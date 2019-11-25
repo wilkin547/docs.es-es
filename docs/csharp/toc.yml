@@ -1,8 +1,8 @@
-- name: 'Guía de C#'
-  href: index.md
+- name: 'Documentación de C#'
+  href: index.yml
 - name: Primeros pasos
   items:
-    - name: Cómo usar esta guía
+    - name: Información general
       href: getting-started/index.md
     - name: 'Introducción al lenguaje C# y .NET Framework'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
@@ -158,7 +158,7 @@
           href: delegates-strongly-typed.md
         - name: Patrones comunes para delegados
           href: delegates-patterns.md
-        - name: Introducción a eventos
+        - name: Introducción a los eventos
           href: events-overview.md
         - name: Patrón de eventos estándar de .NET
           href: event-pattern.md
@@ -320,11 +320,11 @@
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
             - name: 'Tutorial: Acceso a web mediante async y await'
               href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: Procedimiento para ampliar el tutorial de async mediante Task.WhenAll
+            - name: Ampliación del tutorial de async usando Task.WhenAll
               href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: Procedimiento para realizar varias solicitudes web en paralelo con async y await
+            - name: Realización de varias solicitudes web en paralelo utilizando async y await
               href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-            - name: Tipos de valor devueltos de async
+            - name: Tipos de valor devueltos de Async
               href: programming-guide/concepts/async/async-return-types.md
             - name: Flujo de control en programas Async
               href: programming-guide/concepts/async/control-flow-in-async-programs.md
@@ -354,7 +354,7 @@
               href: programming-guide/concepts/attributes/attributeusage.md
             - name: Acceso a atributos mediante reflexión
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: Procedimiento para crear una unión de C-C++ mediante atributos
+            - name: 'Procedimiento para: Crear una unión de C/C++ mediante atributos'
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: Atributos comunes
               href: programming-guide/concepts/attributes/common-attributes.md
@@ -384,11 +384,11 @@
           items:
             - name: Información general
               href: programming-guide/concepts/expression-trees/index.md
-            - name: Procedimiento para ejecutar árboles de expresión
+            - name: Ejecución de árboles de expresión
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: Procedimiento para modificar árboles de expresión
+            - name: Modificación de árboles de expresión
               href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: Procedimiento para usar árboles de expresión para crear consultas dinámicas
+            - name: Uso de árboles de expresión para crear consultas dinámicas
               href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
             - name: Depuración de árboles de expresión en Visual Studio
               href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
@@ -462,13 +462,13 @@
                   href: programming-guide/concepts/linq/linq-and-strings.md
                 - name: Artículos de procedimientos
                   items:
-                    - name: Procedimiento para realizar un recuento de las repeticiones de una palabra en una cadena (LINQ)
+                    - name: 'Procedimiento para: Realizar un recuento de las repeticiones de una palabra en una cadena (LINQ)'
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
                     - name: Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
                     - name: Procedimiento para buscar caracteres en una cadena (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: Procedimiento para combinar consultas LINQ con expresiones regulares
+                    - name: 'Procedimiento para: Combinar consultas LINQ con expresiones regulares'
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
                     - name: Procedimiento para buscar la diferencia de conjuntos entre dos listas (LINQ)
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
@@ -476,7 +476,7 @@
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
                     - name: Procedimiento para reordenar los campos de un archivo delimitado (LINQ)
                       href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
-                    - name: Procedimiento para combinar y comparar colecciones de cadenas (LINQ)
+                    - name: 'Procedimiento para: Combinar y comparar colecciones de cadenas (LINQ)'
                       href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
                     - name: Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ)
                       href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
@@ -484,9 +484,9 @@
                       href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
                     - name: Procedimiento para combinar contenido de archivos no similares (LINQ)
                       href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
-                    - name: Procedimiento para calcular valores de columna en un archivo de texto CSV (LINQ)
+                    - name: 'Procedimiento para: Calcular valores de columna en un archivo de texto CSV (LINQ)'
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
-                - name: LINQ y reflexión
+                - name: LINQ y Reflection
                   href: programming-guide/concepts/linq/linq-and-reflection.md
                 - name: Procedimiento para consultar los metadatos de un ensamblado con reflexión (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
@@ -500,7 +500,7 @@
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
                     - name: Procedimiento para buscar el número total de bytes en un conjunto de carpetas (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-                    - name: Procedimiento para comparar el contenido de dos carpetas (LINQ)
+                    - name: 'Procedimiento para: Comparar el contenido de dos carpetas (LINQ)'
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
                     - name: Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
@@ -510,7 +510,7 @@
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
                 - name: Procedimiento para consultar un objeto ArrayList con LINQ
                   href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
-                - name: Procedimiento para agregar métodos personalizados para las consultas LINQ
+                - name: 'Procedimiento para: Agregar métodos personalizados para las consultas LINQ'
                   href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
             - name: LINQ to XML
               items:
@@ -536,7 +536,7 @@
                           href: programming-guide/concepts/linq/xattribute-class-overview.md
                         - name: Información general de la clase XDocument
                           href: programming-guide/concepts/linq/xdocument-class-overview.md
-                        - name: Procedimiento para compilar ejemplos de LINQ to XML
+                        - name: 'Procedimiento para: Compilar ejemplos de LINQ to XML'
                           href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
                     - name: Árboles XML
                       items:
@@ -552,9 +552,9 @@
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: Mantener un espacio en blanco al cargar o analizar XML
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
-                            - name: Procedimiento para detectar errores de análisis
+                            - name: 'Procedimiento para: Detectar errores de análisis'
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
-                            - name: Procedimiento para crear un árbol a partir de un objeto XmlReader
+                            - name: 'Procedimiento para: Crear un árbol a partir de un objeto XmlReader'
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
                             - name: Procedimiento para hacer streaming de fragmentos XML desde un objeto XmlReader
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
@@ -568,9 +568,9 @@
                       items:
                         - name: Información general sobre los espacios de nombres (LINQ to XML)
                           href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
-                        - name: Procedimiento para crear un documento con espacios de nombres (LINQ to XML)
+                        - name: 'Procedimiento para: Crear un documento con espacios de nombres (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
-                        - name: Procedimiento para controlar prefijos de espacios de nombres (LINQ to XML)
+                        - name: 'Procedimiento para: Controlar prefijos de espacio de nombres (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'Ámbito del espacio de nombres predeterminado de C#'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
@@ -594,9 +594,9 @@
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
                         - name: Procedimiento para recuperar el valor de un elemento (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-                        - name: Procedimiento para filtrar por nombres de elemento (LINQ to XML)
+                        - name: 'Procedimiento para: Filtrar por nombres de elemento (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
-                        - name: Procedimiento para encadenar llamadas de métodos de eje (LINQ to XML)
+                        - name: 'Procedimiento para: Encadenar llamadas de métodos de eje (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
                         - name: Procedimiento para recuperar un único elemento secundario (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
@@ -612,31 +612,31 @@
                       items:
                         - name: Consultas básicas (LINQ to XML)
                           items:
-                            - name: Procedimiento para buscar un elemento con un atributo específico
+                            - name: 'Procedimiento para: Buscar un elemento con un atributo específico'
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md
-                            - name: Procedimiento para buscar un elemento con un elemento secundario específico
+                            - name: 'Procedimiento para: Buscar un elemento con un elemento secundario específico'
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md
                             - name: Diferencias entre realizar consultas de un XDocument y de un XElement
                               href: programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md
-                            - name: Procedimiento para buscar descendientes con un nombre de elemento específico
+                            - name: 'Procedimiento para: Buscar descendientes con un nombre de elemento específico'
                               href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
-                            - name: Procedimiento para buscar un único descendiente con el método Descendants
+                            - name: 'Procedimiento para: Buscar un único descendiente utilizando el método Descendants'
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
                             - name: Procedimiento para escribir consultas con filtrado complejo
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
-                            - name: Procedimiento para filtrar por un elemento opcional
+                            - name: 'Procedimiento para: Filtrar por un elemento opcional'
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
-                            - name: Procedimiento para buscar todos los nodos de un espacio de nombres
+                            - name: 'Procedimiento para: Buscar todos los nodos de un espacio de nombres'
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
                             - name: Procedimiento para ordenar elementos
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
                             - name: Procedimiento para ordenar elementos por varias claves
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
-                            - name: Procedimiento para calcular valores intermedios
+                            - name: 'Procedimiento para: Calcular valores intermedios'
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
                             - name: Procedimiento para escribir una consulta que busca elementos en función del contexto
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
-                            - name: Procedimiento para depurar conjuntos de resultados de consulta vacíos
+                            - name: 'Procedimiento para: Depurar conjuntos de resultados de consulta vacíos'
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: Proyecciones y transformaciones (LINQ to XML)
                           items:
@@ -644,7 +644,7 @@
                               href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
                             - name: Procedimiento para transformar la forma de un árbol XML
                               href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
-                            - name: Procedimiento para controlar el tipo de una proyección
+                            - name: 'Procedimiento para: Controlar el tipo de una proyección'
                               href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
                             - name: Procedimiento para proyectar un tipo nuevo (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
@@ -660,7 +660,7 @@
                           items:
                             - name: Procedimiento para combinar dos colecciones (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
-                            - name: Procedimiento para crear una jerarquía mediante la agrupación
+                            - name: 'Procedimiento para: Crear una jerarquía utilizando la agrupación'
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
                             - name: Procedimiento para consultar LINQ to XML mediante XPath
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
@@ -680,37 +680,37 @@
                           items:
                             - name: Comparación de XPath y LINQ to XML
                               href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
-                            - name: Procedimiento para buscar un elemento secundario (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar un elemento secundario (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar una lista de elementos secundarios (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar una lista de elementos secundarios (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
                             - name: Procedimiento para buscar el elemento raíz (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar elementos descendientes (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar elementos descendientes (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
-                            - name: Procedimiento para filtrar por un atributo (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Filtrar por un atributo (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar elementos relacionados (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar elementos relacionados (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar elementos de un espacio de nombres (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar elementos de un espacio de nombres (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar elementos anteriores del mismo nivel (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar nodos anteriores del mismo nivel (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar descendientes de un elemento secundario (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar descendientes de un elemento secundario (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar la unión de dos rutas de acceso a ubicaciones (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar la unión de dos rutas de acceso a ubicaciones (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar nodos del mismo nivel (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar nodos del mismo nivel (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar un atributo del elemento principal (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar un atributo del elemento principal (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar atributos de elementos del mismo nivel con un nombre específico (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar atributos de nodos del mismo nivel con un nombre específico (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar elementos con un atributo específico (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar elementos con un atributo específico (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar elementos secundarios en función de la posición (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar elementos secundarios en función de la posición (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-                            - name: Procedimiento para buscar el elemento del mismo nivel inmediatamente anterior (XPath-LINQ to XML)
+                            - name: 'Procedimiento para: Buscar el nodo inmediatamente anterior del mismo nivel (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                         - name: Transformaciones funcionales puras de XML
                           items:
@@ -790,7 +790,7 @@
                           href: programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md
                         - name: Mantener pares nombre-valor
                           href: programming-guide/concepts/linq/maintaining-name-value-pairs.md
-                        - name: Procedimiento para cambiar el espacio de nombres de todo un árbol XML
+                        - name: 'Procedimiento para: Cambiar el espacio de nombres de todo un árbol XML'
                           href: programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md
                     - name: Rendimiento (LINQ to XML)
                       items:
@@ -946,9 +946,9 @@
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Control de versiones con las palabras clave Override y New
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
-            - name: Saber cuándo usar las palabras clave Override y New
+            - name: Saber cuándo utilizar las palabras clave Override y New
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: Procedimiento para invalidar el método ToString
+            - name: Invalidación del método ToString
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
         - name: Miembros
           items:
@@ -964,9 +964,9 @@
               href: programming-guide/classes-and-structs/fields.md
             - name: Constantes
               href: programming-guide/classes-and-structs/constants.md
-            - name: Procedimiento para definir propiedades abstractas
+            - name: Definición de propiedades abstractas
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: 'Procedimiento para definir constantes en C#'
+            - name: 'Definición de constantes en C#'
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: Propiedades
           items:
@@ -978,11 +978,11 @@
               href: programming-guide/classes-and-structs/interface-properties.md
             - name: Restringir la accesibilidad del descriptor de acceso
               href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: Procedimiento para declarar y usar propiedades de lectura y escritura
+            - name: Declaración y uso de propiedades de lectura y escritura
               href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
             - name: Propiedades autoimplementadas
               href: programming-guide/classes-and-structs/auto-implemented-properties.md
-            - name: Procedimiento para implementar una clase ligera con propiedades autoimplementadas
+            - name: Cómo implementar una clase ligera con propiedades autoimplementadas
               href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
         - name: Métodos
           items:
@@ -998,23 +998,23 @@
                   href: programming-guide/classes-and-structs/passing-parameters.md
                 - name: Pasar parámetros de tipo de valor
                   href: programming-guide/classes-and-structs/passing-value-type-parameters.md
-                - name: Pasar parámetros de tipo de referencia
+                - name: Pasar parámetros Reference-Type
                   href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: Procedimiento para saber las diferencias entre pasar a un método un struct y una referencia a clase
+                - name: Conocimiento de las diferencias entre pasar a un método un struct y una referencia a clase
                   href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
             - name: Variables locales con asignación implícita de tipos
               href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: Procedimiento para usar matrices y variables locales con tipo implícito en expresiones de consulta
+            - name: Uso de matrices y variables locales con tipo implícito en expresiones de consulta
               href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
             - name: Métodos de extensión.
               href: programming-guide/classes-and-structs/extension-methods.md
-            - name: Procedimiento para implementar e invocar un método de extensión personalizado
+            - name: Implementación e invocación de un método de extensión personalizado
               href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: Procedimiento para crear un método nuevo para una enumeración
+            - name: Creación de un método nuevo para una enumeración
               href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
             - name: Argumentos opcionales y con nombre
               href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: Procedimiento para usar argumentos opcionales y con nombre en la programación de Office
+            - name: Uso de argumentos opcionales y con nombre en la programación de Office
               href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
         - name: Constructores
           items:
@@ -1028,13 +1028,13 @@
               href: programming-guide/classes-and-structs/private-constructors.md
             - name: Constructores estáticos
               href: programming-guide/classes-and-structs/static-constructors.md
-            - name: Procedimiento para escribir un constructor de copia
+            - name: Escritura de un constructor copy
               href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
         - name: Finalizadores
           href: programming-guide/classes-and-structs/destructors.md
         - name: Inicializadores de objeto y colección
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: Procedimiento para inicializar un objeto mediante un inicializador de objeto
+        - name: Inicialización de un objeto usando un inicializador de objeto
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
         - name: Procedimiento para inicializar un diccionario con un inicializador de colección
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
@@ -1044,7 +1044,7 @@
           href: programming-guide/classes-and-structs/partial-classes-and-methods.md
         - name: Tipos anónimos
           href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: Procedimiento para devolver subconjuntos de propiedades de elementos en una consulta
+        - name: Devolución de subconjuntos de propiedades de elementos en una consulta
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
     - name: Interfaces
       items:
@@ -1301,7 +1301,7 @@
                 - name: bool
                   href: language-reference/keywords/bool.md
                 - name: char
-                  href: language-reference/keywords/char.md
+                  href: language-reference/builtin-types/char.md
                 - name: enum
                   href: language-reference/keywords/enum.md
                 - name: struct
@@ -1675,7 +1675,7 @@
           href: language-reference/compiler-options/index.md
         - name: Compilar la línea de comandos con csc.exe
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: Procedimiento Establecer variables de entorno para la línea de comandos de Visual Studio
+        - name: Establecimiento de variables de entorno para la línea de comandos de Visual Studio
           href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
         - name: 'Opciones del compilador de C#, por categoría'
           href: language-reference/compiler-options/listed-by-category.md

@@ -2,6 +2,46 @@
   href: index.md
 - name: Sobre .NET Core
   href: about.md
+- name: Instalar
+  items:
+    - name: Información general
+      href: install/index.md
+    - name: Instalación del SDK
+      href: install/sdk.md
+    - name: Instalación del entorno de ejecución
+      href: install/runtime.md
+    - name: Dependencias y SO admitidos
+      href: install/dependencies.md
+    - name: Cómo comprobar las versiones de .NET Core
+      href: install/how-to-detect-installed-versions.md
+    - name: Administradores de paquetes de Linux
+      items:
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
+        - name: "RHEL\_8.1"
+          href: install/linux-package-manager-rhel81.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: "Ubuntu\_19.04"
+          href: install/linux-package-manager-ubuntu-1904.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: "Debian\_10"
+          href: install/linux-package-manager-debian10.md
+        - name: "Fedora\_29"
+          href: install/linux-package-manager-fedora29.md
+        - name: "Fedora\_30"
+          href: install/linux-package-manager-fedora30.md
+        - name: CentOS 7
+          href: install/linux-package-manager-centos7.md
+        - name: "OpenSUSE\_15"
+          href: install/linux-package-manager-opensuse15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
+        - name: SLES 15
+          href: install/linux-package-manager-sles15.md
 - name: Primeros pasos
   href: get-started.md
   items:
@@ -23,12 +63,6 @@
       href: tutorials/testing-library-with-visual-studio.md
     - name: Consumo de una biblioteca de .NET Standard en Visual Studio 2017
       href: tutorials/consuming-library-with-visual-studio.md
-- name: Requisitos previos de Windows
-  href: windows-prerequisites.md
-- name: Requisitos previos de macOS
-  href: macos-prerequisites.md
-- name: Requisitos previos de Linux
-  href: linux-prerequisites.md
 - name: Novedades de .NET Core
   items:
     - name: Novedades de .NET Core 3.0
@@ -54,27 +88,33 @@
           href: tutorials/cli-templates-create-template-pack.md
     - name: Introducción a .NET Core en macOS
       href: tutorials/using-on-macos.md
-    - name: Introducción a .NET Core en macOS con Visual Studio para Mac
+    - name: "Introducción a .NET Core\_con Visual\_Studio para Mac"
       href: tutorials/using-on-mac-vs.md
-    - name: Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac
+    - name: "Compilación de una solución completa de .NET\_Core en macOS"
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Introducción a .NET Core con las herramientas de la CLI
       href: tutorials/using-with-xplat-cli.md
-    - name: Organización y prueba de proyectos con la línea de comandos de .NET Core
+    - name: "Organización y prueba de proyectos con la CLI de .NET\_Core"
       href: tutorials/testing-with-cli.md
-    - name: Desarrollo de bibliotecas con herramientas multiplataforma
+    - name: Desarrollar bibliotecas con herramientas multiplataforma
       href: tutorials/libraries.md
-    - name: Creación de una aplicación de .NET Core con complementos
+    - name: "Creación de una aplicación .Net\_Core con complementos"
       href: tutorials/creating-app-with-plugin-support.md
-    - name: Desarrollo de aplicaciones de ASP.NET Core
+    - name: "Desarrollo de aplicaciones ASP.NET\_Core"
       href: tutorials/aspnet-core.md
-    - name: Hospedaje de .NET Core desde código nativo
+    - name: "Hospedaje de .NET\_Core desde código nativo"
       href: tutorials/netcore-hosting.md
+- name: Configuración del entorno en tiempo de ejecución
+  items:
+    - name: Configuración
+      href: run-time-config/index.md
+    - name: Nombre de recolector de elementos no utilizados
+      href: run-time-config/garbage-collector.md
 - name: Interoperabilidad nativa
   items:
     - name: "Exposición de los componentes de .NET\_Core a COM"
       href: native-interop/expose-components-to-com.md
-- name: 'Paquetes, metapaquetes y marcos de trabajo'
+- name: 'Paquetes, metapaquetes y marcos'
   href: packages.md
 - name: Cambios en la información general de la CLI
   href: tools/cli-msbuild-architecture.md

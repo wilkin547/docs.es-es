@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421586"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283894"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -29,7 +29,7 @@ Para obtener más información sobre cómo configurar un entorno de desarrollo p
 
 Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual Basic (VB). 
 
-* C# es simple, eficaz, incluye seguridad de tipos y está orientado a objetos, al mismo tiempo que mantiene la expresividad y elegancia de los lenguajes de estilo C. Cualquiera que esté familiarizado con C y lenguajes similares, encuentra pocos problemas para adaptarse a C#. Consulte la [Guía de C#](../csharp/index.md) para más información sobre C#.
+* C# es simple, eficaz, incluye seguridad de tipos y está orientado a objetos, al mismo tiempo que mantiene la expresividad y elegancia de los lenguajes de estilo C. Cualquiera que esté familiarizado con C y lenguajes similares, encuentra pocos problemas para adaptarse a C#. Consulte la [Guía de C#](../csharp/index.yml) para más información sobre C#.
 
 * F# es un lenguaje de programación multiplataforma, principalmente funcional, que también admite la programación tradicional imperativa y orientada en objetos. Consulte la [Guía de F#](../fsharp/index.md) para más información sobre F#.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771835"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428606"
 ---
 # <a name="c-reference"></a>Referencia de C#
 
@@ -54,16 +54,13 @@ Las características que se han implementado en versiones de C# posteriores a 6.
  Se han agregado una serie de pequeñas características a C# 7.2. Puede pasar argumentos por referencia de solo lectura mediante la palabra clave `in`. Se han realizado diversos cambios de bajo nivel para admitir la seguridad en tiempo de compilación para `Span` y tipos relacionados. Puede usar argumentos con nombre donde los argumentos posteriores son posicionales, en algunos casos. El modificador de acceso `private protected` permite especificar que los llamadores se limitan a los tipos derivados que se implementan en el mismo ensamblado. El operador `?:` se puede resolver en una referencia a una variable. También puede dar formato a números hexadecimales y binarios con un separador de dígito inicial.
 
  [Propuestas de especificación de C# 7.3](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C# 7.3 es otra versión secundaria que incluye una serie de pequeñas actualizaciones. Puede usar nuevas restricciones en parámetros de tipo genérico. Otros cambios hacen que sea más fácil trabajar con campos `fixed`, incluido el uso de asignaciones [`stackalloc`](./operators/stackalloc.md). Las variables locales declaradas con la palabra clave `ref` puede reasignarse para que hagan referencia a un almacenamiento nuevo. Puede colocar atributos en propiedades implementadas automáticamente que tengan como destino el campo de respaldo generado por el compilador. Se pueden usar variables de expresión en inicializadores. Las tuplas pueden compararse para comprobar si son iguales (o si no lo son). Además, se han realizado algunas mejoras en la resolución de sobrecarga.
+ C# 7.3 es otra versión secundaria que incluye una serie de pequeñas actualizaciones. Puede usar nuevas restricciones en parámetros de tipo genérico. Otros cambios hacen que sea más fácil trabajar con campos `fixed`, incluido el uso de asignaciones [`stackalloc`](./operators/stackalloc.md). Las variables locales declaradas con la palabra clave `ref` pueden reasignarse para que hagan referencia a un almacenamiento nuevo. Puede colocar atributos en propiedades implementadas automáticamente que tengan como destino el campo de respaldo generado por el compilador. Se pueden usar variables de expresión en inicializadores. Las tuplas pueden compararse para comprobar si son iguales (o si no lo son). Además, se han realizado algunas mejoras en la resolución de sobrecarga.
   
  [Propuestas de especificación de C# 8.0](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C# 8.0 está disponible con .NET Core 3.0. Entre las características se incluyen tipos de referencia que aceptan valores NULL, coincidencia de patrones recursiva, métodos de interfaz predeterminados, secuencias asincrónicas, intervalos e índices, using basado en patrones y declaraciones using, asignación de uso combinado de NULL y miembros de instancia de solo lectura.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
- [Guía de C#](../index.md)  
- Ofrece un portal para la documentación de Visual C#.  
-  
  [Usar el entorno de desarrollo de Visual C#](/visualstudio/get-started/csharp)  
  Ofrece vínculos para los temas de tareas y conceptos y temas que describen el IDE y el Editor.  
   

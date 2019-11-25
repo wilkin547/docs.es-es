@@ -9,7 +9,7 @@
               href: microsoft.sqlserver.server.smiorderproperty.item.md
     - name: Sistema
       items:
-        - name: Clase Exception
+        - name: Exception (clase)
           items:
             - name: Método Exception.PrepForRemoting
               href: system.exception.prepforremoting.md
@@ -29,9 +29,9 @@
               href: system.data.sqltypes.sqlstreamchars.isnull.md
             - name: Propiedad Length
               href: system.data.sqltypes.sqlstreamchars.length.md
-            - name: Close (Método)
+            - name: Método Close
               href: system.data.sqltypes.sqlstreamchars.close.md
-            - name: Dispose (Método)
+            - name: Dispose (método)
               href: system.data.sqltypes.sqlstreamchars.dispose.md
             - name: Método Flush
               href: system.data.sqltypes.sqlstreamchars.flush.md
@@ -43,6 +43,12 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: Método Write
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: Clase MemoryStream
+          items:
+            - name: Método InternalGetOriginAndLength
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
         - name: Clase Connection
@@ -55,6 +61,10 @@
           items:
             - name: Campo m_ConnectionList
               href: m_connectionlist.md
+        - name: Clase ConnectStream
+          items:
+            - name: Propiedad Connection
+              href: system.net.connectstream.connection.md
         - name: Clase CoreResponseData
           href: coreresponsedata.md
           items:
@@ -70,12 +80,36 @@
               href: httpwebrequest__coreresponse.md
             - name: Campo _HttpResponse
               href: _httpresponse.md
+        - name: Clase PooledStream
+          items:
+            - name: Propiedad NetworkStream
+              href: system.net.pooledstream.networkstream.md
+        - name: Clase RtcState
+          href: system.net.rtcstate.md
         - name: Clase ServicePoint
           items:
             - name: Campo m_ConnectionGroupList
               href: m_connectiongrouplist.md
             - name: Campo s_ServicePointTable
               href: s_servicepointtable.md
+        - name: Clase TlsStream
+          items:
+            - name: Campo m_Worker
+              href: system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: Clase SslState
+          items:
+            - name: Propiedad SslProtocol
+              href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Message (clase)
+          items:
+            - name: Método BodyToString
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: Método WriteStartHeaders
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: Clase VisualDiagnostics
@@ -114,7 +148,7 @@
               href: system.xml.xmlreader.createsqlreader.md
     - name: Espacio de nombres adodb
       items:
-        - name: Interfaz de conexión
+        - name: Interfaz Connection
           href: adodb.connection.md
         - name: Enumeración EventReason
           href: adodb.eventreasonenum.md
