@@ -1,5 +1,5 @@
 ---
-title: Optional (Visual Basic)
+title: Optional
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -8,42 +8,42 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 3758f17634395236abf2cd7059418bf6f8b6c062
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a16dae35bf4bc84d95501624c4f023f390a8dda8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630920"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351438"
 ---
-# <a name="optional-visual-basic"></a><span data-ttu-id="cefc4-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cefc4-102">Optional (Visual Basic)</span></span>
+# <a name="optional-visual-basic"></a><span data-ttu-id="bb866-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb866-102">Optional (Visual Basic)</span></span>
 
-<span data-ttu-id="cefc4-103">Especifica que un argumento de procedimiento se puede omitir cuando se llama al procedimiento.</span><span class="sxs-lookup"><span data-stu-id="cefc4-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>
+<span data-ttu-id="bb866-103">Specifies that a procedure argument can be omitted when the procedure is called.</span><span class="sxs-lookup"><span data-stu-id="bb866-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="cefc4-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cefc4-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="bb866-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="bb866-104">Remarks</span></span>
 
-<span data-ttu-id="cefc4-105">Para cada parámetro opcional, debe especificar una expresión constante como valor predeterminado de ese parámetro.</span><span class="sxs-lookup"><span data-stu-id="cefc4-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="cefc4-106">Si la expresión se evalúa como [Nothing](../../../visual-basic/language-reference/nothing.md), se usa el valor predeterminado del tipo de datos Value como valor predeterminado del parámetro.</span><span class="sxs-lookup"><span data-stu-id="cefc4-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>
+<span data-ttu-id="bb866-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span><span class="sxs-lookup"><span data-stu-id="bb866-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="bb866-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span><span class="sxs-lookup"><span data-stu-id="bb866-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>
 
-<span data-ttu-id="cefc4-107">Si la lista de parámetros contiene un parámetro opcional, cada parámetro que siga también debe ser opcional.</span><span class="sxs-lookup"><span data-stu-id="cefc4-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>
+<span data-ttu-id="bb866-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span><span class="sxs-lookup"><span data-stu-id="bb866-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>
 
-<span data-ttu-id="cefc4-108">El modificador `Optional` se puede utilizar en los contextos siguientes:</span><span class="sxs-lookup"><span data-stu-id="cefc4-108">The `Optional` modifier can be used in these contexts:</span></span>
+<span data-ttu-id="bb866-108">El modificador `Optional` se puede utilizar en los contextos siguientes:</span><span class="sxs-lookup"><span data-stu-id="bb866-108">The `Optional` modifier can be used in these contexts:</span></span>
 
-- [<span data-ttu-id="cefc4-109">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="cefc4-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="bb866-109">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="bb866-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [<span data-ttu-id="cefc4-110">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="cefc4-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="bb866-110">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="bb866-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [<span data-ttu-id="cefc4-111">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="cefc4-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="bb866-111">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="bb866-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [<span data-ttu-id="cefc4-112">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="cefc4-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-
-> [!NOTE]
-> <span data-ttu-id="cefc4-113">Cuando se llama a un procedimiento con o sin parámetros opcionales, se pueden pasar argumentos por posición o por nombre.</span><span class="sxs-lookup"><span data-stu-id="cefc4-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="cefc4-114">Para obtener más información, vea [pasar argumentos por posición y por nombre](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span><span class="sxs-lookup"><span data-stu-id="cefc4-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>
+- [<span data-ttu-id="bb866-112">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="bb866-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> <span data-ttu-id="cefc4-115">También puede definir un procedimiento con parámetros opcionales mediante sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="cefc4-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="cefc4-116">Si tiene un parámetro opcional, puede definir dos versiones sobrecargadas del procedimiento, una que acepte el parámetro y otra que no lo sea.</span><span class="sxs-lookup"><span data-stu-id="cefc4-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="cefc4-117">Para obtener más información, consulta [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="cefc4-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>
+> <span data-ttu-id="bb866-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span><span class="sxs-lookup"><span data-stu-id="bb866-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="bb866-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span><span class="sxs-lookup"><span data-stu-id="bb866-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="cefc4-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cefc4-118">Example</span></span>
+> [!NOTE]
+> <span data-ttu-id="bb866-115">You can also define a procedure with optional parameters by using overloading.</span><span class="sxs-lookup"><span data-stu-id="bb866-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="bb866-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span><span class="sxs-lookup"><span data-stu-id="bb866-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="bb866-117">Para obtener más información, consulta [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="bb866-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>
 
-<span data-ttu-id="cefc4-119">En el ejemplo siguiente se define un procedimiento que tiene un parámetro opcional.</span><span class="sxs-lookup"><span data-stu-id="cefc4-119">The following example defines a procedure that has an optional parameter.</span></span>
+## <a name="example"></a><span data-ttu-id="bb866-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb866-118">Example</span></span>
+
+<span data-ttu-id="bb866-119">The following example defines a procedure that has an optional parameter.</span><span class="sxs-lookup"><span data-stu-id="bb866-119">The following example defines a procedure that has an optional parameter.</span></span>
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -64,14 +64,14 @@ Public Function FindMatches(ByRef values As List(Of String),
 End Function
 ```
 
-## <a name="example"></a><span data-ttu-id="cefc4-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cefc4-120">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bb866-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb866-120">Example</span></span>
 
-<span data-ttu-id="cefc4-121">En el ejemplo siguiente se muestra cómo llamar a un procedimiento con argumentos pasados por posición y con argumentos pasados por nombre.</span><span class="sxs-lookup"><span data-stu-id="cefc4-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="cefc4-122">El procedimiento tiene dos parámetros opcionales.</span><span class="sxs-lookup"><span data-stu-id="cefc4-122">The procedure has two optional parameters.</span></span>
+<span data-ttu-id="bb866-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span><span class="sxs-lookup"><span data-stu-id="bb866-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="bb866-122">The procedure has two optional parameters.</span><span class="sxs-lookup"><span data-stu-id="bb866-122">The procedure has two optional parameters.</span></span>
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 
-## <a name="see-also"></a><span data-ttu-id="cefc4-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="cefc4-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb866-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="bb866-123">See also</span></span>
 
-- [<span data-ttu-id="cefc4-124">Lista de parámetros</span><span class="sxs-lookup"><span data-stu-id="cefc4-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [<span data-ttu-id="cefc4-125">Parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cefc4-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [<span data-ttu-id="cefc4-126">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="cefc4-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="bb866-124">Lista de parámetros</span><span class="sxs-lookup"><span data-stu-id="bb866-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [<span data-ttu-id="bb866-125">Parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="bb866-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [<span data-ttu-id="bb866-126">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="bb866-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
