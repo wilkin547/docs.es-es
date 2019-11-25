@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Colección de listas
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179885"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969424"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Toma de decisiones con la instrucción if
   durationInMinutes: 4
   content: >
-    Ejecute el código siguiente en la ventana interactiva. Para ello, escriba el siguiente bloque de código en la ventana interactiva y haga clic en el botón **Ejecutar**:
+    Ejecute el código siguiente en la ventana interactiva. Seleccione el botón **Entrar en el modo de enfoque**. A continuación, escriba el bloque de código siguiente en la ventana interactiva y seleccione **Ejecutar**:
 
 
     ```csharp
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Vuelva a hacer clic en el botón **Ejecutar**. Como la respuesta es menor que diez, no se imprime nada. La **condición** que está probando es false. No tiene ningún código para ejecutar porque solo ha escrito una de las bifurcaciones posibles para una instrucción `if`: la bifurcación true.
+    Vuelva a seleccionar el botón **Ejecutar**. Como la respuesta es menor que diez, no se imprime nada. La **condición** que está probando es false. No tiene ningún código para ejecutar porque solo ha escrito una de las bifurcaciones posibles para una instrucción `if`: la bifurcación true.
 
 
     > [!TIP]
@@ -221,7 +221,7 @@ items:
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: ¡Enhorabuena!
   content: >
-    Ha completado el tutorial interactivo "Bifurcaciones y bucles". Puede hacer clic en el vínculo **Colección de listas** que aparece a continuación para iniciar el siguiente tutorial interactivo. También puede visitar el [sitio .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial interactivo "Bifurcaciones y bucles". Puede seleccionar el vínculo **Colección de listas** que aparece a continuación para iniciar el siguiente tutorial interactivo. También puede visitar el [sitio .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Puede obtener más información sobre estos conceptos en los temas siguientes:

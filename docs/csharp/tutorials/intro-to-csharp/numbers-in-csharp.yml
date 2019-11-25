@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Bifurcaciones y bucles en C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774014"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969364"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Análisis de las operaciones matemáticas con enteros
   durationInMinutes: 4
   content: >
-    Ejecute el código siguiente en la ventana interactiva. Para ello, escriba el siguiente bloque de código en la ventana interactiva y haga clic en el botón **Ejecutar**:
+    Ejecute el código siguiente en la ventana interactiva. Seleccione el botón **Entrar en el modo de enfoque**. A continuación, escriba el bloque de código siguiente en la ventana interactiva y seleccione **Ejecutar**:
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     > En este tutorial interactivo, puede indagar por su cuenta con la modificación del código que ha escrito en la ventana interactiva. Este tutorial proporciona ejemplos que puede probar en cada paso.
 
 
-    Comience por explorar esas operaciones diferentes. Modifique la tercera línea para probar cada una de estas operaciones. Después de cada modificación, haga clic en el botón **Ejecutar**.
+    Comience por explorar esas operaciones diferentes. Modifique la tercera línea para probar cada una de estas operaciones. Después de cada modificación, seleccione el botón **Ejecutar**.
 
 
     Resta:
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    Vuelva a hacer clic en **Ejecutar** para ver los resultados.
+    Vuelva a seleccionar **Ejecutar** para ver los resultados.
 
 
     > [!NOTE]
@@ -414,8 +414,8 @@ items:
     > [!NOTE]
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
-- content: >-
-    Ha completado el tutorial interactivo "Números en C#". Puede hacer clic en el vínculo **Ramas y bucles** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
+- content: >
+    Ha completado el tutorial interactivo "Números en C#". Puede seleccionar el vínculo **Ramas y bucles** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Puede obtener más información sobre los números en C# en los temas siguientes:

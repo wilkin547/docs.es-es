@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966976"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969444"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Crear una cadena interpolada
   durationInMinutes: 2
   content: >
-    Ejecute el código siguiente en la ventana interactiva. Para ello, escriba el código en la ventana interactiva (sustituya `<name>` por su nombre) y seleccione **Ejecutar**:
+    Ejecute el código siguiente en la ventana interactiva. Seleccione el botón **Entrar en el modo de enfoque**. A continuación, escriba el bloque de código siguiente en la ventana interactiva (reemplace `<name>` por su nombre) y seleccione **Ejecutar**:
 
 
     ```csharp
