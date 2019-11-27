@@ -9,13 +9,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333748"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="51b00-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51b00-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
-<span data-ttu-id="51b00-103">En este tema se describe cómo ordenar en varias claves.</span><span class="sxs-lookup"><span data-stu-id="51b00-103">This topic shows how to sort on multiple keys.</span></span>  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="4c153-102">Cómo: ordenar elementos en varias claves (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c153-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
+<span data-ttu-id="4c153-103">En este tema se describe cómo ordenar en varias claves.</span><span class="sxs-lookup"><span data-stu-id="4c153-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51b00-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="51b00-104">Example</span></span>  
- <span data-ttu-id="51b00-105">En este ejemplo los resultados se ofrecen primero por código postal de envío y después por fecha de ordenación.</span><span class="sxs-lookup"><span data-stu-id="51b00-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
+## <a name="example"></a><span data-ttu-id="4c153-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4c153-104">Example</span></span>  
+ <span data-ttu-id="4c153-105">En este ejemplo los resultados se ofrecen primero por código postal de envío y después por fecha de ordenación.</span><span class="sxs-lookup"><span data-stu-id="4c153-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- <span data-ttu-id="51b00-106">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="51b00-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="4c153-106">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4c153-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -34,7 +34,7 @@ For Each r In result
 Next  
 ```  
   
- <span data-ttu-id="51b00-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="51b00-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="4c153-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="4c153-107">This code produces the following output:</span></span>  
   
 ```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -61,10 +61,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a><span data-ttu-id="51b00-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="51b00-108">Example</span></span>  
- <span data-ttu-id="51b00-109">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="51b00-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="51b00-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="51b00-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="4c153-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4c153-108">Example</span></span>  
+ <span data-ttu-id="4c153-109">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="4c153-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="4c153-110">Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4c153-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="51b00-111">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="51b00-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="4c153-111">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="4c153-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -89,7 +89,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="51b00-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="51b00-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="4c153-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="4c153-112">This code produces the following output:</span></span>  
   
 ```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -116,6 +116,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="51b00-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="51b00-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c153-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="4c153-113">See also</span></span>
 
-- [<span data-ttu-id="51b00-114">Basic Queries (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51b00-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="4c153-114">Consultas básicas (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c153-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

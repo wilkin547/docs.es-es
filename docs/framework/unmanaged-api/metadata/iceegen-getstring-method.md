@@ -22,12 +22,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426163"
 ---
-# <a name="iceegengetstring-method"></a><span data-ttu-id="beefd-102">ICeeGen::GetString (Método)</span><span class="sxs-lookup"><span data-stu-id="beefd-102">ICeeGen::GetString Method</span></span>
-<span data-ttu-id="beefd-103">Gets the string stored at the specified relative virtual address.</span><span class="sxs-lookup"><span data-stu-id="beefd-103">Gets the string stored at the specified relative virtual address.</span></span>  
+# <a name="iceegengetstring-method"></a><span data-ttu-id="814a2-102">ICeeGen::GetString (Método)</span><span class="sxs-lookup"><span data-stu-id="814a2-102">ICeeGen::GetString Method</span></span>
+<span data-ttu-id="814a2-103">Obtiene la cadena almacenada en la dirección virtual relativa especificada.</span><span class="sxs-lookup"><span data-stu-id="814a2-103">Gets the string stored at the specified relative virtual address.</span></span>  
   
- <span data-ttu-id="beefd-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="beefd-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="814a2-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="814a2-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="beefd-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="beefd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="814a2-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="814a2-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetString (  
@@ -36,22 +36,22 @@ HRESULT GetString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="beefd-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="beefd-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="814a2-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="814a2-106">Parameters</span></span>  
  `RVA`  
- <span data-ttu-id="beefd-107">[in] The relative virtual address of the string to return.</span><span class="sxs-lookup"><span data-stu-id="beefd-107">[in] The relative virtual address of the string to return.</span></span>  
+ <span data-ttu-id="814a2-107">de Dirección virtual relativa de la cadena que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="814a2-107">[in] The relative virtual address of the string to return.</span></span>  
   
  `lpString`  
- <span data-ttu-id="beefd-108">[out] The returned string.</span><span class="sxs-lookup"><span data-stu-id="beefd-108">[out] The returned string.</span></span>  
+ <span data-ttu-id="814a2-108">enuncia La cadena devuelta.</span><span class="sxs-lookup"><span data-stu-id="814a2-108">[out] The returned string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="beefd-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="beefd-109">Requirements</span></span>  
- <span data-ttu-id="beefd-110">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="beefd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="814a2-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="814a2-109">Requirements</span></span>  
+ <span data-ttu-id="814a2-110">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="814a2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="beefd-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="beefd-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="814a2-111">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="814a2-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="beefd-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="beefd-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="814a2-112">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="814a2-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="beefd-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="beefd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="814a2-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="814a2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="beefd-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="beefd-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="814a2-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="814a2-114">See also</span></span>
 
-- [<span data-ttu-id="beefd-115">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="beefd-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="814a2-115">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="814a2-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

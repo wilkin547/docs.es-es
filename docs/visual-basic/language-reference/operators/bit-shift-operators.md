@@ -13,13 +13,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336120"
 ---
-# <a name="bit-shift-operators-visual-basic"></a><span data-ttu-id="14918-102">Operador de desplazamiento de bits (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14918-102">Bit Shift Operators (Visual Basic)</span></span>
-<span data-ttu-id="14918-103">The following are the bit shift operators defined in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="14918-103">The following are the bit shift operators defined in Visual Basic.</span></span>  
+# <a name="bit-shift-operators-visual-basic"></a><span data-ttu-id="f54bc-102">Operador de desplazamiento de bits (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f54bc-102">Bit Shift Operators (Visual Basic)</span></span>
+<span data-ttu-id="f54bc-103">A continuación se muestran los operadores de desplazamiento de bits definidos en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f54bc-103">The following are the bit shift operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="14918-104"><\< Operator</span><span class="sxs-lookup"><span data-stu-id="14918-104"><\< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<span data-ttu-id="f54bc-104"><\< (operador)</span><span class="sxs-lookup"><span data-stu-id="f54bc-104"><\< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
- [<span data-ttu-id="14918-105">Operador >></span><span class="sxs-lookup"><span data-stu-id="14918-105">>> Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
+ [<span data-ttu-id="f54bc-105">Operador >></span><span class="sxs-lookup"><span data-stu-id="f54bc-105">>> Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="14918-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="14918-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f54bc-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f54bc-106">See also</span></span>
 
-- [<span data-ttu-id="14918-107">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="14918-107">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="f54bc-107">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="f54bc-107">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

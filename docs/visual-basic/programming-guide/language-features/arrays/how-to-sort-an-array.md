@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 'Cómo: ordenar una matriz'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351851"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="0effc-102">How to: sort an array in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0effc-102">How to: sort an array in Visual Basic</span></span>
+# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="60598-102">Cómo: ordenar una matriz en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="60598-102">How to: sort an array in Visual Basic</span></span>
 
-<span data-ttu-id="0effc-103">This article shows an example of how to sort an array of strings in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="0effc-103">This article shows an example of how to sort an array of strings in Visual Basic.</span></span>
+<span data-ttu-id="60598-103">En este artículo se muestra un ejemplo de cómo ordenar una matriz de cadenas en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="60598-103">This article shows an example of how to sort an array of strings in Visual Basic.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0effc-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0effc-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="60598-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="60598-104">Example</span></span>
 
-<span data-ttu-id="0effc-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span><span class="sxs-lookup"><span data-stu-id="0effc-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span></span>
+<span data-ttu-id="60598-105">En este ejemplo se declara una matriz de objetos de `String` denominada `zooAnimals`, se rellena y, a continuación, se ordena alfabéticamente:</span><span class="sxs-lookup"><span data-stu-id="60598-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span></span>
   
 ```vb
 Private Sub SortAnimals()
@@ -32,18 +32,18 @@ Private Sub SortAnimals()
 End Sub
 ```
 
-## <a name="robust-programming"></a><span data-ttu-id="0effc-106">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="0effc-106">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="60598-106">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="60598-106">Robust programming</span></span>
 
-<span data-ttu-id="0effc-107">Las condiciones siguientes pueden provocar una excepción:</span><span class="sxs-lookup"><span data-stu-id="0effc-107">The following conditions may cause an exception:</span></span>
+<span data-ttu-id="60598-107">Las condiciones siguientes pueden provocar una excepción:</span><span class="sxs-lookup"><span data-stu-id="60598-107">The following conditions may cause an exception:</span></span>
 
-- <span data-ttu-id="0effc-108">Array is empty (<xref:System.ArgumentNullException> class).</span><span class="sxs-lookup"><span data-stu-id="0effc-108">Array is empty (<xref:System.ArgumentNullException> class).</span></span>
-- <span data-ttu-id="0effc-109">Array is multidimensional (<xref:System.RankException> class).</span><span class="sxs-lookup"><span data-stu-id="0effc-109">Array is multidimensional (<xref:System.RankException> class).</span></span>
-- <span data-ttu-id="0effc-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span><span class="sxs-lookup"><span data-stu-id="0effc-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span></span>
+- <span data-ttu-id="60598-108">La matriz está vacía (clase<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="60598-108">Array is empty (<xref:System.ArgumentNullException> class).</span></span>
+- <span data-ttu-id="60598-109">La matriz es multidimensional (clase<xref:System.RankException>).</span><span class="sxs-lookup"><span data-stu-id="60598-109">Array is multidimensional (<xref:System.RankException> class).</span></span>
+- <span data-ttu-id="60598-110">Uno o varios elementos de la matriz no implementan la interfaz <xref:System.IComparable> (clase<xref:System.InvalidOperationException>).</span><span class="sxs-lookup"><span data-stu-id="60598-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0effc-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="0effc-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60598-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="60598-111">See also</span></span>
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="0effc-112">Matrices</span><span class="sxs-lookup"><span data-stu-id="0effc-112">Arrays</span></span>](index.md)
-- [<span data-ttu-id="0effc-113">Solución de problemas de matrices</span><span class="sxs-lookup"><span data-stu-id="0effc-113">Troubleshooting Arrays</span></span>](troubleshooting-arrays.md)
-- [<span data-ttu-id="0effc-114">Colecciones</span><span class="sxs-lookup"><span data-stu-id="0effc-114">Collections</span></span>](../../concepts/collections.md)
-- [<span data-ttu-id="0effc-115">For Each...Next (instrucción)</span><span class="sxs-lookup"><span data-stu-id="0effc-115">For Each...Next Statement</span></span>](../../../language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="60598-112">Matrices</span><span class="sxs-lookup"><span data-stu-id="60598-112">Arrays</span></span>](index.md)
+- [<span data-ttu-id="60598-113">Solución de problemas de matrices</span><span class="sxs-lookup"><span data-stu-id="60598-113">Troubleshooting Arrays</span></span>](troubleshooting-arrays.md)
+- [<span data-ttu-id="60598-114">Colecciones</span><span class="sxs-lookup"><span data-stu-id="60598-114">Collections</span></span>](../../concepts/collections.md)
+- [<span data-ttu-id="60598-115">For Each...Next (instrucción)</span><span class="sxs-lookup"><span data-stu-id="60598-115">For Each...Next Statement</span></span>](../../../language-reference/statements/for-each-next-statement.md)

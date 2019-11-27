@@ -9,22 +9,22 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336106"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a><span data-ttu-id="07b63-102">How to: Load XML from a File (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07b63-102">How to: Load XML from a File (Visual Basic)</span></span>
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a><span data-ttu-id="fb98c-102">Cómo: cargar XML desde un archivo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb98c-102">How to: Load XML from a File (Visual Basic)</span></span>
 
-<span data-ttu-id="07b63-103">En este tema se muestra cómo cargar XML de una dirección URI usando el método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="07b63-103">This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="fb98c-103">En este tema se muestra cómo cargar XML de una dirección URI usando el método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fb98c-103">This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> method.</span></span>
 
-## <a name="example"></a><span data-ttu-id="07b63-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="07b63-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fb98c-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fb98c-104">Example</span></span>
 
-<span data-ttu-id="07b63-105">El siguiente ejemplo muestra cómo cargar un documento XML desde un archivo.</span><span class="sxs-lookup"><span data-stu-id="07b63-105">The following example shows how to load an XML document from a file.</span></span> <span data-ttu-id="07b63-106">El siguiente ejemplo carga books.xml y produce el árbol XML en la consola.</span><span class="sxs-lookup"><span data-stu-id="07b63-106">The following example loads books.xml and outputs the XML tree to the console.</span></span>
+<span data-ttu-id="fb98c-105">El siguiente ejemplo muestra cómo cargar un documento XML desde un archivo.</span><span class="sxs-lookup"><span data-stu-id="fb98c-105">The following example shows how to load an XML document from a file.</span></span> <span data-ttu-id="fb98c-106">El siguiente ejemplo carga books.xml y produce el árbol XML en la consola.</span><span class="sxs-lookup"><span data-stu-id="fb98c-106">The following example loads books.xml and outputs the XML tree to the console.</span></span>
 
-<span data-ttu-id="07b63-107">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="07b63-107">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
+<span data-ttu-id="fb98c-107">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="fb98c-107">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
 
 ```vb
 Dim booksFromFile As XElement = XElement.Load("books.xml")
 Console.WriteLine(booksFromFile)
 ```
 
-<span data-ttu-id="07b63-108">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="07b63-108">This code produces the following output:</span></span>
+<span data-ttu-id="fb98c-108">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="fb98c-108">This code produces the following output:</span></span>
 
 ```xml
 <Catalog>
@@ -50,6 +50,6 @@ Console.WriteLine(booksFromFile)
 </Catalog>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="07b63-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="07b63-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb98c-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="fb98c-109">See also</span></span>
 
-- [<span data-ttu-id="07b63-110">Parsing XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07b63-110">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="fb98c-110">Analizar XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb98c-110">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

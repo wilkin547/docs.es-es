@@ -13,18 +13,18 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430678"
 ---
-# <a name="metadata-unions"></a><span data-ttu-id="8c776-102">Uniones de metadatos</span><span class="sxs-lookup"><span data-stu-id="8c776-102">Metadata Unions</span></span>
-<span data-ttu-id="8c776-103">En esta sección se describen las uniones no administradas que utiliza la API de metadatos.</span><span class="sxs-lookup"><span data-stu-id="8c776-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  
+# <a name="metadata-unions"></a><span data-ttu-id="160d5-102">Uniones de metadatos</span><span class="sxs-lookup"><span data-stu-id="160d5-102">Metadata Unions</span></span>
+<span data-ttu-id="160d5-103">En esta sección se describen las uniones no administradas que utiliza la API de metadatos.</span><span class="sxs-lookup"><span data-stu-id="160d5-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8c776-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="8c776-104">In This Section</span></span>  
- [<span data-ttu-id="8c776-105">CeeSectionRelocExtra (unión)</span><span class="sxs-lookup"><span data-stu-id="8c776-105">CeeSectionRelocExtra Union</span></span>](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- <span data-ttu-id="8c776-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span><span class="sxs-lookup"><span data-stu-id="8c776-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="160d5-104">Esta sección</span><span class="sxs-lookup"><span data-stu-id="160d5-104">In This Section</span></span>  
+ [<span data-ttu-id="160d5-105">CeeSectionRelocExtra (unión)</span><span class="sxs-lookup"><span data-stu-id="160d5-105">CeeSectionRelocExtra Union</span></span>](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
+ <span data-ttu-id="160d5-106">Representa un desplazamiento de dirección que se usa en la interfaz [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) para reubicar una sección.</span><span class="sxs-lookup"><span data-stu-id="160d5-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="8c776-107">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="8c776-107">Related Sections</span></span>  
- [<span data-ttu-id="8c776-108">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="8c776-108">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="160d5-107">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="160d5-107">Related Sections</span></span>  
+ [<span data-ttu-id="160d5-108">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="160d5-108">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [<span data-ttu-id="8c776-109">Funciones estáticas globales para metadatos</span><span class="sxs-lookup"><span data-stu-id="8c776-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [<span data-ttu-id="160d5-109">Funciones estáticas globales para metadatos</span><span class="sxs-lookup"><span data-stu-id="160d5-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [<span data-ttu-id="8c776-110">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="8c776-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [<span data-ttu-id="160d5-110">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="160d5-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [<span data-ttu-id="8c776-111">Estructuras de metadatos</span><span class="sxs-lookup"><span data-stu-id="8c776-111">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+ [<span data-ttu-id="160d5-111">Estructuras de metadatos</span><span class="sxs-lookup"><span data-stu-id="160d5-111">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

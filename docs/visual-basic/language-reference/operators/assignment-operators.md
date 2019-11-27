@@ -14,31 +14,31 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336550"
 ---
-# <a name="assignment-operators-visual-basic"></a><span data-ttu-id="2b9ac-102">Operadores de asignación (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b9ac-102">Assignment Operators (Visual Basic)</span></span>
-<span data-ttu-id="2b9ac-103">The following are the assignment operators defined in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2b9ac-103">The following are the assignment operators defined in Visual Basic.</span></span>  
+# <a name="assignment-operators-visual-basic"></a><span data-ttu-id="313b7-102">Operadores de asignación (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="313b7-102">Assignment Operators (Visual Basic)</span></span>
+<span data-ttu-id="313b7-103">A continuación se muestran los operadores de asignación definidos en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="313b7-103">The following are the assignment operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="2b9ac-104">Operador =</span><span class="sxs-lookup"><span data-stu-id="2b9ac-104">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [<span data-ttu-id="313b7-104">Operador =</span><span class="sxs-lookup"><span data-stu-id="313b7-104">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-105">Operador ^=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-105">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [<span data-ttu-id="313b7-105">Operador ^=</span><span class="sxs-lookup"><span data-stu-id="313b7-105">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-106">Operador \*=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-106">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [<span data-ttu-id="313b7-106">Operador \*=</span><span class="sxs-lookup"><span data-stu-id="313b7-106">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-107">Operador /=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-107">/= Operator</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [<span data-ttu-id="313b7-107">Operador /=</span><span class="sxs-lookup"><span data-stu-id="313b7-107">/= Operator</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-108">\\= Operator</span><span class="sxs-lookup"><span data-stu-id="2b9ac-108">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [<span data-ttu-id="313b7-108">\\= (operador)</span><span class="sxs-lookup"><span data-stu-id="313b7-108">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-109">Operador +=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-109">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [<span data-ttu-id="313b7-109">Operador +=</span><span class="sxs-lookup"><span data-stu-id="313b7-109">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-110">Operador -=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-110">-= Operator</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
+ [<span data-ttu-id="313b7-110">Operador -=</span><span class="sxs-lookup"><span data-stu-id="313b7-110">-= Operator</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-111"><\<= Operator</span><span class="sxs-lookup"><span data-stu-id="2b9ac-111"><\<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<span data-ttu-id="313b7-111"><\<= (operador)</span><span class="sxs-lookup"><span data-stu-id="313b7-111"><\<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-112">Operador >>=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-112">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [<span data-ttu-id="313b7-112">Operador >>=</span><span class="sxs-lookup"><span data-stu-id="313b7-112">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
- [<span data-ttu-id="2b9ac-113">Operador &=</span><span class="sxs-lookup"><span data-stu-id="2b9ac-113">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [<span data-ttu-id="313b7-113">Operador &=</span><span class="sxs-lookup"><span data-stu-id="313b7-113">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2b9ac-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b9ac-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="313b7-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="313b7-114">See also</span></span>
 
-- [<span data-ttu-id="2b9ac-115">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2b9ac-115">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="2b9ac-116">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="2b9ac-116">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="2b9ac-117">Instrucciones</span><span class="sxs-lookup"><span data-stu-id="2b9ac-117">Statements</span></span>](../../../visual-basic/language-reference/statements/index.md)
+- [<span data-ttu-id="313b7-115">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="313b7-115">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="313b7-116">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="313b7-116">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="313b7-117">Instrucciones</span><span class="sxs-lookup"><span data-stu-id="313b7-117">Statements</span></span>](../../../visual-basic/language-reference/statements/index.md)

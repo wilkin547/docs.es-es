@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439308"
 ---
-# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="5488b-102">ICorProfilerCallback4::ReJITCompilationFinished (Método)</span><span class="sxs-lookup"><span data-stu-id="5488b-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
-<span data-ttu-id="5488b-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span><span class="sxs-lookup"><span data-stu-id="5488b-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
+# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="db32c-102">ICorProfilerCallback4::ReJITCompilationFinished (Método)</span><span class="sxs-lookup"><span data-stu-id="db32c-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
+<span data-ttu-id="db32c-103">Notifica al generador de perfiles que el compilador Just-in-Time (JIT) ha terminado de volver a compilar una función.</span><span class="sxs-lookup"><span data-stu-id="db32c-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5488b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5488b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db32c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="db32c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ReJITCompilationFinished(  
@@ -34,33 +34,33 @@ HRESULT ReJITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5488b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5488b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db32c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="db32c-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="5488b-106">[in] The ID of the function that was recompiled.</span><span class="sxs-lookup"><span data-stu-id="5488b-106">[in] The ID of the function that was recompiled.</span></span>  
+ <span data-ttu-id="db32c-106">de IDENTIFICADOR de la función que se volvió a compilar.</span><span class="sxs-lookup"><span data-stu-id="db32c-106">[in] The ID of the function that was recompiled.</span></span>  
   
  `rejitId`  
- <span data-ttu-id="5488b-107">[in] Identidad de la función recompilada con JIT.</span><span class="sxs-lookup"><span data-stu-id="5488b-107">[in] The identity of the JIT-recompiled function.</span></span>  
+ <span data-ttu-id="db32c-107">[in] Identidad de la función recompilada con JIT.</span><span class="sxs-lookup"><span data-stu-id="db32c-107">[in] The identity of the JIT-recompiled function.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="5488b-108">[in] A value that indicates whether the JIT recompilation was successful.</span><span class="sxs-lookup"><span data-stu-id="5488b-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
+ <span data-ttu-id="db32c-108">de Valor que indica si la recompilación JIT se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="db32c-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="5488b-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span><span class="sxs-lookup"><span data-stu-id="5488b-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
+ <span data-ttu-id="db32c-109">[in] `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="db32c-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
   
- <span data-ttu-id="5488b-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span><span class="sxs-lookup"><span data-stu-id="5488b-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
+ <span data-ttu-id="db32c-110">Un valor de `true` no perjudica al tiempo de ejecución, pero puede afectar a los resultados de la generación de perfiles.</span><span class="sxs-lookup"><span data-stu-id="db32c-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5488b-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5488b-111">Requirements</span></span>  
- <span data-ttu-id="5488b-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5488b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db32c-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="db32c-111">Requirements</span></span>  
+ <span data-ttu-id="db32c-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db32c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5488b-113">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5488b-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="db32c-113">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="db32c-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5488b-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5488b-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="db32c-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db32c-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5488b-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5488b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="db32c-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db32c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5488b-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="5488b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db32c-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="db32c-116">See also</span></span>
 
-- [<span data-ttu-id="5488b-117">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5488b-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="5488b-118">ICorProfilerCallback4 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5488b-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="5488b-119">JITCompilationStarted (método)</span><span class="sxs-lookup"><span data-stu-id="5488b-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="5488b-120">ReJITCompilationStarted (método)</span><span class="sxs-lookup"><span data-stu-id="5488b-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [<span data-ttu-id="db32c-117">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db32c-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="db32c-118">ICorProfilerCallback4 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db32c-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="db32c-119">JITCompilationStarted (método)</span><span class="sxs-lookup"><span data-stu-id="db32c-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="db32c-120">ReJITCompilationStarted (método)</span><span class="sxs-lookup"><span data-stu-id="db32c-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

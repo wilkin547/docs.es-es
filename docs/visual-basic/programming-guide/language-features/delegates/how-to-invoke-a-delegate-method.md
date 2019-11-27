@@ -9,19 +9,19 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345265"
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="9d783-102">Cómo: Invocar un método delegado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d783-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="55204-102">Cómo: Invocar un método delegado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55204-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
 
-<span data-ttu-id="9d783-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span><span class="sxs-lookup"><span data-stu-id="9d783-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>
+<span data-ttu-id="55204-103">En este ejemplo se muestra cómo asociar un método a un delegado y, a continuación, invocar ese método a través del delegado.</span><span class="sxs-lookup"><span data-stu-id="55204-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>
 
-### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="9d783-104">Create the delegate and matching procedures</span><span class="sxs-lookup"><span data-stu-id="9d783-104">Create the delegate and matching procedures</span></span>
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="55204-104">Crear el delegado y los procedimientos coincidentes</span><span class="sxs-lookup"><span data-stu-id="55204-104">Create the delegate and matching procedures</span></span>
 
-1. <span data-ttu-id="9d783-105">Create a delegate named `MySubDelegate`.</span><span class="sxs-lookup"><span data-stu-id="9d783-105">Create a delegate named `MySubDelegate`.</span></span>
+1. <span data-ttu-id="55204-105">Cree un delegado denominado `MySubDelegate`.</span><span class="sxs-lookup"><span data-stu-id="55204-105">Create a delegate named `MySubDelegate`.</span></span>
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. <span data-ttu-id="9d783-106">Declare a class that contains a method with the same signature as the delegate.</span><span class="sxs-lookup"><span data-stu-id="9d783-106">Declare a class that contains a method with the same signature as the delegate.</span></span>
+2. <span data-ttu-id="55204-106">Declare una clase que contenga un método con la misma firma que el delegado.</span><span class="sxs-lookup"><span data-stu-id="55204-106">Declare a class that contains a method with the same signature as the delegate.</span></span>
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ ms.locfileid: "74345265"
     End Class
     ```
 
-3. <span data-ttu-id="9d783-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span><span class="sxs-lookup"><span data-stu-id="9d783-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>
+3. <span data-ttu-id="55204-107">Defina un método que cree una instancia del delegado e invoque el método asociado al delegado llamando al método integrado `Invoke`.</span><span class="sxs-lookup"><span data-stu-id="55204-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,9 +43,9 @@ ms.locfileid: "74345265"
     End Sub
     ```
 
-## <a name="see-also"></a><span data-ttu-id="9d783-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d783-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55204-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="55204-108">See also</span></span>
 
-- [<span data-ttu-id="9d783-109">Delegate (instrucción)</span><span class="sxs-lookup"><span data-stu-id="9d783-109">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="9d783-110">Delegados</span><span class="sxs-lookup"><span data-stu-id="9d783-110">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="9d783-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="9d783-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [<span data-ttu-id="9d783-112">Aplicaciones multiproceso</span><span class="sxs-lookup"><span data-stu-id="9d783-112">Multithreaded Applications</span></span>](../../../../standard/threading/using-threads-and-threading.md)
+- [<span data-ttu-id="55204-109">Delegate (instrucción)</span><span class="sxs-lookup"><span data-stu-id="55204-109">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="55204-110">Delegados</span><span class="sxs-lookup"><span data-stu-id="55204-110">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="55204-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="55204-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="55204-112">Aplicaciones multiproceso</span><span class="sxs-lookup"><span data-stu-id="55204-112">Multithreaded Applications</span></span>](../../../../standard/threading/using-threads-and-threading.md)

@@ -21,10 +21,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443870"
 ---
-# <a name="corattributetargets-enumeration"></a><span data-ttu-id="efa54-102">CorAttributeTargets (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="efa54-102">CorAttributeTargets Enumeration</span></span>
-<span data-ttu-id="efa54-103">Especifica los elementos de aplicación en los que se permite aplicar un atributo.</span><span class="sxs-lookup"><span data-stu-id="efa54-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
+# <a name="corattributetargets-enumeration"></a><span data-ttu-id="41607-102">CorAttributeTargets (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="41607-102">CorAttributeTargets Enumeration</span></span>
+<span data-ttu-id="41607-103">Especifica los elementos de aplicación en los que se permite aplicar un atributo.</span><span class="sxs-lookup"><span data-stu-id="41607-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efa54-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="efa54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41607-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="41607-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorAttributeTargets  
@@ -58,39 +58,39 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="efa54-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="efa54-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="41607-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="41607-105">Members</span></span>  
   
-|<span data-ttu-id="efa54-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="efa54-106">Member</span></span>|<span data-ttu-id="efa54-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="efa54-107">Description</span></span>|  
+|<span data-ttu-id="41607-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="41607-106">Member</span></span>|<span data-ttu-id="41607-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="41607-107">Description</span></span>|  
 |------------|-----------------|  
-|`catAssembly`|<span data-ttu-id="efa54-108">Attribute can be applied to an assembly.</span><span class="sxs-lookup"><span data-stu-id="efa54-108">Attribute can be applied to an assembly.</span></span>|  
-|`catModule`|<span data-ttu-id="efa54-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span><span class="sxs-lookup"><span data-stu-id="efa54-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
-|`catClass`|<span data-ttu-id="efa54-110">Attribute can be applied to a class.</span><span class="sxs-lookup"><span data-stu-id="efa54-110">Attribute can be applied to a class.</span></span>|  
-|`catStruct`|<span data-ttu-id="efa54-111">Attribute can be applied to a structure; that is, a value type.</span><span class="sxs-lookup"><span data-stu-id="efa54-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
-|`catEnum`|<span data-ttu-id="efa54-112">Attribute can be applied to an enumeration.</span><span class="sxs-lookup"><span data-stu-id="efa54-112">Attribute can be applied to an enumeration.</span></span>|  
-|`catConstructor`|<span data-ttu-id="efa54-113">Attribute can be applied to a constructor.</span><span class="sxs-lookup"><span data-stu-id="efa54-113">Attribute can be applied to a constructor.</span></span>|  
-|`catMethod`|<span data-ttu-id="efa54-114">Attribute can be applied to a method.</span><span class="sxs-lookup"><span data-stu-id="efa54-114">Attribute can be applied to a method.</span></span>|  
-|`catProperty`|<span data-ttu-id="efa54-115">Attribute can be applied to a property.</span><span class="sxs-lookup"><span data-stu-id="efa54-115">Attribute can be applied to a property.</span></span>|  
-|`catField`|<span data-ttu-id="efa54-116">Attribute can be applied to a field.</span><span class="sxs-lookup"><span data-stu-id="efa54-116">Attribute can be applied to a field.</span></span>|  
-|`catEvent`|<span data-ttu-id="efa54-117">Attribute can be applied to an event.</span><span class="sxs-lookup"><span data-stu-id="efa54-117">Attribute can be applied to an event.</span></span>|  
-|`catInterface`|<span data-ttu-id="efa54-118">Attribute can be applied to an interface.</span><span class="sxs-lookup"><span data-stu-id="efa54-118">Attribute can be applied to an interface.</span></span>|  
-|`catParameter`|<span data-ttu-id="efa54-119">Attribute can be applied to a parameter.</span><span class="sxs-lookup"><span data-stu-id="efa54-119">Attribute can be applied to a parameter.</span></span>|  
-|`catDelegate`|<span data-ttu-id="efa54-120">Attribute can be applied to a delegate.</span><span class="sxs-lookup"><span data-stu-id="efa54-120">Attribute can be applied to a delegate.</span></span>|  
-|`catGenericParameter`|<span data-ttu-id="efa54-121">Attribute can be applied to a generic parameter.</span><span class="sxs-lookup"><span data-stu-id="efa54-121">Attribute can be applied to a generic parameter.</span></span>|  
-|`catAll`|<span data-ttu-id="efa54-122">Attribute can be applied to any application element.</span><span class="sxs-lookup"><span data-stu-id="efa54-122">Attribute can be applied to any application element.</span></span>|  
-|`catClassMembers`|<span data-ttu-id="efa54-123">Attribute can be applied to a member of a class.</span><span class="sxs-lookup"><span data-stu-id="efa54-123">Attribute can be applied to a member of a class.</span></span>|  
+|`catAssembly`|<span data-ttu-id="41607-108">El atributo se puede aplicar a un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="41607-108">Attribute can be applied to an assembly.</span></span>|  
+|`catModule`|<span data-ttu-id="41607-109">El atributo se puede aplicar a un módulo ejecutable portable (. dll o. exe).</span><span class="sxs-lookup"><span data-stu-id="41607-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
+|`catClass`|<span data-ttu-id="41607-110">El atributo se puede aplicar a una clase.</span><span class="sxs-lookup"><span data-stu-id="41607-110">Attribute can be applied to a class.</span></span>|  
+|`catStruct`|<span data-ttu-id="41607-111">El atributo se puede aplicar a una estructura; es decir, un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="41607-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
+|`catEnum`|<span data-ttu-id="41607-112">El atributo se puede aplicar a una enumeración.</span><span class="sxs-lookup"><span data-stu-id="41607-112">Attribute can be applied to an enumeration.</span></span>|  
+|`catConstructor`|<span data-ttu-id="41607-113">El atributo se puede aplicar a un constructor.</span><span class="sxs-lookup"><span data-stu-id="41607-113">Attribute can be applied to a constructor.</span></span>|  
+|`catMethod`|<span data-ttu-id="41607-114">El atributo se puede aplicar a un método.</span><span class="sxs-lookup"><span data-stu-id="41607-114">Attribute can be applied to a method.</span></span>|  
+|`catProperty`|<span data-ttu-id="41607-115">El atributo se puede aplicar a una propiedad.</span><span class="sxs-lookup"><span data-stu-id="41607-115">Attribute can be applied to a property.</span></span>|  
+|`catField`|<span data-ttu-id="41607-116">El atributo se puede aplicar a un campo.</span><span class="sxs-lookup"><span data-stu-id="41607-116">Attribute can be applied to a field.</span></span>|  
+|`catEvent`|<span data-ttu-id="41607-117">El atributo se puede aplicar a un evento.</span><span class="sxs-lookup"><span data-stu-id="41607-117">Attribute can be applied to an event.</span></span>|  
+|`catInterface`|<span data-ttu-id="41607-118">El atributo se puede aplicar a una interfaz.</span><span class="sxs-lookup"><span data-stu-id="41607-118">Attribute can be applied to an interface.</span></span>|  
+|`catParameter`|<span data-ttu-id="41607-119">El atributo se puede aplicar a un parámetro.</span><span class="sxs-lookup"><span data-stu-id="41607-119">Attribute can be applied to a parameter.</span></span>|  
+|`catDelegate`|<span data-ttu-id="41607-120">El atributo se puede aplicar a un delegado.</span><span class="sxs-lookup"><span data-stu-id="41607-120">Attribute can be applied to a delegate.</span></span>|  
+|`catGenericParameter`|<span data-ttu-id="41607-121">El atributo se puede aplicar a un parámetro genérico.</span><span class="sxs-lookup"><span data-stu-id="41607-121">Attribute can be applied to a generic parameter.</span></span>|  
+|`catAll`|<span data-ttu-id="41607-122">El atributo se puede aplicar a cualquier elemento de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="41607-122">Attribute can be applied to any application element.</span></span>|  
+|`catClassMembers`|<span data-ttu-id="41607-123">El atributo se puede aplicar a un miembro de una clase.</span><span class="sxs-lookup"><span data-stu-id="41607-123">Attribute can be applied to a member of a class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efa54-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="efa54-124">Remarks</span></span>  
- <span data-ttu-id="efa54-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span><span class="sxs-lookup"><span data-stu-id="efa54-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41607-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="41607-124">Remarks</span></span>  
+ <span data-ttu-id="41607-125">Los valores de enumeración de `CorAttributeTargets` se pueden combinar con una operación OR bit a bit para obtener la combinación preferida.</span><span class="sxs-lookup"><span data-stu-id="41607-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
   
- <span data-ttu-id="efa54-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span><span class="sxs-lookup"><span data-stu-id="efa54-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
+ <span data-ttu-id="41607-126">El `CorAttributeTargets` en paralelo a la enumeración de <xref:System.AttributeTargets?displayProperty=nameWithType> administrados.</span><span class="sxs-lookup"><span data-stu-id="41607-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efa54-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="efa54-127">Requirements</span></span>  
- <span data-ttu-id="efa54-128">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efa54-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41607-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="41607-127">Requirements</span></span>  
+ <span data-ttu-id="41607-128">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41607-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efa54-129">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="efa54-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="41607-129">**Encabezado:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="41607-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="efa54-130">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efa54-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="41607-130">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41607-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efa54-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="efa54-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41607-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="41607-131">See also</span></span>
 
-- [<span data-ttu-id="efa54-132">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="efa54-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="41607-132">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="41607-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
