@@ -22,7 +22,7 @@ ms.locfileid: "74446890"
 > Si la aplicación cliente intenta buscar elementos en su propia interfaz de usuario, debe realizar todos las llamadas a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en un subproceso independiente. Para obtener más información, consulta [UI Automation Threading Issues](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
-## <a name="root-element"></a>Elemento raíz  
+## <a name="root-element"></a>Elemento Root  
  Todas las búsquedas de objetos <xref:System.Windows.Automation.AutomationElement> deben tener un punto de inicio. Puede ser cualquier elemento, incluidos el escritorio, una ventana de aplicación o un control.  
   
  El elemento raíz para el escritorio, del que descienden todos los elementos, se obtiene de la propiedad estática <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> .  

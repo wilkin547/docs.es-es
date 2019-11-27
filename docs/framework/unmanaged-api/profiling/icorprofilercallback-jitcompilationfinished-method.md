@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449922"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished (Método)
-Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
+Notifica al generador de perfiles que el compilador Just-in-Time (JIT) ha terminado de compilar una función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,15 +36,15 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] The ID of the function that was compiled.  
+ de IDENTIFICADOR de la función que se compiló.  
   
  `hrStatus`  
- [in] A value indicating whether compilation was successful.  
+ de Valor que indica si la compilación se realizó correctamente.  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ de Un valor que indica al generador de perfiles si el bloqueo afectará al funcionamiento del tiempo de ejecución. El valor es `true` si el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; de lo contrario, `false`.  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ Aunque el valor `true` no perjudicará el tiempo de ejecución, puede sesgar los resultados de la generación de perfiles.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

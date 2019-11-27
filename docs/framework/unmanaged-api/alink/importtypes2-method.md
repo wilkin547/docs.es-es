@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445665"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 (Método)
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+Inicia la importación de tipos. Llame a este método para empezar a importar los tipos de cada ámbito importado mediante el [método importFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of assembly into which to import.  
+ IDENTIFICADOR del ensamblado en el que se va a importar.  
   
  `FileToken`  
- ID of file to from which to import.  
+ IDENTIFICADOR del archivo desde el que se va a importar.  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ Ámbito de base cero desde el que se va a importar.  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ Recibe el identificador de enumerador para los tipos en el ámbito especificado.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ Opcionalmente, recibe la interfaz de [interfaz IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ Opcionalmente, recibe el recuento de tipos en el ámbito especificado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

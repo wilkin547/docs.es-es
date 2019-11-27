@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442873"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 (Método)
-Returns the size of a specified object. Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.  
+Devuelve el tamaño de un objeto especificado. Reemplaza el método [ICorProfilerInfo:: GetObjectSize (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) mediante la creación de informes de tamaños de objetos mayores de lo que se puede expresar en un `ULONG`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT GetObjectSize2(
   
 ## <a name="parameters"></a>Parámetros  
  `objectId`  
- [in] The ID of the object.  
+ de IDENTIFICADOR del objeto.  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ enuncia Puntero al tamaño del objeto, en bytes.  
   
 ## <a name="remarks"></a>Comentarios  
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+ A menudo, los distintos objetos de los mismos tipos tienen el mismo tamaño. Sin embargo, algunos tipos, como matrices o cadenas, pueden tener un tamaño diferente para cada objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

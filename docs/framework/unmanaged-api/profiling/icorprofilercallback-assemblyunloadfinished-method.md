@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445150"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished (Método)
-Notifies the profiler that an assembly has been unloaded.  
+Notifica al generador de perfiles que se ha descargado un ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +35,15 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ de Identifica el ensamblado que se está descargando.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly was unloaded successfully.  
+ de HRESULT que indica si el ensamblado se ha descargado correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.  
+ El valor de `assemblyId` no es válido para una solicitud de información después de que se devuelva el método [ICorProfilerCallback:: assemblyunloadstarted (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) .  
   
- Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.  
+ Algunas partes de la descarga del ensamblado pueden continuar después de la devolución de llamada de `AssemblyUnloadFinished`. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` solo indica que la primera parte de la descarga del ensamblado se ha realizado correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

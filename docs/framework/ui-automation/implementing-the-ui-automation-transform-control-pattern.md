@@ -39,9 +39,9 @@ ms.locfileid: "74447057"
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propiedad|Ninguno|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Método|Ninguno|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Método|Ninguno|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Método|Ninguno|  
@@ -54,14 +54,14 @@ ms.locfileid: "74447057"
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -Si el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> es false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -Si el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> es false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -Si el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> es false.|  
   
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)

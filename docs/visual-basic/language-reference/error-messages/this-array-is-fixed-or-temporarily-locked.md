@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350785"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Esta matriz es fija o está bloqueada temporalmente (Visual Basic)
-This error has the following possible causes:  
+Este error tiene las siguientes causas posibles:  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- Usar `ReDim` para cambiar el número de elementos de una matriz de tamaño fijo.  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Redimensionar una matriz dinámica de nivel de módulo, en la que se ha pasado un elemento como argumento a un procedimiento. Si se pasa un elemento, la matriz está bloqueada para evitar la desasignación de memoria para el parámetro de referencia dentro del procedimiento.  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- Se intentó asignar un valor a una variable `Variant` que contiene una matriz, pero el `Variant` está bloqueado actualmente.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. Haga que la matriz original sea dinámica en lugar de fija declarándola con `ReDim` (si la matriz se declara dentro de un procedimiento) o declarándolo sin especificar el número de elementos (si la matriz se declara en el nivel de módulo).  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. Determine si realmente necesita pasar el elemento, ya que es visible en todos los procedimientos del módulo.  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. Determine qué está bloqueando el `Variant` y Remedy.  
   
 ## <a name="see-also"></a>Vea también
 

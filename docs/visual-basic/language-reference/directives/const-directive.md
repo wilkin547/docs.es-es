@@ -24,7 +24,7 @@ ms.locfileid: "74343842"
 ---
 # <a name="const-directive"></a>#Const (Directiva)
 
-Defines conditional compiler constants for Visual Basic.  
+Define constantes de compilador condicionales para Visual Basic.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,16 +35,16 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>Elementos  
 
  `constname`  
- Requerido. Name of the constant being defined.  
+ Obligatorio. Nombre de la constante que se está definiendo.  
   
  `expression`  
- Requerido. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ Obligatorio. Literal, otra constante del compilador condicional o cualquier combinación que incluya todos o todos los operadores aritméticos o lógicos excepto `Is`.  
   
 ## <a name="remarks"></a>Comentarios  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ Las constantes de compilador condicionales siempre son privadas en el archivo en el que aparecen. No se pueden crear constantes del compilador públicas mediante la Directiva `#Const`; solo puede crearlos en la interfaz de usuario o con la opción del compilador `/define`.  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ Solo se pueden usar constantes y literales de compilador condicionales en `expression`. El uso de una constante estándar definida con `Const` produce un error. Por el contrario, puede usar constantes definidas con la palabra clave `#Const` solo para la compilación condicional. Las constantes también pueden ser undefined, en cuyo caso tienen un valor de `Nothing`.  
   
 ## <a name="example"></a>Ejemplo  
 

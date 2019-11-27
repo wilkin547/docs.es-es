@@ -22,23 +22,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432226"
 ---
 # <a name="imaptoken-interface"></a>IMapToken (Interfaz)
-Provides mapping capabilities between assemblies.  
+Proporciona funciones de asignación entre ensamblados.  
   
 > [!NOTE]
-> The `IMapToken` interface must be implemented by the client.  
+> La interfaz de `IMapToken` debe ser implementada por el cliente.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Map (método)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Maps a relationship between two assemblies using metadata signatures.|  
+|[Map (método)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Asigna una relación entre dos ensamblados mediante firmas de metadatos.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

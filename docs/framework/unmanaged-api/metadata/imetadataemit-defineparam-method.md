@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431689"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam (Método)
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+Crea una definición de parámetro con la firma especificada para el método al que hace referencia el token especificado y obtiene un token para esa definición de parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parámetros  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ de El token para el método cuyo parámetro se está definiendo.  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ de El número de secuencia del parámetro.  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ de Nombre del parámetro en Unicode.  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ de Marcas para el parámetro. Se trata de una máscara de máscara de valores `CorParamAttr`.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] `ELEMENT_TYPE_` *\** para el valor constante.  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ de Valor constante para el parámetro.  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ de Tamaño, en caracteres Unicode, de `pValue`.  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ enuncia El token de `mdParamDef` asignado.  
   
 ## <a name="remarks"></a>Comentarios  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+ Los valores de secuencia de `ulParamSeq` comienzan por 1 para los parámetros. Un valor devuelto tiene un número de secuencia de 0.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

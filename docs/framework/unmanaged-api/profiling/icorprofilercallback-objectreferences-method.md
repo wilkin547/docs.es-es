@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445890"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences (Método)
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+Notifica al generador de perfiles sobre los objetos de memoria a los que hace referencia el objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,25 +37,25 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>Parámetros  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ de IDENTIFICADOR del objeto que hace referencia a los objetos.  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ de IDENTIFICADOR de la clase de la que el objeto especificado es una instancia de.  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ de El número de objetos a los que hace referencia el objeto especificado (es decir, el número de elementos de la matriz `objectRefIds`).  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ de Matriz de identificadores de los objetos a los que hace referencia `objectId`.  
   
 ## <a name="remarks"></a>Comentarios  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+ Se llama al método `ObjectReferences` para cada objeto restante en el montón después de que se haya completado una recolección de elementos no utilizados. Si el generador de perfiles devuelve un error de esta devolución de llamada, los servicios de generación de perfiles interrumpirán la invocación de esta devolución de llamada hasta la siguiente recolección de elementos no utilizados.  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ La devolución de llamada de `ObjectReferences` se puede usar junto con la devolución de llamada [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) para crear un gráfico de referencia de objeto completo para el tiempo de ejecución. El Common Language Runtime (CLR) garantiza que cada referencia de objeto se notifique solo una vez por el método `ObjectReferences`.  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ Los identificadores de objeto devueltos por `ObjectReferences` no son válidos durante la devolución de llamada, ya que la recolección de elementos no utilizados podría estar en medio de mover objetos. Por lo tanto, los perfiles no deben intentar inspeccionar objetos durante una llamada `ObjectReferences`. Cuando se llama a [ICorProfilerCallback2:: garbagecollectionfinished (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) , se completa la recolección de elementos no utilizados y se puede realizar la inspección de forma segura.  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ Un valor null `ClassId` indica que `objectId` tiene un tipo que se está descargando.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

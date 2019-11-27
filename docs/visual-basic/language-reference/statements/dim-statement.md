@@ -38,7 +38,7 @@ ms.locfileid: "74343767"
 ---
 # <a name="dim-statement-visual-basic"></a>Instrucción Dim (Visual Basic)
 
-Declares and allocates storage space for one or more variables.
+Declara y asigna espacio de almacenamiento para una o más variables.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,7 +51,7 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  Opcional. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+  Opcional. Vea [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 - `accessmodifier`
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  Opcional. See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
+  Opcional. Vea [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  Opcional. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  Opcional. Vea [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Static`
 
-  Opcional. See [Static](../../../visual-basic/language-reference/modifiers/static.md).
+  Opcional. Vea [static](../../../visual-basic/language-reference/modifiers/static.md).
 
 - `ReadOnly`
 
-  Opcional. See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  Opcional. Vea [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
 
 - `WithEvents`
 
-Opcional. Specifies that these are object variables that refer to instances of a class that can raise events. See [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+Opcional. Especifica que se trata de variables de objeto que hacen referencia a las instancias de una clase que puede generar eventos. Vea [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
 
 - `variablelist`
 
-  Requerido. List of variables being declared in this statement.
+  Obligatorio. Lista de variables que se declaran en esta instrucción.
 
   `variable [ , variable ... ]`
 
@@ -103,43 +103,43 @@ Opcional. Specifies that these are object variables that refer to instances of a
 
   |Parte|Descripción|
   |---|---|
-  |`variablename`|Requerido. Nombre de la variable. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|Opcional. List of bounds of each dimension of an array variable.|
-  |`New`|Opcional. Creates a new instance of the class when the `Dim` statement runs.|
-  |`datatype`|Opcional. Data type of the variable.|
-  |`With`|Opcional. Introduces the object initializer list.|
-  |`propertyname`|Opcional. The name of a property in the class you are making an instance of.|
-  |`propinitializer`|Required after `propertyname` =. The expression that is evaluated and assigned to the property name.|
-  |`initializer`|Optional if `New` is not specified. Expression that is evaluated and assigned to the variable when it is created.|
+  |`variablename`|Obligatorio. nombre de la variable. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|Opcional. Lista de los límites de cada dimensión de una variable de matriz.|
+  |`New`|Opcional. Crea una nueva instancia de la clase cuando se ejecuta la instrucción `Dim`.|
+  |`datatype`|Opcional. Tipo de datos de la variable.|
+  |`With`|Opcional. Presenta la lista de inicializadores de objeto.|
+  |`propertyname`|Opcional. Nombre de una propiedad de la clase en la que se va a crear una instancia.|
+  |`propinitializer`|Obligatorio después de `propertyname` =. Expresión que se evalúa y asigna al nombre de la propiedad.|
+  |`initializer`|Opcional si no se especifica `New`. Expresión que se evalúa y se asigna a la variable cuando se crea.|
 
 ## <a name="remarks"></a>Comentarios
 
-The Visual Basic compiler uses the `Dim` statement to determine the variable's data type and other information, such as what code can access the variable. The following example declares a variable to hold an `Integer` value.
+El compilador Visual Basic usa la instrucción `Dim` para determinar el tipo de datos de la variable y otra información, como el código que puede tener acceso a la variable. En el ejemplo siguiente se declara una variable que contiene un valor `Integer`.
 
 ```vb
 Dim numberOfStudents As Integer
 ```
 
-You can specify any data type or the name of an enumeration, structure, class, or interface.
+Puede especificar cualquier tipo de datos o el nombre de una enumeración, estructura, clase o interfaz.
 
 ```vb
 Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form
 ```
 
-For a reference type, you use the `New` keyword to create a new instance of the class or structure that is specified by the data type. If you use `New`, you do not use an initializer expression. Instead, you supply arguments, if they are required, to the constructor of the class from which you are creating the variable.
+Para un tipo de referencia, use la palabra clave `New` para crear una nueva instancia de la clase o la estructura especificada por el tipo de datos. Si utiliza `New`, no utiliza una expresión de inicializador. En su lugar, se proporcionan argumentos, si son necesarios, al constructor de la clase a partir de la cual se crea la variable.
 
 ```vb
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-You can declare a variable in a procedure, block, class, structure, or module. You cannot declare a variable in a source file, namespace, or interface. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
+Puede declarar una variable en un procedimiento, un bloque, una clase, una estructura o un módulo. No se puede declarar una variable en un archivo de código fuente, un espacio de nombres o una interfaz. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
 
-A variable that is declared at module level, outside any procedure, is a *member variable* or *field*. Member variables are in scope throughout their class, structure, or module. A variable that is declared at procedure level is a *local variable*. Local variables are in scope only within their procedure or block.
+Una variable que se declara en el nivel de módulo, fuera de cualquier procedimiento, es una variable o *campo* *miembro* . Las variables de miembro están en el ámbito a lo largo de su clase, estructura o módulo. Una variable que se declara en el nivel de procedimiento es una *variable local*. Las variables locales están en el ámbito solo dentro de su procedimiento o bloque.
 
-The following access modifiers are used to declare variables outside a procedure: `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private`. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Los modificadores de acceso siguientes se usan para declarar variables fuera de un procedimiento: `Public`, `Protected`, `Friend`, `Protected Friend`y `Private`. Para obtener más información, consulte [niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-The `Dim` keyword is optional and usually omitted if you specify any of the following modifiers: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, or `WithEvents`.
+La palabra clave `Dim` es opcional y normalmente se omite si se especifica cualquiera de los siguientes modificadores: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`o `WithEvents`.
 
 ```vb
 Public maximumAllowed As Double
@@ -148,18 +148,18 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-If `Option Explicit` is on (the default), the compiler requires a declaration for every variable you use. For more information, see [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
+Si `Option Explicit` es on (valor predeterminado), el compilador requiere una declaración para cada variable que se use. Para obtener más información, vea [Option Explicit (instrucción](../../../visual-basic/language-reference/statements/option-explicit-statement.md)).
 
-## <a name="specifying-an-initial-value"></a>Specifying an Initial Value
+## <a name="specifying-an-initial-value"></a>Especificar un valor inicial
 
-You can assign a value to a variable when it is created. For a value type, you use an *initializer* to supply an expression to be assigned to the variable. The expression must evaluate to a constant that can be calculated at compile time.
+Puede asignar un valor a una variable cuando se crea. Para un tipo de valor, se usa un *inicializador* para proporcionar una expresión que se va a asignar a la variable. La expresión se debe evaluar como una constante que se puede calcular en tiempo de compilación.
 
 ```vb
 Dim quantity As Integer = 10
 Dim message As String = "Just started"
 ```
 
-If an initializer is specified and a data type is not specified in an `As` clause, *type inference* is used to infer the data type from the initializer. In the following example, both `num1` and `num2` are strongly typed as integers. In the second declaration, type inference infers the type from the value 3.
+Si se especifica un inicializador y no se especifica un tipo de datos en una cláusula `As`, se usa la *inferencia de tipos* para deducir el tipo de datos del inicializador. En el ejemplo siguiente, tanto `num1` como `num2` están fuertemente tipados como enteros. En la segunda declaración, la inferencia de tipos infiere el tipo a partir del valor 3.
 
 ```vb
 ' Use explicit typing.
@@ -169,30 +169,30 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-Type inference applies at the procedure level. It does not apply outside a procedure in a class, structure, module, or interface. For more information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+La inferencia de tipos se aplica en el nivel de procedimiento. No se aplica fuera de un procedimiento en una clase, estructura, módulo o interfaz. Para obtener más información sobre la inferencia de tipos, vea [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [inferencia de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-For information about what happens when a data type or initializer is not specified, see [Default Data Types and Values](../../../visual-basic/language-reference/statements/dim-statement.md#default) later in this topic.
+Para obtener información sobre lo que ocurre cuando no se especifica un tipo de datos o un inicializador, vea [valores y tipos de datos predeterminados](../../../visual-basic/language-reference/statements/dim-statement.md#default) más adelante en este tema.
 
-You can use an *object initializer* to declare instances of named and anonymous types. The following code creates an instance of a `Student` class and uses an object initializer to initialize properties.
+Puede usar un *inicializador de objeto* para declarar instancias de tipos con nombre y anónimos. En el código siguiente se crea una instancia de una clase `Student` y se utiliza un inicializador de objeto para inicializar las propiedades.
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-For more information about object initializers, see [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Para obtener más información sobre los inicializadores de objeto, vea [Cómo: declarar un objeto usando un inicializador](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)de objeto, [inicializadores de objeto: tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), y [tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
-## <a name="declaring-multiple-variables"></a>Declaring Multiple Variables
+## <a name="declaring-multiple-variables"></a>Declarar varias variables
 
-You can declare several variables in one declaration statement, specifying the variable name for each one, and following each array name with parentheses. Las variables se separan con comas.
+Puede declarar varias variables en una instrucción de declaración, especificando el nombre de la variable para cada una de ellas y siguiendo cada nombre de matriz entre paréntesis. Las variables se separan con comas.
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
 ```
 
-If you declare more than one variable with one `As` clause, you cannot supply an initializer for that group of variables.
+Si se declara más de una variable con una `As` cláusula, no se puede proporcionar un inicializador para ese grupo de variables.
 
-You can specify different data types for different variables by using a separate `As` clause for each variable you declare. Each variable takes the data type specified in the first `As` clause encountered after its `variablename` part.
+Puede especificar tipos de datos diferentes para variables diferentes mediante una cláusula de `As` independiente para cada variable que declare. Cada variable toma el tipo de datos especificado en la primera cláusula `As` encontrada después de su parte `variablename`.
 
 ```vb
 Dim a, b, c As Single, x, y As Double, i As Integer
@@ -201,26 +201,26 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>Matrices
 
-You can declare a variable to hold an *array*, which can hold multiple values. To specify that a variable holds an array, follow its `variablename` immediately with parentheses. Para obtener más información sobre las matrices, consulte [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Puede declarar una variable para que contenga una *matriz*, que puede contener varios valores. Para especificar que una variable contiene una matriz, siga el `variablename` inmediatamente con paréntesis. Para obtener más información sobre las matrices, consulte [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-You can specify the lower and upper bound of each dimension of an array. To do this, include a `boundslist` inside the parentheses. For each dimension, the `boundslist` specifies the upper bound and optionally the lower bound. The lower bound is always zero, whether you specify it or not. Each index can vary from zero through its upper bound value.
+Puede especificar el límite inferior y superior de cada dimensión de una matriz. Para ello, incluya una `boundslist` dentro de los paréntesis. Para cada dimensión, el `boundslist` especifica el límite superior y, opcionalmente, el límite inferior. El límite inferior es siempre cero, tanto si se especifica como si no. Cada índice puede variar de cero a través de su valor de límite superior.
 
-The following two statements are equivalent. Each statement declares an array of 21 `Integer` elements. When you access the array, the index can vary from 0 through 20.
+Las dos instrucciones siguientes son equivalentes. Cada instrucción declara una matriz de 21 elementos `Integer`. Al tener acceso a la matriz, el índice puede variar de 0 a 20.
 
 ```vb
 Dim totals(20) As Integer
 Dim totals(0 To 20) As Integer
 ```
 
-The following statement declares a two-dimensional array of type `Double`. The array has 4 rows (3 + 1) of 6 columns (5 + 1) each. Note that an upper bound represents the highest possible value for the index, not the length of the dimension. The length of the dimension is the upper bound plus one.
+La instrucción siguiente declara una matriz bidimensional de tipo `Double`. La matriz tiene 4 filas (3 + 1) de 6 columnas (5 + 1) cada una. Tenga en cuenta que un límite superior representa el valor más alto posible para el índice, no la longitud de la dimensión. La longitud de la dimensión es el límite superior más uno.
 
 ```vb
 Dim matrix2(3, 5) As Double
 ```
 
-An array can have from 1 to 32 dimensions.
+Una matriz puede tener de 1 a 32 dimensiones.
 
-You can leave all the bounds blank in an array declaration. If you do this, the array has the number of dimensions you specify, but it is uninitialized. It has a value of `Nothing` until you initialize at least some of its elements. The `Dim` statement must specify bounds either for all dimensions or for no dimensions.
+Puede dejar todos los límites en blanco en una declaración de matriz. Si lo hace, la matriz tiene el número de dimensiones que especifique, pero no se inicializa. Tiene un valor de `Nothing` hasta que inicializa al menos algunos de sus elementos. La instrucción `Dim` debe especificar límites para todas las dimensiones o para ninguna dimensión.
 
 ```vb
 ' Declare an array with blank array bounds.
@@ -229,97 +229,97 @@ Dim messages() As String
 ReDim messages(4)
 ```
 
-If the array has more than one dimension, you must include commas between the parentheses to indicate the number of dimensions.
+Si la matriz tiene más de una dimensión, debe incluir comas entre paréntesis para indicar el número de dimensiones.
 
 ```vb
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-You can declare a *zero-length array* by declaring one of the array's dimensions to be -1. A variable that holds a zero-length array does not have the value `Nothing`. Zero-length arrays are required by certain common language runtime functions. If you try to access such an array, a runtime exception occurs. Para más información, consulte [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Puede declarar una *matriz de longitud cero* declarando una de las dimensiones de la matriz para que sea-1. Una variable que contiene una matriz de longitud cero no tiene el valor `Nothing`. Ciertas funciones Common Language Runtime requieren matrices de longitud cero. Si intenta obtener acceso a una matriz de este tipo, se produce una excepción en tiempo de ejecución. Para más información, consulte [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-You can initialize the values of an array by using an array literal. To do this, surround the initialization values with braces (`{}`).
+Puede inicializar los valores de una matriz mediante un literal de matriz. Para ello, incluya los valores de inicialización entre llaves (`{}`).
 
 ```vb
 Dim longArray() As Long = {0, 1, 2, 3}
 ```
 
-For multidimensional arrays, the initialization for each separate dimension is enclosed in braces in the outer dimension. The elements are specified in row-major order.
+En el caso de las matrices multidimensionales, la inicialización de cada dimensión independiente se incluye entre llaves en la dimensión externa. Los elementos se especifican en orden de fila principal.
 
 ```vb
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Para obtener más información sobre los literales de matriz, vea [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-## <a name="default"></a> Default Data Types and Values
+## <a name="default"></a>Valores y tipos de datos predeterminados
 
 En la tabla siguiente se describen los resultados de diversas combinaciones resultantes de especificar el tipo de datos y el inicializador en una instrucción `Dim`.
 
 |¿Tipo de datos especificado?|¿Inicializador especificado?|Ejemplo|Resultado|
 |---|---|---|---|
-|No|No|`Dim qty`|If [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) is off (the default), the variable is set to `Nothing`.<br /><br /> Si `Option Strict` está activado, se produce un error en tiempo de compilación.|
-|No|Sí|`Dim qty = 5`|If [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) is on (the default), the variable takes the data type of the initializer. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está desactivado, la variable toma el tipo de datos de `Object`.<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está activado, se produce un error en tiempo de compilación.|
-|Sí|No|`Dim qty As Integer`|La variable se inicializa con el valor predeterminado del tipo de datos. See the table later in this section.|
+|No|No|`Dim qty`|Si [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) está establecido en OFF (valor predeterminado), la variable se establece en `Nothing`.<br /><br /> Si `Option Strict` está activado, se produce un error en tiempo de compilación.|
+|No|Sí|`Dim qty = 5`|Si [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) es on (valor predeterminado), la variable toma el tipo de datos del inicializador. Vea [inferencia de tipo de local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está desactivado, la variable toma el tipo de datos de `Object`.<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está activado, se produce un error en tiempo de compilación.|
+|Sí|No|`Dim qty As Integer`|La variable se inicializa con el valor predeterminado del tipo de datos. Vea la tabla que aparece más adelante en esta sección.|
 |Sí|Sí|`Dim qty  As Integer = 5`|Si el tipo de datos del inicializador no es convertible al tipo de datos especificado, se produce un error en tiempo de compilación.|
 
-If you specify a data type but do not specify an initializer, Visual Basic initializes the variable to the default value for its data type. The following table shows the default initialization values.
+Si especifica un tipo de datos pero no especifica un inicializador, Visual Basic inicializa la variable en el valor predeterminado para su tipo de datos. En la tabla siguiente se muestran los valores de inicialización predeterminados.
 
 |Tipo de datos|Valor predeterminado|
 |---|---|
-|All numeric types (including `Byte` and `SByte`)|0|
-|`Char`|Binary 0|
-|All reference types (including `Object`, `String`, and all arrays)|`Nothing`|
+|Todos los tipos numéricos (incluidos `Byte` y `SByte`)|0|
+|`Char`|Binario 0|
+|Todos los tipos de referencia (incluidos `Object`, `String`y todas las matrices)|`Nothing`|
 |`Boolean`|`False`|
-|`Date`|12:00 AM of January 1 of the year 1 (01/01/0001 12:00:00 AM)|
+|`Date`|12:00 A.M. del 1 de enero del año 1 (01/01/0001 12:00:00 AM)|
 
-Each element of a structure is initialized as if it were a separate variable. If you declare the length of an array but do not initialize its elements, each element is initialized as if it were a separate variable.
+Cada elemento de una estructura se inicializa como si fuera una variable independiente. Si declara la longitud de una matriz pero no inicializa sus elementos, cada elemento se inicializa como si fuera una variable independiente.
 
-## <a name="static-local-variable-lifetime"></a>Static Local Variable Lifetime
+## <a name="static-local-variable-lifetime"></a>Duración de la variable local estática
 
-A `Static` local variable has a longer lifetime than that of the procedure in which it is declared. The boundaries of the variable's lifetime depend on where the procedure is declared and whether it is `Shared`.
+Una variable local `Static` tiene una duración más larga que la del procedimiento en el que se declara. Los límites de la duración de la variable dependen de dónde se declara el procedimiento y de si se `Shared`.
 
-|Procedure declaration|Variable initialized|Variable stops existing|
+|Declaración de procedimiento|Variable inicializada|La variable deja de existir|
 |---|---|---|
-|In a module|The first time the procedure is called|When your program stops execution|
-|In a class or structure, procedure is `Shared`|The first time the procedure is called either on a specific instance or on the class or structure itself|When your program stops execution|
-|In a class or structure, procedure isn't `Shared`|The first time the procedure is called on a specific instance|When the instance is released for garbage collection (GC)|
+|En un módulo|La primera vez que se llama al procedimiento|Cuando el programa detiene la ejecución|
+|En una clase o estructura, el procedimiento es `Shared`|La primera vez que se llama al procedimiento en una instancia específica o en la propia clase o estructura|Cuando el programa detiene la ejecución|
+|En una clase o estructura, el procedimiento no es `Shared`|La primera vez que se llama al procedimiento en una instancia específica|Cuando se libera la instancia para la recolección de elementos no utilizados (GC)|
 
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers
+## <a name="attributes-and-modifiers"></a>Atributos y modificadores
 
-You can apply attributes only to member variables, not to local variables. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local variables.
+Solo puede aplicar atributos a las variables de miembro, no a las variables locales. Un atributo aporta información a los metadatos del ensamblado, lo que no es significativo para el almacenamiento temporal, como las variables locales.
 
-At module level, you cannot use the `Static` modifier to declare member variables. At procedure level, you cannot use `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, or any access modifiers to declare local variables.
+En el nivel de módulo, no se puede usar el modificador `Static` para declarar variables de miembro. En el nivel de procedimiento, no se puede usar `Shared`, `Shadows`, `ReadOnly`, `WithEvents`o cualquier modificador de acceso para declarar variables locales.
 
-You can specify what code can access a variable by supplying an `accessmodifier`. Class and module member variables (outside any procedure) default to private access, and structure member variables default to public access. Los niveles de acceso se pueden ajustar con los modificadores de acceso. You cannot use access modifiers on local variables (inside a procedure).
+Puede especificar qué código puede tener acceso a una variable proporcionando un `accessmodifier`. Las variables de miembro de clase y módulo (fuera de cualquier procedimiento) tienen como valor predeterminado el acceso privado y las variables miembro de estructura tienen como valor predeterminado el acceso público. Los niveles de acceso se pueden ajustar con los modificadores de acceso. No se pueden usar modificadores de acceso en variables locales (dentro de un procedimiento).
 
-You can specify `WithEvents` only on member variables, not on local variables inside a procedure. If you specify `WithEvents`, the data type of the variable must be a specific class type, not `Object`. You cannot declare an array with `WithEvents`. For more information about events, see [Events](../../../visual-basic/programming-guide/language-features/events/index.md).
+Solo puede especificar `WithEvents` en variables de miembro, no en variables locales dentro de un procedimiento. Si especifica `WithEvents`, el tipo de datos de la variable debe ser un tipo de clase específico, no `Object`. No se puede declarar una matriz con `WithEvents`. Para obtener más información sobre los eventos, vea [eventos](../../../visual-basic/programming-guide/language-features/events/index.md).
 
 > [!NOTE]
-> Code outside a class, structure, or module must qualify a member variable's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local variables within that procedure or block.
+> El código fuera de una clase, estructura o módulo debe calificar el nombre de una variable miembro con el nombre de esa clase, estructura o módulo. El código fuera de un procedimiento o bloque no puede hacer referencia a ninguna variable local dentro de ese procedimiento o bloque.
 
-## <a name="releasing-managed-resources"></a>Releasing Managed Resources
+## <a name="releasing-managed-resources"></a>Liberar recursos administrados
 
-The .NET Framework garbage collector disposes of managed resources without any extra coding on your part. However, you can force the disposal of a managed resource instead of waiting for the garbage collector.
+El recolector de elementos no utilizados de .NET Framework elimina los recursos administrados sin necesidad de codificación adicional por su parte. Sin embargo, puede forzar la eliminación de un recurso administrado en lugar de esperar al recolector de elementos no utilizados.
 
-If a class holds onto a particularly valuable and scarce resource (such as a database connection or file handle), you might not want to wait until the next garbage collection to clean up a class instance that's no longer in use. A class may implement the <xref:System.IDisposable> interface to provide a way to release resources before a garbage collection. A class that implements that interface exposes a `Dispose` method that can be called to force valuable resources to be released immediately.
+Si una clase contiene un recurso especialmente valioso y escaso (como una conexión de base de datos o un identificador de archivo), es posible que no desee esperar hasta la siguiente recolección de elementos no utilizados para limpiar una instancia de clase que ya no está en uso. Una clase puede implementar la interfaz <xref:System.IDisposable> para proporcionar una manera de liberar recursos antes de una recolección de elementos no utilizados. Una clase que implementa esa interfaz expone un método `Dispose` al que se puede llamar para obligar a que se liberen recursos valiosos de forma inmediata.
 
-The `Using` statement automates the process of acquiring a resource, executing a set of statements, and then disposing of the resource. However, the resource must implement the <xref:System.IDisposable> interface. Para obtener más información, vea [Using (Instrucción)](../../../visual-basic/language-reference/statements/using-statement.md).
+La instrucción `Using` automatiza el proceso de adquisición de un recurso, la ejecución de un conjunto de instrucciones y la eliminación del recurso. Sin embargo, el recurso debe implementar la interfaz <xref:System.IDisposable>. Para obtener más información, vea [Using (Instrucción)](../../../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="example"></a>Ejemplo
 
-The following example declares variables by using the `Dim` statement with various options.
+En el siguiente ejemplo se declaran variables mediante la instrucción `Dim` con varias opciones.
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
 ## <a name="example"></a>Ejemplo
 
-The following example lists the prime numbers between 1 and 30. The scope of local variables is described in code comments.
+En el ejemplo siguiente se enumeran los números primos entre 1 y 30. El ámbito de las variables locales se describe en los comentarios de código.
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
 ## <a name="example"></a>Ejemplo
 
-In the following example, the `speedValue` variable is declared at the class level. The `Private` keyword is used to declare the variable. The variable can be accessed by any procedure in the `Car` class.
+En el ejemplo siguiente, la variable `speedValue` se declara en el nivel de clase. La palabra clave `Private` se utiliza para declarar la variable. Cualquier procedimiento de la clase `Car` puede tener acceso a la variable.
 
 [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]
 

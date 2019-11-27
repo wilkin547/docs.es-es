@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446460"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore (Método)
-Actualiza el almacén de símbolos existente con un almacén de símbolos delta. This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
+Actualiza el almacén de símbolos existente con un almacén de símbolos delta. Este método se usa en escenarios de edición y continuación para actualizar el almacén de símbolos de modo que coincida con las diferencias con el archivo portable ejecutable (PE) original.  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Solo se debe especificar uno de los parámetros `filename` o `pIStream`, no ambos. Si se especifica `filename`, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si se especifica `pIStream`, el almacén se actualizará con los datos de la <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +38,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Parámetros  
  `filename`  
- [in] The name of the file that contains the symbol store.  
+ de Nombre del archivo que contiene el almacén de símbolos.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ de El flujo de archivo, que se usa como alternativa al parámetro `filename`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

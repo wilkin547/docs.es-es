@@ -28,7 +28,7 @@ ms.locfileid: "74441493"
 ## <a name="types-of-events"></a>Tipos de eventos  
  Existen varias categorías de eventos[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] :  
   
-|evento|Descripción|  
+|Evento|Descripción|  
 |-----------|-----------------|  
 |Cambio de propiedad|Se genera cuando se produce un cambio en un patrón de control o elemento de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Por ejemplo, si un cliente necesita supervisar un control de casilla de una aplicación, se puede registrar para escuchar si se produce un evento de cambio de propiedad en la propiedad <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Cuando el control de casilla se activa o desactiva, el proveedor genera el evento y el cliente puede actuar según sea necesario.|  
 |Acción de elemento|Se genera cuando se produce un cambio en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] como resultado de la actividad del usuario final o de programación, por ejemplo, cuando se hace clic en un botón o se invoca mediante <xref:System.Windows.Automation.InvokePattern>.|  
@@ -83,6 +83,6 @@ ms.locfileid: "74441493"
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos de Automatización de la interfaz de usuario para clientes](ui-automation-events-for-clients.md)
+- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
 - [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
 - [Suscripción a eventos de Automatización de la interfaz de usuario](subscribe-to-ui-automation-events.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450261"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags (Enumeración)
-Indicates the visibility of resources encoded in an assembly manifest.  
+Indica la visibilidad de los recursos codificados en un manifiesto del ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,13 +41,13 @@ typedef enum CorManifestResourceFlags {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`mrVisibilityMask`|Reservado.|  
-|`mrPublic`|The resources are public.|  
-|`mrPrivate`|The resources are private.|  
+|`mrPublic`|Los recursos son públicos.|  
+|`mrPrivate`|Los recursos son privados.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

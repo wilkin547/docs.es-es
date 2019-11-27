@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446951"
 ---
 # <a name="importfileex-method"></a>ImportFileEx (Método)
-Imports indicated assembly or unbound module.  
+Importa el ensamblado indicado o el módulo sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parámetros  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ Nombre completo del archivo desde el que se va a importar.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Nombre opcional del archivo de destino.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Si es TRUE, se usa ImportTypes (; de lo contrario, la importación se debe realizar manualmente.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Marcas que se van a pasar al [método OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ Recibe el identificador del archivo que se va a importar.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Recibe la interfaz de [interfaz IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) de ámbito de importación de ensamblado. Se establece en NULL si el archivo no es un ensamblado.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ Recibe el recuento de archivos y/o ámbitos importados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448255"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName (Método)
-Gets a pointer to the manifest resource with the specified name.  
+Obtiene un puntero al recurso de manifiesto con el nombre especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,20 +36,20 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [in] The name of the resource.  
+ de Nombre del recurso.  
   
  `ptkManifestResource`  
- [out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.  
+ enuncia La matriz que se usa para almacenar los tokens de metadatos de `mdManifestResource`, cada uno de los cuales representa un recurso de manifiesto.  
   
 ## <a name="remarks"></a>Comentarios  
- The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ El método `FindManifestResourceByName` utiliza las reglas estándar empleadas por el Common Language Runtime para resolver las referencias.  
   
 ## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

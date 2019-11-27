@@ -34,18 +34,18 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] The number of elements to be skipped.  
+ de Número de elementos que se van a omitir.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|`celt` elementos se omitieron.|  
+|S_FALSE|Se omitieron menos de `celt` elementos, lo que indica que no hay más elementos.|  
   
 ## <a name="remarks"></a>Comentarios  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ La nueva posición del cursor de este enumerador es (posición actual) + `celt`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

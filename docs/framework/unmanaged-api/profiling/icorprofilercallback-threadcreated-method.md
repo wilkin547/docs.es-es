@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446926"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated (Método)
-Notifies the profiler that a thread has been created.  
+Notifica al generador de perfiles que se ha creado un subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] The ID of the thread that has been created.  
+ de IDENTIFICADOR del subproceso que se ha creado.  
   
 ## <a name="remarks"></a>Comentarios  
- The `threadId` value is immediately valid.  
+ El valor `threadId` es válido de forma inmediata.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

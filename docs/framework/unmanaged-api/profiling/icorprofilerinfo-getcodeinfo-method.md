@@ -25,7 +25,7 @@ ms.locfileid: "74439226"
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo (Método)
 Obtiene la extensión del código nativo asociado al identificador de función especificado.  
   
- Este método está obsoleto. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ Este método está obsoleto. Use en su lugar el método [ICorProfilerInfo2:: GetCodeInfo2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +58,7 @@ HRESULT GetCodeInfo(
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0  
+ **Versiones de .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vea también
 

@@ -16,7 +16,7 @@ ms.locfileid: "74447694"
 # <a name="profiling-structures"></a>Estructuras para generación de perfiles
 En esta sección se describen las estructuras no administradas que utiliza la API de generación de perfiles.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO (estructura)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  Proporciona a Common Language Runtime información sobre una referencia de ensamblado que debe tener en cuenta a la hora de realizar un rastreo de cierre de referencias de ensamblado.  
   

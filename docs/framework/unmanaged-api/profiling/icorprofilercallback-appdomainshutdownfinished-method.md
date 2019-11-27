@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445198"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished (Método)
-Notifies the profiler that an application domain has been unloaded from a process.  
+Notifica al generador de perfiles que se ha descargado un dominio de aplicación de un proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +35,15 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ de Identifica el dominio en el que se almacenan los ensamblados de la aplicación.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
+ de Un valor HRESULT que indica si el dominio de aplicación se ha descargado correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
+ El valor de `appDomainId` no es válido para una solicitud de información después de que se devuelva el método [ICorProfilerCallback:: appdomainshutdownstarted (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) .  
   
- Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
+ Algunas partes de la descarga del dominio de aplicación pueden continuar después de la devolución de llamada de `AppDomainCreationFinished`. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` solo indica que la primera parte de la descarga del dominio de aplicación se ha realizado correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

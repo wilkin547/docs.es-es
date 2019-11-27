@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430111"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError (Método)
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Notifica al generador de perfiles que el compilador Just-in-Time (JIT) encontró un error en el proceso de recompilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ de `ModuleID` en el que se realizó el intento de recompilación con errores.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ de `MethodDef` del método en el que se realizó el intento de recompilación con errores.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ de Instancia de la función que se va a compilar o marcar para volver a compilar. Este valor puede ser `NULL` si el error se produjo por cada método en lugar de por cada instancia (por ejemplo, si el generador de perfiles especificó un token de metadatos no válido para el método que se va a volver a compilar).  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ de HRESULT que indica la naturaleza del error. Vea la sección Estados HRESULTs para obtener una lista de valores.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Los valores devueltos de esta devolución de llamada se pasan por alto.  
@@ -55,12 +55,12 @@ HRESULT ReJITError(
   
 |HRESULT de la matriz de estados|Descripción|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|E_INVALIDARG|El token de `moduleID` o `methodDef` es `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|El módulo no está totalmente cargado aún o está en proceso de descarga.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Otro|El sistema operativo devolvió un error fuera del control del CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|El módulo especificado se generó dinámicamente (por ejemplo, por `Reflection.Emit`) y, por lo tanto, este método no lo admite.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Se crea una instancia del método en un ensamblado recopilable y, por tanto, no se puede volver a compilar. Tenga en cuenta que se pueden crear instancias de los tipos y funciones definidos en un contexto de reflexión no (por ejemplo, `List<MyCollectibleStruct>`) en un ensamblado recopilable.|  
+|E_OUTOFMEMORY|El CLR se quedó sin memoria al intentar marcar el método especificado para la recompilación JIT.|  
+|Otro|El sistema operativo devolvió un error fuera del control del CLR. Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se muestra el error del sistema operativo.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

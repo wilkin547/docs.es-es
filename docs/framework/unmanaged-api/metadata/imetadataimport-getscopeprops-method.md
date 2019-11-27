@@ -38,26 +38,26 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ enuncia Búfer del nombre del ensamblado o del módulo.  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ de Tamaño en caracteres anchos de `szName`.  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ enuncia Número de caracteres anchos devueltos en `szName`.  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [out, opcional] Un puntero a un GUID que identifica de forma única la versión del ensamblado o módulo.  
   
 ## <a name="remarks"></a>Comentarios  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+ El método [IMetaDataEmit:: SetModuleProps (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) se usa para establecer estas propiedades.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

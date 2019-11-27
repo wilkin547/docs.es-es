@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436023"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout (Método)
-Gets information about where the specified value type is located when it is boxed.  
+Obtiene información sobre dónde se encuentra el tipo de valor especificado cuando se le aplica la conversión boxing.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ de IDENTIFICADOR de la clase que describe el tipo de valor al que se aplica la conversión boxing.  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ enuncia Entero que es el desplazamiento con respecto al puntero de identificador de objeto con conversión boxing del tipo de valor.  
   
 ## <a name="remarks"></a>Comentarios  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+ El valor `pBufferOffset` es la ubicación del tipo de valor dentro de un cuadro. Una vez que se aplica `pBufferOffset` a un objeto con conversión boxing, el diseño de clase del tipo de valor se puede utilizar para interpretar el valor del objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

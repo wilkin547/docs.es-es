@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437059"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps (Método)
-Gets the metadata for the property represented by the specified token.  
+Obtiene los metadatos de la propiedad representada por el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,59 +50,59 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parámetros  
  `prop`  
- [in] A token that represents the property to return metadata for.  
+ de Token que representa la propiedad para la que se van a devolver los metadatos.  
   
  `pClass`  
- [out] A pointer to the TypeDef token that represents the type that implements the property.  
+ enuncia Puntero al token de TypeDef que representa el tipo que implementa la propiedad.  
   
  `szProperty`  
- [out] A buffer to hold the property name.  
+ enuncia Búfer que contiene el nombre de la propiedad.  
   
  `cchProperty`  
- [in] The size in wide characters of `szProperty`.  
+ de Tamaño en caracteres anchos de `szProperty`.  
   
  `pchProperty`  
- [out] The number of wide characters returned in `szProperty`.  
+ enuncia Número de caracteres anchos devueltos en `szProperty`.  
   
  `pdwPropFlags`  
- [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
+ enuncia Un puntero a cualquier marcador de atributo aplicado a la propiedad. Este valor es una máscara de máscara de la enumeración [CorPropertyAttr (](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) .  
   
  `ppvSig`  
- [out] A pointer to the metadata signature of the property.  
+ enuncia Puntero a la firma de metadatos de la propiedad.  
   
  `pbSig`  
- [out] The number of bytes returned in `ppvSig`.  
+ enuncia Número de bytes devueltos en `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
+ enuncia Marca que especifica el tipo de la constante que es el valor predeterminado de la propiedad. Este valor procede de la enumeración CorElementType.  
   
  `ppDefaultValue`  
- [out] A pointer to the bytes that store the default value for this property.  
+ enuncia Puntero a los bytes que almacenan el valor predeterminado de esta propiedad.  
   
  `pcchDefaultValue`  
- [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
+ enuncia Tamaño en caracteres anchos de `ppDefaultValue`, si se ELEMENT_TYPE_STRING `pdwCPlusTypeFlag`; de lo contrario, este valor no es relevante. En ese caso, la longitud de `ppDefaultValue` se deduce del tipo especificado por `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
+ enuncia Puntero al token de MethodDef que representa el método de descriptor de acceso set para la propiedad.  
   
  `pmdGetter`  
- [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
+ enuncia Puntero al token de MethodDef que representa el método de descriptor de acceso get para la propiedad.  
   
  `rmdOtherMethod`  
- [out] An array of MethodDef tokens that represent other methods associated with the property.  
+ enuncia Matriz de tokens de MethodDef que representan otros métodos asociados a la propiedad.  
   
  `cMax`  
- [in] Tamaño máximo de la matriz `rmdOtherMethod`. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
+ [in] Tamaño máximo de la matriz `rmdOtherMethod`. Si no proporciona una matriz lo suficientemente grande como para contener todos los métodos, se omiten sin ninguna advertencia.  
   
  `pcOtherMethod`  
- [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
+ enuncia Número de tokens de MethodDef devueltos en `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

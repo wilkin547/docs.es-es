@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446509"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute (Método)
-Call to set assembly-level custom attributes.  
+Llame a para establecer los atributos personalizados de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of the assembly.  
+ IDENTIFICADOR del ensamblado.  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Archivo que Desarchiva el atributo. Puede ser NULL si `AssemblyID` no indica un valor de netmodule sin enlazar.  
   
  `tkType`  
- Type of the custom attribute.  
+ Tipo del atributo personalizado.  
   
  `pCustomValue`  
- Custom value data.  
+ Datos de valores personalizados.  
   
  `cbCustomValue`  
- Length of custom value data.  
+ Longitud de los datos de valor personalizados.  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ TRUE si el atributo personalizado está relacionado con la firma de ensamblados.  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ TRUE si se van a emitir varios atributos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

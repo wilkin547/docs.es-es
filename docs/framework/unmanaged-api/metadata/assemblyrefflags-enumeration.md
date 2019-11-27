@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444222"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags (Enumeración)
-Contains values that describe features of an assembly reference.  
+Contiene valores que describen las características de una referencia de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +36,12 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`arfFullOriginator`|Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.|  
+|`arfFullOriginator`|Especifica que la referencia de ensamblado contiene información completa sin hash sobre el publicador del ensamblado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

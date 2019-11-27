@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428036"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField (Método)
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+Define una única variable que no está dentro de un método. Este método se usa para determinados campos de clases, campos de bits, etc.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parámetros  
  `parent`  
- [in] The metadata type or method token.  
+ de El tipo de metadatos o el token del método.  
   
  `name`  
- [in] The field name.  
+ de Nombre del campo.  
   
  `attributes`  
- [in] The field attributes.  
+ de Atributos del campo.  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ de `ULONG32` que es el tamaño, en caracteres, del búfer necesario para contener la firma del campo.  
   
  `signature`  
- [in] The array of field signatures.  
+ de Matriz de firmas de campo.  
   
  `addrKind`  
- [in] The address type.  
+ de Tipo de dirección.  
   
  `addr1`  
- [in] The first address for the field specification.  
+ de Primera dirección de la especificación de campo.  
   
  `addr2`  
- [in] The second address for the field specification.  
+ de Segunda dirección de la especificación de campo.  
   
  `addr3`  
- [in] The third address for the field specification.  
+ de Tercera dirección de la especificación de campo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 
