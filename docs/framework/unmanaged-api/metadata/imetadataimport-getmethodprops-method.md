@@ -44,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ de Token de MethodDef que representa el método para el que se van a devolver los metadatos.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ enuncia Un puntero a un token de TypeDef que representa el tipo que implementa el método.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ enuncia Puntero a un búfer que tiene el nombre del método.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ de Tamaño solicitado de `szMethod`.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ enuncia Puntero al tamaño en caracteres anchos de `szMethod`, o en el caso del truncamiento, el número real de caracteres anchos en el nombre del método.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ enuncia Puntero a cualquier marca asociada al método.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ enuncia Puntero a la firma de metadatos binarios del método.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ enuncia Puntero al tamaño en bytes de `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ enuncia Puntero a la dirección virtual relativa del método.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ enuncia Un puntero a cualquier marcador de implementación para el método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

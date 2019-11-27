@@ -1,5 +1,5 @@
 ---
-title: IALink2 (Interfaz)
+title: IALink2 (interfaz)
 ms.date: 03/30/2017
 f1_keywords:
 - IALink2
@@ -13,10 +13,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431370"
 ---
-# <a name="ialink2-interface"></a>IALink2 (Interfaz)
-Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md). Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.  
+# <a name="ialink2-interface"></a>IALink2 (interfaz)
+Complementa la [interfaz ialink (](ialink-interface.md) al declarar métodos que operan en interfaces de metadatos más recientes, como la [interfaz IMetaDataEmit2](../metadata/imetadataemit2-interface.md). Además, Ialink2 (declara métodos que proporcionan flexibilidad de uso adicional sobre las interfaces de Ialink (originales.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [AddFile2 (método)](addfile2-method.md)  
   
  [EmitAssembly (método)](emitassembly-method.md)  

@@ -17,22 +17,22 @@ ms.locfileid: "74347170"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Cómo: Convertir cadenas hexadecimales en números (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+En este ejemplo se convierte una cadena hexadecimal en un entero mediante el método <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Para convertir una cadena hexadecimal en un número
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- Use el método <xref:System.Convert.ToInt32(System.String,System.Int32)> para convertir el número expresado en base-16 en un entero.
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  El primer argumento del método <xref:System.Convert.ToInt32(System.String,System.Int32)> es la cadena que se va a convertir. El segundo argumento describe en qué base se expresa el número; hexadecimal es base 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- Tenga en cuenta que la cadena hexadecimal tiene las restricciones siguientes:
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - No puede incluir el prefijo `&h`.
+  - No puede incluir el separador de dígitos `_`.
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  Si el prefijo o el separador de dígitos están presentes, la llamada al método <xref:System.Convert.ToInt32(System.String,System.Int32)> produce una <xref:System.FormatException>.
 
 ## <a name="see-also"></a>Vea también
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436094"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo (Método)
-Gets data about the specified column in the specified table.  
+Obtiene datos sobre la columna especificada de la tabla especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ de Índice de la tabla deseada.  
   
  `ixCol`  
- [in] The index of the desired column.  
+ de Índice de la columna deseada.  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ enuncia Puntero al desplazamiento de la columna de la fila.  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ enuncia Puntero al tamaño, en bytes, de la columna.  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ enuncia Puntero al tipo de los valores de la columna.  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ enuncia Un puntero a un puntero al nombre de la columna.  
  
 ## <a name="remarks"></a>Comentarios
 
-The returned column type falls within a range of values:
+El tipo de columna devuelto está dentro de un intervalo de valores:
 
-| pType                    | Descripción   | Helper function                   |
+| pType                    | Descripción   | Función auxiliar                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0.. 63)   | Libra           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Token codificado | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
@@ -76,21 +76,21 @@ The returned column type falls within a range of values:
 | `iGUID` (102)            | GUID          | **IsHeapType**                    |
 | `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+Los valores que se almacenan en el *montón* (es decir, `IsHeapType == true`) se pueden leer mediante:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GetGUID**
+- `iBLOB`: **IMetadataTables. GetBlob**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> Para usar las constantes definidas en la tabla anterior, incluya la Directiva `#define _DEFINE_META_DATA_META_CONSTANTS` proporciona el archivo de encabezado *Cor. h* .
 
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -29,7 +29,7 @@ ms.locfileid: "74435256"
   
 - Las celdas combinadas informarán de sus propiedades <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> y <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> según su celda de anclaje subyacente, como define el proveedor de Automatización de la interfaz de usuario. Normalmente, será la fila o columna superior izquierda.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> no permite la manipulación activa de la cuadrícula, como la combinación o la división de celdas.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> no proporciona la manipulación activa de la cuadrícula, como combinar o dividir celdas.  
   
 - Los controles que implementan <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente se pueden atravesar (es decir, un cliente de UI Automation puede moverse a los controles adyacentes) con el teclado.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "74435256"
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Propiedad|Ninguno|  
   
  Este patrón de control no tiene métodos o propiedades asociados.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74435256"
 
 - [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Implementación del patrón de control Grid de Automatización de la interfaz de usuario](implementing-the-ui-automation-grid-control-pattern.md)
 - [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)

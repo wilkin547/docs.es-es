@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [out] The number of threads used by the application.  
+ enuncia Número de subprocesos utilizados por la aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430272"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed (Método)
-Notifies the profiler that the specified thread has resumed after being suspended.  
+Notifica al generador de perfiles que se ha reanudado el subproceso especificado tras su suspensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] The ID of the thread that has been resumed.  
+ de IDENTIFICADOR del subproceso que se ha reanudado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

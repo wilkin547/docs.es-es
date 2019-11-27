@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345963"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parámetros opcionales (Visual Basic)
-Un parámetro de un procedimiento puede ser opcional si así se especifica y no es necesario proporcionarle argumentos al llamar al procedimiento. *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. Se aplican las siguientes reglas:  
+Un parámetro de un procedimiento puede ser opcional si así se especifica y no es necesario proporcionarle argumentos al llamar al procedimiento. Los *parámetros opcionales* se indican mediante la palabra clave `Optional` en la definición del procedimiento. Se aplican las siguientes reglas:  
   
 - Todos los parámetros opcionales de la definición del procedimiento deben especificar un valor predeterminado.  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- En el ejemplo siguiente se realizan algunas llamadas a la función `MsgBox`. `MsgBox` tiene un parámetro obligatorio y dos parámetros opcionales.  
+ En el ejemplo siguiente se realizan algunas llamadas a la función `MsgBox`. `MsgBox` tiene un parámetro necesario y dos parámetros opcionales.  
   
  La primera llamada a `MsgBox` proporciona los tres argumentos en el orden en que `MsgBox` los define. La segunda llamada únicamente proporciona el argumento obligatorio. La tercera y la cuarta llamada proporcionan el primer y el tercer argumento. La tercera llamada lo hace por posición y la llamada cuarta, por nombre.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Determinar si un argumento opcional está presente  
- En tiempo de ejecución un procedimiento no puede detectar si un argumento determinado se ha omitido o si el código de llamada ha suministrado de forma explícita el valor predeterminado de dicho argumento. Si fuese necesario hacer esta distinción, se podría establecer como valor predeterminado un valor improbable. The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ En tiempo de ejecución un procedimiento no puede detectar si un argumento determinado se ha omitido o si el código de llamada ha suministrado de forma explícita el valor predeterminado de dicho argumento. Si fuese necesario hacer esta distinción, se podría establecer como valor predeterminado un valor improbable. En el procedimiento siguiente se define el parámetro opcional `office`y se comprueba su valor predeterminado, `QJZ`, para ver si se ha omitido en la llamada:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -67,5 +67,5 @@ Sub name(argument 1, , , argument 4)
 - [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
 - [Matrices de parámetros](./parameter-arrays.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
-- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [Opcional](../../../../visual-basic/language-reference/modifiers/optional.md)
 - [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

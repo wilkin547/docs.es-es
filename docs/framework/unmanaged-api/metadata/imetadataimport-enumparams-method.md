@@ -39,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `mb`  
- [in] A MethodDef token representing the method with the parameters to enumerate.  
+ de Símbolo (token) de MethodDef que representa el método con los parámetros que se van a enumerar.  
   
  `rParams`  
- [out] The array used to store the ParamDef tokens.  
+ enuncia Matriz utilizada para almacenar los tokens de ParamDef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rParams`.  
   
  `pcTokens`  
- [out] The number of ParamDef tokens returned in `rParams`.  
+ enuncia Número de tokens de ParamDef devueltos en `rParams`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumParams` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

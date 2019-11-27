@@ -51,7 +51,7 @@ HRESULT AttachProfiler(
  [in] Ruta de acceso completa al archivo DLL del generador de perfiles que se va a cargar. Esta cadena debe contener un máximo de 260 caracteres, incluido el terminador NULL. Si `wszProfilerPath` es NULL o una cadena vacía, Common Language Runtime (CLR) intentará encontrar la ubicación del archivo DLL del generador de perfiles; para ello, buscará en el Registro el CLSID al que `pClsidProfiler` apunta.  
   
  `pvClientData`  
- [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva. Si `pvClientData` es NULL, `cbClientData` debe ser 0 (cero).  
+ de Puntero a los datos que se van a pasar al generador de perfiles mediante el método [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva. Si `pvClientData` es NULL, `cbClientData` debe ser 0 (cero).  
   
  `cbClientData`  
  [in] Tamaño, en bytes, de los datos a los que señala `pvClientData`.  
@@ -72,7 +72,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|El tiempo de espera se agotó sin que el generador de perfiles comenzara a cargarse. Puede volver a intentar la operación de asociación. El tiempo de espera se agota cuando un finalizador del proceso de destino se ejecuta durante más tiempo que el valor del tiempo de espera.|  
 |E_INVALIDARG|Uno o más parámetros tienen valores no válidos.|  
 |E_FAIL|Se ha producido algún otro error no especificado.|  
-|Otros códigos de error|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. En este caso, E_NOTIMPL se convierte en CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Otros códigos de error|Si el método [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) del generador de perfiles devuelve un valor HRESULT que indica un error, `AttachProfiler` devuelve el mismo HRESULT. En este caso, E_NOTIMPL se convierte en CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
   

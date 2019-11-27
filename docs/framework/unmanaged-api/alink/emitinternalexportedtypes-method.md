@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446499"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes (Método)
-Emits types added to the assembly. Call this method after known internal types have been added.  
+Emite tipos agregados al ensamblado. Llame a este método después de que se hayan agregado los tipos internos conocidos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT EmitInternalExportedTypes(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of assembly.  
+ IDENTIFICADOR del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

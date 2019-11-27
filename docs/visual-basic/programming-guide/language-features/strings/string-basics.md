@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344290"
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
-El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). This topic introduces the basic concepts of strings in Visual Basic.  
+El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). En este tema se presentan los conceptos básicos de las cadenas de Visual Basic.  
   
 ## <a name="string-variables"></a>Variables de cadena  
  A una instancia de una cadena se le puede asignar un valor literal que represente una serie de caracteres. Por ejemplo:  
@@ -29,7 +29,7 @@ El tipo de datos de `String` representa una serie de caracteres (y cada uno de e
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- Este código provoca un error porque el compilador termina la cadena después de la segunda comilla, y el resto de la cadena se interpreta como código. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. En el ejemplo siguiente se muestra la forma correcta de incluir una comilla en una cadena:  
+ Este código provoca un error porque el compilador termina la cadena después de la segunda comilla, y el resto de la cadena se interpreta como código. Para solucionar este problema, Visual Basic interpreta dos comillas en un literal de cadena como una comilla en la cadena. En el ejemplo siguiente se muestra la forma correcta de incluir una comilla en una cadena:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,7 +50,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Caracteres en cadenas  
- Una cadena puede considerarse como una serie de valores `Char` y el tipo `String` tiene funciones integradas que permiten realizar muchas manipulaciones en una cadena similares a las permitidas por las matrices. Like all array in .NET Framework, these are zero-based arrays. Puede hacer referencia a un carácter específico de una cadena con la propiedad `Chars`, que proporciona una forma de acceso a un carácter mediante la posición en la que este aparece en la cadena. Por ejemplo:  
+ Una cadena puede considerarse como una serie de valores `Char` y el tipo `String` tiene funciones integradas que permiten realizar muchas manipulaciones en una cadena similares a las permitidas por las matrices. Al igual que todas las matrices de .NET Framework, son matrices de base cero. Puede hacer referencia a un carácter específico de una cadena con la propiedad `Chars`, que proporciona una forma de acceso a un carácter mediante la posición en la que este aparece en la cadena. Por ejemplo:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
@@ -61,7 +61,7 @@ World]]></xml>.Value
  La variable `myArray` contiene ahora una matriz de valores `Char` y cada uno representa un carácter de `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Inmutabilidad de cadenas  
- A string is *immutable*, which means its value cannot be changed once it has been created. Sin embargo, esto no impide asignar más de un valor a una variable de cadena. Considere el ejemplo siguiente:  
+ Una cadena es *inmutable*, lo que significa que su valor no se puede cambiar una vez que se ha creado. Sin embargo, esto no impide asignar más de un valor a una variable de cadena. Considere el ejemplo siguiente:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   

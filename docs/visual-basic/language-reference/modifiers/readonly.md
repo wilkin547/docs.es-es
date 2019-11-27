@@ -18,26 +18,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351282"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-Specifies that a variable or property can be read but not written.
+Especifica que una variable o una propiedad se puede leer pero no escribir.
 
 ## <a name="remarks"></a>Comentarios
 
 ## <a name="rules"></a>Reglas
 
-- **Declaration Context.** Solo se puede usar `ReadOnly` en un nivel de módulo. This means the declaration context for a `ReadOnly` element must be a class, structure, or module, and cannot be a source file, namespace, or procedure.
+- **Contexto de declaración.** Solo se puede usar `ReadOnly` en un nivel de módulo. Esto significa que el contexto de la declaración de un elemento `ReadOnly` debe ser una clase, una estructura o un módulo, y no puede ser un archivo de código fuente, un espacio de nombres o un procedimiento.
 
-- **Combined Modifiers.** You cannot specify `ReadOnly` together with `Static` in the same declaration.
+- **Modificadores combinados.** No se puede especificar `ReadOnly` junto con `Static` en la misma declaración.
 
-- **Assigning a Value.** Code consuming a `ReadOnly` property cannot set its value. But code that has access to the underlying storage can assign or change the value at any time.
+- **Asignación de un valor.** El código que consume una propiedad `ReadOnly` no puede establecer su valor. Pero el código que tiene acceso al almacenamiento subyacente puede asignar o cambiar el valor en cualquier momento.
 
-     You can assign a value to a `ReadOnly` variable only in its declaration or in the constructor of a class or structure in which it is defined.
+     Solo puede asignar un valor a una variable `ReadOnly` en su declaración o en el constructor de una clase o estructura en la que se define.
 
-## <a name="when-to-use-a-readonly-variable"></a>When to Use a ReadOnly Variable
+## <a name="when-to-use-a-readonly-variable"></a>Cuándo usar una variable de solo lectura
 
-There are situations in which you cannot use a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value. For example, the `Const` statement might not accept the data type you want to assign, or you might not be able to compute the value at compile time with a constant expression. You might not even know the value at compile time. In these cases, you can use a `ReadOnly` variable to hold a constant value.
+Hay situaciones en las que no se puede usar una [instrucción const](../../../visual-basic/language-reference/statements/const-statement.md) para declarar y asignar un valor constante. Por ejemplo, es posible que la instrucción `Const` no acepte el tipo de datos que desea asignar o que no pueda calcular el valor en tiempo de compilación con una expresión constante. Es posible que ni siquiera conozca el valor en tiempo de compilación. En estos casos, puede usar una variable `ReadOnly` para contener un valor constante.
 
 > [!IMPORTANT]
-> If the data type of the variable is a reference type, such as an array or a class instance, its members can be changed even if the variable itself is `ReadOnly`. Esto se ilustra en el siguiente ejemplo:
+> Si el tipo de datos de la variable es un tipo de referencia, como una matriz o una instancia de clase, sus miembros se pueden cambiar incluso si la propia variable es `ReadOnly`. En el ejemplo siguiente se ilustra esto.
 
 ```vb
 ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}
@@ -46,13 +46,13 @@ Sub ChangeArrayElement()
 End Sub
 ```
 
-When initialized, the array pointed to by `characterArray()` holds "x", "y", and "z". Because the variable `characterArray` is `ReadOnly`, you cannot change its value once it is initialized; that is, you cannot assign a new array to it. However, you can change the values of one or more of the array members. Following a call to the procedure `ChangeArrayElement`, the array pointed to by `characterArray()` holds "x", "M", and "z".
+Cuando se inicializa, la matriz a la que apunta `characterArray()` contiene "x", "y" y "z". Dado que la variable `characterArray` es `ReadOnly`, no se puede cambiar su valor una vez inicializado. es decir, no se puede asignar una nueva matriz a ella. Sin embargo, puede cambiar los valores de uno o varios de los miembros de la matriz. Después de una llamada al procedimiento `ChangeArrayElement`, la matriz a la que apunta `characterArray()` contiene "x", "M" y "z".
 
-Note that this is similar to declaring a procedure parameter to be [ByVal](byval.md), which prevents the procedure from changing the calling argument itself but allows it to change its members.
+Tenga en cuenta que esto es similar a declarar un parámetro de procedimiento como [ByVal](byval.md), lo que evita que el procedimiento cambie el argumento de llamada en sí, pero permite cambiar sus miembros.
 
 ## <a name="example"></a>Ejemplo
 
-The following example defines a `ReadOnly` property for the date on which an employee was hired. The class stores the property value internally as a `Private` variable, and only code inside the class can change that value. However, the property is `Public`, and any code that can access the class can read the property.
+En el ejemplo siguiente se define una propiedad `ReadOnly` para la fecha en la que se contrató a un empleado. La clase almacena el valor de propiedad internamente como una variable `Private` y solo el código dentro de la clase puede cambiar ese valor. Sin embargo, la propiedad es `Public`y cualquier código que pueda tener acceso a la clase puede leer la propiedad.
 
 [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]
 

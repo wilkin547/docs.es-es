@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437684"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName (Método)
-Gets the custom attribute, given its name and owner.  
+Obtiene el atributo personalizado, dado su nombre y propietario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,26 +38,26 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>Parámetros  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ de Un token de metadatos que representa el objeto que posee el atributo personalizado.  
   
  `szName`  
- [in] The name of the custom attribute.  
+ de Nombre del atributo personalizado.  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ enuncia Puntero a una matriz de datos que es el valor del atributo personalizado.  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ enuncia Tamaño en bytes de los datos devueltos en *`ppData`.  
   
 ## <a name="remarks"></a>Comentarios  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+ Es legal definir varios atributos personalizados para el mismo propietario. incluso pueden tener el mismo nombre. Sin embargo, `GetCustomAttributeByName` devuelve solo una instancia. (`GetCustomAttributeByName` devuelve la primera instancia que encuentra). Para buscar todas las instancias de un atributo personalizado, llame al método [IMetaDataImport:: enumcustomattributes (](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

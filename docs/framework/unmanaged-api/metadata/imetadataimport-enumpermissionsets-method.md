@@ -40,36 +40,36 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `tk`  
- [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
+ de Un token de metadatos que limita el ámbito de la búsqueda o NULL para buscar el ámbito más amplio posible.  
   
  `dwActions`  
- [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
+ de Marcas que representan los valores de <xref:System.Security.Permissions.SecurityAction> que se van a incluir en `rPermission`, o cero para devolver todas las acciones.  
   
  `rPermission`  
- [out] The array used to store the Permission tokens.  
+ enuncia Matriz utilizada para almacenar los tokens de permiso.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rPermission`.  
   
  `pcTokens`  
- [out] The number of Permission tokens returned in `rPermission`.  
+ enuncia El número de tokens de permiso devueltos en `rPermission`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumPermissionSets` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

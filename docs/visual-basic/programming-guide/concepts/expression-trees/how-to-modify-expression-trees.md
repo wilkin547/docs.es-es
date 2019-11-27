@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353743"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>How to: Modify Expression Trees (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Cómo: modificar árboles de expresiones (Visual Basic)
 
 En este tema se muestra cómo modificar un árbol de expresión. Los árboles de expresiones son inmutables, lo que significa que no pueden modificarse directamente. Para cambiar un árbol de expresión, debe crear una copia de un árbol de expresión existente y, una vez creada la copia, realizar los cambios necesarios. Puede usar la clase <xref:System.Linq.Expressions.ExpressionVisitor> para recorrer un árbol de expresión existente y copiar cada nodo que visita.
 
@@ -17,7 +17,7 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
 
 1. Cree un nuevo proyecto de **aplicación de consola**.
 
-2. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
+2. Agregue una instrucción `Imports` al archivo para el espacio de nombres `System.Linq.Expressions`.
 
 3. Agregue la clase `AndAlsoModifier` al proyecto.
 
@@ -47,9 +47,9 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
 
     Esta clase hereda la clase <xref:System.Linq.Expressions.ExpressionVisitor> y está especializada en la modificación de expresiones que representan operaciones `AND` condicionales. Cambia estas operaciones de una expresión `AND` condicional a una expresión `OR` condicional. Para ello, la clase invalida el método <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> del tipo base, porque las expresiones `AND` condicionales se representan como expresiones binarias. En el método `VisitBinary`, si la expresión que se pasa representa una operación `AND` condicional, el código construye una nueva expresión que contiene el operador `OR` condicional en lugar del operador `AND` condicional. Si la expresión que se pasa a `VisitBinary` no representa una operación `AND` condicional, el método defiere a la implementación de la case base. Los métodos de clase base construyen nodos que son como los árboles de expresiones que se pasan, pero los subárboles de los nodos se reemplazan por los árboles de expresiones que genera de forma recursiva el visitante.
 
-4. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
+4. Agregue una instrucción `Imports` al archivo para el espacio de nombres `System.Linq.Expressions`.
 
-5. Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.
+5. Agregue código al método `Main` del archivo Module1. VB para crear un árbol de expresión y pasarlo al método que lo modificará.
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -73,5 +73,5 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
 
 ## <a name="see-also"></a>Vea también
 
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Cómo: ejecutar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

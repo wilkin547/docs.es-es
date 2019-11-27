@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445571"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps (Método)
-Assigns assembly-level properties.  
+Asigna propiedades de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of the assembly.  
+ IDENTIFICADOR del ensamblado.  
   
  `FileToken`  
- File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Archivo que define la propiedad. Puede ser NULL si `AssemblyID` no indica un valor de netmodule sin enlazar.  
   
  `Option`  
- Indicates the option to modify.  
+ Indica la opción que se va a modificar.  
   
  `Value`  
- New value of the option.  
+ Nuevo valor de la opción.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 

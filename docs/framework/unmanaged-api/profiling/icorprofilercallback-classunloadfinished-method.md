@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435913"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished (Método)
-Notifies the profiler that a class has finished unloading.  
+Notifica al generador de perfiles que una clase ha terminado de descargarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ de Identifica la clase que se ha descargado.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ de HRESULT que indica si la clase se ha descargado correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+ Algunas partes de la descarga de la clase podrían continuar después de la devolución de llamada de `ClassUnloadFinished`. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` solo indica que la primera parte de la descarga de la clase se ha realizado correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

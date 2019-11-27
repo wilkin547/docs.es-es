@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a C-C++ Union by Using Attributes'
+title: 'Cómo: crear una Unión deC++ C mediante atributos'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349496"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Cómo: crear una Unión de CC++ /mediante atributos (Visual Basic)
 
 Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.
 

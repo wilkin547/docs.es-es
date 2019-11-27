@@ -18,15 +18,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353942"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Cómo: Deshacerse de un recurso del sistema (Visual Basic)
-You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
+Puede usar un bloque `Using` para garantizar que el sistema desecha un recurso cuando el código sale del bloque. Esto resulta útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria, o que otros componentes también desean usar.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando el código finaliza con ella  
   
-1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
+1. Asegúrese de incluir la [instrucción Imports (espacio de nombres y tipo .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) adecuada para la conexión de base de datos al principio del archivo de código fuente (en este caso, <xref:System.Data.SqlClient>).  
   
-2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
+2. Cree un bloque `Using` con las instrucciones `Using` y `End Using`. Dentro del bloque, coloque el código que se ocupa de la conexión de base de datos.  
   
-3. Declare the connection and create an instance of it as part of the `Using` statement.  
+3. Declare la conexión y cree una instancia de ella como parte de la instrucción `Using`.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ You can use a `Using` block to guarantee that the system disposes of a resource 
     End Sub  
     ```  
   
-     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
+     El sistema desecha el recurso independientemente de cómo salga del bloque, incluido el caso de una excepción no controlada.  
   
-     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
+     Tenga en cuenta que no puede tener acceso a `sqc` desde fuera del bloque de `Using`, porque su ámbito está limitado al bloque.  
   
-     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
+     Puede usar esta misma técnica en un recurso del sistema, como un identificador de archivo o un contenedor COM. Use un bloque de `Using` cuando desee asegurarse de dejar el recurso disponible para otros componentes después de salir del bloque de `Using`.  
   
 ## <a name="see-also"></a>Vea también
 

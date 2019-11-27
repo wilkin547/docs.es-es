@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436957"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA (Método)
-Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.  
+Obtiene la dirección virtual relativa (RVA) y las marcas de implementación del método o campo representado por el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +37,20 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for. If the token is a FieldDef, the field must be a global variable.  
+ de Símbolo (token) de metadatos de MethodDef o FieldDef que representa el objeto de código para el que se va a devolver la RVA. Si el token es FieldDef, el campo debe ser una variable global.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the code object represented by the token.  
+ enuncia Un puntero a la dirección virtual relativa del objeto de código representado por el token.  
   
  `pdwImplFlags`  
- [out] A pointer to the implementation flags for the method. This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.  
+ enuncia Puntero a las marcas de implementación para el método. Este valor es una máscara de máscara de la enumeración [CorMethodImpl (](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) . El valor de `pdwImplFlags` solo es válido si `tk` es un token de MethodDef.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

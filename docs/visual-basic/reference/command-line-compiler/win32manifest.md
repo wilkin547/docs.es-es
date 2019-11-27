@@ -24,33 +24,33 @@ Identifica un archivo de manifiesto de la aplicación Win32 definido por el usua
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`fileName`|The path of the custom manifest file.|  
+|`fileName`|Ruta de acceso del archivo de manifiesto personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
- By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker. It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio. If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.  
+ De forma predeterminada, el compilador Visual Basic inserta un manifiesto de aplicación que especifica un nivel de ejecución solicitado de AsInvoker. Crea el manifiesto en la misma carpeta en la que se compila el archivo ejecutable, normalmente la carpeta bin\Debug o bin\Release cuando se usa Visual Studio. Si desea proporcionar un manifiesto personalizado, por ejemplo, para especificar un nivel de ejecución solicitado de highestAvailable o requireAdministrator, use esta opción para especificar el nombre del archivo.  
   
 > [!NOTE]
-> This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive. If you try to use both options in the same command line, you will get a build error.  
+> Esta opción y la opción [-Win32Resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) son mutuamente excluyentes. Si intenta usar ambas opciones en la misma línea de comandos, obtendrá un error de compilación.  
   
  Una aplicación sin manifiesto de aplicación que especifique un nivel de ejecución solicitado estará sujeta a virtualización de archivos y Registro conforme a la característica Control de cuentas de usuario de Windows Vista. Para más información sobre la virtualización, vea [Implementación de ClickOnce en Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
- Your application will be subject to virtualization if either of the following conditions is true:  
+ La aplicación estará sujeta a la virtualización si se cumple alguna de las siguientes condiciones:  
   
-1. You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.  
+1. Use la opción `-nowin32manifest` y no proporcione un manifiesto en un paso de compilación posterior o como parte de un archivo de recursos de Windows (. res) mediante la opción `-win32resource`.  
   
 2. Se proporciona un manifiesto personalizado que no especifica un nivel de ejecución solicitado.  
   
- Visual Studio crea un archivo de manifiesto predeterminado y lo almacena en los directorios de depuración y versión junto con el archivo ejecutable. You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer. Para obtener más información, consulte [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio crea un archivo de manifiesto predeterminado y lo almacena en los directorios de depuración y versión junto con el archivo ejecutable. Para ver o editar el archivo app. manifest predeterminado, haga clic en **Ver configuración de UAC** en la pestaña **aplicación** del diseñador de proyectos. Para obtener más información, consulta [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option. Use esa misma opción si quiere que la aplicación esté sujeta a virtualización de archivos y Registro en Windows Vista. This will prevent the compiler from creating and embedding a default manifest in the PE file.  
+ Puede proporcionar el manifiesto de aplicación como un paso personalizado posterior a la compilación o como parte de un archivo de recursos de Win32 mediante la opción `-nowin32manifest`. Use esa misma opción si quiere que la aplicación esté sujeta a virtualización de archivos y Registro en Windows Vista. Esto impedirá que el compilador cree e inserte un manifiesto predeterminado en el archivo PE.  
   
 ## <a name="example"></a>Ejemplo  
- The following example shows the default manifest that the Visual Basic compiler inserts into a PE.  
+ En el ejemplo siguiente se muestra el manifiesto predeterminado que el compilador Visual Basic inserta en un PE.  
   
 > [!NOTE]
-> The compiler inserts a standard application name MyApplication.app into the manifest XML. Se trata de una solución alternativa para permitir que las aplicaciones se ejecuten en Windows Server 2003 Service Pack 3.  
+> El compilador inserta un nombre de aplicación estándar, la aplicación en el XML de manifiesto. Se trata de una solución alternativa para permitir que las aplicaciones se ejecuten en Windows Server 2003 Service Pack 3.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

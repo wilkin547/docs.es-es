@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350201"
 ---
 # <a name="-operator-visual-basic"></a>= (Operador, Visual Basic)
-Assigns a value to a variable or property.  
+Asigna un valor a una variable o propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,22 +26,22 @@ variableorproperty = value
   
 ## <a name="parts"></a>Elementos  
  `variableorproperty`  
- Any writable variable or any property.  
+ Cualquier variable que se pueda escribir o cualquier propiedad.  
   
  `value`  
- Any literal, constant, or expression.  
+ Cualquier literal, constante o expresión.  
   
 ## <a name="remarks"></a>Comentarios  
- The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `=` operator assigns the value on its right to the variable or property on its left.  
+ El elemento del lado izquierdo del signo igual (`=`) puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../../../visual-basic/language-reference/modifiers/readonly.md). El operador `=` asigna el valor de su derecha a la variable o propiedad de su izquierda.  
   
 > [!NOTE]
-> The `=` operator is also used as a comparison operator. For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> El operador `=` también se usa como operador de comparación. Para obtener más información, vea [operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
- The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El operador `=` solo se puede sobrecargar como operador de comparación relacional, no como operador de asignación. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- The following example demonstrates the assignment operator. The value on the right is assigned to the variable on the left.  
+ En el siguiente ejemplo se muestra el operador de asignación. El valor de la derecha se asigna a la variable de la izquierda.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
@@ -50,9 +50,9 @@ variableorproperty = value
 - [Operador &=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [Operador *=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [Operador +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [-= (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [/= (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\\= (operador)](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Operador ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md)

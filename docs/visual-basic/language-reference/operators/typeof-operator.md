@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350893"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf (Operador, Visual Basic)
-Checks whether the runtime type of an expression's result is type-compatible with the specified type.
+Comprueba si el tipo en tiempo de ejecución del resultado de una expresión es compatible con el tipo especificado.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ result = TypeOf objectexpression IsNot typename
  Devuelto. Valor `Boolean`.  
   
  `objectexpression`  
- Requerido. Cualquier expresión que se evalúa como un tipo de referencia.  
+ Obligatorio. Cualquier expresión que se evalúa como un tipo de referencia.  
   
  `typename`  
- Requerido. Cualquier nombre de tipo de datos.  
+ Obligatorio. Cualquier nombre de tipo de datos.  
   
 ## <a name="remarks"></a>Comentarios  
  El operador `TypeOf` determina si el tipo en tiempo de ejecución de `objectexpression` es compatible con `typename`. La compatibilidad depende de la categoría del tipo de `typename`. En la tabla siguiente se muestra cómo se determina la compatibilidad.  
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

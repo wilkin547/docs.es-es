@@ -1,5 +1,5 @@
 ---
-title: Join (Cláusula)
+title: Cláusula Join
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -19,7 +19,7 @@ ms.locfileid: "74353263"
 ---
 # <a name="join-clause-visual-basic"></a>Join (Cláusula, Visual Basic)
 
-Combina dos colecciones en una sola colección. The join operation is based on matching keys and uses the `Equals` operator.
+Combina dos colecciones en una sola colección. La operación de combinación se basa en las claves coincidentes y utiliza el operador `Equals`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>Elementos
 
-`element` Obligatorio. The control variable for the collection being joined.
+`element` Obligatorio. Variable de control de la colección que se va a combinar.
 
 `collection`  
-Requerido. The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
+Obligatorio. Colección que se va a combinar con la colección identificada en el lado izquierdo del operador `Join`. Una cláusula `Join` se puede anidar en otra cláusula `Join` o en una cláusula `Group Join`.
 
 `joinClause`  
-Opcional. One or more additional `Join` clauses to further refine the query.
+Opcional. Una o varias cláusulas de `Join` adicionales para restringir aún más la consulta.
 
 `groupJoinClause`  
-Opcional. One or more additional `Group Join` clauses to further refine the query.
+Opcional. Una o varias cláusulas de `Group Join` adicionales para restringir aún más la consulta.
 
 `key1` `Equals` `key2`  
-Requerido. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
+Obligatorio. Identifica las claves para las colecciones que se están combinando. Debe utilizar el operador `Equals` para comparar las claves de las colecciones que se están combinando. Puede combinar condiciones de combinación mediante el operador `And` para identificar varias claves. `key1` debe ser de la colección en el lado izquierdo del operador de `Join`. `key2` debe ser de la colección del lado derecho del operador de `Join`.
 
-The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
+Las claves utilizadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión clave solo puede contener elementos de su colección respectiva.
 
 ## <a name="remarks"></a>Comentarios
 
-The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
+La cláusula `Join` combina dos colecciones basadas en los valores de clave coincidentes de las colecciones que se van a combinar. La colección resultante puede contener cualquier combinación de valores de la colección identificada en el lado izquierdo del operador `Join` y la colección identificada en la cláusula `Join`. La consulta devolverá solo los resultados para los que se cumple la condición especificada por el operador `Equals`. Esto es equivalente a un `INNER JOIN` en SQL.
 
-You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
+Puede usar varias cláusulas `Join` en una consulta para combinar dos o más colecciones en una sola colección.
 
-You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
+Puede realizar una combinación implícita para combinar colecciones sin la cláusula `Join`. Para ello, incluya varias cláusulas `In` en la cláusula `From` y especifique una cláusula `Where` que identifique las claves que desea usar para la combinación.
 
-You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
+Puede usar la cláusula `Group Join` para combinar colecciones en una sola colección jerárquica. Esto es como un `LEFT OUTER JOIN` en SQL.
 
 ## <a name="example"></a>Ejemplo
 
-The following code example performs an implicit join to combine a list of customers with their orders.
+En el ejemplo de código siguiente se realiza una combinación implícita para combinar una lista de clientes con sus pedidos.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>Ejemplo
 
-The following code example joins two collections by using the `Join` clause.
+En el ejemplo de código siguiente se combinan dos colecciones mediante la cláusula `Join`.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-This example will produce output similar to the following:
+Este ejemplo generará una salida similar a la siguiente:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ This example will produce output similar to the following:
 
 ## <a name="example"></a>Ejemplo
 
-The following code example joins two collections by using the `Join` clause with two key columns.
+En el ejemplo de código siguiente se combinan dos colecciones mediante la cláusula `Join` con dos columnas de clave.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-The example will produce output similar to the following:
+En el ejemplo se producirá una salida similar a la siguiente:
 
 `winlogon (968), Windows Logon, Priority = 13`
 

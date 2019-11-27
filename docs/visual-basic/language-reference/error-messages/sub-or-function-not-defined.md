@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349574"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function no definida (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. Las causas posibles de este error son:  
+Se debe definir una `Sub` o `Function` para que se llame a. Las causas posibles de este error son:  
   
-- Misspelling the procedure name.  
+- Error al escribir el nombre del procedimiento.  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- Intentar llamar a un procedimiento desde otro proyecto sin agregar explícitamente una referencia a ese proyecto en el cuadro de diálogo **referencias** .  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- Especificar un procedimiento que no es visible para el procedimiento que realiza la llamada.  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- Declarar una rutina de biblioteca de vínculos dinámicos (DLL) de Windows o una rutina de recursos de código de Macintosh que no está en la biblioteca o el recurso de código especificado.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. Asegúrese de que el nombre del procedimiento esté escrito correctamente.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. Busque el nombre del proyecto que contiene el procedimiento al que desea llamar en el cuadro de diálogo **referencias** . Si no aparece, haga clic en el botón **examinar** para buscarlo. Active la casilla situada a la izquierda del nombre del proyecto y, a continuación, haga clic en **Aceptar**.  
   
-3. Check the name of the routine.  
+3. Compruebe el nombre de la rutina.  
   
 ## <a name="see-also"></a>Vea también
 

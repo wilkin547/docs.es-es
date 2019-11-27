@@ -16,13 +16,13 @@ ms.locfileid: "74351420"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Modificador genérico) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+En el caso de los parámetros de tipo genérico, la palabra clave `Out` especifica que el tipo es covariante.
 
 ## <a name="remarks"></a>Comentarios
 
 La covarianza le permite usar un tipo más derivado que el que se especifica en el parámetro genérico. Esto permite la conversión implícita de las clases que implementan interfaces variantes y la conversión implícita de los tipos de delegado.
 
-Para obtener más información, vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).
+Para obtener más información, vea [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (Covarianza y contravarianza).
 
 ## <a name="rules"></a>Reglas
 
@@ -37,11 +37,11 @@ En una interfaz genérica, un parámetro de tipo se puede declarar como covarian
 
 - El parámetro de tipo no se usa como restricción genérica para los métodos de interfaz.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+En un delegado genérico, un parámetro de tipo puede declararse como covariante si solo se usa como un tipo de valor devuelto de método y no se usa para los argumentos de método.
 
 La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+En Visual Basic, no se pueden declarar eventos en interfaces covariantes sin especificar el tipo de delegado. Además, las interfaces covariantes no pueden tener clases, enumeraciones o estructuras anidadas, pero pueden tener interfaces anidadas.
 
 ## <a name="behavior"></a>Comportamiento
 
@@ -57,7 +57,7 @@ En el ejemplo siguiente se muestra cómo declarar, extender e implementar una in
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. It also shows how you can use implicit conversion for delegate types.
+En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. También se muestra cómo puede usar la conversión implícita para los tipos de delegado.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

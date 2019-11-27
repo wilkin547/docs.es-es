@@ -24,7 +24,7 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |+ &#124; -|Opcional. De forma predeterminada, se aplica `-warnaserror-`; las advertencias no impiden que el compilador genere un archivo de salida. La opción `-warnaserror`, que es la misma que `-warnaserror+`, causa que las advertencias se traten como errores.|  
 |`numberList`|Opcional. Lista delimitada por comas de los números de identificadores de advertencia a los que se aplica la opción `-warnaserror`. Si no se especifica ningún identificador de advertencia, la opción `-warnaserror` se aplica a todas las advertencias.|  
@@ -41,11 +41,11 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
   
 |Para establecer -warnaserror a fin de tratar todas las advertencias como errores en el IDE de Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2. Haga clic en la pestaña **compilar** .<br />3. Asegúrese de que la casilla **deshabilitar todas las advertencias** esté desactivada.<br />4. Active la casilla **tratar todas las advertencias como errores** .|  
   
 |Para establecer - warnaserror a fin de tratar advertencias específicas como errores en el IDE de Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />2. Haga clic en la pestaña **compilar** .<br />3. Asegúrese de que la casilla **deshabilitar todas las advertencias** esté desactivada.<br />4. Asegúrese de que la casilla **tratar todas las advertencias como errores** esté desactivada.<br />5. Seleccione **error** en la columna **notificación** adyacente a la advertencia que se debe tratar como un error.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `In.vb` y ordena al compilador que muestre un error para la primera ocurrencia de cada advertencia que encuentra.  

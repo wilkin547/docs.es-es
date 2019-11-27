@@ -27,27 +27,27 @@ object(index)
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`object`|Requerido. A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
-|(|Requerido. Denotes the start of the indexer property.|  
-|`index`|Requerido. An integer expression that specifies the zero-based position of an element of the collection.|  
-|)|Requerido. Denotes the end of the indexer property.|  
+|`object`|Obligatorio. Colección consultable. Es decir, una colección que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.|  
+|(|Obligatorio. Denota el inicio de la propiedad de indizador.|  
+|`index`|Obligatorio. Expresión de tipo entero que especifica la posición de base cero de un elemento de la colección.|  
+|)|Obligatorio. Denota el final de la propiedad de indizador.|  
   
 ## <a name="return-value"></a>Valor devuelto  
- The object from the specified location in the collection, or `Nothing` if the index is out of range.  
+ Objeto de la ubicación especificada en la colección, o `Nothing` si el índice está fuera del intervalo.  
   
 ## <a name="remarks"></a>Comentarios  
- You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
+ Puede usar la propiedad de indizador de extensión para tener acceso a los elementos individuales de una colección. Esta propiedad de indizador se utiliza normalmente en la salida de las propiedades del eje XML. Las propiedades XML secundario y del eje descendiente XML devuelven colecciones de objetos <xref:System.Xml.Linq.XElement> o un valor de atributo.  
   
- The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
+ El compilador Visual Basic convierte las propiedades de indizador de extensión en llamadas al método `ElementAtOrDefault`. A diferencia de un indizador de matriz, el método `ElementAtOrDefault` devuelve `Nothing` si el índice está fuera del intervalo. Este comportamiento es útil cuando no se puede determinar fácilmente el número de elementos de una colección.  
   
- This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
+ Esta propiedad de indizador es como una propiedad de extensión para las colecciones que implementan <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>: solo se usa si la colección no tiene un indizador o una propiedad predeterminada.  
   
- To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Para tener acceso al valor del primer elemento de una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, puede usar la propiedad `Value` XML. Para obtener más información, vea [propiedad valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Ejemplo  
- The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
+ En el ejemplo siguiente se muestra cómo usar el indizador de extensión para tener acceso al segundo nodo secundario de una colección de objetos <xref:System.Xml.Linq.XElement>. Se tiene acceso a la colección mediante la propiedad del eje secundario, que obtiene todos los elementos secundarios denominados `phone` en el objeto `contact`.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   

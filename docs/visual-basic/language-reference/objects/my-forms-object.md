@@ -16,57 +16,57 @@ ms.locfileid: "74350370"
 ---
 # <a name="myforms-object"></a>My.Forms (Objeto)
 
-Provides properties for accessing an instance of each Windows form declared in the current project.
+Proporciona propiedades para obtener acceso a una instancia de cada Windows Forms declarado en el proyecto actual.
 
 ## <a name="remarks"></a>Comentarios
 
-The `My.Forms` object provides an instance of each form in the current project. The name of the property is the same as the name of the form that the property accesses.
+El objeto `My.Forms` proporciona una instancia de cada formulario en el proyecto actual. El nombre de la propiedad es el mismo que el nombre del formulario al que tiene acceso la propiedad.
 
-You can access the forms provided by the `My.Forms` object by using the name of the form, without qualification. Because the property name is the same as the form's type name, this allows you to access a form as if it had a default instance. Por ejemplo, `My.Forms.Form1.Show` es equivalente a `Form1.Show`.
+Puede tener acceso a los formularios proporcionados por el objeto `My.Forms` utilizando el nombre del formulario, sin calificación. Dado que el nombre de la propiedad es el mismo que el nombre de tipo del formulario, esto le permite tener acceso a un formulario como si tuviera una instancia predeterminada. Por ejemplo, `My.Forms.Form1.Show` es equivalente a `Form1.Show`.
 
-The `My.Forms` object exposes only the forms associated with the current project. It does not provide access to forms declared in referenced DLLs. To access a form that a DLL provides, you must use the qualified name of the form, written as *DllName*.*FormName*.
+El objeto `My.Forms` expone solo los formularios asociados al proyecto actual. No proporciona acceso a los formularios declarados en los archivos DLL a los que se hace referencia. Para tener acceso a un formulario que proporciona un archivo DLL, debe usar el nombre completo del formulario, escrito como *DllName*. *Nombreformulario*.
 
-You can use the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> property to get a collection of all the application's open forms.
+Puede usar la propiedad <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> para obtener una colección de todos los formularios abiertos de la aplicación.
 
-The object and its properties are available only for Windows applications.
+El objeto y sus propiedades solo están disponibles para las aplicaciones de Windows.
 
 ## <a name="properties"></a>Propiedades
 
-Each property of the `My.Forms` object provides access to an instance of a form in the current project. The name of the property is the same as the name of the form that the property accesses, and the property type is the same as the form's type.
+Cada propiedad del objeto `My.Forms` proporciona acceso a una instancia de un formulario en el proyecto actual. El nombre de la propiedad es el mismo que el nombre del formulario al que tiene acceso la propiedad y el tipo de propiedad es el mismo que el tipo del formulario.
 
 > [!NOTE]
-> If there is a name collision, the property name to access a form is *RootNamespace*_*Namespace*\_*FormName*. For example, consider two forms named `Form1.`If one of these forms is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that form through `My.Forms.WindowsApplication1_Namespace1_Form1`.
+> Si hay un conflicto de nombres, el nombre de la propiedad para tener acceso a un formulario es *RootNamespace*_*namespace*\_*formName*. Por ejemplo, considere dos formularios denominados `Form1.`si uno de estos formularios está en el espacio de nombres raíz `WindowsApplication1` y en el espacio de nombres `Namespace1`, tendría acceso a ese formulario a través de `My.Forms.WindowsApplication1_Namespace1_Form1`.
 
-The `My.Forms` object provides access to the instance of the application's main form that was created on startup. For all other forms, the `My.Forms` object creates a new instance of the form when it is accessed and stores it. Subsequent attempts to access that property return that instance of the form.
+El objeto `My.Forms` proporciona acceso a la instancia del formulario principal de la aplicación que se creó en el inicio. En el caso de todos los demás formularios, el objeto `My.Forms` crea una instancia nueva del formulario cuando se tiene acceso a ella y la almacena. Los intentos posteriores de obtener acceso a esa propiedad devuelven esa instancia del formulario.
 
-You can dispose of a form by assigning `Nothing` to the property for that form. The property setter calls the <xref:System.Windows.Forms.Form.Close%2A> method of the form, and then assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.
+Puede desechar un formulario asignando `Nothing` a la propiedad de ese formulario. El establecedor de propiedad llama al método <xref:System.Windows.Forms.Form.Close%2A> del formulario y, a continuación, asigna `Nothing` al valor almacenado. Si asigna un valor distinto de `Nothing` a la propiedad, el establecedor produce una excepción de <xref:System.ArgumentException>.
 
-You can test whether a property of the `My.Forms` object stores an instance of the form by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.
+Puede comprobar si una propiedad del objeto `My.Forms` almacena una instancia del formulario mediante el operador `Is` o `IsNot`. Puede utilizar esos operadores para comprobar si el valor de la propiedad es `Nothing`.
 
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the form and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.Forms` object differently and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.
+> Normalmente, el operador `Is` o `IsNot` tiene que leer el valor de la propiedad para realizar la comparación. Sin embargo, si la propiedad almacena actualmente `Nothing`, la propiedad crea una nueva instancia del formulario y, a continuación, devuelve esa instancia. Sin embargo, el compilador Visual Basic trata las propiedades del objeto `My.Forms` de forma diferente y permite que el operador `Is` o `IsNot` Compruebe el estado de la propiedad sin modificar su valor.
 
 ## <a name="example"></a>Ejemplo
 
-This example changes the title of the default `SidebarMenu` form.
+En este ejemplo se cambia el título del formulario `SidebarMenu` predeterminado.
 
 [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]
 
-For this example to work, your project must have a form named `SidebarMenu`.
+Para que este ejemplo funcione, el proyecto debe tener un formulario denominado `SidebarMenu`.
 
-This code will work only in a Windows Application project.
+Este código solo funcionará en un proyecto de aplicación de Windows.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="availability-by-project-type"></a>Availability by Project Type
+### <a name="availability-by-project-type"></a>Disponibilidad por tipo de proyecto
 
 |Tipo de proyecto|Disponible|
 |---|---|
-|Aplicación Windows|**Sí**|
+|Aplicación de Windows|**Sí**|
 |Biblioteca de clases|No|
 |Aplicación de consola|No|
-|Windows Control Library|No|
-|Web Control Library|No|
+|Biblioteca de controles de Windows|No|
+|Biblioteca de controles Web|No|
 |Servicio de Windows|No|
 |Sitio web|No|
 

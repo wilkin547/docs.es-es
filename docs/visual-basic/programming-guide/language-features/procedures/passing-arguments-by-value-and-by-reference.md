@@ -17,53 +17,53 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352605"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Pasar argumentos por valor y por referencia (Visual Basic)
-In Visual Basic, you can pass an argument to a procedure *by value* or *by reference*. This is known as the *passing mechanism*, and it determines whether the procedure can modify the programming element underlying the argument in the calling code. The procedure declaration determines the passing mechanism for each parameter by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword.  
+En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por referencia*. Esto se conoce como *mecanismo de paso*y determina si el procedimiento puede modificar el elemento de programación subyacente al argumento en el código de llamada. La declaración de procedimiento determina el mecanismo de paso de cada parámetro especificando la palabra clave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) .  
   
-## <a name="distinctions"></a>Distinctions  
- When passing an argument to a procedure, be aware of several different distinctions that interact with each other:  
+## <a name="distinctions"></a>Diferencias  
+ Al pasar un argumento a un procedimiento, tenga en cuenta varias distinciones diferentes que interactúan entre sí:  
   
-- Whether the underlying programming element is modifiable or nonmodifiable  
+- Si el elemento de programación subyacente es modificable o no modificable  
   
-- Whether the argument itself is modifiable or nonmodifiable  
+- Si el propio argumento es modificable o no modificable  
   
-- Whether the argument is being passed by value or by reference  
+- Si el argumento se pasa por valor o por referencia  
   
-- Whether the argument data type is a value type or a reference type  
+- Si el tipo de datos del argumento es un tipo de valor o un tipo de referencia  
   
- For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](./differences-between-modifiable-and-nonmodifiable-arguments.md) and [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+ Para obtener más información, vea [diferencias entre argumentos modificables y no modificables](./differences-between-modifiable-and-nonmodifiable-arguments.md) y [diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-## <a name="choice-of-passing-mechanism"></a>Choice of Passing Mechanism  
- You should choose the passing mechanism carefully for each argument.  
+## <a name="choice-of-passing-mechanism"></a>Elección del mecanismo de paso  
+ Debe elegir cuidadosamente el mecanismo de paso para cada argumento.  
   
-- **Protection**. In choosing between the two passing mechanisms, the most important criterion is the exposure of calling variables to change. The advantage of passing an argument `ByRef` is that the procedure can return a value to the calling code through that argument. The advantage of passing an argument `ByVal` is that it protects a variable from being changed by the procedure.  
+- **Protección**. Al elegir entre los dos mecanismos de paso, el criterio más importante es la exposición de las variables de llamada que se van a cambiar. La ventaja de pasar un argumento `ByRef` es que el procedimiento puede devolver un valor al código de llamada a través de ese argumento. La ventaja de pasar un argumento `ByVal` es que protege una variable de que el procedimiento cambie.  
   
-- **Performance**. Although the passing mechanism can affect the performance of your code, the difference is usually insignificant. One exception to this is a value type passed `ByVal`. In this case, Visual Basic copies the entire data contents of the argument. Therefore, for a large value type such as a structure, it can be more efficient to pass it `ByRef`.  
+- **Rendimiento**. Aunque el mecanismo de paso puede afectar al rendimiento del código, la diferencia suele ser insignificante. Una excepción es un tipo de valor que se pasa `ByVal`. En este caso, Visual Basic copia todo el contenido de los datos del argumento. Por lo tanto, para un tipo de valor grande, como una estructura, puede ser más eficaz pasarlo `ByRef`.  
   
-     For reference types, only the pointer to the data is copied (four bytes on 32-bit platforms, eight bytes on 64-bit platforms). Therefore, you can pass arguments of type `String` or `Object` by value without harming performance.  
+     En el caso de los tipos de referencia, solo se copia el puntero a los datos (cuatro bytes en las plataformas de 32 bits, ocho bytes en las plataformas de 64 bits). Por lo tanto, puede pasar argumentos de tipo `String` o `Object` por valor sin dañar el rendimiento.  
   
-## <a name="determination-of-the-passing-mechanism"></a>Determination of the Passing Mechanism  
- The procedure declaration specifies the passing mechanism for each parameter. The calling code can't override a `ByVal` mechanism.  
+## <a name="determination-of-the-passing-mechanism"></a>Determinación del mecanismo de paso  
+ La declaración de procedimiento especifica el mecanismo de paso de cada parámetro. El código de llamada no puede invalidar un mecanismo de `ByVal`.  
   
- If a parameter is declared with `ByRef`, the calling code can force the mechanism to `ByVal` by enclosing the argument name in parentheses in the call. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Si un parámetro se declara con `ByRef`, el código de llamada puede forzar al mecanismo a `ByVal` mediante la inclusión del nombre del argumento entre paréntesis en la llamada. Para obtener más información, vea [Cómo: forzar un argumento para que se pase por valor](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- The default in Visual Basic is to pass arguments by value.  
+ De forma predeterminada, en Visual Basic es pasar argumentos por valor.  
   
-## <a name="when-to-pass-an-argument-by-value"></a>When to Pass an Argument by Value  
+## <a name="when-to-pass-an-argument-by-value"></a>Cuándo pasar un argumento por valor  
   
-- If the calling code element underlying the argument is a nonmodifiable element, declare the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). No code can change the value of a nonmodifiable element.  
+- Si el elemento de código de llamada subyacente al argumento es un elemento no modificable, declare el parámetro correspondiente [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Ningún código puede cambiar el valor de un elemento no modificable.  
   
-- If the underlying element is modifiable, but you do not want the procedure to be able to change its value, declare the parameter `ByVal`. Only the calling code can change the value of a modifiable element passed by value.  
+- Si el elemento subyacente es modificable, pero no desea que el procedimiento pueda cambiar su valor, declare el parámetro `ByVal`. Solo el código de llamada puede cambiar el valor de un elemento modificable que se pasa por valor.  
   
-## <a name="when-to-pass-an-argument-by-reference"></a>When to Pass an Argument by Reference  
+## <a name="when-to-pass-an-argument-by-reference"></a>Cuándo pasar un argumento por referencia  
   
-- If the procedure has a genuine need to change the underlying element in the calling code, declare the corresponding parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Si el procedimiento tiene una necesidad genuina de cambiar el elemento subyacente en el código de llamada, declare el parámetro correspondiente [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
-- If the correct execution of the code depends on the procedure changing the underlying element in the calling code, declare the parameter `ByRef`. If you pass it by value, or if the calling code overrides the `ByRef` passing mechanism by enclosing the argument in parentheses, the procedure call might produce unexpected results.  
+- Si la ejecución correcta del código depende del procedimiento que cambia el elemento subyacente en el código de llamada, declare el parámetro `ByRef`. Si se pasa por valor, o si el código de llamada invalida el mecanismo de paso de `ByRef` mediante la inclusión del argumento entre paréntesis, la llamada al procedimiento podría producir resultados inesperados.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- The following example illustrates when to pass arguments by value and when to pass them by reference. Procedure `Calculate` has both a `ByVal` and a `ByRef` parameter. Given an interest rate, `rate`, and a sum of money, `debt`, the task of the procedure is to calculate a new value for `debt` that is the result of applying the interest rate to the original value of `debt`. Because `debt` is a `ByRef` parameter, the new total is reflected in the value of the argument in the calling code that corresponds to `debt`. Parameter `rate` is a `ByVal` parameter because `Calculate` should not change its value.  
+ En el ejemplo siguiente se muestra Cuándo pasar argumentos por valor y cuándo pasarlos por referencia. El procedimiento `Calculate` tiene un `ByVal` y un parámetro `ByRef`. Dado un tipo de interés, `rate`y una suma de dinero, `debt`, la tarea del procedimiento es calcular un nuevo valor para `debt` que es el resultado de aplicar el tipo de interés al valor original de `debt`. Dado que `debt` es un parámetro `ByRef`, el nuevo total se refleja en el valor del argumento en el código de llamada que corresponde a `debt`. `rate` de parámetro es un parámetro de `ByVal` porque `Calculate` no debe cambiar su valor.  
   
 ### <a name="code"></a>Código  
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
@@ -77,4 +77,4 @@ In Visual Basic, you can pass an argument to a procedure *by value* or *by refer
 - [Proteger un argumento de procedimiento para que no se realicen cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
-- [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

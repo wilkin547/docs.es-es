@@ -14,31 +14,31 @@ ms.locfileid: "74330957"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Cómo: Cargar XML desde un archivo, cadena o secuencia (Visual Basic)
 
-You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods. These methods are shown in the following examples.
+Puede crear [literales XML](../../../../visual-basic/language-reference/xml-literals/index.md) y rellenarlos con el contenido de un origen externo, como un archivo, una cadena o una secuencia mediante varios métodos. Estos métodos se muestran en los ejemplos siguientes.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-load-xml-from-a-file"></a>To load XML from a file
+## <a name="to-load-xml-from-a-file"></a>Para cargar XML desde un archivo
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a file, use the `Load` method. This method can take a file path, text stream, or XML stream as input.
+Para rellenar un literal XML como un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> objeto desde un archivo, use el método `Load`. Este método puede tomar como entrada una ruta de acceso de archivo, una secuencia de texto o una secuencia XML.
 
-The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Load%28System.String%29> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a text file.
+En el ejemplo de código siguiente se muestra el uso del método <xref:System.Xml.Linq.XDocument.Load%28System.String%29> para rellenar un objeto <xref:System.Xml.Linq.XDocument> con XML de un archivo de texto.
 
 [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]
 
-## <a name="to-load-xml-from-a-string"></a>To load XML from a string
+## <a name="to-load-xml-from-a-string"></a>Para cargar XML desde una cadena
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a string, you can use the `Parse` method.
+Para rellenar un literal XML como un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> objeto de una cadena, puede usar el método `Parse`.
 
-The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a string.
+En el ejemplo de código siguiente se muestra el uso del método <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> para rellenar un objeto <xref:System.Xml.Linq.XDocument> con XML a partir de una cadena.
 
 [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]
 
-## <a name="to-load-xml-from-a-stream"></a>To load XML from a stream
+## <a name="to-load-xml-from-a-stream"></a>Para cargar XML desde un flujo
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a stream, you can use the `Load` method or the <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> method.
+Para rellenar un literal XML, como un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> de una secuencia, puede usar el método `Load` o el método <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>.
 
-The following code example shows the use of the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from an XML stream.
+En el ejemplo de código siguiente se muestra el uso del método <xref:System.Xml.Linq.XNode.ReadFrom%2A> para rellenar un objeto <xref:System.Xml.Linq.XDocument> con XML a partir de una secuencia XML.
 
 [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]
 

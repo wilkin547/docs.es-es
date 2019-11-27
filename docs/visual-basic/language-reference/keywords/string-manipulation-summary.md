@@ -16,7 +16,7 @@ ms.locfileid: "74351654"
 # <a name="string-manipulation-summary-visual-basic"></a>Resumen de manipulaciones de cadenas (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
 |Comparar dos cadenas.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
 |Convertir cadenas.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  

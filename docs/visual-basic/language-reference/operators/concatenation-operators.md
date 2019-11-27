@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331493"
 ---
 # <a name="concatenation-operators-visual-basic"></a>Operadores de concatenación (Visual Basic)
-The following are the concatenation operators defined in Visual Basic.  
+A continuación se muestran los operadores de concatenación definidos en Visual Basic.  
   
  [Operador &](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
@@ -24,4 +24,4 @@ The following are the concatenation operators defined in Visual Basic.
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Operadores de concatenación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

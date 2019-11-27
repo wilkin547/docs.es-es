@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351244"
 ---
 # <a name="error-statement"></a>Error (Instrucción)
-Simulates the occurrence of an error.  
+Simula la aparición de un error.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Elementos  
  `errornumber`  
- Requerido. Can be any valid error number.  
+ Obligatorio. Puede ser cualquier número de error válido.  
   
 ## <a name="remarks"></a>Comentarios  
- The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
+ La instrucción `Error` se admite por compatibilidad con versiones anteriores. En el nuevo código, especialmente al crear objetos, utilice el método `Raise` del objeto `Err` para generar errores en tiempo de ejecución.  
   
- If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
+ Si se define `errornumber`, la instrucción `Error` llama al controlador de errores después de que se asignen los siguientes valores predeterminados a las propiedades del objeto `Err`:  
   
-|Propiedad.|Valor|  
+|Propiedad|Valor|  
 |--------------|-----------|  
-|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
-|`Source`|Name of the current Visual Basic project.|  
-|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
-|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
-|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
-|`LastDLLError`|Zero.|  
+|`Number`|Valor especificado como argumento para `Error` instrucción. Puede ser cualquier número de error válido.|  
+|`Source`|Nombre del proyecto de Visual Basic actual.|  
+|`Description`|Expresión de cadena que corresponde al valor devuelto de la función `Error` para el `Number`especificado, si esta cadena existe. Si la cadena no existe, `Description` contiene una cadena de longitud cero ("").|  
+|`HelpFile`|La unidad, ruta de acceso y nombre de archivo completos del archivo de ayuda Visual Basic adecuado.|  
+|`HelpContext`|El identificador de contexto del archivo de ayuda Visual Basic adecuado para el error correspondiente a la propiedad `Number`.|  
+|`LastDLLError`|Nulo.|  
   
- If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
+ Si no existe ningún controlador de errores, o si no se habilita ninguno, se crea un mensaje de error que se muestra en las propiedades del objeto `Err`.  
   
 > [!NOTE]
-> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
+> Algunas aplicaciones host de Visual Basic no pueden crear objetos. Consulte la documentación de la aplicación host para determinar si puede crear clases y objetos.  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the `Error` statement to generate error number 11.  
+ En este ejemplo se utiliza la instrucción `Error` para generar el número de error 11.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Espacio de nombres:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

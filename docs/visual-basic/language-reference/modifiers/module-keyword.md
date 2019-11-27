@@ -1,5 +1,5 @@
 ---
-title: Module <keyword>
+title: <keyword> de módulos
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,15 +15,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351550"
 ---
-# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
+# <a name="module-keyword-visual-basic"></a>> De palabra clave de Module \<(Visual Basic)
+Especifica que un atributo al principio de un archivo de código fuente se aplica al módulo de ensamblado actual.  
   
 ## <a name="remarks"></a>Comentarios  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ Muchos atributos pertenecen a un elemento de programación individual, como una clase o una propiedad. Este atributo se aplica asociando el bloque de atributos, entre corchetes angulares (`< >`), directamente a la instrucción de declaración.  
   
- If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
+ Si un atributo no solo pertenece al elemento siguiente, sino al módulo de ensamblado actual, coloca el bloque de atributos al principio del archivo de código fuente e identifica el atributo con la palabra clave `Module`. Si se aplica a todo el ensamblado, se utiliza la palabra clave [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) .  
   
- The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+ El modificador `Module` no es el mismo que el de la [instrucción Module](../../../visual-basic/language-reference/statements/module-statement.md).  
   
 ## <a name="see-also"></a>Vea también
 

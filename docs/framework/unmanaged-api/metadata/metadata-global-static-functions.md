@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447823"
 ---
 # <a name="metadata-global-static-functions"></a>Funciones estáticas globales para metadatos
-Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). No hay funciones estáticas globales que pertenezcan a metadatos.  
+A partir de la .NET Framework 4, la documentación de las funciones `_Cor*`, `CoInitialize*`, `CoUninitialize*`y `CoEEShutDownCOM`, que pertenecen al hospedaje, se encuentra en [funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). No hay funciones estáticas globales que pertenezcan a metadatos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

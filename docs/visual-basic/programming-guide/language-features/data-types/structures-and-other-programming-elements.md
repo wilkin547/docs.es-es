@@ -16,13 +16,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346118"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Estructuras y otros elementos de programación (Visual Basic)
-You can use structures in conjunction with arrays, objects, and procedures, as well as with each other. The interactions use the same syntax as these elements use individually.  
+Puede usar estructuras junto con matrices, objetos y procedimientos, así como entre sí. Las interacciones utilizan la misma sintaxis que estos elementos usan individualmente.  
   
 > [!NOTE]
-> You cannot initialize any of the structure elements in the structure declaration. You can assign values only to elements of a variable that has been declared to be of a structure type.  
+> No se puede inicializar ninguno de los elementos de la estructura en la declaración de la estructura. Solo puede asignar valores a los elementos de una variable que se ha declarado como un tipo de estructura.  
   
-## <a name="structures-and-arrays"></a>Structures and Arrays  
- A structure can contain an array as one or more of its elements. Esto se ilustra en el siguiente ejemplo:  
+## <a name="structures-and-arrays"></a>Estructuras y matrices  
+ Una estructura puede contener una matriz como uno o varios de sus elementos. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- You access the values of an array within a structure the same way you access a property on an object. Esto se ilustra en el siguiente ejemplo:  
+ Puede tener acceso a los valores de una matriz dentro de una estructura de la misma manera que tiene acceso a una propiedad en un objeto. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- You can also declare an array of structures. Esto se ilustra en el siguiente ejemplo:  
+ También puede declarar una matriz de estructuras. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- You follow the same rules to access the components of this data architecture. Esto se ilustra en el siguiente ejemplo:  
+ Siga las mismas reglas para tener acceso a los componentes de esta arquitectura de datos. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Structures and Objects  
- A structure can contain an object as one or more of its elements. Esto se ilustra en el siguiente ejemplo:  
+## <a name="structures-and-objects"></a>Estructuras y objetos  
+ Una estructura puede contener un objeto como uno o varios de sus elementos. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- You should use a specific object class in such a declaration, rather than `Object`.  
+ Debe utilizar una clase de objeto específica en este tipo de declaración, en lugar de `Object`.  
   
-## <a name="structures-and-procedures"></a>Structures and Procedures  
- You can pass a structure as a procedure argument. Esto se ilustra en el siguiente ejemplo:  
+## <a name="structures-and-procedures"></a>Estructuras y procedimientos  
+ Puede pasar una estructura como un argumento de procedimiento. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code. If you want to protect a structure against such modification, pass it by value.  
+ En el ejemplo anterior se pasa la estructura *por referencia*, lo que permite al procedimiento modificar sus elementos para que los cambios surtan efecto en el código de llamada. Si desea proteger una estructura contra dicha modificación, pásela por valor.  
   
- You can also return a structure from a `Function` procedure. Esto se ilustra en el siguiente ejemplo:  
+ También puede devolver una estructura a partir de un procedimiento `Function`. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Structures Within Structures  
- Structures can contain other structures. Esto se ilustra en el siguiente ejemplo:  
+## <a name="structures-within-structures"></a>Estructuras dentro de estructuras  
+ Las estructuras pueden contener otras estructuras. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,16 +118,16 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.  
+ También puede usar esta técnica para encapsular una estructura definida en un módulo dentro de una estructura definida en otro módulo.  
   
- Structures can contain other structures to an arbitrary depth.  
+ Las estructuras pueden contener otras estructuras para una profundidad arbitraria.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Declarar una estructura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

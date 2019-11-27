@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445311"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter (Método)
-Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.  
+Notifica al generador de perfiles que la fase de desenredo del control de excepciones está entrando en una cláusula `finally` incluida en la función especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +34,12 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] The ID of the function that contains the `finally` clause.  
+ de IDENTIFICADOR de la función que contiene la cláusula `finally`.  
   
 ## <a name="remarks"></a>Comentarios  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ El generador de perfiles no debe bloquear en su implementación de este método porque la pila puede no estar en un estado que permita la recolección de elementos no utilizados y, por tanto, no se puede habilitar la recolección de elementos no utilizados preferente. Si el generador de perfiles se bloquea aquí y se intenta la recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que esta devolución de llamada vuelva.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ La implementación del generador de perfiles de este método no debe llamar a código administrado ni provocar una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

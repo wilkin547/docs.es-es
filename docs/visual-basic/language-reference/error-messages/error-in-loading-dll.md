@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329561"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Error al cargar la biblioteca DLL (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+Una biblioteca de vínculos dinámicos (DLL) es una biblioteca especificada en la cláusula `Lib` de una instrucción `Declare`. Entre las posibles causas de este error se incluyen:  
   
-- The file is not DLL executable.  
+- El archivo no es un ejecutable DLL.  
   
-- The file is not a Microsoft Windows DLL.  
+- El archivo no es una DLL de Microsoft Windows.  
   
-- The DLL references another DLL that is not present.  
+- El archivo DLL hace referencia a otro archivo DLL que no está presente.  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- El archivo dll o el archivo DLL al que se hace referencia no se encuentra en un directorio especificado en la ruta de acceso.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- Si el archivo es un archivo de texto de origen y, por lo tanto, no es un ejecutable DLL, se debe compilar y vincular a un formulario ejecutable DLL.  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- Si el archivo no es una DLL de Microsoft Windows, obtenga el equivalente de Microsoft Windows.  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- Si el archivo DLL hace referencia a otro archivo DLL que no está presente, obtenga el archivo DLL al que se hace referencia y haga que esté disponible.  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- Si el archivo dll o el archivo DLL al que se hace referencia no se encuentra en un directorio especificado por la ruta de acceso, mueva el archivo DLL a un directorio al que se hace referencia.  
   
 ## <a name="see-also"></a>Vea también
 

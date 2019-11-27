@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448495"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay (Método)
-Returns the current binding display information.  
+Devuelve la información de presentación del enlace actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>Parámetros  
  `display`  
- [out, retval] A pointer to a safearray containing the binding display information.  
+ [out, retval] Un puntero a un objeto SafeArray que contiene la información de presentación del enlace.  
   
 ## <a name="remarks"></a>Comentarios  
- The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
+ El método [IBindingDisplay:: InitializeForProcess (](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) debe haber tenido éxito previamente y el programa debe detenerse en un depurador.  
   
- The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ El autor de la llamada debe desasignar la memoria `SAFEARRAY` devuelta mediante [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Encabezado:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **Biblioteca:** BindingDisplay. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

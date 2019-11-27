@@ -37,7 +37,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] The number of threads to retrieve.  
+ [in] Número de subprocesos para recuperar.  
   
  `ids`  
  [out] Matriz de valores `ThreadID`, cada uno de los cuales representa un subproceso recuperado.  
@@ -50,7 +50,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|Se devolvieron `celt` elementos.|  
+|S_OK|se devolvieron `celt` elementos.|  
 |S_FALSE|Se devolvieron menos de `celt` elementos, lo que indica que la enumeración está completa.|  
   
 ## <a name="requirements"></a>Requisitos  

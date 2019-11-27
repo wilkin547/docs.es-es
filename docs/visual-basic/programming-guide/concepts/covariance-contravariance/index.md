@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-In .NET Framework 4 or later, Visual Basic supports covariance and contravariance in generic interfaces and delegates and allows for implicit conversion of generic type parameters. Para obtener más información, vea [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (Visual Basic)) y [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) (Varianza en delegados (Visual Basic)).
+En .NET Framework 4 o posterior, Visual Basic admite la covarianza y la contravarianza en interfaces y delegados genéricos y permite la conversión implícita de parámetros de tipo genérico. Para obtener más información, vea [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (Visual Basic)) y [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) (Varianza en delegados (Visual Basic)).
 
 En el ejemplo de código siguiente, se muestra la conversión implícita de referencias para interfaces genéricas.
 
@@ -92,7 +92,7 @@ Un delegado o interfaz genéricos se denominan *variante* si sus parámetros gen
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Varianza en interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Describe la covarianza y contravarianza en las interfaces genéricas y proporciona una lista de interfaces genéricas variantes en .NET Framework.|
 |[Crear interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Se muestra cómo crear interfaces variantes personalizadas.|

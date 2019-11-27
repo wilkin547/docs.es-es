@@ -40,36 +40,36 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `td`  
- [in] A TypeDef token for the type whose method implementations to enumerate.  
+ de Un token de TypeDef para el tipo cuyas implementaciones de método se van a enumerar.  
   
  `rMethodBody`  
- [out] The array to store the MethodBody tokens.  
+ enuncia Matriz en la que se van a almacenar los tokens de MethodBody.  
   
  `rMethodDecl`  
- [out] The array to store the MethodDeclaration tokens.  
+ enuncia Matriz en la que se van a almacenar los tokens MethodDeclaration.  
   
  `cMax`  
- [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
+ de Tamaño máximo de las matrices de `rMethodBody` y `rMethodDecl`.  
   
  `pcTokens`  
- [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
+ de Número real de métodos devueltos en `rMethodBody` y `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` returned successfully.|  
-|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodImpls` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens de método para enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

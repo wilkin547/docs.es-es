@@ -18,7 +18,7 @@ ms.locfileid: "74349422"
 ---
 # <a name="xml-value-property-visual-basic"></a>Value (Propiedad XML) (Visual Basic)
 
-Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
+Proporciona acceso al valor del primer elemento de una colección de objetos <xref:System.Xml.Linq.XElement>.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,32 +28,32 @@ object.Value
 
 ## <a name="parts"></a>Elementos
 
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`object`|Requerido. Una colección de objetos <xref:System.Xml.Linq.XElement>.|  
+|`object`|Obligatorio. Una colección de objetos <xref:System.Xml.Linq.XElement>.|  
 
 ## <a name="return-value"></a>Valor devuelto
 
- A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
+ `String` que contiene el valor del primer elemento de la colección, o `Nothing` si la colección está vacía.
 
 ## <a name="remarks"></a>Comentarios
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
+ La propiedad <xref:System.Xml.Linq.XElement.Value%2A> facilita el acceso al valor del primer elemento de una colección de objetos <xref:System.Xml.Linq.XElement>. Esta propiedad comprueba primero si la colección contiene al menos un objeto. Si la colección está vacía, esta propiedad devuelve `Nothing`. De lo contrario, esta propiedad devuelve el valor de la <xref:System.Xml.Linq.XElement.Value%2A> propiedad del primer elemento de la colección.
 
 > [!NOTE]
-> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
+> Cuando se tiene acceso al valor de un atributo XML mediante el identificador '\@', el valor de atributo se devuelve como un `String` y no es necesario especificar explícitamente la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A>.
 
- To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
+ Para tener acceso a otros elementos de una colección, puede usar la propiedad de indizador de extensión XML. Para más información, consulte [extensión de la propiedad Indexer](extension-indexer-property.md).
 
 ## <a name="inheritance"></a>Herencia
 
- Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
+ La mayoría de los usuarios no tendrá que implementar <xref:System.Collections.Generic.IEnumerable%601>y, por tanto, puede omitir esta sección.
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
+ La propiedad <xref:System.Xml.Linq.XElement.Value%2A> es una propiedad de extensión para los tipos que implementan `IEnumerable(Of XElement)`. El enlace de esta propiedad de extensión es como el enlace de métodos de extensión: Si un tipo implementa una de las interfaces y define una propiedad con el nombre "Value", esa propiedad tiene prioridad sobre la propiedad de extensión. En otras palabras, esta propiedad de <xref:System.Xml.Linq.XElement.Value%2A> se puede invalidar definiendo una nueva propiedad en una clase que implementa `IEnumerable(Of XElement)`.
 
 ## <a name="example"></a>Ejemplo
 
- The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
+ En el ejemplo siguiente se muestra cómo utilizar la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para tener acceso al primer nodo de una colección de objetos <xref:System.Xml.Linq.XElement>. En el ejemplo se usa la propiedad del eje secundario para obtener la colección de todos los nodos secundarios denominados `phone` que se encuentran en el objeto `contact`.
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
@@ -63,7 +63,7 @@ object.Value
 
 ## <a name="example"></a>Ejemplo
 
- The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
+ En el ejemplo siguiente se muestra cómo obtener el valor de un atributo XML de una colección de objetos <xref:System.Xml.Linq.XAttribute>. En el ejemplo se usa la propiedad de eje de atributo para mostrar el valor del atributo `type` de todos los elementos `phone`.
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 

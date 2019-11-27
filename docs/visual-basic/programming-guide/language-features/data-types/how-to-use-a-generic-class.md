@@ -33,13 +33,13 @@ Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si 
   
  Además de clases, también puede definir y usar estructuras genéricas, interfaces, procedimientos y delegados.  
   
- The following procedure takes a generic class defined in the .NET Framework and creates an instance from it.  
+ En el procedimiento siguiente se toma una clase genérica definida en el .NET Framework y se crea una instancia a partir de ella.  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Para usar una clase que toma un parámetro de tipo  
   
-1. At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. Esto le permite hacer referencia a la clase <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> sin tener que usar su nombre completo para diferenciarla de otras clases queue, como <xref:System.Collections.Queue?displayProperty=nameWithType>.  
+1. Al principio del archivo de código fuente, incluya una [instrucción Imports (espacio de nombres de .net y tipo)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Esto le permite hacer referencia a la clase <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> sin tener que usar su nombre completo para diferenciarla de otras clases queue, como <xref:System.Collections.Queue?displayProperty=nameWithType>.  
   
-2. Create the object in the normal way, but add `(Of type)` immediately after the class name.  
+2. Cree el objeto de la manera normal, pero agregue `(Of type)` inmediatamente después del nombre de clase.  
   
      En el ejemplo siguiente se usa la misma clase (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) para crear dos objetos queue que contienen elementos de distintos tipos de datos. Agrega elementos al final de cada cola y, después, quita y muestra los elementos de la parte delantera de cada cola.  
   

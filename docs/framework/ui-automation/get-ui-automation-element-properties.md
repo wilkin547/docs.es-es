@@ -19,28 +19,28 @@ ms.locfileid: "74435501"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic shows how to retrieve properties of a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element.  
+ En este tema se muestra cómo recuperar las propiedades de un elemento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-### <a name="get-a-current-property-value"></a>Get a Current Property Value  
+### <a name="get-a-current-property-value"></a>Obtiene un valor de propiedad actual.  
   
-1. Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.  
+1. Obtenga el <xref:System.Windows.Automation.AutomationElement> cuya propiedad desea obtener.  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Current%2A> property structure and get the value from one of its members.  
+2. Llame a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, o recupere la estructura de la propiedad <xref:System.Windows.Automation.AutomationElement.Current%2A> y obtenga el valor de uno de sus miembros.  
   
-### <a name="get-a-cached-property-value"></a>Get a Cached Property Value  
+### <a name="get-a-cached-property-value"></a>Obtiene el valor de una propiedad almacenada en caché  
   
-1. Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get. The property must have been specified in the <xref:System.Windows.Automation.CacheRequest>.  
+1. Obtenga el <xref:System.Windows.Automation.AutomationElement> cuya propiedad desea obtener. La propiedad se debe haber especificado en el <xref:System.Windows.Automation.CacheRequest>.  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structure and get the value from one of its members.  
+2. Llame a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, o recupere la estructura de la propiedad <xref:System.Windows.Automation.AutomationElement.Cached%2A> y obtenga el valor de uno de sus miembros.  
   
 ## <a name="example"></a>Ejemplo  
- The following example shows various ways to retrieve current properties of an <xref:System.Windows.Automation.AutomationElement>.  
+ En el ejemplo siguiente se muestran varias maneras de recuperar las propiedades actuales de un <xref:System.Windows.Automation.AutomationElement>.  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Propiedades de Automatización de la interfaz de usuario para clientes](ui-automation-properties-for-clients.md)
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)
-- [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](caching-in-ui-automation-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)

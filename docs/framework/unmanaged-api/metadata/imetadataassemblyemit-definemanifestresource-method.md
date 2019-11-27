@@ -39,29 +39,29 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [in] The name of the resource.  
+ de Nombre del recurso.  
   
  `tkImplementation`  
- [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
+ de Símbolo (token) de metadatos de tipo `mdtFile` o `mdtAssemblyRef` que se asigna al proveedor de recursos. Un valor NULL indica que el archivo en el que se incrustan los metadatos es el proveedor de recursos.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
+ de Desplazamiento al principio del recurso dentro del archivo. En el caso de los recursos de archivos independientes, siempre será cero. Si el recurso está incrustado en un archivo PE (portable ejecutable), se trata de un desplazamiento del BLOB de recursos, que se inicia en la ubicación especificada en el archivo de encabezado Cor. h.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify property settings for the resource definition.  
+ de Combinación bit a bit de valores de marca que especifican los valores de propiedad para la definición de recursos.  
   
  `pmdmr`  
- [out] A pointer to the returned metadata token.  
+ enuncia Puntero al token de metadatos devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
+ Se debe definir una `ManifestResource` estructura de metadatos para cada recurso que se implementa en cada uno de los archivos del ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

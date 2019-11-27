@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438709"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass (Método)
-Determines whether the specified class is an array class.  
+Determina si la clase especificada es una clase de matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +37,19 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] The ID of the class to be examined.  
+ de IDENTIFICADOR de la clase que se va a examinar.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ enuncia Un puntero a un valor de la enumeración CorElementType que indica el tipo de los elementos de la matriz.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ enuncia Puntero al identificador de clase de los elementos de la matriz, si está disponible.  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ enuncia Un puntero a un entero que indica el rango (es decir, el número de dimensiones) de la matriz.  
   
 ## <a name="remarks"></a>Comentarios  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ Si la clase especificada es una clase de matriz, el método `IsArrayClass` devuelve un S_OK HRESULT y valores para cualquier parámetro de salida que no sea NULL. De lo contrario, devuelve S_FALSE.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

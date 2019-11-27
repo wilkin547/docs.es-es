@@ -19,13 +19,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348966"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Cómo: Calcular valores numéricos (Visual Basic)
-You can calculate numeric values through the use of numeric expressions. A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.  
+Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una *expresión numérica* es una expresión que contiene literales, constantes y variables que representan valores numéricos y operadores que actúan sobre esos valores.  
   
-## <a name="calculating-numeric-values"></a>Calculating Numeric Values  
+## <a name="calculating-numeric-values"></a>Calcular valores numéricos  
   
-#### <a name="to-calculate-a-numeric-value"></a>To calculate a numeric value  
+#### <a name="to-calculate-a-numeric-value"></a>Para calcular un valor numérico  
   
-- Combine one or more numeric literals, constants, and variables into a numeric expression. The following example shows some valid numeric expressions.  
+- Combinar uno o más literales numéricos, constantes y variables en una expresión numérica. En el ejemplo siguiente se muestran algunas expresiones numéricas válidas.  
   
      `93.217`  
   
@@ -35,32 +35,32 @@ You can calculate numeric values through the use of numeric expressions. A *nume
   
      `4 * (67 + i)`  
   
-     The first three lines show a literal, a constant, and a variable. Each one forms a valid numeric expression by itself. The final line shows a combination of a variable with two literals.  
+     Las tres primeras líneas muestran un literal, una constante y una variable. Cada uno de ellos forma una expresión numérica válida por sí sola. La línea final muestra una combinación de una variable con dos literales.  
   
-     Note that a numeric expression does not form a complete Visual Basic statement by itself. You must use the expression as part of a complete statement.  
+     Tenga en cuenta que una expresión numérica no forma una instrucción Visual Basic completa. Debe utilizar la expresión como parte de una instrucción completa.  
   
-#### <a name="to-store-a-numeric-value"></a>To store a numeric value  
+#### <a name="to-store-a-numeric-value"></a>Para almacenar un valor numérico  
   
-- You can use an assignment statement to assign the value represented by a numeric expression to a variable, as the following example demonstrates.  
+- Puede usar una instrucción de asignación para asignar el valor representado por una expresión numérica a una variable, como se muestra en el ejemplo siguiente.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     In the preceding example, the value of the expression on the right side of the equal operator (`=`) is assigned to the variable `j` on the left side of the operator, so `j` evaluates to 276.  
+     En el ejemplo anterior, el valor de la expresión en el lado derecho del operador igual (`=`) se asigna a la variable `j` en el lado izquierdo del operador, por lo que `j` se evalúa como 276.  
   
      Para obtener más información, vea [Instrucciones (Guía de programación de C#)](../../../../visual-basic/language-reference/statements/index.md).  
   
-## <a name="multiple-operators"></a>Multiple Operators  
- If the numeric expression contains more than one operator, the order in which they are evaluated is determined by the rules of operator precedence. To override the rules of operator precedence, you enclose expressions in parentheses, as in the above example; the enclosed expressions are evaluated first.  
+## <a name="multiple-operators"></a>Varios operadores  
+ Si la expresión numérica contiene más de un operador, el orden en el que se evalúan viene determinado por las reglas de prioridad de los operadores. Para invalidar las reglas de prioridad de los operadores, incluya expresiones entre paréntesis, como en el ejemplo anterior. primero se evalúan las expresiones delimitadas.  
   
-#### <a name="to-override-normal-operator-precedence"></a>To override normal operator precedence  
+#### <a name="to-override-normal-operator-precedence"></a>Para invalidar la prioridad de operador normal  
   
-- Use parentheses to enclose the operations you want to be performed first. The following example shows two different results with the same operands and operators.  
+- Use paréntesis para encerrar las operaciones que desea que se realicen en primer lugar. En el ejemplo siguiente se muestran dos resultados diferentes con los mismos operandos y operadores.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     In the preceding example, the calculation for `j` performs the addition operator (`+`) first because the parentheses around `(67 + i)` override normal precedence, and the value assigned to `j` is 276 (4 times 69). The calculation for `k` performs the operators in their normal precedence (`*` before `+`), and the value assigned to `k` is 270 (268 plus 2).  
+     En el ejemplo anterior, el cálculo de `j` realiza primero el operador de suma (`+`) porque los paréntesis alrededor de `(67 + i)` invalidan la prioridad normal y el valor asignado a `j` es 276 (4 veces 69). El cálculo de `k` realiza los operadores en su prioridad normal (`*` antes `+`) y el valor asignado a `k` es 270 (268 más 2).  
   
-     For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     Para obtener más información, vea [precedencia de operadores en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Vea también
 

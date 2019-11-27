@@ -19,19 +19,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349991"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Valores devueltos para la función CStr (Visual Basic)
-The following table describes the return values for `CStr` for different data types of `expression`.  
+En la tabla siguiente se describen los valores devueltos para `CStr` para diferentes tipos de datos de `expression`.  
   
-|If `expression` type is|Devoluciones de `CStr`|  
+|Si `expression` tipo es|Devoluciones de `CStr`|  
 |-----------------------------|--------------------|  
-|[Boolean (tipo de datos)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
-|[Date (tipo de datos)](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
-|[Tipos de datos numéricos](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
+|[Boolean (tipo de datos)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Cadena que contiene "true" o "false".|  
+|[Date (tipo de datos)](../../../visual-basic/language-reference/data-types/date-data-type.md)|Cadena que contiene un valor de `Date` (fecha y hora) en el formato de fecha corta del sistema.|  
+|[Tipos de datos numéricos](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Cadena que representa el número.|  
   
-## <a name="cstr-and-date"></a>CStr and Date  
- The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr y Date  
+ El tipo de `Date` siempre contiene información de fecha y hora. A efectos de la conversión de tipos, Visual Basic considera 1/1/0001 (1 de enero del año 1) para que sea un *valor neutro* para la fecha y 00:00:00 (medianoche) como valor neutro para el tiempo. `CStr` no incluye valores neutros en la cadena resultante. Por ejemplo, si convierte `#January 1, 0001 9:30:00#` en una cadena, el resultado es "9:30:00 AM"; se suprime la información de fecha. Sin embargo, la información de fecha todavía está presente en el valor de `Date` original y se puede recuperar con funciones como <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
-> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
+> La función `CStr` realiza su conversión en función de la configuración de la referencia cultural actual de la aplicación. Para obtener la representación en forma de cadena de un número en una referencia cultural determinada, use el método `ToString(IFormatProvider)` del número. Por ejemplo, utilice <xref:System.Double.ToString%2A?displayProperty=nameWithType> al convertir un valor de tipo `Double` en un `String`.  
   
 ## <a name="see-also"></a>Vea también
 

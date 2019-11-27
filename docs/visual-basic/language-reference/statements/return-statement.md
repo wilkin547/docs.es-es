@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333011"
 ---
 # <a name="return-statement-visual-basic"></a>Return (Instrucción, Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+Devuelve el control al código que llamó a un procedimiento `Function`, `Sub`, `Get`, `Set`o `Operator`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,20 +29,20 @@ Return expression
   
 ## <a name="part"></a>Parte  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ Obligatorio en un procedimiento `Function`, `Get`o `Operator`. Expresión que representa el valor que se va a devolver al código de llamada.  
   
 ## <a name="remarks"></a>Comentarios  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+ En un procedimiento `Sub` o `Set`, la instrucción `Return` es equivalente a una instrucción `Exit Sub` o `Exit Property` y no se debe proporcionar `expression`.  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ En un procedimiento `Function`, `Get`o `Operator`, la instrucción `Return` debe incluir `expression`y `expression` debe evaluarse como un tipo de datos que se pueda convertir al tipo de valor devuelto del procedimiento. En un procedimiento `Function` o `Get`, también tiene la alternativa de asignar una expresión al nombre del procedimiento para que sirva como valor devuelto y, a continuación, ejecutar una instrucción `Exit Function` o `Exit Property`. En un procedimiento `Operator`, debe utilizar `Return expression`.  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ Puede incluir tantas instrucciones `Return` como corresponda en el mismo procedimiento.  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> El código de un bloque de `Finally` se ejecuta después de que se encuentre una instrucción de `Return` en un bloque de `Try` o `Catch`, pero antes de que se ejecute la instrucción `Return`. No se puede incluir una instrucción `Return` en un bloque de `Finally`.  
   
 ## <a name="example"></a>Ejemplo  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ En el ejemplo siguiente se utiliza la instrucción `Return` varias veces para volver al código de llamada cuando el procedimiento no tiene que hacer nada más.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
@@ -52,7 +52,7 @@ Return expression
 - [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Get (instrucción)](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set (instrucción)](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)
 - [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

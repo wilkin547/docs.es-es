@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350930"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Operadores lógicos y bit a bit (Visual Basic)
-The following are the logical/bitwise operators defined in Visual Basic.  
+A continuación se muestran los operadores lógicos y bit a bit definidos en Visual Basic.  
   
  [And (operador)](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -34,4 +34,4 @@ The following are the logical/bitwise operators defined in Visual Basic.
 ## <a name="see-also"></a>Vea también
 
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operadores lógicos y bit a bit en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

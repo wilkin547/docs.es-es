@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350793"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>El subíndice está fuera del intervalo (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+Un subíndice de matriz no es válido porque está fuera del intervalo permitido. El valor de subíndice más bajo de una dimensión es siempre 0, y el valor de subíndice más alto lo devuelve el método `GetUpperBound` de esa dimensión.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Change the subscript so it falls within the valid range.  
+- Cambiar el subíndice para que esté dentro del intervalo válido.  
   
 ## <a name="see-also"></a>Vea también
 

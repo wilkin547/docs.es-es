@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445016"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter (Método)
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+Notifica al generador de perfiles que el control se pasa al bloque `catch` adecuado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,17 +35,17 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ de Identificador de la función que contiene el bloque de `catch`.  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ de Identificador de la excepción que se está controlando.  
   
 ## <a name="remarks"></a>Comentarios  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+ Solo se llama al método `ExceptionCatcherEnter` si el punto de captura está en código compilado con el compilador Just-in-Time (JIT). Una excepción que se detecta en el código no administrado o en el código interno del tiempo de ejecución no llamará a esta notificación. El valor `objectId` se pasa de nuevo porque una recolección de elementos no utilizados podría haber trasladado el objeto desde la notificación de `ExceptionThrown`.  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ El generador de perfiles no debe bloquear en su implementación de este método porque la pila puede no estar en un estado que permita la recolección de elementos no utilizados y, por tanto, no se puede habilitar la recolección de elementos no utilizados preferente. Si el generador de perfiles se bloquea aquí y se intenta la recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que esta devolución de llamada vuelva.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ La implementación del generador de perfiles de este método no debe llamar a código administrado ni provocar una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

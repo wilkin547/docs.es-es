@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351086"
 ---
 # <a name="goto-statement"></a>GoTo (Instrucción)
-Branches unconditionally to a specified line in a procedure.  
+Bifurca incondicionalmente a una línea especificada en un procedimiento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,33 +31,33 @@ GoTo line
   
 ## <a name="part"></a>Parte  
  `line`  
- Requerido. Any line label.  
+ Obligatorio. Cualquier etiqueta de línea.  
   
 ## <a name="remarks"></a>Comentarios  
- The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ La instrucción `GoTo` solo puede bifurcar a las líneas del procedimiento en el que aparece. La línea debe tener una etiqueta de línea a la que `GoTo` pueda hacer referencia. Para obtener más información, vea [Cómo: etiquetar instrucciones](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` instrucciones pueden hacer que el código sea difícil de leer y mantener. Siempre que sea posible, use una estructura de control en su lugar. Para obtener más información, consulte [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
+ No se puede usar una instrucción `GoTo` para bifurcar desde fuera de una `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`o `Using`...`End Using` construcción a una etiqueta dentro de.  
   
-## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
- Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
+## <a name="branching-and-try-constructions"></a>Bifurcación y construcciones try  
+ Dentro de una construcción `Try`...`Catch`...`Finally`, se aplican las siguientes reglas a la bifurcación con la instrucción `GoTo`.  
   
-|Block or region|Branching in from outside|Branching out from inside|  
+|Bloque o región|Bifurcación desde fuera|Bifurcar desde dentro|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
-|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
-|`Finally` block|Never allowed|Never allowed|  
+|`Try` bloque)|Solo desde un bloque de `Catch` de la misma construcción <sup>1</sup>|Solo hacia fuera de la construcción completa|  
+|`Catch` bloque)|Nunca permitido|Solo hacia fuera de la construcción completa o hasta el `Try` bloque de la misma construcción <sup>1</sup>|  
+|`Finally` bloque)|Nunca permitido|Nunca permitido|  
   
- <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
+ <sup>1</sup> si una construcción `Try`...`Catch`...`Finally` está anidada dentro de otra, un bloque de `Catch` se puede bifurcar en el bloque de `Try` en su propio nivel de anidamiento, pero no en otro bloque de `Try`. Una construcción `Try`anidada...`Catch`...`Finally` debe estar contenida completamente en un bloque `Try` o `Catch` de la construcción en la que está anidada.  
   
- The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
+ En la ilustración siguiente se muestra una construcción `Try` anidada dentro de otra. Varias ramas entre los bloques de las dos construcciones se indican como válidas o no válidas.  
   
  ![Diagrama gráfico de bifurcación en construcciones Try](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Ejemplo  
- The following example uses the `GoTo` statement to branch to line labels in a procedure.  
+ En el ejemplo siguiente se usa la instrucción `GoTo` para bifurcar a las etiquetas de línea de un procedimiento.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

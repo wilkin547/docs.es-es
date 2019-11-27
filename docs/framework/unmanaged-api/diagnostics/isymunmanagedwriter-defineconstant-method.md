@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428066"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant (Método)
-Defines a name for a constant value.  
+Define un nombre para un valor constante.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +37,22 @@ HRESULT DefineConstant(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- [in] A pointer to a `WCHAR` that defines the constant name.  
+ de Puntero a un `WCHAR` que define el nombre de la constante.  
   
  `value`  
- [in] The value of the constant.  
+ de Valor de la constante.  
   
  `cSig`  
  [in] Tamaño de la matriz `signature`.  
   
  `signature`  
- [in] The type signature for the constant.  
+ de Firma de tipo de la constante.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

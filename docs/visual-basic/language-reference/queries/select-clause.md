@@ -1,5 +1,5 @@
 ---
-title: Select (Cláusula)
+title: Cláusula Select
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySelect
@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350411"
 ---
 # <a name="select-clause-visual-basic"></a>Select (Cláusula, Visual Basic)
-Defines the result of a query.  
+Define el resultado de una consulta.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,28 +26,28 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>Elementos  
  `var1`  
- Opcional. An alias that can be used to reference the results of the column expression.  
+ Opcional. Un alias que se puede utilizar para hacer referencia a los resultados de la expresión de columna.  
   
  `fieldName1`  
- Requerido. The name of the field to return in the query result.  
+ Obligatorio. Nombre del campo que se va a devolver en el resultado de la consulta.  
   
 ## <a name="remarks"></a>Comentarios  
- You can use the `Select` clause to define the results to return from a query. This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query. The `Select` clause is not required for a query. If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope. Para más información, vea [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.  
+ Puede usar la cláusula `Select` para definir los resultados que se van a devolver desde una consulta. Esto le permite definir los miembros de un nuevo tipo anónimo creado por una consulta o establecer como destino los miembros de un tipo con nombre devuelto por una consulta. La cláusula `Select` no es necesaria para una consulta. Si no se especifica ninguna cláusula de `Select`, la consulta devolverá un tipo basado en todos los miembros de las variables de rango identificadas para el ámbito actual. Para obtener más información, vea [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Cuando una consulta crea un tipo con nombre, devolverá un resultado de tipo <xref:System.Collections.Generic.IEnumerable%601> donde `T` es el tipo creado.  
   
- The `Select` clause can reference any variables in the current scope. This includes range variables identified in the `From` clause (or `From` clauses). It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression. The `Select` clause can also include static values. For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`. The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause. The `DiscountedPrice` member value is calculated in the `Let` clause. The `Discount` member is a static value.  
+ La cláusula `Select` puede hacer referencia a cualquier variable del ámbito actual. Esto incluye las variables de rango identificadas en la cláusula `From` (o en las cláusulas `From`). También incluye las nuevas variables creadas con un alias mediante las cláusulas `Aggregate`, `Let`, `Group By`o `Group Join`, o bien las variables de una cláusula `Select` anterior en la expresión de consulta. La cláusula `Select` también puede incluir valores estáticos. Por ejemplo, en el ejemplo de código siguiente se muestra una expresión de consulta en la que la cláusula `Select` define el resultado de la consulta como un nuevo tipo anónimo con cuatro miembros: `ProductName`, `Price`, `Discount`y `DiscountedPrice`. Los valores de miembro `ProductName` y `Price` se toman de la variable de rango de producto que se define en la cláusula `From`. El valor del miembro `DiscountedPrice` se calcula en la cláusula `Let`. El miembro `Discount` es un valor estático.  
   
  [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
- The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope. The last `Select` clause in a query expression determines the return value of the query. For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500. The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause. The second `Select` clause identifies the values returned by the query as a new anonymous type.  
+ La cláusula `Select` presenta un nuevo conjunto de variables de rango para las cláusulas de consulta posteriores, y las variables de rango anteriores ya no están en el ámbito. La última cláusula `Select` de una expresión de consulta determina el valor devuelto de la consulta. Por ejemplo, la consulta siguiente devuelve el nombre de la compañía y el ID. de pedido de cada pedido de cliente cuyo total supera el 500. La primera cláusula `Select` identifica las variables de rango para la cláusula `Where` y la segunda cláusula `Select`. La segunda cláusula `Select` identifica los valores devueltos por la consulta como un nuevo tipo anónimo.  
   
  [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
- If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item. If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items. For example, the following two queries return collections of two different types based on the `Select` clause. The first query returns a collection of company names as strings. The second query returns a collection of `Customer` objects populated with the company names and address information.  
+ Si la cláusula `Select` identifica un solo elemento que se va a devolver, la expresión de consulta devuelve una colección del tipo de ese único elemento. Si la cláusula `Select` identifica varios elementos para devolver, la expresión de consulta devuelve una colección de un nuevo tipo anónimo, basado en los elementos seleccionados. Por ejemplo, las dos consultas siguientes devuelven colecciones de dos tipos diferentes basados en la cláusula `Select`. La primera consulta devuelve una colección de nombres de compañía como cadenas. La segunda consulta devuelve una colección de objetos `Customer` rellenados con los nombres e información de dirección de la compañía.  
   
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Ejemplo  
- The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection. The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable. The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.  
+ La siguiente expresión de consulta utiliza una cláusula `From` para declarar una variable de rango `cust` para la colección `customers`. La cláusula `Select` selecciona el nombre del cliente y el valor del identificador y rellena las columnas `CompanyName` y `CustomerID` de la nueva variable de rango. La instrucción `For Each` recorre en bucle cada objeto devuelto y muestra las columnas `CompanyName` y `CustomerID` de cada registro.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Zero-based vs. One-based String Access
+title: Acceso de cadena basado en cero y basado en uno
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354299"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Acceso de base cero y de base uno a a cadenas en Visual Basic
-This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
+En este tema se compara cómo Visual Basic y el .NET Framework proporcionan acceso a los caracteres de una cadena. El .NET Framework siempre proporciona acceso de base cero a los caracteres de una cadena, mientras que Visual Basic proporciona acceso basado en cero y basado en uno, en función de la función.  
   
-## <a name="one-based"></a>One-Based  
- For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
+## <a name="one-based"></a>Basado en uno  
+ Para obtener un ejemplo de una función de Visual Basic basada en uno, considere la función `Mid`. Toma un argumento que indica la posición del carácter en el que comenzará la subcadena, comenzando por la posición 1. El método <xref:System.String.Substring%2A?displayProperty=nameWithType> de .NET Framework toma un índice del carácter de la cadena en la que se va a iniciar la subcadena, empezando por la posición 0. Por lo tanto, si tiene una cadena "ABCDe", los caracteres individuales se numeran de 1, 2, 3, 4, 5 para su uso con la función `Mid`, pero 0, 1, 2, 3, 4 para su uso con el método <xref:System.String.Substring%2A?displayProperty=nameWithType>.  
   
-## <a name="zero-based"></a>Zero-Based  
- For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
+## <a name="zero-based"></a>Basado en cero  
+ Para obtener un ejemplo de una función de Visual Basic basado en cero, considere la función `Split`. Divide una cadena y devuelve una matriz que contiene las subcadenas. El método .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> también divide una cadena y devuelve una matriz que contiene las subcadenas. Dado que la función `Split` y <xref:System.String.Split%2A> método devuelven .NET Framework matrices, deben ser de base cero.  
   
 ## <a name="see-also"></a>Vea también
 

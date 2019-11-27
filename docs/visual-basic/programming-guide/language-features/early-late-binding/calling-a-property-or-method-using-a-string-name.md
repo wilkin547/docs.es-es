@@ -20,31 +20,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345206"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
-In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
+En la mayoría de los casos, puede detectar las propiedades y los métodos de un objeto en tiempo de diseño y escribir código para controlarlos. Sin embargo, en algunos casos es posible que no conozca las propiedades y los métodos de un objeto de antemano, o que solo desee la flexibilidad de permitir que un usuario final especifique las propiedades o ejecute métodos en tiempo de ejecución.  
   
-## <a name="callbyname-function"></a>CallByName Function  
- Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
+## <a name="callbyname-function"></a>Función CallByName  
+ Considere, por ejemplo, una aplicación cliente que evalúa las expresiones especificadas por el usuario pasando un operador a un componente COM. Supongamos que va a agregar constantemente nuevas funciones al componente que requiere nuevos operadores. Cuando use técnicas de acceso a objetos estándar, debe volver a compilar y distribuir la aplicación cliente antes de poder utilizar los nuevos operadores. Para evitar esto, puede usar la función `CallByName` para pasar los operadores nuevos como cadenas, sin cambiar la aplicación.  
   
- The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
+ La función `CallByName` permite usar una cadena para especificar una propiedad o un método en tiempo de ejecución. La firma de la función `CallByName` tiene el siguiente aspecto:  
   
- *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
+ *Resultado* = `CallByName`(*Object*, *nombreprocedimiento*, *CallType*, *arguments*())  
   
- The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
+ El primer argumento, *Object*, toma el nombre del objeto sobre el que desea actuar. El argumento *nombreprocedimiento* toma una cadena que contiene el nombre del método o el procedimiento de propiedad que se va a invocar. El argumento *CallType* toma una constante que representa el tipo de procedimiento que se va a invocar: un método (`Microsoft.VisualBasic.CallType.Method`), una propiedad read (`Microsoft.VisualBasic.CallType.Get`) o un conjunto de propiedades (`Microsoft.VisualBasic.CallType.Set`). El argumento *arguments* , que es opcional, toma una matriz de tipo `Object` que contiene argumentos para el procedimiento.  
   
- You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
+ Puede usar `CallByName` con clases en la solución actual, pero se suele usar para tener acceso a objetos COM u objetos de .NET Framework ensamblados.  
   
- Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
+ Supongamos que agrega una referencia a un ensamblado que contiene una clase denominada `MathClass`, que tiene una nueva función denominada `SquareRoot`, tal y como se muestra en el código siguiente:  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
+ La aplicación podría usar controles de cuadro de texto para controlar el método al que se llamará y sus argumentos. Por ejemplo, si `TextBox1` contiene la expresión que se va a evaluar y `TextBox2` se usa para escribir el nombre de la función, puede usar el siguiente código para invocar la función `SquareRoot` en la expresión de `TextBox1`:  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
+ Si escribe "64" en `TextBox1`, "SquareRoot" en `TextBox2`y, a continuación, llama al procedimiento `CallMath`, se evalúa la raíz cuadrada del número en `TextBox1`. El código del ejemplo invoca la función `SquareRoot` (que toma una cadena que contiene la expresión que se va a evaluar como argumento obligatorio) y devuelve "8" en `TextBox1` (la raíz cuadrada de 64). Por supuesto, si el usuario escribe una cadena no válida en `TextBox2`, si la cadena contiene el nombre de una propiedad en lugar de un método o si el método tenía un argumento necesario adicional, se produce un error en tiempo de ejecución. Tiene que agregar un código de control de errores sólido al usar `CallByName` para anticiparse a estos o a cualquier otro error.  
   
 > [!NOTE]
-> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
+> Aunque la función `CallByName` puede ser útil en algunos casos, debe sopesar su utilidad en cuanto a las implicaciones de rendimiento, el uso de `CallByName` para invocar un procedimiento es ligeramente más lento que una llamada enlazada en tiempo de ejecución. Si va a invocar una función a la que se llama repetidamente, como dentro de un bucle, `CallByName` puede tener un efecto grave en el rendimiento.  
   
 ## <a name="see-also"></a>Vea también
 

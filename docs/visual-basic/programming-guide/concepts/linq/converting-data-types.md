@@ -9,11 +9,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354252"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Convertir tipos de datos (Visual Basic)
 
 Los métodos de conversión cambian el tipo de los objetos de entrada.
 
- Las operaciones de conversión en las consultas LINQ son útiles en una serie de aplicaciones. The following are some examples:
+ Las operaciones de conversión en las consultas LINQ son útiles en una serie de aplicaciones. Estos son algunos ejemplos:
 
 - El método <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> puede usarse para ocultar una implementación personalizada de tipo de un operador de consulta estándar.
 
@@ -27,7 +27,7 @@ En la siguiente tabla se muestran los métodos de operadores de consulta estánd
 
 Los métodos de conversión de esta tabla cuyos nombres comienzan por "As" cambian el tipo estático de la colección de origen, pero no lo enumeran. Los métodos cuyos nombres empiezan por "To" enumeran la colección de origen y colocan los elementos en el tipo de colección correspondiente.
 
-|Nombre del método|Descripción|Visual Basic Query Expression Syntax|Más información|
+|Nombre del método|Descripción|Visual Basic sintaxis de expresiones de consulta|Más información|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|Devuelve la entrada con tipo como <xref:System.Collections.Generic.IEnumerable%601>.|No disponible.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|Convierte un <xref:System.Collections.IEnumerable> (genérico) en un <xref:System.Linq.IQueryable> (genérico).|No disponible.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -40,7 +40,7 @@ Los métodos de conversión de esta tabla cuyos nombres comienzan por "As" cambi
 
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+En el ejemplo de código siguiente se usa la cláusula `From As` para convertir un tipo en un subtipo antes de tener acceso a un miembro que solo está disponible en el subtipo.
 
 ```vb
 Class Plant
@@ -85,4 +85,4 @@ End Sub
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From (cláusula)](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Cómo: consultar una ArrayList con LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

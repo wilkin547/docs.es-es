@@ -15,7 +15,7 @@ ms.locfileid: "74354124"
 ---
 # <a name="const-statement-visual-basic"></a>Instrucción Const (Visual Basic)
 
-Declares and defines one or more constants.
+Declara y define una o más constantes.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,16 +27,16 @@ Const constantlist
 ## <a name="parts"></a>Elementos
 
 `attributelist`  
-Opcional. List of attributes that apply to all the constants declared in this statement. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+Opcional. Lista de atributos que se aplican a todas las constantes declaradas en esta instrucción. Vea [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre corchetes angulares ("`<`" y "`>`").
 
 `accessmodifier`  
-Opcional. Use this to specify what code can access these constants. Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), or [Private Protected](../../language-reference/modifiers/private-protected.md).
+Opcional. Úselo para especificar qué código puede tener acceso a estas constantes. Puede ser [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [Private](../../../visual-basic/language-reference/modifiers/private.md)o [Private Protected](../../language-reference/modifiers/private-protected.md).
 
 `Shadows`  
-Opcional. Use this to redeclare and hide a programming element in a base class. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+Opcional. Use esto para volver a declarar y ocultar un elemento de programación en una clase base. Vea [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 `constantlist`  
-Requerido. List of constants being declared in this statement.
+Obligatorio. Lista de constantes que se declaran en esta instrucción.
 
 `constant` `[ ,` `constant` `... ]`
 
@@ -46,63 +46,63 @@ Cada `constant` tiene la sintaxis y las partes siguientes:
 
 |Parte|Descripción|
 |----------|-----------------|
-|`constantname`|Requerido. Name of the constant. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`datatype`|Required if `Option Strict` is `On`. Data type of the constant.|
-|`initializer`|Requerido. Expression that is evaluated at compile time and assigned to the constant.|
+|`constantname`|Obligatorio. Nombre de la constante. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`datatype`|Es obligatorio si se `On``Option Strict`. Tipo de datos de la constante.|
+|`initializer`|Obligatorio. Expresión que se evalúa en tiempo de compilación y se asigna a la constante.|
 
 ## <a name="remarks"></a>Comentarios
 
-If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value. A name is easier to remember than a value. You can define the constant just once and use it in many places in your code. If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.
+Si tiene un valor que nunca cambia en la aplicación, puede definir una constante con nombre y utilizarla en lugar de un valor literal. Un nombre es más fácil de recordar que un valor. Puede definir la constante una sola vez y usarla en muchos lugares del código. Si en una versión posterior necesita volver a definir el valor, la `Const` instrucción es el único lugar que necesita para realizar un cambio.
 
-You can use `Const` only at module or procedure level. This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
+Solo puede usar `Const` en el nivel de módulo o de procedimiento. Esto significa que el contexto de la *declaración* de una variable debe ser una clase, una estructura, un módulo, un procedimiento o un bloque, y no puede ser un archivo de código fuente, un espacio de nombres o una interfaz. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
 
-Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them. Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access. Los niveles de acceso se pueden ajustar con los modificadores de acceso.
+Las constantes locales (dentro de un procedimiento) tienen como valor predeterminado el acceso público y no se pueden usar modificadores de acceso en ellas. Las constantes de miembro de clase y módulo (fuera de cualquier procedimiento) tienen como valor predeterminado el acceso privado y las constantes de miembro de estructura tienen como valor predeterminado el acceso público. Los niveles de acceso se pueden ajustar con los modificadores de acceso.
 
 ## <a name="rules"></a>Reglas
 
-- **Declaration Context.** A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.
+- **Contexto de declaración.** Una constante declarada en el nivel de módulo, fuera de cualquier procedimiento, es una *constante de miembro*; es miembro de la clase, estructura o módulo que lo declara.
 
-  A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.
+  Una constante declarada en el nivel de procedimiento es una *constante local*; es local para el procedimiento o bloque que lo declara.
 
-- **Attributes.** You can apply attributes only to member constants, not to local constants. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.
+- **Sus.** Solo puede aplicar atributos a constantes de miembro, no a constantes locales. Un atributo contribuye a la información en los metadatos del ensamblado, lo que no es significativo para el almacenamiento temporal, como las constantes locales.
 
-- **Modifiers.** By default, all constants are `Shared`, `Static`, and `ReadOnly`. You cannot use any of these keywords when declaring a constant.
+- **Modificadores.** De forma predeterminada, todas las constantes son `Shared`, `Static`y `ReadOnly`. No se puede usar ninguna de estas palabras clave al declarar una constante.
 
-  At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.
+  En el nivel de procedimiento, no se puede usar `Shadows` o cualquier modificador de acceso para declarar constantes locales.
 
-- **Multiple Constants.** You can declare several constants in the same declaration statement, specifying the `constantname` part for each one. Multiple constants are separated by commas.
+- **Varias constantes.** Puede declarar varias constantes en la misma instrucción de declaración, especificando la parte `constantname` de cada una. Varias constantes se separan mediante comas.
 
-## <a name="data-type-rules"></a>Data Type Rules
+## <a name="data-type-rules"></a>Reglas de tipo de datos
 
-- **Data Types.** The `Const` statement can declare the data type of a variable. You can specify any data type or the name of an enumeration.
+- **Tipos de datos.** La instrucción `Const` puede declarar el tipo de datos de una variable. Puede especificar cualquier tipo de datos o el nombre de una enumeración.
 
-- **Default Type.** If you do not specify `datatype`, the constant takes the data type of `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.
+- **Tipo predeterminado.** Si no se especifica `datatype`, la constante toma el tipo de datos de `initializer`. Si especifica `datatype` y `initializer`, el tipo de datos de `initializer` debe ser convertible en `datatype`. Si no hay ningún `datatype` ni `initializer`, el tipo de datos tiene como valor predeterminado `Object`.
 
-- **Different Types.** You can specify different data types for different constants by using a separate `As` clause for each variable you declare. However, you cannot declare several constants to be of the same type by using a common `As` clause.
+- **Tipos diferentes.** Puede especificar tipos de datos diferentes para las diferentes constantes mediante el uso de una cláusula de `As` independiente para cada variable que declare. Sin embargo, no se pueden declarar varias constantes para que sean del mismo tipo mediante una cláusula de `As` común.
 
-- **Initialization.** You must initialize the value of every constant in `constantlist`. You use `initializer` to supply an expression to be assigned to the constant. The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined. You can use arithmetic and logical operators to combine such elements.
+- **Inicial.** Debe inicializar el valor de cada constante en `constantlist`. Utilice `initializer` para proporcionar una expresión que se asignará a la constante. La expresión puede ser cualquier combinación de literales, otras constantes que ya están definidas y miembros de enumeración que ya están definidos. Puede usar operadores aritméticos y lógicos para combinar estos elementos.
 
-  You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+  No se pueden usar variables ni funciones en `initializer`. Sin embargo, puede usar palabras clave de conversión como `CByte` y `CShort`. También puede utilizar `AscW` si lo llama con una constante `String` o `Char` argumento, ya que se puede evaluar en tiempo de compilación.
 
 ## <a name="behavior"></a>Comportamiento
 
-- **Scope.** Local constants are accessible only from within their procedure or block. Member constants are accessible from anywhere within their class, structure, or module.
+- **ID.** Solo se puede tener acceso a las constantes locales desde el procedimiento o el bloque. Las constantes de miembro son accesibles desde cualquier lugar dentro de su clase, estructura o módulo.
 
-- **Qualification.** Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local constants within that procedure or block.
+- **Evaluación.** El código fuera de una clase, estructura o módulo debe calificar el nombre de una constante de miembro con el nombre de esa clase, estructura o módulo. El código fuera de un procedimiento o bloque no puede hacer referencia a ninguna constante local dentro de ese procedimiento o bloque.
 
 ## <a name="example"></a>Ejemplo
 
-The following example uses the `Const` statement to declare constants for use in place of literal values.
+En el ejemplo siguiente se usa la instrucción `Const` para declarar constantes que se usan en lugar de los valores literales.
 
 [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]
 
 ## <a name="example"></a>Ejemplo
 
-If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`. In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.
+Si define una constante con el tipo de datos `Object`, el compilador Visual Basic le asigna el tipo de `initializer`, en lugar de `Object`. En el ejemplo siguiente, la constante `naturalLogBase` tiene `Decimal`de tipo en tiempo de ejecución.
 
 [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]
 
-The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.
+En el ejemplo anterior se usa el método <xref:System.Type.ToString%2A> en el objeto <xref:System.Type> devuelto por el [operador GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), porque <xref:System.Type> no se puede convertir en `String` con `CStr`.
 
 ## <a name="see-also"></a>Vea también
 

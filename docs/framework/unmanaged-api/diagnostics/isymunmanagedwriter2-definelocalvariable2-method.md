@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438292"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 (Método)
-Define una única variable en el ámbito léxico actual. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+Define una única variable en el ámbito léxico actual. Se puede llamar a este método varias veces para una variable del mismo nombre que tiene varias casas en todo el ámbito. Sin embargo, en este caso, los valores de los parámetros `startOffset` y `endOffset` no deben superponerse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- [in] The local variable name.  
+ de Nombre de la variable local.  
   
  `attributes`  
- [in] The local variable attributes.  
+ de Atributos de la variable local.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ de Símbolo (token) de metadatos de la firma.  
   
  `addrKind`  
- [in] The address type.  
+ de Tipo de dirección.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ de Primera dirección de la especificación de parámetro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ de Segunda dirección de la especificación de parámetro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ de Tercera dirección de la especificación de parámetro.  
   
  `startOffset`  
- [in] The start offset for the variable. Este parámetro es opcional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ de Desplazamiento inicial de la variable. Este parámetro es opcional. Si es 0, este parámetro se omite y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.  
   
  `endOffset`  
- [in] The end offset for the variable. Este parámetro es opcional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ de Desplazamiento final de la variable. Este parámetro es opcional. Si es 0, este parámetro se omite y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl  
+ **Encabezado:** CorSym. idl  
   
 ## <a name="see-also"></a>Vea también
 

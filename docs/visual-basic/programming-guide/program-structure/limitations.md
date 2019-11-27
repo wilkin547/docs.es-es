@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347365"
 ---
 # <a name="visual-basic-limitations"></a>Limitaciones de Visual Basic
-Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
+Las versiones anteriores de Visual Basic los límites aplicados en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y el tamaño del módulo. En Visual Basic .NET, estas restricciones se han reducido, lo que le aporta mayor libertad para escribir y organizar el código.  
   
- Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
+ Los límites físicos dependen más en la memoria en tiempo de ejecución que en las consideraciones en tiempo de compilación. Si usa prácticas de programación prudentes y divide aplicaciones grandes en varias clases y módulos, hay muy pocas probabilidades de encontrar una limitación de Visual Basic interna.  
   
- The following are some limitations that you might encounter in extreme cases:  
+ A continuación se indican algunas limitaciones que pueden surgir en casos extremos:  
   
-- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Longitud del nombre.** Hay un número máximo de caracteres para el nombre de cada elemento de programación declarado. Este máximo se aplica a toda la cadena de calificación si el nombre del elemento está calificado. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Longitud de línea.** Hay un máximo de 65535 caracteres en una línea física de código fuente. La línea de código fuente lógica puede ser más larga si usa caracteres de continuación de línea. Vea [Cómo: interrumpir y combinar instrucciones en el código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
-- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Dimensiones de la matriz.** Hay un número máximo de dimensiones que puede declarar para una matriz. Esto limita el número de índices que puede utilizar para especificar un elemento de la matriz. Vea [dimensiones de la matriz en Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
-- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **Longitud de la cadena.** Hay un número máximo de caracteres Unicode que se pueden almacenar en una sola cadena. Vea [tipo de datos de cadena](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
-- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
+- **Longitud de la cadena de entorno.** Hay un máximo de 32768 caracteres para cualquier cadena de entorno utilizada como argumento de la línea de comandos. Se trata de una limitación en todas las plataformas.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

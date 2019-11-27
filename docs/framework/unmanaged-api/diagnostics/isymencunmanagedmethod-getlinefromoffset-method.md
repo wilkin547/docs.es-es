@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448642"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset (Método)
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+Obtiene la información de línea asociada a un desplazamiento. Si el parámetro de desplazamiento (`dwOffset`) no es un punto de secuencia, este método obtiene la información de línea asociada al desplazamiento anterior.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ de `ULONG32` que contiene el desplazamiento.  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ enuncia Puntero a un `ULONG32` que recibe la línea.  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ enuncia Puntero a un `ULONG32` que recibe la columna.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ enuncia Puntero a un `ULONG32` que recibe la línea final.  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ enuncia Puntero a un `ULONG32` que recibe la columna final.  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ enuncia Puntero a un `ULONG32` que recibe el punto de secuencia asociado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

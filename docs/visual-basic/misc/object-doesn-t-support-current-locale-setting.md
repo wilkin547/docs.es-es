@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: El objeto no admite la configuración regional actual
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
