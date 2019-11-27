@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449068"
 ---
-# <a name="isymunmanageddocumentwritersetsource-method"></a><span data-ttu-id="ee6b4-102">ISymUnmanagedDocumentWriter::SetSource (Método)</span><span class="sxs-lookup"><span data-stu-id="ee6b4-102">ISymUnmanagedDocumentWriter::SetSource Method</span></span>
-<span data-ttu-id="ee6b4-103">Sets embedded source for a document that is being written.</span><span class="sxs-lookup"><span data-stu-id="ee6b4-103">Sets embedded source for a document that is being written.</span></span>  
+# <a name="isymunmanageddocumentwritersetsource-method"></a><span data-ttu-id="f246f-102">ISymUnmanagedDocumentWriter::SetSource (Método)</span><span class="sxs-lookup"><span data-stu-id="f246f-102">ISymUnmanagedDocumentWriter::SetSource Method</span></span>
+<span data-ttu-id="f246f-103">Establece el origen incrustado de un documento que se está escribiendo.</span><span class="sxs-lookup"><span data-stu-id="f246f-103">Sets embedded source for a document that is being written.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee6b4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ee6b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f246f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f246f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetSource(  
@@ -33,19 +33,19 @@ HRESULT SetSource(
     [in, size_is(sourceSize)] BYTE  source[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ee6b4-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ee6b4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f246f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f246f-105">Parameters</span></span>  
  `sourceSize`  
- <span data-ttu-id="ee6b4-106">[in] A `ULONG32` that contains the size of the `source` buffer.</span><span class="sxs-lookup"><span data-stu-id="ee6b4-106">[in] A `ULONG32` that contains the size of the `source` buffer.</span></span>  
+ <span data-ttu-id="f246f-106">de `ULONG32` que contiene el tamaño del búfer de `source`.</span><span class="sxs-lookup"><span data-stu-id="f246f-106">[in] A `ULONG32` that contains the size of the `source` buffer.</span></span>  
   
  `source`  
- <span data-ttu-id="ee6b4-107">[in] The buffer that stores the embedded source.</span><span class="sxs-lookup"><span data-stu-id="ee6b4-107">[in] The buffer that stores the embedded source.</span></span>  
+ <span data-ttu-id="f246f-107">de Búfer que almacena el código fuente incrustado.</span><span class="sxs-lookup"><span data-stu-id="f246f-107">[in] The buffer that stores the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ee6b4-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ee6b4-108">Return Value</span></span>  
- <span data-ttu-id="ee6b4-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ee6b4-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f246f-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f246f-108">Return Value</span></span>  
+ <span data-ttu-id="f246f-109">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="f246f-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee6b4-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ee6b4-110">Requirements</span></span>  
- <span data-ttu-id="ee6b4-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ee6b4-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f246f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f246f-110">Requirements</span></span>  
+ <span data-ttu-id="f246f-111">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f246f-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee6b4-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="ee6b4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f246f-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f246f-112">See also</span></span>
 
-- [<span data-ttu-id="ee6b4-113">ISymUnmanagedDocumentWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ee6b4-113">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [<span data-ttu-id="f246f-113">ISymUnmanagedDocumentWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f246f-113">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

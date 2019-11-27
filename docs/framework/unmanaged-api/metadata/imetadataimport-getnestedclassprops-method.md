@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437143"
 ---
-# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="9bb0a-102">IMetaDataImport::GetNestedClassProps (Método)</span><span class="sxs-lookup"><span data-stu-id="9bb0a-102">IMetaDataImport::GetNestedClassProps Method</span></span>
-<span data-ttu-id="9bb0a-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span><span class="sxs-lookup"><span data-stu-id="9bb0a-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
+# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="53b0b-102">IMetaDataImport::GetNestedClassProps (Método)</span><span class="sxs-lookup"><span data-stu-id="53b0b-102">IMetaDataImport::GetNestedClassProps Method</span></span>
+<span data-ttu-id="53b0b-103">Obtiene el token de TypeDef para el <xref:System.Type> primario del tipo anidado especificado.</span><span class="sxs-lookup"><span data-stu-id="53b0b-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9bb0a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9bb0a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53b0b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="53b0b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNestedClassProps (  
@@ -34,23 +34,23 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9bb0a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9bb0a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53b0b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="53b0b-105">Parameters</span></span>  
  `tdNestedClass`  
- <span data-ttu-id="9bb0a-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span><span class="sxs-lookup"><span data-stu-id="9bb0a-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
+ <span data-ttu-id="53b0b-106">de Un token de TypeDef que representa la <xref:System.Type> para la que se va a devolver el token de clase principal.</span><span class="sxs-lookup"><span data-stu-id="53b0b-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
   
  `ptdEnclosingClass`  
- <span data-ttu-id="9bb0a-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span><span class="sxs-lookup"><span data-stu-id="9bb0a-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
+ <span data-ttu-id="53b0b-107">enuncia Puntero al token de TypeDef para el <xref:System.Type> en el que está anidado `tdNestedClass`.</span><span class="sxs-lookup"><span data-stu-id="53b0b-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9bb0a-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9bb0a-108">Requirements</span></span>  
- <span data-ttu-id="9bb0a-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9bb0a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53b0b-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="53b0b-108">Requirements</span></span>  
+ <span data-ttu-id="53b0b-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53b0b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9bb0a-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9bb0a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="53b0b-110">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="53b0b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9bb0a-111">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9bb0a-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="53b0b-111">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="53b0b-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9bb0a-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9bb0a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="53b0b-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53b0b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9bb0a-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="9bb0a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53b0b-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="53b0b-113">See also</span></span>
 
-- [<span data-ttu-id="9bb0a-114">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9bb0a-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="9bb0a-115">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9bb0a-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="53b0b-114">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="53b0b-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="53b0b-115">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="53b0b-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

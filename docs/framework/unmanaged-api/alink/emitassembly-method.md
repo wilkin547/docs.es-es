@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446522"
 ---
-# <a name="emitassembly-method"></a><span data-ttu-id="02d00-102">EmitAssembly (Método)</span><span class="sxs-lookup"><span data-stu-id="02d00-102">EmitAssembly Method</span></span>
-<span data-ttu-id="02d00-103">Creates the assembly.</span><span class="sxs-lookup"><span data-stu-id="02d00-103">Creates the assembly.</span></span> <span data-ttu-id="02d00-104">Call this method after all other files are closed except for the assembly file.</span><span class="sxs-lookup"><span data-stu-id="02d00-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="02d00-105">Do not call this method when producing unbound modules.</span><span class="sxs-lookup"><span data-stu-id="02d00-105">Do not call this method when producing unbound modules.</span></span>  
+# <a name="emitassembly-method"></a><span data-ttu-id="a844d-102">EmitAssembly (Método)</span><span class="sxs-lookup"><span data-stu-id="a844d-102">EmitAssembly Method</span></span>
+<span data-ttu-id="a844d-103">Crea el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="a844d-103">Creates the assembly.</span></span> <span data-ttu-id="a844d-104">Llame a este método después de que se cierren todos los demás archivos excepto el archivo de ensamblado.</span><span class="sxs-lookup"><span data-stu-id="a844d-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="a844d-105">No llame a este método al producir módulos sin enlazar.</span><span class="sxs-lookup"><span data-stu-id="a844d-105">Do not call this method when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02d00-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="02d00-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a844d-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a844d-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitAssembly(  
@@ -33,18 +33,18 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02d00-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="02d00-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a844d-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a844d-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="02d00-108">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="02d00-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="a844d-108">IDENTIFICADOR del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="a844d-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="02d00-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="02d00-109">Return Value</span></span>  
- <span data-ttu-id="02d00-110">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="02d00-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a844d-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a844d-109">Return Value</span></span>  
+ <span data-ttu-id="a844d-110">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="a844d-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02d00-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="02d00-111">Requirements</span></span>  
- <span data-ttu-id="02d00-112">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="02d00-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a844d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a844d-111">Requirements</span></span>  
+ <span data-ttu-id="a844d-112">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="a844d-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02d00-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="02d00-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a844d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="a844d-113">See also</span></span>
 
-- [<span data-ttu-id="02d00-114">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="02d00-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="02d00-115">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="02d00-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="02d00-116">API de ALink</span><span class="sxs-lookup"><span data-stu-id="02d00-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="a844d-114">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a844d-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="a844d-115">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a844d-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="a844d-116">API de ALink</span><span class="sxs-lookup"><span data-stu-id="a844d-116">ALink API</span></span>](index.md)

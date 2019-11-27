@@ -22,29 +22,29 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444669"
 ---
-# <a name="icorprofilermoduleenumclone-method"></a><span data-ttu-id="43cc2-102">ICorProfilerModuleEnum::Clone (Método)</span><span class="sxs-lookup"><span data-stu-id="43cc2-102">ICorProfilerModuleEnum::Clone Method</span></span>
-<span data-ttu-id="43cc2-103">Gets an interface pointer to a copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="43cc2-103">Gets an interface pointer to a copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
+# <a name="icorprofilermoduleenumclone-method"></a><span data-ttu-id="55232-102">ICorProfilerModuleEnum::Clone (Método)</span><span class="sxs-lookup"><span data-stu-id="55232-102">ICorProfilerModuleEnum::Clone Method</span></span>
+<span data-ttu-id="55232-103">Obtiene un puntero de interfaz a una copia de esta interfaz [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="55232-103">Gets an interface pointer to a copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43cc2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="43cc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55232-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="55232-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="43cc2-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="43cc2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="55232-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="55232-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="43cc2-106">[out] A pointer to the interface pointer that in turn points to the copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="43cc2-106">[out] A pointer to the interface pointer that in turn points to the copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span> <span data-ttu-id="43cc2-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span><span class="sxs-lookup"><span data-stu-id="43cc2-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="43cc2-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span><span class="sxs-lookup"><span data-stu-id="43cc2-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span></span>  
+ <span data-ttu-id="55232-106">enuncia Puntero al puntero de interfaz que a su vez apunta a la copia de esta interfaz [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="55232-106">[out] A pointer to the interface pointer that in turn points to the copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span> <span data-ttu-id="55232-107">La copia del enumerador mantiene su propio estado de enumeración por separado de este enumerador.</span><span class="sxs-lookup"><span data-stu-id="55232-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="55232-108">Sin embargo, la posición inicial del cursor de la copia es la misma que la posición actual del cursor de este enumerador.</span><span class="sxs-lookup"><span data-stu-id="55232-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43cc2-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="43cc2-109">Requirements</span></span>  
- <span data-ttu-id="43cc2-110">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43cc2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55232-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="55232-109">Requirements</span></span>  
+ <span data-ttu-id="55232-110">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55232-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="43cc2-111">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="43cc2-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="55232-111">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="55232-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="43cc2-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43cc2-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55232-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55232-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="43cc2-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43cc2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="55232-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55232-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43cc2-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="43cc2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55232-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="55232-114">See also</span></span>
 
-- [<span data-ttu-id="43cc2-115">ICorProfilerModuleEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="43cc2-115">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="43cc2-116">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="43cc2-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="55232-115">ICorProfilerModuleEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="55232-115">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="55232-116">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="55232-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

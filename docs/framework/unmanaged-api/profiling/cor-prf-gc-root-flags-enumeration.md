@@ -21,10 +21,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449458"
 ---
-# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="5f08d-102">COR_PRF_GC_ROOT_FLAGS (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="5f08d-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
-<span data-ttu-id="5f08d-103">Indicates a property of a garbage collection root.</span><span class="sxs-lookup"><span data-stu-id="5f08d-103">Indicates a property of a garbage collection root.</span></span>  
+# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="757a1-102">COR_PRF_GC_ROOT_FLAGS (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="757a1-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
+<span data-ttu-id="757a1-103">Indica una propiedad de una raíz de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="757a1-103">Indicates a property of a garbage collection root.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f08d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5f08d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="757a1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="757a1-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,27 +35,27 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5f08d-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="5f08d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="757a1-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="757a1-105">Members</span></span>  
   
-|<span data-ttu-id="5f08d-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="5f08d-106">Member</span></span>|<span data-ttu-id="5f08d-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="5f08d-107">Description</span></span>|  
+|<span data-ttu-id="757a1-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="757a1-106">Member</span></span>|<span data-ttu-id="757a1-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="757a1-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="5f08d-108">The root prevents a garbage collection from moving the object.</span><span class="sxs-lookup"><span data-stu-id="5f08d-108">The root prevents a garbage collection from moving the object.</span></span>|  
-|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="5f08d-109">The root does not prevent garbage collection.</span><span class="sxs-lookup"><span data-stu-id="5f08d-109">The root does not prevent garbage collection.</span></span>|  
-|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="5f08d-110">The root refers to a field of the object rather than the object itself.</span><span class="sxs-lookup"><span data-stu-id="5f08d-110">The root refers to a field of the object rather than the object itself.</span></span>|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="5f08d-111">The root prevents garbage collection if the reference count of the object is a certain value.</span><span class="sxs-lookup"><span data-stu-id="5f08d-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
+|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="757a1-108">La raíz impide que una recolección de elementos no utilizados mueva el objeto.</span><span class="sxs-lookup"><span data-stu-id="757a1-108">The root prevents a garbage collection from moving the object.</span></span>|  
+|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="757a1-109">La raíz no impide la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="757a1-109">The root does not prevent garbage collection.</span></span>|  
+|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="757a1-110">La raíz hace referencia a un campo del objeto en lugar del propio objeto.</span><span class="sxs-lookup"><span data-stu-id="757a1-110">The root refers to a field of the object rather than the object itself.</span></span>|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="757a1-111">La raíz evita la recolección de elementos no utilizados si el recuento de referencias del objeto es un determinado valor.</span><span class="sxs-lookup"><span data-stu-id="757a1-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5f08d-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5f08d-112">Remarks</span></span>  
- <span data-ttu-id="5f08d-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span><span class="sxs-lookup"><span data-stu-id="5f08d-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="5f08d-114">However, not all roots are special.</span><span class="sxs-lookup"><span data-stu-id="5f08d-114">However, not all roots are special.</span></span> <span data-ttu-id="5f08d-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span><span class="sxs-lookup"><span data-stu-id="5f08d-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="5f08d-116">For such roots, there are no flags to convey.</span><span class="sxs-lookup"><span data-stu-id="5f08d-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="5f08d-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span><span class="sxs-lookup"><span data-stu-id="5f08d-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="757a1-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="757a1-112">Remarks</span></span>  
+ <span data-ttu-id="757a1-113">`COR_PRF_GC_ROOT_FLAGS` es una máscara de datos que proporciona información adicional sobre raíces especiales.</span><span class="sxs-lookup"><span data-stu-id="757a1-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="757a1-114">Sin embargo, no todas las raíces son especiales.</span><span class="sxs-lookup"><span data-stu-id="757a1-114">However, not all roots are special.</span></span> <span data-ttu-id="757a1-115">Por ejemplo, algunas raíces no son referencias débiles, punteros interiores, ancladas o con recuento de referencias.</span><span class="sxs-lookup"><span data-stu-id="757a1-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="757a1-116">Para tales raíces, no hay marcas para transmitir.</span><span class="sxs-lookup"><span data-stu-id="757a1-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="757a1-117">Por lo tanto, los métodos que utilizan esta enumeración, como el método [ICorProfilerCallback2:: RootReferences2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) , envían 0 para la máscara de máscara de marcas, lo que indica que todas las marcas están desactivadas.</span><span class="sxs-lookup"><span data-stu-id="757a1-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f08d-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5f08d-118">Requirements</span></span>  
- <span data-ttu-id="5f08d-119">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f08d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="757a1-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="757a1-118">Requirements</span></span>  
+ <span data-ttu-id="757a1-119">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="757a1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f08d-120">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5f08d-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="757a1-120">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="757a1-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5f08d-121">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f08d-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="757a1-121">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="757a1-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f08d-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f08d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="757a1-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="757a1-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f08d-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f08d-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="757a1-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="757a1-123">See also</span></span>
 
-- [<span data-ttu-id="5f08d-124">Enumeraciones para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="5f08d-124">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="757a1-124">Enumeraciones para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="757a1-124">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

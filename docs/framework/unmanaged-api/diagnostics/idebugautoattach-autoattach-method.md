@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445523"
 ---
-# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="9a5df-102">IDebugAutoAttach::AutoAttach (Método)</span><span class="sxs-lookup"><span data-stu-id="9a5df-102">IDebugAutoAttach::AutoAttach Method</span></span>
-<span data-ttu-id="9a5df-103">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="9a5df-103">Performs server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="2da8f-102">IDebugAutoAttach::AutoAttach (Método)</span><span class="sxs-lookup"><span data-stu-id="2da8f-102">IDebugAutoAttach::AutoAttach Method</span></span>
+<span data-ttu-id="2da8f-103">Realiza la Asociación automática del depurador invocado por el servidor.</span><span class="sxs-lookup"><span data-stu-id="2da8f-103">Performs server-invoked debugger auto attach.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a5df-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9a5df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2da8f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2da8f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AutoAttach  
@@ -38,28 +38,28 @@ HRESULT AutoAttach
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a5df-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9a5df-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2da8f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2da8f-105">Parameters</span></span>  
  `guidPort`  
- <span data-ttu-id="9a5df-106">[in] Always set to `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="9a5df-106">[in] Always set to `GUID_NULL`.</span></span>  
+ <span data-ttu-id="2da8f-106">de Siempre se establece en `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="2da8f-106">[in] Always set to `GUID_NULL`.</span></span>  
   
  `dwPid`  
- <span data-ttu-id="9a5df-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span><span class="sxs-lookup"><span data-stu-id="9a5df-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
+ <span data-ttu-id="2da8f-107">de IDENTIFICADOR de proceso, que se recupera normalmente con la función `GetCurrentProcessId`.</span><span class="sxs-lookup"><span data-stu-id="2da8f-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
   
  `dwProgramType`  
- <span data-ttu-id="9a5df-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="9a5df-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
+ <span data-ttu-id="2da8f-108">de Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`o `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="2da8f-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
   
  `dwProgramId`  
- <span data-ttu-id="9a5df-109">[in] Program ID.</span><span class="sxs-lookup"><span data-stu-id="9a5df-109">[in] Program ID.</span></span>  
+ <span data-ttu-id="2da8f-109">de IDENTIFICADOR de programa.</span><span class="sxs-lookup"><span data-stu-id="2da8f-109">[in] Program ID.</span></span>  
   
  `pszSessionId`  
- <span data-ttu-id="9a5df-110">[in] String passed by the debug verb.</span><span class="sxs-lookup"><span data-stu-id="9a5df-110">[in] String passed by the debug verb.</span></span>  
+ <span data-ttu-id="2da8f-110">de Cadena pasada por el verbo DEBUG.</span><span class="sxs-lookup"><span data-stu-id="2da8f-110">[in] String passed by the debug verb.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9a5df-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9a5df-111">Return Value</span></span>  
- <span data-ttu-id="9a5df-112">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9a5df-112">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2da8f-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="2da8f-111">Return Value</span></span>  
+ <span data-ttu-id="2da8f-112">S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="2da8f-112">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a5df-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a5df-113">Requirements</span></span>  
- <span data-ttu-id="9a5df-114">**Header:** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="9a5df-114">**Header:** DbgAutoAttach.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2da8f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2da8f-113">Requirements</span></span>  
+ <span data-ttu-id="2da8f-114">**Encabezado:** DbgAutoAttach. h</span><span class="sxs-lookup"><span data-stu-id="2da8f-114">**Header:** DbgAutoAttach.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a5df-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a5df-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2da8f-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="2da8f-115">See also</span></span>
 
-- [<span data-ttu-id="9a5df-116">IDebugAutoAttach (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9a5df-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [<span data-ttu-id="2da8f-116">IDebugAutoAttach (interfaz)</span><span class="sxs-lookup"><span data-stu-id="2da8f-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
