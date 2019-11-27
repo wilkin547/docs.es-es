@@ -51,7 +51,7 @@ Algunos ejemplos de lenguajes desarrollados con DLR son los siguientes:
 
 - IronPython. Disponible como software de código abierto en el sitio web de [GitHub](https://github.com/IronLanguages/ironpython2).
 
-- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby. Disponible como software de código abierto en el sitio web de [ironruby](http://ironruby.net/) .
 
 ## <a name="primary-dlr-advantages"></a>Principales ventajas de DLR
  DLR ofrece las ventajas que se indican a continuación.
@@ -74,7 +74,7 @@ Algunos ejemplos de lenguajes desarrollados con DLR son los siguientes:
 ## <a name="dlr-architecture"></a>Arquitectura de DLR
  En la ilustración siguiente se muestra la arquitectura de Dynamic Language Runtime.
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![Información general sobre la arquitectura de Dynamic Language Runtime](./media/dlr-archoverview.png "DLR_ArchOverview") Arquitectura de DLR
 
  DLR agrega un conjunto de servicios a CLR para una mejor compatibilidad con los lenguajes dinámicos. Entre estos servicios, se incluyen los siguientes:
 

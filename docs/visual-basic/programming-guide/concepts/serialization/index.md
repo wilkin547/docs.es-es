@@ -25,7 +25,7 @@ La serialización es un proceso que consiste en convertir un objeto en una secue
 ### <a name="making-an-object-serializable"></a>Conversión de un objeto en serializable  
  Para serializar un objeto, necesita el objeto que se va a serializar, una secuencia que contenga el objeto serializado y un <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contiene las clases necesarias para serializar y deserializar objetos.  
   
- Aplique el atributo <xref:System.SerializableAttribute> a un tipo para indicar que se pueden serializar instancias de este tipo. Si se intenta serializar pero el tipo no tiene el atributo <xref:System.SerializableAttribute>, se produce una excepción <xref:System.Runtime.Serialization.SerializationException>.  
+ Aplique el atributo <xref:System.SerializableAttribute> a un tipo para indicar que se pueden serializar instancias de este tipo. Si se intenta serializar pero el tipo no tiene el atributo <xref:System.Runtime.Serialization.SerializationException>, se produce una excepción <xref:System.SerializableAttribute>.  
   
  Si no quiere que un campo dentro de la clase sea serializable, aplique el atributo <xref:System.NonSerializedAttribute>. Si un campo de un tipo serializable contiene un puntero, un controlador o alguna otra estructura de datos específica para un entorno concreto y el campo no se puede reconstituir correctamente en un entorno diferente, puede convertirlo en no serializable.  
   
