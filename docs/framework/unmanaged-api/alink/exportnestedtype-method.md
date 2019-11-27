@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438422"
 ---
-# <a name="exportnestedtype-method"></a><span data-ttu-id="af249-102">ExportNestedType (Método)</span><span class="sxs-lookup"><span data-stu-id="af249-102">ExportNestedType Method</span></span>
-<span data-ttu-id="af249-103">Specifies nested types as exportable.</span><span class="sxs-lookup"><span data-stu-id="af249-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="af249-104">The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.</span><span class="sxs-lookup"><span data-stu-id="af249-104">The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.</span></span>  
+# <a name="exportnestedtype-method"></a><span data-ttu-id="db973-102">ExportNestedType (Método)</span><span class="sxs-lookup"><span data-stu-id="db973-102">ExportNestedType Method</span></span>
+<span data-ttu-id="db973-103">Especifica los tipos anidados como exportables.</span><span class="sxs-lookup"><span data-stu-id="db973-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="db973-104">El [método ExportType](exporttype-method.md) también puede exportar tipos anidados, pero este método es más rápido.</span><span class="sxs-lookup"><span data-stu-id="db973-104">The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af249-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="af249-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db973-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="db973-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportNestedType(  
@@ -39,36 +39,36 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af249-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="af249-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db973-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="db973-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="af249-107">ID of assembly to export from.</span><span class="sxs-lookup"><span data-stu-id="af249-107">ID of assembly to export from.</span></span>  
+ <span data-ttu-id="db973-107">IDENTIFICADOR del ensamblado del que se va a exportar.</span><span class="sxs-lookup"><span data-stu-id="db973-107">ID of assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="af249-108">File token or Assembly of file that defines the type to be made exportable.</span><span class="sxs-lookup"><span data-stu-id="af249-108">File token or Assembly of file that defines the type to be made exportable.</span></span>  
+ <span data-ttu-id="db973-108">Token de archivo o ensamblado de archivo que define el tipo que se va a convertir.</span><span class="sxs-lookup"><span data-stu-id="db973-108">File token or Assembly of file that defines the type to be made exportable.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="af249-109">Type token of type to be made exportable.</span><span class="sxs-lookup"><span data-stu-id="af249-109">Type token of type to be made exportable.</span></span>  
+ <span data-ttu-id="db973-109">Token de tipo del tipo que se va a convertir.</span><span class="sxs-lookup"><span data-stu-id="db973-109">Type token of type to be made exportable.</span></span>  
   
  `ParentType`  
- <span data-ttu-id="af249-110">Token of parent type.</span><span class="sxs-lookup"><span data-stu-id="af249-110">Token of parent type.</span></span>  
+ <span data-ttu-id="db973-110">Token del tipo primario.</span><span class="sxs-lookup"><span data-stu-id="db973-110">Token of parent type.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="af249-111">Fully qualified type name to export.</span><span class="sxs-lookup"><span data-stu-id="af249-111">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="db973-111">Nombre completo del tipo que se va a exportar.</span><span class="sxs-lookup"><span data-stu-id="db973-111">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="af249-112">`ComType` flags such as `tdPublic` or `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="af249-112">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="af249-113">This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="af249-113">This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="db973-112">`ComType` marcas como `tdPublic` o `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="db973-112">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="db973-113">Este valor se puede pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="db973-113">This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="af249-114">Receives token for exported type.</span><span class="sxs-lookup"><span data-stu-id="af249-114">Receives token for exported type.</span></span>  
+ <span data-ttu-id="db973-114">Recibe el token para el tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="db973-114">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="af249-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="af249-115">Return Value</span></span>  
- <span data-ttu-id="af249-116">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="af249-116">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="db973-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="db973-115">Return Value</span></span>  
+ <span data-ttu-id="db973-116">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="db973-116">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af249-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="af249-117">Requirements</span></span>  
- <span data-ttu-id="af249-118">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="af249-118">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db973-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="db973-117">Requirements</span></span>  
+ <span data-ttu-id="db973-118">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="db973-118">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af249-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="af249-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db973-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="db973-119">See also</span></span>
 
-- [<span data-ttu-id="af249-120">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="af249-120">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="af249-121">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="af249-121">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="af249-122">API de ALink</span><span class="sxs-lookup"><span data-stu-id="af249-122">ALink API</span></span>](index.md)
+- [<span data-ttu-id="db973-120">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db973-120">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="db973-121">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db973-121">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="db973-122">API de ALink</span><span class="sxs-lookup"><span data-stu-id="db973-122">ALink API</span></span>](index.md)
