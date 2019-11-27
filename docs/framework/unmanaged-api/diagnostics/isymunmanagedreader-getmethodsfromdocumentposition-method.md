@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441800"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition (Método)
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+Devuelve una matriz de métodos, cada uno de los cuales contiene el punto de interrupción en la posición especificada de un documento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,28 +40,28 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Parámetros  
  `document`  
- [in] The specified document.  
+ de Documento especificado.  
   
  `line`  
- [in] The line of the specified document.  
+ de Línea del documento especificado.  
   
  `column`  
- [in] The column of the specified document.  
+ de Columna del documento especificado.  
   
  `cMethod`  
  [in] Tamaño de la matriz `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ enuncia Puntero a una variable que recibe el número de elementos devueltos en la matriz de `pRetVal`.  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) que representa un método que contiene el punto de interrupción.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341545"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>How to: Sort Elements (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Cómo: ordenar elementos (Visual Basic)
 Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,7 +40,7 @@ Next
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
@@ -77,4 +77,4 @@ End Module
 ## <a name="see-also"></a>Vea también
 
 - [Ordenación de datos](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

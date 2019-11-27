@@ -18,9 +18,9 @@ ms.locfileid: "74446850"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).
 
-En esta sección se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado.
+En esta sección se describe cómo implementar un proveedor de UI Automation del lado servidor para un control personalizado.
 
-The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.
+La implementación de elementos Windows Presentation Foundation (WPF) y elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (como los diseñados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) es fundamentalmente diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.
 
 <a name="Security_Considerations"></a>
 
@@ -115,7 +115,7 @@ Por lo general, en lo que respecta a los controles basados en HWND, los proveedo
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, vea <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, consulta <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > Los proveedores hospedados en un control de <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deben devolver el elemento [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . En este caso, es posible que el proveedor de ventana predeterminado no consiga recuperar el valor correcto.
 >

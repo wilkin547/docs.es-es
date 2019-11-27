@@ -12,51 +12,51 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350452"
 ---
-# <a name="queries-visual-basic"></a>Consultas de Visual Basic
-Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
+# <a name="queries-visual-basic"></a>Consultas (Visual Basic)
+Visual Basic le permite crear expresiones de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] en el código.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.  
+ Describe la cláusula `Aggregate`, que aplica una o varias funciones de agregado a una colección.  
   
  [Distinct (cláusula)](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.  
+ Describe la cláusula `Distinct`, que restringe los valores de la variable de rango actual para eliminar los valores duplicados en los resultados de la consulta.  
   
  [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- Describes the `From` clause, which specifies a collection and a range variable for a query.  
+ Describe la cláusula `From`, que especifica una colección y una variable de rango para una consulta.  
   
  [Group By (cláusula)](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.  
+ Describe la cláusula `Group By`, que agrupa los elementos del resultado de una consulta y se puede usar para aplicar funciones de agregado a cada grupo.  
   
  [Group Join (cláusula)](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.  
+ Describe la cláusula `Group Join`, que combina dos colecciones en una sola colección jerárquica.  
   
  [Join (cláusula)](../../../visual-basic/language-reference/queries/join-clause.md)  
- Describes the `Join` clause, which combines two collections into a single collection.  
+ Describe la cláusula `Join`, que combina dos colecciones en una sola colección.  
   
  [Let (cláusula)](../../../visual-basic/language-reference/queries/let-clause.md)  
- Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.  
+ Describe la cláusula `Let`, que calcula un valor y lo asigna a una nueva variable en la consulta.  
   
  [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- Describes the `Order By` clause, which specifies the sort order for columns in a query.  
+ Describe la cláusula `Order By`, que especifica el criterio de ordenación de las columnas de una consulta.  
   
  [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- Describes the `Select` clause, which declares a set of range variables for a query.  
+ Describe la cláusula `Select`, que declara un conjunto de variables de rango para una consulta.  
   
  [Skip (cláusula)](../../../visual-basic/language-reference/queries/skip-clause.md)  
- Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.  
+ Describe la cláusula `Skip`, que omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes.  
   
  [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
+ Describe la cláusula `Skip While`, que omite los elementos de una colección siempre que se `true` una condición especificada y, a continuación, devuelve los elementos restantes.  
   
  [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)  
- Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.  
+ Describe la cláusula `Take`, que devuelve un número especificado de elementos contiguos desde el principio de una colección.  
   
  [Take While (cláusula)](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
+ Describe la cláusula `Take While`, que incluye los elementos de una colección siempre que se `true` una condición especificada y se omiten los elementos restantes.  
   
  [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
- Describes the `Where` clause, which specifies a filtering condition for a query.  
+ Describe la cláusula `Where`, que especifica una condición de filtrado para una consulta.  
   
 ## <a name="see-also"></a>Vea también
 

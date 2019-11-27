@@ -38,33 +38,33 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
+ [in, out] Puntero al enumerador. Este valor debe ser NULL para la primera llamada de este método.  
   
  `rTypeSpecs`  
- [out] The array used to store the TypeSpec tokens.  
+ enuncia Matriz usada para almacenar los tokens de TypeSpec.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rTypeSpecs`.  
   
  `pcTypeSpecs`  
- [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
+ enuncia Número de tokens de TypeSpec devueltos en `rTypeSpecs`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
+|`S_OK`|`EnumTypeSpecs` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcTypeSpecs` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
- The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
+ El método [IMetaDataEmit:: GetTokenFromTypeSpec (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) crea los tokens TypeSpec.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

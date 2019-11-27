@@ -18,9 +18,9 @@ ms.locfileid: "74441460"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ En esta sección se proporciona información detallada sobre cómo usar los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Implementación del patrón de control Dock de Automatización de la interfaz de usuario](implementing-the-ui-automation-dock-control-pattern.md)  
  [Implementación del patrón de control ExpandCollapse de Automatización de la interfaz de usuario](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [Implementación del patrón de control Grid de Automatización de la interfaz de usuario](implementing-the-ui-automation-grid-control-pattern.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "74441460"
  [Implementación del patrón de control Transformación de Automatización de la interfaz de usuario](implementing-the-ui-automation-transform-control-pattern.md)  
  [Implementación del patrón de control Value de Automatización de la interfaz de usuario](implementing-the-ui-automation-value-control-pattern.md)  
  [Implementación del patrón de control Window de Automatización de la interfaz de usuario](implementing-the-ui-automation-window-control-pattern.md)  
- [Temas "Cómo..."](ui-automation-control-patterns-how-to-topics.md)
+ [Temas de procedimientos](ui-automation-control-patterns-how-to-topics.md)

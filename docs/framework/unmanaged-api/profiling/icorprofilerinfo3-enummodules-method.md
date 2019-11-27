@@ -33,7 +33,7 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
   
 ## <a name="parameters"></a>Parámetros  
  `ppEnum`  
- [out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.  
+ enuncia Puntero a una interfaz [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .  
   
 ## <a name="remarks"></a>Comentarios  
   

@@ -9,8 +9,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346503"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring Using an Extension Method (Visual Basic)
-This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactorizar mediante un método de extensión (Visual Basic)
+Este ejemplo se basa en el ejemplo anterior, [recuperar el texto de los párrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), mediante la refactorización de la concatenación de cadenas con una función pura que se implementa como método de extensión.  
   
  El ejemplo anterior usaba el operador de consultas estándar <xref:System.Linq.Enumerable.Aggregate%2A> para concatenar varias cadenas en una sola. Sin embargo, resulta más eficaz escribir un método de extensión a tal efecto, ya que la consulta resultante es más pequeña y más simple.  
   
@@ -19,7 +19,7 @@ This example builds on the previous example, [Retrieving the Text of the Paragra
   
  El ejemplo contiene varias sobrecargas del método `StringConcatenate`.  
   
- You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Puede encontrar instrucciones para crear el documento de origen para este ejemplo en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](creating-the-source-office-open-xml-document.md).
+ En este ejemplo se genera el siguiente resultado cuando se aplica al documento descrito en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -245,5 +245,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -29,10 +29,10 @@ Proporciona métodos para escribir en un documento al que hace referencia un alm
 |Método|Descripción|  
 |------------|-----------------|  
 |[SetCheckSum (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Establece la información de suma de comprobación.|  
-|[SetSource (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Sets embedded source for a document that is being written.|  
+|[SetSource (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Establece el origen incrustado de un documento que se está escribiendo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

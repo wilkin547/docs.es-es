@@ -33,7 +33,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [out] The number of runtime modules in the collection.  
+ enuncia El número de módulos en tiempo de ejecución de la colección.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

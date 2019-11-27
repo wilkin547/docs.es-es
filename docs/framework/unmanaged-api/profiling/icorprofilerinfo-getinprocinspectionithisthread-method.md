@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438913"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread (Método)
-Gets an object that can be queried for the ICorDebugThread interface. This method is obsolete in the .NET Framework version 2.0.  
+Obtiene un objeto que se puede consultar para la interfaz ICorDebugThread. Este método está obsoleto en la .NET Framework versión 2,0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="parameters"></a>Parámetros  
  `ppicd`  
- [out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.  
+ objeto [out](/cpp/atl/iunknown) que se puede consultar para la interfaz `ICorDebugThread`.  
   
 ## <a name="remarks"></a>Comentarios  
- The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0. In-process debugging enabled a profiler to use the inspection portions of the debugging API. As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ Los servicios de depuración de Common Language Runtime (CLR) admiten la depuración limitada en proceso en la versión 1,0 de .NET Framework. La depuración en proceso ha habilitado un generador de perfiles para usar las partes de inspección de la API de depuración. Como resultado de los comentarios de los clientes, la depuración en proceso se ha quitado del .NET Framework en la versión 2,0 y se ha reemplazado por un conjunto de funcionalidades que está más en línea con la API de generación de perfiles.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,7 +46,7 @@ HRESULT GetInprocInspectionIThisThread(
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Versión de .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vea también
 

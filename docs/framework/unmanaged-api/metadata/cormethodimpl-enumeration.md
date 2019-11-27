@@ -56,27 +56,27 @@ typedef enum CorMethodImpl {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|Marcas que describen el tipo de código.|  
+|`miIL`|Especifica que la implementación del método es el lenguaje intermedio de Microsoft (MSIL).|  
 |`miNative`|Especifica que la implementación del método es nativa.|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|Especifica que la implementación del método es OPTIl.|  
+|`miRuntime`|Especifica que la implementación del método la proporciona el Common Language Runtime.|  
+|`miManagedMask`|Marcas que indican si el código es administrado o no administrado.|  
+|`miUnmanaged`|Especifica que la implementación del método no está administrada.|  
+|`miManaged`|Especifica que la implementación del método está administrada.|  
+|`miForwardRef`|Especifica que el método está definido. Esta marca se utiliza principalmente en escenarios de combinación.|  
+|`miPreserveSig`|Especifica que la firma del método no se puede alterar para una conversión HRESULT.|  
+|`miInternalCall`|Reservado para uso interno por el Common Language Runtime.|  
+|`miSynchronized`|Especifica que el método tiene un único subproceso a través de su cuerpo.|  
 |`miNoInlining`|Especifica que el método no se puede insertar.|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|Especifica que el método debe insertarse si es posible.|  
+|`miNoOptimization`|Especifica que el método no se debe optimizar.|  
+|`miMaxMethodImplVal`|Valor máximo válido para un `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

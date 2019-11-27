@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450386"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID (Método)
-Gets the ID of the current thread, if it is a managed thread.  
+Obtiene el identificador del subproceso actual, si es un subproceso administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ HRESULT GetCurrentThreadID(
   
 ## <a name="parameters"></a>Parámetros  
  `pThreadId`  
- [out] A pointer to the returned ID of the managed thread.  
+ enuncia Puntero al identificador devuelto del subproceso administrado.  
   
 ## <a name="remarks"></a>Comentarios  
- If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.  
+ Si el subproceso actual es un subproceso en tiempo de ejecución interno u otro subproceso no administrado, `GetCurrentThreadID` devuelve CORPROF_E_NOT_MANAGED_THREAD como HRESULT y el valor devuelto del parámetro `pThreadId` será null.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

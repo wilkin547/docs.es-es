@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445766"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>ICorProfilerCallback::RemotingServerInvocationStarted (Método)
-Notifies the profiler that the process is invoking a method in response to a remote method invocation request.  
+Notifica al generador de perfiles que el proceso está invocando un método en respuesta a una solicitud de invocación de método remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440242"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes (Método)
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+Enumera los tokens de definición de atributos personalizados asociados al tipo o miembro especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [in, out] Puntero al enumerador devuelto.  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ de Un token para el ámbito de la enumeración o cero para todos los atributos personalizados.  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ de Token para el constructor del tipo de atributos que se va a enumerar o `null` para todos los tipos.  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ enuncia Matriz de tokens de atributos personalizados.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [out, opcional] Número real de valores de token devueltos en `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` devolvió correctamente.|  
+|`S_FALSE`|No hay atributos personalizados para enumerar. En ese caso, `pcCustomAttributes` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

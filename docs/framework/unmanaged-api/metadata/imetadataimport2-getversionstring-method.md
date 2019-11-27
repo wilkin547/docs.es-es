@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445225"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString (Método)
-Gets the version number of the runtime that was used to build the assembly.  
+Obtiene el número de versión del motor en tiempo de ejecución que se usó para compilar el ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +37,23 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>Parámetros  
  `pwzBuf`  
- [out] An array to store the string that specifies the version.  
+ enuncia Matriz para almacenar la cadena que especifica la versión.  
   
  `ccBufSize`  
- [in] The size, in wide characters, of the `pwzBuf` array.  
+ de Tamaño, en caracteres anchos, de la matriz de `pwzBuf`.  
   
  `pccBufSize`  
- [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
+ enuncia El número de caracteres anchos, incluido un terminador nulo, devuelto en la matriz `pwzBuf`.  
   
 ## <a name="remarks"></a>Comentarios  
- The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
+ El método `GetVersionString` obtiene la versión integrada del ámbito de metadatos actual. Si el ámbito no se ha guardado nunca, no tendrá una versión integrada y se devolverá una cadena vacía.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

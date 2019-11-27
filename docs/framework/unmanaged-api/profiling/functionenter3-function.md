@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440781"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 (Función)
-Notifies the profiler that control is being passed to a function.  
+Notifica al generador de perfiles que el control se pasa a una función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,23 +32,23 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parámetros  
  `functionOrRemappedID`  
- [in] The identifier of the function to which control is passed.  
+ de Identificador de la función a la que se pasa el control.  
   
 ## <a name="remarks"></a>Comentarios  
- The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+ La función de devolución de llamada `FunctionEnter3` notifica al generador de perfiles cuando se llama a las funciones, pero no admite la inspección de argumentos. Use el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar su implementación de esta función.  
   
- The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ La función `FunctionEnter3` es una devolución de llamada; debe implementarla. La implementación de debe utilizar el atributo de clase de almacenamiento `__declspec(naked)`.  
   
- The execution engine does not save any registers before calling this function.  
+ El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- En la entrada, debe guardar todos los registros que use, incluidos los de la unidad de punto flotante (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
@@ -61,8 +61,8 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
 - [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [SetEnterLeaveFunctionHooks3WithInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [SetFunctionIDMapper2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [Setenterleavefunctionhooks3 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [Setenterleavefunctionhooks3withinfo (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [Setfunctionidmapper (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
+- [Setfunctionidmapper2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
 - [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

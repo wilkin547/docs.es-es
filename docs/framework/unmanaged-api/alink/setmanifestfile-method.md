@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445561"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile (Método)
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+Permite especificar o restablecer el archivo de manifiesto que el vinculador utiliza al crear el ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,16 +35,16 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parámetros  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ Nombre del archivo de manifiesto cuyo contenido se coloca en el BLOB de recursos de Win32.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+ Llame a este método antes de solicitar el Win32ResBlob. El valor del parámetro `pszFile` es el nombre del archivo de manifiesto cuyo contenido se lee y se coloca en los recursos de Win32 con el identificador de RT_MANIFEST. Cuando se llama con un parámetro de NULL, se borra cualquier manifiesto leído previamente. Esto permite restablecer el estado del enlazador con respecto al tiempo de inicialización.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires aLink.h  
+ Requiere aLink. h  
   
 ## <a name="see-also"></a>Vea también
 
