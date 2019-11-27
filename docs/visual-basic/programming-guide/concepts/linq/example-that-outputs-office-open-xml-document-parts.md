@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353498"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Ejemplo que da como resultado elementos de documento de Office Open XML (Visual Basic)
 Este tema muestra cómo abrir un documento XML abierto de Office y obtener acceso a sus partes.  
   
 ## <a name="example"></a>Ejemplo  
@@ -66,4 +66,4 @@ End Using
   
 ## <a name="see-also"></a>Vea también
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Detalles de los documentos WordprocessingML de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

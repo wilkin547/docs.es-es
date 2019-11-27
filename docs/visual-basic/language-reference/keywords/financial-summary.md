@@ -15,7 +15,7 @@ ms.locfileid: "74349811"
 # <a name="financial-summary-visual-basic"></a>Resumen financiero (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
 |Calcular la amortización.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
 |Calcular el valor futuro.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  

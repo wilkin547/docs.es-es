@@ -20,9 +20,9 @@ ms.locfileid: "74445703"
   
  Esta sección contiene información detallada sobre la implementación de los patrones de control.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Exposición del contenido de una tabla con Automatización de la interfaz de usuario](expose-the-content-of-a-table-using-ui-automation.md)  
- [Obtención de patrones de control compatibles de Automatización de la interfaz de usuario](get-supported-ui-automation-control-patterns.md)  
- [Obtención del estado de alternancia de una casilla mediante Automatización de la interfaz de usuario](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Invocación de un control mediante Automatización de la interfaz de usuario](invoke-a-control-using-ui-automation.md)  
- [Movimiento de un elemento de Automatización de la interfaz de usuario](move-a-ui-automation-element.md)
+## <a name="in-this-section"></a>Esta sección  
+ [Expose the Content of a Table Using UI Automation](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Get Supported UI Automation Control Patterns](get-supported-ui-automation-control-patterns.md)  
+ [Get the Toggle State of a Check Box Using UI Automation](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)

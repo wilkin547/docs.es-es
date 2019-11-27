@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436034"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo (Método)
-Gets detailed information about an array object.  
+Obtiene información detallada sobre un objeto de matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,22 +38,22 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `objectId`  
- [in] The ID of a valid array object.  
+ de IDENTIFICADOR de un objeto de matriz válido.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ de Rango (número de dimensiones) de la matriz.  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ enuncia Una matriz que contiene enteros, cada uno de los cuales representa el tamaño de una dimensión de la matriz.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ enuncia Una matriz que contiene enteros, cada uno de los cuales representa el límite inferior de una dimensión de la matriz.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ enuncia Puntero a la dirección del búfer sin formato de la matriz, que se distribuye según la C++ Convención.  
   
 ## <a name="remarks"></a>Comentarios  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ Los `pDimensionSizes` y `pDimensionLowerBounds` son matrices paralelas, por lo que los elementos que se encuentran en el mismo índice de cada matriz son características de la misma entidad.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

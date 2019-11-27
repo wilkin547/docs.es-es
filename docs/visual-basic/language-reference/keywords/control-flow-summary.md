@@ -14,13 +14,13 @@ ms.locfileid: "74349911"
 # <a name="control-flow-summary-visual-basic"></a>Resumen de flujos de control (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
-|Bifurcar.|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md), [On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
-|Salir o detener el programa.|[End](../../../visual-basic/language-reference/statements/end-statement.md), [Exit](../../../visual-basic/language-reference/statements/exit-statement.md), [Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|  
-|Bucle.|[Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md), [For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md), [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
-|Tomar decisiones.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md), [Select Case](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
-|Utilizar procedimientos.|[Call](../../../visual-basic/language-reference/statements/call-statement.md), [Function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
+|Bifurcar.|[Goto](../../../visual-basic/language-reference/statements/goto-statement.md), [en el error](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
+|Salir o detener el programa.|[Finalizar](../../../visual-basic/language-reference/statements/end-statement.md), [salir](../../../visual-basic/language-reference/statements/exit-statement.md), [detener](../../../visual-basic/language-reference/statements/stop-statement.md)|  
+|Bucle.|. [.. Bucle](../../../visual-basic/language-reference/statements/do-loop-statement.md), [for... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md), [para cada... Después](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [while... End while](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [with](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
+|Tomar decisiones.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [si... Después... ](../../../visual-basic/language-reference/statements/if-then-else-statement.md)En caso contrario, [Seleccione Case](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
+|Utilizar procedimientos.|[Call](../../../visual-basic/language-reference/statements/call-statement.md), [function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
   
 ## <a name="see-also"></a>Vea también
 

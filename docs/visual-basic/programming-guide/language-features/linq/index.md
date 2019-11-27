@@ -14,7 +14,7 @@ ms.locfileid: "74354180"
 # <a name="linq-in-visual-basic"></a>LINQ en Visual Basic
 Esta sección contiene información general, ejemplos e información contextual que le ayudará a comprender y usar Visual Basic y [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  Proporciona una introducción a proveedores, operadores, estructuras de consulta y características del lenguaje en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   

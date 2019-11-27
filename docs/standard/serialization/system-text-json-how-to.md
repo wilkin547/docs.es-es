@@ -377,9 +377,9 @@ Para excluir todas las propiedades de valores NULL, establezca la propiedad <xre
 
 A continuación se muestra un ejemplo de un objeto para serializar y la salida JSON:
 
-|Property |Valor  |
+|Propiedad |Valor  |
 |---------|---------|
-| Fecha    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
 | Resumen| null|
 
@@ -571,11 +571,11 @@ Si deserializa el JSON que se muestra en el tipo que se muestra, las propiedades
 
 Al deserializar el JSON que se muestra anteriormente en este tipo de ejemplo, los datos adicionales se convierten en pares de clave y valor de la propiedad `ExtensionData`:
 
-|Property |Valor  |Notas  |
+|Propiedad |Valor  |Notas  |
 |---------|---------|---------|
-| Fecha    | 8/1/2019 12:00:00 AM-07:00||
+| Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | No coinciden las mayúsculas y minúsculas (`temperatureCelsius` en el JSON), por lo que no se establece la propiedad. |
-| Resumen | Conexión ||
+| Resumen | Caliente ||
 | Extensiondata ( | temperatureCelsius: 25 |Dado que el caso no coincidía, esta propiedad JSON es un extra y se convierte en un par clave-valor en el diccionario.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |La propiedad adicional del JSON se convierte en un par clave-valor, con una matriz como el objeto de valor.|
 | |SummaryWords:<br>Geniales<br>Viento<br>Húmeda |La propiedad adicional del JSON se convierte en un par clave-valor, con una matriz como el objeto de valor.|

@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ de Un token de FieldDef que representa el campo para el que se van a obtener los metadatos asociados.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ enuncia Un puntero a un token de TypeDef que representa el tipo de la clase a la que pertenece el campo.  
   
  `szField`  
- [out] The name of the field.  
+ enuncia Nombre del campo.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ de Tamaño en caracteres anchos del búfer para *szField*.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ enuncia Tamaño real del búfer devuelto.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ enuncia Marcas asociadas a los metadatos del campo.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ de Puntero al valor de metadatos binarios que describe el campo.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ enuncia Tamaño en bytes de `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ enuncia Marca que especifica el tipo de valor del campo.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ enuncia Valor constante para el campo.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ enuncia Tamaño en caracteres de `ppValue`, o cero si no existe ninguna cadena.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

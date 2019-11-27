@@ -29,7 +29,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352827"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Instrucción Select...Case (Visual Basic)
-Runs one of several groups of statements, depending on the value of an expression.  
+Ejecuta uno de varios grupos de instrucciones, dependiendo del valor de una expresión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,41 +44,41 @@ End Select
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`testexpression`|Requerido. Expression. Must evaluate to one of the elementary data types (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, and `UShort`).|  
-|`expressionlist`|Required in a `Case` statement. List of expression clauses representing match values for `testexpression`. Multiple expression clauses are separated by commas. Each clause can take one of the following forms:<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Use the `To` keyword to specify the boundaries of a range of match values for `testexpression`. The value of `expression1` must be less than or equal to the value of `expression2`.<br /><br /> Use the `Is` keyword with a comparison operator (`=`, `<>`, `<`, `<=`, `>`, or `>=`) to specify a restriction on the match values for `testexpression`. If the `Is` keyword is not supplied, it is automatically inserted before *comparisonoperator*.<br /><br /> The form specifying only `expression` is treated as a special case of the `Is` form where *comparisonoperator* is the equal sign (`=`). This form is evaluated as `testexpression` = `expression`.<br /><br /> The expressions in `expressionlist` can be of any data type, provided they are implicitly convertible to the type of `testexpression` and the appropriate `comparisonoperator` is valid for the two types it is being used with.|  
-|`statements`|Opcional. One or more statements following `Case` that run if `testexpression` matches any clause in `expressionlist`.|  
-|`elsestatements`|Opcional. One or more statements following `Case Else` that run if `testexpression` does not match any clause in the `expressionlist` of any of the `Case` statements.|  
-|`End Select`|Terminates the definition of the `Select`...`Case` construction.|  
+|`testexpression`|Obligatorio. Expresiones. Debe evaluarse como uno de los tipos de datos básicos (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`y `UShort`).|  
+|`expressionlist`|Obligatorio en una instrucción `Case`. Lista de cláusulas de expresión que representan los valores de coincidencia para `testexpression`. Las cláusulas de varias expresiones se separan mediante comas. Cada cláusula puede adoptar uno de los siguientes formatos:<br /><br /> -   *expression1* `To` *expresión2*<br />-[`Is`] *expresión* comparisonoperator<br />-   *expresión* )<br /><br /> Use la palabra clave `To` para especificar los límites de un intervalo de valores coincidentes para `testexpression`. El valor de `expression1` debe ser menor o igual que el valor de `expression2`.<br /><br /> Use la palabra clave `Is` con un operador de comparación (`=`, `<>`, `<`, `<=`, `>`o `>=`) para especificar una restricción en los valores de coincidencia de `testexpression`. Si no se proporciona la palabra clave `Is`, se inserta automáticamente antes de *comparisonoperator*.<br /><br /> La forma que especifica solo `expression` se trata como un caso especial del `Is` formulario donde *comparisonoperator* es el signo igual (`=`). Este formulario se evalúa como `testexpression` = `expression`.<br /><br /> Las expresiones de `expressionlist` pueden ser de cualquier tipo de datos, siempre que se puedan convertir implícitamente al tipo de `testexpression` y el `comparisonoperator` adecuado sea válido para los dos tipos con los que se usa.|  
+|`statements`|Opcional. Una o más instrucciones que siguen `Case` que se ejecutan si `testexpression` coincide con cualquier cláusula de `expressionlist`.|  
+|`elsestatements`|Opcional. Una o más instrucciones que siguen `Case Else` que se ejecutan si `testexpression` no coincide con ninguna cláusula en el `expressionlist` de cualquiera de las instrucciones de `Case`.|  
+|`End Select`|Finaliza la definición de la construcción `Select`...`Case`.|  
   
 ## <a name="remarks"></a>Comentarios  
- If `testexpression` matches any `Case` `expressionlist` clause, the statements following that `Case` statement run up to the next `Case`, `Case Else`, or `End Select` statement. Control then passes to the statement following `End Select`. If `testexpression` matches an `expressionlist` clause in more than one `Case` clause, only the statements following the first match run.  
+ Si `testexpression` coincide con cualquier cláusula `Case` `expressionlist`, las instrucciones que siguen a esa instrucción `Case` se ejecutan hasta la siguiente instrucción `Case`, `Case Else`o `End Select`. A continuación, el control pasa a la instrucción siguiente `End Select`. Si `testexpression` coincide con una cláusula de `expressionlist` en más de una cláusula `Case`, solo se ejecutan las instrucciones que siguen a la primera coincidencia.  
   
- The `Case Else` statement is used to introduce the `elsestatements` to run if no match is found between the `testexpression` and an `expressionlist` clause in any of the other `Case` statements. Although not required, it is a good idea to have a `Case Else` statement in your `Select Case` construction to handle unforeseen `testexpression` values. If no `Case` `expressionlist` clause matches `testexpression` and there is no `Case Else` statement, control passes to the statement following `End Select`.  
+ La instrucción `Case Else` se utiliza para introducir el `elsestatements` que se va a ejecutar si no se encuentra ninguna coincidencia entre el `testexpression` y una cláusula `expressionlist` en cualquiera de las otras instrucciones `Case`. Aunque no es necesario, es una buena idea tener una `Case Else` instrucción en la construcción de `Select Case` para administrar valores de `testexpression` imprevistos. Si ninguna cláusula de `expressionlist` de `Case` coincide con `testexpression` y no hay ninguna instrucción `Case Else`, el control pasa a la instrucción siguiente a `End Select`.  
   
- You can use multiple expressions or ranges in each `Case` clause. For example, the following line is valid.  
+ Puede usar varias expresiones o intervalos en cada cláusula de `Case`. Por ejemplo, la siguiente línea es válida.  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
-> The `Is` keyword used in the `Case` and `Case Else` statements is not the same as the [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), which is used for object reference comparison.  
+> La palabra clave `Is` utilizada en las instrucciones `Case` y `Case Else` no es igual que el [operador is](../../../visual-basic/language-reference/operators/is-operator.md), que se utiliza para la comparación de referencias de objetos.  
   
- You can specify ranges and multiple expressions for character strings. In the following example, `Case` matches any string that is exactly equal to "apples", has a value between "nuts" and "soup" in alphabetical order, or contains the exact same value as the current value of `testItem`.  
+ Puede especificar intervalos y varias expresiones para las cadenas de caracteres. En el ejemplo siguiente, `Case` coincide con cualquier cadena que sea exactamente igual a "manzanas", tiene un valor entre "NUTS" y "sopa" en orden alfabético, o contiene el mismo valor exacto que el valor actual de `testItem`.  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- The setting of `Option Compare` can affect string comparisons. Under `Option Compare Text`, the strings "Apples" and "apples" compare as equal, but under `Option Compare Binary`, they do not.  
+ La configuración de `Option Compare` puede afectar a las comparaciones de cadenas. En `Option Compare Text`, las cadenas "manzanas" y "manzanas" se comparan como iguales, pero en `Option Compare Binary`no lo hacen.  
   
 > [!NOTE]
-> A `Case` statement with multiple clauses can exhibit behavior known as *short-circuiting*. Visual Basic evaluates the clauses from left to right, and if one produces a match with `testexpression`, the remaining clauses are not evaluated. Short-circuiting can improve performance, but it can produce unexpected results if you are expecting every expression in `expressionlist` to be evaluated. For more information on short-circuiting, see [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+> Una instrucción `Case` con varias cláusulas puede presentar un comportamiento conocido como *cortocircuito*. Visual Basic evalúa las cláusulas de izquierda a derecha y, si una genera una coincidencia con `testexpression`, no se evalúan las cláusulas restantes. El cortocircuito puede mejorar el rendimiento, pero puede producir resultados inesperados si espera que se evalúen todas las expresiones de `expressionlist`. Para obtener más información sobre el cortocircuito, vea [Expresiones booleanas](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
   
- If the code within a `Case` or `Case Else` statement block does not need to run any more of the statements in the block, it can exit the block by using the `Exit Select` statement. This transfers control immediately to the statement following `End Select`.  
+ Si el código de un bloque de instrucciones `Case` o `Case Else` no necesita ejecutar más instrucciones en el bloque, puede salir del bloque mediante la instrucción `Exit Select`. Esto transfiere el control inmediatamente a la instrucción siguiente `End Select`.  
   
- `Select Case` constructions can be nested. Each nested `Select Case` construction must have a matching `End Select` statement and must be completely contained within a single `Case` or `Case Else` statement block of the outer `Select Case` construction within which it is nested.  
+ `Select Case` construcciones se pueden anidar. Cada construcción de `Select Case` anidada debe tener una instrucción `End Select` coincidente y debe estar dentro de un único bloque de instrucciones `Case` o `Case Else` de la construcción de `Select Case` externa en la que está anidada.  
   
 ## <a name="example"></a>Ejemplo  
- The following example uses a `Select Case` construction to write a line corresponding to the value of the variable `number`. The second `Case` statement contains the value that matches the current value of `number`, so the statement that writes "Between 6 and 8, inclusive" runs.  
+ En el ejemplo siguiente se usa una construcción `Select Case` para escribir una línea que se corresponda con el valor de la variable `number`. La segunda instrucción `Case` contiene el valor que coincide con el valor actual de `number`, por lo que la instrucción que escribe "between 6 and 8, inclusive" se ejecuta.  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   

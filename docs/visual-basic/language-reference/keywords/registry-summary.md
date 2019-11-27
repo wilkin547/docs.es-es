@@ -12,9 +12,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351681"
 ---
 # <a name="registry-summary-visual-basic"></a>Resumen del Registro (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Las palabras clave del lenguaje de Visual Studio y los miembros de la biblioteca en tiempo de ejecución se organizan por propósito y uso.  
   
- Si utiliza la característica `My`, consigue una mayor productividad y rendimiento en las operaciones del Registro que con estos elementos. Para obtener más información, vea <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Si utiliza la característica `My`, consigue una mayor productividad y rendimiento en las operaciones del Registro que con estos elementos. Para obtener más información, consulta <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
 |**Acción**|**Elemento del lenguaje**|  
 |----------------|--------------------------|  

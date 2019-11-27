@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445479"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 (Interfaz)
-Declares methods for registering and unregistering a connection notification source.  
+Declara los métodos para registrar y anular el registro de un origen de notificación de conexión.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[RegisterNotifySource (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installs a specified notification source object.|  
-|[UnregisterNotifySource (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Removes a specified notification source object from the connection.|  
+|[RegisterNotifySource (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Instala un objeto de origen de notificación especificado.|  
+|[UnregisterNotifySource (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Quita un objeto de origen de notificación especificado de la conexión.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** ProtocolNotify2.idl  
+ **Encabezado:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vea también
 

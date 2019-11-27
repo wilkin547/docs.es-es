@@ -16,20 +16,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346880"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Cómo: Hacer referencia a la instancia actual de un objeto (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+La *instancia actual* de un objeto es la instancia en la que se está ejecutando el código.  
   
- You use the `Me` keyword to refer to the current instance.  
+ Utilice la palabra clave `Me` para hacer referencia a la instancia actual.  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>Para hacer referencia a la instancia actual  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- Use la palabra clave `Me` donde normalmente usaría el nombre de una variable de objeto.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     Aunque `Me` se comporta como una variable de objeto, no se puede declarar ni asignar nada. `Me` siempre hace referencia a la instancia actual.  
   
 ## <a name="see-also"></a>Vea también
 

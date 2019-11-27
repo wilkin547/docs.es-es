@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433215"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs (Método)
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+Obtiene el `FunctionID` de una función mediante el token de metadatos especificado, la clase contenedora y los valores de `ClassID` de cualquier argumento de tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,29 +39,29 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ de IDENTIFICADOR del módulo en el que reside la función.  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ de Un token de metadatos de `mdMethodDef` que hace referencia a la función.  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ de IDENTIFICADOR de la clase contenedora de la función.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ de El número de parámetros de tipo para la función especificada. Este valor debe ser cero para las funciones no genéricas.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ de Matriz de valores de `ClassID`, cada uno de los cuales es un argumento de la función. El valor de `typeArgs` puede ser NULL si `cTypeArgs` está establecido en cero.  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ enuncia Puntero al `FunctionID` de la función especificada.  
   
 ## <a name="remarks"></a>Comentarios  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ Llamar al método `GetFunctionFromTokenAndTypeArgs` con un `mdMethodRef` metadatos en lugar de un token de metadatos de `mdMethodDef` puede tener resultados imprevisibles. Los llamadores deben resolver el `mdMethodRef` en un `mdMethodDef` al pasarlo.  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Si la función no está cargada todavía, la llamada a `GetFunctionFromTokenAndTypeArgs` provocará que se produzca la carga, lo que es una operación peligrosa en muchos contextos. Por ejemplo, llamar a este método durante la carga de módulos o tipos podría provocar un bucle infinito, ya que el tiempo de ejecución intenta cargar elementos de forma circular.  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ En general, no se recomienda el uso de `GetFunctionFromTokenAndTypeArgs`. Si los perfiles están interesados en eventos para una función determinada, deben almacenar los `ModuleID` y `mdMethodDef` de esa función y usar [ICorProfilerInfo2:: getfunctioninfo2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) para comprobar si un `FunctionID` determinado es el de la función deseada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

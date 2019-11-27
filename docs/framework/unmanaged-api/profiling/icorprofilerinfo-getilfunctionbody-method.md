@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450363"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody (Método)
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Obtiene un puntero al cuerpo de un método en el código del lenguaje intermedio de Microsoft (MSIL), comenzando en su encabezado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,21 +37,21 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ de IDENTIFICADOR del módulo en el que reside la función.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ de Símbolo (token) de metadatos para el método.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ enuncia Puntero al encabezado del método.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ enuncia Entero que especifica el tamaño del método.  
   
 ## <a name="remarks"></a>Comentarios  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ Un método está en el ámbito del módulo en el que reside. Dado que el método `GetILFunctionBody` está diseñado para proporcionar a una herramienta acceso al código MSIL antes de que lo haya cargado el Common Language Runtime (CLR), utiliza el token de metadatos del método para buscar la instancia deseada.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody` puede devolver un CORPROF_E_FUNCTION_NOT_IL HRESULT si el `methodId` apunta a un método sin código MSIL (como un método abstracto o un método de invocación de plataforma (PInvoke)).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

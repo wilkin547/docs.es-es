@@ -15,20 +15,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448540"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Enumeraciones de almacén de símbolos de diagnósticos
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+En este tema se describen las enumeraciones no administradas que utiliza la API del almacén de símbolos de diagnóstico.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [CorSymAddrKind (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ Indica el tipo de dirección de memoria.  
   
  [CorSymSearchPolicyAttributes (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ Especifica la Directiva que se va a usar al realizar una búsqueda de un lector de símbolos.  
   
  [CorSymVarFlag (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ Indica si una variable es generada por el compilador.  
   
  [NOTIFY_FILTER (enumeración)](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ Identifica las devoluciones de llamada para las funciones del depurador.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

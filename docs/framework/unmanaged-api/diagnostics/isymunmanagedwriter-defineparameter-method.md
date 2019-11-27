@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427998"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter (Método)
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+Define un único parámetro en el método actual. El tipo de parámetro se toma de la posición del parámetro (Sequence) dentro de la Signatura del método.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ Si los parámetros se definen en los metadatos de un método determinado, no es necesario volver a definirlos mediante este método. Los lectores de símbolos deben comprobar los metadatos normales de los parámetros antes de comprobar el almacén de símbolos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- [in] The parameter name.  
+ de Nombre del parámetro.  
   
  `attributes`  
- [in] The parameter attributes.  
+ de Atributos de parámetro.  
   
  `sequence`  
- [in] The parameter signature.  
+ de Firma del parámetro.  
   
  `addrKind`  
- [in] The address type.  
+ de Tipo de dirección.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ de Primera dirección de la especificación de parámetro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ de Segunda dirección de la especificación de parámetro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ de Tercera dirección de la especificación de parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

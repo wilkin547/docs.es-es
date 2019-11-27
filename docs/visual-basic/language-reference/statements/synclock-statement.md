@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352816"
 ---
 # <a name="synclock-statement"></a>SyncLock (Instrucción)
-Acquires an exclusive lock for a statement block before executing the block.  
+Adquiere un bloqueo exclusivo para un bloque de instrucciones antes de ejecutar el bloque.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>Elementos  
  `lockobject`  
- Requerido. Expression that evaluates to an object reference.  
+ Obligatorio. Expresión que se evalúa como una referencia de objeto.  
   
  `block`  
- Opcional. Block of statements that are to execute when the lock is acquired.  
+ Opcional. Bloque de instrucciones que se ejecutan cuando se adquiere el bloqueo.  
   
  `End SyncLock`  
- Terminates a `SyncLock` block.  
+ Finaliza un bloque de `SyncLock`.  
   
 ## <a name="remarks"></a>Comentarios  
- The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time. `SyncLock` prevents each thread from entering the block until no other thread is executing it.  
+ La instrucción `SyncLock` garantiza que varios subprocesos no ejecuten el bloque de instrucciones al mismo tiempo. `SyncLock` impide que cada subproceso entre en el bloque hasta que no lo ejecute ningún otro subproceso.  
   
- The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously. If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.  
+ El uso más común de `SyncLock` consiste en proteger los datos de la actualización a más de un subproceso simultáneamente. Si las instrucciones que manipulan los datos deben ir a la finalización sin interrupción, colóquelos dentro de un bloque `SyncLock`.  
   
- A statement block protected by an exclusive lock is sometimes called a *critical section*.  
+ Un bloque de instrucciones protegido por un bloqueo exclusivo a veces se denomina *sección crítica*.  
   
 ## <a name="rules"></a>Reglas  
   
-- Branching. You cannot branch into a `SyncLock` block from outside the block.  
+- Bifurcación. No se puede crear una bifurcación en un bloque `SyncLock` desde fuera del bloque.  
   
-- Lock Object Value. The value of `lockobject` cannot be `Nothing`. You must create the lock object before you use it in a `SyncLock` statement.  
+- Valor de bloqueo de objeto. No se puede `Nothing`el valor de `lockobject`. Debe crear el objeto de bloqueo antes de usarlo en una instrucción `SyncLock`.  
   
-     You cannot change the value of `lockobject` while executing a `SyncLock` block. The mechanism requires that the lock object remain unchanged.  
+     No se puede cambiar el valor de `lockobject` mientras se ejecuta un bloque de `SyncLock`. El mecanismo requiere que el objeto de bloqueo permanezca sin cambios.  
   
-- You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.  
+- No se puede usar el operador [Await](../../../visual-basic/language-reference/operators/await-operator.md) en un bloque `SyncLock`.  
   
 ## <a name="behavior"></a>Comportamiento  
   
-- Mechanism. When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression. When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.  
+- Método. Cuando un subproceso alcanza la instrucción `SyncLock`, evalúa la expresión `lockobject` y suspende la ejecución hasta que adquiere un bloqueo exclusivo en el objeto devuelto por la expresión. Cuando otro subproceso alcanza la instrucción `SyncLock`, no adquiere un bloqueo hasta que el primer subproceso ejecuta la instrucción `End SyncLock`.  
   
-- Protected Data. If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it. This protects data that is shared among all the instances.  
+- Datos protegidos. Si `lockobject` es una variable de `Shared`, el bloqueo exclusivo impide que un subproceso de una instancia de la clase ejecute el bloque de `SyncLock` mientras otro subproceso lo está ejecutando. Esto protege los datos que se comparten entre todas las instancias.  
   
-     If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance. This protects data maintained by the individual instance.  
+     Si `lockobject` es una variable de instancia (no `Shared`), el bloqueo impide que un subproceso que se ejecuta en la instancia actual ejecute el bloque de `SyncLock` al mismo tiempo que otro subproceso de la misma instancia. Esto protege los datos mantenidos por la instancia individual.  
   
-- Acquisition and Release. A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it. Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block. This is true even in the case of an unhandled exception.  
+- Adquisición y lanzamiento. Un bloque `SyncLock` se comporta como una construcción `Try...Finally` en la que el bloque `Try` adquiere un bloqueo exclusivo en `lockobject` y el bloque `Finally` lo libera. Por este motivo, el bloque `SyncLock` garantiza la liberación del bloqueo, independientemente de cómo salga del bloque. Esto es así incluso en el caso de una excepción no controlada.  
   
-- Framework Calls. The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.  
+- Llamadas de marco de trabajo. El bloque `SyncLock` adquiere y libera el bloqueo exclusivo mediante una llamada a los métodos `Enter` y `Exit` de la clase `Monitor` en el espacio de nombres <xref:System.Threading>.  
   
-## <a name="programming-practices"></a>Programming Practices  
- The `lockobject` expression should always evaluate to an object that belongs exclusively to your class. You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.  
+## <a name="programming-practices"></a>Prácticas de programación  
+ La expresión `lockobject` siempre debe evaluarse como un objeto que pertenezca exclusivamente a la clase. Debe declarar un `Private` variable de objeto para proteger los datos que pertenecen a la instancia actual o una variable de objeto `Private Shared` para proteger los datos comunes a todas las instancias.  
   
- You should not use the `Me` keyword to provide a lock object for instance data. If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data. In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks. Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.  
+ No debe utilizar la palabra clave `Me` para proporcionar un objeto de bloqueo para los datos de instancia. Si el código externo a la clase tiene una referencia a una instancia de la clase, podría usar esa referencia como un objeto de bloqueo para un bloque `SyncLock` completamente diferente del suyo, protegiendo los datos diferentes. De esta manera, la clase y la otra clase podrían bloquearse entre sí desde la ejecución de los bloques de `SyncLock` no relacionados. Un bloqueo similar en una cadena puede ser problemático, ya que cualquier otro código del proceso que use la misma cadena compartirá el mismo bloqueo.  
   
- You should also not use the `Me.GetType` method to provide a lock object for shared data. This is because `GetType` always returns the same `Type` object for a given class name. External code could call `GetType` on your class and obtain the same lock object you are using. This would result in the two classes blocking each other from their `SyncLock` blocks.  
+ Tampoco debe utilizar el método `Me.GetType` para proporcionar un objeto de bloqueo para los datos compartidos. Esto se debe a que `GetType` siempre devuelve el mismo objeto `Type` para un nombre de clase determinado. El código externo podría llamar a `GetType` en la clase y obtener el mismo objeto de bloqueo que está utilizando. Esto daría lugar a que las dos clases se bloqueen entre sí desde sus bloques `SyncLock`.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="description"></a>Descripción  
- The following example shows a class that maintains a simple list of messages. It holds the messages in an array and the last used element of that array in a variable. The `addAnotherMessage` procedure increments the last element and stores the new message. Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.  
+ En el ejemplo siguiente se muestra una clase que mantiene una lista de mensajes simple. Contiene los mensajes de una matriz y el último elemento utilizado de esa matriz en una variable. En el procedimiento `addAnotherMessage` se incrementa el último elemento y se almacena el mensaje nuevo. Estas dos operaciones están protegidas por las instrucciones `SyncLock` y `End SyncLock`, porque una vez que se ha incrementado el último elemento, el nuevo mensaje se debe almacenar antes de que cualquier otro subproceso pueda incrementar el último elemento de nuevo.  
   
- If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`. In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.  
+ Si la clase `simpleMessageList` compartió una lista de mensajes entre todas sus instancias, las variables `messagesList` y `messagesLast` se declararían como `Shared`. En este caso, la variable `messagesLock` también debe ser `Shared`, de modo que haya un único objeto de bloqueo utilizado por cada instancia.  
   
 ### <a name="code"></a>Código  
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Descripción  
- The following example uses threads and `SyncLock`. As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number. You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.  
+ En el ejemplo siguiente se usan subprocesos y `SyncLock`. Siempre y cuando la instrucción `SyncLock` esté presente, el bloque de instrucciones es una sección crítica y `balance` nunca se convierte en un número negativo. Puede comentar las instrucciones `SyncLock` y `End SyncLock` para ver el efecto de salir de la palabra clave `SyncLock`.  
   
 ### <a name="code"></a>Código  
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  

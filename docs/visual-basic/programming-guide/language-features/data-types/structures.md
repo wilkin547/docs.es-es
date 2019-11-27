@@ -17,28 +17,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350771"
 ---
 # <a name="structures-visual-basic"></a>Estructuras (Visual Basic)
-A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
+Una *estructura* es una generalización del tipo definido por el usuario (UDT) que admiten las versiones anteriores de Visual Basic. Además de los campos, las estructuras pueden exponer propiedades, métodos y eventos. Una estructura puede implementar una o más interfaces, y puede declarar niveles de acceso individuales para cada campo.  
   
- You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
+ Puede combinar elementos de datos de tipos diferentes para crear una estructura. Una estructura asocia uno o más *elementos* entre sí y con la propia estructura. Cuando se declara una estructura, se convierte en un *tipo de datos compuesto*y se pueden declarar variables de ese tipo.  
   
- Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
+ Las estructuras son útiles cuando se desea que una sola variable contenga varios datos relacionados. Por ejemplo, puede que desee conservar el nombre de un empleado, la extensión de teléfono y el salario juntos. Puede usar varias variables para esta información, o puede definir una estructura y utilizarla para una única variable de empleado. La ventaja de la estructura se hace patente cuando tiene muchos empleados y, por tanto, muchas instancias de la variable.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Declarar una estructura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Shows how to declare a structure and its elements.  
+ Muestra cómo declarar una estructura y sus elementos.  
   
  [Variables de estructura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Covers assigning a structure to a variable and accessing its elements.  
+ Describe la asignación de una estructura a una variable y el acceso a sus elementos.  
   
  [Estructuras y otros elementos de programación](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Summarizes how structures interact with arrays, objects, procedures, and each other.  
+ Resume cómo interactúan las estructuras con matrices, objetos, procedimientos y entre sí.  
   
  [Estructuras y clases](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Describes the similarities and differences between structures and classes.  
+ Describe las similitudes y diferencias entre estructuras y clases.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Presenta los tipos de datos Visual Basic y describe cómo usarlos.  
   
  [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.
+ Enumera los tipos de datos básicos proporcionados por Visual Basic.

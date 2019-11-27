@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444250"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr (Enumeración)
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+Proporciona valores que especifican atributos de una sección para su uso por parte de la interfaz [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,17 +41,17 @@ typedef enum  {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|La sección no tiene atributos.|  
+|`sdReadOnly`|La sección contiene datos inicializados que solo se pueden leer y no actualizar.|  
+|`sdReadWrite`|La sección contiene datos inicializados que se pueden leer o actualizar.|  
+|`sdExecute`|La sección contiene código ejecutable que se puede leer y ejecutar.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

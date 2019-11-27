@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428297"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs (Método)
-Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.  
+Obtiene un enumerador para una matriz de tokens MethodSpec asociados al token MethodDef o MemberRef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,33 +39,33 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator for `rMethodSpecs`.  
+ [in, out] Puntero al enumerador para `rMethodSpecs`.  
   
  `tk`  
- [in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated. If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.  
+ de El token MemberRef o MethodDef que representa el método cuyos tokens MethodSpec se van a enumerar. Si el valor de `tk` es 0 (cero), se enumerarán todos los tokens MethodSpec en el ámbito.  
   
  `rMethodSpecs`  
- [out] The array of MethodSpec tokens to enumerate.  
+ enuncia Matriz de tokens MethodSpec que se va a enumerar.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rMethodSpecs`.  
+ de Número máximo solicitado de tokens que se van a colocar en `rMethodSpecs`.  
   
  `pcMethodSpecs`  
- [out] The returned number of tokens placed in `rMethodSpecs`.  
+ enuncia Número devuelto de tokens colocados en `rMethodSpecs`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcMethodSpecs` is set to 0 (zero).|  
+|`S_OK`|`EnumMethodSpecs` devolvió correctamente.|  
+|`S_FALSE`|`phEnum` no tiene elementos de miembro. En este caso, `pcMethodSpecs` se establece en 0 (cero).|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

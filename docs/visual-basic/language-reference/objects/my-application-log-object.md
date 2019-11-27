@@ -17,7 +17,7 @@ Proporciona una propiedad y métodos para escribir información de eventos y exc
 ## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Application.Log` , vea <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Para obtener más información, consulte [registrar información desde la aplicación](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
 > También puede usar clases de .NET Framework para registrar información desde la aplicación. Para obtener más información, consulta [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
@@ -27,7 +27,7 @@ Proporciona una propiedad y métodos para escribir información de eventos y exc
   
  **Clase:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

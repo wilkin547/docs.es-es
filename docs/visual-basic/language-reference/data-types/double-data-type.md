@@ -28,34 +28,34 @@ ms.locfileid: "74344011"
 ---
 # <a name="double-data-type-visual-basic"></a>Double (Tipo de datos, Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+Contiene números de punto flotante de precisión doble de IEEE 64 bits (8 bytes) que van del valor de-1.79769313486231570 E + 308 a-4.94065645841246544 E-324 para los valores negativos y de 4.94065645841246544 E-324 a 1.79769313486231570 E + 308 para valores positivos. Los números de precisión doble almacenan una aproximación de un número real.
 
 ## <a name="remarks"></a>Comentarios
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+El tipo de datos `Double` proporciona las magnitudes más grandes y pequeñas posibles para un número.
 
 El valor predeterminado de `Double` es 0.
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **Precisión.** Al trabajar con números de punto flotante, recuerde que no siempre tienen una representación precisa en la memoria. Esto podría dar lugar a resultados inesperados de ciertas operaciones, como la comparación de valores y el operador `Mod`. Para obtener más información, vea [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **Ceros a la derecha.** Los tipos de datos de punto flotante no tienen ninguna representación interna de los caracteres cero finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, los caracteres cero finales no aparecen al mostrar o imprimir valores de punto flotante.
 
-- **Type Characters.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. Por ejemplo, si un valor entero va seguido de `R`, el valor se cambia a un `Double`.
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  Si se agrega el carácter de tipo identificador `#` a cualquier identificador, se convierte forzosamente al tipo `Double`. In the following example, the variable `num` is typed as a `Double`:
+  Si se agrega el carácter de tipo identificador `#` a cualquier identificador, se convierte forzosamente al tipo `Double`. En el ejemplo siguiente, la variable `num` se escribe como un `Double`:
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.
+- **Tipo de marco.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vea también
 

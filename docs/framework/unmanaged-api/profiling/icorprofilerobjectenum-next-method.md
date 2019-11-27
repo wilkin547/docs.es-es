@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428155"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next (Método)
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+Obtiene el número especificado de objetos contiguos de una colección secuencial de objetos, empezando en la posición actual del enumerador en la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ HRESULT Next (
  [in] Número de objetos que se van a recuperar.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ enuncia Matriz de valores de `ObjectID`, cada uno de los cuales representa un objeto recuperado.  
   
  `pceltFetched`  
  [out] Puntero al número de elementos realmente devueltos en la matriz `objects`.  

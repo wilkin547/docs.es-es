@@ -23,7 +23,7 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
  Una *expresión* es una serie de elementos de valor combinados con operadores, lo que produce un nuevo valor. Los operadores actúan en los elementos de valor mediante cálculos, comparaciones y otras operaciones.  
   
 ## <a name="types-of-operators"></a>Tipos de operadores  
- Visual Basic provides the following types of operators:  
+ Visual Basic proporciona los siguientes tipos de operadores:  
   
 - Los [operadores aritméticos](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) realizan cálculos familiares en valores numéricos, incluido el desplazamiento de los patrones de bits.  
   
@@ -60,7 +60,7 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. No hay ningún límite práctico al número de operadores que se pueden combinar en una expresión, pero es necesario conocer la [prioridad de operadores en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para asegurarse de que se obtienen los resultados esperados.  
+ En el ejemplo anterior, Visual Basic realiza las operaciones en la expresión del lado derecho del operador de asignación (`=`) y, a continuación, asigna el valor resultante a la variable `x` a la izquierda. No hay ningún límite práctico al número de operadores que se pueden combinar en una expresión, pero es necesario conocer la [prioridad de operadores en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para asegurarse de que se obtienen los resultados esperados.  
 
 ## <a name="see-also"></a>Vea también
 

@@ -23,20 +23,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351490"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
+Especifica que una propiedad o procedimiento no está implementado en esta clase y se debe invalidar en una clase derivada antes de que se pueda utilizar.  
   
 ## <a name="remarks"></a>Comentarios  
- You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ Solo se puede usar `MustOverride` en una instrucción de declaración de propiedad o procedimiento. La propiedad o el procedimiento que especifica `MustOverride` debe ser miembro de una clase y la clase debe marcarse como [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>Reglas  
   
-- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
+- **Declaración incompleta.** Cuando se especifica `MustOverride`, no se proporcionan líneas de código adicionales para la propiedad o el procedimiento, ni siquiera la instrucción `End Function`, `End Property`o `End Sub`.  
   
-- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
+- **Modificadores combinados.** No se puede especificar `MustOverride` junto con `NotOverridable`, `Overridable`o `Shared` en la misma declaración.  
   
-- **Shadowing and Overriding.** Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Sombrear e invalidar.** Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos. Para obtener más información, vea [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
+- **Términos alternativos.** Un elemento que no se puede usar excepto en una invalidación a veces se denomina elemento *virtual puro* .  
   
  El modificador `MustOverride` se puede utilizar en los contextos siguientes:  
   
@@ -53,4 +53,4 @@ Specifies that a property or procedure is not implemented in this class and must
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

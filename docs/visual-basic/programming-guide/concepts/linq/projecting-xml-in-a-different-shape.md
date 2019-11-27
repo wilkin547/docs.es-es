@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347144"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proyectar XML en una forma diferente (Visual Basic)
 Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es diferente a la del XML de origen.  
   
  Muchas de las transformación típicas de un XML consisten en consultas encadenadas, como ocurre en este ejemplo. Es habitual comenzar con una cierta forma de XML, proyectar los resultados intermedios como colecciones de tipos anónimos o con nombre y, finalmente, proyectar de nuevo los resultados en XML, cuya forma es completamente diferente a la del XML de origen.  
@@ -17,7 +17,7 @@ Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es difere
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo y el texto de cada uno de los párrafos. Por último, el ejemplo proyecta el XML con una forma diferente. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. La nueva instrucción encargada de la proyección está señalada en los comentarios del código siguiente:  
   
- For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>Pasos siguientes  
  En el siguiente ejemplo, realizará una consulta para buscar todo el texto de un documento de Word:  
   
-- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Buscar texto en documentos de Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -45,19 +45,19 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Indicates the default behavior, which does not generate error messages.|  
-|`MDErrorOutOfOrderNone`|Indicates that the compiler should not generate error messages.|  
-|`MDErrorOutOfOrderAll`|Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.|  
-|`MDMethodOutOfOrder`|Indicates that the compiler should generate an error message when a method is emitted out of order.|  
-|`MDFieldOutOfOrder`|Indicates that the compiler should generate an error message when a field is emitted out of order.|  
-|`MDParamOutOfOrder`|Indicates that the compiler should generate an error message when a parameter is emitted out of order.|  
-|`MDPropertyOutOfOrder`|Indicates that the compiler should generate an error message when a property is emitted out of order.|  
-|`MDEventOutOfOrder`|Indicates that the compiler should generate an error message when an event is emitted out of order.|  
+|`MDErrorOutOfOrderDefault`|Indica el comportamiento predeterminado, que no genera mensajes de error.|  
+|`MDErrorOutOfOrderNone`|Indica que el compilador no debe generar mensajes de error.|  
+|`MDErrorOutOfOrderAll`|Indica que el compilador debe generar un mensaje de error cuando un campo, una propiedad, un evento, un método o un parámetro se emiten de forma desordenada.|  
+|`MDMethodOutOfOrder`|Indica que el compilador debe generar un mensaje de error cuando un método se emite de forma desordenada.|  
+|`MDFieldOutOfOrder`|Indica que el compilador debe generar un mensaje de error cuando un campo se emite de forma desordenada.|  
+|`MDParamOutOfOrder`|Indica que el compilador debe generar un mensaje de error cuando un parámetro se emite de forma desordenada.|  
+|`MDPropertyOutOfOrder`|Indica que el compilador debe generar un mensaje de error cuando una propiedad se emite de forma desordenada.|  
+|`MDEventOutOfOrder`|Indica que el compilador debe generar un mensaje de error cuando se emite un evento sin orden.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

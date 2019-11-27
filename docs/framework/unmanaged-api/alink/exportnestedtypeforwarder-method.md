@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438409"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder (Método)
-Adds a type forwarder for a nested type to the type table of the given assembly.  
+Agrega un reenviador de tipos para un tipo anidado a la tabla de tipos del ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of the assembly to export from.  
+ IDENTIFICADOR del ensamblado del que se va a exportar.  
   
  `FileToken`  
- File token or assembly ID of file that defines the type.  
+ Token de archivo o ID. de ensamblado del archivo que define el tipo.  
   
  `TypeToken`  
- Token for the type.  
+ Token para el tipo.  
   
  `ParentType`  
- Token of parent type.  
+ Token del tipo primario.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Nombre completo del tipo que se va a exportar.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`.  
+ `ComType` marcas como `tdPublic` o `tdNested`.  
   
  `pType`  
- Receives token of export type. This is necessary only for emitting nested types.  
+ Recibe el token del tipo de exportación. Esto solo es necesario para emitir tipos anidados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

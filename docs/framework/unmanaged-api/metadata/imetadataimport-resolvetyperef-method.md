@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431472"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef (Método)
-Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
+Resuelve una referencia <xref:System.Type> representada por el token TypeRef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,32 +38,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parámetros  
  `tr`  
- [in] The TypeRef metadata token to return the referenced type information for.  
+ de Token de metadatos de TypeRef para el que se va a devolver la información de tipos a la que se hace referencia.  
   
  `riid`  
- [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
+ de IID de la interfaz que se va a devolver en `ppIScope`. Normalmente, esto sería IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] An interface to the module scope in which the referenced type is defined.  
+ enuncia Interfaz al ámbito del módulo en el que se define el tipo al que se hace referencia.  
   
  `ptd`  
- [out] A pointer to a TypeDef token that represents the referenced type.  
+ enuncia Un puntero a un token de TypeDef que representa el tipo al que se hace referencia.  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!IMPORTANT]
-> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
+> No use este método si se cargan varios dominios de aplicación. El método no respeta los límites del dominio de aplicación. Si se cargan varias versiones de un ensamblado y contienen el mismo tipo con el mismo espacio de nombres, el método devuelve el ámbito del módulo del primer tipo que encuentra.  
   
- The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
+ El método `ResolveTypeRef` busca la definición de tipo en otros módulos. Si se encuentra la definición de tipo, `ResolveTypeRef` devuelve una interfaz a ese ámbito de módulo, así como el token de TypeDef para el tipo.  
   
- If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
+ Si la referencia de tipo que se va a resolver tiene un ámbito de resolución de AssemblyRef, el método `ResolveTypeRef` busca una coincidencia solo en los ámbitos de metadatos que ya se han abierto con llamadas al método [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) o al método [IMetaDataDispenser:: openscopeonmemory (](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Esto se debe a que `ResolveTypeRef` no puede determinar solo en el ámbito de AssemblyRef en el que se almacena en el disco o en la caché global de ensamblados el ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

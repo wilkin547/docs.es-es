@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439201"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP (Método)
-Maps a managed code instruction pointer to a `FunctionID`.  
+Asigna un puntero de instrucción de código administrado a un `FunctionID`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,10 +35,10 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>Parámetros  
  `ip`  
- [in] The instruction pointer in managed code.  
+ de Puntero de instrucción en código administrado.  
   
  `pFunctionId`  
- [out] The returned function ID.  
+ enuncia IDENTIFICADOR de función devuelto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

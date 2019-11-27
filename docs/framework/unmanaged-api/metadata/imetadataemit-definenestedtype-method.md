@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431704"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType (Método)
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+Crea la firma de metadatos de una definición de tipo, devuelve un `mdTypeDef` token para ese tipo y especifica que el tipo definido es un miembro del tipo al que hace referencia el parámetro `tdEncloser`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,29 +40,29 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parámetros  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ de Nombre del tipo en Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] atributos de `TypeDef`. Se trata de una máscara de máscara de valores `CorTypeAttr`.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ de Token de la clase base. Se trata de un `mdTypeDef` o un token de `mdTypeRef`.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ de Matriz de tokens que especifican las interfaces que esta clase o interfaz implementa.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ de Token del tipo envolvente. El último elemento de la matriz se debe `mdTokenNil`.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ enuncia El token de `mdTypeDef` asignado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

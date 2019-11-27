@@ -13,7 +13,7 @@ ms.locfileid: "74283327"
 
 A partir de la .NET Framework 3,5, los llamadores de confianza parcial pueden tener acceso a los tipos y métodos públicos implementados en <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>y <xref:System.ServiceModel.Web>. En esta sección se describen los escenarios admitidos para usar Windows Communication Foundation (WCF) dentro de una aplicación de confianza parcial, así como el subconjunto limitado de la funcionalidad de WCF disponible para las aplicaciones que se ejecutan con seguridad de acceso del código (CAS) reducida los.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Escenarios de implementación admitidos](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
  Describe los principales escenarios de confianza parcial para ejecutar WCF.  
   

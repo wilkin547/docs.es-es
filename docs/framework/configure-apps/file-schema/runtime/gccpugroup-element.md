@@ -12,13 +12,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430481"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<elemento > GCCpuGroup
 
 Especifica si la recolección de elementos no utilizados admite varios grupos de CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,7 +29,7 @@ Especifica si la recolección de elementos no utilizados admite varios grupos de
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
 
-En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
+En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.
 
 ### <a name="attributes"></a>Atributos
 
@@ -44,11 +44,11 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |`false`|La recolección de elementos no utilizados no admite varios grupos de CPU. Este es el valor predeterminado.|
 |`true`|La recolección de elementos no utilizados admite varios grupos de CPU, si está habilitada la recolección de elementos no utilizados de servidor.|
 
-### <a name="child-elements"></a>Elementos secundarios
+### <a name="child-elements"></a>Elemento secundario
 
 Ninguno.
 
-### <a name="parent-elements"></a>Elementos primarios
+### <a name="parent-elements"></a>Elemento principal
 
 |Elemento|Descripción|
 |-------------|-----------------|
@@ -57,10 +57,10 @@ Ninguno.
 
 ## <a name="remarks"></a>Comentarios
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+Cuando un equipo tiene varios grupos de CPU y la recolección de elementos no utilizados de servidor está habilitada (vea el\<elemento de [> gcServer](gcserver-element.md) ), la habilitación de este elemento extiende la recolección de elementos no utilizados en todos los grupos de CPU y tiene en cuenta todos los núcleos al crear y equilibrar los montones.
 
 > [!NOTE]
-> Este elemento solo se aplica a los subprocesos de recolección de elementos no utilizados. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> Este elemento solo se aplica a los subprocesos de recolección de elementos no utilizados. Para permitir al motor en tiempo de ejecución distribuir los subprocesos de usuario en todos los grupos de CPU, también debe habilitar el [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) elemento.
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,5 +79,5 @@ En el ejemplo siguiente se muestra cómo habilitar la recolección de elementos 
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Para deshabilitar la recolección de elementos no utilizados simultánea](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Recolección de elementos no utilizados de estación de trabajo y de servidor](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

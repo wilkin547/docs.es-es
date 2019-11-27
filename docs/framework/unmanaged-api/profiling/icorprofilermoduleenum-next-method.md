@@ -49,7 +49,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|Se devolvieron `celt` elementos.|  
+|S_OK|se devolvieron `celt` elementos.|  
 |S_FALSE|Se devolvieron menos de `celt` elementos, lo que indica que la enumeración está completa.|  
   
 ## <a name="requirements"></a>Requisitos  

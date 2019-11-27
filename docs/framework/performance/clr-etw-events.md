@@ -24,7 +24,7 @@ Los temas de esta sección describen los eventos de seguimiento de eventos para 
   
  Para más información, vea [Proveedores ETW de CLR](clr-etw-providers.md).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Eventos de información en tiempo de ejecución](runtime-information-etw-events.md)  
  Capturan información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante.  
   
@@ -63,8 +63,8 @@ Los temas de esta sección describen los eventos de seguimiento de eventos para 
   
 ## <a name="see-also"></a>Vea también
 
-- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [Mejorar la depuración y el ajuste del rendimiento con ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Blog de rendimiento de Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Controlar el registro de .NET Framework](controlling-logging.md)
 - [Proveedores ETW de CLR](clr-etw-providers.md)
 - [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md)

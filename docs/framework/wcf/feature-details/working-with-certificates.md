@@ -53,7 +53,7 @@ Seleccionar dónde almacenar un certificado depende de cómo y cuándo se ejecut
 
 - Si el servicio WCF se hospeda en un servicio Windows, use el almacén del **equipo local**. Observe que es necesario tener privilegios de administrador para instalar certificados en el almacén de la máquina local.
 
-- Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, utilice el almacén del **usuario actual**.
+- Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, use el almacén del **usuario actual**.
 
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes
 
@@ -72,7 +72,7 @@ Los certificados digitales se usan para autenticar una entidad confiando en esta
 
 Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.
 
-|Clase|Property|
+|Clase|Propiedad|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -113,7 +113,7 @@ Las preguntas más comunes sobre certificados son qué certificados utilizar y p
 
 ### <a name="service-certificates"></a>Certificados de servicio
 
-Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) utilizado para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio se `http://www.contoso.com/endpoint/`, el campo **asunto** también debe contener el valor `www.contoso.com`.
+Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) que se usa para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio se `http://www.contoso.com/endpoint/`, el campo **asunto** también debe contener el valor `www.contoso.com`.
 
 Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Normalmente, la inicialización es "CN" para el nombre común, por ejemplo, `CN = www.contoso.com`. También es posible que el campo **Asunto** esté en blanco, en cuyo caso el campo **Nombre alternativo del firmante** puede contener el valor **Nombre DNS**.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428309"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams (Método)
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+Obtiene un enumerador para una matriz de tokens de parámetro genéricos asociados al token de TypeDef o MethodDef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,33 +39,33 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntero al enumerador.  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ de El token TypeDef o MethodDef cuyos parámetros genéricos se van a enumerar.  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ enuncia Matriz de parámetros genéricos que se va a enumerar.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ de Número máximo solicitado de tokens que se van a colocar en `rGenericParams`.  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ enuncia Número devuelto de tokens colocados en `rGenericParams`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParams` devolvió correctamente.|  
+|`S_FALSE`|`phEnum` no tiene elementos de miembro. En este caso, `pcGenericParams` se establece en 0 (cero).|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

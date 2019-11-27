@@ -1,5 +1,5 @@
 ---
-title: CVStruct (Estructura)
+title: CVStruct (estructura)
 ms.date: 03/30/2017
 api_name:
 - CVStruct
@@ -21,7 +21,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436429"
 ---
-# <a name="cvstruct-structure"></a>CVStruct (Estructura)
+# <a name="cvstruct-structure"></a>CVStruct (estructura)
 Contiene información que se utiliza al instalar un módulo o una imagen compuesta.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,17 +39,17 @@ typedef struct {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|Major|Major version build number.|  
-|Secundaria|Minor version build number.|  
-|Sub|Sub-build number.|  
-|Compilar|Build number.|  
+|Principal|Número de compilación de la versión principal.|  
+|Secundaria|Número de compilación de la versión secundaria.|  
+|Sub|Número de subcompilación.|  
+|Compilar|Número de compilación.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

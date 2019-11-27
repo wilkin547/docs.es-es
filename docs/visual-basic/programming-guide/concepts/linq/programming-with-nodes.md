@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346638"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Programming with Nodes (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>Programar con nodos (Visual Basic)
 Los desarrolladores de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  
   
 ## <a name="node-details"></a>Detalles del nodo  
@@ -124,7 +124,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Los métodos del eje XPath no devuelven un espacio en blanco secundario de XDocument  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite nodos de texto secundarios de un <xref:System.Xml.Linq.XDocument> mientras los nodos de texto contengan solamente espacios en blanco. No obstante, el modelo del objeto XPath no incluye el espacio en blanco como nodos secundarios de un documento, así que cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando el eje <xref:System.Xml.Linq.XContainer.Nodes%2A>, se devolverán los nodos de texto del espacio en blanco. Sin embargo, cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando los métodos del eje de XPath, no se devolverán los nodos de texto de espacio en blanco.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite nodos de texto secundarios de un <xref:System.Xml.Linq.XDocument>, siempre que los nodos de texto contengan solo espacios en blanco. No obstante, el modelo del objeto XPath no incluye el espacio en blanco como nodos secundarios de un documento, así que cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando el eje <xref:System.Xml.Linq.XContainer.Nodes%2A>, se devolverán los nodos de texto del espacio en blanco. Sin embargo, cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando los métodos del eje de XPath, no se devolverán los nodos de texto de espacio en blanco.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>Vea también
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

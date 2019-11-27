@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
+Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Cambie el directorio del símbolo del sistema a la carpeta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET versión > \). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
 
 `wevtutil im CLR-ETW.man`
 
@@ -55,9 +55,9 @@ Para activar el registro, el usuario debe especificar tres cosas:
 
     - El parámetro `-p` identifica el GUID del proveedor.
 
-    - `0x1CCBD` especifica las categorías de eventos que se van a producir.
+    - `0x1CCBD` especifica las categorías de eventos que se generarán.
 
-    - `0x5` establece el nivel de registro (en este caso, detallado (5)).
+    - `0x5` establece el nivel de registro (en este caso, verbose (5)).
 
     - El parámetro `-ets` indica a Logman que envíe los comandos a las sesiones de seguimiento de eventos.
 
@@ -113,5 +113,5 @@ Utilice los comandos enumerados a continuación para ver los eventos ETW de CLR.
 
 ## <a name="see-also"></a>Vea también
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/)
 - [Eventos ETW en Common Language Runtime](etw-events-in-the-common-language-runtime.md)

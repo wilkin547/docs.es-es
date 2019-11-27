@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440436"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps (Método)
-Sets property values for the generic parameter definition referenced by the specified token.  
+Establece los valores de propiedad para la definición de parámetro genérico a la que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,26 +39,26 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parámetros  
  `gp`  
- [in] The token for the generic parameter definition for which to set values.  
+ de Token de la definición de parámetro genérico para el que se van a establecer valores.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ de Un valor de la enumeración [CorGenericParamAttr (](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) que describe el tipo para el parámetro genérico.  
   
  `szName`  
- [in] Opcional. The name of the parameter for which to set values.  
+ [in] Opcional. Nombre del parámetro para el que se van a establecer valores.  
   
  `reserved`  
  [in] Reservado para extensibilidad futura.  
   
  `rtkConstraints`  
- [in] Opcional. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ [in] Opcional. Matriz terminada en cero de restricciones de tipo. Los miembros de matriz deben ser un token de metadatos `mdTypeDef`, `mdTypeRef`o `mdTypeSpec`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

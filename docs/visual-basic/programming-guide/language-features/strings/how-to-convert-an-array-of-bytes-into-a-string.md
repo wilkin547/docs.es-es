@@ -1,5 +1,5 @@
 ---
-title: 'How to: Convert an Array of Bytes into a String'
+title: 'Cómo: convertir una matriz de bytes en una cadena'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351986"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Cómo: Convertir una matriz de bytes en una cadena en Visual Basic
-This topic shows how to convert the bytes from a byte array into a string.  
+En este tema se muestra cómo convertir los bytes de una matriz de bytes en una cadena.  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the <xref:System.Text.Encoding.GetString%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert all the bytes from a byte array into a string.  
+ En este ejemplo se usa el método <xref:System.Text.Encoding.GetString%2A> de la clase de codificación <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> para convertir todos los bytes de una matriz de bytes en una cadena.  
   
  [!code-vb[VbVbalrStrings#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#72)]  
   
- You can choose from several encoding options to convert a byte array into a string:  
+ Puede elegir entre varias opciones de codificación para convertir una matriz de bytes en una cadena:  
   
-- <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.  
+- <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: obtiene una codificación para el juego de caracteres ASCII (7 bits).  
   
-- <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.  
+- <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: obtiene una codificación para el formato UTF-16 utilizando el orden de bytes big-endian.  
   
-- <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.  
+- <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: obtiene una codificación para la página de códigos ANSI actual del sistema.  
   
-- <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.  
+- <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: obtiene una codificación para el formato UTF-16 utilizando el orden de bytes Little-Endian.  
   
-- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.  
+- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: obtiene una codificación para el formato UTF-32 utilizando el orden de bytes Little-Endian.  
   
-- <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.  
+- <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: obtiene una codificación para el formato UTF-7.  
   
-- <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.  
+- <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: obtiene una codificación para el formato UTF-8.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetString%2A>
-- [How to: Convert Strings into an Array of Bytes in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)
+- [Cómo: convertir cadenas en una matriz de bytes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)

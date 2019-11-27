@@ -19,9 +19,9 @@ ms.locfileid: "74441276"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ Esta sección contiene ejemplos de código que muestran las tareas de escritura de proveedores de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para elementos de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Exposición de un proveedor de Automatización de la interfaz de usuario en el servidor](expose-a-server-side-ui-automation-provider.md)  
  [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](return-properties-from-a-ui-automation-provider.md)  
  [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](raise-events-from-a-ui-automation-provider.md)  

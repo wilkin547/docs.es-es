@@ -18,7 +18,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335848"
 ---
-# <a name="-link-visual-basic"></a>-link (Visual Basic)
+# <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,9 +35,9 @@ o
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`fileList`|Requerido. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
+|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
  La opción `-link` permite implementar una aplicación que tiene información de tipo incrustada. La aplicación puede usar los tipos de un ensamblado en tiempo de ejecución que implementan la información de tipo incrustada sin necesidad de una referencia al ensamblado en tiempo de ejecución. Si hay varias versiones del ensamblado en tiempo de ejecución publicadas, la aplicación que contiene la información de tipo incrustada puede trabajar con las distintas versiones sin tener que volver a compilar. Para obtener un ejemplo, vea [Tutorial: Incrustar los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md).  
@@ -57,9 +57,9 @@ o
   
 - Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
+ Use [-LIBPATH](libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
- Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
+ Al igual que la opción del compilador [-Reference](reference.md) , la opción del compilador `-link` usa el archivo de respuesta VBC. RSP, que hace referencia a los ensamblados .NET Framework utilizados con frecuencia. Use la opción del compilador [-noconfig](noconfig.md) si no desea que el compilador use el archivo Vbc. rsp.  
   
  La forma abreviada de `-link` es `-l`.  
   
@@ -83,7 +83,7 @@ o
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Ejemplo  
- The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
+ La línea de comandos siguiente compila los ensamblados de referencia y `OfficeApp.vb` de archivos de origen de `COMData1.dll` y `COMData2.dll` para generar `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Compilador de línea de comandos de Visual Basic](index.md)
 - [Tutorial: Incrustación de los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference (Visual Basic)](reference.md)
+- [-Reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

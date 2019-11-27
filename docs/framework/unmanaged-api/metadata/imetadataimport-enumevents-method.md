@@ -39,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntero al enumerador.  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ de El token de TypeDef cuyas definiciones de evento se van a enumerar.  
   
  `rEvents`  
- [out] The array of returned events.  
+ enuncia La matriz de eventos devueltos.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rEvents`.  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ enuncia Número real de eventos devueltos en `rEvents`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` devolvió correctamente.|  
+|`S_FALSE`|No hay eventos que enumerar. En ese caso, `pcEvents` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

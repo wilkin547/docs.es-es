@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432323"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps (Método)
-Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Establece o actualiza las características de la firma de metadatos de un conjunto de permisos definido por una llamada anterior a [IMetaDataEmit::D efinepermissionset](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,26 +39,26 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] A metadata token that represents the object to be decorated.  
+ de Token de metadatos que representa el objeto que se va a decorar.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ de Valor [cordeclsecurity (](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) que especifica el tipo de seguridad declarativa que se va a utilizar.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ de El BLOB de permiso.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ de Tamaño, en bytes, de `pvPermission`.  
   
  `ppm`  
- [out] An `mdPermission` metadata token that represents the updated permissions.  
+ enuncia Un token de metadatos de `mdPermission` que representa los permisos actualizados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

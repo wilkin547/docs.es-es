@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440817"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
-Notifies the profiler that control is being passed to a function.  
+Notifica al generador de perfiles que el control se pasa a una función.  
   
 > [!NOTE]
-> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
+> La función `FunctionEnter` está en desuso en la versión de .NET Framework 2,0 y su uso supondrá una penalización del rendimiento. En su lugar, use la función [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parámetros  
  `funcID`  
- [in] The identifier of the function to which control is passed.  
+ de Identificador de la función a la que se pasa el control.  
   
 ## <a name="remarks"></a>Comentarios  
- The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ La función `FunctionEnter` es una devolución de llamada; debe implementarla. La implementación debe usar el atributo de clase de almacenamiento `__declspec`(`naked`).  
   
- The execution engine does not save any registers before calling this function.  
+ El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- En la entrada, debe guardar todos los registros que use, incluidos los de la unidad de punto flotante (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
+ La implementación de `FunctionEnter` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que `FunctionEnter` devuelva.  
   
- Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
+ Además, la función `FunctionEnter` no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework versiones:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vea también
 

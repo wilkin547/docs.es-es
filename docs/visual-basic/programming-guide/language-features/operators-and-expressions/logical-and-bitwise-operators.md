@@ -29,33 +29,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343592"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operadores lógicos y bit a bit en Visual Basic
-Logical operators compare `Boolean` expressions and return a `Boolean` result. The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand. Some of these operators can also perform bitwise logical operations on integral values.  
+Los operadores lógicos comparan expresiones `Boolean` y devuelven un resultado `Boolean`. Los operadores `And`, `Or`, `AndAlso`, `OrElse`y `Xor` son *binarios* porque toman dos operandos, mientras que el operador `Not` es *unario* porque toma un solo operando. Algunos de estos operadores también pueden realizar operaciones lógicas bit a bit en valores enteros.  
   
-## <a name="unary-logical-operator"></a>Unary Logical Operator  
- The [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) performs logical *negation* on a `Boolean` expression. It yields the logical opposite of its operand. If the expression evaluates to `True`, then `Not` returns `False`; if the expression evaluates to `False`, then `Not` returns `True`. Esto se ilustra en el siguiente ejemplo:  
+## <a name="unary-logical-operator"></a>Operador lógico unario  
+ El [operador not](../../../../visual-basic/language-reference/operators/not-operator.md) realiza una *negación* lógica en una expresión `Boolean`. Produce el contrario lógico de su operando. Si la expresión se evalúa como `True`, `Not` devuelve `False`; Si la expresión se evalúa como `False`, `Not` devuelve `True`. En el ejemplo siguiente se ilustra esto.  
   
  [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
-## <a name="binary-logical-operators"></a>Binary Logical Operators  
- The [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) performs logical *conjunction* on two `Boolean` expressions. If both expressions evaluate to `True`, then `And` returns `True`. If at least one of the expressions evaluates to `False`, then `And` returns `False`.  
+## <a name="binary-logical-operators"></a>Operadores lógicos binarios  
+ El [operador and](../../../../visual-basic/language-reference/operators/and-operator.md) realiza una *conjunción* lógica entre dos expresiones `Boolean`. Si ambas expresiones se evalúan como `True`, `And` devuelve `True`. Si al menos una de las expresiones se evalúa como `False`, `And` devuelve `False`.  
   
- The [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) performs logical *disjunction* or *inclusion* on two `Boolean` expressions. If either expression evaluates to `True`, or both evaluate to `True`, then `Or` returns `True`. If neither expression evaluates to `True`, `Or` returns `False`.  
+ El [operador OR](../../../../visual-basic/language-reference/operators/or-operator.md) realiza una *disyunción* lógica o una *inclusión* en dos expresiones `Boolean`. Si alguna de las expresiones se evalúa como `True`, o ambos se evalúan como `True`, `Or` devuelve `True`. Si ninguna de las expresiones se evalúa como `True`, `Or` devuelve `False`.  
   
- The [Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md) performs logical *exclusion* on two `Boolean` expressions. If exactly one expression evaluates to `True`, but not both, `Xor` returns `True`. If both expressions evaluate to `True` or both evaluate to `False`, `Xor` returns `False`.  
+ El [operador XOR](../../../../visual-basic/language-reference/operators/xor-operator.md) realiza una *exclusión* lógica en dos expresiones `Boolean`. Si exactamente una expresión se evalúa como `True`, pero no ambos, `Xor` devuelve `True`. Si ambas expresiones se evalúan como `True` o ambos se evalúan como `False`, `Xor` devuelve `False`.  
   
- The following example illustrates the `And`, `Or`, and `Xor` operators.  
+ En el ejemplo siguiente se muestran los operadores `And`, `Or`y `Xor`.  
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Short-Circuiting Logical Operations  
- The [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) is very similar to the `And` operator, in that it also performs logical conjunction on two `Boolean` expressions. The key difference between the two is that `AndAlso` exhibits *short-circuiting* behavior. If the first expression in an `AndAlso` expression evaluates to `False`, then the second expression is not evaluated because it cannot alter the final result, and `AndAlso` returns `False`.  
+## <a name="short-circuiting-logical-operations"></a>Operaciones lógicas de cortocircuito  
+ El [operador AndAlso](../../../../visual-basic/language-reference/operators/andalso-operator.md) es muy similar al operador `And`, ya que también realiza una conjunción lógica de dos expresiones `Boolean`. La diferencia clave entre ambos es que `AndAlso` exhibe *un comportamiento de cortocircuito* . Si la primera expresión de una expresión `AndAlso` se evalúa como `False`, la segunda expresión no se evalúa porque no puede modificar el resultado final y `AndAlso` devuelve `False`.  
   
- Similarly, the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md) performs short-circuiting logical disjunction on two `Boolean` expressions. If the first expression in an `OrElse` expression evaluates to `True`, then the second expression is not evaluated because it cannot alter the final result, and `OrElse` returns `True`.  
+ Del mismo modo, el [operador OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md) realiza una disyunción lógica de cortocircuito en dos expresiones `Boolean`. Si la primera expresión de una expresión `OrElse` se evalúa como `True`, la segunda expresión no se evalúa porque no puede modificar el resultado final y `OrElse` devuelve `True`.  
   
-### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
- Short-circuiting can improve performance by not evaluating an expression that cannot alter the result of the logical operation. However, if that expression performs additional actions, short-circuiting skips those actions. For example, if the expression includes a call to a `Function` procedure, that procedure is not called if the expression is short-circuited, and any additional code contained in the `Function` does not run. Therefore, the function might run only occasionally, and might not be tested correctly. Or the program logic might depend on the code in the `Function`.  
+### <a name="short-circuiting-trade-offs"></a>Equilibrio de cortocircuito  
+ El cortocircuito puede mejorar el rendimiento al no evaluar una expresión que no pueda modificar el resultado de la operación lógica. Sin embargo, si esa expresión realiza acciones adicionales, el cortocircuito omite esas acciones. Por ejemplo, si la expresión incluye una llamada a un procedimiento de `Function`, no se llama a ese procedimiento si la expresión se cortocircuita y no se ejecuta ningún código adicional incluido en el `Function`. Por lo tanto, la función puede ejecutarse solo ocasionalmente y no se puede probar correctamente. O la lógica del programa podría depender del código del `Function`.  
   
- The following example illustrates the difference between `And`, `Or`, and their short-circuiting counterparts.  
+ En el ejemplo siguiente se muestra la diferencia entre `And`, `Or`y sus homólogos de cortocircuito.  
   
  [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
@@ -63,43 +63,43 @@ Logical operators compare `Boolean` expressions and return a `Boolean` result. T
   
  [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
- In the preceding example, note that some important code inside `checkIfValid()` does not run when the call is short-circuited. The first `If` statement calls `checkIfValid()` even though `12 > 45` returns `False`, because `And` does not short-circuit. The second `If` statement does not call `checkIfValid()`, because when `12 > 45` returns `False`, `AndAlso` short-circuits the second expression. The third `If` statement calls `checkIfValid()` even though `12 < 45` returns `True`, because `Or` does not short-circuit. The fourth `If` statement does not call `checkIfValid()`, because when `12 < 45` returns `True`, `OrElse` short-circuits the second expression.  
+ En el ejemplo anterior, tenga en cuenta que algunos códigos importantes dentro de `checkIfValid()` no se ejecutan cuando la llamada se cortocircuita. La primera instrucción `If` llama a `checkIfValid()` aunque `12 > 45` devuelva `False`, porque `And` no cortocircuita. La segunda instrucción `If` no llama a `checkIfValid()`, porque cuando `12 > 45` devuelve `False`, `AndAlso` cortocircuita la segunda expresión. La tercera `If` instrucción llama a `checkIfValid()` aunque `12 < 45` devuelva `True`, porque `Or` no cortocircuita. La cuarta instrucción `If` no llama a `checkIfValid()`, porque cuando `12 < 45` devuelve `True`, `OrElse` cortocircuita la segunda expresión.  
   
-## <a name="bitwise-operations"></a>Bitwise Operations  
- Bitwise operations evaluate two integral values in binary (base 2) form. They compare the bits at corresponding positions and then assign values based on the comparison. The following example illustrates the `And` operator.  
+## <a name="bitwise-operations"></a>Operaciones bit a bit  
+ Las operaciones bit a bit evalúan dos valores enteros en formato binario (base 2). Comparan los bits en las posiciones correspondientes y, a continuación, asignan valores basados en la comparación. En el ejemplo siguiente se muestra el operador `And`.  
   
  [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
- The preceding example sets the value of `x` to 1. This happens for the following reasons:  
+ En el ejemplo anterior se establece el valor de `x` en 1. Esto sucede por los siguientes motivos:  
   
-- The values are treated as binary:  
+- Los valores se tratan como binarios:  
   
-     3 in binary form = 011  
+     3 en formato binario = 011  
   
-     5 in binary form = 101  
+     5 en formato binario = 101  
   
-- The `And` operator compares the binary representations, one binary position (bit) at a time. If both bits at a given position are 1, then a 1 is placed in that position in the result. If either bit is 0, then a 0 is placed in that position in the result. In the preceding example this works out as follows:  
+- El operador `And` compara las representaciones binarias, una posición binaria (bit) a la vez. Si los dos bits de una posición determinada son 1, se coloca un 1 en esa posición en el resultado. Si alguno de los bits es 0, se coloca un 0 en esa posición en el resultado. En el ejemplo anterior, esto funciona de la siguiente manera:  
   
-     011 (3 in binary form)  
+     011 (3 en formato binario)  
   
-     101 (5 in binary form)  
+     101 (5 en formato binario)  
   
-     001 (The result, in binary form)  
+     001 (el resultado, en formato binario)  
   
-- The result is treated as decimal. The value 001 is the binary representation of 1, so `x` = 1.  
+- El resultado se trata como decimal. El valor 001 es la representación binaria de 1, por lo que `x` = 1.  
   
- The bitwise `Or` operation is similar, except that a 1 is assigned to the result bit if either or both of the compared bits is 1. `Xor` assigns a 1 to the result bit if exactly one of the compared bits (not both) is 1. `Not` takes a single operand and inverts all the bits, including the sign bit, and assigns that value to the result. This means that for signed positive numbers, `Not` always returns a negative value, and for negative numbers, `Not` always returns a positive or zero value.  
+ La operación de `Or` bit a bit es similar, salvo que se asigna 1 al bit de resultado si uno de los bits comparados es 1 o ambos. `Xor` asigna un 1 al bit de resultado si exactamente uno de los bits comparados (no ambos) es 1. `Not` toma un solo operando e invierte todos los bits, incluido el bit de signo, y asigna ese valor al resultado. Esto significa que para los números positivos con signo, `Not` siempre devuelve un valor negativo, y para los números negativos, `Not` siempre devuelve un valor positivo o cero.  
   
- The `AndAlso` and `OrElse` operators do not support bitwise operations.  
+ Los operadores `AndAlso` y `OrElse` no admiten las operaciones bit a bit.  
   
 > [!NOTE]
-> Bitwise operations can be performed on integral types only. Floating-point values must be converted to integral types before bitwise operation can proceed.  
+> Las operaciones bit a bit solo se pueden realizar en tipos enteros. Los valores de punto flotante se deben convertir en tipos enteros antes de que pueda continuar la operación bit a bit.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Operadores lógicos y bit a bit (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Expresiones booleanas](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Operadores aritméticos en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operadores de concatenación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
 - [Combinación eficaz de operadores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

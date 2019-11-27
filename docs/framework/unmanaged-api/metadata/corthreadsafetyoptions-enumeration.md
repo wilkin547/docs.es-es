@@ -39,15 +39,15 @@ typedef enum CorThreadSafetyOptions {
 
 |Miembro|Descripción|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Default value. Igual a `MDThreadSafetyOff`.|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyDefault`|Valor predeterminado. Igual que `MDThreadSafetyOff`.|
+|`MDThreadSafetyOff`|Indica que no se puede establecer un bloqueo de lector/escritor.|
+|`MDThreadSafetyOn`|Indica que se puede establecer un bloqueo de lectura/escritura.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorHdr.h
+**Encabezado:** CorHdr. h
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: Información general sobre atributos
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -112,9 +112,9 @@ Module: CLSCompliant(True)>
 
 La lista siguiente incluye algunos de los usos comunes de atributos en el código:
 
-- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, vea <xref:System.Web.Services.WebMethodAttribute>.
+- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, consulta <xref:System.Web.Services.WebMethodAttribute>.
 
-- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, vea <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, consulta <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 
 - Describir las propiedades COM para clases, métodos e interfaces.
 
@@ -136,7 +136,7 @@ La lista siguiente incluye algunos de los usos comunes de atributos en el códig
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-Para obtener más información, consulte:
+Para obtener más información, vea:
 
 - [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])
 

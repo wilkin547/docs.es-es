@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344313"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Introducción a las cadenas en Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+En esta sección se describen los conceptos básicos del uso de cadenas en Visual Basic.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Fundamentos de cadenas](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Presenta los conceptos básicos que hay detrás del uso de cadenas y variables de cadena.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Tipos de métodos de manipulación de cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Presenta varias maneras de analizar y manipular cadenas.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Cómo afecta la referencia cultural a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Describe cómo Visual Basic usa la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -15,7 +15,7 @@ ms.locfileid: "74349791"
 # <a name="information-and-interaction-summary-visual-basic"></a>Resumen de información e interacción (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
 |Ejecutar otros programas.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
 |Llamar a un método o a una propiedad.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  

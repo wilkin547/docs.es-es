@@ -15,13 +15,13 @@ ms.locfileid: "74351887"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Cómo: Asignar una matriz a otra (Visual Basic)
 
-Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
+Dado que las matrices son objetos, puede usarlas en instrucciones de asignación como otros tipos de objeto. Una variable de matriz contiene un puntero a los datos que conforman los elementos de la matriz y la información de rango y longitud, y una asignación solo copia este puntero.
 
-### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
+### <a name="to-assign-one-array-to-another-array"></a>Para asignar una matriz a otra matriz
 
-1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
+1. Asegúrese de que las dos matrices tienen el mismo rango (número de dimensiones) y tipos de datos de elementos compatibles.
 
-2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
+2. Use una instrucción de asignación estándar para asignar la matriz de origen a la matriz de destino. No siga ningún nombre de matriz entre paréntesis.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Because arrays are objects, you can use them in assignment statements like other
     controlArray = formArray
     ```
 
-When you assign one array to another, the following rules apply:
+Al asignar una matriz a otra, se aplican las siguientes reglas:
 
-- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
+- **Rangos iguales.** El rango (número de dimensiones) de la matriz de destino debe ser el mismo que el de la matriz de origen.
 
-  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
+  Siempre que los rangos de las dos matrices sean iguales, no es necesario que las dimensiones sean iguales. El número de elementos de una dimensión determinada puede cambiar durante la asignación.
 
-- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Tipos de elemento.** Ambas matrices deben tener elementos de *tipo de referencia* o ambas matrices deben tener elementos de *tipo de valor* . Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
+  - Si ambas matrices tienen elementos de tipo de valor, los tipos de datos de los elementos deben ser exactamente iguales. La única excepción a esto es que puede asignar una matriz de `Enum` elementos a una matriz del tipo base de ese `Enum`.
 
-  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
+  - Si ambas matrices tienen elementos de tipo de referencia, el tipo de elemento de origen debe derivar del tipo de elemento de destino. En este caso, las dos matrices tienen la misma relación de herencia que sus elementos. Esto se denomina *covarianza de matriz*.
 
-The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
+El compilador notifica un error si se infringen las reglas anteriores, por ejemplo, si los tipos de datos no son compatibles o los rangos no son iguales. Puede Agregar control de errores al código para asegurarse de que las matrices son compatibles antes de intentar una asignación. También puede usar la palabra clave del [operador TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) si desea evitar que se produzca una excepción.
 
 ## <a name="see-also"></a>Vea también
 

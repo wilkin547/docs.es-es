@@ -12,8 +12,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346960"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>\<> de excepciones (Visual Basic)
+Especifica qué excepciones se pueden iniciar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,12 +29,12 @@ Specifies which exceptions can be thrown.
  Una descripción.  
   
 ## <a name="remarks"></a>Comentarios  
- Use the `<exception>` tag to specify which exceptions can be thrown. Esta etiqueta se aplica a una definición de método.  
+ Use la etiqueta `<exception>` para especificar qué excepciones se pueden iniciar. Esta etiqueta se aplica a una definición de método.  
   
  Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ En este ejemplo se usa la etiqueta `<exception>` para describir una excepción que la función `IntDivide` puede iniciar.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

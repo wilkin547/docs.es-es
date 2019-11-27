@@ -17,17 +17,17 @@ ms.locfileid: "74343801"
 
 Los temas en esta sección documentan las directivas del compilador de código fuente de Visual Basic.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [Directiva de #Const](../../../visual-basic/language-reference/directives/const-directive.md) : definir una constante del compilador  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [Directiva de #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) : indicar una asignación entre líneas de código fuente y texto externo al origen  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Then... #Else directivas](../../../visual-basic/language-reference/directives/if-then-else-directives.md) : compilar bloques de código seleccionados  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [Directiva de #Region](../../../visual-basic/language-reference/directives/region-directive.md) : contraer y ocultar secciones de código en el editor de Visual Studio  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable, #Enable** : deshabilitar y habilitar advertencias específicas para las regiones de código.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

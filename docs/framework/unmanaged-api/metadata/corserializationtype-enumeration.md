@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432872"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType (Enumeración)
-Specifies how an object is serialized by the common language runtime.  
+Especifica cómo el Common Language Runtime serializa un objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,31 +57,31 @@ typedef enum CorSerializationType {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|La serialización del objeto no está definida.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|El objeto se serializa como un tipo booleano|  
+|`SERIALIZATION_TYPE_CHAR`|El objeto se serializa como un tipo de carácter.|  
+|`SERIALIZATION_TYPE_I1`|El objeto se serializa como un entero de 1 byte con signo.|  
+|`SERIALIZATION_TYPE_U1`|El objeto se serializa como un entero de 1 byte sin signo.|  
+|`SERIALIZATION_TYPE_I2`|El objeto se serializa como un entero de 2 bytes con signo.|  
+|`SERIALIZATION_TYPE_U2`|El objeto se serializa como un entero de 2 bytes sin signo.|  
+|`SERIALIZATION_TYPE_I4`|El objeto se serializa como un entero de 4 bytes con signo.|  
+|`SERIALIZATION_TYPE_U4`|El objeto se serializa como un entero de 4 bytes sin signo.|  
+|`SERIALIZATION_TYPE_I8`|El objeto se serializa como un entero de 8 bytes con signo.|  
+|`SERIALIZATION_TYPE_U8`|El objeto se serializa como un entero de 8 bytes sin signo.|  
+|`SERIALIZATION_TYPE_R4`|El objeto se serializa como un punto flotante de 4 bytes.|  
+|`SERIALIZATION_TYPE_R8`|El objeto se serializa como un punto flotante de 8 bytes.|  
+|`SERIALIZATION_TYPE_STRING`|El objeto se serializa como un tipo System. String.|  
+|`SERIALIZATION_TYPE_SZARRAY`|El objeto se serializa como una matriz unidimensional de límite inferior de cero.|  
+|`SERIALIZATION_TYPE_TYPE`|El objeto se serializa como un tipo genérico.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|El objeto se serializa como un objeto etiquetado.|  
+|`SERIALIZATION_TYPE_FIELD`|El objeto se serializa como un campo.|  
+|`SERIALIZATION_TYPE_PROPERTY`|El objeto se serializa como una propiedad.|  
+|`SERIALIZATION_TYPE_ENUM`|El objeto se serializa como una enumeración.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

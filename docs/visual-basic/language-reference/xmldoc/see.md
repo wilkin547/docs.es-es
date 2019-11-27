@@ -12,8 +12,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352228"
 ---
-# <a name="see-visual-basic"></a>\<see> (Visual Basic)
-Specifies a link to another member.  
+# <a name="see-visual-basic"></a>\<Ver > (Visual Basic)
+Especifica un vínculo a otro miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,12 +26,12 @@ Specifies a link to another member.
  Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML. `member` debe aparecer entre comillas dobles (" ").  
   
 ## <a name="remarks"></a>Comentarios  
- Use the `<see>` tag to specify a link from within text. Use [\<seealso>](../../../visual-basic/language-reference/xmldoc/seealso.md) to indicate text that you might want to appear in a "See Also" section.  
+ Use la etiqueta `<see>` para especificar un vínculo desde dentro del texto. Use [\<> seeAlso](../../../visual-basic/language-reference/xmldoc/seealso.md) para indicar el texto que desea que aparezca en la sección "vea también".  
   
  Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the `<see>` tag in the `UpdateRecord` remarks section to refer to the `DoesRecordExist` method.  
+ En este ejemplo se usa la etiqueta `<see>` de la sección `UpdateRecord` notas para hacer referencia al método `DoesRecordExist`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -72,7 +72,7 @@ La *elevación de privilegios* resulta de conceder a un atacante permisos de aut
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>El Servicio utiliza un certificado diferente del que el cliente pretendía  
  Bajo ciertas condiciones, un cliente puede firmar digitalmente un mensaje con un certificado X.509 y hacer que el servicio recupere un certificado diferente del deseado.  
   
- Esto puede suceder bajo las siguientes circunstancias:  
+ Esto puede producirse en las siguientes circunstancias:  
   
 - El cliente firma digitalmente un mensaje mediante un certificado X.509 y no adjunta el certificado X.509 al mensaje, sino que solo hace referencia al certificado utilizando su identificador de clave de sujeto.  
   

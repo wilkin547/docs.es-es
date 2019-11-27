@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436175"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping (Método)
-Gets the memory region of the mapped file, and the type of mapping.  
+Obtiene la región de memoria del archivo asignado y el tipo de asignación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,37 +37,37 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>Parámetros  
  `ppvData`  
- [out] A pointer to the start of the mapped file.  
+ enuncia Puntero al principio del archivo asignado.  
   
  `pcbData`  
- [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
+ enuncia Tamaño de la región asignada. Si `pdwMappingType` es `fmFlat`, es el tamaño del archivo.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
+ enuncia Valor de [corfilemapping (](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) que indica el tipo de asignación. La implementación actual del Common Language Runtime (CLR) siempre devuelve `fmFlat`. Otros valores se reservan para un uso futuro. Sin embargo, siempre debe comprobar el valor devuelto, ya que otros valores pueden estar habilitados en versiones futuras o versiones de servicio.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|All outputs are filled.|  
-|`E_INVALIDARG`|NULL was passed as an argument value.|  
-|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
+|`S_OK`|Se rellenan todas las salidas.|  
+|`E_INVALIDARG`|Se pasó NULL como un valor de argumento.|  
+|`COR_E_NOTSUPPORTED`|La implementación de CLR no puede proporcionar información sobre la región de memoria. Esto puede deberse a los siguientes motivos:<br /><br /> -El ámbito de metadatos se abrió con la marca `ofWrite` o `ofCopyMemory`.<br />-El ámbito de metadatos se abrió sin la marca `ofReadOnly`.<br />-El método [IMetaDataDispenser:: openscopeonmemory (](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) se usó para abrir solo la parte de metadatos del archivo.<br />-El archivo no es un archivo ejecutable portable (PE). **Nota:**  Estas condiciones dependen de la implementación de CLR y es probable que se debiliten en versiones futuras de CLR.|  
   
 ## <a name="remarks"></a>Comentarios  
- The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
+ La memoria a la que apunta `ppvData` solo es válida siempre y cuando el ámbito de los metadatos subyacentes sea abierto.  
   
- In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
+ Para que este método funcione, cuando asigne los metadatos de un archivo en disco a la memoria mediante una llamada al método [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) , debe especificar la marca `ofReadOnly` y no debe especificar la marca `ofWrite` o `ofCopyMemory`.  
   
- The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
+ La elección del tipo de asignación de archivos para cada ámbito es específica de una implementación determinada de CLR. El usuario no puede establecerlo. La implementación actual de CLR siempre devuelve `fmFlat` en `pdwMappingType`, pero esto puede cambiar en versiones futuras de CLR o en futuras versiones de servicio de una versión determinada. Siempre debe comprobar el valor devuelto en `pdwMappingType`, ya que los distintos tipos tendrán distintos diseños y desplazamientos.  
   
- Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
+ No se admite pasar NULL para ninguno de los tres parámetros. El método devuelve `E_INVALIDARG`y no se rellena ninguna de las salidas. Si se omite el tipo de asignación o el tamaño de la región, se puede producir una terminación anómala del programa.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

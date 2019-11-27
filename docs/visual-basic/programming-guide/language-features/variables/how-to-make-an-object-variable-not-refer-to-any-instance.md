@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352894"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Cómo: Crear una variable de objeto que no haga referencia a ninguna instancia (Visual Basic)
-You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+Puede desasociar una variable de objeto de cualquier instancia de objeto estableciéndolo en [Nothing](../../../../visual-basic/language-reference/nothing.md).  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Para desasociar una variable de objeto de cualquier instancia de objeto  
   
-- Set the variable to `Nothing` in an assignment statement.  
+- Establezca la variable en `Nothing` en una instrucción de asignación.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,10 +26,10 @@ You can disassociate an object variable from any object instance by setting it t
     ```  
   
 ## <a name="robust-programming"></a>Programación sólida  
- If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
+ Si el código intenta tener acceso a un miembro de una variable de objeto que se ha establecido en `Nothing`, se produce una <xref:System.NullReferenceException>. Si establece una variable de objeto en `Nothing` con frecuencia, o si es posible, la variable no se inicializa, es aconsejable incluir los accesos de los miembros en un bloque de `Try...Catch...Finally`.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
+ Si usa una variable de objeto para los objetos que contienen datos confidenciales o confidenciales, puede establecer la variable en `Nothing` cuando no esté tratando activamente con uno de esos objetos. Esto reduce la posibilidad de que el código malintencionado obtenga acceso a los datos.  
   
 ## <a name="see-also"></a>Vea también
 

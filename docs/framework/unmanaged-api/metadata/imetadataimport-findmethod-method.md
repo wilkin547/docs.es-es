@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437897"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod (Método)
-Gets a pointer to the MethodDef token for the method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Obtiene un puntero al token MethodDef para el método incluido en el <xref:System.Type> especificado y que tiene el nombre y la firma de metadatos especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,33 +39,33 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [in] The `mdTypeDef` token for the type (a class or interface) that encloses the member to search for. If this value is `mdTokenNil`, then the lookup is done for a global function.  
+ de El token de `mdTypeDef` para el tipo (una clase o interfaz) que incluye el miembro que se va a buscar. Si este valor se `mdTokenNil`, la búsqueda se realiza para una función global.  
   
  `szName`  
- [in] The name of the method to search for.  
+ de Nombre del método que se va a buscar.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the method.  
+ de Puntero a la firma de metadatos binarios del método.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ de Tamaño en bytes de `pvSigBlob`.  
   
  `pmb`  
- [out] A pointer to the matching MethodDef token.  
+ enuncia Puntero al token MethodDef coincidente.  
   
 ## <a name="remarks"></a>Comentarios  
- You specify the method using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple methods with the same name in a class or interface. In that case, pass the method's signature to find the unique match.  
+ El método se especifica mediante su clase o interfaz envolvente (`td`), su nombre (`szName`) y, opcionalmente, su firma (`pvSigBlob`). Puede haber varios métodos con el mismo nombre en una clase o interfaz. En ese caso, pase la Signatura del método para buscar la coincidencia única.  
   
- The signature passed to `FindMethod` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMethod`.  
+ La firma pasada a `FindMethod` debe haberse generado en el ámbito actual, porque las firmas están enlazadas a un ámbito determinado. Una firma puede insertar un token que identifica la clase envolvente o el tipo de valor. El token es un índice en la tabla TypeDef local. No se puede crear una firma de tiempo de ejecución fuera del contexto del ámbito actual y usar esa firma como entrada para la entrada en `FindMethod`.  
   
- `FindMethod` finds only methods that were defined directly in the class or interface; it does not find inherited methods.  
+ `FindMethod` encuentra solo los métodos que se definieron directamente en la clase o la interfaz; no se encuentran los métodos heredados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

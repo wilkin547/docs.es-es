@@ -12,8 +12,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352211"
 ---
-# <a name="seealso-visual-basic"></a>\<seealso> (Visual Basic)
-Specifies a link that appears in the See Also section.  
+# <a name="seealso-visual-basic"></a>\<seealso > (Visual Basic)
+Especifica un vínculo que aparece en la sección Vea también.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,12 +26,12 @@ Specifies a link that appears in the See Also section.
  Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML. `member` debe aparecer entre comillas dobles (" ").  
   
 ## <a name="remarks"></a>Comentarios  
- Use the `<seealso>` tag to specify the text that you want to appear in a See Also section. Use [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) para especificar un vínculo desde dentro del texto.  
+ Use la etiqueta `<seealso>` para especificar el texto que desea que aparezca en la sección Vea también. Use [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) para especificar un vínculo desde dentro del texto.  
   
  Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the `<seealso>` tag in the `DoesRecordExist` remarks section to refer to the `UpdateRecord` method.  
+ En este ejemplo se usa la etiqueta `<seealso>` de la sección `DoesRecordExist` notas para hacer referencia al método `UpdateRecord`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

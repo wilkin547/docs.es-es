@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445430"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob (Método)
-Gets a pointer to the binary large object (BLOB) at the specified column index.  
+Obtiene un puntero al objeto binario grande (BLOB) en el índice de columna especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +37,20 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>Parámetros  
  `ixBlob`  
- [in] The memory address from which to get `ppData`.  
+ de Dirección de memoria de la que se va a obtener `ppData`.  
   
  `pcbData`  
- [out] A pointer to the size, in bytes, of `ppData`.  
+ enuncia Puntero al tamaño, en bytes, de `ppData`.  
   
  `ppData`  
- [out] A pointer to a pointer to the binary data retrieved.  
+ enuncia Un puntero a un puntero a los datos binarios recuperados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

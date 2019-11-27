@@ -78,7 +78,7 @@ Puede hacer referencia al [código fuente de los convertidores integrados](https
 
 En los pasos siguientes se explica cómo crear un convertidor siguiendo el patrón de fábrica:
 
-* Cree una clase que derive de <xref:System.Text.Json.Serialization.JsonConverterFactory>.
+* Cree una clase que provenga de <xref:System.Text.Json.Serialization.JsonConverterFactory>.
 * Invalide el método `CanConvert` para devolver true cuando el tipo que se va a convertir es uno que el convertidor puede controlar. Por ejemplo, si el convertidor es para `List<T>` solo puede controlar `List<int>`, `List<string>`y `List<DateTime>`. 
 * Invalide el método `CreateConverter` para devolver una instancia de una clase de convertidor que controlará el tipo de conversión que se proporciona en tiempo de ejecución.
 * Cree la clase de convertidor en la que crea instancias el método `CreateConverter`. 

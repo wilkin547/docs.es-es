@@ -40,17 +40,17 @@ typedef enum
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`nlfNone`|Indicates no flags.|  
-|`nlfLastError`|Indicates a `setLastError` keyword.|  
-|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
-|`nlfMaxValue`|No se utiliza.|  
+|`nlfNone`|Indica que no hay marcas.|  
+|`nlfLastError`|Indica una palabra clave de `setLastError`.|  
+|`nlfNoMangle`|Indica una palabra clave de `nomangle`.|  
+|`nlfMaxValue`|No usado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ Para obtener una aplicación de ejemplo, consulte [validador de contraseña de n
 
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>Para crear un nombre de usuario personalizado y un validador de contraseñas
 
-1. Cree una clase que derive de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.
+1. Cree una clase que provenga de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.
 
     [!code-csharp[C_CustomUsernameAndPasswordValidator#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#3)]
     [!code-vb[C_CustomUsernameAndPasswordValidator#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#3)]

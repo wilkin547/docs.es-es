@@ -38,7 +38,7 @@ Las referencias a este tipo se pueden incrustar en archivos .netmodules cuyos or
 
 Las referencias a este tipo indican atributos personalizados que están relacionados con la seguridad y que no tienen diversos usos.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Estos tipos se marcan como "Internal" dentro del .NET Framework y se encuentran en el espacio de nombres <xref:System.Runtime.CompilerServices>.
 
 ## <a name="requirements"></a>Requisitos
 

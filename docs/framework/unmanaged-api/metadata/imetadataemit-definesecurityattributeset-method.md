@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428246"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet (Método)
-Creates a set of security permissions to attach to the object referenced by the specified token.  
+Crea un conjunto de permisos de seguridad que se van a adjuntar al objeto al que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,23 +38,23 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Parámetros  
  `tkObj`  
- [in] The token to which the security information is attached.  
+ de El token al que se adjunta la información de seguridad.  
   
  `rSecAttrs`  
- [in] An array of `COR_SECATTR` structures.  
+ de Matriz de estructuras de `COR_SECATTR`.  
   
  `cSecAttrs`  
- [in] The number of elements in `rSecAttrs`.  
+ de Número de elementos de `rSecAttrs`.  
   
  `pulErrorAttr`  
- [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
+ enuncia Si se produce un error en el método, especifica el índice en `rSecAttrs` del elemento que causó el problema.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

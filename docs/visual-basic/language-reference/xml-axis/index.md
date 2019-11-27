@@ -15,17 +15,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352677"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>Propiedades de eje XML (Visual Basic)
-The topics in this section document the syntax of XML axis properties in Visual Basic. The XML axis properties make it easy to access XML directly in your code.  
+En los temas de esta sección se documenta la sintaxis de las propiedades del eje XML en Visual Basic. Las propiedades del eje XML facilitan el acceso a XML directamente en el código.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Propiedad del eje de atributo XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Describes how to access the attributes of an <xref:System.Xml.Linq.XElement> object.|  
-|[Propiedad del eje secundario XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Describes how to access the children of an <xref:System.Xml.Linq.XElement> object.|  
-|[Propiedad del eje descendiente XML](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Describes how to access the descendants of an <xref:System.Xml.Linq.XElement> object.|  
-|[Propiedad de indexador de extensión](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Describes how to access individual elements in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
-|[Propiedad de valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Describes how to access the value of the first element of a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
+|[Propiedad del eje de atributo XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Describe cómo obtener acceso a los atributos de un objeto <xref:System.Xml.Linq.XElement>.|  
+|[Propiedad del eje secundario XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Describe cómo obtener acceso a los elementos secundarios de un objeto <xref:System.Xml.Linq.XElement>.|  
+|[Propiedad del eje descendiente XML](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Describe cómo obtener acceso a los descendientes de un objeto <xref:System.Xml.Linq.XElement>.|  
+|[Propiedad de indexador de extensión](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Describe cómo obtener acceso a los elementos individuales de una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>.|  
+|[Propiedad de valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Describe cómo obtener acceso al valor del primer elemento de una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>.|  
   
 ## <a name="see-also"></a>Vea también
 

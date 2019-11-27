@@ -21,18 +21,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344876"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Cómo: Definir un operador (Visual Basic)
-If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.  
+Si ha definido una clase o estructura, puede definir el comportamiento de un operador estándar (como `*`, `<>`o `And`) cuando uno o los dos operandos son del tipo de la clase o estructura.  
   
- Define the standard operator as an operator procedure within the class or structure. All operator procedures must be `Public` `Shared`.  
+ Defina el operador estándar como procedimiento de operador dentro de la clase o estructura. Todos los procedimientos de operador deben estar `Public` `Shared`.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ La definición de un operador en una clase o estructura también se denomina *sobrecargar* el operador.  
   
 ## <a name="example"></a>Ejemplo  
- The following example defines the `+` operator for a structure called `height`. The structure uses heights measured in feet and inches. One *inch* is 2.54 centimeters, and one *foot* is 12 inches. To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic. The `+` operator uses the constructor to generate normalized values.  
+ En el ejemplo siguiente se define el operador de `+` para una estructura denominada `height`. La estructura utiliza altos medidos en pies y pulgadas. Una *pulgada* es 2,54 centímetros y un *pie* es 12 pulgadas. Para garantizar valores normalizados (pulgadas < 12,0), el constructor realiza la aritmética de *módulo* 12. El operador `+` usa el constructor para generar valores normalizados.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
- You can test the structure `height` with the following code.  
+ Puede probar la estructura `height` con el código siguiente.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
@@ -42,7 +42,7 @@ If you have defined a class or structure, you can define the behavior of a stand
 - [Definir un operador de conversión](./how-to-define-a-conversion-operator.md)
 - [Llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
 - [Utilizar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)
-- [Operator (instrucción)](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Declarar una estructura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Mod (operador)](../../../../visual-basic/language-reference/operators/mod-operator.md)

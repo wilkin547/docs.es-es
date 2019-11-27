@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443144"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 (Método)
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+Asigna un puntero de instrucción de código administrado a la versión recompilada con JIT de una función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,19 +36,19 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parámetros  
  `ip`  
- [in] The instruction pointer in managed code.  
+ de Puntero de instrucción en código administrado.  
   
  `pFunctionId`  
- [out] The function ID.  
+ enuncia IDENTIFICADOR de la función.  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ enuncia La identidad de la versión recompilada con JIT de la función.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+ `GetFunctionFromIP2` es similar a `GetFunctionFromIP`, salvo que obtiene el identificador de recompilación JIT en lugar del identificador de función de la función que contiene la dirección IP especificada.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` puede desencadenar una recolección de elementos no utilizados, mientras que `GetFunctionFromIP` no lo hará.  Para obtener más información, vea [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

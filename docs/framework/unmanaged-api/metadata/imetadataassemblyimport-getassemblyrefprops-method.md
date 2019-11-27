@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448226"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps (Método)
-Gets the set of properties for the assembly reference with the specified metadata signature.  
+Obtiene el conjunto de propiedades para la referencia de ensamblado con la firma de metadatos especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,44 +44,44 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mdar`  
- [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
+ de Símbolo (token) de metadatos de `mdAssemblyRef` que representa la referencia de ensamblado para la que se van a obtener las propiedades.  
   
  `ppbPublicKeyOrToken`  
- [out] A pointer to the public key or the metadata token.  
+ enuncia Puntero a la clave pública o al token de metadatos.  
   
  `pcbPublicKeyOrToken`  
- [out] The number of bytes in the returned public key or token.  
+ enuncia Número de bytes de la clave pública o el token devueltos.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ enuncia Nombre simple del ensamblado.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ de Tamaño, en caracteres anchos, de `szName`.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ enuncia Puntero al número de caracteres anchos que se devuelven realmente en `szName`.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ enuncia Puntero a una estructura ASSEMBLYMETADATA (que contiene los metadatos del ensamblado.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
+ enuncia Puntero al valor hash. Este es el hash, mediante el algoritmo SHA-1, de la `PublicKey` propiedad del ensamblado al que se hace referencia, a menos que se establezca la marca arfFullOriginator de la enumeración [AssemblyRefFlags (](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) .  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ enuncia Número de caracteres anchos en el valor hash devuelto.  
   
  `pdwAssemblyRefFlags`  
- [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ enuncia Puntero a las marcas que describen los metadatos aplicados a un ensamblado. El valor de flags es una combinación de uno o más valores de [corassemblyflags (](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
- This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
+ Este método devuelve S_OK si se realiza correctamente; de lo contrario, devuelve uno de los códigos de error definidos en el archivo de encabezado Winerror. h.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

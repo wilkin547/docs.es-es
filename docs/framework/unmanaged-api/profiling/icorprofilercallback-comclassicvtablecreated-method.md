@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445052"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated (Método)
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+Notifica al generador de perfiles que se ha creado una vtable de interoperabilidad COM para el IID y la clase especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,21 +37,21 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parámetros  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ de IDENTIFICADOR de la clase para la que se ha creado la tabla vtable.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ de IDENTIFICADOR de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ de Puntero al principio de la tabla vtable.  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ de Número de ranuras que se encuentran en la tabla vtable.  
   
 ## <a name="remarks"></a>Comentarios  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ El generador de perfiles no debe bloquear en su implementación de este método porque la pila puede no estar en un estado que permita la recolección de elementos no utilizados y, por tanto, no se puede habilitar la recolección de elementos no utilizados preferente. Si el generador de perfiles se bloquea aquí y se intenta la recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que esta devolución de llamada vuelva.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ La implementación del generador de perfiles de este método no debe llamar a código administrado ni provocar una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
