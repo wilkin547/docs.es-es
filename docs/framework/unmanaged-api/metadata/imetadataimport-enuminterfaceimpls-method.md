@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449523"
 ---
-# <a name="imetadataimportenuminterfaceimpls-method"></a><span data-ttu-id="30c13-102">IMetaDataImport::EnumInterfaceImpls (Método)</span><span class="sxs-lookup"><span data-stu-id="30c13-102">IMetaDataImport::EnumInterfaceImpls Method</span></span>
-<span data-ttu-id="30c13-103">Enumerates all interfaces implemented by the specified `TypeDef`.</span><span class="sxs-lookup"><span data-stu-id="30c13-103">Enumerates all interfaces implemented by the specified `TypeDef`.</span></span> 
+# <a name="imetadataimportenuminterfaceimpls-method"></a><span data-ttu-id="961ba-102">IMetaDataImport::EnumInterfaceImpls (Método)</span><span class="sxs-lookup"><span data-stu-id="961ba-102">IMetaDataImport::EnumInterfaceImpls Method</span></span>
+<span data-ttu-id="961ba-103">Enumera todas las interfaces implementadas por el `TypeDef`especificado.</span><span class="sxs-lookup"><span data-stu-id="961ba-103">Enumerates all interfaces implemented by the specified `TypeDef`.</span></span> 
   
-## <a name="syntax"></a><span data-ttu-id="30c13-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="30c13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="961ba-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="961ba-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
@@ -37,43 +37,43 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30c13-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="30c13-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="961ba-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="961ba-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="30c13-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="30c13-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="961ba-106">[in, out] Puntero al enumerador.</span><span class="sxs-lookup"><span data-stu-id="961ba-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `td`  
- <span data-ttu-id="30c13-107">[in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="30c13-107">[in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.</span></span>  
+ <span data-ttu-id="961ba-107">de El token de la definición de tipo cuyos tokens de MethodDef representan implementaciones de interfaz se van a enumerar.</span><span class="sxs-lookup"><span data-stu-id="961ba-107">[in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.</span></span>  
   
  `rImpls`  
- <span data-ttu-id="30c13-108">[out] The array used to store the MethodDef tokens.</span><span class="sxs-lookup"><span data-stu-id="30c13-108">[out] The array used to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="961ba-108">enuncia Matriz utilizada para almacenar los tokens de MethodDef.</span><span class="sxs-lookup"><span data-stu-id="961ba-108">[out] The array used to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="30c13-109">[in] Tamaño máximo de la matriz `rImpls`.</span><span class="sxs-lookup"><span data-stu-id="30c13-109">[in] The maximum size of the `rImpls` array.</span></span>  
+ <span data-ttu-id="961ba-109">[in] Tamaño máximo de la matriz `rImpls`.</span><span class="sxs-lookup"><span data-stu-id="961ba-109">[in] The maximum size of the `rImpls` array.</span></span>  
   
  `pcImpls`  
- <span data-ttu-id="30c13-110">[out] The actual number of tokens returned in `rImpls`.</span><span class="sxs-lookup"><span data-stu-id="30c13-110">[out] The actual number of tokens returned in `rImpls`.</span></span>  
+ <span data-ttu-id="961ba-110">enuncia Número real de tokens devueltos en `rImpls`.</span><span class="sxs-lookup"><span data-stu-id="961ba-110">[out] The actual number of tokens returned in `rImpls`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30c13-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="30c13-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="961ba-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="961ba-111">Return Value</span></span>  
   
-|<span data-ttu-id="30c13-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30c13-112">HRESULT</span></span>|<span data-ttu-id="30c13-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="30c13-113">Description</span></span>|  
+|<span data-ttu-id="961ba-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="961ba-112">HRESULT</span></span>|<span data-ttu-id="961ba-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="961ba-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="30c13-114">`EnumInterfaceImpls` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="30c13-114">`EnumInterfaceImpls` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="30c13-115">There are no MethodDef tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="30c13-115">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="30c13-116">In that case, `pcImpls` is set to zero.</span><span class="sxs-lookup"><span data-stu-id="30c13-116">In that case, `pcImpls` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="961ba-114">`EnumInterfaceImpls` devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="961ba-114">`EnumInterfaceImpls` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="961ba-115">No hay tokens de MethodDef que enumerar.</span><span class="sxs-lookup"><span data-stu-id="961ba-115">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="961ba-116">En ese caso, `pcImpls` se establece en cero.</span><span class="sxs-lookup"><span data-stu-id="961ba-116">In that case, `pcImpls` is set to zero.</span></span>|  
 
-## <a name="remarks"></a><span data-ttu-id="30c13-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="30c13-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="961ba-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="961ba-117">Remarks</span></span>
 
-<span data-ttu-id="30c13-118">The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`.</span><span class="sxs-lookup"><span data-stu-id="30c13-118">The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`.</span></span> <span data-ttu-id="30c13-119">Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`).</span><span class="sxs-lookup"><span data-stu-id="30c13-119">Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`).</span></span> <span data-ttu-id="30c13-120">Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).</span><span class="sxs-lookup"><span data-stu-id="30c13-120">Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).</span></span>
+<span data-ttu-id="961ba-118">La enumeración devuelve una colección de tokens de `mdInterfaceImpl` para cada interfaz implementada por el `TypeDef`especificado.</span><span class="sxs-lookup"><span data-stu-id="961ba-118">The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`.</span></span> <span data-ttu-id="961ba-119">Los tokens de interfaz se devuelven en el orden en que se especificaron las interfaces (a través de `DefineTypeDef` o `SetTypeDefProps`).</span><span class="sxs-lookup"><span data-stu-id="961ba-119">Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`).</span></span> <span data-ttu-id="961ba-120">Las propiedades de los tokens de `mdInterfaceImpl` devueltos se pueden consultar mediante [getinterfaceimplprops (](imetadataimport-getinterfaceimplprops-method.md).</span><span class="sxs-lookup"><span data-stu-id="961ba-120">Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="30c13-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="30c13-121">Requirements</span></span>  
- <span data-ttu-id="30c13-122">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30c13-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="961ba-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="961ba-121">Requirements</span></span>  
+ <span data-ttu-id="961ba-122">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="961ba-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30c13-123">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="30c13-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="961ba-123">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="961ba-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="30c13-124">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="30c13-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="961ba-124">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="961ba-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="30c13-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30c13-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="961ba-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="961ba-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30c13-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="30c13-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="961ba-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="961ba-126">See also</span></span>
 
-- [<span data-ttu-id="30c13-127">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="30c13-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="30c13-128">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="30c13-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="961ba-127">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="961ba-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="961ba-128">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="961ba-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
