@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428048"
 ---
-# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="df0e9-102">ISymUnmanagedWriter::DefineDocument (Método)</span><span class="sxs-lookup"><span data-stu-id="df0e9-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
-<span data-ttu-id="df0e9-103">Define un documento de origen.</span><span class="sxs-lookup"><span data-stu-id="df0e9-103">Defines a source document.</span></span> <span data-ttu-id="df0e9-104">GUIDs are provided for known languages, vendors, and document types.</span><span class="sxs-lookup"><span data-stu-id="df0e9-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
+# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="35897-102">ISymUnmanagedWriter::DefineDocument (Método)</span><span class="sxs-lookup"><span data-stu-id="35897-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
+<span data-ttu-id="35897-103">Define un documento de origen.</span><span class="sxs-lookup"><span data-stu-id="35897-103">Defines a source document.</span></span> <span data-ttu-id="35897-104">Se proporcionan GUID para los lenguajes, proveedores y tipos de documento conocidos.</span><span class="sxs-lookup"><span data-stu-id="35897-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df0e9-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="df0e9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35897-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="35897-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineDocument(  
@@ -36,28 +36,28 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="df0e9-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="df0e9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="35897-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="35897-106">Parameters</span></span>  
  `url`  
- <span data-ttu-id="df0e9-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span><span class="sxs-lookup"><span data-stu-id="df0e9-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
+ <span data-ttu-id="35897-107">de Un puntero a un `WCHAR` que define el localizador uniforme de recursos (URL) que identifica el documento.</span><span class="sxs-lookup"><span data-stu-id="35897-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
   
  `language`  
- <span data-ttu-id="df0e9-108">[in] A pointer to a GUID that defines the document language.</span><span class="sxs-lookup"><span data-stu-id="df0e9-108">[in] A pointer to a GUID that defines the document language.</span></span>  
+ <span data-ttu-id="35897-108">de Un puntero a un GUID que define el idioma del documento.</span><span class="sxs-lookup"><span data-stu-id="35897-108">[in] A pointer to a GUID that defines the document language.</span></span>  
   
  `languageVendor`  
- <span data-ttu-id="df0e9-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span><span class="sxs-lookup"><span data-stu-id="df0e9-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
+ <span data-ttu-id="35897-109">de Un puntero a un GUID que define la identidad del proveedor para el idioma del documento.</span><span class="sxs-lookup"><span data-stu-id="35897-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
   
  `documentType`  
- <span data-ttu-id="df0e9-110">[in] A pointer to a GUID that defines the type of the document.</span><span class="sxs-lookup"><span data-stu-id="df0e9-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
+ <span data-ttu-id="35897-110">de Un puntero a un GUID que define el tipo del documento.</span><span class="sxs-lookup"><span data-stu-id="35897-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="df0e9-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="df0e9-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
+ <span data-ttu-id="35897-111">enuncia Puntero a la interfaz [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) devuelta.</span><span class="sxs-lookup"><span data-stu-id="35897-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df0e9-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="df0e9-112">Return Value</span></span>  
- <span data-ttu-id="df0e9-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="df0e9-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="35897-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="35897-112">Return Value</span></span>  
+ <span data-ttu-id="35897-113">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="35897-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df0e9-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df0e9-114">Requirements</span></span>  
- <span data-ttu-id="df0e9-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="df0e9-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35897-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="35897-114">Requirements</span></span>  
+ <span data-ttu-id="35897-115">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="35897-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df0e9-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="df0e9-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35897-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="35897-116">See also</span></span>
 
-- [<span data-ttu-id="df0e9-117">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="df0e9-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="35897-117">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="35897-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

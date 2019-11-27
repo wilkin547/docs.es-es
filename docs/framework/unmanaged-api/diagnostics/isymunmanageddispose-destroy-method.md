@@ -22,21 +22,21 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430702"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="5033e-102">ISymUnmanagedDispose::Destroy (Método)</span><span class="sxs-lookup"><span data-stu-id="5033e-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="5033e-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span><span class="sxs-lookup"><span data-stu-id="5033e-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="efc6c-102">ISymUnmanagedDispose::Destroy (Método)</span><span class="sxs-lookup"><span data-stu-id="efc6c-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="efc6c-103">Hace que el objeto subyacente libere todas las referencias internas y devuelva un error en cualquier llamada posterior al método.</span><span class="sxs-lookup"><span data-stu-id="efc6c-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5033e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5033e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efc6c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="efc6c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="5033e-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5033e-105">Return Value</span></span>  
- <span data-ttu-id="5033e-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="5033e-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="efc6c-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="efc6c-105">Return Value</span></span>  
+ <span data-ttu-id="efc6c-106">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="efc6c-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5033e-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5033e-107">Requirements</span></span>  
- <span data-ttu-id="5033e-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5033e-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efc6c-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="efc6c-107">Requirements</span></span>  
+ <span data-ttu-id="efc6c-108">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="efc6c-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5033e-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="5033e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efc6c-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="efc6c-109">See also</span></span>
 
-- [<span data-ttu-id="5033e-110">ISymUnmanagedDispose (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5033e-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [<span data-ttu-id="efc6c-110">ISymUnmanagedDispose (interfaz)</span><span class="sxs-lookup"><span data-stu-id="efc6c-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

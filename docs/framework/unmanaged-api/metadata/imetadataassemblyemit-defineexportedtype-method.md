@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432069"
 ---
-# <a name="imetadataassemblyemitdefineexportedtype-method"></a><span data-ttu-id="a41a3-102">IMetaDataAssemblyEmit::DefineExportedType (Método)</span><span class="sxs-lookup"><span data-stu-id="a41a3-102">IMetaDataAssemblyEmit::DefineExportedType Method</span></span>
-<span data-ttu-id="a41a3-103">Crea una estructura `ExportedType` que contiene los metadatos para el tipo exportado especificado y devuelve el token de metadatos asociado.</span><span class="sxs-lookup"><span data-stu-id="a41a3-103">Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineexportedtype-method"></a><span data-ttu-id="68702-102">IMetaDataAssemblyEmit::DefineExportedType (Método)</span><span class="sxs-lookup"><span data-stu-id="68702-102">IMetaDataAssemblyEmit::DefineExportedType Method</span></span>
+<span data-ttu-id="68702-103">Crea una estructura `ExportedType` que contiene los metadatos para el tipo exportado especificado y devuelve el token de metadatos asociado.</span><span class="sxs-lookup"><span data-stu-id="68702-103">Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a41a3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a41a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68702-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="68702-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineExportedType (  
@@ -37,42 +37,42 @@ HRESULT DefineExportedType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a41a3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a41a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68702-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="68702-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="a41a3-106">[in] The name of type to be exported.</span><span class="sxs-lookup"><span data-stu-id="a41a3-106">[in] The name of type to be exported.</span></span> <span data-ttu-id="a41a3-107">For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.</span><span class="sxs-lookup"><span data-stu-id="a41a3-107">For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.</span></span>  
+ <span data-ttu-id="68702-106">de Nombre del tipo que se va a exportar.</span><span class="sxs-lookup"><span data-stu-id="68702-106">[in] The name of type to be exported.</span></span> <span data-ttu-id="68702-107">En la versión 1,1 del Common Language Runtime, el nombre del tipo exportado debe coincidir exactamente con el nombre especificado en el `TypeDef` para el tipo.</span><span class="sxs-lookup"><span data-stu-id="68702-107">For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="a41a3-108">[in] A token specifying where the exported type is implemented.</span><span class="sxs-lookup"><span data-stu-id="a41a3-108">[in] A token specifying where the exported type is implemented.</span></span> <span data-ttu-id="a41a3-109">The valid values and their associated meanings are:</span><span class="sxs-lookup"><span data-stu-id="a41a3-109">The valid values and their associated meanings are:</span></span>  
+ <span data-ttu-id="68702-108">de Token que especifica dónde se implementa el tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="68702-108">[in] A token specifying where the exported type is implemented.</span></span> <span data-ttu-id="68702-109">Los valores válidos y sus significados asociados son:</span><span class="sxs-lookup"><span data-stu-id="68702-109">The valid values and their associated meanings are:</span></span>  
   
-- <span data-ttu-id="a41a3-110">`mdFile` The type is implemented in a different file within this assembly.</span><span class="sxs-lookup"><span data-stu-id="a41a3-110">`mdFile` The type is implemented in a different file within this assembly.</span></span>  
+- <span data-ttu-id="68702-110">`mdFile` el tipo se implementa en un archivo diferente dentro de este ensamblado.</span><span class="sxs-lookup"><span data-stu-id="68702-110">`mdFile` The type is implemented in a different file within this assembly.</span></span>  
   
-- <span data-ttu-id="a41a3-111">`mdAssemblyRef` The type is implemented in a different assembly.</span><span class="sxs-lookup"><span data-stu-id="a41a3-111">`mdAssemblyRef` The type is implemented in a different assembly.</span></span>  
+- <span data-ttu-id="68702-111">`mdAssemblyRef` el tipo se implementa en un ensamblado diferente.</span><span class="sxs-lookup"><span data-stu-id="68702-111">`mdAssemblyRef` The type is implemented in a different assembly.</span></span>  
   
-- <span data-ttu-id="a41a3-112">`mdExportedTYpe` The type is nested within some other type.</span><span class="sxs-lookup"><span data-stu-id="a41a3-112">`mdExportedTYpe` The type is nested within some other type.</span></span>  
+- <span data-ttu-id="68702-112">`mdExportedTYpe` el tipo está anidado dentro de otro tipo.</span><span class="sxs-lookup"><span data-stu-id="68702-112">`mdExportedTYpe` The type is nested within some other type.</span></span>  
   
-- <span data-ttu-id="a41a3-113">`mdFileNil` The type is in the same file as the manifest and is not a nested type.</span><span class="sxs-lookup"><span data-stu-id="a41a3-113">`mdFileNil` The type is in the same file as the manifest and is not a nested type.</span></span>  
+- <span data-ttu-id="68702-113">`mdFileNil` el tipo está en el mismo archivo que el manifiesto y no es un tipo anidado.</span><span class="sxs-lookup"><span data-stu-id="68702-113">`mdFileNil` The type is in the same file as the manifest and is not a nested type.</span></span>  
   
  `tkTypeDef`  
- <span data-ttu-id="a41a3-114">[in] A token to the metadata that specifies the type to be exported.</span><span class="sxs-lookup"><span data-stu-id="a41a3-114">[in] A token to the metadata that specifies the type to be exported.</span></span> <span data-ttu-id="a41a3-115">This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.</span><span class="sxs-lookup"><span data-stu-id="a41a3-115">This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.</span></span>  
+ <span data-ttu-id="68702-114">de Token a los metadatos que especifica el tipo que se va a exportar.</span><span class="sxs-lookup"><span data-stu-id="68702-114">[in] A token to the metadata that specifies the type to be exported.</span></span> <span data-ttu-id="68702-115">Este valor se especifica en la tabla `TypeDef` del archivo que implementa el tipo y solo es relevante si ese archivo está en este ensamblado.</span><span class="sxs-lookup"><span data-stu-id="68702-115">This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.</span></span>  
   
  `dwExportedTypeFlags`  
- <span data-ttu-id="a41a3-116">[in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.</span><span class="sxs-lookup"><span data-stu-id="a41a3-116">[in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.</span></span>  
+ <span data-ttu-id="68702-116">de Combinación bit a bit de los valores de enumeración de [cortypeattr (](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) que definen los valores de propiedad para el tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="68702-116">[in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.</span></span>  
   
  `pmdct`  
- <span data-ttu-id="a41a3-117">[out] A pointer to the returned metadata token that indicates the exported type.</span><span class="sxs-lookup"><span data-stu-id="a41a3-117">[out] A pointer to the returned metadata token that indicates the exported type.</span></span>  
+ <span data-ttu-id="68702-117">enuncia Puntero al símbolo (token) de metadatos devuelto que indica el tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="68702-117">[out] A pointer to the returned metadata token that indicates the exported type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a41a3-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a41a3-118">Remarks</span></span>  
- <span data-ttu-id="a41a3-119">An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.</span><span class="sxs-lookup"><span data-stu-id="a41a3-119">An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="68702-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="68702-118">Remarks</span></span>  
+ <span data-ttu-id="68702-119">Se debe definir una estructura de metadatos de `ExportedType` para cada tipo expuesto por este ensamblado y que se implementa en un módulo distinto del que contiene el manifiesto.</span><span class="sxs-lookup"><span data-stu-id="68702-119">An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a41a3-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a41a3-120">Requirements</span></span>  
- <span data-ttu-id="a41a3-121">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a41a3-121">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68702-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="68702-120">Requirements</span></span>  
+ <span data-ttu-id="68702-121">**Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68702-121">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a41a3-122">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a41a3-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="68702-122">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="68702-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a41a3-123">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a41a3-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="68702-123">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="68702-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a41a3-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a41a3-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="68702-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68702-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a41a3-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="a41a3-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68702-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="68702-125">See also</span></span>
 
-- [<span data-ttu-id="a41a3-126">IMetaDataAssemblyEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a41a3-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="68702-126">IMetaDataAssemblyEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="68702-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
