@@ -24,10 +24,10 @@ ms.locfileid: "74449868"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap (Método)
 
-Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.
+Establece un mapa de código para la función especificada utilizando las entradas de asignación del lenguaje intermedio de Microsoft (MSIL) especificadas.
 
 > [!NOTE]
-> In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.
+> En la .NET Framework versión 2,0, la llamada a `SetILInstrumentedCodeMap` en un `FunctionID` que representa una función genérica en un dominio de aplicación determinado afectará a todas las instancias de esa función en el dominio de aplicación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,48 +42,48 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parámetros
 
 `functionId`\
-[in] The ID of the function for which to set the code map.
+de IDENTIFICADOR de la función para la que se va a establecer el mapa de código.
 
 `fStartJit`\
-[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`. Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.
+de Valor booleano que indica si la llamada al método `SetILInstrumentedCodeMap` es la primera para un `FunctionID`determinado. Establezca `fStartJit` en `true` en la primera llamada a `SetILInstrumentedCodeMap` para un `FunctionID`determinado y `false` después.
 
 `cILMapEntries`\
-[in] The number of elements in the `cILMapEntries` array.
+de Número de elementos de la matriz de `cILMapEntries`.
 
 `rgILMapEntries`\
-[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.
+de Matriz de estructuras de COR_IL_MAP, cada una de las cuales especifica un desplazamiento de MSIL.
 
 ## <a name="remarks"></a>Comentarios
 
-A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached). `SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations. A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.
+A menudo, un generador de perfiles inserta instrucciones dentro del código fuente de un método para instrumentar ese método (por ejemplo, para notificar cuando se alcanza una línea de código fuente determinada). `SetILInstrumentedCodeMap` permite a un generador de perfiles asignar las instrucciones de MSIL originales a sus nuevas ubicaciones. Un generador de perfiles puede utilizar el método [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) para obtener el desplazamiento de MSIL original para un desplazamiento nativo determinado.
 
-The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code. The map should be sorted in increasing order. For stepping to work properly, follow these guidelines:
+El depurador asumirá que cada desplazamiento anterior se refiere a un desplazamiento de MSIL en el código MSIL original, sin modificar, y que cada nuevo desplazamiento hace referencia al desplazamiento de MSIL en el nuevo código instrumentado. La asignación debe ordenarse en orden ascendente. Para que funcione correctamente, siga estas instrucciones:
 
-- Do not reorder instrumented MSIL code.
+- No reordene el código MSIL instrumentado.
 
-- Do not remove the original MSIL code.
+- No quite el código MSIL original.
 
-- Include entries for all the sequence points from the program database (PDB) file in the map. The map does not interpolate missing entries. So, given the following map:
+- Incluya entradas para todos los puntos de secuencia del archivo de base de datos de programa (PDB) en el mapa. La asignación no interpola las entradas que faltan. Por lo tanto, dada la siguiente asignación:
 
-  (0 old, 0 new)
+  (0 Old, 0 nuevo)
 
-  (5 old, 10 new)
+  (5 antiguos, 10 nuevos)
 
-  (9 old, 20 new)
+  (9 antiguos, 20 nuevos)
 
-  - An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.
+  - Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará al nuevo desplazamiento 0.
 
-  - An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.
+  - Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento 10.
 
-  - An old offset of 9 or higher will be mapped to new offset 20.
+  - Un desplazamiento anterior de 9 o superior se asignará al nuevo desplazamiento 20.
 
-  - A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.
+  - Un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 se asignará al desplazamiento anterior 0.
 
-  - A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.
+  - Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.
 
-  - A new offset of 20 or higher will be mapped to old offset 9.
+  - Un nuevo desplazamiento de 20 o superior se asignará al anterior desplazamiento 9.
 
-In the .NET Framework 3.5 and previous versions, you allocate the `rgILMapEntries` array by calling the [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) method. Because the runtime takes ownership of this memory, the profiler should not attempt to free it.
+En el .NET Framework 3,5 y versiones anteriores, asigna la matriz de `rgILMapEntries` llamando al método [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) . Dado que el tiempo de ejecución toma la propiedad de esta memoria, el generador de perfiles no debe intentar liberarla.
 
 ## <a name="requirements"></a>Requisitos
 

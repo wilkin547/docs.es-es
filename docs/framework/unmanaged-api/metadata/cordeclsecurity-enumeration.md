@@ -62,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|Reservado.|  
 |`dclRequest`|Reservado.|  
 |`dclDemand`|Todos los autores de llamada de la pila necesitan que se les conceda el permiso especificado por el objeto de permiso actual.|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclAssert`|El código de llamada puede tener acceso al recurso identificado por el objeto de permiso actual, incluso si los autores de la llamada situados en una posición más alta de la pila no tienen permiso para obtener acceso al recurso.|  
+|`dclDeny`|La capacidad de tener acceso al recurso especificado por el objeto de permiso actual se deniega a los llamadores, incluso si se les ha concedido permiso de acceso.|  
 |`dclPermitOnly`|Solo se puede acceder a los recursos especificados por este objeto de permiso, aunque al código se le haya concedido permiso de acceso a otros recursos.|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. Esta acción solo se puede usar en el ámbito del ensamblado.|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). Esta solicitud rechaza implícitamente todos los demás permisos no solicitados específicamente. Esta acción solo se puede usar en el ámbito del ensamblado.|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. Esta acción solo se puede usar en el ámbito del ensamblado.|  
+|`dclLinktimeCheck`|Se requiere que el llamador inmediato tenga concedido el permiso especificado para un período de tiempo determinado.|  
+|`dclInheritanceCheck`|La clase derivada que hereda otra clase o invalida un método debe tener concedido el permiso especificado.|  
+|`dclRequestMinimum`|El autor de la llamada puede solicitar los permisos mínimos necesarios para que se ejecute el código. Esta acción solo se puede usar en el ámbito del ensamblado.|  
+|`dclRequestOptional`|El autor de la llamada puede solicitar permisos adicionales que son opcionales (no es necesario ejecutar). Esta solicitud rechaza implícitamente todos los demás permisos no solicitados específicamente. Esta acción solo se puede usar en el ámbito del ensamblado.|  
+|`dclRequestRefuse`|No se concederá la solicitud del llamador de los permisos que se puedan usar inconvenientemente. Esta acción solo se puede usar en el ámbito del ensamblado.|  
 |`dclPrejitGrant`|Reservado.|  
 |`dclPrejitDenied`|Reservado.|  
 |`dclNonCasDemand`|Reservado.|  
@@ -83,7 +83,7 @@ typedef enum CorDeclSecurity {
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

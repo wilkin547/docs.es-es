@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445793"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage (Método)
-Notifies the profiler that the client is sending a request to the server.  
+Notifica al generador de perfiles que el cliente envía una solicitud al servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,18 +35,18 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parámetros  
  `pCookie`  
- [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
+ de Un valor que corresponde al valor proporcionado en [ICorProfilerCallback:: remotingserverreceivingmessage (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) en estas condiciones:  
   
-- Remoting GUID cookies are active.  
+- Las cookies del GUID de comunicación remota están activas.  
   
-- The channel succeeds in transmitting the message.  
+- El canal realiza correctamente la transmisión del mensaje.  
   
-- GUID cookies are active on the server-side process.  
+- Las cookies de GUID están activas en el proceso del servidor.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Esto permite un fácil emparejamiento de llamadas remotas y la creación de una pila de llamadas lógicas.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ de Valor que se `true` si la llamada es asincrónica; de lo contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

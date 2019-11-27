@@ -18,7 +18,7 @@ En los temas de esta sección, se incluyen tablas de las funciones de miembro en
 > [!NOTE]
 > También puede crear funciones y llamarlas. Para obtener más información, consulte [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) [Function (instrucción)] y [How to: Create a Procedure that Returns a Value](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md) (Cómo: Crear un procedimiento que devuelve un valor).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Funciones de conversión](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [Funciones matemáticas](../../../visual-basic/language-reference/functions/math-functions.md)  
