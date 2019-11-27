@@ -37,13 +37,13 @@ typedef struct _COR_PRF_CODE_INFO {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`startAddress`|The starting address of the contiguous block of code.|  
-|`size`|The size of the block.|  
+|`startAddress`|Dirección inicial del bloque de código contiguo.|  
+|`size`|Tamaño del bloque.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   

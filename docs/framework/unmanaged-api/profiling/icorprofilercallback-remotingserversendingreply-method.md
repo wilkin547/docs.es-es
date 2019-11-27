@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430716"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply (Método)
-Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.  
+Notifica al generador de perfiles que el proceso ha terminado de procesar una solicitud de invocación de método remoto y está a punto de transmitir la respuesta a través de un canal.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,18 +35,18 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>Parámetros  
  `pCookie`  
- [in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:  
+ de Un puntero a un GUID que se corresponderá con el valor proporcionado en [ICorProfilerCallback:: remotingclientreceivingreply (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) en estas condiciones:  
   
-- Remoting GUID cookies are active.  
+- Las cookies del GUID de comunicación remota están activas.  
   
-- The channel succeeds in transmitting the message.  
+- El canal realiza correctamente la transmisión del mensaje.  
   
-- GUID cookies are active on the client-side process.  
+- Las cookies de GUID están activas en el proceso del lado cliente.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Esto permite un fácil emparejamiento de llamadas remotas y la creación de una pila de llamadas lógicas.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ de Valor que se `true` si la llamada es asincrónica; de lo contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

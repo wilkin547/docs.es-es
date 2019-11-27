@@ -38,26 +38,26 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mr`  
- [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
+ de El token que especifica la estructura de metadatos de `ManifestResource` que se va a modificar.  
   
  `tkImplementation`  
- [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
+ de El token, de tipo `File` o `AssemblyRef`, que se asigna al proveedor de recursos.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file.  
+ de Desplazamiento al principio del recurso dentro del archivo.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify the attributes of the resource.  
+ de Combinación bit a bit de valores de marca que especifican los atributos del recurso.  
   
 ## <a name="remarks"></a>Comentarios  
- To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
+ Para crear una estructura de metadatos de `ManifestResource`, use el método [IMetaDataAssemblyEmit::D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

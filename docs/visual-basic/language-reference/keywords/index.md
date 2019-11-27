@@ -19,7 +19,7 @@ ms.locfileid: "74338790"
 ---
 # <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
 
-The following tables list all Visual Basic language keywords.
+En las tablas siguientes se enumeran todas las palabras clave del lenguaje Visual Basic.
 
 ## <a name="reserved-keywords"></a>Palabras clave reservadas
 
@@ -39,7 +39,7 @@ Las palabras clave siguientes están *reservadas*, lo que significa que no se pu
 |[CObj](../functions/type-conversion-functions.md)|[Const](../statements/const-statement.md)|[Continue](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
 |[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
 |[CUInt](../functions/type-conversion-functions.md)|[CULng](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Date](../data-types/date-data-type.md)|  
-|[Decimal](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[Predetermiado](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
+|[Decimal](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[Default](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
 |[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[Double](../data-types/double-data-type.md)|  
 |[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End (instrucción)](../statements/end-statement.md)|  
 |[End \<palabra clave>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
@@ -53,11 +53,11 @@ Las palabras clave siguientes están *reservadas*, lo que significa que no se pu
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[Módulo](../modifiers/module-keyword.md)|[Module (instrucción)](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Espacio de nombres](../statements/namespace-statement.md)|
 |[Narrowing](../modifiers/narrowing.md)|[New Constraint](../statements/type-list.md)|[New (operador)](../operators/new-operator.md)|[Siguiente](../statements/for-next-statement.md)|
 |[Next (en Resume)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[Objeto](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
-|[Operator](../statements/operator-statement.md)|[Opción](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[Operator](../statements/operator-statement.md)|[Opción](../statements/option-keyword-statement.md)|[Opcional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
 |[OrElse](../operators/orelse-operator.md)|[Out (modificador genérico)](../modifiers/out-generic-modifier.md)|[Sobrecargas](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
 |[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
 |[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
@@ -80,7 +80,7 @@ Las palabras clave siguientes están *reservadas*, lo que significa que no se pu
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../queries/let-clause.md) (Cláusula Let).
+> `EndIf`, `GoSub`, `Variant`y `Wend` se conservan como palabras clave reservadas, aunque ya no se usan en Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../queries/let-clause.md) (Cláusula Let).
 
 ## <a name="unreserved-keywords"></a>Palabras clave no reservadas
 
@@ -95,19 +95,19 @@ Las palabras clave siguientes no están reservadas, lo que significa que puede u
 |[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
 |[Key](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
 |[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Text](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Texto](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
 |[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
 |[#Region](../directives/region-directive.md)||||  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Descripción|  
 |-----------|-----------------|  
 |[Resumen de matrices](arrays-summary.md)|Enumera los elementos del lenguaje que se usan para crear, definir y usar matrices.|  
 |[Resumen de objetos de colección](collection-object-summary.md)|Enumera los elementos del lenguaje que se usan para las colecciones.|  
 |[Resumen de flujo de control](control-flow-summary.md)|Enumera las instrucciones que se usan para crear bucles y controlar el flujo del procedimiento.|  
 |[Resumen de conversión](conversion-summary.md)|Enumera las funciones que se usan para convertir números, fechas, horas y cadenas.|  
-|[Resumen de tipos de datos](data-types-summary.md)|Enumera tipos de datos. También enumera las funciones que se usan para convertir entre tipos de datos y comprobar tipos de datos.|  
+|[Data Types Summary](data-types-summary.md)|Enumera tipos de datos. También enumera las funciones que se usan para convertir entre tipos de datos y comprobar tipos de datos.|  
 |[Resumen de fechas y horas](dates-and-times-summary.md)|Enumera los elementos del lenguaje que se usan para las fechas y horas.|  
 |[Resumen de constantes y declaraciones](declarations-and-constants-summary.md)|Enumera las instrucciones que se usan para declarar variables, constantes, clases, módulos y otros elementos de programación. También enumera los elementos del lenguaje que se usan para obtener información sobre los objetos, controlar eventos e implementar la herencia.|  
 |[Resumen de archivos y directorios](directories-and-files-summary.md)|Enumera las funciones que se usan para controlar el sistema de archivos y procesar archivos.|  

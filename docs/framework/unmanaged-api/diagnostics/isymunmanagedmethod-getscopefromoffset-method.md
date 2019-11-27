@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448903"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset (Método)
-Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
+Obtiene el ámbito léxico más envolvente dentro de este método que incluye el desplazamiento determinado. Se puede usar para iniciar búsquedas de variables locales.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,16 +35,16 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `offset`  
- [in] A `ULONG` that contains the offset.  
+ de `ULONG` que contiene el desplazamiento.  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ enuncia Puntero que se establece en la interfaz [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

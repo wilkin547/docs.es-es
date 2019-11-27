@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448937"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset (Método)
-Returns the offset within this method that corresponds to a given position within a document.  
+Devuelve el desplazamiento dentro de este método que corresponde a una posición determinada dentro de un documento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +37,22 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `document`  
- [in] A pointer to the document for which the offset is requested.  
+ de Un puntero al documento para el que se solicita el desplazamiento.  
   
  `line`  
- [in] The document line for which the offset is requested.  
+ de Línea del documento para la que se solicita el desplazamiento.  
   
  `column`  
- [in] The document column for which the offset is requested.  
+ de Columna del documento para la que se solicita el desplazamiento.  
   
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the offsets.  
+ enuncia Puntero a un `ULONG32` que recibe los desplazamientos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

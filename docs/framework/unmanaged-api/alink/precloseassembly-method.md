@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445615"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly (Método)
-Closes the assembly file. Call this method after closing all other files, but before closing the assembly file. Do not call this method for unbound modules.  
+Cierra el archivo de ensamblado. Llame a este método después de cerrar todos los demás archivos, pero antes de cerrar el archivo de ensamblado. No llame a este método para módulos sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,13 +34,13 @@ HRESULT PreCloseAssembly(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of the assembly.  
+ IDENTIFICADOR del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 

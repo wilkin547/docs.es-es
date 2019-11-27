@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448550"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag (Enumeración)
-Indicates whether a variable is compiler-generated.  
+Indica si una variable es generada por el compilador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ typedef enum CorSymVarFlag
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indicates that the given variable is compiler-generated.|  
+|`VAR_IS_COMP_GEN`|Indica que la variable especificada es generada por el compilador.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346556"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Querying an XDocument vs. Querying an XElement (Visual Basic)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Consultar un XDocument y consultar un XElement (Visual Basic)
 Cuando carga un documento mediante <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, observará que es necesario escribir las consultas de forma ligeramente diferente a como lo haría en caso de cargar el documento mediante <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Comparación entre XDocument.Load y XElement.Load  
@@ -114,4 +114,4 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>Vea también
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

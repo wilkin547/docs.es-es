@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427469"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace (Método)
-Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
+Especifica que el nombre completo del espacio de nombres especificado se está usando en el ámbito léxico abierto actualmente. El espacio de nombres se usará en todos los ámbitos que heredan del ámbito abierto actualmente. Al cerrar el ámbito actual, también se detendrá el uso del espacio de nombres.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,13 +34,13 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>Parámetros  
  `fullName`  
- [in] A pointer to the fully qualified name of the namespace.  
+ de Puntero al nombre completo del espacio de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -24,7 +24,7 @@ ms.locfileid: "74447567"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc (Método)
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+Intenta asignar una cantidad de memoria especificada para un nuevo cuerpo de la función del lenguaje intermedio de Microsoft (MSIL).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,13 +37,13 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parámetros
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+de Número de bytes que se van a asignar para el cuerpo del método.
 
 ## <a name="remarks"></a>Comentarios
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ La memoria asignada comenzará en una dirección mayor que la dirección base del módulo que está asociado a este asignador. En otras palabras, cada asignador se crea para un módulo determinado e intentará asignar memoria en un desplazamiento positivo desde su dirección base. Si `Alloc` no puede asignar el número solicitado de bytes en una dirección mayor que la dirección base del módulo, devuelve E_OUTOFMEMORY, independientemente de la cantidad real de espacio de memoria disponible.
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ El método `Alloc` debe usarse junto con el método [ICorProfilerInfo:: SetILFunctionBody (](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Requisitos
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).

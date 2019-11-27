@@ -42,38 +42,38 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parámetros  
  `ar`  
- [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
+ de Símbolo (token) de metadatos que especifica el `AssemblyRef` estructura de metadatos que se va a modificar.  
   
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly.  
+ de La clave pública del publicador del ensamblado al que se hace referencia.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ de Tamaño en bytes de `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ de Nombre del texto legible del ensamblado.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ de Un puntero a una instancia de ASSEMBLYMETADATA (que contiene la versión, la plataforma y la información de configuración regional para el ensamblado.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ de Puntero a los datos hash asociados al ensamblado.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ de Tamaño en bytes de `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
+ de Combinación bit a bit de valores de [AssemblyRefFlags (](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) que especifican los atributos del ensamblado al que se hace referencia.  
   
 ## <a name="remarks"></a>Comentarios  
- To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
+ Para crear una estructura de metadatos de `AssemblyRef`, use el método [IMetaDataAssemblyEmit::D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

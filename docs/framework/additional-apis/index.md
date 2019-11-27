@@ -19,9 +19,9 @@ ms.locfileid: "74429336"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de clases y API adicionales
 
-The .NET Framework is constantly evolving. To improve cross-platform development and introduce new functionality early, new features are released out of band (OOB). En este tema se muestran los proyectos OOB para los que ofrecemos documentación.  
+El .NET Framework evoluciona constantemente. Para mejorar el desarrollo multiplataforma e introducir nuevas funciones con antelación, se lanzan nuevas características fuera de banda (OOB). En este tema se muestran los proyectos OOB para los que ofrecemos documentación.  
   
-Además, algunas bibliotecas se orientan a plataformas o implementaciones específicas de .NET Framework. For example, the <xref:System.Text.CodePagesEncodingProvider> class makes code page encodings available to UWP apps developed using the .NET Framework. En este tema también se enumeran estas bibliotecas.  
+Además, algunas bibliotecas se orientan a plataformas o implementaciones específicas de .NET Framework. Por ejemplo, la clase <xref:System.Text.CodePagesEncodingProvider> hace que las codificaciones de páginas de códigos estén disponibles para las aplicaciones UWP desarrolladas mediante el .NET Framework. En este tema también se enumeran estas bibliotecas.  
   
 ## <a name="oob-projects"></a>Proyectos OOB
   
@@ -36,61 +36,61 @@ Además, algunas bibliotecas se orientan a plataformas o implementaciones espec�
   
 | Proyecto | Descripción |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Extends the <xref:System.Text.EncodingProvider> class to make code page encodings available to apps that target the Universal Windows Platform. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Extiende la clase <xref:System.Text.EncodingProvider> para que las codificaciones de páginas de códigos estén disponibles para las aplicaciones destinadas a la Plataforma universal de Windows. |  
   
 ## <a name="private-apis"></a>API privadas  
 
 Estas API admiten la infraestructura del producto y no están previstas ni se admiten para usarlas directamente en el código.  
   
-* [Microsoft.SqlServer.Server.SmiOrderProperty.Item Property](microsoft.sqlserver.server.smiorderproperty.item.md)
-* [System.Exception.PrepForRemoting Method](system.exception.prepforremoting.md)
-* [System.Data.SqlTypes.SqlChars.Stream Property](system.data.sqltypes.sqlchars.stream.md)
-* [System.Data.SqlTypes.SqlStreamChars Constructor](system.data.sqltypes.sqlstreamchars.-ctor.md)
-* [System.Data.SqlTypes.SqlStreamChars.CanSeek Property](system.data.sqltypes.sqlstreamchars.canseek.md)
-* [System.Data.SqlTypes.SqlStreamChars.IsNull Property](system.data.sqltypes.sqlstreamchars.isnull.md)
-* [System.Data.SqlTypes.SqlStreamChars.Length Property](system.data.sqltypes.sqlstreamchars.length.md)
-* [System.Data.SqlTypes.SqlStreamChars.Close Method](system.data.sqltypes.sqlstreamchars.close.md)
-* [System.Data.SqlTypes.SqlStreamChars.Dispose Method](system.data.sqltypes.sqlstreamchars.dispose.md)
-* [System.Data.SqlTypes.SqlStreamChars.Flush Method](system.data.sqltypes.sqlstreamchars.flush.md)
-* [System.Data.SqlTypes.SqlStreamChars.Read Method](system.data.sqltypes.sqlstreamchars.read.md)
-* [System.Data.SqlTypes.SqlStreamChars.Seek Method](system.data.sqltypes.sqlstreamchars.seek.md)
-* [System.Data.SqlTypes.SqlStreamChars.SetLength Method](system.data.sqltypes.sqlstreamchars.setlength.md)
-* [System.Data.SqlTypes.SqlStreamChars.Write Method](system.data.sqltypes.sqlstreamchars.write.md)
-* [System.IO.MemoryStream.InternalGetOriginAndLength Method](system.io.memorystream.internalgetoriginandlength.md)
-* [System.Net.Connection Class](connection.md)
-* [System.Net.Connection.m\_WriteList Field](m_writelist.md)
-* [System.Net.ConnectionGroup Class](connectiongroup.md)
-* [System.Net.ConnectionGroup.m\_ConnectionList Field](m_connectionlist.md)
-* [System.Net.ConnectStream.Connection Property](system.net.connectstream.connection.md)
-* [System.Net.CoreResponseData Class](coreresponsedata.md)
-* [System.Net.CoreResponseData.m\_ResponseHeaders Field](coreresponsedata_m_responseheaders.md)
-* [System.Net.CoreResponseData.m\_StatusCode Field](coreresponsedata_m_statuscode.md)
-* [System.Net.HttpWebRequest.\_AutoRedirects Field](_autoredirects.md)
-* [System.Net.HttpWebRequest.\_CoreResponse Field](httpwebrequest__coreresponse.md)
-* [System.Net.HttpWebRequest.\_HttpResponse Field](_httpresponse.md)
-* [System.Net.PooledStream.NetworkStream Property](system.net.pooledstream.networkstream.md)
-* [System.Net.RtcState class](system.net.rtcstate.md)
-* [System.Net.ServicePoint.m\_ConnectionGroupList Field](m_connectiongrouplist.md)
-* [System.Net.ServicePointManager.s\_ServicePointTable Field](s_servicepointtable.md)
-* [System.Net.TlsStream.m_Worker Field](system.net.tlsstream.m_worker.md)
-* [System.Net.Security.SslState.SslProtocol Property](system.net.security.sslstate.sslprotocol.md)
-* [System.ServiceModel.Channels.Message.BodyToString Method](system.servicemodel.channels.message.bodytostring.md)
-* [System.ServiceModel.Channels.Message.WriteStartHeaders Method](system.servicemodel.channels.message.writestartheaders.md)
-* [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md)
-* [System.Windows.Forms.Design.DataMemberFieldEditor Class](datamemberfieldeditor-class.md)
-* [System.Windows.Forms.Design.DataMemberListEditor Class](datamemberlisteditor-class.md)
-* [System.Xml.XmlReader.CreateSqlReader Method](system.xml.xmlreader.createsqlreader.md)
-* [adodb.Connection Interface](adodb.connection.md)
-* [adodb.EventReason Enum](adodb.eventreasonenum.md)
-* [adodb.EventStatus Enum](adodb.eventstatusenum.md)
-* [stdole.DISPPARAMS Structure](stdole.dispparams.md)
-* [stdole.EXCEPINFO Structure](stdole.excepinfo.md)
-* [stdole.IFont.Name Property](stdole.ifont.name.md)
-* [stdole.IFontDisp Interface](stdole.ifontdisp.md)
-* [stdole.IPicture.Handle Property](stdole.ipicture.handle.md)
-* [stdole.IPictureDisp.Handle Property](stdole.ipicturedisp.handle.md)
-* [stdole.StdFont Interface](stdole.stdfont.md)
-* [stdole.StdPicture Interface](stdole.stdpicture.md)
+* [Propiedad Microsoft. SqlServer. Server. SmiOrderProperty. Item](microsoft.sqlserver.server.smiorderproperty.item.md)
+* [System. Exception. PrepForRemoting (método)](system.exception.prepforremoting.md)
+* [Propiedad System. Data. SqlTypes. SqlChars. Stream](system.data.sqltypes.sqlchars.stream.md)
+* [Constructor System. Data. SqlTypes. SqlStreamChars](system.data.sqltypes.sqlstreamchars.-ctor.md)
+* [Propiedad System. Data. SqlTypes. SqlStreamChars. CanSeek](system.data.sqltypes.sqlstreamchars.canseek.md)
+* [Propiedad System. Data. SqlTypes. SqlStreamChars. IsNull](system.data.sqltypes.sqlstreamchars.isnull.md)
+* [Propiedad System. Data. SqlTypes. SqlStreamChars. length](system.data.sqltypes.sqlstreamchars.length.md)
+* [System. Data. SqlTypes. SqlStreamChars. Close (método)](system.data.sqltypes.sqlstreamchars.close.md)
+* [System. Data. SqlTypes. SqlStreamChars. Dispose (método)](system.data.sqltypes.sqlstreamchars.dispose.md)
+* [System. Data. SqlTypes. SqlStreamChars. Flush (método)](system.data.sqltypes.sqlstreamchars.flush.md)
+* [System. Data. SqlTypes. SqlStreamChars. Read (método)](system.data.sqltypes.sqlstreamchars.read.md)
+* [System. Data. SqlTypes. SqlStreamChars. Seek (método)](system.data.sqltypes.sqlstreamchars.seek.md)
+* [System. Data. SqlTypes. SqlStreamChars. SetLength (método)](system.data.sqltypes.sqlstreamchars.setlength.md)
+* [System. Data. SqlTypes. SqlStreamChars. Write (método)](system.data.sqltypes.sqlstreamchars.write.md)
+* [System. IO. MemoryStream. InternalGetOriginAndLength (método)](system.io.memorystream.internalgetoriginandlength.md)
+* [System .net. Connection (clase)](connection.md)
+* [System .net. Connection. m\_campo WriteList](m_writelist.md)
+* [System .net. ConnectionGroup (clase)](connectiongroup.md)
+* [Campo System .net. ConnectionGroup. m\_ConnectionList](m_connectionlist.md)
+* [Propiedad System .net. ConnectStream. Connection](system.net.connectstream.connection.md)
+* [System .net. CoreResponseData (clase)](coreresponsedata.md)
+* [Campo System .net. CoreResponseData. m\_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [System .net. CoreResponseData. m\_campo StatusCode](coreresponsedata_m_statuscode.md)
+* [Campo System .net. HttpWebRequest.\_AutoRedirects](_autoredirects.md)
+* [Campo System .net. HttpWebRequest.\_CoreResponse](httpwebrequest__coreresponse.md)
+* [Campo System .net. HttpWebRequest.\_HttpResponse](_httpresponse.md)
+* [Propiedad System .net. PooledStream. NetworkStream](system.net.pooledstream.networkstream.md)
+* [System .net. RtcState (clase)](system.net.rtcstate.md)
+* [System .net. ServicePoint. m\_campo ConnectionGroupList](m_connectiongrouplist.md)
+* [System .net. ServicePointManager. s\_campo ServicePointTable](s_servicepointtable.md)
+* [Campo System .net. TlsStream. m_Worker](system.net.tlsstream.m_worker.md)
+* [Propiedad System .net. Security. SslState. SslProtocol](system.net.security.sslstate.sslprotocol.md)
+* [System. ServiceModel. Channels. Message. BodyToString (método)](system.servicemodel.channels.message.bodytostring.md)
+* [System. ServiceModel. Channels. Message. WriteStartHeaders (método)](system.servicemodel.channels.message.writestartheaders.md)
+* [System. Windows. Diagnostics. VisualDiagnostics. s\_campo isDebuggerCheckDisabledForTestPurposes](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Clase System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
+* [Clase System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
+* [System. Xml. XmlReader. CreateSqlReader (método)](system.xml.xmlreader.createsqlreader.md)
+* [ADODB. Interfaz de conexión](adodb.connection.md)
+* [ADODB. Enumeración EventReason](adodb.eventreasonenum.md)
+* [ADODB. Enumeración EventStatus](adodb.eventstatusenum.md)
+* [dicha. Estructura DISPPARAMS](stdole.dispparams.md)
+* [dicha. Estructura EXCEPINFO](stdole.excepinfo.md)
+* [dicha. Propiedad IFont.Name](stdole.ifont.name.md)
+* [dicha. IFontDisp (interfaz)](stdole.ifontdisp.md)
+* [dicha. IPicture. Handle (propiedad)](stdole.ipicture.handle.md)
+* [dicha. IPictureDisp. Handle (propiedad)](stdole.ipicturedisp.handle.md)
+* [dicha. StdFont (interfaz)](stdole.stdfont.md)
+* [dicha. StdPicture (interfaz)](stdole.stdpicture.md)
   
 ## <a name="see-also"></a>Vea también
 

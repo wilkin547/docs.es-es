@@ -9,12 +9,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347779"
 ---
-# <a name="linq-and-reflection-visual-basic"></a>LINQ and Reflection (Visual Basic)
+# <a name="linq-and-reflection-visual-basic"></a>LINQ y reflexión (Visual Basic)
 Las API de reflexión de la biblioteca de clases de .NET Framework se pueden usar para examinar los metadatos de un ensamblado .NET y para crear colecciones de tipos, escribir miembros, parámetros etc. que se encuentren en ese ensamblado. Dado que estas colecciones admiten la interfaz genérica `IEnumerable`, se pueden consultar mediante LINQ.  
   
  Esta sección contiene los siguientes temas:  
   
- [How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ [Cómo: consultar los metadatos de un ensamblado con reflexión (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  Muestra cómo usar LINQ con la reflexión.  
   
 ## <a name="see-also"></a>Vea también

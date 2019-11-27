@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433534"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted (Método)
-Notifies the profiler that the runtime is resuming all run-time threads.  
+Notifica al generador de perfiles que el Runtime está reanudando todos los subprocesos en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   

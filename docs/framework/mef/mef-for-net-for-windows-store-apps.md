@@ -10,11 +10,11 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204704"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF de .NET para aplicaciones de la Tienda Windows
-<xref:System.Composition?displayProperty=nameWithType> and its child namespaces contain types for developing extensible Windows 8.x Store apps with Managed Extensibility Framework (MEF). Estos espacios de nombres forman parte del subconjunto [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] del sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
+<xref:System.Composition?displayProperty=nameWithType> y sus espacios de nombres secundarios contienen tipos para desarrollar aplicaciones extensibles de la tienda Windows 8. x con Managed Extensibility Framework (MEF). Estos espacios de nombres forman parte del subconjunto [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] del sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
   
  Los espacios de nombres no forman parte de la biblioteca de clases básica distribuida con .NET Framework. Para instalar estos espacios de nombres, abra el proyecto en Visual Studio, elija **Administrar paquetes NuGet** en el menú **Proyecto** y busque en línea el paquete Microsoft.Composition.  
   
-- <xref:System.Composition?displayProperty=nameWithType> provides classes that constitute the core MEF for Windows 8.x Store apps.  
+- <xref:System.Composition?displayProperty=nameWithType> proporciona clases que constituyen el núcleo de MEF para las aplicaciones de la tienda Windows 8. x.  
   
 - <xref:System.Composition.Convention?displayProperty=nameWithType> proporciona tipos que admiten el uso de MEF con un modelo de configuración basado en convenciones.  
   
@@ -22,10 +22,10 @@ ms.locfileid: "74204704"
   
 - <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> proporciona los tipos MEF utilizados internamente por el motor de composición.  
   
- For more information about [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] and a list of namespaces and types that it contains, see [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
+ Para obtener más información sobre [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y una lista de espacios de nombres y tipos que contiene, consulte [información general de .net para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
   
 ## <a name="see-also"></a>Vea también
 
 - [Información general de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/br230302(v=vs.110))
-- [.NET para aplicaciones de la Tienda Windows: API admitidas](https://docs.microsoft.com/previous-versions/br230232(v=vs.110))
+- [.NET para aplicaciones de la Tienda Windows - API admitidas](https://docs.microsoft.com/previous-versions/br230232(v=vs.110))
 - [Managed Extensibility Framework (MEF)](index.md)

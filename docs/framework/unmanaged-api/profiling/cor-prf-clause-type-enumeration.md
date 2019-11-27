@@ -39,10 +39,10 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|The exception clause is not valid.|  
-|`COR_PRF_CLAUSE_FILTER`|The exception clause is a filter expression.|  
-|`COR_PRF_CLAUSE_CATCH`|The exception clause is a `catch` statement.|  
-|`COR_PRF_CLAUSE_FINALLY`|The exception clause is a `finally` statement.|  
+|`COR_PRF_CLAUSE_NONE`|La cláusula de excepción no es válida.|  
+|`COR_PRF_CLAUSE_FILTER`|La cláusula Exception es una expresión de filtro.|  
+|`COR_PRF_CLAUSE_CATCH`|La cláusula Exception es una instrucción `catch`.|  
+|`COR_PRF_CLAUSE_FINALLY`|La cláusula Exception es una instrucción `finally`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

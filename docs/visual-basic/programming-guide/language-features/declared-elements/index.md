@@ -34,7 +34,7 @@ Un *elemento declarado* es un elemento de programación que se define en una ins
   
 - [Declare (instrucción)](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [Operator (instrucción)](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 - [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -42,7 +42,7 @@ Un *elemento declarado* es un elemento de programación que se define en una ins
   
 - [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  Se describe cómo asignar un nombre a elementos y usar mayúsculas o minúsculas.  
   

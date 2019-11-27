@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443552"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles (Método)
-Enumerates the files referenced in the current assembly manifest.  
+Enumera los archivos a los que se hace referencia en el manifiesto del ensamblado actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,30 +38,30 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
+ [in, out] Puntero al enumerador. Debe ser un valor null para la primera llamada de este método.  
   
  `rFiles`  
- [out] The array used to store the `mdFile` metadata tokens.  
+ enuncia Matriz usada para almacenar los tokens de metadatos de `mdFile`.  
   
  `cMax`  
- [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
+ de Número máximo de tokens de `mdFile` que se pueden colocar en `rFiles`.  
   
  `pcTokens`  
- [out] The number of `mdFile` tokens actually placed in `rFiles`.  
+ enuncia Número de tokens de `mdFile` realmente colocados en `rFiles`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumFiles` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens que enumerar. En este caso, `pcTokens` se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

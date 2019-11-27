@@ -16,7 +16,7 @@ ms.locfileid: "74348527"
 # <a name="input-and-output-summary-visual-basic"></a>Resumen de entrada y salida (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
 |Tener acceso o crear un archivo.|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
 |Cerrar archivos.|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  

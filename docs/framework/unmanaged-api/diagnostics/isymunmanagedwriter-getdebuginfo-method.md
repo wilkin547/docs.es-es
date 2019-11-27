@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427963"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo (Método)
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+Devuelve la información necesaria para que un compilador escriba la entrada del directorio de depuración en el encabezado de archivo portable ejecutable (PE). El escritor de símbolos rellena todos los campos excepto `TimeDateStamp` y `PointerToRawData`. (El compilador es responsable de establecer estos dos campos de forma adecuada).  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ Un compilador debe llamar a este método, emitir el BLOB de datos al archivo PE, establecer el campo `PointerToRawData` del IMAGE_DEBUG_DIRECTORY para que apunte a los datos emitidos y escribir el IMAGE_DEBUG_DIRECTORY en el archivo PE. El compilador también debe establecer el campo `TimeDateStamp` para que sea igual al `TimeDateStamp` del archivo PE que se está generando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [in, out] Un puntero a un IMAGE_DEBUG_DIRECTORY que el escritor de símbolos rellenará.  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ de `DWORD` que contiene el tamaño de los datos de depuración.  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ enuncia Un puntero a un `DWORD` que recibe el tamaño del búfer necesario para contener los datos de depuración.  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ enuncia Un puntero a un búfer que es lo suficientemente grande como para contener los datos de depuración para el almacén de símbolos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

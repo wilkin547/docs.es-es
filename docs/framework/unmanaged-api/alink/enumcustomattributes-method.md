@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446471"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes (Método)
-Retrieves assembly-level custom attributes.  
+Recupera los atributos personalizados de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +39,25 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Parámetros  
  `hEnum`  
- Handle of enumerator.  
+ Identificador del enumerador.  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ Tipo de atributos que se van a enumerar. Use `mdTokenNill` para todos los atributos.  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ Recibe tokens de atributos personalizados.  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ Especifica el tamaño de `rCustomValues` matriz.  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ Opcionalmente, recibe el recuento de valores de token.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

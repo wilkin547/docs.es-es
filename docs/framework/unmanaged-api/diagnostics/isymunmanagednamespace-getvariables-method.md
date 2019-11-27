@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448373"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables (Método)
-Returns all variables defined at global scope within this namespace.  
+Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +37,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parámetros  
  `cVars`  
- [in] A `ULONG32` that indicates the size of the `pVars` array.  
+ de `ULONG32` que indica el tamaño de la matriz de `pVars`.  
   
  `pcVars`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.  
   
  `pVars`  
- [out] A pointer to a buffer that contains the namespaces.  
+ enuncia Un puntero a un búfer que contiene los espacios de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

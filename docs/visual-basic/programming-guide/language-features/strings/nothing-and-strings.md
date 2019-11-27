@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344293"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing y cadenas en Visual Basic
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+El tiempo de ejecución de Visual Basic y el .NET Framework evalúan `Nothing` de manera diferente cuando se trata de cadenas.  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic en tiempo de ejecución y el .NET Framework  
  Considere el ejemplo siguiente:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ Normalmente, el tiempo de ejecución de Visual Basic evalúa `Nothing` como una cadena vacía (""). Sin embargo, el .NET Framework no y produce una excepción cada vez que se realiza un intento de realizar una operación de cadena en `Nothing`.  
   
 ## <a name="see-also"></a>Vea también
 

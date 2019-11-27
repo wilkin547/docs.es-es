@@ -18,7 +18,7 @@ ms.locfileid: "74204572"
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.
 
 > [!IMPORTANT]
-> Shadow copying is not supported in Windows 8.x Store apps.
+> No se admite la copia sombra en aplicaciones de la tienda Windows 8. x.
 
 Common Language Runtime bloquea el archivo de ensamblado al cargar el ensamblado, por lo que no se puede actualizar el archivo hasta que se descarga el ensamblado. La única manera de descargar un ensamblado de un dominio de aplicación es descargar el dominio de aplicación, por lo que en circunstancias normales, no se puede actualizar un ensamblado en el disco hasta que todos los dominios de aplicación que lo están usando se descargan.
 

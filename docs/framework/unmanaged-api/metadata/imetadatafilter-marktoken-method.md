@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440349"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken (Método)
-Sets a value indicating that the specified metadata token has been processed.  
+Establece un valor que indica que se ha procesado el token de metadatos especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,14 +35,14 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] The token to mark as processed.  
+ de Token que se va a marcar como procesado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

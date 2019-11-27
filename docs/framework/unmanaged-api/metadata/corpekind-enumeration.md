@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436472"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind (Enumeración)
-Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Contiene valores que describen un archivo portable ejecutable (PE), tal y como se devuelve de una llamada a [IMetaDataImport2:: getpekind (](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,20 +43,20 @@ typedef enum CorPEKind {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`peNot`|Indicates that this is not a PE file.|  
-|`peILOnly`|Indicates that this PE file contains only managed code.|  
-|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
-|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
-|`pe32Unmanaged`|Indicates that this PE file is native code.|  
-|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
+|`peNot`|Indica que este no es un archivo PE.|  
+|`peILOnly`|Indica que este archivo PE contiene solo código administrado.|  
+|`pe32BitRequired`|Indica que este archivo PE realiza llamadas a Win32.|  
+|`pe32Plus`|Indica que este archivo PE se ejecuta en una plataforma de 64 bits.|  
+|`pe32Unmanaged`|Indica que este archivo PE es código nativo.|  
+|pe32BitPreferred|Indica que este archivo PE es independiente de la plataforma y prefiere que se cargue en un entorno de 32 bits.|  
   
 ## <a name="remarks"></a>Comentarios  
- These values can be used in bitwise combinations.  
+ Estos valores se pueden usar en combinaciones bit a bit.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450170"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout (Método)
-Destroys the class layout metadata signature for the type represented by the specified token.  
+Destruye la firma de metadatos de diseño de clase para el tipo representado por el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,14 +35,14 @@ HRESULT DeleteClassLayout (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.  
+ de `mdTypeDef` token de metadatos que representa el tipo para el que se eliminará el diseño de clase.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

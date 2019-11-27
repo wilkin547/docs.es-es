@@ -20,7 +20,7 @@ ms.locfileid: "74433859"
   
  En la siguiente tabla se organizan los patrones de control en las siguientes categorías:  
   
-- Se admite. El control debe admitir este patrón de control.  
+- Compatible. El control debe admitir este patrón de control.  
   
 - Compatibilidad condicional. El control puede admitir este patrón de control según el estado del control.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "74433859"
 |Calendario|Grid, Table|Selection, Scroll|Valor|  
 |Casilla|Alternar|Ninguno|Ninguno|  
 |Cuadro combinado|Expandir o contraer|Selection, Value|Scroll|  
-|Data Grid|Cuadrícula|Scroll, Selection, Table|Ninguno|  
+|Data Grid|Grid|Scroll, Selection, Table|Ninguno|  
 |Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Ninguno|  
-|Documento|Text|Scroll, Value|Ninguno|  
-|Editar|Ninguno|Text, Range Value, Value|Ninguno|  
-|Agrupar|Ninguno|Expandir o contraer|Ninguno|  
-|Header|Ninguno|Transform|Ninguno|  
+|Documento|Texto|Scroll, Value|Ninguno|  
+|Edit|Ninguno|Text, Range Value, Value|Ninguno|  
+|Grupo|Ninguno|Expandir o contraer|Ninguno|  
+|Encabezado|Ninguno|Transformación|Ninguno|  
 |Header Item|Ninguno|Transform, Invoke|Ninguno|  
 |Hipervínculo|Invocar|Valor|Ninguno|  
 |Imagen|Ninguno|Grid Item, Table Item|Invoke, Selection Item|  
@@ -54,18 +54,18 @@ ms.locfileid: "74433859"
 |Elemento de menú|Ninguno|Expand Collapse, Invoke, Selection Item, Toggle|Ninguno|  
 |Panel|Ninguno|Dock Scroll, Transform|Ventana|  
 |ProgressBar|Ninguno|Range Value, Value|Ninguno|  
-|Radio Button|Selection Item|Ninguno|Alternar|  
+|Botón de radio|Selection Item|Ninguno|Alternar|  
 |Scroll Bar|Ninguno|RangeValue|Scroll|  
 |Separador|Ninguno|Ninguno|Ninguno|  
-|Slider|Ninguno|Range Value, Selection, Value|Ninguno|  
+|Control deslizante|Ninguno|Range Value, Selection, Value|Ninguno|  
 |Spinner|Ninguno|Range Value, Selection, Value|Ninguno|  
 |Botón de expansión|Invoke, Expand Collapse|Ninguno|Ninguno|  
-|Barra de estado|Ninguno|Cuadrícula|Ninguno|  
-|Tab|Selección|Scroll|Ninguno|  
+|Barra de estado|Ninguno|Grid|Ninguno|  
+|Pestaña|Selección|Scroll|Ninguno|  
 |Tab Item|Selection Item|Ninguno|Invocar|  
 |Table|Grid, Grid Item, Table, Table Item|Ninguno|Ninguno|  
-|Text|Ninguno|Grid Item, Table Item, Text|Valor|  
-|Thumb|Transform|Ninguno|Ninguno|  
+|Texto|Ninguno|Grid Item, Table Item, Text|Valor|  
+|Miniatura|Transformación|Ninguno|Ninguno|  
 |Barra de título|Ninguno|Ninguno|Ninguno|  
 |Tool Bar|Ninguno|Dock, Expand Collapse, Transform|Ninguno|  
 |Tool Tip|Ninguno|Text, Window|Ninguno|  

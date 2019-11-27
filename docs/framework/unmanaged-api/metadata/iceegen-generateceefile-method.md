@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436375"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile (Método)
-Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+Genera un archivo de código base que contiene la base de código cargada actualmente en esta interfaz [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .  
   
- This method is obsolete and should not be used.  
+ Este método está obsoleto y no debe usarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,14 +34,14 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- `GenerateCeeFile` takes no parameters.  
+ `GenerateCeeFile` no toma ningún parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

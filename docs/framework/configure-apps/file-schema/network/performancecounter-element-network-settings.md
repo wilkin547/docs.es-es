@@ -32,7 +32,7 @@ Habilita o deshabilita los contadores de rendimiento de red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -40,10 +40,10 @@ Habilita o deshabilita los contadores de rendimiento de red.
 |---------------|-----------------|  
 |`enabled`|Especifica si los contadores de rendimiento de red están habilitados. El valor predeterminado es `false`.|  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
  Ninguno.  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  

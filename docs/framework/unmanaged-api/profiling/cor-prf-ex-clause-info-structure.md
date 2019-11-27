@@ -39,32 +39,32 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`clauseType`|A value of the [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeration that specifies the type of exception clause the code just entered or left.|  
-|`programCounter`|The native entry point of the clause handler — for example, the contents of the X86 EIP register.|  
-|`framePointer`|The pointer to the logical frame for the clause handler — for example, the contents of the X86 EBP register.|  
-|`shadowStackPointer`|The pointer to the shadow stack. This value is the contents of the BSP register and applies only to IA64.|  
+|`clauseType`|Un valor de la enumeración [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) que especifica el tipo de cláusula de excepción que el código acaba de escribir o a la izquierda.|  
+|`programCounter`|El punto de entrada nativo del controlador de la cláusula, por ejemplo, el contenido del registro de la EIP x86.|  
+|`framePointer`|El puntero al marco lógico para el controlador de la cláusula, por ejemplo, el contenido del registro del EBP x86.|  
+|`shadowStackPointer`|Puntero a la pila de la sombra. Este valor es el contenido del registro de BSP y se aplica solo a IA64.|  
   
 ## <a name="remarks"></a>Comentarios  
- When an exception notification is received, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) can be used to get the native address and frame information for the exception clause (`catch`/`finally`/filter) that is about to be run or has just been run.  
+ Cuando se recibe una notificación de excepción, se puede usar [ICorProfilerInfo2:: getnotifiedexceptionclauseinfo (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) para obtener la información de la dirección nativa y el marco de la cláusula de excepción (`catch`/`finally`/Filter) que está a punto de ejecutarse o acaba de ejecutarse.  
   
- Execution of an exception clause involves these callbacks from the common language runtime (CLR):  
+ La ejecución de una cláusula de excepción implica estas devoluciones de llamada de Common Language Runtime (CLR):  
   
-- [ICorProfilerCallback::ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
+- [ICorProfilerCallback:: Exceptioncatcherenter (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
   
-- [ICorProfilerCallback::ExceptionUnwindFinallyEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
+- [ICorProfilerCallback:: Exceptionunwindfinallyenter (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
   
-- [ICorProfilerCallback::ExceptionSearchFilterEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
+- [ICorProfilerCallback:: Exceptionsearchfilterenter (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
   
-- [ICorProfilerCallback::ExceptionCatcherLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
+- [ICorProfilerCallback:: Exceptioncatcherleave (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
   
-- [ICorProfilerCallback::ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
+- [ICorProfilerCallback:: ExceptionUnwindFinallyLeave (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
   
-- [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
+- [ICorProfilerCallback:: Exceptionsearchfilterleave (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   

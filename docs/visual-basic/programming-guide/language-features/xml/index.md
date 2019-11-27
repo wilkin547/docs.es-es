@@ -1,6 +1,6 @@
 ---
 title: XML
-description: Learn how to use XML and LINQ to XML features in your Visual Basic code.
+description: Aprenda a usar las características de XML y LINQ to XML en el código de Visual Basic.
 ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
@@ -14,7 +14,7 @@ ms.locfileid: "74330803"
 ---
 # <a name="xml-in-visual-basic"></a>XML en Visual Basic
 
-Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic proporciona compatibilidad con lenguajes integrados que le permite interactuar con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
 
@@ -22,7 +22,7 @@ Visual Basic provides integrated language support that enables it to interact wi
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Información general sobre LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Información general sobre LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describe cómo Visual Basic admite [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|Describe cómo crear objetos de literales XML mediante el uso de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Manipular XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Describe cómo cargar y analizar XML mediante Visual Basic.|  
 |[Obtener acceso a XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Describe las propiedades de eje XML y los métodos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para tener acceso a elementos y atributos XML.|  

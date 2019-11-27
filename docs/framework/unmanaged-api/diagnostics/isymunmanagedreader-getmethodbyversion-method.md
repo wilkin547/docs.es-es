@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426752"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion (Método)
-Gets a symbol reader method, given a method token and an edit-and-copy version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.  
+Obtiene un método del lector de símbolos, dado un token de método y un número de versión de edición y copia. Los números de versión se inician en 1 y se incrementan cada vez que se cambia el método como resultado de una operación de edición y copia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,19 +36,19 @@ HRESULT GetMethodByVersion (
   
 ## <a name="parameters"></a>Parámetros  
  `token`  
- [in] The method token.  
+ de Token del método.  
   
  `version`  
- [in] The method version.  
+ de Versión del método.  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ enuncia Puntero a la interfaz devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

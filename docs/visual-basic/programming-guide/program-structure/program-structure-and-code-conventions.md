@@ -21,65 +21,65 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347283"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Convenciones de código y estructura de programas (Visual Basic)
-This section introduces the typical Visual Basic program structure, provides a simple Visual Basic program, "Hello, World", and discusses Visual Basic code conventions. Code conventions are suggestions that focus not on a program's logic but on its physical structure and appearance. Following them makes your code easier to read, understand, and maintain. Code conventions can include, among others:  
+En esta sección se presenta la estructura de programas de Visual Basic típica, se proporciona un sencillo programa de Visual Basic, "Hello, World", y se explican las convenciones de código Visual Basic. Las convenciones de código son sugerencias que no se centran en la lógica de un programa, sino en su estructura y apariencia física. Después, hace que el código sea más fácil de leer, comprender y mantener. Las convenciones de código pueden incluir, entre otras:  
   
-- Standardized formats for labeling and commenting code.  
+- Formatos normalizados para etiquetar y comentar código.  
   
-- Guidelines for spacing, formatting, and indenting code.  
+- Instrucciones para el espaciado, el formato y la sangría del código.  
   
-- Naming conventions for objects, variables, and procedures.  
+- Convenciones de nomenclatura para objetos, variables y procedimientos.  
   
- The following topics present a set of programming guidelines for Visual Basic programs, along with examples of good usage.  
+ En los siguientes temas se presenta un conjunto de directrices de programación para Visual Basic programas, junto con ejemplos de uso correcto.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- Provides an overview of the elements that make up a Visual Basic program.  
+## <a name="in-this-section"></a>Esta sección  
+ [Estructura de un programa de Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ Proporciona información general sobre los elementos que componen un programa Visual Basic.  
   
- [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
- Discusses the procedure that serves as the starting point and overall control for your application.  
+ [Procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
+ Describe el procedimiento que sirve como punto de partida y control general de la aplicación.  
   
  [Referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- Discusses how to reference objects in other assemblies.  
+ Describe cómo hacer referencia a objetos de otros ensamblados.  
   
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- Describes how namespaces organize objects within assemblies.  
+ [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ Describe cómo los espacios de nombres organizan los objetos dentro de los ensamblados.  
   
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- Includes general guidelines for naming procedures, constants, variables, arguments, and objects.  
+ [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ Incluye directrices generales para asignar nombres a procedimientos, constantes, variables, argumentos y objetos.  
   
  [Convenciones de código de Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- Reviews the guidelines used in developing the samples in this documentation.  
+ Revisa las instrucciones usadas en el desarrollo de los ejemplos de esta documentación.  
   
  [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Describes how to compile particular blocks of code selectively while directing the compiler to ignore others.  
+ Describe cómo compilar de forma selectiva bloques concretos de código mientras se indica al compilador que omita otros.  
   
  [Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- Shows how to divide long statements into multiple lines and combine short statements on one line.  
+ Muestra cómo dividir instrucciones largas en varias líneas y combinar instrucciones cortas en una sola línea.  
   
  [Contraer y ocultar secciones de código](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- Shows how to collapse and hide sections of code in the Visual Basic code editor.  
+ Muestra cómo contraer y ocultar secciones de código en el editor de código de Visual Basic.  
   
  [Aplicar etiquetas a las instrucciones](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
- Shows how to mark a line of code to identify it for use with statements such as `On Error Goto`.  
+ Muestra cómo marcar una línea de código para identificarla para su uso con instrucciones como `On Error Goto`.  
   
  [Caracteres especiales en el código](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)  
- Shows how and where to use non-numeric and non-alphabetic characters.  
+ Muestra cómo y dónde utilizar caracteres no numéricos y no alfabéticos.  
   
  [Comentarios en código](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)  
- Discusses how to add descriptive comments to your code.  
+ Describe cómo agregar comentarios descriptivos al código.  
   
  [Palabras clave como nombres de elementos en código](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- Describes how to use brackets (`[]`) to delimit variable names that are also Visual Basic keywords.  
+ Describe cómo usar corchetes (`[]`) para delimitar nombres de variable que también se Visual Basic palabras clave.  
   
  [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- Describes various ways to refer to elements of a Visual Basic program.  
+ Describe varias maneras de hacer referencia a los elementos de un programa de Visual Basic.  
   
- [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- Discusses the removal of known coding limits within Visual Basic.  
+ [Limitaciones de Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)  
+ Describe la eliminación de los límites de código conocidos en Visual Basic.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Convenciones tipográficas y de código](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Provides standard coding conventions for Visual Basic.  
+ Proporciona convenciones de codificación estándar para Visual Basic.  
   
  [Escribir código](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
- Describes features that make it easier for you to write and manage your code.
+ Describe las características que facilitan la escritura y administración del código.

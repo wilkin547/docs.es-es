@@ -37,13 +37,13 @@ typedef enum CorLinkerOptions {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDAssembly`|The private types and global functions are not preserved.|  
-|`MDNetModule`|The private types and global functions are preserved.|  
+|`MDAssembly`|Los tipos privados y las funciones globales no se conservan.|  
+|`MDNetModule`|Se conservan los tipos privados y las funciones globales.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

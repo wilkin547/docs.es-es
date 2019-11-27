@@ -65,8 +65,8 @@ En la llamada a <xref:System.String.Split%2A>, los signos de puntuación se usan
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

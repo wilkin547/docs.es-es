@@ -24,7 +24,7 @@ Proporciona propiedades para obtener acceso al estado actual del teclado, como l
   
  **Clase:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

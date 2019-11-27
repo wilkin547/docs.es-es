@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448596"
 ---
 # <a name="call_id-structure"></a>CALL_ID (Estructura)
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+Proporciona información a un depurador sobre una función a la que se está llamando. Vea la interfaz [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) para obtener más información.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,15 +42,15 @@ typedef struct tagCALL_ID
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|Identifica el equipo que realiza la llamada.|  
+|`dwPid`|Identifica el procesador del equipo.|  
+|`pUserThread`|Identifica el subproceso que está ejecutando la llamada.|  
+|`addrStackPointer`|Especifica la dirección de la pila de llamadas.|  
+|`szEntryPoint`|Especifica la dirección de la llamada.|  
+|`szDestinationMachine`|Identifica el equipo que ejecutará la llamada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** ProtocolNotify2.idl  
+ **Encabezado:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vea también
 

@@ -18,17 +18,17 @@ Proporciona propiedades y métodos para manipular el Registro.
 ## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer.Registry` , vea <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
- For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ Para obtener más información, vea [leer y escribir en el registro](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
   
 > [!NOTE]
-> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
+> También puede manipular el registro mediante métodos de la clase <xref:Microsoft.Win32.Registry?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
+ **Clase:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (proporciona acceso a <xref:Microsoft.Win32.Registry>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352867"
 ---
 # <a name="visual-basic-language-specification"></a>Especificación del lenguaje de Visual Basic
-The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
+La especificación del lenguaje Visual Basic es el origen de autoridad para obtener respuestas a todas las preguntas sobre la gramática y la sintaxis de Visual Basic. Contiene información detallada sobre el lenguaje, incluidos muchos puntos que no se describen en la documentación de referencia de Visual Basic.  
   
  La especificación está disponible en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=188623).  
   

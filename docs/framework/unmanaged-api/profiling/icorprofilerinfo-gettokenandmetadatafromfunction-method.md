@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438740"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction (Método)
-Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
+Obtiene el token de metadatos y una instancia de la interfaz de metadatos que se puede usar con el token para la función especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +37,16 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] The ID of the function for which to get the metadata token and metadata interface.  
+ de IDENTIFICADOR de la función para la que se va a obtener el token de metadatos y la interfaz de metadatos.  
   
  `riid`  
- [in] The reference ID of the metadata interface to get the instance of.  
+ de IDENTIFICADOR de referencia de la interfaz de metadatos de la que se va a obtener la instancia.  
   
  `ppImport`  
- [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
+ enuncia Puntero a la dirección de la instancia de la interfaz de metadatos que se puede usar con el token para la función especificada.  
   
  `pToken`  
- [out] A pointer to the metadata token for the specified function.  
+ enuncia Puntero al símbolo (token) de metadatos para la función especificada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

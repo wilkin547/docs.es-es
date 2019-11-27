@@ -38,16 +38,16 @@ typedef enum CorSaveSize {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`cssAccurate`|Specifies that the return value should be exact.|  
-|`cssQuick`|Specifies that the return value should be estimated.|  
-|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
+|`cssAccurate`|Especifica que el valor devuelto debe ser exacto.|  
+|`cssQuick`|Especifica que se debe estimar el valor devuelto.|  
+|`cssDiscardTransientCAs`|Especifica que deben quitarse los tipos que se pueden descartar.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

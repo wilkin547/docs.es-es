@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446371"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren (Método)
-Gets the children of this scope.  
+Obtiene los elementos secundarios de este ámbito.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +37,19 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parámetros  
  `cChildren`  
- [in] A `ULONG32` that indicates the size of the `children` array.  
+ de `ULONG32` que indica el tamaño de la matriz de `children`.  
   
  `pcChildren`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los elementos secundarios.  
   
  `children`  
- [out] The returned array of children.  
+ enuncia Matriz de elementos secundarios devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448580"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind (Enumeración)
-Indicates the type of memory address.  
+Indica el tipo de dirección de memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,19 +46,19 @@ typedef enum CorSymAddrKind
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|Indica una variable local o un índice de parámetro de lenguaje intermedio de Microsoft (MSIL).|  
+|`ADDR_NATIVE_RVA`|Indica una dirección virtual relativa en un módulo.|  
+|`ADDR_NATIVE_REGISTER`|Indica un registro de CPU.|  
+|`ADDR_NATIVE_REGREL`|Indica que la primera dirección es un registro y la segunda dirección es un desplazamiento.|  
+|`ADDR_NATIVE_OFFSET`|Indica un desplazamiento a partir de una dirección base.|  
+|`ADDR_NATIVE_REGREG`|Indica que la primera dirección es la parte baja de un registro y la segunda es la parte alta.|  
+|`ADDR_NATIVE_REGSTK`|Indica que la primera dirección es la parte inferior de un registro, la segunda es la parte alta y la tercera es un desplazamiento.|  
+|`ADDR_NATIVE_STKREG`|Indica que la primera dirección es un registro, la segunda es un desplazamiento y la tercera es la parte alta del registro.|  
+|`ADDR_BITFIELD`|Indica que la primera dirección es el inicio de un campo y la segunda dirección es la longitud del campo.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Indica que la primera dirección es la sección y la segunda dirección es un desplazamiento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

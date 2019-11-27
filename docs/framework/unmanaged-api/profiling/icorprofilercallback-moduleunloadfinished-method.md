@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445910"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished (Método)
-Notifies the profiler that a module has finished unloading.  
+Notifica al generador de perfiles que un módulo ha terminado de descargarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +35,15 @@ HRESULT ModuleUnloadFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleId`  
- [in] The ID of the module that was unloaded.  
+ de IDENTIFICADOR del módulo que se ha descargado.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was unloaded successfully.  
+ de HRESULT que indica si el módulo se ha descargado correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.  
+ El valor de `moduleId` no es válido para una solicitud de información después de que se devuelva el método [ICorProfilerCallback:: ModuleUnloadStarted (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) .  
   
- Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.  
+ Algunas partes de la descarga de la clase podrían continuar después de la devolución de llamada de `ModuleUnloadFinished`. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` solo indica que la primera parte de la descarga del módulo se ha realizado correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

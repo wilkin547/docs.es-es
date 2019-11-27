@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446421"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap (Método)
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
+Obtiene un atributo personalizado basado en su nombre. A diferencia de los atributos personalizados de metadatos, estos atributos se guardan en el almacén de símbolos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +39,25 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>Parámetros  
  `parent`  
- [in] The metadata token of the parent.  
+ de Token de metadatos del elemento primario.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the name.  
+ de Puntero a una `WCHAR` que contiene el nombre.  
   
  `cBuffer`  
- [in] A `ULONG32` that indicates the size of the `buffer` array.  
+ de `ULONG32` que indica el tamaño de la matriz de `buffer`.  
   
  `pcBuffer`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los bytes de atributo.  
   
  `buffer`  
- [out] A pointer to the buffer that receives the attribute bytes.  
+ enuncia Puntero al búfer que recibe los bytes de atributo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

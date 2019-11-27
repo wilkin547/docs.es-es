@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429737"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize (Método)
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+Inicializa el lector de símbolos con la interfaz de importador de metadatos a la que se asociará este lector, junto con el nombre de archivo del módulo.  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> Este método solo se puede llamar una vez y se debe llamar a antes que a cualquier otro método de lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parámetros  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ de La interfaz de importador de metadatos a la que se asociará este lector.  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ de Nombre de archivo del módulo. En su lugar, puede usar el parámetro `pIStream`.  
   
  `searchPath`  
- [in] The path to search. Este parámetro es opcional.  
+ de Ruta de acceso que se va a buscar. Este parámetro es opcional.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ de El flujo de archivo, que se usa como alternativa al parámetro FILENAME.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="remarks"></a>Comentarios  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. El parámetro `searchPath` es opcional.  
+ Solo tiene que especificar uno de los parámetros `filename` o `pIStream`, no ambos. El parámetro `searchPath` es opcional.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

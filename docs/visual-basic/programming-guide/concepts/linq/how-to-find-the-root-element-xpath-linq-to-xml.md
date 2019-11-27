@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344610"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>How to: Find the Root Element (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar el elemento raíz (XPath-LINQ to XML) (Visual Basic)
 Este tema muestra cómo obtener el elemento raíz con XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  La expresión XPath es:  
@@ -47,4 +47,4 @@ PurchaseOrders
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

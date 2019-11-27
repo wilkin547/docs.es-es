@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446450"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap (Método)
-Gets a symbol reader method, given a method token and an edit-and-continue version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.  
+Obtiene un método del lector de símbolos, dado un token de método y un número de versión de edición y continuación. Los números de versión se inician en 1 y se incrementan cada vez que se cambia el método como resultado de una operación de editar y continuar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,19 +36,19 @@ HRESULT GetMethodByVersionPreRemap(
   
 ## <a name="parameters"></a>Parámetros  
  `token`  
- [in] The method metadata token.  
+ de Token de metadatos del método.  
   
  `version`  
- [in] The method version.  
+ de Versión del método.  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
+ enuncia Puntero a la interfaz [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl. CorSym.h  
+ **Encabezado:** CorSym. idl. CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

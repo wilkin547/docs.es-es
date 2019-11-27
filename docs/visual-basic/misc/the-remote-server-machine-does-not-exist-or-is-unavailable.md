@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: La máquina del servidor remoto no existe o no está disponible
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -16,7 +16,7 @@ Está intentando conectarse a un servidor remoto que no está disponible o no ex
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Vuelva a conectarlo a la red e inténtelo de nuevo.  
+- Vuelva a conectarla a la red e inténtelo de nuevo.  
   
 ## <a name="see-also"></a>Vea también
 

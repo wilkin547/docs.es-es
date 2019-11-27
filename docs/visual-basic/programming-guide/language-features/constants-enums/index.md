@@ -23,16 +23,16 @@ Las constantes son una forma de usar nombres significativos en lugar de un valor
   
  Las enumeraciones proporcionan una forma cómoda de trabajar con conjuntos de constantes relacionadas y asociar valores constantes con nombres. Por ejemplo, puede declarar una enumeración para un conjunto de constantes de tipo entero asociadas con los días de la semana y, después, usar los nombres de los días en lugar de sus valores enteros en el código.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |[Información general sobre las constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|En los temas de esta sección se describen las constantes y sus usos.|  
 |[Información general sobre las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|En los temas de esta sección se describen las enumeraciones y sus usos.|  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |[Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)|Se describe la instrucción `Const`, que se usa para declarar constantes.|  
 |[Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)|Se describe la instrucción `Enum`, que se usa para crear enumeraciones.|  

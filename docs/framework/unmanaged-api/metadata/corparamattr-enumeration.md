@@ -46,18 +46,18 @@ typedef enum CorParamAttr {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdIn`|Especifica que el parámetro se pasa a la llamada al método.|  
+|`pdOut`|Especifica que el parámetro se pasa desde el método devuelto.|  
+|`pdOptional`|Especifica que el parámetro es opcional.|  
+|`pdReservedMask`|Reservado para uso interno por el Common Language Runtime.|  
+|`pdHasDefault`|Especifica que el parámetro tiene un valor predeterminado.|  
+|`pdHasFieldMarshal`|Especifica que el parámetro tiene información de serialización.|  
 |`pdUnused`|Sin usar.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

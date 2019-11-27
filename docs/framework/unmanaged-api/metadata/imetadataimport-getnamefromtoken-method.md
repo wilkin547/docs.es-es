@@ -36,22 +36,22 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] The token representing the object to return the name for.  
+ de Token que representa el objeto para el que se va a devolver el nombre.  
   
  `pszUtf8NamePtr`  
- [out] A pointer to the UTF-8 object name in the heap.  
+ enuncia Puntero al nombre del objeto UTF-8 en el montón.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetNameFromToken` está obsoleto. As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
+ `GetNameFromToken` está obsoleto. Como alternativa, llame a un método para obtener las propiedades del tipo determinado de token necesario, como `GetFieldProps` para un campo o `GetMethodProps` para un método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **.NET Framework Versions:** 1.0  
+ **Versiones de .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vea también
 

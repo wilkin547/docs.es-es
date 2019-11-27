@@ -66,7 +66,7 @@ El valor predeterminado de la opción del compilador **-subsystemversion** depen
 
 ## <a name="setting-this-option"></a>Establecer esta opción
 
-To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. No se puede establecer esta opción en el IDE de Visual Studio. Para obtener más información, consulte la sección "Valores predeterminados" que aparece más arriba en este tema o [Propiedades comunes de proyectos de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
+Para establecer la opción del compilador **-subsystemversion** en Visual Studio, debe abrir el archivo. vbproj y especificar un valor para la propiedad `SubsystemVersion` en el XML de MSBuild. No se puede establecer esta opción en el IDE de Visual Studio. Para obtener más información, consulte la sección "Valores predeterminados" que aparece más arriba en este tema o [Propiedades comunes de proyectos de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Vea también
 

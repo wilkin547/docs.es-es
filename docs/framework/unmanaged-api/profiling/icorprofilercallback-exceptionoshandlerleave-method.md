@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445405"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>ICorProfilerCallback::ExceptionOSHandlerLeave (Método)
-Sin implementar. A profiler that needs unmanaged exception information must obtain this information through other means.  
+No implementado. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.  
   
 ## <a name="syntax"></a>Sintaxis  
   

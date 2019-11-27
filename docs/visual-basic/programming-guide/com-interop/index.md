@@ -13,9 +13,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348002"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
-El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. En esta sección se tratan algunos de los problemas asociados con la creación y el uso de objetos COM con Visual Basic.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Introducción a la interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Proporciona información general sobre la interoperabilidad COM.  
   
@@ -23,7 +23,7 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  Describe cómo agregar referencias a objetos COM que tienen bibliotecas de tipos.  
   
  [Trabajar con controles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ Muestra cómo usar los controles ActiveX existentes para agregar características al cuadro de herramientas de Visual Studio.  
   
  [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Describe el proceso de llamar a las API que forman parte del sistema operativo Windows.  

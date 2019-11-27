@@ -37,7 +37,7 @@ Proporciona métodos para iterar secuencialmente por una colección de funciones
 ## <a name="remarks"></a>Comentarios  
  La interfaz `ICorProfilerFunctionEnum` es un enumerador. Permite al receptor de una matriz incorporar los cambios de los elementos del remitente a una velocidad que sea adecuada para el receptor. En otras palabras, el receptor es capaz de controlar explícitamente el flujo de elementos de matriz, lo que evita los problemas asociados con pasar matrices de gran tamaño como parámetros de método.  
   
- `ICorProfilerFunctionEnum` enumera las funciones que ya se han compilado con JIT, pero no incluye las funciones que se cargan desde imágenes nativas generadas con Ngen.exe.  
+ `ICorProfilerFunctionEnum` enumera las funciones que ya se han compilado JIT, pero no incluye las funciones que se cargan desde imágenes nativas generadas con Ngen. exe.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

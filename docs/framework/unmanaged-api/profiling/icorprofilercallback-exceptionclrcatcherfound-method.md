@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435831"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound (Método)
-Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
+Llamado cuando se encuentra un bloque `catch` para una excepción dentro del propio Common Language Runtime (CLR). Este método está obsoleto en la .NET Framework versión 2,0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ HRESULT ExceptionCLRCatcherFound();
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Versión de .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vea también
 

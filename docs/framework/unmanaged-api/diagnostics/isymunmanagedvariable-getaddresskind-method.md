@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446092"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind (Método)
-Gets the kind of address of this variable.  
+Obtiene el tipo de dirección de esta variable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,13 +34,13 @@ HRESULT GetAddressKind(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the value. The possible values are defined in the [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeration.  
+ enuncia Puntero a un `ULONG32` que recibe el valor. Los valores posibles se definen en la enumeración [corsymaddrkind (](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

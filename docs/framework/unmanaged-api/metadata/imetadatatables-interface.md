@@ -28,32 +28,32 @@ Proporciona métodos para el almacenamiento y la recuperación de información d
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetBlob (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Gets a pointer to the binary large object (BLOB) at the specified column index.|  
-|[GetBlobHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Gets the size, in bytes, of the BLOB heap.|  
-|[GetCodedTokenInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Gets a pointer to an array of tokens associated with the specified row index.|  
-|[GetColumn (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Gets a pointer to the values contained in the column at the specified column index, in the table at the specified table index.|  
-|[GetColumnInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Gets data about the specified column in the specified table.|  
-|[GetGuid (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Gets a GUID from the row at the specified index.|  
-|[GetGuidHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Gets the size, in bytes, of the GUID heap.|  
-|[GetNextBlob (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Gets the index of the next BLOB in the table.|  
-|[GetNextGuid (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Gets the index of the next GUID value in the current table column.|  
-|[GetNextString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Gets the index of the next string in the current table column.|  
-|[GetNextUserString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Gets the index of the row that contains the next hard-coded string in the current table column.|  
-|[GetNumTables (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Gets the number of tables in the scope of the current `IMetaDataTables` instance.|  
-|[GetRow (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Gets the row at the specified row index, in the table at the specified table index.|  
-|[GetString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Gets the string at the specified index from the table column in the current reference scope.|  
-|[GetStringHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Gets the size, in bytes, of the string heap.|  
-|[GetTableIndex (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Gets the index for the table referenced by the specified token.|  
-|[GetTableInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Gets the name, row size, number of rows, number of columns, and key column index of the table at the specified table index.|  
-|[GetUserString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Gets the hard-coded string at the specified index in the string column in the current scope.|  
-|[GetUserStringHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Gets the size, in bytes, of the user string heap.|  
+|[GetBlob (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Obtiene un puntero al objeto binario grande (BLOB) en el índice de columna especificado.|  
+|[GetBlobHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Obtiene el tamaño, en bytes, del montón de BLOBs.|  
+|[GetCodedTokenInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Obtiene un puntero a una matriz de tokens asociada al índice de fila especificado.|  
+|[GetColumn (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Obtiene un puntero a los valores contenidos en la columna en el índice de columna especificado, en la tabla en el índice de tabla especificado.|  
+|[GetColumnInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Obtiene datos sobre la columna especificada de la tabla especificada.|  
+|[GetGuid (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Obtiene un GUID de la fila en el índice especificado.|  
+|[GetGuidHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Obtiene el tamaño, en bytes, del montón GUID.|  
+|[GetNextBlob (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Obtiene el índice del siguiente BLOB de la tabla.|  
+|[GetNextGuid (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Obtiene el índice del siguiente valor de GUID en la columna de la tabla actual.|  
+|[GetNextString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Obtiene el índice de la cadena siguiente en la columna de la tabla actual.|  
+|[GetNextUserString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Obtiene el índice de la fila que contiene la siguiente cadena codificada de forma rígida en la columna de la tabla actual.|  
+|[GetNumTables (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Obtiene el número de tablas en el ámbito de la instancia de `IMetaDataTables` actual.|  
+|[GetRow (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Obtiene la fila en el índice de fila especificado de la tabla en el índice de tabla especificado.|  
+|[GetString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Obtiene la cadena en el índice especificado de la columna de tabla del ámbito de referencia actual.|  
+|[GetStringHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Obtiene el tamaño, en bytes, del montón de cadenas.|  
+|[GetTableIndex (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Obtiene el índice de la tabla a la que hace referencia el token especificado.|  
+|[GetTableInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Obtiene el nombre, el tamaño de la fila, el número de filas, el número de columnas y el índice de columna de clave de la tabla en el índice de tabla especificado.|  
+|[GetUserString (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Obtiene la cadena codificada de forma rígida en el índice especificado de la columna de cadena en el ámbito actual.|  
+|[GetUserStringHeapSize (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Obtiene el tamaño, en bytes, del montón de cadena de usuario.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

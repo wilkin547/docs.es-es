@@ -39,14 +39,14 @@ typedef enum CorLocalRefPreservation
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Preserve no local references.|  
-|`MDPreserveLocalTypeRef`|Preserve local type references.|  
-|`MDPreserveLocalMemberRef`|Preserve local member references.|  
+|`MDPreserveLocalRefsNone`|No conservar ninguna referencia local.|  
+|`MDPreserveLocalTypeRef`|Conserva las referencias de tipo local.|  
+|`MDPreserveLocalMemberRef`|Conservar las referencias de miembro local.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

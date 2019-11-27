@@ -16,7 +16,7 @@ ms.locfileid: "74431587"
 # <a name="metadata-interfaces"></a>Interfaces de metadatos
 En esta sección se describen las interfaces no administradas que proporcionan acceso a los metadatos expuestos por los tipos, métodos o campos .NET Framework, entre otros.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  Proporciona métodos para la compilación de código dinámico.  
   

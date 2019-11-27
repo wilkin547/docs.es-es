@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449691"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info (Método)
-Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. Solo se puede llamar a este método durante la devolución de llamada `FunctionTailcall3WithInfo`.  
+Proporciona el marco de pila de la función que la función [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) está informando al generador de perfiles. Solo se puede llamar a este método durante la devolución de llamada `FunctionTailcall3WithInfo`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ de `FunctionID` de la función que se devuelve.  
   
  `eltInfo`  
- [in] Controlador opaco que representa información sobre un marco de pila determinado. The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
+ [in] Controlador opaco que representa información sobre un marco de pila determinado. El generador de perfiles debe proporcionar el mismo `eltInfo` que se proporcionó al generador de perfiles mediante la función `FunctionTailcall3WithInfo`.  
   
  `pFrameInfo`  
  [out] Controlador opaco que representa información genérica sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada `FunctionTailcall3WithInfo` en la que el generador de perfiles llamó al método `GetFunctionTailcall3Info`.  

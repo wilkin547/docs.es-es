@@ -9,13 +9,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430877"
 ---
-# <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
+# <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding >
 Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre una canalización con nombre.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system.serviceModel>** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bindings>** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexNamedPipeBinding>**  
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexNamedPipeBinding >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,26 +31,26 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`closeTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|`name`|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. Starting with .NET Framework 4, bindings and behaviors are not required to have a name. For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
 |`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
  Ninguno.  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<enlaces >](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="see-also"></a>Vea también
 
@@ -62,4 +62,4 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](bindings.md)
+- [\<> de enlace](bindings.md)

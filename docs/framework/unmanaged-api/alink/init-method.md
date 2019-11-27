@@ -1,5 +1,5 @@
 ---
-title: Init (Método)
+title: Método Init
 ms.date: 03/30/2017
 api_name:
 - IALink.Init
@@ -21,8 +21,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445643"
 ---
-# <a name="init-method"></a>Init (Método)
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+# <a name="init-method"></a>Método Init
+Prepara objetos que implementan la [interfaz ialink (](ialink-interface.md) para su uso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,16 +35,16 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Parámetros  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ Puntero de la [interfaz IMetaDataDispenserEx](../metadata/imetadatadispenserex-interface.md) al dispensador de metadatos.  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ Puntero de [interfaz imetadataerror (](../metadata/imetadataerror-interface.md) a una interfaz de control de errores opcional.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

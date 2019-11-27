@@ -21,7 +21,7 @@ ms.locfileid: "74343828"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource (Directiva)
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+Indica una asignación entre líneas específicas de código fuente y texto externo al origen.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,24 +34,24 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>Elementos  
 
  `StringLiteral`  
- The path to the external source.  
+ Ruta de acceso al origen externo.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ Número de línea de la primera línea del origen externo.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ La línea donde se produce el error en el origen externo.  
   
  `#End ExternalSource`  
  Finaliza el bloque `#ExternalSource`.  
   
 ## <a name="remarks"></a>Comentarios  
 
- This directive is used only by the compiler and the debugger.  
+ Esta directiva solo la usan el compilador y el depurador.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ Un archivo de código fuente puede incluir directivas de origen externo, que indican una asignación entre líneas específicas de código en el archivo de código fuente y texto externo al origen, como un archivo. aspx. Si se encuentran errores en el código fuente designado durante la compilación, se identifican como procedentes del origen externo.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ Las directivas de origen externo no tienen ningún efecto en la compilación y no se pueden anidar. Están pensadas para uso interno de la aplicación únicamente.  
   
 ## <a name="see-also"></a>Vea también
 

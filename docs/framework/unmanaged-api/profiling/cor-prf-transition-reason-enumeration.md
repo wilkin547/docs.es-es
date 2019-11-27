@@ -37,11 +37,11 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|The transition is due to a call into a function.|  
-|`COR_PRF_TRANSITION_RETURN`|The transition is due to a return from a function.|  
+|`COR_PRF_TRANSITION_CALL`|La transición se debe a una llamada a una función.|  
+|`COR_PRF_TRANSITION_RETURN`|La transición se debe a un valor devuelto de una función.|  
   
 ## <a name="remarks"></a>Comentarios  
- When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.  
+ Cuando se produce una transición, el generador de perfiles recibe una devolución de llamada [ICorProfilerCallback:: ManagedToUnmanagedTransition (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) o [ICorProfilerCallback:: UnmanagedToManagedTransition (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) , que proporciona un valor de la enumeración `COR_PRF_TRANSITION_REASON` para indicar el motivo de la transición.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

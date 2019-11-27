@@ -40,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntero al enumerador.  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ de Un token de TypeDef que representa el tipo con miembros que se van a enumerar.  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ de Nombre del miembro que limita el ámbito del enumerador.  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ enuncia Matriz utilizada para almacenar los tokens de MemberDef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rMembers`.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ enuncia Número real de tokens de MemberDef devueltos en `rMembers`.  
   
 ## <a name="remarks"></a>Comentarios  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+ Este método enumera los campos y métodos, pero no las propiedades o los eventos. A diferencia de [IMetaDataImport:: EnumMembers (](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` descarta todos los tokens de campo y miembro que no tienen el nombre especificado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumTypeDefs` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens de MemberDef que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

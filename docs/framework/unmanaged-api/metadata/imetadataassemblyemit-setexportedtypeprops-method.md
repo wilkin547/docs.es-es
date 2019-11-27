@@ -38,26 +38,26 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>Parámetros  
  `ct`  
- [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
+ de Símbolo (token) de metadatos que especifica el `ExportedType` estructura de metadatos que se va a modificar.  
   
  `tkImplementation`  
- [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
+ de El token, de tipo `File`, `AssemblyRef`o `ExportedType`, que especifica cómo se implementa este tipo.  
   
  `tkTypeDef`  
- [in] The `TypeDef` token referenced in the code file.  
+ de El token de `TypeDef` al que se hace referencia en el archivo de código.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of values that specify attributes of the type.  
+ de Combinación bit a bit de valores que especifican atributos del tipo.  
   
 ## <a name="remarks"></a>Comentarios  
- To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
+ Para crear una estructura de metadatos de `ExportedType`, use el método [IMetaDataAssemblyEmit::D efineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

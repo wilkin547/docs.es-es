@@ -12,7 +12,7 @@ ms.locfileid: "74351540"
 # <a name="modifiers-visual-basic"></a>Modificadores de Visual Basic
 Los temas de esta sección documentan los modificadores en tiempo de ejecución de Visual Basic.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [Ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md)  
@@ -25,7 +25,7 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [Predetermiado](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Default](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
@@ -47,7 +47,7 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Opcional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   

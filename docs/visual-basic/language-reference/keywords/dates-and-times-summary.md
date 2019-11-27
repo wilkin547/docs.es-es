@@ -20,7 +20,7 @@ ms.locfileid: "74349876"
 # <a name="dates-and-times-summary-visual-basic"></a>Resumen de fechas y horas (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
 |Obtener la hora o la fecha actual.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
 |Ejecutar cálculos de fechas.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  

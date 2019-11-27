@@ -16,45 +16,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351747"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Obtener acceso a XML en Visual Basic
-Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
+Visual Basic proporciona propiedades de eje XML para tener acceso a las estructuras de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y navegar por ellas. Estas propiedades usan una sintaxis especial para permitir el acceso a elementos y atributos mediante la especificación de los nombres XML.  
   
- The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
+ En la tabla siguiente se enumeran las características del lenguaje que permiten tener acceso a los elementos y atributos XML en Visual Basic.  
   
 ### <a name="xml-axis-properties"></a>Propiedades de eje XML  
   
-|Property description|Ejemplo|Descripción|  
+|Descripción de la propiedad|Ejemplo|Descripción|  
 |--------------------------|-------------|-----------------|  
-|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
-|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
-|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
-|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
-|*valor*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
+|*eje secundario*|`contact.<phone>`|Obtiene todos los elementos de `phone` que son elementos secundarios del elemento `contact`.|  
+|*eje de atributo*|`phone.@type`|Obtiene todos los atributos `type` del elemento `phone`.|  
+|*eje descendiente*|`contacts...<name>`|Obtiene todos los elementos `name` del elemento `contacts`, independientemente de la profundidad de la jerarquía que se produzcan.|  
+|*indexador de extensión*|`contacts...<name>(0)`|Obtiene el primer elemento `name` de la secuencia.|  
+|*valor*|`contacts...<name>.Value`|Obtiene la representación de cadena del primer objeto de la secuencia o `Nothing` si la secuencia está vacía.|  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Acceso a elementos descendientes XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
+ Muestra cómo usar una propiedad de eje descendiente para tener acceso a todos los elementos XML que tienen un nombre especificado y que están incluidos en un elemento XML especificado.  
   
  [Acceso a elementos secundarios XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
+ Muestra cómo usar una propiedad de eje secundario para tener acceso a todos los elementos secundarios XML que tienen un nombre especificado en un elemento XML.  
   
  [Acceso a atributos XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
+ Muestra cómo utilizar una propiedad de eje de atributo para tener acceso a todos los atributos XML que tienen un nombre especificado en un elemento XML.  
   
  [Declarar y usar prefijos de espacio de nombres XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
+ Muestra cómo declarar un prefijo de espacio de nombres XML y usarlo para crear y obtener acceso a los elementos XML.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Propiedades del eje XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections describing the various XML access properties.  
+ Proporciona vínculos a secciones en las que se describen las distintas propiedades de acceso XML.  
   
  [Información general sobre LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Proporciona una introducción al uso de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en Visual Basic.  
   
  [Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ Proporciona una introducción al uso de literales XML en Visual Basic.  
   
  [Manipular XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Provides links to sections about loading and modifying XML in Visual Basic.  
+ Proporciona vínculos a las secciones sobre cómo cargar y modificar XML en Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.
+ Proporciona vínculos a secciones en las que se describe cómo usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en Visual Basic.

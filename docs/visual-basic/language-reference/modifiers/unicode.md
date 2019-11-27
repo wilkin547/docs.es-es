@@ -17,21 +17,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344219"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.  
+Especifica que Visual Basic debe serializar todas las cadenas en valores Unicode, independientemente del nombre del procedimiento externo que se está declarando.  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ Cuando se llama a un procedimiento definido fuera del proyecto, el compilador Visual Basic no tiene acceso a la información que debe tener para poder llamar al procedimiento correctamente. Esta información incluye dónde se encuentra el procedimiento, cómo se identifica, su secuencia de llamada y tipo de valor devuelto, y el juego de caracteres de cadena que usa. La [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.  
+ La parte `charsetmodifier` de la instrucción `Declare` proporciona la información del juego de caracteres para calcular las referencias de las cadenas durante una llamada al procedimiento externo. También afecta al modo en que Visual Basic busca el nombre del procedimiento externo en el archivo externo. El modificador `Unicode` especifica que Visual Basic debe serializar todas las cadenas en valores Unicode y debe buscar el procedimiento sin modificar su nombre durante la búsqueda.  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ Si no se especifica ningún modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
   
 ## <a name="remarks"></a>Comentarios  
- The `Unicode` modifier can be used in this context:  
+ El modificador `Unicode` se puede usar en este contexto:  
   
  [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
- This keyword is not supported.  
+## <a name="smart-device-developer-notes"></a>Notas para desarrolladores de Smart Device  
+ Esta palabra clave no es compatible.  
   
 ## <a name="see-also"></a>Vea también
 

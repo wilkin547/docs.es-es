@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437520"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps (Método)
-Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
+Obtiene información almacenada en los metadatos de una definición de miembro especificada, incluidos el nombre, la firma binaria y la dirección virtual relativa, del miembro de <xref:System.Type> al que hace referencia el token de metadatos especificado. Se trata de un método auxiliar sencillo: Si *MB* es un MethodDef, se llama a **GetMethodProps (** ; Si *MB* es un FieldDef, se llama a **getfieldprops (** . Consulte estos otros métodos para obtener más información. 
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,50 +47,50 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- [in] The token that references the member to get the associated metadata for.  
+ de Token que hace referencia al miembro para el que se van a obtener los metadatos asociados.  
   
  `pClass`  
- [out] A pointer to the metadata token that represents the class of the member.  
+ enuncia Puntero al símbolo (token) de metadatos que representa la clase del miembro.  
   
  `szMember`  
- [out] The name of the member.  
+ enuncia Nombre del miembro.  
   
  `cchMember`  
- [in] The size in wide characters of the `szMember` buffer.  
+ de Tamaño en caracteres anchos del búfer `szMember`.  
   
  `pchMember`  
- [out] The size in wide characters of the returned name.  
+ enuncia Tamaño en caracteres anchos del nombre devuelto.  
   
  `pdwAttr`  
- [out] Any flag values applied to the member.  
+ enuncia Los valores de marca aplicados al miembro.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the member.  
+ enuncia Puntero a la firma de metadatos binarios del miembro.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ enuncia Tamaño en bytes de `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the member.  
+ enuncia Puntero a la dirección virtual relativa del miembro.  
   
  `pdwImplFlags`  
- [out] Any method implementation flags associated with the member.  
+ enuncia Cualquier marcador de implementación de método asociado al miembro.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
+ enuncia Marca que marca un <xref:System.ValueType>. Es uno de los valores de `ELEMENT_TYPE_*`.
   
  `ppValue`  
- [out] A constant string value returned by this member.  
+ enuncia Un valor de cadena constante devuelto por este miembro.  
   
  `pcchValue`  
- [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
+ enuncia Tamaño en caracteres de `ppValue`, o cero si `ppValue` no contiene una cadena.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

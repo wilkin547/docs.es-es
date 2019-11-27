@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346995"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>El argumento o la llamada al procedimiento no es válido (Visual Basic)
-Some part of the call cannot be completed.  
+Parte de la llamada no se puede completar.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.  
+- Compruebe los intervalos permitidos para los argumentos para asegurarse de que ninguna disposición supera los valores permitidos.  
   
 ## <a name="see-also"></a>Vea también
 

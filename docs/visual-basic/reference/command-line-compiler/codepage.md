@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343543"
 ---
-# <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
+# <a name="-codepage-visual-basic"></a>-codePage (Visual Basic)
 Especifica la página de códigos que se va a utilizar para todos los archivos de código fuente en la compilación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -24,17 +24,17 @@ Especifica la página de códigos que se va a utilizar para todos los archivos d
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`id`|Requerido. The compiler uses the code page specified by `id` to interpret the encoding of the source files.|  
+|`id`|Obligatorio. El compilador usa la página de códigos especificada por `id` para interpretar la codificación de los archivos de código fuente.|  
   
 ## <a name="remarks"></a>Comentarios  
- To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used. The `-codepage` option applies to all source-code files in your compilation. For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).  
+ Para compilar el código fuente guardado con una codificación específica, puede usar `-codepage` para especificar qué página de códigos debe usarse. La opción `-codepage` se aplica a todos los archivos de código fuente de la compilación. Para obtener más información, vea [codificación de caracteres en el .NET Framework](../../../standard/base-types/character-encoding.md).  
   
- The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature. Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box. Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.  
+ La opción `-codepage` no es necesaria si los archivos de código fuente se guardaron mediante la página de códigos ANSI actual, Unicode o UTF-8 con una firma. De forma predeterminada, Visual Studio guarda todos los archivos de código fuente con la página de códigos ANSI actual, a menos que el usuario especifique otra codificación en el cuadro de diálogo **codificación** . Visual Studio usa el cuadro de diálogo **codificación** para abrir los archivos de código fuente guardados con una página de códigos diferente.  
   
 > [!NOTE]
-> The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> La opción `-codepage` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449876"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody (Método)
-Replaces the body of the specified function in the specified module.  
+Reemplaza el cuerpo de la función especificada en el módulo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,20 +36,20 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ de IDENTIFICADOR del módulo en el que reside la función.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ de Token de la función para la que se va a reemplazar el cuerpo.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ de Nuevo encabezado de la función.  
   
 ## <a name="remarks"></a>Comentarios  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ El método `SetILFunctionBody` reemplaza la dirección virtual relativa de la función en los metadatos para que apunte al nuevo cuerpo de la función y ajusta las estructuras de datos internas según sea necesario.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ Solo se puede llamar al método `SetILFunctionBody` en aquellas funciones que nunca ha compilado un compilador Just-in-Time (JIT).  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Use el método [ICorProfilerInfo:: getilfunctionbodyallocator (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) para asignar espacio para el nuevo método con el fin de asegurarse de que el búfer sea compatible.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

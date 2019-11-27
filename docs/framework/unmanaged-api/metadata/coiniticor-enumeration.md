@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444280"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR (Enumeración)
-Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.  
+Especifica las constantes utilizadas por [CoInitializeCor (](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) cuando inicializa el Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,14 +37,14 @@ typedef enum tagCOINITCOR
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COINITCOR`|Indicates the default initialization mode.|  
+|`COINITCOR`|Indica el modo de inicialización predeterminado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

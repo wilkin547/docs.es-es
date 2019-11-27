@@ -20,16 +20,16 @@ ms.locfileid: "74433546"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.  
+ En este tema se muestra cómo recuperar un <xref:System.Windows.Automation.AutomationElement> para un elemento de una lista cuando se conoce el índice del elemento.  
   
 ## <a name="example"></a>Ejemplo  
- The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.  
+ En el ejemplo siguiente se muestran dos maneras de recuperar un elemento especificado de una lista, uno que usa <xref:System.Windows.Automation.TreeWalker> y el otro mediante <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.  
   
- The first technique tends to be faster for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls, but the second is faster for Windows Presentation Foundation (WPF) controls.  
+ La primera técnica tiende a ser más rápida para los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], pero la segunda es más rápida para los controles de Windows Presentation Foundation (WPF).  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Obtención de elementos de Automatización de la interfaz de usuario](obtaining-ui-automation-elements.md)
+- [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)

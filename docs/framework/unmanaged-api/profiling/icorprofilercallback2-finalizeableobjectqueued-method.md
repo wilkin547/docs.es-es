@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439853"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued (Método)
-Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.  
+Notifica al generador de perfiles de código que un objeto con un finalizador se ha puesto en cola en el subproceso finalizador para la ejecución de su método `Finalize`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,10 +35,10 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Parámetros  
  `finalizerFlags`  
- [in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.  
+ de Un valor de la enumeración [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) que describe aspectos del finalizador.  
   
  `objectID`  
- [in] The ID of the object that has been queued.  
+ de IDENTIFICADOR del objeto que se ha puesto en la cola.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

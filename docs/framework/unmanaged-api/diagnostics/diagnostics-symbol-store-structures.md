@@ -15,17 +15,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448515"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Estructuras de almacén de símbolos de diagnósticos
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+En este tema se describen las estructuras no administradas que utiliza la API del almacén de símbolos de diagnóstico.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [CALL_ID (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ Proporciona información a un depurador sobre una función a la que se está llamando.  
   
  [SYMLINEDELTA (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ Proporciona información al controlador de símbolos sobre los métodos que se movieron como resultado de las ediciones.  
   
  [USER_THREAD (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ Proporciona información a un depurador sobre un subproceso.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

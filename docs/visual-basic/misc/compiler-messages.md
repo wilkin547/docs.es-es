@@ -13,4 +13,4 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353309"
 ---
 # <a name="visual-basic-compiler-messages"></a>Mensajes del compilador de Visual Basic
-This section contains the Visual Basic error messages that occur at compile time.
+Esta sección contiene los mensajes de error de Visual Basic que se producen en tiempo de compilación.

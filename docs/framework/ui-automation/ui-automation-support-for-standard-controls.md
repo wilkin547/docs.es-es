@@ -30,23 +30,23 @@ ms.locfileid: "74441223"
   
  Se admiten los siguientes controles.  
   
-|Nombre de la clase|Tipo de control|  
+|Nombre de clase|Tipo de control|  
 |----------------|------------------|  
 |Botón|Botón|  
 |Botón|RadioButton|  
-|Botón|Agrupar|  
+|Botón|Grupo|  
 |Botón|CheckBox|  
 |Botón|Hipervínculo|  
 |Botón|SplitButton|  
 |Botón|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Editar|Documento|  
-|Editar|Editar|  
+|Edit|Documento|  
+|Edit|Edit|  
 |SysLink|Hipervínculo|  
-|Estático|Text|  
+|Estático|Texto|  
 |Estático|Imagen|  
-|SysIPAddress32|Personalizados|  
+|SysIPAddress32|Personalizar|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Lista|  
@@ -54,16 +54,16 @@ ms.locfileid: "74441223"
 |ListBox|ListItem|  
 |#32768|Menú|  
 |#32768|MenuItem|  
-|msctls_progress32|ProgressBar|  
-|RichEdit|Documento. Vea la nota.|  
+|msctls_progress32|Barra de progreso|  
+|RichEdit|Documentar. Vea la nota.|  
 |RichEdit20A|Documento|  
 |RichEdit20W|Documento|  
 |RichEdit50W|Documento|  
-|ScrollBar|Slider|  
-|msctls_trackbar32|Slider|  
+|ScrollBar|Control deslizante|  
+|msctls_trackbar32|Control deslizante|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tab|  
+|SysTabControl32|Pestaña|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -71,34 +71,34 @@ ms.locfileid: "74441223"
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|Separador|  
-|tooltips_class32|Información sobre herramientas|  
-|#32774|Información sobre herramientas|  
-|ReBarWindow32|ToolBar|  
+|tooltips_class32|ToolTip|  
+|#32774|ToolTip|  
+|ReBarWindow32|Barra de herramientas|  
 |SysTreeView32|Árbol|  
 |SysTreeView32|TreeItem|  
   
- **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
+ **Nota:** El control RichEdit solo se admite para las versiones incluidas con Windows Vista (en RichEd20. dll versión 3,1 y posteriores, y MsftEdit. dll versión 4,1 y posteriores).  
   
  No se admiten los siguientes controles.  
   
-|Nombre de la clase|Tipo de control|  
+|Nombre de clase|Tipo de control|  
 |----------------|------------------|  
 |SysAnimate32|Imagen|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Personalizados|  
+|SysDateTimePick32|Personalizar|  
 |SysMonthCal32|Calendario|  
-|MS_WINNOTE|Información sobre herramientas|  
-|VBBubble|Información sobre herramientas|  
-|ScrollBar (cuando se usa como control independiente)|Slider|  
-|SuperGrid|Personalizados|  
+|MS_WINNOTE|Tooltip|  
+|VBBubble|Tooltip|  
+|ScrollBar (cuando se usa como control independiente)|Control deslizante|  
+|SuperGrid|Personalizar|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controles de Windows Forms  
- Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
+ Windows Forms controles se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del lado cliente en UIAutomationClientsideProviders. dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
- Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Se admiten los siguientes controles.  
+ Normalmente, los Windows Forms controles que son contenedores administrados para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles comunes son compatibles con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Se admiten los siguientes controles.  
   
-|Nombre de la clase|  
+|Nombre de clase|  
 |----------------|  
 |Botón|  
 |CheckBox|  
@@ -119,7 +119,7 @@ ms.locfileid: "74441223"
 |OpenFileDialog|  
 |PageSetupDialog|  
 |PrintDialog|  
-|ProgressBar|  
+|Barra de progreso|  
 |RadioButton|  
 |RichTextBox|  
 |SaveFileDialog|  
@@ -129,14 +129,14 @@ ms.locfileid: "74441223"
 |TabControl/TabPage|  
 |TextBox|  
 |Temporizador|  
-|ToolBar|  
-|Información sobre herramientas|  
+|Barra de herramientas|  
+|ToolTip|  
 |Trackbar|  
 |TreeView|  
 |VscrollBar|  
 |ExploradorWeb|  
   
- The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. Es posible que algunas funciones no estén disponibles.  
+ Los siguientes controles se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] solo a través de la compatibilidad con Microsoft Active Accessibility. Es posible que algunas funciones no estén disponibles.  
   
 |Nombre del control|  
 |------------------|  
@@ -169,4 +169,4 @@ ms.locfileid: "74441223"
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types.md)
+- [UI Automation Control Types](ui-automation-control-types.md)

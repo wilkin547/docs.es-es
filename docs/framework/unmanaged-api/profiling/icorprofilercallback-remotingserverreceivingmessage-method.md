@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445764"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage (Método)
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+Notifica al generador de perfiles que el proceso ha recibido una invocación de método remoto o una solicitud de activación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,21 +35,21 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parámetros  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ de Un valor que se corresponderá con el valor proporcionado en [ICorProfilerCallback:: remotingclientsendingmessage (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) en estas condiciones:  
   
-- Remoting GUID cookies are active.  
+- Las cookies del GUID de comunicación remota están activas.  
   
-- The channel succeeds in transmitting the message.  
+- El canal realiza correctamente la transmisión del mensaje.  
   
-- GUID cookies are active on the client-side process.  
+- Las cookies de GUID están activas en el proceso del lado cliente.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Esto permite un fácil emparejamiento de llamadas remotas y la creación de una pila de llamadas lógicas.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ de Valor que se `true` si la llamada es asincrónica; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ Si la solicitud de mensaje es asincrónica, cualquier subproceso arbitrario puede atender la solicitud.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

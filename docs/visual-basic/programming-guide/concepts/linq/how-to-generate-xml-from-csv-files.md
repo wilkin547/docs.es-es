@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344595"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>How to: Generate XML from CSV Files (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Cómo: generar XML a partir de archivos CSV (Visual Basic)
 Este ejemplo muestra el uso de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
   
 ## <a name="example"></a>Ejemplo  
@@ -109,4 +109,4 @@ Console.WriteLine(cust)
   
 ## <a name="see-also"></a>Vea también
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Proyecciones y transformaciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

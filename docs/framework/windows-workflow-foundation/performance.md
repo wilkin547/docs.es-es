@@ -21,7 +21,7 @@ ms.locfileid: "74283232"
 
  Windows Communication Foundation (WCF) es el modelo de programación Unificado de Microsoft para la creación de aplicaciones orientadas a servicios. Se presentó por primera vez como parte de .NET 3,0 junto con WF3 y ahora es uno de los componentes clave de la .NET Framework.
 
- Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar más fácilmente aplicaciones web y aplicaciones compuestas que se ejecutan en IIS. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar las aplicaciones web y compuestas que se ejecutan en IIS más fácilmente. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Objetivos
  El objetivo de este tema es mostrar las características de rendimiento de WF4 con datos medidos para diferentes escenarios. También se proporcionan en él comparaciones detalladas entre WF4 y WF3, y asimismo se muestran las grandes mejoras realizadas en esta nueva revisión. Los escenarios y los datos presentados en este artículo cuantifican el costo subyacente de distintos aspectos de WF4 y WF3. Estos datos son útiles para entender las características de rendimiento de WF4 y pueden ser útiles para planear migraciones de WF3 a WF4 o utilizar WF4 en el desarrollo de aplicaciones. Sin embargo, se debe ser cauto al considerar las conclusiones extraídas de los datos presentados en este artículo. El rendimiento de una aplicación de flujo de trabajo compuesta depende en gran medida de cómo se implementa el flujo de trabajo y cómo se integran los distintos componentes. Se debe medir cada aplicación para determinar las características de rendimiento de la misma.
@@ -218,7 +218,7 @@ En el diagrama siguiente se muestra el flujo de trabajo de compensación básica
 
  ![Gráfico de columnas que muestra una latencia fría y activa para los servicios de flujo de trabajo WCF mediante WF3 y WF4](./media/performance/latency-results-graph.gif)
 
- En el gráfico anterior, en frío se refiere al caso en el que no hay ningún <xref:System.ServiceModel.WorkflowServiceHost> existente para el flujo de trabajo determinado.  En otras palabras, la latencia en frío se produce cuando el flujo de trabajo se utiliza por primera vez y el XOML o el XAML deben compilarse.  La latencia en caliente es el tiempo necesario para crear una nueva instancia de flujo de trabajo cuando el tipo de flujo de trabajo ya se ha compilado.  La complejidad del flujo de trabajo apenas si sufre diferencias en el caso de WF4, pero tiene una progresión lineal en el caso de WF3.
+ En el gráfico anterior, en frío se refiere al caso en el que no hay ningún <xref:System.ServiceModel.WorkflowServiceHost> existente para el flujo de trabajo determinado.  En otras palabras, la latencia en frío se produce cuando el flujo de trabajo se usa por primera vez y el XOML o el XAML debe ser compilado.  La latencia en caliente es el momento de crear una nueva instancia de flujo de trabajo cuando el tipo del flujo de trabajo ya se ha compilado.  La complejidad del flujo de trabajo apenas si sufre diferencias en el caso de WF4, pero tiene una progresión lineal en el caso de WF3.
 
 #### <a name="correlation-throughput"></a>Rendimiento de la correlación
  WF4 introduce una nueva característica de correlación basada en contenido.  WF3 proporcionaba solamente correlación basada en contexto.  La correlación basada en contexto solo se puede realizar en enlaces de canal WCF concretos.  El identificador del flujo de trabajo se inserta en el encabezado del mensaje cuando se utilizan estos enlaces.  El tiempo de ejecución de WF3 solo puede identificar un flujo de trabajo por su identificador.  Con la correlación basada en contenido, el autor del flujo de trabajo puede crear una clave de correlación fuera de una parte relevante de datos, como un número de cuenta o un identificador de cliente.
@@ -397,7 +397,7 @@ public class Workflow1 : Activity
 
 - Bloqueos temporales de SQL\Esperas de bloqueo temporal por segundo
 
-### <a name="tracking"></a>Seguimiento
+### <a name="tracking"></a>Tracking
  El seguimiento de flujo de trabajo se puede utilizar para realizar el seguimiento del progreso de un flujo de trabajo.  La información incluida en los eventos de seguimiento la determina un perfil de seguimiento.  Cuanto más complejo sea el perfil de seguimiento, más costoso será el seguimiento.
 
  WF3 se proporcionó con un servicio de seguimiento basado en SQL.  Este servicio podía funcionar en modo por lotes y en modo sin lotes.  En el modo sin lotes, los eventos de seguimiento se escriben directamente en la base de datos.  En modo por lotes, los eventos de seguimiento se recopilan en el mismo lote como estado de instancia de flujo de trabajo.  El modo por lotes tiene el máximo rendimiento para la gama más amplia de diseños de flujo de trabajo.  Sin embargo, el procesamiento por lotes puede tener un impacto negativo en el rendimiento si el flujo de trabajo ejecuta muchas actividades sin persistencia y se realiza un seguimiento de esas actividades.  Esto sucedería normalmente en los bucles y la mejor manera de evitar este escenario es diseñar bucles grandes para que contengan un punto de persistencia.  La introducción de un punto de persistencia en un bucle también puede afectar negativamente al rendimiento, por lo que es importante medir los costos de cada uno y lograr un equilibrio.
@@ -443,7 +443,7 @@ public class Workflow1 : Activity
  
 En la tabla siguiente se muestran los resultados de la ejecución de un flujo de trabajo que contiene cinco actividades en una secuencia en varias configuraciones.
 
-|Prueba|Rendimiento (flujos de trabajo/segundo)|
+|Probar|Rendimiento (flujos de trabajo/segundo)|
 |----------|-----------------------------------|
 |Secuencia de WF3 en runtime de WF3|1,576|
 |Secuencia de WF3 en runtime de WF4 utilizando Interop|2,745|

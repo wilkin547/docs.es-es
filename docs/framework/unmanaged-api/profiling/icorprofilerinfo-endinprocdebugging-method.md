@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447755"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging (Método)
-Shuts down an in-process debugging session. This method is obsolete in the .NET Framework version 2.0.  
+Cierra una sesión de depuración en proceso. Este método está obsoleto en la .NET Framework versión 2,0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +34,12 @@ HRESULT EndInprocDebugging(
   
 ## <a name="parameters"></a>Parámetros  
  `dwProfilerContext`  
- [in] A value that identifies the debugging session. This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.  
+ de Valor que identifica la sesión de depuración. Este valor debe ser el mismo que el recibido en el método [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) .  
   
 ## <a name="remarks"></a>Comentarios  
- You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.  
+ Debe llamar a [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) y `EndInprocDebugging` dentro del mismo método de devolución de llamada.  
   
- The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ Los servicios de depuración de CLR admiten la depuración limitada en proceso en las .NET Framework versiones 1,0 y 1,1. La depuración en proceso ha habilitado un generador de perfiles para usar las partes de inspección de la API de depuración. Sin embargo, debido a los comentarios de los clientes, la depuración en proceso se ha quitado del .NET Framework en la versión 2,0 y se ha reemplazado por un conjunto de funcionalidades que está más en línea con la API de generación de perfiles.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,7 +48,7 @@ HRESULT EndInprocDebugging(
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Versión de .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vea también
 

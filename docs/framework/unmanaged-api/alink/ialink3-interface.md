@@ -1,5 +1,5 @@
 ---
-title: IALink3 (Interfaz)
+title: IALink3 (interfaz)
 ms.date: 03/30/2017
 f1_keywords:
 - IALink3
@@ -13,19 +13,19 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441797"
 ---
-# <a name="ialink3-interface"></a>IALink3 (Interfaz)
-Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
+# <a name="ialink3-interface"></a>IALink3 (interfaz)
+Proporciona un método único, `SetManifestFile`, que permite especificar o restablecer el archivo de manifiesto que el vinculador usará al crear un ensamblado.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [SetManifestFile (método)](setmanifestfile-method.md)  
- Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
+ Permite especificar o restablecer el archivo de manifiesto que el vinculador usará al crear el ensamblado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [API de ALink](index.md)  
  Admite la creación de módulos no enlazados y ensamblados de .NET Framework.  
   
  [IALink (interfaz)](ialink-interface.md)  
- Helps in constructing .NET Framework assemblies.  
+ Ayuda a crear ensamblados de .NET Framework.  
   
  [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)  
- Generates a file that has an assembly manifest from one or more files that are either modules or resource files.
+ Genera un archivo que tiene un manifiesto de ensamblado de uno o varios archivos que son módulos o archivos de recursos.

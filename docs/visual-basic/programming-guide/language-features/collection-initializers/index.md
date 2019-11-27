@@ -39,7 +39,7 @@ Cuando se crea una colección, como <xref:System.Collections.Generic.List%601> o
 > [!NOTE]
 > No se puede combinar un inicializador de colección y un inicializador de objeto para inicializar el mismo objeto de colección. Puede usar inicializadores de objeto para inicializar objetos en un inicializador de colección.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Crear una colección mediante un inicializador de colección
 
 Cuando crea una colección mediante un inicializador de colección, cada valor que se proporciona en el inicializador de colección se pasa al método `Add` correspondiente de la colección. Por ejemplo, si crea <xref:System.Collections.Generic.List%601> mediante un inicializador de colección, cada valor de cadena del inicializador de colección se pasa al método <xref:System.Collections.Generic.List%601.Add%2A>. Si quiere crear una colección mediante un inicializador de colección, el tipo especificado debe ser un tipo de colección válido. Las clases que implementan la interfaz <xref:System.Collections.Generic.IEnumerable%601> o que heredan la clase <xref:System.Collections.CollectionBase> son algunos ejemplos de tipos de colección válidos. El tipo especificado también debe exponer un método `Add` que cumpla los criterios siguientes.
 
@@ -75,7 +75,7 @@ Solo se envían listas de valores anidados del primer nivel de anidamiento al m�
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |---|---|
 |[Crear un método de extensión Add usado por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Muestra cómo crear un método de extensión denominado `Add` que se puede usar para rellenar una colección con los valores de un inicializador de colección.|
 |[Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Muestra cómo habilitar el uso de un inicializador de colección mediante la inclusión de un método `Add` en una clase de colección que implementa `IEnumerable`.|

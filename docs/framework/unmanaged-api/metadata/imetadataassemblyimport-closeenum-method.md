@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446029"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>IMetaDataAssemblyImport::CloseEnum (Método)
-Releases a reference to the specified enumeration instance.  
+Libera una referencia a la instancia de enumeración especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,14 +35,14 @@ void CloseEnum (
   
 ## <a name="parameters"></a>Parámetros  
  `hEnum`  
- [in] The enumeration instance to be closed.  
+ de Instancia de enumeración que se va a cerrar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

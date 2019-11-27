@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449892"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo (Método)
-Gets the current Win32 thread identity for the specified thread.  
+Obtiene la identidad del subproceso de Win32 actual para el subproceso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] The ID of the thread for which to get the current Win32 ID.  
+ de IDENTIFICADOR del subproceso para el que se va a obtener el ID. de Win32 actual.  
   
  `pdwWin32ThreadId`  
- [out] A pointer to the specified thread's current Win32 thread ID.  
+ enuncia Puntero al identificador de subproceso actual de Win32 del subproceso especificado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

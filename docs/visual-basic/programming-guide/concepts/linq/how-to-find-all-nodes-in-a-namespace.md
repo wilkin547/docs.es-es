@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352966"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>How to: Find All Nodes in a Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Cómo: Buscar todos los nodos de un espacio de nombres (Visual Basic)
 Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.  
   
 ## <a name="example"></a>Ejemplo  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>Vea también
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

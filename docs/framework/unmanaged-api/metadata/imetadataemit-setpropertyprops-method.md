@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440539"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps (Método)
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Establece las características almacenadas en los metadatos de una propiedad definida por una llamada anterior al [método DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,35 +42,35 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parámetros  
  `pr`  
- [in] The token for the property to be changed  
+ de Token para la propiedad que se va a cambiar.  
   
  `dwPropFlags`  
- [in] Property flags.  
+ de Marcas de propiedad.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ de Tipo del valor predeterminado de la propiedad.  
   
  `pValue`  
- [in] The default value for the property.  
+ de Valor predeterminado de la propiedad.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ de Recuento de caracteres (Unicode) de `pValue`.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ de El método que establece el valor de propiedad.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ de Método que obtiene el valor de propiedad.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ de Matriz de otros métodos asociados a la propiedad. Termine esta matriz con un token de `mdTokenNil`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

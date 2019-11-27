@@ -1,5 +1,5 @@
 ---
-title: CorDebugNGenPolicy (Enumeración)
+title: CorDebugNGenPolicy (enumeración)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -23,7 +23,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204862"
 ---
-# <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy (Enumeración)
+# <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy (enumeración)
 Proporciona un valor que determina si un depurador carga imágenes nativas (NGen) desde la caché de imágenes nativas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,10 +38,10 @@ enum CorDebugNGENPolicy {
   
 |Nombre de miembro|Descripción|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|In a Windows 8.x Store app, the use of images from the local native image cache is disabled. In a desktop app, this setting has no effect.|  
+|`DISABLE_LOCAL_NIC`|En una aplicación de la tienda Windows 8. x, el uso de imágenes de la memoria caché de imágenes nativas local está deshabilitado. En una aplicación de escritorio, este valor no tiene ningún efecto.|  
   
 ## <a name="remarks"></a>Comentarios  
- The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method. Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.  
+ El método [ICorDebugProcess5:: enablengenpolicy (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) usa la enumeración `CorDebugNGENPolicy`. Deshabilitar el uso de imágenes de la memoria caché de imágenes nativas local proporciona una experiencia de depuración coherente asegurándose de que el depurador carga imágenes compiladas por JIT depurables en lugar de imágenes nativas optimizadas.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

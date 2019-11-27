@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344643"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos relacionados (XPath-LINQ to XML) (Visual Basic)
 Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.  
   
  La expresión XPath es:  
@@ -21,7 +21,7 @@ Este tema muestra cómo obtener un elemento seleccionando en un atributo al que 
   
  Tenga en cuenta que la indización en una lista de .NET se basa en "cero". Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno". Este ejemplo refleja esta diferencia.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -75,4 +75,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

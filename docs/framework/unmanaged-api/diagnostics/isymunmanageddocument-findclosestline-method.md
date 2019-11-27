@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449218"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine (Método)
-Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
+Devuelve la línea más cercana que es un punto de secuencia, dada una línea de este documento que puede ser o no un punto de secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>Parámetros  
  `line`  
- [in] A line in this document.  
+ de Una línea en este documento.  
   
  `pRetVal`  
- [out] A pointer to a variable that receives the line.  
+ enuncia Puntero a una variable que recibe la línea.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.  
   
 ## <a name="see-also"></a>Vea también
 

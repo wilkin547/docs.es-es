@@ -9,18 +9,18 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349369"
 ---
-# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Serializing Object Graphs that Contain XElement Objects (Visual Basic)
+# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Serializar gráficos de objetos que contienen objetos XElement (Visual Basic)
 Este tema presenta la funcionalidad de serializar gráficos de objetos que contienen referencias a objetos de tipo <xref:System.Xml.Linq.XElement>. Para facilitar este tipo de serialización, <xref:System.Xml.Linq.XElement> implementa la interfaz <xref:System.Xml.Serialization.IXmlSerializable>.  
   
  Tenga en cuenta que sólo la clase <xref:System.Xml.Linq.XElement> implementa la serialización.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Cómo: serializar con XmlSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Demuestra cómo serializar usando <xref:System.Xml.Serialization.XmlSerializer>.|  
-|[How to: Serialize Using DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Demuestra cómo serializar usando <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[Cómo: serializar mediante DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Demuestra cómo serializar usando <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

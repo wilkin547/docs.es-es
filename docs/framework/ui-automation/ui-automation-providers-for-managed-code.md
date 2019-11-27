@@ -19,10 +19,10 @@ ms.locfileid: "74441485"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ Esta sección contiene información general y temas de procedimientos que describen cómo escribir proveedores de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para los elementos de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] personalizados.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)  
  [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)  
  [Implementación del proveedor de Automatización de la interfaz de usuario en el cliente](client-side-ui-automation-provider-implementation.md)  
- [Temas "Cómo..."](ui-automation-providers-for-managed-code-how-to-topics.md)
+ [Temas de procedimientos](ui-automation-providers-for-managed-code-how-to-topics.md)

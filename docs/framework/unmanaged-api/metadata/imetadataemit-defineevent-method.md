@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432568"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent (Método)
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+Crea una definición para un evento con la firma de metadatos especificada y obtiene un token para esa definición de evento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,38 +43,38 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ de Token de la clase o interfaz de destino. Se trata de un token de `mdTypeDef` o `mdTypeDefNil`.  
   
  `szEvent`  
- [in] The name of the event.  
+ de Nombre del evento.  
   
  `dwEventFlags`  
- [in] Event flags.  
+ de Marcas de evento.  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ de El token para la clase de evento. Se trata de una `mdTypeDef`, un `mdTypeRef`o un token de `mdTokenNil`.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ de Método utilizado para suscribirse al evento o null.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ de Método utilizado para cancelar la suscripción al evento o null.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ de Método utilizado (por una clase derivada) para generar el evento.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ de Matriz de tokens para otros métodos asociados al evento. La matriz finaliza con un token de `mdMethodDefNil`.  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ enuncia Símbolo (token) de metadatos asignado al evento.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

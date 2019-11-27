@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428266"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>ICorProfilerObjectEnum::Clone (Método)
-Gets an interface pointer to a copy of this [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface.  
+Obtiene un puntero de interfaz a una copia de esta interfaz [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parámetros  
  `ppEnum`  
- [out] A pointer to the interface pointer that in turn points to the copy of this `ICorProfilerObjectEnum` interface. The copy maintains its own enumeration state separately from this one. However, the copy's initial cursor position will be the same as this enumerator's current cursor position.  
+ enuncia Puntero al puntero de interfaz que a su vez apunta a la copia de esta interfaz de `ICorProfilerObjectEnum`. La copia mantiene su propio estado de enumeración independiente de este. Sin embargo, la posición inicial del cursor de la copia será la misma que la posición actual del cursor de este enumerador.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

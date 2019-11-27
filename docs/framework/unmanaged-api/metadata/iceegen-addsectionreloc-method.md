@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436410"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc (Método)
-Adds a .reloc instruction to the code base.  
+Agrega una instrucción. reloc al código base.  
   
- This method is obsolete and should not be used.  
+ Este método está obsoleto y no debe usarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,23 +40,23 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Parámetros  
  `section`  
- [in] The section of in-memory code to which to add a .reloc instruction.  
+ de La sección de código en memoria a la que se va a agregar una instrucción. reloc.  
   
  `offset`  
- [in] The offset of the section.  
+ de Desplazamiento de la sección.  
   
  `relativeTo`  
- [in] The section to which `offset` refers.  
+ de Sección a la que hace referencia `offset`.  
   
  `relocType`  
- [in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.  
+ de Uno de los valores de [ceesectionreloctype (](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) , que indica el tipo de instrucción. reloc que se va a agregar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

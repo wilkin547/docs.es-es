@@ -16,7 +16,7 @@ ms.locfileid: "74444608"
 # <a name="metadata-structures"></a>Estructuras de metadatos
 En esta sección, se describen las estructuras no administradas que utiliza la API de metadatos.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  ASSEMBLYMETADATA  
  Almacena los metadatos del ensamblado para usarlos más tarde.  
   

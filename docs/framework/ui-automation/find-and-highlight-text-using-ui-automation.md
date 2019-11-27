@@ -23,10 +23,10 @@ ms.locfileid: "74435751"
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ En este tema se muestra cómo buscar y resaltar secuencialmente cada aparición de una cadena en el contenido de un control de texto mediante [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control. A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>. Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.  
+ En el ejemplo siguiente se obtiene un objeto <xref:System.Windows.Automation.TextPattern> de un control de texto. A continuación, se crea un objeto <xref:System.Windows.Automation.Text.TextPatternRange>, que representa el contenido textual del documento completo, utilizando la propiedad <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> de este <xref:System.Windows.Automation.TextPattern>. A continuación, se crean dos objetos de <xref:System.Windows.Automation.Text.TextPatternRange> adicionales para la funcionalidad de búsqueda y resaltado secuencial.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  

@@ -37,8 +37,8 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
-|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
+|`COR_PRF_GC_INDUCED`|Un método <xref:System.GC.Collect%2A> indujo la recolección de elementos no utilizados.|  
+|`COR_PRF_GC_OTHER`|Razón no especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

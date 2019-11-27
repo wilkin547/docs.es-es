@@ -25,10 +25,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353837"
 ---
 # <a name="of-clause-visual-basic"></a>Of (Cláusula, Visual Basic)
-Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure. For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Presenta una cláusula `Of`, que identifica un *parámetro de tipo* en una clase *genérica* , una estructura, una interfaz, un delegado o un procedimiento. Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Using the Of Keyword  
- The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters. It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>. This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method. Para más información sobre las restricciones, vea [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Usar la palabra clave of  
+ En el ejemplo de código siguiente se usa la palabra clave `Of` para definir el contorno de una clase que toma dos parámetros de tipo. *Restringe* el parámetro `keyType` por la interfaz <xref:System.IComparable>, lo que significa que el código utilizado debe proporcionar un argumento de tipo que implementa <xref:System.IComparable>. Esto es necesario para que el procedimiento `add` pueda llamar al método <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>. Para más información sobre las restricciones, vea [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it. The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry. Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.  
+ Si completa la definición de clase anterior, puede construir una variedad de clases `dictionary` a partir de ella. Los tipos que se proporcionan a `entryType` y `keyType` determinan qué tipo de entrada contiene la clase y qué tipo de clave asocia a cada entrada. Debido a la restricción, debe proporcionar a `keyType` un tipo que implementa <xref:System.IComparable>.  
   
- The following code example creates an object that holds `String` entries and associates an `Integer` key with each one. `Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.  
+ En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia una clave `Integer` a cada una de ellas. `Integer` implementa <xref:System.IComparable> y, por tanto, satisface la restricción en `keyType`.  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  

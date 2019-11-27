@@ -10,7 +10,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350994"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
-One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
+Una de las características clave de los literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante la instrucción `Imports`. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
   
  Esta capacidad es útil en dos situaciones. En primer lugar, los espacios de nombres declarados en los literales XML no se mantienen en expresiones incrustadas. La declaración de espacios de nombres globales reduce la cantidad de trabajo que tiene que realizar para usar expresiones incrustadas con espacios de nombres. En segundo lugar, debe declarar espacios de nombres globales para usar espacios de nombres con propiedades XML.  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Vea también
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Información general sobre espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

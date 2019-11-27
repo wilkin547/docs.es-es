@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448243"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope (Método)
-Gets a pointer to the assembly in the current scope.  
+Obtiene un puntero al ensamblado en el ámbito actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,14 +35,14 @@ HRESULT GetAssemblyFromScope (
   
 ## <a name="parameters"></a>Parámetros  
  `ptkAssembly`  
- [out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.  
+ enuncia Puntero al token de `mdAssembly` recuperado que identifica el ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

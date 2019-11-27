@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440430"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked (Método)
-Gets a value indicating whether the specified metadata token has been marked as processed.  
+Obtiene un valor que indica si el token de metadatos especificado se ha marcado como procesado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,17 +36,17 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] The token to examine for a processing mark.  
+ de Token que se va a examinar para una marca de procesamiento.  
   
  `pIsMarked`  
- [out] A value that is `true` if `tk` has been processed; otherwise `false`.  
+ enuncia Un valor que es `true` si se ha procesado `tk`; de lo contrario `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

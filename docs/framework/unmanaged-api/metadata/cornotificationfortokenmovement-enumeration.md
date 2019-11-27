@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450149"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement (Enumeración)
-Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
+Especifica las notificaciones que se enviarán al cliente de la API de metadatos cuando se produzca una reasignación de token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,37 +63,37 @@ typedef enum CorNotificationForTokenMovement {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
-|`MDNotifyAll`|Notify when any token moves.|  
-|`MDNotifyNone`|Do not notify when tokens move.|  
-|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
-|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
-|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
-|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
-|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
-|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
-|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
-|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
-|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
-|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
-|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
-|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
-|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
-|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
-|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
-|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
-|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
-|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
-|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
-|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
+|`MDNotifyDefault`|Notificar cuando se muevan los tokens `mdTypeRef`, `mdMethodDef`, `mdMemberRef`o `mdFieldDef`.|  
+|`MDNotifyAll`|Notificar cuando se mueva cualquier token.|  
+|`MDNotifyNone`|No notifique cuando se muevan los tokens.|  
+|`MDNotifyMethodDef`|Notificar cuando se mueve un token de `mdMethodDef`.|  
+|`MDNotifyMemberRef`|Notificar cuando se mueve un token de `mdMemberRef`.|  
+|`MDNotifyFieldDef`|Notificar cuando se mueve un token de `mdFieldDef`.|  
+|`MDNotifyTypeRef`|Notificar cuando se mueve un token de `mdTypeRef`.|  
+|`MDNotifyTypeDef`|Notificar cuando se mueve un token de `mdTypeDef`.|  
+|`MDNotifyParamDef`|Notificar cuando se mueve un token de `mdParamDef`.|  
+|`MDNotifyInterfaceImpl`|Notificar cuando se mueve un token de `mdInterfaceImpl`.|  
+|`MDNotifyProperty`|Notificar cuando se mueve un token de `mdProperty`.|  
+|`MDNotifyEvent`|Notificar cuando se mueve un token de `mdEvent`.|  
+|`MDNotifySignature`|Notificar cuando se mueve un token de `mdSignature`.|  
+|`MDNotifyTypeSpec`|Notificar cuando se mueve un token de `mdTypeSpec`.|  
+|`MDNotifyCustomAttribute`|Notificar cuando se mueve un token de `mdCustomAttribute`.|  
+|`MDNotifySecurityValue`|Notificar cuando se mueve un token de `mdSecurityValue`.|  
+|`MDNotifyPermission`|Notificar cuando se mueve un token de `mdPermission`.|  
+|`MDNotifyModuleRef`|Notificar cuando se mueve un token de `mdModuleRef`.|  
+|`MDNotifyNameSpace`|Notificar cuando se mueve un token de `mdNameSpace`.|  
+|`MDNotifyAssemblyRef`|Notificar cuando se mueve un token de `mdAssemblyRef`.|  
+|`MDNotifyFile`|Notificar cuando se mueve un token de `mdFile`.|  
+|`MDNotifyExportedType`|Notificar cuando se mueve un token de `mdExportedType`.|  
+|`MDNotifyResource`|Notificar cuando se mueve un token de `mdManifestResource`.|  
   
 ## <a name="remarks"></a>Comentarios  
- A token may be re-mapped (that is, moved) during a metadata merge.  
+ Un token puede volver a asignarse (es decir, moverse) durante una fusión mediante combinación de metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

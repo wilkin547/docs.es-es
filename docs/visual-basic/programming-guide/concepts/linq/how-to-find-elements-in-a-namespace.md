@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344661"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos en un espacio de nombres (XPath-LINQ to XML) (Visual Basic)
 Las expresiones XPath pueden buscar nodos en un espacio de nombres específico. Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre. Para analizar una expresión XPath que contiene prefijos de espacio de nombre, debe pasar un objeto a los métodos XPath que implementan <xref:System.Xml.IXmlNamespaceResolver>. Este ejemplo usa <xref:System.Xml.XmlNamespaceManager>.  
   
  La expresión XPath es:  
@@ -82,4 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

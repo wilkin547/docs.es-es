@@ -20,17 +20,17 @@ ms.locfileid: "74448795"
   
  Esta sección contiene información general y temas de procedimientos que le ayudarán a desarrollar clientes de Automatización de la interfaz de usuario.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Automatización de la interfaz de usuario y ajuste de escala de la pantalla](ui-automation-and-screen-scaling.md)  
- [Compatibilidad de Automatización de la interfaz de usuario con los controles estándar](ui-automation-support-for-standard-controls.md)  
- [Eventos de Automatización de la interfaz de usuario para clientes](ui-automation-events-for-clients.md)  
- [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](caching-in-ui-automation-clients.md)  
- [Propiedades de Automatización de la interfaz de usuario para clientes](ui-automation-properties-for-clients.md)  
- [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](control-pattern-mapping-for-ui-automation-clients.md)  
- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)  
- [Obtención de elementos de Automatización de la interfaz de usuario](obtaining-ui-automation-elements.md)  
- [Problemas de subproceso de Automatización de la interfaz de usuario](ui-automation-threading-issues.md)  
- [Temas "Cómo..."](ui-automation-clients-for-managed-code-how-to-topics.md)  
+## <a name="in-this-section"></a>Esta sección  
+ [UI Automation and Screen Scaling](ui-automation-and-screen-scaling.md)  
+ [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)  
+ [UI Automation Events for Clients](ui-automation-events-for-clients.md)  
+ [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)  
+ [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+ [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)  
+ [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)  
+ [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)  
+ [UI Automation Threading Issues](ui-automation-threading-issues.md)  
+ [Temas de procedimientos](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Automation>

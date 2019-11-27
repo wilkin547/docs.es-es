@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449434"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps (Método)
-Gets the set of properties for the assembly with the specified metadata signature.  
+Obtiene el conjunto de propiedades para el ensamblado con la firma de metadatos especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,38 +43,38 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]. Símbolo (token) de metadatos de `mdAssembly` que representa el ensamblado para el que se van a obtener las propiedades.  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ enuncia Puntero a la clave pública o al token de metadatos.  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ enuncia Número de bytes de la clave pública devuelta.  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ enuncia Puntero al algoritmo utilizado para aplicar un algoritmo hash a los archivos del ensamblado.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ enuncia Nombre simple del ensamblado.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ de Tamaño, en caracteres anchos, de `szName`.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ enuncia Número de caracteres anchos realmente devueltos en `szName`.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ enuncia Puntero a una estructura ASSEMBLYMETADATA (que contiene los metadatos del ensamblado.  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ enuncia Marcas que describen los metadatos aplicados a un ensamblado. Este valor es una combinación de uno o más valores de [corassemblyflags (](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

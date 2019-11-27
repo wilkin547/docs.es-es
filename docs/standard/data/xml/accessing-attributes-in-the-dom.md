@@ -117,7 +117,7 @@ public class Sample
 
 Este ejemplo muestra el siguiente resultado:
 
-**Resultado**
+**Salida**
 
 Muestra todos los atributos en la colección.
 

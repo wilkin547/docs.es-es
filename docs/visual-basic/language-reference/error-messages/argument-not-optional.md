@@ -13,13 +13,13 @@ ms.locfileid: "74353909"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argumento no opcional (Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+El número y los tipos de argumentos deben coincidir con los esperados. Hay un número de argumentos incorrecto o un argumento omitido no es opcional. Un argumento solo se puede omitir en una llamada a un procedimiento definido por el usuario si se declaró `Optional` en la definición del procedimiento.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Supply all necessary arguments.  
+1. Proporcione todos los argumentos necesarios.  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. Asegúrese de que los argumentos omitidos son opcionales. Si no es así, proporcione el argumento en la llamada o declare el parámetro `Optional` en la definición.  
   
 ## <a name="see-also"></a>Vea también
 

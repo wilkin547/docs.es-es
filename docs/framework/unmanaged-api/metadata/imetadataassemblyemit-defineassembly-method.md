@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432124"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly (Método)
-Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
+Crea una estructura de `Assembly` que contiene metadatos para el ensamblado especificado y devuelve el token de metadatos asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,35 +41,35 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parámetros  
  `pbPublicKey`  
- [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
+ de La clave pública que identifica al publicador del ensamblado, o NULL si el ensamblado no tiene un nombre seguro.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ de Tamaño en bytes de `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
+ de Identificador del algoritmo hash que se va a utilizar para cifrar los archivos del ensamblado, o NULL para especificar el algoritmo SHA-1.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ de Nombre del texto legible del ensamblado. Este valor no debe superar los 1024 caracteres.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ de Un puntero a una instancia de ASSEMBLYMETADATA (que contiene la versión, la plataforma y la información de configuración regional para el ensamblado.  
   
  `dwAssemblyFlags`  
- [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
+ de Combinación de valores [corassemblyflags (](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) que describen las características del ensamblado.  
   
  `pmda`  
- [out] A pointer to the metadata token.  
+ enuncia Puntero al token de metadatos.  
   
 ## <a name="remarks"></a>Comentarios  
- Only one `Assembly` metadata structure can be defined within a manifest.  
+ Solo se puede definir una estructura de metadatos de `Assembly` dentro de un manifiesto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

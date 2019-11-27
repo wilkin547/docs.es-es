@@ -12,7 +12,7 @@ ms.locfileid: "74283150"
 # <a name="activity-library"></a>Biblioteca de actividades
 Esta sección contiene ejemplos que muestran las actividades personalizadas avanzadas en Windows Workflow Foundation (WF).  
   
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
  [Actividad personalizada SendMail](sendmail-custom-activity.md)  
  Muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo mediante SMTP para el uso dentro de una aplicación de flujo de trabajo.  

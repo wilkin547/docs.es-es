@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448075"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly (Método)
-Notifies the profiler that a module is being attached to its parent assembly.  
+Notifica al generador de perfiles que se está asociando un módulo a su ensamblado primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleId`  
- [in] The ID of the module that is being attached.  
+ de IDENTIFICADOR del módulo que se va a adjuntar.  
   
  `AssemblyId`  
- [in] The ID of the parent assembly to which the module is attached.  
+ de IDENTIFICADOR del ensamblado primario al que está asociado el módulo.  
   
 ## <a name="remarks"></a>Comentarios  
- A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
+ Un módulo se puede cargar a través de una tabla de direcciones de importación (IAT), a través de una llamada a `LoadLibrary`o a través de una referencia de metadatos. Como resultado, el cargador de Common Language Runtime (CLR) tiene varias rutas de acceso de código para determinar el ensamblado en el que reside un módulo. Por lo tanto, es posible que después de llamar a [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) , el módulo no sepa en qué ensamblado se encuentra y que no sea posible obtener el identificador del ensamblado primario. Se llama al método `ModuleAttachedToAssembly` cuando el módulo se adjunta a su ensamblado primario y se puede obtener el identificador del ensamblado primario.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

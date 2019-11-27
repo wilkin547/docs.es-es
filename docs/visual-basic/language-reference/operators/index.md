@@ -15,21 +15,21 @@ ms.locfileid: "74330988"
 
 ## <a name="in-this-section"></a>En esta sección
 
-- [Operator precedence in Visual Basic](operator-precedence.md)
-- [Operators listed by functionality](operators-listed-by-functionality.md)
-- [Data types of operator results](data-types-of-operator-results.md)
-- [DirectCast operator](directcast-operator.md)
-- [TryCast operator](trycast-operator.md)
-- [NameOf operator](nameof.md)
-- [New operator](new-operator.md)
-- [Null-conditional operators](null-conditional-operators.md)
+- [Precedencia de operadores en Visual Basic](operator-precedence.md)
+- [Operadores enumerados por funcionalidad](operators-listed-by-functionality.md)
+- [Tipos de datos de resultados de operador](data-types-of-operator-results.md)
+- [DirectCast (operador)](directcast-operator.md)
+- [TryCast (operador)](trycast-operator.md)
+- [Operador Name](nameof.md)
+- [New (operador)](new-operator.md)
+- [Operadores condicionales null](null-conditional-operators.md)
 - [Operadores aritméticos](arithmetic-operators.md)
 - [Operadores de asignación](assignment-operators.md)
-- [Bit Shift operators](bit-shift-operators.md)
+- [Operadores de desplazamiento de bits](bit-shift-operators.md)
 - [Operadores de comparación](comparison-operators.md)
-- [Concatenation operators](concatenation-operators.md)
-- [Logical/Bitwise operators](logical-bitwise-operators.md)
-- [Miscellaneous operators](miscellaneous-operators.md)
+- [Operadores de concatenación](concatenation-operators.md)
+- [Operadores lógicos y bit a bit](logical-bitwise-operators.md)
+- [Operadores varios](miscellaneous-operators.md)
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

@@ -55,10 +55,10 @@ Para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvide
 
 |Miembros requeridos|Tipo de miembro|Notas|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propiedad.|Ninguno|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propiedad|Ninguno|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Método|Ninguno|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Método|Ninguno|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|evento|Este control no tiene ningún evento asociado; use este delegado genérico.|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Evento|Este control no tiene ningún evento asociado; use este delegado genérico.|
 
 <a name="Exceptions"></a>
 
@@ -68,13 +68,13 @@ Los proveedores deben producir las siguientes excepciones.
 
 |Tipo de excepción|Condición|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|Either <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called when the <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
+|<xref:System.InvalidOperationException>|Se llama a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> cuando la <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
 
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Navegar entre elementos de Automatización de la interfaz de usuario con TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
 - [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)

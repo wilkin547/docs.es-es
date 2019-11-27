@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445325"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown (Método)
-Notifies the profiler that an exception has been thrown.  
+Notifica al generador de perfiles que se ha producido una excepción.  
   
 > [!NOTE]
-> This function is called only if the exception reaches managed code.  
+> Solo se llama a esta función si la excepción llega al código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +37,12 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parámetros  
  `thrownObjectId`  
- [in] The ID of the object that caused the exception to be thrown.  
+ de IDENTIFICADOR del objeto que produjo la excepción que se va a producir.  
   
 ## <a name="remarks"></a>Comentarios  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ El generador de perfiles no debe bloquear en su implementación de este método porque la pila puede no estar en un estado que permita la recolección de elementos no utilizados y, por tanto, no se puede habilitar la recolección de elementos no utilizados preferente. Si el generador de perfiles se bloquea aquí y se intenta la recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que esta devolución de llamada vuelva.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ La implementación del generador de perfiles de este método no debe llamar a código administrado ni provocar una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

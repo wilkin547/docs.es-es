@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352955"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo desplazarse hasta el elemento primario y buscar un atributo en él.  
   
  La expresión XPath es:  
@@ -49,4 +49,4 @@ id="bk101"
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

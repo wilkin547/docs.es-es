@@ -18,17 +18,17 @@ Proporciona una propiedad y un método para obtener acceso a los puertos serie d
 ## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer.Ports` , vea <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Para obtener más información, consulte [acceso a los puertos del equipo](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> También puede utilizar las propiedades y los métodos de la clase <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> para tener acceso a los puertos serie del equipo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Clase:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

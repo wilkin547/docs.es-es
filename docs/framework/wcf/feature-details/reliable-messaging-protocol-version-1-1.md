@@ -352,11 +352,11 @@ WCF proporciona protección para las secuencias de WS-ReliableMessaging mediante
 
 - R2301: para proteger la integridad de una secuencia de WS-ReliableMessaging además de la integridad y confidencialidad de los mensajes individuales, WCF requiere que se utilice WS-Secure Conversation.
 
-- R2302: AWS: la sesión de conversación segura se debe establecer antes de establecer las secuencias de WS-ReliableMessaging.
+- R2302:una sesión de WS-Secure Conversation se debe establecer antes de establecer las secuencias de WS-ReliableMessaging.
 
 - R2303: si la duración de la secuencia de WS-ReliableMessaging supera la duración de la sesión de WS-Secure Conversation, el `SecurityContextToken` establecido mediante WS-Secure Conversation se debe renovar utilizando el enlace de renovación de WS-Secure Conversation correspondiente.
 
-- B2304: la secuencia de WS-ReliableMessaging o un par de secuencias inversas correlacionadas siempre se enlazan a una única sesión de WS-SecureConversation.
+- B2304:La secuencia de WS-ReliableMessaging o un par de secuencias inversas correlacionadas siempre se enlazan a una única sesión de WS-SecureConversation.
 
 - R2305: cuando se crea con WS-Secure Conversation, el respondedor de WCF requiere que el mensaje de `CreateSequence` contenga el elemento `wsse:SecurityTokenReference` y el encabezado `wsrm:UsesSequenceSTR`.
 
@@ -452,7 +452,7 @@ En esta sección se describe el comportamiento de WCF cuando se utiliza WS-Relia
 
 ### <a name="one-way-non-addressable-initiator"></a>Iniciador unidireccional no direccionable
 
-#### <a name="binding"></a>Enlaces
+#### <a name="binding"></a>Enlace
 
 WCF proporciona un patrón de intercambio de mensajes unidireccional utilizando una secuencia sobre un canal HTTP. WCF usa solicitudes HTTP para transmitir todos los mensajes desde el iniciador al respondedor y respuestas HTTP para transmitir todos los mensajes del respondedor al iniciador.
 
@@ -474,7 +474,7 @@ El iniciador de WCF transmite un mensaje de `TerminateSequence` en una solicitud
 
 ### <a name="one-way-addressable-initiator"></a>Iniciador unidireccional y direccionable
 
-#### <a name="binding"></a>Enlaces
+#### <a name="binding"></a>Enlace
 
 WCF proporciona un patrón de intercambio de mensajes unidireccional utilizando una secuencia sobre un canal HTTP entrante y otro saliente. WCF usa las solicitudes HTTP para transmitir todos los mensajes. Todas las respuestas HTTP tienen un cuerpo vacío y código de estado HTTP 202.
 
@@ -484,7 +484,7 @@ El iniciador de WCF transmite un mensaje `CreateSequence` sin ningún elemento `
 
 ### <a name="duplex-addressable-initiator"></a>Iniciador dúplex y direccionable
 
-#### <a name="binding"></a>Enlaces
+#### <a name="binding"></a>Enlace
 
 WCF proporciona un patrón de intercambio de mensajes bidireccional totalmente asincrónico que usa dos secuencias sobre un canal HTTP entrante y otro saliente. Este patrón de intercambio de mensajes se puede mezclar con el patrón de intercambio de mensajes del iniciador de `Request/Reply`, `Addressable` de una manera limitada. WCF usa solicitudes HTTP para transmitir todos los mensajes. Todas las respuestas HTTP tienen un cuerpo vacío y código de estado HTTP 202.
 
@@ -502,7 +502,7 @@ WCF puede cerrar su secuencia de salida y continuar procesando los mensajes en l
 
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>Iniciador de solicitud-respuesta unidireccional y no direccionable
 
-#### <a name="binding"></a>Enlaces
+#### <a name="binding"></a>Enlace
 
 WCF proporciona un modelo de intercambio de mensajes de solicitud-respuesta unidireccional que usa dos secuencias sobre un canal HTTP. WCF usa solicitudes HTTP para transmitir todos los mensajes desde el iniciador al respondedor y respuestas HTTP para transmitir todos los mensajes del respondedor al iniciador.
 
@@ -546,7 +546,7 @@ El respondedor de WCF transmite el mensaje de `TerminateSequenceResponse` en la 
 
 ### <a name="requestreply-addressable-initiator"></a>Iniciador direccionable de solicitud-respuesta
 
-#### <a name="binding"></a>Enlaces
+#### <a name="binding"></a>Enlace
 
 WCF proporciona un patrón de intercambio de mensajes de solicitud-respuesta con dos secuencias sobre un canal HTTP entrante y uno saliente. Este patrón de intercambio de mensajes se puede mezclar con el patrón de intercambio de mensajes del iniciador de `Duplex, Addressable` de una manera limitada. WCF usa las solicitudes HTTP para transmitir todos los mensajes. Todas las respuestas HTTP tienen un cuerpo vacío y código de estado HTTP 202.
 

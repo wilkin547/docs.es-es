@@ -38,21 +38,21 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|El número de bloques de argumentos. Es decir, este valor es el número de estructuras [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) en la matriz de `ranges`.|  
+|`totalArgumentSize`|Tamaño total de todos los argumentos. En otras palabras, este valor es la suma de las longitudes de los argumentos.|  
+|`ranges`|Matriz de estructuras de `COR_PRF_FUNCTION_ARGUMENT_RANGE`, cada una de las cuales representa un bloque de argumentos de función.|  
   
 ## <a name="remarks"></a>Comentarios  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+ Una función puede tener muchos argumentos. Es posible que esos argumentos no se almacenen de forma contigua en la memoria. Puede tener un bloque de tres argumentos en un lugar, un bloque de dos argumentos en otro lugar y un bloque final de un argumento en un lugar diferente. Estos argumentos son todos para la misma función; simplemente se almacenan en distintos lugares.  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ La estructura `COR_PRF_FUNCTION_ARGUMENT_INFO` representa todos los argumentos de una sola función. Utiliza una matriz para hacer referencia a todos los bloques de argumentos de función. Por lo tanto, para una sola función, tiene una única estructura de `COR_PRF_FUNCTION_ARGUMENT_INFO`, que hace referencia a varias estructuras `COR_PRF_FUNCTION_ARGUMENT_RANGE`, cada una de las cuales señala a uno o más argumentos de función.  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ Los argumentos que se almacenan en registros se desbordan en la memoria para compilar las estructuras.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346812"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos descendientes (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo obtener los elementos descendientes con un nombre particular.  
   
  La expresión XPath es `//Name`.  
@@ -53,4 +53,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

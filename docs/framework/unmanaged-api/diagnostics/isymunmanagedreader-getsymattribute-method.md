@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440138"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute (Método)
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
+Obtiene un atributo personalizado basado en su nombre. A diferencia de los atributos personalizados de metadatos, estos atributos personalizados se mantienen en el almacén de símbolos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parámetros  
  `parent`  
- [in] The metadata token for the object for which the attribute is requested.  
+ de Símbolo (token) de metadatos del objeto para el que se solicita el atributo.  
   
  `name`  
- [in] A pointer to the variable that indicates the attribute to retrieve.  
+ de Puntero a la variable que indica el atributo que se va a recuperar.  
   
  `cBuffer`  
  [in] Tamaño de la matriz `buffer`.  
   
  `pcBuffer`  
- [out] A pointer to the variable that receives the length of the attribute data.  
+ enuncia Puntero a la variable que recibe la longitud de los datos del atributo.  
   
  `buffer`  
- [out] A pointer to the variable that receives the attribute data.  
+ enuncia Puntero a la variable que recibe los datos del atributo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

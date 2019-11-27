@@ -9,11 +9,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332364"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>How to: Work with Dictionaries Using LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Cómo: trabajar con diccionarios mediante LINQ to XML (Visual Basic)
 A menudo resulta cómodo convertir variedades de estructuras de datos a XML y de XML a otras estructuras de datos. Este tema muestra una implementación específica de este enfoque general convirtiendo un <xref:System.Collections.Generic.Dictionary%602> a XML y de XML.  
   
 ## <a name="example"></a>Ejemplo  
- This example uses XML literals and a query in an embedded expression. The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.  
+ En este ejemplo se usan literales XML y una consulta en una expresión incrustada. La consulta proyecta nuevos objetos de <xref:System.Xml.Linq.XElement>, que se convierten en el nuevo contenido del objeto de <xref:System.Xml.Linq.XElement> `Root`.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -72,4 +72,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>Vea también
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Proyecciones y transformaciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
