@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444258"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA (Estructura)
-Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
+Contiene información acerca del ensamblado al que se hace referencia, incluida su versión y su nivel de compatibilidad con configuraciones regionales, procesadores y sistemas operativos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,23 +45,23 @@ typedef struct {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
-|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
-|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
-|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
-|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
-|`cbLocale`|The size in wide characters of `szLocale`.|  
-|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
-|`ulProcessor`|The length of the `rdwProcessor` array.|  
-|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
-|`ulOS`|The length of the `rOS` array.|  
+|`usMajorVersion`|Número de versión principal del ensamblado al que se hace referencia. Este valor no puede ser cero. Si se establecen todos los bits de `usMajorVersion`, no se especifica la versión principal.|  
+|`usMinorVersion`|Número de versión secundaria del ensamblado al que se hace referencia. Este valor no puede ser cero. Si se establecen todos los bits de `usMinorVersion`, no se especifica la versión secundaria.|  
+|`usBuildNumber`|Número de compilación del ensamblado al que se hace referencia. Este valor no puede ser cero. Si se establecen todos los bits de `usBuildNumber`, no se especifica el número de compilación.|  
+|`usRevisionNumber`|El número de revisión del ensamblado al que se hace referencia. Este valor no puede ser cero. Si se establecen todos los bits de `usRevisionNumber`, no se especifica el número de revisión.|  
+|`szLocale`|Una lista de nombres de configuración regional que se ajustan a la especificación de RFC1766, separadas por punto y coma, que especifican las configuraciones regionales que admite el ensamblado al que se hace referencia. Un valor null indica la independencia de la configuración regional. **Nota:**  En la versión .NET Framework 1,0 no puede especificar más de una configuración regional.|  
+|`cbLocale`|Tamaño en caracteres anchos de `szLocale`.|  
+|`rdwProcessor`|Matriz de identificadores, tal y como se define en Winnt. h, para los tipos de procesador admitidos por el ensamblado al que se hace referencia. Un valor NULL indica la independencia del procesador.|  
+|`ulProcessor`|Longitud de la matriz de `rdwProcessor`.|  
+|`rOS`|Una matriz de instancias de [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) que especifican los sistemas operativos admitidos por el ensamblado al que se hace referencia. Un valor NULL indica la independencia del sistema operativo.|  
+|`ulOS`|Longitud de la matriz de `rOS`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

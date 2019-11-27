@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352994"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>How to: Find a Single Descendant Using the Descendants Method (Visual Basic)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Cómo: buscar un único descendiente utilizando el método Descendants (Visual Basic)
 Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -44,7 +44,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -82,4 +82,4 @@ GC3 Value
   
 ## <a name="see-also"></a>Vea también
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

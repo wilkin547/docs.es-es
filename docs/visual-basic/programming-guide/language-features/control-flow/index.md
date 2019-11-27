@@ -19,9 +19,9 @@ ms.locfileid: "74353929"
 
 Si un programa no se regula, procede a través de las instrucciones que contiene de principio a fin. Algunos programas muy simples pueden escribirse únicamente con este flujo unidireccional. Pero gran parte del rendimiento y la utilidad de un lenguaje de programación se debe a la capacidad de cambiar el orden de ejecución mediante instrucciones de control y bucles.
 
- Las estructuras de control permiten regular el flujo de la ejecución del programa. Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. Otras estructuras de control permiten garantizar la eliminación de un recurso o ejecutar una serie de instrucciones en la misma referencia de objeto.
+ Las estructuras de control permiten regular el flujo de la ejecución del programa. Mediante el uso de estructuras de control, puede escribir Visual Basic código que toma decisiones o que repite las acciones. Otras estructuras de control permiten garantizar la eliminación de un recurso o ejecutar una serie de instrucciones en la misma referencia de objeto.
   
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
  [Estructuras de decisión](decision-structures.md)  
  Describe las estructuras de control que se usan para la bifurcación.

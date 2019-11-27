@@ -38,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `rSignatures`  
- [out] The array used to store the Signature tokens.  
+ enuncia Matriz utilizada para almacenar los tokens de firma.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rSignatures`.  
   
  `pcSignatures`  
- [out] The number of Signature tokens returned in `rSignatures`.  
+ enuncia El número de tokens de firma devueltos en `rSignatures`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
+|`S_OK`|`EnumSignatures` devolvió correctamente.|  
+|`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcSignatures` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
- The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
+ El método [IMetaDataEmit:: GetTokenFromSig (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) crea los tokens de firma.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -52,24 +52,24 @@ typedef enum CorCallingConvention
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indica una Convención de llamada predeterminada.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indica que el método toma un número variable de parámetros.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indica que la llamada es a un campo.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indica que la llamada es a un método local.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indica que la llamada a es una propiedad.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indica que la llamada no está administrada.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indica una creación de instancias de método genérico.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indica una llamada PInvoke de 64 bits a un método que toma un número variable de parámetros.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Describe un valor de 4 bits no válido.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indica que la Convención de llamada se describe en los cuatro bits inferiores.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indica que el bit superior describe un parámetro `this`.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica que un parámetro de `this` se describe explícitamente en la firma.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma de método genérico con un número explícito de argumentos de tipo. Esto precede a un recuento de parámetros ordinarios.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

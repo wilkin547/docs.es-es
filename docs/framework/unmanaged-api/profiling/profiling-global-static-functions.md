@@ -14,59 +14,59 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447437"
 ---
 # <a name="profiling-global-static-functions"></a>Funciones estáticas globales para generación de perfiles
-This section describes the unmanaged API functions that the profiling API uses.  
+En esta sección se describen las funciones de la API no administradas que utiliza la API de generación de perfiles.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
   
-## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework version 1 Profiling Functions  
+## <a name="net-framework-version-1-profiling-functions"></a>Funciones de generación de perfiles de .NET Framework versión 1  
  [FunctionEnter (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- Notifies the profiler that control is being passed to a function. Deprecated in the .NET Framework 2.0.  
+ Notifica al generador de perfiles que el control se pasa a una función. En desuso en el .NET Framework 2,0.  
   
  [FunctionLeave (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- Notifies the profiler that a function is about to return to the caller. Deprecated in the .NET Framework 2.0.  
+ Notifica al generador de perfiles que una función está a punto de volver al llamador. En desuso en el .NET Framework 2,0.  
   
  [FunctionTailcall (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function. Deprecated in the .NET Framework 2.0.  
+ Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función. En desuso en el .NET Framework 2,0.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework version 2 Profiling Functions  
+## <a name="net-framework-version-2-profiling-functions"></a>Funciones de generación de perfiles de .NET Framework versión 2  
  [FunctionIDMapper (Función)](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function  
+ Notifica al generador de perfiles que el identificador especificado de una función puede reasignarse a un identificador alternativo que se va a usar en las devoluciones de llamada [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)y [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) para esa función. También permite al generador de perfiles indicar si desea recibir devoluciones de llamada para esa función.  
   
  [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. Deprecated in the .NET Framework 4.  
+ Notifica al generador de perfiles que el control se pasa a una función y proporciona información sobre el marco de pila y los argumentos de la función. En desuso en el .NET Framework 4.  
   
  [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value. Deprecated in the .NET Framework 4.  
+ Notifica al generador de perfiles que una función está a punto de volver al autor de la llamada y proporciona información sobre el marco de pila y el valor devuelto de la función. En desuso en el .NET Framework 4.  
   
  [FunctionTailcall2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame. Deprecated in the .NET Framework 4.  
+ Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función y proporciona información sobre el marco de pila. En desuso en el .NET Framework 4.  
   
  [StackSnapshotCallback (Función)](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+ Proporciona al generador de perfiles información sobre cada marco administrado y cada ejecución de marcos no administrados en la pila durante un recorrido de pila, iniciado por el método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .  
   
-## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework version 4 Profiling Functions  
+## <a name="net-framework-version-4-profiling-functions"></a>Funciones de generación de perfiles de .NET Framework versión 4  
  [FunctionIDMapper2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function.  
+ Notifica al generador de perfiles que el identificador especificado de una función puede reasignarse a un identificador alternativo que se va a usar en las devoluciones de llamada [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)o[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)y [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) de esa función. También permite al generador de perfiles indicar si desea recibir devoluciones de llamada para esa función.  
   
- `FunctionIDMapper2` extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with a `clientData` parameter, which profilers may use to disambiguate among runtimes.  
+ `FunctionIDMapper2` extiende la función [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) con un parámetro `clientData`, que los subarchivos pueden usar para eliminar la ambigüedad entre los tiempos de ejecución.  
   
  [FunctionEnter3 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- Notifies the profiler that control is being passed to a function.  
+ Notifica al generador de perfiles que el control se pasa a una función.  
   
  [FunctionEnter3WithInfo (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
+ Notifica al generador de perfiles que el control se pasa a una función y proporciona un identificador que se puede pasar a [ICorProfilerInfo3:: GetFunctionEnter3Info (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar el marco de pila y los argumentos de la función.  
   
  [FunctionLeave3 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- Notifies the profiler that control is being returned from a function.  
+ Notifica al generador de perfiles que el control se devuelve desde una función.  
   
  [FunctionLeave3WithInfo (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
+ Notifica al generador de perfiles que el control se devuelve desde una función y proporciona un identificador que se puede pasar a [ICorProfilerInfo3:: GetFunctionLeave3Info (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) para recuperar el marco de pila y el valor devuelto.  
   
  [FunctionTailcall3 (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+ Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función.  
   
  [FunctionTailcall3WithInfo (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
+ Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función y proporciona un identificador que se puede pasar a [ICorProfilerInfo3:: GetFunctionTailcall3Info (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar el marco de pila.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Información general sobre la generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
