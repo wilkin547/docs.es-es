@@ -15,7 +15,7 @@ ms.locfileid: "74336072"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot (Operador) (Visual Basic)
 
-Compares two object reference variables.
+Compara dos variables de referencia de objeto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,19 +26,19 @@ result = object1 IsNot object2
 ## <a name="parts"></a>Elementos
  `result` Obligatorio. Valor `Boolean`.
 
- `object1` Obligatorio. Any `Object` variable or expression.
+ `object1` Obligatorio. Cualquier `Object` variable o expresión.
 
- `object2` Obligatorio. Any `Object` variable or expression.
+ `object2` Obligatorio. Cualquier `Object` variable o expresión.
 
 ## <a name="remarks"></a>Comentarios
- The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
+ El operador `IsNot` determina si dos referencias de objeto hacen referencia a objetos diferentes. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` hacen referencia a la misma instancia de objeto exacta, se `False``result`. Si no es así, `result` se `True`.
 
- `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
+ `IsNot` es lo contrario del operador de `Is`. La ventaja de `IsNot` es que puede evitar una sintaxis poco complicada con `Not` y `Is`, lo que puede resultar difícil de leer.
 
- You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
+ Puede usar los operadores `Is` y `IsNot` para probar los objetos enlazados en tiempo de compilación y en tiempo de ejecución.
 
 ## <a name="example"></a>Ejemplo
- The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
+ En el ejemplo de código siguiente se usa el operador `Is` y el operador `IsNot` para realizar la misma comparación.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 

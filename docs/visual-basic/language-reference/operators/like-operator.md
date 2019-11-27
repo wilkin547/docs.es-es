@@ -30,10 +30,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350943"
 ---
 # <a name="like-operator-visual-basic"></a>Like (operador, Visual Basic)
-Compares a string against a pattern.  
+Compara una cadena con un patrón.  
 
 > [!IMPORTANT]
-> The `Like` operator is currently not supported in .NET Core and .NET Standard projects.
+> El operador `Like` no se admite actualmente en los proyectos de .NET Core y .NET Standard.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,65 +43,65 @@ result = string Like pattern
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Requerido. Any `Boolean` variable. The result is a `Boolean` value indicating whether or not the `string` satisfies the `pattern`.  
+ Obligatorio. Cualquier variable de `Boolean`. El resultado es un valor `Boolean` que indica si el `string` satisface o no el `pattern`.  
   
  `string`  
- Requerido. Cualquier expresión `String` .  
+ Obligatorio. Cualquier expresión `String` .  
   
  `pattern`  
- Requerido. Any `String` expression conforming to the pattern-matching conventions described in "Remarks."  
+ Obligatorio. Cualquier `String` expresión que se ajuste a las convenciones de coincidencia de patrones descritas en "Comentarios".  
   
 ## <a name="remarks"></a>Comentarios  
- If the value in `string` satisfies the pattern contained in `pattern`, `result` is `True`. If the string does not satisfy the pattern, `result` is `False`. If both `string` and `pattern` are empty strings, the result is `True`.  
+ Si el valor de `string` satisface el patrón incluido en `pattern`, se `True``result`. Si la cadena no satisface el modelo, `result` se `False`. Si tanto `string` como `pattern` son cadenas vacías, el resultado es `True`.  
   
-## <a name="comparison-method"></a>Comparison Method  
- The behavior of the `Like` operator depends on the [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md). The default string comparison method for each source file is `Option Compare Binary`.  
+## <a name="comparison-method"></a>Método de comparación  
+ El comportamiento del operador `Like` depende de la [instrucción Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md). El método predeterminado de comparación de cadenas para cada archivo de código fuente es `Option Compare Binary`.  
   
-## <a name="pattern-options"></a>Pattern Options  
- Built-in pattern matching provides a versatile tool for string comparisons. The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range. The following table shows the characters allowed in `pattern` and what they match.  
+## <a name="pattern-options"></a>Opciones de patrón  
+ La coincidencia de patrones integrada proporciona una herramienta versátil para comparaciones de cadenas. Las características de coincidencia de patrones permiten hacer coincidir cada carácter de `string` con un carácter específico, un carácter comodín, una lista de caracteres o un intervalo de caracteres. En la tabla siguiente se muestran los caracteres permitidos en `pattern` y en qué coinciden.  
   
-|Characters in `pattern`|Matches in `string`|  
+|Caracteres en `pattern`|Coincidencias en `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Cualquier carácter individual|  
-|`*`|Zero or more characters|  
-|`#`|Any single digit (0–9)|  
-|`[charlist]`|Any single character in `charlist`|  
-|`[!charlist]`|Any single character not in `charlist`|  
+|`*`|Cero o más caracteres|  
+|`#`|Cualquier dígito individual (0 – 9)|  
+|`[charlist]`|Cualquier carácter individual de `charlist`|  
+|`[!charlist]`|Cualquier carácter individual que no esté en `charlist`|  
   
-## <a name="character-lists"></a>Character Lists  
- A group of one or more characters (`charlist`) enclosed in brackets (`[ ]`) can be used to match any single character in `string` and can include almost any character code, including digits.  
+## <a name="character-lists"></a>Listas de caracteres  
+ Se puede usar un grupo de uno o varios caracteres (`charlist`) entre corchetes (`[ ]`) para buscar coincidencias con cualquier carácter individual de `string` y puede incluir prácticamente cualquier código de carácter, incluidos los dígitos.  
   
- An exclamation point (`!`) at the beginning of `charlist` means that a match is made if any character except the characters in `charlist` is found in `string`. When used outside brackets, the exclamation point matches itself.  
+ Un signo de exclamación (`!`) al principio de `charlist` significa que se realiza una coincidencia si se encuentra algún carácter excepto los caracteres de `charlist` en `string`. Cuando se usa fuera de corchetes, el signo de exclamación coincide con sí mismo.  
   
 ## <a name="special-characters"></a>Caracteres especiales  
- To match the special characters left bracket (`[`), question mark (`?`), number sign (`#`), and asterisk (`*`), enclose them in brackets. The right bracket (`]`) cannot be used within a group to match itself, but it can be used outside a group as an individual character.  
+ Para hacer coincidir los caracteres especiales entre corchetes (`[`), signos de interrogación (`?`), signo de número (`#`) y asterisco (`*`), escríbalos entre corchetes. El corchete de cierre (`]`) no se puede usar dentro de un grupo para que coincida, pero se puede usar fuera de un grupo como un carácter individual.  
   
- The character sequence `[]` is considered a zero-length string (`""`). However, it cannot be part of a character list enclosed in brackets. If you want to check whether a position in `string` contains one of a group of characters or no character at all, you can use `Like` twice. For an example, see [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ La `[]` de la secuencia de caracteres se considera una cadena de longitud cero (`""`). Sin embargo, no puede formar parte de una lista de caracteres entre corchetes. Si desea comprobar si una posición en `string` contiene uno de un grupo de caracteres o ningún carácter, puede usar `Like` dos veces. Para obtener un ejemplo, vea [Cómo: buscar coincidencias de una cadena con un patrón](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
-## <a name="character-ranges"></a>Character Ranges  
- By using a hyphen (`–`) to separate the lower and upper bounds of the range, `charlist` can specify a range of characters. For example, `[A–Z]` results in a match if the corresponding character position in `string` contains any character within the range `A`–`Z`, and `[!H–L]` results in a match if the corresponding character position contains any character outside the range `H`–`L`.  
+## <a name="character-ranges"></a>Intervalos de caracteres  
+ Mediante el uso de un guión (`–`) para separar los límites inferior y superior del intervalo, `charlist` puede especificar un intervalo de caracteres. Por ejemplo, `[A–Z]` da como resultado una coincidencia si la posición de carácter correspondiente en `string` contiene cualquier carácter dentro del intervalo `A`–`Z`y `[!H–L]` da como resultado una coincidencia si la posición del carácter correspondiente contiene algún carácter situado fuera del intervalo `H`-`L`.  
   
- When you specify a range of characters, they must appear in ascending sort order, that is, from lowest to highest. Thus, `[A–Z]` is a valid pattern, but `[Z–A]` is not.  
+ Cuando se especifica un intervalo de caracteres, deben aparecer en orden ascendente, es decir, de menor a mayor. Por lo tanto, `[A–Z]` es un patrón válido, pero `[Z–A]` no.  
   
-### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
- To specify multiple ranges for the same character position, put them within the same brackets without delimiters. For example, `[A–CX–Z]` results in a match if the corresponding character position in `string` contains any character within either the range `A`–`C` or the range `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>Varios intervalos de caracteres  
+ Para especificar varios intervalos para la misma posición de carácter, colóquelos dentro de los mismos corchetes sin delimitadores. Por ejemplo, `[A–CX–Z]` da como resultado una coincidencia si la posición de carácter correspondiente en `string` contiene cualquier carácter dentro del intervalo `A`–`C` o el intervalo `X`-`Z`.  
   
-### <a name="usage-of-the-hyphen"></a>Usage of the Hyphen  
- A hyphen (`–`) can appear either at the beginning (after an exclamation point, if any) or at the end of `charlist` to match itself. In any other location, the hyphen identifies a range of characters delimited by the characters on either side of the hyphen.  
+### <a name="usage-of-the-hyphen"></a>Uso del guión  
+ Un guión (`–`) puede aparecer al principio (después de un signo de exclamación, si existe) o al final de `charlist` para que coincida. En cualquier otra ubicación, el guión identifica un intervalo de caracteres delimitado por los caracteres situados a cada lado del guión.  
   
-## <a name="collating-sequence"></a>Collating Sequence  
- The meaning of a specified range depends on the character ordering at run time, as determined by `Option Compare` and the locale setting of the system the code is running on. With `Option Compare Binary`, the range `[A–E]` matches `A`, `B`, `C`, `D`, and `E`. With `Option Compare Text`, `[A–E]` matches `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, and `e`. The range does not match `Ê` or `ê` because accented characters collate after unaccented characters in the sort order.  
+## <a name="collating-sequence"></a>Secuencia de intercalación  
+ El significado de un intervalo especificado depende del orden de los caracteres en tiempo de ejecución, según determine `Option Compare` y la configuración regional del sistema en el que se está ejecutando el código. Con `Option Compare Binary`, el intervalo `[A–E]` coincide con `A`, `B`, `C`, `D`y `E`. Con `Option Compare Text`, `[A–E]` coincide con `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`y `e`. El intervalo no coincide con `Ê` o `ê` porque los caracteres acentuados se intercalan después de los caracteres no acentuados en el criterio de ordenación.  
   
-## <a name="digraph-characters"></a>Digraph Characters  
- In some languages, there are alphabetic characters that represent two separate characters. For example, several languages use the character `æ` to represent the characters `a` and `e` when they appear together. The `Like` operator recognizes that the single digraph character and the two individual characters are equivalent.  
+## <a name="digraph-characters"></a>Caracteres de dígrafo  
+ En algunos idiomas, hay caracteres alfabéticos que representan dos caracteres independientes. Por ejemplo, varios lenguajes usan el `æ` de caracteres para representar los caracteres `a` y `e` cuando aparecen juntos. El operador `Like` reconoce que el carácter de un solo gráfico y los dos caracteres individuales son equivalentes.  
   
- When a language that uses a digraph character is specified in the system locale settings, an occurrence of the single digraph character in either `pattern` or `string` matches the equivalent two-character sequence in the other string. Similarly, a digraph character in `pattern` enclosed in brackets (by itself, in a list, or in a range) matches the equivalent two-character sequence in `string`.  
+ Cuando se especifica un idioma que usa un carácter de dígrafo en la configuración regional del sistema, una aparición del carácter de un solo gráfico en `pattern` o `string` coincide con la secuencia de dos caracteres equivalentes de la otra cadena. De forma similar, un carácter de dígrafo en `pattern` entre corchetes (por sí solo, en una lista o en un intervalo) coincide con la secuencia de dos caracteres equivalentes en `string`.  
   
 ## <a name="overloading"></a>Sobrecarga  
- The `Like` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El operador de `Like` se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the `Like` operator to compare strings to various patterns. The results go into a `Boolean` variable indicating whether each string satisfies the pattern.  
+ En este ejemplo se usa el operador `Like` para comparar cadenas con varios patrones. Los resultados van a una variable `Boolean` que indica si cada cadena satisface el patrón.  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   

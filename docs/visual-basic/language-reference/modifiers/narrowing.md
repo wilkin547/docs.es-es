@@ -18,22 +18,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351474"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+Indica que un operador de conversión (`CType`) convierte una clase o estructura en un tipo que podría no contener algunos de los valores posibles de la clase o estructura original.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Convertir con la palabra clave narrowing  
+ El procedimiento de conversión debe especificar `Public Shared` además de `Narrowing`.  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ Las conversiones de restricción no siempre se realizan correctamente en tiempo de ejecución y pueden producir un error o provocar la pérdida de datos. Algunos ejemplos son `Long` `Integer`, `String` a `Date`y un tipo base a un tipo derivado. Esta última conversión está restringida porque el tipo base no puede contener todos los miembros del tipo derivado y, por tanto, no es una instancia del tipo derivado.  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ Si `Option Strict` es `On`, el código de consumo debe usar `CType` para todas las conversiones de restricción.  
   
- The `Narrowing` keyword can be used in this context:  
+ La palabra clave `Narrowing` se puede usar en este contexto:  
   
- [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Definir un operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

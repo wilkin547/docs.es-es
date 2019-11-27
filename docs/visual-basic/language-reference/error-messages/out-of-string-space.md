@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349171"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Espacio para cadenas insuficiente (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+Con Visual Basic, puede usar cadenas muy grandes. Sin embargo, los requisitos de otros programas y la forma de trabajar con las cadenas pueden producir este error.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. Asegúrese de que una expresión que requiera la creación de cadenas temporales durante la evaluación no esté causando el error.  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. Quite las aplicaciones innecesarias de la memoria para crear más espacio.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -14,7 +14,7 @@ ms.locfileid: "74353569"
 # <a name="statements-visual-basic"></a>Instrucciones (Visual Basic)
 En los temas de esta sección, se incluyen tablas de la declaración y las instrucciones ejecutables de Visual Basic, y de listas importantes que se aplican a muchas instrucciones.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Instrucciones de la A a la E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
  [Instrucciones de la F a la P](../../../visual-basic/language-reference/statements/f-p-statements.md)  

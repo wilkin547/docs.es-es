@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332338"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Cómo: Obtener acceso a elementos secundarios XML (Visual Basic)
-This example shows how to use a child axis property to access all XML child elements that have a specified name in an XML element. In particular, it uses the <xref:System.Xml.Linq.XElement.Value%2A> property to get the value of the first element in the collection that the `name` child axis property returns. The `name` child axis property gets all child elements named `phone` in the `contact` object. This example also uses the `phone` child axis property to access all child elements named `phone` that are contained in the `contact` object.  
+En este ejemplo se muestra cómo usar una propiedad de eje secundario para tener acceso a todos los elementos secundarios XML que tienen un nombre especificado en un elemento XML. En concreto, usa la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para obtener el valor del primer elemento de la colección que devuelve la propiedad del eje secundario `name`. La propiedad `name` eje secundario obtiene todos los elementos secundarios denominados `phone` en el objeto `contact`. En este ejemplo también se usa la propiedad del eje secundario `phone` para tener acceso a todos los elementos secundarios denominados `phone` contenidos en el objeto `contact`.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  

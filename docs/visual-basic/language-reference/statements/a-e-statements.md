@@ -10,13 +10,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350225"
 ---
 # <a name="a-e-statements"></a>Instrucciones A-E
-The following table contains a listing of Visual Basic language statements.  
+La tabla siguiente contiene una lista de instrucciones de lenguaje de Visual Basic.  
   
 |||||  
 |---|---|---|---|  
 |[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[Clase](class-statement.md)|[Const](const-statement.md)|  
 |[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[Fin](end-statement.md)|[End \<palabra clave>](end-keyword-statement.md)|  
+|[... Realizar](do-loop-statement.md)|[Else](else-statement.md)|[Fin](end-statement.md)|[End \<palabra clave>](end-keyword-statement.md)|  
 |[Enum](enum-statement.md)|[Erase](erase-statement.md)|[Error](error-statement.md)|[Event](event-statement.md)|  
 |[Salir](exit-statement.md)||||  
   

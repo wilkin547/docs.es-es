@@ -28,7 +28,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351256"
 ---
 # <a name="doloop-statement-visual-basic"></a>Instrucción Do...Loop (Visual Basic)
-Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.  
+Repite un bloque de instrucciones mientras se `True` una condición `Boolean` o hasta que la condición se `True`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,57 +52,57 @@ Loop { While | Until } condition
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`Do`|Requerido. Starts the definition of the `Do` loop.|  
-|`While`|Es necesario a menos que se use `Until`. Repeat the loop until `condition` is `False`.|  
-|`Until`|Es necesario a menos que se use `While`. Repeat the loop until `condition` is `True`.|  
-|`condition`|Opcional. `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
-|`statements`|Opcional. One or more statements that are repeated while, or until, `condition` is `True`.|  
-|`Continue Do`|Opcional. Transfers control to the next iteration of the `Do` loop.|  
-|`Exit Do`|Opcional. Transfers control out of the `Do` loop.|  
-|`Loop`|Requerido. Terminates the definition of the `Do` loop.|  
+|`Do`|Obligatorio. Inicia la definición del bucle `Do`.|  
+|`While`|Es necesario a menos que se use `Until`. Repita el bucle hasta que se `False``condition`.|  
+|`Until`|Es necesario a menos que se use `While`. Repita el bucle hasta que se `True``condition`.|  
+|`condition`|Opcional. `Boolean` expresión. Si `condition` es `Nothing`, Visual Basic lo trata como `False`.|  
+|`statements`|Opcional. Una o varias instrucciones que se repiten mientras, o hasta, se `True``condition`.|  
+|`Continue Do`|Opcional. Transfiere el control a la siguiente iteración del bucle `Do`.|  
+|`Exit Do`|Opcional. Transfiere el control fuera del bucle `Do`.|  
+|`Loop`|Obligatorio. Finaliza la definición del bucle `Do`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Use a `Do...Loop` structure when you want to repeat a set of statements an indefinite number of times, until a condition is satisfied. If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
+ Use una estructura de `Do...Loop` cuando desee repetir un conjunto de instrucciones un número indefinido de veces, hasta que se satisfaga una condición. Si desea repetir las instrucciones un número establecido de veces, la instrucción [for... La siguiente instrucción](../../../visual-basic/language-reference/statements/for-next-statement.md) suele ser una mejor opción.  
   
- You can use either `While` or `Until` to specify `condition`, but not both.  
+ Puede usar `While` o `Until` para especificar `condition`, pero no ambos.  
   
- You can test `condition` only one time, at either the start or the end of the loop. If you test `condition` at the start of the loop (in the `Do` statement), the loop might not run even one time. If you test at the end of the loop (in the `Loop` statement), the loop always runs at least one time.  
+ Solo puede probar `condition` una vez, al principio o al final del bucle. Si prueba `condition` al principio del bucle (en la instrucción `Do`), es posible que el bucle no se ejecute incluso una vez. Si realiza una prueba al final del bucle (en la instrucción `Loop`), el bucle siempre se ejecuta al menos una vez.  
   
- The condition usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This includes values of other data types, such as numeric types, that have been converted to `Boolean`.  
+ La condición suele ser el resultado de una comparación de dos valores, pero puede ser cualquier expresión que se evalúe como un valor de [tipo de datos booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md) (`True` o `False`). Esto incluye los valores de otros tipos de datos, como los tipos numéricos, que se han convertido en `Boolean`.  
   
- You can nest `Do` loops by putting one loop within another. You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Puede anidar `Do` bucles colocando un bucle dentro de otro. También puede anidar distintos tipos de estructuras de control entre sí. Para obtener más información, vea [estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
-> The `Do...Loop` structure gives you more flexibility than the [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) because it enables you to decide whether to end the loop when `condition` stops being `True` or when it first becomes `True`. It also enables you to test `condition` at either the start or the end of the loop.  
+> La estructura de `Do...Loop` proporciona más flexibilidad que el [tiempo... End while](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , ya que permite decidir si finalizar el bucle cuando `condition` deja de `True` o cuando se convierte por primera vez en `True`. También le permite probar `condition` al principio o al final del bucle.  
   
-## <a name="exit-do"></a>Exit Do  
- The [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide an alternative way to exit a `Do…Loop`. `Exit Do` transfers control immediately to the statement that follows the `Loop` statement.  
+## <a name="exit-do"></a>Salir  
+ La instrucción [Exit do](../../../visual-basic/language-reference/statements/exit-statement.md) puede proporcionar una manera alternativa de salir de un `Do…Loop`. `Exit Do` transfiere el control inmediatamente a la instrucción que sigue a la instrucción `Loop`.  
   
- `Exit Do` is often used after some condition is evaluated, for example in an `If...Then...Else` structure. You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. One use of `Exit Do` is to test for a condition that could cause an *endless loop*, which is a loop that could run a large or even infinite number of times. You can use `Exit Do` to escape the loop.  
+ a menudo se usa `Exit Do` después de evaluar alguna condición, por ejemplo en una estructura de `If...Then...Else`. Es posible que desee salir de un bucle si detecta una condición que hace que sea innecesario o imposible continuar la iteración, como un valor erróneo o una solicitud de finalización. Un uso de `Exit Do` es probar una condición que podría provocar un *bucle interminable*, que es un bucle que podría ejecutar un número de veces grande o incluso infinito. Puede usar `Exit Do` para escapar el bucle.  
   
- You can include any number of `Exit Do` statements anywhere in a `Do…Loop`.  
+ Puede incluir cualquier número de instrucciones `Exit Do` en cualquier parte de un `Do…Loop`.  
   
- When used within nested `Do` loops, `Exit Do` transfers control out of the innermost loop and into the next higher level of nesting.  
+ Cuando se utiliza en bucles `Do` anidados, `Exit Do` transfiere el control fuera del bucle más interno y en el siguiente nivel superior de anidamiento.  
   
 ## <a name="example"></a>Ejemplo  
- In the following example, the statements in the loop continue to run until the `index` variable is greater than 10. The `Until` clause is at the end of the loop.  
+ En el ejemplo siguiente, las instrucciones del bucle continúan ejecutándose hasta que la variable de `index` sea mayor que 10. La cláusula `Until` está al final del bucle.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>Ejemplo  
- The following example uses a `While` clause instead of an `Until` clause, and `condition` is tested at the start of the loop instead of at the end.  
+ En el ejemplo siguiente se utiliza una cláusula `While` en lugar de una cláusula `Until` y `condition` se prueba al principio del bucle en lugar de al final.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>Ejemplo  
- In the following example, `condition` stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.  
+ En el ejemplo siguiente, `condition` detiene el bucle cuando la variable de `index` es mayor que 100. Sin embargo, la instrucción `If` del bucle hace que la instrucción `Exit Do` detenga el bucle cuando la variable de índice sea mayor que 10.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Ejemplo  
- The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `Do...Loop` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether there are any additional characters.  
+ En el ejemplo siguiente se leen todas las líneas de un archivo de texto. El método <xref:System.IO.File.OpenText%2A> abre el archivo y devuelve un <xref:System.IO.StreamReader> que lee los caracteres. En la condición `Do...Loop`, el método <xref:System.IO.StreamReader.Peek%2A> de la `StreamReader` determina si hay caracteres adicionales.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

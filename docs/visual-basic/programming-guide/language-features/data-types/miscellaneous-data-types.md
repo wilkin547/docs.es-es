@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346345"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Tipos de datos variados (Visual Basic)
-Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
+Visual Basic proporciona varios tipos de datos que no están orientados a números o caracteres. En su lugar, se ocupan de los datos especializados, como los valores sí/no, los valores de fecha y hora y las direcciones de objeto.  
   
- For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Para ver una tabla que muestra una comparación en paralelo de los tipos de datos Visual Basic, vea [tipos de datos](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>Boolean Type  
- The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
+## <a name="boolean-type"></a>Tipo booleano  
+ El [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) es un valor sin signo que se interpreta como `True` o `False`. El ancho de los datos depende de la plataforma de implementación. Si una variable solo puede contener valores de dos Estados, como true/false, yes/no o ON/OFF, declárela como `Boolean`.  
   
-## <a name="date-type"></a>Date Type  
- The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
+## <a name="date-type"></a>Tipo de fecha  
+ El [tipo de datos Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) es un valor de 64 bits que contiene información de fecha y hora. Cada incremento representa 100 nanosegundos de tiempo transcurrido desde el inicio (12:00 A.M.) del 1 de enero del año 1 del calendario gregoriano. Si una variable puede contener un valor de fecha, un valor de hora o ambos, declárelo como `Date`.  
   
 ## <a name="object-type"></a>Tipo de objeto  
- The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
+ El [tipo de datos Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) es una dirección de 32 bits que apunta a una instancia de objeto dentro de la aplicación o en alguna otra aplicación. Una variable de `Object` puede hacer referencia a cualquier objeto que la aplicación reconozca o a datos de cualquier tipo de datos. Esto incluye los dos *tipos de valor*, como `Integer`, `Boolean`y las instancias de la estructura, y los tipos de *referencia*, que son instancias de los objetos creados a partir de clases como `String` y <xref:System.Windows.Forms.Form>, y las instancias de matriz.  
   
- If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
+ Si una variable almacena un puntero a una instancia de una clase que no conoce en tiempo de compilación, o si puede apuntar a datos de varios tipos de datos, declárelo como `Object`.  
   
- The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
+ La ventaja del tipo de datos `Object` es que se puede usar para almacenar datos de cualquier tipo de datos. El inconveniente es que se incurre en operaciones adicionales que tardan más tiempo de ejecución y hacen que la aplicación funcione más lentamente. Si usa una variable de `Object` para los tipos de valor, incurrirá en la *conversión boxing* y la conversión *unboxing*. Si se usa para los tipos de referencia, se incurre en el *enlace en tiempo de ejecución*.  
   
 ## <a name="see-also"></a>Vea también
 

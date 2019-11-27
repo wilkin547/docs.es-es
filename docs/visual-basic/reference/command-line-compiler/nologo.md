@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335432"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Suppresses display of the copyright banner and informational messages during compilation.  
+Suprime la presentación de la pancarta de copyright y los mensajes informativos durante la compilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -24,13 +24,13 @@ Suppresses display of the copyright banner and informational messages during com
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- If you specify `-nologo`, the compiler does not display a copyright banner. De forma predeterminada, `-nologo` no está en vigor.  
+ Si especifica `-nologo`, el compilador no mostrará un titular de copyright. De forma predeterminada, `-nologo` no está en vigor.  
   
 > [!NOTE]
-> The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> La opción `-nologo` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
- The following code compiles `T2.vb` and does not display a copyright banner.  
+ En el código siguiente se compila `T2.vb` y no se muestra un banner de copyright.  
   
 ```console
 vbc -nologo t2.vb  

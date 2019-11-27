@@ -30,14 +30,14 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`identifier_string`|Requerido. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
+|`identifier_string`|Obligatorio. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
 |`#End Region`|Finaliza el bloque `#Region`.|  
   
 ## <a name="remarks"></a>Comentarios  
 
- La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio. You can place, or *nest*, regions within other regions to group similar regions together.  
+ La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio. Puede colocar, o *anidar*, regiones en otras regiones para agrupar regiones similares.  
   
 ## <a name="example"></a>Ejemplo  
 

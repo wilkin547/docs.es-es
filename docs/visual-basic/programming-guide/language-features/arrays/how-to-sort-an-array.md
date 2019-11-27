@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 'Cómo: ordenar una matriz'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351851"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Cómo: ordenar una matriz en Visual Basic
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+En este artículo se muestra un ejemplo de cómo ordenar una matriz de cadenas en Visual Basic.
 
 ## <a name="example"></a>Ejemplo
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+En este ejemplo se declara una matriz de objetos de `String` denominada `zooAnimals`, se rellena y, a continuación, se ordena alfabéticamente:
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 Las condiciones siguientes pueden provocar una excepción:
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- La matriz está vacía (clase<xref:System.ArgumentNullException>).
+- La matriz es multidimensional (clase<xref:System.RankException>).
+- Uno o varios elementos de la matriz no implementan la interfaz <xref:System.IComparable> (clase<xref:System.InvalidOperationException>).
 
 ## <a name="see-also"></a>Vea también
 

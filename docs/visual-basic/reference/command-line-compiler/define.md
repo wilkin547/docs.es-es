@@ -33,13 +33,13 @@ o
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`symbol`|Requerido. Símbolo que se va a definir.|  
-|`value`|Opcional. Valor que se va a asignar a `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. Si no se especifica ningún valor, se considera como verdadero.|  
+|`symbol`|Obligatorio. Símbolo que se va a definir.|  
+|`value`|Opcional. Valor que se va a asignar a `symbol`. Si `value` es una cadena, debe estar rodeada por secuencias de barras diagonales inversas (\\") en lugar de Comillas. Si no se especifica ningún valor, se considera como verdadero.|  
   
 ## <a name="remarks"></a>Comentarios  
- The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
+ La opción `-define` tiene un efecto similar al uso de una directiva de preprocesador de `#Const` en el archivo de código fuente, con la excepción de que las constantes definidas con `-define` son públicas y se aplican a todos los archivos del proyecto.  
   
  Los símbolos creados por esta opción se pueden usar con la directiva `#If`...`Then`...`#Else` para compilar archivos de origen condicionalmente.  
   
@@ -49,7 +49,7 @@ o
   
 |Para definir/establecer en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
+|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2. Haga clic en la pestaña **compilar** .<br />3. Haga clic en **avanzadas**.<br />4. modifique el valor en el cuadro **constantes personalizadas** .|  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente código se definen y usan dos constantes de compilador condicionales.  

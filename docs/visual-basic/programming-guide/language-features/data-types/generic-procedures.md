@@ -20,18 +20,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350082"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimientos genéricos en Visual Basic
-A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter. This allows the calling code to tailor the data types to its requirements each time it calls the procedure.  
+Un *procedimiento genérico*, también denominado *método genérico*, es un procedimiento definido con al menos un parámetro de tipo. Esto permite que el código de llamada adapte los tipos de datos a sus requisitos cada vez que llama al procedimiento.  
   
- A procedure is not generic simply by virtue of being defined inside a generic class or a generic structure. To be generic, the procedure must take at least one type parameter, in addition to any normal parameters it might take. A generic class or structure can contain nongeneric procedures, and a nongeneric class, structure, or module can contain generic procedures.  
+ Un procedimiento no es genérico simplemente en virtud de definirse dentro de una clase genérica o en una estructura genérica. Para que sea genérico, el procedimiento debe tomar al menos un parámetro de tipo, además de los parámetros normales que puede llevar a cabo. Una clase o estructura genérica puede contener procedimientos no genéricos, y una clase, estructura o módulo no genéricos pueden contener procedimientos genéricos.  
   
- A generic procedure can use its type parameters in its normal parameter list, in its return type if it has one, and in its procedure code.  
+ Un procedimiento genérico puede usar sus parámetros de tipo en su lista de parámetros normal, en su tipo de valor devuelto si tiene uno, y en su código de procedimiento.  
   
 ## <a name="type-inference"></a>Inferencia de tipos  
- You can call a generic procedure without supplying any type arguments at all. If you call it this way, the compiler attempts to determine the appropriate data types to pass to the procedure's type arguments. This is called *type inference*. The following code shows a call in which the compiler infers that it should pass type `String` to the type parameter `t`.  
+ Puede llamar a un procedimiento genérico sin proporcionar ningún argumento de tipo. Si se llama de esta manera, el compilador intenta determinar los tipos de datos adecuados que se van a pasar a los argumentos de tipo del procedimiento. Esto se denomina *inferencia de tipos*. En el código siguiente se muestra una llamada en la que el compilador deduce que debe pasar el tipo `String` al parámetro de tipo `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
- If the compiler cannot infer the type arguments from the context of your call, it reports an error. One possible cause of such an error is an array rank mismatch. For example, suppose you define a normal parameter as an array of a type parameter. If you call the generic procedure supplying an array of a different rank (number of dimensions), the mismatch causes type inference to fail. The following code shows a call in which a two-dimensional array is passed to a procedure that expects a one-dimensional array.  
+ Si el compilador no puede inferir los argumentos de tipo del contexto de la llamada, notifica un error. Una posible causa de este error es que la clasificación de una matriz no coincide. Por ejemplo, supongamos que define un parámetro normal como una matriz de un parámetro de tipo. Si llama al procedimiento genérico que proporciona una matriz de un rango diferente (número de dimensiones), la incoherencia provocará un error en la inferencia de tipos. En el código siguiente se muestra una llamada en la que se pasa una matriz bidimensional a un procedimiento que espera una matriz unidimensional.  
   
 ```vb  
 Public Sub demoSub(Of t)(ByVal arg() As t)
@@ -43,26 +43,26 @@ Public Sub callDemoSub()
 End Sub
 ```
   
- You can invoke type inference only by omitting all the type arguments. If you supply one type argument, you must supply them all.  
+ Solo se puede invocar la inferencia de tipos si se omiten todos los argumentos de tipo. Si proporciona un argumento de tipo, debe proporcionarlos todos.  
   
- Type inference is supported only for generic procedures. You cannot invoke type inference on generic classes, structures, interfaces, or delegates.  
+ La inferencia de tipos solo se admite para los procedimientos genéricos. No se puede invocar la inferencia de tipos en clases, estructuras, interfaces o delegados genéricos.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- The following example defines a generic `Function` procedure to find a particular element in an array. It defines one type parameter and uses it to construct the two parameters in the parameter list.  
+ En el ejemplo siguiente se define un procedimiento genérico `Function` para buscar un elemento determinado en una matriz. Define un parámetro de tipo y lo usa para construir los dos parámetros en la lista de parámetros.  
   
 ### <a name="code"></a>Código  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Comentarios  
- The preceding example requires the ability to compare `searchValue` against each element of `searchArray`. To guarantee this ability, it constrains the type parameter `T` to implement the <xref:System.IComparable%601> interface. The code uses the <xref:System.IComparable%601.CompareTo%2A> method instead of the `=` operator, because there is no guarantee that a type argument supplied for `T` supports the `=` operator.  
+ En el ejemplo anterior se requiere la capacidad de comparar `searchValue` con cada elemento de `searchArray`. Para garantizar esta capacidad, restringe el parámetro de tipo `T` para implementar la interfaz de <xref:System.IComparable%601>. El código utiliza el método <xref:System.IComparable%601.CompareTo%2A> en lugar del operador `=`, porque no hay ninguna garantía de que un argumento de tipo proporcionado para `T` admita el operador `=`.  
   
- You can test the `findElement` procedure with the following code.  
+ Puede probar el procedimiento `findElement` con el código siguiente.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- The preceding calls to `MsgBox` display "0", "1", and "-1" respectively.  
+ Las llamadas anteriores a `MsgBox` Mostrar "0", "1" y "-1", respectivamente.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: 'Cómo: crear cadenas mediante StringBuilder'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,13 +12,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344378"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Cómo: crear cadenas mediante StringBuilder en Visual Basic
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+Este ejemplo crea una cadena larga a partir de muchas cadenas más pequeñas mediante la <xref:System.Text.StringBuilder> clase. La clase <xref:System.Text.StringBuilder> es más eficaz que el operador `&=` para concatenar muchas cadenas.
 
 ## <a name="example"></a>Ejemplo
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+En el ejemplo siguiente se crea una instancia de la clase <xref:System.Text.StringBuilder>, se anexan cadenas 1.000 a esa instancia y, después, se devuelve su representación de cadena:
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 

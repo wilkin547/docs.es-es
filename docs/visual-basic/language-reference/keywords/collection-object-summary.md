@@ -14,7 +14,7 @@ ms.locfileid: "74349923"
 # <a name="collection-object-summary-visual-basic"></a>Resumen de objetos de colección (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
 |Crear un objeto `Collection`.|<xref:Microsoft.VisualBasic.Collection>|  
 |Agregar un elemento a una colección.|<xref:Microsoft.VisualBasic.Collection.Add*>|  

@@ -18,7 +18,7 @@ ms.locfileid: "74353100"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Cómo: Calificar el elemento XML y los nombres del atributo XML
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+Los espacios de nombres XML contenidos en instancias de la clase <xref:System.Xml.Serialization.XmlSerializerNamespaces> deben ajustarse a la especificación de World Wide Web Consortium (W3C) denominada [espacios de nombres en XML](https://www.w3.org/TR/REC-xml-names/).
 
 Los espacios de nombres XML proporcionan una método para calificar los nombres de elementos y atributos XML en documentos XML. Un nombre calificado se compone de un prefijo y un nombre local, separados por dos puntos. El prefijo funciona únicamente como marcador de posición y está asignado a un identificador URI que especifica un espacio de nombres. La combinación del espacio de nombres del URI, universalmente administrado, y el nombre local genera un nombre del que se garantiza que es universalmente único.
 
@@ -175,7 +175,7 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Herramienta de definición de esquema XML y serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Introducción a la serialización XML](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer (clase)](xref:System.Xml.Serialization.XmlSerializer)
 - [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
 - [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Cómo: Serializar un objeto](how-to-serialize-an-object.md)

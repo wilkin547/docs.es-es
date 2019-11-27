@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436394"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer (Método)
-Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.  
+Crea un búfer con el tamaño especificado para un método y obtiene la dirección virtual relativa del método.  
   
- This method is obsolete and should not be used.  
+ Este método está obsoleto y no debe usarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +39,20 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Parámetros  
  `cchBuffer`  
- [in] The length of the buffer to create.  
+ de Longitud del búfer que se va a crear.  
   
  `lpBuffer`  
- [out] The returned buffer.  
+ enuncia Búfer devuelto.  
   
  `RVA`  
- [out] The relative virtual address of the method.  
+ enuncia Dirección virtual relativa del método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

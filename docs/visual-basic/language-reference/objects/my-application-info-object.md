@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344138"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info (Objeto)
-Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.  
+Proporciona propiedades para obtener información sobre la aplicación, como el número de versión, la descripción, los ensamblados cargados, etc.  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Application.Info` , vea <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
-> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
+> Puede utilizar las propiedades de la clase <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> para obtener información acerca de un archivo en disco.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
  **Clase:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

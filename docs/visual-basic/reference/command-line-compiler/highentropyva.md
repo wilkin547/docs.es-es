@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344250"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Indicates whether a 64-bit executable or an executable that's marked by the [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).  
+Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que está marcado con la opción del compilador [-Platform: AnyCPU](../../../visual-basic/reference/command-line-compiler/platform.md) admite la selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -23,12 +23,12 @@ Indicates whether a 64-bit executable or an executable that's marked by the [-pl
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. The option is off by default or if you specify `-highentropyva-`. The option is on if you specify `-highentropyva` or `-highentropyva+`.  
+ Opcional. La opción está desactivada de forma predeterminada o si se especifica `-highentropyva-`. La opción está activada si se especifica `-highentropyva` o `-highentropyva+`.  
   
 ## <a name="remarks"></a>Comentarios  
- If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR. If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps. Como resultado, la ubicación de un área de memoria específica es más difícil de adivinar.  
+ Si especifica esta opción, las versiones compatibles del kernel de Windows pueden usar los mayores grados de entropía cuando el kernel Aleatoriza el diseño del espacio de direcciones de un proceso como parte de ASLR. Si el kernel usa mayores grados de entropía, se puede asignar un número mayor de direcciones a las regiones de memoria, como pilas y montones. Como resultado, la ubicación de un área de memoria específica es más difícil de adivinar.  
   
- When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.  
+ Cuando la opción está activada, el archivo ejecutable de destino y todos los módulos de los que depende deben ser capaces de controlar los valores de puntero que son superiores a 4 gigabytes (GB) cuando dichos módulos se ejecutan como procesos de 64 bits.  
   
 ## <a name="see-also"></a>Vea también
 

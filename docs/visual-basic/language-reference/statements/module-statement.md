@@ -22,7 +22,7 @@ ms.locfileid: "74348015"
 ---
 # <a name="module-statement"></a>Module (Instrucción)
 
-Declares the name of a module and introduces the definition of the variables, properties, events, and procedures that the module comprises.
+Declara el nombre de un módulo e introduce la definición de las variables, propiedades, eventos y procedimientos que el módulo incluye.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,7 +35,7 @@ End Module
 ## <a name="parts"></a>Elementos
 
 `attributelist`  
-Opcional. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+Opcional. Vea [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 `accessmodifier`  
 Opcional. Puede ser uno de los siguientes:
@@ -47,55 +47,55 @@ Opcional. Puede ser uno de los siguientes:
 Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 `name`  
-Requerido. Name of this module. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+Obligatorio. Nombre de este módulo. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 `statements`  
-Opcional. Statements which define the variables, properties, events, procedures, and nested types of this module.
+Opcional. Instrucciones que definen las variables, propiedades, eventos, procedimientos y tipos anidados de este módulo.
 
 `End Module`  
 Termina la definición de `Module`.
 
 ## <a name="remarks"></a>Comentarios
 
-A `Module` statement defines a reference type available throughout its namespace. A *module* (sometimes called a *standard module*) is similar to a class but with some important distinctions. Every module has exactly one instance and does not need to be created or assigned to a variable. Modules do not support inheritance or implement interfaces. Notice that a module is not a *type* in the sense that a class or structure is — you cannot declare a programming element to have the data type of a module.
+Una instrucción `Module` define un tipo de referencia disponible a lo largo de su espacio de nombres. Un *módulo* (a veces denominado *módulo estándar*) es similar a una clase, pero con algunas distinciones importantes. Cada módulo tiene exactamente una instancia y no es necesario crearla o asignarla a una variable. Los módulos no admiten la herencia ni implementan interfaces. Observe que un módulo no es un *tipo* en el sentido de que una clase o estructura es: no puede declarar un elemento de programación para que tenga el tipo de datos de un módulo.
 
-You can use `Module` only at namespace level. This means the *declaration context* for a module must be a source file or namespace, and cannot be a class, structure, module, interface, procedure, or block. You cannot nest a module within another module, or within any type. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
+Solo se puede usar `Module` en el nivel de espacio de nombres. Esto significa que el contexto de la *declaración* de un módulo debe ser un archivo de código fuente o un espacio de nombres, y no puede ser una clase, una estructura, un módulo, una interfaz, un procedimiento o un bloque. No se puede anidar un módulo dentro de otro módulo o dentro de cualquier tipo. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
 
-A module has the same lifetime as your program. Because its members are all `Shared`, they also have lifetimes equal to that of the program.
+Un módulo tiene la misma duración que el programa. Dado que todos sus miembros se `Shared`, también tienen una duración igual a la del programa.
 
-Modules default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. Los niveles de acceso se pueden ajustar con los modificadores de acceso. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+El acceso predeterminado de los módulos es [Friend](../../../visual-basic/language-reference/modifiers/friend.md) . Los niveles de acceso se pueden ajustar con los modificadores de acceso. Para obtener más información, consulte [niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-All members of a module are implicitly `Shared`.
+Todos los miembros de un módulo se `Shared`n implícitamente.
 
-## <a name="classes-and-modules"></a>Classes and Modules
+## <a name="classes-and-modules"></a>Clases y módulos
 
-These elements have many similarities, but there are some important differences as well.
+Estos elementos tienen muchas similitudes, pero también hay algunas diferencias importantes.
 
-- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.
+- **Terminología.** Las versiones anteriores de Visual Basic reconocen dos tipos de módulos: *módulos de clase* (archivos. CLS) y *módulos estándar* (archivos. Bas). La versión actual llama a estas *clases* y *módulos*, respectivamente.
 
-- **Shared Members.** You can control whether a member of a class is a shared or instance member.
+- **Miembros compartidos.** Puede controlar si un miembro de una clase es un miembro compartido o de instancia.
 
-- **Object Orientation.** Classes are object-oriented, but modules are not. So only classes can be instantiated as objects. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).
+- **Orientación de objeto.** Las clases están orientadas a objetos, pero los módulos no lo son. De modo que solo se pueden crear instancias de las clases como objetos. Para obtener más información, vea [objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).
 
 ## <a name="rules"></a>Reglas
 
-- **Modifiers.** All module members are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring a member, and you cannot alter the shared status of any member.
+- **Modificadores.** Todos los miembros de módulo están [compartidos](../../../visual-basic/language-reference/modifiers/shared.md)implícitamente. No se puede usar la palabra clave `Shared` al declarar un miembro, y no se puede modificar el estado compartido de ningún miembro.
 
-- **Herencia.** A module cannot inherit from any type other than <xref:System.Object>, from which all modules inherit. In particular, one module cannot inherit from another.
+- **Herencia.** Un módulo no puede heredar de ningún tipo que no sea <xref:System.Object>, del que se heredan todos los módulos. En concreto, un módulo no puede heredar de otro.
 
-  You cannot use the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) in a module definition, even to specify <xref:System.Object>.
+  No se puede usar la [instrucción Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md) en una definición de módulo, ni siquiera para especificar <xref:System.Object>.
 
-- **Default Property.** You cannot define any default properties in a module. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).
+- **Propiedad predeterminada.** No se puede definir ninguna propiedad predeterminada en un módulo. Para obtener más información, vea [default](../../../visual-basic/language-reference/modifiers/default.md).
 
 ## <a name="behavior"></a>Comportamiento
 
-- **Access Level.** Within a module, you can declare each member with its own access level. Module members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a module has more restricted access than one of its members, the specified module access level takes precedence.
+- **Nivel de acceso.** Dentro de un módulo, puede declarar cada miembro con su propio nivel de acceso. Los miembros del módulo tienen acceso [público](../../../visual-basic/language-reference/modifiers/public.md) de forma predeterminada, excepto las variables y constantes, que tienen como valor predeterminado el acceso [privado](../../../visual-basic/language-reference/modifiers/private.md) . Cuando un módulo tiene más acceso restringido que uno de sus miembros, tiene prioridad el nivel de acceso del módulo especificado.
 
-- **Scope.** A module is in scope throughout its namespace.
+- **ID.** Un módulo está en el ámbito A lo largo de su espacio de nombres.
 
-  The scope of every module member is the entire module. Notice that all members undergo *type promotion*, which causes their scope to be promoted to the namespace containing the module. For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).
+  El ámbito de cada miembro del módulo es todo el módulo. Observe que todos los miembros se someten a la *promoción de tipos*, lo que hace que su ámbito se promueva al espacio de nombres que contiene el módulo. Para obtener más información, consulte [promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).
 
-- **Qualification.** You can have multiple modules in a project, and you can declare members with the same name in two or more modules. However, you must qualify any reference to such a member with the appropriate module name if the reference is from outside that module. Para obtener más información, consulta [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+- **Evaluación.** Puede tener varios módulos en un proyecto y puede declarar miembros con el mismo nombre en dos o más módulos. Sin embargo, debe calificar cualquier referencia a este miembro con el nombre de módulo adecuado si la referencia es de fuera de ese módulo. Para obtener más información, consulta [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
 ## <a name="example"></a>Ejemplo
 

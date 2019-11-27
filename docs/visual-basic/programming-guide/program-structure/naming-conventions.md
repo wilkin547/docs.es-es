@@ -18,27 +18,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347317"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenciones de nomenclatura de Visual Basic
-When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore. Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+Al asignar un nombre a un elemento en la aplicación Visual Basic, el primer carácter de ese nombre debe ser un carácter alfabético o un carácter de subrayado. Sin embargo, tenga en cuenta que los nombres que empiezan por un carácter de subrayado no son compatibles con la [independencia del lenguaje y los componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
- The following suggestions apply to naming.  
+ Las sugerencias siguientes se aplican a la asignación de nombres.  
   
-- Begin each separate word in a name with a capital letter, as in `FindLastRecord` and `RedrawMyForm`.  
+- Comience cada palabra independiente en un nombre con una letra mayúscula, como en `FindLastRecord` y `RedrawMyForm`.  
   
-- Begin function and method names with a verb, as in `InitNameArray` or `CloseDialog`.  
+- Los nombres de función y método de inicio con un verbo, como en `InitNameArray` o `CloseDialog`.  
   
-- Begin class, structure, module, and property names with a noun, as in `EmployeeName` or `CarAccessory`.  
+- Empiece la clase, la estructura, el módulo y los nombres de propiedad con un nombre, como en `EmployeeName` o `CarAccessory`.  
   
-- Begin interface names with the prefix "I", followed by a noun or a noun phrase, like `IComponent`, or with an adjective describing the interface's behavior, like `IPersistable`. Do not use the underscore, and use abbreviations sparingly, because abbreviations can cause confusion.  
+- Comience los nombres de interfaz con el prefijo "I", seguido de un sustantivo o un sustantivo, como `IComponent`, o con un adjetivo que describa el comportamiento de la interfaz, como `IPersistable`. No use el carácter de subrayado y use las abreviaturas con moderación, ya que las abreviaturas pueden causar confusión.  
   
-- Begin event handler names with a noun describing the type of event followed by the "`EventHandler`" suffix, as in "`MouseEventHandler`".  
+- Comience los nombres de los controladores de eventos con un nombre que describa el tipo de evento seguido del sufijo "`EventHandler`", como en "`MouseEventHandler`".  
   
-- In names of event argument classes, include the "`EventArgs`" suffix.  
+- En los nombres de las clases de argumento de evento, incluya el sufijo "`EventArgs`".  
   
-- If an event has a concept of "before" or "after," use a suffix in present or past tense, as in "`ControlAdd`" or "`ControlAdded`".  
+- Si un evento tiene un concepto de "Before" o "after", use un sufijo en el pasado o en el pasado, como en "`ControlAdd`" o "`ControlAdded`".  
   
-- For long or frequently used terms, use abbreviations to keep name lengths reasonable, for example, "HTML", instead of "Hypertext Markup Language". In general, variable names greater than 32 characters are difficult to read on a monitor set to a low resolution. Also, make sure your abbreviations are consistent throughout the entire application. Randomly switching in a project between "HTML" and "Hypertext Markup Language" can lead to confusion.  
+- Para términos largos o usados con frecuencia, use abreviaturas para mantener las longitudes de nombre razonables, por ejemplo, "HTML", en lugar de "Lenguaje de marcado de hipertexto". En general, los nombres de variable de más de 32 caracteres son difíciles de leer en un monitor establecido en una resolución baja. Además, asegúrese de que las abreviaturas son coherentes en toda la aplicación. El cambio aleatorio de un proyecto entre "HTML" y "Lenguaje de marcado de hipertexto" puede producir confusión.  
   
-- Avoid using names in an inner scope that are the same as names in an outer scope. Errors can result if the wrong variable is accessed. If a conflict occurs between a variable and the keyword of the same name, you must identify the keyword by preceding it with the appropriate type library. For example, if you have a variable called `Date`, you can use the intrinsic `Date` function only by calling <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+- Evite usar nombres en un ámbito interno que coincidan con los nombres de un ámbito externo. Se pueden producir errores si se tiene acceso a la variable equivocada. Si se produce un conflicto entre una variable y la palabra clave con el mismo nombre, debe identificar la palabra clave anteponiendo la biblioteca de tipos adecuada. Por ejemplo, si tiene una variable denominada `Date`, puede usar la función de `Date` intrínseca solo mediante una llamada a <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

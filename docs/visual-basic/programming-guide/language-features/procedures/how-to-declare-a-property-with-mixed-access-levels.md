@@ -18,21 +18,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349695"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Cómo: Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
-If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement. You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.  
+Si desea que los procedimientos `Get` y `Set` de una propiedad tengan niveles de acceso diferentes, puede usar el nivel más permisivo en la instrucción `Property` y el nivel más restrictivo en la instrucción `Get` o `Set`. Puede usar niveles de acceso mixtos en una propiedad si desea que determinadas partes del código puedan obtener el valor de la propiedad y otras partes del código para poder cambiar el valor.  
   
- For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Para obtener más información sobre los niveles de acceso, vea [niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-### <a name="to-declare-a-property-with-mixed-access-levels"></a>To declare a property with mixed access levels  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a>Para declarar una propiedad con niveles de acceso mixtos  
   
-1. Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.  
+1. Declare la propiedad de la manera normal y especifique el nivel de acceso menos restrictivo (como `Public`) en la instrucción `Property`.  
   
-2. Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).  
+2. Declare el `Get` o el procedimiento `Set` especificando el nivel de acceso más restrictivo (como `Friend`).  
   
-3. Do not specify an access level on the other property procedure. It assumes the access level declared in the `Property` statement. You can restrict access on only one of the property procedures.  
+3. No especifique un nivel de acceso en el otro procedimiento de propiedad. Se asume el nivel de acceso declarado en la instrucción `Property`. Puede restringir el acceso solo en uno de los procedimientos de propiedad.  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access. A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.  
+     En el ejemplo anterior, el procedimiento `Get` tiene el mismo acceso `Protected` que la propiedad, mientras que el procedimiento `Set` tiene `Private` acceso. Una clase derivada de `employee` puede leer el valor de `salary`, pero solo la clase `employee` puede establecerlo.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -40,9 +40,9 @@ If you want the `Get` and `Set` procedures on a property to have different acces
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Diferencias entre propiedades y variables en Visual Basic](./differences-between-properties-and-variables.md)
 - [Crear una propiedad](./how-to-create-a-property.md)
 - [Llamar a un procedimiento de propiedad](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
 - [Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)

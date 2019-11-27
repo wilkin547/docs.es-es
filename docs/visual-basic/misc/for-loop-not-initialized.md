@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: No se inicializó el bucle for
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92

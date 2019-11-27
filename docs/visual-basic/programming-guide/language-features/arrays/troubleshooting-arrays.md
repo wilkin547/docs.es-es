@@ -17,12 +17,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349064"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionar problemas de matrices (Visual Basic)
-This page lists some common problems that can occur when working with arrays.  
+En esta página se enumeran algunos problemas comunes que pueden producirse al trabajar con matrices.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
- Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Errores de compilación que declaran e inicializan una matriz  
+ Pueden surgir errores de compilación debido a la incomprensión de las reglas para declarar, crear e inicializar matrices. Las causas más comunes de los errores son las siguientes:  
   
-- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
+- Proporcionar una [nueva cláusula Operator](../../../../visual-basic/language-reference/operators/new-operator.md) después de especificar la longitud de la dimensión en la declaración de la variable de matriz. En las líneas de código siguientes se muestran declaraciones no válidas de este tipo.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
+- Especificar longitudes de dimensión para más que la matriz de nivel superior de una matriz escalonada. En la línea de código siguiente se muestra una declaración no válida de este tipo.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
+- Omitir la palabra clave `New` al especificar los valores de los elementos. En la línea de código siguiente se muestra una declaración no válida de este tipo.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
+- Proporcionar una cláusula `New` sin llaves (`{}`). En las líneas de código siguientes se muestran declaraciones no válidas de este tipo.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,14 +48,14 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
- The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
+## <a name="accessing-an-array-out-of-bounds"></a>Acceder a una matriz fuera de los límites  
+ El proceso de inicialización de una matriz asigna un límite superior y un límite inferior a cada dimensión. Cada acceso a un elemento de la matriz debe especificar un índice válido, o subíndice, para cada dimensión. Si un índice está por debajo de su límite inferior o por encima de su límite superior, se produce una excepción <xref:System.IndexOutOfRangeException>. El compilador no puede detectar este tipo de error, por lo que se produce un error en tiempo de ejecución.  
   
-### <a name="determining-bounds"></a>Determining Bounds  
- If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
+### <a name="determining-bounds"></a>Determinar los límites  
+ Si otro componente pasa una matriz al código (por ejemplo, como un argumento de procedimiento), no se conoce el tamaño de la matriz o las longitudes de sus dimensiones. Siempre debe determinar el límite superior de cada dimensión de una matriz antes de intentar tener acceso a los elementos. Si la matriz se ha creado por algunos medios distintos de una Visual Basic `New` cláusula, el límite inferior podría ser distinto de 0 y es más seguro determinar también ese límite inferior.  
   
-### <a name="specifying-the-dimension"></a>Specifying the Dimension  
- When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
+### <a name="specifying-the-dimension"></a>Especificar la dimensión  
+ Al determinar los límites de una matriz multidimensional, tenga cuidado al especificar la dimensión. Los `dimension` parámetros de los métodos <xref:System.Array.GetLowerBound%2A> y <xref:System.Array.GetUpperBound%2A> se basan en 0, mientras que los parámetros `Rank` de las funciones Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> y <xref:Microsoft.VisualBasic.Information.UBound%2A> se basan en 1.  
   
 ## <a name="see-also"></a>Vea también
 

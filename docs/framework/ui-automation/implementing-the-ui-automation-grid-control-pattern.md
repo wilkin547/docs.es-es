@@ -29,7 +29,7 @@ ms.locfileid: "74435376"
   
 - Si una celda está vacía, todavía debe devolverse un elemento de Automatización de la interfaz de usuario para admitir la propiedad <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> en esa celda. Esto es posible si el diseño de elementos secundarios de la cuadrícula es similar a una matriz irregular (consulte el ejemplo siguiente).  
   
- ![Windows Explorer view showing ragged layout.](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Vista del explorador de Windows que muestra el diseño irregular.](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Ejemplo de un control Grid con coordenadas vacías  
   
 - Sigue siendo necesaria una cuadrícula con un elemento único para implementar <xref:System.Windows.Automation.Provider.IGridProvider> si lógicamente se considera una cuadrícula. El número de elementos secundarios de la cuadrícula es irrelevante.  
@@ -46,10 +46,10 @@ Ejemplo de un control Grid con coordenadas vacías
 ## <a name="required-members-for-igridprovider"></a>Miembros requeridos para IGridProvider  
  Se requieren los métodos y propiedades siguientes para implementar la interfaz de IGridProvider.  
   
-|Miembros requeridos|Type|Notas|  
+|Miembros requeridos|Tipo|Notas|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propiedad.|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propiedad|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propiedad|Ninguno|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Método|Ninguno|  
   
  Este patrón de control no tiene eventos asociados.  
@@ -60,14 +60,14 @@ Ejemplo de un control Grid con coordenadas vacías
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   If the requested row coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> or the column coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   If either of the requested row or column coordinates is less than zero.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> : Si la coordenada de la fila solicitada es mayor que la <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordenada de columna es mayor que la <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> : Si alguna de las coordenadas de columna o fila solicitada es menor que cero.|  
   
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Implementación del patrón de control GridItem de Automatización de la interfaz de usuario](implementing-the-ui-automation-griditem-control-pattern.md)
 - [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)

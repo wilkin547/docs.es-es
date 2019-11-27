@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerFunctionControl::SetILFunctionBody (Método)
+title: ICorProfilerFunctionControl::SetILFunctionBody (método)
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerFunctionControl.SetILFunctionBody
@@ -22,7 +22,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429888"
 ---
-# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody (Método)
+# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody (método)
 Reemplaza el cuerpo del Lenguaje intermedio común (CIL) del método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,7 +48,7 @@ HRESULT SetILFunctionBody(
 |S_OK|El reemplazo se ha realizado correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. sino que se puede asignar en cualquier montón. The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
+ A diferencia del método [ICorProfilerInfo:: SetILFunctionBody (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) , el método `SetILFunctionBody` administra la memoria necesaria para el nuevo cuerpo de CIL. Esto significa que no es necesario asignar el cuerpo de CIL proporcionado por el generador de perfiles utilizando la interfaz [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) o asignada dentro de un intervalo determinado. sino que se puede asignar en cualquier montón. El generador de perfiles puede liberar la memoria usada para su cuerpo de CIL después de que `SetILFunctionBody` devuelve.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

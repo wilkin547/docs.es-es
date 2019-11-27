@@ -26,38 +26,38 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345328"
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombrear en Visual Basic
-When two programming elements share the same name, one of them can hide, or *shadow*, the other one. In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.  
+Cuando dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *sombrear*, el otro. En tal situación, el elemento sombreado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento, el compilador Visual Basic lo resuelve en el elemento de sombreado.  
   
-## <a name="purpose"></a>Finalidad  
- The main purpose of shadowing is to protect the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.  
+## <a name="purpose"></a>Propósito  
+ El propósito principal de la sombra es proteger la definición de los miembros de clase. La clase base puede someterse a un cambio que crea un elemento con el mismo nombre que el que ya se ha definido. Si esto ocurre, el modificador `Shadows` fuerza las referencias a través de la clase para que se resuelvan en el miembro definido, en lugar de en el nuevo elemento de clase base.  
   
-## <a name="types-of-shadowing"></a>Types of Shadowing  
- An element can shadow another element in two different ways. The shadowing element can be declared inside a subregion of the region containing the shadowed element, in which case the shadowing is accomplished *through scope*. Or a deriving class can redefine a member of a base class, in which case the shadowing is done *through inheritance*.  
+## <a name="types-of-shadowing"></a>Tipos de sombreado  
+ Un elemento puede prevalecer sobre otro elemento de dos maneras diferentes. El elemento de sombreado se puede declarar dentro de una subregión de la región que contiene el elemento sombreado, en cuyo caso la sombra se logra *a través del ámbito*. O una clase derivada puede volver a definir un miembro de una clase base, en cuyo caso la sombra se realiza *a través*de la herencia.  
   
-### <a name="shadowing-through-scope"></a>Shadowing Through Scope  
- It is possible for programming elements in the same module, class, or structure to have the same name but different scope. When two elements are declared in this manner and the code refers to the name they share, the element with the narrower scope shadows the other element (block scope is the narrowest).  
+### <a name="shadowing-through-scope"></a>Sombreado a través del ámbito  
+ Es posible que los elementos de programación del mismo módulo, clase o estructura tengan el mismo nombre pero con un ámbito diferente. Cuando dos elementos se declaran de esta manera y el código hace referencia al nombre que comparten, el elemento con el ámbito más estrecho prevalece sobre el otro elemento (el ámbito de bloque es el más estrecho).  
   
- For example, a module can define a `Public` variable named `temp`, and a procedure within the module can declare a local variable also named `temp`. References to `temp` from within the procedure access the local variable, while references to `temp` from outside the procedure access the `Public` variable. In this case, the procedure variable `temp` shadows the module variable `temp`.  
+ Por ejemplo, un módulo puede definir una variable de `Public` denominada `temp`y un procedimiento dentro del módulo puede declarar una variable local denominada también `temp`. Las referencias a `temp` desde el procedimiento acceden a la variable local, mientras que las referencias a `temp` desde fuera del procedimiento acceden a la variable `Public`. En este caso, la variable de procedimiento `temp` prevalece en la variable de módulo `temp`.  
   
- The following illustration shows two variables, both named `temp`. The local variable `temp` shadows the member variable `temp` when accessed from within its own procedure `p`. However, the `MyClass` keyword bypasses the shadowing and accesses the member variable.  
+ En la ilustración siguiente se muestran dos variables, llamadas `temp`. La variable local `temp` prevalece sobre la variable miembro `temp` cuando se tiene acceso a ella desde dentro de su propio procedimiento `p`. Sin embargo, la palabra clave `MyClass` omite el sombreado y obtiene acceso a la variable miembro.  
   
- ![Graphic that shows shadowing through scope.](./media/shadowing/shadow-scope-diagram.gif)
+ ![Gráfico que muestra el sombreado en el ámbito.](./media/shadowing/shadow-scope-diagram.gif)
   
- For an example of shadowing through scope, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
+ Para obtener un ejemplo de sombreado a través del ámbito, consulte [Cómo: ocultar una variable con el mismo nombre que la variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
-### <a name="shadowing-through-inheritance"></a>Shadowing Through Inheritance  
- If a derived class redefines a programming element inherited from a base class, the redefining element shadows the original element. You can shadow any type of declared element, or set of overloaded elements, with any other type. For example, an `Integer` variable can shadow a `Function` procedure. If you shadow a procedure with another procedure, you can use a different parameter list and a different return type.  
+### <a name="shadowing-through-inheritance"></a>Sombrear a través de la herencia  
+ Si una clase derivada vuelve a definir un elemento de programación heredado de una clase base, el elemento que se va a redefinir prevalecerá sobre el elemento original. Puede sombrear cualquier tipo de elemento declarado, o bien un conjunto de elementos sobrecargados, con cualquier otro tipo. Por ejemplo, una variable de `Integer` puede sombrear un procedimiento `Function`. Si sombrea un procedimiento con otro procedimiento, puede usar una lista de parámetros diferente y un tipo de valor devuelto diferente.  
   
- The following illustration shows a base class `b` and a derived class `d` that inherits from `b`. The base class defines a procedure named `proc`, and the derived class shadows it with another procedure of the same name. The first `Call` statement accesses the shadowing `proc` in the derived class. However, the `MyBase` keyword bypasses the shadowing and accesses the shadowed procedure in the base class.  
+ En la ilustración siguiente se muestra una clase base `b` y una clase derivada `d` que hereda de `b`. La clase base define un procedimiento denominado `proc`, y la clase derivada lo sombrea con otro procedimiento con el mismo nombre. La primera instrucción `Call` tiene acceso a la `proc` de sombreado de la clase derivada. Sin embargo, la palabra clave `MyBase` omite el sombreado y obtiene acceso al procedimiento sombreado en la clase base.  
   
  ![Diagrama gráfico de sombreado por herencia](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- For an example of shadowing through inheritance, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) and [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
+ Para obtener un ejemplo de sombreado a través de la herencia, vea [Cómo: ocultar una variable con el mismo nombre que la variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) y [Cómo: ocultar una variable heredada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   
-#### <a name="shadowing-and-access-level"></a>Shadowing and Access Level  
- The shadowing element is not always accessible from the code using the derived class. For example, it might be declared `Private`. In such a case, shadowing is defeated and the compiler resolves any reference to the same element it would have if there had been no shadowing. This element is the accessible element the fewest derivational steps backward from the shadowing class. If the shadowed element is a procedure, the resolution is to the closest accessible version with the same name, parameter list, and return type.  
+#### <a name="shadowing-and-access-level"></a>Nivel de acceso y sombreado  
+ No siempre se puede obtener acceso al elemento de sombreado desde el código mediante la clase derivada. Por ejemplo, podría declararse `Private`. En tal caso, la sombra es derrotada y el compilador resuelve cualquier referencia al mismo elemento que tendría si no hubiese ninguna sombra. Este elemento es el elemento accesible el menos pasos de derivación hacia atrás desde la clase de sombreado. Si el elemento sombreado es un procedimiento, la resolución es a la versión accesible más cercana con el mismo nombre, lista de parámetros y tipo de valor devuelto.  
   
- The following example shows an inheritance hierarchy of three classes. Each class defines a `Sub` procedure `display`, and each derived class shadows the `display` procedure in its base class.  
+ En el ejemplo siguiente se muestra una jerarquía de herencia de tres clases. Cada clase define un procedimiento `Sub` `display`y cada clase derivada sombrea el procedimiento `display` en su clase base.  
   
 ```vb  
 Public Class firstClass  
@@ -92,23 +92,23 @@ Module callDisplay
 End Module  
 ```  
   
- In the preceding example, the derived class `secondClass` shadows `display` with a `Private` procedure. When module `callDisplay` calls `display` in `secondClass`, the calling code is outside `secondClass` and therefore cannot access the private `display` procedure. Shadowing is defeated, and the compiler resolves the reference to the base class `display` procedure.  
+ En el ejemplo anterior, la clase derivada `secondClass` sombras `display` con un procedimiento `Private`. Cuando el módulo `callDisplay` llama a `display` en `secondClass`, el código de llamada está fuera `secondClass` y, por tanto, no puede tener acceso al procedimiento `display` privado. La sombra es derrotada y el compilador resuelve la referencia a la clase base `display` procedimiento.  
   
- However, the further derived class `thirdClass` declares `display` as `Public`, so the code in `callDisplay` can access it.  
+ Sin embargo, la clase derivada `thirdClass` declara `display` como `Public`, por lo que el código de `callDisplay` puede tener acceso a ella.  
   
-## <a name="shadowing-and-overriding"></a>Shadowing and Overriding  
- Do not confuse shadowing with overriding. Both are used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two. For a comparison, see [Differences Between Shadowing and Overriding](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
+## <a name="shadowing-and-overriding"></a>Sombrear e invalidar  
+ No confunda el sombreado con la invalidación. Ambos se usan cuando una clase derivada hereda de una clase base y ambos vuelven a definir un elemento declarado con otro. Pero hay diferencias significativas entre los dos. Para obtener una comparación, vea [diferencias entre la sombra y el reemplazo](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
   
-## <a name="shadowing-and-overloading"></a>Shadowing and Overloading  
- If you shadow the same base class element with more than one element in your derived class, the shadowing elements become overloaded versions of that element. Para obtener más información, consulta [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+## <a name="shadowing-and-overloading"></a>Sombreado y sobrecarga  
+ Si sombrea el mismo elemento de clase base con más de un elemento en la clase derivada, los elementos de sombreado pasan a ser versiones sobrecargadas de ese elemento. Para obtener más información, consulta [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
-## <a name="accessing-a-shadowed-element"></a>Accessing a Shadowed Element  
- When you access an element from a derived class, you normally do so through the current instance of that derived class, by qualifying the element name with the `Me` keyword. If your derived class shadows the element in the base class, you can access the base class element by qualifying it with the `MyBase` keyword.  
+## <a name="accessing-a-shadowed-element"></a>Obtener acceso a un elemento con sombra  
+ Al tener acceso a un elemento desde una clase derivada, normalmente lo hace a través de la instancia actual de esa clase derivada, calificando el nombre del elemento con la palabra clave `Me`. Si la clase derivada sombrea el elemento en la clase base, puede tener acceso al elemento de la clase base mediante la calificación de la palabra clave `MyBase`.  
   
- For an example of accessing a shadowed element, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
+ Para obtener un ejemplo de acceso a un elemento con sombra, vea [Cómo: obtener acceso a una variable oculta por una clase derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
-### <a name="declaration-of-the-object-variable"></a>Declaration of the Object Variable  
- How you create the object variable can also affect whether the derived class accesses a shadowing element or the shadowed element. The following example creates two objects from a derived class, but one object is declared as the base class and the other as the derived class.  
+### <a name="declaration-of-the-object-variable"></a>Declaración de la variable de objeto  
+ La forma de crear la variable de objeto también puede afectar a si la clase derivada tiene acceso a un elemento de sombreado o al elemento sombreado. En el ejemplo siguiente se crean dos objetos a partir de una clase derivada, pero un objeto se declara como la clase base y el otro como la clase derivada.  
   
 ```vb  
 Public Class baseCls  
@@ -135,12 +135,12 @@ Public Class useClasses
 End Class  
 ```  
   
- In the preceding example, the variable `basObj` is declared as the base class. Assigning a `dervCls` object to it constitutes a widening conversion and is therefore valid. However, the base class cannot access the shadowing version of the variable `z` in the derived class, so the compiler resolves `basObj.z` to the original base class value.  
+ En el ejemplo anterior, la variable `basObj` se declara como la clase base. Asignar un objeto `dervCls` a él constituye una conversión de ampliación y, por tanto, es válida. Sin embargo, la clase base no puede tener acceso a la versión de sombreado de la variable `z` en la clase derivada, por lo que el compilador resuelve `basObj.z` en el valor de la clase base original.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437968"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD (Estructura)
-Provides information to a debugger about a thread. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+Proporciona información a un depurador sobre un subproceso. Para obtener más información, vea el método [INotifySource2 (:: SetNotifyFilter (](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,12 +39,12 @@ typedef struct tagUSER_THREAD
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`pSidBuffer`|Address of thread buffer.|  
-|`dwSidLen`|Length of thread buffer, in bytes.|  
-|`dwTid`|Thread ID.|  
+|`pSidBuffer`|Dirección del búfer de subproceso.|  
+|`dwSidLen`|Longitud del búfer de subprocesos, en bytes.|  
+|`dwTid`|IDENTIFICADOR de subproceso.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** ProtocolNotify2.idl  
+ **Encabezado:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vea también
 

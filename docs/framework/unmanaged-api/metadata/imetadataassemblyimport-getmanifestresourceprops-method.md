@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436321"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps (Método)
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+Obtiene el conjunto de propiedades del recurso de manifiesto con la firma de metadatos especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,32 +41,32 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ de `mdManifestResource` token que representa el recurso para el que se van a obtener las propiedades.  
   
  `szName`  
- [out] The name of the resource.  
+ enuncia Nombre del recurso.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ de Tamaño, en caracteres anchos, de `szName`.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ enuncia Puntero al número de caracteres anchos que se devuelven realmente en `szName`.  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ enuncia Un puntero a un token de `mdFile` o un token de `mdAssemblyRef` que representa el archivo o ensamblado, respectivamente, que contiene el recurso.  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ enuncia Un puntero a un valor que especifica el desplazamiento al principio del recurso dentro del archivo.  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ enuncia Puntero a las marcas que describen los metadatos aplicados a un recurso. El valor de flags es una combinación de uno o más valores de [CorManifestResourceFlags (](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

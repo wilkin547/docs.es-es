@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347577"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Cómo: recuperar una colección de atributos (LINQ to XML) (Visual Basic)
 En este tema se presenta el método <xref:System.Xml.Linq.XElement.Attributes%2A>. Este método recupera los atributos de un elemento.  
   
 ## <a name="example"></a>Ejemplo  

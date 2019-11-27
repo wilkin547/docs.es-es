@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340206"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento sobrecargado (Visual Basic)
-The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
+La ventaja de sobrecargar un procedimiento es la flexibilidad de la llamada. El código de llamada puede obtener la información que necesita para pasar al procedimiento y, a continuación, llamar a un nombre de procedimiento único, independientemente de los argumentos que pase.  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Para llamar a un procedimiento que tiene más de una versión definida  
   
-1. In the calling code, determine which data to pass to the procedure.  
+1. En el código de llamada, determine qué datos se van a pasar al procedimiento.  
   
-2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
+2. Escriba la llamada a procedimiento de la manera normal y presente los datos en la lista de argumentos. Asegúrese de que los argumentos coincidan con la lista de parámetros en una de las versiones definidas para el procedimiento.  
   
-3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
+3. No es necesario determinar la versión del procedimiento que se va a llamar. Visual Basic pasa el control a la versión que coincida con la lista de argumentos.  
   
-     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
+     En el ejemplo siguiente se llama al procedimiento `post` declarado en [Cómo: definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md). Obtiene la identificación del cliente, determina si se trata de una `String` o un `Integer`y, en cualquier caso, llama al mismo procedimiento.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   

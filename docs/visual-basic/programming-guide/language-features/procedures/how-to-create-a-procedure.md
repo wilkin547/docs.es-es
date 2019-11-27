@@ -17,41 +17,41 @@ ms.locfileid: "74344910"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Cómo: Crear un procedimiento (Visual Basic)
 
-You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`). All the procedure's code lies between these statements.
+Puede incluir un procedimiento entre una instrucción de declaración de inicio (`Sub` o `Function`) y una instrucción de declaración de finalización (`End Sub` o `End Function`). Todo el código del procedimiento se encuentra entre estas instrucciones.
 
- A procedure cannot contain another procedure, so its starting and ending statements must be outside any other procedure.
+ Un procedimiento no puede contener otro procedimiento, por lo que sus instrucciones de inicio y finalización deben estar fuera de cualquier otro procedimiento.
 
- If you have code that performs the same task in different places, you can write the task once as a procedure and then call it from different places in your code.
+ Si tiene código que realiza la misma tarea en distintos lugares, puede escribir la tarea una vez como un procedimiento y, a continuación, llamarla desde distintos lugares del código.
 
-### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>To create a procedure that does not return a value
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Para crear un procedimiento que no devuelve un valor
 
-1. Outside any other procedure, use a `Sub` statement, followed by an `End Sub` statement.
+1. Fuera de cualquier otro procedimiento, use una instrucción `Sub`, seguida de una instrucción `End Sub`.
 
-2. In the `Sub` statement, follow the `Sub` keyword with the name of the procedure, then the parameter list in parentheses.
+2. En la instrucción `Sub`, siga la palabra clave `Sub` con el nombre del procedimiento y, a continuación, la lista de parámetros entre paréntesis.
 
-3. Place the procedure's code statements between the `Sub` and `End Sub` statements.
+3. Coloque las instrucciones de código del procedimiento entre las instrucciones `Sub` y `End Sub`.
 
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Para crear un procedimiento que devuelve un valor
 
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.
+1. Fuera de cualquier otro procedimiento, use una instrucción `Function`, seguida de una instrucción `End Function`.
 
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, then the parameter list in parentheses, and then an `As` clause specifying the data type of the return value.
+2. En la instrucción `Function`, siga la palabra clave `Function` con el nombre del procedimiento, la lista de parámetros entre paréntesis y, a continuación, una cláusula `As` que especifique el tipo de datos del valor devuelto.
 
-3. Place the procedure's code statements between the `Function` and `End Function` statements.
+3. Coloque las instrucciones de código del procedimiento entre las instrucciones `Function` y `End Function`.
 
-4. Use a `Return` statement to return the value to the calling code.
+4. Use una instrucción `Return` para devolver el valor al código de llamada.
 
-### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>To connect your new procedure with the old, repetitive blocks of code
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Para conectar el nuevo procedimiento con los bloques de código repetitivos anteriores
 
-1. Make sure you define the new procedure in a place where the old code has access to it.
+1. Asegúrese de definir el nuevo procedimiento en un lugar donde el código anterior tenga acceso a él.
 
-2. In your old, repetitive code block, replace the statements that perform the repetitive task with a single statement that calls the `Sub` or `Function` procedure.
+2. En el bloque de código anterior, repetitivo, reemplace las instrucciones que realizan la tarea repetitiva con una única instrucción que llama al procedimiento `Sub` o `Function`.
 
-3. If your procedure is a `Function` that returns a value, ensure that your calling statement performs an action with the returned value, such as storing it in a variable, or else the value will be lost.
+3. Si el procedimiento es una `Function` que devuelve un valor, asegúrese de que la instrucción de llamada realiza una acción con el valor devuelto, como el almacenamiento en una variable, o bien se perderá el valor.
 
 ## <a name="example"></a>Ejemplo
 
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides:
+ En el procedimiento `Function` siguiente se calcula el lado más largo o la hipotenusa de un triángulo de la derecha, dados los valores de los otros dos lados:
 
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]
 

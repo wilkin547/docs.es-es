@@ -15,48 +15,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349708"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Cómo: Crear una propiedad (Visual Basic)
-You enclose a property definition between a `Property` statement and an `End Property` statement. Within this definition you define a `Get` procedure, a `Set` procedure, or both. All the property's code lies within these procedures.  
+Puede incluir una definición de propiedad entre una instrucción `Property` y una instrucción `End Property`. Dentro de esta definición se define un procedimiento de `Get`, un procedimiento de `Set` o ambos. Todo el código de la propiedad se encuentra dentro de estos procedimientos.  
   
- The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value. If you want the property to have read/write access, you must define both procedures. For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.  
+ El procedimiento `Get` recupera el valor de la propiedad y el procedimiento `Set` almacena un valor. Si desea que la propiedad tenga acceso de lectura y escritura, debe definir ambos procedimientos. En el caso de una propiedad de solo lectura, solo se definen `Get`y, para una propiedad de solo escritura, solo se definen `Set`.  
   
-### <a name="to-create-a-property"></a>To create a property  
+### <a name="to-create-a-property"></a>Para crear una propiedad  
   
-1. Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.  
+1. Fuera de cualquier propiedad o procedimiento, utilice una [instrucción de propiedad](../../../../visual-basic/language-reference/statements/property-statement.md), seguida de una instrucción `End Property`.  
   
-2. If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.  
+2. Si la propiedad toma parámetros, siga la palabra clave `Property` con el nombre del procedimiento y, a continuación, la lista de parámetros entre paréntesis.  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the property's value. You must specify the data type even for a write-only property.  
+3. Siga los paréntesis con una cláusula `As` para especificar el tipo de datos del valor de la propiedad. Debe especificar el tipo de datos incluso para una propiedad de solo escritura.  
   
-4. Add `Get` and `Set` procedures, as appropriate. See the following directions.  
+4. Agregue `Get` y `Set` procedimientos, según corresponda. Vea las instrucciones siguientes.  
   
-### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>To create a Get procedure that retrieves a property value  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>Para crear un procedimiento Get que recupere un valor de propiedad  
   
-1. Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement. You do not need to define any parameters for the `Get` procedure.  
+1. Entre las instrucciones `Property` y `End Property`, escriba una [instrucción Get](../../../../visual-basic/language-reference/statements/get-statement.md)seguida de una instrucción `End Get`. No es necesario definir ningún parámetro para el procedimiento `Get`.  
   
-2. Place the code statements to retrieve the property's value between the `Get` and `End Get` statements. This code can include other calculations and data manipulations in addition to generating and returning the property's value.  
+2. Coloque las instrucciones de código para recuperar el valor de la propiedad entre las instrucciones `Get` y `End Get`. Este código puede incluir otros cálculos y manipulaciones de datos, además de generar y devolver el valor de la propiedad.  
   
-3. Use a `Return` statement to return the property's value to the calling code.  
+3. Use una instrucción `Return` para devolver el valor de la propiedad al código de llamada.  
   
- You must write a `Get` procedure for a read-write property and for a read-only property. You must not define a `Get` procedure for a write-only property.  
+ Debe escribir una `Get` procedimiento para una propiedad de lectura y escritura y para una propiedad de solo lectura. No debe definir un procedimiento `Get` para una propiedad de solo escritura.  
   
-### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>To create a Set procedure that writes a property's value  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>Para crear un procedimiento set que escriba el valor de una propiedad  
   
-1. Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.  
+1. Entre las instrucciones `Property` y `End Property`, escriba una [instrucción set](../../../../visual-basic/language-reference/statements/set-statement.md)seguida de una instrucción `End Set`.  
   
-2. In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses. This parameter list must include at least a value parameter for the value passed by the calling code. The default name for this value parameter is `Value`, but you can use a different name if appropriate. The value parameter must have the same data type as the property itself.  
+2. En la instrucción `Set`, siga la palabra clave `Set` con una lista de parámetros entre paréntesis. Esta lista de parámetros debe incluir al menos un parámetro de valor para el valor pasado por el código de llamada. El nombre predeterminado de este parámetro de valor es `Value`, pero puede usar otro nombre si es necesario. El parámetro de valor debe tener el mismo tipo de datos que la propiedad en sí.  
   
-3. Place the code statements to store a value in the property between the `Set` and `End Set` statements. This code can include other calculations and data manipulations in addition to validating and storing the property's value.  
+3. Coloque las instrucciones de código para almacenar un valor en la propiedad entre las instrucciones `Set` y `End Set`. Este código puede incluir otros cálculos y manipulaciones de datos, además de validar y almacenar el valor de la propiedad.  
   
-4. Use the value parameter to accept the value supplied by the calling code. You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.  
+4. Use el parámetro value para aceptar el valor proporcionado por el código de llamada. Puede almacenar este valor directamente en una instrucción de asignación o usarlo en una expresión para calcular el valor interno que se va a almacenar.  
   
- You must write a `Set` procedure for a read-write property and for a write-only property. You must not define a `Set` procedure for a read-only property.  
+ Debe escribir una `Set` procedimiento para una propiedad de lectura y escritura y para una propiedad de solo escritura. No debe definir un procedimiento `Set` para una propiedad de solo lectura.  
   
 ## <a name="example"></a>Ejemplo  
- The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.  
+ En el ejemplo siguiente se crea una propiedad de lectura y escritura que almacena un nombre completo como dos nombres constituyentes, el nombre y el apellido. Cuando el código de llamada Lee `fullName`, el procedimiento `Get` combina los dos nombres constituyentes y devuelve el nombre completo. Cuando el código de llamada asigna un nuevo nombre completo, el procedimiento `Set` intenta dividirlo en dos nombres constituyentes. Si no encuentra un espacio, lo almacena como el nombre.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- The following example shows typical calls to the property procedures of `fullName`. The first call sets the property value and the second call retrieves it.  
+ En el ejemplo siguiente se muestran las llamadas típicas a los procedimientos de propiedad de `fullName`. La primera llamada establece el valor de la propiedad y la segunda llamada lo recupera.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
@@ -65,9 +65,9 @@ You enclose a property definition between a `Property` statement and an `End Pro
 - [Procedimientos](./index.md)
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Diferencias entre propiedades y variables en Visual Basic](./differences-between-properties-and-variables.md)
 - [Declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Llamar a un procedimiento de propiedad](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
 - [Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)

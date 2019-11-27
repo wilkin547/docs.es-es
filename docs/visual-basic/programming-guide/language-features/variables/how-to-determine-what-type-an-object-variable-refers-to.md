@@ -15,18 +15,18 @@ ms.locfileid: "74348611"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Cómo: Determinar el tipo al que hace referencia una variable de objeto (Visual Basic)
 
-An object variable contains a pointer to data that is stored elsewhere. The type of that data can change during run time. At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.
+Una variable de objeto contiene un puntero a los datos que se almacenan en otro lugar. El tipo de datos que pueden cambiar durante el tiempo de ejecución. En cualquier momento, puede usar el método <xref:System.Type.GetTypeCode%2A> para determinar el tipo en tiempo de ejecución actual o el [operador typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) para averiguar si el tipo en tiempo de ejecución actual es compatible con un tipo especificado.
 
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>To determine the exact type an object variable currently refers to
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>Para determinar el tipo exacto al que una variable de objeto hace referencia actualmente
 
-1. On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.
+1. En la variable de objeto, llame al método <xref:System.Object.GetType%2A> para recuperar un objeto <xref:System.Type?displayProperty=nameWithType>.
 
     ```vb
     Dim myObject As Object
     myObject.GetType()
     ```
 
-2. On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.
+2. En la clase <xref:System.Type?displayProperty=nameWithType>, llame al método compartido <xref:System.Type.GetTypeCode%2A> para recuperar el valor de enumeración <xref:System.TypeCode> para el tipo del objeto.
 
     ```vb
     Dim myObject As Object
@@ -34,11 +34,11 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     MsgBox("myObject currently has type code " & CStr(datTyp))
     ```
 
-    You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.
+    Puede probar el valor de enumeración de <xref:System.TypeCode> con los miembros de enumeración de interés, como `Double`.
 
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>To determine whether an object variable's type is compatible with a specified type
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>Para determinar si el tipo de una variable de objeto es compatible con un tipo especificado
 
-- Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.
+- Use el operador `TypeOf` en combinación con el [operador is](../../../../visual-basic/language-reference/operators/is-operator.md) para probar el objeto con una expresión `TypeOf`...`Is`.
 
     ```vb
     If TypeOf objA Is System.Windows.Forms.Control Then
@@ -46,13 +46,13 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     End If
     ```
 
-    The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.
+    La expresión `TypeOf`...`Is` devuelve `True` si el tipo en tiempo de ejecución del objeto es compatible con el tipo especificado.
 
-    The criterion for compatibility depends on whether the specified type is a class, structure, or interface. In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type. For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).
+    El criterio de compatibilidad depende de si el tipo especificado es una clase, una estructura o una interfaz. En general, los tipos son compatibles si el objeto es del mismo tipo que, hereda de o implementa el tipo especificado. Para obtener más información, vea [operador typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
-Note that the specified type cannot be a variable or expression. It must be the name of a defined type, such as a class, structure, or interface. This includes intrinsic types such as `Integer` and `String`.
+Tenga en cuenta que el tipo especificado no puede ser una variable o una expresión. Debe ser el nombre de un tipo definido, como una clase, una estructura o una interfaz. Esto incluye tipos intrínsecos como `Integer` y `String`.
 
 ## <a name="see-also"></a>Vea también
 
@@ -62,4 +62,4 @@ Note that the specified type cannot be a variable or expression. It must be the 
 - <xref:System.TypeCode>
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

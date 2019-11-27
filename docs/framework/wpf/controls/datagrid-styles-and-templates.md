@@ -53,9 +53,9 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |MouseOver|CommonStates|El puntero del mouse se coloca sobre la celda.|  
 |Con foco|FocusStates|La celda tiene el foco.|  
 |Sin foco|FocusStates|La celda no tiene el foco|  
-|Current|CurrentStates|La celda es la celda actual.|  
+|Actual|CurrentStates|La celda es la celda actual.|  
 |Estándar|CurrentStates|La celda no es la celda actual.|  
-|Pantalla|InteractionStates|La celda está en modo de presentación.|  
+|Display|InteractionStates|La celda está en modo de presentación.|  
 |Editar|InteractionStates|La celda está en modo de edición.|  
 |Seleccionado|SelectionStates|La celda está seleccionada.|  
 |No seleccionado|SelectionStates|La celda no está seleccionada.|  

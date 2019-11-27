@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347484"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Información general sobre las enumeraciones (Visual Basic)
-Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names. Por ejemplo, puede declarar una enumeración para un conjunto de constantes de tipo entero asociadas con los días de la semana y, después, usar los nombres de los días en lugar de sus valores enteros en el código.  
+Las enumeraciones proporcionan una manera cómoda de trabajar con conjuntos de constantes relacionadas y de asociar valores constantes con nombres. Por ejemplo, puede declarar una enumeración para un conjunto de constantes de tipo entero asociadas con los días de la semana y, después, usar los nombres de los días en lugar de sus valores enteros en el código.  
   
-## <a name="tasks-involving-enumerations"></a>Tasks involving Enumerations  
- The following table lists common tasks involving enumerations.  
+## <a name="tasks-involving-enumerations"></a>Tareas que implican enumeraciones  
+ En la tabla siguiente se enumeran las tareas comunes que implican enumeraciones.  
   
-|Para|Vea|  
+|Para|Consulte|  
 |----------------|---------|  
-|Find a pre-defined enumeration|[Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|Declare an enumeration|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|Fully qualify an enumeration's name|[Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|Refer to an enumeration member|[Hacer referencia al miembro de una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|Iterate through an enumeration|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|Determine the string associated with an enumeration|[Determinar la cadena asociada a un valor de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|Decide when to use an enumeration|[Cuándo se debe utilizar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|Buscar una enumeración predefinida|[Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|Declarar una enumeración|[Cómo: declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|Calificar totalmente el nombre de una enumeración|[Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|Referencia a un miembro de enumeración|[Hacer referencia al miembro de una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|Recorrer en iteración una enumeración|[Cómo: recorrer en iteración una enumeración en Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|Determinar la cadena asociada a una enumeración|[Determinar la cadena asociada a un valor de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|Decidir cuándo usar una enumeración|[Cuándo se debe utilizar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>Vea también
 

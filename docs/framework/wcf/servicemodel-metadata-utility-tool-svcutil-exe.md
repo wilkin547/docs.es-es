@@ -62,7 +62,7 @@ En la tabla siguiente se muestran algunas opciones de uso frecuente de esta herr
 |/Directory:\<> de directorio|Directorio en el que se crearán los archivos.<br /><br /> Valor predeterminado: el directorio actual.<br /><br /> Forma abreviada: `/d`|
 |/help|Muestra la sintaxis de comandos y las opciones de la herramienta.<br /><br /> Forma abreviada: `/?`|
 |/noLogo|Suprime el mensaje del banner y el copyright.|
-|/svcutilConfig:\<configFile>|Especifica un archivo de configuración personalizado para utilizar en lugar del archivo App.config. Esto se puede utilizar para registrar extensiones system.serviceModel sin modificar el archivo de configuración de la herramienta.|
+|/svcutilConfig:\<configFile >|Especifica un archivo de configuración personalizado para utilizar en lugar del archivo App.config. Esto se puede utilizar para registrar extensiones system.serviceModel sin modificar el archivo de configuración de la herramienta.|
 |/target:\<tipo de salida >|Especifica la salida que va a generar la herramienta.<br /><br /> Los valores válidos son código, metadatos o xmlSerializer.<br /><br /> Forma abreviada: `/t`|
 
 ### <a name="code-generation"></a>Generación de código
@@ -87,11 +87,11 @@ Para un servicio con un punto de conexión de BasicHttpContextBinding, *SvcUtil.
 |Opción|Descripción|
 |------------|-----------------|
 |/async|Genera firmas del método sincrónicas y asincrónicas.<br /><br /> Valor predeterminado: generar solo firmas de método sincrónicas.<br /><br /> Forma abreviada: `/a`|
-|/collectionType:\<type>|Especifica el tipo de colección de lista para un cliente de WCF.<br/><br /> Valor predeterminado: el tipo de colección es System. Array. <br /><br /> Forma abreviada: `/ct`|
-|/config:\<configFile>|Especifica el nombre de archivo para el archivo de configuración generado.<br /><br /> Valor predeterminado: output.config|
+|/collectionType: tipo de\<>|Especifica el tipo de colección de lista para un cliente de WCF.<br/><br /> Valor predeterminado: el tipo de colección es System. Array. <br /><br /> Forma abreviada: `/ct`|
+|/config:\<configFile >|Especifica el nombre de archivo para el archivo de configuración generado.<br /><br /> Valor predeterminado: output.config|
 |/dataContractOnly|Genera código solo para tipos de contrato de datos. No se generan los tipos del contrato de servicio.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|
 |/enableDataBinding|Implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> en todos los tipos de contrato de datos para habilitar el enlace de datos.<br /><br /> Forma abreviada: `/edb`|
-|/excludeType:\<type>|Especifica un nombre de tipo completo o calificado con el nombre de ensamblado que se va a excluir de los tipos de contrato a los que se hace referencia.<br /><br /> Al utilizar este modificador junto con `/r` de DLL independientes, se hace referencia al nombre completo de la clase XSD.<br /><br /> Forma abreviada: `/et`|
+|/excludeType: tipo de\<>|Especifica un nombre de tipo completo o calificado con el nombre de ensamblado que se va a excluir de los tipos de contrato a los que se hace referencia.<br /><br /> Al utilizar este modificador junto con `/r` de DLL independientes, se hace referencia al nombre completo de la clase XSD.<br /><br /> Forma abreviada: `/et`|
 |/importXmlTypes|Configura el serializador de contratos de datos para importar tipos que no son de contratos de datos como tipos IXmlSerializable.|
 |/internal|Genera clases que están marcadas como internas. Valor predeterminado: generar solo clases públicas.<br /><br /> Forma abreviada: `/i`|
 |/Language:\<idioma >|Especifica el lenguaje de programación a utilizar para la generación de código. Debe proporcionar un nombre de lenguaje registrado en el archivo Machine. config o el nombre completo de una clase que herede de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Valor predeterminado: csharp<br /><br /> Forma abreviada: `/l`|
@@ -125,10 +125,10 @@ Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de da
 
 |Opción|Descripción|
 |------------|-----------------|
-|/serviceName:\<serviceConfigName>|Especifica el nombre de configuración de un servicio que se va a exportar. Si se utiliza esta opción, se debe pasar un ensamblado ejecutable con un archivo de configuración asociado como entrada. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|
+|/serviceName:\<serviceConfigName >|Especifica el nombre de configuración de un servicio que se va a exportar. Si se utiliza esta opción, se debe pasar un ensamblado ejecutable con un archivo de configuración asociado como entrada. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|
 |/Reference:\<ruta de acceso del archivo >|Agrega el ensamblado especificado al conjunto de ensamblados utilizados para resolver las referencias de tipo. Si está exportando o validando un servicio registrado en configuración que utiliza extensiones de terceros (Comportamientos, Enlaces y Elementos de enlace), utilice esta opción para buscar ensamblados de extensión que no están en la GAC.<br /><br /> Forma abreviada: `/r`|
 |/dataContractOnly|Solo funciona en tipos de contrato de datos. No se procesan los contratos de servicios.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|
-|/excludeType:\<type>|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la exportación. Se puede utilizar esta opción al exportar los metadatos para un servicio o un conjunto de contratos de servicios excluyan tipos de la exportación. Esta opción no se puede combinar con la opción `/dconly`.<br /><br /> Si tiene un ensamblado único que contiene varios servicios y cada uno usa clases independientes con el mismo nombre XSD, debería especificar el nombre del servicio en lugar del nombre de clase XSD para este modificador.<br /><br /> No se admiten XSD o tipos de contrato de datos.<br /><br /> Forma abreviada: `/et`|
+|/excludeType: tipo de\<>|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la exportación. Se puede utilizar esta opción al exportar los metadatos para un servicio o un conjunto de contratos de servicios excluyan tipos de la exportación. Esta opción no se puede combinar con la opción `/dconly`.<br /><br /> Si tiene un ensamblado único que contiene varios servicios y cada uno usa clases independientes con el mismo nombre XSD, debería especificar el nombre del servicio en lugar del nombre de clase XSD para este modificador.<br /><br /> No se admiten XSD o tipos de contrato de datos.<br /><br /> Forma abreviada: `/et`|
 
 ### <a name="service-validation"></a>Validación del servicio
 
@@ -143,10 +143,10 @@ La validación se puede utilizar para detectar errores en implementaciones del s
 |Opción|Descripción|
 |------------|-----------------|
 |/validate|Valida una implementación del servicio especificada por la opción `/serviceName`. Si se utiliza esta opción, se debe pasar un ensamblado ejecutable con un archivo de configuración asociado como entrada.<br /><br /> Forma abreviada: `/v`|
-|/serviceName:\<serviceConfigName>|Especifica el nombre de configuración de un servicio que se va a validar. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados de todos los ensamblados de entrada. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|
+|/serviceName:\<serviceConfigName >|Especifica el nombre de configuración de un servicio que se va a validar. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados de todos los ensamblados de entrada. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|
 |/Reference:\<ruta de acceso del archivo >|Agrega el ensamblado especificado al conjunto de ensamblados utilizados para resolver las referencias de tipo. Si está exportando o validando un servicio registrado en configuración que utiliza extensiones de terceros (Comportamientos, Enlaces y Elementos de enlace), utilice esta opción para buscar ensamblados de extensión que no están en la GAC.<br /><br /> Forma abreviada: `/r`|
 |/dataContractOnly|Solo funciona en tipos de contrato de datos. No se procesan los contratos de servicios.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|
-|/excludeType:\<type>|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la validación.<br /><br /> Forma abreviada: `/et`|
+|/excludeType: tipo de\<>|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la validación.<br /><br /> Forma abreviada: `/et`|
 
 ### <a name="metadata-download"></a>Descarga de metadatos
 
@@ -190,7 +190,7 @@ Svcutil.exe puede generar el código de serialización C# necesario a partir de 
 |Opción|Descripción|
 |------------|-----------------|
 |/Reference:\<ruta de acceso del archivo >|Agrega el ensamblado especificado al conjunto de ensamblados utilizados para resolver las referencias de tipo.<br /><br /> Forma abreviada: `/r`|
-|/excludeType:\<type>|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la exportación o de la validación.<br /><br /> Forma abreviada: `/et`|
+|/excludeType: tipo de\<>|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la exportación o de la validación.<br /><br /> Forma abreviada: `/et`|
 |/out:\<> de archivo|Especifica el nombre de archivo para el código generado. Se omite esta opción cuando se pasan varios ensamblados a la herramienta como entrada.<br /><br /> Valor predeterminado: Se deriva del nombre de ensamblado.<br /><br /> Forma abreviada: `/o`|
 |/UseSerializerForFaults|Especifica que <xref:System.Xml.Serialization.XmlSerializer> se debería utilizar para leer y escribir los errores, en lugar del <xref:System.Runtime.Serialization.DataContractSerializer> predeterminado.|
 

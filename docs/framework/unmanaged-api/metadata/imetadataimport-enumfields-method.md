@@ -39,33 +39,33 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntero al enumerador.  
   
  `cl`  
- [in] The TypeDef token of the class whose fields are to be enumerated.  
+ de El token TypeDef de la clase cuyos campos se van a enumerar.  
   
  `rFields`  
- [out] The list of FieldDef tokens.  
+ enuncia Lista de tokens de FieldDef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rFields`.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ enuncia Número real de tokens de FieldDef devueltos en `rFields`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFields` devolvió correctamente.|  
+|`S_FALSE`|No hay campos que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

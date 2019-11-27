@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349569"
 ---
 # <a name="set-statement-visual-basic"></a>Instrucción Set (Visual Basic)
-Declares a `Set` property procedure used to assign a value to a property.  
+Declara un procedimiento de propiedad `Set` que se usa para asignar un valor a una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>Elementos  
  `attributelist`  
- Opcional. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Opcional. Vea [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Optional on at most one of the `Get` and `Set` statements in this property. Puede ser uno de los siguientes:  
+ Opcional en, como máximo, una de las instrucciones `Get` y `Set` de esta propiedad. Puede ser uno de los siguientes:  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,44 +46,44 @@ End Set
  Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Requerido. Parameter containing the new value for the property.  
+ Obligatorio. Parámetro que contiene el nuevo valor para la propiedad.  
   
  `datatype`  
- Required if `Option Strict` is `On`. Data type of the `value` parameter. The data type specified must be the same as the data type of the property where this `Set` statement is declared.  
+ Es obligatorio si se `On``Option Strict`. Tipo de datos del parámetro `value`. El tipo de datos especificado debe ser el mismo que el del tipo de datos de la propiedad donde se declara esta instrucción `Set`.  
   
  `statements`  
- Opcional. One or more statements that run when the `Set` property procedure is called.  
+ Opcional. Una o varias instrucciones que se ejecutan cuando se llama al procedimiento de propiedad `Set`.  
   
  `End Set`  
- Requerido. Terminates the definition of the `Set` property procedure.  
+ Obligatorio. Finaliza la definición del procedimiento de propiedad `Set`.  
   
 ## <a name="remarks"></a>Comentarios  
- Every property must have a `Set` property procedure unless the property is marked `ReadOnly`. The `Set` procedure is used to set the value of the property.  
+ Cada propiedad debe tener un procedimiento de propiedad `Set` a menos que la propiedad esté marcada `ReadOnly`. El procedimiento `Set` se utiliza para establecer el valor de la propiedad.  
   
- Visual Basic automatically calls a property's `Set` procedure when an assignment statement provides a value to be stored in the property.  
+ Visual Basic llama automáticamente al procedimiento `Set` de una propiedad cuando una instrucción de asignación proporciona un valor que se va a almacenar en la propiedad.  
   
- Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. The parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.  
+ Visual Basic pasa un parámetro al procedimiento `Set` durante las asignaciones de propiedades. Si no proporciona un parámetro para `Set`, el entorno de desarrollo integrado (IDE) utiliza un parámetro implícito denominado `value`. El parámetro contiene el valor que se va a asignar a la propiedad. Normalmente, este valor se almacena en una variable local privada y se devuelve cada vez que se llama al procedimiento `Get`.  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Set` procedure inside the property to which it applies.  
+ El cuerpo de la declaración de propiedad solo puede contener los procedimientos `Get` y `Set` de la propiedad entre la [instrucción Property](../../../visual-basic/language-reference/statements/property-statement.md) y la instrucción `End Property`. No puede almacenar nada que no sea esos procedimientos. En concreto, no puede almacenar el valor actual de la propiedad. Debe almacenar este valor fuera de la propiedad, porque si lo almacena dentro de cualquiera de los procedimientos de propiedad, el otro procedimiento de propiedad no podrá tener acceso a él. El enfoque habitual es almacenar el valor en una variable [privada](../../../visual-basic/language-reference/modifiers/private.md) declarada en el mismo nivel que la propiedad. Debe definir un procedimiento de `Set` dentro de la propiedad a la que se aplica.  
   
- The `Set` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Set` statement.  
+ El procedimiento `Set` toma como valor predeterminado el nivel de acceso de la propiedad que lo contiene a menos que use `accessmodifier` en la instrucción `Set`.  
   
 ## <a name="rules"></a>Reglas  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.  
+- **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, puede especificar opcionalmente un nivel de acceso diferente para el `Get` o el procedimiento de `Set`, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si la propiedad se declara `Friend`, puede declarar el `Set` procedimiento `Private`, pero no `Public`.  
   
-     If you are defining a `WriteOnly` property, the `Set` procedure represents the entire property. You cannot declare a different access level for `Set`, because that would set two access levels for the property.  
+     Si va a definir una propiedad `WriteOnly`, el procedimiento `Set` representa la propiedad completa. No se puede declarar un nivel de acceso diferente para `Set`, porque esto establecería dos niveles de acceso para la propiedad.  
   
 ## <a name="behavior"></a>Comportamiento  
   
-- **Returning from a Property Procedure.** When the `Set` procedure returns to the calling code, execution continues following the statement that provided the value to be stored.  
+- **Devolver desde un procedimiento de propiedad.** Cuando el procedimiento `Set` devuelve al código de llamada, la ejecución continúa después de la instrucción que proporcionó el valor que se va a almacenar.  
   
-     `Set` property procedures can return using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or the [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` procedimientos de propiedad pueden devolver mediante la [instrucción return](../../../visual-basic/language-reference/statements/return-statement.md) o la [instrucción Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     Las instrucciones `Exit Property` y `Return` producen una salida inmediata de un procedimiento de propiedad. Cualquier número de instrucciones `Exit Property` y `Return` puede aparecer en cualquier parte del procedimiento y se pueden mezclar instrucciones `Exit Property` y `Return`.  
   
 ## <a name="example"></a>Ejemplo  
- The following example uses the `Set` statement to set the value of a property.  
+ En el ejemplo siguiente se usa la instrucción `Set` para establecer el valor de una propiedad.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   

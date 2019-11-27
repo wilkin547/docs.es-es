@@ -38,7 +38,7 @@ Puede obtener la fecha y hora actuales desde la clase <xref:Microsoft.VisualBasi
 
 Debe delimitar cualquier literal `Date` con signos de número (`# #`). Debe especificar el valor de fecha en el formato M/d/aaaa, por ejemplo `#5/31/1993#`, o aaaa-MM-dd, por ejemplo `#1993-5-31#`. Puede usar barras diagonales al especificar el año en primer lugar.  Este requisito es independiente de la configuración regional y de la configuración de formato de fecha y hora del equipo.
 
-El motivo de esta restricción es que el significado del código nunca debe cambiar en función de la configuración regional en que se ejecuta la aplicación. Suponga que codifica un literal `Date` de `#3/4/1998#` con la intención de que signifique el 4 de marzo de 1998. En una configuración regional que use el formato mm/dd/aaaa, 3/4/1998 se compila tal como desea. But suppose you deploy your application in many countries/regions. En una configuración regional que use el formato dd/mm/aaaa, el literal incluido en el código se compilará como 3 de abril de 1998. En una configuración local que utilice el formato aaaa/mm/dd, el literal no sería válido (1998 de abril de 0003) y generaría un error de compilación.
+El motivo de esta restricción es que el significado del código nunca debe cambiar en función de la configuración regional en que se ejecuta la aplicación. Suponga que codifica un literal `Date` de `#3/4/1998#` con la intención de que signifique el 4 de marzo de 1998. En una configuración regional que use el formato mm/dd/aaaa, 3/4/1998 se compila tal como desea. Pero supongamos que implementa la aplicación en muchos países o regiones. En una configuración regional que use el formato dd/mm/aaaa, el literal incluido en el código se compilará como 3 de abril de 1998. En una configuración local que utilice el formato aaaa/mm/dd, el literal no sería válido (1998 de abril de 0003) y generaría un error de compilación.
 
 ## <a name="workarounds"></a>Soluciones
 
@@ -68,15 +68,15 @@ Si convierte un valor `Date` al tipo `String`, Visual Basic representa la fecha 
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
-- **Interop Considerations.** Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo, objetos de automatización o COM, tenga presente que los tipos de fecha y hora definidos en otros entornos no son compatibles con el tipo `Date` de Visual Basic. Al pasar un argumento de fecha y hora a esos componentes, declárelo en el código de Visual Basic como `Double` en lugar de como `Date`, y use los métodos de conversión <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> y <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
+- **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo, objetos de automatización o COM, tenga presente que los tipos de fecha y hora definidos en otros entornos no son compatibles con el tipo `Date` de Visual Basic. Al pasar un argumento de fecha y hora a esos componentes, declárelo en el código de Visual Basic como `Double` en lugar de como `Date`, y use los métodos de conversión <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> y <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
 
-- **Type Characters.** `Date` has no literal type character or identifier type character. Sin embargo, el compilador trata los literales incluidos entre caracteres de signo de número (`# #`) como `Date`.
+- **Caracteres de tipo.** `Date` no tiene un carácter de tipo literal o un carácter de tipo de identificador. Sin embargo, el compilador trata los literales incluidos entre caracteres de signo de número (`# #`) como `Date`.
 
-- **Framework Type.** El tipo correspondiente en .NET Framework es la estructura <xref:System.DateTime?displayProperty=nameWithType>.
+- **Tipo de marco.** El tipo correspondiente en .NET Framework es la estructura <xref:System.DateTime?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Ejemplo
 
-Una variable o constante del tipo de datos `Date` contiene la fecha y la hora. Esto se ilustra en el siguiente ejemplo:
+Una variable o constante del tipo de datos `Date` contiene la fecha y la hora. En el ejemplo siguiente se ilustra esto.
 
 ```vb
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
@@ -86,8 +86,8 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
-- [Cadenas con formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md)
-- [Cadenas con formato de fecha y hora personalizado](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
 - [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

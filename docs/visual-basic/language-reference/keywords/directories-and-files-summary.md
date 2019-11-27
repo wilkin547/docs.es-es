@@ -16,7 +16,7 @@ ms.locfileid: "74349835"
 # <a name="directories-and-files-summary-visual-basic"></a>Resumen de directorios y archivos (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
- La característica `My` proporciona una mayor productividad y rendimiento en las operaciones de E/S de archivo que si se utilizan estos miembros. Para obtener más información, vea <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ La característica `My` proporciona una mayor productividad y rendimiento en las operaciones de E/S de archivo que si se utilizan estos miembros. Para obtener más información, consulta <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
 |**Acción**|**Elemento del lenguaje**|  
 |----------------|--------------------------|  

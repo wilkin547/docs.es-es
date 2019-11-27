@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348711"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Cómo: Llamar a las API de Windows (Visual Basic)
-This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
+En este ejemplo se define y se llama a la función `MessageBox` en user32. dll y, a continuación, se le pasa una cadena.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
@@ -28,9 +28,9 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
-- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
+- El método no es estático, es abstracto o se ha definido previamente. El tipo primario es una interfaz o la longitud del *nombre* o *DllName* es cero. (<xref:System.ArgumentException>)  
   
-- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
+- El *nombre* o *DllName* es `Nothing`. (<xref:System.ArgumentNullException>)  
   
 - Tipo contenedor que se ha creado anteriormente mediante `CreateType`. (<xref:System.InvalidOperationException>)  
   
@@ -39,6 +39,6 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
 - [Aproximación a la invocación de plataforma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Ejemplos de invocación de plataforma](../../../framework/interop/platform-invoke-examples.md)
 - [Consumir funciones DLL no administradas](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [Definir un método con la emisión de la reflexión](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)

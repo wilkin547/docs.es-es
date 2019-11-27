@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347358"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimiento Main en Visual Basic
-Every Visual Basic application must contain a procedure called `Main`. This procedure serves as the starting point and overall control for your application. The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it. Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.
+Cada Visual Basic aplicación debe contener un procedimiento denominado `Main`. Este procedimiento sirve como punto de partida y control general de la aplicación. El .NET Framework llama a su `Main` procedimiento cuando haya cargado la aplicación y esté listo para pasarle el control. A menos que cree una aplicación Windows Forms, debe escribir el procedimiento de `Main` para las aplicaciones que se ejecutan por sí mismas.
 
- `Main` contains the code that runs first. In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.
+ `Main` contiene el código que se ejecuta en primer lugar. En `Main`, puede determinar qué formulario se va a cargar primero cuando se inicie el programa, averiguar si ya se está ejecutando una copia de la aplicación en el sistema, establecer un conjunto de variables para la aplicación o abrir una base de datos que la aplicación requiera.
 
-## <a name="requirements-for-the-main-procedure"></a>Requirements for the Main Procedure
- A file that runs on its own (usually with extension .exe) must contain a `Main` procedure. A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure. The requirements for the different types of projects you can create are as follows:
+## <a name="requirements-for-the-main-procedure"></a>Requisitos para el procedimiento Main
+ Un archivo que se ejecuta por su cuenta (normalmente con la extensión. exe) debe contener un procedimiento `Main`. Una biblioteca (por ejemplo, con extensión. dll) no se ejecuta por sí misma y no requiere un procedimiento `Main`. Los requisitos para los diferentes tipos de proyectos que puede crear son los siguientes:
 
-- Console applications run on their own, and you must supply at least one `Main` procedure.
+- Las aplicaciones de consola se ejecutan por sí mismas, por lo que debe proporcionar al menos un procedimiento `Main`.
 
-- Windows Forms applications run on their own. However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.
+- Windows Forms aplicaciones se ejecutan por sí solos. Sin embargo, el compilador de Visual Basic genera automáticamente un procedimiento de `Main` en este tipo de aplicación y no es necesario escribir ninguno.
 
-- Class libraries do not require a `Main` procedure. These include Windows Control Libraries and Web Control Libraries. Web applications are deployed as class libraries.
+- Las bibliotecas de clases no requieren un procedimiento `Main`. Entre ellas se incluyen bibliotecas de controles de Windows y bibliotecas de controles Web. Las aplicaciones web se implementan como bibliotecas de clases.
 
-## <a name="declaring-the-main-procedure"></a>Declaring the Main Procedure
- There are four ways to declare the `Main` procedure. It can take arguments or not, and it can return a value or not.
+## <a name="declaring-the-main-procedure"></a>Declarar el procedimiento Main
+ Hay cuatro maneras de declarar el procedimiento `Main`. Puede tomar argumentos o no, y puede devolver un valor.
 
 > [!NOTE]
-> If you declare `Main` in a class, you must use the `Shared` keyword. In a module, `Main` does not need to be `Shared`.
+> Si declara `Main` en una clase, debe utilizar la palabra clave `Shared`. En un módulo, `Main` no tiene que ser `Shared`.
 
-- The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.
+- La manera más sencilla consiste en declarar un procedimiento `Sub` que no tome argumentos o devuelva un valor.
 
     ```vb
     Module mainModule
@@ -47,7 +47,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- `Main` can also return an `Integer` value, which the operating system uses as the exit code for your program. Other programs can test this code by examining the Windows ERRORLEVEL value. To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.
+- `Main` también puede devolver un valor `Integer`, que el sistema operativo usa como código de salida para el programa. Otros programas pueden probar este código examinando el valor de ERRORLEVEL de Windows. Para devolver un código de salida, debe declarar `Main` como un `Function` procedimiento en lugar de un procedimiento `Sub`.
 
     ```vb
     Module mainModule
@@ -64,7 +64,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- `Main` can also take a `String` array as an argument. Each string in the array contains one of the command-line arguments used to invoke your program. You can take different actions depending on their values.
+- `Main` también puede tomar una matriz de `String` como argumento. Cada cadena de la matriz contiene uno de los argumentos de línea de comandos utilizados para invocar el programa. Puede realizar diferentes acciones en función de sus valores.
 
     ```vb
     Module mainModule
@@ -88,7 +88,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.
+- Puede declarar `Main` para examinar los argumentos de la línea de comandos, pero no devolver un código de salida, como se indica a continuación.
 
     ```vb
     Module mainModule
@@ -113,7 +113,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Estructura de un programa de Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)

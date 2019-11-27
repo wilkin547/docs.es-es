@@ -14,12 +14,12 @@ ms.locfileid: "74349820"
 # <a name="errors-summary-visual-basic"></a>Resumen de errores (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Elemento del lenguaje|  
+|Acción|Language, elemento|  
 |------------|----------------------|  
-|Generar errores en tiempo de ejecución.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Error](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
+|Generar errores en tiempo de ejecución.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Error](../../../visual-basic/language-reference/statements/error-statement.md)<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
 |Obtener excepciones.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
 |Proporcionar información sobre errores.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
-|Interceptar errores en tiempo de ejecución.|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md), [Resume](../../../visual-basic/language-reference/statements/resume-statement.md), [Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
+|Interceptar errores en tiempo de ejecución.|[En el error](../../../visual-basic/language-reference/statements/on-error-statement.md), [reanudar](../../../visual-basic/language-reference/statements/resume-statement.md), [probar... Detectar... Por último](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
 |Proporcionar el número de línea del error.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
 |Proporcionar el código de error del sistema.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   

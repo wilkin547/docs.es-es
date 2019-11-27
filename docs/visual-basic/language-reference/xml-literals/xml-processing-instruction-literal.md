@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347044"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Literal de instrucción de procesamiento XML (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
+Literal que representa un objeto <xref:System.Xml.Linq.XProcessingInstruction>.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,37 +26,37 @@ A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.
   
 ## <a name="parts"></a>Elementos  
  `<?`  
- Requerido. Denotes the start of the XML processing instruction literal.  
+ Obligatorio. Denota el inicio del literal de instrucción de procesamiento XML.  
   
  `piName`  
- Requerido. Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
+ Obligatorio. Nombre que indica la aplicación a la que se destina la instrucción de procesamiento. No puede comenzar por "XML" o "XML".  
   
  `piData`  
- Opcional. String indicating how the application targeted by `piName` should process the XML document.  
+ Opcional. Cadena que indica cómo la aplicación de destino `piName` debe procesar el documento XML.  
   
  `?>`  
- Requerido. Denotes the end of the processing instruction.  
+ Obligatorio. Denota el final de la instrucción de procesamiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto <xref:System.Xml.Linq.XProcessingInstruction>.  
   
 ## <a name="remarks"></a>Comentarios  
- XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
+ Los literales de instrucciones de procesamiento XML indican cómo deben procesar las aplicaciones un documento XML. Cuando una aplicación carga un documento XML, la aplicación puede comprobar las instrucciones de procesamiento XML para determinar cómo procesar el documento. La aplicación interpreta el significado de `piName` y `piData`.  
   
- The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
-> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
-  
- You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+ El literal de documento XML utiliza una sintaxis similar a la de la instrucción de procesamiento XML. Para obtener más información, vea [literal de documento XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
-> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> El elemento `piName` no puede comenzar con las cadenas "XML" o "XML", ya que la especificación XML 1,0 reserva esos identificadores.  
   
- The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
+ Puede asignar un literal de instrucción de procesamiento XML a una variable o incluirlo en un literal de documento XML.  
+  
+> [!NOTE]
+> Un literal XML puede abarcar varias líneas sin necesidad de caracteres de continuación de línea. Esto le permite copiar contenido de un documento XML y pegarlo directamente en un programa de Visual Basic.  
+  
+ El compilador Visual Basic convierte el literal de instrucción de procesamiento XML en una llamada al constructor <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- The following example creates a processing instruction identifying a style-sheet for an XML document.  
+ En el ejemplo siguiente se crea una instrucción de procesamiento que identifica una hoja de estilos para un documento XML.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

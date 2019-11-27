@@ -15,20 +15,20 @@ ms.locfileid: "74348629"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Cómo: Determinar si dos objetos están relacionados (Visual Basic)
 
-You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
+Puede comparar dos objetos para determinar la relación, si existe, entre las clases de las que se crean. El método <xref:System.Type.IsInstanceOfType%2A> de la clase <xref:System.Type?displayProperty=nameWithType> devuelve `True` si la clase especificada hereda de la clase actual, o si el tipo actual es una interfaz compatible con la clase especificada.
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Para determinar si un objeto hereda de la clase o la interfaz de otro objeto
 
-1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
+1. En el objeto que cree que podría ser del tipo base, invoque el método <xref:System.Object.GetType%2A>.
 
-2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
+2. En el objeto <xref:System.Type?displayProperty=nameWithType> devuelto por <xref:System.Object.GetType%2A>, invoque el método <xref:System.Type.IsInstanceOfType%2A>.
 
-3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
+3. En la lista de argumentos de <xref:System.Type.IsInstanceOfType%2A>, especifique el objeto que cree que podría ser del tipo derivado.
 
-    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
+    <xref:System.Type.IsInstanceOfType%2A> devuelve `True` si su tipo de argumento hereda del tipo de objeto <xref:System.Type?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Ejemplo
- The following example determines whether one object represents a class derived from another object's class.
+ En el ejemplo siguiente se determina si un objeto representa una clase derivada de la clase de otro objeto.
 
 ```vb
 Public Class baseClass
@@ -46,14 +46,14 @@ Public Class testTheseClasses
 End Class
 ```
 
-Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
+Tenga en cuenta la colocación inesperada de las dos variables de objeto en la llamada a <xref:System.Type.IsInstanceOfType%2A>. El tipo base supuesto se utiliza para generar la clase <xref:System.Type?displayProperty=nameWithType> y el tipo derivado supuesto se pasa como argumento al método <xref:System.Type.IsInstanceOfType%2A>.
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Determinar si dos objetos son idénticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

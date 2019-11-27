@@ -1,5 +1,5 @@
 ---
-title: AssemblyFlags (Enumeración)
+title: AssemblyFlags (enumeración)
 ms.date: 03/30/2017
 api_name:
 - AssemblyFlags
@@ -21,8 +21,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444300"
 ---
-# <a name="assemblyflags-enumeration"></a>AssemblyFlags (Enumeración)
-Contains values that describe run-time features of an assembly.  
+# <a name="assemblyflags-enumeration"></a>AssemblyFlags (enumeración)
+Contiene valores que describen las características de tiempo de ejecución de un ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
-|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
-|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
-|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
-|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
+|`afImplicitExportedTypes`|Especifica que las definiciones de tipos exportadas están implícitas dentro de los archivos que componen el ensamblado. En las versiones 1,0 y 1,1 de .NET Framework, se supone que este valor siempre está establecido.|  
+|`afImplicitResources`|Especifica que las definiciones de recursos están implícitas dentro de los archivos que componen el ensamblado. En el .NET Framework 1,0 y 1,1, siempre se supone que se establece este valor.|  
+|`afNonSideBySideAppDomain`|Especifica que el ensamblado no se puede ejecutar con otras versiones si se ejecutan en el mismo dominio de aplicación.|  
+|`afNonSideBySideProcess`|Especifica que el ensamblado no se puede ejecutar con otras versiones si se ejecutan en el mismo proceso.|  
+|`afNonSideBySideMachine`|Especifica que el ensamblado no se puede ejecutar con otras versiones si se ejecutan en el mismo equipo.|  
   
 ## <a name="remarks"></a>Comentarios  
- The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
+ Los valores entre 0x0010 y 0x0070, ambos incluidos, se usan para describir las características de compatibilidad en paralelo del ensamblado al que se hace referencia. Si no se establece ninguno de estos valores, se supone que el ensamblado es compatible en paralelo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MsCorEE.h  
+ **Encabezado:** MsCorEE. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

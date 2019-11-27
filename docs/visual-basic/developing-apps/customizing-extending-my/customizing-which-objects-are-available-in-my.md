@@ -14,63 +14,63 @@ ms.locfileid: "74330326"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizar los objetos que están disponibles en My (Visual Basic)
 
-This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant. The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.  
+En este tema se describe cómo puede controlar qué objetos de `My` se habilitan estableciendo la constante de compilación condicional del proyecto `_MYTYPE`. El entorno de desarrollo integrado (IDE) de Visual Studio mantiene el `_MYTYPE` constante de compilación condicional para un proyecto sincronizado con el tipo del proyecto.  
   
-## <a name="predefined-_mytype-values"></a>Predefined \_MYTYPE Values  
+## <a name="predefined-_mytype-values"></a>Valores predefinidos de \_de tipo  
 
-You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant. When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences. For example, you could use:  
+Debe utilizar la opción del compilador `/define` para establecer la `_MYTYPE` constante de compilación condicional. Al especificar su propio valor para la constante `_MYTYPE`, debe incluir el valor de cadena en las secuencias de la barra diagonal inversa/comilla (\\"). Por ejemplo, podría usar:  
   
 ```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.  
+ En esta tabla se muestra cómo se establece la constante de compilación condicional de `_MYTYPE` para varios tipos de proyecto.  
   
-|Tipo de proyecto|\_MYTYPE value|  
+|Tipo de proyecto|\_valor de tipo|  
 |------------------|--------------------|  
-|Biblioteca de clases|"Windows"|  
-|Aplicación de consola|"Console"|  
-|Web|"Web"|  
-|Web Control Library|"WebControl"|  
-|Aplicación Windows|"WindowsForms"|  
-|Windows Application, when starting with custom `Sub Main`|"WindowsFormsWithCustomSubMain"|  
-|Windows Control Library|"Windows"|  
-|Servicio de Windows|"Console"|  
-|Empty|"Empty"|  
+|Biblioteca de clases|Windows|  
+|Aplicación de consola|Console|  
+|Web|Web|  
+|Biblioteca de controles Web|WebControl|  
+|Aplicación de Windows|WindowsForms|  
+|Aplicación para Windows, al iniciar con el `Sub Main` personalizado|"WindowsFormsWithCustomSubMain"|  
+|Biblioteca de controles de Windows|Windows|  
+|Servicio de Windows|Console|  
+|Vacío|Vacía|  
   
 > [!NOTE]
-> All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.  
+> Todas las comparaciones de cadenas de compilación condicional distinguen mayúsculas de minúsculas, independientemente de cómo se establezca la instrucción `Option Compare`.  
   
-## <a name="dependent-_my-compilation-constants"></a>Dependent \_MY Compilation Constants  
+## <a name="dependent-_my-compilation-constants"></a>Dependientes \_mis constantes de compilación  
 
-The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:  
+A su vez, el `_MYTYPE` constante de compilación condicional controla los valores de varias otras constantes de compilación `_MY`:  
   
-|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
+|\_de tipo|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Console"|"Console"|"Windows"|Sin definir|"Windows"|true|  
-|"Custom"|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
-|"Empty"|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
-|"Web"|Sin definir|"Web"|false|"Web"|false|  
-|"WebControl"|Sin definir|"Web"|false|"Web"|true|  
-|"Windows" or ""|"Windows"|"Windows"|Sin definir|"Windows"|true|  
-|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
-|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
+|Console|Console|Windows|Sin definir|Windows|TRUE|  
+|Personal|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
+|Vacía|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
+|Web|Sin definir|Web|FALSE|Web|FALSE|  
+|WebControl|Sin definir|Web|FALSE|Web|TRUE|  
+|"Windows" o ""|Windows|Windows|Sin definir|Windows|TRUE|  
+|WindowsForms|WindowsForms|Windows|TRUE|Windows|TRUE|  
+|"WindowsFormsWithCustomSubMain"|Console|Windows|TRUE|Windows|TRUE|  
   
- By default, undefined conditional-compilation constants resolve to `FALSE`. You can specify values for the undefined constants when compiling your project to override the default behavior.  
+ De forma predeterminada, las constantes de compilación condicional sin definir se resuelven en `FALSE`. Puede especificar valores para las constantes no definidas al compilar el proyecto para invalidar el comportamiento predeterminado.  
   
 > [!NOTE]
-> When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects. However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.  
+> Cuando `_MYTYPE` se establece en "Custom", el proyecto contiene el espacio de nombres `My`, pero no contiene ningún objeto. Sin embargo, si se establece `_MYTYPE` en "Empty", se impide que el compilador agregue el espacio de nombres `My` y sus objetos.  
   
- This table describes the effects of the predefined values of the `_MY` compilation constants.  
+ En esta tabla se describen los efectos de los valores predefinidos de las constantes de compilación `_MY`.  
   
 |Constante|Significado|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":<br /><br /> -   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. and has fewer members than the "Windows" version.<br />-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.<br />-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.|  
-|`_MYCOMPUTERTYPE`|Enables `My.Computer`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.<br />-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.|  
-|`_MYFORMS`|Enables `My.Forms`, if the constant is `TRUE`.|  
-|`_MYUSERTYPE`|Enables `My.User`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.<br />-   The "Windows" version of `My.User` is associated with the thread's current principal.|  
-|`_MYWEBSERVICES`|Enables `My.WebServices`, if the constant is `TRUE`.|  
-|`_MYTYPE`|Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".|  
+|`_MYAPPLICATIONTYPE`|Habilita `My.Application`, si la constante es "Console", "Windows" o "WindowsForms":<br /><br /> -La versión "Console" deriva de <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. y tiene menos miembros que la versión "Windows".<br />-La versión "Windows" deriva de <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>. y tiene menos miembros que la versión "WindowsForms".<br />-La versión "WindowsForms" de `My.Application` deriva de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. Si la constante `TARGET` se define como "winexe", la clase incluye un método `Sub Main`.|  
+|`_MYCOMPUTERTYPE`|Habilita `My.Computer`, si la constante es "Web" o "Windows":<br /><br /> -La versión "Web" deriva de <xref:Microsoft.VisualBasic.Devices.ServerComputer>y tiene menos miembros que la versión "Windows".<br />-La versión "Windows" de `My.Computer` deriva de <xref:Microsoft.VisualBasic.Devices.Computer>.|  
+|`_MYFORMS`|Habilita `My.Forms`, si la constante se `TRUE`.|  
+|`_MYUSERTYPE`|Habilita `My.User`, si la constante es "Web" o "Windows":<br /><br /> -La versión "Web" de `My.User` está asociada a la identidad del usuario de la solicitud HTTP actual.<br />-La versión "Windows" de `My.User` está asociada a la entidad de seguridad actual del subproceso.|  
+|`_MYWEBSERVICES`|Habilita `My.WebServices`, si la constante se `TRUE`.|  
+|`_MYTYPE`|Habilita `My.Log`, `My.Request`y `My.Response`, si la constante es "Web".|  
   
 ## <a name="see-also"></a>Vea también
 

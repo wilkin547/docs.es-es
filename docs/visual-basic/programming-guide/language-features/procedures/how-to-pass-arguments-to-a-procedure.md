@@ -19,31 +19,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344841"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Cómo: Pasar argumentos a un procedimiento (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+Cuando se llama a un procedimiento, se sigue el nombre del procedimiento con una lista de argumentos entre paréntesis. Proporcione un argumento correspondiente a cada parámetro necesario que el procedimiento define y, opcionalmente, puede proporcionar argumentos a los parámetros de `Optional`. Si no proporciona un parámetro `Optional` en la llamada, debe incluir una coma para marcar su lugar en la lista de argumentos si está proporcionando los argumentos subsiguientes.  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Si piensa pasar un argumento de un tipo de datos distinto del parámetro correspondiente, como `Byte` a `String`, puede establecer el modificador de comprobación de tipo ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) en `Off`. Si `Option Strict` es `On`, debe utilizar las conversiones de ampliación o las palabras clave de conversión explícita. Para obtener más información, vea [conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) y [funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Para obtener más información, vea [argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Para pasar uno o más argumentos a un procedimiento  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. En la instrucción de llamada, siga el nombre del procedimiento entre paréntesis.  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. Dentro de los paréntesis, coloque una lista de argumentos. Incluya un argumento para cada parámetro necesario que defina el procedimiento y sepárelos con comas.  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. Asegúrese de que cada argumento es una expresión válida que se evalúa como un tipo de datos que se pueda convertir al tipo definido por el procedimiento para el parámetro correspondiente.  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. Si un parámetro se define como [opcional](../../../../visual-basic/language-reference/modifiers/optional.md), puede incluirlo en la lista de argumentos u omitirlo. Si lo omite, el procedimiento utiliza el valor predeterminado definido para ese parámetro.  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. Si omite un argumento para un parámetro de `Optional` y hay otro parámetro después de él en la lista de parámetros, puede marcar el lugar del argumento omitido mediante una coma adicional en la lista de argumentos.  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     En el ejemplo siguiente se llama a la función <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> de Visual Basic.  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     En el ejemplo anterior se proporciona el primer argumento necesario, que es la cadena de mensaje que se va a mostrar. Omite un argumento para el segundo parámetro opcional, que especifica los botones que se van a mostrar en el cuadro de mensaje. Dado que la llamada no proporciona un valor, `MsgBox` usa el valor predeterminado, `MsgBoxStyle.OKOnly`, que muestra solo un botón **Aceptar** .  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     La segunda coma de la lista de argumentos marca el lugar del segundo argumento omitido, y la última cadena se pasa al tercer parámetro opcional de `MsgBox`, que es el texto que se va a mostrar en la barra de título.  
   
 ## <a name="see-also"></a>Vea también
 

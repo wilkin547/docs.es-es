@@ -62,7 +62,7 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
 6. Asegúrese de que el código solo usa operaciones y métodos admitidos por cualquier tipo de datos que pueda proporcionar a `itemType`.  
   
-     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista. A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
+     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista. Un constructor con parámetros permite que el código de uso establezca el límite superior de `items`y el constructor sin parámetros lo establece en 9 (para un total de 10 elementos).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -82,4 +82,4 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md)
 - [Utilizar una clase genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -16,9 +16,9 @@ ms.locfileid: "74430678"
 # <a name="metadata-unions"></a>Uniones de metadatos
 En esta sección se describen las uniones no administradas que utiliza la API de metadatos.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [CeeSectionRelocExtra (unión)](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Representa un desplazamiento de dirección que se usa en la interfaz [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) para reubicar una sección.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349182"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Espacio de pila insuficiente (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+La pila es un área de trabajo de memoria que aumenta y disminuye dinámicamente con las demandas del programa en ejecución. Se han superado sus límites.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Check that procedures are not nested too deeply.  
+1. Compruebe que los procedimientos no estén demasiado anidados.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Asegúrese de que los procedimientos recursivos se terminan correctamente.  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Si las variables locales requieren más espacio de variables locales que el disponible, intente declarar algunas variables en el nivel de módulo. También puede declarar todas las variables en el procedimiento static anteponiendo la palabra clave `Property`, `Sub`o `Function` con `Static`. O bien, puede usar la instrucción `Static` para declarar variables estáticas individuales dentro de los procedimientos.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Vuelva a definir algunas cadenas de longitud fija como cadenas de longitud variable, ya que las cadenas de longitud fija utilizan más espacio de pila que las cadenas de longitud variable. También puede definir la cadena en el nivel de módulo en el que no se requiere espacio de pila.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Compruebe el número de llamadas a funciones `DoEvents` anidadas mediante el cuadro de diálogo `Calls` para ver los procedimientos que están activos en la pila.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Asegúrese de que no ocasionó un "evento en cascada" desencadenando un evento que llama a un procedimiento de evento que ya está en la pila. Un evento en cascada es similar a una llamada a procedimiento recursivo no terminada, pero es menos obvio, ya que la llamada se realiza mediante Visual Basic en lugar de una llamada explícita en el código. Utilice el cuadro de diálogo `Calls` para ver los procedimientos que están activos en la pila.  
   
 ## <a name="see-also"></a>Vea también
 

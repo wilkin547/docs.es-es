@@ -24,9 +24,9 @@ Visual Basic ofrece nuevas características para el desarrollo rápido de aplica
   
  Esta tabla muestra los objetos `My` de nivel superior y sus relaciones entre sí.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![En el diagrama se muestra el modelo de objetos de My.](./media/index/my-object-model-relationships.gif)  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
 
  [Realizacion de tareas con My.Application, My.Computer y My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  Describe los tres objetos principales `My`, a saber, `My.Application`, `My.Computer` y `My.User`, que proporcionan acceso a información y funcionalidades.  
@@ -38,7 +38,7 @@ Visual Basic ofrece nuevas características para el desarrollo rápido de aplica
  Describe los objetos `My.Resources` y `My.Settings`, que proporcionan acceso a la configuración y los recursos de una aplicación.  
   
  [Información general sobre el modelo de aplicaciones de Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Describe el modelo de inicio y cierre de la aplicación Visual Basic.  
   
  [Cómo My depende del tipo de proyecto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Proporciona información detallada sobre las características `My` disponibles en diferentes tipos de proyectos.  

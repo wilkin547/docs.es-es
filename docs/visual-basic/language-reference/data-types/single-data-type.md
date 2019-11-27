@@ -29,25 +29,25 @@ ms.locfileid: "74343915"
 ---
 # <a name="single-data-type-visual-basic"></a>Single (Tipo de datos, Visual Basic)
 
-Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
+Contiene números de punto flotante de precisión sencilla (4 bytes) de IEEE 32 bits con signo que van en el valor de-3.4028235 E + 38 a-401298e E-45 para los valores negativos y desde 401298e E-45 hasta 3.4028235 E + 38 para los valores positivos. Los números de precisión sencilla almacenan una aproximación de un número real.  
   
 ## <a name="remarks"></a>Comentarios  
 
- Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
+ Utilice el tipo de datos `Single` para contener valores de punto flotante que no requieran el ancho completo de los datos de `Double`. En algunos casos, es posible que el Common Language Runtime pueda empaquetar las variables de `Single` en estrecha colaboración y ahorrar consumo de memoria.  
   
  El valor predeterminado de `Single` es 0.  
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
-- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Precisión.** Al trabajar con números de punto flotante, tenga en cuenta que no siempre tienen una representación precisa en la memoria. Esto podría dar lugar a resultados inesperados de ciertas operaciones, como la comparación de valores y el operador `Mod`. Para obtener más información, vea [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Ampliación.** El tipo de datos `Single` se amplía a `Double`. Esto significa que puede convertir `Single` a `Double` sin encontrar un error de <xref:System.OverflowException?displayProperty=nameWithType>.  
   
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
+- **Ceros a la derecha.** Los tipos de datos de punto flotante no tienen ninguna representación interna de 0 caracteres finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, los caracteres 0 finales no aparecen al mostrar o imprimir valores de punto flotante.  
   
-- **Type Characters.** Al agregar el carácter de tipo literal `F` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Single`. Si se agrega el carácter de tipo identificador `!` a cualquier identificador, se convierte forzosamente al tipo `Single`.  
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `F` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Single`. Si se agrega el carácter de tipo identificador `!` a cualquier identificador, se convierte forzosamente al tipo `Single`.  
   
-- **Framework Type.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Single?displayProperty=nameWithType>.  
+- **Tipo de marco.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

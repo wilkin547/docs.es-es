@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432973"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo (Método)
-Gets a value that indicates the kind of static that applies to the specified field.  
+Obtiene un valor que indica el tipo de estático que se aplica al campo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,18 +36,18 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ de IDENTIFICADOR de la clase en la que se define el campo estático.  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ de El símbolo (token) de metadatos para el campo estático.  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ enuncia Un puntero a un valor de la enumeración [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) que indica si el campo especificado es estático y, en ese caso, el tipo de estático que se aplica al campo.  
   
 ## <a name="remarks"></a>Comentarios  
- This information can be used to determine which function to call to get the address of the static field.  
+ Esta información se puede usar para determinar la función a la que se va a llamar para obtener la dirección del campo estático.  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ El código del generador de perfiles debe seguir comprobando los metadatos de un campo estático para asegurarse de que realmente tiene una dirección. Los literales estáticos (es decir, las constantes) solo existen en los metadatos y no tienen una dirección.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

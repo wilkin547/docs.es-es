@@ -20,26 +20,26 @@ ms.locfileid: "74348320"
 ---
 # <a name="new-operator-visual-basic"></a>New (Operador, Visual Basic)
 
-Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.
+Presenta una cláusula `New` para crear una nueva instancia de objeto, especifica una restricción de constructor en un parámetro de tipo o identifica un procedimiento `Sub` como un constructor de clase.
 
 ## <a name="remarks"></a>Comentarios
 
-In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created. This means that the class must expose one or more constructors that the calling code can access.
+En una declaración o una instrucción de asignación, una cláusula `New` debe especificar una clase definida a partir de la cual se pueda crear la instancia. Esto significa que la clase debe exponer uno o más constructores a los que puede tener acceso el código de llamada.
 
-You can use a `New` clause in a declaration statement or an assignment statement. When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied. The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:
+Puede usar una cláusula `New` en una instrucción de declaración o una instrucción de asignación. Cuando se ejecuta la instrucción, llama al constructor adecuado de la clase especificada, pasando los argumentos que ha proporcionado. En el siguiente ejemplo se muestra la creación de instancias de una clase `Customer` que tiene dos constructores, uno que no toma parámetros y otro que toma un parámetro de cadena:
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-Since arrays are classes, `New` can create a new array instance, as shown in the following example:
+Dado que las matrices son clases, `New` puede crear una nueva instancia de la matriz, como se muestra en el ejemplo siguiente:
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.
+El Common Language Runtime (CLR) produce un error de <xref:System.OutOfMemoryException> si no hay suficiente memoria para crear la nueva instancia.
 
 > [!NOTE]
-> The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor. For more information about type parameters and constraints, see [Type List](../statements/type-list.md).
+> La palabra clave `New` también se usa en las listas de parámetros de tipo para especificar que el tipo proporcionado debe exponer un constructor sin parámetros accesible. Para obtener más información sobre los parámetros de tipo y las restricciones, vea [Type List](../statements/type-list.md).
 
-To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Para crear un procedimiento de constructor para una clase, establezca el nombre de una `Sub` procedimiento en la palabra clave `New`. Para obtener más información, vea [duración del objeto: cómo se crean y destruyen los objetos](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 La palabra clave `New` se puede usar en los siguientes contextos:
 

@@ -46,20 +46,20 @@ typedef enum CorImportOptions {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|Indica el comportamiento predeterminado, que consiste en omitir los registros eliminados.|  
+|`MDImportOptionAll`|Indica que se deben enumerar todos los metadatos.|  
+|`MDImportOptionAllTypeDefs`|Indica que se deben enumerar todos los TypeDefs, incluidos los eliminados.|  
+|`MDImportOptionAllMethodDefs`|Indica que se deben enumerar todos los MethodDefs, incluidos los eliminados.|  
+|`MDImportOptionAllFieldDefs`|Indica que se deben enumerar todos los FieldDefs, incluidos los eliminados.|  
+|`MDImportOptionAllProperties`|Indica que se deben enumerar todos los PropertyDefs, incluidos los eliminados.|  
+|`MDImportOptionAllEvents`|Indica que se deben enumerar todos los EventDefs, incluidos los eliminados.|  
+|`MDImportOptionAllCustomAttributes`|Indica que se deben enumerar todos los atributos personalizados, incluidos los eliminados.|  
+|`MDImportOptionAllExportedTypes`|Indica que se deben enumerar todos los tipos exportados, incluidos los eliminados.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

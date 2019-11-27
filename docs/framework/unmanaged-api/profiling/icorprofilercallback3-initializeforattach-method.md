@@ -39,7 +39,7 @@ HRESULT InitializeForAttach(
  [in] Puntero de interfaz para la interfaz `ICorProfilerInfo*`.  
   
  `pvClientData`  
- [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. Si este parámetro es nulo, `cbClientData` será 0 (cero). CLR libera esta memoria cuando vuelve de `InitializeForAttach`.  
+ de Un puntero a los datos pasados al método [IClrProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) en su parámetro `pvClientData`. Si este parámetro es nulo, `cbClientData` será 0 (cero). CLR libera esta memoria cuando vuelve de `InitializeForAttach`.  
   
  `cbClientData`  
  [in] Tamaño, en bytes, de los datos a los que señala `pvClientData`.  

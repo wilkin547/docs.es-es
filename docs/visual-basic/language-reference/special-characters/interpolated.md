@@ -8,7 +8,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349583"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Referencia de Visual Basic)
 
 Identifica un literal de cadena como una [cadena interpolada](../../programming-guide/language-features/strings/interpolated-strings.md). Una cadena interpolada es una cadena de tipo plantilla que contiene texto literal junto con *expresiones interpoladas*. Cuando se resuelve la cadena interpolada, por ejemplo en una instrucción de asignación o una llamada de método, sus expresiones interpoladas se reemplazan por sus representaciones de cadena en la cadena de resultado. Las cadenas interpoladas son reemplazos para las [cadenas de formato compuesto](../../../standard/base-types/composite-formatting.md) compatibles con .NET Framework.
 
@@ -21,4 +21,4 @@ Para obtener más información sobre las cadenas interpoladas, vea el tema [Inte
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de Visual Basic](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [Visual Basic caracteres especiales](index.md)

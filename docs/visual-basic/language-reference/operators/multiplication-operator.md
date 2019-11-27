@@ -1,5 +1,5 @@
 ---
-title: '* "??"'
+title: '* Operador'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.*
@@ -28,34 +28,34 @@ number1 * number2
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`number1`|Requerido. Cualquier expresión numérica.|  
-|`number2`|Requerido. Cualquier expresión numérica.|  
+|`number1`|Obligatorio. Cualquier expresión numérica.|  
+|`number2`|Obligatorio. Cualquier expresión numérica.|  
   
 ## <a name="result"></a>Resultado  
- The result is the product of `number1` and `number2`.  
+ El resultado es el producto de `number1` y `number2`.  
   
 ## <a name="supported-types"></a>Tipos admitidos  
- All numeric types, including the unsigned and floating-point types and `Decimal`.  
+ Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo y `Decimal`.  
   
 ## <a name="remarks"></a>Comentarios  
- The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
+ El tipo de datos del resultado depende de los tipos de los operandos. En la tabla siguiente se muestra cómo se determina el tipo de datos del resultado.  
   
-|Operand data types|Result data type|  
+|Tipos de datos de operando|Tipo de datos de resultados|  
 |---|---|  
-|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|A numeric data type appropriate for the data types of `number1` and `number2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Both expressions are [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
-|Both expressions are [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
-|Either expression is a floating-point data type (`Single` or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)) but not both `Single` (note `Decimal` is not a floating-point data type)|`Double`|  
+|Ambas expresiones son tipos de datos enteros ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [ushort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|Un tipo de datos numérico adecuado para los tipos de datos de `number1` y `number2`. Vea las tablas "aritmética de enteros" en [tipos de datos de resultados de operadores](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Ambas expresiones son [decimales](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
+|Ambas expresiones son [únicas](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
+|Cualquier expresión es un tipo de datos de punto flotante (`Single` o [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)) pero no ambos `Single` (tenga en cuenta `Decimal` no es un tipo de datos de punto flotante)|`Double`|  
   
- If an expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
+ Si una expresión se evalúa como [Nothing](../../../visual-basic/language-reference/nothing.md), se trata como cero.  
   
 ## <a name="overloading"></a>Sobrecarga  
- The `*` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El operador de `*` se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- This example uses the `*` operator to multiply two numbers. The result is the product of the two operands.  
+ En este ejemplo se usa el operador `*` para multiplicar dos números. El resultado es el producto de los dos operandos.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
@@ -65,4 +65,4 @@ number1 * number2
 - [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

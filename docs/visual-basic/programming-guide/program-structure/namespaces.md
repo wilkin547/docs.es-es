@@ -26,24 +26,24 @@ ms.locfileid: "74347330"
 # <a name="namespaces-in-visual-basic"></a>Espacios de nombres en Visual Basic
 Los espacios de nombres organizan los objetos definidos en un ensamblado. Los ensamblados pueden contener varios espacios de nombres, que a su vez pueden contener otros espacios de nombres. Los espacios de nombres evitan las ambigüedades y simplifican las referencias cuando se usan grupos de objetos grandes, como las bibliotecas de clases.  
   
- For example, the .NET Framework defines the <xref:System.Windows.Forms.ListBox> class in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
+ Por ejemplo, el .NET Framework define la clase <xref:System.Windows.Forms.ListBox> en el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType>. En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitar conflictos de nombres  
- .NET Framework namespaces address a problem sometimes called *namespace pollution*, in which the developer of a class library is hampered by the use of similar names in another library. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
+ .NET Framework espacios de nombres resuelven un problema que a veces se denomina *contaminación de espacio de nombres*, en el que el desarrollador de una biblioteca de clases se ve obstaculizado por el uso de nombres similares en otra biblioteca. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
   
- Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, However, if you want to use the .NET Framework <xref:System.Windows.Forms.ListBox> class in the same project, you must use a fully qualified reference to make the reference unique. If the reference is not unique, Visual Basic produces an error stating that the name is ambiguous. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
+ Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea utilizar la clase .NET Framework <xref:System.Windows.Forms.ListBox> en el mismo proyecto, debe usar una referencia completa para que la referencia sea única. Si la referencia no es única, Visual Basic genera un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- The following illustration shows two namespace hierarchies, both containing an object named `ListBox`:  
+ En la ilustración siguiente se muestran dos jerarquías de espacios de nombres que contienen un objeto denominado `ListBox`:  
   
- ![Screenshot that shows two namespace hierarchies.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Captura de pantalla que muestra dos jerarquías de espacios de nombres.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- By default, every executable file you create with Visual Basic contains a namespace with the same name as your project. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
+ De forma predeterminada, cada archivo ejecutable que se crea con Visual Basic contiene un espacio de nombres con el mismo nombre que el proyecto. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
   
- Se puede usar el mismo espacio de nombres en varios ensamblados. Visual Basic treats them as a single set of names. Por ejemplo, puede definir clases para un espacio de nombres ( `SomeNameSpace` ) en un ensamblado ( `Assemb1`) y definir clases adicionales para el mismo espacio de nombres desde un ensamblado denominado `Assemb2`.  
+ Se puede usar el mismo espacio de nombres en varios ensamblados. Visual Basic los trata como un único conjunto de nombres. Por ejemplo, puede definir clases para un espacio de nombres ( `SomeNameSpace` ) en un ensamblado ( `Assemb1`) y definir clases adicionales para el mismo espacio de nombres desde un ensamblado denominado `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>nombres completos  
  Los nombres completos son referencias de objetos que llevan como prefijo el nombre del espacio de nombres en el que se define el objeto. Puede usar los objetos definidos en otros proyectos si crea una referencia a la clase (eligiendo **Agregar referencia** desde el menú **Proyecto** ) y usa el nombre completo del objeto en el código. En el siguiente fragmento de código se muestra cómo usar el nombre completo de un objeto desde el espacio de nombres de otro proyecto:  
@@ -60,7 +60,7 @@ Los espacios de nombres organizan los objetos definidos en un ensamblado. Los en
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- If you attempt to use `Class1` without fully qualifying it, Visual Basic produces an error stating that the name `Class1` is ambiguous.  
+ Si intenta usar `Class1` sin calificarlo por completo, Visual Basic genera un error que indica que el nombre `Class1` es ambiguo.  
   
 ## <a name="namespace-level-statements"></a>Instrucciones de nivel de espacio de nombres  
  Dentro de un espacio de nombres, puede definir elementos tales como módulos, interfaces, clases, delegados, enumeraciones, estructuras y otros espacios de nombres. Los elementos tales como propiedades, procedimientos, variables y eventos no se pueden definir en el nivel de espacio de nombres. Estos elementos deben declararse dentro de contenedores tales como módulos, estructuras o clases.  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- Como resultado, el compilador de Visual Basic no puede resolver correctamente la referencia a <xref:System.Int32?displayProperty=nameWithType>, porque `SpecialSpace.System` no define `Int32`. Puede usar la palabra clave `Global` para iniciar la cadena de calificación en el nivel más externo de la biblioteca de clases de .NET Framework. De este modo, puede especificar el espacio de nombres <xref:System?displayProperty=nameWithType> o cualquier otro espacio de nombres en la biblioteca de clases. Esto se ilustra en el siguiente ejemplo:  
+ Como resultado, el compilador de Visual Basic no puede resolver correctamente la referencia a <xref:System.Int32?displayProperty=nameWithType>, porque `SpecialSpace.System` no define `Int32`. Puede usar la palabra clave `Global` para iniciar la cadena de calificación en el nivel más externo de la biblioteca de clases de .NET Framework. De este modo, puede especificar el espacio de nombres <xref:System?displayProperty=nameWithType> o cualquier otro espacio de nombres en la biblioteca de clases. En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -126,4 +126,4 @@ End Namespace
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
 - [Referencias y la instrucción Imports](references-and-the-imports-statement.md)
 - [Imports (instrucción), espacio de nombres y tipo .NET](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Escribir código en soluciones de Office](/visualstudio/vsto/writing-code-in-office-solutions)
+- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

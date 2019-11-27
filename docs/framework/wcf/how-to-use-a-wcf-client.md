@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Use a Windows Communication Foundation client'
+title: 'Tutorial: uso de un cliente de Windows Communication Foundation'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -14,27 +14,27 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346767"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Tutorial: Use a Windows Communication Foundation client
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Tutorial: uso de un cliente de Windows Communication Foundation
 
-This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application. For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).
+En este tutorial se describen las últimas cinco tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF). Para obtener información general sobre los tutoriales, vea [Tutorial: Introducción a las aplicaciones de Windows Communication Foundation](getting-started-tutorial.md).
 
-After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application. You then use it to communicate with the WCF service. 
+Después de crear y configurar un proxy de Windows Communication Foundation (WCF), cree una instancia de cliente y compile la aplicación cliente. A continuación, Úsela para comunicarse con el servicio WCF. 
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
-> - Add code to use the WCF client.
-> - Test the WCF client.
+> - Agregue código para usar el cliente de WCF.
+> - Pruebe el cliente de WCF.
 
-## <a name="add-code-to-use-the-wcf-client"></a>Add code to use the WCF client
+## <a name="add-code-to-use-the-wcf-client"></a>Agregar código para usar el cliente de WCF
 
-The client code does the following steps:
+El código de cliente realiza los siguientes pasos:
 
-- Instantiates the WCF client.
+- Crea una instancia del cliente de WCF.
 - Llama a las operaciones de servicio desde el proxy generado.
-- Closes the client after the operation call is completed.
+- Cierra el cliente una vez completada la llamada a la operación.
 
-Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:
+Abra el archivo **Program.CS** o **Module1. VB** desde el proyecto **GettingStartedClient** y reemplace su código por el código siguiente:
 
 ```csharp
 using System;
@@ -134,27 +134,27 @@ Module Module1
 End Module
 ```
 
-Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`. This statement imports the code that Visual Studio generated with the **Add Service Reference** function. The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes. It then closes the proxy and ends the program.
+Observe la instrucción `using` (para C#visual) o `Imports` (para Visual Basic) que importa `GettingStartedClient.ServiceReference1`. Esta instrucción importa el código generado por Visual Studio con la función **Agregar referencia de servicio** . El código crea una instancia del proxy de WCF y llama a cada una de las operaciones de servicio que expone el servicio de la calculadora. A continuación, cierra el proxy y finaliza el programa.
 
-## <a name="test-the-wcf-client"></a>Test the WCF client
+## <a name="test-the-wcf-client"></a>Prueba del cliente de WCF
 
-### <a name="test-the-application-from-visual-studio"></a>Test the application from Visual Studio
+### <a name="test-the-application-from-visual-studio"></a>Prueba de la aplicación desde Visual Studio
 
-1. Save and build the solution.
+1. Guarde y compile la solución.
 
-2. Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.
+2. Seleccione la carpeta **GettingStartedLib** y, a continuación, seleccione **establecer como proyecto de inicio** en el menú contextual.
 
-3. From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.
+3. En **proyectos de inicio**, seleccione **GettingStartedLib** en la lista desplegable y, a continuación, seleccione **Ejecutar** o presione **F5**.
 
-### <a name="test-the-application-from-a-command-prompt"></a>Test the application from a command prompt
+### <a name="test-the-application-from-a-command-prompt"></a>Prueba de la aplicación desde un símbolo del sistema
 
-1. Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory. 
+1. Abra un símbolo del sistema como administrador y vaya al directorio de la solución de Visual Studio. 
 
-2. To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
+2. Para iniciar el servicio: escriba *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
 
-3. To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
+3. Para iniciar el cliente: Abra otro símbolo del sistema, navegue hasta el directorio de la solución de Visual Studio y escriba *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
 
-   *GettingStartedHost.exe* produces the following output:
+   *GettingStartedHost. exe* genera el siguiente resultado:
 
    ```text
    The service is ready.
@@ -170,7 +170,7 @@ Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement tha
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient.exe* produces the following output:
+   *GettingStartedClient. exe* genera el siguiente resultado:
 
    ```text
    Add(100,15.99) = 115.99
@@ -183,15 +183,15 @@ Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement tha
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-You've now completed all the tasks in the WCF get started tutorial. En este tutorial ha aprendido a:
+Ya ha completado todas las tareas del tutorial de introducción a WCF. En este tutorial ha aprendido a:
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
-> - Add code to use the WCF client.
-> - Test the WCF client.
+> - Agregue código para usar el cliente de WCF.
+> - Pruebe el cliente de WCF.
 
-If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.
+Si tiene problemas o errores en cualquiera de los pasos, siga los pasos descritos en el artículo de solución de problemas para corregirlos.
 
 > [!div class="nextstepaction"]
-> [Troubleshoot the Get started with WCF tutorials](troubleshooting-the-getting-started-tutorial.md)
+> [Solución de problemas de los tutoriales de introducción a WCF](troubleshooting-the-getting-started-tutorial.md)

@@ -19,25 +19,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346036"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Cómo: Utilizar una clase que define operadores (Visual Basic)
-If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
+Si usa una clase o estructura que define sus propios operadores, puede tener acceso a esos operadores desde Visual Basic.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ La definición de un operador en una clase o estructura también se denomina *sobrecargar* el operador.  
   
 ## <a name="example"></a>Ejemplo  
- The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
+ En el ejemplo siguiente se obtiene acceso a la estructura de SQL <xref:System.Data.SqlTypes.SqlString>, que define los operadores de conversión ([función ctype](../../../../visual-basic/language-reference/functions/ctype-function.md)) en ambas direcciones entre una cadena SQL y una cadena Visual Basic. Use `CType(`*expresión de cadena SQL*, `String)` para convertir una cadena SQL en una cadena Visual Basic y `CType(`*Visual Basic expresión de cadena*, <xref:System.Data.SqlTypes.SqlString>`)` para convertirla en la otra dirección.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
+ La estructura <xref:System.Data.SqlTypes.SqlString> define un operador de conversión ([función ctype](../../../../visual-basic/language-reference/functions/ctype-function.md)) de `String` a <xref:System.Data.SqlTypes.SqlString> y otro de <xref:System.Data.SqlTypes.SqlString> a `String`. La instrucción que asigna `title` a `jobTitle` usa el primer operador y la llamada a la función <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> usa el segundo.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Asegúrese de que la clase o estructura que está usando define el operador que desea utilizar. No suponga que la clase o la estructura ha definido todos los operadores disponibles para la sobrecarga. Para obtener una lista de operadores disponibles, vea [Operator (instrucción](../../../../visual-basic/language-reference/statements/operator-statement.md)).  
   
- Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
+ Incluya la instrucción `Imports` adecuada para la cadena SQL al principio del archivo de código fuente (en este caso <xref:System.Data.SqlTypes>).  
   
- Your project must have references to System.Data and System.XML.  
+ El proyecto debe tener referencias a System. Data y System. XML.  
   
 ## <a name="see-also"></a>Vea también
 

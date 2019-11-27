@@ -1,5 +1,5 @@
 ---
-title: Uso de la varianza en delegados
+title: Usar varianza en delegados
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
 ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349032"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Usar la varianza en delegados (Visual Basic)
 
 Al asignar un método a un delegado, la *covarianza* y la *contravarianza* proporcionan flexibilidad para hacer coincidir un tipo de delegado con una firma de método. La covarianza permite que un método tenga un tipo de valor devuelto más derivado que el definido en el delegado. La contravarianza permite un método que tiene tipos de parámetro menos derivados que los del tipo de delegado.
 

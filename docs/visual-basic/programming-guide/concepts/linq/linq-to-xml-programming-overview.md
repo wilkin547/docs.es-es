@@ -9,20 +9,20 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352168"
 ---
-# <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML Programming Overview (Visual Basic)
+# <a name="linq-to-xml-programming-overview-visual-basic"></a>Información general sobre la programación de LINQ to XML (Visual Basic)
 Estos temas proporcionan información general de alto nivel acerca de las clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], así como información detallada de tres de las clases más importantes.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Functional vs. Procedural Programming (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|Proporciona una vista de alto nivel de los dos métodos principales para escribir aplicaciones LINQ to XML.|  
-|[LINQ to XML Classes Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|Proporciona información general acerca de las clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[XElement Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XElement>, que representa elementos XML. <xref:System.Xml.Linq.XElement> es una de las clases fundamentales en la jerarquía de clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[XAttribute Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XAttribute>, que representa atributos XML.|  
-|[XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XDocument>, que representa documentos XML.|  
-|[How to: Build LINQ to XML Examples (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Contains the `Imports` statements that are required to build the LINQ to XML examples.|  
+|[Programación funcional frente a procedimientos (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|Proporciona una vista de alto nivel de los dos métodos principales para escribir aplicaciones LINQ to XML.|  
+|[Información general sobre las clases de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|Proporciona información general acerca de las clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Información general de la clase XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XElement>, que representa elementos XML. <xref:System.Xml.Linq.XElement> es una de las clases fundamentales en la jerarquía de clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Información general de la clase XAttribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XAttribute>, que representa atributos XML.|  
+|[Información general de la clase XDocument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XDocument>, que representa documentos XML.|  
+|[Cómo: compilar ejemplos de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Contiene las instrucciones `Imports` necesarias para compilar los ejemplos de LINQ to XML.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

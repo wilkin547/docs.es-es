@@ -30,7 +30,7 @@ Option Infer { On | Off }
 
 ## <a name="parts"></a>Elementos
 
-|Término|de esquema JSON|
+|Término|Definición|
 |---|---|
 |`On`|Opcional. Habilita la inferencia de tipo de variable local.|
 |`Off`|Opcional. Deshabilita la inferencia de tipo de variable local.|
@@ -43,26 +43,26 @@ Al establecer `Option Infer` en `On`, puede declarar variables locales sin espec
 
 En la siguiente ilustración, `Option Infer` está activado. La variable de la declaración `Dim someVar = 2` se declara como un entero mediante la inferencia de tipo.
 
-The following screenshot shows IntelliSense when Option Infer is on:
+En la captura de pantalla siguiente se muestra IntelliSense cuando Option Infer está activada:
 
-![Screenshot showing IntelliSense view when Option Infer is on.](./media/option-infer-statement/option-infer-as-integer-on.png)
+![Captura de pantalla que muestra la vista de IntelliSense cuando Option Infer está activada.](./media/option-infer-statement/option-infer-as-integer-on.png)
 
-En la siguiente ilustración, `Option Infer` está desactivado. La variable de la declaración `Dim someVar = 2` se declara como un `Object` mediante la inferencia de tipo. In this example, the **Option Strict** setting is set to **Off** on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+En la siguiente ilustración, `Option Infer` está desactivado. La variable de la declaración `Dim someVar = 2` se declara como un `Object` mediante la inferencia de tipo. En este ejemplo, el valor **Option Strict** está establecido en **OFF** en la [Página compilar, diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
-The following screenshot shows IntelliSense when Option Infer is off:
+La captura de pantalla siguiente muestra IntelliSense cuando Option Infer es OFF:
 
-![Screenshot showing IntelliSense view when Option Infer is off.](./media/option-infer-statement/option-infer-as-object-off.png)
+![Captura de pantalla que muestra la vista de IntelliSense cuando Option Infer es OFF.](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> Cuando una variable se declara como un `Object`, el tipo de tiempo de ejecución puede cambiar mientras se ejecuta el programa. Visual Basic performs operations called *boxing* and *unboxing* to convert between an `Object` and a value type, which makes execution slower. For information about boxing and unboxing, see the [Visual Basic Language Specification](~/_vblang/spec/conversions.md#value-type-conversions).
+> Cuando una variable se declara como un `Object`, el tipo de tiempo de ejecución puede cambiar mientras se ejecuta el programa. Visual Basic realiza operaciones denominadas *conversión boxing* y *unboxing* para realizar la conversión entre un `Object` y un tipo de valor, lo que hace que la ejecución sea más lenta. Para obtener información sobre las conversiones boxing y unboxing, vea la [especificación del lenguaje Visual Basic](~/_vblang/spec/conversions.md#value-type-conversions).
 
 La inferencia de tipo se aplica en el nivel de procedimiento, y no se aplica fuera de un procedimiento en una clase, estructura, módulo o interfaz.
 
-For additional information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Para obtener más información, consulte [inferencia de tipo de local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Cuando la instrucción Option Infer no está presente
 
-If the source code does not contain an `Option Infer` statement, the **Option Infer** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option is used.
+Si el código fuente no contiene una instrucción `Option Infer`, se usa el valor de **Option Infer** en la [Página compilar, el diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Si se usa el compilador de línea de comandos, se usa la opción del compilador [-optioninfer (](../../../visual-basic/reference/command-line-compiler/optioninfer.md) .
 
 #### <a name="to-set-option-infer-in-the-ide"></a>Cómo establecer Option Infer en el IDE
 
@@ -70,13 +70,13 @@ If the source code does not contain an `Option Infer` statement, the **Option In
 
 2. Haga clic en la pestaña **Compilar**.
 
-3. Set the value in the **Option infer** box.
+3. Establezca el valor en el cuadro **Option Infer** .
 
-When you create a new project, the **Option Infer** setting on the **Compile** tab is set to the **Option Infer** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. The initial default setting in **VB Defaults** is `On`.
+Al crear un nuevo proyecto, el valor **Option Infer** de la pestaña **compilar** se establece en el valor **Option Infer** del cuadro de diálogo **valores predeterminados de VB** . Para tener acceso al cuadro de diálogo **valores predeterminados de VB** , en el menú **herramientas** , haga clic en **Opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. La configuración predeterminada inicial en los **valores predeterminados de VB** es `On`.
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>Cómo establecer Option Infer en la línea de comandos
 
-Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option in the **vbc** command.
+Incluya la opción del compilador [-optioninfer (](../../../visual-basic/reference/command-line-compiler/optioninfer.md) en el comando **VBC** .
 
 ## <a name="default-data-types-and-values"></a>Tipos de datos y valores predeterminados
 
@@ -85,8 +85,8 @@ En la tabla siguiente se describen los resultados de diversas combinaciones resu
 |¿Tipo de datos especificado?|¿Inicializador especificado?|Ejemplo|Resultado|
 |---|---|---|---|
 |No|No|`Dim qty`|Si `Option Strict` está desactivado (valor predeterminado), la variable se establece en `Nothing`.<br /><br /> Si `Option Strict` está activado, se produce un error en tiempo de compilación.|
-|No|Sí|`Dim qty = 5`|Si `Option Infer` está activado (valor predeterminado), la variable toma el tipo de datos del inicializador. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está desactivado, la variable toma el tipo de datos de `Object`.<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está activado, se produce un error en tiempo de compilación.|
-|Sí|No|`Dim qty As Integer`|La variable se inicializa con el valor predeterminado del tipo de datos. For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|
+|No|Sí|`Dim qty = 5`|Si `Option Infer` está activado (valor predeterminado), la variable toma el tipo de datos del inicializador. Vea [inferencia de tipo de local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está desactivado, la variable toma el tipo de datos de `Object`.<br /><br /> Si `Option Infer` está desactivado y `Option Strict` está activado, se produce un error en tiempo de compilación.|
+|Sí|No|`Dim qty As Integer`|La variable se inicializa con el valor predeterminado del tipo de datos. Para obtener más información, vea [Dim (instrucción](../../../visual-basic/language-reference/statements/dim-statement.md)).|
 |Sí|Sí|`Dim qty  As Integer = 5`|Si el tipo de datos del inicializador no es convertible al tipo de datos especificado, se produce un error en tiempo de compilación.|
 
 ## <a name="example"></a>Ejemplo
@@ -108,6 +108,6 @@ El siguiente ejemplo demuestra que el tipo en tiempo de ejecución puede ser dif
 - [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Option Explicit (instrucción)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Valores predeterminados de Visual Basic, Proyectos, Cuadro de diálogo Opciones](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Conversión boxing y conversión unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

@@ -44,11 +44,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |----------|----------------|  
 |`Preserve`|Opcional. Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
-|`name`|Requerido. Nombre de la variable de matriz. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Requerido. Lista de límites de cada dimensión de la matriz redefinida.|  
+|`name`|Obligatorio. Nombre de la variable de matriz. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Obligatorio. Lista de límites de cada dimensión de la matriz redefinida.|  
   
 ## <a name="remarks"></a>Comentarios  
  Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado. Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz. Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Reglas  
   
-- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Las variables se separan con comas.  
+- **Varias variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` de cada variable. Las variables se separan con comas.  
   
-- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
+- **Límites de matriz.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
   
      El número de dimensiones de `boundlist` debe coincidir con el número de dimensiones (rango) de la matriz original.  
   
-- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
+- **Tipos de datos.** La instrucción `ReDim` no puede cambiar el tipo de datos de una variable de matriz o sus elementos.  
   
-- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
+- **Inicial.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
   
-- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
+- **Criterios.** La instrucción `ReDim` no puede cambiar el rango (número de dimensiones) de la matriz.  
   
-- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
+- **Cambio de tamaño con Preserve.** Si utiliza `Preserve`, solo podrá cambiar el tamaño de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
   
      Por ejemplo, si su matriz tiene solo una dimensión, puede cambiar el tamaño de esa dimensión y conservar todo el contenido de la matriz, ya que es la última y única dimensión. Sin embargo, si su matriz tiene dos o más dimensiones, puede cambiar solamente el tamaño de la última dimensión si utiliza `Preserve`.  
   
-- **Properties.** You can use `ReDim` on a property that holds an array of values.  
+- **Propiedades.** Puede usar `ReDim` en una propiedad que contiene una matriz de valores.  
   
 ## <a name="behavior"></a>Comportamiento  
   
-- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
+- **Reemplazo de matriz.** `ReDim` libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
   
-- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
+- **Inicialización sin Preserve.** Si no se especifica `Preserve`, `ReDim` inicializa los elementos de la nueva matriz utilizando el valor predeterminado para su tipo de datos.  
   
-- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
+- **Inicialización con Preserve.** Si especifica `Preserve`, Visual Basic copia los elementos de la matriz existente en la nueva matriz.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente aumenta el tamaño de la última dimensión de una matriz dinámica sin perder los datos existentes en la matriz y, a continuación, reduce el tamaño con pérdida de datos parcial. Por último, reduce el tamaño a su valor original y reinicializa todos los elementos de la matriz.  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  El tercer `ReDim` crea otra nueva matriz y quita otras cinco columnas del final de cada fila en cada capa. Esta vez no copia los elementos existentes. Esta instrucción revierte la matriz a su tamaño original. Dado que la instrucción no incluye el modificador `Preserve`, establece todos los elementos de matriz con sus valores predeterminados originales.  
   
- For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obtener más ejemplos, consulte [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Vea también
 

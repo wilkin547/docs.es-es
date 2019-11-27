@@ -24,16 +24,16 @@ Muestra los resultados del compilador en codificación UTF-8.
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. Especificar `-utf8output` es lo mismo que especificar `-utf8output+`.  
+ Opcional. El valor predeterminado para esta opción es `-utf8output-`, lo que significa que la salida del compilador no utiliza la codificación UTF-8. Especificar `-utf8output` es lo mismo que especificar `-utf8output+`.  
   
 ## <a name="remarks"></a>Comentarios  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+ En algunas configuraciones internacionales, los resultados del compilador no se pueden mostrar correctamente en la consola. En tales situaciones, use `-utf8output` y redirigir la salida del compilador a un archivo.  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> La opción `-utf8output` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ En el código siguiente se compila `In.vb` y se indica al compilador que muestre la salida mediante la codificación UTF-8.  
   
 ```console  
 vbc -utf8output in.vb  

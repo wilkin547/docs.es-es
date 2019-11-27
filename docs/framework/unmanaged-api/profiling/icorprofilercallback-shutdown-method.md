@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446947"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown (Método)
-Notifies the profiler that the application is shutting down.  
+Notifica al generador de perfiles que la aplicación se está cerrando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,11 +32,11 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
+ El código del generador de perfiles no puede llamar a los métodos de la interfaz [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) de forma segura después de llamar al método `Shutdown`. Cualquier llamada a métodos `ICorProfilerInfo` produce un comportamiento indefinido después de que el método `Shutdown` devuelva. Es posible que se sigan produciendo ciertos eventos inmutables después del apagado; el generador de perfiles debe tener cuidado de volver inmediatamente cuando esto suceda.  
   
- The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
+ Solo se llamará al método `Shutdown` si la aplicación administrada en la que se va a crear el perfiles se inicia como código administrado (es decir, el marco inicial en la pila de procesos se administra). Si la aplicación se inició como código no administrado, pero posteriormente salta a código administrado, con lo que se crea una instancia del Common Language Runtime (CLR), no se llamará a `Shutdown`. En estos casos, el generador de perfiles debe incluir en su biblioteca una rutina `DllMain` que use el valor DLL_PROCESS_DETACH para liberar los recursos y realizar el procesamiento de la limpieza de sus datos, como el vaciado de seguimientos en el disco, etc.  
   
- In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
+ En general, el generador de perfiles debe hacer frente a apagados inesperados. Por ejemplo, un proceso podría detenerse mediante Win32 `TerminateProcess` método (declarado en Winbase. h). En otros casos, CLR detendrá determinados subprocesos administrados (subprocesos en segundo plano) sin proporcionar mensajes de destrucción ordenada para ellos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

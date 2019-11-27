@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350169"
 ---
 # <a name="as-clause-visual-basic"></a>As (Cláusula, Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+Presenta una cláusula `As`, que identifica un tipo de datos en una instrucción de declaración o una lista de restricciones en un parámetro de tipo genérico.  
   
 ## <a name="remarks"></a>Comentarios  
  La palabra clave `As` se puede usar en los siguientes contextos:  
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Para... Instrucciones Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Para cada... Instrucciones Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -49,7 +49,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try... Detectar... Finally (instrucciones)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Vea también
 

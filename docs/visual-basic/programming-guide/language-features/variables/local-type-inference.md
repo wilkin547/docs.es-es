@@ -21,59 +21,59 @@ ms.locfileid: "74351836"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferencia de tipo de variable local (Visual Basic)
 
-The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type, as shown in the following example. As a result of the declarations, both `num1` and `num2` are strongly typed as integers.
+El compilador Visual Basic usa la *inferencia de tipos* para determinar los tipos de datos de las variables locales declaradas sin una cláusula `As`. El compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización. Esto le permite declarar variables sin indicar explícitamente un tipo, tal como se muestra en el ejemplo siguiente. Como resultado de las declaraciones, tanto `num1` como `num2` están fuertemente tipadas como enteros.
 
 [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]
 
 > [!NOTE]
-> If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.
+> Si no desea que `num2` en el ejemplo anterior se escriba como `Integer`, puede especificar otro tipo mediante una declaración como `Dim num3 As Object = 3` o `Dim num4 As Double = 3`.
 
 > [!NOTE]
-> Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.
+> La inferencia de tipos solo se puede usar para variables locales no estáticas; no se puede usar para determinar el tipo de campos de clase, propiedades o funciones.
 
-Local type inference applies at procedure level. It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block). If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off. Similarly, local type inference does not apply to procedure level variables declared as `Static`.
+La inferencia de tipo local se aplica en el nivel de procedimiento. No se puede usar para declarar variables en el nivel de módulo (dentro de una clase, una estructura, un módulo o una interfaz, pero no dentro de un procedimiento o un bloque). Si `num2` en el ejemplo anterior eran un campo de una clase en lugar de una variable local en un procedimiento, la declaración produciría un error con `Option Strict` activado y clasificaría `num2` como un `Object` con `Option Strict` desactivado. Del mismo modo, la inferencia de tipo local no se aplica a las variables de nivel de procedimiento declaradas como `Static`.
 
-## <a name="type-inference-vs-late-binding"></a>Type Inference vs. Late Binding
+## <a name="type-inference-vs-late-binding"></a>Inferencia de tipos frente a enlace en tiempo de ejecución
 
-Code that uses type inference resembles code that relies on late binding. However, type inference strongly types the variable instead of leaving it as `Object`. The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code. In the previous example, `num2`, like `num1`, is typed as an `Integer`.
+El código que usa la inferencia de tipos es similar al código que se basa en el enlace en tiempo de ejecución. Sin embargo, la inferencia de tipos fuertemente tipa la variable en lugar de mantenerla como `Object`. El compilador usa un inicializador de variable para determinar el tipo de la variable en tiempo de compilación para generar código enlazado en tiempo de compilación. En el ejemplo anterior, `num2`, como `num1`, se escribe como un `Integer`.
 
-The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time. Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations. Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object. Early binding is also preferred for performance. This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.
+El comportamiento de las variables enlazadas en tiempo de compilación difiere del de las variables enlazadas en tiempo de ejecución, para las que solo se conoce el tipo en tiempo de ejecución. Conocer el tipo pronto permite al compilador identificar problemas antes de la ejecución, asignar la memoria con precisión y realizar otras optimizaciones. El enlace temprano también habilita el Visual Basic entorno de desarrollo integrado (IDE) para proporcionar ayuda de IntelliSense acerca de los miembros de un objeto. El enlace en tiempo de compilación también es preferible para el rendimiento. Esto se debe a que todos los datos almacenados en una variable enlazada en tiempo de ejecución deben ajustarse como de tipo `Object`, y tener acceso a los miembros del tipo en tiempo de ejecución hace que el programa sea más lento.
 
 ## <a name="examples"></a>Ejemplos
 
-Type inference occurs when a local variable is declared without an `As` clause and initialized. The compiler uses the type of the assigned initial value as the type of the variable. For example, each of the following lines of code declares a variable of type `String`.
+La inferencia de tipos se produce cuando se declara una variable local sin una cláusula `As` y se inicializa. El compilador usa el tipo del valor inicial asignado como el tipo de la variable. Por ejemplo, cada una de las siguientes líneas de código declara una variable de tipo `String`.
 
 [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]
 
-The following code demonstrates two equivalent ways to create an array of integers.
+En el código siguiente se muestran dos formas equivalentes de crear una matriz de enteros.
 
 [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]
 
-It is convenient to use type inference to determine the type of a loop control variable. In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.
+Es conveniente usar la inferencia de tipos para determinar el tipo de una variable de control de bucle. En el código siguiente, el compilador deduce que `number` es una `Integer` porque `someNumbers2` del ejemplo anterior es una matriz de enteros.
 
 [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]
 
-Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.
+La inferencia de tipo local se puede usar en `Using` instrucciones para establecer el tipo del nombre del recurso, como se muestra en el ejemplo siguiente.
 
 [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]
 
-The type of a variable can also be inferred from the return values of functions, as the following example demonstrates. Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.
+El tipo de una variable también se puede inferir a partir de los valores devueltos de las funciones, como se muestra en el ejemplo siguiente. Tanto `pList1` como `pList2` son matrices de procesos porque `Process.GetProcesses` devuelve una matriz de procesos.
 
 [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]
 
 ## <a name="option-infer"></a>Option Infer
 
-`Option Infer` enables you specify whether local type inference is allowed in a particular file. To enable or to block the option, type one of the following statements at the start of the file.
+`Option Infer` permite especificar si se permite la inferencia de tipo de variable local en un archivo determinado. Para habilitar o para bloquear la opción, escriba una de las siguientes instrucciones al principio del archivo.
 
 `Option Infer On`
 
 `Option Infer Off`
 
-If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.
+Si no especifica un valor para `Option Infer` en el código, el valor predeterminado del compilador es `Option Infer On`.
 
 Si el valor establecido para `Option Infer` en un archivo entra en conflicto con el valor establecido en el IDE o en la línea de comandos, el valor del archivo tiene prioridad.
 
-For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+Para obtener más información, vea [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) y [compilar Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
 ## <a name="see-also"></a>Vea también
 

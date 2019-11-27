@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439066"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread (Método)
-Maps the ID of a thread to a Win32 thread handle.  
+Asigna el identificador de un subproceso a un identificador de subproceso de Win32.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] The thread ID to be mapped.  
+ de IDENTIFICADOR del subproceso que se va a asignar.  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ enuncia Puntero a un identificador de subproceso de Win32.  
   
 ## <a name="remarks"></a>Comentarios  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+ El generador de perfiles debe llamar a la función `DuplicateHandle` de Win32 en el identificador antes de usarlo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

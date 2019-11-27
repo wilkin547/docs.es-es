@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331849"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Introduces a response to a run-time error or turns a compiler option on.  
+Presenta una respuesta a un error en tiempo de ejecución o activa una opción del compilador.  
   
- In queries, identifies keys for the collections being joined.  
+ En las consultas, identifica las claves para las colecciones que se están combinando.  
   
 ## <a name="remarks"></a>Comentarios  
- The `On` keyword is used in these contexts:  
+ La palabra clave `On` se usa en estos contextos:  
   
  [Group Join (cláusula)](../../visual-basic/language-reference/queries/group-join-clause.md)  
   

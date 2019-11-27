@@ -13,22 +13,22 @@ ms.locfileid: "74344182"
 ---
 # <a name="modules-visual-basic"></a>Módulos (Visual Basic)
 
-Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
+Visual Basic proporciona varios módulos que permiten simplificar las tareas comunes del código, como manipular cadenas, realizar cálculos matemáticos, obtener información del sistema, realizar operaciones de archivos y directorios, etc. En la tabla siguiente se enumeran los módulos proporcionados por Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
-|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
-|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
-|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
-|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
-|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
-|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
+|<xref:Microsoft.VisualBasic.Constants>|Contiene varias constantes. Estas constantes se pueden usar en cualquier parte del código.|  
+|<xref:Microsoft.VisualBasic.ControlChars>|Contiene caracteres de control constantes para imprimir y mostrar texto.|  
+|<xref:Microsoft.VisualBasic.Conversion>|Contiene miembros que convierten números decimales en otras bases, números en cadenas, cadenas en números y un tipo de datos en otro.|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|Contiene miembros que obtienen la fecha o la hora actual, realizan cálculos de fecha, devuelven una fecha o una hora, establecen la fecha o la hora, o la duración de un proceso.|  
+|<xref:Microsoft.VisualBasic.ErrObject>|Contiene información sobre los errores y métodos en tiempo de ejecución para generar o borrar un error.|  
+|<xref:Microsoft.VisualBasic.FileSystem>|Contiene miembros que realizan operaciones de archivo, directorio o carpeta y del sistema.|  
+|<xref:Microsoft.VisualBasic.Financial>|Contiene procedimientos que se utilizan para realizar cálculos financieros.|  
+|<xref:Microsoft.VisualBasic.Globals>|Contiene información sobre la versión actual del motor de scripting.|  
+|<xref:Microsoft.VisualBasic.Information>|Contiene los miembros que devuelven, prueban o comprueban información como el tamaño de la matriz, los nombres de tipo, etc.|  
+|<xref:Microsoft.VisualBasic.Interaction>|Contiene miembros que interactúan con objetos, aplicaciones y sistemas.|  
+|<xref:Microsoft.VisualBasic.Strings>|Contiene miembros que realizan operaciones de cadena, como volver a dar formato a cadenas, buscar una cadena, obtener la longitud de una cadena, etc.|  
+|<xref:Microsoft.VisualBasic.VBMath>|Contiene miembros que realizan operaciones matemáticas.|  
   
 ## <a name="see-also"></a>Vea también
 

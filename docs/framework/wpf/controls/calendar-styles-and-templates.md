@@ -82,8 +82,8 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |CalendarButtonUnfocused|CalendarButtonFocusStates|El botón no tiene el foco.|  
 |Con foco|FocusStates|El botón tiene el foco.|  
 |Sin foco|FocusStates|El botón no tiene el foco.|  
-|Activo|ActiveStates|El botón está activo.|  
-|Inactivo|ActiveStates|El botón está inactivo.|  
+|Activa|ActiveStates|El botón está activo.|  
+|Inactive|ActiveStates|El botón está inactivo.|  
 |RegularDay|DayStates|El botón no representa <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Hoy|DayStates|El botón representa <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|El botón representa un día que se puede seleccionar.|  
@@ -110,8 +110,8 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |CalendarButtonUnfocused|CalendarButtonFocusStates|El botón no tiene el foco.|  
 |Con foco|FocusStates|El botón tiene el foco.|  
 |Sin foco|FocusStates|El botón no tiene el foco.|  
-|Activo|ActiveStates|El botón está activo.|  
-|Inactivo|ActiveStates|El botón está inactivo.|  
+|Activa|ActiveStates|El botón está activo.|  
+|Inactive|ActiveStates|El botón está inactivo.|  
 |Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
 |InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|  
 |InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|  

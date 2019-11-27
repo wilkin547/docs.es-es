@@ -16,22 +16,22 @@ ms.locfileid: "74347383"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Cómo: Aplicar etiquetas a las instrucciones (Visual Basic)
 
-Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
+Los bloques de instrucciones se componen de líneas de código delimitadas por dos puntos. Se dice que las líneas de código precedidas de una cadena o un entero de identificación están *etiquetadas*. Las etiquetas de instrucción se usan para marcar una línea de código para identificarla para su uso con instrucciones como `On Error Goto`.
 
-Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
+Las etiquetas pueden ser válidas Visual Basic identificadores, como los que identifican elementos de programación, o literales enteros. Una etiqueta debe aparecer al principio de una línea de código fuente y debe ir seguida de dos puntos, independientemente de si va seguido de una instrucción en la misma línea.
 
-The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
+El compilador identifica las etiquetas comprobando si el principio de la línea coincide con cualquier identificador ya definido. Si no es así, el compilador supone que es una etiqueta.
 
-Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
+Las etiquetas tienen su propio espacio de declaración y no interfieren con otros identificadores. El ámbito de una etiqueta es el cuerpo del método. La declaración de etiqueta tiene prioridad en cualquier situación ambigua.
 
 > [!NOTE]
-> Labels can be used only on executable statements inside methods.
+> Las etiquetas solo se pueden usar en instrucciones ejecutables dentro de métodos.
 
-## <a name="to-label-a-line-of-code"></a>To label a line of code
+## <a name="to-label-a-line-of-code"></a>Para etiquetar una línea de código
 
-Place an identifier, followed by a colon, at the beginning of the line of source code.
+Coloque un identificador seguido de un signo de dos puntos, al principio de la línea de código fuente.
 
-For example, the following lines of code are labeled with `Jump` and `120`, respectively:
+Por ejemplo, las siguientes líneas de código se etiquetan con `Jump` y `120`, respectivamente:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 

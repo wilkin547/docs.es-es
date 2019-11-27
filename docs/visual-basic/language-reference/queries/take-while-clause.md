@@ -26,17 +26,17 @@ Take While expression
   
 ## <a name="parts"></a>Elementos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`expression`|Requerido. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Obligatorio. Expresión que representa una condición de la que se van a probar los elementos. La expresión debe devolver un valor `Boolean` o un equivalente funcional, como un `Integer` que se va a evaluar como `Boolean`.|  
   
 ## <a name="remarks"></a>Comentarios  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+ La cláusula `Take While` incluye elementos desde el principio del resultado de una consulta hasta que el `expression` proporcionado devuelve `false`. Una vez que el `expression` devuelva `false`, la consulta omitirá todos los elementos restantes. El `expression` se omite para los resultados restantes.  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ La cláusula `Take While` difiere de la cláusula `Where` en que la cláusula `Where` se puede utilizar para incluir todos los elementos de una consulta que cumplan una condición determinada. La cláusula `Take While` solo incluye elementos hasta la primera vez que la condición no se cumple. La cláusula `Take While` es muy útil cuando se trabaja con un resultado de consulta ordenado.  
   
 ## <a name="example"></a>Ejemplo  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ En el ejemplo de código siguiente se usa la cláusula `Take While` para recuperar los resultados hasta que se encuentre el primer cliente sin ningún pedido.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
