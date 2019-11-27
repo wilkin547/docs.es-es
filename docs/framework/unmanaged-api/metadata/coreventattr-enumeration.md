@@ -21,10 +21,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443564"
 ---
-# <a name="coreventattr-enumeration"></a><span data-ttu-id="daa16-102">CorEventAttr (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="daa16-102">CorEventAttr Enumeration</span></span>
-<span data-ttu-id="daa16-103">Contiene valores que describen los metadatos de un evento.</span><span class="sxs-lookup"><span data-stu-id="daa16-103">Contains values that describe the metadata of an event.</span></span>  
+# <a name="coreventattr-enumeration"></a><span data-ttu-id="c8dc3-102">CorEventAttr (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="c8dc3-102">CorEventAttr Enumeration</span></span>
+<span data-ttu-id="c8dc3-103">Contiene valores que describen los metadatos de un evento.</span><span class="sxs-lookup"><span data-stu-id="c8dc3-103">Contains values that describe the metadata of an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="daa16-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="daa16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8dc3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c8dc3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorEventAttr {  
@@ -37,21 +37,21 @@ typedef enum CorEventAttr {
 } CorEventAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="daa16-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="daa16-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c8dc3-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="c8dc3-105">Members</span></span>  
   
-|<span data-ttu-id="daa16-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="daa16-106">Member</span></span>|<span data-ttu-id="daa16-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="daa16-107">Description</span></span>|  
+|<span data-ttu-id="c8dc3-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="c8dc3-106">Member</span></span>|<span data-ttu-id="c8dc3-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8dc3-107">Description</span></span>|  
 |------------|-----------------|  
-|`evSpecialName`|<span data-ttu-id="daa16-108">Specifies that the event is special, and that its name describes how.</span><span class="sxs-lookup"><span data-stu-id="daa16-108">Specifies that the event is special, and that its name describes how.</span></span>|  
-|`evReservedMask`|<span data-ttu-id="daa16-109">Reserved for internal use by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="daa16-109">Reserved for internal use by the common language runtime.</span></span>|  
-|`evRTSpecialName`|<span data-ttu-id="daa16-110">Specifies that the common language runtime should check the encoding of the event name.</span><span class="sxs-lookup"><span data-stu-id="daa16-110">Specifies that the common language runtime should check the encoding of the event name.</span></span>|  
+|`evSpecialName`|<span data-ttu-id="c8dc3-108">Especifica que el evento es especial y que su nombre describe cómo.</span><span class="sxs-lookup"><span data-stu-id="c8dc3-108">Specifies that the event is special, and that its name describes how.</span></span>|  
+|`evReservedMask`|<span data-ttu-id="c8dc3-109">Reservado para uso interno por el Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="c8dc3-109">Reserved for internal use by the common language runtime.</span></span>|  
+|`evRTSpecialName`|<span data-ttu-id="c8dc3-110">Especifica que el Common Language Runtime debe comprobar la codificación del nombre del evento.</span><span class="sxs-lookup"><span data-stu-id="c8dc3-110">Specifies that the common language runtime should check the encoding of the event name.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="daa16-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="daa16-111">Requirements</span></span>  
- <span data-ttu-id="daa16-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="daa16-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8dc3-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c8dc3-111">Requirements</span></span>  
+ <span data-ttu-id="c8dc3-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8dc3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="daa16-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="daa16-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c8dc3-113">**Encabezado:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="c8dc3-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="daa16-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daa16-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c8dc3-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8dc3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="daa16-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="daa16-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8dc3-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8dc3-115">See also</span></span>
 
-- [<span data-ttu-id="daa16-116">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="daa16-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c8dc3-116">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="c8dc3-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

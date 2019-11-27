@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450043"
 ---
-# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="bed20-102">IMetaDataImport::EnumPermissionSets (Método)</span><span class="sxs-lookup"><span data-stu-id="bed20-102">IMetaDataImport::EnumPermissionSets Method</span></span>
-<span data-ttu-id="bed20-103">Enumera los permisos de los objetos en un ámbito de metadatos especificado.</span><span class="sxs-lookup"><span data-stu-id="bed20-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
+# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="b0c50-102">IMetaDataImport::EnumPermissionSets (Método)</span><span class="sxs-lookup"><span data-stu-id="b0c50-102">IMetaDataImport::EnumPermissionSets Method</span></span>
+<span data-ttu-id="b0c50-103">Enumera los permisos de los objetos en un ámbito de metadatos especificado.</span><span class="sxs-lookup"><span data-stu-id="b0c50-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bed20-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bed20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0c50-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b0c50-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumPermissionSets  
@@ -38,42 +38,42 @@ HRESULT EnumPermissionSets
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bed20-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="bed20-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0c50-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b0c50-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="bed20-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="bed20-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="bed20-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="bed20-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="b0c50-106">[in, out] Puntero al enumerador.</span><span class="sxs-lookup"><span data-stu-id="b0c50-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="b0c50-107">Debe ser NULL para la primera llamada de este método.</span><span class="sxs-lookup"><span data-stu-id="b0c50-107">This must be NULL for the first call of this method.</span></span>  
   
  `tk`  
- <span data-ttu-id="bed20-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span><span class="sxs-lookup"><span data-stu-id="bed20-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
+ <span data-ttu-id="b0c50-108">de Un token de metadatos que limita el ámbito de la búsqueda o NULL para buscar el ámbito más amplio posible.</span><span class="sxs-lookup"><span data-stu-id="b0c50-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
   
  `dwActions`  
- <span data-ttu-id="bed20-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span><span class="sxs-lookup"><span data-stu-id="bed20-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
+ <span data-ttu-id="b0c50-109">de Marcas que representan los valores de <xref:System.Security.Permissions.SecurityAction> que se van a incluir en `rPermission`, o cero para devolver todas las acciones.</span><span class="sxs-lookup"><span data-stu-id="b0c50-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
   
  `rPermission`  
- <span data-ttu-id="bed20-110">[out] The array used to store the Permission tokens.</span><span class="sxs-lookup"><span data-stu-id="bed20-110">[out] The array used to store the Permission tokens.</span></span>  
+ <span data-ttu-id="b0c50-110">enuncia Matriz utilizada para almacenar los tokens de permiso.</span><span class="sxs-lookup"><span data-stu-id="b0c50-110">[out] The array used to store the Permission tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="bed20-111">[in] Tamaño máximo de la matriz `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="bed20-111">[in] The maximum size of the `rPermission` array.</span></span>  
+ <span data-ttu-id="b0c50-111">[in] Tamaño máximo de la matriz `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="b0c50-111">[in] The maximum size of the `rPermission` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="bed20-112">[out] The number of Permission tokens returned in `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="bed20-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
+ <span data-ttu-id="b0c50-112">enuncia El número de tokens de permiso devueltos en `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="b0c50-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bed20-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="bed20-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b0c50-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b0c50-113">Return Value</span></span>  
   
-|<span data-ttu-id="bed20-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bed20-114">HRESULT</span></span>|<span data-ttu-id="bed20-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="bed20-115">Description</span></span>|  
+|<span data-ttu-id="b0c50-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b0c50-114">HRESULT</span></span>|<span data-ttu-id="b0c50-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="b0c50-115">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="bed20-116">`EnumPermissionSets` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="bed20-116">`EnumPermissionSets` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="bed20-117">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="bed20-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="bed20-118">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="bed20-118">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="b0c50-116">`EnumPermissionSets` devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="b0c50-116">`EnumPermissionSets` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="b0c50-117">No hay tokens que enumerar.</span><span class="sxs-lookup"><span data-stu-id="b0c50-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="b0c50-118">En ese caso, `pcTokens` es cero.</span><span class="sxs-lookup"><span data-stu-id="b0c50-118">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bed20-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bed20-119">Requirements</span></span>  
- <span data-ttu-id="bed20-120">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bed20-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0c50-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b0c50-119">Requirements</span></span>  
+ <span data-ttu-id="b0c50-120">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0c50-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bed20-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bed20-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b0c50-121">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b0c50-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bed20-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bed20-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b0c50-122">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b0c50-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bed20-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bed20-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b0c50-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0c50-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bed20-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="bed20-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0c50-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="b0c50-124">See also</span></span>
 
-- [<span data-ttu-id="bed20-125">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="bed20-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="bed20-126">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="bed20-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="b0c50-125">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b0c50-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="b0c50-126">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b0c50-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
