@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448386"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="7413c-102">ISymENCUnmanagedMethod::GetDocumentsForMethod (Método)</span><span class="sxs-lookup"><span data-stu-id="7413c-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
-<span data-ttu-id="7413c-103">Gets the documents that this method has lines in.</span><span class="sxs-lookup"><span data-stu-id="7413c-103">Gets the documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="41d77-102">ISymENCUnmanagedMethod::GetDocumentsForMethod (Método)</span><span class="sxs-lookup"><span data-stu-id="41d77-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
+<span data-ttu-id="41d77-103">Obtiene los documentos en los que este método tiene líneas.</span><span class="sxs-lookup"><span data-stu-id="41d77-103">Gets the documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7413c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7413c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41d77-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="41d77-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentsForMethod(  
@@ -34,22 +34,22 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7413c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7413c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41d77-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="41d77-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="7413c-106">[in] The length of the buffer pointed to by `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="7413c-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
+ <span data-ttu-id="41d77-106">de Longitud del búfer al que apunta `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="41d77-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="7413c-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span><span class="sxs-lookup"><span data-stu-id="7413c-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="41d77-107">enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los documentos.</span><span class="sxs-lookup"><span data-stu-id="41d77-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
   
  `documents`  
- <span data-ttu-id="7413c-108">[in] The buffer that contains the documents.</span><span class="sxs-lookup"><span data-stu-id="7413c-108">[in] The buffer that contains the documents.</span></span>  
+ <span data-ttu-id="41d77-108">de Búfer que contiene los documentos.</span><span class="sxs-lookup"><span data-stu-id="41d77-108">[in] The buffer that contains the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7413c-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7413c-109">Return Value</span></span>  
- <span data-ttu-id="7413c-110">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="7413c-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="41d77-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="41d77-109">Return Value</span></span>  
+ <span data-ttu-id="41d77-110">S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.</span><span class="sxs-lookup"><span data-stu-id="41d77-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7413c-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7413c-111">Requirements</span></span>  
- <span data-ttu-id="7413c-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7413c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41d77-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="41d77-111">Requirements</span></span>  
+ <span data-ttu-id="41d77-112">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="41d77-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7413c-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="7413c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41d77-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="41d77-113">See also</span></span>
 
-- [<span data-ttu-id="7413c-114">ISymENCUnmanagedMethod (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7413c-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="41d77-114">ISymENCUnmanagedMethod (interfaz)</span><span class="sxs-lookup"><span data-stu-id="41d77-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

@@ -13,18 +13,18 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343752"
 ---
-# <a name="else-statement-visual-basic"></a><span data-ttu-id="c6157-102">Else (Instrucción, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6157-102">Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="c6157-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span><span class="sxs-lookup"><span data-stu-id="c6157-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="ebe14-102">Else (Instrucción, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ebe14-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="ebe14-103">Introduce un grupo de instrucciones que se van a ejecutar o compilar si no se ha ejecutado o compilado ningún otro grupo condicional de instrucciones.</span><span class="sxs-lookup"><span data-stu-id="ebe14-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c6157-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c6157-104">Remarks</span></span>  
- <span data-ttu-id="c6157-105">La palabra clave `Else` se puede usar en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="c6157-105">The `Else` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ebe14-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ebe14-104">Remarks</span></span>  
+ <span data-ttu-id="ebe14-105">La palabra clave `Else` se puede usar en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="ebe14-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="c6157-106">If...Then...Else (instrucción)</span><span class="sxs-lookup"><span data-stu-id="c6157-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="ebe14-106">If...Then...Else (instrucción)</span><span class="sxs-lookup"><span data-stu-id="ebe14-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [<span data-ttu-id="c6157-107">Select...Case (instrucción)</span><span class="sxs-lookup"><span data-stu-id="c6157-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="ebe14-107">Select...Case (instrucción)</span><span class="sxs-lookup"><span data-stu-id="ebe14-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [<span data-ttu-id="c6157-108">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="c6157-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="ebe14-108">#If... Then... #Else (Directiva)</span><span class="sxs-lookup"><span data-stu-id="ebe14-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c6157-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="c6157-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebe14-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="ebe14-109">See also</span></span>
 
-- [<span data-ttu-id="c6157-110">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="c6157-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="ebe14-110">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="ebe14-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

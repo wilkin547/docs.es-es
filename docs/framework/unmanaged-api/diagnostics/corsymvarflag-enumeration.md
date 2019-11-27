@@ -21,10 +21,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448550"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="bfb64-102">CorSymVarFlag (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="bfb64-102">CorSymVarFlag Enumeration</span></span>
-<span data-ttu-id="bfb64-103">Indicates whether a variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="bfb64-103">Indicates whether a variable is compiler-generated.</span></span>  
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="5fd82-102">CorSymVarFlag (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="5fd82-102">CorSymVarFlag Enumeration</span></span>
+<span data-ttu-id="5fd82-103">Indica si una variable es generada por el compilador.</span><span class="sxs-lookup"><span data-stu-id="5fd82-103">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bfb64-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bfb64-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fd82-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5fd82-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymVarFlag   
@@ -33,15 +33,15 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="bfb64-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="bfb64-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5fd82-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="5fd82-105">Members</span></span>  
   
-|<span data-ttu-id="bfb64-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="bfb64-106">Member</span></span>|<span data-ttu-id="bfb64-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="bfb64-107">Description</span></span>|  
+|<span data-ttu-id="5fd82-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="5fd82-106">Member</span></span>|<span data-ttu-id="5fd82-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="5fd82-107">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="bfb64-108">Indicates that the given variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="bfb64-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="5fd82-108">Indica que la variable especificada es generada por el compilador.</span><span class="sxs-lookup"><span data-stu-id="5fd82-108">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bfb64-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bfb64-109">Requirements</span></span>  
- <span data-ttu-id="bfb64-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bfb64-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fd82-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5fd82-109">Requirements</span></span>  
+ <span data-ttu-id="5fd82-110">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5fd82-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfb64-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="bfb64-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fd82-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="5fd82-111">See also</span></span>
 
-- [<span data-ttu-id="bfb64-112">Enumeraciones de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="bfb64-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="5fd82-112">Enumeraciones de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="5fd82-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

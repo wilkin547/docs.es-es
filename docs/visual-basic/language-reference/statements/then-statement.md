@@ -11,16 +11,16 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352797"
 ---
-# <a name="then-statement"></a><span data-ttu-id="24c53-102">Then (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="24c53-102">Then Statement</span></span>
-<span data-ttu-id="24c53-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span><span class="sxs-lookup"><span data-stu-id="24c53-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
+# <a name="then-statement"></a><span data-ttu-id="e9645-102">Then (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="e9645-102">Then Statement</span></span>
+<span data-ttu-id="e9645-103">Introduce un bloque de instrucciones que se va a compilar o ejecutar si una condición probada es true.</span><span class="sxs-lookup"><span data-stu-id="e9645-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="24c53-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="24c53-104">Remarks</span></span>  
- <span data-ttu-id="24c53-105">La palabra clave `Then` se puede usar en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="24c53-105">The `Then` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e9645-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e9645-104">Remarks</span></span>  
+ <span data-ttu-id="e9645-105">La palabra clave `Then` se puede usar en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="e9645-105">The `Then` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="24c53-106">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="24c53-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="e9645-106">#If... Then... #Else (Directiva)</span><span class="sxs-lookup"><span data-stu-id="e9645-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [<span data-ttu-id="24c53-107">If...Then...Else (instrucción)</span><span class="sxs-lookup"><span data-stu-id="24c53-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="e9645-107">If...Then...Else (instrucción)</span><span class="sxs-lookup"><span data-stu-id="e9645-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="24c53-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="24c53-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9645-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9645-108">See also</span></span>
 
-- [<span data-ttu-id="24c53-109">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="24c53-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="e9645-109">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="e9645-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

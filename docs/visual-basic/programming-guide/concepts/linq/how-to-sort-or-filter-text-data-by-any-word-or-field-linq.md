@@ -9,15 +9,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341513"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="857f7-102">Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="857f7-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="c6cc0-102">Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6cc0-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="857f7-103">En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea.</span><span class="sxs-lookup"><span data-stu-id="857f7-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="857f7-104">El campo se puede especificar dinámicamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="857f7-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="857f7-105">Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.</span><span class="sxs-lookup"><span data-stu-id="857f7-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
+<span data-ttu-id="c6cc0-103">En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea.</span><span class="sxs-lookup"><span data-stu-id="c6cc0-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="c6cc0-104">El campo se puede especificar dinámicamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="c6cc0-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="c6cc0-105">Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.</span><span class="sxs-lookup"><span data-stu-id="c6cc0-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
 
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="857f7-106">Para crear un archivo que contenga datos</span><span class="sxs-lookup"><span data-stu-id="857f7-106">To create a file that contains data</span></span>
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="c6cc0-106">Para crear un archivo que contenga datos</span><span class="sxs-lookup"><span data-stu-id="c6cc0-106">To create a file that contains data</span></span>
 
-<span data-ttu-id="857f7-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span><span class="sxs-lookup"><span data-stu-id="857f7-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
+<span data-ttu-id="c6cc0-107">Copie los datos de scores. csv del tema [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guardarlo en la carpeta de la solución.</span><span class="sxs-lookup"><span data-stu-id="c6cc0-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
 
-## <a name="example"></a><span data-ttu-id="857f7-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="857f7-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c6cc0-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c6cc0-108">Example</span></span>
 
 ```vb
 Class SortLines
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-<span data-ttu-id="857f7-109">This example also demonstrates how to return a query variable from a Function.</span><span class="sxs-lookup"><span data-stu-id="857f7-109">This example also demonstrates how to return a query variable from a Function.</span></span>
+<span data-ttu-id="c6cc0-109">En este ejemplo también se muestra cómo devolver una variable de consulta desde una función.</span><span class="sxs-lookup"><span data-stu-id="c6cc0-109">This example also demonstrates how to return a query variable from a Function.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="857f7-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="857f7-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="c6cc0-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="c6cc0-110">Compiling the Code</span></span>
 
-<span data-ttu-id="857f7-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="857f7-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="c6cc0-111">Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.</span><span class="sxs-lookup"><span data-stu-id="c6cc0-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="857f7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="857f7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6cc0-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="c6cc0-112">See also</span></span>
 
-- [<span data-ttu-id="857f7-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="857f7-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="c6cc0-113">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6cc0-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

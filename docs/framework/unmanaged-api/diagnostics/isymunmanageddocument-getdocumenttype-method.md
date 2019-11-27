@@ -22,23 +22,23 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449194"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="f0dd3-102">ISymUnmanagedDocument::GetDocumentType (Método)</span><span class="sxs-lookup"><span data-stu-id="f0dd3-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="f0dd3-103">Gets the document type of this document.</span><span class="sxs-lookup"><span data-stu-id="f0dd3-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="ef5dd-102">ISymUnmanagedDocument::GetDocumentType (Método)</span><span class="sxs-lookup"><span data-stu-id="ef5dd-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="ef5dd-103">Obtiene el tipo de documento de este documento.</span><span class="sxs-lookup"><span data-stu-id="ef5dd-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0dd3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f0dd3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef5dd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ef5dd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f0dd3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f0dd3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef5dd-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ef5dd-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f0dd3-106">[out] Pointer to a variable that receives the document type.</span><span class="sxs-lookup"><span data-stu-id="f0dd3-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="ef5dd-106">enuncia Puntero a una variable que recibe el tipo de documento.</span><span class="sxs-lookup"><span data-stu-id="ef5dd-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f0dd3-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f0dd3-107">Return Value</span></span>  
- <span data-ttu-id="f0dd3-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="f0dd3-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ef5dd-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ef5dd-107">Return Value</span></span>  
+ <span data-ttu-id="ef5dd-108">S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="ef5dd-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0dd3-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="f0dd3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef5dd-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef5dd-109">See also</span></span>
 
-- [<span data-ttu-id="f0dd3-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f0dd3-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="ef5dd-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ef5dd-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

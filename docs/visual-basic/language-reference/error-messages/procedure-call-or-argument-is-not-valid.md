@@ -11,13 +11,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346995"
 ---
-# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="81cfd-102">El argumento o la llamada al procedimiento no es válido (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81cfd-102">Procedure call or argument is not valid (Visual Basic)</span></span>
-<span data-ttu-id="81cfd-103">Some part of the call cannot be completed.</span><span class="sxs-lookup"><span data-stu-id="81cfd-103">Some part of the call cannot be completed.</span></span>  
+# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="8de03-102">El argumento o la llamada al procedimiento no es válido (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8de03-102">Procedure call or argument is not valid (Visual Basic)</span></span>
+<span data-ttu-id="8de03-103">Parte de la llamada no se puede completar.</span><span class="sxs-lookup"><span data-stu-id="8de03-103">Some part of the call cannot be completed.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="81cfd-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="81cfd-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8de03-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="8de03-104">To correct this error</span></span>  
   
-- <span data-ttu-id="81cfd-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span><span class="sxs-lookup"><span data-stu-id="81cfd-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
+- <span data-ttu-id="8de03-105">Compruebe los intervalos permitidos para los argumentos para asegurarse de que ninguna disposición supera los valores permitidos.</span><span class="sxs-lookup"><span data-stu-id="8de03-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81cfd-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="81cfd-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8de03-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="8de03-106">See also</span></span>
 
-- [<span data-ttu-id="81cfd-107">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="81cfd-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="8de03-107">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="8de03-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437264"
 ---
-# <a name="imetadataimportgetnamefromtoken-method"></a><span data-ttu-id="cc4ee-102">IMetaDataImport::GetNameFromToken (Método)</span><span class="sxs-lookup"><span data-stu-id="cc4ee-102">IMetaDataImport::GetNameFromToken Method</span></span>
-<span data-ttu-id="cc4ee-103">Obtiene el nombre en UTF-8 del objeto al que hace referencia el token de metadatos especificado.</span><span class="sxs-lookup"><span data-stu-id="cc4ee-103">Gets the UTF-8 name of the object referenced by the specified metadata token.</span></span> <span data-ttu-id="cc4ee-104">Este método está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="cc4ee-104">This method is obsolete.</span></span>  
+# <a name="imetadataimportgetnamefromtoken-method"></a><span data-ttu-id="aa8e0-102">IMetaDataImport::GetNameFromToken (Método)</span><span class="sxs-lookup"><span data-stu-id="aa8e0-102">IMetaDataImport::GetNameFromToken Method</span></span>
+<span data-ttu-id="aa8e0-103">Obtiene el nombre en UTF-8 del objeto al que hace referencia el token de metadatos especificado.</span><span class="sxs-lookup"><span data-stu-id="aa8e0-103">Gets the UTF-8 name of the object referenced by the specified metadata token.</span></span> <span data-ttu-id="aa8e0-104">Este método está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="aa8e0-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc4ee-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cc4ee-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa8e0-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="aa8e0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNameFromToken (  
@@ -34,26 +34,26 @@ HRESULT GetNameFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cc4ee-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cc4ee-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aa8e0-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="aa8e0-106">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="cc4ee-107">[in] The token representing the object to return the name for.</span><span class="sxs-lookup"><span data-stu-id="cc4ee-107">[in] The token representing the object to return the name for.</span></span>  
+ <span data-ttu-id="aa8e0-107">de Token que representa el objeto para el que se va a devolver el nombre.</span><span class="sxs-lookup"><span data-stu-id="aa8e0-107">[in] The token representing the object to return the name for.</span></span>  
   
  `pszUtf8NamePtr`  
- <span data-ttu-id="cc4ee-108">[out] A pointer to the UTF-8 object name in the heap.</span><span class="sxs-lookup"><span data-stu-id="cc4ee-108">[out] A pointer to the UTF-8 object name in the heap.</span></span>  
+ <span data-ttu-id="aa8e0-108">enuncia Puntero al nombre del objeto UTF-8 en el montón.</span><span class="sxs-lookup"><span data-stu-id="aa8e0-108">[out] A pointer to the UTF-8 object name in the heap.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cc4ee-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cc4ee-109">Remarks</span></span>  
- <span data-ttu-id="cc4ee-110">`GetNameFromToken` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="cc4ee-110">`GetNameFromToken` is obsolete.</span></span> <span data-ttu-id="cc4ee-111">As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.</span><span class="sxs-lookup"><span data-stu-id="cc4ee-111">As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aa8e0-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="aa8e0-109">Remarks</span></span>  
+ <span data-ttu-id="aa8e0-110">`GetNameFromToken` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="aa8e0-110">`GetNameFromToken` is obsolete.</span></span> <span data-ttu-id="aa8e0-111">Como alternativa, llame a un método para obtener las propiedades del tipo determinado de token necesario, como `GetFieldProps` para un campo o `GetMethodProps` para un método.</span><span class="sxs-lookup"><span data-stu-id="aa8e0-111">As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc4ee-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cc4ee-112">Requirements</span></span>  
- <span data-ttu-id="cc4ee-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cc4ee-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa8e0-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="aa8e0-112">Requirements</span></span>  
+ <span data-ttu-id="aa8e0-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa8e0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc4ee-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cc4ee-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="aa8e0-114">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="aa8e0-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cc4ee-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cc4ee-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="aa8e0-115">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="aa8e0-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cc4ee-116">**.NET Framework Versions:** 1.0</span><span class="sxs-lookup"><span data-stu-id="cc4ee-116">**.NET Framework Versions:** 1.0</span></span>  
+ <span data-ttu-id="aa8e0-116">**Versiones de .NET Framework:** 1,0</span><span class="sxs-lookup"><span data-stu-id="aa8e0-116">**.NET Framework Versions:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc4ee-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="cc4ee-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa8e0-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="aa8e0-117">See also</span></span>
 
-- [<span data-ttu-id="cc4ee-118">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cc4ee-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="cc4ee-119">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cc4ee-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="aa8e0-118">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="aa8e0-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="aa8e0-119">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="aa8e0-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

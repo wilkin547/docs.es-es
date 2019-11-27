@@ -21,10 +21,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447376"
 ---
-# <a name="cor_prf_gc_reason-enumeration"></a><span data-ttu-id="f2ae2-102">COR_PRF_GC_REASON (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="f2ae2-102">COR_PRF_GC_REASON Enumeration</span></span>
-<span data-ttu-id="f2ae2-103">Indica el motivo por el que se está produciendo la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="f2ae2-103">Indicates the reason that garbage collection is occurring.</span></span>  
+# <a name="cor_prf_gc_reason-enumeration"></a><span data-ttu-id="99516-102">COR_PRF_GC_REASON (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="99516-102">COR_PRF_GC_REASON Enumeration</span></span>
+<span data-ttu-id="99516-103">Indica el motivo por el que se está produciendo la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="99516-103">Indicates the reason that garbage collection is occurring.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2ae2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f2ae2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99516-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="99516-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,22 +33,22 @@ typedef enum {
 } COR_PRF_GC_REASON;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f2ae2-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="f2ae2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="99516-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="99516-105">Members</span></span>  
   
-|<span data-ttu-id="f2ae2-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="f2ae2-106">Member</span></span>|<span data-ttu-id="f2ae2-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="f2ae2-107">Description</span></span>|  
+|<span data-ttu-id="99516-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="99516-106">Member</span></span>|<span data-ttu-id="99516-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="99516-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|<span data-ttu-id="f2ae2-108">The garbage collection was induced by a <xref:System.GC.Collect%2A> method.</span><span class="sxs-lookup"><span data-stu-id="f2ae2-108">The garbage collection was induced by a <xref:System.GC.Collect%2A> method.</span></span>|  
-|`COR_PRF_GC_OTHER`|<span data-ttu-id="f2ae2-109">The reason is unspecified.</span><span class="sxs-lookup"><span data-stu-id="f2ae2-109">The reason is unspecified.</span></span>|  
+|`COR_PRF_GC_INDUCED`|<span data-ttu-id="99516-108">Un método <xref:System.GC.Collect%2A> indujo la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="99516-108">The garbage collection was induced by a <xref:System.GC.Collect%2A> method.</span></span>|  
+|`COR_PRF_GC_OTHER`|<span data-ttu-id="99516-109">Razón no especificada.</span><span class="sxs-lookup"><span data-stu-id="99516-109">The reason is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f2ae2-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f2ae2-110">Requirements</span></span>  
- <span data-ttu-id="f2ae2-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2ae2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99516-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="99516-110">Requirements</span></span>  
+ <span data-ttu-id="99516-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99516-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f2ae2-112">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f2ae2-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="99516-112">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="99516-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f2ae2-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f2ae2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99516-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99516-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f2ae2-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2ae2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="99516-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99516-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2ae2-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="f2ae2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99516-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="99516-115">See also</span></span>
 
-- [<span data-ttu-id="f2ae2-116">Enumeraciones para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="f2ae2-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="99516-116">Enumeraciones para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="99516-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

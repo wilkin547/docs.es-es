@@ -22,12 +22,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435019"
 ---
-# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="9a59d-102">ICeeGen::GetIMapTokenIface (Método)</span><span class="sxs-lookup"><span data-stu-id="9a59d-102">ICeeGen::GetIMapTokenIface Method</span></span>
-<span data-ttu-id="9a59d-103">Gets the interface referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="9a59d-103">Gets the interface referenced by the specified token.</span></span>  
+# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="9af2b-102">ICeeGen::GetIMapTokenIface (Método)</span><span class="sxs-lookup"><span data-stu-id="9af2b-102">ICeeGen::GetIMapTokenIface Method</span></span>
+<span data-ttu-id="9af2b-103">Obtiene la interfaz a la que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="9af2b-103">Gets the interface referenced by the specified token.</span></span>  
   
- <span data-ttu-id="9a59d-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="9a59d-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="9af2b-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="9af2b-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a59d-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9a59d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9af2b-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9af2b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIMapTokenIface (  
@@ -35,19 +35,19 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a59d-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9a59d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9af2b-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9af2b-106">Parameters</span></span>  
  `pIMapToken`  
- <span data-ttu-id="9a59d-107">[in, out] The metadata token for the interface to be returned.</span><span class="sxs-lookup"><span data-stu-id="9a59d-107">[in, out] The metadata token for the interface to be returned.</span></span>  
+ <span data-ttu-id="9af2b-107">[in, out] Símbolo (token) de metadatos de la interfaz que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="9af2b-107">[in, out] The metadata token for the interface to be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a59d-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a59d-108">Requirements</span></span>  
- <span data-ttu-id="9a59d-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a59d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9af2b-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9af2b-108">Requirements</span></span>  
+ <span data-ttu-id="9af2b-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9af2b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a59d-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a59d-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9af2b-110">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="9af2b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9a59d-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9a59d-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9af2b-111">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9af2b-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9a59d-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a59d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9af2b-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9af2b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a59d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a59d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9af2b-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="9af2b-113">See also</span></span>
 
-- [<span data-ttu-id="9a59d-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9a59d-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="9af2b-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9af2b-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Clase Connection (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -20,25 +20,25 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429348"
 ---
-# <a name="connection-class"></a><span data-ttu-id="2a8d8-102">Clase Connection</span><span class="sxs-lookup"><span data-stu-id="2a8d8-102">Connection Class</span></span>
+# <a name="connection-class"></a><span data-ttu-id="f2403-102">Clase Connection</span><span class="sxs-lookup"><span data-stu-id="f2403-102">Connection Class</span></span>
 
-<span data-ttu-id="2a8d8-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span><span class="sxs-lookup"><span data-stu-id="2a8d8-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
+<span data-ttu-id="f2403-103">La clase `Connection` analiza las respuestas del servidor, las solicitudes de cola y las solicitudes de canalización.</span><span class="sxs-lookup"><span data-stu-id="f2403-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2a8d8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2a8d8-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f2403-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f2403-104">Syntax</span></span>
   
 ```csharp  
 internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> <span data-ttu-id="2a8d8-105">The `Connection` class is internal and is not meant to be used directly in your code.</span><span class="sxs-lookup"><span data-stu-id="2a8d8-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="f2403-105">La clase `Connection` es interna y no está diseñada para usarse directamente en el código.</span><span class="sxs-lookup"><span data-stu-id="f2403-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="2a8d8-106">Microsoft does not support the use of this class in a production application under any circumstance.</span><span class="sxs-lookup"><span data-stu-id="2a8d8-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="f2403-106">Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.</span><span class="sxs-lookup"><span data-stu-id="f2403-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="2a8d8-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2a8d8-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f2403-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f2403-107">Requirements</span></span>
 
-<span data-ttu-id="2a8d8-108">**Espacio de nombres:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="2a8d8-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="f2403-108">**Espacio de nombres:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="f2403-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="2a8d8-109">**Assembly:** System (in System.dll)</span><span class="sxs-lookup"><span data-stu-id="2a8d8-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="f2403-109">**Ensamblado:** Sistema (en System. dll)</span><span class="sxs-lookup"><span data-stu-id="f2403-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="2a8d8-110">**.NET Framework versions:** Available since 2.0.</span><span class="sxs-lookup"><span data-stu-id="2a8d8-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="f2403-110">**.NET Framework versiones:** Disponible desde 2,0.</span><span class="sxs-lookup"><span data-stu-id="f2403-110">**.NET Framework versions:** Available since 2.0.</span></span>

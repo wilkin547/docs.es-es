@@ -22,26 +22,26 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446398"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="2993a-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount (Método)</span><span class="sxs-lookup"><span data-stu-id="2993a-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
-<span data-ttu-id="2993a-103">Gets a count of symbol search information.</span><span class="sxs-lookup"><span data-stu-id="2993a-103">Gets a count of symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="5f9e0-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount (Método)</span><span class="sxs-lookup"><span data-stu-id="5f9e0-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
+<span data-ttu-id="5f9e0-103">Obtiene un recuento de información de búsqueda de símbolos.</span><span class="sxs-lookup"><span data-stu-id="5f9e0-103">Gets a count of symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2993a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2993a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f9e0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5f9e0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSymbolSearchInfoCount(  
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2993a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2993a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f9e0-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5f9e0-105">Parameters</span></span>  
  `pcSearchInfo`  
- <span data-ttu-id="2993a-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span><span class="sxs-lookup"><span data-stu-id="2993a-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="5f9e0-106">] out] un puntero a una `ULONG32` que recibe el tamaño del búfer necesario para contener la información de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="5f9e0-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2993a-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="2993a-107">Return Value</span></span>  
- <span data-ttu-id="2993a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="2993a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f9e0-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5f9e0-107">Return Value</span></span>  
+ <span data-ttu-id="5f9e0-108">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="5f9e0-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2993a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2993a-109">Requirements</span></span>  
- <span data-ttu-id="2993a-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2993a-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f9e0-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5f9e0-109">Requirements</span></span>  
+ <span data-ttu-id="5f9e0-110">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5f9e0-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2993a-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="2993a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f9e0-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f9e0-111">See also</span></span>
 
-- [<span data-ttu-id="2993a-112">ISymUnmanagedReaderSymbolSearchInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="2993a-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [<span data-ttu-id="5f9e0-112">ISymUnmanagedReaderSymbolSearchInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5f9e0-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

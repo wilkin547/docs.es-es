@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448243"
 ---
-# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="43c3e-102">IMetaDataAssemblyImport::GetAssemblyFromScope (Método)</span><span class="sxs-lookup"><span data-stu-id="43c3e-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
-<span data-ttu-id="43c3e-103">Gets a pointer to the assembly in the current scope.</span><span class="sxs-lookup"><span data-stu-id="43c3e-103">Gets a pointer to the assembly in the current scope.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="b8ee5-102">IMetaDataAssemblyImport::GetAssemblyFromScope (Método)</span><span class="sxs-lookup"><span data-stu-id="b8ee5-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
+<span data-ttu-id="b8ee5-103">Obtiene un puntero al ensamblado en el ámbito actual.</span><span class="sxs-lookup"><span data-stu-id="b8ee5-103">Gets a pointer to the assembly in the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43c3e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="43c3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8ee5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b8ee5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyFromScope (  
@@ -33,19 +33,19 @@ HRESULT GetAssemblyFromScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="43c3e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="43c3e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b8ee5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b8ee5-105">Parameters</span></span>  
  `ptkAssembly`  
- <span data-ttu-id="43c3e-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span><span class="sxs-lookup"><span data-stu-id="43c3e-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
+ <span data-ttu-id="b8ee5-106">enuncia Puntero al token de `mdAssembly` recuperado que identifica el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="b8ee5-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43c3e-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="43c3e-107">Requirements</span></span>  
- <span data-ttu-id="43c3e-108">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43c3e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8ee5-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b8ee5-107">Requirements</span></span>  
+ <span data-ttu-id="b8ee5-108">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8ee5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="43c3e-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="43c3e-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b8ee5-109">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b8ee5-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="43c3e-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="43c3e-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b8ee5-110">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b8ee5-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="43c3e-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43c3e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b8ee5-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8ee5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43c3e-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="43c3e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8ee5-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8ee5-112">See also</span></span>
 
-- [<span data-ttu-id="43c3e-113">IMetaDataAssemblyImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="43c3e-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="b8ee5-113">IMetaDataAssemblyImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b8ee5-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

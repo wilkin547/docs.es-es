@@ -1,5 +1,5 @@
 ---
-title: Variable uses an Automation type not supported
+title: La variable utiliza un tipo de automatización no compatible
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
@@ -11,18 +11,18 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344827"
 ---
-# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="fe8fb-102">La variable utiliza un tipo de Automation no compatible con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe8fb-102">Variable uses an Automation type not supported in Visual Basic</span></span>
+# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="c46e6-102">La variable utiliza un tipo de Automation no compatible con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c46e6-102">Variable uses an Automation type not supported in Visual Basic</span></span>
 
-<span data-ttu-id="fe8fb-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fe8fb-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span></span>
+<span data-ttu-id="c46e6-103">Ha intentado usar una variable definida en una biblioteca de tipos o una biblioteca de objetos que tiene un tipo de datos no admitido por Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c46e6-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="fe8fb-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="fe8fb-104">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="c46e6-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="c46e6-104">To correct this error</span></span>
 
-- <span data-ttu-id="fe8fb-105">Use a variable of a type recognized by Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fe8fb-105">Use a variable of a type recognized by Visual Basic.</span></span>
+- <span data-ttu-id="c46e6-105">Use una variable de un tipo reconocido por Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c46e6-105">Use a variable of a type recognized by Visual Basic.</span></span>
 
-     <span data-ttu-id="fe8fb-106">o bien</span><span class="sxs-lookup"><span data-stu-id="fe8fb-106">-or-</span></span>
+     <span data-ttu-id="c46e6-106">O bien,</span><span class="sxs-lookup"><span data-stu-id="c46e6-106">-or-</span></span>
 
-- <span data-ttu-id="fe8fb-107">If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span><span class="sxs-lookup"><span data-stu-id="fe8fb-107">If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span></span>
+- <span data-ttu-id="c46e6-107">Si se produce este error al usar `FileGet` o `FileGetObject`, asegúrese de que el archivo que está intentando usar se ha escrito con `FilePut` o `FilePutObject`.</span><span class="sxs-lookup"><span data-stu-id="c46e6-107">If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fe8fb-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="fe8fb-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c46e6-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="c46e6-108">See also</span></span>
 
-- [<span data-ttu-id="fe8fb-109">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="fe8fb-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="c46e6-109">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="c46e6-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)

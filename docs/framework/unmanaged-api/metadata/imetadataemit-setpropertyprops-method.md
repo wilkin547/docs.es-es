@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440539"
 ---
-# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="a7300-102">IMetaDataEmit::SetPropertyProps (Método)</span><span class="sxs-lookup"><span data-stu-id="a7300-102">IMetaDataEmit::SetPropertyProps Method</span></span>
-<span data-ttu-id="a7300-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="a7300-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
+# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="03a61-102">IMetaDataEmit::SetPropertyProps (Método)</span><span class="sxs-lookup"><span data-stu-id="03a61-102">IMetaDataEmit::SetPropertyProps Method</span></span>
+<span data-ttu-id="03a61-103">Establece las características almacenadas en los metadatos de una propiedad definida por una llamada anterior al [método DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="03a61-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7300-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a7300-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03a61-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="03a61-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetPropertyProps (   
@@ -40,41 +40,41 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a7300-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a7300-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03a61-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="03a61-105">Parameters</span></span>  
  `pr`  
- <span data-ttu-id="a7300-106">[in] The token for the property to be changed</span><span class="sxs-lookup"><span data-stu-id="a7300-106">[in] The token for the property to be changed</span></span>  
+ <span data-ttu-id="03a61-106">de Token para la propiedad que se va a cambiar.</span><span class="sxs-lookup"><span data-stu-id="03a61-106">[in] The token for the property to be changed</span></span>  
   
  `dwPropFlags`  
- <span data-ttu-id="a7300-107">[in] Property flags.</span><span class="sxs-lookup"><span data-stu-id="a7300-107">[in] Property flags.</span></span>  
+ <span data-ttu-id="03a61-107">de Marcas de propiedad.</span><span class="sxs-lookup"><span data-stu-id="03a61-107">[in] Property flags.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="a7300-108">[in] The type of the property's default value.</span><span class="sxs-lookup"><span data-stu-id="a7300-108">[in] The type of the property's default value.</span></span>  
+ <span data-ttu-id="03a61-108">de Tipo del valor predeterminado de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="03a61-108">[in] The type of the property's default value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="a7300-109">[in] The default value for the property.</span><span class="sxs-lookup"><span data-stu-id="a7300-109">[in] The default value for the property.</span></span>  
+ <span data-ttu-id="03a61-109">de Valor predeterminado de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="03a61-109">[in] The default value for the property.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="a7300-110">[in] The count of (Unicode) characters in `pValue`.</span><span class="sxs-lookup"><span data-stu-id="a7300-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
+ <span data-ttu-id="03a61-110">de Recuento de caracteres (Unicode) de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="03a61-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
   
  `mdSetter`  
- <span data-ttu-id="a7300-111">[in] The method that sets the property value.</span><span class="sxs-lookup"><span data-stu-id="a7300-111">[in] The method that sets the property value.</span></span>  
+ <span data-ttu-id="03a61-111">de El método que establece el valor de propiedad.</span><span class="sxs-lookup"><span data-stu-id="03a61-111">[in] The method that sets the property value.</span></span>  
   
  `mdGetter`  
- <span data-ttu-id="a7300-112">[in] The method that gets the property value.</span><span class="sxs-lookup"><span data-stu-id="a7300-112">[in] The method that gets the property value.</span></span>  
+ <span data-ttu-id="03a61-112">de Método que obtiene el valor de propiedad.</span><span class="sxs-lookup"><span data-stu-id="03a61-112">[in] The method that gets the property value.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="a7300-113">[in] An array of other methods associated with the property.</span><span class="sxs-lookup"><span data-stu-id="a7300-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="a7300-114">Terminate this array with an `mdTokenNil` token.</span><span class="sxs-lookup"><span data-stu-id="a7300-114">Terminate this array with an `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="03a61-113">de Matriz de otros métodos asociados a la propiedad.</span><span class="sxs-lookup"><span data-stu-id="03a61-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="03a61-114">Termine esta matriz con un token de `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="03a61-114">Terminate this array with an `mdTokenNil` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a7300-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a7300-115">Requirements</span></span>  
- <span data-ttu-id="a7300-116">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7300-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03a61-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="03a61-115">Requirements</span></span>  
+ <span data-ttu-id="03a61-116">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03a61-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a7300-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a7300-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="03a61-117">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="03a61-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a7300-118">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a7300-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="03a61-118">**Biblioteca:** Se utiliza como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="03a61-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a7300-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7300-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="03a61-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03a61-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7300-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="a7300-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03a61-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="03a61-120">See also</span></span>
 
-- [<span data-ttu-id="a7300-121">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a7300-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="a7300-122">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a7300-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="03a61-121">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="03a61-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="03a61-122">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="03a61-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

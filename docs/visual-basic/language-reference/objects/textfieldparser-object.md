@@ -13,23 +13,23 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350315"
 ---
-# <a name="textfieldparser-object"></a><span data-ttu-id="41118-102">TextFieldParser Object</span><span class="sxs-lookup"><span data-stu-id="41118-102">TextFieldParser Object</span></span>
-<span data-ttu-id="41118-103">Proporciona los métodos y propiedades para analizar archivos de texto estructurados.</span><span class="sxs-lookup"><span data-stu-id="41118-103">Provides methods and properties for parsing structured text files.</span></span>  
+# <a name="textfieldparser-object"></a><span data-ttu-id="e4cb3-102">TextFieldParser Object</span><span class="sxs-lookup"><span data-stu-id="e4cb3-102">TextFieldParser Object</span></span>
+<span data-ttu-id="e4cb3-103">Proporciona los métodos y propiedades para analizar archivos de texto estructurados.</span><span class="sxs-lookup"><span data-stu-id="e4cb3-103">Provides methods and properties for parsing structured text files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41118-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="41118-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4cb3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e4cb3-104">Syntax</span></span>  
   
 ```vb  
 Public Class TextFieldParser  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="41118-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="41118-105">Remarks</span></span>  
- <span data-ttu-id="41118-106">Para obtener información acerca de los métodos y las propiedades del objeto `TextFieldParser` , vea <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span><span class="sxs-lookup"><span data-stu-id="41118-106">For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e4cb3-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e4cb3-105">Remarks</span></span>  
+ <span data-ttu-id="e4cb3-106">Para obtener información acerca de los métodos y las propiedades del objeto `TextFieldParser` , vea <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span><span class="sxs-lookup"><span data-stu-id="e4cb3-106">For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span></span>  
   
- <span data-ttu-id="41118-107">For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span><span class="sxs-lookup"><span data-stu-id="41118-107">For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span></span>  
+ <span data-ttu-id="e4cb3-107">Para obtener más información, vea [leer desde archivos](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span><span class="sxs-lookup"><span data-stu-id="e4cb3-107">For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41118-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="41118-108">Requirements</span></span>  
- <span data-ttu-id="41118-109">**Espacio de nombres:** <xref:Microsoft.VisualBasic.FileIO></span><span class="sxs-lookup"><span data-stu-id="41118-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4cb3-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e4cb3-108">Requirements</span></span>  
+ <span data-ttu-id="e4cb3-109">**Espacio de nombres:** <xref:Microsoft.VisualBasic.FileIO></span><span class="sxs-lookup"><span data-stu-id="e4cb3-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span></span>  
   
- <span data-ttu-id="41118-110">**Clase:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="41118-110">**Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span></span>  
+ <span data-ttu-id="e4cb3-110">**Clase:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="e4cb3-110">**Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span></span>  
   
- <span data-ttu-id="41118-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="41118-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
+ <span data-ttu-id="e4cb3-111">**Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)</span><span class="sxs-lookup"><span data-stu-id="e4cb3-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>

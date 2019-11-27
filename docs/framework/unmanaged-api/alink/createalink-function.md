@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446547"
 ---
-# <a name="createalink-function"></a><span data-ttu-id="92743-102">CreateALink (Función)</span><span class="sxs-lookup"><span data-stu-id="92743-102">CreateALink Function</span></span>
-<span data-ttu-id="92743-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span><span class="sxs-lookup"><span data-stu-id="92743-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
+# <a name="createalink-function"></a><span data-ttu-id="b945a-102">CreateALink (Función)</span><span class="sxs-lookup"><span data-stu-id="b945a-102">CreateALink Function</span></span>
+<span data-ttu-id="b945a-103">Crea una instancia del enlazador de ensamblado y establece un puntero a la interfaz especificada.</span><span class="sxs-lookup"><span data-stu-id="b945a-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92743-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="92743-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b945a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b945a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateALink (  
@@ -34,16 +34,16 @@ HRESULT CreateALink (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="92743-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="92743-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b945a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b945a-105">Parameters</span></span>  
   
-|<span data-ttu-id="92743-106">Parámetro</span><span class="sxs-lookup"><span data-stu-id="92743-106">Parameter</span></span>|<span data-ttu-id="92743-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="92743-107">Description</span></span>|  
+|<span data-ttu-id="b945a-106">Parámetro</span><span class="sxs-lookup"><span data-stu-id="b945a-106">Parameter</span></span>|<span data-ttu-id="b945a-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="b945a-107">Description</span></span>|  
 |---------------|-----------------|  
-|`riid`|<span data-ttu-id="92743-108">The physical name of one of the Assembly Linker interfaces.</span><span class="sxs-lookup"><span data-stu-id="92743-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
-|`ppInterface`|<span data-ttu-id="92743-109">The location that on successful completion contains a pointer to the `riid` interface.</span><span class="sxs-lookup"><span data-stu-id="92743-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
+|`riid`|<span data-ttu-id="b945a-108">El nombre físico de una de las interfaces del enlazador de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="b945a-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
+|`ppInterface`|<span data-ttu-id="b945a-109">La ubicación en la que se completó correctamente contiene un puntero a la interfaz `riid`.</span><span class="sxs-lookup"><span data-stu-id="b945a-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="92743-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="92743-110">Requirements</span></span>  
- <span data-ttu-id="92743-111">**Library**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="92743-111">**Library**: alink.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b945a-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b945a-110">Requirements</span></span>  
+ <span data-ttu-id="b945a-111">**Biblioteca**: ALink. dll</span><span class="sxs-lookup"><span data-stu-id="b945a-111">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92743-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="92743-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b945a-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="b945a-112">See also</span></span>
 
-- [<span data-ttu-id="92743-113">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="92743-113">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="b945a-113">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="b945a-113">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)

@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448619"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="1f96d-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument (Método)</span><span class="sxs-lookup"><span data-stu-id="1f96d-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="1f96d-103">Gets the smallest start line and largest end line for the method in a specific document.</span><span class="sxs-lookup"><span data-stu-id="1f96d-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="5e183-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument (Método)</span><span class="sxs-lookup"><span data-stu-id="5e183-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="5e183-103">Obtiene la línea de inicio más pequeña y la línea de finalización más grande para el método en un documento específico.</span><span class="sxs-lookup"><span data-stu-id="5e183-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f96d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1f96d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e183-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5e183-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceExtentInDocument(  
@@ -34,22 +34,22 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1f96d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1f96d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e183-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5e183-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="1f96d-106">[in] A pointer to the document.</span><span class="sxs-lookup"><span data-stu-id="1f96d-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="5e183-106">de Puntero al documento.</span><span class="sxs-lookup"><span data-stu-id="5e183-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="1f96d-107">[out] A pointer to a `ULONG32` that receives the start line.</span><span class="sxs-lookup"><span data-stu-id="1f96d-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="5e183-107">enuncia Puntero a un `ULONG32` que recibe la línea de inicio.</span><span class="sxs-lookup"><span data-stu-id="5e183-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="1f96d-108">[out] A pointer to a `ULONG32` that receives the end line.</span><span class="sxs-lookup"><span data-stu-id="1f96d-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="5e183-108">enuncia Puntero a un `ULONG32` que recibe la línea final.</span><span class="sxs-lookup"><span data-stu-id="5e183-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1f96d-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="1f96d-109">Return Value</span></span>  
- <span data-ttu-id="1f96d-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="1f96d-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5e183-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5e183-109">Return Value</span></span>  
+ <span data-ttu-id="5e183-110">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="5e183-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f96d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1f96d-111">Requirements</span></span>  
- <span data-ttu-id="1f96d-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1f96d-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e183-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5e183-111">Requirements</span></span>  
+ <span data-ttu-id="5e183-112">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5e183-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f96d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="1f96d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e183-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="5e183-113">See also</span></span>
 
-- [<span data-ttu-id="1f96d-114">ISymENCUnmanagedMethod (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1f96d-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="5e183-114">ISymENCUnmanagedMethod (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5e183-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

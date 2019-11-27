@@ -22,10 +22,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440349"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="715c8-102">IMetaDataFilter::MarkToken (Método)</span><span class="sxs-lookup"><span data-stu-id="715c8-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="715c8-103">Sets a value indicating that the specified metadata token has been processed.</span><span class="sxs-lookup"><span data-stu-id="715c8-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="1e84b-102">IMetaDataFilter::MarkToken (Método)</span><span class="sxs-lookup"><span data-stu-id="1e84b-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="1e84b-103">Establece un valor que indica que se ha procesado el token de metadatos especificado.</span><span class="sxs-lookup"><span data-stu-id="1e84b-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="715c8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="715c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e84b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1e84b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkToken (  
@@ -33,19 +33,19 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="715c8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="715c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e84b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1e84b-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="715c8-106">[in] The token to mark as processed.</span><span class="sxs-lookup"><span data-stu-id="715c8-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="1e84b-106">de Token que se va a marcar como procesado.</span><span class="sxs-lookup"><span data-stu-id="1e84b-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="715c8-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="715c8-107">Requirements</span></span>  
- <span data-ttu-id="715c8-108">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="715c8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e84b-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1e84b-107">Requirements</span></span>  
+ <span data-ttu-id="1e84b-108">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e84b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="715c8-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="715c8-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1e84b-109">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="1e84b-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="715c8-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="715c8-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1e84b-110">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="1e84b-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="715c8-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="715c8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1e84b-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e84b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="715c8-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="715c8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e84b-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e84b-112">See also</span></span>
 
-- [<span data-ttu-id="715c8-113">IMetaDataFilter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="715c8-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="1e84b-113">IMetaDataFilter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1e84b-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
