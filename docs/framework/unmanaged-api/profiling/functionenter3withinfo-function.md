@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440751"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo (Función)
-Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
+Notifica al generador de perfiles que el control se pasa a una función y proporciona un identificador que se puede pasar al [método ICorProfilerInfo3:: GetFunctionEnter3Info (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar el marco de pila y los argumentos de la función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,30 +34,30 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `functionIDOrClientID`  
- [in] The identifier of the function to which control is passed.  
+ de Identificador de la función a la que se pasa el control.  
   
  `eltInfo`  
- [in] Controlador opaco que representa información sobre un marco de pila determinado. This handle is valid only during the callback to which it is passed.  
+ [in] Controlador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.  
   
 ## <a name="remarks"></a>Comentarios  
- The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values. To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
+ El método de devolución de llamada `FunctionEnter3WithInfo` notifica al generador de perfiles cuando se llama a las funciones y permite al generador de perfiles usar el [método ICorProfilerInfo3:: GetFunctionEnter3Info (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para inspeccionar los valores de argumento. Para tener acceso a la información de los argumentos, se debe establecer la marca `COR_PRF_ENABLE_FUNCTION_ARGS`. El generador de perfiles puede utilizar el [método ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento y, a continuación, usar el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar la implementación de esta función.  
   
- The `FunctionEnter3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ La función `FunctionEnter3WithInfo` es una devolución de llamada; debe implementarla. La implementación de debe utilizar el atributo de clase de almacenamiento `__declspec(naked)`.  
   
- The execution engine does not save any registers before calling this function.  
+ El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- En la entrada, debe guardar todos los registros que use, incluidos los de la unidad de punto flotante (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.  
+ La implementación de `FunctionEnter3WithInfo` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados, porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que `FunctionEnter3WithInfo` devuelva.  
   
- The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.  
+ La función `FunctionEnter3WithInfo` no debe llamar a código administrado ni producir una asignación de memoria administrada de ninguna manera.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
@@ -65,7 +65,7 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="see-also"></a>Vea también
 
-- [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
+- [Getfunctionenter3info (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

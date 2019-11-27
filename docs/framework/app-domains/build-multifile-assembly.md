@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: 'Cómo: compilar un ensamblado de un solo archivo'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,7 +24,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429557"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>Cómo: compilar un ensamblado de un solo archivo
 
 En este artículo se explica cómo crear un ensamblado de múltiples archivos e incluye código que muestra cada paso del procedimiento.
 
@@ -224,6 +224,6 @@ En este artículo se explica cómo crear un ensamblado de múltiples archivos e 
 ## <a name="see-also"></a>Vea también
 
 - [Creación de ensamblados](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [Cómo: ver el contenido de un ensamblado](../../standard/assembly/view-contents.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
 - [Ensamblados de varios archivos](multifile-assemblies.md)

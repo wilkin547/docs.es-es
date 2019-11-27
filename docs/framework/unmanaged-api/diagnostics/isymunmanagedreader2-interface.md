@@ -22,18 +22,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448266"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 (Interfaz)
-Represents a symbol reader that provides access to documents, methods, and variables within a symbol store. This interface extends the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+Representa un lector de símbolos que proporciona acceso a los documentos, métodos y variables de un almacén de símbolos. Esta interfaz extiende la interfaz [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetMethodByVersionPreRemap (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|Get a symbol reader method, given a method token and an edit-and-continue version number.|  
-|[GetMethodsInDocument (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|Gets every method that has line information in the provided document.|  
-|[GetSymAttributePreRemap (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|Gets a custom attribute based upon its name.|  
+|[GetMethodByVersionPreRemap (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|Obtiene un método del lector de símbolos, dado un token de método y un número de versión de edición y continuación.|  
+|[GetMethodsInDocument (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|Obtiene todos los métodos que tienen información de línea en el documento proporcionado.|  
+|[GetSymAttributePreRemap (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|Obtiene un atributo personalizado basado en su nombre.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

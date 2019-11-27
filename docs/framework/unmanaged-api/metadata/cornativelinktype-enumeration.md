@@ -42,19 +42,19 @@ typedef enum
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`nltNone`|Indicates that none of the keywords are specified.|  
-|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
-|`nltUnicode`|Indicates that a Unicode keyword is specified|  
-|`nltAuto`|Indicates that an auto keyword is specified.|  
-|`nltOle`|Indicates that an OLE keyword is specified.|  
-|`nltMaxValue`|No se utiliza.|  
+|`nltNone`|Indica que no se ha especificado ninguna de las palabras clave.|  
+|`nltAnsi`|Indica que se ha especificado una palabra clave ANSI.|  
+|`nltUnicode`|Indica que se ha especificado una palabra clave de Unicode|  
+|`nltAuto`|Indica que se ha especificado una palabra clave auto.|  
+|`nltOle`|Indica que se ha especificado una palabra clave OLE.|  
+|`nltMaxValue`|No usado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: Sintaxis usada por la propiedad DebugView
 description: Describe la sintaxis especial usada por la propiedad DebugView para producir una representación de cadena de árboles de expresión
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346871"
 
 La propiedad `DebugView` (disponible solo durante la depuración) proporciona una representación de cadenas de árboles de expresión. La mayor parte de la sintaxis es bastante sencilla de entender; los casos especiales se describen en las siguientes secciones.
 
-Each example is followed by a comment block containing the `DebugView`.
+Cada ejemplo va seguido de un bloque de comentario que contiene el `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,9 +45,9 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Para los objetos <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> que representan valores enteros, cadenas y `null`, se muestra el valor de la constante.
 
-For some numeric types, a suffix is added to the value:
+En algunos tipos numéricos, se agrega un sufijo al valor:
 
-| Type | Palabra clave | Sufijo |
+| Tipo | Palabra clave | Sufijo |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |

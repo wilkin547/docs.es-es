@@ -27,23 +27,23 @@ ms.locfileid: "74343913"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
 
-Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character. A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.  
+Contiene secuencias de puntos de código sin signo de 16 bits (2 bytes) que van desde 0 hasta 65535. Cada *punto de código*, o código de carácter, representa un único carácter Unicode. Una cadena puede contener entre 0 y aproximadamente 2 mil millones (2 ^ 31) caracteres Unicode.  
   
 ## <a name="remarks"></a>Comentarios  
 
- Use the `String` data type to hold multiple characters without the array management overhead of `Char()`, an array of `Char` elements.  
+ Utilice el tipo de datos `String` para contener varios caracteres sin la sobrecarga de administración de la matriz de `Char()`, una matriz de elementos `Char`.  
   
- The default value of `String` is `Nothing` (a null reference). Note that this is not the same as the empty string (value `""`).  
+ El valor predeterminado de `String` es `Nothing` (una referencia nula). Tenga en cuenta que esto no es lo mismo que la cadena vacía (valor `""`).  
   
 ## <a name="unicode-characters"></a>Caracteres Unicode  
 
- The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols. This includes worldwide textual characters, diacritics, and mathematical and technical symbols.  
+ Los primeros 128 puntos de código (0 – 127) de Unicode corresponden a las letras y símbolos de un teclado estándar de EE. UU. Estos primeros 128 puntos de código son los mismos que los que define el juego de caracteres ASCII. Los dos puntos de código 128 (128 – 255) representan caracteres especiales, como Letras de alfabetos basados en latín, acentos, símbolos de moneda y fracciones. Unicode utiliza el resto de puntos de código (256-65535) para una amplia variedad de símbolos. Esto incluye los caracteres de texto, los signos diacríticos y los símbolos matemáticos y técnicos del mundo.  
   
- You can use methods such as <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on an individual character in a `String` variable to determine its Unicode classification.  
+ Puede utilizar métodos como <xref:System.Char.IsDigit%2A> y <xref:System.Char.IsPunctuation%2A> en un carácter individual de una variable de `String` para determinar su clasificación Unicode.  
   
 ## <a name="format-requirements"></a>Requisitos de formato  
 
- You must enclose a `String` literal within quotation marks (`" "`). If you must include a quotation mark as one of the characters in the string, you use two contiguous quotation marks (`""`). Esto se ilustra en el siguiente ejemplo:  
+ Debe incluir un literal de `String` entre comillas (`" "`). Si debe incluir una comilla tipográfica como uno de los caracteres de la cadena, utilice dos comillas contiguas (`""`). En el ejemplo siguiente se ilustra esto.  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -55,13 +55,13 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Note that the contiguous quotation marks that represent a quotation mark in the string are independent of the quotation marks that begin and end the `String` literal.  
+ Tenga en cuenta que las comillas contiguas que representan una comilla en la cadena son independientes de las comillas que comienzan y finalizan el literal `String`.  
   
-## <a name="string-manipulations"></a>String Manipulations  
+## <a name="string-manipulations"></a>Manipulaciones de cadenas  
 
- Once you assign a string to a `String` variable, that string is *immutable*, which means you cannot change its length or contents. When you alter a string in any way, Visual Basic creates a new string and abandons the previous one. The `String` variable then points to the new string.  
+ Una vez que se asigna una cadena a una variable `String`, esa cadena es *inmutable*, lo que significa que no se puede cambiar su longitud o su contenido. Al modificar una cadena de alguna manera, Visual Basic crea una nueva cadena y abandona la anterior. A continuación, la variable `String` señala a la nueva cadena.  
   
- You can manipulate the contents of a `String` variable by using a variety of string functions. The following example illustrates the <xref:Microsoft.VisualBasic.Strings.Left%2A> function  
+ Puede manipular el contenido de una variable de `String` mediante una variedad de funciones de cadena. En el ejemplo siguiente se muestra la función <xref:Microsoft.VisualBasic.Strings.Left%2A>  
   
 ```vb  
 Dim S As String = "Database"  
@@ -69,19 +69,19 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- A string created by another component might be padded with leading or trailing spaces. If you receive such a string, you can use the <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, and <xref:Microsoft.VisualBasic.Strings.RTrim%2A> functions to remove these spaces.  
+ Una cadena creada por otro componente se puede rellenar con espacios iniciales o finales. Si recibe este tipo de cadena, puede usar las funciones <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>y <xref:Microsoft.VisualBasic.Strings.RTrim%2A> para quitar estos espacios.  
   
- For more information about string manipulations, see [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Para obtener más información sobre las manipulaciones de cadenas, vea [cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
-- **Negative Numbers.** Remember that the characters held by `String` are unsigned and cannot represent negative values. In any case, you should not use `String` to hold numeric values.  
+- **Números negativos.** Recuerde que los caracteres que contiene `String` no están firmados y no pueden representar valores negativos. En cualquier caso, no debe utilizar `String` para contener valores numéricos.  
   
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that string characters have a different data width (8 bits) in other environments. If you are passing a string argument of 8-bit characters to such a component, declare it as `Byte()`, an array of `Byte` elements, instead of `String` in your new Visual Basic code.  
+- **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para el .NET Framework, por ejemplo, objetos de automatización o COM, recuerde que los caracteres de cadena tienen un ancho de datos diferente (8 bits) en otros entornos. Si va a pasar un argumento de cadena de caracteres de 8 bits a este componente, declárelo como `Byte()`, una matriz de elementos `Byte`, en lugar de `String` en el nuevo código de Visual Basic.  
   
-- **Type Characters.** Appending the identifier type character `$` to any identifier forces it to the `String` data type. `String` has no literal type character. However, the compiler treats literals enclosed in quotation marks (`" "`) as `String`.  
+- **Caracteres de tipo.** Anexar el carácter de tipo de identificador `$` a cualquier identificador lo convierte al tipo de datos `String`. `String` no tiene un carácter de tipo literal. Sin embargo, el compilador trata los literales entre comillas (`" "`) como `String`.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.String?displayProperty=nameWithType> class.  
+- **Tipo de marco.** El tipo correspondiente en el .NET Framework es la clase <xref:System.String?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

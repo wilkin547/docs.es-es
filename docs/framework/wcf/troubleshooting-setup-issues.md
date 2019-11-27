@@ -25,7 +25,7 @@ En este tema se describe cómo solucionar problemas de configuración de Windows
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- No se recrean las claves si ejecuta la reparación utilizando el instalador de .NET Framework 3.0 iniciado desde el applet **Agregar o quitar programas** en el **Panel de control**. Para volver a crear correctamente estas claves, el usuario debe desinstalar y reinstalar .NET Framework 3.0.  
+ Las claves no se vuelven a crear si ejecuta la reparación con el instalador .NET Framework 3,0 iniciado desde el applet **Agregar o quitar programas** del **Panel de control**. Para volver a crear correctamente estas claves, el usuario debe desinstalar y reinstalar .NET Framework 3.0.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>Los daños en el servicio WMI bloquean la instalación del proveedor de WMI de Windows Communication Foundation durante la instalación del paquete de .NET Framework 3.0  
  Los daños del servicio WMI pueden bloquear la instalación del proveedor de WMI de Windows Communication Foundation. Durante la instalación, el instalador de Windows Communication Foundation no puede registrar el archivo .mof de WCF mediante el componente mofcomp.exe. A continuación, se muestra una lista de síntomas:  
@@ -40,11 +40,11 @@ En este tema se describe cómo solucionar problemas de configuración de Windows
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: Resultado inesperado 3 al ejecutar E:\WINDOWS\system32\wbem\mofcomp.exe con "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
-     O bien  
+     o bien:  
   
      ServiceModelReg [07:19:33:843]: System.TypeInitializationException: El inicializador de tipo para 'System.Management.ManagementPath' produjo una excepción. ---> System. Runtime. InteropServices. COMException (0x80040154): no se pudo recuperar el generador de clases COM para el componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} debido al siguiente error: 80040154.  
   
-     O bien  
+     o bien:  
   
      ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: No pudo cargar el archivo ni ensamblado 'C:\WINDOWS\system32\wbem\mofcomp.exe' o uno de sus dependencias. El sistema no puede encontrar el archivo especificado.  
   
@@ -54,7 +54,7 @@ En este tema se describe cómo solucionar problemas de configuración de Windows
   
 1. Ejecute [el utilidad de diagnóstico de WMI, versión 2,0](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar el servicio WMI. Para obtener más información sobre el uso de esta herramienta, vea el tema [utilidad de diagnóstico de WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
   
- Repare la instalación de .NET Framework 3.0 utilizando el applet **Agregar o quitar programas** situado en el **Panel de control** o desinstale/reinstale .NET Framework 3.0.  
+ Repare la instalación de .NET Framework 3,0 mediante el applet **Agregar o quitar programas** que se encuentra en el **Panel de control**, o bien desinstale o vuelva a instalar el .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Reparar .NET Framework 3.0 después de que la instalación de .NET Framework 3.5 quite los elementos de configuración introducidos por .NET Framework 3.5 en el archivo machine.config  
  Si realiza una reparación de .NET Framework 3,0 después de instalar .NET Framework 3,5, se quitan los elementos de configuración introducidos por .NET Framework 3,5 en el archivo Machine. config. No obstante, el archivo web.config permanece intacto. La solución consiste en reparar .NET Framework 3,5 después de hacerlo a través de ARP, o usar la [herramienta de registro del servicio de flujo de trabajo (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) con el modificador `/c`.  

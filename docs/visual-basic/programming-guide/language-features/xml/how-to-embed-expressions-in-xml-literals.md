@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332942"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Cómo: Incrustar expresiones en literales XML (Visual Basic)
-You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
+Puede combinar literales XML con expresiones incrustadas para crear un documento, fragmento o elemento XML que contenga contenido creado en tiempo de ejecución. En los siguientes ejemplos se muestra cómo utilizar expresiones incrustadas para rellenar el contenido de los elementos, los atributos y los nombres de elemento en tiempo de ejecución.  
   
- The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ La sintaxis de una expresión incrustada es `<%=` `exp` `%>`, que es la misma sintaxis que utiliza ASP.NET. Para obtener más información, vea [expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Para obtener más información, vea <xref:System.Xml.Linq.XElement>.  
+ También puede usar el [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API para crear objetos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Para obtener más información, consulta <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Procedimientos  
   
-#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
+#### <a name="to-insert-text-as-element-content"></a>Para insertar texto como contenido de elemento  
   
-- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
+- En el ejemplo siguiente se muestra cómo insertar el texto contenido en la variable `contactName` entre los elementos de nombre de apertura y de cierre.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
+#### <a name="to-insert-text-as-an-attribute-value"></a>Para insertar texto como un valor de atributo  
   
-- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
+- En el ejemplo siguiente se muestra cómo insertar el texto contenido en la variable `phoneType` como el valor del atributo `type`.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
+#### <a name="to-insert-text-for-an-element-name"></a>Para insertar texto para un nombre de elemento  
   
-- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
+- En el ejemplo siguiente se muestra cómo insertar el texto contenido en la variable `elementName` como el nombre de un elemento.  
   
-     When creating elements by using this technique, you must close them with the \</> tag.  
+     Al crear elementos mediante esta técnica, debe cerrarlos con la etiqueta \</>.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   

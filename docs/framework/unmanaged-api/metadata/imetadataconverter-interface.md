@@ -28,16 +28,16 @@ Proporciona métodos para asignar las bibliotecas de tipos a sus firmas de metad
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetMetaDataFromTypeInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature for the type library referenced by the specified `ITypeInfo` instance.|  
-|[GetMetaDataFromTypeLib (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypelib-method.md)|Gets a pointer to an `IMetaDataImport` instance that represents the metadata signature for the type library represented by the specified `ITypeLib` instance.|  
-|[GetTypeLibFromMetaData (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-gettypelibfrommetadata-method.md)|Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified module and library names.|  
+|[GetMetaDataFromTypeInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Obtiene un puntero a una instancia de [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que representa la firma de metadatos para la biblioteca de tipos a la que hace referencia la instancia de `ITypeInfo` especificada.|  
+|[GetMetaDataFromTypeLib (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypelib-method.md)|Obtiene un puntero a una instancia de `IMetaDataImport` que representa la firma de metadatos para la biblioteca de tipos representada por la instancia de `ITypeLib` especificada.|  
+|[GetTypeLibFromMetaData (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-gettypelibfrommetadata-method.md)|Obtiene un puntero a una instancia de `ITypeLib` que representa la biblioteca de tipos que tiene los nombres de módulo y de biblioteca especificados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

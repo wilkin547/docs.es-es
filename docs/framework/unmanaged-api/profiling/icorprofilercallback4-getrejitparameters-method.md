@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439439"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters (Método)
-Allows the code profiler to set alternate code generation flags for a new recompiled method body.  
+Permite que el generador de perfiles de código establezca marcas de generación de código alternativas para un nuevo cuerpo de método recompilado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,16 +33,16 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
 ## <a name="parameters"></a>Parámetros  
  `moduleID`  
- [in] The module that contains the method for which the CLR needs JIT recompilation parameters.  
+ de Módulo que contiene el método para el que CLR necesita parámetros de recompilación JIT.  
   
  `methodId`  
- [in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.  
+ de `MethodDef` del método para el que CLR necesita parámetros de recompilación JIT.  
   
  `pFunctionControl`  
- [in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.  
+ de Puntero a una interfaz [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) que el generador de perfiles puede usar para proporcionar información de recompilación JIT para el método que se va a volver a compilar.  
   
 ## <a name="remarks"></a>Comentarios  
- The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method. The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.  
+ CLR emite una devolución de llamada de `GetReJITParameters` para que el generador de perfiles pueda especificar los parámetros para volver a compilar un método determinado. La devolución de llamada de `GetReJITParameters` se emite solo una vez por función; los parámetros proporcionados por el generador de perfiles se aplican a todas las instancias de esa función.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

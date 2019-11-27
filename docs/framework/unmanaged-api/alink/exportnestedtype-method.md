@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438422"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType (Método)
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+Especifica los tipos anidados como exportables. El [método ExportType](exporttype-method.md) también puede exportar tipos anidados, pero este método es más rápido.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,31 +41,31 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- ID of assembly to export from.  
+ IDENTIFICADOR del ensamblado del que se va a exportar.  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ Token de archivo o ensamblado de archivo que define el tipo que se va a convertir.  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ Token de tipo del tipo que se va a convertir.  
   
  `ParentType`  
- Token of parent type.  
+ Token del tipo primario.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Nombre completo del tipo que se va a exportar.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` marcas como `tdPublic` o `tdNested`. Este valor se puede pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives token for exported type.  
+ Recibe el token para el tipo exportado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Returns S_OK if the method succeeds.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 

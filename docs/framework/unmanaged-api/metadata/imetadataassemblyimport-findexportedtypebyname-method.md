@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449446"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName (Método)
-Gets a pointer to an exported type, given its name and enclosing type.  
+Obtiene un puntero a un tipo exportado, dado su nombre y tipo envolvente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [in] The name of the exported type.  
+ de Nombre del tipo exportado.  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ de Símbolo (token) de metadatos para la clase envolvente del tipo exportado. Este valor se `mdExportedTypeNil` si el tipo exportado solicitado no es un tipo anidado.  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ enuncia Puntero al token de `mdExportedType` que representa el tipo exportado.  
   
 ## <a name="remarks"></a>Comentarios  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ El método `FindExportedTypeByName` utiliza las reglas estándar empleadas por el Common Language Runtime para resolver las referencias.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

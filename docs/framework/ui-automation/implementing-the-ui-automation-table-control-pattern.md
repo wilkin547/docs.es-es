@@ -32,14 +32,14 @@ ms.locfileid: "74447099"
 - Los encabezados de fila y columna pueden incluir tanto un encabezado principal como cualquier encabezado auxiliar.  
   
 > [!NOTE]
-> This concept becomes evident in a Microsoft Excel spreadsheet where a user has defined a "First name" column. Esta columna tiene ahora dos encabezados: el encabezado "Nombre" definido por el usuario y la designación alfanumérica para esa columna asignada por la aplicación.  
+> Este concepto se vuelve evidente en una hoja de cálculo de Microsoft Excel en la que un usuario ha definido una columna "nombre". Esta columna tiene ahora dos encabezados: el encabezado "Nombre" definido por el usuario y la designación alfanumérica para esa columna asignada por la aplicación.  
   
-- See [Implementing the UI Automation Grid Control Pattern](implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.  
+- Vea [implementar el patrón de control Grid de UI Automation](implementing-the-ui-automation-grid-control-pattern.md) para la funcionalidad de cuadrícula relacionada.  
   
- ![Table with complex header items.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![Tabla con elementos de encabezado complejos.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Ejemplo de una tabla con encabezados de columna compleja  
   
- ![Table with ambiguous RowOrColumnMajor property.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Tabla con propiedad RowOrColumnMajor ambigua.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Ejemplo de una tabla con propiedad RowOrColumnMajor ambigua  
   
 <a name="Required_Members_for_ITableProvider"></a>   
@@ -48,7 +48,7 @@ Ejemplo de una tabla con propiedad RowOrColumnMajor ambigua
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Propiedad|Ninguno|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Método|Ninguno|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Método|Ninguno|  
   
@@ -62,7 +62,7 @@ Ejemplo de una tabla con propiedad RowOrColumnMajor ambigua
 
 - [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Implementación del patrón de control TableItem de Automatización de la interfaz de usuario](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [Implementación del patrón de control Grid de Automatización de la interfaz de usuario](implementing-the-ui-automation-grid-control-pattern.md)
 - [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
