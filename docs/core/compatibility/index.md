@@ -1,15 +1,15 @@
 ---
-title: Evaluación de los cambios importantes en .NET Core
-description: Conozca las formas en que .NET Core intenta mantener la compatibilidad para los desarrolladores en todas las versiones de .NET.
+title: 'Tipos de cambios importantes: .NET Core'
+description: Obtenga más información sobre los esfuerzos de .NET Core por mantener la compatibilidad entre versiones de .NET para los desarrolladores, así como sobre los tipos de cambios que se consideran importantes.
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973652"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567717"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>Evaluación de los cambios importantes en .NET Core
+# <a name="changes-that-affect-compatibility"></a>Cambios que afectan a la compatibilidad
 
 A lo largo de su historia, .NET ha intentado mantener un alto nivel de compatibilidad de versión a versión y a través de los sabores de .NET. Esto sigue siendo cierto para .NET Core. Aunque .NET Core se puede considerar como una nueva tecnología que es independiente de .NET Framework, hay dos factores principales que limitan la capacidad de .NET Core para desviarse de .NET Framework:
 
@@ -19,7 +19,7 @@ A lo largo de su historia, .NET ha intentado mantener un alto nivel de compatibi
 
 Junto con la compatibilidad entre las implementaciones de .NET, los desarrolladores esperan un alto nivel de compatibilidad entre las versiones .NET Core. En particular, el código escrito para una versión anterior de .NET Core debería funcionar sin problemas en una versión posterior de .NET Core. De hecho, muchos desarrolladores esperan que las nuevas API que se encuentran en las versiones más recientes de .NET Core también sean compatibles con las versiones preliminares en las que se introdujeron dichas API.
 
-En este artículo se describen las categorías de cambios de compatibilidad (o cambios importantes) y la forma en que el equipo de .NET evalúa los cambios en cada una de estas categorías. Entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios en el repositorio GitHub [dotnet/corefx](https://github.com/dotnet/corefx) que modifican el comportamiento de las API existentes.
+En este artículo se describen las categorías de cambios de compatibilidad (o cambios importantes) y la forma en que el equipo de .NET evalúa los cambios en cada una de estas categorías. Entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios en el repositorio de GitHub [dotnet/corefx](https://github.com/dotnet/corefx) que tienen por objetivo modificar el comportamiento de las API existentes.
 
 > [!NOTE]
 > Para una definición de las categorías de compatibilidad, como la compatibilidad binaria y la compatibilidad con versiones anteriores, consulte [Breaking change categories](categories.md) (Categorías de cambios importantes).
@@ -31,7 +31,7 @@ En las secciones siguientes se describen las categorías de los cambios realizad
 
 ## <a name="modifications-to-the-public-contract"></a>Modificaciones en el contrato público
 
-Los cambios en esta categoría *modifican* el área expuesta pública de un tipo. No están permitidos la mayoría de los cambios en esta categoría ya que infringen la *compatibilidad con versiones anteriores* (la capacidad de una aplicación que se ha desarrollado con una versión anterior de una API para ejecutarse sin recompilación en una versión posterior).
+Los cambios en esta categoría modifican el área expuesta pública de un tipo. No están permitidos la mayoría de los cambios en esta categoría ya que infringen la *compatibilidad con versiones anteriores* (la capacidad de una aplicación que se ha desarrollado con una versión anterior de una API para ejecutarse sin recompilación en una versión posterior).
 
 ### <a name="types"></a>Tipos
 

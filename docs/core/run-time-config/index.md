@@ -2,12 +2,12 @@
 title: Configuración del tiempo de ejecución
 description: Aprenda a configurar aplicaciones .NET Core mediante opciones de configuración de tiempo de ejecución.
 ms.date: 11/13/2019
-ms.openlocfilehash: f7074b07bdd5aca23b6caae78952d630d905c489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283967"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567390"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Opciones de configuración en tiempo de ejecución de .NET Core
 
@@ -64,7 +64,7 @@ Algunos valores de configuración también se pueden establecer mediante program
 
 ## <a name="environment-variables"></a>Variables de entorno
 
-Las variables de entorno se pueden usar para proporcionar información de configuración en tiempo de ejecución. Los botones de configuración especificados como variables de entorno generalmente tienen el prefijo **COMPlus_** .
+Las variables de entorno se pueden usar para proporcionar información de configuración del entorno de ejecución. Los botones de configuración especificados como variables de entorno generalmente tienen el prefijo **COMPlus_** .
 
 Puede definir variables de entorno desde el Panel de control de Windows, en la línea de comandos o mediante programación llamando al método <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> en sistemas basados en Windows y Unix.
 
