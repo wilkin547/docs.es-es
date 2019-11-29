@@ -1,5 +1,5 @@
 ---
-title: Almacenar y leer datos en el Portapapeles (Visual Basic)
+title: Almacenamiento y lectura de datos en el Portapapeles
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -9,17 +9,19 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: d7693f6b5dc74e17686cd7d2667f32adbde9df80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 243fb237f3f9ba53f8b29079df08531c102c78dd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349732"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Almacenar y leer datos en el Portapapeles (Visual Basic)
+
 El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado que todos los procesos activos comparten el Portapapeles, se puede usar para transferir datos entre ellos. El objeto `My.Computer.Clipboard` permite acceder fácilmente al Portapapeles y leer y escribir en él.  
   
 ## <a name="reading-from-the-clipboard"></a>Leer desde el Portapapeles  
+
  Use el método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> para leer el texto en el Portapapeles. El código siguiente lee el texto y lo muestra en un cuadro de mensaje. Para que el ejemplo se ejecute correctamente debe haber texto almacenado en el Portapapeles.  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
@@ -35,6 +37,7 @@ El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado
  Los elementos colocados en el Portapapeles se conservan incluso después de que se cierre la aplicación.  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Determinar el tipo de archivo almacenado en el Portapapeles  
+
  Los datos del Portapapeles pueden adoptar varios formatos distintos, como texto, un archivo de audio o una imagen. Para determinar qué tipo de archivo está en el Portapapeles, puede usar métodos como <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> y <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. El método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> puede usarse si tiene un formato personalizado que desea comprobar.  
   
  Use la función `ContainsImage` para determinar si los datos incluidos en el Portapapeles son una imagen. El código siguiente comprueba si los datos son una imagen e informa en consecuencia.  
@@ -42,6 +45,7 @@ El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
 ## <a name="clearing-the-clipboard"></a>Borrar el Portapapeles  
+
  El método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> borra el Portapapeles. Dado que otros procesos comparten el Portapapeles, borrarlo puede afectar a esos procesos.  
   
  En el código siguiente se muestra cómo puede utilizar el método `Clear`.  
@@ -49,6 +53,7 @@ El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
 ## <a name="writing-to-the-clipboard"></a>Escribir en el Portapapeles  
+
  Use el método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> para escribir texto en el Portapapeles. El código siguiente escribe la cadena "This is a test string" en el Portapapeles.  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  

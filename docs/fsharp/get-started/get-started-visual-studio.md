@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio
 description: Obtenga información sobre cómo F# usar con Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 80b4fc5b7631eace719832fe32003cad578ead27
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082700"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552827"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introducción a F# en Visual Studio
 
@@ -29,21 +29,21 @@ Uno de los proyectos más básicos de Visual Studio es la aplicación de consola
 
 ## <a name="writing-your-code"></a>Escritura del código
 
-Vamos a empezar por escribir código primero.  Asegúrese de que el `Program.fs` archivo está abierto y, a continuación, reemplace el contenido por lo siguiente:
+Vamos a empezar por escribir código primero.  Asegúrese de que el archivo de `Program.fs` está abierto y, a continuación, reemplace el contenido por lo siguiente:
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-En el ejemplo de código anterior, se `square` ha definido una función que toma una entrada `x` denominada y la multiplica por sí misma.  Dado F# que utiliza la [inferencia de tipos](../language-reference/type-inference.md), `x` no es necesario especificar el tipo de.  El F# compilador entiende los tipos en los que la multiplicación es válida y asignará un tipo `square` a `x` basándose en cómo se llama a.  Si mantiene el puntero `square`sobre, debería ver lo siguiente:
+En el ejemplo de código anterior, se ha definido una función `square` que toma una entrada denominada `x` y la multiplica por sí misma.  Dado F# que utiliza la [inferencia de tipos](../language-reference/type-inference.md), no es necesario especificar el tipo de `x`.  El F# compilador entiende los tipos en los que la multiplicación es válida y asignará un tipo a `x` basándose en cómo se llama a `square`.  Si mantiene el mouse sobre `square`, debería ver lo siguiente:
 
 ```fsharp
 val square: x:int -> int
 ```
 
-Esto es lo que se conoce como la firma de tipo de la función.  Se puede leer de la siguiente manera: "Square es una función que toma un entero denominado x y genera un entero".  Tenga en cuenta que el `square` compilador dio el tipo por ahora: esto se debe a que la multiplicación no es genérica en *todos los* tipos, sino que `int` es genérica en un conjunto cerrado de tipos.  El F# compilador eligió `int` en este punto, pero ajustará la firma del tipo si `square` llama a con otro tipo de entrada, `float`como.
+Esto es lo que se conoce como la firma de tipo de la función.  Se puede leer de la siguiente manera: "Square es una función que toma un entero denominado x y genera un entero".  Tenga en cuenta que el compilador dio `square` el tipo de `int` por ahora: esto se debe a que la multiplicación no es genérica en *todos los* tipos, sino que es genérica en un conjunto cerrado de tipos.  El F# compilador eligió `int` en este punto, pero ajustará la firma del tipo si llama a `square` con un tipo de entrada diferente, como un `float`.
 
-Otra función, `main`, se define, que se decora con el `EntryPoint` atributo para indicar al F# compilador que la ejecución del programa debe comenzar allí.  Sigue la misma Convención que otros [lenguajes de programación de estilo C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), donde se pueden pasar argumentos de línea de comandos a esta función y se devuelve un código entero (normalmente `0`).
+Otra función, `main`, se define, que está decorada con el atributo `EntryPoint` para indicar F# al compilador que la ejecución del programa debe comenzar allí.  Sigue la misma Convención que otros [lenguajes de programación de estilo C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), donde se pueden pasar argumentos de línea de comandos a esta función y se devuelve un código entero (normalmente `0`).
 
-En esta función se llama a la `square` función con un argumento de. `12`  A F# continuación, el compilador asigna el `square` tipo de `int -> int` para que sea ( `int` es decir, una `int`función que toma y produce).  La llamada a `printfn` es una función de impresión con formato que usa una cadena de formato, similar a los lenguajes de programación de estilo C, los parámetros que se corresponden con los especificados en la cadena de formato y, a continuación, imprime el resultado y una nueva línea.
+En esta función se llama a la función `square` con un argumento de `12`.  A F# continuación, el compilador asigna el tipo de `square` que se va a `int -> int` (es decir, una función que toma un `int` y genera un `int`).  La llamada a `printfn` es una función de impresión con formato que usa una cadena de formato, similar a los lenguajes de programación de estilo C, los parámetros que se corresponden con los especificados en la cadena de formato y, a continuación, imprime el resultado y una nueva línea.
 
 ## <a name="running-your-code"></a>Ejecución del código
 
@@ -59,7 +59,7 @@ Ahora debería ver lo siguiente en la ventana de la consola que Visual Studio ha
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si no lo ha hecho ya, consulte el [paseo F# ](../tour.md)por, que cubre algunas de las características principales del F# lenguaje.  Le proporcionará una visión general de algunas de las funcionalidades de F#y proporcionará ejemplos de código que puede copiar en Visual Studio y ejecutar.  También hay algunos excelentes recursos externos que puede usar, que se muestran en la [ F# guía](../index.md).
+Si no lo ha hecho ya, consulte el [paseo F# ](../tour.md)por, que cubre algunas de las características principales del F# lenguaje.  Le proporcionará una visión general de algunas de las funcionalidades de F#y proporcionará ejemplos de código que puede copiar en Visual Studio y ejecutar.  También puede obtener más información sobre la F# documentación en la [ F# Página principal de docs](../index.yml).
 
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: Referencia del lenguaje F#
 description: Busque F# información de características de lenguaje de esta referencia a los tokens de lenguaje, los conceptos, los tipos, las expresiones y los temas de construcción compatibles con el compilador.
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424987"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552908"
 ---
 # <a name="f-language-reference"></a>Referencia del lenguaje F#
 
@@ -110,7 +110,3 @@ En la tabla siguiente se muestran los temas que describen las construcciones esp
 |[Opciones del compilador](compiler-options.md)|Describe las opciones de línea de comandos para el compilador de F#.|
 |[Directivas de compilador](compiler-directives.md)|Describe las directivas de procesador y las directivas de compilador.|
 |[Identificadores de línea, archivo y ruta de acceso de origen](source-line-file-path-identifiers.md)|Describe los identificadores `__LINE__`, `__SOURCE_DIRECTORY__` y `__SOURCE_FILE__`, que son valores integrados que permiten obtener acceso al número de línea y al nombre de directorio y archivo de origen en el código.|
-
-## <a name="see-also"></a>Vea también
-
-- [Visual F#](../index.md)

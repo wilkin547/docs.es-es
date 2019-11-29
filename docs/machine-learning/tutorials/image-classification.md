@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow'
 description: Obtenga información sobre cómo transferir el conocimiento de un modelo de TensorFlow existente a un modelo de clasificación de imágenes de ML.NET nuevo. El modelo TensorFlow se entrenó para clasificar las imágenes en mil categorías. El modelo de ML.NET usa el aprendizaje de transferencia para clasificar las imágenes en menos categorías más amplias.
-ms.date: 10/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129597"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204986"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -40,13 +40,7 @@ En este tutorial, usará parte de un modelo de TensorFlow (entrenado para clasif
 ## <a name="prerequisites"></a>Requisitos previos
 
 * [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
-
-* Paquete NuGet de Microsoft.ML 1.3.1
-* Paquete NuGet de Microsoft.ML.ImageAnalytics 1.3.1
-* Paquete NuGet de Microsoft.ML.TensorFlow 1.3.1
-
 * [El archivo ZIP del directorio de recursos del tutorial](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
-
 * [El modelo de Machine Learning de InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>Selección de la tarea de aprendizaje automático adecuada
@@ -130,10 +124,10 @@ Las imágenes de entrenamiento y prueba se encuentran en las carpetas de recurso
 
     * En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**.
     * Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar y busque **Microsoft.ML**.
-    * Haga clic en el menú desplegable **Versión**, seleccione el paquete **1.3.1** en la lista y, luego, el botón **Instalar**.
+    * Haga clic en el menú desplegable **Versión**, seleccione el paquete **1.4.0** en la lista y, luego, el botón **Instalar**.
     * Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de los cambios**.
     * Haga clic en el botón **Acepto** en el cuadro de diálogo **Aceptación de la licencia** si está de acuerdo con los términos de licencia de los paquetes que aparecen.
-    * Repita estos pasos para **Microsoft.ML.ImageAnalytics v1.3.1** y **Microsoft.ML.TensorFlow v1.3.1**.
+    * Repita estos pasos para **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** y **Microsoft.ML.TensorFlow v1.4.0**.
 
 ### <a name="download-assets"></a>Descarga de activos
 

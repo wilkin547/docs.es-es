@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039014"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552472"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
 
-C# proporciona una serie de operadores compatibles con los tipos integrados. Por ejemplo, los [operadores aritméticos](arithmetic-operators.md) realizan operaciones aritméticas con operandos numéricos, y los [operadores lógicos booleanos](boolean-logical-operators.md) realizan operaciones lógicas con los operandos [bool](../keywords/bool.md). Algunos operadores se pueden [sobrecargar](operator-overloading.md). Con la sobrecarga de operadores, puede especificar el comportamiento del operador para los operandos de un tipo definido por el usuario.
+C# proporciona una serie de operadores compatibles con los tipos integrados. Por ejemplo, los [operadores aritméticos](arithmetic-operators.md) realizan operaciones aritméticas con operandos numéricos, y los [operadores lógicos booleanos](boolean-logical-operators.md) realizan operaciones lógicas con los operandos [bool](../builtin-types/bool.md). Algunos operadores se pueden [sobrecargar](operator-overloading.md). Con la sobrecarga de operadores, puede especificar el comportamiento del operador para los operandos de un tipo definido por el usuario.
 
 En una [expresión](../../programming-guide/statements-expressions-operators/expressions.md), la prioridad y la asociatividad de los operadores determinan el orden en el que se realizan las operaciones. Puede usar los paréntesis para cambiar el orden de evaluación impuesto por la prioridad y la asociatividad de operadores.
 

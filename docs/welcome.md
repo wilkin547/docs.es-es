@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283934"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552949"
 ---
 # <a name="welcome-to-net"></a>Bienvenido a .NET
 
@@ -48,7 +48,7 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes. Puede 
 - [Guía de .NET Core](core/index.md)
 - [Guía de .NET Framework](framework/index.md)
 - [Guía de C#](csharp/index.yml)
-- [Guía de F#](fsharp/index.md)
+- [Guía de F#](fsharp/index.yml)
 - [Guía de Visual Basic](visual-basic/index.md)
 - [Guía de ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)

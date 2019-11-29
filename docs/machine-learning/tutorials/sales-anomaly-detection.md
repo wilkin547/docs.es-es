@@ -1,21 +1,21 @@
 ---
 title: 'Tutorial: Detección de anomalías en las ventas de productos'
 description: Aprenda a crear una aplicación de detección de anomalías para los datos de ventas de productos. En este tutorial se va a crear una aplicación de consola de .NET Core mediante C# en Visual Studio 2019.
-ms.date: 07/17/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fe2904dee349f32feb115ea533adbb4b1d8b7140
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774442"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204939"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detección de anomalías en ventas de productos con ML.NET
 
 Aprenda a crear una aplicación de detección de anomalías para los datos de ventas de productos. En este tutorial se va a crear una aplicación de consola de .NET Core mediante C# en Visual Studio.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > * Carga de los datos
@@ -44,7 +44,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 3. Instale el **paquete NuGet Microsoft.ML**:
 
-    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como el origen del paquete, seleccione la pestaña Examinar, busque **Microsoft.ML**, seleccione el paquete **v1.0.0** en la lista de paquetes y seleccione el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados. Repita estos pasos para **Microsoft.ML.TimeSeries v0.12.0**.
+    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar, busque **Microsoft.ML** y seleccione el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados. Repita estos pasos para **Microsoft.ML.TimeSeries**.
 
 4. Agregue las instrucciones `using` siguientes en la parte superior del archivo *Program.cs*:
 
@@ -125,9 +125,9 @@ Los datos de ML.NET se representan como una [clase IDataView](xref:Microsoft.ML.
 
 ## <a name="time-series-anomaly-detection"></a>Detección de anomalías en una serie temporal
 
-La detección de anomalías marca eventos o comportamientos inesperados o poco habituales. Proporciona pistas sobre dónde buscar problemas y ayuda a responder la pregunta "¿es extraño esto?".
+La detección de anomalías marca comportamientos o eventos inesperados o poco habituales. Proporciona pistas sobre dónde buscar problemas y ayuda a responder la pregunta "¿es extraño esto?".
 
-![Es extraño esto](./media/sales-anomaly-detection/anomalydetection.png)
+![Ejemplo de la detección de anomalías "Es extraño esto".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 La detección de anomalías es el proceso de detectar valores atípicos de datos de series temporales, puntos en determinada serie temporal de entrada donde el comportamiento no es lo que se esperaba o es "extraño".
 
@@ -152,7 +152,7 @@ Analizará los mismos datos de ventas de productos para detectar los picos y los
 
 El objetivo de la detección de picos es identificar ráfagas repentinas pero temporales que difieren significativamente de la mayoría de los valores de datos de las series temporales. Es importante detectar estos elementos, eventos u observaciones poco frecuentes y sospechosos de manera oportuna con el fin de minimizarlos. El siguiente enfoque puede utilizarse para detectar una variedad de anomalías, como interrupciones, ciberataques o contenido web viral. La siguiente imagen es un ejemplo de los picos de un conjunto de datos de serie temporal:
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![Captura de pantalla en la que se muestran dos detecciones de picos.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>Agregar el método CreateEmptyDataView()
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` son cambios permanentes en una distribución de valores de secuencia de eventos de serie temporal, como los cambios de nivel y las tendencias. Estos cambios persistentes duran mucho más tiempo que `spikes` y podrían indicar eventos catastróficos. `Change points` no son normalmente visibles a simple vista, pero se pueden detectar en los datos mediante enfoques como el del siguiente método.  La siguiente imagen es un ejemplo de una detección de puntos de cambio:
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![Captura de pantalla en la que se muestra una detección de puntos de cambio.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>Crear el método DetectChangepoint()
 
@@ -367,11 +367,11 @@ Alert   Score   P-Value Martingale value
 0       651.90  0.14    0.09
 ```
 
-Felicidades. Ya ha creado correctamente los modelos de aprendizaje automático para detectar anomalías de picos y puntos de cambio en los datos de ventas.
+¡Enhorabuena! Ya ha creado correctamente los modelos de aprendizaje automático para detectar anomalías de picos y puntos de cambio en los datos de ventas.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
 > * Carga de los datos

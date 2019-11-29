@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970114"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204516"
 ---
 # <a name="-target-c-compiler-options"></a>-target (Opciones del compilador de C#)
 La opción del compilador **-target** se puede especificar en uno de estos cuatro formatos:  
   
  [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- Para crear un archivo .exe para aplicaciones de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
+ Para crear un archivo .exe para aplicaciones de la Tienda Windows 8.x.  
   
  [/target:exe](./target-exe-compiler-option.md)  
  Para crear un archivo .exe.  

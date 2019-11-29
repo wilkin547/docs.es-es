@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Lectura de archivos de texto con varios formatos en Visual Basic
+title: Procedimiento Lectura de archivos de texto con varios formatos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: dc726f7648c1c0a564594331023f03d20569d766
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736820"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334572"
 ---
 # <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedimiento Lectura de archivos de texto con varios formatos en Visual Basic
 

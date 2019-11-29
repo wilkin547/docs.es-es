@@ -4,12 +4,12 @@ description: Encuentre recursos para aprender a crear aplicaciones .NET Core en 
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521626"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428872"
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
 
@@ -52,7 +52,7 @@ Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriale
 - Vea un vídeo sobre [cómo instalar y usar Visual Studio 2017 y .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
 - [Introducción a .NET Core con la línea de comandos.](tutorials/using-with-xplat-cli.md)
 
-Vea el artículo [Requisitos previos para .NET Core en Windows](windows-prerequisites.md) para obtener una lista de las versiones de Windows admitidas.
+Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) para obtener una lista de las versiones de Windows admitidas.
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -61,7 +61,7 @@ Para empezar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales
 - [Introducción a .NET Core con la línea de comandos.](tutorials/using-with-xplat-cli.md)
 - Vea un vídeo de [introducción a Visual Studio Code mediante C# y .NET Core en Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-Vea el artículo [Requisitos previos para .NET Core en Linux](linux-prerequisites.md) para obtener una lista de las versiones y distribuciones de Linux admitidas.
+Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) para obtener una lista de las distribuciones y las versiones de Linux admitidas.
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
@@ -73,6 +73,6 @@ Para empezar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales
 - [Introducción a .NET Core en macOS con Visual Studio para Mac.](tutorials/using-on-mac-vs.md)
 - [Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac.](tutorials/using-on-mac-vs-full-solution.md)
 
-Vea el artículo [Requisitos previos para .NET Core en macOS](macos-prerequisites.md) para obtener una lista de las versiones de OS X y macOS admitidas.
+Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos) para obtener una lista de las versiones de OS X / macOS admitidas.
 
 ---

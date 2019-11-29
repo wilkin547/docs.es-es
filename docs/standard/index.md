@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 6ce570460984d975b19fd2a696b668bc41e9054e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1af17be16061aedab9226bf2b4a0419b0a8d63b7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283839"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552835"
 ---
 # <a name="net-guide"></a>Guía de .NET
 
@@ -58,7 +58,7 @@ Si está interesado en algunos de los conceptos principales de. NET, consulte:
 Consulte también la guía correspondiente a cada lenguaje de programación para obtener más información sobre los tres lenguajes principales de .NET:
 
 * [Guía de C#](../csharp/index.yml)
-* [Guía de F#](../fsharp/index.md)
+* [Guía de F#](../fsharp/index.yml)
 * [Guía de Visual Basic](../visual-basic/index.md)
 
 ## <a name="api-reference"></a>Referencia de API

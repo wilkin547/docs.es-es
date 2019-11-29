@@ -2,12 +2,12 @@
 title: Programación asincrónica en C#
 description: Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 633da9485c5f74efb6e57234a31f0404e39605ec
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167887"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552439"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programación asincrónica con async y await
 
@@ -65,8 +65,8 @@ Realicemos estos cambios en el código del desayuno. El primer paso consiste en 
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggTask = FryEggs(2);
-Egg eggs = await eggTask;
+Task<Egg> eggsTask = FryEggs(2);
+Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
 Task<Bacon> baconTask = FryBacon(3);
 Bacon bacon = await baconTask;
@@ -87,7 +87,7 @@ Después, puede mover las instrucciones `await` del beicon y los huevos al final
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggTask = FryEggs(2);
+Task<Egg> eggsTask = FryEggs(2);
 Task<Bacon> baconTask = FryBacon(3);
 Task<Toast> toastTask = ToastBread(2);
 Toast toast = await toastTask;
@@ -97,7 +97,7 @@ Console.WriteLine("toast is ready");
 Juice oj = PourOJ();
 Console.WriteLine("oj is ready");
 
-Egg eggs = await eggTask;
+Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
 Bacon bacon = await baconTask;
 Console.WriteLine("bacon is ready");
@@ -129,7 +129,7 @@ El cambio anterior ilustra una técnica importante para trabajar con código asi
 La serie de instrucciones `await` al final del código anterior se puede mejorar mediante el uso de métodos de la clase `Task`. Una de estas API es <xref:System.Threading.Tasks.Task.WhenAll%2A>, que devuelve un objeto <xref:System.Threading.Tasks.Task> que se completa cuando finalizan todas las tareas de la lista de argumentos, como se muestra en el código siguiente:
 
 ```csharp
-await Task.WhenAll(eggTask, baconTask, toastTask);
+await Task.WhenAll(eggsTask, baconTask, toastTask);
 Console.WriteLine("eggs are ready");
 Console.WriteLine("bacon is ready");
 Console.WriteLine("toast is ready");

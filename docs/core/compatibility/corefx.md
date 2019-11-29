@@ -1,13 +1,13 @@
 ---
-title: Cambios importantes en CoreFx - .NET Core
+title: 'Cambios importantes de la biblioteca de clases base: .NET Core'
 description: Enumera los cambios importantes de CoreFx en .NET, la biblioteca de clases base.
 ms.date: 09/20/2019
-ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 859eb30b8f6fa48350f81ee1822247e72698fead
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739790"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429194"
 ---
 # <a name="corefx-breaking-changes"></a>Cambios importantes de CoreFx
 

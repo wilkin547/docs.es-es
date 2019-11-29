@@ -2,12 +2,12 @@
 title: Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 description: Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f90aabf0d10ce61dc10fcd952d66ca00e66d282d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428745"
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 
@@ -108,7 +108,7 @@ Solo se muestran los valores comunes. Para obtener la versión más reciente y c
   - `win10-arm`
   - `win10-arm64`
 
-Vea [Requisitos previos para .NET Core en Windows](windows-prerequisites.md) para más información.
+Para obtener más información, vea [Dependencias y requisitos de .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="linux-rids"></a>RID de Linux
 
@@ -126,7 +126,7 @@ Solo se muestran los valores comunes. Para obtener la versión más reciente y c
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Vea [Requisitos previos para .NET Core en Linux](linux-prerequisites.md) para más información.
+Para obtener más información, vea [Dependencias y requisitos de .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="macos-rids"></a>RID de macOS
 
@@ -145,7 +145,7 @@ Los RID de macOS usan la personalización de marca antigua "OSX". Solo se muestr
 - macOS 10.14 Mojave (.NET Core 1.1 o versiones posteriores)
   - `osx.10.14-x64`
 
-Vea [Requisitos previos para .NET Core en macOS](macos-prerequisites.md) para más información.
+Para obtener más información, vea [Dependencias y requisitos de .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos).
 
 ## <a name="see-also"></a>Vea también
 

@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 8b2810af81a57cf21b9a2e2438f7f6aa2cb7a669
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772071"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429498"
 ---
 # <a name="using-structs-c-programming-guide"></a>Uso de estructuras (Guía de programación de C#)
 
-El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../language-reference/keywords/class.md) con [Propiedades autoimplementadas](./auto-implemented-properties.md), seguramente un [struct](../../language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Puesto que .NET Framework contiene un objeto llamado <xref:System.Drawing.Point>, la estructura de este ejemplo se llamará `Coords` en su lugar.
+El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../language-reference/keywords/class.md) con [Propiedades autoimplementadas](./auto-implemented-properties.md), seguramente un [struct](../../language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Puesto que .NET ya contiene un objeto llamado <xref:System.Drawing.Point>, la estructura de este ejemplo se llamará `Coords` en su lugar.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

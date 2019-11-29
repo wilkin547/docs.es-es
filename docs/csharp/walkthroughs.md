@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195493"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204590"
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -24,7 +24,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  Muestra cómo crear una solución asincrónica mediante el uso de [async](./language-reference/keywords/async.md) y [await](./language-reference/operators/await.md).  
   
  [Crear un componente de Windows Runtime en C# o Visual Basic y llamarlo desde JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Muestra cómo crear un tipo de Windows Runtime, empaquetarlo en un componente de Windows Runtime y, a continuación, llamar al componente desde una aplicación de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] creada para Windows mediante JavaScript.  
+ Muestra cómo crear un tipo de Windows Runtime, empaquetarlo en un componente de Windows Runtime y, a continuación, llamar al componente desde una aplicación de la Tienda Windows 8.x creada para Windows mediante JavaScript.  
   
  [Programación de Office (C# y Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Muestra cómo crear un libro de Excel y un documento de Word mediante C# y Visual Basic.  

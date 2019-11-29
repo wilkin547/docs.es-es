@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 540b95beaf00c17812a3b602602504278be69b0e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960827"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429393"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -30,6 +30,8 @@ C# 8.0 agrega las siguientes características y mejoras al lenguaje C#:
 - [Tipos construidos no administrados](#unmanaged-constructed-types)
 - [Stackalloc en expresiones anidadas](#stackalloc-in-nested-expressions)
 - [Mejora de las cadenas textuales interpoladas](#enhancement-of-interpolated-verbatim-strings)
+
+C# 8.0 se admite en **.NET Core 3.x** y **.NET Standard 2.1**. Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
 
 En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 

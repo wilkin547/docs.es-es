@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417798"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204636"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
@@ -20,16 +20,14 @@ Las restricciones informan al compilador sobre las capacidades que debe tener un
 
 |Restricción|DESCRIPCIÓN|
 |----------------|-----------------|
-|`where T : struct`|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable%601> puede especificarse. Para más información sobre los tipos de valor que admiten un valor NULL, consulte [Tipos de valor que admiten un valor NULL](../nullable-types/index.md).|
+|`where T : struct`|El argumento de tipo debe ser un tipo que no acepta valores NULL. Para más información sobre los tipos de valor que admiten un valor NULL, consulte [Tipos de valor que admiten un valor NULL](../../language-reference/builtin-types/nullable-value-types.md). Todos los tipos de valor tienen un constructor sin parámetros accesible, por lo que la restricción `struct` implica la restricción `new()` y no se puede combinar con la restricción `new()`. Tampoco se puede combinar la restricción `struct` con la restricción `unmanaged`.|
 |`where T : class`|El argumento de tipo debe ser un tipo de referencia. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
 |`where T : notnull`|El argumento de tipo debe ser un tipo que no acepta valores NULL. El argumento puede ser un tipo de referencia que no acepta valores NULL en C# 8.0 o posterior, o un tipo de valor que no acepta valores NULL. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
-|`where T : unmanaged`|El argumento de tipo debe ser [un tipo no administrado](../../language-reference/builtin-types/unmanaged-types.md).|
-|`where T : new()`|El argumento de tipo debe tener un constructor sin parámetros público. Cuando se usa conjuntamente con otras restricciones, la restricción `new()` debe especificarse en último lugar.|
+|`where T : unmanaged`|El argumento de tipo debe ser un tipo [no administrado](../../language-reference/builtin-types/unmanaged-types.md) que no acepta valores NULL. La restricción `unmanaged` implica la restricción `struct` y no se puede combinar con las restricciones `struct` ni `new()`.|
+|`where T : new()`|El argumento de tipo debe tener un constructor sin parámetros público. Cuando se usa conjuntamente con otras restricciones, la restricción `new()` debe especificarse en último lugar. La restricción `new()` no se puede combinar con las restricciones `struct` ni `unmanaged`.|
 |`where T :` *\<nombre de clase base>*|El argumento de tipo debe ser o derivarse de la clase base especificada.|
 |`where T :` *\<nombre de interfaz>*|El argumento de tipo debe ser o implementar la interfaz especificada. Pueden especificarse varias restricciones de interfaz. La interfaz de restricciones también puede ser genérica.|
 |`where T : U`|El argumento de tipo proporcionado por T debe ser o derivarse del argumento proporcionado para U.|
-
-Algunas de estas restricciones son mutuamente excluyentes. Todos los tipos de valor deben tener un constructor sin parámetros accesible. La restricción `struct` implica la restricción `new()` y la restricción `new()` no se puede combinar con la restricción `struct`. La restricción `unmanaged` implica la restricción `struct`. La restricción `unmanaged` no se puede combinar con las restricciones `struct` o `new()`.
 
 ## <a name="why-use-constraints"></a>Por qué usar restricciones
 
@@ -85,11 +83,13 @@ A diferencia de otras restricciones, cuando un argumento de tipo infringe la res
 
 ## <a name="unmanaged-constraint"></a>Restricción no administrada
 
-A partir de C# 7.3, puede usar la restricción `unmanaged` para especificar que el parámetro de tipo debe ser un [tipo no administrado](../../language-reference/builtin-types/unmanaged-types.md). La restricción `unmanaged` permite escribir rutinas reutilizables para trabajar con tipos que se pueden manipular como bloques de memoria, como se muestra en el ejemplo siguiente:
+A partir de C# 7.3, puede usar la restricción `unmanaged` para especificar que el parámetro de tipo debe ser un [tipo no administrado](../../language-reference/builtin-types/unmanaged-types.md) que no acepta valores NULL. La restricción `unmanaged` permite escribir rutinas reutilizables para trabajar con tipos que se pueden manipular como bloques de memoria, como se muestra en el ejemplo siguiente:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
 El método anterior debe compilarse en un contexto `unsafe`, ya que usa el operador `sizeof` en un tipo que se desconoce si es integrado. Sin la restricción `unmanaged`, el operador `sizeof` no está disponible.
+
+La restricción `unmanaged` implica la restricción `struct` y no se puede combinar con ella. Dado que la restricción `struct` implica la restricción `new()`, la restricción `unmanaged` tampoco se puede combinar con la restricción `new()`.
 
 ## <a name="delegate-constraints"></a>Restricciones de delegado
 

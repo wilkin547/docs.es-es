@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422296"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428488"
 ---
 # <a name="switch-c-reference"></a>switch (referencia de C#)
 
@@ -43,10 +43,10 @@ La expresión de coincidencia proporciona el valor que debe coincidir con los pa
 
 En C# 6 y versiones anteriores, la expresión de coincidencia debe ser una expresión que devuelva un valor de los siguientes tipos:
 
-- Un [carácter](char.md).
+- Un [carácter](../builtin-types/char.md).
 - Una [cadena](../builtin-types/reference-types.md).
 - Un [booleano](bool.md).
-- Un valor entero, como [int](../builtin-types/integral-numeric-types.md) o [long](../builtin-types/integral-numeric-types.md).
+- Un valor [entero](../builtin-types/integral-numeric-types.md), como `int` o `long`.
 - Un valor [enum](enum.md).
 
 A partir de C# 7.0, la expresión de coincidencia puede ser cualquier expresión que no sea nula.
@@ -121,10 +121,10 @@ El patrón de constante comprueba si la expresión de coincidencia es igual a un
 donde *constant* es el valor que se va a comprobar. *constant* puede ser cualquiera de las expresiones de constante siguientes:
 
 - Un literal [booleano](bool.md), ya sea `true` o `false`.
-- Cualquier constante entera, como [int](../builtin-types/integral-numeric-types.md), [long](../builtin-types/integral-numeric-types.md) o [byte](../builtin-types/integral-numeric-types.md).
+- Cualquier constante [entera](../builtin-types/integral-numeric-types.md), como `int`, `long` o `byte`.
 - El nombre de una variable `const` declarada.
 - Una constante de enumeración.
-- Un literal de [carácter](char.md).
+- Un literal de [carácter](../builtin-types/char.md).
 - Un literal de [cadena](../builtin-types/reference-types.md).
 
 La expresión de constante se evalúa de la siguiente forma:

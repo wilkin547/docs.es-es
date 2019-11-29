@@ -5,28 +5,28 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039597"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428562"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilación de una aplicación "Hola mundo" en C# con el SDK de .NET Core en Visual Studio 2017
 
-En este tema se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con C# en Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
+En este artículo se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con C# en Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-[Visual Studio de 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. Puede desarrollar su aplicación con .NET Core 2.1 o versiones posteriores.
+[Visual Studio 2017 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. Puede desarrollar su aplicación con .NET Core 2.1 o versiones posteriores.
 
-Para obtener más información, vea el tema [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md).
+Para obtener más información, vea el artículo [Dependencias y requisitos de .NET Core](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio).
 
 ## <a name="a-simple-hello-world-application"></a>Una aplicación Hola mundo sencilla
 
 Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pasos:
 
-1. Inicie Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo *Nuevo proyecto*\*, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "Hola mundo". Seleccione el botón **Aceptar**.
+1. Inicie Visual Studio. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "Hola mundo". Seleccione el botón **Aceptar**.
 
    ![Cuadro de diálogo Nuevo proyecto con la aplicación de consola seleccionada](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -57,9 +57,9 @@ Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pa
 
 Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la fecha y la hora. Para modificar y probar el programa, haga lo siguiente:
 
-1. Escriba el siguiente código de C# en la ventana de código inmediatamente después del corchete de apertura que sigue a la línea `static void Main(string[] args)` y antes del primer corchete de cierre:
+1. Escriba el código de C# siguiente en la ventana de código inmediatamente después del corchete de apertura que sigue a la línea `static void Main(string[] args)` y antes de la primera llave de cierre:
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    Este código reemplaza el contenido del método `Main`.
 
@@ -81,7 +81,7 @@ Ha creado y ejecutado la aplicación. Para desarrollar una aplicación profesion
 
 - Para obtener información sobre el desarrollo y publicación de una versión de distribución de la aplicación, consulte [Publicación de la aplicación Hola mundo de .NET Core con Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 En lugar de una aplicación de consola, también puede crear una biblioteca de clases con .NET Core y Visual Studio 2017. Para consultar una introducción detallada, vea [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017).
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd6861a71bdaac2d3500be52ae29c9fdb383a574
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092711"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428897"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -24,7 +24,7 @@ En las secciones siguientes se muestra cómo usar Microsoft Visual Studio para c
 - Implementación autocontenida
 - Implementación autocontenida con dependencias de terceros
 
-Para obtener información sobre el uso de Visual Studio para desarrollar aplicaciones de .NET Core, vea [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
+Para obtener información sobre el uso de Visual Studio para desarrollar aplicaciones de .NET Core, vea [Dependencias y requisitos de .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows) .
 
 ## <a name="framework-dependent-deployment"></a>Implementación dependiente de marco de trabajo
 
@@ -71,7 +71,7 @@ La implementación de una implementación dependiente de la plataforma con una o
 
 1. Use el **Administrador de paquetes NuGet** para agregar una referencia a un paquete de NuGet para el proyecto y, si el paquete todavía no está disponible en el sistema, instálelo. Para abrir el administrador de paquetes, seleccione **Herramientas** > **Administrador de paquetes NuGet** > **Administrar paquetes NuGet para la solución**.
 
-1. Confirme que `Newtonsoft.Json` está instalado en el sistema y, si no es así, instálelo. La pestaña **Instalado** enumera los paquetes de NuGet instalados en el sistema. Si `Newtonsoft.Json` no aparece ahí, seleccione la pestaña **Examinar** y escriba "Newtonsoft.Json" en el cuadro de búsqueda. Seleccione `Newtonsoft.Json` y, en el panel derecho, seleccione el proyecto antes de hacer clic en **Instalar**.
+1. Confirme que las dependencias de terceros (por ejemplo, `Newtonsoft.Json`) están instaladas en el sistema y, si no es así, instálelas. La pestaña **Instalado** enumera los paquetes de NuGet instalados en el sistema. Si `Newtonsoft.Json` no aparece ahí, seleccione la pestaña **Examinar** y escriba "Newtonsoft.Json" en el cuadro de búsqueda. Seleccione `Newtonsoft.Json` y, en el panel derecho, seleccione el proyecto antes de hacer clic en **Instalar**.
 
 1. Si `Newtonsoft.Json` ya está instalado en el sistema, agréguelo al proyecto seleccionando el proyecto en el panel derecho de la pestaña **Administrar paquetes para la solución**.
 
@@ -98,7 +98,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
    Para habilitar el modo invariable, haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Editar SCD.csproj** o **Editar SCD.vbproj**. Luego agregue las siguientes líneas resaltadas al archivo:
 
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
 1. Cree una compilación de depuración de la aplicación.
 
@@ -268,7 +268,7 @@ Implementar una implementación independiente con una o varias dependencias de t
 
 1. Use el **Administrador de paquetes NuGet** para agregar una referencia a un paquete de NuGet para el proyecto y, si el paquete todavía no está disponible en el sistema, instálelo. Para abrir el administrador de paquetes, seleccione **Herramientas** > **Administrador de paquetes NuGet** > **Administrar paquetes NuGet para la solución**.
 
-1. Confirme que `Newtonsoft.Json` está instalado en el sistema y, si no es así, instálelo. La pestaña **Instalado** enumera los paquetes de NuGet instalados en el sistema. Si `Newtonsoft.Json` no aparece ahí, seleccione la pestaña **Examinar** y escriba "Newtonsoft.Json" en el cuadro de búsqueda. Seleccione `Newtonsoft.Json` y, en el panel derecho, seleccione el proyecto antes de hacer clic en **Instalar**.
+1. Confirme que las dependencias de terceros (por ejemplo, `Newtonsoft.Json`) están instaladas en el sistema y, si no es así, instálelas. La pestaña **Instalado** enumera los paquetes de NuGet instalados en el sistema. Si `Newtonsoft.Json` no aparece ahí, seleccione la pestaña **Examinar** y escriba "Newtonsoft.Json" en el cuadro de búsqueda. Seleccione `Newtonsoft.Json` y, en el panel derecho, seleccione el proyecto antes de hacer clic en **Instalar**.
 
 1. Si `Newtonsoft.Json` ya está instalado en el sistema, agréguelo al proyecto seleccionando el proyecto en el panel derecho de la pestaña **Administrar paquetes para la solución**.
 

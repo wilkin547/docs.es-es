@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente'
 description: En este tutorial se muestra cómo usar un modelo de TensorFlow previamente entrenado para clasificar la opinión en comentarios de sitios Web. El clasificador binario de opiniones es una aplicación de consola de C# desarrollada con Visual Studio.
-ms.date: 09/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 417abb5052df95c8496d97894d3e11d2956d7a1a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774397"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204920"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -19,7 +19,7 @@ En este tutorial se muestra cómo usar un modelo de TensorFlow previamente entre
 
 El modelo de TensorFlow que se usa en este tutorial se entrenó con reseñas de películas procedentes de la base de datos de IMDB. Cuando haya terminado de desarrollar la aplicación, podrá proporcionar el texto de la reseña de la película y la aplicación le indicará si la reseña tiene una opinión positiva o negativa.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > * Carga de un modelo de TensorFlow entrenado previamente
@@ -32,9 +32,9 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 * [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
-## <a name="setup"></a>Configuración
+## <a name="setup"></a>Programa de instalación
 
-### <a name="create-the-application"></a>Creación de la aplicación
+### <a name="create-the-application"></a>Crear la aplicación
 
 1. Cree una **aplicación de consola de .NET Core** denominada "TextClassificationTF".
 
@@ -42,7 +42,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 3. Instale el **paquete NuGet Microsoft.ML**:
 
-    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete y luego seleccione la pestaña **Examinar**. Busque **Microsoft.ML**, seleccione el paquete que desee y luego, el botón **Instalar**. Acepte los términos de licencia del paquete que elija para continuar con la instalación. Repita estos pasos para **Microsoft.ML.TensorFlow**.
+    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete y luego seleccione la pestaña **Examinar**. Busque **Microsoft.ML**, seleccione el paquete que desee y luego, el botón **Instalar**. Acepte los términos de licencia del paquete que elija para continuar con la instalación. Repita estos pasos para **Microsoft.ML.TensorFlow** y **SciSharp.TensorFlow.Redist**.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>Adición del modelo TensorFlow al proyecto
 
@@ -81,14 +81,14 @@ Las reseñas de películas son texto de forma libre. La aplicación convierte el
 
 La primera consiste en dividir el texto en palabras independientes y usar el archivo de asignación proporcionado para asignar cada palabra a una codificación de enteros. El resultado de esta transformación es una matriz de enteros de longitud variable cuya longitud corresponde al número de palabras de la oración.
 
-|Propiedad| Valor|type|
+|Propiedad.| Valor|Tipo|
 |-------------|-----------------------|------|
 |ReviewText|Esta película es realmente buena|cadena|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 
 El tamaño de la matriz de características de longitud variable se cambia a una longitud fija de 600. Esta es la longitud que espera el modelo de TensorFlow.
 
-|Propiedad| Valor|type|
+|Propiedad.| Valor|Tipo|
 |-------------|-----------------------|------|
 |ReviewText|Esta película es realmente buena|cadena|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
@@ -132,7 +132,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
 1. Cree un diccionario para codificar palabras como enteros mediante el método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) para cargar los datos de asignación de un archivo, como se aprecia en la tabla siguiente:
 
-    |Word     |Índice    |
+    |Palabra     |Índice    |
     |---------|---------|
     |niños     |  362    |
     |want     |  181    |
@@ -226,7 +226,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
 1. La función [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) realiza una predicción sobre una sola fila de datos:
 
-    |Propiedad| Valor|type|
+    |Propiedad.| Valor|Tipo|
     |-------------|-----------------------|------|
     |Predicción|[0.5459937, 0.454006255]|float[]|
 
@@ -238,9 +238,9 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
     [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
 
-## <a name="results"></a>Results
+## <a name="results"></a>Resultados
 
-Compile y ejecute la aplicación.
+Compile y ejecute su aplicación.
 
 Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Estos mensajes se han quitado de los resultados siguientes para mayor claridad.
 
@@ -249,11 +249,11 @@ Number of classes: 2
 Is sentiment/review positive ? Yes
 ```
 
-Felicidades. Ha creado correctamente un modelo de Machine Learning para clasificar y predecir la opinión de los mensajes reutilizando un modelo de `TensorFlow` entrenado previamente en ML.NET.
+¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para clasificar y predecir la opinión de los mensajes reutilizando un modelo de `TensorFlow` entrenado previamente en ML.NET.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
 > * Carga de un modelo de TensorFlow entrenado previamente

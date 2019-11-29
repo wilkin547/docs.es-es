@@ -1,27 +1,27 @@
 ---
 title: 'Tutorial: Clasificación de incidencias de soporte técnico (clasificación multiclase)'
 description: Descubra cómo usar ML.NET en un escenario de clasificación multiclase para clasificar los problemas de GitHub y asignarlos a un área determinada.
-ms.date: 09/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65b83c4396c1f80281cbb60b5e9e6e91c802472b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774487"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74205037"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
 Este tutorial de ejemplo ilustra el uso de ML.NET para crear un clasificador de problemas de GitHub para entrenar un modelo que clasifica y predice la etiqueta de área para un problema de GitHub a través de una aplicación de consola de .NET Core con C# en Visual Studio.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > * Preparar los datos
 > * Transformar los datos
-> * Entrenamiento del modelo
-> * Evaluación del modelo
+> * Entrenar el modelo
+> * Evaluar el modelo
 > * Predecir con el modelo entrenado
 > * Implementar y predecir con un modelo cargado
 
@@ -50,7 +50,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 4. Instale el **paquete NuGet Microsoft.ML**:
 
-    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar, busque **Microsoft.ML**, seleccione el paquete **v 1.0.0** en la lista de paquetes y seleccione el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
+    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar, busque **Microsoft.ML** y seleccione el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
 
 ### <a name="prepare-your-data"></a>Preparar los datos
 
@@ -79,7 +79,7 @@ Agregue el código siguiente a la línea justo encima del método `Main` para es
 
 Cree algunas clases para los datos de entrada y las predicciones. Agregue una nueva clase a su proyecto:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
 
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *GitHubIssueData.cs*. A continuación, seleccione el botón **Agregar**.
 
@@ -204,7 +204,7 @@ Anexe el algoritmo de aprendizaje automático a las definiciones de transformaci
 
 [SdcaMaximumEntropy](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer) es el algoritmo de entrenamiento de clasificación multiclase. Se anexa a `pipeline` y acepta `Title` y `Description` (`Features`) caracterizados y los parámetros de entrada `Label` para aprender de los datos históricos.
 
-### <a name="train-the-model"></a>Entrenamiento del modelo
+### <a name="train-the-model"></a>Entrenar el modelo
 
 Ajuste el modelo a los datos `splitTrainSet` y devuelva el modelo entrenado. Para ello, agregue lo que se indica a continuación como la siguiente línea de código en el método `BuildAndTrainModel()`:
 
@@ -272,13 +272,13 @@ Observe el uso del método [Transform()](xref:Microsoft.ML.ITransformer.Transfor
 
 Las siguientes métricas se evalúan para la clasificación multiclase:
 
-* Microprecisión: todos los pares de ejemplo y clase contribuyen del mismo modo a la métrica de precisión.  Le recomendamos que la microprecisión esté lo más cerca posible de 1.
+* Microprecisión: todos los pares de ejemplo y clase contribuyen del mismo modo a la métrica de precisión.  Quiere que la microprecisión esté lo más cerca posible de 1.
 
-* Macroprecisión: todas las clases contribuyen del mismo modo a la métrica de precisión. Las clases minoritarias tienen el mismo peso que las clases más grandes. Le recomendamos que la macroprecisión esté lo más cerca posible de 1.
+* Macroprecisión: todas las clases contribuyen del mismo modo a la métrica de precisión. Las clases minoritarias tienen el mismo peso que las clases más grandes. Quiere que la macroprecisión esté lo más cerca posible de 1.
 
 * Pérdida de registro: vea [Pérdida de registro](../resources/glossary.md#log-loss). Le recomendamos que la pérdida logarítmica esté lo más cerca posible de 0.
 
-* Reducción de la pérdida de registro: parte de [-inf, 100], donde 100 equivale a una predicción perfecta, y 0 indica una predicción aproximada. Le recomendamos que la reducción de la pérdida de registro esté lo más cerca posible de 0.
+* Reducción de la pérdida de registro: parte de [-inf, 1.00], donde 1.00 equivale a una predicción perfecta, y 0 indica una predicción aproximada. Le recomendamos que la reducción de la pérdida de registro esté lo más cerca posible de 1.
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Mostrar las métricas para la validación del modelo
 
@@ -288,7 +288,7 @@ Utilice el código siguiente para mostrar las métricas, compartir los resultado
 
 ### <a name="save-the-model-to-a-file"></a>Guardar el modelo en un archivo
 
-Una vez que esté satisfecho con el modelo, guárdelo en un archivo para hacer predicciones más adelante o en otra aplicación. Agregue el siguiente código al método `Evaluate`.
+Una vez que esté satisfecho con el modelo, guárdelo en un archivo para hacer predicciones más adelante o en otra aplicación. Agregue el código siguiente al método `Evaluate` .
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
@@ -355,7 +355,7 @@ Muestre `Area` para poder categorizar el problema y actuar en consecuencia. Cree
 
 [!code-csharp[DisplayResults](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayResults)]
 
-## <a name="results"></a>Results
+## <a name="results"></a>Resultados
 
 Los resultados deberían ser similares a los indicados a continuación. A medida que la canalización procesa, muestra mensajes. Puede ver las advertencias o mensajes de procesamiento. Estos mensajes se han quitado de los resultados siguientes para mayor claridad.
 
@@ -372,20 +372,20 @@ Los resultados deberían ser similares a los indicados a continuación. A medida
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-Felicidades. Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir una etiqueta Área de un problema de GitHub. Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
+¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir una etiqueta Área de un problema de GitHub. Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
 > * Preparar los datos
 > * Transformar los datos
-> * Entrenamiento del modelo
-> * Evaluación del modelo
+> * Entrenar el modelo
+> * Evaluar el modelo
 > * Predecir con el modelo entrenado
 > * Implementar y predecir con un modelo cargado
 
 Siga con el siguiente tutorial para obtener más información
 > [!div class="nextstepaction"]
-> [Predictor de tarifa de taxi](taxi-fare.md)
+> [Predictor de tarifa de taxi](predict-prices.md)
