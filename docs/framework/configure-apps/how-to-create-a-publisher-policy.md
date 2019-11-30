@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040187"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568402"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 
@@ -53,7 +53,7 @@ Use [Assembly Linker (al. exe)](../tools/al-exe-assembly-linker.md) para crear e
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>Para crear un ensamblado de directiva de edición
 
-Escriba el siguiente comando en el símbolo del sistema:
+Escriba el comando siguiente en el símbolo del sistema:
 
 ```console
 al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
@@ -74,7 +74,7 @@ En este comando:
   > [!NOTE]
   > La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0.
 
-La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0. El siguiente comando crea un ensamblado de directiva de edición denominado `policy.1.0.myAssembly` a partir de un archivo de directiva de edición denominado `pub.config`, asigna un nombre seguro al ensamblado mediante el par de claves en el archivo `sgKey.snk` y especifica que el ensamblado tiene como destino el procesador x86. arquitectura.
+La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0. El siguiente comando crea un ensamblado de directiva de edición denominado `policy.1.0.myAssembly` a partir de un archivo de directiva de edición denominado `pub.config`, asigna un nombre seguro al ensamblado mediante el par de claves del archivo `sgKey.snk` y especifica que el ensamblado tiene como destino la arquitectura de procesador x86.
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -92,7 +92,7 @@ Use la [herramienta caché global de ensamblados (Gacutil. exe)](../tools/gacuti
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para agregar el ensamblado de directiva de edición a la caché global de ensamblados
 
-Escriba el siguiente comando en el símbolo del sistema:
+Escriba el comando siguiente en el símbolo del sistema:
 
 ```console
 gacutil /i publisherPolicyAssemblyFile
@@ -105,7 +105,7 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> El ensamblado de directiva de edición no se puede Agregar a la caché global de ensamblados a menos que el archivo de directiva de edición original se encuentre en el mismo directorio que el ensamblado.
+> El ensamblado de directiva de edición no se puede Agregar a la caché global de ensamblados a menos que el archivo de directiva de edición original especificado en el argumento `/link` se encuentre en el mismo directorio que el ensamblado.
 
 ## <a name="see-also"></a>Vea también
 

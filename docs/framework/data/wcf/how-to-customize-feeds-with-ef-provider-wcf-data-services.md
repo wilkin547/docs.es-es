@@ -1,25 +1,25 @@
 ---
-title: Procedimiento Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services)
+title: 'Cómo: Personalizar fuentes con el proveedor de Entity Framework (Data Services de WCF)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 8f994065ea42d6fc522fa297cafa8c46a8164e67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 16c3741068d19fb55d8acfd28e4f83df633b0b09
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780155"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569151"
 ---
-# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Procedimiento Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a los elementos no usados que se definen en el protocolo AtomPub. En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework. Para obtener más información, vea [Personalización de fuentes](feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Cómo: Personalizar fuentes con el proveedor de Entity Framework (Data Services de WCF)
+WCF Data Services permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a elementos no usados que se definen en el protocolo AtomPub. En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework. Para obtener más información, vea [Personalización de fuentes](feed-customization-wcf-data-services.md).  
   
  En este tema modificará manualmente el archivo .edmx generado por la herramienta que contiene el modelo de datos. Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo. Para obtener más información sobre el archivo. edmx generado por las herramientas de Entity Data Model, vea [información general sobre el archivo. edmx (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)). En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Para modificar manualmente el archivo Northwind.edmx para agregar los atributos de personalización de fuente  
   
-1. En **Explorador de soluciones**, haga clic con el `Northwind.edmx` botón secundario en el archivo y, a continuación, haga clic en **abrir con**.  
+1. En **Explorador de soluciones**, haga clic con el botón secundario en el archivo `Northwind.edmx` y, a continuación, haga clic en **abrir con**.  
   
 2. En el cuadro de diálogo **abrir con-Northwind. edmx** , seleccione **Editor XML**y, a continuación, haga clic en **Aceptar**.  
   

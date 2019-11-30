@@ -2,12 +2,12 @@
 title: Consideraciones de migración (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: e3e4caf79c1e75708e266e625a4271bc0c90747b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 168aec6ef369f446cfac22ee5c4361fa06aaf16d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854423"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569440"
 ---
 # <a name="migration-considerations-entity-framework"></a>Consideraciones de migración (Entity Framework)
 El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existente. Una de las más importantes es la capacidad de utilizar el modelo conceptual para separar las estructuras de datos que usa la aplicación del esquema en el origen de datos. De esta forma se pueden realizar más adelante y con facilidad cambios en el modelo de almacenamiento o en el propio origen de datos sin realizar los cambios correspondientes en la aplicación. Para obtener más información acerca de las ventajas de usar el Entity Framework, consulte [Entity Framework información general](overview.md) y [Entity Data Model](../entity-data-model.md).  
@@ -29,7 +29,7 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
  La ruta de acceso para migrar una aplicación existente al Entity Framework depende tanto del tipo de aplicación como de la estrategia de acceso a datos existente. Sin embargo, siempre debe realizar las siguientes tareas al migrar una aplicación existente al Entity Framework.  
   
 > [!NOTE]
-> Todas estas tareas se realizan automáticamente al usar las herramientas de Entity Data Model a partir de Visual Studio 2008. Para obtener más información, consulte [Cómo Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+> Todas estas tareas se realizan automáticamente al usar las herramientas de Entity Data Model a partir de Visual Studio 2008. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 1. Actualice la aplicación.  
   
@@ -37,30 +37,30 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
   
 2. Defina los modelos y la asignación.  
   
-     Los archivos de modelo y asignación definen las entidades en el modelo conceptual; las estructuras en el origen de datos, por ejemplo las tablas, los procedimientos almacenados y vistas; y la asignación entre las entidades y estructuras del origen de datos. Para obtener más información, consulte [Cómo Definir manualmente los archivos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))de asignación y de modelo.  
+     Los archivos de modelo y asignación definen las entidades en el modelo conceptual; las estructuras en el origen de datos, por ejemplo las tablas, los procedimientos almacenados y vistas; y la asignación entre las entidades y estructuras del origen de datos. Para obtener más información, vea [Cómo: definir manualmente los archivos de asignación y de modelo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
   
-     Los tipos que se definen en el modelo de almacenamiento deben coincidir con el nombre de los objetos en el origen de datos. Si la aplicación existente expone los datos como objetos, debe asegurarse de que las entidades y las propiedades que se definen en el modelo conceptual coincidan con los nombres de estas clases de datos y propiedades existentes. Para obtener más información, vea [Cómo: Personalizar el modelado y los archivos de asignación para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))trabajar con objetos personalizados.  
+     Los tipos que se definen en el modelo de almacenamiento deben coincidir con el nombre de los objetos en el origen de datos. Si la aplicación existente expone los datos como objetos, debe asegurarse de que las entidades y las propiedades que se definen en el modelo conceptual coincidan con los nombres de estas clases de datos y propiedades existentes. Para obtener más información, vea [Cómo: personalizar el modelado y la asignación de archivos para trabajar con objetos personalizados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100)).  
   
     > [!NOTE]
     > Entity Data Model Designer se puede utilizar para cambiar el nombre de las entidades en el modelo conceptual de modo que coincidan con los objetos existentes. Para obtener más información, vea [Diseñador de Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
 3. Defina la cadena de conexión.  
   
-     El Entity Framework usa una cadena de conexión con formato especial al ejecutar las consultas en un modelo conceptual. Esta cadena de conexión encapsula la información sobre los archivos de modelo y asignación y la conexión al origen de datos. Para obtener más información, consulte [Cómo Defina la cadena](how-to-define-the-connection-string.md)de conexión.  
+     El Entity Framework usa una cadena de conexión con formato especial al ejecutar las consultas en un modelo conceptual. Esta cadena de conexión encapsula la información sobre los archivos de modelo y asignación y la conexión al origen de datos. Para obtener más información, consulte [Cómo: definir la cadena de conexión](how-to-define-the-connection-string.md).  
   
 4. Configure el proyecto de Visual Studio.  
   
-     Las referencias a los ensamblados de Entity Framework y los archivos de asignación y de modelo se deben agregar al proyecto de Visual Studio. Puede agregar estos archivos de asignación al proyecto para asegurarse de que se implementan con la aplicación en la ubicación que se indica en la cadena de conexión. Para obtener más información, vea [Cómo: Configurar manualmente un proyecto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))de Entity Framework.  
+     Las referencias a los ensamblados de Entity Framework y los archivos de asignación y de modelo se deben agregar al proyecto de Visual Studio. Puede agregar estos archivos de asignación al proyecto para asegurarse de que se implementan con la aplicación en la ubicación que se indica en la cadena de conexión. Para obtener más información, consulte [Cómo: configurar manualmente un proyecto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Consideraciones para las aplicaciones con objetos existentes  
- A partir de la .NET Framework 4, el Entity Framework admite objetos CLR "antiguos sin formato" (POCO), también denominados objetos que ignoran la persistencia. En la mayoría de los casos, los objetos existentes pueden trabajar con el Entity Framework realizando cambios menores. Para obtener más información, vea [trabajar con entidades poco](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). También puede migrar una aplicación a la Entity Framework y usar las clases de datos generadas por las herramientas de Entity Framework. Para obtener más información, vea [Cómo: Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+ A partir de la .NET Framework 4, el Entity Framework admite objetos CLR "antiguos sin formato" (POCO), también denominados objetos que ignoran la persistencia. En la mayoría de los casos, los objetos existentes pueden trabajar con el Entity Framework realizando cambios menores. Para obtener más información, vea [trabajar con entidades poco](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). También puede migrar una aplicación a la Entity Framework y usar las clases de datos generadas por las herramientas de Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Consideraciones para las aplicaciones que utilizan los proveedores ADO.NET  
  Los proveedores de ADO.NET, como SqlClient, permiten consultar un origen de datos para devolver datos tabulares. Los datos también se pueden cargar en un conjunto de datos de ADO.NET. En la lista siguiente se describen las consideraciones para actualizar una aplicación que usa un proveedor de ADO.NET existente:  
   
 - Muestre los datos tabulares utilizando un lector de datos.  
 
-  Puede considerar la posibilidad de ejecutar [!INCLUDE[esql](../../../../../includes/esql-md.md)] una consulta con el proveedor de EntityClient y enumerarla a <xref:System.Data.EntityClient.EntityDataReader> través del objeto devuelto. Haga esto solo si la aplicación muestra datos tabulares mediante un lector de datos y no requiere los medios proporcionados por el Entity Framework para materializar los datos en los objetos, realizar el seguimiento de los cambios y realizar actualizaciones. Puede continuar utilizando el código de acceso a los datos existente que realiza las actualizaciones en el origen de datos, pero puede utilizar la conexión existente a la que se obtiene acceso desde la propiedad <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> de <xref:System.Data.EntityClient.EntityConnection>. Para obtener más información, consulte [proveedor de EntityClient para el Entity Framework](entityclient-provider-for-the-entity-framework.md).  
+  Puede considerar la ejecución de una consulta de [!INCLUDE[esql](../../../../../includes/esql-md.md)] mediante el proveedor de EntityClient y la enumeración a través del objeto de <xref:System.Data.EntityClient.EntityDataReader> devuelto. Haga esto solo si la aplicación muestra datos tabulares mediante un lector de datos y no requiere los medios proporcionados por el Entity Framework para materializar los datos en los objetos, realizar el seguimiento de los cambios y realizar actualizaciones. Puede continuar utilizando el código de acceso a los datos existente que realiza las actualizaciones en el origen de datos, pero puede utilizar la conexión existente a la que se obtiene acceso desde la propiedad <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> de <xref:System.Data.EntityClient.EntityConnection>. Para obtener más información, consulte [proveedor de EntityClient para el Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 - Trabaje con objetos DataSet.  
 
@@ -73,7 +73,7 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
   
 - Enlace los datos a los controles.  
 
-  Al consultar el modelo conceptual, el Entity Framework devuelve los datos como objetos que son instancias de tipos de entidad. Estos objetos se pueden enlazar directamente a los controles y este enlace admite actualizaciones. Esto significa que los cambios en los datos de un control, como una fila de <xref:System.Windows.Forms.DataGridView>, se guardan automáticamente en la base de <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> datos cuando se llama al método.  
+  Al consultar el modelo conceptual, el Entity Framework devuelve los datos como objetos que son instancias de tipos de entidad. Estos objetos se pueden enlazar directamente a los controles y este enlace admite actualizaciones. Esto significa que los cambios en los datos de un control, como una fila de un <xref:System.Windows.Forms.DataGridView>, se guardan automáticamente en la base de datos cuando se llama al método <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>.  
   
   Si una aplicación enumera los resultados de una consulta para mostrar los datos en un control de tipo <xref:System.Windows.Forms.DataGridView> o de otro tipo que admite el enlace de datos, puede modificar la aplicación para enlazar el control al resultado de <xref:System.Data.Objects.ObjectQuery%601>.  
   
@@ -92,7 +92,7 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
   
 - Aplicaciones que utilizan datos XML.  
 
-  La serialización de objetos permite crear Entity Framework Data Services. Estos servicios proporcionan datos a las aplicaciones que consumen datos XML, como las aplicaciones de Internet basadas en AJAX. En estos casos, considere el uso de [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Estos servicios de datos se basan en el Entity Data Model y proporcionan acceso dinámico a los datos de la entidad mediante acciones HTTP de transferencia de estado de representación (REST) estándar, como GET, PUT y POST. Para obtener más información, vea [WCF Data Services 4.5](../../wcf/index.md).  
+  La serialización de objetos permite crear Entity Framework Data Services. Estos servicios proporcionan datos a las aplicaciones que consumen datos XML, como las aplicaciones de Internet basadas en AJAX. En estos casos, considere la posibilidad de usar WCF Data Services. Estos servicios de datos se basan en el Entity Data Model y proporcionan acceso dinámico a los datos de la entidad mediante acciones HTTP de transferencia de estado de representación (REST) estándar, como GET, PUT y POST. Para obtener más información, vea [WCF Data Services 4.5](../../wcf/index.md).  
   
   El Entity Framework no admite un tipo de datos XML nativo. Esto significa que cuando una entidad se asigna a una tabla con una columna XML, la propiedad de entidad equivalente para la columna XML es una cadena. Los objetos se pueden desconectar y serializar como XML. Para obtener más información, vea [serializar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
@@ -100,7 +100,7 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
   
 - Aplicaciones que mantienen el estado.  
 
-  Las aplicaciones Web de ASP.NET deben mantener con frecuencia el estado de una página web o de una sesión de usuario. Los objetos de <xref:System.Data.Objects.ObjectContext> una instancia de pueden almacenarse en el estado de vista de cliente o en el estado de sesión en el servidor y, posteriormente, recuperarse y volver a adjuntarse a un nuevo contexto de objeto. Para obtener más información, vea [adjuntar y separar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
+  Las aplicaciones Web de ASP.NET deben mantener con frecuencia el estado de una página web o de una sesión de usuario. Los objetos de una instancia de <xref:System.Data.Objects.ObjectContext> pueden almacenarse en el estado de vista de cliente o en el estado de sesión en el servidor y, posteriormente, recuperarse y volver a adjuntarse a un nuevo contexto de objeto. Para obtener más información, vea [adjuntar y separar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
 

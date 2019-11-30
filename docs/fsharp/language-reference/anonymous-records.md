@@ -1,21 +1,21 @@
 ---
 title: Registros anónimos
-description: Obtenga información sobre cómo usar la construcción y use registros anónimos, una característica del lenguaje que ayuda en la manipulación de datos.
+description: Aprenda a usar los registros anónimos de construcción y uso, una característica de lenguaje que ayuda a la manipulación de datos.
 ms.date: 06/12/2019
-ms.openlocfilehash: e576210d4fb76ccfd09f8feb157ef4542aa94ccf
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 0a7a819cc471c6579feacd621ed15aa89a6423ba
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041809"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569469"
 ---
 # <a name="anonymous-records"></a>Registros anónimos
 
-Registros anónimos son agregados simples de valores con nombre que no es necesario declarar antes de utilizarlo. Se puede declarar como tipos de structs o referencia. Son tipos de referencia de forma predeterminada.
+Los registros anónimos son agregados simples de valores con nombre que no es necesario declarar antes de su uso. Puede declararlos como Structs o tipos de referencia. Son tipos de referencia de forma predeterminada.
 
 ## <a name="syntax"></a>Sintaxis
 
-Los ejemplos siguientes muestran la sintaxis de registro anónimo. Los elementos delimitados como `[item]` son opcionales.
+En los siguientes ejemplos se muestra la sintaxis de registros anónimos. Los elementos delimitados como `[item]` son opcionales.
 
 ```fsharp
 // Construct an anonymous record
@@ -30,12 +30,11 @@ let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ..
 
 ## <a name="basic-usage"></a>Uso básico
 
-Registros anónimos mejor están pensados como F# tipos que no necesitan declararse antes de la creación de instancias de registros.
+Los registros anónimos se consideran como F# tipos de registro que no es necesario declarar antes de la creación de instancias.
 
-Por ejemplo, aquí cómo pueden interactuar con una función que genera un registro anónimo:
+Por ejemplo, aquí puede interactuar con una función que genera un registro anónimo:
 
 ```fsharp
-
 open System
 
 let getCircleStats radius =
@@ -51,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-El ejemplo siguiente se expande en el anterior con un `printCircleStats` función que toma un registro anónimo como entrada:
+En el ejemplo siguiente se expande el anterior con una función `printCircleStats` que toma un registro anónimo como entrada:
 
 ```fsharp
 open System
@@ -72,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-Una llamada a `printCircleStats` con cualquier tipo de registro anónimo que no tiene la misma "forma" como el tipo de entrada no se compilará:
+La llamada a `printCircleStats` con cualquier tipo de registro anónimo que no tenga la misma "forma" que el tipo de entrada no se compilará:
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -80,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a>Registros de struct anónimos
+## <a name="struct-anonymous-records"></a>Struct de registros anónimos
 
-Registros anónimos también pueden definirse como struct con el elemento opcional `struct` palabra clave. El ejemplo siguiente aumenta lo anterior al producir y consumir un registro de struct anónimo:
+Los registros anónimos también se pueden definir como struct con la palabra clave `struct` opcional. En el ejemplo siguiente se aumenta el anterior generando y consumiendo un registro anónimo de struct:
 
 ```fsharp
 open System
@@ -105,9 +104,9 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-### <a name="structness-inference"></a>Inferencia Structness
+### <a name="structness-inference"></a>Inferencia de Structs
 
-Registros de struct anónimos también permiten "structness inferencia" donde no es necesario especificar el `struct` palabra clave en el sitio de llamada. En este ejemplo, elide el `struct` palabra clave al llamar a `printCircleStats`:
+Los registros anónimos de struct también permiten la "inferencia de la estructura", donde no es necesario especificar la palabra clave `struct` en el sitio de llamada. En este ejemplo, Elide la palabra clave `struct` al llamar a `printCircleStats`:
 
 ```fsharp
 
@@ -118,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-El orden inverso de patrón - especificar `struct` cuando el tipo de entrada no es un registro struct anónimo: no se compilará.
+El patrón inverso, que especifica `struct` cuando el tipo de entrada no es un registro anónimo de struct, no se compilará.
 
-## <a name="embedding-anonymous-records-within-other-types"></a>Insertar registros anónimos dentro de otros tipos
+## <a name="embedding-anonymous-records-within-other-types"></a>Incrustar registros anónimos dentro de otros tipos
 
-Es útil declarar [uniones discriminadas](discriminated-unions.md) cuyos casos son los registros. Pero si los datos de los registros son el mismo tipo que la unión discriminada, debe definir todos los tipos como mutuamente recursivas. Uso de registros anónimos evita esta restricción. Lo que sigue es un ejemplo de tipo y función coincide con ese patrón encima de él:
+Resulta útil declarar [uniones discriminadas](discriminated-unions.md) cuyos casos son registros. Pero si los datos de los registros son del mismo tipo que la Unión discriminada, debe definir todos los tipos como recursivos mutuamente. El uso de registros anónimos evita esta restricción. A continuación se muestra un tipo y una función de ejemplo que coincide con el patrón:
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -140,23 +139,23 @@ let getFirstName e =
     | Executive ex -> ex.Name.FirstName
 ```
 
-## <a name="copy-and-update-expressions"></a>Copiar y actualizar las expresiones
+## <a name="copy-and-update-expressions"></a>Expresiones de copia y actualización
 
-Registros anónimos admiten una construcción con [copiar y actualizar las expresiones](copy-and-update-record-expressions.md). Por ejemplo, mostramos cómo puede crear una nueva instancia de un registro anónimo que copia existente de datos:
+Los registros anónimos admiten la construcción con [expresiones de copia y actualización](copy-and-update-record-expressions.md). Por ejemplo, aquí se muestra cómo se puede crear una nueva instancia de un registro anónimo que copie los datos de una existente:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-Sin embargo, a diferencia de los registros con nombre, registros anónimos le permiten construir formularios completamente diferentes con copia y actualizar las expresiones. El ejemplo siguiente toma el mismo registro anónimo del ejemplo anterior y expande en un nuevo registro anónimo:
+Sin embargo, a diferencia de los registros con nombre, los registros anónimos le permiten crear formularios totalmente diferentes con expresiones de copia y actualización. En el ejemplo siguiente se toma el mismo registro anónimo del ejemplo anterior y se expande en un nuevo registro anónimo:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let expandedData = {| data with Z = 3 |} // Gives {| X=1; Y=2; Z=3 |}
 ```
 
-También es posible crear registros anónimos de instancias de registros con nombre:
+También es posible construir registros anónimos a partir de instancias de registros con nombre:
 
 ```fsharp
 type R = { X: int }
@@ -164,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-También puede copiar datos hacia y desde registros anónimos de referencia y struct:
+También puede copiar datos a y desde los registros anónimos de referencia y de struct:
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -184,22 +183,22 @@ let data2 = {| r1 with Y = 1 |}
 let data3 = struct {| data2 with Z = r2.X |}
 ```
 
-## <a name="properties-of-anonymous-records"></a>Propiedades de registros anónimos
+## <a name="properties-of-anonymous-records"></a>Propiedades de los registros anónimos
 
-Registros anónimos tienen un número de características que son esenciales para entender cómo se puede usar.
+Los registros anónimos tienen una serie de características que son esenciales para comprender mejor cómo se pueden usar.
 
-### <a name="anonymous-records-are-nominal"></a>Registros anónimos son nominales
+### <a name="anonymous-records-are-nominal"></a>Los registros anónimos son nominales
 
-Registros anónimos son [tipos nominales](https://en.wikipedia.org/wiki/Nominal_type_system). Como con nombre son entiende mejor [registro](records.md) tipos (que también son nominales) que no requieren una declaración por adelantado.
+Los registros anónimos son [tipos nominales](https://en.wikipedia.org/wiki/Nominal_type_system). Se consideran mejores como tipos de [registros](records.md) con nombre (que también son nominales) que no requieren una declaración inicial.
 
-Considere el siguiente ejemplo con dos declaraciones de registro anónimo:
+Considere el ejemplo siguiente con dos declaraciones de registros anónimos:
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-El `x` y `y` tienen distintos tipos de valores y no son compatibles entre sí. No son equivalentes y no son comparables. Para ilustrar esto, considere la posibilidad de un registro con nombre equivalente:
+Los valores `x` y `y` tienen tipos diferentes y no son compatibles entre sí. No son equiparables y no son comparables. Para ilustrar esto, considere un equivalente de registro con nombre:
 
 ```fsharp
 type X = { X: int }
@@ -209,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-No hay nada esencialmente distinto en registros anónimos cuando se comparan con sus equivalentes de registro con nombre cuando relativas a la equivalencia de tipos o comparación.
+No hay nada inherentemente diferente sobre los registros anónimos cuando se compara con sus equivalentes de registro con nombre cuando se trata de una comparación o equivalencia de tipos.
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Registros anónimos, use comparación e igualdad estructural
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Los registros anónimos usan comparación y igualdad estructural
 
-Al igual que los tipos de registros, registros anónimos son estructuralmente equivalentes y comparable. Esto solo es true si todos los tipos constituyentes admiten igualdad y comparación, al igual que con los tipos de registros. Para admitir la comparación o igualdad, dos registros anónimos deben tener la misma "forma".
+Al igual que los tipos de registro, los registros anónimos son estructuralmente equiparables y comparables. Esto solo es cierto si todos los tipos constituyentes admiten la igualdad y la comparación, como sucede con los tipos de registro. Para admitir la igualdad o la comparación, dos registros anónimos deben tener la misma "forma".
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -223,9 +222,9 @@ Al igual que los tipos de registros, registros anónimos son estructuralmente eq
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a>Registros anónimos son serializables
+### <a name="anonymous-records-are-serializable"></a>Los registros anónimos son serializables
 
-Puede serializar registros anónimos se puede hacer con registros con nombre. Este es un ejemplo con [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/):
+Puede serializar los registros anónimos del mismo modo que con los registros con nombre. Este es un ejemplo de uso de [Newtonsoft. JSON](https://www.nuget.org/packages/Newtonsoft.Json/):
 
 ```fsharp
 open Newtonsoft.Json
@@ -237,11 +236,11 @@ let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(str)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-Registros anónimos son útiles para el envío de datos ligero a través de una red sin necesidad de definir un dominio para los tipos serializa y deserializa por adelantado.
+Los registros anónimos son útiles para enviar datos ligeros a través de una red sin necesidad de definir por adelantado un dominio para los tipos serializados y deserializados.
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Registros anónimos interoperan con C# tipos anónimos
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Los registros anónimos interoperan con C# tipos anónimos
 
-Es posible usar una API de .NET que requiere el uso de [ C# tipos anónimos](../../csharp/programming-guide/classes-and-structs/anonymous-types.md). C#tipos anónimos son triviales para interoperar con registros anónimos. En el ejemplo siguiente se muestra cómo utilizar registros anónimos para llamar a un [LINQ](../../csharp/programming-guide/concepts/linq/index.md) sobrecarga que requiere un tipo anónimo:
+Es posible usar una API de .net que requiera el uso de [ C# tipos anónimos](../../csharp/programming-guide/classes-and-structs/anonymous-types.md). C#los tipos anónimos son triviales para interoperar con mediante registros anónimos. En el ejemplo siguiente se muestra cómo usar registros anónimos para llamar a una sobrecarga de [LINQ](../../csharp/programming-guide/concepts/linq/index.md) que requiere un tipo anónimo:
 
 ```fsharp
 open System.Linq
@@ -252,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-Hay una gran cantidad de otra API que se usan a lo largo de .NET que requieren el uso de cómo pasar un tipo anónimo. Registros anónimos son la herramienta para trabajar con ellos.
+Hay muchas otras API usadas en .NET que requieren el uso del paso de un tipo anónimo. Los registros anónimos son la herramienta para trabajar con ellos.
 
 ## <a name="limitations"></a>Limitaciones
 
-Registros anónimos tienen algunas restricciones de su uso. Algunas son inherentes a su diseño, pero otras son susceptibles de cambiar.
+Los registros anónimos tienen algunas restricciones en su uso. Algunos son inherentes a su diseño, pero otros pueden cambiar.
 
-### <a name="limitations-with-pattern-matching"></a>Limitaciones de coincidencia de patrones
+### <a name="limitations-with-pattern-matching"></a>Limitaciones con la coincidencia de patrones
 
-Registros anónimos no admiten la coincidencia de patrones, a diferencia de los registros con nombre. Existen tres razones:
+Los registros anónimos no admiten la coincidencia de patrones, a diferencia de los registros con nombre. Existen tres razones:
 
-1. Tendría un patrón para tener en cuenta todos los campos de un registro anónimo, a diferencia de los tipos de registros con nombre. Esto es porque no admiten registros anónimos subtipo estructural, sino que son tipos nominales.
-2. Debido a (1), no hay ninguna posibilidad de ver patrones adicionales en una expresión de coincidencia de patrón, como cada patrón distinto implicaría un tipo de registro anónimo diferentes.
-3. Debido a (3), cualquier modelo de registro anónimo sería más detallado que el uso de la notación "punto".
+1. Un patrón tendría que tener en cuenta cada campo de un registro anónimo, a diferencia de los tipos de registro con nombre. Esto se debe a que los registros anónimos no admiten el subtipo estructural, sino que son tipos nominales.
+2. Debido a (1), no hay ninguna posibilidad de tener patrones adicionales en una expresión de coincidencia de patrones, ya que cada patrón distinto implicaría un tipo de registro anónimo diferente.
+3. Debido a (3), cualquier patrón de registro anónimo sería más detallado que el uso de la notación "punto".
 
-Hay una sugerencia de lenguaje abierto para [permiten la coincidencia de patrones limitada en contextos](https://github.com/fsharp/fslang-suggestions/issues/713).
+Hay una sugerencia de lenguaje abierto para [permitir la coincidencia de patrones en contextos limitados](https://github.com/fsharp/fslang-suggestions/issues/713).
 
 ### <a name="limitations-with-mutability"></a>Limitaciones con mutabilidad
 
-No es actualmente posible definir un registro anónimo con `mutable` datos. Hay un [abrir sugerencia lenguaje](https://github.com/fsharp/fslang-suggestions/issues/732) para permitir que los datos mutables.
+En la actualidad, no es posible definir un registro anónimo con datos de `mutable`. Hay una [sugerencia de lenguaje abierto](https://github.com/fsharp/fslang-suggestions/issues/732) para permitir datos mutables.
 
-### <a name="limitations-with-struct-anonymous-records"></a>Limitaciones de los registros de struct anónimos
+### <a name="limitations-with-struct-anonymous-records"></a>Limitaciones de los registros anónimos de struct
 
-No es posible declarar struct registros anónimos como `IsByRefLike` o `IsReadOnly`. Hay un [abrir sugerencia lenguaje](https://github.com/fsharp/fslang-suggestions/issues/712) a para `IsByRefLike` y `IsReadOnly` registros anónimos.
+No es posible declarar registros anónimos de struct como `IsByRefLike` o `IsReadOnly`. Hay una [sugerencia de lenguaje abierto](https://github.com/fsharp/fslang-suggestions/issues/712) para `IsByRefLike` y `IsReadOnly` registros anónimos.

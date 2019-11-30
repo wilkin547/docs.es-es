@@ -2,18 +2,18 @@
 title: Expresiones de cálculo
 description: Aprenda a crear una sintaxis adecuada para escribir cálculos en que F# se pueden secuenciar y combinar mediante construcciones y enlaces de flujo de control.
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976787"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569453"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
 Las expresiones de cálculo F# de proporcionan una sintaxis adecuada para escribir cálculos que se pueden secuenciar y combinar mediante construcciones y enlaces de flujo de control. En función del tipo de expresión de cálculo, se pueden considerar como una manera de expresar las funciones de Monoids, los transformadores de Monad y los procesos de ejecución. Sin embargo, a diferencia de otros lenguajes (como *la notación* de realización en Haskell), no están asociados a una abstracción única y no se basan en macros u otras formas de metaprogramaciones para lograr una sintaxis adecuada y sensible al contexto.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Los cálculos pueden adoptar muchas formas. La forma más común de cálculo es la ejecución de un solo subproceso, que es fácil de entender y modificar. Sin embargo, no todas las formas de cálculo son tan sencillas como la ejecución de un solo subproceso. Estos son algunos ejemplos:
 
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-A partir F# de 4,5, la palabra clave`match!`permite alinear una llamada a otra expresión de cálculo y a la coincidencia de patrones en su resultado:
+La palabra clave `match!` permite alinear una llamada a otra expresión de cálculo y a la coincidencia de patrones en su resultado:
 
 ```fsharp
 let doThingsAsync url =
@@ -238,9 +238,9 @@ En la tabla siguiente se describen los métodos que se pueden utilizar en una cl
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Ajusta una expresión de cálculo como una función.|
 |`Return`|`'T -> M<'T>`|Se llama para obtener `return` en expresiones de cálculo.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|Se llama para obtener `return!` en expresiones de cálculo.|
-|`Run`|`M<'T> -> M<'T>`, o bien<br /><br />`M<'T> -> 'T`|Ejecuta una expresión de cálculo.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>`, o bien<br /><br />`M<unit> * M<'T> -> M<'T>`|Se llama para la secuenciación en expresiones de cálculo.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`, o bien<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Se llama para expresiones `for...do` en expresiones de cálculo.|
+|`Run`|`M<'T> -> M<'T>` o<br /><br />`M<'T> -> 'T`|Ejecuta una expresión de cálculo.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` o<br /><br />`M<unit> * M<'T> -> M<'T>`|Se llama para la secuenciación en expresiones de cálculo.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` o<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Se llama para expresiones `for...do` en expresiones de cálculo.|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Se llama para expresiones `try...finally` en expresiones de cálculo.|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Se llama para expresiones `try...with` en expresiones de cálculo.|
 |`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'T :> IDisposable`|Se llama para los enlaces de `use` en expresiones de cálculo.|
@@ -250,7 +250,7 @@ En la tabla siguiente se describen los métodos que se pueden utilizar en una cl
 |`Zero`|`unit -> M<'T>`|Se llama para bifurcar `else` vacías de expresiones de `if...then` en expresiones de cálculo.|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica que la expresión de cálculo se pasa al miembro de `Run` como una expresión de código delimitada. Convierte todas las instancias de un cálculo en una expresión de código delimitada.|
 
-Muchos de los métodos de una clase de generador usan y devuelven una construcción `M<'T>`, que suele ser un tipo definido por separado que caracteriza el tipo de cálculo que se combina, por ejemplo, `Async<'T>` para flujos de trabajo asincrónicos y `Seq<'T>` para la secuencia. flujos. Las firmas de estos métodos permiten que se combinen y se aniden entre sí, de modo que el objeto de flujo de trabajo devuelto de una construcción se pueda pasar al siguiente. El compilador, cuando analiza una expresión de cálculo, convierte la expresión en una serie de llamadas de función anidadas mediante los métodos de la tabla anterior y el código de la expresión de cálculo.
+Muchos de los métodos de una clase de generador usan y devuelven una construcción `M<'T>`, que suele ser un tipo definido por separado que caracteriza el tipo de cálculo que se combina, por ejemplo, `Async<'T>` para flujos de trabajo asincrónicos y `Seq<'T>` para flujos de trabajo de secuencia. Las firmas de estos métodos permiten que se combinen y se aniden entre sí, de modo que el objeto de flujo de trabajo devuelto de una construcción se pueda pasar al siguiente. El compilador, cuando analiza una expresión de cálculo, convierte la expresión en una serie de llamadas de función anidadas mediante los métodos de la tabla anterior y el código de la expresión de cálculo.
 
 La expresión anidada tiene el formato siguiente:
 
@@ -258,7 +258,7 @@ La expresión anidada tiene el formato siguiente:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-En el código anterior, las llamadas a `Run` y `Delay` se omiten si no están definidas en la clase generador de expresiones de cálculo. El cuerpo de la expresión de cálculo, que se indica a continuación como `{| cexpr |}`, se traduce en llamadas que implican los métodos de la clase de generador mediante las traducciones descritas en la tabla siguiente. La expresión de cálculo `{| cexpr |}` se define de forma recursiva según estas traducciones, donde `expr` es F# una expresión y`cexpr`es una expresión de cálculo.
+En el código anterior, las llamadas a `Run` y `Delay` se omiten si no están definidas en la clase generador de expresiones de cálculo. El cuerpo de la expresión de cálculo, que se indica a continuación como `{| cexpr |}`, se traduce en llamadas que implican los métodos de la clase de generador mediante las traducciones descritas en la tabla siguiente. La expresión de cálculo `{| cexpr |}` se define de forma recursiva según estas traducciones, donde `expr` es F# una expresión y `cexpr` es una expresión de cálculo.
 
 |Expresión|Conversión|
 |----------|-----------|

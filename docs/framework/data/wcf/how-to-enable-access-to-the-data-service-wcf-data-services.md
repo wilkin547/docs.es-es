@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Habilitación del acceso al servicio de datos (WCF Data Services)
+title: 'Cómo: Habilitar el acceso al servicio de datos (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: cbe25dcb62adf82921b24623cc4930c3076dd1fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0ec9c9a730516b22b4eaa215e042e9393c01d752
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790664"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569104"
 ---
-# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Procedimiento Habilitación del acceso al servicio de datos (WCF Data Services)
-En [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], debe permitir explícitamente el acceso a los recursos expuestos por un servicio de datos. Esto significa que después de crear un nuevo servicio de datos, debe proporcionar explícitamente acceso a los recursos individuales como conjuntos de entidades. En este tema se muestra cómo habilitar el acceso de lectura y escritura a cinco de los conjuntos de entidades del servicio de datos de Northwind que se crea al completar la guía de [Inicio rápido](quickstart-wcf-data-services.md). Dado que la enumeración <xref:System.Data.Services.EntitySetRights> se define utilizando <xref:System.FlagsAttribute>, puede utilizar un operador OR lógico para especificar varios permisos para un único conjunto de entidades.  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Cómo: Habilitar el acceso al servicio de datos (WCF Data Services)
+En WCF Data Services, debe conceder explícitamente acceso a los recursos expuestos por un servicio de datos. Esto significa que después de crear un nuevo servicio de datos, debe proporcionar explícitamente acceso a los recursos individuales como conjuntos de entidades. En este tema se muestra cómo habilitar el acceso de lectura y escritura a cinco de los conjuntos de entidades del servicio de datos de Northwind que se crea al completar la guía de [Inicio rápido](quickstart-wcf-data-services.md). Dado que la enumeración <xref:System.Data.Services.EntitySetRights> se define utilizando <xref:System.FlagsAttribute>, puede utilizar un operador OR lógico para especificar varios permisos para un único conjunto de entidades.  
   
 > [!NOTE]
 > Cualquier cliente que pueda tener acceso a la aplicación ASP.NET también puede tener acceso a los recursos expuestos por el servicio de datos. En un servicio de datos de producción, para evitar el acceso no autorizado a los recursos, también debería proteger la aplicación. Para obtener más información, consulte [protección de sitios web de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
@@ -31,5 +31,5 @@ En [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], debe permitir ex
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Desarrollo de un servicio de datos de WCF que se ejecuta en IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)
+- [Desarrollo de un servicio de datos WCF que se ejecuta en IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)
 - [Configuración del servicio de datos](configuring-the-data-service-wcf-data-services.md)

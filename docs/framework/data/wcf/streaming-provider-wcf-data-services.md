@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975121"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568805"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
@@ -25,7 +25,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
 
 - Entrada de vínculo multimedia: entidad con una referencia a un flujo de recursos multimedia relacionado.
 
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], defina un flujo de recursos binarios implementando un proveedor de transmisión de datos por secuencias. La implementación del proveedor de transmisión por secuencias proporciona al servicio de datos la secuencia de recursos multimedia asociada a una entidad específica como un objeto <xref:System.IO.Stream>. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.
+Con WCF Data Services, se define un flujo de recursos binarios mediante la implementación de un proveedor de datos de streaming. La implementación del proveedor de transmisión por secuencias proporciona al servicio de datos la secuencia de recursos multimedia asociada a una entidad específica como un objeto <xref:System.IO.Stream>. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.
 
 La configuración de un servicio de datos para que admita la transmisión por secuencias de datos binarios requiere los siguientes pasos:
 
@@ -67,7 +67,7 @@ Cuando se usan proveedores de servicios personalizados, implemente la interfaz <
 
 Para crear un servicio de datos que admita flujos de datos binarios, debe implementar la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Esta implementación habilita el servicio de datos para devolver al cliente datos binarios como flujo y utilizar los datos binarios como flujo enviado desde el cliente. El servicio de datos crea una instancia de esta interfaz cuando sea necesario para acceder a los datos binarios como flujo. La interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider> especifica los siguientes miembros:
 
-|Nombre de miembro|Descripción|
+|Nombre del miembro|Descripción|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|El servicio de datos invoca este método para eliminar el recurso multimedia correspondiente cuando se elimina su entrada de vínculo multimedia. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que elimina el recurso multimedia asociado con la entrada de vínculo multimedia proporcionada.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|El servicio de datos invoca este método para devolver un recurso multimedia como un flujo. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que proporciona un flujo que el servicio de datos utiliza para devolver el recurso multimedia que está asociado a la entrada de vínculo multimedia proporcionada.|
@@ -79,7 +79,7 @@ Para crear un servicio de datos que admita flujos de datos binarios, debe implem
 
 ## <a name="creating-the-streaming-data-service"></a>Crear el servicio de transmisión de datos por secuencias
 
-Para proporcionar al motor de tiempo de ejecución de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] acceso a la implementación de la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, el servicio de datos que cree también debe implementar la interfaz <xref:System.IServiceProvider>. En el siguiente ejemplo se muestra cómo implementar el método <xref:System.IServiceProvider.GetService%2A> para devolver una instancia de la clase `PhotoServiceStreamProvider` que implemente la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+Para proporcionar al tiempo de ejecución de WCF Data Services acceso a la implementación de <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, el servicio de datos que cree también debe implementar la interfaz de <xref:System.IServiceProvider>. En el siguiente ejemplo se muestra cómo implementar el método <xref:System.IServiceProvider.GetService%2A> para devolver una instancia de la clase `PhotoServiceStreamProvider` que implemente la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ De forma predeterminada, Internet Information Services (IIS) también limita el 
 
 ## <a name="using-data-streams-in-a-client-application"></a>Usar flujos de datos en una aplicación cliente
 
-La biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite recuperar y actualizar estos recursos expuestos como flujos binarios en el cliente. Para obtener más información, vea [trabajar con datos binarios](working-with-binary-data-wcf-data-services.md).
+La biblioteca de cliente de WCF Data Services permite recuperar y actualizar estos recursos expuestos como secuencias binarias en el cliente. Para obtener más información, vea [trabajar con datos binarios](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Consideraciones para trabajar con un proveedor de transmisión por secuencias
 

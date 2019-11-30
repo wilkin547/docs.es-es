@@ -2,17 +2,17 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783808"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569421"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para programadores de .NET Framework. ADO.NET ofrece abundancia de componentes para la creación de aplicaciones de uso compartido de datos distribuidas. Constituye una parte integral de .NET Framework y proporciona acceso a datos relacionales, XML y de aplicaciones. ADO.NET satisface diversas necesidades de desarrollo, como la creación de clientes de base de datos front-end y objetos empresariales de nivel medio que utilizan aplicaciones, herramientas, lenguajes o exploradores de Internet.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Novedades de ADO.NET](whats-new.md)  
  Presenta características nuevas en ADO.NET.  
   
@@ -51,7 +51,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  Proporciona vínculos a temas y ejemplos de LINQ mediante Visual Basic.  
   
  [Servicios de datos de WCF 4.5](../wcf/index.md)  
- Describe cómo usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para implementar servicios de datos en web o en una intranet que implemente el Protocolo de datos abiertos (OData).  
+ Describe cómo usar WCF Data Services para implementar servicios de datos en Internet o en una intranet que implementa el Open Data Protocol (OData).  
   
  [Guía de desarrollo para .NET Framework](../../development-guide.md)  
  Proporciona vínculos a información acerca de las tareas de desarrollo estándar en .NET Framework.  

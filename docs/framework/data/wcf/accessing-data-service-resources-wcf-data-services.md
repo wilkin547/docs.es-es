@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975433"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569401"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acceder a recursos de servicios de datos (Servicios de datos de WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite el Open Data Protocol (OData) para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de entidad-relación del [Entity Data Model](../adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
+WCF Data Services admite el Open Data Protocol (OData) para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de entidad-relación del [Entity Data Model](../adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
   
 ## <a name="addressing-resources"></a>Direccionar recursos  
  En OData, se abordan los datos expuestos por el modelo de datos mediante un URI. Por ejemplo, el siguiente URI devuelve una fuente que es el conjunto de entidades customers, que contiene entradas para todas las instancias del tipo de entidad Customer:  
@@ -56,7 +56,7 @@ ms.locfileid: "73975433"
   
  Las entradas de la fuente devuelta se ordenan también en función del valor de propiedad ShipCity de los pedidos.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite las siguientes opciones de consulta del sistema OData:  
+ WCF Data Services admite las siguientes opciones de consulta del sistema OData:  
   
 |Opción de consulta|Descripción|  
 |------------------|-----------------|  

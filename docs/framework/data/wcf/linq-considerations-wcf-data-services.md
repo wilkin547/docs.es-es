@@ -9,15 +9,15 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975218"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568962"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Consideraciones sobre LINQ (WCF Data Services)
-En este tema se proporciona información sobre la forma en que las consultas LINQ se componen y se ejecutan cuando se usa el cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y las limitaciones del uso de LINQ para consultar un servicio de datos que implementa el Open Data Protocol (OData). Para obtener más información acerca de la creación y ejecución de consultas en un servicio de datos basado en OData, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
+En este tema se proporciona información sobre la forma en que las consultas LINQ se componen y se ejecutan cuando se usa el cliente de WCF Data Services y las limitaciones del uso de LINQ para consultar un servicio de datos que implementa el Open Data Protocol (OData). Para obtener más información acerca de la creación y ejecución de consultas en un servicio de datos basado en OData, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Redactar consultas LINQ  
  LINQ permite redactar consultas en una colección de objetos que implemente la interfaz <xref:System.Collections.Generic.IEnumerable%601>. Tanto el cuadro de diálogo **Agregar referencia de servicio** de Visual Studio como la herramienta herramienta datasvcutil. exe se usan para generar una representación de un servicio de oData como una clase de contenedor de entidades que hereda de <xref:System.Data.Services.Client.DataServiceContext>, así como objetos que representan las entidades devueltas en las fuentes. Estas herramientas también generan propiedades en la clase de contenedor de entidades de las colecciones que el servicio exponen como fuentes. Cada una de estas propiedades de la clase que encapsula el servicio de datos devuelve una clase <xref:System.Data.Services.Client.DataServiceQuery%601>. Puesto que la clase <xref:System.Data.Services.Client.DataServiceQuery%601> implementa la interfaz <xref:System.Linq.IQueryable%601> definida por LINQ, puede crear una consulta LINQ en fuentes expuestas por el servicio de datos, que la biblioteca cliente traduce en un URI de solicitud de consulta que se envía al servicio de datos en la ejecución.  
@@ -43,7 +43,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
   
- El cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] puede traducir ambos tipos de consultas redactadas en un URI de la consulta y puede ampliar una consulta LINQ si anexa los métodos de consulta a una expresión de consulta. Cuando redacte consultas LINQ anexando la sintaxis del método a una expresión de consulta o a una clase <xref:System.Data.Services.Client.DataServiceQuery%601>, las operaciones se agregan al URI de la consulta en el orden en el que se llama a los métodos. Esto es equivalente a llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar cada opción de consulta al URI de la consulta.  
+ El cliente WCF Data Services es capaz de traducir ambos tipos de consultas compuestas en un URI de consulta, y puede extender una consulta LINQ anexando métodos de consulta a una expresión de consulta. Cuando redacte consultas LINQ anexando la sintaxis del método a una expresión de consulta o a una clase <xref:System.Data.Services.Client.DataServiceQuery%601>, las operaciones se agregan al URI de la consulta en el orden en el que se llama a los métodos. Esto es equivalente a llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar cada opción de consulta al URI de la consulta.  
   
 ## <a name="executing-linq-queries"></a>Ejecutar consultas LINQ  
  Ciertos métodos de consulta LINQ, como los métodos <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> o <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, cuando se anexan a la consulta, provocan la ejecución de esta. También se ejecuta una consult6a cuando los resultados se enumeran implícitamente, como durante un bucle `foreach` o cuando la consulta se asigna a una colección `List`. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
@@ -135,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Los dos ejemplos anteriores se traducen en el URI de la consulta: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Expand  
+### <a name="expand"></a>Expandir  
  Al consultar un servicio de datos de OData, puede solicitar que las entidades relacionadas con la entidad de destino de la consulta se incluyan en la fuente devuelta. Se llama al método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> en la clase <xref:System.Data.Services.Client.DataServiceQuery%601> para el conjunto de entidades que sean el destino de la consulta LINQ, con el nombre del conjunto de entidades relacionado proporcionado como el parámetro `path`. Para obtener más información, vea [cargar contenido diferido](loading-deferred-content-wcf-data-services.md).  
   
  En los siguientes ejemplos se muestran las formas equivalentes de usar el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> en una consulta:  

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Adjuntar una entidad existente a DataServiceContext (WCF Data Services)
+title: 'Cómo: Asociar una entidad existente a DataServiceContext (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 160f0afc2e1baf033557b7114a51145a5c983e29
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c8355ea9e9823e7cab6f43c0f3f901948d1d539
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791187"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569378"
 ---
-# <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Procedimiento Adjuntar una entidad existente a DataServiceContext (WCF Data Services)
-Cuando una entidad ya existe en un servicio de datos, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] la biblioteca cliente le permite adjuntar un objeto que representa la entidad directamente <xref:System.Data.Services.Client.DataServiceContext> a sin ejecutar primero una consulta. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Cómo: Asociar una entidad existente a DataServiceContext (Data Services de WCF)
+Cuando una entidad ya existe en un servicio de datos, la biblioteca de cliente de WCF Data Services le permite adjuntar un objeto que representa directamente la entidad al <xref:System.Data.Services.Client.DataServiceContext> sin ejecutar primero una consulta. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   

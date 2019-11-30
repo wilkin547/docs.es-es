@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar opciones de consulta a una consulta de servicio de datos (WCF Data Services)
+title: 'Cómo: Agregar opciones de consulta a una consulta de servicio de datos (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: f7b0557938d1419b79c3191cf8f9110cab2f5ce6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7b5a9c15f2d46c89abf8fb5bc0f4be99e501a267
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790784"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569183"
 ---
-# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Procedimiento Agregar opciones de consulta a una consulta de servicio de datos (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite consultar un servicio datos desde una aplicación cliente basada en .NET Framework usando las clases generadas del servicio de datos del cliente. La forma más fácil de hacerlo es crear una expresión de consulta Language Integrated Query (LINQ) que incluya las opciones de consulta deseadas. Además, puede llamar a una serie de métodos de consulta LINQ para crear una consulta equivalente. Por último, puede usar el método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar las opciones de consulta a una consulta. En cada uno de estos casos, el URI que genera el cliente incluye el conjunto de entidades solicitado con las opciones de consulta seleccionadas aplicadas. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Cómo: Agregar opciones de consulta a una consulta de servicio de datos (Data Services de WCF)
+WCF Data Services permite consultar un servicio de datos desde una aplicación cliente basada en .NET Framework mediante las clases de servicio de datos del cliente generadas. La forma más fácil de hacerlo es crear una expresión de consulta Language Integrated Query (LINQ) que incluya las opciones de consulta deseadas. Además, puede llamar a una serie de métodos de consulta LINQ para crear una consulta equivalente. Por último, puede usar el método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar las opciones de consulta a una consulta. En cada uno de estos casos, el URI que genera el cliente incluye el conjunto de entidades solicitado con las opciones de consulta seleccionadas aplicadas. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -48,4 +48,4 @@ ms.locfileid: "70790784"
 ## <a name="see-also"></a>Vea también
 
 - [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)
-- [Cómo: Resultados de la consulta de proyecto](how-to-project-query-results-wcf-data-services.md)
+- [Resultados de consulta del proyecto](how-to-project-query-results-wcf-data-services.md)

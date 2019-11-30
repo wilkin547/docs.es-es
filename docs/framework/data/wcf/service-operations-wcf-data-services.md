@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c254a7362c7bc28f4b38fc0189ae0ea763bc90cc
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894274"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568844"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operaciones de servicio (Servicios de datos de WCF)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite definir operaciones de servicio en un servicio de datos para exponer métodos del servidor. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Las operaciones de servicio le permiten exponer la lógica de negocios de un servicio de datos; por ejemplo, implementar la lógica de validación, aplicar la seguridad basada en roles o exponer capacidades de consulta especializadas. Estas operaciones son métodos agregados a la clase del servicio de datos derivada de <xref:System.Data.Services.DataService%601>. Como el resto de los recursos del servicio de datos, puede proporcionar parámetros al método de operación de servicio. Por ejemplo, el siguiente URI de operación de servicio (basado en el servicio de datos de [Inicio rápido](quickstart-wcf-data-services.md) ) `city` pasa el valor `London` al parámetro:
+WCF Data Services permite definir operaciones de servicio en un servicio de datos para exponer métodos en el servidor. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Las operaciones de servicio le permiten exponer la lógica de negocios de un servicio de datos; por ejemplo, implementar la lógica de validación, aplicar la seguridad basada en roles o exponer capacidades de consulta especializadas. Estas operaciones son métodos agregados a la clase del servicio de datos derivada de <xref:System.Data.Services.DataService%601>. Como el resto de los recursos del servicio de datos, puede proporcionar parámetros al método de operación de servicio. Por ejemplo, el siguiente URI de operación de servicio (basado en el servicio de datos de [Inicio rápido](quickstart-wcf-data-services.md) ) pasa el valor `London` al parámetro `city`:
 
 ```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,7 +28,7 @@ La definición de esta operación de servicio es la siguiente:
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-Puede usar la propiedad <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> de la clase <xref:System.Data.Services.DataService%601> para tener acceso directo al origen de datos que está usando el servicio de datos. Para obtener más información, consulte [Cómo Defina una operación](how-to-define-a-service-operation-wcf-data-services.md)de servicio.
+Puede usar la propiedad <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> de la clase <xref:System.Data.Services.DataService%601> para tener acceso directo al origen de datos que está usando el servicio de datos. Para obtener más información, consulte [Cómo: definir una operación de servicio](how-to-define-a-service-operation-wcf-data-services.md).
 
 Para obtener información sobre cómo llamar a una operación de servicio desde una .NET Framework aplicación cliente, vea [llamar a operaciones de servicio](calling-service-operations-wcf-data-services.md).
 
@@ -80,7 +80,7 @@ A continuación se enumeran los tipos de valor devueltos válidos para una opera
 
 |Tipos de valor devueltos válidos|Reglas que deben cumplir los URI|
 |------------------------|---------------|
-|`void` (`Nothing` en Visual Basic)<br /><br /> -o bien-<br /><br /> Tipos de entidad<br /><br /> -o bien-<br /><br /> Tipos primitivos|El URI debe ser un solo segmento de ruta de acceso que sea el nombre de la operación de servicio. No se permiten las opciones de consulta.|
+|`void` (`Nothing` en Visual Basic)<br /><br /> O bien,<br /><br /> Tipos de entidad<br /><br /> O bien,<br /><br /> Tipos primitivos|El URI debe ser un solo segmento de ruta de acceso que sea el nombre de la operación de servicio. No se permiten las opciones de consulta.|
 |<xref:System.Collections.Generic.IEnumerable%601>|El URI debe ser un solo segmento de ruta de acceso que sea el nombre de la operación de servicio. Puesto que el tipo de resultado no es un tipo <xref:System.Linq.IQueryable%601>, no se permiten las opciones de consulta.|
 |<xref:System.Linq.IQueryable%601>|Se permiten segmentos de ruta de acceso de la consulta además de la ruta de acceso que es el nombre de la operación de servicio. También se permiten las opciones de consulta.|
 
@@ -100,7 +100,7 @@ El método <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperat
 > [!NOTE]
 > Si una operación de servicio tiene un tipo de valor devuelto que se oculta restringiendo el acceso en los conjuntos de entidades subyacentes, la operación de servicio no estará disponible para las aplicaciones cliente.
 
-Para obtener más información, vea [Cómo: Defina una operación](how-to-define-a-service-operation-wcf-data-services.md)de servicio.
+Para obtener más información, consulte [Cómo: definir una operación de servicio](how-to-define-a-service-operation-wcf-data-services.md).
 
 ## <a name="raising-exceptions"></a>Producir excepciones
 

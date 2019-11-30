@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Determinar el número de entidades devueltas por una consulta (WCF Data Services)
+title: 'Cómo: Determinar el número de entidades devueltas por una consulta (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 942fc6d6cbfb35d836ca5881958e7c9965a7d08b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 43833566d59b15ef382872b0c40f452192b59bac
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779831"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568923"
 ---
-# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Procedimiento Determinar el número de entidades devueltas por una consulta (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede determinar el número de entidades que existen en el conjunto de entidades especificado por un URI de consulta. Este número se puede incluir junto con el resultado de la búsqueda o como valor entero. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Cómo: Determinar el número de entidades devueltas por una consulta (Data Services de WCF)
+Con WCF Data Services, puede determinar el número de entidades que se encuentran en el conjunto de entidades especificado por un URI de consulta. Este número se puede incluir junto con el resultado de la búsqueda o como valor entero. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   

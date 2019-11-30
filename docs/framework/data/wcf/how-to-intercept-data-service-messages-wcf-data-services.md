@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Interceptar mensajes del servicio de datos (WCF Data Services)
+title: 'Cómo: Interceptar mensajes de Data Services (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f2d6cf34c820c60181d5287298898af5eb8d038
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780035"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569045"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Procedimiento Interceptar mensajes del servicio de datos (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede interceptar mensajes de solicitud, lo que le permitirá agregar lógica personalizada a una operación. Para interceptar un mensaje, se usan métodos especialmente atribuidos en el servicio de datos. Para obtener más información, vea [interceptores](interceptors-wcf-data-services.md).  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Cómo: Interceptar mensajes de Data Services (Data Services de WCF)
+Con WCF Data Services, puede interceptar mensajes de solicitud para que pueda agregar lógica personalizada a una operación. Para interceptar un mensaje, se usan métodos especialmente atribuidos en el servicio de datos. Para obtener más información, vea [interceptores](interceptors-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind. Este servicio se crea cuando se completa la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -57,5 +57,5 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede intercept
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Definir una operación de servicio](how-to-define-a-service-operation-wcf-data-services.md)
+- [Definición de una operación de servicio](how-to-define-a-service-operation-wcf-data-services.md)
 - [Definir Servicios de datos de WCF](defining-wcf-data-services.md)

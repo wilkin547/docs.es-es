@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ejecutar consultas en un lote (WCF Data Services)
+title: 'Cómo: Ejecutar consultas en un lote (Servicios de datos de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: a825fe83ff62d935740fb69871ba2d1e2120e9ec
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0ddf5b4f68ca08fca0c55cfcdfcd5431bcec6de2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790496"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569050"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Procedimiento Ejecutar consultas en un lote (WCF Data Services)
-Mediante el uso [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] de la biblioteca de cliente, puede ejecutar más de una consulta en el servicio de datos en un único lote. Para obtener más información, vea [operaciones de procesamiento por lotes](batching-operations-wcf-data-services.md).  
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Cómo: Ejecutar consultas en un lote (Servicios de datos de WCF)
+Mediante el uso de la biblioteca de cliente de WCF Data Services, puede ejecutar más de una consulta en el servicio de datos en un único lote. Para obtener más información, vea [operaciones de procesamiento por lotes](batching-operations-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   

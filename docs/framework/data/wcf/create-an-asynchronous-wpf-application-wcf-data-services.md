@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear una aplicación asincrónica de Windows Presentation Framework (WCF Data Services)
+title: 'Cómo: Crear una aplicación asincrónica de Windows Presentation Framework (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: 820cb4aa39b49d63cf1acc31e6eb5aa56fd1ba03
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9bc1cef1f76e6e55e9cd5ed318741f8913abbaab
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790990"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569276"
 ---
-# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Procedimiento Crear una aplicación asincrónica de Windows Presentation Framework (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede enlazar los datos obtenidos de un servicio de datos a los elementos de la interfaz de usuario de una aplicación de Windows Presentation Framework (WPF). Para obtener más información, consulte [enlazar datos a controles](binding-data-to-controls-wcf-data-services.md). También puede ejecutar operaciones en el servicio de datos de una manera asincrónica, lo que permite que la aplicación siga respondiendo mientras se espera una respuesta a una solicitud de servicio de datos. Las aplicaciones para Silverlight deben tener acceso al servicio de datos de forma asincrónica. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Cómo: Crear una aplicación asincrónica de Windows Presentation Framework (Data Services de WCF)
+Con WCF Data Services, puede enlazar datos obtenidos de un servicio de datos a un elemento de la interfaz de usuario de una aplicación de Windows Presentation Framework (WPF). Para obtener más información, consulte [enlazar datos a controles](binding-data-to-controls-wcf-data-services.md). También puede ejecutar operaciones en el servicio de datos de una manera asincrónica, lo que permite que la aplicación siga respondiendo mientras se espera una respuesta a una solicitud de servicio de datos. Las aplicaciones para Silverlight deben tener acceso al servicio de datos de forma asincrónica. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
   
  En este tema se muestra cómo tener acceso a un servicio de datos de forma asincrónica y enlazar los resultados a los elementos de una aplicación WPF. En los ejemplos de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos del cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   

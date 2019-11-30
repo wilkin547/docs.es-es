@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975170"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568897"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
 
@@ -112,7 +112,7 @@ Se aplican las siguientes consideraciones adicionales cuando se define una proye
 
 - Cuando una proyección incluya una propiedad de navegación, los objetos relacionados se cargan implícitamente sin tener que llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. No se admite el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> para su uso en una consulta proyectada.
 
-- Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecute una consulta con proyección en una versión previa de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que no admita la opción de consulta `$select`, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).
+- Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecuta una consulta con proyección en una versión anterior de WCF Data Services que no admite la opción de consulta `$select`, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).
 
 Para obtener más información, vea [Cómo: proyectar los resultados](how-to-project-query-results-wcf-data-services.md)de una consulta.
 

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar, modificar y eliminar entidades (WCF Data Services)
+title: 'Cómo: Agregar, modificar y eliminar entidades (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 501bec59a61b51ec4bece4b0ce2f941189b35ed0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780246"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569200"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Procedimiento Agregar, modificar y eliminar entidades (WCF Data Services)
-Con las [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente, puede crear, actualizar y eliminar datos de entidad en un servicio de datos realizando acciones equivalentes en los <xref:System.Data.Services.Client.DataServiceContext>objetos de. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Cómo: Agregar, modificar y eliminar entidades (Data Services de WCF)
+Con las bibliotecas de cliente de WCF Data Services, puede crear, actualizar y eliminar datos de entidad en un servicio de datos realizando acciones equivalentes en los objetos de la <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -46,6 +46,6 @@ Con las [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas 
 ## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
-- [Cómo: Adjuntar una entidad existente a DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
-- [Cómo: Definir relaciones de entidad](how-to-define-entity-relationships-wcf-data-services.md)
+- [Asociación de una entidad existente a DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
+- [Definición de relaciones de entidades](how-to-define-entity-relationships-wcf-data-services.md)
 - [Procesamiento por lotes de operaciones](batching-operations-wcf-data-services.md)

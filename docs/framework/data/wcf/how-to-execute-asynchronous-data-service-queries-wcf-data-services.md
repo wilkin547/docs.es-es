@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ejecutar consultas asincrónicas del servicio de datos (WCF Data Services)
+title: 'Cómo: Ejecutar consultas asincrónicas de Data Services (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 14bfc138c5ece45184fb939f19aaf3d7e73e7294
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68e2035315780b7c6dd60e93ae6eb10d252aabb3
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790571"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569065"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Procedimiento Ejecutar consultas asincrónicas del servicio de datos (WCF Data Services)
-Al usar la biblioteca de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede realizar operaciones cliente-servidor, como ejecutar consultas y guardar cambios, de forma asincrónica. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Cómo: Ejecutar consultas asincrónicas de Data Services (Data Services de WCF)
+Mediante el uso de la biblioteca de cliente de WCF Data Services, puede realizar de forma asincrónica operaciones cliente-servidor, como ejecutar consultas y guardar cambios. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
 > En una aplicación donde se debe invocar la devolución de llamada en un subproceso concreto, debe calcular explícitamente las referencias de la ejecución del método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
