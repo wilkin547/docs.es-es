@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428527"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551820"
 ---
 # <a name="default-values-table-c-reference"></a>Tabla de valores predeterminados (referencia de C#)
 
@@ -22,7 +22,7 @@ En la tabla siguiente se muestran los valores predeterminados de los tipos de C#
 |Cualquier tipo de referencia|`null`|
 |Cualquier [tipo numérico entero integrado](../builtin-types/integral-numeric-types.md)|0 (cero)|
 |Cualquier [tipo numérico de punto flotante integrado](../builtin-types/floating-point-numeric-types.md)|0 (cero)|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Valor generado por la expresión `(E)0`, donde `E` es el identificador de enumeración.|
 |[struct](struct.md)|El valor generado al establecer todos los campos de tipo de valor en sus valores predeterminados y todos los campos de tipo de referencia en `null`.|

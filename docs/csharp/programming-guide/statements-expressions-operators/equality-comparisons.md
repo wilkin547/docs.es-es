@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588717"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552421"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (guía de programación de C#)
 
@@ -28,7 +28,7 @@ A veces es necesario comparar si dos valores son iguales. En algunos casos, se p
 
 ## <a name="value-equality"></a>Igualdad de valores
 
- La igualdad de valores significa que dos objetos contienen el mismo valor o valores. Para los tipos de valor primitivos, como [int](../../language-reference/builtin-types/integral-numeric-types.md) o [bool](../../language-reference/keywords/bool.md), las pruebas de igualdad de valores son sencillas. Puede usar el operador [==](../../language-reference/operators/equality-operators.md#equality-operator-), como se muestra en el ejemplo siguiente.  
+ La igualdad de valores significa que dos objetos contienen el mismo valor o valores. Para los tipos de valor primitivos, como [int](../../language-reference/builtin-types/integral-numeric-types.md) o [bool](../../language-reference/builtin-types/bool.md), las pruebas de igualdad de valores son sencillas. Puede usar el operador [==](../../language-reference/operators/equality-operators.md#equality-operator-), como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 int a = GetOriginalValue();  

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283894"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552864"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -31,7 +31,7 @@ Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual B
 
 * C# es simple, eficaz, incluye seguridad de tipos y está orientado a objetos, al mismo tiempo que mantiene la expresividad y elegancia de los lenguajes de estilo C. Cualquiera que esté familiarizado con C y lenguajes similares, encuentra pocos problemas para adaptarse a C#. Consulte la [Guía de C#](../csharp/index.yml) para más información sobre C#.
 
-* F# es un lenguaje de programación multiplataforma, principalmente funcional, que también admite la programación tradicional imperativa y orientada en objetos. Consulte la [Guía de F#](../fsharp/index.md) para más información sobre F#.
+* F# es un lenguaje de programación multiplataforma, principalmente funcional, que también admite la programación tradicional imperativa y orientada en objetos. Consulte la [Guía de F#](../fsharp/index.yml) para más información sobre F#.
 
 * Visual Basic es un lenguaje fácil de aprender que se usa para crear una gran variedad de aplicaciones que se ejecutan en .NET. Entré  los lenguajes .NET, la sintaxis de VB es la más cercana al idioma normal, lo que a menudo facilita el trabajo a las personas sin experiencia en desarrollo de software.
 

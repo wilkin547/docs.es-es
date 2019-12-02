@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771905"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552277"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de punto flotante (referencia de C#)
 
@@ -52,8 +52,8 @@ Como el tipo `decimal` tiene más precisión y un intervalo más reducido que `f
 
 Puede combinar tipos [enteros](integral-numeric-types.md) y tipos de punto flotante en una expresión. En este caso, los tipos enteros se convierten a tipos de punto flotante. La evaluación de la expresión se realiza según las reglas siguientes:
 
-- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double` o [bool](../keywords/bool.md) en comparaciones relacionales y de igualdad.
-- Si no hay ningún tipo `double` en la expresión, esta se evalúa como `float` o [bool](../keywords/bool.md) en comparaciones relacionales o de igualdad.
+- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double` o [bool](bool.md) en comparaciones relacionales y de igualdad.
+- Si no hay ningún tipo `double` en la expresión, esta se evalúa como `float` o [bool](bool.md) en comparaciones relacionales o de igualdad.
 
 Una expresión de punto flotante puede contener los siguientes conjuntos de valores:
 

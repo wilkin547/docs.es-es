@@ -6,16 +6,16 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 780c63e5a8f3f0d82559565b3319fe54507e3d21
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f65ed3b362080d7a8afe89e22bd132d1fc190b06
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036126"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552462"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operadores true y false (referencia de C#)
 
-El operador `true` devuelve el valor [bool](../keywords/bool.md) `true` para indicar que su operando es definitivamente true. El operador `false` devuelve el valor `bool` `true` para indicar que su operando es definitivamente false. Los operadores `true` y `false` no garantizan que se complementan entre sí. Es decir, tanto el operador `true` como `false` podrían devolver el valor `bool` `false` del mismo operando. Si un tipo define uno de los dos operadores, también debe definir otro operador.
+El operador `true` devuelve el valor [bool](../builtin-types/bool.md) `true` para indicar que su operando es definitivamente true. El operador `false` devuelve el valor `bool` `true` para indicar que su operando es definitivamente false. Los operadores `true` y `false` no garantizan que se complementan entre sí. Es decir, tanto el operador `true` como `false` podrían devolver el valor `bool` `false` del mismo operando. Si un tipo define uno de los dos operadores, también debe definir otro operador.
 
 > [!TIP]
 > Use el tipo `bool?`, si tiene que admitir la lógica de tres valores (por ejemplo, cuando trabaja con bases de datos que admiten un tipo booleano de tres valores). C# proporciona los operadores `&` y `|` que admiten la lógica de tres valores con los operandos `bool?`. Para más información, consulte la sección [Operadores lógicos booleanos que aceptan valores NULL](boolean-logical-operators.md#nullable-boolean-logical-operators) del artículo [Operadores lógicos booleanos](boolean-logical-operators.md).
@@ -45,5 +45,3 @@ Wait!
 
 - [Referencia de C#](../index.md)
 - [Operadores de C#](index.md)
-- [literal true](../keywords/true-literal.md)
-- [Literal false](../keywords/false-literal.md)
