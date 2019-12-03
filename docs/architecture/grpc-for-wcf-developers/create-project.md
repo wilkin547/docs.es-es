@@ -1,62 +1,62 @@
 ---
 title: Creación de un nuevo ASP.NET Core proyecto de gRPC-gRPC para desarrolladores de WCF
-description: Obtenga información sobre cómo crear un proyecto de gRPC con Visual Studio o desde la línea de comandos.
+description: Obtenga información sobre cómo crear un proyecto de gRPC con Visual Studio o la línea de comandos.
 ms.date: 09/02/2019
-ms.openlocfilehash: 992c3f57be25ae2517d41437170dc287f58934b6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711448"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Creación de un nuevo proyecto gRPC de ASP.NET Core
 
-.NET Core incluye una eficaz herramienta de la CLI, `dotnet`, que permite crear y administrar proyectos y soluciones desde la línea de comandos. La herramienta está estrechamente integrada con Visual Studio, por lo que todo está disponible a través de la interfaz GUI familiar. En este capítulo se muestran las dos maneras de crear un nuevo proyecto de gRPC ASP.NET Core: en primer lugar con Visual Studio, con el CLI de .NET Core.
+La SDK de .NET Core incluye una eficaz herramienta de la CLI, `dotnet`, que permite crear y administrar proyectos y soluciones desde la línea de comandos. El SDK está estrechamente integrado con Visual Studio, por lo que todo está también disponible a través de la conocida interfaz gráfica de usuario. En este capítulo se muestran las dos maneras de crear un nuevo proyecto de gRPC de ASP.NET Core.
 
-## <a name="create-the-project-using-visual-studio"></a>Crear el proyecto mediante Visual Studio
+## <a name="create-the-project-by-using-visual-studio"></a>Crear el proyecto mediante Visual Studio
 
 > [!IMPORTANT]
-> Para desarrollar una aplicación ASP.NET Core 3,0, necesita Visual Studio 2019,3 o posterior con la carga de trabajo de **desarrollo web y ASP.net** instalada.
+> Para desarrollar cualquier aplicación ASP.NET Core 3,0, necesita Visual Studio 2019 16,3 o posterior, con la carga de trabajo de **desarrollo web y ASP.net** instalada.
 
-Cree una solución vacía denominada **Traders** a partir de la plantilla de *solución en blanco* . Agregue una carpeta de soluciones llamada `src`, haga clic con el botón derecho en la carpeta y elija **agregar** > **nuevo proyecto** en el menú contextual. Escriba `grpc` en el cuadro de búsqueda de plantillas y debería ver una plantilla de proyecto denominada `gRPC Service`.
+Cree una solución vacía denominada **Traders** a partir de la plantilla de *solución en blanco* . Agregue una carpeta de soluciones llamada `src`. A continuación, haga clic con el botón derecho en la carpeta y elija **agregar** > **nuevo proyecto**. Escriba `grpc` en el cuadro de búsqueda de plantillas y debería ver una plantilla de proyecto denominada `gRPC Service`.
 
-![Cuadro de diálogo Agregar nuevo proyecto que muestra la plantilla de proyecto de servicio gRPC](media/create-project/new-grpc-project.png)
+![Captura de pantalla del cuadro de diálogo Agregar un nuevo proyecto](media/create-project/new-grpc-project.png)
 
-Haga clic en **siguiente** para continuar con el cuadro de diálogo **configurar proyecto** , asigne al proyecto el nombre `TraderSys.Portfolios`y agregue un subdirectorio `src` a la **Ubicación**.
+Seleccione **siguiente** para continuar en el cuadro de diálogo **configurar el nuevo proyecto** . Asigne al proyecto el nombre `TraderSys.Portfolios`y agregue un subdirectorio `src` a la **Ubicación**.
 
-![Cuadro de diálogo Configurar proyecto](media/create-project/configure-project.png)
+![Captura de pantalla del cuadro de diálogo Configurar el nuevo proyecto](media/create-project/configure-project.png)
 
-Haga clic en **siguiente** para continuar en el cuadro de diálogo **nuevo proyecto de gRPC** .
+Seleccione **siguiente** para continuar con el cuadro de diálogo **crear un nuevo servicio de gRPC** .
 
-![Cuadro de diálogo nuevo proyecto de gRPC](media/create-project/create-new-grpc-service.png)
+![Captura de pantalla del cuadro de diálogo crear un nuevo servicio gRPC](media/create-project/create-new-grpc-service.png)
 
-En la actualidad, hay opciones limitadas para la creación del servicio. Docker se introducirá más adelante en el libro, de modo que deje la casilla desactivada por ahora y simplemente haga clic en **crear**. Se genera el primer ASP.NET Core 3,0 gRPC proyecto y se agrega a la solución. Si no desea saber cómo trabajar con el `dotnet CLI`, vaya a la sección [limpieza del código de ejemplo](#clean-up-the-example-code) .
+En la actualidad, tiene opciones limitadas para la creación del servicio. Docker se introducirá más adelante, por lo que, por ahora, deje esa opción desactivada. Simplemente seleccione **crear**. Se genera el primer ASP.NET Core 3,0 gRPC proyecto y se agrega a la solución. Si no desea saber cómo trabajar con el `dotnet CLI`, vaya a la sección [limpieza del código de ejemplo](#clean-up-the-example-code) .
 
-## <a name="create-the-project-using-the-net-core-cli"></a>Cree el proyecto mediante el CLI de .NET Core
+## <a name="create-the-project-by-using-the-net-core-cli"></a>Cree el proyecto mediante el CLI de .NET Core
 
 En esta sección se describe la creación de soluciones y proyectos desde la línea de comandos.
 
-Cree la solución como se muestra a continuación. La marca `-o` (o `--output`) especifica el directorio de salida, que se creará en el directorio actual si no existe. La solución tendrá el mismo nombre que el directorio, es decir, `TraderSys.sln`. Puede proporcionar un nombre diferente mediante la marca `-n` (o `--name`).
+Cree la solución como se muestra en el siguiente comando. La marca `-o` (o `--output`) especifica el directorio de salida, que se crea en el directorio actual si aún no existe. La solución tiene el mismo nombre que el directorio: `TraderSys.sln`. Puede proporcionar un nombre diferente mediante la marca `-n` (o `--name`).
 
 ```dotnetcli
 dotnet new sln -o TraderSys
 cd TraderSys
 ```
 
-ASP.NET Core 3,0 incluye una plantilla de CLI para gRPC Services. Cree el nuevo proyecto con esta plantilla y colóquelo en un subdirectorio de `src` como la Convención de ASP.NET Core proyectos. El proyecto se denominará después del directorio (es decir, `TraderSys.Portfolios.csproj`) a menos que especifique otro nombre con la marca `-n`.
+ASP.NET Core 3,0 incluye una plantilla de CLI para gRPC Services. Cree el nuevo proyecto con esta plantilla y colóquelo en un subdirectorio de `src` como se usa para proyectos de ASP.NET Core. El nombre del proyecto se encuentra después del directorio (`TraderSys.Portfolios.csproj`), a menos que especifique otro nombre con la marca `-n`.
 
 ```dotnetcli
 dotnet new grpc -o src/TraderSys.Portfolios
 ```
 
-Por último, agregue el proyecto a la solución con el comando `dotnet sln`.
+Por último, agregue el proyecto a la solución mediante el comando `dotnet sln`:
 
 ```dotnetcli
 dotnet sln add src/TraderSys.Portfolios
 ```
 
 > [!TIP]
-> Dado que el directorio especificado solo contiene un único archivo de `.csproj`, puede empezar a especificar solo el directorio para guardar escribiendo.
+> Dado que el directorio concreto solo contiene un único archivo de `.csproj`, puede especificar solo el directorio para guardar escribiendo.
 
 Ahora puede abrir esta solución en Visual Studio 2019, Visual Studio Code o cualquier editor que prefiera.
 
@@ -66,7 +66,7 @@ Ahora ha creado un servicio de ejemplo con la plantilla gRPC, que se ha revisado
 
 ### <a name="rename-and-edit-the-proto-file"></a>Cambiar el nombre y editar el archivo proto
 
-Continúe y cambie el nombre del archivo de `Protos/greet.proto` a `Protos/portfolios.proto` y ábralo en el editor. Elimine todo lo que haya después de la línea de `package`, cambie los nombres de `option csharp_namespace`, `package` y `service` y quite el servicio de `SayHello` predeterminado, de modo que el código tenga este aspecto.
+Continúe y cambie el nombre del archivo de `Protos/greet.proto` a `Protos/portfolios.proto`y ábralo en el editor. Elimine todo después de la línea de `package`. A continuación, cambie los nombres de `option csharp_namespace`, `package` y `service` y quite el servicio de `SayHello` predeterminado. El código tiene ahora el siguiente aspecto:
 
 ```protobuf
 syntax = "proto3";
@@ -93,9 +93,9 @@ En los destinos de compilación de gRPC, hay un elemento `Protobuf` elemento que
 </ItemGroup>
 ```
 
-### <a name="rename-the-greeterservice-class"></a>Cambiar el nombre de la clase GreeterService
+### <a name="rename-the-greeterservice-class"></a>Cambiar el nombre de la clase `GreeterService`
 
-La clase `GreeterService` se encuentra en la carpeta `Services` y hereda de `Greeter.GreeterBase`. Cambie el nombre a `PortfolioService` y cambie la clase base a `Portfolios.PortfoliosBase`. Elimine los métodos de `override`.
+La clase `GreeterService` se encuentra en la carpeta `Services` y hereda de `Greeter.GreeterBase`. Cambie el nombre a `PortfolioService`y cambie la clase base a `Portfolios.PortfoliosBase`. Elimine los métodos de `override`.
 
 ```csharp
 public class PortfolioService : Portfolios.PortfoliosBase

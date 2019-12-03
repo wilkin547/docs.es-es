@@ -2,39 +2,39 @@
 title: 'Introducción: gRPC para desarrolladores de WCF'
 description: Introducción
 ms.date: 09/02/2019
-ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2f36d6294e2c76309b051fb3af21157cbfc1087a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967617"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711237"
 ---
 # <a name="introduction"></a>Introducción
 
 Ayudar a las máquinas a comunicarse entre sí ha sido una de las principales preocupaciones de la era digital. En concreto, hay un esfuerzo continuo para determinar el mecanismo de comunicación remota óptimo que se adaptará a las demandas de interoperabilidad de la infraestructura actual. Como puede imaginar, ese mecanismo cambia a medida que evolucionan las demandas o la infraestructura.
 
-La versión de .NET Core 3,0 marca un cambio en la forma en que Microsoft ofrece soluciones de comunicación remota a los desarrolladores que quieren ofrecer servicios a través de una variedad de plataformas. .NET Core no ofrece Windows Communication Foundation (WCF) de un solo cuadro, sino que con el lanzamiento de la versión ASP.NET Core 3,0, proporciona funcionalidad gRPC integrada.
+La versión de .NET Core 3,0 marca un cambio en la forma en que Microsoft ofrece soluciones de comunicación remota a los desarrolladores que quieren ofrecer servicios a través de una variedad de plataformas. .NET Core no ofrece Windows Communication Foundation (WCF) de un solo cuadro, sino que, con el lanzamiento de ASP.NET Core 3,0, proporciona funcionalidad gRPC integrada.
 
-gRPC es un marco popular de la comunidad de software más amplio, que usan los desarrolladores en muchos lenguajes de programación para los escenarios de RPC modernos. La comunidad y el ecosistema son vibrantes y activos, con compatibilidad para el protocolo gRPC que se agrega a componentes de infraestructura como Kubernetes, mallas de servicio, equilibradores de carga y mucho más. Estos factores, así como el rendimiento, la eficacia y la compatibilidad entre plataformas, hacen que gRPC sea una opción natural para aplicaciones nuevas y aplicaciones WCF que se mueven a .NET Core.
+gRPC es un marco popular en la mayor comunidad de software. Lo usan los desarrolladores en muchos lenguajes de programación para los escenarios de RPC modernos. La comunidad y el ecosistema son vibrante y activo. La compatibilidad con el protocolo gRPC se agrega a componentes de infraestructura como Kubernetes, mallas de servicio, equilibradores de carga, etc. Estos factores, junto con el rendimiento, la eficacia y la compatibilidad entre plataformas, hacen que gRPC sea una opción natural para aplicaciones nuevas y aplicaciones WCF que se mueven a .NET Core.
 
 ## <a name="history"></a>Historial
 
-El principio fundamental de una red de equipos como nada más que un grupo de equipos que intercambian datos entre sí para lograr un conjunto de tareas interrelacionadas no ha cambiado desde su inicio. Sin embargo, la complejidad, la escala y las expectativas han crecido exponencialmente.  
+El principio fundamental de una red de equipos como nada más que un grupo de equipos que intercambian datos entre sí para lograr un conjunto de tareas interrelacionadas no ha cambiado desde su inicio. Pero la complejidad, la escala y las expectativas han crecido exponencialmente.  
 
-Durante los 90, el énfasis se ha centrado principalmente en la mejora de las redes internas con el mismo lenguaje y plataformas. TCP/IP se convirtió en el estándar Gold para este tipo de comunicación.
+Durante los años noventa, el énfasis era principalmente en mejorar las redes internas que usaban el mismo lenguaje y plataformas. TCP/IP se convirtió en el estándar Gold para este tipo de comunicación.
 
-Sin embargo, el enfoque se centra pronto en la mejor forma de optimizar la comunicación entre varias plataformas, lo que promueve un enfoque independiente del lenguaje. La arquitectura orientada a servicios (SOA) proporciona una estructura para el acoplamiento flexible de una amplia colección de servicios que se podrían proporcionar a una aplicación.
+El enfoque se centra pronto en la mejor forma de optimizar la comunicación entre varias plataformas mediante la promoción de un enfoque independiente del lenguaje. La arquitectura orientada a servicios (SOA) proporciona una estructura para el acoplamiento flexible de una amplia colección de servicios que se podrían proporcionar a una aplicación.
 
-El desarrollo de *servicios web* se produjo una vez que todas las plataformas principales podían tener acceso a Internet, pero siguen pudiendo interactuar entre sí. Los servicios Web de tienen estándares y protocolos abiertos, entre los que se incluyen:
+El desarrollo de *servicios web* se produjo cuando todas las plataformas principales podían tener acceso a Internet, pero siguen sin poder interactuar entre sí. Los servicios Web de tienen estándares y protocolos abiertos, entre los que se incluyen:
 
-- XML para etiquetar y codificar datos;
-- Protocolo simple de acceso a objetos (SOAP) para transferir datos;
-- Lenguaje de definición de servicios web (WSDL): describe el servicio Web y lo conecta a la aplicación cliente; *y*
-- Integración de la detección de descripción universal (UDDI): permite que otros servicios puedan detectar servicios Web
+- XML para etiquetar y codificar datos.
+- Protocolo simple de acceso a objetos (SOAP) para transferir datos.
+- Lenguaje de definición de servicios web (WSDL) para describir y conectar los servicios web a las aplicaciones cliente.
+- Universal Description, Discovery, and Integration (UDDI) para que otros servicios puedan detectar los servicios Web.
 
-SOAP define las reglas por las que los elementos distribuidos de una aplicación pueden comunicarse entre sí incluso si se encuentran en distintas plataformas. SOAP se basa en XML, por lo que es legible. El sacrificio para facilitar la comprensión de SOAP es el tamaño; Los mensajes SOAP son más grandes que los mensajes en protocolos comparables. SOAP se diseñó para dividir las aplicaciones monolíticas en una forma de varios componentes sin perder seguridad o control. Por lo tanto, WCF se diseñó para funcionar con ese tipo de sistema, a diferencia de gRPC, que comenzó como sistema distribuido. WCF solucionó algunas de estas limitaciones al desarrollar y documentar protocolos de extensión propietarios para la pila SOAP, pero a costa de la falta de compatibilidad de otras plataformas.
+SOAP define las reglas por las que los elementos distribuidos de una aplicación pueden comunicarse entre sí, aunque estén en distintas plataformas. SOAP se basa en XML, por lo que es legible. El sacrificio para facilitar la comprensión de SOAP es el tamaño; Los mensajes SOAP son más grandes que los mensajes en protocolos comparables. SOAP se diseñó para dividir las aplicaciones monolíticas en un formato multicomponente sin perder seguridad ni control. De este modo, WCF se diseñó para funcionar con ese tipo de sistema, a diferencia de gRPC, que comenzó como sistema distribuido. WCF solucionó algunas de estas limitaciones al desarrollar y documentar protocolos de extensión propietarios para la pila SOAP, pero a costa de una falta de compatibilidad de otras plataformas.
 
-Windows Communication Foundation es un marco de trabajo para la creación de servicios. Se diseñó en el 2000s temprano para ayudar a los desarrolladores a usar SOA temprano a administrar las complejidades del trabajo con SOAP. Aunque elimina el requisito de que el desarrollador escriba sus propios protocolos SOAP, WCF sigue usando SOAP para habilitar la interoperabilidad con otros sistemas. WCF también se ha diseñado para ofrecer soluciones en varios protocolos (HTTP/1.1, NetTCP, etc.).
+Windows Communication Foundation es un marco de trabajo para la creación de servicios. Se diseñó en el 2000s temprano para ayudar a los desarrolladores a usar SOA temprano a administrar las complejidades del trabajo con SOAP. Aunque elimina el requisito de que los desarrolladores escriban sus propios protocolos SOAP, WCF sigue utilizando SOAP para habilitar la interoperabilidad con otros sistemas. WCF también se ha diseñado para ofrecer soluciones en varios protocolos (HTTP/1.1, net. TCP, etc.).
 
 ## <a name="microservices"></a>Microservicios
 
@@ -43,25 +43,25 @@ En las arquitecturas de microservicios, las aplicaciones de gran tamaño se comp
 Entre las ventajas de los microservicios se incluyen:
 
 - Los cambios y las actualizaciones se pueden administrar de forma independiente.
-- El control de errores es más eficaz, ya que se puede realizar un seguimiento de los problemas a los servicios específicos que se aíslan, se vuelven a generar, se prueban y se vuelven a implementar de forma independiente de los demás servicios.
+- El control de errores es más eficaz, ya que se puede realizar un seguimiento de los problemas a los servicios específicos que se aíslan, se vuelven a compilar, probar y volver a implementar independientemente de los demás servicios.
 - La escalabilidad se puede limitar a instancias o servicios específicos en lugar de a toda la aplicación.
 - El desarrollo puede producirse en varios equipos, con menos fricción de lo que ocurre cuando muchos equipos trabajan en un solo código base.
 
-La transición hacia el aumento de la virtualización, la informática en la nube, los contenedores y el Internet de las cosas ha contribuido al aumento continuo de los microservicios. Sin embargo, los microservicios no tienen sus desafíos. La infraestructura fragmentada o descentralizada ha hecho más hincapié en la necesidad de simplicidad y velocidad al comunicarse entre los servicios. Esto, a su vez, ha captado la atención a la naturaleza de SOAP a veces laboriosa y con responsabilidad.
+El avance hacia el aumento de la virtualización, la informática en la nube, los contenedores y el Internet de las cosas ha contribuido al aumento continuo de los microservicios. Sin embargo, los microservicios no tienen sus desafíos. La infraestructura fragmentada o descentralizada pone más énfasis en la necesidad de simplicidad y velocidad al comunicarse entre los servicios. Esto, a su vez, ha captado la atención a la naturaleza de SOAP a veces laboriosa y con responsabilidad.
 
-Se encontraba en este entorno en el que se lanzó gRPC, 10 años después de que Microsoft lanzó por primera vez WCF. Evolucionó directamente de la RPC de la infraestructura interna de Google (Stubby), gRPC nunca se basó en los mismos estándares y protocolos que habían informado de los parámetros de muchas RPC anteriores. Además, gRPC solo se basó en HTTP/2 y es por eso que podría dibujarse en las nuevas capacidades que el protocolo de transporte avanzado proporcionó. En concreto, streaming bidireccional, mensajería binaria y multiplexación.
+Se encontraba en este entorno en el que se lanzó gRPC, 10 años después de que Microsoft lanzó por primera vez WCF. Evolucionó directamente de la RPC de la infraestructura interna de Google (Stubby), gRPC nunca se basó en los mismos estándares y protocolos que habían informado de los parámetros de muchas RPC anteriores. Y gRPC solo se basaba en HTTP/2. Por eso podría basarse en las nuevas capacidades que el protocolo de transporte avanzado proporcionó. En concreto, streaming bidireccional, mensajería binaria y multiplexación.
 
 ## <a name="about-this-guide"></a>Acerca de esta guía
 
-En esta guía se tratan las principales características de gRPC. En los capítulos iniciales se ofrece una visión general de las principales características de WCF y se comparan con gRPC. Identifica dónde son las correlaciones directas entre WCF y gRPC y también donde gRPC ofrece una ventaja. Cuando no hay ninguna correlación entre WCF y gRPC, o donde gRPC no puede ofrecer una solución equivalente a WCF, en esta guía se sugieren soluciones alternativas o lugares para obtener más información.
+En esta guía se tratan las principales características de gRPC. En los capítulos iniciales se ofrece una visión general de las principales características de WCF y se comparan con las de gRPC. Identifica dónde hay correlaciones directas entre WCF y gRPC y también donde gRPC ofrece una ventaja. Cuando no hay ninguna correlación entre WCF y gRPC, o cuando gRPC no puede ofrecer una solución equivalente a WCF, en esta guía se sugieren soluciones alternativas o dónde se puede obtener más información.
 
 Con un conjunto de aplicaciones WCF de ejemplo, el capítulo 5 es una visión detallada de la conversión de los tipos principales de servicio WCF (solicitud-respuesta simple, unidireccional y transmisión por secuencias) a sus equivalentes en gRPC.
 
-En la sección final del libro se examina cómo sacar el máximo partido de gRPC en la práctica, incluido el uso de herramientas adicionales como contenedores de Docker o Kubernetes para aprovechar la eficacia de gRPC y una visión detallada de la supervisión con registro, métricas y distribuidas. seguimiento.
+En la sección final del libro se examina cómo sacar el máximo partido de gRPC en la práctica. En esta sección se incluye información sobre el uso de herramientas adicionales, como contenedores de Docker o Kubernetes, para aprovechar la eficacia de gRPC. También se incluye una visión detallada de la supervisión con registro, métricas y seguimiento distribuido.
 
-## <a name="whom-this-guide-is-for"></a>Para qué es esta guía
+## <a name="who-this-guide-is-for"></a>Destinatarios de esta guía
 
-Esta guía se ha escrito para desarrolladores que trabajan con .NET Framework o .NET Core, que han usado WCF antes y que buscan migrar sus aplicaciones a un entorno de RPC moderno para .NET Core 3.0 y versiones posteriores. La guía también puede ser de uso más general para desarrolladores que vayan a realizar la actualización a .NET Core 3.0 (o piensen hacerlo) y que quieran usar las herramientas de gRPC integradas.
+Esta guía se ha escrito para desarrolladores que trabajan en .NET Framework o .NET Core que han usado WCF y que buscan migrar sus aplicaciones a un entorno de RPC moderno para .NET Core 3,0 y versiones posteriores. La guía también puede ser útil más en general para desarrolladores que actualicen o consideren la actualización a .NET Core 3,0 y que quieran usar las herramientas de gRPC integradas.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

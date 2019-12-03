@@ -2,12 +2,12 @@
 title: 'Mallas de servicio: gRPC para desarrolladores de WCF'
 description: Usar una malla de servicio para enrutar y equilibrar las solicitudes a los servicios de gRPC en un clúster de Kubernetes.
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966969"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711274"
 ---
 # <a name="service-meshes"></a>Mallas de servicio
 
@@ -21,7 +21,7 @@ Una malla de servicio es un componente de infraestructura que toma el control de
 
 Las mallas de servicio de Kubernetes funcionan agregando un contenedor adicional, denominado *proxy sidecar*, a cada POD incluido en la malla. El proxy asume el control de todas las solicitudes de red entrantes y salientes, lo que permite que la configuración y la administración de las redes sean independientes de los contenedores de la aplicación y, en muchos casos, sin necesidad de realizar cambios en el código de la aplicación.
 
-Tome el [ejemplo del capítulo anterior](kubernetes.md#testing-the-application), donde las solicitudes de gRPC de la aplicación web se enrutaron a una única instancia del servicio gRPC. Esto sucede porque el nombre de host del servicio se resuelve en una dirección IP y esa dirección IP se almacena en caché durante la duración de la instancia de `HttpClientHandler`. Es posible que se pueda solucionar esto mediante el control manual de las búsquedas de DNS o la creación de varios clientes, pero esto complicaría considerablemente el código de aplicación sin agregar ningún valor empresarial o de cliente.
+Tome el [ejemplo del capítulo anterior](kubernetes.md#test-the-application), donde las solicitudes de gRPC de la aplicación web se enrutaron a una única instancia del servicio gRPC. Esto sucede porque el nombre de host del servicio se resuelve en una dirección IP y esa dirección IP se almacena en caché durante la duración de la instancia de `HttpClientHandler`. Es posible que se pueda solucionar esto mediante el control manual de las búsquedas de DNS o la creación de varios clientes, pero esto complicaría considerablemente el código de aplicación sin agregar ningún valor empresarial o de cliente.
 
 Mediante una malla de servicio, las solicitudes del contenedor de la aplicación se envían al proxy sidecar, que puede distribuirlas de forma inteligente en todas las instancias del otro servicio. La malla también puede:
 
