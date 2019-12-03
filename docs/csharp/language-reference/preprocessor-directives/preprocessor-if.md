@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036002"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552442"
 ---
 # <a name="if-c-reference"></a>#if (Referencia de C#)
 
@@ -24,7 +24,7 @@ Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por
 #endif
 ```
 
-Puede usar los operadores [==](../operators/equality-operators.md#equality-operator-) (igualdad) y [!=](../operators/equality-operators.md#inequality-operator-) (desigualdad) solo para comprobar los valores [true](../keywords/true-literal.md) o [false](../keywords/false-literal.md). True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (y), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (o) y [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
+Puede usar los operadores [==](../operators/equality-operators.md#equality-operator-) (igualdad) y [!=](../operators/equality-operators.md#inequality-operator-) (desigualdad) solo para comprobar los valores [booleanos](../builtin-types/bool.md) `true` o `false`. True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (y), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (o) y [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
 
 ## <a name="remarks"></a>Comentarios
 

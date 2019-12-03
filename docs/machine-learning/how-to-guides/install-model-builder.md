@@ -3,26 +3,29 @@ title: Cómo instalar el Generador de modelos
 description: Obtenga información sobre cómo instalar la herramienta Generador de modelos de ML.NET.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774564"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552941"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Cómo instalar el Generador de modelos de ML.NET
 
 Obtenga información sobre cómo instalar el Generador de modelos de ML.NET para agregar aprendizaje automático a las aplicaciones. NET.
 
 > [!NOTE]
-> El Generador de modelos se encuentra en versión preliminar.
+> De momento, el Generador de modelos se encuentra en versión preliminar.
 
-## <a name="pre-requisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 - Visual Studio 2017, versión 15.9.12 o una posterior/Visual Studio 2019
-- .NET Core 2.1 o SDK posterior
+- SDK de .NET Core 2.1 o versiones posteriores.
+
+> [!NOTE]
+> El SDK de .NET Core 3.0 no se admite actualmente.
 
 ## <a name="limitations"></a>Limitaciones
 
@@ -31,7 +34,7 @@ Obtenga información sobre cómo instalar el Generador de modelos de ML.NET para
 - SQL Server tiene un límite de 100 000 filas para el entrenamiento
 - No admite Microsoft SQL Server Data Tools para Visual Studio 2017
 
-## <a name="install"></a>Instalación
+## <a name="install"></a>Instalar
 
 El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketplace o desde el propio Visual Studio.
 
@@ -66,7 +69,7 @@ El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketpl
 
 1. Siga las indicaciones para completar la instalación.
 
-## <a name="uninstall"></a>Desinstalación
+## <a name="uninstall"></a>Desinstalar
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -94,6 +97,6 @@ El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketpl
 
 1. Siga las indicaciones para completar la desinstalación.
 
-## <a name="upgrade"></a>Actualizar
+## <a name="upgrade"></a>Actualización:
 
 El proceso de actualización es similar al proceso de instalación. Descargue la versión más reciente desde Visual Studio Marketplace o use el Administrador de extensiones de Visual Studio.

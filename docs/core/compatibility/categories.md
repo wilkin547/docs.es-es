@@ -2,16 +2,24 @@
 title: Categorías de cambios importantes - .NET Core
 description: Obtenga información sobre la forma de clasificar los cambios importantes en .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739368"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567923"
 ---
 # <a name="breaking-change-categories"></a>Categorías de cambios importantes
 
-*Compatibilidad* hace referencia a la capacidad de compilar o ejecutar código en una versión de una implementación .NET distinta a la que se utilizó originalmente para desarrollar el código. Un cambio determinado puede repercutir en la compatibilidad de seis formas distintas. Los [tipos de cambios individuales que se tienen en cuenta al evaluar la compatibilidad](index.md) se incluyen en las cinco primeras categorías.
+*Compatibilidad* hace referencia a la capacidad de compilar o ejecutar código en una versión de una implementación .NET distinta a la que se utilizó originalmente para desarrollar el código. Un cambio determinado puede repercutir en la compatibilidad de seis formas distintas. Los [tipos de cambios individuales](index.md) que se tienen en cuenta al evaluar la compatibilidad se clasifican en las siguientes categorías:
+
+- [cambio de comportamiento](#behavioral-change)
+- [compatibilidad binaria](#binary-compatibility)
+- [compatibilidad de origen](#source-compatibility)
+- [compatibilidad en tiempo de diseño](#design-time-compatibility)
+- [compatibilidad con versiones anteriores](#backwards-compatibility)
+
+La [compatibilidad con versiones posteriores](#forward-compatibility) no es un objetivo de .NET Core.
 
 ## <a name="behavioral-change"></a>Cambio de comportamiento
 

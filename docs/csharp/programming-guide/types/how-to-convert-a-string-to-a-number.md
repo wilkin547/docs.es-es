@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417645"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552410"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedimiento Convertir una cadena en un número (Guía de programación de C#)
 
@@ -21,7 +21,7 @@ Puede convertir una [cadena](../../language-reference/builtin-types/reference-ty
   
  Si tiene una cadena, resulta algo más eficaz y sencillo llamar a un método `TryParse` (por ejemplo, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) o un método `Parse` (por ejemplo, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  El uso de un método <xref:System.Convert> resulta más práctico para objetos generales que implementan <xref:System.IConvertible>.  
   
- Puede usar los métodos `Parse` o `TryParse` sobre el tipo numérico que espera que la cadena contenga, como el tipo <xref:System.Int32?displayProperty=nameWithType>.  El método <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> utiliza <xref:System.Int32.Parse%2A> internamente.  El método `Parse` devuelve el número convertido; el método `TryParse` devuelve un valor <xref:System.Boolean> que indica si la conversión se realizó correctamente, y devuelve el número convertido en un [parámetro `out`](../../language-reference/keywords/out.md). Si el formato de la cadena no es válido, `Parse` genera una excepción, mientras que `TryParse` devuelve [false](../../language-reference/keywords/false-literal.md). Cuando se llama a un método `Parse`, siempre debe usar control de excepciones para detectar un <xref:System.FormatException> en caso de que se produzca un error en la operación de análisis.  
+ Puede usar los métodos `Parse` o `TryParse` sobre el tipo numérico que espera que la cadena contenga, como el tipo <xref:System.Int32?displayProperty=nameWithType>.  El método <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> utiliza <xref:System.Int32.Parse%2A> internamente.  El método `Parse` devuelve el número convertido; el método `TryParse` devuelve un valor <xref:System.Boolean> que indica si la conversión se realizó correctamente, y devuelve el número convertido en un [parámetro `out`](../../language-reference/keywords/out.md). Si el formato de la cadena no es válido, `Parse` produce una excepción, mientras que `TryParse` devuelve `false`. Cuando se llama a un método `Parse`, siempre debe usar control de excepciones para detectar un <xref:System.FormatException> en caso de que se produzca un error en la operación de análisis.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Llamada a los métodos Parse y TryParse
 

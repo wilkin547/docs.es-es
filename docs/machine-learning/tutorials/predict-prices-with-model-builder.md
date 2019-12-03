@@ -3,15 +3,15 @@ title: 'Tutorial: Predicción de precios mediante regresión con el Generador de
 description: En este tutorial se muestra cómo compilar un modelo de regresión con el Generador de modelos de ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977353"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552926"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Predicción de precios mediante regresión con el Generador de modelos
 
@@ -38,7 +38,7 @@ Para obtener una lista de los requisitos previos e instrucciones de instalación
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
-1. Cree una **aplicación de consola de .NET Core** denominada "TaxiFarePrediction".
+1. Cree una **aplicación de consola .NET Core de C#** denominada "TaxiFarePrediction". Asegúrese de que **Colocar la solución y el proyecto en el mismo directorio** está **desactivado** (VS 2019) o que **Crear directorio para la solución** está **activado** (VS 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 

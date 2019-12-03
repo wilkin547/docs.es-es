@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Análisis de sentimiento: clasificación binaria'
 description: En este tutorial se muestra cómo crear una aplicación Razor Pages que clasifica los sentimientos de los comentarios del sitio web y toma las medidas oportunas. El clasificador binario de sentimientos usa el Generador de modelos en Visual Studio.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974795"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551844"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Análisis del sentimiento de los comentarios del sitio web en una aplicación web con el Generador de modelos de ML.NET
 
@@ -48,7 +48,7 @@ Para obtener una lista de los requisitos previos e instrucciones de instalación
     1. En el cuadro de diálogo Nuevo proyecto, seleccione el nodo **Visual C#** seguido del nodo **Web**.
     1. Seleccione la plantilla de proyecto **Aplicación web de ASP.NET Core**.
     1. En el cuadro de texto **Nombre**, escriba "SentimentRazor".
-    1. La casilla **Create a directory for solution** (Crear un directorio para la solución) debe estar activada de manera predeterminada. Si no es así, actívela.
+    1. Asegúrese de que **Colocar la solución y el proyecto en el mismo directorio** está **desactivado** (VS 2019) o que **Crear directorio para la solución** está **activado** (VS 2017).
     1. Seleccione el botón **Aceptar**.
     1. Elija **Aplicación web** en la ventana que muestra los distintos tipos de proyectos de ASP.NET Core y, luego, haga clic en el botón **Aceptar**.
 
