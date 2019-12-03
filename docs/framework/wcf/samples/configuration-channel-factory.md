@@ -2,15 +2,15 @@
 title: Generador de canales de configuración
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 1b74c15599ebc932a2a0ed46d646b54bec986794
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a236f1812d3124e83702a97e1877b7fec10be64
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045654"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715500"
 ---
 # <a name="configuration-channel-factory"></a>Generador de canales de configuración
-En este ejemplo se explica el uso de <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. Permite <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> la administración central de la configuración del cliente de WCF. Esto también puede ser útil en escenarios en los que la configuración se selecciona o se cambia después de la carga del dominio de aplicación.
+En este ejemplo se explica el uso de <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. El <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> permite la administración central de la configuración del cliente de WCF. Esto también puede ser útil en escenarios en los que la configuración se selecciona o se cambia después de la carga del dominio de aplicación.
 
 ## <a name="demonstrates"></a>Demostraciones
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
@@ -39,7 +39,7 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 3. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **proyectos de inicio múltiples**.
 
-4. Mueva el proyecto de **servicio** al principio de la lista, con la **Acción ' iniciar '** y, a continuación, mueva el proyecto de **cliente** después del proyecto de **servicio** , también con la **Acción ' iniciar '** , de modo que se ejecute el proyecto de **cliente** . después del proyecto de **servicio** .
+4. Mueva el proyecto **servicio** al principio de la lista, con la **Acción ' iniciar '** y, a continuación, mueva el proyecto **cliente** después del proyecto de **servicio** , también con la **Acción ' iniciar '** , de modo que el proyecto **cliente** se ejecute después del proyecto de **servicio** .
 
 5. Haga clic en **Aceptar**y, a continuación, presione F5 (o Ctrl + F5) para ejecutar el ejemplo.
 
@@ -48,6 +48,6 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

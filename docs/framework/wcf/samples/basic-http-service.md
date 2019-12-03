@@ -2,12 +2,12 @@
 title: Servicio HTTP básico
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: ec716b41efb3dde6e5afdb386d797e402d924b56
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8dfcd5a751bcef6aa24b5cb4a200c8820c43fe81
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045157"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716101"
 ---
 # <a name="basic-http-service"></a>Servicio HTTP básico
 
@@ -21,7 +21,7 @@ La operación `EchoWithGet` se anota con <xref:System.ServiceModel.Web.WebGetAtt
 
 La operación `EchoWithPost` se anota con <xref:System.ServiceModel.Web.WebInvokeAttribute>, que indica que no es una operación `GET` (tiene efectos secundarios). Dado que el <xref:System.ServiceModel.Web.WebInvokeAttribute> no especifica un `Method` explícitamente, la operación procesa las solicitudes `POST` de HTTP que tienen la cadena en el cuerpo de la solicitud (en el formato XML, por ejemplo). Observe que el método HTTP y el formato del URI para la solicitud se pueden personalizar utilizando las propiedades <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> y <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>, respectivamente.
 
-El archivo App.config configura el servicio WCF con un <xref:System.ServiceModel.Description.WebHttpEndpoint> predeterminado que tiene la propiedad <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> establecida en `true`. Como resultado, la infraestructura de WCF crea una página de ayuda basada en HTML `http://localhost:8000/Customers/help` automática en que proporciona información acerca de cómo construir las solicitudes HTTP al servicio y cómo consumir la respuesta HTTP del servicio.
+El archivo App.config configura el servicio WCF con un <xref:System.ServiceModel.Description.WebHttpEndpoint> predeterminado que tiene la propiedad <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> establecida en `true`. Como resultado, la infraestructura de WCF crea una página de ayuda basada en HTML automática en `http://localhost:8000/Customers/help` que proporciona información sobre cómo construir las solicitudes HTTP al servicio y cómo consumir la respuesta HTTP del servicio.
 
 Program.cs muestra cómo se puede usar un generador de canales de WCF para realizar llamadas al servicio y procesar las respuestas. Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF. También es posible tener acceso al servicio utilizando otras clases de .NET Framework como <xref:System.Net.HttpWebRequest> y <xref:System.Net.WebClient>.
 
@@ -40,6 +40,6 @@ El ejemplo consta de un servicio autohospedado y un cliente que se ejecutan ambo
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`

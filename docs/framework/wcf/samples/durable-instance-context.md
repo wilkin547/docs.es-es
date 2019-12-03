@@ -2,12 +2,12 @@
 title: Contexto de instancia duradera
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 4c2e39aa257d4b4b9b3bd28e0cd469f09cae0766
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351626"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711943"
 ---
 # <a name="durable-instance-context"></a>Contexto de instancia duradera
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-Estos dos métodos utilizan implementaciones `IContextManager` para escribir y leer el id. de contexto a o del mensaje. (`IContextManager` es una interfaz personalizada utilizada para definir el contrato para todos los administradores del contexto). El canal puede incluir o el id. de contexto en un encabezado SOAP personalizado o en un encabezado cookie HTTP. Cada implementación de administrador de contexto hereda de la clase `ContextManagerBase` que contiene la funcionalidad común para todos los administradores del contexto. El método `GetContextId` en esta clase se utiliza para originar el id. de contexto del cliente. Cuando se origina un id. de contexto por primera vez, este método lo guarda en un archivo de texto cuyo nombre se construye a partir de la dirección remota del extremo (los caracteres del nombre de archivo no válidos en los URI típicos se reemplazan con caracteres @).
+Estos dos métodos utilizan implementaciones `IContextManager` para escribir y leer el id. de contexto a o del mensaje. (`IContextManager` es una interfaz personalizada que se usa para definir el contrato para todos los administradores de contexto). El canal puede incluir el identificador de contexto en un encabezado SOAP personalizado o en un encabezado cookie HTTP. Cada implementación de administrador de contexto hereda de la clase `ContextManagerBase` que contiene la funcionalidad común para todos los administradores del contexto. El método `GetContextId` en esta clase se utiliza para originar el id. de contexto del cliente. Cuando se origina un id. de contexto por primera vez, este método lo guarda en un archivo de texto cuyo nombre se construye a partir de la dirección remota del extremo (los caracteres del nombre de archivo no válidos en los URI típicos se reemplazan con caracteres @).
 
 Después, cuando el id. de contexto se requiere para el mismo extremo remoto, comprueba si existe un archivo adecuado. Si es así, lee el id. de contexto y lo devuelve. De lo contrario devuelve un id. de contexto recientemente generado y lo guarda en un archivo. Con la configuración predeterminada, estos archivos se colocan en un directorio llamado ContextStore, que reside en el directorio temp del usuario actual. No obstante, esta ubicación es configurable utilizando el elemento de enlace.
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-Estas implementaciones de canal se agregan a continuación al tiempo de ejecución `DurableInstanceContextBindingElement` del canal `DurableInstanceContextBindingElementSection` de WCF mediante la clase y la clase adecuadamente. Consulte la documentación del ejemplo de canal de [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) para obtener más información sobre los elementos de enlace y las secciones del elemento de enlace.
+A continuación, las implementaciones de canal se agregan al tiempo de ejecución del canal de WCF mediante la clase `DurableInstanceContextBindingElement` y `DurableInstanceContextBindingElementSection` clase adecuadamente. Consulte la documentación del ejemplo de canal de [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) para obtener más información sobre los elementos de enlace y las secciones del elemento de enlace.
 
 ## <a name="service-model-layer-extensions"></a>Extensiones de la capa de modelo de servicio
 
@@ -234,13 +234,13 @@ Se implementa la infraestructura necesaria para leer y escribir instancias del a
 
 Como primer paso de este proceso tenemos que guardar el id. de contexto, que pasó por la capa del canal al InstanceContext actual. InstanceContext es un componente de tiempo de ejecución que actúa como el vínculo entre el distribuidor de WCF y la instancia de servicio. Se puede utilizar para proporcionar estado y comportamiento adicionales a la instancia del servicio. Esto es esencial porque en comunicación con sesión el id. de contexto solo se envía con el primer mensaje.
 
-WCF permite extender su componente de tiempo de ejecución InstanceContext agregando un nuevo estado y comportamiento mediante su patrón de objeto extensible. El patrón de objeto extensible se utiliza en WCF para ampliar las clases en tiempo de ejecución existentes con nueva funcionalidad o agregar nuevas características de estado a un objeto. Hay tres interfaces en el patrón de objeto extensible: IExtensibleObject\<t >, IExtension\<t > y IExtensionCollection\<T >:
+WCF permite extender su componente de tiempo de ejecución InstanceContext agregando un nuevo estado y comportamiento mediante su patrón de objeto extensible. El patrón de objeto extensible se utiliza en WCF para ampliar las clases en tiempo de ejecución existentes con nueva funcionalidad o agregar nuevas características de estado a un objeto. Hay tres interfaces en el patrón de objeto extensible: IExtensibleObject\<T >, IExtension\<T > y IExtensionCollection\<T >:
 
-- La interfaz\<IExtensibleObject T > se implementa mediante objetos que permiten extensiones que personalizan su funcionalidad.
+- La interfaz IExtensibleObject\<T > se implementa mediante objetos que permiten extensiones que personalizan su funcionalidad.
 
-- La interfaz\<IExtension T > se implementa mediante objetos que son extensiones de clases de tipo T.
+- La interfaz IExtension\<T > se implementa mediante objetos que son extensiones de clases de tipo T.
 
-- La interfaz\<de > IExtensionCollection T es una colección de IExtensions que permite recuperar IExtensions por su tipo.
+- La interfaz IExtensionCollection\<T > es una colección de IExtensions que permite recuperar IExtensions por su tipo.
 
 Por consiguiente una clase InstanceContextExtension se debería crear de tal manera que implementase la interfaz IExtension y definiese el estado necesario para guardar el id. de contexto. Esta clase también proporciona el estado para mantener al administrador de almacenamiento en uso. Una vez guardado el nuevo estado, no debería ser posible modificarlo. Por consiguiente, el estado se proporciona y guarda a la instancia en el momento en que se construye; en ese momento solo se puede tener acceso a él utilizando las propiedades de solo lectura.
 
@@ -351,7 +351,7 @@ Resumiendo hasta ahora, este ejemplo ha generado un canal que habilita el protoc
 
 Lo que queda es un modo de guardar la instancia del servicio en el almacenamiento persistente. Como se dijo con anterioridad, ya existe la funcionalidad necesaria para guardar el estado en una implementación `IStorageManager`. Ahora debemos integrarlo con el tiempo de ejecución de WCF. Se requiere otro atributo, que es aplicable a los métodos en la clase de implementación de servicio. Se supone que este atributo se aplica a los métodos que cambian el estado de la instancia del servicio.
 
-La clase `SaveStateAttribute` implementa esta funcionalidad. También implementa `IOperationBehavior` la clase para modificar el tiempo de ejecución de WCF para cada operación. Cuando un método se marca con este atributo, el tiempo de ejecución de WCF `ApplyBehavior` invoca el método mientras `DispatchOperation` se construye el adecuado. En esta implementación de método hay línea única de código:
+La clase `SaveStateAttribute` implementa esta funcionalidad. También implementa `IOperationBehavior` clase para modificar el tiempo de ejecución de WCF para cada operación. Cuando un método se marca con este atributo, el tiempo de ejecución de WCF invoca al método `ApplyBehavior` mientras se construye el `DispatchOperation` adecuado. En esta implementación de método hay línea única de código:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -457,6 +457,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`
