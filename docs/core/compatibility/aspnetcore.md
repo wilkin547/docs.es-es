@@ -1,21 +1,25 @@
 ---
 title: 'Cambios importantes en ASP.NET Core: .NET Core'
 description: Enumera los cambios importantes en ASP.NET Core.
-ms.date: 11/20/2019
+ms.date: 11/25/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 130a89f45c3f80975c56ea3a4845ee560921286e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282513"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568379"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="4edd0-103">Cambios importantes en ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="4edd0-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="80ff0-103">Cambios importantes en ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="80ff0-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="4edd0-104">A continuación se muestra una lista de cambios importantes en ASP.NET Core según la versión de ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="4edd0-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="4edd0-105">ASP.NET Core proporciona las características de desarrollo de aplicaciones web que usa .NET Core.</span><span class="sxs-lookup"><span data-stu-id="4edd0-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="80ff0-104">A continuación se muestra una lista de cambios importantes en ASP.NET Core según la versión de ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="80ff0-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="80ff0-105">ASP.NET Core proporciona las características de desarrollo de aplicaciones web que usa .NET Core.</span><span class="sxs-lookup"><span data-stu-id="80ff0-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="4edd0-106">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="4edd0-106">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-31"></a><span data-ttu-id="80ff0-106">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="80ff0-106">ASP.NET Core 3.1</span></span>
+
+[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
+
+## <a name="aspnet-core-30"></a><span data-ttu-id="80ff0-107">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="80ff0-107">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
