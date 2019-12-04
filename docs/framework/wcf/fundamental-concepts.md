@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319847"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802315"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceptos básicos de Windows Communication Foundation
 
@@ -32,7 +32,7 @@ Los mensajes se envían entre puntos de conexión. Los _extremos_ son los lugare
 
 Un _punto de conexión_ describe de una manera basada en el estándar en la que se deben enviar los mensajes, cómo deben enviarse y el aspecto de los mensajes. Un servicio puede exponer esta información como metadatos que los clientes pueden procesar para generar los clientes de WCF y las _pilas_de comunicación adecuados.
 
-### <a name="communication-protocols"></a>Protocolos de comunicaciones
+### <a name="communication-protocols"></a>Protocolos de comunicación
 
 Un elemento obligatorio de la pila de comunicación es el _Protocolo de transporte_. Los mensajes se pueden enviar a través de intranets e Internet utilizando transportes comunes, como HTTP y TCP. Otros transportes incluidos admiten la comunicación con aplicaciones Message Queuing (MSMQ) y nodos en una malla de redes del mismo nivel. Se pueden agregar más mecanismos de transporte mediante los puntos de extensión integrados de WCF.
 
@@ -90,7 +90,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Componente que controla varios aspectos del tiempo de ejecución de un servicio, un punto de conexión, una operación determinada o un cliente. Los comportamientos están agrupados en función del ámbito: los comportamientos comunes afectan globalmente a todos los puntos de conexión, los comportamientos de servicios sólo afectan a los aspectos relacionados con servicios, los comportamientos de puntos de conexión sólo afectan a las propiedades relacionadas con los puntos de conexión y los comportamientos de operaciones afectan a las operaciones determinadas. Por ejemplo, un comportamiento del servicio está limitando que especifica cómo un servicio reacciona cuando un exceso de mensajes amenaza agobiar sus funciones del control. Un comportamiento de extremos, por otro lado, solo controla los aspectos relacionados con los extremos, como, por ejemplo, cómo y dónde encontrar una credencial de seguridad.
 
 **Enlaces proporcionados por el sistema**  
- WCF incluye varios enlaces proporcionados por el sistema. Éstas son colecciones de elementos de enlace optimizados para escenarios concretos. Por ejemplo, el <xref:System.ServiceModel.WSHttpBinding> está diseñado para la interoperabilidad con servicios que implementan varias especificaciones de WS-\*. Estos enlaces predefinidos ahorran tiempo al presentar sólo las opciones que se pueden aplicar correctamente al escenario en cuestión. Si un enlace predefinido no cumple sus requisitos, puede crear su propio enlace personalizado.
+ WCF incluye varios enlaces proporcionados por el sistema. Éstas son colecciones de elementos de enlace optimizados para escenarios concretos. Por ejemplo, la <xref:System.ServiceModel.WSHttpBinding> está diseñada para la interoperabilidad con servicios que implementan diversas especificaciones de WS-\*. Estos enlaces predefinidos ahorran tiempo al presentar sólo las opciones que se pueden aplicar correctamente al escenario en cuestión. Si un enlace predefinido no cumple sus requisitos, puede crear su propio enlace personalizado.
 
 **Configuración frente a codificación**  
  El control de una aplicación puede realizarse mediante codificación, configuración o a mediante una combinación de ambas. La configuración tiene la ventaja de que permite a alguien que no sea el programador (por ejemplo, un administrador de redes) establecer parámetros de servicio y de cliente después de que el código se haya escrito y sin necesidad de recompilar. La configuración no sólo permite establecer valores como las direcciones de los extremos, sino que también proporciona un control adicional al permitir la agregación de extremos, enlaces y comportamientos. La codificación permite al desarrollador retener un control estricto sobre todos los componentes del servicio o cliente, y cualquier ajuste realizado a través de la configuración se puede inspeccionar y, si fuese necesario, podría invalidarse mediante el código.
@@ -150,7 +150,7 @@ Cuando se habilita, WCFG genera automáticamente los metadatos del servicio medi
  Especifica que los mecanismos del nivel de transporte (como HTTPS) proporcionan confidencialidad, integridad y autenticación. El uso de un transporte como HTTPS en este modo tiene la ventaja de ofrecer un mejor rendimiento. También se entiende bien debido a su predominio en Internet. La desventaja es que este tipo de seguridad se aplica por separado en cada salto en la ruta de comunicación, provocando que la comunicación sea susceptible a un ataque tipo “man in the middle”.
 
 **Modo de seguridad de mensajes**  
- Especifica que la seguridad se proporciona mediante la implementación de una o varias especificaciones de seguridad, como la especificación denominada [seguridad de servicios web: seguridad del mensaje SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Cada mensaje contiene los mecanismos necesarios para proporcionar la seguridad durante su tránsito y para permitir que los receptores detecten la manipulación y el descifrado de mensajes. En este sentido, la seguridad se encapsula dentro de cada mensaje, con lo que se proporciona una seguridad de extremo a extremo en varios saltos. Dado que la información de seguridad se convierte en parte del mensaje, también es posible incluir varios tipos de credenciales con el mensaje (a las que se hace referencia como _notificaciones_). Este enfoque también tiene la ventaja de permitir al mensaje viajar de manera segura sobre cualquier transporte, incluyendo varios transportes entre su origen y destino. La desventaja de este enfoque es la complejidad de los mecanismos de cifrado empleados, que afectan al rendimiento.
+ Especifica que la seguridad se proporciona mediante la implementación de una o varias especificaciones de seguridad, como la especificación denominada [seguridad de servicios web: seguridad del mensaje SOAP](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf). Cada mensaje contiene los mecanismos necesarios para proporcionar la seguridad durante su tránsito y para permitir que los receptores detecten la manipulación y el descifrado de mensajes. En este sentido, la seguridad se encapsula dentro de cada mensaje, con lo que se proporciona una seguridad de extremo a extremo en varios saltos. Dado que la información de seguridad se convierte en parte del mensaje, también es posible incluir varios tipos de credenciales con el mensaje (a las que se hace referencia como _notificaciones_). Este enfoque también tiene la ventaja de permitir al mensaje viajar de manera segura sobre cualquier transporte, incluyendo varios transportes entre su origen y destino. La desventaja de este enfoque es la complejidad de los mecanismos de cifrado empleados, que afectan al rendimiento.
 
 **Transporte con el modo de seguridad de credenciales de mensaje**  
  Especifica el uso del nivel de transporte para proporcionar la confidencialidad, autenticación e integridad de los mensajes, mientras que cada uno de los mensajes puede contener varias credenciales (notificaciones) requeridas por parte de los receptores del mensaje.

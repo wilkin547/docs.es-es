@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975604"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802084"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
 <a name="introduction"></a>Al desarrollar aplicaciones independientes y hospedadas en un explorador Windows Presentation Foundation (WPF), debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes se ejecutan con permisos no restringidos (conjunto de permisos**FullTrust** de CAS), tanto si se implementan con Windows Installer (. msi), xcopy o ClickOnce. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear un <xref:System.AppDomain> de confianza parcial mediante el modelo de complemento .NET Framework. Para obtener más información, consulte [Introducción a los complementos de WPF](./app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "73975604"
 |Recurso|Archivos que se agregan a un proyecto con un tipo de compilación de **recurso**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Contenido|Archivos que se agregan a un proyecto con un tipo de compilación de **contenido**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Sitio de origen|Archivos que se agregan a un proyecto con un tipo de compilación de **ninguno**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Código de aplicación|Recursos XAML que tienen un código compilado subyacente.<br /><br /> o bien<br /><br /> Archivos XAML que se agregan a un proyecto con un tipo de compilación de **Página**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Código de aplicación|Recursos XAML que tienen un código compilado subyacente.<br /><br /> O bien,<br /><br /> Archivos XAML que se agregan a un proyecto con un tipo de compilación de **Página**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 > Para obtener más información sobre los archivos de datos de aplicación y los pack uri, consulte [archivos de recursos, contenido y datos de aplicaciones de WPF](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "73975604"
 ### <a name="browser-navigation-security"></a>Seguridad de navegación de explorador  
  La navegación de explorador se considera segura solo en las siguientes condiciones:  
   
-- **Navegación de usuario**. El usuario navega haciendo clic en un elemento <xref:System.Windows.Documents.Hyperlink> que se encuentra dentro del <xref:System.Windows.Navigation.NavigationWindow> principal, no en un <xref:System.Windows.Controls.Frame> anidado.  
+- **Navegación de usuario**. El usuario navega haciendo clic en un elemento <xref:System.Windows.Documents.Hyperlink> que se encuentra dentro del <xref:System.Windows.Navigation.NavigationWindow>principal, no en un <xref:System.Windows.Controls.Frame>anidado.  
   
 - **Zona**. El contenido al que se navega se encuentra en Internet o en la intranet local.  
   
@@ -97,13 +97,13 @@ ms.locfileid: "73975604"
   
 - Descargas  
   
-- Scripting  
+- Secuencias de comandos  
   
 - Autenticación de usuario  
   
  La colección de funciones que se pueden proteger de esta manera se configura en cada zona para las zonas de **Internet**, **intranet**, **sitios de confianza**y **sitios restringidos** . En los siguientes pasos se describe cómo establecer la configuración de seguridad:  
   
-1. Abra el **Panel de control**.  
+1. Abra el **Panel de Control**.  
   
 2. Haga clic en **red e Internet** y, a continuación, en **Opciones de Internet**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "73975604"
   
  Si ejecuta una aplicación de explorador XAML de confianza parcial (XBAP) que incluye un control de <xref:System.Windows.Controls.WebBrowser> de WPF en Windows Internet Explorer, WPF hospeda el control ActiveX WebBrowser en el espacio de direcciones del proceso de Internet Explorer. Puesto que el control ActiveX WebBrowser se hospeda en el proceso de Internet Explorer, todos los controles de características de Internet Explorer también están habilitados para el control ActiveX WebBrowser.  
   
- Los objetos XBAP que se ejecutan en Internet Explorer también obtienen un nivel adicional de seguridad en comparación con las aplicaciones independientes normales. Esta seguridad adicional se debe a que Internet Explorer y, por tanto, el control ActiveX WebBrowser, se ejecuta en modo protegido de forma predeterminada en Windows Vista y [!INCLUDE[win7](../../../includes/win7-md.md)]. Para obtener más información acerca del modo protegido, consulte [Descripción y funcionamiento en modo protegido de Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ Los objetos XBAP que se ejecutan en Internet Explorer también obtienen un nivel adicional de seguridad en comparación con las aplicaciones independientes normales. Esta seguridad adicional se debe a que Internet Explorer y, por tanto, el control ActiveX WebBrowser, se ejecuta en modo protegido de forma predeterminada en Windows Vista y Windows 7. Para obtener más información acerca del modo protegido, consulte [Descripción y funcionamiento en modo protegido de Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
 > Si intenta ejecutar una aplicación XBAP que incluye un control de <xref:System.Windows.Controls.WebBrowser> de WPF en Firefox, mientras esté en la zona de Internet, se iniciará una <xref:System.Security.SecurityException>. Esto se debe a la directiva de seguridad de WPF.  
@@ -258,7 +258,7 @@ ms.locfileid: "73975604"
  Con esta configuración, el contenido externo se carga en un proceso independiente del proceso que hospeda la aplicación. Este proceso está restringido al conjunto de permisos predeterminado de la zona de Internet y lo aísla de forma eficaz desde la aplicación host y el equipo cliente.  
   
 > [!NOTE]
-> Aunque la navegación a archivos de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] sueltos desde un <xref:System.Windows.Navigation.NavigationWindow> o una <xref:System.Windows.Controls.Frame> en una aplicación independiente se implementa en función de la infraestructura de hospedaje del explorador de WPF, en la que se implica el proceso PresentationHost, el nivel de seguridad es ligeramente menor que cuando el contenido se carga directamente en Internet Explorer en Windows Vista y [!INCLUDE[win7](../../../includes/win7-md.md)] (que seguiría pasando a PresentationHost). Esto se debe a que una aplicación de WPF independiente que usa un navegador web no proporciona la característica de seguridad adicional de modo protegido de Internet Explorer.  
+> Aunque la navegación a archivos [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] sueltos desde un <xref:System.Windows.Navigation.NavigationWindow> o una <xref:System.Windows.Controls.Frame> en una aplicación independiente se implementa en función de la infraestructura de hospedaje del explorador de WPF, en la que se requiere el proceso PresentationHost, el nivel de seguridad es ligeramente menor que cuando el contenido se carga directamente en Internet Explorer en Windows Vista y Windows 7 (que todavía se realiza a través de PresentationHost). Esto se debe a que una aplicación de WPF independiente que usa un navegador web no proporciona la característica de seguridad adicional de modo protegido de Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Recursos para desarrollar aplicaciones de WPF que promueven la seguridad  

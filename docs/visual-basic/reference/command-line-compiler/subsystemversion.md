@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348538"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802150"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -26,7 +26,7 @@ Especifica la versión mínima del subsistema en la que se puede ejecutar el arc
 -subsystemversion:major.minor
 ```
 
-## <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
 `major.minor`
 
@@ -34,7 +34,7 @@ La versión mínima requerida del subsistema, expresada en una notación de punt
 
 Los ceros a la izquierda en la versión `minor` no cambian la versión, pero los ceros a la derecha sí. Por ejemplo, 6.1 y 6.01 hacen referencia a la misma versión, pero 6.10 hace referencia a una versión diferente. Se recomienda expresar la versión secundaria como dos dígitos para evitar confusiones.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 En la tabla siguiente se enumeran las versiones de subsistema habituales de Windows.
 
@@ -46,7 +46,7 @@ En la tabla siguiente se enumeran las versiones de subsistema habituales de Wind
 |Windows Vista|6.00|
 |Windows 7|6.01|
 |Windows Server 2008|6.01|
-|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|
+|Windows 8|6.02|
 
 ## <a name="default-values"></a>Valores predeterminados
 

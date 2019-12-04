@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: a22474d943212e35310a0e8bcf6643c4a99c0389
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039415"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800788"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilizar la UI Automation para pruebas automatizadas
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En esta introducción se describe cómo [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] puede ser de utilidad como marco de trabajo para el acceso mediante programación en escenarios de pruebas automatizadas.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73039415"
 > Con otros modelos de accesibilidad, los desarrolladores deben recopilar información directamente desde distintos botones, menús u otros controles individuales. Lamentablemente, cada tipo de control se presenta con docenas de pequeñas variaciones. Es decir, aunque diez variaciones de un pulsador pueden funcionar de la misma manera y realizar la misma función, todas deben tratarse como controles únicos. No hay ninguna manera de saber que estos controles sean funcionalmente equivalentes. Los patrones de control se desarrollaron para representar estos comportamientos de control comunes. Para obtener más información, consulta [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementación de automatización de interfaz de usuario  
- Como se ha mencionado anteriormente, sin el modelo unificado ofrecido por [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], las herramientas de prueba y los desarrolladores deben conocer la información específica del marco de trabajo para exponer propiedades y comportamientos de los controles en ese marco de trabajo. Dado que puede haber varios marcos de trabajo de interfaz de usuario diferentes presentes en cualquier momento único dentro de los sistemas operativos Windows, como [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]y Windows Presentation Foundation (WPF), puede ser una tarea desalentadora para probar varias aplicaciones con controles que parecen similares. Por ejemplo, en la siguiente tabla se describen los nombres de propiedades específicas del marco de trabajo necesarias para recuperar el nombre (o el texto) asociado a un control de botón y se muestra la única propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
+ Como se ha mencionado anteriormente, sin el modelo unificado ofrecido por [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], las herramientas de prueba y los desarrolladores deben conocer la información específica del marco de trabajo para exponer propiedades y comportamientos de los controles en ese marco de trabajo. Dado que puede haber varios marcos de interfaz de usuario diferentes presentes en cualquier momento en los sistemas operativos Windows, como [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]y Windows Presentation Foundation (WPF), puede ser una tarea desalentadora para probar varias aplicaciones con controles que parezcan similares. Por ejemplo, en la siguiente tabla se describen los nombres de propiedades específicas del marco de trabajo necesarias para recuperar el nombre (o el texto) asociado a un control de botón y se muestra la única propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
   
 |Tipo de control de automatización de interfaz de usuario|Marco de interfaz de usuario|Propiedad específica de marco de trabajo|Propiedad de automatización de interfaz de usuario|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "73039415"
   
 - MSAABridge expone información [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a los clientes Active Accessibility. El objetivo principal de puente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a Active Accessibility es permitir a los clientes de Active Accessibility existentes la capacidad de interactuar con cualquier marco de trabajo que haya implementado [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-## <a name="security"></a>Seguridad  
+## <a name="security"></a>de seguridad  
  Para obtener información de seguridad, vea [UI Automation Security Overview](ui-automation-security-overview.md).  
   
 ## <a name="see-also"></a>Vea también

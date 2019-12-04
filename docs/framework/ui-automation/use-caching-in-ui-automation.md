@@ -8,22 +8,22 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: dd7506d388ba215f671ee3c7c4bae09baf4cc2b3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 679192b611a423e095ee9acc956d247364940edf
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040305"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800796"
 ---
 # <a name="use-caching-in-ui-automation"></a>Utilizar el almacenamiento en caché en la UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En esta sección se muestra cómo implementar el almacenamiento en caché de patrones de control y propiedades de <xref:System.Windows.Automation.AutomationElement> .  
   
 ### <a name="activate-a-cache-request"></a>Activar una solicitud de almacenamiento en caché  
   
-1. Creará un control <xref:System.Windows.Automation.CacheRequest>.  
+1. Cree un <xref:System.Windows.Automation.CacheRequest>.  
   
 2. Especifique las propiedades y los patrones que se almacenarán en caché mediante el uso de <xref:System.Windows.Automation.CacheRequest.Add%2A>.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "71040305"
   
 5. Establezca la propiedad <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> en <xref:System.Windows.Automation.AutomationElementMode.None> si quiere aumentar la eficacia sin recuperar una referencia completa a objetos. (Esto hará que no sea posible recuperar los valores actuales de esos objetos).  
   
-6. Active la solicitud mediante el <xref:System.Windows.Automation.CacheRequest.Activate%2A> uso de `using` dentro de`Using` un bloque (en Microsoft Visual Basic .net).  
+6. Active la solicitud mediante <xref:System.Windows.Automation.CacheRequest.Activate%2A> dentro de un bloque de `using` (`Using` en Microsoft Visual Basic .NET).  
   
- Después de obtener objetos <xref:System.Windows.Automation.AutomationElement> o de suscribirse a eventos, desactive la solicitud mediante <xref:System.Windows.Automation.CacheRequest.Pop%2A> (si se usó <xref:System.Windows.Automation.CacheRequest.Push%2A> ) o eliminando el objeto creado por <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Utilice <xref:System.Windows.Automation.CacheRequest.Activate%2A> en un `using` bloque (`Using` en Microsoft Visual Basic .net).  
+ Después de obtener objetos <xref:System.Windows.Automation.AutomationElement> o de suscribirse a eventos, desactive la solicitud mediante <xref:System.Windows.Automation.CacheRequest.Pop%2A> (si se usó <xref:System.Windows.Automation.CacheRequest.Push%2A> ) o eliminando el objeto creado por <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Use <xref:System.Windows.Automation.CacheRequest.Activate%2A> en un bloque de `using` (`Using` en Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Propiedades de AutomationElement de almacenamiento en caché  
   

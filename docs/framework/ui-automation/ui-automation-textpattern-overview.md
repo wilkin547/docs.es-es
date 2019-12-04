@@ -6,17 +6,17 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975490"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800199"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Información general sobre el modelo de texto de UI Automation
 
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).
 
 Esta información general describe cómo usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para exponer el contenido textual, incluidos los atributos de estilo y formato, de los controles de texto en plataformas compatibles con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Estos controles incluyen, entre otros, el marco de Microsoft .NET <xref:System.Windows.Controls.TextBox> y <xref:System.Windows.Controls.RichTextBox>, así como sus [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] equivalentes.
 
@@ -50,7 +50,7 @@ Un control de texto independiente puede usarse como una etiqueta o texto estáti
 > [!NOTE]
 > Es posible que los controles de texto no aparezcan en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (consulte [UI Automation Tree Overview](ui-automation-tree-overview.md)). Esto se debe a que los controles de texto se muestran a menudo a través de la propiedad Name de otro control. Por ejemplo, el texto que se usa para etiquetar un control de edición (Edit) se expone a través de la propiedad Name del control de edición. Dado que el control de edición que se encuentra en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , no es necesario que el elemento de texto esté en esa vista del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . El único texto que se muestra en la vista de contenido es el texto que no es información redundante. Esto permite a las tecnologías de asistencia filtrar rápidamente solo los fragmentos de información que necesitan los usuarios.
 
-### <a name="edit"></a>Editar
+### <a name="edit"></a>Edit
 
 Los controles de edición (Edit) permiten al usuario ver y editar una sola línea de texto.
 
@@ -94,7 +94,7 @@ Un proveedor de <xref:System.Windows.Automation.TextPattern> siempre debe admiti
 
 <a name="Security"></a>
 
-## <a name="security"></a>Seguridad
+## <a name="security"></a>de seguridad
 
 Las clase [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se diseñó teniendo en cuenta la seguridad (consulte [UI Automation Security Overview](ui-automation-security-overview.md)). Sin embargo, las clases TextPattern descritas en este artículo requieren algunas consideraciones de seguridad específicas.
 
@@ -137,7 +137,7 @@ Es el punto <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start>
 ![Inicio &#40;y finalización&#41;de TextPatternRangeEndpoints.](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
 En el siguiente ejemplo se muestra un conjunto de puntos de inicio y final.
 
-\ **TextRange**
+**TextRange**\
 Es una representación de un intervalo de texto, con puntos de inicio y final, en un contenedor de texto que incluye todos los atributos y la funcionalidad asociados.
 
 <xref:System.Windows.Automation.Text.TextUnit>\

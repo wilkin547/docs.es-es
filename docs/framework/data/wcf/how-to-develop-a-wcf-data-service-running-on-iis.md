@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para desarrollar un servicio de datos WCF que se ejecuta en IIS
+title: 'Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052972"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800516"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procedimiento Desarrollo de un servicio de datos de WCF que se ejecuta en IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Cómo: desarrollar un servicio de datos de WCF que se ejecuta en IIS
 
 En este tema se muestra cómo utilizar WCF Data Services para crear un servicio de datos basado en la base de datos de ejemplo Northwind que está hospedada en una aplicación Web de ASP.NET que se ejecuta en Internet Information Services (IIS). Para obtener un ejemplo de cómo crear el mismo servicio de datos de Northwind como una aplicación Web de ASP.NET que se ejecuta en el Servidor de desarrollo de ASP.NET, consulte la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).
 
@@ -25,19 +25,19 @@ En este tema se muestra cómo utilizar WCF Data Services para crear un servicio 
 
 En este tema se muestra cómo crear un servicio de datos utilizando el proveedor de Entity Framework. Están disponibles otros proveedores de servicios de datos. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md).
 
-Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio de datos de forma explícita. Para obtener más información, consulte [Cómo Habilite el acceso al servicio](how-to-enable-access-to-the-data-service-wcf-data-services.md)de datos.
+Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio de datos de forma explícita. Para obtener más información, consulte [Cómo: habilitar el acceso al servicio de datos](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Crear la aplicación Web de ASP.NET que se ejecuta en IIS
 
-1. En Visual Studio, en el menú **archivo** , seleccione **nuevo** > **proyecto**.
+1. En Visual Studio, en el menú **Archivo**, seleccione **Nuevo** > **Proyecto**.
 
 2. En el cuadro de diálogo **nuevo proyecto** , seleccione el > **instalado** [ **C# visual** o **Visual Basic**] > categoría **Web** .
 
-3. Seleccione la plantilla **aplicación Web ASP.net** .
+3. Seleccione la plantilla **Aplicación Web ASP.NET** .
 
 4. Escriba `NorthwindService` como nombre del proyecto.
 
-5. Haga clic en **OK**.
+5. Haga clic en **Aceptar**.
 
 6. En el menú **proyecto** , seleccione **propiedades de NorthwindService**.
 
@@ -47,7 +47,7 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
 
 9. Desde el símbolo del sistema, con privilegios de administrador, ejecute uno de los siguientes comandos (en función de cuál sea el sistema operativo):
 
-    - Sistemas de 32 bits:
+    - sistemas de 32 bits:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,7 +63,7 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
 
 10. Desde el símbolo del sistema, con privilegios de administrador, ejecute uno de los siguientes comandos (en función de cuál sea el sistema operativo):
 
-    - Sistemas de 32 bits:
+    - sistemas de 32 bits:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -81,9 +81,9 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
 
     1. Abra el administrador de IIS y navegue hasta la aplicación de fotoservicio en **sitio web predeterminado**.
 
-    2. En la **vista características**, haga doble clic en **autenticación**.
+    2. En la vista **Características**, haga doble clic en **Autenticación**.
 
-    3. En la página **autenticación** , seleccione **autenticación anónima**.
+    3. En la página **Autenticación**, seleccione **Autenticación anónima**.
 
     4. En el panel **acciones** , haga clic en **Editar** para establecer la entidad de seguridad en la que los usuarios anónimos se conectarán al sitio.
 
@@ -132,7 +132,7 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
 
 5. Conecte el modelo de datos a la base de datos mediante uno de los pasos siguientes y, a continuación, haga clic en **siguiente**:
 
-    - Si no tiene una conexión de base de datos ya configurada, haga clic en **nueva conexión** y cree una conexión nueva. Para obtener más información, consulte [Cómo Crear conexiones a bases de datos](https://go.microsoft.com/fwlink/?LinkId=123631)de SQL Server. Esta instancia de SQL Server debe tener asociada la base de datos de ejemplo Northwind.
+    - Si no tiene una conexión de base de datos ya configurada, haga clic en **nueva conexión** y cree una conexión nueva. Para obtener más información, consulta [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631). Esta instancia de SQL Server debe tener asociada la base de datos de ejemplo Northwind.
 
          \- o -
 
@@ -151,7 +151,7 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
    ![Plantilla de elemento de servicio de datos de WCF en Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > La plantilla de **servicio de datos de WCF** está disponible en visual Studio 2015, pero no en visual Studio 2017.
+   > La plantilla de **servicio de datos de WCF** está disponible en visual Studio 2015, pero no en visual Studio 2017 o posterior.
 
 3. Como nombre del servicio, escriba `Northwind`.
 

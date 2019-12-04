@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975133"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800351"
 ---
 # <a name="quickstart-wcf-data-services"></a>Inicio rápido (Servicios de datos de WCF)
 
 Esta guía de inicio rápido le ayudará a familiarizarse con WCF Data Services y el Open Data Protocol (OData) a través de una serie de tareas que admiten los temas de [Introducción](getting-started-with-wcf-data-services.md).
 
-## <a name="what-youll-learn"></a>Qué aprenderá
+## <a name="what-youll-learn"></a>Lo que aprenderá
 
 En la primera tarea de esta guía de inicio rápido se muestra cómo crear un servicio de datos para exponer una fuente de OData desde la base de datos de ejemplo Northwind. En temas posteriores, tendrá acceso a la fuente de OData mediante un explorador Web y también creará una aplicación cliente Windows Presentation Foundation (WPF) que consume la fuente de OData mediante las bibliotecas de cliente.
 
@@ -26,7 +26,7 @@ Para completar este tutorial rápido, debe instalar los siguientes componentes:
 
 - Programa para la mejora
 
-- Instancia de SQL Server. Esto incluye SQL Server Express, que se incluye en una instalación predeterminada de Visual Studio 2015, o como parte de la carga de trabajo de **procesamiento y almacenamiento de datos** en Visual Studio 2017.
+- Instancia de SQL Server. Esto incluye SQL Server Express, que se incluye en una instalación predeterminada de Visual Studio 2015, o como parte de la carga de trabajo de **procesamiento y almacenamiento de datos** en Visual Studio 2017 o posterior.
 
 - Base de datos de ejemplo Northwind. Para descargar esta base de datos de ejemplo, consulte la página de descargas, [Bases de datos de ejemplo de SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 

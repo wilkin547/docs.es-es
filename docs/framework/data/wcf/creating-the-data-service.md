@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975399"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802265"
 ---
 # <a name="create-the-data-service"></a>Crear el servicio de datos
 
@@ -26,7 +26,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 ## <a name="create-the-aspnet-web-app"></a>Creación de la aplicación Web de ASP.NET
 
-1. En Visual Studio, en el menú **archivo** , seleccione **nuevo** **proyecto**de  > .
+1. En Visual Studio, en el menú **Archivo**, seleccione **Nuevo** > **Proyecto**.
 
 1. En el cuadro de diálogo **nuevo proyecto** , en Visual Basic o visual C# , seleccione la categoría **Web** y, a continuación, seleccione **aplicación Web ASP.net**.
 
@@ -71,7 +71,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
    ![Plantilla de elemento de servicio de datos de WCF en Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > La plantilla de **servicio de datos de WCF** está disponible en visual Studio 2015, pero no en visual Studio 2017.
+   > La plantilla de **servicio de datos de WCF** está disponible en visual Studio 2015, pero no en visual Studio 2017 o posterior.
 
 3. Como nombre del servicio, escriba `Northwind`.
 

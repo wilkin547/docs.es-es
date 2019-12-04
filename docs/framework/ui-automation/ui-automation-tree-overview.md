@@ -5,20 +5,20 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: adb1d10e659254b5fa326e7c598107d768aa2685
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040408"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800294"
 ---
 # <a name="ui-automation-tree-overview"></a>Información general sobre el árbol de la UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  Los productos de tecnología de asistencia y los scripts de prueba navegan por el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para reunir información sobre [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] y sus elementos.  
   
- En el [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árbol hay un elemento raíz (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>) que representa el escritorio actual y cuyos elementos secundarios representan las ventanas de la aplicación. Cada uno de estos elementos secundarios puede contener elementos que representan partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como menús, botones, barras de herramientas y cuadros de lista. A su vez, estos elementos pueden contener elementos, como elementos de lista.  
+ Dentro del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] hay un elemento raíz (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>) que representa el escritorio actual y cuyos elementos secundarios representan las ventanas de la aplicación. Cada uno de estos elementos secundarios puede contener elementos que representan partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como menús, botones, barras de herramientas y cuadros de lista. A su vez, estos elementos pueden contener elementos, como elementos de lista.  
   
  El árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] no es una estructura fija y casi nunca se presenta en su totalidad, ya que podría contener miles de elementos. Partes de él se crean conforme se necesitan y pueden experimentar cambios a medida que se agregan, mueven o quitan elementos.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71040408"
  La vista de control se obtiene mediante la búsqueda de elementos que tengan la propiedad <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> establecida en `true` o mediante el elemento <xref:System.Windows.Automation.TreeWalker.ControlViewWalker> para navegar por el árbol.  
   
 <a name="uiautomation_content_view"></a>   
-### <a name="content-view"></a>Vista de contenido  
+### <a name="content-view"></a>Vista Contenido  
  La vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] es un subconjunto de la vista de control. Contiene elementos de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] que transmiten la información verdadera en una interfaz de usuario, entre la que se incluyen los elementos de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] que pueden recibir el foco del teclado y texto que no es una etiqueta en un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Por ejemplo, los valores de un cuadro combinado desplegable aparecerán en la vista de contenido porque representan la información que usa un usuario final. En la vista de contenido, un cuadro combinado y un cuadro de lista se representan como una colección de elementos de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], donde se pueden seleccionar uno o, quizás, varios elementos. El hecho de que uno siempre esté abierto y otro pueda expandirse y contraerse es irrelevante en la vista de contenido, ya que está diseñada para mostrar los datos, o el contenido, que se muestran al usuario.  
   
  La vista de contenido se obtiene mediante la búsqueda de elementos que tengan la propiedad <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> establecida en `true` o mediante el elemento <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> para navegar por el árbol.  
