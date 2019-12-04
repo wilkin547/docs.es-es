@@ -2,12 +2,12 @@
 title: "\"Hola mundo\" con el Servicio de enrutamiento"
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 1ab3da97bc94f864bbd28ca072f4df8f7d854ea1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044936"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716914"
 ---
 # <a name="hello-world-with-the-routing-service"></a>"Hola mundo" con el Servicio de enrutamiento
 Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente de WCF que facilita la inclusión de un enrutador basado en contenido en la aplicación. En este ejemplo se adapta el ejemplo de calculadora WCF estándar para comunicarse mediante el servicio de enrutamiento. En este ejemplo, el cliente de la calculadora se configura para enviar los mensajes a un extremo que expone el enrutador. El servicio de enrutamiento se configura para aceptar todos los mensajes que se le envíen y reenviarlos a un punto de conexión que corresponde al servicio de calculadora. Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Los mensajes del servicio de calculadora se devuelven al enrutador, que a su vez los devuelve al cliente de la calculadora.
@@ -27,7 +27,7 @@ Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundatio
 
 3. Presione Entrar para iniciar el cliente.
 
-     Debería ver los siguientes resultados:
+     Verá lo siguiente:
 
     ```console
      Add(100,15.99) = 115.99
@@ -53,7 +53,7 @@ Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
