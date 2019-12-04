@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281656"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714495"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -2116,13 +2116,13 @@ Para obtener más información, vea [Novedades de Windows Workflow Foundation](h
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>.NET para aplicaciones de la Tienda Windows 8.x
 
-Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de la Tienda Windows 8.x para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
+Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de la Tienda Windows 8.x para Windows mediante C# o Visual Basic. Este subconjunto se denomina .NET para aplicaciones de la Tienda Windows 8.x y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de clases portables <a name="portable" />
 
-El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones posteriores) permite escribir y compilar ensamblados administrados capaces de funcionar en múltiples plataformas de .NET Framework. Un proyecto de Biblioteca de clases portable le permite elegir las plataformas de destino (como Windows Phone y [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]). Los tipos y miembros disponibles en el proyecto se restringen automáticamente a los tipos y miembros comunes de estas plataformas. Para obtener más información, consulte [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones posteriores) permite escribir y compilar ensamblados administrados capaces de funcionar en múltiples plataformas de .NET Framework. Mediante el uso de Biblioteca de clases portable, puede elegir las plataformas de destino, como Windows Phone y .NET para aplicaciones de la Tienda Windows 8.x. Los tipos y miembros disponibles en el proyecto se restringen automáticamente a los tipos y miembros comunes de estas plataformas. Para obtener más información, consulte [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Vea también
 

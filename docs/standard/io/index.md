@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204793"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716265"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 
@@ -143,11 +143,11 @@ Vea [Almacenamiento aislado](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operaciones de E/S en aplicaciones de Microsoft Store
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contiene muchos de los tipos necesarios para leer y escribir en secuencias; sin embargo, este conjunto no incluye todos los tipos de E/S de .NET Framework.
+El conjunto de .NET para las aplicaciones de la Tienda Windows 8.x contiene muchos de los tipos necesarios para leer y escribir en secuencias. Sin embargo, dicho conjunto no incluye todos los tipos de E/S de .NET Framework.
 
 Estas son algunas diferencias importantes que se deben tener en cuenta al utilizar operaciones de E/S en las aplicaciones de la Tienda Windows 8.x:
 
-- Los tipos relacionados específicamente con las operaciones de archivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> y <xref:System.IO.DirectoryInfo>, no se incluyen en [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. En su lugar, use los tipos en el espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType> de Windows Runtime, como <xref:Windows.Storage.StorageFile> y <xref:Windows.Storage.StorageFolder>.
+- Los tipos relacionados específicamente con las operaciones de archivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> y <xref:System.IO.DirectoryInfo>, no se incluyen en el conjunto de .NET para las aplicaciones de la Tienda Windows 8.x. En su lugar, use los tipos en el espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType> de Windows Runtime, como <xref:Windows.Storage.StorageFile> y <xref:Windows.Storage.StorageFolder>.
 
 - El almacenamiento aislado no está disponible; use en su lugar [datos de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

@@ -47,21 +47,21 @@
   items:
     - name: 'Introducción a C# y Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: "Compilación de una aplicación Hola mundo C# con .NET Core en Visual\_Studio\_2017"
+    - name: "Compilación de una aplicación Hola mundo en C# Core en Visual\_Studio"
       href: tutorials/with-visual-studio.md
-    - name: "Compilación de una aplicación Hola mundo Visual Basic con .NET Core en Visual\_Studio\_2017"
+    - name: "Compilación de una aplicación Hola mundo en Visual\_Basic Core en Visual\_Studio"
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Depuración de la aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017'
+    - name: "Depuración de una aplicación con Visual\_Studio"
       href: tutorials/debugging-with-visual-studio.md
-    - name: Publicación de la aplicación Hola a todos con Visual Studio 2017
+    - name: "Publicación de una aplicación con Visual\_Studio"
       href: tutorials/publishing-with-visual-studio.md
-    - name: "Creación de una biblioteca de clases .NET Standard con C# y .NET Core en Visual\_Studio\_2017"
+    - name: "Compilación de una biblioteca de .NET Standard con C# en Visual\_Studio"
       href: tutorials/library-with-visual-studio.md
-    - name: "Creación de una biblioteca de clases .NET Standard con Visual Basic y .NET Core en Visual\_Studio\_2017"
+    - name: "Compilación de una biblioteca de .NET Standard con Visual\_Basic en Visual\_Studio"
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017
+    - name: "Prueba de una biblioteca de .NET Standard en Visual\_Studio"
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Consumo de una biblioteca de .NET Standard en Visual Studio 2017
+    - name: "Consumo de una biblioteca de .NET Standard en Visual\_Studio"
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Novedades de .NET Core
   items:
@@ -134,14 +134,14 @@
       href: tools/project-json-to-csproj.md
     - name: Migración desde DNX
       href: migration/from-dnx.md
-- name: Implementación de aplicaciones
+- name: Implementación de la aplicación
   href: deploying/index.md
   items:
     - name: Implementación de aplicaciones con herramientas CLI
       href: deploying/deploy-with-cli.md
     - name: "Implementación de aplicaciones con Visual\_Studio"
       href: deploying/deploy-with-vs.md
-    - name: Creación de un paquete de NuGet con herramientas multiplataforma
+    - name: Creación de un paquete NuGet con herramientas multiplataforma
       href: deploying/creating-nuget-packages.md
     - name: Puesta al día del runtime de implementación autocontenida
       href: deploying/runtime-patch-selection.md
@@ -153,7 +153,7 @@
       href: docker/introduction.md
     - name: Incluir una aplicación de .NET Core en un contenedor
       href: docker/build-container.md
-    - name: Herramientas de contenedor en Visual Studio
+    - name: Herramientas de contenedor de Visual Studio
       href: /visualstudio/containers/overview
 - name: Herramientas de diagnóstico
   items:
@@ -196,9 +196,9 @@
       href: testing/unit-testing-visual-basic-with-mstest.md
     - name: Ejecución de pruebas unitarias selectivas
       href: testing/selective-unit-tests.md
-    - name: Salida publicada de prueba unitaria
+    - name: Salida publicada de una prueba unitaria
       href: testing/unit-testing-published-output.md
-    - name: "Proyectos de .NET Core de Live Unit Testing con Visual\_Studio"
+    - name: "Pruebas unitarias dinámicas de proyectos de .NET Core con Visual\_Studio"
       href: /visualstudio/test/live-unit-testing-start
 - name: Integración continua
   href: tools/using-ci-with-cli.md
