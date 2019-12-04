@@ -42,8 +42,6 @@
       href: configure-apps/
     - name: Compilar aplicaciones con .NET Native
       href: net-native/
-    - name: Windows Identity Foundation
-      href: security/
     - name: 'Depurar, trazar y generar perfiles'
       href: debug-trace-profile/
     - name: Implementación
