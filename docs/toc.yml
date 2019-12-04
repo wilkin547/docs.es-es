@@ -12,7 +12,7 @@
   href: csharp/index.yml
 - name: 'Guía de F#'
   href: fsharp/
-- name: Guía de Visual Basic
+- name: "Guía de Visual\_Basic"
   href: visual-basic/
 - name: Guía de ML.NET
   href: machine-learning/index.yml
