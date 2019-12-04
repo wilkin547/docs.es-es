@@ -2,12 +2,12 @@
 title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710873"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -26,11 +26,11 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
 - La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
 
-- `None`: El cliente no requiere ninguna cola de mensajes no enviados.
+- `None`: el cliente no requiere la cola de mensajes no enviados.
 
-- `System`: La cola de mensajes no enviados del sistema se usa para almacenar mensajes inactivos. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
+- `System`: La cola de mensajes no enviados del sistema se utiliza para guardar los mensajes no entregados. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
 
-- `Custom`: Una cola de mensajes no enviados personalizada especificada mediante <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> la propiedad se utiliza para almacenar mensajes inactivos. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
+- `Custom`: una cola de mensajes no enviados personalizada especificada con la propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> se utiliza para almacenar los mensajes no entregados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
 
 - La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -171,7 +171,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 
  Los mensajes en la cola de mensajes no enviados son mensajes que se dirigen al servicio que está procesando el mensaje. Por lo tanto, cuando el servicio de mensajes no enviados Lee los mensajes de la cola, el nivel de canal de Windows Communication Foundation (WCF) detecta la falta de coincidencia en los extremos y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de la orden, pero quien lo recibe es el servicio de mensajes no enviados. Para recibir un mensaje que se dirige a un punto de conexión diferente, una dirección se filtra para coincidir con cualquier dirección especificada en `ServiceBehavior`. Esto se exigen para procesar correctamente los mensajes que se leen de la cola de mensajes no enviados.
 
- En este ejemplo, el servicio de mensajes no enviados reenvía el mensaje en el caso de que la razón para el error sea que el mensaje ha agotado el tiempo de espera. Para el resto de razones, muestra el error de la entrega, como se muestra en el código muestra siguiente:
+ En este ejemplo, el servicio de mensajes con problemas de entrega reenvía el mensaje si el motivo del error es que el mensaje ha agotado el tiempo de espera. Por todas las demás razones, muestra el error de entrega, tal como se muestra en el siguiente código de ejemplo:
 
 ```csharp
 // Service class that implements the service contract.
@@ -350,13 +350,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.
 
 ## <a name="comments"></a>Comentarios
- De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el siguiente error: "No existe el certificado de Message Queuing interno del usuario".
+ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

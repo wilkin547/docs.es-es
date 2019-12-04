@@ -2,12 +2,12 @@
 title: Proceso de aprobación de un documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038223"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710849"
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
 
@@ -18,7 +18,7 @@ Este ejemplo muestra el uso conjunto de muchas características de Windows Workf
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -26,7 +26,7 @@ Este ejemplo muestra el uso conjunto de muchas características de Windows Workf
 
 En el gráfico siguiente se muestra el flujo de trabajo del proceso de aprobación de documentos:
 
-![Flujo de trabajo del proceso de aprobación de un documento](./media/document-approval-process/document-approval-process.jpg)
+![Flujo de trabajo de proceso de aprobación de un documento](./media/document-approval-process/document-approval-process.jpg)
 
 Desde la perspectiva del cliente, el proceso de aprobación funciona del siguiente modo:
 
@@ -78,7 +78,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 9. El resultado del flujo de trabajo del proceso de aprobación se envía al cliente.
 
-## <a name="using-the-sample"></a>Utilizar el ejemplo
+## <a name="using-the-sample"></a>Usar el ejemplo
 
 ##### <a name="to-set-up-the-database"></a>Para configurar la base de datos
 
@@ -90,7 +90,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-3. Para ejecutar la solución, inicie la aplicación del administrador de aprobaciones; para ello, haga clic con el->botón secundario en el proyecto ApprovalManager en el **Explorador de soluciones** y haga clic en depurar**iniciar** nueva instancia en el menú contextual.
+3. Para ejecutar la solución, inicie la aplicación del administrador de aprobaciones; para ello, haga clic con el botón secundario en el proyecto ApprovalManager en el **Explorador de soluciones** y haga clic en **depurar**->**iniciar** nueva instancia en el menú contextual.
 
     Espere a que el resultado del administrador le indique que está listo.
 
@@ -104,7 +104,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 4. Haga clic en **detectar**, espere hasta que se habilite el botón **suscribir** .
 
-5. Escriba cualquier nombre de usuario yhaga clic en suscribirse. Para un cliente, use `UserType1` y para el otro, escriba `UserType2`.
+5. Escriba cualquier nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para el otro, escriba `UserType2`.
 
 6. En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**.
 
@@ -120,7 +120,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 4. Haga clic en **detectar**, espere hasta que se habilite el botón **suscribir** .
 
-5. Escriba cualquier nombre de usuario yhaga clic en suscribirse. Para un cliente, use `UserType1` y para los otros dos, escriba `UserType2`.
+5. Escriba cualquier nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para los otros dos, escriba `UserType2`.
 
 6. En el cliente `UserType1`, seleccione el tipo de aprobación de quórum en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**. Este tipo de aprobación requieres que los dos clientes `UserType2` aprueben o rechacen el documento. Aunque los dos clientes `UserType2` deben responder, solo uno de ellos necesita aprobar el documento para que se considere aprobado.
 
@@ -136,11 +136,11 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 4. Haga clic en **detectar**, espere hasta que se habilite el botón **suscribir** .
 
-5. Escriba cualquier nombre de usuario yhaga clic en suscribirse. Para un cliente, use `UserType1`, para los otros dos, escriba `UserType2` y en el último, use `UserType3`.
+5. Escriba cualquier nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1`, para los otros dos, escriba `UserType2` y en el último, use `UserType3`.
 
 6. En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**.
 
-7. En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar**; el documento se pasa al `UserType3` cliente.
+7. En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar**, el documento se pasa al cliente de `UserType3`.
 
     Si el primer quórum `UserType2` aprueba el documento, el documento se pasa al cliente `UserType3`.
 

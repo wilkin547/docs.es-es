@@ -2,12 +2,12 @@
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3811f7e7229dec1a46585a558b96f94bb202902f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990115"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716026"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 
@@ -23,13 +23,13 @@ Siempre se debería emplear la fragmentación solo una vez construido el mensaje
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
 ## <a name="chunking-channel-assumptions-and-limitations"></a>Supuestos y limitaciones del canal de fragmentación
 
-### <a name="message-structure"></a>Estructura de mensaje
+### <a name="message-structure"></a>Estructura del mensaje
 
 El canal de fragmentación supone la estructura de mensaje siguiente para que los mensajes estén fragmentados:
 
@@ -256,7 +256,7 @@ Detalles que se han de tener en cuenta:
 
 - El tiempo de espera pasado a Send se utiliza como tiempo de espera para la operación de envío al completo, la cual incluye el envío de todos los fragmentos.
 
-- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents`. Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.
+- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos una <xref:System.Xml.XmlDictionaryWriter> personalizada que se pasa a `message.WriteBodyContents`. Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.
 
 ## <a name="implementing-the-receive-operation"></a>Implementar la operación Receive
 
@@ -282,7 +282,7 @@ Detalles que se han de tener en cuenta:
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. Después espera `receiveStopped` <xref:System.Threading.ManualResetEvent>a, que se establece cuando `ReceiveChunkLoop` se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.
+`OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. Después espera el <xref:System.Threading.ManualResetEvent>de `receiveStopped`, que se establece cuando `ReceiveChunkLoop` se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ Detalles que se han de tener en cuenta:
 
 ## <a name="implementing-binding-element-and-binding"></a>Implementar elemento de enlace y enlace
 
-`ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. `CanBuildChannelFactory` `CanBuildChannelListener` Compruebasi\<t `IDuplexSessionChannel` en \<t > y t > es de tipo (el único canal que admite el canal de fragmentación) y que los otros elementos de enlace del enlace admiten esto. `ChunkingBindingElement` tipo de canal.
+`ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. El `ChunkingBindingElement` comprueba si T en `CanBuildChannelFactory`\<T > y `CanBuildChannelListener`\<T > es de tipo `IDuplexSessionChannel` (el único canal que admite el canal de fragmentación) y que los otros elementos de enlace del enlace admiten este tipo de canal.
 
-`BuildChannelFactory`\<T > comprueba primero que el tipo de canal solicitado se puede compilar y, a continuación, obtiene una lista de acciones de mensaje que se van a fragmentar. Para obtener más información, consulte la siguiente sección. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.
+`BuildChannelFactory`\<T > primero comprueba que el tipo de canal solicitado se puede compilar y, a continuación, obtiene una lista de acciones de mensaje que se van a fragmentar. Para obtener más información, vea la siguiente sección: Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.
 
 `BuildChannelListener<T>` tiene una implementación similar para crear `ChunkingChannelListener` y pasarle el agente de escucha de canal interno.
 
@@ -320,7 +320,7 @@ Hay un enlace de ejemplo incluido en este ejemplo denominado `TcpChunkingBinding
 
 El canal de fragmentación solo fragmenta los mensajes identificados a través del atributo `ChunkingBehavior`. La clase `ChunkingBehavior` implementa `IOperationBehavior` y se implementa llamando al método `AddBindingParameter`. En este método,el `ChunkingBehavior` examina el valor de su propiedad (`AppliesTo`, `InMessage` o ambos) `OutMessage` para determinar qué mensajes deberían fragmentarse. Obtiene a continuación la acción de cada uno de esos mensajes (de la colección Messages en `OperationDescription`) y lo agrega a una colección de cadenas contenida dentro de una instancia de `ChunkingBindingParameter`. Agrega a continuación `ChunkingBindingParameter` al `BindingParameterCollection`proporcionado.
 
-Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada elemento de enlace en el enlace cuando ese elemento de enlace compila el generador de canales o la escucha del canal. La `ChunkingBindingElement`implementación de `BuildChannelFactory<T>` y `BuildChannelListener<T>` extrae este `ChunkingBindingParameter` de los `BindingContext’`s. `BindingParameterCollection` La colección de acciones contenida dentro de `ChunkingBindingParameter` se pasa a continuación al `ChunkingChannelFactory` o `ChunkingChannelListener`, que a su vez lo pasa al `ChunkingDuplexSessionChannel`.
+Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada elemento de enlace en el enlace cuando ese elemento de enlace compila el generador de canales o la escucha del canal. La implementación del `ChunkingBindingElement`de `BuildChannelFactory<T>` y `BuildChannelListener<T>` extraer este `ChunkingBindingParameter` del `BindingContext’``BindingParameterCollection`s. La colección de acciones contenida dentro de `ChunkingBindingParameter` se pasa a continuación al `ChunkingChannelFactory` o `ChunkingChannelListener`, que a su vez lo pasa al `ChunkingDuplexSessionChannel`.
 
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo
 

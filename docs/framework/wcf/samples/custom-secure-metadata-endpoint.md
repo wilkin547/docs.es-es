@@ -2,12 +2,12 @@
 title: Extremo personalizado de metadatos seguros
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 32e6e0238637f9c2ef6814ace35ccb0b78110b60
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 92fa468caf331fadcd6cab0ab57b34858053c1b5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715450"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Extremo personalizado de metadatos seguros
 Este ejemplo muestra cómo implementar un servicio con un extremo de metadatos seguro que utiliza uno de los enlaces de intercambio que no son de metadatos y cómo configurar la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o clientes para capturar los metadatos de este extremo de metadatos. Hay dos enlaces proporcionados por el sistema disponibles para exponer extremos de metadatos: mexHttpBinding y mexHttpsBinding. mexHttpBinding se usa para exponer un extremo de metadatos sobre HTTP de una manera no segura. mexHttpsBinding se usa para exponer un extremo de metadatos sobre HTTPS de una manera no segura. En este ejemplo se muestra cómo exponer un extremo de metadatos seguro mediante el objeto <xref:System.ServiceModel.WSHttpBinding>. Desearía hacer esto cuando desee cambiar la configuración de seguridad en el enlace, pero no desee usar HTTPS. Si utiliza mexHttpsBinding, su extremo de metadatos será seguro, pero no hay ninguna manera de modificar la configuración del enlace.  
@@ -89,7 +89,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Inicial ". \\"asegura que se ejecuta la copia de SvcUtil. exe en este directorio (la que tiene el correspondiente SvcUtil. exe. config).  
+ Inicial ".\\"asegura que se ejecuta la copia de SvcUtil. exe en este directorio (el que tiene el correspondiente SvcUtil. exe. config).  
   
 ## <a name="metadataresolver-client"></a>Cliente de MetadataResolver  
  Si el cliente conoce el contrato y cómo hablar en tiempo de diseño con los metadatos, el cliente puede averiguar dinámicamente el enlace y dirección de los extremos de la aplicación utilizando `MetadataResolver`. Este cliente de ejemplo demuestra esto mostrando cómo configurar el enlace y las credenciales utilizadas por `MetadataResolver` creando y configurando `MetadataExchangeClient`.  
@@ -148,13 +148,13 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
   
 #### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   
-1. En el servidor, ejecute `setup.bat service`. Al `setup.bat` ejecutar con `service` el argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
+1. En el servidor, ejecute `setup.bat service`. Al ejecutar `setup.bat` con el argumento `service`, se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-2. En el servidor, edite Web.config para reflejar el nuevo nombre del certificado. Es decir, cambie el `findValue` atributo [ \<del elemento > serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) por el nombre de dominio completo del equipo.  
+2. En el servidor, edite Web.config para reflejar el nuevo nombre del certificado. Es decir, cambie el atributo `findValue` del elemento [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) al nombre de dominio completo del equipo.  
   
 3. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-4. En el cliente, ejecute `setup.bat client`. Al `setup.bat` ejecutar con `client` el argumento se crea un certificado de cliente denominado Client.com y se exporta el certificado de cliente a un archivo denominado Client. cer.  
+4. En el cliente, ejecute `setup.bat client`. Al ejecutar `setup.bat` con el argumento `client`, se crea un certificado de cliente denominado Client.com y se exporta el certificado de cliente a un archivo denominado Client. cer.  
   
 5. En el archivo App.config de `MetadataResolverClient` en el equipo cliente, cambie el valor de la dirección del extremo mex para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor. Cambie también la cadena "localhost" en el archivo metadataResolverClient.cs por el nuevo nombre del certificado del servicio (el nombre de dominio completo del servidor). Haga lo mismo para App.config en el proyecto SvcutilClient.  
   
@@ -182,6 +182,6 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  

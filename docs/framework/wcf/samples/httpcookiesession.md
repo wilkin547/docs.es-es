@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: af624305e4ab4678938b7f63c4e4056404de0bc9
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9e47959314ba161ff07a37f3d45088d038557c9e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393141"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711602"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones. Este canal permite la comunicación entre los servicios de Windows Communication Foundation (WCF) y los clientes ASMX o entre los clientes de WCF y los servicios ASMX.  
@@ -29,7 +29,7 @@ Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -66,7 +66,7 @@ Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- La `HttpCookieReplySessionChannel` clase<xref:System.ServiceModel.Channels.IReplySessionChannel>implementa. Los niveles más altos de la pila de canales llaman al método <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> para leer las solicitudes de esta sesión. Cada canal de la sesión tiene una cola de mensajes privada que el canal de servicio rellena.  
+ La clase `HttpCookieReplySessionChannel` implementa <xref:System.ServiceModel.Channels.IReplySessionChannel>. Los niveles más altos de la pila de canales llaman al método <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> para leer las solicitudes de esta sesión. Cada canal de la sesión tiene una cola de mensajes privada que el canal de servicio rellena.  
   
 ```csharp  
 InputQueue<RequestContext> requestQueue;  
@@ -130,7 +130,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Código de prueba  
- El código de prueba para utilizar este transporte del ejemplo está disponible en los directorios de cliente y servicio. Consta de dos pruebas: una prueba usa un enlace con `allowCookies` `true` establecido en en el cliente. La segunda prueba habilita el apagado explícito (utilizando el intercambio de mensajes de finalización) en el enlace.  
+ El código de prueba para utilizar este transporte del ejemplo está disponible en los directorios de cliente y servicio. Consta de dos pruebas: una prueba usa un enlace con `allowCookies` establecido en `true` en el cliente. La segunda prueba habilita el apagado explícito (utilizando el intercambio de mensajes de finalización) en el enlace.  
   
  Al ejecutar el ejemplo, deberá ver el resultado siguiente:  
   

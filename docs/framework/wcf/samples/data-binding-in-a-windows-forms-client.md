@@ -2,12 +2,12 @@
 title: Enlace de datos en un cliente de Windows Forms
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: c91f413cd5ef41fcbe85c083f2bcfb77a3c957a5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 70bb47ff13e639bd34ad4df2f5aa6f09fb00b41d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039877"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716388"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Enlace de datos en un cliente de Windows Forms
 Este ejemplo muestra cómo enlazar a los datos devueltos por un servicio de Windows Communication Foundation (WCF) en una aplicación Windows Forms.  
@@ -34,6 +34,6 @@ Este ejemplo muestra cómo enlazar a los datos devueltos por un servicio de Wind
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  

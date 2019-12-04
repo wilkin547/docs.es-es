@@ -2,16 +2,16 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895245"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714772"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 
-Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo utiliza `netMsmqBinding` y se basa en el ejemplo de [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) . El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.
+Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo utiliza el `netMsmqBinding` y se basa en el ejemplo de [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) . El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.
 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
@@ -19,11 +19,11 @@ Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación d
 > [!NOTE]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<InstallDrive >: \ WF_WCF_Samples
 >
-> Si este directorio no existe, vaya a los [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos y WCF. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de WCF y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 Servicio de activación de procesos de Windows (WAS), el nuevo mecanismo de activación de procesos para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], proporciona características de tipo IIS que solo estaban disponible para aplicaciones basadas en HTTP a aplicaciones que usan protocolos no HTTP. Windows Communication Foundation (WCF) usa la interfaz del adaptador del agente de escucha para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y MSMQ. La funcionalidad para recibir solicitudes a través de protocolos no http está hospedada por servicios de Windows administrados que se ejecutan en SMSvcHost.exe.
 
@@ -232,7 +232,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. El servicio de activación MSMQ se ejecuta como servicio de red de manera predeterminada. Por consiguiente, la cola que se utiliza para activar la aplicación debe tener permisos de recepción y lectura para el Servicio de la Red. Esto se puede agregar utilizando el MMC de Message Queuing:
 
-    1. En el menú **Inicio** , haga clic en **Ejecutar**, `Compmgmt.msc` escriba y presione Entrar.
+    1. En el menú **Inicio** , haga clic en **ejecutar**, escriba `Compmgmt.msc` y presione Entrar.
 
     2. En **servicios y aplicaciones**, expanda **Message Queue Server**.
 
@@ -267,9 +267,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > Este comando es una sola línea de texto.
 
-        Este comando permite tener acceso a la aplicación/servicemodelsamples mediante `http://localhost/servicemodelsamples` y. `net.msmq://localhost/servicemodelsamples`
+        Este comando permite tener acceso a la aplicación/servicemodelsamples mediante `http://localhost/servicemodelsamples` y `net.msmq://localhost/servicemodelsamples`.
 
-7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **Ejecutar**y `Services.msc`escriba. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón derecho y seleccione **propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
+7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón derecho y seleccione **propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
 
 8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:
 
@@ -302,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > Al ejecutar el archivo por lotes, se restablecerá DefaultAppPool para que se ejecute utilizando la versión 2.0 de .NET Framework.
 
-De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, se recibe el siguiente error: "No existe el certificado de Message Queuing interno del usuario".
+De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo
 

@@ -2,12 +2,12 @@
 title: ForEach no genérico
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a4bbc594ec0bf2d387e700508c7d92685216accc
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715650"
 ---
 # <a name="non-generic-foreach"></a>ForEach no genérico
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] incluye en su cuadro de herramientas un conjunto de actividades Control Flow, como la actividad <xref:System.Activities.Statements.ForEach%601>, que permite recorrer en iteración colecciones <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|Condición|Message|Severity|Tipo de excepción|  
+|Condición|Mensaje|Gravedad|Tipo de excepción|  
 |---------------|-------------|--------------|--------------------|  
-|Los valores son `null`|No se proporcionó el valor para un argumento de actividad necesario 'Values'.|Error|<xref:System.InvalidOperationException>|  
+|Los valores son `null`|No se proporcionó el valor para un argumento de actividad necesario 'Values'.|Error de :|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Diseñador de ForEach  
- El diseñador de actividad del ejemplo es similar en aspecto al diseñador proporcionado para la actividad <xref:System.Activities.Statements.ForEach%601> integrada. El diseñador aparece en el cuadro de herramientas en la categoría **ejemplos**, **actividades no genéricas** . El diseñador se denomina **ForEachWithBodyFactory** en el cuadro de herramientas, porque la actividad expone <xref:System.Activities.Presentation.IActivityTemplateFactory> un en el cuadro de herramientas, que crea la actividad con <xref:System.Activities.ActivityAction>un configurado correctamente.  
+ El diseñador de actividad del ejemplo es similar en aspecto al diseñador proporcionado para la actividad <xref:System.Activities.Statements.ForEach%601> integrada. El diseñador aparece en el cuadro de herramientas en la categoría **ejemplos**, **actividades no genéricas** . El diseñador se denomina **ForEachWithBodyFactory** en el cuadro de herramientas, porque la actividad expone un <xref:System.Activities.Presentation.IActivityTemplateFactory> en el cuadro de herramientas, que crea la actividad con un <xref:System.Activities.ActivityAction>configurado correctamente.  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -101,13 +101,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
     2. **DesignerTestClient** muestra cómo utilizar la actividad en el diseñador.  
   
-2. Compile y ejecute el proyecto.  
+2. Cree y ejecute el proyecto.  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

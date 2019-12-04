@@ -2,12 +2,12 @@
 title: Throttled Parallel ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-ms.openlocfilehash: 2694173e203fae9b620e9594d6d4a494bdedafef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 340e4ff154b63221ec911c872a1154bdb672cf8c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637764"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715919"
 ---
 # <a name="throttled-parallel-foreach"></a>Throttled Parallel ForEach
 
@@ -22,7 +22,7 @@ La actividad `ThrottleParallelForEach` es similar a la actividad <xref:System.Ac
 
 ## <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2010, abra el archivo ThrottledParallelForEach.sln.
+1. Con Visual Studio 2010, abra el archivo ThrottledParallelForEach. sln.
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
@@ -33,6 +33,6 @@ La actividad `ThrottleParallelForEach` es similar a la actividad <xref:System.Ac
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`

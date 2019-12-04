@@ -2,12 +2,12 @@
 title: Uso de contadores de rendimiento
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716714"
 ---
 # <a name="using-performance-counters"></a>Uso de contadores de rendimiento
 Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Windows Communication Foundation (WCF) y cómo crear contadores de rendimiento definidos por el usuario. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -41,7 +41,7 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
   
 ### <a name="to-view-performance-data"></a>Para ver los datos de rendimiento  
   
-1. Para iniciar la herramienta Monitor de rendimiento, haga clic en **Inicio**, **Ejecutar.** `perfmon` .., escriba y haga clic en **Aceptar,** o bien, en el panel de control, seleccione **herramientas administrativas** y haga doble clic en **rendimiento**.  
+1. Para iniciar la herramienta Monitor de rendimiento, haga clic en **Inicio**, **Ejecutar..** ., escriba `perfmon`, haga clic en **Aceptar** o, en el panel de control, seleccione **herramientas administrativas** y haga doble clic en **rendimiento**.  
   
     > [!NOTE]
     > No puede agregar los contadores hasta que el código de ejemplo se esté ejecutando.  
@@ -61,7 +61,7 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
   
 3. Vaya a la carpeta de servicio de la aplicación de ejemplo y abra el archivo Web.config.  
   
-4. Haga clic en diagnósticos en el árbol de configuración.  
+4. Haga clic en **diagnósticos** en el árbol de configuración.  
   
 5. Alterne el **contador de rendimiento** en la ventana **diagnóstico** para mostrar "todos".  
   
@@ -72,7 +72,7 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   

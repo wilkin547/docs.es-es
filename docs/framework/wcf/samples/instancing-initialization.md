@@ -2,12 +2,12 @@
 title: Creación de instancias de inicialización
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 44cd278fb0e48e07562b0b8ad52855b4a3f70761
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ee7d470cb80e913707ae6e92039061efde8fcb7f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715801"
 ---
 # <a name="instancing-initialization"></a>Creación de instancias de inicialización
 Este ejemplo extiende el ejemplo de [agrupación](../../../../docs/framework/wcf/samples/pooling.md) definiendo una interfaz, `IObjectControl`, que personaliza la inicialización de un objeto mediante su activación y desactivación. El cliente invoca métodos que devuelven el objeto al grupo y que no devuelven el objeto al grupo.  
@@ -261,6 +261,6 @@ else if (pool.Count < minPoolSize)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  

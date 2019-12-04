@@ -2,12 +2,12 @@
 title: Distribución mediante el elemento del cuerpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 307d6bbbab118392ef079942eae367a4c6792c22
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039761"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712027"
 ---
 # <a name="dispatch-by-body-element"></a>Distribución mediante el elemento del cuerpo
 Este ejemplo muestra cómo implementar un algoritmo alternativo para asignar mensajes entrantes a las operaciones.  
@@ -120,7 +120,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>Implementar el servicio  
  El comportamiento implementado directamente en este ejemplo afecta a cómo se interpretan los mensajes de la conexión y los envían, lo cual es una función del contrato de servicios. Por consiguiente, el comportamiento se debería declarar en el nivel del contrato de servicios en cualquier implementación del servicio que decida utilizarlo.  
   
- El servicio de proyecto de ejemplo `DispatchByBodyElementBehaviorAttribute` aplica el comportamiento del `IDispatchedByBody` contrato al contrato de servicio y etiqueta cada una `OperationForBodyA()` de las dos `DispatchBodyElementAttribute` operaciones y `OperationForBodyB()` con un comportamiento de la operación. Cuando se abre un host del servicio para un servicio que implementa este contrato, este metadato lo escoge previamente el generador del distribuidor, tal y como se ha descrito previamente.  
+ El servicio de proyecto de ejemplo aplica el comportamiento del contrato `DispatchByBodyElementBehaviorAttribute` al contrato de servicio `IDispatchedByBody` y etiqueta cada una de las dos operaciones `OperationForBodyA()` y `OperationForBodyB()` con un comportamiento de la operación `DispatchBodyElementAttribute`. Cuando se abre un host del servicio para un servicio que implementa este contrato, este metadato lo escoge previamente el generador del distribuidor, tal y como se ha descrito previamente.  
   
  Dado que el selector de la operación se envía solamente basado en el elemento de cuerpo del mensaje y omite la "Acción", para indicar el tiempo de ejecución se exige no comprobar el encabezado "Acción" en las respuestas devueltas asignando el carácter comodín "*" a la propiedad `ReplyAction` de <xref:System.ServiceModel.OperationContractAttribute>. Además, es necesario tener una operación predeterminada que tenga la propiedad "Action" establecida en el carácter comodín "\*". La operación predeterminada recibe todos los mensajes que no se pueden enviar y no tienen `DispatchBodyElementAttribute`:  
   
@@ -175,6 +175,6 @@ public interface IDispatchedByBody
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

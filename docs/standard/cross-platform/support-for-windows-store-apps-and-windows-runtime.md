@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204954"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714482"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución
 
@@ -32,7 +32,7 @@ En este tema se describe la compatibilidad que proporciona el .NET Framework par
 
 ## <a name="the-basics"></a>Aspectos básicos
 
-El .NET Framework admite los tres escenarios de desarrollo enumerados anteriormente al proporcionar [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]y admitir el Windows Runtime mismo.
+El .NET Framework admite los tres escenarios de desarrollo enumerados anteriormente proporcionando .NET para aplicaciones de la tienda Windows 8. x y admitiendo el Windows Runtime mismo.
 
 - Los [espacios de nombres .NET Framework y Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) proporcionan una vista simplificada de las bibliotecas de clases de .NET Framework e incluyen solo los tipos y miembros que se pueden usar para crear aplicaciones de la tienda Windows 8. x y componentes de Windows Runtime.
 
@@ -42,7 +42,7 @@ El .NET Framework admite los tres escenarios de desarrollo enumerados anteriorme
 
   - También se quitan las características que simplemente encapsulan la API del sistema operativo, ya que la Windows Runtime es fácil de llamar desde código administrado.
 
-  Para obtener más información sobre el [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consulte la [información general de .net para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Para obtener información sobre el proceso de selección de la API, consulte la entrada [.net para aplicaciones estilo metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) en el blog de .net.
+  Para obtener más información acerca de las aplicaciones de la tienda .NET para Windows 8. x, consulte la [información general de .net para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Para obtener información sobre el proceso de selección de la API, consulte la entrada [.net para aplicaciones estilo metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) en el blog de .net.
 
 - El [Windows Runtime](/uwp/api/) proporciona los elementos de la interfaz de usuario para compilar aplicaciones de la tienda Windows 8. x y proporciona acceso a las características del sistema operativo. Al igual que el .NET Framework, el Windows Runtime tiene metadatos C# que permiten a los compiladores y Visual Basic usar el Windows Runtime la forma en que usan las bibliotecas de clases de .NET Framework. El .NET Framework facilita el uso del Windows Runtime ocultando algunas diferencias:
 
@@ -157,7 +157,7 @@ Puede empaquetar el código administrado desde las aplicaciones de escritorio ex
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----------|-----------------|
 |[Información general de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Describe los tipos de .NET Framework y miembros que se pueden usar para crear aplicaciones de la tienda Windows 8. x y Windows RuntimeComponents. (En el Centro de desarrollo de Windows).|
 |[Guía básica para aplicaciones de la C# tienda Windows mediante o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Proporciona recursos clave para ayudarle a empezar a desarrollar aplicaciones de la tienda Windows 8. C# x mediante o Visual Basic, incluidos muchos temas de inicio rápido, instrucciones y procedimientos recomendados. (En el Centro de desarrollo de Windows).|

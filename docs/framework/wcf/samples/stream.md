@@ -1,15 +1,15 @@
 ---
-title: Secuencia
+title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 3f52ba01dfd3290e4b0f728e5832a11f2f9c3eeb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d4166ac0258001b3e4eb0b8ece0f5163863359a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045470"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716658"
 ---
-# <a name="stream"></a>Secuencia
+# <a name="stream"></a>Stream
 El ejemplo de la secuencia muestra el uso de la comunicación de modos de transferencias por secuencia. El servicio expone varias operaciones que envían y reciben secuencias. Este ejemplo se autohospeda. Tanto el cliente como el servicio son los programas de la consola.  
   
 > [!NOTE]
@@ -181,6 +181,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  

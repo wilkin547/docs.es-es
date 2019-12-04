@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 08f712167b502885486be3ce4398603339623415
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 581f75ece1a601b3baf590c1923a17a353de1ff1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039006"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714621"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 En el ejemplo OperationContextScope se muestra cómo enviar información adicional sobre una llamada a Windows Communication Foundation (WCF) mediante encabezados. En este ejemplo, tanto el servidor como el cliente son aplicaciones de consola.  
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Esta es la implementación del cliente que usa el proxy generado por la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para comunicarse con el servicio remoto. Crea primero dos objetos proxy de `MessageHeaderReaderClient`.  
+ Esta es la implementación del cliente que usa el proxy generado por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para comunicarse con el servicio remoto. Crea primero dos objetos proxy de `MessageHeaderReaderClient`.  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- El cliente crea a continuación un OperationContextScope y genera el ámbito en `client1`. Agrega un <xref:System.ServiceModel.Channels.MessageHeader> a <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca una llamada en ambos clientes. Garantiza que el encabezado se envíe solo en `client1` y no en `client2` comprobando el valor devuelto de la `RetrieveHeader` llamada.  
+ El cliente crea a continuación un OperationContextScope y genera el ámbito en `client1`. Agrega un <xref:System.ServiceModel.Channels.MessageHeader> a <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca una llamada en ambos clientes. Garantiza que el encabezado se envíe solo en `client1` y no en `client2` comprobando el valor devuelto de la llamada a `RetrieveHeader`.  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -126,6 +126,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

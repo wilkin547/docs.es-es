@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716546"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding predeterminado
 Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> . Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
@@ -22,11 +22,11 @@ Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en `binding` el atributo [ \<del punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento, tal y como se muestra en la configuración del ejemplo siguiente.  
+ El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el atributo `binding` del elemento [> del extremo de\<](../../configure-apps/file-schema/wcf/endpoint-element.md) como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <endpoint address=""  

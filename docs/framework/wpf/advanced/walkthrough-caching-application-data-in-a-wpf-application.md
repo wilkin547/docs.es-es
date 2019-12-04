@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920311"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715887"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
@@ -78,7 +78,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
      WPF Designer se abre en la vista de **diseño** y muestra el archivo MainWindow. Xaml. Visual Studio crea la carpeta **mi proyecto** , el archivo Application. XAML y el archivo MainWindow. Xaml.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Establecer como destino el .NET Framework y agregar una referencia a los ensamblados de almacenamiento en caché
- De forma predeterminada, las aplicaciones de WPF tienen como destino el [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar el espacio de nombres <xref:System.Runtime.Caching> en una aplicación de WPF, la aplicación debe tener como destino el .NET Framework 4 (no la [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) y debe incluir una referencia al espacio de nombres.
+ De forma predeterminada, las aplicaciones de WPF tienen como destino el perfil de cliente de .NET Framework 4. Para usar el espacio de nombres <xref:System.Runtime.Caching> en una aplicación de WPF, la aplicación debe tener como destino el .NET Framework 4 (no el perfil de cliente de .NET Framework 4) y debe incluir una referencia al espacio de nombres.
 
  Por lo tanto, el siguiente paso es cambiar el destino de .NET Framework y agregar una referencia al espacio de nombres <xref:System.Runtime.Caching>.
 
@@ -97,7 +97,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      Se muestra el cuadro de diálogo **configuración de compilador avanzada** .
 
-4. En la lista versión de **.NET Framework de destino (todas las configuraciones)** , seleccione .NET Framework 4. (No seleccione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]).
+4. En la lista versión de **.NET Framework de destino (todas las configuraciones)** , seleccione .NET Framework 4. (No seleccione .NET Framework 4 Client Profile).
 
 5. Haga clic en **Aceptar**.
 

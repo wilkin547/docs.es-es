@@ -2,12 +2,12 @@
 title: Administración de instancias suspendidas
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 7a2f36ac2c127376eea56601f54aa5e571d66a55
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037892"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715941"
 ---
 # <a name="suspended-instance-management"></a>Administración de instancias suspendidas
 En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que se han suspendido.  La acción predeterminada para <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> es `AbandonAndSuspend`. Esto significa que, de forma predeterminada, las excepciones no controladas producidas por una instancia de flujo de trabajo hospedada en <xref:System.ServiceModel.WorkflowServiceHost> causarán que la instancia se elimine de la memoria (se abandone) y la versión duradera/conservada de la instancia se marque como suspendida. Una instancia de flujo de trabajo suspendida no se podrá ejecutar hasta que no se anule la suspensión.
@@ -15,7 +15,7 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
  El ejemplo muestra cómo se puede implementar una utilidad de línea de comandos para consultar las instancias suspendidas y cómo otorgarle al usuario la opción de reanudar o finalizar la instancia. En este ejemplo, un servicio de flujo de trabajo produce una excepción de forma intencionada, haciendo que se suspenda. La utilidad de línea de comandos se puede utilizar a continuación para consultar la instancia y reanudarla o finalizarla.
 
 ## <a name="demonstrates"></a>Demostraciones
- <xref:System.ServiceModel.WorkflowServiceHost>con <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> y<xref:System.ServiceModel.Activities.WorkflowControlEndpoint> en Windows Workflow Foundation (WF).
+ <xref:System.ServiceModel.WorkflowServiceHost> con <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> y <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> en Windows Workflow Foundation (WF).
 
 ## <a name="discussion"></a>Discusión
  La utilidad de línea de comandos implementada en este ejemplo es específica de la implementación del almacén de instancias de SQL que se distribuye con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Si tiene una implementación personalizada del almacén de instancias, podrá adaptar esta utilidad reemplazando las implementaciones de `WorkflowInstanceCommand` en el ejemplo con implementaciones que sean específicas de su almacén de instancias.
@@ -48,13 +48,13 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
 
     3. Presione **entrar** para detener el SampleWorkflowApp.
 
-    4. Abra la consola Administración del equipo ejecutando Compmgmt.msc desde un símbolo del sistema.
+    4. En un símbolo del sistema, ejecute Compmgmt.msc para abrir la consola Administración de equipos.
 
     5. Expanda **servicios y aplicaciones**, **Message Queue Server**, **colas privadas**.
 
     6. Haga clic con el botón derecho en la cola **ReceiveTx** y seleccione **propiedades**.
 
-    7. Seleccione la pestaña **seguridad** y permita que **todos** tengan permisos para **recibir mensajes**, **Inspeccionar mensaje**y **Enviar mensaje**.
+    7. Seleccione la **pestaña seguridad** y permita **que todos** tengan permisos para **recibir mensajes**, **Inspeccionar mensaje**y **Enviar mensaje**.
 
 4. Ejecute el ejemplo.
 
@@ -81,6 +81,6 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

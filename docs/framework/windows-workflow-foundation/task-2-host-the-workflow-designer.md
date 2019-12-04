@@ -2,30 +2,30 @@
 title: 'Tarea 2: Hospedaje del Diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 15657ad79632812d3802e4da22b9ef297d08f932
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 8e4c17ed182cec7748b9a1f11f76ff90aa60c39e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180261"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715790"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedaje del Diseñador de flujo de trabajo
 
-En este tema se describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).
+En este tema se describe el procedimiento para hospedar una instancia de Windows Diseñador de flujo de trabajo en una aplicación de Windows Presentation Foundation (WPF).
 
-El procedimiento configura el control de **cuadrícula** que contiene el diseñador, crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene una actividad <xref:System.Activities.Statements.Sequence> predeterminada, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para todas las actividades integradas y hospeda la [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en la aplicación WPF.
+El procedimiento configura el control de **cuadrícula** que contiene el diseñador, crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene una actividad <xref:System.Activities.Statements.Sequence> predeterminada, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para todas las actividades integradas y hospeda la diseñador de flujo de trabajo en la aplicación WPF.
 
 ## <a name="to-host-the-workflow-designer"></a>Para hospedar el diseñador de flujo de trabajo
 
 1. Abra el proyecto HostingApplication que creó en la [tarea 1: crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).
 
-2. Ajuste el tamaño de la ventana para facilitar el uso de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la ventana **propiedades** y, en la sección de **diseño** , establezca el **ancho** en un valor de 600 y el **alto** en un valor de 350.
+2. Ajuste el tamaño de la ventana para que sea más fácil usar el Diseñador de flujo de trabajo. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la ventana **propiedades** y, en la sección de **diseño** , establezca el **ancho** en un valor de 600 y el **alto** en un valor de 350.
 
 3. Para establecer el nombre de la cuadrícula, seleccione el panel de **cuadrícula** en el diseñador (haga clic en el cuadro dentro de **MainWindow**) y establezca la propiedad **nombre** en la parte superior de la ventana **propiedades** en "Grid1".
 
 4. En la ventana **propiedades** , haga clic en los puntos suspensivos ( **...** ) junto a la propiedad `ColumnDefinitions` para abrir el cuadro de diálogo Editor de la **colección** .
 
-5. En el cuadro de diálogo **Editor de colecciones** , haga clic en el botón **Agregar** tres veces para insertar tres columnas en el diseño. La primera columna contendrá el **cuadro de herramientas**, la segunda columna hospedará el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]y la tercera columna se utilizará para el inspector de propiedad.
+5. En el cuadro de diálogo **Editor de colecciones** , haga clic en el botón **Agregar** tres veces para insertar tres columnas en el diseño. La primera columna contendrá el **cuadro de herramientas**, la segunda columna hospedará el diseñador de flujo de trabajo y la tercera columna se utilizará para el inspector de propiedad.
 
 6. Establezca la propiedad `Width` de la columna central en el valor "4 *".
 
@@ -88,7 +88,7 @@ El procedimiento configura el control de **cuadrícula** que contiene el diseña
         }
         ```
 
-    4. Registre los metadatos del diseñador para agregar la compatibilidad con el diseñador para todas las actividades integradas. Esto le permite colocar las actividades del cuadro de herramientas en la actividad <xref:System.Activities.Statements.Sequence> original en [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, agregue el método `RegisterMetadata` a la clase `MainWindow`:
+    4. Registre los metadatos del diseñador para agregar la compatibilidad con el diseñador para todas las actividades integradas. Esto le permite colocar las actividades del cuadro de herramientas en la actividad <xref:System.Activities.Statements.Sequence> original del Diseñador de flujo de trabajo. Para ello, agregue el método `RegisterMetadata` a la clase `MainWindow`:
 
         ```csharp
         private void RegisterMetadata()

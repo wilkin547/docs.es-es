@@ -2,12 +2,12 @@
 title: Servicio AJAX con ejemplo JSON y XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: eadb884667a0b29ef36056f0c3bec4675b7f1b05
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ca9bdbfa135ac7dc0b69589d4f8fce07bc4c4afe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895139"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716216"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Servicio AJAX con ejemplo JSON y XML
 
@@ -20,11 +20,11 @@ Este ejemplo muestra cómo intercambiar el tipo de respuesta de una operación e
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
-Para habilitar el uso de los clientes de AJAX de ASP.NET, use <xref:System.ServiceModel.Activation.WebServiceHostFactory> (no <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) en el archivo .svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> agrega un extremo <xref:System.ServiceModel.Description.WebHttpEndpoint> estándar al servicio. El punto de conexión se configura en una dirección vacía relativa al archivo. SVC; Esto significa que la dirección del servicio es `http://localhost/ServiceModelSamples/service.svc`, sin sufijos adicionales que no sean el nombre de la operación.
+Para habilitar el uso de los clientes de AJAX de ASP.NET, use <xref:System.ServiceModel.Activation.WebServiceHostFactory> (no <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) en el archivo .svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> agrega un extremo <xref:System.ServiceModel.Description.WebHttpEndpoint> estándar al servicio. El punto de conexión se configura en una dirección vacía relativa al archivo. SVC; Esto significa que la dirección del servicio se `http://localhost/ServiceModelSamples/service.svc`, sin sufijos adicionales que no sean el nombre de la operación.
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>`
 
-La siguiente sección de Web.config se puede utilizar para realizar cambios de configuración adicionales en el extremo. Se puede quitar si no se necesita ningún cambio adicional.
+La siguiente sección de Web.config se puede utilizar para realizar cambios de configuración adicionales en el punto de conexión. Se puede quitar si no se necesita ningún cambio adicional.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ La siguiente sección de Web.config se puede utilizar para realizar cambios de c
 </system.serviceModel>
 ```
 
-El formato de datos predeterminado <xref:System.ServiceModel.Description.WebHttpEndpoint> para es XML, mientras que el formato de <xref:System.ServiceModel.Description.WebScriptEndpoint> datos predeterminado para es JSON. Para obtener más información, consulte [crear servicios WCF Ajax sin ASP.net](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
+El formato de datos predeterminado para <xref:System.ServiceModel.Description.WebHttpEndpoint> es XML, mientras que el formato de datos predeterminado para <xref:System.ServiceModel.Description.WebScriptEndpoint> es JSON. Para obtener más información, consulte [crear servicios WCF Ajax sin ASP.net](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
 
 El servicio en el ejemplo siguiente es un servicio WCF estándar con dos operaciones. Ambas operaciones requieren el estilo de cuerpo <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> en <xref:System.ServiceModel.Web.WebGetAttribute> o los atributos <xref:System.ServiceModel.Web.WebInvokeAttribute>, que es concreto al comportamiento `webHttp` y no están afectados por el cambio de formato de JSON/XML.
 
@@ -47,7 +47,7 @@ El servicio en el ejemplo siguiente es un servicio WCF estándar con dos operaci
 MathResult DoMathXml(double n1, double n2);
 ```
 
-El formato de respuesta para la operación se especifica como XML, que es la configuración predeterminada para el comportamiento del [ \<> webhttp](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) . No obstante, es conveniente especificar de forma explícita al formato de respuesta.
+El formato de la respuesta para la operación se especifica como XML, que es el valor predeterminado para el comportamiento del [> de\<webhttp](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) . No obstante, es conveniente especificar de forma explícita al formato de respuesta.
 
 La otra operación utiliza el atributo `WebInvokeAttribute` y explícitamente especifica JSON en lugar de XML para la respuesta.
 
@@ -98,7 +98,7 @@ xmlHttp.onreadystatechange=function(){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`
 

@@ -2,12 +2,12 @@
 title: Ejemplo de suministros de transmisión por secuencias
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9d40a07b81474a283a8edbeb7aca1aa7ab3993b2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976371"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716649"
 ---
 # <a name="streaming-feeds-sample"></a>Ejemplo de suministros de transmisión por secuencias
 Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen grandes cantidades de elementos. En el servidor, el ejemplo muestra cómo retrasar la creación de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuales dentro de la fuente hasta justo antes de que el elemento se escriba en el flujo de red.  
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen
   
  La demostración hace uso de iteradores visuales C# (mediante la construcción de palabra clave `yield return`). Para obtener más información sobre los iteradores, vea el tema sobre el uso de iteradores en MSDN.  
   
-## <a name="service"></a>web de Office  
+## <a name="service"></a>Servicio  
  El servicio implementa un contrato <xref:System.ServiceModel.Web.WebGetAttribute> básico que está compuesto de una operación, tal y como se muestra en el código siguiente.  
   
 ```csharp  
@@ -67,7 +67,7 @@ public Atom10FeedFormatter StreamedFeed()
   
  Como resultado, la secuencia del elemento nunca se almacena totalmente en búfer en la memoria. Puede observar este comportamiento estableciendo un punto de interrupción en la instrucción `yield return` dentro del método `ItemGenerator.GenerateItems()` y teniendo en cuenta que este punto de interrupción se encuentra por primera vez después de que el servicio devuelva el resultado del método `StreamedFeed()`.  
   
-## <a name="client"></a>Cliente  
+## <a name="client"></a>Client  
  El cliente en este ejemplo utiliza una implementación <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizada que retrasa la materialización de elementos individuales en la fuente en lugar de almacenarlos en búfer en la memoria. La instancia `StreamedAtom10FeedFormatter` personalizada se usa de la manera siguiente.  
   
 ```csharp  
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

@@ -2,12 +2,12 @@
 title: Servicio de enrutador de detección
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9434c26fb12b73ea4f1c185658b03cb95a3a2310
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039828"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712283"
 ---
 # <a name="discovery-router-service"></a>Servicio de enrutador de detección
 En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punto de conexión.  
@@ -22,7 +22,7 @@ En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punt
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Compilar el ejemplo.  
+1. Cree el ejemplo.  
   
 2. Ejecute la aplicación ejecutable DiscoveryRouter.  
   
@@ -35,6 +35,6 @@ En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punt
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

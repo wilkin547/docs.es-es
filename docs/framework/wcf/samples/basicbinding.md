@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: ddbe3e505028acf3abbadc9a741f66fdceca3784
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990144"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716057"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -21,7 +21,7 @@ El ejemplo muestra el uso de `basicHttpBinding` que proporciona a la comunicaci�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`
 
@@ -29,7 +29,7 @@ El ejemplo muestra el uso de `basicHttpBinding` que proporciona a la comunicaci�
 
 Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.
 
-Sólo se exige el nombre de la sección de enlace para utilizar el enlace básico con un comportamiento predeterminado. Si desea configurar el enlace básico y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El punto de conexión debe hacer referencia a la configuración de enlace `bindingConfiguration` por nombre mediante el`endpoint`atributo del elemento < >, tal y como se muestra en el código de ejemplo siguiente.
+Sólo se exige el nombre de la sección de enlace para utilizar el enlace básico con un comportamiento predeterminado. Si desea configurar el enlace básico y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El punto de conexión debe hacer referencia a la configuración de enlace por nombre mediante el atributo `bindingConfiguration` del elemento <`endpoint`>, tal y como se muestra en el código de ejemplo siguiente.
 
 ```xml
 <services>

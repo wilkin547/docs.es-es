@@ -1,15 +1,15 @@
 ---
-title: 'Codificador de mensajes personalizado: codificador de compresión'
+title: 'Codificador de mensaje personalizado: codificador de compresión'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 80dd29569897be501d76024a081f38ec5add4ff7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928749"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716846"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensajes personalizado: codificador de compresión
+# <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensaje personalizado: codificador de compresión
 
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma Windows Communication Foundation (WCF).
 
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`
 
@@ -224,7 +224,7 @@ binding.Namespace = "http://tempuri.org/bindings";
 
 Aunque esto puede ser suficiente para la mayoría de escenarios de usuario, ser compatible con una configuración de archivo es fundamental si se hospeda en web un servicio. Para admitir el escenario hospedado en web, debe desarrollar un controlador de configuración personalizado para permitir que se configure un elemento de enlace personalizado en un archivo.
 
-Puede compilar un controlador de configuración para el elemento de enlace en la parte superior del sistema de configuración. El controlador de configuración para el elemento de enlace debe derivar de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Informa al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección. Todos los aspectos de `BindingElement` que se pueden establecer se deberían exponer como propiedades en la clase derivada <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.Configuration.ConfigurationPropertyAttribute> Ayuda a asignar los atributos del elemento de configuración a las propiedades y a establecer los valores predeterminados si faltan atributos. Después de cargar y aplicar los valores de configuración a las propiedades, se llama al método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType>, que convierte las propiedades en una instancia concreta de un elemento de enlace. El <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> método se usa para convertir las propiedades de la <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> clase derivada en los valores que se van a establecer en el elemento de enlace que se acaba de crear.
+Puede compilar un controlador de configuración para el elemento de enlace en la parte superior del sistema de configuración. El controlador de configuración para el elemento de enlace debe derivar de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. El <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informa al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección. Todos los aspectos de `BindingElement` que se pueden establecer se deberían exponer como propiedades en la clase derivada <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. El <xref:System.Configuration.ConfigurationPropertyAttribute> ayuda a asignar los atributos del elemento de configuración a las propiedades y establecer los valores predeterminados si faltan atributos. Después de cargar y aplicar los valores de configuración a las propiedades, se llama al método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType>, que convierte las propiedades en una instancia concreta de un elemento de enlace. El método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> se usa para convertir las propiedades de la clase derivada <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> en los valores que se van a establecer en el elemento de enlace que se acaba de crear.
 
 En el siguiente código de ejemplo muestra la implementación de `GZipMessageEncodingElement`.
 
@@ -295,7 +295,7 @@ Este controlador de configuración asigna a la representación siguiente en App.
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
 ```
 
-Para utilizar este controlador de configuración, se debe registrar en el [ \<elemento System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , como se muestra en la configuración del ejemplo siguiente.
+Para utilizar este controlador de configuración, se debe registrar en el elemento [\<System. serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , tal y como se muestra en la configuración del ejemplo siguiente.
 
 ```xml
 <extensions>
@@ -353,6 +353,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`

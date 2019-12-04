@@ -1,19 +1,19 @@
 ---
-title: Procedimiento para crear una plantilla de actividad personalizada
+title: 'Cómo: Crear una plantilla de actividad personalizada'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f910d1367c941dbc319421d402cae8f4194872e5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989710"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715251"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Procedimiento para crear una plantilla de actividad personalizada
+# <a name="how-to-create-a-custom-activity-template"></a>Cómo: Crear una plantilla de actividad personalizada
 
-Las plantillas de actividad personalizadas se utilizan para personalizar la configuración de actividades, incluidas las actividades compuestas personalizadas, para que los usuarios no tengan que crear cada actividad de forma individual y configurar propiedades y otros valores manualmente. Estas plantillas personalizadas pueden estar disponibles en el **cuadro de herramientas** en [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o desde un diseñador rehospedado, desde el que los usuarios pueden arrastrarlas a la superficie de diseño preconfigurada. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]incluye buenos ejemplos de estas plantillas: el [Diseñador de plantillas SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) y el [Diseñador de plantillas ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) en la categoría [diseñadores de actividad de mensajería](/visualstudio/workflow-designer/messaging-activity-designers) .
+Las plantillas de actividad personalizadas se utilizan para personalizar la configuración de actividades, incluidas las actividades compuestas personalizadas, para que los usuarios no tengan que crear cada actividad de forma individual y configurar propiedades y otros valores manualmente. Estas plantillas personalizadas pueden estar disponibles en el **cuadro de herramientas** en el diseñador de flujo de trabajo de Windows o en un diseñador hospedado en otro host, desde el que los usuarios pueden arrastrarlas a la superficie de diseño preconfigurada. Diseñador de flujo de trabajo incluye buenos ejemplos de estas plantillas: el [Diseñador de plantillas SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) y el [Diseñador de plantillas ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) en la categoría [diseñadores de actividad de mensajería](/visualstudio/workflow-designer/messaging-activity-designers) .
 
- En el primer procedimiento de este tema se describe cómo crear una plantilla de actividad personalizada para una actividad de **retraso** y el segundo procedimiento describe brevemente cómo hacer que esté [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] disponible en un para comprobar que la plantilla personalizada funciona.
+ En el primer procedimiento de este tema se describe cómo crear una plantilla de actividad personalizada para una actividad de **retraso** y el segundo procedimiento describe brevemente cómo hacer que esté disponible en un diseñador de flujo de trabajo para comprobar que la plantilla personalizada funciona.
 
  Las plantillas de actividad personalizadas deben implementar la <xref:System.Activities.Presentation.IActivityTemplateFactory>. La interfaz tiene un método <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> único con el que puede crear y configurar las instancias de actividad utilizadas en la plantilla.
 
@@ -76,7 +76,7 @@ Las plantillas de actividad personalizadas se utilizan para personalizar la conf
 
 1. Haga clic con el botón secundario en la solución DelayActivityTemplate en **Explorador de soluciones** y elija **Agregar** y, a continuación, **nuevo proyecto** para abrir el cuadro de diálogo **Agregar nuevo proyecto** .
 
-2. Seleccione la plantilla **aplicación de consola de flujos** de `CustomActivityTemplateApp`trabajo, asígnele el nombre y haga clic en **Aceptar**.
+2. Seleccione la plantilla **aplicación de consola de flujos de trabajo** , asígnele el nombre `CustomActivityTemplateApp`y, a continuación, haga clic en **Aceptar**.
 
 3. Haga clic con el botón secundario en el directorio referencias del proyecto CustomActivityTemplateApp en **Explorador de soluciones** y elija **Agregar referencia** para abrir el cuadro de diálogo **Agregar referencia** .
 
@@ -90,7 +90,7 @@ Las plantillas de actividad personalizadas se utilizan para personalizar la conf
 
 8. Abra el archivo Workflow1. XAML y abra el **cuadro de herramientas**.
 
-9. Busque la plantilla **MyDelayActivity** en la categoría **DelayActivityTemplate** . Arrástrela a la superficie de diseño. En la ventana **propiedades** , compruebe que `Duration` la propiedad se ha establecido en 10 segundos.
+9. Busque la plantilla **MyDelayActivity** en la categoría **DelayActivityTemplate** . Arrástrela a la superficie de diseño. En la ventana **propiedades** , compruebe que la propiedad `Duration` se ha establecido en 10 segundos.
 
 ## <a name="example"></a>Ejemplo
  El archivo MyDelayActivity.cs debería contener el siguiente código.

@@ -2,12 +2,12 @@
 title: Seguridad de mensajes mediante Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 03f4bd3f580163868920622a74ae4f34d7a1a97a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424121"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714795"
 ---
 # <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.
@@ -82,7 +82,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
     > [!NOTE]
     > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
  Este ejemplo exige que MSMQ se instale y se ejecute.
 
 ## <a name="demonstrates"></a>Demostraciones
@@ -323,7 +323,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes de instalación se ejecuta con un argumento de servicio (como `setup.bat service`),% SERVER_NAME% contiene el nombre de dominio completo del equipo. De lo contrario, el valor predeterminado es localhost.
+     La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes de instalación se ejecuta con un argumento de servicio (como, por ejemplo, `setup.bat service`),% SERVER_NAME% contiene el nombre de dominio completo del equipo. De lo contrario, el valor predeterminado es localhost.
 
 - Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
 
@@ -341,6 +341,6 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

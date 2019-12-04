@@ -2,12 +2,12 @@
 title: 'Establecimiento de las propiedades de uso y estilo: ejemplos de WCF'
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 946f8f6aab253eb881faaba7adfdc68dc54d7f0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f92b25144759692c54aa7a1730a9bb85cab4f15f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714436"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Establecimiento del uso y estilo de las propiedades
 
@@ -74,7 +74,7 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-Para ver la diferencia entre el <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> diferente y los valores <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, modifíquelos en el servicio, regenere el cliente, ejecute el ejemplo y examine el archivo c:\logs\message.logs con la herramienta Service Trace Viewer. Observe también el impacto en los metadatos viendo `http://localhost/ServiceModelSamples/service.svc?wsdl`. Los metadatos para los servicios se irrumpen normalmente en varias páginas. La Página principal de WSDL contiene los enlaces de WSDL, pero `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` la vista para observar las definiciones de los mensajes.
+Para ver la diferencia entre el <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> diferente y los valores <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, modifíquelos en el servicio, regenere el cliente, ejecute el ejemplo y examine el archivo c:\logs\message.logs con la herramienta Service Trace Viewer. Observe también el impacto en los metadatos mediante la visualización de `http://localhost/ServiceModelSamples/service.svc?wsdl`. Los metadatos para los servicios se irrumpen normalmente en varias páginas. La Página principal de WSDL contiene los enlaces de WSDL, pero la vista `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` para observar las definiciones de los mensajes.
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
@@ -91,6 +91,6 @@ Para ver la diferencia entre el <xref:System.ServiceModel.XmlSerializerFormatAtt
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

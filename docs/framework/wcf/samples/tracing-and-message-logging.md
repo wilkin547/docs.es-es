@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: a58541b7d50d83d1e39d7c9dd9c58be4111ec494
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f6f2fd0bbbc191d466ac600bd9639c8955d5b7fe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038731"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715675"
 ---
 # <a name="tracing-and-message-logging"></a>Seguimiento y registro de mensajes
 Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los seguimientos y registros de mensajes resultantes se ven mediante la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 ## <a name="tracing"></a>Traza  
- Windows Communication Foundation (WCF) utiliza el mecanismo de seguimiento definido en <xref:System.Diagnostics> el espacio de nombres. Los orígenes de seguimiento que las aplicaciones implementan generan la información de seguimiento en este modelo de seguimiento. Un nombre identifica cada origen. Los consumidores de seguimiento crean los agentes de escucha de seguimiento para los orígenes de seguimiento para los que desean recuperar información. Debe crear un agente de escucha para que el origen de seguimiento reciba la información de seguimiento. En WCF, esto se puede hacer agregando el código siguiente al archivo de configuración del cliente o del servicio estableciendo el origen `switchValue`de seguimiento del modelo de servicio:  
+ Windows Communication Foundation (WCF) utiliza el mecanismo de seguimiento definido en el espacio de nombres <xref:System.Diagnostics>. Los orígenes de seguimiento que las aplicaciones implementan generan la información de seguimiento en este modelo de seguimiento. Un nombre identifica cada origen. Los consumidores de seguimiento crean los agentes de escucha de seguimiento para los orígenes de seguimiento para los que desean recuperar información. Debe crear un agente de escucha para que el origen de seguimiento reciba la información de seguimiento. En WCF, esto se puede hacer agregando el código siguiente al archivo de configuración del cliente o del servicio mediante la configuración del origen de seguimiento del modelo de servicio `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -46,7 +46,7 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
  Para obtener más información acerca de los orígenes de seguimiento, vea la sección origen de seguimiento en el tema [configurar el seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) .  
   
 ## <a name="activity-tracing-and-propagation"></a>Seguimiento de actividad y propagación  
- Tener `ActivityTracing` habilitado `propagateActivity` y establecido `true` en en `system.ServiceModel` los orígenes de seguimiento para el cliente y el servicio proporcionan la correlación de seguimientos dentro de las unidades lógicas de procesamiento (actividades), entre las actividades dentro de los extremos ( a través de las transferencias de actividad), y entre las actividades que abarcan varios puntos de conexión (a través de la propagación de ID. de actividad).  
+ Tener `ActivityTracing` habilitado y `propagateActivity` establecido en `true` en los orígenes de seguimiento de `system.ServiceModel` para el cliente y el servicio proporcionan la correlación de seguimientos dentro de las unidades lógicas de procesamiento (actividades), entre las actividades dentro de los puntos de conexión (a través de las transferencias de actividad) y entre las actividades que abarcan varios puntos de conexión (a través de la propagación de ID.  
   
  Estos tres mecanismos (actividades, transferencias y propagación) pueden ayudarle a buscar la causa principal de un error más rápidamente utilizando Service Trace Viewer tool. Para obtener más información, consulte [uso del visor de seguimiento de servicios para ver seguimientos correlacionados y solución de problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
@@ -128,7 +128,7 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

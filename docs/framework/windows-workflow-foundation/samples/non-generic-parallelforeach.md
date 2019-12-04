@@ -2,18 +2,18 @@
 title: ParallelForEach no genérico
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 52b851686ea2fdc8c573a0622fe91ca5e205edeb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637735"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715642"
 ---
 # <a name="non-generic-parallelforeach"></a>ParallelForEach no genérico
 
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] incluye en su cuadro de herramientas un conjunto de actividades Control Flow, como la actividad <xref:System.Activities.Statements.ParallelForEach%601>, que permite recorrer en iteración colecciones <xref:System.Collections.Generic.IEnumerable%601>.
 
-<xref:System.Activities.Statements.ParallelForEach%601> requiere su <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> propiedad sea de tipo <xref:System.Collections.Generic.IEnumerable%601>. Esto impide a los usuarios recorrer en iteración estructuras de datos que implementan la interfaz <xref:System.Collections.Generic.IEnumerable%601> (por ejemplo, <xref:System.Collections.ArrayList>). La versión no genérica de <xref:System.Activities.Statements.ParallelForEach%601> supera este requisito, a costa de una mayor complejidad del tiempo de ejecución para garantizar la compatibilidad de los tipos de los valores de la colección.
+<xref:System.Activities.Statements.ParallelForEach%601> requiere que su propiedad <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> sea de tipo <xref:System.Collections.Generic.IEnumerable%601>. Esto impide a los usuarios recorrer en iteración estructuras de datos que implementan la interfaz <xref:System.Collections.Generic.IEnumerable%601> (por ejemplo, <xref:System.Collections.ArrayList>). La versión no genérica de <xref:System.Activities.Statements.ParallelForEach%601> supera este requisito, a costa de una mayor complejidad del tiempo de ejecución para garantizar la compatibilidad de los tipos de los valores de la colección.
 
 En este ejemplo se muestra cómo implementar una actividad <xref:System.Activities.Statements.ParallelForEach%601> no genérica y su diseñador. Esta actividad se puede utilizar para recorrer en iteración <xref:System.Collections.ArrayList>.
 
@@ -55,7 +55,7 @@ La colección de elementos que se recorre en iteración. La verificación de que
 CompletionCondition (opcional) \
 La propiedad <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> se evalúa después de completarse cada iteración. Si se evalúa como `true`, se cancelan las iteraciones programadas pendientes. Si esta propiedad no está establecida, todas las actividades de la colección Branches se ejecutan hasta su finalización.
 
-## <a name="example-of-using-parallelforeach"></a>Ejemplo de utilización de ParallelForEach
+## <a name="example-of-using-parallelforeach"></a>Ejemplo del uso de ParallelForEach
 
 El siguiente código muestra cómo utilizar la actividad ParallelForEach en una aplicación.
 
@@ -81,7 +81,7 @@ Activity sampleUsage =
 
 ## <a name="parallelforeach-designer"></a>Diseñador de ParallelForEach
 
-El diseñador de actividad del ejemplo es similar en aspecto al diseñador proporcionado para la actividad <xref:System.Activities.Statements.ParallelForEach%601> integrada. El diseñador aparece en el cuadro de herramientas en el **ejemplos**, **actividades no genéricas** categoría. El diseñador se denomina **ParallelForEachWithBodyFactory** en el cuadro de herramientas, porque la actividad expone un <xref:System.Activities.Presentation.IActivityTemplateFactory> en el cuadro de herramientas que crea la actividad con un objeto configurado adecuadamente <xref:System.Activities.ActivityAction>.
+El diseñador de actividad del ejemplo es similar en aspecto al diseñador proporcionado para la actividad <xref:System.Activities.Statements.ParallelForEach%601> integrada. El diseñador aparece en el cuadro de herramientas en la categoría **ejemplos**, **actividades no genéricas** . El diseñador se denomina **ParallelForEachWithBodyFactory** en el cuadro de herramientas, porque la actividad expone un <xref:System.Activities.Presentation.IActivityTemplateFactory> en el cuadro de herramientas que crea la actividad con un <xref:System.Activities.ActivityAction>configurado correctamente.
 
 ```csharp
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
@@ -106,17 +106,17 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
 1. Establezca el proyecto que desee como el proyecto de inicio de la solución.
 
-    1. **CodeTestClient** se muestra cómo usar la actividad mediante código.
+    1. **CodeTestClient** muestra cómo utilizar la actividad mediante código.
 
-    2. **DesignerTestClient** se muestra cómo usar la actividad dentro del diseñador.
+    2. **DesignerTestClient** muestra cómo utilizar la actividad en el diseñador.
 
-2. Compile y ejecute el proyecto.
+2. Cree y ejecute el proyecto.
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

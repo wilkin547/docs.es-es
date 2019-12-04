@@ -2,12 +2,12 @@
 title: 'Walkthrough: Acceso a web usando Async y Await'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f649f1f16da545c4587f0ed76b8f1a443ee8744
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349089"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715854"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a web usando Async y Await (C# y Visual Basic)
 
@@ -51,9 +51,9 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 3. En el panel **plantillas instaladas** , elija Visual Basic y, a continuación, elija **aplicación WPF** en la lista de tipos de proyecto.
 
-4. En el cuadro de diálogo **Nombre**, escriba `AsyncExampleWPF` y elija el botón **Aceptar**.
+4. En el cuadro de texto **Nombre**, escriba `AsyncExampleWPF` y elija el botón **Aceptar**.
 
-    El nuevo proyecto aparece en el **Explorador de soluciones**.
+    El proyecto nuevo aparece en el **Explorador de soluciones**.
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>Diseñar una ventana MainWindow simple de WPF
 
@@ -660,11 +660,11 @@ End Class
 
 ## <a name="see-also"></a>Vea también
 
-- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic])
-- [Await (operador)](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
-- [Task-based Asynchronous Programming (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847) (Programación asincrónica basada en tareas [TAP])
-- [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Ampliación del tutorial de Async mediante Task.WhenAll [Visual Basic])
-- [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Realización de solicitudes web en paralelo mediante Async y Await [Visual Basic])
+- [Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await (operador)](../../../language-reference/operators/await-operator.md)
+- [Async](../../../language-reference/modifiers/async.md)
+- [Programación asincrónica con Async y Await (Visual Basic)](index.md)
+- [Async Return Types (Visual Basic)](async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
+- [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])
+- [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Ampliación del tutorial de Async mediante Task.WhenAll [Visual Basic])
+- [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Realización de solicitudes web en paralelo mediante Async y Await [Visual Basic])

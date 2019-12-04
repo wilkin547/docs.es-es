@@ -2,12 +2,12 @@
 title: Varios puntos de conexión en un ListenUri único
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 8e514b28d9b3719a52d420551c607c49c70738e1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ef4212fa0989f80393f62119d9b2b6cda370ef94
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044844"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714737"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Varios puntos de conexión en un ListenUri único
 Este ejemplo muestra un servicio que hospeda varios puntos de conexión en un `ListenUri`único. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -39,11 +39,11 @@ Este ejemplo muestra un servicio que hospeda varios puntos de conexión en un `L
   
  Los tres extremos se hospedan en el mismo `ListenUri` y utilizan el mismo `binding`, los extremos en el mismo `ListenUri` deben tener el mismo enlace, porque están compartiendo una pila de canal única que realiza escuchas para los mensajes en esa dirección física en el equipo. La`address` de cada punto de conexión es un URN; aunque normalmente las direcciones representan las ubicaciones físicas, de hecho la dirección puede ser cualquier tipo de URI, porque la dirección se utiliza para coincidir y filtrar los propósitos como se muestra en este ejemplo.  
   
- Dado que los tres puntos de conexión comparten `ListenUri`el mismo, cuando un mensaje llega allí, Windows Communication Foundation (WCF) debe decidir a qué punto de conexión se destina el mensaje. Cada punto de conexión tiene un filtro de mensajes que se compone de dos partes: el filtro de la dirección y el filtro del contrato. El filtro de la dirección coincide con `To` del mensaje SOAP a la dirección del punto de conexión de servicio. Por ejemplo, solo los mensajes direccionados `To "Urn:OtherEcho"` son candidatos para el tercer punto de conexión de este servicio. El filtro del contrato coincide con las Acciones asociadas a las operaciones de un contrato determinado. Por ejemplo, los mensajes con la acción de `IEcho`. `Echo` coincide con los filtros de contrato del segundo y tercer extremos de este servicio, porque ambos de esos extremos hospedan el contrato `IEcho`.  
+ Dado que los tres puntos de conexión comparten el mismo `ListenUri`, cuando llega un mensaje, Windows Communication Foundation (WCF) debe decidir a qué punto de conexión se destina el mensaje. Cada punto de conexión tiene un filtro de mensajes que se compone de dos partes: el filtro de la dirección y el filtro del contrato. El filtro de la dirección coincide con `To` del mensaje SOAP a la dirección del punto de conexión de servicio. Por ejemplo, solo los mensajes direccionados `To "Urn:OtherEcho"` son candidatos para el tercer punto de conexión de este servicio. El filtro del contrato coincide con las Acciones asociadas a las operaciones de un contrato determinado. Por ejemplo, los mensajes con la acción de `IEcho`. `Echo` coincide con los filtros de contrato del segundo y tercer extremos de este servicio, porque ambos de esos extremos hospedan el contrato `IEcho`.  
   
  Así la combinación de filtro de la dirección y filtro del contrato permite enrutar cada mensaje que llega al`ListenUri` de este servicio al extremo correcto. El tercer punto de conexión se diferencia de los otros dos porque aceptan mensajes enviados a una dirección diferente de los otros puntos de conexión. Los primeros y segundos puntos de conexión se diferencian entre sí basándose en sus contratos (la acción del mensaje entrante).  
   
-## <a name="client"></a>Cliente  
+## <a name="client"></a>Client  
  Así como los puntos de conexión en el servidor tienen dos direcciones diferentes, los puntos de conexión del cliente también tienen dos direcciones. En el servidor y el cliente, la dirección lógica se denomina `EndpointAddress`. Pero mientras que la dirección física se denomina `ListenUri` en el servidor, en el cliente, la dirección física se denomina `Via`.  
   
  Como en el servidor, de forma predeterminada, estas dos direcciones son las mismas. Para especificar una`Via` en el cliente que sea diferente de la dirección del extremo, `ClientViaBehavior` se utiliza:  
@@ -75,6 +75,6 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  

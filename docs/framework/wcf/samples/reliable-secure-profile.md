@@ -2,12 +2,12 @@
 title: Perfil seguro confiable
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044801"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716502"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiable
 Este ejemplo muestra cómo crear WCF y un [perfil seguro confiable](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este ejemplo muestra la implementación de un canal de [creación de conexiones](https://go.microsoft.com/fwlink/?LinkId=178141) que se puede componer junto con mensajería confiable y, opcionalmente, un canal seguro para crear un enlace seguro confiable basado en la especificación de RSP.  
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo crear WCF y un [perfil seguro confiable](https://go.m
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -28,9 +28,9 @@ Este ejemplo muestra cómo crear WCF y un [perfil seguro confiable](https://go.m
   
 1. Abra la solución **ReliableSecureProfile** .  
   
-2. Haga clic con el botón derecho en el proyecto de **servicio** en **Explorador de soluciones**, seleccione Depurar, **Iniciar nueva instancia** en el menú contextual. De esta forma se inicia el host de servicio.  
+2. Haga clic con el botón derecho en el proyecto de **servicio** en **Explorador de soluciones**, seleccione **depurar**, **Iniciar nueva instancia** en el menú contextual. De esta forma se inicia el host de servicio.  
   
-3. Haga clic con el botón derecho en el proyecto de **cliente** en **Explorador de soluciones**, seleccione Depurar, **Iniciar nueva instancia** en el menú contextual. De esta forma se inicia el cliente.  
+3. Haga clic con el botón derecho en el proyecto de **cliente** en **Explorador de soluciones**, seleccione **depurar**, **Iniciar nueva instancia** en el menú contextual. De esta forma se inicia el cliente.  
   
 4. Escriba una cadena en el símbolo del sistema de la ventana de la consola del cliente y haga clic en ENTRAR. De este modo se envía la cadena de entrada al servicio, que calcula un valor hash de la misma.  
   

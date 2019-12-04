@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 2115ac88c52efca09d32a870fc52905f80f6f746
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dcdeeda0d6054c9cf6fefa31ea33d720c0c0f3f7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045051"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716575"
 ---
 # <a name="default-message-contract"></a>Contrato de mensaje predeterminado
-El ejemplo de contrato de mensaje predeterminado muestra un servicio donde un mensaje personalizado definido por el usuario se pasa a las operaciones de servicio y desde ellas. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa una interfaz de calculadora como un servicio con tipo. En lugar de las operaciones de servicio individuales para la suma, resta, multiplicación y división utilizadas en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), este ejemplo pasa un mensaje personalizado que contiene los operandos y el operador, y devuelve el resultado de la operación cálculo aritmético.  
+El ejemplo de contrato de mensaje predeterminado muestra un servicio donde un mensaje personalizado definido por el usuario se pasa a las operaciones de servicio y desde ellas. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa una interfaz de calculadora como un servicio con tipo. En lugar de las operaciones de servicio individuales para la suma, resta, multiplicación y división utilizadas en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), este ejemplo pasa un mensaje personalizado que contiene los operandos y el operador, y devuelve el resultado del cálculo aritmético.  
   
  El cliente es un programa de la consola (.exe) e Internet Information Services (IIS) hospeda la biblioteca de servicio. La actividad del cliente es visible en la ventana de la consola.  
   
@@ -131,7 +131,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- El código de cliente generado para el cliente se creó con la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . La herramienta crea automáticamente los tipos de contratos de mensaje en el código de cliente generado si es necesario. La opción de comando `/messageContract` puede especificarse para forzar la generación de los contratos de mensaje.  
+ El código de cliente generado para el cliente se creó con la herramienta de [utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . La herramienta crea automáticamente los tipos de contratos de mensaje en el código de cliente generado si es necesario. La opción de comando `/messageContract` puede especificarse para forzar la generación de los contratos de mensaje.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
@@ -181,6 +181,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

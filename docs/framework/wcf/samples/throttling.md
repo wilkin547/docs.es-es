@@ -1,18 +1,18 @@
 ---
-title: Limitaciones
+title: Limitación de peticiones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: b19e58222248e7ce5abddb118ec00ff3e17e9963
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 14d16a644aa89d5da9ec1adcbdef48367ddc1205
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715692"
 ---
-# <a name="throttling"></a>Limitaciones
+# <a name="throttling"></a>Limitación de peticiones
 El ejemplo de limitación de peticiones muestra el uso de la limitación de controles. Los controles de limitación de peticiones establecen límites en el número de llamadas simultáneas, instancias o sesiones para evitar el consumo excesivo de recursos. El comportamiento de la limitación de peticiones se especifica en los valores del archivo de configuración del servicio. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -20,7 +20,7 @@ El ejemplo de limitación de peticiones muestra el uso de la limitación de cont
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El archivo de configuración de servicio especifica los controles de limitación en un [ \<> serviceThrottling](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), como se muestra en la configuración del ejemplo siguiente.  
+ El archivo de configuración de servicio especifica los controles de limitación en un [\<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), tal y como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <behaviors>  
@@ -78,6 +78,6 @@ Press any key to continue . . .
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  

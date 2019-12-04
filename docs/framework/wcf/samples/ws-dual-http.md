@@ -2,12 +2,12 @@
 title: WS Http dual
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138676"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716785"
 ---
 # <a name="ws-dual-http"></a>WS Http dual
 
@@ -21,7 +21,7 @@ El ejemplo Http dual muestra cómo configurar el enlace `WSDualHttpBinding`. Est
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -88,7 +88,7 @@ Al ejecutar el ejemplo, se ven los mensajes devueltos al cliente en la interfaz 
 4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Al ejecutar el cliente en una configuración entre equipos, asegúrese de reemplazar localhost en el atributo `address` del [> de\<del punto de conexión de \<elemento > cliente](../../configure-apps/file-schema/wcf/endpoint-of-client.md) y el atributo `clientBaseAddress` del [enlace de\<](../../configure-apps/file-schema/wcf/bindings.md) del elemento [\<> wsDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) con el nombre del equipo adecuado, como se muestra a continuación:
+    > Al ejecutar el cliente en una configuración de equipo cruzado, asegúrese de reemplazar localhost en el atributo `address` del [> de\<del punto de conexión de \<cliente >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) y el atributo `clientBaseAddress` del elemento\<de [enlace](../../configure-apps/file-schema/wcf/bindings.md) > del elemento\<[wsDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) > por el nombre del equipo adecuado, como se muestra a continuación:
 
     ```xml
     <client>

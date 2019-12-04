@@ -1,23 +1,23 @@
 ---
-title: Quitar el estado de vista, el diseñador agrega a un archivo XAML - WF
+title: 'Quitar el estado de vista que el diseñador agrega a un archivo XAML: WF'
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637859"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715620"
 ---
-# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Quitar el estado de vista, el diseñador agrega a un archivo XAML
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Quitar el estado de vista que el diseñador agrega a un archivo XAML
 
-Este ejemplo muestra cómo crear una clase que se deriva de <xref:System.Xaml.XamlWriter> y quita el estado de vista de un archivo XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] escribe información en el documento XAML, que se conoce como estado de la vista. El estado de la vista hace referencia a la información que se necesita en tiempo de diseño, como la posición del diseño, que no se necesita en tiempo de ejecución. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserta esta información en el documento XAML mientras se edita. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] escribe el estado de la vista en el archivo XAML con el atributo `mc:Ignorable`, por lo que esta información no se carga cuando el tiempo de ejecución carga el archivo XAML. Este ejemplo muestra cómo crear una clase que quite esa información del estado de vista mientras se procesan los nodos XAML.
+Este ejemplo muestra cómo crear una clase que se deriva de <xref:System.Xaml.XamlWriter> y quita el estado de vista de un archivo XAML. Windows Diseñador de flujo de trabajo escribe información en el documento XAML, que se conoce como estado de vista. El estado de la vista hace referencia a la información que se necesita en tiempo de diseño, como la posición del diseño, que no se necesita en tiempo de ejecución. Diseñador de flujo de trabajo inserta esta información en el documento XAML a medida que se edita. Diseñador de flujo de trabajo escribe el estado de vista en el archivo XAML con el atributo `mc:Ignorable`, por lo que esta información no se carga cuando el tiempo de ejecución carga el archivo XAML. Este ejemplo muestra cómo crear una clase que quite esa información del estado de vista mientras se procesan los nodos XAML.
 
 ## <a name="discussion"></a>Discusión
 
 En este ejemplo se muestra cómo crear un sistema de escritura personalizado.
 
-Para compilar un sistema de escritura XAML personalizado, cree una clase que herede de la clase <xref:System.Xaml.XamlWriter>. Como a menudo se anidan los escritores XAML, es habitual realizar un seguimiento de un sistema de escritura XAML "interno". Estos "interna" escritores pueden considerarse como la referencia a la pila restante de los escritores XAML, lo que permite tener varios puntos de entrada para trabajar y, a continuación, delegar el procesamiento al resto de la pila.
+Para compilar un sistema de escritura XAML personalizado, cree una clase que herede de la clase <xref:System.Xaml.XamlWriter>. Como los escritores de XAML suelen estar anidados, es habitual realizar un seguimiento de un escritor XAML "interno". Estos escritores "internos" se pueden considerar como referencia a la pila restante de escritores de XAML, lo que le permite tener varios puntos de entrada para trabajar y, a continuación, delegar el procesamiento en el resto de la pila.
 
 En este ejemplo, hay algunos elementos de interés. Uno es la comprobación para ver si el elemento que se está escribiendo procede de un espacio de nombres de diseñador. Observe que esto también elimina el uso de otros tipos del espacio de nombres del diseñador en un flujo de trabajo.
 
@@ -87,7 +87,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 
 ## <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2010, abra el archivo de solución ViewStateCleaningWriter.sln.
+1. Con Visual Studio 2010, abra el archivo de solución ViewStateCleaningWriter. sln.
 
 2. Abra un símbolo del sistema y navegue al directorio donde ViewStageCleaningWriter.exe está compilado.
 
@@ -99,7 +99,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   Esto da como resultado un archivo XAML para \[outfile], que tiene toda su información de estado de vista quitada.
+   Esto genera un archivo XAML en \[OUTFILE], que tiene quitada toda su información de estado de vista.
 
 > [!NOTE]
 > En un flujo de trabajo <xref:System.Activities.Statements.Sequence>, se quitan varias sugerencias de virtualización. Esto hace que el diseñador vuelva a calcular el diseño la próxima vez que se carga. Cuando se utiliza este ejemplo de <xref:System.Activities.Statements.Flowchart>, se elimina toda la información de posición y de enrutamiento de línea y en la posterior carga en el diseñador, todas las actividades se apilan en el lado izquierdo de la pantalla.
@@ -121,6 +121,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

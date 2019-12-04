@@ -2,16 +2,16 @@
 title: 'Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716228"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid
 
-En esta tarea, creará los paneles **cuadro de herramientas** y **PropertyGrid** y los agregará a la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]hospedada en otro host.
+En esta tarea, creará los paneles **cuadro de herramientas** y **PropertyGrid** y los agregará a la diseñador de flujo de trabajo de Windows hospedada en otro host.
 
 Como referencia, al final de este tema se proporciona el código que debe estar en el archivo MainWindow.xaml.cs después de completar las tres tareas de la serie de temas de [rehospedamiento diseñador de flujo de trabajo](rehosting-the-workflow-designer.md) .
 

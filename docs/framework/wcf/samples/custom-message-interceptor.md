@@ -2,12 +2,12 @@
 title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 61f9bae24f5edb70430f4f3eaa16e42da221a7b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 53005212bc834d73ab5cbb4545d1477112f29c75
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978307"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716811"
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  
@@ -22,7 +22,7 @@ Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particula
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
@@ -57,7 +57,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adición de un elemento de enlace  
- El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement` toma un `ChannelMessageInterceptor` como entrada y utiliza este `ChannelMessageInterceptor` para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
+ El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement` toma un `ChannelMessageInterceptor` como entrada y utiliza este `ChannelMessageInterceptor` para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, la escucha y los canales pueden ser todos implementaciones internas de las interfaces públicas en tiempo de ejecución.  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement

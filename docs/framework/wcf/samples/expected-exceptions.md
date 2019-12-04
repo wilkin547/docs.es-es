@@ -2,12 +2,12 @@
 title: Excepciones esperadas
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 24bb9b483a3f26241f895d68b763a1974b02151b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989975"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716450"
 ---
 # <a name="expected-exceptions"></a>Excepciones esperadas
 Este ejemplo muestra cómo detectar las excepciones esperadas cuando se usa un cliente con tipo. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -19,7 +19,7 @@ Este ejemplo muestra cómo detectar las excepciones esperadas cuando se usa un c
   
  Las excepciones que se producen desde los métodos de comunicación en un cliente de Windows Communication Foundation (WCF) son esperadas o inesperadas. Las inesperadas incluyen errores graves como `OutOfMemoryException` y errores de programación como `ArgumentNullException` o `InvalidOperationException`. Normalmente no hay ninguna manera útil de administrar los errores inesperados, por lo que normalmente no se deben detectar cuando se llama a un método de comunicación de cliente de WCF.  
   
- Las excepciones esperadas de los métodos de comunicación en `TimeoutException`un `CommunicationException`cliente WCF incluyen, y cualquier `CommunicationException`clase derivada de. Esto indica un problema durante la comunicación que se puede controlar de forma segura mediante la anulación del cliente de WCF y la notificación de un error de comunicación. Dado que los factores externos pueden producir estos errores en cualquier aplicación, las aplicaciones correctas deben detectar estas excepciones y recuperarse cuando se produzcan.  
+ Las excepciones esperadas de los métodos de comunicación en un cliente WCF incluyen `TimeoutException`, `CommunicationException`y cualquier clase derivada de `CommunicationException`. Esto indica un problema durante la comunicación que se puede controlar de forma segura mediante la anulación del cliente de WCF y la notificación de un error de comunicación. Dado que los factores externos pueden producir estos errores en cualquier aplicación, las aplicaciones correctas deben detectar estas excepciones y recuperarse cuando se produzcan.  
   
  Hay varias clases derivadas de `CommunicationException` que un cliente puede iniciar. En algunos casos, las aplicaciones detectan también algunas de ellas para que se gestionen de forma especial, pero deja que otras las gestionen como `CommunicationException`. Esto se puede lograr detectando el tipo de excepción más concreto primero y detectando a continuación `CommunicationException` en una cláusula catch posterior.  
   
@@ -76,6 +76,6 @@ Got System.TimeoutException
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

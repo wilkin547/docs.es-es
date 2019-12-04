@@ -2,23 +2,23 @@
 title: Vigencia personalizada
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8625877d9b4d05d5cf06af2c9f8ef10f701e98db
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003170"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715477"
 ---
 # <a name="custom-lifetime"></a>Vigencia personalizada
 
-Este ejemplo muestra cómo escribir una extensión de Windows Communication Foundation (WCF) para proporcionar servicios de duración personalizados para las instancias de servicio compartidas de WCF.
+Este ejemplo muestra cómo escribir una extensión de Windows Communication Foundation (WCF) para proporcionar servicios de duración personalizados para las instancias de servicio WCF compartidas.
 
 > [!NOTE]
 > El procedimiento de configuración y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
-## <a name="shared-instancing"></a>Creación de instancias compartidas
+## <a name="shared-instancing"></a>Instancias compartidas
 
-WCF ofrece varios modos de creación de instancias para las instancias de servicio. El modo de creación de instancias compartido descrito en este artículo proporciona una manera de compartir una instancia de servicio entre varios canales. Los clientes pueden ponerse en contacto con un método de fábrica en el servicio y crear un nuevo canal para iniciar la comunicación. El fragmento de código siguiente muestra cómo una aplicación cliente crea un nuevo canal en una instancia de servicio existente:
+WCF ofrece varios modos de creación de instancias para las instancias de servicio. El modo de creación de instancias compartido que se trata en este artículo proporciona una manera de compartir una instancia de servicio entre varios canales. Los clientes pueden ponerse en contacto con un Factory Method del servicio y crear un nuevo canal para iniciar la comunicación. En el fragmento de código siguiente se muestra cómo una aplicación cliente crea un canal nuevo en una instancia de servicio existente:
 
 ```csharp
 // Create a header for the shared instance id
@@ -54,21 +54,21 @@ using (new OperationContextScope((IClientChannel)proxy2))
 }
 ```
 
-A diferencia de los demás modos de creación de instancias, el modo de creación de instancias compartido tiene una sola manera de liberar las instancias de servicio. De forma predeterminada, cuando se cierran todos los canales para un <xref:System.ServiceModel.InstanceContext>, el runtime del servicio WCF que se comprueba para ver si el servicio <xref:System.ServiceModel.InstanceContextMode> está configurado para <xref:System.ServiceModel.InstanceContextMode.PerCall> o <xref:System.ServiceModel.InstanceContextMode.PerSession>y si por lo que libera la instancia y reclama los recursos. Si un personalizado <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> es emplean, WCF invoca el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método de la implementación del proveedor antes de liberar la instancia. Si <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> devuelve `true` , de lo contrario, se libera la instancia de la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementación es responsable de notificar la `Dispatcher` del estado de inactividad mediante un método de devolución de llamada. Esto se realiza mediante una llamada a la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> método del proveedor.
+A diferencia de los demás modos de creación de instancias, el modo de creación de instancias compartido tiene una sola manera de liberar las instancias de servicio. De forma predeterminada, cuando se cierran todos los canales para un <xref:System.ServiceModel.InstanceContext>, el tiempo de ejecución del servicio WCF comprueba si el servicio <xref:System.ServiceModel.InstanceContextMode> está configurado para <xref:System.ServiceModel.InstanceContextMode.PerCall> o <xref:System.ServiceModel.InstanceContextMode.PerSession>y, en ese caso, libera la instancia y notifica los recursos. Si se utiliza un <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> personalizado, WCF invoca el método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> de la implementación del proveedor antes de liberar la instancia. Si <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> devuelve `true` se libera la instancia de, en caso contrario, la implementación de <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> es responsable de notificar al `Dispatcher` del estado de inactividad mediante un método de devolución de llamada. Esto se hace llamando al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> del proveedor.
 
-Este ejemplo muestra cómo se puede retrasar la liberación de la <xref:System.ServiceModel.InstanceContext> con un tiempo de inactividad de 20 segundos.
+Este ejemplo muestra cómo se puede retrasar la liberación del <xref:System.ServiceModel.InstanceContext> con un tiempo de espera de inactividad de 20 segundos.
 
 ## <a name="extending-the-instancecontext"></a>Ampliar InstanceContext
 
-En WCF, <xref:System.ServiceModel.InstanceContext> es el vínculo entre la instancia de servicio y el `Dispatcher`. WCF permite ampliar este componente en tiempo de ejecución al agregar el nuevo estado o comportamiento usando su patrón de objeto extensible. El patrón de objeto extensible se utiliza en WCF para extender las clases en tiempo de ejecución existentes con nueva funcionalidad o agregar nuevas características del estado a un objeto. Hay tres interfaces en el patrón de objeto extensible: <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601>y <xref:System.ServiceModel.IExtensionCollection%601>.
+En WCF, <xref:System.ServiceModel.InstanceContext> es el vínculo entre la instancia de servicio y el `Dispatcher`. WCF le permite ampliar este componente en tiempo de ejecución agregando nuevo estado o comportamiento mediante su patrón de objeto extensible. El patrón de objeto extensible se utiliza en WCF para ampliar las clases en tiempo de ejecución existentes con nueva funcionalidad o agregar nuevas características de estado a un objeto. Hay tres interfaces en el patrón de objeto extensible: <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601>y <xref:System.ServiceModel.IExtensionCollection%601>.
 
-El <xref:System.ServiceModel.IExtensibleObject%601> objetos para permitir las extensiones que personalicen su funcionalidad implementan la interfaz.
+Los objetos implementan la interfaz <xref:System.ServiceModel.IExtensibleObject%601> para permitir extensiones que personalizan su funcionalidad.
 
 La interfaz <xref:System.ServiceModel.IExtension%601> se implementa mediante objetos que pueden ser extensiones de clases de tipo `T`.
 
-Y, finalmente, el <xref:System.ServiceModel.IExtensionCollection%601> interfaz es una colección de <xref:System.ServiceModel.IExtension%601> implementaciones que permite la recuperación de una implementación de <xref:System.ServiceModel.IExtension%601> por su tipo.
+Y, por último, la interfaz de <xref:System.ServiceModel.IExtensionCollection%601> es una colección de implementaciones de <xref:System.ServiceModel.IExtension%601> que permite recuperar una implementación de <xref:System.ServiceModel.IExtension%601> por su tipo.
 
-Por lo tanto, con el fin de ampliar la <xref:System.ServiceModel.InstanceContext>, debe implementar la <xref:System.ServiceModel.IExtension%601> interfaz. En este proyecto de ejemplo, el `CustomLeaseExtension` clase contiene esta implementación.
+Por lo tanto, para extender el <xref:System.ServiceModel.InstanceContext>, debe implementar la interfaz <xref:System.ServiceModel.IExtension%601>. En este proyecto de ejemplo, la clase `CustomLeaseExtension` contiene esta implementación.
 
 ```csharp
 class CustomLeaseExtension : IExtension<InstanceContext>
@@ -87,7 +87,7 @@ public void Attach(InstanceContext owner)
 }
 ```
 
-Además, debe agregar la implementación necesaria a la extensión para proporcionar compatibilidad con la duración extendida. Por lo tanto, el `ICustomLease` interfaz se declara con los métodos deseados y se implementa en el `CustomLeaseExtension` clase.
+Además, debe agregar la implementación necesaria a la extensión para proporcionar compatibilidad con la duración extendida. Por lo tanto, la interfaz de `ICustomLease` se declara con los métodos deseados y se implementa en la clase `CustomLeaseExtension`.
 
 ```csharp
 interface ICustomLease
@@ -101,7 +101,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }
 ```
 
-Cuando se invoca WCF la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método en el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementación, esta llamada se enruta a la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método de la `CustomLeaseExtension`. A continuación, la `CustomLeaseExtension` comprueba su estado privado para ver si el <xref:System.ServiceModel.InstanceContext> está inactivo. Si está inactiva, devuelve `true`. De lo contrario, inicia un temporizador con la duración extendida especificada.
+Cuando WCF invoca el método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> en la implementación de <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>, esta llamada se enruta al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> del `CustomLeaseExtension`. A continuación, el `CustomLeaseExtension` comprueba su estado privado para ver si el <xref:System.ServiceModel.InstanceContext> está inactivo. Si está inactivo, devuelve `true`. De lo contrario, inicia un temporizador con la duración extendida especificada.
 
 ```csharp
 public bool IsIdle
@@ -124,7 +124,7 @@ public bool IsIdle
 }
 ```
 
-En el temporizador `Elapsed` evento, se llama a la función de devolución de llamada en el distribuidor para iniciar otro ciclo de limpieza.
+En el evento `Elapsed` del temporizador, se llama a la función de devolución de llamada del distribuidor para iniciar otro ciclo de limpieza.
 
 ```csharp
 void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
@@ -140,14 +140,14 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 }
 ```
 
-No hay ninguna manera de renovar el temporizador en ejecución cuando llega un mensaje nuevo para la instancia que se mueven al estado inactivo.
+No hay ninguna manera de renovar el temporizador en ejecución cuando llega un mensaje nuevo para que la instancia se mueva al estado inactivo.
 
-En el ejemplo se implementa <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> para interceptar las llamadas al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> y enrutarlas a `CustomLeaseExtension`. La implementación de <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> está contenida en la clase `CustomLifetimeLease`. El <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método se invoca cuando WCF está a punto de liberar la instancia de servicio. Sin embargo, solo hay una instancia de una implementación de `ISharedSessionInstance` determinada en la colección de propiedades <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> de ServiceBehavior. Esto significa que no hay ninguna manera de saber si el <xref:System.ServiceModel.InstanceContext> está cerrado en el momento en que WCF comprueba el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método. Por lo tanto, este ejemplo utiliza el bloqueo de subprocesos para serializar las solicitudes a la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método.
+En el ejemplo se implementa <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> para interceptar las llamadas al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> y enrutarlas a `CustomLeaseExtension`. La implementación de <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> está contenida en la clase `CustomLifetimeLease`. Se invoca al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> cuando WCF está a punto de liberar la instancia de servicio. Sin embargo, solo hay una instancia de una implementación de `ISharedSessionInstance` determinada en la colección de propiedades <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> de ServiceBehavior. Esto significa que no hay ninguna manera de saber si el <xref:System.ServiceModel.InstanceContext> está cerrado en el momento en que WCF comprueba el método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>. Por consiguiente, este ejemplo usa el bloqueo de subprocesos para serializar las solicitudes al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>.
 
 > [!IMPORTANT]
 > El uso del bloqueo de subprocesos no es una solución recomendada porque la serialización puede afectar de forma grave al rendimiento de la aplicación.
 
-Se usa un campo de miembro privado en la `CustomLifetimeLease` clase para realizar un seguimiento del estado de inactividad y es devuelto por la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método. Cada vez que el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> se invoca el `isIdle` campo se devuelve y se restablece a `false`.  Es esencial establecer este valor en `false` para asegurarse de que el Distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A>.
+Se utiliza un campo de miembro privado en la clase `CustomLifetimeLease` para realizar un seguimiento del estado de inactividad y lo devuelve el método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>. Cada vez que se llama al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>, se devuelve el `isIdle` campo y se restablece en `false`.  Es esencial establecer este valor en `false` para asegurarse de que el Distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A>.
 
 ```csharp
 public bool IsIdle(InstanceContext instanceContext)
@@ -165,7 +165,7 @@ public bool IsIdle(InstanceContext instanceContext)
 }
 ```
 
-Si el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> devuelve del método `false`, el distribuidor registra una función de devolución de llamada utilizando el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> método. Este método recibe una referencia al <xref:System.ServiceModel.InstanceContext> que se va a liberar. Por lo tanto, puede consultar el código de ejemplo la `ICustomLease` escribir extensión y comprobar la `ICustomLease.IsIdle` propiedad en el estado extendido.
+Si el método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> devuelve `false`, el distribuidor registra una función de devolución de llamada mediante el método <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A>. Este método recibe una referencia al <xref:System.ServiceModel.InstanceContext> que se va a liberar. Por lo tanto, el código de ejemplo puede consultar la extensión de tipo `ICustomLease` y comprobar la propiedad `ICustomLease.IsIdle` en el estado extendido.
 
 ```csharp
 public void NotifyIdle(InstanceContextIdleCallback callback,
@@ -185,9 +185,9 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
 }
 ```
 
-Antes de la `ICustomLease.IsIdle` propiedad está activada, la propiedad de devolución de llamada debe establecerse como esto es esencial para `CustomLeaseExtension` notifique al distribuidor cuando esté inactivo. Si `ICustomLease.IsIdle` devuelve `true`, el miembro privado `isIdle` simplemente se establece en `CustomLifetimeLease` como `true` y llama al método de devolución de llamada. Dado que el código contiene un bloqueo, otros subprocesos no pueden cambiar el valor de este miembro privado. Y la próxima vez que se llama al distribuidor la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>, devuelve `true` y permite que el distribuidor libere la instancia.
+Antes de que se Compruebe la propiedad `ICustomLease.IsIdle`, es necesario establecer la propiedad de devolución de llamada, ya que es esencial para que `CustomLeaseExtension` notifique al distribuidor cuando se vuelva inactiva. Si `ICustomLease.IsIdle` devuelve `true`, el miembro privado `isIdle` simplemente se establece en `CustomLifetimeLease` como `true` y llama al método de devolución de llamada. Dado que el código contiene un bloqueo, otros subprocesos no pueden cambiar el valor de este miembro privado. Y la próxima vez que el distribuidor llama al <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>, devuelve `true` y permite que el distribuidor libere la instancia.
 
-Ahora que el fundamento de la extensión personalizada está completado, tiene que enlazarse con el modelo de servicio. Para enlazar el `CustomLeaseExtension` implementación para el <xref:System.ServiceModel.InstanceContext>, WCF proporciona el <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> interfaz para realizar el arranque de <xref:System.ServiceModel.InstanceContext>. En el ejemplo, la clase `CustomLeaseInitializer` implementa esta interfaz y agrega una instancia de `CustomLeaseExtension` a la colección de la propiedad <xref:System.ServiceModel.InstanceContext.Extensions%2A> desde la única inicialización del método. El Distribuidor llama a este método inicializando la instancia de <xref:System.ServiceModel.InstanceContext>.
+Ahora que el fundamento de la extensión personalizada está completado, tiene que enlazarse con el modelo de servicio. Para enlazar la implementación de `CustomLeaseExtension` al <xref:System.ServiceModel.InstanceContext>, WCF proporciona la interfaz <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> para realizar el arranque de <xref:System.ServiceModel.InstanceContext>. En el ejemplo, la clase `CustomLeaseInitializer` implementa esta interfaz y agrega una instancia de `CustomLeaseExtension` a la colección de la propiedad <xref:System.ServiceModel.InstanceContext.Extensions%2A> desde la única inicialización del método. El Distribuidor llama a este método inicializando la instancia de <xref:System.ServiceModel.InstanceContext>.
 
 ```csharp
 public void InitializeInstanceContext(InstanceContext instanceContext,
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Por último el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementación está enlazada al modelo de servicio mediante el uso de la <xref:System.ServiceModel.Description.IServiceBehavior> implementación. Esta implementación se coloca en la clase `CustomLeaseTimeAttribute` y también deriva de la clase base <xref:System.Attribute> para exponer este comportamiento como un atributo.
+ Por último, la implementación de <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> se enlaza al modelo de servicio mediante el uso de la implementación de <xref:System.ServiceModel.Description.IServiceBehavior>. Esta implementación se coloca en la clase `CustomLeaseTimeAttribute` y también deriva de la clase base <xref:System.Attribute> para exponer este comportamiento como un atributo.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -238,17 +238,17 @@ Al ejecutar el ejemplo, las solicitudes y las respuestas de operación se muestr
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](running-the-samples.md).
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`

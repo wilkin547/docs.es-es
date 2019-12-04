@@ -2,15 +2,15 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82fa0bb09ebdf3ca2325872c2b884f4940de17ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989778"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715721"
 ---
 # <a name="jsonp"></a>JSONP
-En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que las etiquetas `<script src="http://..." >` como pueden evaluar los scripts de cualquier dominio y el script recuperado por esas etiquetas se evalúa dentro de un ámbito en el que es posible que ya se hayan definido otras funciones.
+En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que las etiquetas como `<script src="http://..." >` pueden evaluar scripts de cualquier dominio y el script recuperado por esas etiquetas se evalúa dentro de un ámbito en el que es posible que ya se hayan definido otras funciones.
 
 ## <a name="demonstrates"></a>Demostraciones
  Scripting a través de dominios con JSONP.
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- La página web puede llamar al servicio REST de WCF porque el servicio usa el objeto <xref:System.ServiceModel.Description.WebScriptEndpoint> con `crossDomainScriptAccessEnabled` establecido en `true`. Ambas configuraciones se realizan en el archivo Web. config en el elemento de \<> System. ServiceModel.
+ La página web puede llamar al servicio REST de WCF porque el servicio usa el objeto <xref:System.ServiceModel.Description.WebScriptEndpoint> con `crossDomainScriptAccessEnabled` establecido en `true`. Ambas configuraciones se realizan en el archivo Web. config en el elemento \<System. serviceModel >.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- El ScriptManager administra la interacción con el servicio y oculta la complejidad de la implementación manual del acceso JSONP. Cuando `crossDomainScriptAccessEnabled` se establece en `true` y el formato de respuesta de una operación es JSON, la infraestructura de WCF inspecciona el URI de la solicitud de un parámetro de cadena de consulta de devolución de llamada y ajusta la respuesta JSON con el valor de la cadena de consulta de devolución de llamada. parámetro. En el ejemplo, la página web llama al servicio REST de WCF con el siguiente URI.
+ El ScriptManager administra la interacción con el servicio y oculta la complejidad de la implementación manual del acceso JSONP. Cuando `crossDomainScriptAccessEnabled` se establece en `true` y el formato de respuesta de una operación es JSON, la infraestructura de WCF inspecciona el URI de la solicitud de un parámetro de cadena de consulta de devolución de llamada y ajusta la respuesta JSON con el valor del parámetro de cadena de consulta de devolución de llamada. En el ejemplo, la página web llama al servicio REST de WCF con el siguiente URI.
 
 ```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
@@ -58,7 +58,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
