@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Implementación en Databricks
       href: tutorials/databricks-deployment.md
+    - name: Structured Streaming
+      href: tutorials/streaming.md
 - name: Guías de procedimientos
   items:
     - name: Depuración de la aplicación
