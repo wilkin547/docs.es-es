@@ -2,12 +2,12 @@
 title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141869"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802601"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 
@@ -95,15 +95,15 @@ El esquema de configuración de WCF es complejo y ofrece a los usuarios muchas c
 
 ### <a name="getting-started"></a>Introducción
 
-- [Guía del desarrollador de WCF 4,0](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [Guía del desarrollador de WCF 4,0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Generador de canales de configuración](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [Generador de canales de configuración](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [Elemento de punto de conexión estándar](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [Elemento de punto de conexión estándar](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Mejoras en la configuración del servicio en .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Mejoras en la configuración del servicio en .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [Error de usuario común en .NET 4: escribir indirectamente el nombre de configuración del servicio WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [Error de usuario común en .NET 4: escribir indirectamente el nombre de configuración del servicio WF/WCF](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>Escenarios de configuración simplificados
 
@@ -125,9 +125,9 @@ En .NET 3.5, había unas cuantas limitaciones en el diseño de tipos conocidos:
 
 ### <a name="getting-started"></a>Introducción
 
-- [Documentación de la API de resolución de contrato de datos](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [Documentación de la API de resolución de contrato de datos](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Introducción a la resolución del contrato de datos](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [Introducción a la resolución del contrato de datos](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - Ejemplos:
 
@@ -287,7 +287,7 @@ El servicio de enrutamiento en .NET 4 está diseñado para facilitar la resoluci
 
 2. Ejemplos: [servicios &#91;de enrutamiento ejemplos&#93; de WCF](../wcf/samples/routing-services.md)
 
-3. Blog: [reglas de enrutamiento.](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. Blog: [reglas de enrutamiento.](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Escenarios de enrutamiento
 
@@ -325,7 +325,7 @@ Además, los mensajes de detección son válidos para distintos protocolos de re
 
 Un desarrollador no desea programar de forma rígida los puntos de conexión, porque no se sabe cuándo estará disponible un servicio determinado. En su lugar, desea elegir un servicio en tiempo de ejecución. Se necesita más desacoplamiento, solidez y autoconfiguración entre los componentes de la aplicación.
 
-## <a name="tracking"></a>Seguimiento
+## <a name="tracking"></a>Tracking
 
 El seguimiento del flujo de trabajo proporciona una visión general de la ejecución de una instancia de flujo de trabajo. Los eventos de seguimiento se emiten desde un flujo de trabajo en el nivel de instancia de flujo de trabajo y cuando se ejecutan actividades dentro del flujo de trabajo. Se necesita agregar un participante de seguimiento de flujo de trabajo al host de flujo de trabajo para suscribirse a los registros de seguimiento. Los registros de seguimiento se filtran utilizando un perfil de seguimiento. El .NET Framework proporciona un participante de seguimiento de ETW (seguimiento de eventos para Windows) y se instala un perfil básico en el archivo Machine. config.
 

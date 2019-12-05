@@ -2,12 +2,12 @@
 title: Utilización de las herramientas de desarrollo de WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420677"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802419"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilización de las herramientas de desarrollo de WCF
 En esta sección se describen las herramientas de desarrollo de Visual Studio que pueden ayudarle a desarrollar su WCFservice.  
@@ -43,7 +43,7 @@ En esta sección se describen las herramientas de desarrollo de Visual Studio qu
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Para obtener más información acerca de Netsh. exe, vea [Cómo utilizar la herramienta netsh. exe y los modificadores de la línea de comandos](https://go.microsoft.com/fwlink/?LinkId=97877).  
+ Para obtener más información acerca de Netsh. exe, vea [Cómo utilizar la herramienta netsh. exe y los modificadores de la línea de comandos](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).  
   
 ## <a name="see-also"></a>Vea también
 

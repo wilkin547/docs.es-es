@@ -2,18 +2,18 @@
 title: 'Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460879"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802588"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo
 
 En este tema se describe cómo configurar la característica Almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia para los flujos de trabajo y servicios de flujo de trabajo, según la programación, o mediante un archivo de configuración.
 
-Windows Server APp Fabric simplifica el proceso de configuración de persistencia. Para obtener más información, consulte [configuración de persistencia de App fabric](https://go.microsoft.com/fwlink/?LinkId=201204).
+Windows Server APp Fabric simplifica el proceso de configuración de persistencia. Para obtener más información, consulte [configuración de persistencia de App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Antes de usar la característica Almacén de instancias de flujo de trabajo de SQL, cree una base de datos que la característica usará para conservar las instancias de flujo de trabajo. El programa de instalación de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] copia los archivos de script de SQL asociados con la característica Almacén de instancias de flujo de trabajo en la carpeta %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Ejecute estos archivos de script en una base de datos de SQL Server 2005 o SQL Server 2008 que desea que el almacén de instancias de flujo de trabajo de SQL use para conservar las instancias de flujo de trabajo. Ejecute primero el archivo SqlWorkflowInstanceStoreSchema.sql y después SqlWorkflowInstanceStoreLogic.sql.
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Se recomienda no almacenar la información confidencial, como nombres de usuario y contraseñas, en el archivo Web.config. Si no almacena información confidencial en el archivo Web.config, debería proteger el acceso al archivo Web.config mediante las lista de control de acceso (ACL) del sistema de archivos. Además, también puede proteger los valores de configuración de un archivo de configuración, como se mencionó en [cifrar información de configuración mediante la configuración protegida](https://go.microsoft.com/fwlink/?LinkId=178419).
+> Se recomienda no almacenar la información confidencial, como nombres de usuario y contraseñas, en el archivo Web.config. Si no almacena información confidencial en el archivo Web.config, debería proteger el acceso al archivo Web.config mediante las lista de control de acceso (ACL) del sistema de archivos. Además, también puede proteger los valores de configuración de un archivo de configuración, como se mencionó en [cifrar información de configuración mediante la configuración protegida](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementos Machine.config relacionados con la característica Almacén de instancias de flujo de trabajo de SQL
 

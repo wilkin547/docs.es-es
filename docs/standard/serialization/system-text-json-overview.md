@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180153"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802718"
 ---
 # <a name="json-serialization-in-net---overview"></a>Serialización de JSON en .NET: información general
 
@@ -35,10 +35,10 @@ La biblioteca también proporciona clases para trabajar con un modelo de objetos
 ## <a name="additional-resources"></a>Recursos adicionales
 
 * [Cómo usar la biblioteca](system-text-json-how-to.md)
-* [Código fuente](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [Código fuente](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [Referencia de API](xref:System.Text.Json)
-* [Guía básica](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [Guía básica](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * Problemas de GitHub en el repositorio dotnet/corefx
-  * [Debate sobre el desarrollo de System. Text. JSON](https://github.com/dotnet/corefx/issues/33115)
-  * [Todos los problemas de System. Text. JSON](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [Problemas de System. Text. JSON con la etiqueta JSON-funcionalidad-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [Debate sobre el desarrollo de System. Text. JSON](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [Todos los problemas de System. Text. JSON](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [Problemas de System. Text. JSON con la etiqueta JSON-funcionalidad-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

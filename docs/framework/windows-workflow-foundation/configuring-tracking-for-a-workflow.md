@@ -2,12 +2,12 @@
 title: Configurar seguimiento para un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458902"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802679"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurar seguimiento para un flujo de trabajo
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Para obtener más información sobre los perfiles de seguimiento, consulte [perfiles de seguimiento](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Para obtener más información sobre los perfiles de seguimiento, consulte [perfiles de seguimiento](tracking-profiles.md).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurar el seguimiento mediante WorkflowInvoker
 
@@ -196,7 +196,7 @@ Si es necesario escribir eventos en un determinado registro de aplicaciones, sig
     </system.serviceModel>
     ```
 
-2. Copie el archivo de manifiesto de%windir%\Microsoft.NET\Framework\\\<última versión de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man en una ubicación temporal y cambie su nombre a Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Copie el archivo de manifiesto de%windir%\Microsoft.NET\Framework\\\<última versión de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man en una ubicación temporal y cambie su nombre a Microsoft. Windows. ApplicationServer. Applications_Provider1. Man.
 
 3. Cambie el GUID del archivo de manifiesto por el nuevo GUID.
 
@@ -222,7 +222,7 @@ Si es necesario escribir eventos en un determinado registro de aplicaciones, sig
 
 6. Genere el archivo DLL de recursos siguiendo estos pasos.
 
-    1. Instale el SDK de Windows. El Windows SDK incluye el compilador de mensajes ([MC. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) y el compilador de recursos ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Instale el SDK de Windows. El Windows SDK incluye el compilador de mensajes ([MC. exe](/windows/win32/wes/message-compiler--mc-exe-)) y el compilador de recursos ([RC. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
 
     2. En un símbolo del sistema de Windows SDK, ejecute mc.exe en el archivo de manifiesto nuevo.
 
@@ -250,7 +250,7 @@ Si es necesario escribir eventos en un determinado registro de aplicaciones, sig
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Use [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) para registrar el manifiesto.
+    7. Use [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) para registrar el manifiesto.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ Si es necesario escribir eventos en un determinado registro de aplicaciones, sig
 
 ## <a name="see-also"></a>Vea también
 
-- [Supervisión de Windows Server App fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Supervisión de aplicaciones con App fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Supervisión de Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Supervisión de aplicaciones con App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

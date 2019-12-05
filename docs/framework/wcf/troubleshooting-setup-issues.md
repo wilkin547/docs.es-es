@@ -2,12 +2,12 @@
 title: Solución de problemas de instalación
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281604"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802432"
 ---
 # <a name="troubleshooting-setup-issues"></a>Solución de problemas de instalación
 En este tema se describe cómo solucionar problemas de configuración de Windows Communication Foundation (WCF).  
@@ -52,7 +52,7 @@ En este tema se describe cómo solucionar problemas de configuración de Windows
   
  Se deben seguir los pasos siguientes para resolver el problema descrito previamente.  
   
-1. Ejecute [el utilidad de diagnóstico de WMI, versión 2,0](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar el servicio WMI. Para obtener más información sobre el uso de esta herramienta, vea el tema [utilidad de diagnóstico de WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
+1. Ejecute [el utilidad de diagnóstico de WMI, versión 2,0](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar el servicio WMI. Para obtener más información sobre el uso de esta herramienta, consulte el artículo [utilidad de diagnóstico de WMI](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10)) .  
   
  Repare la instalación de .NET Framework 3,0 mediante el applet **Agregar o quitar programas** que se encuentra en el **Panel de control**, o bien desinstale o vuelva a instalar el .NET Framework 3,0.  
   

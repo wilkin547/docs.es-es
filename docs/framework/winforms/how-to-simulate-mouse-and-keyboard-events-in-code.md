@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para simular eventos del mouse y del teclado en el código
+title: 'Cómo: Simular eventos del mouse y del teclado en el código'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1a7a0fa6295cd8332313a983ca78345bfbac393e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046391"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802484"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procedimiento para simular eventos del mouse y del teclado en el código
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Cómo: Simular eventos del mouse y del teclado en el código
 
 Windows Forms ofrece varias opciones para simular la entrada de mouse y de teclado mediante programación. En este tema se ofrece una introducción a estas opciones.
 
@@ -72,7 +72,7 @@ Aunque puede simular la entrada del teclado con las estrategias descritas anteri
 1. Active la ventana de la aplicación que recibirá las pulsaciones de teclas y, después, llame al método <xref:System.Windows.Forms.SendKeys.Send%2A> o <xref:System.Windows.Forms.SendKeys.SendWait%2A> . Como no hay ningún método administrado para activar otra aplicación, debe usar métodos nativos de Windows para forzar el foco en otras aplicaciones. El ejemplo de código siguiente usa la invocación de la plataforma para llamar a los métodos `FindWindow` y `SetForegroundWindow` para activar la ventana de la aplicación Calculadora y, después, llama a <xref:System.Windows.Forms.SendKeys.SendWait%2A> para emitir una serie de cálculos a la aplicación Calculadora.
 
     > [!NOTE]
-    > Los parámetros correctos de la llamada a `FindWindow` que busca la aplicación Calculadora varían en función de la versión de Windows.  El código siguiente busca la aplicación Calculadora en [!INCLUDE[win7](../../../includes/win7-md.md)]. En [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], cambie el primer parámetro por "SciCalc". Puede usar la herramienta Spy ++, incluida con Visual Studio, para determinar los parámetros correctos.
+    > Los parámetros correctos de la llamada a `FindWindow` que busca la aplicación Calculadora varían en función de la versión de Windows.  El código siguiente busca la aplicación Calculator en Windows 7. En [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], cambie el primer parámetro por "SciCalc". Puede usar la herramienta Spy ++, incluida con Visual Studio, para determinar los parámetros correctos.
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

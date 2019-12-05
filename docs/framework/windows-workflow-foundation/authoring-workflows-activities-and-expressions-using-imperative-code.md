@@ -2,12 +2,12 @@
 title: Crear flujos de trabajo, actividades y expresiones mediante código imperativo
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: 22f5928dda55d77fde2ee518510eb2890e55b446
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97f57067e72be2ed2fb6b3846e2ab876c13e049f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940892"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802705"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Crear flujos de trabajo, actividades y expresiones mediante código imperativo
 Una definición de flujo de trabajo es un árbol de objetos de actividad configurados. Este árbol de actividades se puede definir de muchas maneras, incluido XAML editado a mano o el uso del Diseñador de flujo de trabajo para generar XAML. El uso de XAML, sin embargo, no es un requisito. También se pueden crear definiciones de flujo de trabajo mediante programación. Este tema proporciona información general sobre cómo crear definiciones de flujo de trabajo, actividades y expresiones mediante código. Para obtener ejemplos de cómo trabajar con flujos de trabajo de XAML mediante código, vea [serializar flujos de trabajo y actividades a y desde XAML](serializing-workflows-and-activities-to-and-from-xaml.md).  
@@ -29,7 +29,7 @@ Una definición de flujo de trabajo es un árbol de objetos de actividad configu
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- Para obtener más información sobre los inicializadores de [objeto, consulte Cómo: Inicializar objetos sin llamar a unC# constructor (guía](https://go.microsoft.com/fwlink/?LinkId=161015) de [programación) y cómo: Declare un objeto mediante un inicializador](https://go.microsoft.com/fwlink/?LinkId=161016)de objeto.  
+ Para obtener más información sobre los inicializadores de objeto, vea [Cómo: inicializar objetos sin llamarC# a un constructor (Guía de programación)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) y [Cómo: declarar un objeto usando un inicializador de objeto](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>Trabajar con variables, valores literales y expresiones  
  Al crear una definición de flujo de trabajo mediante código, tenga en cuenta qué código se ejecuta como parte de la creación de la definición de flujo de trabajo y qué código se ejecuta como parte de la ejecución de una instancia de ese flujo de trabajo. Por ejemplo, el siguiente flujo de trabajo está pensado para generar un número aleatorio y escribirlo en la consola.  
@@ -50,7 +50,7 @@ new Assign<int>
 }  
 ```  
   
- Es necesario compilar las expresiones de C# antes de que se invoque el flujo de trabajo que las contiene. Si no C# se compilan las expresiones <xref:System.NotSupportedException> , se produce una excepción cuando se invoca el flujo de trabajo con un mensaje similar al siguiente: `Expression Activity type 'CSharpValue`1 "requiere compilación para poder ejecutarse.  Asegúrese de que se ha compilado el flujo de trabajo. ' en la mayoría de los escenarios que implican flujos C# de trabajo creados en Visual Studio, las expresiones se compilan automáticamente, pero en C# algunos escenarios, como los flujos de trabajo de código, las expresiones deben ser manuales vuelto. Para obtener un ejemplo de cómo compilar C# expresiones, consulte la sección uso [ C# de expresiones en flujos de trabajo de código](csharp-expressions.md#CodeWorkflows) del tema [ C# expresiones](csharp-expressions.md) .  
+ Es necesario compilar las expresiones de C# antes de que se invoque el flujo de trabajo que las contiene. Si las expresiones de C# no se compilan, se produce <xref:System.NotSupportedException> cuando el flujo de trabajo se invoca con un mensaje similar al siguiente: ``Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled.`` En la mayoría de los escenarios en los que se involucran flujos de trabajo creados en Visual Studio, la expresiones de C# se compilan automáticamente, pero en algunos escenarios, como flujos de trabajo de código, es necesario compilar las expresiones de C# manualmente. Para obtener un ejemplo de cómo compilar C# expresiones, consulte la sección uso [ C# de expresiones en flujos de trabajo de código](csharp-expressions.md#CodeWorkflows) del tema [ C# expresiones](csharp-expressions.md) .  
   
  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> representa una expresión en la sintaxis de Visual Basic que se puede usar como valor r en una expresión y <xref:Microsoft.CSharp.Activities.CSharpValue%601> representa una expresión en la sintaxis de C# que se puede usar como valor r en una expresión. Se evalúan estas expresiones cada vez que se ejecuta la actividad que contienen. El resultado de la expresión se asigna a la variable de flujo de trabajo `n`. La actividad siguiente usa estos resultados en el flujo de trabajo. Para tener acceso al valor de la variable de flujo de trabajo `n` en el tiempo de ejecución, se necesita <xref:System.Activities.ActivityContext>. Se puede tener acceso a esto con la siguiente expresión lambda.  
   
@@ -61,9 +61,9 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- Para obtener más información sobre las expresiones lambda, vea [expresionesC# lambda (Guía de programación)](https://go.microsoft.com/fwlink/?LinkID=152436) o [expresiones lambda (Visual Basic)](https://go.microsoft.com/fwlink/?LinkID=152437).  
+ Para obtener más información sobre las expresiones lambda, vea [expresionesC# lambda (Guía de programación)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) o [expresiones lambda (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Las expresiones lambda no son serializables para el formato XAML. Si se realiza un intento de serializar un flujo de trabajo con expresiones <xref:System.Activities.Expressions.LambdaSerializationException> lambda, se produce una excepción con el siguiente mensaje: "Este flujo de trabajo contiene expresiones lambda especificadas en el código. Estas expresiones no se pueden serializar mediante XAML. Para que el flujo de trabajo se pueda serializar mediante XAML, use VisualBasicValue/VisualBasicReference o ExpressionServices.Convert(lambda). Esto convertirá las expresiones lambda en actividades de expresión”. Para que esta expresión sea compatible con XAML, use <xref:System.Activities.Expressions.ExpressionServices> y <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, tal y como se muestra en el ejemplo siguiente.  
+ Las expresiones lambda no son serializables para el formato XAML. Si se intenta serializar un flujo de trabajo con expresiones lambda, se produce <xref:System.Activities.Expressions.LambdaSerializationException> con el mensaje siguiente: “Este flujo de trabajo contiene expresiones lambda especificadas en código. Estas expresiones no se pueden serializar mediante XAML. Para que el flujo de trabajo se pueda serializar mediante XAML, use VisualBasicValue/VisualBasicReference o ExpressionServices.Convert(lambda). Esto convertirá las expresiones lambda en actividades de expresión”. Para que esta expresión sea compatible con XAML, use <xref:System.Activities.Expressions.ExpressionServices> y <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, tal y como se muestra en el ejemplo siguiente.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#53](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#53)]  
   
@@ -97,7 +97,7 @@ new Assign
 },  
 ```  
   
- Cuando se valida el flujo de trabajo que contiene esta actividad, se devuelve el siguiente error de validación: "Literal solo admite tipos de valor y el tipo inmutable System. String. El tipo System.Collections.Generic.List`1[System.String] no se puede usar como literal”. Si se invoca el flujo de trabajo, se produce <xref:System.Activities.InvalidWorkflowException> que contiene el texto del error de validación. Esto es un error de validación porque al crear una expresión literal con un tipo de referencia no se crea una nueva instancia del tipo de referencia para cada instancia del flujo de trabajo. Para solucionarlo, reemplace la expresión literal con una que cree y devuelva una nueva instancia de tipo de referencia.  
+ Cuando el flujo de trabajo que contiene esta actividad se valida, se devuelve el error de validación siguiente: "El literal solo admite tipos de valor y el tipo inmutable System.String. El tipo System.Collections.Generic.List`1[System.String] no se puede usar como literal”. Si se invoca el flujo de trabajo, se produce <xref:System.Activities.InvalidWorkflowException> que contiene el texto del error de validación. Esto es un error de validación porque al crear una expresión literal con un tipo de referencia no se crea una nueva instancia del tipo de referencia para cada instancia del flujo de trabajo. Para solucionarlo, reemplace la expresión literal con una que cree y devuelva una nueva instancia de tipo de referencia.  
   
 ```csharp  
 new Assign  
@@ -142,7 +142,7 @@ new InvokeMethod<int>
 ## <a name="compiled-activities"></a>Actividades compiladas  
  Las actividades dinámicas son una manera de definir una actividad que contiene argumentos mediante código, pero las actividades también se pueden crear en código y compilar en tipos. Se pueden crear actividades simples que derivan de <xref:System.Activities.CodeActivity> y actividades asincrónicas que derivan de <xref:System.Activities.AsyncCodeActivity>. Estas actividades pueden tener argumentos, valores devueltos y definir la lógica mediante código imperativo. Para obtener ejemplos de cómo crear estos tipos de actividades, vea [clase base CodeActivity](workflow-activity-authoring-using-the-codeactivity-class.md) y [crear actividades asincrónicas](creating-asynchronous-activities-in-wf.md).  
   
- Las actividades que derivan de <xref:System.Activities.NativeActivity> pueden definir su lógica mediante código imperativo y también pueden contener actividades secundarias que definen la lógica. También tienen acceso completo a las características del runtime como crear marcadores. Para obtener ejemplos de cómo <xref:System.Activities.NativeActivity>crear una actividad basada en, vea [NativeActivity base class](nativeactivity-base-class.md), [How to: Cree una actividad](how-to-create-an-activity.md)y el ejemplo de [composición personalizada mediante la actividad nativa](./samples/custom-composite-using-native-activity.md) .  
+ Las actividades que derivan de <xref:System.Activities.NativeActivity> pueden definir su lógica mediante código imperativo y también pueden contener actividades secundarias que definen la lógica. También tienen acceso completo a las características del runtime como crear marcadores. Para obtener ejemplos de cómo crear una actividad basada en <xref:System.Activities.NativeActivity>, vea [clase base NativeActivity](nativeactivity-base-class.md), [Cómo: crear una actividad](how-to-create-an-activity.md)y el ejemplo de [composición personalizada mediante la actividad nativa](./samples/custom-composite-using-native-activity.md) .  
   
  Las actividades que derivan de <xref:System.Activities.Activity> definen la lógica únicamente con el uso de actividades secundarias. Estas actividades se crean normalmente mediante el diseñador de flujo de trabajo, pero también pueden definirse mediante código. En el siguiente ejemplo, se define una actividad `Square` que deriva de `Activity<int>`. La actividad `Square` tiene un único <xref:System.Activities.InArgument%601> denominado `Value` y define su lógica especificando una actividad <xref:System.Activities.Statements.Sequence> mediante la propiedad <xref:System.Activities.Activity.Implementation%2A>. La actividad <xref:System.Activities.Statements.Sequence> contiene una actividad <xref:System.Activities.Statements.WriteLine> y una actividad <xref:System.Activities.Statements.Assign%601>. Juntas, estas tres actividades implementan la lógica de la actividad `Square`.  
   
@@ -184,4 +184,4 @@ Console.WriteLine("Result: {0}", result);
  Cuando se invoca el flujo de trabajo, en la consola se muestra el siguiente resultado:  
   
  **Elevar el valor: 5**  
-**Da 25**
+**Resultado: 25**

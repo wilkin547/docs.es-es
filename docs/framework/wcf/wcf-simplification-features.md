@@ -2,12 +2,12 @@
 title: Características de simplificación de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 85c50e5939a5e63202d57bca08393b9b79308f57
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321228"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802393"
 ---
 # <a name="wcf-simplification-features"></a>Características de simplificación de WCF
 
@@ -88,13 +88,13 @@ WCF proporciona el modo de compatibilidad de ASP.NET para conceder a los desarro
 
 - Se ha agregado a WCF una nueva compatibilidad para streaming asincrónico. Para habilitar el streaming asincrónico, agregue el comportamiento de punto de conexión <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`. Esto puede beneficiar a la escalabilidad cuando un servicio envía mensajes de secuencias a varios clientes que leen despacio. WCF ya no bloquea un subproceso por cliente y liberará el subproceso para atender a otro cliente.
 
-- Se han quitado las limitaciones sobre el almacenamiento en búfer de mensajes cuando un servicio está hospedado en IIS. En versiones anteriores de WCF, al recibir un mensaje para un servicio hospedado por IIS que usaba transferencia de mensajes de streaming, ASP.NET almacenaba en búfer todo el mensaje antes de enviarlo a WCF. Esto provocaba que el consumo de memoria fuera grande. Este almacenamiento en búfer se ha quitado en .NET 4.5 y ahora los servicios WCF hospedados en IIS pueden empezar a procesar el flujo de entrada antes de que se haya recibido el mensaje completo, lo que permite streaming auténtico. Esto permite que WCF responda inmediatamente a los mensajes y permite mejorar el rendimiento. Además, ya no es necesario especificar un valor para `maxRequestLength`, el límite de tamaño de ASP.NET en las solicitudes entrantes. Si se establece esta propiedad, se omite. Para obtener más información sobre `maxRequestLength` vea [\<httpRuntime > elemento de configuración](https://go.microsoft.com/fwlink/?LinkId=223344). Todavía tendrá que configurar el maxAllowedContentLength. para obtener más información, consulte [límites de solicitudes de IIS](https://go.microsoft.com/fwlink/?LinkId=225908).
+- Se han quitado las limitaciones sobre el almacenamiento en búfer de mensajes cuando un servicio está hospedado en IIS. En versiones anteriores de WCF, al recibir un mensaje para un servicio hospedado por IIS que usaba transferencia de mensajes de streaming, ASP.NET almacenaba en búfer todo el mensaje antes de enviarlo a WCF. Esto provocaba que el consumo de memoria fuera grande. Este almacenamiento en búfer se ha quitado en .NET 4.5 y ahora los servicios WCF hospedados en IIS pueden empezar a procesar el flujo de entrada antes de que se haya recibido el mensaje completo, lo que permite streaming auténtico. Esto permite que WCF responda inmediatamente a los mensajes y permite mejorar el rendimiento. Además, ya no es necesario especificar un valor para `maxRequestLength`, el límite de tamaño de ASP.NET en las solicitudes entrantes. Si se establece esta propiedad, se omite. Para obtener más información sobre `maxRequestLength` vea [\<httpRuntime > elemento de configuración](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71)). Todavía tendrá que configurar el maxAllowedContentLength. para obtener más información, consulte [límites de solicitudes de IIS](https://docs.microsoft.com/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
 
 ## <a name="new-transport-default-values"></a>Nuevos valores de transporte predeterminados
 
 En la tabla siguiente se describen los valores que han cambiado y dónde encontrar información adicional.
 
-|Propiedad|Activado|Nuevo valor predeterminado|Más información|
+|Propiedad.|On|Nuevo valor predeterminado|Más información|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Esta propiedad determina cuánto tiempo puede tardar una conexión TCP en autenticarse a sí misma mediante el protocolo de tramas .NET. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. Este tiempo de expiración se ha hecho intencionadamente más breve que ReceiveTimeout (10 min) para que los clientes no autenticados y malintencionados no conserven las conexiones con el servidor durante mucho tiempo. El valor predeterminado es 30 segundos. Para obtener más información acerca de <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * número de procesadores|Esta propiedad del nivel de socket describe el número de solicitudes "pendientes de aceptación" que se van a poner en cola. Si la cola de trabajos pendientes de escucha se llena, las nuevas solicitudes de socket se rechazarán. Para obtener más información acerca de <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -107,9 +107,9 @@ En la tabla siguiente se describen los valores que han cambiado y dónde encontr
 
 ## <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas> contiene valores de cuota configurables para los lectores del diccionario XML que limitan la cantidad de memoria utilizada por un codificador mientras se crea un mensaje. Aunque estas cuotas son configurables, los valores predeterminados han cambiado para reducir la posibilidad de que un desarrollador tenga que establecerlas explícitamente. `MaxReceivedMessageSize` cuota no ha cambiado para que pueda seguir limitando el consumo de memoria, lo que evita la necesidad de administrar la complejidad de la <xref:System.Xml.XmlDictionaryReaderQuotas>. En la tabla siguiente se muestran las cuotas, sus nuevos valores predeterminados y una breve descripción de para qué se usa cada cuota.
+<xref:System.Xml.XmlDictionaryReaderQuotas> contiene valores de cuota configurables para los lectores de diccionario de XML que restringen la cantidad de memoria usada por un codificador mientras se crea un mensaje. Aunque estas cuotas son configurables, los valores predeterminados han cambiado para reducir la posibilidad de que un desarrollador tenga que establecerlas explícitamente. La cuota de `MaxReceivedMessageSize` no se ha cambiado, de modo que aún puede limitar el consumo de memoria para evitar que sea necesario tratar la complejidad de <xref:System.Xml.XmlDictionaryReaderQuotas>. En la tabla siguiente se muestran las cuotas, sus nuevos valores predeterminados y una breve descripción de para qué se usa cada cuota.
 
-|Nombre de la cuota|Default Value|Descripción|
+|Nombre de la cuota|Valor predeterminado|Descripción|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Obtiene y establece la longitud máxima permitida de matriz. Esta cuota limita el tamaño máximo de una matriz de primitivas que devuelve el lector XML, incluidas las matrices de bytes. Esta cuota no limita el consumo de la memoria en el propio lector XML, sino en cualquier componente que esté utilizando el lector. Por ejemplo, cuando <xref:System.Runtime.Serialization.DataContractSerializer> utiliza un lector protegido con <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, no deserializa matrices de bytes mayores que esta cuota.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Obtiene y establece el máximo permitido de bytes devueltos para cada lectura. Esta cuota limita el número de bytes que se leen en una operación de lectura única al leer la etiqueta de inicio de elemento y sus atributos. (En los casos en que no haya transmisión, el propio nombre del elemento no se cuenta para la cuota). Tener demasiados atributos XML puede usar un tiempo de proceso desproporcionado porque se tiene que comprobar la unicidad de los nombres de atributo. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> mitiga esta amenaza.|

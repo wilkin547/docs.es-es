@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320181"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802356"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Inicio rápido de solución de problemas de WCF
 En este tema se enumeran muchos problemas conocidos que los clientes han detectado al desarrollar clientes y servicios de WCF. Si el problema que tiene no aparece en esta lista, se recomienda que configure la traza del servicio. De esta forma, se genera un archivo de seguimiento que puede ver con el visor de archivos de seguimiento y obtiene información detallada sobre las excepciones que se pueden producir en el servicio. Para obtener más información sobre la configuración del seguimiento, consulte [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md). Para obtener más información sobre cómo usar el visor de archivos de seguimiento, consulte [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -51,7 +51,7 @@ En este tema se enumeran muchos problemas conocidos que los clientes han detecta
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>A veces recibo una excepción MessageSecurityException en la segunda solicitud si mi cliente está inactivo durante algún tiempo después de la primera solicitud. ¿Qué sucede?  
- Se puede producir un error en la segunda solicitud principalmente por dos razones: (1) se ha agotado de tiempo de espera de la sesión o (2) se recicla el servidor web que está hospedando el servicio. En el primer caso, la sesión es válida hasta que se agota el tiempo de espera del servicio. Cuando el servicio no recibe una solicitud del cliente dentro del período de tiempo especificado en el enlace del servicio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), el servicio finaliza la sesión de seguridad. Los siguientes mensajes del cliente producen <xref:System.ServiceModel.Security.MessageSecurityException>. El cliente debe restablecer una sesión segura con el servicio para enviar los futuros mensajes o utilizar un token de contexto de seguridad con estado. Los tokens de contexto de seguridad con estado también permiten que una sesión segura sobreviva a un servidor web que se recicla. Para obtener más información sobre el uso de tokens de contexto seguro con estado en una sesión segura, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). También puede deshabilitar las sesiones seguras. Al usar el enlace [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) , puede establecer la propiedad `establishSecurityContext` en `false` para deshabilitar las sesiones seguras. Para deshabilitar las sesiones seguras para otros enlaces, debe crear un enlace personalizado. Para obtener más información sobre cómo crear un enlace personalizado, consulte [Creación de un enlace personalizado mediante SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) Antes de aplicar cualquiera de estas opciones, debe entender los requisitos de seguridad de su aplicación.  
+ Se puede producir un error en la segunda solicitud principalmente por dos razones: (1) se ha agotado de tiempo de espera de la sesión o (2) se recicla el servidor web que está hospedando el servicio. En el primer caso, la sesión es válida hasta que se agota el tiempo de espera del servicio. Cuando el servicio no recibe una solicitud del cliente dentro del período de tiempo especificado en el enlace del servicio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), el servicio finaliza la sesión de seguridad. Los siguientes mensajes del cliente producen <xref:System.ServiceModel.Security.MessageSecurityException>. El cliente debe restablecer una sesión segura con el servicio para enviar los futuros mensajes o utilizar un token de contexto de seguridad con estado. Los tokens de contexto de seguridad con estado también permiten que una sesión segura sobreviva a un servidor web que se recicla. Para obtener más información sobre el uso de tokens de contexto seguro con estado en una sesión segura, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). También puede deshabilitar las sesiones seguras. Al usar el enlace [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) , puede establecer la propiedad `establishSecurityContext` en `false` para deshabilitar las sesiones seguras. Para deshabilitar las sesiones seguras para otros enlaces, debe crear un enlace personalizado. Para obtener más información sobre cómo crear un enlace personalizado, consulte [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Antes de aplicar cualquiera de estas opciones, debe entender los requisitos de seguridad de su aplicación.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Mi servicio empieza a rechazar nuevos clientes cuando interactúa con unos 10 clientes. ¿Qué sucede?  
@@ -136,9 +136,9 @@ public class MyServiceHost : ServiceHost
   
 - [Depuración de errores de autenticación de Windows](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [Registrar nombres principales de servicio de Kerberos mediante Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrar nombres principales de servicio de Kerberos mediante Http.sys](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms178119(v=sql.105))  
   
-- [Kerberos Explained (Kerberos en detalle)](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos Explained (Kerberos en detalle)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v%3dtechnet.10))  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Cuando se inicia una excepción FaultException\<> en la que el tipo es una excepción, siempre se recibe un tipo de FaultException general en el cliente y no el tipo genérico. ¿Qué sucede?  
@@ -193,7 +193,7 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q10"></a>   
-## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>¿Cuál es la dirección base? ¿Cómo se relaciona con una dirección de extremo?  
+## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>¿Cuál es la dirección base? ¿Cómo se relaciona con una dirección de punto de conexión?  
  Una dirección base es la dirección de raíz para una clase <xref:System.ServiceModel.ServiceHost> . De forma predeterminada, si agrega una clase <xref:System.ServiceModel.Description.ServiceMetadataBehavior> en su configuración de servicio, el lenguaje de descripción de servicios Web (WSDL) para todos los extremos que publica el host se recupera de la dirección base de HTTP, más cualquier dirección relativa proporcionada al comportamiento de los metadatos, más "? wsdl". Si está familiarizado con ASP.NET e IIS, la dirección base es equivalente al directorio virtual.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Compartir un puerto entre un extremo de servicio y un extremo mex mediante NetTcpBinding  
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Verá un error como el siguiente: Excepción no controlada: System.ServiceModel.AddressAlreadyInUseException: Ya hay una escucha en el punto de conexión IP0.0.0.0:9000. Para solucionar este error, especifique una dirección URL completa con un puerto diferente para el punto de conexión MEX, como se muestra en el siguiente fragmento de código de configuración:  
+ Verá un error como el siguiente: Excepción no controlada: System.ServiceModel.AddressAlreadyInUseException: Ya hay una escucha en el extremo IP0.0.0.0:9000. Para solucionar este error, especifique una dirección URL completa con un puerto diferente para el extremo MEX, como se muestra en el siguiente fragmento de código de configuración:  
   
 ```xml
 <services>  

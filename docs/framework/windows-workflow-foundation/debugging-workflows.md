@@ -1,17 +1,17 @@
 ---
-title: Depuración de flujos de trabajo
+title: Depurar flujos de trabajo
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291490"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802640"
 ---
-# <a name="debugging-workflows"></a>Depuración de flujos de trabajo
+# <a name="debugging-workflows"></a>Depurar flujos de trabajo
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ofrece varias opciones para Depurar flujos de trabajo en ejecución desde el entorno de desarrollo. Los flujos de trabajo se pueden depurar en el diseñador, en XAML y en el código.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias opciones para depurar los flujos de trabajo en ejecución del entorno de desarrollo. Los flujos de trabajo se pueden depurar en el diseñador, en XAML y en el código.
 
 ## <a name="debugging-in-the-workflow-designer"></a>Depuración en el Diseñador de flujo de trabajo
 
@@ -29,9 +29,9 @@ Para establecer un punto de interrupción, haga clic en el margen izquierdo del 
 
 La depuración del flujo de trabajo también admite el uso de la infraestructura de Visual Studio para adjuntar a un proceso. De esta forma se permite que el autor del flujo de trabajo depure un flujo de trabajo que se ejecuta en un entorno de host diferente como Internet Information Services (IIS) 7.0.
 
-## <a name="remote-debugging"></a>Depuración remota
+## <a name="remote-debugging"></a>Remote Debugging
 
-La depuración remota de Windows Workflow Foundation (WF) es igual que la depuración remota de otros componentes de Visual Studio. Para obtener información sobre cómo usar la depuración remota, vea [Cómo: habilitar la depuración remota](https://go.microsoft.com/fwlink/?LinkId=196257).
+La depuración remota de Windows Workflow Foundation (WF) es igual que la depuración remota de otros componentes de Visual Studio. Para obtener información sobre cómo usar la depuración remota, vea [Cómo: habilitar la depuración remota](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Si la aplicación de flujo de trabajo tiene como destino la arquitectura x86 y se hospeda en un equipo que ejecuta un sistema operativo de 64 bits, la depuración remota no funcionará a menos que Visual Studio esté instalado en el equipo remoto o el destino de la aplicación de flujo de trabajo se cambie a **cualquier CPU**.
