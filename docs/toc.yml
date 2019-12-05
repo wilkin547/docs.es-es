@@ -11,9 +11,9 @@
 - name: 'Guía de C#'
   href: csharp/index.yml
 - name: 'Guía de F#'
-  href: fsharp/
+  href: fsharp/index.yml
 - name: "Guía de Visual\_Basic"
-  href: visual-basic/
+  href: visual-basic/index.yml
 - name: Guía de ML.NET
   href: machine-learning/index.yml
 - name: Guía de .NET para Apache Spark
