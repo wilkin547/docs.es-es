@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: a39d25f03583ab9020878b7a659bc99489231ff9
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1e7a5a03db4a24ed4d13d62899754cfe9e76b56
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458886"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837160"
 ---
 # <a name="xamlname-grammar"></a>Gramática de XamlName
 La gramática de XamlName es una gramática específica que se define en la especificación del lenguaje XAML [MS-XAML], que se reproduce aquí por comodidad.  
@@ -54,5 +54,5 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener la especificación completa, vea [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).
+## <a name="remarks"></a>Notas  
+ Para obtener la especificación completa, vea [\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).

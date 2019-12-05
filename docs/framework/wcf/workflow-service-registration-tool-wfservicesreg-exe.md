@@ -1,15 +1,15 @@
 ---
-title: Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
+title: Herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281672"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837758"
 ---
-# <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
+# <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)
 El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramienta independiente que puede utilizarse para agregar, quitar o reparar los elementos de configuración de los servicios de Windows Workflow Foundation (WF).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -18,7 +18,7 @@ El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramien
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La herramienta se puede encontrar en la ubicación de instalación de .NET Framework 3,5, específicamente,%windir%\Microsoft.NET\Framework\v3.5 o en%windir%\Microsoft.NET\Framework64\v3.5 en máquinas de 64 bits.  
   
  Las tablas siguientes describen las opciones que pueden utilizarse con la herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe).  
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  En equipos de 64 bits, la herramienta registra asignaciones de secuencias de comandos en el modo WOW si el modificador `Enable32BitAppOnWin64` está habilitado, o asignaciones de secuencias de comandos nativas de 64 bits si el modificador `Enable32BitAppOnWin64` está deshabilitado.  
   
- En máquinas [!INCLUDE[wv](../../../includes/wv-md.md)] y Windows Server 2008 (IIS 7,0 y versiones posteriores), se registran dos conjuntos de controladores. xoml y. rules: uno para el modo integrado y otro para el modo clásico.  
+ En las máquinas con Windows Vista y Windows Server 2008 (IIS 7,0 y versiones posteriores), se registran dos conjuntos de controladores. xoml y. rules: uno para el modo integrado y otro para el modo clásico.  
   
  En equipos de 64 bits, se registran tres conjuntos de controladores (independientemente del estado del modificador `Enable32BitAppOnWin64`): uno para el modo integrado, otro para el modo clásico de WOW y el tercero para el modo clásico de 64 bits nativo.  
   

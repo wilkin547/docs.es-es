@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 3282daff166a8fe56841a41bfe8bd9dd69f9d4c8
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716943"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837875"
 ---
 # <a name="getting-started-sample"></a>Ejemplo de introducción
 
@@ -34,7 +34,7 @@ El servicio describe las operaciones que realiza en un contrato de servicios que
 
 El cliente contiene una definición del contrato de servicios y una clase de proxy para tener acceso al servicio. El código proxy se genera a partir de los metadatos del servicio mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-En [!INCLUDE[wv](../../../../includes/wv-md.md)], el servicio se hospeda en el Servicio de Activación de Windows (WAS). Internet Information Services (IIS) y ASP.NET hospedan [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.
+En Windows Vista, el servicio se hospeda en el servicio de activación de Windows (WAS). Internet Information Services (IIS) y ASP.NET hospedan [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.
 
 > [!NOTE]
 > Si prefiere empezar a trabajar con un ejemplo que hospeda el servicio en una aplicación de consola en lugar de en IIS, consulte el ejemplo de [host propio](../../../../docs/framework/wcf/samples/self-host.md) .

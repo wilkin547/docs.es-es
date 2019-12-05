@@ -2,12 +2,12 @@
 title: Modificadores
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2056cdc69c7d89b78e9b269fc919a0e0f6b76bf4
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351540"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838291"
 ---
 # <a name="modifiers-visual-basic"></a>Modificadores de Visual Basic
 Los temas de esta sección documentan los modificadores en tiempo de ejecución de Visual Basic.  
@@ -25,7 +25,7 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [Default](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Predetermiado](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
@@ -47,7 +47,7 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Opcional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
@@ -89,5 +89,3 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)

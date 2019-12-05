@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643543"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837342"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Colas en Windows Communication Foundation
-Los temas de esta sección describen el soporte técnico de Windows Communication Foundation (WCF) para las colas. WCF proporciona compatibilidad para poner en cola por aprovechando Microsoft Message Queuing (anteriormente conocido como MSMQ) como transporte y habilita los escenarios siguientes:  
+En los temas de esta sección se describe la compatibilidad de Windows Communication Foundation (WCF) con las colas de. WCF proporciona compatibilidad para la puesta en cola aprovechando Microsoft Message Queuing (conocido anteriormente como MSMQ) como transporte y habilita los siguientes escenarios:  
   
 - Aplicaciones acopladas débilmente Las aplicaciones emisoras pueden enviar mensajes a colas sin necesidad de conocer si la aplicación receptora está disponible para procesar el mensaje. La cola proporciona independencia de procesamiento que permite a una aplicación emisora enviar mensajes a la cola a una tasa que no depende de cómo de rápido las aplicaciones receptoras puedan procesar los mensajes. La disponibilidad del sistema total aumenta al enviar los mensajes a una cola que no está fuertemente acoplada al procesamiento de mensajes.  
   
@@ -22,20 +22,20 @@ Los temas de esta sección describen el soporte técnico de Windows Communicatio
   
 - Operaciones desconectadas. Las operaciones de envío, recepción y procesamiento se pueden desconectar al comunicar a través de redes de latencia alta o redes de disponibilidad limitada, como es el caso de los dispositivos móviles. Las colas permiten a estas operaciones continuar, incluso cuando los puntos de conexión están desconectados. Cuando se restablece la conexión, la cola reenvía los mensajes a la aplicación receptora.  
   
- Para usar la característica de colas en una aplicación de WCF, puede usar uno de los enlaces estándares o puede crear un enlace personalizado si uno de los enlaces estándar no satisface sus requisitos. Para obtener más información sobre los enlaces estándar pertinentes y cómo elegir uno, consulte [Cómo: Intercambiar mensajes con puntos de conexión WCF y aplicaciones de Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obtener más información sobre cómo crear enlaces personalizados, vea [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Para usar la característica de colas en una aplicación WCF, puede usar uno de los enlaces estándar o puede crear un enlace personalizado si uno de los enlaces estándar no satisface sus requisitos. Para obtener más información sobre los enlaces estándar pertinentes y cómo elegir uno, consulte [Cómo: intercambiar mensajes con extremos de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obtener más información sobre cómo crear enlaces personalizados, vea [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Una información general de conceptos de colas de mensajes.  
   
  [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Información general de soporte técnico de cola WCF.  
+ Información general sobre la compatibilidad con las colas de WCF.  
   
- [Cómo: Intercambiar los mensajes en cola con puntos de conexión WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Explica cómo utilizar el <xref:System.ServiceModel.NetMsmqBinding> clase para la comunicación entre un cliente WCF y un servicio WCF.  
+ [Intercambio de mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ Explica cómo usar la clase <xref:System.ServiceModel.NetMsmqBinding> para comunicarse entre un cliente WCF y un servicio WCF.  
   
- [Cómo: Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Explica cómo utilizar el <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para la comunicación entre aplicaciones WCF y Message Queue Server.  
+ [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ Explica cómo usar el <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para comunicarse entre WCF y las aplicaciones de Message Queuing.  
   
  [Agrupación de los mensajes en cola de una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Explica cómo agrupar los mensajes en una cola para facilitar el procesamiento de mensajes correlacionado por una aplicación receptora única.  
@@ -50,7 +50,7 @@ Los temas de esta sección describen el soporte técnico de Windows Communicatio
  Explica cómo administrar los mensajes dudosos (mensajes que han superado el número máximo de intentos de entrega a la aplicación receptora).  
   
  [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Resume las diferencias en la característica de colas WCF entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Resume las diferencias en la característica de colas de WCF entre Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Describe cómo utilizar la seguridad de transporte para proteger los mensajes en cola.  
@@ -62,4 +62,4 @@ Los temas de esta sección describen el soporte técnico de Windows Communicatio
  Explica cómo solucionar los problemas comunes de la puesta en cola.  
   
  [Procedimientos recomendados para la comunicación en cola](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Explica la comunicación en cola las prácticas recomendadas para el uso de WCF.  
+ Explica los procedimientos recomendados para usar la comunicación en cola de WCF.  

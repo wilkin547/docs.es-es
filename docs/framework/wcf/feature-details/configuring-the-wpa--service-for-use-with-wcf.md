@@ -2,28 +2,28 @@
 title: Configuración del Servicio de activación de procesos de Windows para el uso con Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 7ab62bda5e579bcd80a7403d9af3a7e7f9836647
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 768674a5cc4b0710e03de8ef1c9fdb2c40a8f314
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487003"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838044"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configuración del Servicio de activación de procesos de Windows para el uso con Windows Communication Foundation
-En este tema se describe los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de Windows Communication Foundation (WCF) protocolos de red de servicios que no se comunican a través de HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
+En este tema se describen los pasos necesarios para configurar el servicio de activación de procesos de Windows (también conocido como WAS) en Windows Vista para hospedar servicios Windows Communication Foundation (WCF) que no se comunican a través de protocolos de red HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
   
-- Instale (o confirme la instalación de) los componentes de activación de WCF necesarios.  
+- Instale (o confirme la instalación de) los componentes de activación de WCF requeridos.  
   
 - Cree un sitio WAS con los enlaces de protocolos de red que desee utilizar o agregue un nuevo enlace de protocolo a un sitio existente.  
   
 - Cree una aplicación para hospedar sus servicios y permita a esa aplicación utilizar los protocolos de red necesarios.  
   
-- Crear un servicio WCF que expone un punto de conexión que no sean HTTP.  
+- Cree un servicio WCF que exponga un punto de conexión que no sea HTTP.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Configuración de un sitio con enlaces que no sean HTTP  
  Para utilizar un enlace no HTTP con WAS, el enlace del sitio se debe agregar a la configuración de WAS. El almacén de configuración para WAS es el archivo applicationHost.config, ubicado en el directorio %windir%\system32\inetsrv\config. WAS e IIS 7.0 comparten este almacén de configuración.  
   
- applicationHost.config es un archivo de texto XML que se puede abrir con cualquier editor de texto estándar (como el Bloc de notas). Sin embargo, la herramienta de configuración de línea de comandos (appcmd.exe) de IIS 7.0 es la mejor manera de agregar enlaces de sitios que no sean HTTP.  
+ applicationHost.config es un archivo de texto XML que se puede abrir con cualquier editor de texto estándar (como el Bloc de notas). Sin embargo, la herramienta de configuración de línea de comandos de IIS 7,0 (appcmd. exe) es la mejor manera de agregar enlaces de sitios que no son HTTP.  
   
  El siguiente comando agrega un enlace de sitio net.tcp al sitio web predeterminado utilizando appcmd.exe (este comando se escribe como una línea única).  
   
@@ -46,13 +46,13 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 ```  
   
 ## <a name="enabling-an-application-to-use-non-http-protocols"></a>Permitir a una aplicación que utilice protocolos no HTTP  
- Puede habilitar o deshabilitar protocolsat el nivel de aplicación de red individuales. El siguiente comando muestra cómo habilitar los protocolos HTTP y net.tcp para una aplicación que se ejecute en el `Default Web Site`.  
+ Puede habilitar o deshabilitar protocolsat de red individuales el nivel de aplicación. El siguiente comando muestra cómo habilitar los protocolos HTTP y net.tcp para una aplicación que se ejecute en el `Default Web Site`.  
   
 ```console  
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- También se puede establecer la lista de protocolos habilitados el \<applicationDefaults > elemento de configuración XML de la carpeta del sitio almacenada en ApplicationHost.config.  
+ La lista de protocolos habilitados también se puede establecer en el elemento \<applicationDefaults > de la configuración XML del sitio almacenada en ApplicationHost. config.  
   
  El siguiente código XML de applicationHost.config muestra un sitio enlazado a protocolos HTTP y no HTTP. Se llama a la configuración adicional necesaria para admitir protocolos no HTTP mediante comentarios.  
   
@@ -89,12 +89,12 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- Si ve este error, asegúrese de que WAS para la activación no HTTP está instalado y configurado correctamente. Para obtener más información, vea [Cómo: Instalar y configurar componentes de activación WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Si ve este error, asegúrese de que WAS para la activación no HTTP está instalado y configurado correctamente. Para obtener más información, vea [Cómo: instalar y configurar los componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Creación de un servicio WCF que utiliza WAS para la activación no HTTP  
- Una vez que realice los pasos para instalar y configurar WAS (vea [Cómo: Instalar y configurar componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), configurar un servicio para que use WAS es similar a configurar un servicio que se hospeda en IIS.  
+ Una vez que realice los pasos para instalar y configurar WAS (consulte [Cómo: instalar y configurar los componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), la configuración de un servicio para su activación es similar a la configuración de un servicio que se hospeda en IIS.  
   
- Para obtener instrucciones detalladas sobre la creación de un servicio WCF activado mediante WAS, vea [Cómo: Hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Para obtener instrucciones detalladas sobre cómo crear un servicio WCF activado, consulte [Cómo: hospedar un servicio WCF en was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>Vea también
 

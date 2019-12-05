@@ -1,31 +1,31 @@
 ---
-title: Procedimiento para instalar y configurar los componentes de activación de WFC
+title: Cómo instalar y configurar los componentes de activación de WFC
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972181"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837420"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Procedimiento para instalar y configurar los componentes de activación de WFC
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Cómo instalar y configurar los componentes de activación de WFC
 
-En este tema se describen los pasos necesarios para configurar el servicio de activación de procesos de Windows (también [!INCLUDE[wv](../../../../includes/wv-md.md)] conocido como was) en para hospedar servicios Windows Communication Foundation (WCF) que no se comunican a través de protocolos de red http. Las siguientes secciones describen los pasos para realizar esta configuración:
+En este tema se describen los pasos necesarios para configurar el servicio de activación de procesos de Windows (también conocido como WAS) en Windows Vista para hospedar servicios Windows Communication Foundation (WCF) que no se comunican a través de protocolos de red HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:
 
 - Instale (o confirme la instalación de) los componentes de activación de WCF.
 
-- Configure WAS para que admita un protocolo que no sea HTTP. El procedimiento siguiente configura [!INCLUDE[wv](../../../../includes/wv-md.md)] para la activación del TCP.
+- Configure WAS para que admita un protocolo que no sea HTTP. El procedimiento siguiente configura Windows Vista para la activación de TCP.
 
-Después de instalar y configurar was, [consulte Cómo: Hospede un servicio WCF en was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) para que los procedimientos creen un servicio WCF que exponga un punto de conexión que no sea http que emplee was.
+Después de instalar y configurar WAS, consulte [Cómo: hospedar un servicio WCF en was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) para los procedimientos para crear un servicio WCF que exponga un punto de conexión que no sea http y que emplee was.
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>Instalación de los componentes de activación que no son HTTP de WCF
 
 1. Haga clic en el botón **Inicio** y, a continuación, en **Panel de control**.
 
-2. Haga clic en **programas**y, a continuación, en **programas y características**.
+2. Haga clic en **Programas** y, a continuación, haga clic en **Programas y características**.
 
 3. En el menú **tareas** , haga clic en **activar o desactivar las características de Windows**.
 
@@ -52,7 +52,7 @@ Después de instalar y configurar was, [consulte Cómo: Hospede un servicio WCF 
     ```
 
     > [!NOTE]
-    > Este comando es una sola línea de texto. Este comando permite\< `net.tcp://localhost/<WCF Application>` `http://localhost/<WCF Application>` tener acceso a la aplicación >/*WCF*mediante y.
+    > Este comando es una sola línea de texto. Este comando permite tener acceso a la aplicación *WCF*>/\<mediante `http://localhost/<WCF Application>` y `net.tcp://localhost/<WCF Application>`.
 
      Elimine el enlace del sitio de net.tcp que ha agregado para este ejemplo.
 

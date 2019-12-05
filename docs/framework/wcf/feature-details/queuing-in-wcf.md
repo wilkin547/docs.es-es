@@ -2,12 +2,12 @@
 title: Las colas en WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: 27c92b0f728b909de16a059485a38ff7fb0fb765
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6656ab0b2db88297e6ac9a28bb2ea18c0056d18c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913387"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837329"
 ---
 # <a name="queuing-in-wcf"></a>Las colas en WCF
 En esta sección se describe cómo usar la comunicación en cola en Windows Communication Foundation (WCF).  
@@ -15,7 +15,7 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
 ## <a name="queues-as-a-wcf-transport-binding"></a>Las colas como enlace de transporte de WCF  
  En WCF, los contratos especifican lo que se intercambia. Los contratos son intercambios de mensajes que dependen de lo comercial, o intercambios específicos de la aplicación. El mecanismo utilizado para intercambiar los mensajes (o el "cómo") se especifica en los enlaces. Los enlaces de WCF encapsulan los detalles del intercambio de mensajes. Exponen botones de configuración para que el usuario controle distintos aspectos del transporte o el protocolo que representan los enlaces. La puesta en cola en WCF se trata como cualquier otro enlace de transporte, que es una gran ventaja para muchas aplicaciones de puesta en cola. Hoy en día, muchas aplicaciones de colas se escriben de manera diferente a otras aplicaciones de estilo distribuido de llamada a procedimiento remoto (RPC), lo que dificulta su seguimiento y mantenimiento. Con WCF, el estilo de escritura de una aplicación distribuida es muy similar, lo que facilita su seguimiento y mantenimiento. Es más, separando la factorización del mecanismo de intercambio de la lógica comercial, es más sencillo configurar el transporte o cambiarlo sin alterar el código específico de la aplicación. La figura siguiente muestra la estructura de un servicio y un cliente WCF que utilizan MSMQ como transporte.  
   
- ![Diagrama de aplicaciones en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-figure")  
+ ![Diagrama de aplicaciones en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Como puede verse en la figura anterior, el cliente y el servicio sólo tienen que definir las semánticas de la aplicación, es decir, el contrato y la implementación. El servicio configura un enlace en cola con los valores preferentes. El cliente usa la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar un cliente de WCF para el servicio y para generar un archivo de configuración que describe los enlaces que se van a usar para enviar mensajes al servicio. Por lo tanto, para enviar un mensaje en cola, el cliente crea una instancia de un cliente WCF e invoca una operación en él. Esto provoca el envío del mensaje a la cola de transmisión y su transferencia a la cola de destino. Toda la complejidad de la comunicación en cola permanece oculta a la aplicación que envía y recibe los mensajes.  
   
@@ -25,7 +25,7 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
   
 - Para generar un cliente de WCF mediante el intercambio de metadatos, se requiere un extremo HTTP adicional en el servicio para que se pueda consultar directamente para generar el cliente de WCF y obtener información de enlace para configurar correctamente la comunicación en cola.  
   
-- Según el enlace en cola, se requiere una configuración adicional fuera de WCF. Por ejemplo, la <xref:System.ServiceModel.NetMsmqBinding> clase que se suministra con WCF requiere la configuración de los enlaces y la configuración mínima de Message Queuing (MSMQ).  
+- Según el enlace en cola, se requiere una configuración adicional fuera de WCF. Por ejemplo, la clase <xref:System.ServiceModel.NetMsmqBinding> que se suministra con WCF requiere la configuración de los enlaces y la configuración mínima de Message Queuing (MSMQ).  
   
  En las secciones siguientes se describen los enlaces en cola específicos que se incluyen con WCF, que se basan en MSMQ.  
   
@@ -41,14 +41,14 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
  Para obtener más información acerca de MSMQ, vea [instalar Message Queue Server (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ El\<> netMsmqBinding](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) es el enlace en cola que proporciona WCF para que dos extremos de WCF se comuniquen mediante MSMQ. Por lo tanto, el enlace expone propiedades que son específicas de MSMQ. No obstante, no todas las características y propiedades MSMQ se exponen en `NetMsmqBinding`. El `NetMsmqBinding` compacto está diseñado con un conjunto óptimo de características que la mayoría de los clientes debería encontrar suficiente.  
+ El [\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) es el enlace en cola que proporciona WCF para que dos extremos de WCF se comuniquen mediante MSMQ. Por lo tanto, el enlace expone propiedades que son específicas de MSMQ. No obstante, no todas las características y propiedades MSMQ se exponen en `NetMsmqBinding`. El `NetMsmqBinding` compacto está diseñado con un conjunto óptimo de características que la mayoría de los clientes debería encontrar suficiente.  
   
  `NetMsmqBinding` expone los conceptos fundamentales de las colas explicados hasta ahora como propiedades de los enlaces. Por su parte, estas propiedades comunican a MSMQ cómo transferir y entregar los mensajes. Hay una descripción de las categorías de propiedad en las secciones siguientes. Para obtener más información, vea los temas conceptuales que describen las propiedades específicas más completamente.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce y propiedades durables  
  `ExactlyOnce` y las propiedades `Durable` afectan a cómo los mensajes se transfieren entre las colas:  
   
-- `ExactlyOnce`: Cuando se establece `true` en (valor predeterminado), el canal en cola garantiza que el mensaje, si se entrega, no está duplicado. Además, garantiza que el mensaje no se pierda. Si no puede entregarse el mensaje, o expira el periodo de vida del mismo antes de poder entregarlo, tanto el mensaje fallido como la razón del error en la entrega se registran en una cola de componentes con problemas de entrega. Cuando se establece en `false`, el canal en cola realiza un esfuerzo para transferir el mensaje. En este caso, se puede optar por elegir una cola de mensajes no enviados.  
+- `ExactlyOnce`: cuando se establece en `true` (el valor predeterminado), el canal en cola garantiza que, si se entrega, el mensaje no se duplica. Además, garantiza que el mensaje no se pierda. Si no puede entregarse el mensaje, o expira el periodo de vida del mismo antes de poder entregarlo, tanto el mensaje fallido como la razón del error en la entrega se registran en una cola de componentes con problemas de entrega. Cuando se establece en `false`, el canal en cola realiza un esfuerzo para transferir el mensaje. En este caso, se puede optar por elegir una cola de mensajes no enviados.  
   
 - `Durable:` cuando se establece en `true` (el valor predeterminado), el canal en cola garantiza que MSMQ almacena el mensaje en el disco de manera duradera. Así, si el servicio de MSMQ se detiene y reinicia, los mensajes del disco se transfieren a la cola de destino o se entregan al servicio. Cuando se establece en `false`, los mensajes se guardan en un almacén volátil y se pierden en caso de que se detenga y reinicie el servicio de MSMQ.  
   
@@ -62,13 +62,13 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
   
  Muchos sistemas de colas proporcionan una cola de mensajes no enviados para todo el sistema. MSMQ proporciona una cola de mensajes no enviados no transaccional para todo el sistema, para los mensajes con entrega fallida en colas no transaccionales; y una cola de mensajes no enviados transaccional para todo el sistema para los mensajes con entrega fallida en colas transaccionales.  
   
- Si varios clientes que envían mensajes a distintas colas de destino comparten el servicio MSMQ, todos los mensajes enviados por los clientes irán a la misma cola de mensajes no enviados. Esto no siempre es lo mejor. Para un mejor aislamiento, WCF y MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] en proporcionan una cola de mensajes no enviados personalizada (o una cola de mensajes no enviados específica de la aplicación) que el usuario puede especificar para almacenar los mensajes que no se han podido entregar. Por lo tanto, los distintos clientes no comparten la misma cola de mensajes no enviados.  
+ Si varios clientes que envían mensajes a distintas colas de destino comparten el servicio MSMQ, todos los mensajes enviados por los clientes irán a la misma cola de mensajes no enviados. Esto no siempre es lo mejor. Para un mejor aislamiento, WCF y MSMQ en Windows Vista proporcionan una cola de mensajes no enviados personalizada (o una cola de mensajes no enviados específica de la aplicación) que el usuario puede especificar para almacenar los mensajes que no se han podido entregar. Por lo tanto, los distintos clientes no comparten la misma cola de mensajes no enviados.  
   
  El enlace tiene dos propiedades interesantes:  
   
-- `DeadLetterQueue`: Esta propiedad es una enumeración que indica si se solicita una cola de mensajes no enviados. La enumeración también contiene el tipo de cola de mensajes no enviados, en caso de que se solicite uno. Los valores son `None`, `System` y `Custom`. Para obtener más información acerca de la interpretación de estas propiedades, consulte [uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`: esta propiedad es una enumeración que indica si se envía una solicitud a una cola de mensajes no enviados. La enumeración también contiene el tipo de cola de mensajes no enviados, en caso de que se solicite uno. Los valores son `None`, `System` y `Custom`. Para obtener más información acerca de la interpretación de estas propiedades, consulte [uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
-- `CustomDeadLetterQueue`: Esta propiedad es la dirección del identificador uniforme de recursos (URI) de la cola de mensajes no enviados específica de la aplicación. Esto es necesario si `DeadLetterQueue`.`Custom` se elige.  
+- `CustomDeadLetterQueue`: esta propiedad es la dirección del identificador uniforme de recursos (URI) de la cola de mensajes no enviados específica de la aplicación. Esto es necesario si `DeadLetterQueue`.`Custom` se elige.  
   
 #### <a name="poison-message-handling-properties"></a>Propiedades de control de mensajes dudosos  
  Cuando el servicio lee mensajes de la cola de destino en una transacción, puede no procesar el mensaje debido a distintas razones. En este caso, el mensaje se devuelve a la cola para volver a leerse. Para gestionar los mensajes en los que se producen errores repetidamente, se puede configurar un conjunto propiedades de control de mensajes dudosos en el enlace. Hay cuatro propiedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` y `ReceiveErrorHandling`. Para obtener más información acerca de estas propiedades, vea [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
@@ -83,16 +83,16 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
 #### <a name="other-properties"></a>Otras propiedades  
  Además de las propiedades anteriores, existen otras propiedades específicas de MSMQ expuestas en el enlace:  
   
-- `UseSourceJournal`: Una propiedad para indicar que el diario de origen está activado. El registro en el diario de origen es una característica de MSMQ que hace un seguimiento de los mensajes transmitidos correctamente desde la cola de transmisión.  
+- `UseSourceJournal`: una propiedad que indica la activación del registro en el diario de origen. El registro en el diario de origen es una característica de MSMQ que hace un seguimiento de los mensajes transmitidos correctamente desde la cola de transmisión.  
   
-- `UseMsmqTracing`: Una propiedad para indicar que el seguimiento de MSMQ está activado. El seguimiento de la traza de MSMQ envía mensajes de informe a una cola de informes cada vez que un mensaje sale o llega a un equipo en el que se aloja un administrador de cola de MSMQ.  
+- `UseMsmqTracing`: una propiedad que indica que el seguimiento de la traza de MSMQ está activado. El seguimiento de la traza de MSMQ envía mensajes de informe a una cola de informes cada vez que un mensaje sale o llega a un equipo en el que se aloja un administrador de cola de MSMQ.  
   
-- `QueueTransferProtocol`: Una enumeración del protocolo que se va a utilizar para las transferencias de mensajes de cola a cola. MSMQ implementa un protocolo de transferencia cola a cola nativo y un protocolo basado en SOAP, denominado protocolo de mensajería de confianza (SRMP) de SOAP. Se utiliza SRMP cuando se recurre al transporte HTTP para las transferencias cola a cola. La protección SRMP se utiliza cuando se recurre a HTTPS para las transferencias cola a cola.  
+- `QueueTransferProtocol`: una enumeración del protocolo utilizado para las transferencias de mensajes cola a cola. MSMQ implementa un protocolo de transferencia cola a cola nativo y un protocolo basado en SOAP, denominado protocolo de mensajería de confianza (SRMP) de SOAP. Se utiliza SRMP cuando se recurre al transporte HTTP para las transferencias cola a cola. La protección SRMP se utiliza cuando se recurre a HTTPS para las transferencias cola a cola.  
   
-- `UseActiveDirectory`: Valor booleano que indica si se debe usar el Active Directory para la resolución de la dirección de la cola. De manera predeterminada, está desactivado. Para obtener más información, consulte [puntos de conexión de servicio y direccionamiento de colas](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+- `UseActiveDirectory`: un valor booleano que indica si debe utilizarse Active Directory para la resolución de direcciones de cola. De manera predeterminada, está desactivado. Para obtener más información, consulte [puntos de conexión de servicio y direccionamiento de colas](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- Se usa cuando se desea que un punto de conexión de WCF se comunique con una aplicación MSMQ existente escrita C++en las API de C,, com o System. Messaging. `MsmqIntegrationBinding`  
+ El `MsmqIntegrationBinding` se usa cuando se desea que un punto de conexión de WCF se comunique con una aplicación MSMQ existente C++escrita en las API de C,, com o System. Messaging.  
   
  Las propiedades de enlace son la mismas que para `NetMsmqBinding`. No obstante, se aplican las siguientes diferencias.  
   
@@ -105,9 +105,9 @@ En esta sección se describe cómo usar la comunicación en cola en Windows Comm
 ### <a name="sample-code"></a>Código de ejemplo  
  Si desea obtener instrucciones paso a paso sobre cómo escribir servicios WCF que usen MSMQ, vea los temas siguientes:  
   
-- [Procedimientos: Intercambio de mensajes con extremos de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
-- [Procedimientos: Intercambio de mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [Intercambio de mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Si desea obtener un ejemplo de código completo que muestre el uso de MSMQ en WCF, vea los temas siguientes:  
   

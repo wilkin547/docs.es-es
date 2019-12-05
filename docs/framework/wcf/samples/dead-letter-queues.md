@@ -2,12 +2,12 @@
 title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710873"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837914"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -16,7 +16,7 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
 > [!NOTE]
-> Este ejemplo muestra cada cola de mensajes no enviados de la aplicación que solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Este ejemplo muestra cada cola de mensajes con problemas de entrega de la aplicación que solo está disponible en Windows Vista. El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.
 
@@ -30,9 +30,9 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
 - `System`: La cola de mensajes no enviados del sistema se utiliza para guardar los mensajes no entregados. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
 
-- `Custom`: una cola de mensajes no enviados personalizada especificada con la propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> se utiliza para almacenar los mensajes no entregados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
+- `Custom`: una cola de mensajes no enviados personalizada especificada con la propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> se utiliza para almacenar los mensajes no entregados. Esta característica solo está disponible en Windows Vista. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
 
-- La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Solo está disponible en Windows Vista.
 
  En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción y especifica un valor arbitrariamente bajo para el "período de vida" para estos mensajes (aproximadamente 2 segundos). El cliente también especifica una cola de mensajes no enviados personalizada utilizada para poner en cola los mensajes que han expirado.
 

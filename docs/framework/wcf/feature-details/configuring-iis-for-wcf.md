@@ -2,23 +2,23 @@
 title: Configuración de Internet Information Services 7.0 para Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6962ed1dccca6db2e55554459742adab210585ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 369fd641adc91c58a676a7c2708e267366d73b41
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655002"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838057"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configuración de Internet Information Services 7.0 para Windows Communication Foundation
 
-Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite instalar de forma selectiva los componentes necesarios. Este diseño está basado en la nueva tecnología de componentización por manifiesto introducida en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Hay más de 40 componentes de características independientes de IIS 7.0 que se pueden instalar independientemente. Esto permite a los profesionales de TI personalizar la instalación con facilidad según sea necesario. En este tema se describe cómo configurar IIS 7.0 para su uso con Windows Communication Foundation (WCF) y determinar qué componentes son necesarios.
+Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite instalar de forma selectiva los componentes necesarios. Este diseño se basa en la nueva tecnología de componentes controlado por manifiestos introducida en Windows Vista. Hay más de 40 componentes de características independientes de IIS 7,0 que se pueden instalar de forma independiente. Esto permite a los profesionales de TI personalizar la instalación con facilidad según sea necesario. En este tema se describe cómo configurar IIS 7,0 para su uso con Windows Communication Foundation (WCF) y determinar qué componentes son necesarios.
 
-## <a name="minimal-installation-installing-was"></a>Instalación mínima: Instalación de WAS
- La instalación mínima de todo el paquete de IIS 7.0 es instalar el servicio de activación de procesos de Windows (WAS). Se ha es una característica independiente y es la única característica de IIS 7.0 con la que está disponible para todos los [!INCLUDE[wv](../../../../includes/wv-md.md)] los sistemas operativos (Home Basic, Home Premium, Business y Ultimate y Enterprise).
+## <a name="minimal-installation-installing-was"></a>Instalación mínima: instalación de WAS
+ La instalación mínima de todo el paquete de IIS 7,0 es instalar el servicio de activación de procesos de Windows (WAS). WAS es una característica independiente y es la única característica de IIS 7,0 que está disponible para todos los sistemas operativos Windows Vista (Home Basic, Home Premium, Business y Ultimate y Enterprise).
 
- En el Panel de Control, haga clic en **programas** y, a continuación, haga clic en **o desactivar las características de Windows Active** que aparece en **programas y características**, el componente WAS se muestra en el lista como se muestra en la siguiente ilustración.
+ En el panel de control, haga clic en **programas** y, a continuación, haga clic en **activar o desactivar las características de Windows** , que aparece en **programas y características**, el componente was se muestra en la lista como se muestra en la siguiente ilustración.
 
- ![Activar las características o fuera del cuadro de diálogo](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
+ ![Cuadro de diálogo activar o desactivar características](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
 
  Esta característica tiene los siguientes componentes secundarios:
 
@@ -28,33 +28,33 @@ Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite 
 
 - Modelo de proceso
 
- Si se selecciona el nodo raíz de WAS, solo el **modelo de proceso** subnodo está activada de forma predeterminada. Tenga en cuenta que con esta instalación solo está instalando WAS, porque no se ofrece ninguna compatibilidad para un servidor web.
+ Si selecciona el nodo raíz de WAS, solo se comprueba de forma predeterminada el subnodo del **modelo de proceso** . Tenga en cuenta que con esta instalación solo está instalando WAS, porque no se ofrece ninguna compatibilidad para un servidor web.
 
- Para realizar cualquier trabajo de la aplicación ASP.NET o de WCF, compruebe el **entorno .NET** casilla de verificación. Esto significa que todos los componentes de WAS son necesarios para hacer que WCF y ASP.NET funcionan bien. Estos se comprueban automáticamente cuando instala cualquiera de esos componentes.
+ Para que WCF o cualquier aplicación de ASP.NET funcione, active la casilla **.net Environment** . Esto significa que todos los componentes de WAS son necesarios para que WCF y ASP.NET funcionen correctamente. Estos se comprueban automáticamente cuando instala cualquiera de esos componentes.
 
-## <a name="iis-70-default-installation"></a>IIS 7.0: Instalación predeterminada
- Comprobando la **Internet Information Services** característica, algunos de los nodos secundarios se comprueban automáticamente tal como se muestra en la siguiente ilustración.
+## <a name="iis-70-default-installation"></a>IIS 7.0: instalación predeterminada
+ Al comprobar la característica de **Internet Information Services** , algunos de los subnodos se comprueban automáticamente como se muestra en la siguiente ilustración.
 
- ![Los valores predeterminados para las características de IIS 7.0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
+ ![Configuración predeterminada de las características de IIS 7,0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
 
- Se trata de la instalación predeterminada de IIS 7.0. Con esta instalación, puede utilizar IIS 7.0 para contenido estático de servicio (por ejemplo, páginas HTML y otro contenido). Sin embargo, no se puede ejecutar las aplicaciones ASP.NET o CGI u hospedar servicios WCF.
+ Esta es la instalación predeterminada de IIS 7,0. Con esta instalación, puede usar IIS 7,0 para atender contenido estático (como páginas HTML y otro contenido). Sin embargo, no se pueden ejecutar aplicaciones ASP.NET o CGI ni servicios WCF de host.
 
-## <a name="iis-70-installation-with-aspnet-support"></a>IIS 7.0: Instalación con compatibilidad de ASP.NET
- Debe instalar ASP.NET para que ASP.NET funcione en IIS 7.0. Después de comprobar **ASP.NET**, la pantalla debería parecerse a la siguiente ilustración.
+## <a name="iis-70-installation-with-aspnet-support"></a>IIS 7.0: instalación con compatibilidad para ASP.NET
+ Debe instalar ASP.NET para que ASP.NET funcione en IIS 7,0. Después de comprobar **ASP.net**, la pantalla debe ser similar a la siguiente ilustración.
 
- ![Los valores obligatorios Asp.NET](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
+ ![Configuración necesaria de Asp.NET](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
 
- Este es el entorno mínimo para que las aplicaciones WCF y ASP.NET funcionan en IIS 7.0.
+ Este es el entorno mínimo para que las aplicaciones WCF y ASP.NET funcionen en IIS 7,0.
 
-## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7.0: Instalación con componentes de compatibilidad 6.0 de IIS
- Cuando se instala IIS 7.0 en un sistema con Visual Studio 2005 o algunos otros scripts de automatización o las herramientas (como Adsutil.vbs) que configura aplicaciones virtuales que usan la API de Metabase de IIS 6.0, asegúrese de que comprueba el IIS 6.0 **herramientas de Scripting**. Esto comprueba automáticamente los demás nodos secundarios de IIS 6.0 **compatibilidad con la administración**. La siguiente ilustración muestra la pantalla después de ello:
+## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7.0: instalación con componentes de compatibilidad de IIS 6.0
+ Al instalar IIS 7,0 en un sistema con Visual Studio 2005 o algún otro script o herramienta de automatización (como Adsutil. vbs) que configure aplicaciones virtuales que usen la API de metabase de IIS 6,0, asegúrese de comprobar las **herramientas de scripting**de IIS 6,0. Esto comprueba automáticamente los otros subnodos de compatibilidad con la **Administración**de IIS 6,0. En la ilustración siguiente se muestra la pantalla una vez hecho esto:
 
- ![Configuración de compatibilidad IIS 6.0 administración](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
+ ![Configuración de compatibilidad con la administración de IIS 6,0](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
 
- Con esta instalación, tiene todo lo necesario para usar características de IIS 7.0, ASP.NET y WCF y ejemplos disponibles en la Web.
+ Con esta instalación, tiene todo lo necesario para usar las características de IIS 7,0, ASP.NET y WCF y ejemplos disponibles en la Web.
 
-## <a name="request-limits"></a>Límites de la solicitud
- En [!INCLUDE[wv](../../../../includes/wv-md.md)] con IIS 7, se ha cambiado el valor predeterminado de los parámetros `maxUri` y `maxQueryStringSize`. De manera predeterminada, la solicitud de filtrado en IIS 7.0 admite una longitud de dirección URL de 4096 caracteres y una longitud de cadena de consulta de 2048 caracteres. Para cambiar estos valores predeterminados, agregue el siguiente XML al archivo App.config:
+## <a name="request-limits"></a>Límites de las solicitudes
+ En Windows Vista con IIS 7, se ha cambiado el valor predeterminado de la configuración de `maxUri` y `maxQueryStringSize`. De manera predeterminada, la solicitud de filtrado en IIS 7.0 admite una longitud de dirección URL de 4096 caracteres y una longitud de cadena de consulta de 2048 caracteres. Para cambiar estos valores predeterminados, agregue el siguiente XML al archivo App.config:
 
 ```xml
  <system.webServer>
@@ -70,5 +70,5 @@ Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite 
 
 - [Arquitectura de activación de WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Cómo: Instalar y configurar componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Instalación y configuración de los componentes de activación de WFC](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
 - [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

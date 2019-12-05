@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: 1398b58c1e95bfb172c9b314e562262003632713
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d980621ed493bbe5f243062238f4b87e1e44003b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330988"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838174"
 ---
 # <a name="operators-visual-basic"></a>Operadores (Visual Basic)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74330988"
 - [DirectCast (operador)](directcast-operator.md)
 - [TryCast (operador)](trycast-operator.md)
 - [Operador Name](nameof.md)
-- [New (operador)](new-operator.md)
+- [Nuevo operador](new-operator.md)
 - [Operadores condicionales null](null-conditional-operators.md)
 - [Operadores aritméticos](arithmetic-operators.md)
 - [Operadores de asignación](assignment-operators.md)
@@ -34,4 +34,3 @@ ms.locfileid: "74330988"
 ## <a name="related-sections"></a>Secciones relacionadas
 
 - [Referencia del lenguaje Visual Basic](../index.md)
-- [Visual Basic](../../index.md)

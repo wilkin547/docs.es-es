@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318694"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837940"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3,0, la aplicación puede afectar a la privacidad de los usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final decida enviarla.  
@@ -44,7 +44,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  La autenticación puede producir una sesión segura establecida entre los extremos en comunicación. Un GUID, cuya duración es igual a la sesión de seguridad, identifica la sesión. La tabla siguiente muestra lo que se guarda y dónde.  
   
-|Datos|Almacenamiento|  
+|Datos|Almacenamiento de|  
 |----------|-------------|  
 |Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
 |Información de pertenencia del usuario, como nombres de usuario y contraseñas.|Proveedores de pertenencia a ASP.NET.|  
@@ -54,7 +54,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ## <a name="auditing"></a>Auditoría  
  La auditoría registra si se ha completado o se ha producido un error en la autenticación y eventos de autorización. Los registros de la auditoría contienen los datos siguientes: servicio URI, acción URI y la identificación del agente de llamada.  
   
- La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos. Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación. Para [!INCLUDE[wv](../../../includes/wv-md.md)] y [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], un registro está registrado en el registro de eventos de seguridad.  
+ La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos. Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación. En Windows Vista y [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], se registra un registro en el registro de eventos de seguridad.  
   
 ## <a name="transactions"></a>Transacciones  
  La característica de transacciones proporciona servicios transaccionales a una aplicación WCF.  

@@ -2,12 +2,12 @@
 title: Ejemplo de federación
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716923"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837888"
 ---
 # <a name="federation-sample"></a>Ejemplo de federación
 Este ejemplo muestra la seguridad aliada.  
@@ -89,7 +89,7 @@ Este ejemplo muestra la seguridad aliada.
 1. Abra la ventana de comandos de SDK. En la ruta de acceso del ejemplo, ejecute Setup.bat. Esto crea directorios virtuales requeridos para obtener el ejemplo e instala los certificados necesarios con permisos adecuados.  
   
     > [!NOTE]
-    > El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Windows SDK. Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Windows SDK. En [!INCLUDE[wv](../../../../includes/wv-md.md)], debe asegurarse de que esté instalada la Compatibilidad con la administración de IIS 6.0, porque la instalación utiliza los scripts de administrador de IIS. Al ejecutar el script de instalación en [!INCLUDE[wv](../../../../includes/wv-md.md)], se requieren privilegios de administrador.  
+    > El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Windows SDK. Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Windows SDK. En Windows Vista, debe asegurarse de que la compatibilidad con la administración de IIS 6,0 está instalada porque la configuración utiliza scripts de administrador de IIS. La ejecución del script de instalación en Windows Vista requiere privilegios de administrador.  
   
 2. Abra FederationSample. sln en Visual Studio y seleccione **compilar solución** en el menú **compilar** . De esta forma se compilan los archivos de proyecto comunes, servicio Bookstore, STS Bookstore, STS HomeRealm, y los implementa en IIS. De esta forma también se compila la aplicación cliente Bookstore y coloca el BookStoreClient.exe ejecutable en la carpeta FederationSample\BookStoreClient\bin\Debug.  
   

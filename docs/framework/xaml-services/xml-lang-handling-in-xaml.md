@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3f236b2378d6af78f034856e3ba0f7a9e17993c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740570"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837147"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Control de xml:lang en XAML
 El atributo `xml:lang` es un atributo definido por XML que declara la información de idioma y de referencia cultural para un elemento en XML. Este mismo significado del atributo persiste en XAML; sin embargo, se aplican algunas consideraciones adicionales.  
@@ -27,9 +27,9 @@ El atributo `xml:lang` es un atributo definido por XML que declara la informaci�
   
 |||  
 |-|-|  
-|*rfc3066lang*|Una cadena que se deriva del estándar [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) e identifica un idioma o un idioma-región. En el caso de la segunda opción, el idioma y la región se separan con un solo guión. Para más información sobre los valores y el formato, vea <xref:System.Windows.Markup.XmlLanguage> .|  
+|*rfc3066lang*|Una cadena que se deriva del estándar [RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) e identifica un idioma o un idioma-región. En el caso de la segunda opción, el idioma y la región se separan con un solo guión. Para más información sobre los valores y el formato, vea <xref:System.Windows.Markup.XmlLanguage> .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La definición del atributo `xml:lang` en [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] deriva de `xml:lang` tal como se define como un "atributo especial" por el World Wide Web Consortium (W3C) for XML. La información del idioma y de la referencia cultural se puede procesar de maneras diferentes, en función de sus implementaciones; sin embargo, no hay ningún procesamiento de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] predeterminado del atributo `xml:lang` .  
   
  El valor predeterminado del atributo `xml:lang` es una cadena vacía en el nivel de atributo.  

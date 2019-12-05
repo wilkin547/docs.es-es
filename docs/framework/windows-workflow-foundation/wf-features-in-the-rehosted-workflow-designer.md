@@ -2,12 +2,12 @@
 title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142071"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837602"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas características nuevas, incluidas varias mejoras en la experiencia del diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas caracter
  Además de los modelos de desarrollo de flujo de trabajo de diagrama de flujo y secuenciales, esta versión incluye flujos de trabajo de máquina de estados y servicios de flujo de trabajo de contrato primero.  
   
 ### <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados  
- Los flujos de trabajo de máquina de Estados se introdujeron como parte del .NET Framework 4.0.1 en la [actualización 1 de la plataforma Microsoft .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para .NET Framework 4,5. Las actualizaciones incluyen:  
+ Los flujos de trabajo de máquina de Estados se introdujeron como parte del .NET Framework 4.0.1 en la [actualización 1 de la plataforma Microsoft .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para .NET Framework 4,5. Las actualizaciones incluyen:  
   
 1. Capacidad de establecer puntos de interrupción en estados  
   

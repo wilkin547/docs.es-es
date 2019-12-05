@@ -1,20 +1,20 @@
 ---
-title: Procedimiento para reemplazar la reserva de direcciones URL de WCF por una reserva restringida
+title: 'Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 981c4890b11130b937e176da78f378340c0d3894
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991663"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837394"
 ---
-# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procedimiento para reemplazar la reserva de direcciones URL de WCF por una reserva restringida
+# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida
 Una reserva de direcciones URL le permite restringir quién puede recibir mensajes desde una URL o un conjunto de ellas. Una reserva consta de una plantilla de dirección URL, una lista de control de acceso (ACL) y un conjunto de marcas. La plantilla de dirección URL define a qué direcciones URL afecta la reserva. Para obtener más información sobre cómo se procesan las plantillas de dirección URL, vea [enrutar solicitudes entrantes](https://go.microsoft.com/fwlink/?LinkId=136764). La ACL determina qué usuario o grupo de usuarios pueden recibir mensajes desde las direcciones URL especificadas. Las marcas indican si la reserva proporciona permiso a un usuario o a un grupo de ellos para realizar escuchas directamente en la dirección URL o delega el permiso de escucha en otro proceso.  
   
  Como parte de la configuración predeterminada del sistema operativo, Windows Communication Foundation (WCF) crea una reserva accesible globalmente para el puerto 80 a fin de permitir que todos los usuarios ejecuten aplicaciones que usan un enlace HTTP doble para la comunicación dúplex. Dado que la ACL en esta reserva es para todos los usuarios, los administradores no pueden conceder o denegar explícitamente el permiso para realizar escuchas en una dirección URL o en un conjunto de ellas. En este tema se explica cómo eliminar esta reserva y cómo volver a crearla con una ACL restringida.  
   
- En [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] puede ver todas las reservas de direcciones URL de HTTP desde un símbolo del sistema con permisos elevados escribiendo `netsh http show urlacl`.  En el ejemplo siguiente se muestra el aspecto de una reserva de direcciones URL de WCF.  
+ En Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] puede ver todas las reservas de direcciones URL HTTP desde un símbolo del sistema con privilegios elevados escribiendo `netsh http show urlacl`.  En el ejemplo siguiente se muestra el aspecto de una reserva de direcciones URL de WCF.  
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -30,7 +30,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Haga clic en **Inicio**, seleccione **todos los programas**, **accesorios**, haga clic con el botón secundario en **símbolo del sistema** y haga clic en **Ejecutar como administrador** en el menú contextual que aparece. Haga clic en **continuar** en la ventana control de cuentas de usuario (UAC), que podría pedir permisos para continuar.  
   
-2. Escriba **netsh http Delete urlacl http://+:80/Temporary_Listen_Addresses/ URL =** en la ventana del símbolo del sistema.  
+2. Escriba **netsh http Delete urlacl URL =http://+:80/Temporary_Listen_Addresses/** en la ventana del símbolo del sistema.  
   
 3. Si la reserva se elimina correctamente, se muestra el mensaje siguiente: **Reserva de direcciones URL eliminada correctamente**  
   
@@ -41,7 +41,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Haga clic en **Inicio**, seleccione **todos los programas**, **accesorios**, haga clic con el botón secundario en **símbolo del sistema** y haga clic en **Ejecutar como administrador** en el menú contextual que aparece. Haga clic en **continuar** en la ventana control de cuentas de usuario (UAC), que podría pedir permisos para continuar.  
   
-2. Escriba **net\<localgroup "nombre del grupo de seguridad >"/comment: "\<Descripción del grupo de seguridad >"/Add** en el símbolo del sistema. **Reemplace\<el nombre del grupo de seguridad >** por el nombre del grupo de seguridad que desea crear y  **\<la descripción del grupo de seguridad >** por una descripción adecuada para el grupo de seguridad.  
+2. Escriba **net localgroup "\<nombre de grupo de seguridad >"/comment: "\<Descripción del grupo de seguridad >"/Add "** en el símbolo del sistema. Reemplace **\<nombre del grupo de seguridad >** por el nombre del grupo de seguridad que desea crear y **\<Descripción del grupo de seguridad >** con una descripción adecuada para el grupo de seguridad.  
   
 3. Si el grupo de seguridad se crea correctamente, se muestra el mensaje siguiente: **El comando se completó correctamente.**  
   
@@ -55,6 +55,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Haga clic en **Inicio**, seleccione **todos los programas**, **accesorios**, haga clic con el botón secundario en **símbolo del sistema** y haga clic en **Ejecutar como administrador** en el menú contextual que aparece. Haga clic en **continuar** en la ventana control de cuentas de usuario (UAC), que podría pedir permisos para continuar.  
   
-2. Escriba **netsh http Add urlacl URL =http://+:80/Temporary_Listen_Addresses/ user = "\< nombre de equipo >\\ < nombre\> de grupo de seguridad** en el símbolo del sistema. **Reemplace\<el nombre de la máquina >** por el nombre del equipo en el que se debe crear el grupo y  **\<el nombre del grupo de seguridad >** por el nombre del grupo de seguridad que creó anteriormente.  
+2. Escriba **netsh http Add urlacl URL =http://+:80/Temporary_Listen_Addresses/ user = "\< nombre de equipo >\\ < nombre de grupo de seguridad\>** en el símbolo del sistema. Reemplace **\<nombre** del equipo > por el nombre del equipo en el que se debe crear el grupo y **\<nombre del grupo de seguridad >** por el nombre del grupo de seguridad que creó anteriormente.  
   
 3. Si la reserva se crea correctamente, se muestra el mensaje siguiente: **Reserva de direcciones URL agregada correctamente**.

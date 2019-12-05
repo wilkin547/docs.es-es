@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para hacer los certificados X.509 accesibles para WCF
+title: 'Cómo: Hacer los certificados X.509 accesibles para WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972354"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837407"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedimiento para hacer los certificados X.509 accesibles para WCF
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Cómo: Hacer los certificados X.509 accesibles para WCF
 Para que un certificado X. 509 sea accesible para Windows Communication Foundation (WCF), el código de aplicación debe especificar el nombre y la ubicación del almacén de certificados. En ciertas circunstancias, la identidad del proceso debe tener el acceso al archivo que contiene la clave privada asociada al certificado X.509. Para obtener la clave privada asociada a un certificado X. 509 en un almacén de certificados, WCF debe tener permiso para hacerlo. De forma predeterminada, solo el propietario y la cuenta del sistema pueden tener acceso a la clave privada de un certificado.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Para hacer los certificados X.509 accesibles para WCF  
@@ -30,8 +30,8 @@ Para que un certificado X. 509 sea accesible para Windows Communication Foundati
         |Uso del certificado X.509|Clave privada|  
         |---------------------------|-----------------|  
         |Firmar digitalmente un mensaje SOAP saliente.|Sí|  
-        |Comprobar la firma de un mensaje SOAP entrante.|Sin|  
-        |Cifrar un mensaje SOAP saliente.|Sin|  
+        |Comprobar la firma de un mensaje SOAP entrante.|No|  
+        |Cifrar un mensaje SOAP saliente.|No|  
         |Descifrar un mensaje SOAP entrante.|Sí|  
   
     2. Determine la ubicación del almacén de certificados y diga dónde está almacenado el certificado.  
@@ -43,9 +43,9 @@ Para que un certificado X. 509 sea accesible para Windows Communication Foundati
   
     3. Determine dónde se encuentra la clave privada para el certificado en el equipo mediante la herramienta [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) .  
   
-         La herramienta [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) requiere el nombre del almacén de certificados, la ubicación del almacén de certificados y algo que identifica de forma única el certificado. La herramienta acepta el nombre de sujeto del certificado o su huella digital como identificador único. Para obtener más información sobre cómo determinar la huella digital de un certificado, [consulte Cómo: Recupera la huella digital de un](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)certificado.  
+         La herramienta [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) requiere el nombre del almacén de certificados, la ubicación del almacén de certificados y algo que identifica de forma única el certificado. La herramienta acepta el nombre de sujeto del certificado o su huella digital como identificador único. Para obtener más información sobre cómo determinar la huella digital de un certificado, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-         En el ejemplo de código siguiente se usa la herramienta [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) para determinar la ubicación de la clave privada de un `My` certificado en `CurrentUser` el almacén con una `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`huella digital de.  
+         En el ejemplo de código siguiente se usa la herramienta [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) para determinar la ubicación de la clave privada de un certificado en el almacén de `My` en `CurrentUser` con una huella digital de `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
   
         ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
@@ -59,7 +59,7 @@ Para que un certificado X. 509 sea accesible para Windows Communication Foundati
         |--------------|----------------------|  
         |Cliente (consola o aplicación WinForms).|Usuario actualmente registrado.|  
         |Servicio que tiene host propio.|Usuario actualmente registrado.|  
-        |Servicio que se hospeda en IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) ó IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|NETWORK SERVICE|  
+        |Servicio que se hospeda en IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) o IIS 7,0 (Windows Vista).|NETWORK SERVICE|  
         |Servicio que se hospeda en IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Controlado por el elemento `<processModel>` en el archivo Machine.config. La cuenta predeterminada es ASPNET.|  
   
     5. Conceda acceso de lectura al archivo que contiene la clave privada a la cuenta con la que se está ejecutando WCF mediante una herramienta como icacls. exe.  
@@ -73,5 +73,5 @@ Para que un certificado X. 509 sea accesible para Windows Communication Foundati
 ## <a name="see-also"></a>Vea también
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Cómo: Recuperación de la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Recuperación de la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

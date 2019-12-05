@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: 85fd0c04a40b9de64979e4da1459dbf8953a93bf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6af46fe2ea21d081e693ee83949651bd388a045
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053880"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837277"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Tipos integrados para primitivas comunes en el lenguaje XAML
 XAML 2009 presenta la compatibilidad de nivel de lenguaje XAML con varios tipos de datos que son primitivas usadas con frecuencia en Common Language Runtime (CLR) y otros lenguajes de programación. XAML 2009 agrega compatibilidad con estas primitivas: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`y `x:Array`  
@@ -51,24 +51,24 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xboolean"></a>x:Boolean  
  En copias de seguridad de CLR, la primitiva `x:Boolean` corresponde a <xref:System.Boolean>.  
   
- XAML analiza los valores de `x:Boolean` como si no distinguieran entre mayúsculas y minúsculas. Tenga en cuenta que `x:Bool` no es una alternativa aceptada. Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.17 y 5.4.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML analiza los valores de `x:Boolean` como si no distinguieran entre mayúsculas y minúsculas. Tenga en cuenta que `x:Bool` no es una alternativa aceptada. Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.17 y 5.4.11](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xchar"></a>x:Char  
  En copias de seguridad de CLR, la primitiva `x:Char` corresponde a <xref:System.Char>.  
   
- Los tipos de cadena y carácter tienen interacción con la codificación general del archivo en el nivel XML. Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.7 y 5.4.1](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Los tipos de cadena y carácter tienen interacción con la codificación general del archivo en el nivel XML. Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.7 y 5.4.1](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xstring"></a>x:String  
  En copias de seguridad de CLR, la primitiva `x:String` corresponde a <xref:System.String>.  
   
- Los tipos de cadena y carácter tienen interacción con la codificación general del archivo en el nivel XML. Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS\] -XAML 5.2.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Los tipos de cadena y carácter tienen interacción con la codificación general del archivo en el nivel XML. Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xdecimal"></a>x:Decimal  
  En copias de seguridad de CLR, la primitiva `x:Decimal` corresponde a <xref:System.Decimal>.  
   
  Tenga en cuenta que el análisis de XAML se realiza de forma inherente bajo la referencia cultural `en-US` . En la referencia cultural `en-US` , el separador correcto de los componentes de un decimal es siempre un punto (`.`) independientemente de la configuración de referencia cultural del entorno de desarrollo o del destino de cliente final donde se carga XAML en tiempo de ejecución.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.14 y 5.4.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.14 y 5.4.8](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xsingle"></a>x:Single  
  En copias de seguridad de CLR, la primitiva `x:Single` corresponde a <xref:System.Single>.  
@@ -77,7 +77,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Single` puede admitir valores en formato de notación científica si el primer carácter de la sintaxis de texto es `e` o `E`.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.8 y 5.4.2](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.8 y 5.4.2](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xdouble"></a>x:Double  
  En copias de seguridad de CLR, la primitiva `x:Double` corresponde a <xref:System.Double>.  
@@ -86,48 +86,48 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Double` puede admitir valores en formato de notación científica. Use el carácter `e` o `E` para presentar la parte del exponente.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.9 y 5.4.3](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.9 y 5.4.3](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint16"></a>x:Int16  
  En copias de seguridad de CLR, la primitiva `x:Int16` corresponde a <xref:System.Int16> y `x:Int16` se trata como un valor con signo. En XAML, la ausencia de un signo más (`+`) en la sintaxis de texto se considera como un valor con signo positivo.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.11 y 5.4.5](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.11 y 5.4.5](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint32"></a>x:Int32  
  En copias de seguridad de CLR, la primitiva `x:Int32` corresponde a <xref:System.Int32>. `x:Int32` se trata como un valor con signo. En XAML, la ausencia de un signo más (`+`) en la sintaxis de texto se considera como un valor con signo positivo.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.12 y 5.4.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para la definición de la especificación del lenguaje XAML, vea [\[secciones de\] de MS-XAML 5.2.12 y 5.4.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint64"></a>x:Int64  
  En copias de seguridad de CLR, la primitiva `x:Int64` corresponde a <xref:System.Int64>. `x:Int64` se trata como un valor con signo. En XAML, la ausencia de un signo más (`+`) en la sintaxis de texto se considera como un valor con signo positivo.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.13 y 5.4.7](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.13 y 5.4.7](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xtimespan"></a>x:TimeSpan  
  En copias de seguridad de CLR, la primitiva `x:TimeSpan` corresponde a <xref:System.TimeSpan>.  
   
  Tenga en cuenta que el análisis de XAML para el formato de fecha y hora se realiza de forma inherente bajo la referencia cultural `en-US` .  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.16 y 5.4.10](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.16 y 5.4.10](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xuri"></a>x:Uri  
  En copias de seguridad de CLR, la primitiva `x:Uri` corresponde a <xref:System.Uri>.  
   
  La comprobación de los protocolos no forma parte de la definición de XAML para `x:Uri`.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.15 y 5.4.9](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.15 y 5.4.9](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xbyte"></a>x:Byte  
- En copias de seguridad de CLR, la primitiva `x:Byte` corresponde a <xref:System.Byte>. Un <xref:System.Byte>  /  se trata como sinsigno.`x:Byte`  
+ En copias de seguridad de CLR, la primitiva `x:Byte` corresponde a <xref:System.Byte>. Un `x:Byte` de  / de <xref:System.Byte>se trata como sin signo.  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS-XAML\] 5.2.10 y 5.4.4](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.10 y 5.4.4](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xarray"></a>x:Array  
  En copias de seguridad de CLR, la primitiva `x:Array` corresponde a <xref:System.Array>.  
   
  Puede definir una matriz en XAML 2006 con una sintaxis de extensión de marcado; sin embargo, la sintaxis de XAML 2009 es una primitiva definida por el lenguaje que no necesita acceso a una extensión de marcado. Para más información sobre la compatibilidad con XAML 2006, vea [x:Array Markup Extension](x-array-markup-extension.md).  
   
- Para la definición de la especificación del lenguaje XAML, vea [ \[las secciones MS\] -XAML 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Para ver la definición de la especificación del lenguaje XAML, vea [\[secciones de\] MS-XAML 5.2.18](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 <a name="wpf_support"></a>   
 ## <a name="wpf-support"></a>Compatibilidad de WPF  

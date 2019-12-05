@@ -2,12 +2,12 @@
 title: Utilización de las herramientas de desarrollo de WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8253a9136b2310deeb7c6d162a9f190c13ba02da
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802419"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837732"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilización de las herramientas de desarrollo de WCF
 En esta sección se describen las herramientas de desarrollo de Visual Studio que pueden ayudarle a desarrollar su WCFservice.  
@@ -37,7 +37,7 @@ En esta sección se describen las herramientas de desarrollo de Visual Studio qu
 ## <a name="using-the-tools-without-administrator-privilege"></a>Utilización de las herramientas sin el privilegio de administrador  
  Para permitir que los usuarios sin privilegios de administrador desarrollen servicios WCF, se crea una ACL (lista de Access Control) para el espacio de nombres "http://+:8731/Design_Time_Addresses" durante la instalación de Visual Studio. La ACL se establece en la interfaz de usuario (UI), en la que se incluyen todos los usuarios interactivos que iniciaron sesión en el equipo. Los administradores pueden agregar o quitar usuarios de esta ACL o abrir puertos adicionales. Esta ACL permite que las plantillas WCF o WF envíen y reciban datos con su configuración predeterminada. También permite a los usuarios utilizar el host automático del servicio WCF (wcfSvcHost. exe) sin concederles privilegios de administrador.  
   
- Puede modificar el acceso mediante la herramienta Netsh.exe de [!INCLUDE[wv](../../../includes/wv-md.md)] con la cuenta elevada de administrador. En el siguiente ejemplo se muestra el uso de Netsh.exe.  
+ Puede modificar el acceso mediante la herramienta netsh. exe en Windows Vista con la cuenta de administrador con privilegios elevados. En el siguiente ejemplo se muestra el uso de Netsh.exe.  
   
 ```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  

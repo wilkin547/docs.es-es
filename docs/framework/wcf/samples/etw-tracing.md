@@ -2,12 +2,12 @@
 title: Seguimiento ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c9f2b3019ee30ded59a7549a4d3be834c9ab9811
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716429"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837901"
 ---
 # <a name="etw-tracing"></a>Seguimiento ETW
 Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E) mediante el Seguimiento de eventos para Windows (ETW) y `ETWTraceListener` que se proporciona este ejemplo. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) e incluye el seguimiento de ETW.  
@@ -85,7 +85,7 @@ logman stop Wcf
 2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
-    > Para utilizar los comandos RegisterProvider.bat, SetupETW.bat y CleanupETW.bat, debe ejecutarlos en una cuenta de administrador local. Si está utilizando [!INCLUDE[wv](../../../../includes/wv-md.md)] o posterior, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic con el botón secundario en el icono símbolo del sistema y, a continuación, haga clic en **Ejecutar como administrador**.  
+    > Para utilizar los comandos RegisterProvider.bat, SetupETW.bat y CleanupETW.bat, debe ejecutarlos en una cuenta de administrador local. Si usa Windows Vista o posterior, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic con el botón secundario en el icono símbolo del sistema y, a continuación, haga clic en **Ejecutar como administrador**.  
   
 3. Antes de ejecutar el ejemplo, ejecute RegisterProvider.bat en el cliente y servidor. Esto prepara el archivo ETWTracingSampleLog.etl resultante para generar rastros que puedan ser leídos por el visor de seguimiento de servicios. Este archivo se puede buscar en la carpeta C:\logs. Si esta carpeta no existe, se debe crear; de lo contrario, no se generará ningún seguimiento. A continuación, ejecute SetupETW.bat en los equipos servidor y cliente para comenzar la sesión de seguimiento de ETW. El archivo SetupETW.bat se encuentra en la carpeta CS\Client.  
   

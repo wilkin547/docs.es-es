@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 20ca8f049298f75412da4c8a7e58975954f67741
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968856"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838031"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depuración de errores de autenticación de Windows
 Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, la interfaz del proveedor de compatibilidad para seguridad (SSPI) controla los procesos de seguridad. Cuando se producen errores de seguridad en la capa SSPI, aparecen Windows Communication Foundation (WCF). En este tema se proporciona un marco y conjunto de cuestiones que le ayudarán a diagnosticar los errores.  
@@ -36,22 +36,22 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
   
  Los encabezados de la tabla muestran posibles tipos de cuenta utilizados por el servidor. La columna izquierda muestra posibles tipos de cuenta utilizados por el cliente.  
   
-||Usuario local|Sistema local|Usuario de dominio|Equipo del dominio|  
+||Usuario local|Local System (Sistema local)|Usuario de dominio|Equipo del dominio|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Usuario local|NTLM|NTLM|NTLM|NTLM|  
-|Sistema local|NTLM anónimo|NTLM anónimo|NTLM anónimo|NTLM anónimo|  
+|Local System (Sistema local)|NTLM anónimo|NTLM anónimo|NTLM anónimo|NTLM anónimo|  
 |Usuario de dominio|NTLM|NTLM|Kerberos|Kerberos|  
 |Equipo del dominio|NTLM|NTLM|Kerberos|Kerberos|  
   
  Específicamente, los cuatro tipos de cuenta incluyen:  
   
-- Usuario local: Perfil de usuario de solo equipo. Por ejemplo: `MachineName\Administrator` o `MachineName\ProfileName`.  
+- Usuario local: perfil de usuario de solo el equipo. Por ejemplo: `MachineName\Administrator` o `MachineName\ProfileName`.  
   
-- Sistema local: El sistema de cuentas integrado en un equipo que no está unido a un dominio.  
+- Sistema local: el SISTEMA de cuentas integrado en un equipo que no está unido a un dominio.  
   
-- Usuario del dominio: Una cuenta de usuario en un dominio de Windows. Por ejemplo: `DomainName\ProfileName`.  
+- Usuario del dominio: una cuenta de usuario en un dominio de Windows. Por ejemplo: `DomainName\ProfileName`.  
   
-- Máquina de dominio: Proceso con identidad de equipo que se ejecuta en un equipo unido a un dominio de Windows. Por ejemplo: `MachineName\Network Service`.  
+- Equipo del dominio: un proceso con la identidad del equipo en ejecución en un equipo unido a un dominio de Windows. Por ejemplo: `MachineName\Network Service`.  
   
 > [!NOTE]
 > Se captura la credencial de servicio cuando se llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> de la clase <xref:System.ServiceModel.ServiceHost>. Se lee la credencial del cliente siempre que el cliente envíe un mensaje.  
@@ -93,12 +93,12 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
   
     1. Realice esta acción en el código, con la siguiente instrucción: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. O bien puede hacerlo en el archivo de configuración estableciendo el atributo `allowNtlm` como `false`. Este atributo se encuentra en la [ \<> de Windows](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. O bien puede hacerlo en el archivo de configuración estableciendo el atributo `allowNtlm` como `false`. Este atributo se encuentra en la [\<> de Windows](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Protocolo NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negociar SSP retrocede hasta NTLM, pero NTLM está deshabilitado  
- La <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propiedad se establece en `false`, lo que hace que Windows Communication Foundation (WCF) realice un mejor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.  
+ La propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> se establece en `false`, lo que hace que Windows Communication Foundation (WCF) realice un mejor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.  
   
  A continuación, se muestra cómo deshabilitar el retroceso a NTLM.  
   
@@ -121,7 +121,7 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- Para obtener más información sobre la suplantación, vea [delegación y](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)suplantación.  
+ Para obtener más información sobre la suplantación, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Por otra parte, el cliente se está ejecutando como un servicio de Windows, utilizando el SISTEMA de cuentas integrado.  
   
@@ -139,7 +139,7 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI no está disponible  
- Los sistemas operativos siguientes no admiten la autenticación de Windows cuando se usan como servidor: [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Ediciones Home Edition [!INCLUDE[wxp](../../../../includes/wxp-md.md)] , Media Center Edition y [!INCLUDE[wv](../../../../includes/wv-md.md)]Home.  
+ Los sistemas operativos siguientes no admiten la autenticación de Windows cuando se usan como servidor: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition y Windows Vista Home Edition.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Desarrollo e implementación con distintas identidades  
  Si desarrolla una aplicación en un equipo y la implementa en otro, y utiliza tipos de cuentas diferentes para autenticarse en cada equipo, el comportamiento puede ser diferente. Supongamos, por ejemplo, que desarrolla una aplicación en un equipo Windows XP Pro con el modo de autenticación `SSPI Negotiated`. Si utiliza una cuenta de usuario local para autenticarse, se utilizará el protocolo NTLM. Una vez desarrollada la aplicación, implementa el servicio en un equipo Windows Server 2003, donde se ejecuta bajo una cuenta de dominio. En este punto, el cliente no podrá autenticar el servicio, porque estará utilizando Kerberos y un controlador de dominio.  

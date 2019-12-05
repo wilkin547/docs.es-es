@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: eb0801a3df0f6f384dd646598e43fe1c20b6eda0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716524"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837823"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
 Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este ejemplo se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -18,12 +18,12 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este
 
  Según la versión de MSMQ, NetMsmqBinding admite la detección limitada para detectar los mensajes dudosos. Una vez detectado el mensaje como dudoso, podrá administrarse de varias maneras. De nuevo, según la versión de MSMQ, NetMsmqBinding admite desde el manejo limitado hasta un manejo completo de mensajes dudosos.
 
- Este ejemplo muestra los medios limitados para mensajes dudosos que se proporcionan en las plataformas [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], además de los medios completos proporcionados en [!INCLUDE[wv](../../../../includes/wv-md.md)]. En ambos casos, el objetivo es mover el mensaje dudoso de una cola a otra para que pueda ser reparado por un servicio de mensajes dudosos.
+ Este ejemplo muestra las instalaciones limitadas de envenenamiento que se proporcionan en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] plataforma y en las instalaciones de envenenamiento completo que se proporcionan en Windows Vista. En ambos casos, el objetivo es mover el mensaje dudoso de una cola a otra para que pueda ser reparado por un servicio de mensajes dudosos.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Ejemplo de Manejo de Mensajes Dudosos
- En [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ proporciona un medio de sub-cola de mensajes dudosos que se puede utilizar para almacenar los mensajes dudosos. Este ejemplo muestra el procedimiento recomendado para tratar con mensajes dudosos utilizando [!INCLUDE[wv](../../../../includes/wv-md.md)].
+ En Windows Vista, MSMQ proporciona una utilidad de subcola dudoso que se puede usar para almacenar mensajes dudosos. Este ejemplo muestra el procedimiento recomendado para tratar los mensajes dudosos mediante Windows Vista.
 
- La detección del mensaje dudoso en [!INCLUDE[wv](../../../../includes/wv-md.md)] es bastante sofisticada. Hay 3 propiedades que ayudan con la detección. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> es el número de veces que un mensaje determinado se relee de la cola y se envía a la aplicación para ser procesado. Un mensaje se relee de la cola cuando se pone de nuevo en la cola porque el mensaje no se puede enviar a la aplicación o la aplicación revierte la transacción en la operación del servicio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> es el número de veces que el mensaje se mueve a la cola de reintento. Cuando se localiza <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, el mensaje se mueve a la cola de reintento. La propiedad <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> es el retraso tras el que el mensaje se devuelve de la cola de reintento a la cola principal. La propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> se restablece en 0. El mensaje se vuelve a intentar. Si se ha producir un error en todos los intentos para leer el mensaje, entonces el mensaje se marca como dudoso.
+ La detección de mensajes dudosos en Windows Vista es bastante sofisticada. Hay 3 propiedades que ayudan con la detección. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> es el número de veces que un mensaje determinado se relee de la cola y se envía a la aplicación para ser procesado. Un mensaje se relee de la cola cuando se pone de nuevo en la cola porque el mensaje no se puede enviar a la aplicación o la aplicación revierte la transacción en la operación del servicio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> es el número de veces que el mensaje se mueve a la cola de reintento. Cuando se localiza <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, el mensaje se mueve a la cola de reintento. La propiedad <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> es el retraso tras el que el mensaje se devuelve de la cola de reintento a la cola principal. La propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> se restablece en 0. El mensaje se vuelve a intentar. Si se ha producir un error en todos los intentos para leer el mensaje, entonces el mensaje se marca como dudoso.
 
  Una vez marcado como dudoso, el mensaje se trata según los valores en la enumeración <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Para reiterar los valores posibles:
 
@@ -31,9 +31,9 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este
 
 - Drop: para quitar el mensaje.
 
-- Move: para mover el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Move: para mover el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en Windows Vista.
 
-- Reject: para rechazar el mensaje, devolviéndolo a la cola de mensajes con problemas de entrega del remitente. Este valor solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reject: para rechazar el mensaje, devolviéndolo a la cola de mensajes con problemas de entrega del remitente. Este valor solo está disponible en Windows Vista.
 
  El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` mueve el mensaje a la subcola de mensajes dudosos.
 

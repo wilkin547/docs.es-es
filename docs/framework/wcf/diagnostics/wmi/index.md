@@ -2,12 +2,12 @@
 title: Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855819"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837446"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de WCF Instrumental de administración de Windows (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) expone datos de inspección de un servici
   
  Un proveedor de WMI es un componente que expone la instrumentación en el tiempo de ejecución a través de una interfaz compatible con WBEM. Está compuesto de un conjunto de objetos WMI con pares atributo/valor. Los pares pueden ser de varios tipos simples. Las herramientas de administración pueden conectarse a los servicios a través de la interfaz en tiempo de ejecución. WCF expone atributos de servicios como direcciones, enlaces, comportamientos y agentes de escucha.  
   
- El proveedor de WMI integrado puede activarse en el archivo de configuración de la aplicación. Esto se realiza a través `wmiProviderEnabled` del atributo [ \<del > de diagnóstico](../../../configure-apps/file-schema/wcf/diagnostics.md) en la [ \<sección > de System. ServiceModel](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , como se muestra en la configuración del ejemplo siguiente.  
+ El proveedor de WMI integrado puede activarse en el archivo de configuración de la aplicación. Esto se realiza a través del atributo `wmiProviderEnabled` del [> de diagnósticos de\<](../../../configure-apps/file-schema/wcf/diagnostics.md) en la sección [\<system. ServiceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , tal y como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <system.serviceModel>  
@@ -41,16 +41,16 @@ Windows Communication Foundation (WCF) expone datos de inspección de un servici
   
  WCF expone un método `GetOperationCounterInstanceName` para el scripting. Este método devuelve un nombre de instancia del contador de rendimiento si le proporciona un nombre de operación. Sin embargo, no valida la entrada. Por lo tanto, si proporciona un nombre de operación incorrecto, se devuelve un nombre de contador incorrecto.  
   
- La `OutgoingChannel` propiedad de la `Service` instancia no cuenta los canales abiertos por un servicio para conectarse a otro servicio, si el cliente de WCF al servicio de destino no se crea dentro `Service` del método.  
+ La propiedad `OutgoingChannel` de la instancia de `Service` no cuenta los canales abiertos por un servicio para conectarse a otro servicio, si el cliente WCF al servicio de destino no se crea dentro del método `Service`.  
   
- **PRECAUCIÓN** WMI solo admite un <xref:System.TimeSpan> valor de hasta 3 separadores decimales. Por ejemplo, si su servicio establece una de sus propiedades en <xref:System.TimeSpan.MaxValue>, su valor se trunca pasados los 3 separadores decimales cuando se ve mediante WMI.  
+ **PRECAUCIÓN** WMI solo admite un valor de <xref:System.TimeSpan> hasta 3 separadores decimales. Por ejemplo, si su servicio establece una de sus propiedades en <xref:System.TimeSpan.MaxValue>, su valor se trunca pasados los 3 separadores decimales cuando se ve mediante WMI.  
   
-## <a name="security"></a>Seguridad  
+## <a name="security"></a>de seguridad  
  Dado que el proveedor de WCF WMI permite la detección de servicios en un entorno, debe extremar las precauciones para concederle acceso. Si suaviza el acceso predeterminado exclusivo a los administradores, puede permitir el acceso de partes menos fiables a los datos confidenciales de su entorno. En concreto, si suaviza los permisos de acceso remoto a WMI, pueden producirse ataques por inundación. Si un proceso se inunda por un exceso de solicitudes de WMI, su rendimiento puede degradarse.  
   
  Además, si suaviza los permisos de acceso para el archivo MOF, partes menos fiables pueden manipular el comportamiento de WMI y modificar los objetos que se cargan en el esquema de WMI. Por ejemplo, pueden quitarse campos de modo que se oculten datos críticos al administrador, que no se puedan rellenar campos, o provocar que se agreguen excepciones al archivo.  
   
- De forma predeterminada, el proveedor de WMI de WCF concede el permiso "ejecutar método", "escritura de proveedor" y "habilitar cuenta" para el administrador y el permiso "habilitar cuenta" para ASP.NET, servicio local y servicio de red. En concreto, en plataformas no [!INCLUDE[wv](../../../../../includes/wv-md.md)], la cuenta de ASP.NET posee acceso de lectura al espacio de nombres ServiceModel de WMI. Si no desea conceder estos privilegios a un grupo de usuarios determinado, debe desactivar el proveedor de WMI (deshabilitado de manera predeterminada), o deshabilitar el acceso para el grupo de usuarios concreto.  
+ De forma predeterminada, el proveedor de WMI de WCF concede el permiso "ejecutar método", "escritura de proveedor" y "habilitar cuenta" para el administrador y el permiso "habilitar cuenta" para ASP.NET, servicio local y servicio de red. En concreto, en plataformas que no son de Windows Vista, la cuenta ASP.NET tiene acceso de lectura al espacio de nombres de ServiceModel de WMI. Si no desea conceder estos privilegios a un grupo de usuarios determinado, debe desactivar el proveedor de WMI (deshabilitado de manera predeterminada), o deshabilitar el acceso para el grupo de usuarios concreto.  
   
  Además, al intentar habilitar WMI a través de la configuración, WMI puede no estar habilitada debido a un privilegio de usuario insuficiente. No obstante, no se escribe ningún evento en el registro de eventos que registre este error.  
   
@@ -155,7 +155,7 @@ Whoami /user
 ### <a name="wmi-cim-studio"></a>CIM Studio de WMI  
  Si ha instalado las [herramientas administrativas de WMI](https://go.microsoft.com/fwlink/?LinkId=95185), puede utilizar WMI CIM Studio para tener acceso a las instancias de WMI. Las herramientas se encuentran en la carpeta siguiente  
   
- **%windir%\Program Files\WMI Tools\\**  
+ **\\ herramientas de Files\WMI de%windir%\Program**  
   
 1. En la ventana **conectar con espacio de nombres:** , escriba **root\ServiceModel** y haga clic en **Aceptar.**  
   

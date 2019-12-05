@@ -2,17 +2,17 @@
 title: Ejecución de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: df984f2464084948cdaa51dab96554de9400911f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04bac7bad1a6ccfa23d37c391047cb8d58ee4f4d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965497"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837810"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Ejecución de los ejemplos de Windows Communication Foundation
 Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una configuración de un solo equipo o entre equipos. Tal y como se proporcionan, los ejemplos están listos para ejecutarse en un equipo único. En una configuración de equipos cruzada, es necesario modificar la configuración del archivo de configuración de un ejemplo. Los procedimientos siguientes explican cómo ejecutar un ejemplo en mismo equipo y en configuraciones de equipos cruzadas. Observe que hay variaciones en los pasos para los servicios hospedados en Internet Information Services (IIS) y los ejemplos autohospedados. La mayoría de los ejemplos se hospedan en IIS; vea la información readme del ejemplo para determinar cómo se hospeda.  
   
- En [!INCLUDE[wv](../../../../includes/wv-md.md)], los ejemplos que no están hospedados en IIS exigen privilegios elevados para registrar un agente de escucha con Http.sys. Utilice Httpcfg.exe para registrar las direcciones de escucha del servicio con la cuenta bajo la que el servicio se está ejecutando o inicie el servicio desde un símbolo del sistema que se ejecuta con privilegios de administrador.  
+ En Windows Vista, los ejemplos que no se hospedan en IIS requieren privilegios elevados para registrar un agente de escucha con http. sys. Utilice Httpcfg.exe para registrar las direcciones de escucha del servicio con la cuenta bajo la que el servicio se está ejecutando o inicie el servicio desde un símbolo del sistema que se ejecuta con privilegios de administrador.  
   
 > [!NOTE]
 > Antes de compilar o ejecutar cualquiera de los ejemplos de WCF, asegúrese de que ha realizado el [procedimiento de instalación único para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -53,19 +53,19 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
     1. Si el servicio no se está ejecutando bajo una cuenta de dominio, abra el archivo de configuración del cliente y cambie el valor de dirección de la definición de extremo para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
   
-    2. Si el servicio se está ejecutando bajo una cuenta de dominio, regenere la configuración del cliente ejecutando Svcutil.exe en el servicio. Para obtener más información acerca de cómo ejecutar SvcUtil. exe, consulte compilar [los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Utilice el archivo generado en lugar del archivo de configuración en el ejemplo. El archivo de configuración generado tiene información de identidad adicional y contiene todos los valores necesarios para conectarse al punto de conexión de servicio, aunque se trate de la configuración predeterminada. Para obtener más información acerca de la información de identidad, vea [identidad de servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), y [ \<> de identidad](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2. Si el servicio se está ejecutando bajo una cuenta de dominio, regenere la configuración del cliente ejecutando Svcutil.exe en el servicio. Para obtener más información acerca de cómo ejecutar SvcUtil. exe, consulte [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Utilice el archivo generado en lugar del archivo de configuración en el ejemplo. El archivo de configuración generado tiene información de identidad adicional y contiene todos los valores necesarios para conectarse al punto de conexión de servicio, aunque se trate de la configuración predeterminada. Para obtener más información acerca de la información de identidad, consulte [identidad de servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), y [\<Identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4. En el equipo cliente, inicie Client.exe desde el símbolo del sistema.  
   
 ### <a name="to-debug-a-service"></a>Para depurar un servicio  
   
-1. Compile la solución (cliente y servicio) mediante el menú compilar o Ctrl + Mayús + B.  
+1. Compile la solución (cliente y servicio) mediante el menú **compilar** o Ctrl + Mayús + B.  
   
 2. Si el servicio se hospeda en IIS:  
   
     1. Active el servicio mediante un explorador escribiendo la dirección `http://localhost/servicemodelsamples/service.svc`.  
   
-    2. En la solución, elija el menú Depurar y el elemento de menú **asociar al proceso** .  
+    2. En la solución, elija el menú **depurar** y el elemento de menú **asociar al proceso** .  
   
     3. Active la casilla **Mostrar los procesos de todos los usuarios**.  
   
@@ -73,7 +73,7 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
 3. Ahora puede establecer puntos de interrupción en el código del servicio y habilitar puntos de interrupción en excepciones.  
   
-4. Haga clic con el botón secundario en el elementode proyecto de cliente y elija depurar, **Iniciar nueva instancia**.  
+4. Haga clic con el botón secundario en el elemento de proyecto de cliente y elija **depurar**, **Iniciar nueva instancia**.  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
