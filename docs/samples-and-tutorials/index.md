@@ -4,18 +4,18 @@ description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423570"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884441"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
 La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn.html). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
 
-## <a name="net-core"></a>Núcleo de .NET
+## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>Muestras
 
@@ -25,7 +25,7 @@ En esta guía se explica cómo crear una aplicación web de ASP.NET Core y las p
 
 ### <a name="tutorials"></a>Tutoriales
 
-**[Escritura de aplicaciones de consola .NET Core con herramientas de la CLI: una guía paso a paso](../core/tutorials/using-with-xplat-cli.md)**
+**[Escritura de aplicaciones de consola .NET Core con herramientas de la CLI: una guía paso a paso](../core/tutorials/cli-create-console-app.md)**
 
 En esta guía se ofrece información sobre cómo usar las herramientas de la CLI de .NET Core para crear aplicaciones de consola multiplataforma. Se empieza con una aplicación de consola básica y finalmente abarca varios proyectos, incluidas las pruebas. Puede agregar características paso a paso, lo que le permitirá ampliar sus conocimientos a medida que avanza. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/core/console-apps) está disponible en el repositorio dotnet/samples de GitHub.
 
