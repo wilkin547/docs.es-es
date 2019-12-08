@@ -4,12 +4,12 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454277"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716477"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -50,7 +50,7 @@ En esta sección, creará un área de trabajo de Azure Databricks mediante Azure
     |---------|---------|
     |**Workspace name** (Nombre del área de trabajo)     | Proporcione un nombre para el área de trabajo de Databricks.        |
     |**Suscripción**     | En el cuadro desplegable, seleccione la suscripción de Azure.        |
-    |**Grupos de recursos**     | Especifique si desea crear un nuevo grupo de recursos o utilizar uno existente. Un grupo de recursos es un contenedor que almacena los recursos relacionados con una solución de Azure. Para más información, consulte [Información general del grupo de recursos de Azure](/azure/azure-databricks/azure-resource-manager/resource-group-overview). |
+    |**Grupos de recursos**     | Especifique si desea crear un nuevo grupo de recursos o utilizar uno existente. Un grupo de recursos es un contenedor que almacena los recursos relacionados con una solución de Azure. Para más información, consulte [Información general del grupo de recursos de Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Ubicación**     | Seleccione su región preferida. Para obtener información sobre las regiones disponibles, consulte [Servicios de Azure disponibles por región](https://azure.microsoft.com/regions/services/).        |
     |**Plan de tarifa**     |  Elija entre **Estándar**, **Premium** o **Evaluación gratuita**. Para más información sobre estos planes, consulte la [página de precios de Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Virtual Network**     |   No       |
