@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588887"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884402"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
 
@@ -26,7 +26,7 @@ Si el valor devuelto de `Main` no se usa, la devolución de `void` permite conta
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se usan las herramientas de línea de comandos de [.NET Core](../../../core/index.md). Si no está familiarizado con las herramientas de línea de comandos de .NET Core, puede obtener información sobre ellas en este [tema de introducción](../../../core/tutorials/using-with-xplat-cli.md).
+En este ejemplo se usan las herramientas de línea de comandos de [.NET Core](../../../core/index.md). Si no está familiarizado con las herramientas de línea de comandos de .NET Core, puede obtener información sobre ellas en este [tema de introducción](../../../core/tutorials/cli-create-console-app.md).
 
 Modifique el método `Main` en *program.cs* como se indica a continuación:
 

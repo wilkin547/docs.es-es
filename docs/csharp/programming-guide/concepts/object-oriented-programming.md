@@ -2,12 +2,12 @@
 title: Programación orientada a objetos (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418041"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711819"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
@@ -158,7 +158,7 @@ Una clase puede tener varias implementaciones o *sobrecargas* del mismo método 
 Para sobrecargar un método:
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-Para obtener más información, consulte:
-
-[Constructores](../classes-and-structs/constructors.md).
+Para obtener más información, vea [Constructores](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a> Finalizadores
 

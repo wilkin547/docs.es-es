@@ -3,12 +3,12 @@ title: 'Estructura del programa de C#: un paseo por el lenguaje C#'
 description: Conozca más acerca de los bloques de compilación básicos de un programa de C#.
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834164"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884389"
 ---
 # <a name="program-structure"></a>Estructura del programa
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 compila el ejemplo como una biblioteca (código sin un punto de entrada `Main` y genera un ensamblado denominado `acme.dll`.
 
 > [!IMPORTANT]
-> Los ejemplos anteriores usan `csc` como el compilador C# de línea de comandos. Este compilador es un ejecutable de Windows. Para usar C# en otras plataformas, debe emplear las herramientas de .NET Core. El ecosistema .NET Core usa la CLI de `dotnet` para administrar las compilaciones de línea de comandos. Esto incluye la administración de dependencias y la llamada al compilador de C#. Consulte [este tutorial](../../core/tutorials/using-with-xplat-cli.md) para obtener una descripción completa de estas herramientas en las plataformas compatibles con .NET Core.
+> Los ejemplos anteriores usan `csc` como el compilador C# de línea de comandos. Este compilador es un ejecutable de Windows. Para usar C# en otras plataformas, debe emplear las herramientas de .NET Core. El ecosistema .NET Core usa la CLI de `dotnet` para administrar las compilaciones de línea de comandos. Esto incluye la administración de dependencias y la llamada al compilador de C#. Consulte [este tutorial](../../core/tutorials/cli-create-console-app.md) para obtener una descripción completa de estas herramientas en las plataformas compatibles con .NET Core.
 
 Los ensamblados contienen código ejecutable en forma de instrucciones de lenguaje intermedio (IL) e información simbólica en forma de metadatos. Antes de ejecutarlo, el código de IL de un ensamblado se convierte automáticamente en código específico del procesador mediante el compilador de Just in Time (JIT) de .NET Common Language Runtime.
 

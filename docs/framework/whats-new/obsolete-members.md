@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134097"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802731"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Miembros obsoletos en .NET Framework
 
@@ -646,8 +646,8 @@ En las tablas siguientes se enumeran los miembros obsoletos en ensamblados del s
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|La alternativa recomendada es <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> de System.Web.dll.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este método genera resultados no conformes con los \-estándares\- y tiene problemas de interoperabilidad. La alternativa preferida es <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este método genera resultados no conformes con los \-estándares\- y tiene problemas de interoperabilidad. La alternativa preferida es <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Este campo está obsoleto. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Esta propiedad ha quedado obsoleta. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Este campo está obsoleto. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Esta propiedad ha quedado obsoleta. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|La alternativa recomendada es la propiedad <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType>. Un valor de versión <xref:System.Version.Major%2A?displayProperty=nameWithType> mayor o igual que 1 implica la compatibilidad de JavaScript.|
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll está obsoleto.|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Este método está obsoleto. Invalide el método <xref:System.Web.Routing.UrlRoutingModule.Init%2A> para usar el evento <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>.|
