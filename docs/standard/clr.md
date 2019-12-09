@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132811"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884415"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Introducción a Common Language Runtime
 
@@ -62,20 +62,7 @@ Las herramientas y los compiladores de lenguajes exponen la funcionalidad del mo
 
 ## <a name="clr-versions"></a>Versiones de CLR
 
-El número de versión de .NET Framework no se corresponde necesariamente con el número de versión del CLR que incluye. En la tabla siguiente se muestra la correlación entre los dos números de versión:
-
-|Versión de .NET Framework|Incluye la versión de CLR|
-|----------------------------|--------------------------|
-|1.0|1.0|
-|1.1|1.1|
-|2.0|2.0|
-|3.0|2.0|
-|3.5|2.0|
-|4|4|
-|4.5 (incluidas 4.5.1 y 4.5.2)|4|
-|4.6 (incluidas 4.6.1 y 4.6.2)|4|
-|4.7 (incluidas 4.7.1 y 4.7.2)|4|
-|4.8|4|
+El número de versión de .NET Framework no se corresponde necesariamente con el número de versión del CLR que incluye. Para obtener una lista de las versiones de .NET Framework y sus versiones de CLR correspondientes, consulte [Versiones y dependencias de .NET Framework](../framework/migration-guide/versions-and-dependencies.md). Las versiones de .NET Core tienen una versión de producto única, es decir, no hay ninguna versión independiente de CLR. Para obtener una lista de las versiones de .NET Core, consulte [Descarga de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -85,7 +72,3 @@ El número de versión de .NET Framework no se corresponde necesariamente con el
 |[Administración automática de la memoria](automatic-memory-management.md)|Describe cómo asigna y libera memoria el recolector de elementos no utilizados.|
 |[Información general acerca de .NET Framework](../framework/get-started/overview.md)|Describe conceptos clave de .NET Framework como Common Type System (CTS), interoperabilidad entre lenguajes, ejecución administrada, dominios de aplicación y ensamblados.|
 |[Sistema de tipos comunes](./base-types/common-type-system.md)|Describe cómo declarar, usar y administrar tipos en el motor en tiempo de ejecución para permitir la integración entre lenguajes.|
-
-## <a name="see-also"></a>Vea también
-
-- [Versiones y dependencias](../framework/migration-guide/versions-and-dependencies.md)

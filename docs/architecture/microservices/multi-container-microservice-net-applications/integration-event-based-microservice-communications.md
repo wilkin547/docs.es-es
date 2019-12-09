@@ -2,12 +2,12 @@
 title: Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los eventos de integración para implementar la comunicación basada en eventos entre microservicios.
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737114"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711219"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
@@ -126,6 +126,19 @@ public interface IEventBus
 El método `Publish` es sencillo. El bus de eventos difunde el evento de integración que ha recibido a cualquier microservicio, o incluso a una aplicación externa, que se haya suscrito a ese evento. El microservicio que está publicando el evento utiliza este método.
 
 Los microservicios que quieren recibir eventos utilizan los métodos `Subscribe` (puede tener varias implementaciones dependiendo de los argumentos). Este método tiene dos argumentos. El primero es el evento de integración para suscribirse a (`IntegrationEvent`). El segundo es el controlador del evento de integración (o el método de devolución de llamada), denominado `IIntegrationEventHandler<T>`, que se ejecuta cuando el microservicio receptor recibe ese mensaje de evento de integración.
+
+## <a name="additional-resources"></a>Recursos adicionales
+
+Algunas soluciones de mensajería listas para producción:
+
+- **Azure Service Bus** \
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+- **NServiceBus** \
+  <https://particular.net/nservicebus>
+  
+- **MassTransit** \
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [Anterior](database-server-container.md)

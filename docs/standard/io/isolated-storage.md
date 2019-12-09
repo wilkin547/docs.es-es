@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204780"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802458"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
 <a name="top"></a> Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
@@ -118,7 +118,7 @@ En ocasiones resulta útil comprobar un cambio en el almacenamiento aislado usan
 |Windows 2000, Windows XP, Windows Server 2003 (actualización desde Windows NT 4.0)|Almacenes con movilidad =<br /><br /> \<SYSTEMROOT>\Profiles\\<usuario\>\Application Data<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMROOT>\Profiles\\<usuario\>\Local Settings\Application Data|
 |Windows 2000 - instalación nueva (y actualizaciones desde Windows 98 y Windows NT 3.51)|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Application Data<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Local Settings\Application Data|
 |Windows XP, Windows Server 2003 - instalación nueva (y actualizaciones desde Windows 2000 y Windows 98)|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Application Data<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Local Settings\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Roaming<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Local|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Roaming<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 

@@ -2,12 +2,12 @@
 title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
-ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739895"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884233"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -341,6 +341,8 @@ Por último, es importante mencionar que en ocasiones es posible que le interese
 ## <a name="conclusions-on-domain-events"></a>Conclusiones sobre los eventos de dominio
 
 Como se mencionó, los eventos de dominio se usan para implementar explícitamente los efectos secundarios de los cambios en el dominio. Para usar la terminología de DDD, los eventos de dominio se usan para implementar explícitamente los efectos secundarios a través de uno o varios agregados. Además, para una mejor escalabilidad y un menor impacto en los bloqueos de base de datos, la coherencia final se usa entre agregados dentro del mismo dominio.
+
+La aplicación de referencia usa [MediatR](https://github.com/jbogard/MediatR) para propagar los eventos de dominio sincrónicamente entre agregados, dentro de una única transacción. No obstante, también puede usar una implementación de AMQP como [RabbitMQ](https://www.rabbitmq.com/) o [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) para propagar los eventos de dominio de forma asincrónica con la coherencia eventual. Pero, como se mencionó anteriormente, hay que tener en cuenta la necesidad de acciones compensatorias en caso de que se produzcan errores.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
