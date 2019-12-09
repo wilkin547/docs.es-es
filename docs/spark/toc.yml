@@ -25,6 +25,8 @@
       href: how-to-guides/debug.md
     - name: Envío de trabajos a HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md
+    - name: Envío de trabajos a Databricks
+      href: how-to-guides/databricks-deploy-methods.md
 - name: Referencia
   items:
     - name: Referencia de API
