@@ -3,14 +3,14 @@ title: Bienvenido a .NET
 description: Introducción a la familia de tecnologías .NET.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552949"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838135"
 ---
 # <a name="welcome-to-net"></a>Bienvenido a .NET
 
@@ -29,9 +29,9 @@ Para conocer las novedades de .NET, consulte los blogs siguientes:
 
 Siga también los eventos de .NET más recientes:
 
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 
 Para obtener más información sobre las últimas características agregadas en las implementaciones de .NET y los lenguajes admitidos, consulte los siguientes artículos:
 
@@ -49,7 +49,7 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes. Puede 
 - [Guía de .NET Framework](framework/index.md)
 - [Guía de C#](csharp/index.yml)
 - [Guía de F#](fsharp/index.yml)
-- [Guía de Visual Basic](visual-basic/index.md)
+- [Guía de Visual Basic](visual-basic/index.yml)
 - [Guía de ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)
 - [Arquitectura de aplicación de .NET](architecture/index.yml)
@@ -67,11 +67,10 @@ Explore vídeos en la web, dispositivos móviles, de escritorio, C#, aprendizaje
 Esta documentación es completamente de [código abierto](https://github.com/dotnet/docs). Puede contribuir de la manera que quiera, desde crear informes de problemas hasta escribir documentación. Además, gran parte del propio .NET también es de código abierto. En la lista siguiente encontrará los principales repositorios de .NET en GitHub:
 
 - [Página principal de .NET Core](https://github.com/dotnet/core)
-- [Bibliotecas de .NET](https://github.com/dotnet/corefx)
-- [Tiempo de ejecución de .NET Core](https://github.com/dotnet/coreclr)
-- [CLI de .NET Core](https://github.com/dotnet/cli)
+- [Runtime de .NET Core](https://github.com/dotnet/runtime)
+- [SDK de .NET Core](https://github.com/dotnet/sdk)
 - [Plataforma del compilador de Roslyn (C# y Visual Basic) y herramientas de IDE](https://github.com/dotnet/roslyn)
-- [Compilador de F# y herramientas de IDE](https://github.com/microsoft/visualfsharp)
+- [Compilador de F# y herramientas de IDE](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 

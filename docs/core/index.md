@@ -2,14 +2,14 @@
 title: Guía de .NET Core
 description: .NET Core es una implementación modular y de alto rendimiento de .NET para crear aplicaciones de Windows, Linux y Mac. Obtenga información sobre .NET Core para comenzar.
 author: richlander
-ms.date: 09/23/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216220"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837017"
 ---
 # <a name="net-core-guide"></a>Guía de .NET Core
 
@@ -25,9 +25,9 @@ Descargue el [SDK de .NET Core](https://www.microsoft.com/net/download) para pro
 
 Si busca otra versión de .NET Core, todas las versiones de .NET Core están disponibles en la [página de descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-## <a name="net-core-30"></a>.NET Core 3.0
+## <a name="net-core-31"></a>.NET Core 3.1
 
-La última versión es .NET Core 3.0. Entre las nuevas características se incluye la compatibilidad del escritorio de Windows con Windows Presentation Foundation (WPF) y Windows Forms, el desarrollo web de C# de pila completa con Blazor, nuevas mejoras en SignalR y Azure SignalR Service, nuevas características del lenguaje C# 8 y mucho más. Para ver un listado completo de las nuevas características de .NET Core 3.0, consulte [Novedades de .NET Core 3.0](./whats-new/dotnet-core-3-0.md).
+La última versión es .NET Core 3.1. Esto incluye mejoras menores con respecto a .NET Core 3.0. Pero .NET Core 3.1 es una versión admitida a largo plazo. Para más información sobre la versión .NET Core 3.1, vea [Novedades de .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
 
 ## <a name="create-your-first-application"></a>Creación de la primera aplicación
 
