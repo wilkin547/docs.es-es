@@ -130,7 +130,7 @@ Luego, publique la aplicación *mySparkApp* creada en el tutorial [.NET para Apa
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **En Linux:**
