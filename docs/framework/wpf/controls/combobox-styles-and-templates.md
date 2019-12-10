@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283786"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960375"
 ---
 # <a name="combobox-styles-and-templates"></a>Estilos y plantillas de ComboBox
 En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.ComboBox>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +22,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 ## <a name="combobox-parts"></a>Elementos ComboBox  
  En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.ComboBox>.  
   
-|Parte|Tipo|Descripción|  
+|Componente|Tipo de|Descripción|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contiene el texto del <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|La lista desplegable que contiene los elementos del cuadro combinado.|  
@@ -56,7 +56,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |-|-|-|  
 |Normal|CommonStates|El estado predeterminado.|  
 |Deshabilitado|CommonStates|El control está deshabilitado.|  
-|MouseOver|CommonStates|El puntero del mouse se sitúa sobre el control de <xref:System.Windows.Controls.ComboBox>.|  
+|MouseOver|CommonStates|El puntero del mouse se sitúa sobre el control de <xref:System.Windows.Controls.ComboBoxItem>.|  
 |Con foco|FocusStates|El control tiene el foco.|  
 |Sin foco|FocusStates|El control no tiene el foco.|  
 |Seleccionado|SelectionStates|El elemento está seleccionado actualmente.|  

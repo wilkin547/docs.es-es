@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441223"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960071"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Compatibilidad de UI Automation con controles estándar
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "74441223"
 ## <a name="win32-controls"></a>Controles de Win32  
  La mayoría de los controles [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
- Solo se proporciona compatibilidad completa para controles desde la versión 6 de ComCtrl32.dll (disponibles con [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] y versiones posteriores).  
+ Solo se proporciona compatibilidad completa con los controles de la versión 6 de *ComCtrl32. dll*.  
   
  Se admiten los siguientes controles.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "74441223"
 |Edit|Documento|  
 |Edit|Edit|  
 |SysLink|Hipervínculo|  
-|Estático|Texto|  
+|Estático|Text|  
 |Estático|Imagen|  
-|SysIPAddress32|Personalizar|  
+|SysIPAddress32|Personalizado|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Lista|  
@@ -59,11 +59,11 @@ ms.locfileid: "74441223"
 |RichEdit20A|Documento|  
 |RichEdit20W|Documento|  
 |RichEdit50W|Documento|  
-|ScrollBar|Control deslizante|  
-|msctls_trackbar32|Control deslizante|  
+|ScrollBar|Slider|  
+|msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Pestaña|  
+|SysTabControl32|Tab|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -71,9 +71,9 @@ ms.locfileid: "74441223"
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|Separador|  
-|tooltips_class32|ToolTip|  
-|#32774|ToolTip|  
-|ReBarWindow32|Barra de herramientas|  
+|tooltips_class32|Información sobre herramientas|  
+|#32774|Información sobre herramientas|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|Árbol|  
 |SysTreeView32|TreeItem|  
   
@@ -85,12 +85,12 @@ ms.locfileid: "74441223"
 |----------------|------------------|  
 |SysAnimate32|Imagen|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Personalizar|  
+|SysDateTimePick32|Personalizado|  
 |SysMonthCal32|Calendario|  
-|MS_WINNOTE|Tooltip|  
-|VBBubble|Tooltip|  
-|ScrollBar (cuando se usa como control independiente)|Control deslizante|  
-|SuperGrid|Personalizar|  
+|MS_WINNOTE|Información sobre herramientas|  
+|VBBubble|Información sobre herramientas|  
+|ScrollBar (cuando se usa como control independiente)|Slider|  
+|SuperGrid|Personalizado|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controles de Windows Forms  
@@ -98,7 +98,7 @@ ms.locfileid: "74441223"
   
  Normalmente, los Windows Forms controles que son contenedores administrados para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles comunes son compatibles con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Se admiten los siguientes controles.  
   
-|Nombre de clase|  
+|Nombre de la clase|  
 |----------------|  
 |Botón|  
 |CheckBox|  
@@ -129,8 +129,8 @@ ms.locfileid: "74441223"
 |TabControl/TabPage|  
 |TextBox|  
 |Temporizador|  
-|Barra de herramientas|  
-|ToolTip|  
+|ToolBar|  
+|Información sobre herramientas|  
 |Trackbar|  
 |TreeView|  
 |VscrollBar|  
@@ -169,4 +169,4 @@ ms.locfileid: "74441223"
   
 ## <a name="see-also"></a>Vea también
 
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [Tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para mostrar una marca de inserción en un control ListView de formularios Windows Forms
+title: 'Cómo: Mostrar una marca de inserción en un control ListView de Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +11,15 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: f5de00fd41b24fc1a7f1ff4484c3a126e98952a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 62d105dc3c0b9aabc3699c12259e1624ac31a3a0
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967831"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960443"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Procedimiento para mostrar una marca de inserción en un control ListView de formularios Windows Forms
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Cómo: Mostrar una marca de inserción en un control ListView de Windows Forms
 La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra a los usuarios el punto en el que se insertarán los elementos arrastrados. Cuando un usuario arrastra un elemento a un punto entre otros dos elementos, la marca de inserción muestra la nueva ubicación esperada del elemento.  
-  
-> [!NOTE]
-> La característica de marca de inserción solo está disponible en [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] cuando la aplicación llama al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. En sistemas operativos anteriores, cualquier código relacionado con la marca de inserción no tiene ningún efecto y la marca de inserción no aparecerá. Para obtener más información, consulta <xref:System.Windows.Forms.ListViewInsertionMark>.  
   
  La siguiente imagen muestra una marca de inserción:  
   
@@ -47,4 +44,4 @@ La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra 
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [ListView (Control)](listview-control-windows-forms.md)
 - [Información general del control ListView](listview-control-overview-windows-forms.md)
-- [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Tutorial: Llevar a cabo una operación de arrastrar y colocar en Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

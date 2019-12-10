@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802099"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960155"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>¿Qué son XPDM y WDDM?  
- Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM se refiere a [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model y WDDM, a Windows Display Driver Model. WDDM está disponible en equipos que ejecutan Windows Vista y Windows 7. XPDM está disponible en equipos que ejecutan Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
+ Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM es el modelo de controladores de pantalla de Microsoft Windows XP y WDDM es el modelo de controladores de pantalla de Windows. WDDM está disponible en equipos que ejecutan Windows Vista y Windows 7. XPDM está disponible en equipos que ejecutan Windows Vista, Microsoft Windows XP y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Configuración del Registro  
@@ -57,7 +57,7 @@ En este tema se ofrece información general sobre la configuración del Registro
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- El **valor máximo de muestreo múltiple** permite ajustar la cantidad máxima de suavizado de contorno del contenido 3D. Use este nivel para deshabilitar el suavizado de contorno 3D en Windows Vista o habilitarlo en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ El **valor máximo de muestreo múltiple** permite ajustar la cantidad máxima de suavizado de contorno del contenido 3D. Use este nivel para deshabilitar el suavizado de contorno 3D en Windows Vista.  
   
  El **valor máximo de muestreo múltiple** es un valor DWORD comprendido entre 0 y 16. Un valor de 0 especifica que debe deshabilitarse el suavizado de contorno de muestreo múltiple del contenido 3D y un valor de 16 intentará usar un suavizado de contorno de muestreo múltiple hasta 16 veces mayor, si la tarjeta de vídeo lo admite. Tenga en cuenta que el establecimiento de este valor de clave del registro en los equipos que usan controladores XPDM hará que las aplicaciones usen una gran cantidad de memoria de vídeo adicional, reduzcan el rendimiento de la representación 3D y tenga el potencial de introducir errores de representación y estabilidad surge.  
   
