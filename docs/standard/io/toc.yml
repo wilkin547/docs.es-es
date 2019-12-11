@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: Canalizaciones
       href: pipelines.md
+    - name: Trabajo con búferes
+      href: buffers.md
     - name: Archivos asignados a memoria
       href: memory-mapped-files.md
