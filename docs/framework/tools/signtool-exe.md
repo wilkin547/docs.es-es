@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104641"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801840"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
@@ -126,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|Comprueba la signatura en una posición especificada.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica un algoritmo hash opcional que se usará al buscar un archivo en un catálogo.|  
 |`/kp`|Especifica que la comprobación debe realizarse con la directiva de firma de controladores en modo kernel.|  
-|`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) en [!INCLUDE[win8](../../../includes/win8-md.md)] y versiones posteriores.|  
+|`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) en Windows 8 y versiones posteriores.|  
 |`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el formato siguiente: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:**  Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
 |`/p7`|Comprueba los archivos PKCS #7. No se usa ninguna directiva existente para la validación de PKCS #7. Se comprueba la signatura y se genera una cadena para el certificado de firma.|  
 |`/pa`|Especifica que se debe usar la directiva de comprobación de Authenticode predeterminada. Si no se especifica la opción `/pa`, la herramienta Firmar utiliza la directiva de comprobación de controladores de Windows. Esta opción no se puede combinar con la opción `catdb`.|  

@@ -3,12 +3,12 @@ title: 'Tutorial: Crear el primer analizador y la corrección de código'
 description: En este tutorial se proporcionan instrucciones detalladas para compilar un analizador y la corrección del código con el SDK del compilador de .NET (API de Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105755"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837056"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Crear el primer analizador y la corrección de código
 
@@ -21,7 +21,7 @@ En este tutorial, explorará la creación de un **analizador** y una **correcci�
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Debe instalar el **SDK de .NET Compiler Platform** a través del Instalador de Visual Studio:
+Debe instalar el **SDK de .NET Compiler Platform** a través del Instalador de Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -427,7 +427,7 @@ Casi ha terminado. Hay algunas condiciones más que el analizador tiene que cump
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Además, los tipos de referencia no se controlan correctamente. El único valor de constante permitido para un tipo de referencia es `null`, excepto en este caso de <xref:System.String?displayProperty=nameWIthType>, que admite los literales de cadena. En otras palabras, `const string s = "abc"` es legal, pero `const object s = "abc"` no lo es. Este fragmento de código comprueba esa condición:
+Además, los tipos de referencia no se controlan correctamente. El único valor de constante permitido para un tipo de referencia es `null`, excepto en este caso de <xref:System.String?displayProperty=nameWithType>, que admite los literales de cadena. En otras palabras, `const string s = "abc"` es legal, pero `const object s = "abc"` no lo es. Este fragmento de código comprueba esa condición:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

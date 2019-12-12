@@ -2,12 +2,12 @@
 title: Novedades de .NET Core 2.0
 description: Obtenga información sobre las características nuevas de .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100840"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801891"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novedades de .NET Core 2.0
 
@@ -136,7 +136,7 @@ Para redestinar el proyecto en Visual Studio, abra la pestaña **Aplicación** d
 
 Cada vez que modifique el código, Live Unit Testing ejecuta automáticamente y en segundo plano cualquier prueba unitaria afectada y presenta los resultados y la cobertura de código en vivo en el entorno de Visual Studio. .NET Core 2.0 ahora admite Live Unit Testing. Anteriormente, Live Unit Testing solo estaba disponible para aplicaciones .NET Framework.
 
-Para más información, consulte [Live Unit Testing con Visual Studio 2017](/visualstudio/test/live-unit-testing) y las [Preguntas más frecuentes de Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
+Para obtener más información, consulte [Live Unit Testing con Visual Studio](/visualstudio/test/live-unit-testing) y las [preguntas más frecuentes de Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Mejor compatibilidad con varias plataformas de destino
 

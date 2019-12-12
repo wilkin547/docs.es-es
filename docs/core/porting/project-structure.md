@@ -4,12 +4,12 @@ description: Ayuda para los propietarios del proyecto que quieren compilar su so
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522972"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801926"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
 
@@ -24,12 +24,12 @@ Aprenda a crear una solución que se compila para .NET Framework y .NET Core en 
   - Le permite escribir código para una versión específica de .NET Framework en las bibliotecas a través del uso de directivas de compilador.
 
   *Escenarios no admitidos:*
-  - Se necesita que los desarrolladores que usan Visual Studio 2017 abran los proyectos existentes. Para admitir versiones anteriores de Visual Studio, una opción mejor es [mantener los archivos de proyecto en distintas carpetas](#support-vs).
+  - Se necesita que los desarrolladores que usan Visual Studio 2017 abran los proyectos existentes. Para admitir versiones anteriores de Visual Studio, una opción mejor es [mantener los archivos de proyecto en distintas carpetas](#support-vs).
 
 - <a name="support-vs"></a>[**Mantener separados los proyectos existentes y los proyectos de .NET Core nuevos**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Para qué se usa:*
-  - Para mantener la compatibilidad con el desarrollo en proyectos existentes sin tener que hacer una actualización para los desarrolladores o colaboradores que posiblemente no tengan Visual Studio 2017.
+  - Compatibilidad de desarrollo en proyectos existentes para desarrolladores y colaboradores que podrían no tener Visual Studio 2017 o una versión posterior.
   - Para disminuir la posibilidad de generar nuevos errores en proyectos existentes porque esos proyectos no requieren renovación de código.
 
 ## <a name="example"></a>Ejemplo

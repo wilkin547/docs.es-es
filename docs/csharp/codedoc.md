@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo documentar el código con comentar
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140667"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710987"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
@@ -51,7 +51,7 @@ Este es el código de la biblioteca matemática simple:
 
 La biblioteca de ejemplo es compatible con cuatro operaciones aritméticas principales (`add`, `subtract`, `multiply` y `divide`) en tipos de datos `int` y `double`.
 
-Ahora le interesa crear un documento de referencia de API desde el código para los desarrolladores de otras empresas que usan la biblioteca pero no tienen acceso al código fuente.
+Ahora le interesa crear un documento de referencia de API desde el código para los desarrolladores de otras empresas que usan la biblioteca, pero no tienen acceso al código fuente.
 Como se mencionó anteriormente, las etiquetas de documentación XML pueden utilizarse para lograr esto. Ahora recibirá una introducción a las etiquetas XML estándares que admite el compilador de C#.
 
 ## <a name="summary"></a>\<summary>
@@ -59,7 +59,7 @@ Como se mencionó anteriormente, las etiquetas de documentación XML pueden util
 La etiqueta `<summary>` agrega información breve sobre un tipo o miembro.
 Vamos a demostrar su uso agregándola a la definición de clase `Math` y al primer método `Add`. No dude en aplicarla al resto del código.
 
-[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 La etiqueta `<summary>` es muy importante y se recomienda incluirla, dado que su contenido es la principal fuente de información sobre el tipo o el miembro en IntelliSense o en un documento de referencia de API.
 
@@ -67,28 +67,28 @@ La etiqueta `<summary>` es muy importante y se recomienda incluirla, dado que su
 
 La etiqueta `<remarks>` complementa la información sobre los tipos o los miembros que proporciona la etiqueta `<summary>`. En este ejemplo, solo la agregará a la clase.
 
-[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ## <a name="returns"></a>\<returns>
 
 La etiqueta `<returns>` describe el valor devuelto de una declaración de método.
 Al igual que antes, en el ejemplo siguiente se muestra la etiqueta `<returns>` en el primer método `Add`. Puede hacer lo mismo en otros métodos.
 
-[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ## <a name="value"></a>\<value>
 
 La etiqueta `<value>` es similar a la etiqueta `<returns>`, salvo que se usa para propiedades.
 Supongamos que su biblioteca `Math` tenía una propiedad estática denominada `PI`. A continuación le mostramos cómo usaría esta etiqueta:
 
-[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
 ## <a name="example"></a>\<example>
 
 La etiqueta `<example>` se usa para incluir un ejemplo en la documentación XML.
 Esto implica usar la etiqueta secundaria `<code>`.
 
-[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](~/samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 La etiqueta `code` conserva los saltos de línea y la sangría en los ejemplos más largos.
 
@@ -97,7 +97,7 @@ La etiqueta `code` conserva los saltos de línea y la sangría en los ejemplos m
 La etiqueta `<para>` se usa para dar formato al contenido dentro de la etiqueta primaria. `<para>` suele usarse dentro de una etiqueta, como `<remarks>` o `<returns>`, para dividir el texto en párrafos.
 Puede dar formato al contenido de la etiqueta `<remarks>` de su definición de clase.
 
-[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ## <a name="c"></a>\<c>
 
@@ -105,14 +105,14 @@ También en el ámbito del formato, puede usar la etiqueta `<c>` para marcar una
 Es como la etiqueta `<code>`, pero insertada. Es útil si quiere mostrar un ejemplo de código rápido como parte del contenido de la etiqueta.
 Vamos a actualizar la documentación de la clase `Math`.
 
-[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
 ## <a name="exception"></a>\<exception>
 
 Mediante el uso de la etiqueta `<exception>`, permite que los desarrolladores sepan que un método puede producir excepciones específicas.
 Si examina su biblioteca `Math`, verá que los dos métodos `Add` producen una excepción si se cumple una determinada condición. En cambio, no resulta tan obvio que el método entero `Divide` también produce una si el parámetro `b` es cero. Vamos a agregar documentación de la excepción a este método.
 
-[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](~/samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 El atributo `cref` representa una referencia a una excepción que está disponible desde el entorno de compilación actual.
 Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia. El compilador emitirá una advertencia si su valor no puede resolverse.
@@ -121,7 +121,7 @@ Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia. 
 
 La etiqueta `<see>` le permite crear un vínculo interactivo a una página de documentación para otro elemento de código. En el siguiente ejemplo, crearemos un vínculo interactivo entre los dos métodos `Add`.
 
-[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](~/samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 `cref` es un atributo **necesario** que representa una referencia a un tipo o a su miembro que está disponible desde el entorno de compilación actual.
 Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
@@ -130,7 +130,7 @@ Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
 La etiqueta `<seealso>` se usa de la misma manera que la etiqueta `<see>`. La única diferencia es que su contenido se suele colocar en una sección "Vea también". Aquí vamos a agregar una etiqueta `seealso` en el método entero `Add` para hacer referencia a otros métodos de la clase que aceptan parámetros enteros:
 
-[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](~/samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 El atributo `cref` representa una referencia a un tipo o a su miembro que está disponible desde el entorno de compilación actual.
 Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
@@ -139,34 +139,34 @@ Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
 La etiqueta `<param>` se usa para describir los parámetros de un método. Este es un ejemplo sobre el método doble `Add`: El parámetro que describe la etiqueta se especifica en el atributo `name` **obligatorio**.
 
-[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ## <a name="typeparam"></a>\<typeparam>
 
 La etiqueta `<typeparam>` se usa igual que la etiqueta `<param>`, pero sirve para que las declaraciones de método o tipo genérico describan un parámetro genérico.
 Agregue un método genérico rápido a su clase `Math` para comprobar si una cantidad es mayor que otra.
 
-[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ## <a name="paramref"></a>\<paramref>
 
 Puede darse la situación de que esté describiendo lo que hace un método en una etiqueta `<summary>` y le interese hacer referencia a un parámetro. La etiqueta `<paramref>` es perfecta para esto. Vamos a actualizar el resumen del método doble `Add`. Igual que en la etiqueta `<param>`, el nombre del parámetro se especifica en el atributo **necesario** `name`.
 
-[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ## <a name="typeparamref"></a>\<typeparamref>
 
 La etiqueta `<typeparamref>` se usa igual que la etiqueta `<paramref>`, pero sirve para que las declaraciones de método o tipo genérico describan un parámetro genérico.
 Puede usar el mismo método genérico que ha creado previamente.
 
-[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
 ## <a name="list"></a>\<list>
 
 La etiqueta `<list>` se usa para dar formato a la información de la documentación en una lista ordenada, una lista sin ordenar o una tabla.
 Cree una lista sin ordenar con todas las operaciones matemáticas que admita su biblioteca `Math`.
 
-[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 Para crear una lista ordenada o una tabla, cambie el atributo `type` a `number` o `table`, respectivamente.
 
@@ -174,7 +174,7 @@ Para crear una lista ordenada o una tabla, cambie el atributo `type` a `number` 
 
 Si ha seguido este tutorial y ha aplicado las etiquetas al código en los casos en que era necesario, el código debe ser ahora similar al siguiente:
 
-[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](~/samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 Desde su código, puede generar un sitio web de documentación detallada completo con referencias cruzadas interactivas. Pero se enfrenta a otro problema: su código se ha vuelto difícil de leer.
 Es una pesadilla para los desarrolladores que quieran contribuir a este código, ya que hay mucha información que examinar.
@@ -186,12 +186,12 @@ La etiqueta `<include>` le permite hacer referencia a los comentarios de un arch
 
 Ahora vamos a mover todas las etiquetas XML a un archivo XML independiente denominado `docs.xml`. Puede ponerle al archivo el nombre que quiera.
 
-[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](~/samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 En el XML anterior, los comentarios de documentación de cada miembro aparecen directamente dentro de una etiqueta cuyo nombre indica lo que hacen, pero puede elegir su propia estrategia.
 Ahora que tiene los comentarios XML en un archivo independiente, veamos cómo se puede hacer más legible el código mediante la etiqueta `<include>`:
 
-[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](~/samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 Aquí lo tiene: el código vuelve a ser legible y no se ha perdido ninguna información de documentación.
 

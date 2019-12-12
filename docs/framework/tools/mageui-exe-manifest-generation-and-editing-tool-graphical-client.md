@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449412"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714453"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 
-MageUI.exe admite la misma funcionalidad que la herramienta de línea de comandos Mage.exe, pero con una interfaz de usuario (IU) basada en Windows. Con esta herramienta puede crear, editar y firmar manifiestos de implementación y de aplicación. Los nuevos manifiestos que se crean con MageUI.exe tienen [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Cuando el destino es una versión anterior de .NET Framework, se deben usar las versiones anteriores de MageUI.exe. Cuando se agregan o quitan ensamblados de un manifiesto, o cuando se vuelven a firmar manifiestos existentes, MageUI.exe no actualiza el manifiesto para destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Para más información, consulte [Mage.exe (Herramienta de generación y edición de manifiestos)](mage-exe-manifest-generation-and-editing-tool.md).
+MageUI.exe admite la misma funcionalidad que la herramienta de línea de comandos Mage.exe, pero con una interfaz de usuario (IU) basada en Windows. Con esta herramienta puede crear, editar y firmar manifiestos de implementación y de aplicación. Los nuevos manifiestos que se crean con MageUI.exe tienen como destino el perfil de cliente de .NET Framework 4. Cuando el destino es una versión anterior de .NET Framework, se deben usar las versiones anteriores de MageUI.exe. Cuando se agregan o quitan ensamblados de un manifiesto, o cuando se vuelven a firmar manifiestos existentes, MageUI.exe no actualiza el manifiesto para destinarlo al perfil de cliente de .NET Framework 4. Para más información, consulte [Mage.exe (Herramienta de generación y edición de manifiestos)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 

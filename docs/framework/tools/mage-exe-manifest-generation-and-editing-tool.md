@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449419"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714472"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -139,9 +139,9 @@ En las siguientes tablas se muestran estas características y restricciones:
 ||Agregar un ensamblado|No compatibles|Aceptar|
 ||Quitar un ensamblado|No compatibles|Aceptar|
 
- Mage.exe crea nuevos manifiestos que tienen [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]como destino. Las aplicaciones ClickOnce que tienen como destino [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] se pueden ejecutar en [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] y en la versión completa de .NET Framework 4. Si la aplicación tiene como destino la versión completa de .NET Framework 4 y no se puede ejecutar en [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], quite el elemento `<framework>` de cliente mediante un editor de texto y vuelva a firmar el manifiesto.
+ Mage.exe crea manifiestos que tienen como destino el perfil de cliente de .NET Framework 4. Las aplicaciones ClickOnce que tienen como destino el perfil de cliente de .NET Framework 4 se pueden ejecutar en el perfil de cliente de .NET Framework 4 y en la versión completa de .NET Framework 4. Si la aplicación tiene como destino la versión completa de .NET Framework 4 y no se puede ejecutar en el perfil de cliente de NET Framework 4, quite el elemento `<framework>` del cliente con un editor de texto y vuelva a firmar el manifiesto.
 
-El siguiente es un elemento `<framework>` de ejemplo cuyo destino es [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]:
+A continuación se muestra un ejemplo de un elemento `<framework>` de muestra que tiene como destino el perfil de cliente de .NET Framework 4:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
