@@ -21,7 +21,7 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
   
 - <xref:System.Activities.Statements.Transition>  
   
- Para crear un flujo de trabajo de máquina de estados, los estados se agregan a una actividad <xref:System.Activities.Statements.StateMachine> y las transiciones se usan para controlar el flujo entre estados. En la captura de pantalla siguiente, en el Introducción paso del [tutorial](getting-started-tutorial.md) [Cómo: crear un flujo de trabajo de equipo de estado, se](how-to-create-a-state-machine-workflow.md)muestra un flujo de trabajo de equipo de estado con tres Estados y tres transiciones. El **destino Initialize** es el estado inicial y representa el primer estado del flujo de trabajo. Esto se designa mediante la línea que conduce a él desde el nodo de **Inicio** . El estado final del flujo de trabajo se denomina **FinalState**y representa el punto en el que se completa el flujo de trabajo.  
+ Para crear un flujo de trabajo de máquina de estados, los estados se agregan a una actividad <xref:System.Activities.Statements.StateMachine> y las transiciones se usan para controlar el flujo entre estados. En la captura de pantalla siguiente, en el [Tutorial de inicio](getting-started-tutorial.md), concretamente en el paso [Cómo: Crear un flujo de trabajo de equipo de estado](how-to-create-a-state-machine-workflow.md), muestra un flujo de trabajo de equipo de estado con tres estados y tres transiciones. El **destino Initialize** es el estado inicial y representa el primer estado del flujo de trabajo. Esto se designa mediante la línea que conduce a él desde el nodo de **Inicio** . El estado final del flujo de trabajo se denomina **FinalState**y representa el punto en el que se completa el flujo de trabajo.  
   
  ![Ilustración que muestra el flujo de trabajo de equipo de estado completado.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
 > [!NOTE]
 > Tenga en cuenta que si la condición <xref:System.Activities.Statements.Transition.Condition%2A> de una transición se evalúa en `False` (o todas las condiciones de una transición de desencadenador compartido se evalúan en `False`), la transición no se producirá y se reprogramarán todos los desencadenadores para todas las transiciones desde el estado.  
   
- Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [Cómo: crear un flujo](how-to-create-a-state-machine-workflow.md)de trabajo de máquina de Estados, el [Diseñador de actividades StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), el diseñador de actividad [State](/visualstudio/workflow-designer/state-activity-designer), el diseñador de [actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)y el [Diseñador de actividad Transition](/visualstudio/workflow-designer/transition-activity-designer).  
+ Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [cómo: Cree un flujo de trabajo de equipo de estado](how-to-create-a-state-machine-workflow.md), el [Diseñador de actividades StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), el diseñador de actividad [State](/visualstudio/workflow-designer/state-activity-designer), el diseñador de [actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)y el [Diseñador de actividad Transition](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Terminología de la máquina de estados  
  Esta sección define el vocabulario de la máquina de estados usado en este tema.  
   
- State  
+ Estado  
  La unidad básica que compone una máquina de estados. Una máquina de estados puede estar en un estado en un momento dado.  
   
  Acción de entrada  
@@ -102,7 +102,7 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md)
+- [Cómo: Crear un flujo de trabajo de equipo de estado](how-to-create-a-state-machine-workflow.md)
 - [Diseñador de actividad StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Diseñador de actividad State](/visualstudio/workflow-designer/state-activity-designer)
 - [Diseñador de actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)

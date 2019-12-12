@@ -31,7 +31,7 @@ En este tema se enumeran los siguientes problemas comunes que surgen al desarrol
 
 - El evento se genera dos veces en el control o el componente heredado
 
-- Error en tiempo de diseño: "Error al crear el componente '*nombre de componente*'"
+- Error en tiempo de diseño: "No se pudo crear el componente '*nombre de componente*'"
 
 - STAThreadAttribute
 
@@ -39,7 +39,7 @@ En este tema se enumeran los siguientes problemas comunes que surgen al desarrol
 
 ## <a name="cannot-add-control-to-toolbox"></a>No se puede agregar el control al cuadro de herramientas
 
-Si desea agregar un control personalizado que creó en otro proyecto o un control de terceros al **cuadro de herramientas**, debe hacerlo manualmente. Si el proyecto actual contiene el control o componente, debería aparecer en el **cuadro de herramientas** automáticamente. Para más información, consulte [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
+Si desea agregar un control personalizado que creó en otro proyecto o un control de terceros al **cuadro de herramientas**, debe hacerlo manualmente. Si el proyecto actual contiene el control o componente, debería aparecer en el **cuadro de herramientas** automáticamente. Para obtener más información, vea [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 ### <a name="to-add-a-control-to-the-toolbox"></a>Para agregar un control al cuadro de herramientas
 
@@ -73,7 +73,7 @@ Si desea agregar un control personalizado que creó en otro proyecto o un contro
 
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>No se puede depurar el control de usuario de Windows Forms o un componente
 
-Si el control se deriva de la clase <xref:System.Windows.Forms.UserControl>, puede depurar su comportamiento en tiempo de ejecución con el contenedor de prueba. Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
+Si el control se deriva de la clase <xref:System.Windows.Forms.UserControl>, puede depurar su comportamiento en tiempo de ejecución con el contenedor de prueba. Para obtener más información, vea [Cómo: Probar el comportamiento en tiempo de ejecución de una](how-to-test-the-run-time-behavior-of-a-usercontrol.md)de UserControl.
 
 Otros controles y componentes personalizados no son proyectos independientes. Deben hospedarse en una aplicación, como un proyecto de Windows Forms. Para depurar un control o componente, debe agregarlo a un proyecto de Windows Forms.
 
@@ -99,13 +99,13 @@ Otros controles y componentes personalizados no son proyectos independientes. De
 
    Ahora puede depurar el control o componente como de costumbre.
 
-Para obtener más información acerca de la depuración, consulte [Depuración en Visual Studio](/visualstudio/debugger/debugger-feature-tour) y [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
+Para obtener más información sobre la depuración, vea [depuración en Visual Studio](/visualstudio/debugger/debugger-feature-tour) y [Tutorial: Depurar controles de Windows Forms personalizados en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
 
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>El evento se genera dos veces en el control o el componente heredado
 
 Probablemente se debe a una cláusula `Handles` duplicada. Para obtener más información, consulte [Solución de problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Error en tiempo de diseño: "Error al crear el componente 'nombre de componente'"
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Error en tiempo de diseño: "No se pudo crear el componente ' nombre de componente '"
 
 El componente o el control deben proporcionar un constructor sin parámetros sin parámetros. Cuando el entorno de diseño crea una instancia de un componente o control, no intenta proporcionar ningún parámetro a las sobrecargas del constructor que toman parámetros.
 
@@ -115,11 +115,11 @@ El <xref:System.STAThreadAttribute> informa al Common Language Runtime (CLR) que
 
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>El icono del componente no aparece en el cuadro de herramientas
 
-Cuando se usa <xref:System.Drawing.ToolboxBitmapAttribute> para asociar un icono al componente personalizado, el mapa de bits no aparece en el cuadro de herramientas para los componentes generados automáticamente. Para ver el mapa de bits, vuelva a cargar el control con el cuadro de diálogo **Elegir elementos del cuadro de herramientas**. Para obtener más información, vea [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](how-to-provide-a-toolbox-bitmap-for-a-control.md).
+Cuando se usa <xref:System.Drawing.ToolboxBitmapAttribute> para asociar un icono al componente personalizado, el mapa de bits no aparece en el cuadro de herramientas para los componentes generados automáticamente. Para ver el mapa de bits, vuelva a cargar el control con el cuadro de diálogo **Elegir elementos del cuadro de herramientas**. Para obtener más información, vea [Cómo: Proporcione un mapa de bits del cuadro de herramientas para un control](how-to-provide-a-toolbox-bitmap-for-a-control.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Desarrollar controles de Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)
 - [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Cómo: Probar el comportamiento en tiempo de ejecución de una](how-to-test-the-run-time-behavior-of-a-usercontrol.md) de UserControl
 - [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
