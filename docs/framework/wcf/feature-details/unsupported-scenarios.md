@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955319"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837979"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por diversas razones, Windows Communication Foundation (WCF) no admite algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como el nombre de usuario y la contraseña, y la autenticación integrada HTTP/HTTPS al ejecutar WCF en Windows XP Home Edition.  
@@ -18,7 +18,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
  Cuando un cliente realiza llamadas asincrónicas a un servicio WCF usando la autenticación de Windows bajo suplantación, se podría producir la autenticación con la identidad del proceso del cliente en lugar de la identidad suplantada.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP y cookie de token de contexto seguro habilitados  
- WCF no admite la suplantación y se <xref:System.InvalidOperationException> produce una excepción cuando se cumplen las condiciones siguientes:  
+ WCF no admite la suplantación y se produce una <xref:System.InvalidOperationException> cuando existen las condiciones siguientes:  
   
 - El sistema operativo es [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -28,24 +28,24 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
   
 - Se crea un token de contexto de seguridad (SCT) basado en estado (de forma predeterminada, la creación está deshabilitada).  
   
- El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, consulte [Cómo Cree un token de contexto de seguridad para una](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)sesión segura). En código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizando el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
+ El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, vea [Cómo: Cree un token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)). En el código, el token se habilita mediante la creación de un elemento de enlace de seguridad (ya sea <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) mediante el <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
   
- Como alternativa, en la configuración, el token se habilita mediante la creación`customBinding`de un > de <,`security`la adición de un elemento de `authenticationMode` > de < y el `requireSecurityContextCancellation` establecimiento del `true`atributo en SecureConversation y el atributo en.  
+ Como alternativa, en la configuración, el token se habilita mediante la creación de una <`customBinding`>, la adición de un <`security`> elemento y el establecimiento del atributo `authenticationMode` en SecureConversation y el atributo `requireSecurityContextCancellation` en `true`.  
   
 > [!NOTE]
 > Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por consiguiente, puede utilizarlo con la opción `Required` en [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Posible conflicto de ASP.NET  
- WCF y ASP.NET pueden habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación WCF, puede existir un conflicto entre la configuración de WCF y de la configuración de ASP.NET. En caso de conflicto, la configuración de WCF tiene prioridad, a <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> menos que la propiedad <xref:System.ServiceModel.ImpersonationOption.NotAllowed>esté establecida en, en cuyo caso la configuración de suplantación de ASP.net tiene prioridad.  
+ WCF y ASP.NET pueden habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación WCF, puede existir un conflicto entre la configuración de WCF y de la configuración de ASP.NET. En caso de conflicto, la configuración de WCF tiene prioridad, a menos que la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> esté establecida en <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, en cuyo caso la configuración de suplantación ASP.NET tiene prioridad.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Se puede producir un error en las cargas de ensamblado si se utiliza la suplantación  
  Si el contexto suplantado no tiene los derechos de acceso para cargar un ensamblado y si es la primera vez Common Language Runtime (CLR) intenta cargar el ensamblado para ese AppDomain, el <xref:System.AppDomain> almacena en memoria caché el error. Los siguientes intentos de cargar ese ensamblado (o ensamblados) producirán un error, incluso después de revertir la suplantación e incluso si el contexto revertido tiene derechos de acceso para cargar el ensamblado. Esto se debe a que CLR no vuelve a intentar la carga una vez que el contexto del usuario ha cambiado. Debe reiniciar el dominio de la aplicación para recuperarse del error.  
   
 > [!NOTE]
-> El valor predeterminado de la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> es <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. En la mayoría de los casos, un contexto de suplantación del nivel de identificación no tiene derechos para cargar ensamblados adicionales. Éste es el valor predeterminado, por lo que esto se trata de una condición muy común a tener en cuenta. La suplantación del nivel de identificación también tiene lugar cuando el proceso de suplantación no tiene el privilegio `SeImpersonate`. Para obtener más información, consulte [delegación y](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)suplantación.  
+> El valor predeterminado de la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> es <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. En la mayoría de los casos, un contexto de suplantación del nivel de identificación no tiene derechos para cargar ensamblados adicionales. Éste es el valor predeterminado, por lo que esto se trata de una condición muy común a tener en cuenta. La suplantación del nivel de identificación también tiene lugar cuando el proceso de suplantación no tiene el privilegio `SeImpersonate`. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>La delegación requiere la negociación de las credenciales  
- Para utilizar el protocolo de autenticación Kerberos con la delegación, debe implementar el protocolo Kerberos con negociación de credenciales (a veces denominado Kerberos de autenticación mutua o de varios pasos). Si implementa la autenticación de Kerberos sin la negociación de la credencial (denominada en ocasiones Kerberos de "un disparo" o "fase única"), se producirá una excepción. Para obtener más información sobre cómo implementar la negociación de credenciales, consulte depuración de [errores de autenticación de Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Para utilizar el protocolo de autenticación Kerberos con la delegación, debe implementar el protocolo Kerberos con negociación de credenciales (a veces denominado Kerberos de autenticación mutua o de varios pasos). Si implementa la autenticación de Kerberos sin la negociación de la credencial (denominada en ocasiones Kerberos de "un disparo" o "fase única"), se producirá una excepción. Para obtener más información sobre cómo implementar la negociación de credenciales, consulte [depuración de errores de autenticación de Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Criptografía  
   
@@ -62,7 +62,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
  El cifrado AES conforme a FIPS no funciona en devoluciones de llamada dúplex bajo suplantación del nivel de identificación.  
   
 ### <a name="cngksp-certificates"></a>Certificados CNG/KSP  
- *API de criptografía: Next Generation (CNG)* es el sustituto a largo plazo de CryptoAPI. Esta API está disponible en código no administrado en [!INCLUDE[wv](../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../includes/lserver-md.md)] y versiones posteriores de Windows.  
+ API de criptografía de *: La siguiente generación (CNG)* es el reemplazo a largo plazo de CryptoAPI. Esta API está disponible en código no administrado en Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] y versiones posteriores de Windows.  
   
  .NET Framework 4.6.1 y versiones anteriores no admiten estos certificados porque usan CryptoAPI heredado para administrar los certificados CNG/KSP. El uso de estos certificados con .NET Framework 4.6.1 y versiones anteriores producirá una excepción.  
   
@@ -70,18 +70,18 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
   
 - Ejecute `p/invoke` para `CertGetCertificateContextProperty` e inspeccione `dwProvType` en la `CertGetCertificateContextProperty` devuelta.  
   
-- Use el `certutil` comando desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Use el comando `certutil` desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Se produce un error en la seguridad del mensaje si se requiere el uso de suplantación de ASP.NET y compatibilidad de ASP.NET  
  WCF no admite la siguiente combinación de valores de configuración porque puede impedir que se produzca la autenticación del cliente:  
   
-- La suplantación de ASP.NET está habilitada. Esto se hace en el archivo Web. config estableciendo el `impersonate` atributo del elemento <`identity`> en `true`.  
+- La suplantación de ASP.NET está habilitada. Esto se hace en el archivo Web. config estableciendo el atributo `impersonate` del elemento <`identity`> en `true`.  
   
-- El modo de compatibilidad de ASP.net se habilita `aspNetCompatibilityEnabled` estableciendo el atributo de la [ \<> serviceHostingEnvironment](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) en. `true`  
+- El modo de compatibilidad de ASP.NET se habilita estableciendo el atributo `aspNetCompatibilityEnabled` del [>\<serviceHostingEnvironment](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) en `true`.  
   
 - Se utiliza la seguridad de modo de mensaje.  
   
- La solución alternativa consiste en desactivar el modo de compatibilidad de ASP.NET. O bien, si se requiere el modo de compatibilidad ASP.NET, deshabilite la característica de suplantación ASP.NET y use en su lugar la suplantación proporcionada por WCF. Para obtener más información, consulte [delegación y](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)suplantación.  
+ La solución alternativa consiste en desactivar el modo de compatibilidad de ASP.NET. O bien, si se requiere el modo de compatibilidad ASP.NET, deshabilite la característica de suplantación ASP.NET y use en su lugar la suplantación proporcionada por WCF. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Error de dirección literal IPv6  
  Se produce un error en las solicitudes de seguridad cuando el cliente y el servicio están en el mismo equipo y se utilizan direcciones IPv6 literales para el servicio.  
@@ -93,11 +93,11 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
   
  Un ejemplo de esta situación sería un servicio con las tres direcciones de punto de conexión siguientes:  
   
-- `http://localhost/CalculatorService/service`(el servicio)  
+- `http://localhost/CalculatorService/service` (el servicio)  
   
-- `http://localhost/CalculatorService/issue_ticket`(STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
-- `http://localhost/CalculatorService/mex`(el extremo de metadatos)  
+- `http://localhost/CalculatorService/mex` (el punto de conexión de metadatos)  
   
  Esto produce una excepción.  
   
