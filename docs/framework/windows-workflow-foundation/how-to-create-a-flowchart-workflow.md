@@ -13,10 +13,10 @@ ms.lasthandoff: 09/14/2019
 ms.locfileid: "70989687"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Procedimiento para crear un flujo de trabajo de diagrama de flujo
-Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas <xref:System.Activities.Statements.Flowchart> , como la actividad, y las actividades personalizadas [de los procedimientos anteriores: Cree un tema](how-to-create-an-activity.md) de la actividad. El flujo de trabajo modela un juego de adivinanzas de números.  
+Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas, como la actividad <xref:System.Activities.Statements.Flowchart>, y las actividades personalizadas del [anterior cómo: Cree una actividad](how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
-> Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [el procedimiento: Cree una actividad](how-to-create-an-activity.md).  
+> Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [cómo: Cree una](how-to-create-an-activity.md)de actividad.  
   
 > [!NOTE]
 > Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -52,7 +52,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 9. Haga clic en **crear variable**.  
   
     > [!TIP]
-    > Si no se muestra ningún cuadro **crear variable** , haga <xref:System.Activities.Statements.Flowchart> clic en la actividad en la superficie del diseñador de flujo de trabajo para seleccionarla.  
+    > Si no se muestra ningún cuadro **crear variable** , haga clic en la actividad <xref:System.Activities.Statements.Flowchart> en la superficie del diseñador de flujo de trabajo para seleccionarla.  
   
 10. Escriba `Guess` en el cuadro **nombre** , seleccione **Int32** en la lista desplegable **tipo de variable** y presione Entrar para guardar la variable.  
   
@@ -82,9 +82,9 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     > [!TIP]
     > Si no se muestra la ventana **cuadro de herramientas** , seleccione **cuadro de herramientas** en el menú **Ver** .  
   
-3. Arrastre una actividad **prompt** de la **sección NumberGuessWorkflowActivities** del cuadro de **herramientas**, colóquela debajo de la actividad **assign** del paso anterior y conecte la actividad **prompt** a la actividad **assign** . Hay tres maneras de conectar las dos actividades. La primera manera es conectarlas a medida que se coloca la actividad **prompt** en el flujo de trabajo. Cuando arrastre la actividad **prompt** al flujo de trabajo, mantenga el mouse sobre la actividad **assign** y colóquela en uno de los cuatro triángulos que aparecen cuando la actividad **prompt** está sobre la actividad **assign** . La segunda manera es colocar la actividad **prompt** en el flujo de trabajo en la ubicación deseada. A continuación, mantenga el mouse sobre la actividad **assign** y arrastre uno de los rectángulos que aparece hacia abajo hasta la actividad **prompt** . Arrastre el mouse para que la línea de conexión de la actividad **assign** se conecte a uno de los rectángulos de la actividad **prompt** y, a continuación, suelte el botón del mouse. La tercera manera es muy similar a la primera, salvo que en lugar de arrastrar la actividad **prompt** desde el cuadro de **herramientas**, se arrastra desde su ubicación en la superficie de diseño de flujo de trabajo, se mantiene el mouse sobre la actividad **assign** y se coloca en una de las triángulos que aparece.  
+3. Arrastre una actividad **prompt** de la **sección NumberGuessWorkflowActivities** del cuadro de **herramientas**, colóquela debajo de la actividad **assign** del paso anterior y conecte la actividad **prompt** a la actividad **assign** . Hay tres maneras de conectar las dos actividades. La primera manera es conectarlas a medida que se coloca la actividad **prompt** en el flujo de trabajo. Cuando arrastre la actividad **prompt** al flujo de trabajo, mantenga el mouse sobre la actividad **assign** y colóquela en uno de los cuatro triángulos que aparecen cuando la actividad **prompt** está sobre la actividad **assign** . La segunda manera es colocar la actividad **prompt** en el flujo de trabajo en la ubicación deseada. A continuación, mantenga el mouse sobre la actividad **assign** y arrastre uno de los rectángulos que aparece hacia abajo hasta la actividad **prompt** . Arrastre el mouse para que la línea de conexión de la actividad **assign** se conecte a uno de los rectángulos de la actividad **prompt** y, a continuación, suelte el botón del mouse. La tercera manera es muy similar a la primera, salvo que en lugar de arrastrar la actividad **prompt** desde el cuadro de **herramientas**, se arrastra desde su ubicación en la superficie de diseño de flujo de trabajo, se mantiene el mouse sobre la actividad **assign** y se coloca en uno de los triángulos que aparece.  
   
-4. En la **ventana Propiedades** de la actividad **prompt** , escriba `"EnterGuess"` incluir las comillas en el cuadro de valor de la propiedad **BookmarkName** . Escriba `Guess` en el cuadro de valor de la propiedad **resultado** y escriba la siguiente expresión en el cuadro de la propiedad **texto** .  
+4. En la **ventana Propiedades** de la actividad **Prompt** , escriba `"EnterGuess"` incluidas las comillas en el cuadro de valor de la propiedad **BookmarkName** . Escriba `Guess` en el cuadro de valor de la propiedad **resultado** y escriba la siguiente expresión en el cuadro de la propiedad **texto** .  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -146,9 +146,9 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 ### <a name="to-build-the-workflow"></a>Para compilar el flujo de trabajo  
   
-1. Presione CTRL+MAYÚS+B para compilar la solución.  
+1. Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-     Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, consulte el tema siguiente [, How to: Ejecutar un flujo](how-to-run-a-workflow.md)de trabajo. Si ya ha completado el [procedimiento: Ejecutar un paso](how-to-run-a-workflow.md) de flujo de trabajo con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de diagrama de flujo de este paso, vaya a la [sección [para compilar y ejecutar la aplicación](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de cómo: Ejecutar un flujo](how-to-run-a-workflow.md)de trabajo.  
+     Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, vea el tema siguiente, [cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md). Si ya ha completado el [cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md) paso con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de diagrama de flujo de este paso, vaya a la sección [para compilar y ejecutar la aplicación](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -157,5 +157,5 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Procedimientos: Crear una actividad](how-to-create-an-activity.md)
-- [Procedimientos: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Cómo: Crear una actividad](how-to-create-an-activity.md)
+- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
