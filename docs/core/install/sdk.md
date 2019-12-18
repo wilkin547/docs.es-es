@@ -1,0 +1,199 @@
+---
+title: 'Instalación del SDK de .NET Core en Windows, Linux y macOS: .NET Core'
+description: Obtenga información sobre cómo instalar .NET Core en Windows, Linux y macOS. Descubra las dependencias necesarias para desarrollar aplicaciones en .NET Core.
+author: thraka
+ms.author: adegeo
+ms.date: 12/04/2019
+ms.custom: updateeachrelease
+zone_pivot_groups: operating-systems-set-one
+ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74999066"
+---
+# <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
+
+En este artículo obtendrá información sobre cómo instalar el SDK de .NET Core. El SDK de .NET Core se usa para crear aplicaciones y bibliotecas de .NET Core. El entorno de ejecución de .NET Core siempre se instala con el SDK.
+
+::: zone pivot="os-windows"
+
+## <a name="install-with-an-installer"></a>Instalación mediante un instalador
+
+Windows tiene instaladores independientes que se pueden usar para instalar el SDK de .NET Core 3.1:
+
+- [CPU de x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [CPU de x86 (32 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>Instalación mediante un instalador
+
+macOS tiene instaladores independientes que se pueden usar para instalar el SDK de .NET Core 3.1:
+
+- [CPU de x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+## <a name="install-with-a-package-manager"></a>Instalación con un administrador de paquetes
+
+Se puede instalar el SDK de .NET Core con muchos de los administradores de paquetes comunes de Linux. Para obtener más información, vea [Administrador de paquetes de Linux: instalación de .NET Core](linux-package-managers.md).
+
+## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
+
+Para extraer el SDK y hacer que los comandos estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. Después, abra un terminal y ejecute los comandos siguientes.
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> Los comandos anteriores solo harán que los comandos del SDK de .NET estén disponibles para la sesión de terminal en la que se ha ejecutado.
+>
+> Puede editar el perfil del shell para agregar los comandos de forma permanente. Hay una serie de shells distintos disponibles para Linux, y cada uno de ellos tiene un perfil diferente. Por ejemplo:
+>
+> - **Shell de Bash**: *~/.bash_profile*, *~/.bashrc*
+> - **Shell de Korn**: *~/.kshrc* or *.profile*
+> - **Shell de Z**: *~/.zshrc* or *.zprofile*
+> 
+> Edite el archivo de origen adecuado para el shell y agregue `:$HOME/dotnet` al final de la instrucción `PATH` existente. Si no se incluye ninguna instrucción `PATH`, agregue una nueva línea con `export PATH=$PATH:$HOME/dotnet`.
+>
+> Además, agregue `export DOTNET_ROOT=$HOME/dotnet` al final del archivo.
+
+::: zone-end
+
+::: zone pivot="os-windows"
+
+## <a name="install-with-visual-studio"></a>Instalación con Visual Studio
+
+Si usa Visual Studio para desarrollar aplicaciones de .NET Core, en la tabla siguiente se describe la versión mínima necesaria de Visual Studio, basada en la versión del SDK de .NET Core de destino.
+
+| Versión del SDK de .NET Core | Versión de Visual Studio                      |
+| --------------------- | ------------------------------------------ |
+| 3.1                   | Visual Studio 2019, versión 16.4 o posterior. |
+| 3.0                   | Visual Studio 2019, versión 16.3 o posterior. |
+| 2.2                   | Visual Studio 2017, versión 15.9 o posterior. |
+| 2.1                   | Visual Studio 2017, versión 15.7 o posterior. |
+
+Si ya tiene Visual Studio instalado, puede comprobar la versión siguiendo los pasos que se detallan a continuación.
+
+01. Abra Visual Studio.
+01. Seleccione **Ayuda** > **Acerca de Microsoft Visual Studio**.
+01. Lea el número de versión en el cuadro de diálogo **Acerca de**.
+
+Visual Studio puede instalar el SDK y el entorno de ejecución de .NET Core más recientes.
+
+- [Descargue Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+
+### <a name="select-a-workload"></a>Selección de una carga de trabajo
+
+Al instalar o modificar Visual Studio, seleccione una de las cargas de trabajo siguientes, en función del tipo de aplicación que quiera compilar:
+
+- La carga de trabajo **Desarrollo multiplataforma de .NET Core** en la sección **Otros conjuntos de herramientas**.
+- La carga de trabajo **Desarrollo de ASP.NET y web** en la sección **Web y nube**.
+- La carga de trabajo **Desarrollo de Azure** en la sección **Web y nube**.
+- La carga de trabajo **Desarrollo de escritorio de .NET** en la sección **Móviles y de escritorio**.
+
+[![Visual Studio 2019 para Windows con la carga de trabajo de .NET Core](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-visual-studio-for-mac"></a>Instalación con Visual Studio para Mac
+
+Visual Studio para Mac instala el SDK de .NET Core cuando se selecciona la carga de trabajo **.NET Core**. Para empezar con el desarrollo en .NET Core en macOS, vea [Instalación de Visual Studio 2019 para Mac](/visualstudio/mac/installation). Para obtener la versión más reciente, .NET Core 3.1, se debe usar la versión preliminar de Visual Studio para Mac 8.4.
+
+[![Visual Studio 2019 para Mac de macOS con la característica de carga de trabajo de .NET Core](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
+
+::: zone-end
+
+## <a name="install-alongside-visual-studio-code"></a>Instalación junto con Visual Studio Code
+
+Visual Studio Code es un editor de código fuente ligero y eficaz que se ejecuta en el escritorio. Visual Studio Code está disponible para Windows, macOS y Linux.
+
+Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core como Visual Studio, agregar compatibilidad con .NET Core es sencillo.
+
+01. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/Download).
+01. [Descargue e instale el SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+01. [Instale la extensión de C# desde el Marketplace de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
+
+::: zone pivot="os-windows"
+
+## <a name="install-with-powershell-automation"></a>Instalación mediante la automatización de PowerShell
+
+Los [scripts de dotnet-install](../tools/dotnet-install-script.md) se usan para la automatización y las instalaciones que no son de administrador del SDK. Se puede descargar el script desde la [página de referencia del script dotnet-install](../tools/dotnet-install-script.md).
+
+El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 2.1. Para instalar la versión actual de .NET Core, ejecute el script con el modificador siguiente.
+
+```powershell
+dotnet-install.ps1 -Channel Current
+```
+
+::: zone-end
+
+::: zone pivot="os-linux,os-macos"
+
+## <a name="install-with-bash-automation"></a>Instalación mediante la automatización de Bash
+
+Los [scripts de dotnet-install](../tools/dotnet-install-script.md) se usan para la automatización y las instalaciones que no son de administrador del SDK. Se puede descargar el script desde la [página de referencia del script dotnet-install](../tools/dotnet-install-script.md).
+
+El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 2.1. Para instalar la versión actual de .NET Core, ejecute el script con el modificador siguiente.
+
+```bash
+./dotnet-install.sh -c Current
+```
+
+::: zone-end
+
+## <a name="all-net-core-downloads"></a>Todas las descargas de .NET Core
+
+Puede descargar e instalar .NET Core directamente con uno de los vínculos siguientes:
+
+- [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Descargas de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Descargas de .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+
+## <a name="docker"></a>Docker
+
+Los contenedores proporcionan una manera ligera de aislar la aplicación del resto del sistema host. Los contenedores de la misma máquina comparten solo el kernel y usan los recursos proporcionados a la aplicación.
+
+.NET Core puede ejecutarse en un contenedor de Docker. Las imágenes oficiales de Docker en .NET Core se publican en el registro de contenedor de Microsoft (MCR) y se pueden encontrar en el [repositorio de Docker Hub para Microsoft .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/). Cada repositorio contiene imágenes para diferentes combinaciones de .NET (SDK o Runtime) y del sistema operativo que puede usar.
+
+Microsoft ofrece imágenes que se adaptan a escenarios específicos. Por ejemplo, el [repositorio de ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) proporciona imágenes que se compilan para ejecutar aplicaciones de ASP.NET Core en producción.
+
+Para obtener más información sobre el uso de .NET Core en un contenedor de Docker, vea [Introducción a .NET y Docker](../docker/introduction.md) y [Ejemplos](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
+
+## <a name="next-steps"></a>Pasos siguientes
+
+::: zone pivot="os-windows"
+
+- [Tutorial: Tutorial Hola mundo de C#](../tutorials/with-visual-studio.md).
+- [Tutorial: Tutorial Hola mundo de Visual Basic](../tutorials/vb-with-visual-studio.md).
+- [Tutorial: Creación de una aplicación con Visual Studio Code](../tutorials/with-visual-studio-code.md).
+- [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- [Tutorial: Introducción a macOS](../tutorials/using-on-mac-vs.md).
+- [Tutorial: Creación de una aplicación con Visual Studio Code](../tutorials/with-visual-studio-code.md).
+- [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- [Tutorial: Creación de una aplicación con Visual Studio Code](../tutorials/with-visual-studio-code.md).
+- [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).
+
+::: zone-end
