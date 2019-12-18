@@ -273,7 +273,7 @@ Por último, si almacena todos los flujos de eventos, se puede utilizar Microsof
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **HealthChecks and HealthChecks UI for ASP.NET Core** \ (HealthChecks e interfaz de usuario de HealthChecks para ASP.NET Core)
+- **HealthChecks and HealthChecks UI for ASP.NET Core (HealthChecks e interfaz de usuario de HealthChecks para ASP.NET Core)**  \
   <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
 - **Introduction to Service Fabric health monitoring (Introducción al seguimiento de estado de Service Fabric)**  \
