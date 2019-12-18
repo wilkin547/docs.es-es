@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 01a34289b4845048438a3d3fd9263d1dcd1028c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138860"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960395"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedimiento para mostrar milisegundos en los valores de fecha y hora
 Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluyen las horas, minutos y segundos de un valor de tiempo, pero excluyen el componente correspondiente a los milisegundos. En este tema se muestra cómo se incluye un componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato.  
@@ -47,7 +47,7 @@ Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateT
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
-> Es posible mostrar unidades fraccionarias de segundo muy pequeñas, como diezmilésimas o cienmilésimas de segundo. Sin embargo, estos valores no suelen ser significativos. La precisión de los valores de fecha y hora depende de la resolución del reloj del sistema. En Windows NT 3.5 y versiones posteriores y en los sistemas operativos de [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], la resolución del reloj es aproximadamente 10-15 milisegundos.  
+> Es posible mostrar unidades fraccionarias de segundo muy pequeñas, como diezmilésimas o cienmilésimas de segundo. Sin embargo, estos valores no suelen ser significativos. La precisión de los valores de fecha y hora depende de la resolución del reloj del sistema. En los sistemas operativos Windows NT 3.5 (y versiones posteriores) y Windows Vista, la resolución del reloj es aproximadamente de 10 a 15 milisegundos.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122002"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960389"
 ---
 # <a name="managed-execution-process"></a>proceso de ejecución administrada
 <a name="introduction"></a> El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:  
@@ -95,7 +95,7 @@ ms.locfileid: "73122002"
   
  Durante la ejecución, el código administrado recibe servicios como la recolección de elementos no utilizados, seguridad, interoperabilidad con código no administrado, compatibilidad de depuración entre lenguajes diferentes y compatibilidad mejorada con el control de versiones y la implementación.  
   
- En Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] y [!INCLUDE[windowsver](../../includes/windowsver-md.md)], el cargador del sistema operativo comprueba los módulos administrados examinando un bit del encabezado de COFF. El bit que se establece indica un módulo administrado. Si el cargador detecta módulos administrados, carga mscoree.dll, y `_CorValidateImage` y `_CorImageUnloading` notifican al cargador cuándo se cargan y descargan imágenes del módulo administrado. `_CorValidateImage` lleva a cabo las acciones siguientes:  
+ En Microsoft Windows Vista, el cargador del sistema operativo comprueba los módulos administrados mediante el examen de un bit del encabezado de COFF. El bit que se establece indica un módulo administrado. Si el cargador detecta módulos administrados, carga mscoree.dll, y `_CorValidateImage` y `_CorImageUnloading` notifican al cargador cuándo se cargan y descargan imágenes del módulo administrado. `_CorValidateImage` lleva a cabo las acciones siguientes:  
   
 1. Garantiza que el código es código administrado válido.  
   

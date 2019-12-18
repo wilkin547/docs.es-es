@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973104"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959707"
 ---
 # <a name="how-to-search-strings"></a>Cómo buscar cadenas
 
@@ -52,7 +52,7 @@ El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, s
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Los métodos `string` suelen ser mejores opciones cuando se busca una cadena exacta. Las expresiones regulares son mejores cuando se busca algún patrón en una cadena de origen.
+> Los métodos `string` suelen ser mejores opciones cuando se busca una cadena exacta. Las expresiones regulares son más adecuadas cuando se busca algún patrón en una cadena de origen.
 
 ## <a name="does-a-string-follow-a-pattern"></a>¿Una cadena sigue un patrón?
 

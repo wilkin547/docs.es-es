@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df7eaf971f3a54057758dc7d974ae00cd4797ad7
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975627"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960024"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
 
@@ -48,7 +48,7 @@ En esta tabla, 4.5.x hace referencia a .NET Framework 4.5 y sus versiones secun
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 ya forma parte de este sistema operativo. No es necesario instalar el paquete redistribuible de .NET Framework 4.5.x/4.6.x/4.7.x/4.8.|No se requiere ninguna acción.<br /><br /> Para determinar qué versiones de .NET Framework están instaladas en un sistema, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md). Consulte [Requisitos del sistema de .NET Framework](../get-started/system-requirements.md) para ver los sistemas operativos compatibles.|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 no es compatible con este sistema operativo.|Consulte [Requisitos del sistema de .NET Framework](../get-started/system-requirements.md) para ver los sistemas operativos compatibles.<br /><br /> Si existen errores de instalación de .NET Framework en Windows 7, este mensaje normalmente indica que Windows 7 SP1 no está instalado. Para sistemas de Windows 7, tenga en cuenta que .NET Framework requiere Windows 7 SP1. Si usa Windows 7 y aún no ha instalado Service Pack 1, deberá hacerlo antes de instalar .NET Framework. Para obtener información sobre cómo instalar Windows 7 SP1, consulte [Instalar Windows 7 Service Pack 1 (SP1)](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1).|  
 |El equipo está ejecutando actualmente una instalación Server Core del sistema operativo Windows Server 2008. .NET Framework 4.5.x requiere una versión completa del sistema operativo o de Server Core 2008 R2 SP1. Instale la versión completa de Windows Server 2008 SP2, Windows Server 2008 R2 SP1 o Server Core 2008 R2 SP1 y vuelva a ejecutar el programa de instalación de .NET Framework 4.5.x.|.NET Framework. se admite en el rol Server Core con Windows Server 2008 R2 SP1 o versiones posteriores. Consulte [Requisitos del sistema](../get-started/system-requirements.md).|  
-|.NET Framework 4.5.x ya forma parte de este sistema operativo, pero actualmente está desactivado (solo [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]).| Use **Activar o desactivar las características de Windows** en el **panel de control** para activar .NET Framework 4.5.x. |  
+|.NET Framework 4.5.x ya forma parte de este sistema operativo, pero actualmente está desactivado (solo Windows Server 2012).| Use **Activar o desactivar las características de Windows** en el **panel de control** para activar .NET Framework 4.5.x. |  
 |Este programa de instalación requiere un equipo x86. No se puede instalar en equipos x64 o IA64.|Consulte [Requisitos del sistema](../get-started/system-requirements.md).|  
 |Este programa de instalación requiere un equipo x64 o x86. No se puede instalar en un equipo IA64.|Consulte [Requisitos del sistema](../get-started/system-requirements.md).|  
 

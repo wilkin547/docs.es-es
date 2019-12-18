@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: d171a1aafe2d7e69dfbc9b16577b2d56672fdd3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802206"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960063"
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos de sistema de .NET Framework
 
@@ -96,7 +96,7 @@ Necesita tener privilegios de administrador para poder instalar .NET Framework. 
 
  **Notas:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] incluye .NET Framework 4.5, por lo que no tendrá que instalarlo por separado. De forma similar, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] incluye .NET Framework 4.5.1.
+- Windows Server 2012 incluye .NET Framework 4.5, por lo que no tendrá que instalarlo aparte. De forma similar, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] incluye .NET Framework 4.5.1.
 
 - .NET Framework. tiene compatibilidad limitada con el rol Server Core con Windows Server 2008 R2 SP1 o versiones posteriores. Vea [Server Core .NET Functionality](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) (Funcionalidad de .NET en Server Core) para obtener una lista de las API no compatibles.
 
