@@ -94,7 +94,7 @@ Ahora que tiene conocimientos generales del aprendizaje de transferencia y de la
 ### <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 
 > [!NOTE]
-> Los conjuntos de valores de este tutorial están tomados del documento "SDNET2018: A concrete crack image dataset for machine learning applications" (2018) (SDNET2018: Un conjunto de datos de imágenes de hormigón descifradas para aplicaciones de aprendizaje automático) de Marc Maguire, Sattar Dorafshan y Robert J. Thomas. Examinar todos los conjuntos de datos. Documento 48. https://digitalcommons.usu.edu/all_datasets/48
+> Los conjuntos de valores de este tutorial están tomados del documento "SDNET2018: A concrete crack image dataset for machine learning applications" (2018) (SDNET2018: Un conjunto de datos de imágenes de hormigón descifradas para aplicaciones de aprendizaje automático) de Marc Maguire, Sattar Dorafshan y Robert J. Thomas. Examinar todos los conjuntos de datos. Documento 48. [https://digitalcommons.usu.edu/all_datasets/48](https://digitalcommons.usu.edu/all_datasets/48 )
 
 SDNET2018 es un conjunto de datos de imágenes que contiene anotaciones para estructuras de hormigón con grietas y sin grietas (tableros de puente, muros y pavimento).
 
