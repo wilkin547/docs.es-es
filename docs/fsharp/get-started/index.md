@@ -1,6 +1,6 @@
 ---
-title: Get started with F#
-description: Find out how to get started with the F# programming language.
+title: IntroducciónF#
+description: Obtenga información sobre cómo empezar a usar el F# lenguaje de programación.
 ms.date: 12/08/2018
 ms.openlocfilehash: 2b4baa5c948800389c171a5d9f9cd157a903063e
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
@@ -9,25 +9,25 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204899"
 ---
-# <a name="get-started-with-f"></a>Get Started with F\#
+# <a name="get-started-with-f"></a>Introducción a F\#
 
-You can get started with F# on your machine or online.
+Puede empezar a trabajar con F# en el equipo o en línea.
 
-## <a name="get-started-on-your-machine"></a>Get started on your machine
+## <a name="get-started-on-your-machine"></a>Introducción a la máquina
 
-There are multiple guides on how to install and use F# for the first time on your machine.  You can use the following table to help in making a decision:
+Hay varias guías sobre cómo instalar y usar F# por primera vez en la máquina.  Puede utilizar la tabla siguiente como ayuda para tomar una decisión:
 
-| SO | Prefer Visual Studio | Prefer Visual Studio Code | Prefer command line |
+| SO | Preferir Visual Studio | Preferir Visual Studio Code | Preferir línea de comandos |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Get started with Visual Studio](get-started-visual-studio.md) | [Introducción a Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
-| macOS | [Get started with VS for Mac](get-started-with-visual-studio-for-mac.md) | [Introducción a Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
-| Linux | N/D | [Introducción a Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
+| Windows | [Introducción a Visual Studio](get-started-visual-studio.md) | [Introducción a Visual Studio Code](get-started-vscode.md) | [Introducción a la CLI de .NET Core](get-started-command-line.md) |
+| macOS | [Introducción a VS para Mac](get-started-with-visual-studio-for-mac.md) | [Introducción a Visual Studio Code](get-started-vscode.md) | [Introducción a la CLI de .NET Core](get-started-command-line.md) |
+| Linux | N/D | [Introducción a Visual Studio Code](get-started-vscode.md) | [Introducción a la CLI de .NET Core](get-started-command-line.md) |
 
-In general, there is no specific that is better than the rest. We recommend trying all ways to use F# on your machine to see what you like the best!
+En general, no hay ningún específico que sea mejor que el resto. Se recomienda probar todas las formas de F# usar en el equipo para ver lo que le gusta mejor.
 
-## <a name="get-started-online"></a>Get started online
+## <a name="get-started-online"></a>Empezar a trabajar en línea
 
-If you'd rather not install F# and .NET on your machine, you can also get started with F# in the browser:
+Si prefiere no instalar F# y .net en el equipo, también puede empezar a trabajar con F# en el explorador:
 
-* [Introduction to F# on Binder](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) is a [Jupyter notebook](https://jupyter.org/) on hosted via the free [Binder](https://mybinder.org/) service. No sign-up needed!
-* [The Fable REPL](https://fable.io/repl/) is an interactive, in-browser REPL that uses [Fable](https://fable.io/) to translate F# code into JavaScript. Check out the numerous samples that range from F# basics to a fully fledged video game all executing in your browser!
+* [La introducción F# a on Binder](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) es un [cuaderno de Jupyter Notebook](https://jupyter.org/) en Hosted mediante el servicio de [enlazador](https://mybinder.org/) gratuito. No es necesario realizar ningún registro.
+* La [REPL de Fable](https://fable.io/repl/) es una REPL interactiva y en el explorador que usa [Fable](https://fable.io/) para traducir código F# en JavaScript. Consulte los numerosos ejemplos que abarcan desde F# los aspectos básicos hasta un juego de vídeo totalmente completo que se ejecuta en el explorador.
