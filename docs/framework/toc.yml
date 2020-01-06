@@ -57,7 +57,7 @@
     - name: Referencia de la API no administrada
       href: unmanaged-api/
     - name: Servicios XAML
-      href: xaml-services/
+      href: ../desktop-wpf/xaml-services/
 - name: Herramientas
   href: tools/
 - name: Bibliotecas de clases y API adicionales

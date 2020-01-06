@@ -2,7 +2,6 @@
 documentType: LandingData
 title: Guía de arquitectura de aplicaciones .NET
 metadata:
-  document_id: na
   title: Guía de arquitectura de aplicaciones .NET
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
