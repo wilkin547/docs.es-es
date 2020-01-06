@@ -2,12 +2,12 @@
 title: DevOps nativa de la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | DevOps nativa de la nube
 ms.date: 06/30/2019
-ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841820"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337411"
 ---
 # <a name="cloud-native-devops"></a>DevOps nativa de la nube
 
@@ -59,7 +59,7 @@ Cada uno de estos componentes proporciona algunas ventajas para las aplicaciones
 
 La organización del código para una aplicación nativa en la nube puede resultar complicada. En lugar de una sola aplicación gigante, las aplicaciones nativas de la nube tienden a estar compuestas de una web de aplicaciones más pequeñas que se comunican entre sí. Al igual que sucede con todo lo que hay en informática, la mejor disposición del código sigue siendo una pregunta abierta. Hay ejemplos de aplicaciones correctas que usan diferentes tipos de diseños, pero parece que dos variantes tienen la mayor popularidad.
 
-Antes de llegar al propio control de código fuente real, probablemente merece la pena decidir cuántos proyectos son adecuados. Dentro de un solo proyecto, hay compatibilidad con varios repositorios y canalizaciones de compilación. Los paneles son un poco más complicado, pero también se pueden asignar fácilmente las tareas a varios equipos dentro de un solo proyecto. Es ciertamente posible admitir cientos, incluso miles de desarrolladores, de un solo proyecto de Azure DevOps. Hacerlo es probablemente el mejor enfoque, ya que proporciona un único lugar para que todo el desarrollador pueda trabajar y reduzca la confusión que supone encontrar una aplicación cuando los desarrolladores no están seguros del proyecto en el que reside.
+Antes de llegar al propio control de código fuente real, probablemente merece la pena decidir cuántos proyectos son adecuados. Dentro de un solo proyecto, hay compatibilidad con varios repositorios y canalizaciones de compilación. Los paneles son un poco más complicados, pero también se pueden asignar fácilmente a varios equipos dentro de un solo proyecto. Es ciertamente posible admitir cientos, incluso miles de desarrolladores, de un solo proyecto de Azure DevOps. Hacerlo es probablemente el mejor enfoque, ya que proporciona un único lugar para que todo el desarrollador pueda trabajar y reduzca la confusión que supone encontrar una aplicación cuando los desarrolladores no están seguros del proyecto en el que reside.
 
 Dividir el código para los microservicios dentro del proyecto DevOps de Azure puede ser un poco más desafiante.
 
@@ -238,11 +238,11 @@ El resultado final de una compilación es una colección de archivos conocidos c
 
 ### <a name="azure-devops-releases"></a>Versiones de DevOps de Azure
 
-Las compilaciones se encargan de compilar el software en un paquete que se puede enviar, pero los artefactos todavía tienen que insertarse en un entorno de prueba para completar la entrega continua. Para ello, Azure DevOps usa una herramienta independiente denominada versiones. Las versiones hacen uso de la misma biblioteca de tareas que estaban disponibles para la compilación, pero presentan un concepto de "fases". Una fase es un entorno aislado en el que se instala el paquete. Por ejemplo, un producto puede hacer uso de un desarrollo, un QA y un entorno de producción. El código se entrega continuamente en el entorno de desarrollo en el que se pueden ejecutar pruebas automatizadas. Una vez que estas pruebas superan la versión, se mueven al entorno de QA para realizar pruebas manuales. Por último, el código se inserta en producción, donde es visible para todo el mundo.
+Las compilaciones se encargan de compilar el software en un paquete que se puede enviar, pero los artefactos todavía tienen que insertarse en un entorno de prueba para completar la entrega continua. Para ello, Azure DevOps usa una herramienta independiente denominada versiones. La herramienta de versiones hace uso de la misma biblioteca de tareas que estaba disponible para la compilación, pero presenta un concepto de "fases". Una fase es un entorno aislado en el que se instala el paquete. Por ejemplo, un producto puede hacer uso de un desarrollo, un QA y un entorno de producción. El código se entrega continuamente en el entorno de desarrollo en el que se pueden ejecutar pruebas automatizadas. Una vez que estas pruebas superan la versión, se mueven al entorno de QA para realizar pruebas manuales. Por último, el código se inserta en producción, donde es visible para todo el mundo.
 
 ![Figura 11-9 ejemplo de canalización de versiones con desarrollo, QA y fases de producción](./media/release-pipeline.png)
 
-Cada fase de la compilación se puede desencadenar automáticamente mediante la finalización de la fase anterior. Sin embargo, en muchos casos, esto no es deseable. Mover código a producción podría requerir la aprobación de alguien. Las versiones de admiten esto al permitir aprobadores en cada paso de la canalización de versiones. Las reglas se pueden configurar de modo que una persona o un grupo de personas específicas debe cerrar la sesión en una versión antes de que se haga en producción. Estas puertas permiten comprobaciones de calidad manuales y también para el cumplimiento de los requisitos normativos relacionados con el control de lo que entra en producción.
+Cada fase de la compilación se puede desencadenar automáticamente mediante la finalización de la fase anterior. Sin embargo, en muchos casos, esto no es deseable. Mover código a producción podría requerir la aprobación de alguien. La herramienta de versiones admite esto al permitir aprobadores en cada paso de la canalización de versiones. Las reglas se pueden configurar de modo que una persona o un grupo de personas específicas debe cerrar la sesión en una versión antes de que se haga en producción. Estas puertas permiten comprobaciones de calidad manuales y también para el cumplimiento de los requisitos normativos relacionados con el control de lo que entra en producción.
 
 ### <a name="everybody-gets-a-build-pipeline"></a>Todos obtienen una canalización de compilación
 

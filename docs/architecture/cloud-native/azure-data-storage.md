@@ -2,12 +2,12 @@
 title: Almacenamiento de datos en Azure
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Almacenamiento de datos en Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841898"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337467"
 ---
 # <a name="data-storage-in-azure"></a>Almacenamiento de datos en Azure
 
@@ -63,7 +63,7 @@ Además de la pila de Microsoft SQL Server tradicional, Azure también incluye v
 
 - [Escale](https://docs.microsoft.com/azure/mysql/concepts-high-availability) según sea necesario en cuestión de segundos.
 
-- Protegido para proteger datos confidenciales en reposo y en movimiento.
+- Protección de información confidencial en reposo y en movimiento.
 
 - [Copias de seguridad automáticas](https://docs.microsoft.com/azure/mysql/concepts-backup) y restauración a un momento [dado](https://docs.microsoft.com/azure/mysql/concepts-backup) durante un máximo de 35 días.
 
@@ -129,11 +129,11 @@ Cosmos DB admite la agrupación en clústeres [activo/activo](https://kemptechno
 
 La característica de protocolo de [varios maestros](https://docs.microsoft.com/azure/cosmos-db/how-to-multi-master) de Cosmos dB habilita la siguiente funcionalidad:
 
-- Escritura elástica ilimitada y escalabilidad de lectura.
+- Escalabilidad de escritura y lectura elásticas ilimitada.
 
-- 99,999% de la disponibilidad de lectura y escritura en todo el mundo.
+- 99,999 % de disponibilidad de lectura y escritura en todo el mundo.
 
-- Lecturas y escrituras garantizadas atendidas en menos de 10 milisegundos en el percentil valores percentil.
+- Garantía de lecturas y escrituras atendidas en menos de 10 milisegundos en el percentil 99.
 
 Internamente, Cosmos DB controla la replicación de datos entre regiones con garantías de nivel de coherencia y acuerdos de nivel de servicio con respaldo financiero.
 
@@ -141,7 +141,7 @@ Con las API de hospedaje [múltiple](https://docs.microsoft.com/azure/cosmos-db/
 
 ### <a name="multi-model-support"></a>Compatibilidad con varios modelos
 
-Cosmos DB es una *plataforma de datos de varios modelos* que permite interactuar con los datos mediante el uso de una serie de modelos NoSQL compatibles, incluidos documentos, pares de clave-valor, de columnas y representaciones de gráficos. Internamente, los datos se almacenan en un formato de [estructura](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) simple formado por tipos de datos primitivos, como cadenas, booleanos y números. Para cada solicitud, el motor de base de datos traduce los datos en la representación del modelo que ha seleccionado. Puede elegir entre una API de propiedad Cosmos DB basada en SQL o cualquiera de las [API de compatibilidad](https://www.wikiwand.com/en/Cosmos_DB) que se muestran en la figura 5-14.
+Cosmos DB es una *plataforma de datos de varios modelos* que permite interactuar con los datos mediante una serie de modelos NoSQL compatibles, incluidos documentos, pares de clave-valor, representaciones de columnas y de gráficos. Internamente, los datos se almacenan en un formato de [estructura](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) simple formado por tipos de datos primitivos, como cadenas, valores booleanos y números. Para cada solicitud, el motor de base de datos traduce los datos en la representación del modelo que ha seleccionado. Puede elegir entre una API de propiedad Cosmos DB basada en SQL o cualquiera de las [API de compatibilidad](https://www.wikiwand.com/en/Cosmos_DB) que se muestran en la figura 5-14.
 
 ![Proveedores de Cosmos DB](./media/cosmos-db-providers.png)
 
@@ -149,7 +149,7 @@ Cosmos DB es una *plataforma de datos de varios modelos* que permite interactuar
 
 Tenga en cuenta en la figura 5-14 cómo Cosmos DB admite [TABLE Storage](https://azure.microsoft.com/services/storage/tables/). Tanto Cosmos DB como [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) comparten el mismo modelo de tabla subyacente y exponen muchas de las mismas operaciones de tabla. Sin embargo, el [TABLE API de Cosmos dB](https://docs.microsoft.com/azure/cosmos-db/table-introduction) proporciona muchas mejoras Premium que no están disponibles en la API de Azure Storage. Estas características se contrastan en la figura 5-15.
 
-![Table API de Azure](./media/azure-table-api.png)
+![Azure Table API](./media/azure-table-api.png)
 
 **Figura 5-15**: Azure Table API
 
@@ -179,7 +179,7 @@ Los datos de Cosmos DB se administran mediante la creación de bases de datos [,
 
 **Figura 5-17**: jerarquía de entidades de Cosmos dB
 
-Tenga en cuenta que en la figura 5-17 se empieza por crear una base de datos de Cosmos DB dentro de una cuenta de base de datos. Esa base de datos se convierte en la unidad de administración de un conjunto de contenedores. Un contenedor es una agrupación independiente del esquema de elementos que se pueden expresar como una colección, una tabla o un grafo, en función del proveedor de API seleccionado (descrito en la sección anterior). Los elementos son los datos que se agregan al contenedor y se representan como documentos, filas, nodos o bordes. De forma predeterminada, todos los elementos que se agregan a un contenedor se indexan automáticamente sin necesidad de administración de esquemas o índices explícitos.
+Tenga en cuenta que en la figura 5-17 se empieza por crear una base de datos de Cosmos DB dentro de una cuenta de base de datos. Esa base de datos se convierte en la unidad de administración de un conjunto de contenedores. Un contenedor es una agrupación independiente del esquema de elementos que se pueden expresar como una colección, una tabla o un grafo, en función del proveedor de API seleccionado (descrito en la sección anterior). Los elementos son los datos que se agregan al contenedor y se representan como documentos, filas, nodos o bordes. De forma predeterminada, todos los elementos que agregue a un contenedor se indexan automáticamente sin requerir ningún índice explícito ni administración de esquema.
 
 Para particionar el contenedor, los elementos se dividen en subconjuntos distintos denominados [particiones lógicas](https://docs.microsoft.com/azure/cosmos-db/partition-data). Las particiones lógicas se crean en función del valor de una clave de partición asociada a cada elemento de un contenedor. En la figura 5-18 se muestra cómo todos los elementos de una partición lógica tienen el mismo valor de clave de partición.
 
@@ -191,7 +191,7 @@ Observe en la figura 5-18 cómo cada elemento incluye una clave de partición de
 
 Internamente, Cosmos DB administra automáticamente la ubicación de las [particiones lógicas](https://docs.microsoft.com/azure/cosmos-db/partition-data) en las [particiones físicas](https://docs.microsoft.com/azure/cosmos-db/partition-data) para satisfacer de forma eficaz las necesidades de escalabilidad y rendimiento del contenedor. A medida que aumentan los requisitos de rendimiento y almacenamiento de una aplicación, Azure Cosmos DB mueve las particiones lógicas para redistribuir la carga a través de un número mayor de servidores. Estas operaciones de redistribución se administran mediante Cosmos DB y se realizan sin interrupción ni tiempo de inactividad.
 
-## <a name="azure-redis-cache"></a>Azure Redis Cache
+## <a name="azure-redis-cache"></a>Caché en Redis de Azure
 
 Las ventajas del almacenamiento en caché para mejorar el rendimiento y la escalabilidad son perfectamente comprensibles.
 

@@ -2,12 +2,12 @@
 title: Patrones de datos nativos en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Patrones de datos nativos de la nube
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841826"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337423"
 ---
 # <a name="cloud-native-data-patterns"></a>Patrones de datos nativos en la nube
 
@@ -139,7 +139,7 @@ Las bases de datos NoSQL se pueden clasificar por los cuatro modelos siguientes:
 
 Las bases de datos NoSQL se pueden optimizar para tratar con datos a gran escala, especialmente cuando los datos son relativamente simples. Considere una base de datos NoSQL cuando:
 
-- La carga de trabajo requiere gran escala y una alta simultaneidad.
+- La carga de trabajo requiere una gran escala y una simultaneidad alta.
 - Tiene un gran número de usuarios.
 - Los datos se pueden expresar simplemente sin relaciones.
 - Debe distribuir geográficamente los datos.

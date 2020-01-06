@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo enfocar la migración de una aplic
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73842042"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337452"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migración de formularios Web Forms de ASP.NET a increíbles
 
@@ -44,7 +44,7 @@ Este paso de migración inicial consiste en crear un nuevo proyecto. Este tipo d
 
 Una vez creado el proyecto, instale las bibliotecas que se usaron en el proyecto anterior. En los proyectos de formularios Web Forms anteriores, es posible que haya usado el archivo *packages. config* para enumerar los paquetes de NuGet necesarios. En el nuevo proyecto de estilo SDK, *packages. config* se ha reemplazado por `<PackageReference>` elementos del archivo de proyecto. Una ventaja de este enfoque es que todas las dependencias se instalan de forma transitiva. Solo se muestran las dependencias de nivel superior que le interesan.
 
-Muchas de las dependencias que está usando están disponibles para .NET Core, como Entity Framework 6 y log4net. Si no hay ninguna versión de .NET Core o .NET Standard disponible, a menudo se puede usar la versión de .NET Framework. Su kilometraje puede variar. Cualquier API usada que no esté disponible en .NET Core producirá un error en tiempo de ejecución. Visual Studio le informa de estos paquetes. Aparece un icono amarillo en el nodo **referencias** del proyecto en **Explorador de soluciones**.
+Muchas de las dependencias que está usando están disponibles para .NET Core, como Entity Framework 6 y log4net. Si no hay ninguna versión de .NET Core o .NET Standard disponible, a menudo se puede usar la versión de .NET Framework. Puede que tu experiencia sea diferente. Cualquier API usada que no esté disponible en .NET Core producirá un error en tiempo de ejecución. Visual Studio le informa de estos paquetes. Aparece un icono amarillo en el nodo **referencias** del proyecto en **Explorador de soluciones**.
 
 En el proyecto de eShop basado en extraordinarias, puede ver los paquetes que están instalados. Anteriormente, el archivo *packages. config* enumeraba todos los paquetes usados en el proyecto, lo que da lugar a un archivo de casi 50 líneas de longitud. Un fragmento de código *packages. config* es:
 
@@ -252,7 +252,7 @@ Para obtener más información sobre el inicio de la aplicación, consulte inici
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migración de módulos y controladores HTTP a middleware
 
-Los módulos y controladores HTTP son patrones comunes en formularios Web Forms para controlar la canalización de solicitudes HTTP. Las clases que implementan `IHttpModule` o `IHttpHandler` podrían estar registradas y procesar solicitudes entrantes. Formularios Web Forms configura módulos y controladores en el archivo *Web. config* . Los formularios Web Forms también se basan principalmente en el control de eventos del ciclo de vida de la aplicación. En su lugar, ASP.NET Core usa middleware. Los middlewares se registran en el método `Configure` de la clase `Startup`. El orden de ejecución del middleware viene determinado por el orden de registro.
+Los módulos y controladores HTTP son patrones comunes en formularios Web Forms para controlar la canalización de solicitudes HTTP. Las clases que implementan `IHttpModule` o `IHttpHandler` podrían estar registradas y procesar solicitudes entrantes. Formularios Web Forms configura módulos y controladores en el archivo *Web. config* . Los formularios Web Forms también se basan principalmente en el control de eventos del ciclo de vida de la aplicación. En su lugar, ASP.NET Core usa middleware. El middleware se registra en el método `Configure` de la clase `Startup`. El orden de ejecución del middleware viene determinado por el orden de registro.
 
 En la sección [Habilitar proceso de inicio](#enable-startup-process) , Web Forms generó un evento de ciclo de vida como el método `Application_BeginRequest`. Este evento no está disponible en ASP.NET Core. Una manera de lograr este comportamiento es implementar el middleware tal como se aprecia en el ejemplo de archivo *Startup.CS* . Este middleware realiza la misma lógica y, a continuación, transfiere el control al siguiente controlador en la canalización de middleware.
 

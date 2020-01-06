@@ -3,12 +3,12 @@ title: Aplicaciones candidatas para la nube nativa
 description: Obtenga información sobre los tipos de aplicaciones que se benefician de un enfoque nativo en la nube
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968296"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337430"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplicaciones candidatas para la nube nativa
 
@@ -40,7 +40,7 @@ El libro electrónico gratuito de Microsoft [modernizar las aplicaciones .net ex
 
 **Figura 1-10**. Estrategias para migrar cargas de trabajo heredadas
 
-Las aplicaciones monolíticas que no son críticas se benefician en gran medida de una migración rápida de elevación y desplazamiento ([lista para la infraestructura en la nube](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). En este caso, la carga de trabajo local se hospeda en una máquina virtual en la nube, sin cambios. Este enfoque utiliza el [modelo de IaaS (infraestructura como servicio)](https://azure.microsoft.com/overview/what-is-iaas/). Azure incluye varias herramientas como ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)y [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)) para facilitar este movimiento. Aunque esta estrategia puede producir un ahorro de costos, estas aplicaciones no se diseñaron normalmente para desbloquear y aprovechar las ventajas de la informática en la nube.
+Las aplicaciones monolíticas que no son críticas se benefician en gran medida de una migración rápida de elevación y desplazamiento ([lista para la infraestructura en la nube](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)). En este caso, la carga de trabajo local se hospeda en una máquina virtual en la nube, sin cambios. Este enfoque utiliza el [modelo de IaaS (infraestructura como servicio)](https://azure.microsoft.com/overview/what-is-iaas/). Azure incluye varias herramientas como ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)y [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)) para facilitar este movimiento. Aunque esta estrategia puede producir un ahorro de costos, estas aplicaciones no se diseñaron normalmente para desbloquear y aprovechar las ventajas de la informática en la nube.
 
 Las aplicaciones monolíticas que son críticas para el negocio a menudo se benefician de una migración mejorada de elevación y desplazamiento (*optimizada*para la nube). Este enfoque incluye optimizaciones de implementación que habilitan los servicios en la nube clave, sin cambiar la arquitectura básica de la aplicación. Por ejemplo, podría incluir la aplicación en un [contenedor](https://docs.microsoft.com/virtualization/windowscontainers/about/) e implementarla en un orquestador de contenedores, como [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/), que se describe más adelante en este libro. Una vez en la nube, la aplicación podría consumir otros servicios en la nube, como bases de datos, colas de mensajes, supervisión y almacenamiento en caché distribuida.
 

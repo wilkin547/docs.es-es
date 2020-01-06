@@ -2,12 +2,12 @@
 title: 'Aplicaciones autohospedadas de gRPC: gRPC para desarrolladores de WCF'
 description: Implementación de aplicaciones de ASP.NET Core gRPC como servicios autohospedados.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967209"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545068"
 ---
 # <a name="self-hosted-grpc-applications"></a>Aplicaciones autohospedadas de gRPC
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Publique la aplicación, ya sea desde Visual Studio; para ello, haga clic con el botón derecho en el proyecto y elija *publicar* en el menú contextual o en el CLI de .net Core.
 
-Al publicar una aplicación de .NET Core, puede crear una implementación *dependiente del marco* o una implementación *autocontenida* . Las implementaciones dependientes del marco requieren que el entorno de tiempo de ejecución compartido de .NET Core esté instalado en el host donde se ejecutan. Las implementaciones independientes se publican con una copia completa del entorno de ejecución y el marco de trabajo de .NET Core y se pueden ejecutar en cualquier host. Para obtener más información, incluidas las ventajas y desventajas de cada método, consulte la documentación de [implementación de aplicaciones .net Core](https://docs.microsoft.com/dotnet/core/deploying/) .
+Al publicar una aplicación de .NET Core, puede crear una implementación *dependiente del marco* o una implementación *autocontenida* . Las implementaciones dependientes del marco requieren que el entorno de tiempo de ejecución compartido de .NET Core esté instalado en el host donde se ejecutan. Las implementaciones independientes se publican con una copia completa del entorno de ejecución y el marco de trabajo de .NET Core y se pueden ejecutar en cualquier host. Para obtener más información, incluidas las ventajas y desventajas de cada método, consulte la documentación de [implementación de aplicaciones .net Core](../../core/deploying/index.md) .
 
 Para publicar una compilación independiente de la aplicación que no requiere la instalación del tiempo de ejecución de .NET Core 3,0 en el host, especifique el tiempo de ejecución que se va a incluir con la aplicación mediante la marca `-r` (o `--runtime`).
 
@@ -77,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Si la aplicación no se está ejecutando como un servicio de Linux, el método `UseSystemd` no hace nada.
 
-Ahora publique su aplicación (dependiente del marco o independiente para el tiempo de ejecución de Linux relevante, por ejemplo, `linux-x64`), desde Visual Studio; para ello, haga clic con el botón secundario en el proyecto y elija *publicar* en el menú contextual, o bien, en el CLI de .net Core con el siguiente comando.
+Publique la aplicación (ya sea dependiente del marco o independiente para el tiempo de ejecución de Linux relevante, por ejemplo, `linux-x64`), desde Visual Studio; para ello, haga clic con el botón derecho en el proyecto y elija *publicar* en el menú contextual, o bien desde el CLI de .net Core con el siguiente comando.
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -150,7 +150,7 @@ Para obtener más información sobre cómo consultar el diario systemd desde la 
 
 Al ejecutar una aplicación de gRPC en producción, debe usar un certificado TLS de una entidad de certificación (CA) de confianza. Esta entidad de certificación puede ser una entidad de certificación pública o una interna para su organización.
 
-En los hosts de Windows, el certificado se puede cargar desde un [almacén de certificados](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro mediante la [clase X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). La clase `X509Store` también se puede usar con el almacén de claves de OpenSSL en algunos hosts de Linux.
+En los hosts de Windows, el certificado se puede cargar desde un [almacén de certificados](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro mediante la clase <xref:System.Security.Cryptography.X509Certificates.X509Store>. La clase `X509Store` también se puede usar con el almacén de claves de OpenSSL en algunos hosts de Linux.
 
 Los certificados también se pueden crear con uno de los [constructores X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), ya sea desde un archivo (por ejemplo, un archivo `.pfx` protegido mediante una contraseña segura) o desde datos binarios recuperados de un servicio de almacenamiento seguro como [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 

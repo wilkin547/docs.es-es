@@ -4,12 +4,12 @@ description: Aprenda a crear componentes de interfaz de usuario reutilizables co
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841964"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337394"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Cree componentes de interfaz de usuario reutilizables con un increíble
 
@@ -81,13 +81,13 @@ En la tabla siguiente se resumen las distintas directivas de Razor que se usan e
 |-------------|-----------|-------|--------------------|
 |`@attribute` |Agrega un atributo de nivel de clase al componente.|`@attribute [Authorize]`|Ninguno|
 |`@code`      |Agrega miembros de clase al componente.|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|Implementa la interfaz especificada.|`@implements IDisposable`|Usar el código subyacente|
+|`@implements`|Implementa la interfaz especificada.|`@implements IDisposable`|Uso de código subyacente|
 |`@inherits`  |Hereda de la clase base especificada|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
 |`@inject`    |Inserta un servicio en el componente.|`@inject IJSRuntime JS`|Ninguno|
 |`@layout`    |Especifica un componente de diseño para el componente|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
 |`@namespace` |Establece el espacio de nombres del componente.|`@namespace MyNamespace`|Ninguno|
 |`@page`      |Especifica la ruta del componente.|`@page "/product/{id}"`|`<%@ Page %>`|
-|`@typeparam` |Especifica un parámetro de tipo genérico para el componente.|`@typeparam TItem`|Usar el código subyacente|
+|`@typeparam` |Especifica un parámetro de tipo genérico para el componente.|`@typeparam TItem`|Uso de código subyacente|
 |`@using`     |Especifica un espacio de nombres que se va a incluir en el ámbito|`@using MyComponentNamespace`|Agregar espacio de nombres en *Web. config*|
 
 Los componentes de Razor también hacen un uso intensivo de *los atributos de la Directiva* en los elementos para controlar diversos aspectos de cómo se compilan los componentes (control de eventos, enlace de datos, referencias de elementos & componentes, etc.). Todos los atributos de directiva siguen una sintaxis genérica común en la que los valores entre paréntesis son opcionales:
@@ -98,7 +98,7 @@ Los componentes de Razor también hacen un uso intensivo de *los atributos de la
 
 En la tabla siguiente se resumen los distintos atributos de las directivas de Razor que se usan en extraordinarias.
 
-|Atributo    |Descripción|Ejemplo|
+|Attribute    |Descripción|Ejemplo|
 |-------------|-----------|-------|
 |`@attributes`|Representa un diccionario de atributos.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Crea un enlace de datos bidireccional    |`<input @bind="username" @bind:event="oninput" />`|
@@ -131,7 +131,7 @@ Para agregar miembros a la clase de componente Razor, use la Directiva `@code`. 
 }
 ```
 
-Dado que Razor se basa C#en, se debe compilar desde C# dentro de un proyecto ( *. csproj*). No se pueden compilar archivos *. Razor* desde un proyecto de VB ( *. vbproj*). Todavía puede hacer referencia a los proyectos de VB desde el proyecto más brillante. Lo contrario también es true.
+Dado que Razor se basa C#en, se debe compilar desde C# dentro de un proyecto ( *. csproj*). No se pueden compilar archivos *. Razor* desde un proyecto de Visual Basic ( *. vbproj*). Todavía puede hacer referencia a proyectos de Visual Basic desde el proyecto más brillante. Lo contrario también es true.
 
 Para obtener una referencia de sintaxis Razor completa, consulte [Sintaxis Razor Reference for ASP.net Core](/aspnet/core/mvc/views/razor).
 

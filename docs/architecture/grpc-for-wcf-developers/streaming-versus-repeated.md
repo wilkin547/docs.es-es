@@ -1,13 +1,13 @@
 ---
-title: gRPC streaming Services frente a campos repetidos-gRPC para desarrolladores de WCF
-description: Comparar campos repetidos con los servicios de streaming como formas de pasar colecciones de datos con gRPC.
+title: Streaming Services frente a campos repetidos-gRPC para desarrolladores de WCF
+description: Compare los campos repetidos con los servicios de streaming como formas de pasar colecciones de datos con gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: f2f13776586607ed489c45ebb324c0c5713bed99
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46586ab08df6b136cdafb990ce8be75435a6bf6c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966921"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337867"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>gRPC streaming Services frente a campos repetidos
 

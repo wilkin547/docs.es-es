@@ -2,12 +2,12 @@
 title: Resistencia de la plataforma Azure
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Resistencia de la infraestructura de la nube con Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "73841262"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337390"
 ---
 # <a name="azure-platform-resiliency"></a>Resistencia de la plataforma Azure
 
@@ -26,11 +26,11 @@ Comprender cómo funcionan estas características juntas y cómo afectan al cost
 
 Los errores varían en el ámbito del impacto. Un error de hardware, como un disco con errores, puede afectar a un solo nodo de un clúster. Un conmutador de red con error puede afectar a todo el bastidor del servidor. Los errores menos comunes, como la pérdida de energía, pueden interrumpir todo un centro de recursos. Rara vez, toda una región deja de estar disponible.
 
-La [redundancia](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) es una manera de proporcionar resistencia de la aplicación. El nivel exacto de redundancia necesario depende de sus requisitos empresariales y afectará tanto al costo como a la complejidad del sistema. Por ejemplo, una implementación de varias regiones es más costosa y más compleja de administrar que una implementación de una sola región. Necesitará procedimientos operativos para administrar la conmutación por error y la conmutación por recuperación. El costo y la complejidad adicionales pueden estar justificados en algunos escenarios empresariales y no en otros.
+La [redundancia](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) es una manera de proporcionar resistencia de la aplicación. El nivel exacto de redundancia necesario depende de sus requisitos empresariales y afectará tanto al costo como a la complejidad del sistema. Por ejemplo, una implementación de varias regiones es más costosa y más compleja de administrar que una implementación de una sola región. Necesitará procedimientos operativos para administrar la conmutación por error y la conmutación por recuperación. El costo adicional y la complejidad podrían estar justificados para algunos escenarios empresariales pero no para otros.
 
 Para diseñar la redundancia, debe identificar las rutas críticas en la aplicación y, a continuación, determinar si hay redundancia en cada punto de la ruta de acceso. Si se produce un error en un subsistema, ¿la aplicación conmutará por error a otra cosa? Por último, necesita comprender claramente las características integradas en la plataforma en la nube de Azure que puede aprovechar para satisfacer sus requisitos de redundancia. Estas son algunas recomendaciones para la arquitectura de la redundancia:
 
-- *Implementar varias instancias de servicios.* Si su aplicación depende de una única instancia de un servicio, crea un único punto de error. El aprovisionamiento de varias instancias mejora la resistencia y la escalabilidad. Al hospedar en Azure Kubernetes Service, puede configurar mediante declaración instancias redundantes (conjuntos de réplicas) en el archivo de manifiesto Kubernetes. El valor de recuento de réplicas se puede administrar mediante programación, en el portal o a través de las características de escalado automático, que se tratarán más adelante.
+- *Implemente varias instancias de servicios.* Si la aplicación depende de una única instancia de un servicio, crea un único punto de error. El aprovisionamiento de varias instancias mejora tanto la resistencia como la escalabilidad. Al hospedar en Azure Kubernetes Service, puede configurar mediante declaración instancias redundantes (conjuntos de réplicas) en el archivo de manifiesto Kubernetes. El valor de recuento de réplicas se puede administrar mediante programación, en el portal o a través de las características de escalado automático, que se tratarán más adelante.
 
 - *Aprovechamiento de un equilibrador de carga.* El equilibrio de carga distribuye las solicitudes de la aplicación a las instancias de servicio en buen estado y quita automáticamente las instancias incorrectas de la rotación. Cuando se implementa en Kubernetes, el equilibrio de carga se puede especificar en el archivo de manifiesto Kubernetes en la sección servicios.
 
@@ -48,7 +48,7 @@ Para diseñar la redundancia, debe identificar las rutas críticas en la aplicac
 
 **Figura 6-7**. AKS y Azure Traffic Manager
 
-## <a name="design-for-scalability"></a>Diseño para la escalabilidad
+## <a name="design-for-scalability"></a>Diseño para escalabilidad
 
 La nube prospera en el escalado. La capacidad de aumentar o disminuir los recursos del sistema para solucionar el aumento o la disminución de la carga del sistema es un principio clave de la nube de Azure. Sin embargo, para escalar eficazmente una aplicación, necesita comprender las características de escalado de cada servicio de Azure que se incluye en la aplicación.  Estas son algunas recomendaciones para implementar eficazmente el escalado en el sistema.
 
@@ -78,7 +78,7 @@ Se recomienda el procedimiento recomendado para implementar operaciones de reint
 
 - *Azure Redis Cache.* El cliente de StackExchange de Redis usa una clase de administrador de conexiones que incluye reintentos en intentos con error. El número de reintentos, la Directiva de reintentos específica y el tiempo de espera se pueden configurar.
 
-- *Azure Service Bus.* El cliente Service Bus expone una [clase RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que se puede configurar con un intervalo de interrupción, un recuento de reintentos y <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, que especifica el tiempo máximo que puede tardar una operación. La directiva predeterminada es nueve reintentos máximos con un período de interrupción de 30 segundos entre los intentos.
+- *Azure Service Bus.* El cliente Service Bus expone una [clase RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que se puede configurar con un intervalo de interrupción, un recuento de reintentos y <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>, que especifica el tiempo máximo que puede tardar una operación. La directiva predeterminada es nueve reintentos máximos con un período de interrupción de 30 segundos entre los intentos.
 
 - *Azure SQL Database.* Se proporciona compatibilidad con el reintento cuando se usa la biblioteca de [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) .
 

@@ -4,20 +4,20 @@ description: Obtenga información sobre cómo controlar las solicitudes HTTP con
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "73841208"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337474"
 ---
 # <a name="modules-handlers-and-middleware"></a>Módulos, controladores y middleware
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Una aplicación ASP.NET Core se basa en una serie de middleware. Los middleware son controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS*y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá qué middleware en el contexto de una aplicación increíblemente.
+Una aplicación ASP.NET Core se basa en una serie de *middleware*. El middleware es controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS*y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá qué middleware en el contexto de una aplicación increíblemente.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 La canalización de solicitudes de ASP.NET Core consiste en una secuencia de delegados de solicitud a los que se llama de uno en uno. En el siguiente diagrama se muestra este concepto. El subproceso de ejecución sigue las flechas negras.
 
@@ -35,7 +35,7 @@ ASP.NET 4. x incluye muchos módulos. De forma similar, ASP.NET Core tiene tambi
 
 En la tabla siguiente se enumeran los componentes y el middleware de reemplazo en ASP.NET Core.
 
-|Módulo                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
+|Module                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
 |-----------------------|-----------------------------|-------------------|
 |Errores HTTP            |`CustomErrorModule`          |[Middleware de páginas de códigos de estado](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento predeterminado       |`DefaultDocumentModule`      |[Middleware de archivos predeterminados](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
