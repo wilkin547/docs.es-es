@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837875"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347040"
 ---
 # <a name="getting-started-sample"></a>Ejemplo de introducción
 
@@ -34,7 +34,7 @@ El servicio describe las operaciones que realiza en un contrato de servicios que
 
 El cliente contiene una definición del contrato de servicios y una clase de proxy para tener acceso al servicio. El código proxy se genera a partir de los metadatos del servicio mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-En Windows Vista, el servicio se hospeda en el servicio de activación de Windows (WAS). Internet Information Services (IIS) y ASP.NET hospedan [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.
+En Windows Vista, el servicio se hospeda en el servicio de activación de Windows (WAS). En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003, se hospeda en Internet Information Services (IIS) y ASP.NET. Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.
 
 > [!NOTE]
 > Si prefiere empezar a trabajar con un ejemplo que hospeda el servicio en una aplicación de consola en lugar de en IIS, consulte el ejemplo de [host propio](../../../../docs/framework/wcf/samples/self-host.md) .

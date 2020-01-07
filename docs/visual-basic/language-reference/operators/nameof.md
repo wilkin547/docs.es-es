@@ -1,15 +1,15 @@
 ---
-title: 'Operador de nombre: Visual Basic'
+title: Operador Name
 description: Aprenda a usar el operador Name en Visual Basic
 ms.date: 10/27/2019
 helpviewer_keywords:
 - NameOf operator [Visual Basic]
-ms.openlocfilehash: 8416bb1a1715c1c37b62cac6a9e0b427a9c72547
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e7dd55bfd98b34449b9f1a35375198598f57b46f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041356"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347018"
 ---
 # <a name="nameof-operator---visual-basic"></a>Operador de nombre: Visual Basic
 

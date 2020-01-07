@@ -2,12 +2,12 @@
 title: Información general
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248090"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634734"
 ---
 # <a name="background-information"></a>Información general
 En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que van más allá del simple uso.  
@@ -18,9 +18,9 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
   
 - Participe en el [Foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), donde puede discutir con detalle temas más complejos con expertos.  
   
-- Estudie las notas del producto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que detallan la tecnología C# , junto con ejemplos de código y Visual Basic. Para obtener más información, vea [LINQ to SQL: consulta integrada en el lenguaje .net para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Estudie las notas del producto que detallan la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] C# , junto con Visual Basic y ejemplos de código. Para obtener más información, vea [LINQ to SQL: consulta integrada en el lenguaje .net para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [ADO.NET y LINQ to SQL](ado-net-and-linq-to-sql.md)  
  Describe la relación de ADO.NET y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
@@ -31,7 +31,7 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
  Describe cómo agregar código de validación y otras personalizaciones.  
   
  [Enlace de datos](data-binding.md)  
- Describe cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza <xref:System.ComponentModel.IListSource> para admitir el enlace de datos.  
+ Describe cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa <xref:System.ComponentModel.IListSource> para admitir el enlace de datos.  
   
  [Compatibilidad de herencia](inheritance-support.md)  
  Describe el papel que juega la herencia en el modelo de objetos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y cómo utilizar los operadores relacionados en las consultas.  
@@ -51,11 +51,11 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
  [Estados de objetos y seguimiento de cambios](object-states-and-change-tracking.md)  
  Proporciona información detallada sobre cómo se realiza el seguimiento de los cambios en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Simultaneidad optimista: Introducción](optimistic-concurrency-overview.md)  
+ [Simultaneidad optimista: información general](optimistic-concurrency-overview.md)  
  Describe la simultaneidad optimista y define sus conceptos.  
   
  [Conceptos sobre consultas](query-concepts.md)  
- Describe los aspectos que distinguen las consultas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de las consultas [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ Describe los aspectos de las consultas en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que difieren de las consultas en LINQ.  
   
  [Recuperar objetos de la memoria caché de identidades](retrieving-objects-from-the-identity-cache.md)  
  Describe los tipos de consultas que recuperan objetos de la memoria caché de identidad.  
