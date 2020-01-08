@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005695"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636216"
 ---
 # <a name="controls-by-category"></a>Agrupar controles por categoría
 Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  
   
-## <a name="layout"></a>Diseño  
+## <a name="layout"></a>Presentación  
  Los controles de diseño se utilizan para administrar el tamaño, las dimensiones, la posición y la disposición de los elementos secundarios.  
   
 - <xref:System.Windows.Controls.Border>  
@@ -100,7 +100,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>Navegación  
+## <a name="navigation"></a>Navegación de  
  Los controles de navegación mejoran o amplían la experiencia de navegación en la aplicación, creando marcos de destino o apariencia de una aplicación con fichas.  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -140,7 +140,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Documentos  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye varios controles especializados para ver documentos. Estos controles optimizan la experiencia de lectura, según el escenario de destino del usuario.  
+ WPF incluye varios controles especializados para ver documentos. Estos controles optimizan la experiencia de lectura, según el escenario de destino del usuario.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -152,7 +152,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Entrada  
+## <a name="input"></a>Input  
  Los controles de entrada permiten al usuario escribir texto y otros contenidos.  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -161,8 +161,8 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Multimedia  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye compatibilidad integrada para hospedar contenido de audio y vídeo, así como [códecs] para la mayoría de los formatos de imagen más conocidos.  
+## <a name="media"></a>Medios  
+ WPF incluye compatibilidad integrada para hospedar contenido de audio y vídeo, así como [códecs] para los formatos de imagen más conocidos.  
   
 - <xref:System.Windows.Controls.Image>  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344853"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347899"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Cómo: Proteger un argumento de procedimiento para que no se realicen cambios de valor (Visual Basic)
 Si un procedimiento declara un parámetro como [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic proporciona al código de procedimiento una referencia directa al elemento de programación subyacente al argumento en el código de llamada. Esto permite al procedimiento cambiar el valor subyacente del argumento en el código de llamada. En algunos casos, es posible que el código de llamada desee proteger contra este tipo de cambio.  
@@ -39,7 +39,7 @@ Si un procedimiento declara un parámetro como [ByRef](../../../../visual-basic/
   
  La segunda llamada a `MsgBox` muestra "After Replace (n): 11, 21, 31, 41". Dado que `n` se pasa `ByVal`, `replace` no puede modificar la variable `n` en el código de llamada mediante la asignación de una nueva matriz a ella. Cuando `replace` crea la nueva instancia de la matriz `k` y la asigna a la variable local `a`, pierde la referencia a `n` pasada por el código de llamada. Cuando cambia los miembros de `a`, solo se ve afectada la `k` de la matriz local. Por lo tanto, `replace` no incrementa los valores de la matriz `n` en el código de llamada.  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compile-the-code"></a>Compilar el código  
  De forma predeterminada, en Visual Basic es pasar argumentos por valor. Sin embargo, es aconsejable incluir la palabra clave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) con cada parámetro declarado. Esto hace que el código sea más fácil de leer.  
   
 ## <a name="see-also"></a>Vea también

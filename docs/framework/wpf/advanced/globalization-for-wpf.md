@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740867"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559440"
 ---
 # <a name="globalization-for-wpf"></a>Globalización de WPF
 En este tema se presentan los problemas que debe tener en cuenta al escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones para el mercado mundial. Los elementos de programación de globalización se definen en .NET en el espacio de nombres <xref:System.Globalization>.
@@ -36,7 +36,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Codificación
+### <a name="encoding"></a>Encoding
  La codificación compatible con [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] son ASCII, Unicode UTF-16 y UTF-8. La instrucción de codificación está al principio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] documento. Si no existe ningún atributo de codificación y no hay ningún orden de bytes, el analizador utiliza el valor predeterminado UTF-8. UTF-8 y UTF-16 son las codificaciones preferentes. No se admite UTF-7. En el ejemplo siguiente se muestra cómo especificar una codificación UTF-8 en un archivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -45,7 +45,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Atributo de idioma
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md) para representar el atributo Language de un elemento.  Para aprovechar las ventajas de la clase <xref:System.Globalization.CultureInfo>, el valor del atributo Language debe ser uno de los nombres de referencia cultural predefinidos por <xref:System.Globalization.CultureInfo>. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) es heredable en el árbol de elementos (mediante reglas XML, no necesariamente debido a la herencia de las propiedades de dependencia) y su valor predeterminado es una cadena vacía si no se asigna de manera explícita.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [xml: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) para representar el atributo Language de un elemento.  Para aprovechar las ventajas de la clase <xref:System.Globalization.CultureInfo>, el valor del atributo Language debe ser uno de los nombres de referencia cultural predefinidos por <xref:System.Globalization.CultureInfo>. [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) es heredable en el árbol de elementos (mediante reglas XML, no necesariamente debido a la herencia de las propiedades de dependencia) y su valor predeterminado es una cadena vacía si no se asigna de manera explícita.
 
  El atributo de idioma es muy útil para especificar dialectos. Por ejemplo, el francés tiene una ortografía, un vocabulario y una pronunciación diferentes en Francia, Quebec, Bélgica y Suiza. Además, el chino, el japonés y el coreano comparten puntos de código en Unicode, pero las formas ideográficas son diferentes y usan fuentes totalmente diferentes.
 
@@ -163,7 +163,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- Para usar un recurso en la aplicación, cree una instancia de <xref:System.Resources.ResourceManager> y cargue el recurso que desea usar. En el ejemplo siguiente se muestra cómo hacerlo:
+ Para usar un recurso en la aplicación, cree una instancia de un <xref:System.Resources.ResourceManager> y cargue el recurso que desea usar. En el ejemplo siguiente se muestra cómo hacerlo:
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
@@ -171,7 +171,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 ## <a name="using-clickonce-with-localized-applications"></a>Utilizar ClickOnce con aplicaciones localizadas
  ClickOnce es una nueva tecnología de implementación de Windows Forms que se incluirá con Visual Studio 2005. Permite la instalación y actualización de aplicaciones web. Cuando se localiza una aplicación que se implementó con ClickOnce, solo puede verse en la referencia cultural localizada. Por ejemplo, si una aplicación implementada se localiza en japonés, solo se puede ver en las ventanas en japonés de Microsoft Windows, no en inglés. Esto supone un problema porque se trata de un escenario común para que los usuarios japoneses ejecuten una versión en Inglés de Windows.
 
- La solución a este problema es establecer el atributo neutro de reserva de idioma. Como alternativa, un desarrollador de aplicaciones puede quitar recursos del ensamblado principal y especificar que los recursos puedan encontrarse en un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar este proceso, use el <xref:System.Resources.NeutralResourcesLanguageAttribute>. El constructor de la clase <xref:System.Resources.NeutralResourcesLanguageAttribute> tiene dos firmas, una que toma un parámetro <xref:System.Resources.UltimateResourceFallbackLocation> para especificar la ubicación donde <xref:System.Resources.ResourceManager> debe extraer los recursos de reserva: ensamblado principal o ensamblado satélite. En el ejemplo siguiente se muestra cómo utilizar el atributo. En el caso de la ubicación de reserva definitiva, el código hace que el <xref:System.Resources.ResourceManager> busque los recursos en el subdirectorio "de" del directorio del ensamblado que se está ejecutando actualmente.
+ La solución a este problema es establecer el atributo neutro de reserva de idioma. Como alternativa, un desarrollador de aplicaciones puede quitar recursos del ensamblado principal y especificar que los recursos puedan encontrarse en un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar este proceso, utilice el <xref:System.Resources.NeutralResourcesLanguageAttribute>. El constructor de la clase <xref:System.Resources.NeutralResourcesLanguageAttribute> tiene dos firmas, una que toma un parámetro <xref:System.Resources.UltimateResourceFallbackLocation> para especificar la ubicación donde el <xref:System.Resources.ResourceManager> debe extraer los recursos de reserva: ensamblado principal o ensamblado satélite. En el ejemplo siguiente se muestra cómo utilizar el atributo. En el caso de la ubicación de reserva definitiva, el código hace que el <xref:System.Resources.ResourceManager> busque los recursos en el subdirectorio "de" del directorio del ensamblado que se está ejecutando actualmente.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

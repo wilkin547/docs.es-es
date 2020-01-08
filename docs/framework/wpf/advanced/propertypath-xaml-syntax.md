@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740788"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559773"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxis de PropertyPath de XAML
 
@@ -143,7 +143,7 @@ Para ciertos objetos de negocios, puede encontrar un caso donde la cadena de rut
 
 - Debe realizar el escape (con la barra diagonal inversa `\`) de caracteres que son especiales para el comportamiento del analizador XAML de WPF para procesar una extensión de marcado.
 
-  - La barra diagonal inversa (`\`) es el carácter de escape.
+  - La barra diagonal inversa (`\`) es el mismo carácter de escape.
 
   - El signo igual (`=`) separa el nombre de propiedad del valor de propiedad.
 
@@ -192,13 +192,13 @@ Con el fin de admitir la clonación para animar una <xref:System.Windows.Freezab
 
 `propertyName2` debe ser el nombre de una propiedad de dependencia que exista en el objeto que es el valor de `propertyName`. En otras palabras, `propertyName2` debe existir como una propiedad de dependencia en el tipo que es el <xref:System.Windows.DependencyProperty.PropertyType%2A>de `propertyName`.
 
-El destino indirecto de animaciones es necesario debido a los estilos y las plantillas que se aplican. Para dirigirse a una animación, necesita una <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> en un objeto de destino y ese nombre se establece mediante [x:Name](../../xaml-services/x-name-directive.md) o <xref:System.Windows.FrameworkElement.Name%2A>. Aunque los elementos de plantilla y estilo también pueden tener nombres, esos nombres solo son válidos en el ámbito de nombres de la plantilla y el estilo. (Si las plantillas y los estilos compartieran ámbitos de nombres con el marcado de la aplicación, los nombres no podrían ser únicos. Los estilos y las plantillas se comparten literalmente entre instancias y perpetuarían nombres duplicados.) Por lo tanto, si las propiedades individuales de un elemento que desea animar provienen de un estilo o una plantilla, debe comenzar con una instancia de elemento con nombre que no sea de una plantilla de estilo y, a continuación, establecer como destino el árbol visual de estilo o plantilla para llegar a la propiedad. desea animar.
+El destino indirecto de animaciones es necesario debido a los estilos y las plantillas que se aplican. Para dirigirse a una animación, necesita una <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> en un objeto de destino y ese nombre se establece mediante [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) o <xref:System.Windows.FrameworkElement.Name%2A>. Aunque los elementos de plantilla y estilo también pueden tener nombres, esos nombres solo son válidos en el ámbito de nombres de la plantilla y el estilo. (Si las plantillas y los estilos compartieran ámbitos de nombres con el marcado de la aplicación, los nombres no podrían ser únicos. Los estilos y las plantillas se comparten literalmente entre instancias y perpetuarían nombres duplicados.) Por lo tanto, si las propiedades individuales de un elemento que desea animar provienen de un estilo o una plantilla, debe comenzar con una instancia de elemento con nombre que no sea de una plantilla de estilo y, a continuación, establecer como destino el árbol visual de estilo o plantilla para llegar a la propiedad. desea animar.
 
 Por ejemplo, la propiedad <xref:System.Windows.Controls.Panel.Background%2A> de una <xref:System.Windows.Controls.Panel> es una <xref:System.Windows.Media.Brush> completa (en realidad una <xref:System.Windows.Media.SolidColorBrush>) procedente de una plantilla de tema. Para animar un <xref:System.Windows.Media.Brush> completamente, debería haber un BrushAnimation (probablemente uno por cada tipo de <xref:System.Windows.Media.Brush>) y no existe ese tipo. Para animar un pincel, en lugar de animar las propiedades de un tipo de <xref:System.Windows.Media.Brush> determinado. Debe obtener <xref:System.Windows.Media.SolidColorBrush> a su <xref:System.Windows.Media.SolidColorBrush.Color%2A> para aplicar una <xref:System.Windows.Media.Animation.ColorAnimation>. La ruta de acceso de propiedad de este ejemplo sería `Background.Color`.
 
 <a name="attachedanim"></a>
 
-### <a name="attached-properties"></a>Propiedades asociadas
+### <a name="attached-properties"></a>Propiedades adjuntas
 
 ```xml
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>

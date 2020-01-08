@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458969"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559466"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Extensión de marcado ComponentResourceKey
 Define y hace referencia a las claves de los recursos que se cargan desde ensamblados externos. Esto permite que una búsqueda de recursos especifique un tipo de destino en un ensamblado, en lugar de un diccionario de recursos explícito en un ensamblado o en una clase.  
@@ -47,9 +47,9 @@ Define y hace referencia a las claves de los recursos que se cargan desde ensamb
 |||  
 |-|-|  
 |`targetTypeName`|Nombre del tipo de Common Language Runtime público (CLR) que se define en el ensamblado de recursos.|  
-|`targetID`|La clave para el recurso. Cuando se buscan recursos, `targetID` será análogo a la [Directiva x:Key](../../xaml-services/x-key-directive.md) del recurso.|  
+|`targetID`|La clave para el recurso. Cuando se buscan recursos, `targetID` será análogo a la [Directiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) del recurso.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Tal como se ha mostrado en los usos anteriores, un uso de la extensión de marcado {`ComponentResourceKey`} se encuentra en dos lugares:  
   
 - La definición de una clave dentro de un diccionario de recursos de tema, tal y como la proporciona el autor de un control.  
@@ -66,7 +66,7 @@ Define y hace referencia a las claves de los recursos que se cargan desde ensamb
   
  La sintaxis compacta que se muestra se basa en el <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> la firma del constructor y el uso de parámetros posicionales de una extensión de marcado. Es importante el orden en el que se proporcionan el `targetTypeName` y el `targetID`. La sintaxis detallada se basa en el <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> constructor sin parámetros y, a continuación, establece el <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> y el <xref:System.Windows.ComponentResourceKey.ResourceId%2A> de forma análoga a una sintaxis de atributo verdadera en un elemento de objeto. En la sintaxis detallada, el orden en el que se establecen las propiedades no es importante. La relación y los mecanismos de estas dos alternativas (compacta y detallada) se describen con más detalle en el tema [extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
- Técnicamente, el valor de `targetID` puede ser cualquier objeto, no tiene que ser una cadena. Sin embargo, el uso más común en WPF es alinear el valor de `targetID` con formularios que son cadenas, y donde dichas cadenas son válidas en la [gramática de XamlName](../../xaml-services/xamlname-grammar.md).  
+ Técnicamente, el valor de `targetID` puede ser cualquier objeto, no tiene que ser una cadena. Sin embargo, el uso más común en WPF es alinear el valor de `targetID` con formularios que son cadenas, y donde dichas cadenas son válidas en la [gramática de XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md).  
   
  `ComponentResourceKey` se puede utilizar en la sintaxis de elementos de objeto. En este caso, es necesario especificar el valor de las propiedades <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> para inicializar correctamente la extensión.  
   

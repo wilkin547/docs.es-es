@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458302"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559864"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Control de eventos en Visual Basic y WPF
 En el lenguaje Microsoft Visual Basic .NET específicamente, puede usar la palabra clave `Handles` específica del lenguaje para asociar controladores de eventos con instancias, en lugar de adjuntar controladores de eventos con atributos o usar el método <xref:System.Windows.UIElement.AddHandler%2A>. Pero la técnica de `Handles` para adjuntar controladores a instancias tiene algunas limitaciones, ya que la sintaxis de `Handles` no es compatible con algunas de las características específicas de eventos enrutados del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Usar "Handles" en una aplicación WPF  
- Los controladores de eventos que se conectan a instancias y eventos con `Handles` deben definirse dentro de la declaración de clase parcial de la instancia, algo que también es un requisito para los controladores de eventos que se asignan a través de valores de atributo en los elementos. Solo se puede especificar `Handles` para un elemento de la página que tenga un valor de propiedad <xref:System.Windows.FrameworkContentElement.Name%2A> (o una [Directiva x:Name](../../xaml-services/x-name-directive.md) declarada). Esto se debe a que el <xref:System.Windows.FrameworkContentElement.Name%2A> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crea la referencia de instancia necesaria para admitir el formato de referencia de la *instancia. event* requerido por la sintaxis de `Handles`. El único elemento que se puede usar para `Handles` sin una referencia <xref:System.Windows.FrameworkContentElement.Name%2A> es la instancia del elemento raíz que define la clase parcial.  
+ Los controladores de eventos que se conectan a instancias y eventos con `Handles` deben definirse dentro de la declaración de clase parcial de la instancia, algo que también es un requisito para los controladores de eventos que se asignan a través de valores de atributo en los elementos. Solo se puede especificar `Handles` para un elemento de la página que tenga un valor de propiedad <xref:System.Windows.FrameworkContentElement.Name%2A> (o una [Directiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) declarada). Esto se debe a que el <xref:System.Windows.FrameworkContentElement.Name%2A> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crea la referencia de instancia necesaria para admitir el formato de referencia de la *instancia. event* requerido por la sintaxis de `Handles`. El único elemento que se puede usar para `Handles` sin una referencia <xref:System.Windows.FrameworkContentElement.Name%2A> es la instancia del elemento raíz que define la clase parcial.  
   
  Puede asignar el mismo controlador a varios elementos. Para ello, separe con comas las referencias *Instancia.Evento* después de `Handles`.  
   
@@ -37,7 +37,7 @@ En el lenguaje Microsoft Visual Basic .NET específicamente, puede usar la palab
 > No use la sintaxis de `Handles` en el código de Visual Basic al especificar un controlador de eventos para el mismo evento en XAML. En ese caso, se llama al controlador de eventos dos veces.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Cómo implementa WPF la funcionalidad "Handles"  
- Cuando se compila una página de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], el archivo intermedio declara `Friend` `WithEvents` referencias a todos los elementos de la página que tienen un conjunto de propiedades <xref:System.Windows.FrameworkContentElement.Name%2A> (o una [Directiva x:Name](../../xaml-services/x-name-directive.md) declarada). Cada instancia con nombre es potencialmente un elemento que se puede asignar a un controlador mediante `Handles`.  
+ Cuando se compila una página de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], el archivo intermedio declara `Friend` `WithEvents` referencias a todos los elementos de la página que tienen un conjunto de propiedades <xref:System.Windows.FrameworkContentElement.Name%2A> (o una [Directiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) declarada). Cada instancia con nombre es potencialmente un elemento que se puede asignar a un controlador mediante `Handles`.  
   
 > [!NOTE]
 > En Visual Studio, IntelliSense puede mostrar la finalización de los elementos que están disponibles para una referencia `Handles` en una página. Sin embargo, esto podría ocupar un paso de compilación para que el archivo intermedio pueda rellenar todas las referencias `Friends`.  

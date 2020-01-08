@@ -2,12 +2,12 @@
 title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: eb2dd3c6392164905cf755075856608ec5fcaf30
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837797"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347921"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Vea los ejemplos de [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.
@@ -117,7 +117,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 1. En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o Windows Vista, importe el archivo de certificado Identity. pfx en la carpeta identidad de la solución en el almacén de certificados LocalMachine/My (personal) mediante la herramienta de complemento MMC. Este archivo está protegido con contraseña. Durante la importación se pide una contraseña. Escriba `xyz` en el cuadro contraseña. Para obtener más información, consulte el tema [Cómo: ver certificados con el complemento MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Una vez hecho esto, ejecute setup. bat en un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador, que copia este certificado en el almacén CurrentUser/Trusted People para su uso en el cliente.
 
-2. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+2. En Windows Server 2003, ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
     > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat. Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  

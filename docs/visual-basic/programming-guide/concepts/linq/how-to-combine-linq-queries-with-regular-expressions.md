@@ -2,12 +2,12 @@
 title: 'Procedimiento para: Combinar consultas LINQ con expresiones regulares'
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348417"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337559"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Cómo combinar consultas LINQ con expresiones regulares (Visual Basic)
 
@@ -84,9 +84,9 @@ End Class
 
 Tenga en cuenta que también puede consultar el objeto <xref:System.Text.RegularExpressions.MatchCollection> devuelto por una búsqueda `RegEx`. En este ejemplo se genera solo el valor de cada coincidencia en los resultados. Pero también es posible usar LINQ para realizar todo tipo de filtrado, ordenación y agrupación en esa colección. Dado que <xref:System.Text.RegularExpressions.MatchCollection> no es una colección genérica <xref:System.Collections.IEnumerable>, tendrá que indicar explícitamente el tipo de la variable de rango en la consulta.
 
-## <a name="compiling-the-code"></a>Compilación del código
+## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de VB.NET, copie y pegue el ejemplo de código y ajuste el valor del objeto startup en las propiedades del proyecto.
+Cree un proyecto de aplicación de consola de Visual Basic, copie y pegue el ejemplo de código y ajuste el valor del objeto startup en las propiedades del proyecto.
 
 ## <a name="see-also"></a>Vea también
 

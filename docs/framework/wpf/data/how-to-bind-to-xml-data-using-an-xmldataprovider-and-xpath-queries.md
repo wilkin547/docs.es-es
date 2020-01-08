@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a5ad7d8bce9bc0a760868e483278d1836f9472af
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733552"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559708"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Cómo: Enlazar a datos XML mediante XMLDataProvider y consultas XPath
 En este ejemplo se muestra cómo enlazar a datos XML mediante una <xref:System.Windows.Data.XmlDataProvider>.  
@@ -26,7 +26,7 @@ En este ejemplo se muestra cómo enlazar a datos XML mediante una <xref:System.W
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Como se muestra en este ejemplo, para crear la misma declaración de enlace en la sintaxis de atributo es preciso crear caracteres de escape correctos para los caracteres especiales. Para más información, consulte [XML Character Entities and XAML](../../xaml-services/xml-character-entities-and-xaml.md) (Entidades de caracteres XML y XAML).  
+ Como se muestra en este ejemplo, para crear la misma declaración de enlace en la sintaxis de atributo es preciso crear caracteres de escape correctos para los caracteres especiales. Para más información, consulte [XML Character Entities and XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md) (Entidades de caracteres XML y XAML).  
   
  El <xref:System.Windows.Controls.ListBox> mostrará los siguientes elementos cuando se ejecute este ejemplo. Se trata de los elementos *Title* de todos los elementos que se encuentran bajo *Books* cuyo valor de *Stock* sea "*out*" o cuyo valor de *Number* sea 3 o mayor o igual que 8. Tenga en cuenta que no se devuelve ningún elemento de *CD* porque el valor de <xref:System.Windows.Data.XmlDataProvider.XPath%2A> establecido en el <xref:System.Windows.Data.XmlDataProvider> indica que solo se deben exponer los elementos de los *libros* (estableciendo un filtro en esencia).  
   
