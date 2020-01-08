@@ -4,12 +4,12 @@ description: En este artículo se le enseña cómo se crean versiones del entorn
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179957"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342911"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
@@ -32,7 +32,7 @@ La tercera posición del número de versión del SDK comunica tanto la versión 
 | Runtime y revisión del SDK | 2.2.1             | 2.2.102           |
 | Cambio de características del SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Este gráfico usa un runtime futuro (2.2) de .NET Core a modo de ejemplo, puesto que un artefacto histórico indica que el primer SDK de .NET Core 2.1 es el de la versión 2.1.300. Para obtener más información, consulte [.Selección de la versión de .NET Core](selection.md).
+(\*) En este gráfico se usa el entorno de ejecución 2.2 de .NET Core como ejemplo, ya que un artefacto histórico indica que el primer SDK de .NET Core 2.1 es el de la versión 2.1.300. Para obtener más información, consulte [.Selección de la versión de .NET Core](selection.md).
 
 NOTAS:
 
@@ -98,7 +98,7 @@ Las implementaciones de cada plataforma pueden actualizarse, normalmente como pa
 
 Cada versión de .NET Core implementa una versión de .NET Standard. Implementar una versión de .NET Standard implica la compatibilidad con versiones anteriores de .NET Standard. Versión de .NET standard y .NET Core por separado. Es una coincidencia que .NET Core 2.0 implemente .NET Standard 2.0. .NET Core 2.1 también implementa .NET Standard 2.0. .NET Core será compatible con versiones futuras de .NET Standard en cuanto estén disponibles.
 
-| Núcleo de .NET | .NET Standard |
+| .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | hasta la versión 1.6     |
 | 2.0       | hasta la versión 2.0     |

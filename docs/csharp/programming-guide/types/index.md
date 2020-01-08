@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: bf520c57f5578f82a0d00e4c7db40e43b308eddf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552496"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345666"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -68,7 +68,7 @@ C# proporciona un conjunto estándar de tipos numéricos integrados para represe
 
 ## <a name="custom-types"></a>Tipos personalizados
 
-Las construcciones [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) y [enum](../../language-reference/keywords/enum.md) se utilizan para crear sus propios tipos personalizados. La biblioteca de clases .NET es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. Para más información, vea [Biblioteca de clases .NET](../../../standard/class-library-overview.md).
+Las construcciones [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) y [enum](../../language-reference/builtin-types/enum.md) se utilizan para crear sus propios tipos personalizados. La biblioteca de clases .NET es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. Para más información, vea [Biblioteca de clases .NET](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Common Type System
 
@@ -91,7 +91,7 @@ En la imagen siguiente se muestran tipos de valores y tipos de referencias en CT
 
 Los tipos de valor derivan de <xref:System.ValueType?displayProperty=nameWithType>, el cual deriva de <xref:System.Object?displayProperty=nameWithType>. Los tipos que derivan de <xref:System.ValueType?displayProperty=nameWithType> tienen un comportamiento especial en CLR. Las variables de tipo de valor contienen directamente sus valores, lo que significa que la memoria se asigna insertada en cualquier contexto en el que se declare la variable. No se produce ninguna asignación del montón independiente ni sobrecarga de la recolección de elementos no utilizados para las variables de tipo de valor.
 
-Existen dos categorías de tipos de valor: [struct](../../language-reference/keywords/struct.md) y [enum](../../language-reference/keywords/enum.md).
+Existen dos categorías de tipos de valor: [struct](../../language-reference/keywords/struct.md) y [enum](../../language-reference/builtin-types/enum.md).
 
 Los tipos numéricos integrados son structs y tienen propiedades y métodos a los que se puede obtener acceso:
 
@@ -116,13 +116,13 @@ Puede usar la palabra clave [struct](../../language-reference/keywords/struct.md
 
 Para más información sobre estructuras, vea [Structs](../classes-and-structs/structs.md). Para más información sobre los tipos de valor en. NET, vea [Tipos de valor](../../language-reference/keywords/value-types.md).
 
-La otra categoría de tipos de valor es [enum](../../language-reference/keywords/enum.md). Una enumeración define un conjunto de constantes integrales con nombre. Por ejemplo, la enumeración <xref:System.IO.FileMode?displayProperty=nameWithType> de la biblioteca de clases .NET contiene un conjunto de enteros constantes con nombre que especifican cómo se debe abrir un archivo. Se define como se muestra en el ejemplo siguiente:
+La otra categoría de tipos de valor es [enum](../../language-reference/builtin-types/enum.md). Una enumeración define un conjunto de constantes integrales con nombre. Por ejemplo, la enumeración <xref:System.IO.FileMode?displayProperty=nameWithType> de la biblioteca de clases .NET contiene un conjunto de enteros constantes con nombre que especifican cómo se debe abrir un archivo. Se define como se muestra en el ejemplo siguiente:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-La constante `System.IO.FileMode.Create` tiene un valor de 2. Sin embargo, el nombre es mucho más significativo para los humanos que leen el código fuente y, por esa razón, es mejor utilizar enumeraciones en lugar de números literales constantes. Para más información, consulte <xref:System.IO.FileMode?displayProperty=nameWithType>.
+La constante `System.IO.FileMode.Create` tiene un valor de 2. Sin embargo, el nombre es mucho más significativo para los humanos que leen el código fuente y, por esa razón, es mejor utilizar enumeraciones en lugar de números literales constantes. Para obtener más información, vea <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Todas las enumeraciones se heredan de <xref:System.Enum?displayProperty=nameWithType>, el cual se hereda de <xref:System.ValueType?displayProperty=nameWithType>. Todas las reglas que se aplican a las estructuras también se aplican a las enumeraciones. Para más información sobre las enumeraciones, vea [Tipos de enumeración](../enumeration-types.md).
+Todas las enumeraciones se heredan de <xref:System.Enum?displayProperty=nameWithType>, el cual se hereda de <xref:System.ValueType?displayProperty=nameWithType>. Todas las reglas que se aplican a las estructuras también se aplican a las enumeraciones. Para más información sobre las enumeraciones, vea [Tipos de enumeración](../../language-reference/builtin-types/enum.md).
 
 ### <a name="reference-types"></a>Tipos de referencia
 

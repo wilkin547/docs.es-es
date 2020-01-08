@@ -3,12 +3,12 @@ title: SDK de .NET Compiler Platform (API de Roslyn)
 description: Aprenda a usar el SDK de .NET Compiler Platform (también denominado API de Roslyn) para comprender el código. NET, detectar errores y corregir dichos errores.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706551"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346949"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>SDK de .NET Compiler Platform
 
@@ -17,7 +17,7 @@ En lugar de actuar como traductores opacos de código fuente de entrada en códi
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>Conceptos del SDK de .NET Compiler Platform
 
-El SDK de .NET Compiler Platform reduce notablemente la barrera de entrada para crear herramientas y aplicaciones centradas en código. Crea numerosas oportunidades para la innovación en áreas como metaprogramación, generación y transformación de código, uso interactivo de los lenguajes C# y VB e incrustación de C# y VB en lenguajes específicos de dominio.
+El SDK de .NET Compiler Platform reduce notablemente la barrera de entrada para crear herramientas y aplicaciones centradas en código. Crea numerosas oportunidades para la innovación en áreas como la metaprogramación, la generación y la transformación de código, el uso interactivo de los lenguajes C# y Visual Basic, y la inserción de C# y Visual Basic en lenguajes específicos del dominio.
 
 El SDK de .NET Compiler Platform le permite crear ***analizadores*** y ***correcciones de código*** que buscan y corrigen errores de codificación. Los ***analizadores*** comprenden la sintaxis y la estructura del código y detectan las prácticas que se deben corregir. Las ***correcciones de código*** sugieren una o varias correcciones para tratar los errores de codificación que los analizadores encuentran. Por lo general, un analizador y las correcciones de código asociadas se empaquetan conjuntamente en un solo proyecto.
 

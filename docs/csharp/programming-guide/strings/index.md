@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46820fe4137f5080b956cd1345d3e95c2e06f9ca
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969717"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635085"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -125,11 +125,11 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadenas, métodos de extensión y LINQ  
- Dado que el tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, puede usar los métodos de extensión definidos en la clase <xref:System.Linq.Enumerable> en cadenas. Para evitar el desorden visual, estos métodos se excluyen de IntelliSense para el tipo <xref:System.String>, pero aun así están disponibles. También puede utilizar expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en cadenas. Para más información, consulte [LINQ and Strings](../concepts/linq/linq-and-strings.md) (LINQ y cadenas).  
+ Dado que el tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, puede usar los métodos de extensión definidos en la clase <xref:System.Linq.Enumerable> en cadenas. Para evitar el desorden visual, estos métodos se excluyen de IntelliSense para el tipo <xref:System.String>, pero aun así están disponibles. También puede usar expresiones de consulta LINQ en cadenas. Para más información, consulte [LINQ and Strings](../concepts/linq/linq-and-strings.md) (LINQ y cadenas).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Tema|DESCRIPCIÓN|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[How to modify string contents](../../how-to/modify-string-contents.md) (Cómo modificar contenido de cadenas)|Muestra técnicas para transformar cadenas y modificar el contenido de estas.|  
 |[Comparación de cadenas](../../how-to/compare-strings.md)|Muestra cómo realizar comparaciones ordinales y culturales específicas de las cadenas.|  

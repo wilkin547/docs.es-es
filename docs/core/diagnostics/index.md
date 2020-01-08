@@ -3,14 +3,14 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 author: sdmaclea
 ms.author: stmaclea
-ms.date: 10/14/2019
+ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 20374c53769bf19901b042e0909175718665b523
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318348"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341480"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -43,3 +43,9 @@ La herramienta [dotnet-dump](dotnet-dump.md) permite recopilar y analizar los vo
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core incluye lo que se denomina `EventPipe`, a través del cual se exponen los datos de diagnóstico. La herramienta [dotnet-trace](dotnet-trace.md) permite consumir datos interesantes sobre la generación de perfiles a partir de su aplicación, lo cual puede resultar útil para analizar la causa principal de que una aplicación se ejecute con lentitud.
+
+## <a name="net-core-diagnostics-tutorials"></a>Tutoriales de diagnóstico de .NET Core
+
+### <a name="debug-a-memory-leak"></a>Depuración de una fuga de memoria
+
+[Tutorial: Depuración de una fuga de memoria](debug-memory-leak.md) le guía a través de la búsqueda de una fuga de memoria. La herramienta [dotnet-counters](dotnet-counters.md) se usa para confirmar la fuga, y la herramienta [dotnet-dump](dotnet-dump.md), para diagnosticarla.

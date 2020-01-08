@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 08357017a29f05c11e316e037497b1ee24d06eff
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523485"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634981"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Comentarios de documentación XML (Guía de programación de C#)
 En Visual C# puede crear documentación para el código incluyendo elementos XML en campos de comentario especiales (se indica con barras diagonales triples) en el código fuente directamente delante del bloque de código al que hacen referencia los comentarios, por ejemplo:  
@@ -44,7 +44,7 @@ public class MyClass {}
   
 - [Delimitadores para etiquetas de documentación](./delimiters-for-documentation-tags.md)  
   
-- [Cómo: Usar las características de documentación XML](./how-to-use-the-xml-documentation-features.md)  
+- [Procedimiento para usar las características de la documentación XML](./how-to-use-the-xml-documentation-features.md)
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información, consulte:  

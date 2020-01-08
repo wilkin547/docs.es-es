@@ -19,7 +19,7 @@
             - name: Libro electrónico sobre la arquitectura de microservicios de .NET
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: Nativo en la nube
+            - name: Compatibilidad nativa para la nube
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: Libro electrónico sobre la modernización de aplicaciones .NET
@@ -66,6 +66,9 @@
             - name: Desarrollo para varias plataformas con .NET
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
+            - name: Microsoft.Data.Sqlite
+              tocHref: /dotnet/standard/data/sqlite/
+              topicHref: /dotnet/standard/data/sqlite/index
             - name: Documentos y datos XML
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
@@ -223,7 +226,7 @@
                     - name: "Sección de configuración de Windows\_Forms"
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: Datos y modelado en .NET Framework
+            - name: Datos y modelado
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -281,13 +284,13 @@
             - name: Compilación de aplicaciones con .NET Native
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: Programación para redes en .NET Framework
+            - name: Programación para redes
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: Rendimiento de .NET Framework
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: Programación dinámica en .NET Framework
+            - name: Programación dinámica
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: Recursos de aplicaciones de escritorio
@@ -473,7 +476,7 @@
                 - name: Delegados
                   tocHref: /dotnet/csharp/programming-guide/delegates/
                   topicHref: /dotnet/csharp/programming-guide/delegates/index
-                - name: Eventos
+                - name: Events
                   tocHref: /dotnet/csharp/programming-guide/events/
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: Excepciones y control de excepciones
@@ -652,7 +655,7 @@
                 - name: Enlace anticipado y en tiempo de ejecución
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/index
-                - name: Eventos
+                - name: Events
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/events/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/events/index
                 - name: LINQ

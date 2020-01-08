@@ -7,13 +7,13 @@
   items:
     - name: 'Instalación de F#'
       href: get-started/install-fsharp.md
-    - name: 'Introducción a F# en Visual Studio'
+    - name: "F# en Visual\_Studio"
       href: get-started/get-started-visual-studio.md
-    - name: "Introducción a F# en Visual\_Studio Code"
+    - name: "F# en Visual\_Studio Code"
       href: get-started/get-started-vscode.md
-    - name: 'Introducción a F# con la CLI de .NET Core'
+    - name: 'F# con la CLI de .NET Core'
       href: get-started/get-started-command-line.md
-    - name: 'Introducción a F# en Visual Studio para Mac'
+    - name: "F# en Visual\_Studio para Mac"
       href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'Paseo por F#'
   href: tour.md

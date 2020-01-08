@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120157"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635241"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
@@ -62,17 +62,17 @@ Una interfaz tiene las propiedades siguientes:
 [Implementación de interfaz explícita](explicit-interface-implementation.md)  
  Explica cómo crear un miembro de clase que es específico de una interfaz.  
   
- [Cómo: Implementar explícitamente miembros de interfaz](how-to-explicitly-implement-interface-members.md)  
+ [Procedimiento para implementar miembros de interfaz de forma explícita](how-to-explicitly-implement-interface-members.md)  
  Proporciona un ejemplo de cómo implementar explícitamente miembros de interfaces.  
   
- [Cómo: Implementar explícitamente miembros de dos interfaces](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Procedimiento para implementar miembros de dos interfaces de forma explícita](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Proporciona un ejemplo de cómo implementar explícitamente miembros de interfaces con herencia.  
   
 ## <a name="BKMK_RelatedSections"></a> Secciones relacionadas
 
 - [Propiedades de interfaz](../classes-and-structs/interface-properties.md)  
 - [Indizadores en Interfaces](../indexers/indexers-in-interfaces.md)  
-- [Cómo:  Implementar eventos de interfaz](../events/how-to-implement-interface-events.md)  
+- [Procedimiento para implementar eventos de interfaz](../events/how-to-implement-interface-events.md)
 - [Clases y structs](../classes-and-structs/index.md)  
 - [Herencia](../classes-and-structs/inheritance.md)  
 - [Métodos](../classes-and-structs/methods.md)  

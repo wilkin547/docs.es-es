@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ca660e6485c492ea7883503be4a98e1b7000427a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423308"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346361"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guía de programación de C#)
 Un [delegado](../../language-reference/builtin-types/reference-types.md) es un tipo que representa referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Cuando se crea una instancia de un delegado, puede asociar su instancia a cualquier método mediante una signatura compatible y un tipo de valor devuelto. Puede invocar (o llamar) al método a través de la instancia del delegado.  
@@ -52,9 +52,9 @@ Un [delegado](../../language-reference/builtin-types/reference-types.md) es un t
   
 - [Uso de varianza en delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Cómo: Combinar delegados (delegados de multidifusión)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Procedimiento para combinar delegados (delegados de multidifusión)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Cómo: Declarar un delegado, crear instancias del mismo y utilizarlo](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Procedimiento para declarar un delegado, crear instancias del mismo y usarlo](./how-to-declare-instantiate-and-use-a-delegate.md)
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 

@@ -1,0 +1,59 @@
+- name: Información general
+  href: index.md
+- name: Cadenas de conexión
+  href: connection-strings.md
+- name: Tipos de datos
+  href: types.md
+- name: Parámetros
+  href: parameters.md
+- name: Errores de base de datos
+  displayName: 'Busy, locked, retries, timeouts'
+  href: database-errors.md
+- name: Transacciones
+  href: transactions.md
+- name: Procesamiento por lotes
+  href: batching.md
+- name: Metadatos
+  href: metadata.md
+- name: Características de SQLite
+  items:
+    - name: Bases de datos en memoria
+      href: in-memory-databases.md
+    - name: Cifrado
+      href: encryption.md
+    - name: Copia de seguridad en línea
+      href: backup.md
+    - name: Funciones definidas por el usuario
+      displayName: UDFs
+      href: user-defined-functions.md
+    - name: Versiones personalizadas de SQLite
+      href: custom-versions.md
+    - name: Collation
+      href: collation.md
+    - name: E/S de blob
+      displayName: Streams
+      href: blob-io.md
+    - name: Interoperabilidad
+      href: interop.md
+    - name: Extensiones
+      href: extensions.md
+- name: Limitaciones
+  items:
+    - name: ADO.NET
+      href: adonet-limitations.md
+    - name: Async
+      href: async.md
+    - name: Inserción masiva
+      href: bulk-insert.md
+    - name: Entity Framework Core
+      href: /ef/core/providers/sqlite/limitations
+    - name: Dapper
+      href: dapper-limitations.md
+    - name: System.Data.SQLite
+      href: compare.md
+    - name: Xamarin
+      href: xamarin.md
+- name: Referencia de API >>
+  href: /dotnet/api/?view=msdata-sqlite-3.0.0
+- name: Sintaxis SQL >>
+  href: 'https://www.sqlite.org/lang.html'

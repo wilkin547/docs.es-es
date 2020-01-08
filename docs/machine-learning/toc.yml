@@ -46,7 +46,7 @@
         - name: Predicción de los precios (generador de modelos y regresión)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Análisis de opiniones mediante la CLI de ML.NET
-          href: tutorials/mlnet-cli.md
+          href: tutorials/sentiment-analysis-cli.md
         - name: Análisis de opiniones en Razor Pages (generador de modelos y clasificación binaria)
           href: tutorials/sentiment-analysis-model-builder.md
         - name: Categorización de infracciones de estado (generador de modelos y clasificación multiclase)
@@ -57,13 +57,13 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: Conceptos
   items:
-    - name: Tareas de ML.NET (tipos de modelo)
+    - name: Tareas de ML.NET
       href: resources/tasks.md
     - name: Algoritmos
       href: how-to-choose-an-ml-net-algorithm.md
     - name: Transformaciones de datos
       href: resources/transforms.md
-    - name: Métricas
+    - name: Métricas de evaluación de modelos
       href: resources/metrics.md
     - name: Mejora de la precisión del modelo
       href: resources/improve-machine-learning-model-ml-net.md

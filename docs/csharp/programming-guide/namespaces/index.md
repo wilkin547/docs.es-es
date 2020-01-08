@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 8a03baffc17da07ccab14c89dc9f99be2fc5ba1a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039489"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635215"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espacios de nombres (Guía de programación de C#)
 
@@ -50,7 +50,7 @@ Para más información, vea la sección [Espacio de nombres](~/_csharplang/spec/
 
 - [Guía de programación de C#](../index.md)
 - [Utilizar espacios de nombres](using-namespaces.md)
-- [Cómo: Utilizar el espacio de nombres My](how-to-use-the-my-namespace.md)
+- [Procedimiento para usar el espacio de nombres My](how-to-use-the-my-namespace.md)
 - [Nombres de identificador](../inside-a-program/identifier-names.md)
 - [using (directiva)](../../language-reference/keywords/using-directive.md)
 - [:: !](../../language-reference/operators/namespace-alias-qualifier.md)

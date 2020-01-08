@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 560218361f470266654734971a12de7862722a46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64fac0245dcf5976786b51e0d96b795b8b1e5d68
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423176"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635202"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidad (Guía de programación de C#)
 La interoperabilidad permite conservar y aprovechar las inversiones existentes en código no administrado. El código que se ejecuta bajo el control de Common Language Runtime (CLR) se denomina *código administrado*, y el código que se ejecuta fuera de CLR se denomina *código no administrado*. COM, COM+, los componentes de C++, los componentes de ActiveX y la API Windows de Microsoft son ejemplos de código no administrado.  
@@ -24,13 +24,13 @@ La interoperabilidad permite conservar y aprovechar las inversiones existentes e
  [Información general sobre interoperabilidad](./interoperability-overview.md)  
  Se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
   
- [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](./how-to-access-office-onterop-objects.md)  
+ [Procedimiento para acceder a objetos de interoperabilidad de Office mediante características de C#](./how-to-access-office-onterop-objects.md)  
  Describe las características introducidas en Visual C# para facilitar la programación de Office.  
   
- [Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Procedimiento para usar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Se describe cómo utilizar las propiedades indizadas para acceder a las propiedades de COM que tienen parámetros.  
   
- [Cómo: Utilizar la invocación de plataforma para reproducir un archivo de sonido](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [Procedimiento para usar la invocación de plataforma para reproducir un archivo WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Se describe cómo usar los servicios de invocación de plataforma para reproducir un archivo de sonido .wav en el sistema operativo Windows.  
   
  [Tutorial: Programación de Office](./walkthrough-office-programming.md)  
