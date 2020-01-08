@@ -1,5 +1,7 @@
 - name: Pantalla de inicio
   href: welcome.md
+- name: Novedades de la documentación de .NET
+  href: whats-new/index.yml
 - name: Guía de .NET
   href: standard/
 - name: Guía de .NET Core

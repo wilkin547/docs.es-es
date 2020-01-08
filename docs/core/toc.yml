@@ -16,11 +16,11 @@
       href: install/how-to-detect-installed-versions.md
     - name: Administradores de paquetes de Linux
       items:
-        - name: RHEL 7
+        - name: "RHEL\_7"
           href: install/linux-package-manager-rhel7.md
         - name: "RHEL\_8.1"
           href: install/linux-package-manager-rhel81.md
-        - name: Ubuntu 16.04
+        - name: "Ubuntu\_16.04"
           href: install/linux-package-manager-ubuntu-1604.md
         - name: Ubuntu 18.04
           href: install/linux-package-manager-ubuntu-1804.md
@@ -38,27 +38,27 @@
           href: install/linux-package-manager-centos7.md
         - name: "OpenSUSE\_15"
           href: install/linux-package-manager-opensuse15.md
-        - name: SLES 12
+        - name: "SLES\_12"
           href: install/linux-package-manager-sles12.md
-        - name: SLES 15
+        - name: "SLES\_15"
           href: install/linux-package-manager-sles15.md
+    - name: Instalación de una versión localizada de IntelliSense
+      href: install/localized-intellisense.md
 - name: Primeros pasos
   href: get-started.md
   items:
     - name: 'Introducción a C# y Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: "Compilación de una aplicación Hola mundo en C# Core en Visual\_Studio"
+    - name: "Introducción a .NET Core en macOS con Visual\_Studio Code"
+      href: tutorials/using-on-macos.md
+    - name: "Creación de su primera aplicación en Visual\_Studio"
       href: tutorials/with-visual-studio.md
-    - name: "Compilación de una aplicación Hola mundo en Visual\_Basic Core en Visual\_Studio"
-      href: tutorials/vb-with-visual-studio.md
     - name: "Depuración de una aplicación con Visual\_Studio"
       href: tutorials/debugging-with-visual-studio.md
     - name: "Publicación de una aplicación con Visual\_Studio"
       href: tutorials/publishing-with-visual-studio.md
-    - name: "Compilación de una biblioteca de .NET Standard con C# en Visual\_Studio"
+    - name: "Creación de una biblioteca de .NET Standard en Visual\_Studio"
       href: tutorials/library-with-visual-studio.md
-    - name: "Compilación de una biblioteca de .NET Standard con Visual\_Basic en Visual\_Studio"
-      href: tutorials/vb-library-with-visual-studio.md
     - name: "Prueba de una biblioteca de .NET Standard en Visual\_Studio"
       href: tutorials/testing-library-with-visual-studio.md
     - name: "Consumo de una biblioteca de .NET Standard en Visual\_Studio"
@@ -89,8 +89,6 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - Crear un paquete de plantillas
           href: tutorials/cli-templates-create-template-pack.md
-    - name: Introducción a .NET Core en macOS
-      href: tutorials/using-on-macos.md
     - name: "Introducción a .NET Core\_con Visual\_Studio para Mac"
       href: tutorials/using-on-mac-vs.md
     - name: "Compilación de una solución completa de .NET\_Core en macOS"
@@ -183,6 +181,10 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
+    - name: Tutoriales de diagnóstico de .NET Core
+      items:
+        - name: Depuración de una fuga de memoria
+          href: diagnostics/debug-memory-leak.md
 - name: Pruebas unitarias
   href: testing/index.md
   items:
@@ -326,6 +328,8 @@
 - name: Herramientas adicionales de .NET Core
   href: additional-tools/index.md
   items:
+    - name: Herramienta de desinstalación de .NET Core
+      href: additional-tools/uninstall-tool.md
     - name: Proveedor de WCF Web Service Reference
       href: additional-tools/wcf-web-service-reference-guide.md
     - name: dotnet-svcutil
