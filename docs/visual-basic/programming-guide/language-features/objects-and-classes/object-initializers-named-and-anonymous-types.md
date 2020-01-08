@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346129"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636814"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: Tipos con nombre y anónimos (Visual Basic)
 Los inicializadores de objeto permiten especificar propiedades para un objeto complejo mediante el uso de una sola expresión. Se pueden usar para crear instancias de tipos con nombre y de tipos anónimos.  
@@ -105,7 +105,7 @@ Los inicializadores de objeto permiten especificar propiedades para un objeto co
   
  Dado que el nombre del tipo no está disponible, no se puede usar una cláusula `As` para declarar `cust13`. Se debe inferir su tipo. Sin usar el enlace en tiempo de ejecución, esto limita el uso de tipos anónimos a variables locales.  
   
- Los tipos anónimos proporcionan compatibilidad crítica para las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información sobre el uso de tipos anónimos en las consultas, vea [tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Los tipos anónimos proporcionan compatibilidad crítica para las consultas LINQ. Para obtener más información sobre el uso de tipos anónimos en las consultas, vea [tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Comentarios acerca de los tipos anónimos  
   

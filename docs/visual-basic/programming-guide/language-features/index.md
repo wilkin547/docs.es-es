@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345067"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636580"
 ---
 # <a name="visual-basic-language-features"></a>Características del lenguaje Visual Basic
 En los temas siguientes se presentan y describen los componentes esenciales de Visual Basic, un lenguaje de programación orientado a objetos. Después de crear la interfaz de usuario para su aplicación con formularios y controles, debe escribir el código que define el comportamiento de la aplicación. Como con cualquier lenguaje de programación moderno, Visual Basic admite una serie de elementos de lenguaje y construcciones de programación comunes.  
@@ -54,7 +54,7 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
  Describe qué son las interfaces y cómo usarlas en las aplicaciones.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Proporciona vínculos a temas que presentan la programación y las características de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+ Proporciona vínculos a temas que presentan características de Language-Integrated Query (LINQ) y programación.  
   
  [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Proporciona información general sobre objetos y clases, cómo se utilizan, las relaciones que mantienen entre sí y las propiedades, los métodos y los eventos que exponen.  

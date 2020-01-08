@@ -2,17 +2,17 @@
 title: 'Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 325609b9f8cf1feebcb4be1fcfd0122e12100156
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332453"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636697"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Cómo: hacer streaming de fragmentos XML con acceso a información de encabezado (Visual Basic)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
   
- Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>. Pero quizás prefiera usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, vea [Cómo: escribir un método de eje de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>. Sin embargo, es posible que desee usar LINQ para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, vea [Cómo: escribir un método de eje de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Para escribir su propio método de eje, debe escribir un pequeño método que utiliza los nodos <xref:System.Xml.XmlReader> para leer hasta que llega a uno de los nodos en el que está interesado. A continuación el método llama a <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de <xref:System.Xml.XmlReader> y crea una instancia de un fragmento XML. A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346701"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344637"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 
@@ -71,7 +71,7 @@ warningLabel.Text = "Data not saved"
 
 #### <a name="intellisense-listing-of-members"></a>Lista de miembros de IntelliSense
 
-IntelliSense muestra los miembros de una clase cuando invoca su opción Lista de miembros, por ejemplo, al escribir un punto (`.`) como un operador de acceso a miembros. Si escribe el punto después del nombre de una variable declarada como una instancia de esa clase, IntelliSense muestra todos los miembros de instancia y ningún miembro compartido. Si escribe el punto después del nombre de clase, IntelliSense muestra todos los miembros compartidos y ningún miembro de instancia. Para obtener más información, vea [Using IntelliSense](/visualstudio/ide/using-intellisense).
+IntelliSense muestra los miembros de una clase cuando invoca su opción Lista de miembros, por ejemplo, al escribir un punto (`.`) como un operador de acceso a miembros. Si escribe el punto después del nombre de una variable declarada como una instancia de esa clase, IntelliSense muestra todos los miembros de instancia y ningún miembro compartido. Si escribe el punto después del nombre de clase, IntelliSense muestra todos los miembros compartidos y ningún miembro de instancia. Para obtener más información, vea [Usar IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="fields-and-properties"></a>Campos y propiedades
 
@@ -121,11 +121,11 @@ Tenga en cuenta que un método es simplemente un *procedimiento* que se expone m
 
 Para más información, vea [Procedimientos en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>eventos
 
 Un evento es una acción reconocida por un objeto, como hacer clic con el ratón o presionar una tecla, para la que puede escribir código para que responda. Los eventos pueden producirse como resultado de una acción del usuario o código de programa, o puede provocarlos el sistema. Se dice que el código que señala un evento *genera* el evento y el código que responde a él se dice que lo *controla*.
 
-También puede desarrollar sus propios eventos personalizados para que los generen sus objetos y los controlen otros objetos. Para obtener más información, consulta [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).
+También puede desarrollar sus propios eventos personalizados para que los generen sus objetos y los controlen otros objetos. Para más información, vea [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).
 
 ### <a name="instance-members-and-shared-members"></a>Miembros de instancia y miembros compartidos
 
@@ -239,7 +239,7 @@ En el ejemplo siguiente, suponga que quiere definir un tipo especial de <xref:Sy
 
 Las clases derivadas heredan miembros de la clase en que se basan, lo que permite agregar complejidad a medida que progresa en una jerarquía de clases. Para más información, vea [Fundamentos de la herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-### <a name="compiling-the-code"></a>Compilación del código
+### <a name="compile-the-code"></a>Compilar el código
 
 Asegúrese de que el compilador puede tener acceso a la clase de la que pretende derivar la nueva clase. Esto puede conllevar su nombre completo, como en el ejemplo anterior, o la identificación de su espacio de nombres en una [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Si la clase está en un proyecto diferente, tendrá que agregar una referencia a ese proyecto. Para más información, vea [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project).
 
@@ -265,7 +265,7 @@ Se tratan los modificadores de herencia, con la sustitución de métodos y propi
 [Duración de los objetos: cómo se crean y destruyen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
 Describe cómo crear y eliminar instancias de clase.
 
-[Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\ (Tipos anónimos [Guía de programación de C#])
+[Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
 Describe cómo crear y usar tipos anónimos que permiten crear objetos sin escribir una definición de clase para el tipo de datos.
 
 [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\

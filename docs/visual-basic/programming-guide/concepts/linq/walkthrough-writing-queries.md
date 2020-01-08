@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351017"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636762"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 
-En este tutorial se muestra cómo se pueden usar las características del lenguaje Visual Basic para escribir expresiones de consulta de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. En el tutorial se muestra cómo crear consultas en una lista de objetos de estudiante, cómo ejecutar las consultas y cómo modificarlas. Las consultas incorporan varias características, como inicializadores de objeto, inferencia de tipo local y tipos anónimos.
+En este tutorial se muestra cómo puede usar las características del lenguaje Visual Basic para escribir expresiones de consulta de Language-Integrated Query (LINQ). En el tutorial se muestra cómo crear consultas en una lista de objetos de estudiante, cómo ejecutar las consultas y cómo modificarlas. Las consultas incorporan varias características, como inicializadores de objeto, inferencia de tipo local y tipos anónimos.
 
-Después de completar este tutorial, estará listo para pasar a los ejemplos y la documentación del proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] específico que le interese. entre los proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se incluyen [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+Después de completar este tutorial, estará listo para pasar a los ejemplos y la documentación del proveedor LINQ específico que le interese. Los proveedores LINQ incluyen [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Crear un proyecto
 
@@ -123,7 +123,7 @@ Es más fácil analizar los resultados de la consulta si están en un orden espe
 
 ### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Para crear un tipo anónimo en la cláusula SELECT
 
-1. Agregue el código de esta sección para ver cómo se usan los tipos anónimos en las consultas. Se usan en consultas cuando se desea devolver varios campos del origen de datos en lugar de registros completos (`currentStudent` registros en ejemplos anteriores) o campos individuales (`First` en la sección anterior). En lugar de definir un nuevo tipo con nombre que contenga los campos que desea incluir en el resultado, especifique los campos en la cláusula `Select` y el compilador creará un tipo anónimo con esos campos como sus propiedades. Para obtener más información, vea [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+1. Agregue el código de esta sección para ver cómo se usan los tipos anónimos en las consultas. Se usan en consultas cuando se desea devolver varios campos del origen de datos en lugar de registros completos (`currentStudent` registros en ejemplos anteriores) o campos individuales (`First` en la sección anterior). En lugar de definir un nuevo tipo con nombre que contenga los campos que desea incluir en el resultado, especifique los campos en la cláusula `Select` y el compilador creará un tipo anónimo con esos campos como sus propiedades. Para obtener más información, consulte [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).
 
     En el ejemplo siguiente se crea una consulta que devuelve el nombre y el rango de los directivos cuyo rango académico está entre 1 y 10, en el orden de los rangos académicos. En este ejemplo, el tipo de `studentQuery4` se debe inferir porque la cláusula `Select` devuelve una instancia de un tipo anónimo y un tipo anónimo no tiene ningún nombre utilizable.
 
@@ -133,13 +133,13 @@ Es más fácil analizar los resultados de la consulta si están en un orden espe
 
 ## <a name="additional-examples"></a>Ejemplos adicionales
 
-Ahora que comprende los conceptos básicos, a continuación se muestra una lista de ejemplos adicionales para ilustrar la flexibilidad y la eficacia de las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Cada ejemplo va precedido de una breve descripción de lo que hace. Sitúe el puntero del mouse sobre la variable de resultado de la consulta para cada consulta para ver el tipo deducido. Use un bucle `For Each` para generar los resultados.
+Ahora que comprende los conceptos básicos, a continuación se muestra una lista de ejemplos adicionales para ilustrar la flexibilidad y la eficacia de las consultas de LINQ. Cada ejemplo va precedido de una breve descripción de lo que hace. Sitúe el puntero del mouse sobre la variable de resultado de la consulta para cada consulta para ver el tipo deducido. Use un bucle `For Each` para generar los resultados.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Información adicional
 
-Una vez que esté familiarizado con los conceptos básicos sobre cómo trabajar con consultas, está listo para leer la documentación y los ejemplos del tipo específico de proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en el que está interesado:
+Una vez que esté familiarizado con los conceptos básicos sobre cómo trabajar con consultas, está listo para leer la documentación y los ejemplos del tipo específico de proveedor LINQ que le interesa:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

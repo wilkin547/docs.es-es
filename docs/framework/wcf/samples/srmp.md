@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716692"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345147"
 ---
 # <a name="srmp"></a>SRMP
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ) a través de HTTP.  
@@ -28,7 +28,7 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
   
 5. Si desea asegurarse de que HTTP se utiliza para la comunicación, puede permitirle a MSMQ ejecutarse en modo endurecido. Esto asegurar que ningún mensaje dirigido a cualquier cola hospedada en el equipo puede llegar utilizando cualquier transporte no HTTP.  
   
-6. Después de haber seleccionado MSMQ para ejecutarse en modo endurecido, el equipo requiere un reinicio en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Después de haber seleccionado MSMQ para que se ejecute en modo protegido, el equipo requiere un reinicio en Windows Server 2003.  
   
 7. Ejecute el servicio.  
   

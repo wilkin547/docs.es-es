@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837966"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345558"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes
 Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que no se han podido entregar se graban en una cola de mensajes no enviados. Los errores en la entrega pueden deberse a motivos como errores de la red, una cola eliminada, una cola completa, error de autenticación o un error para entregar a tiempo.  
@@ -23,7 +23,7 @@ Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que 
   
  La cola de mensajes no enviados personalizada proporciona aislamiento entre los clientes que comparten el mismo servicio de MSMQ para enviar los mensajes.  
   
- En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) proporciona una cola de mensajes no enviados en todo el sistema para todas las aplicaciones cliente en cola. En Windows Vista, WCF proporciona una cola de mensajes no enviados para cada aplicación cliente en cola.  
+ En Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) proporciona una cola de mensajes no enviados en todo el sistema para todas las aplicaciones cliente en cola. En Windows Vista, WCF proporciona una cola de mensajes no enviados para cada aplicación cliente en cola.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Especificar el uso de la cola de mensajes no enviados  
  Una cola de mensajes no enviados está en el administrador de cola de la aplicación emisora. Almacena mensajes que han expirado o que han producido un error en la transferencia o entrega.  

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353514"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636866"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Características de Visual Basic que admiten LINQ
-El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referencia a la tecnología de Visual Basic que admite la sintaxis de consulta y otras construcciones de lenguaje directamente en el lenguaje. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no tiene que aprender un nuevo lenguaje para realizar consultas en un origen de datos externo. Puede realizar consultas en los datos de bases de datos relacionales, almacenes XML u objetos mediante Visual Basic. Esta integración de funcionalidades de consulta en el lenguaje habilita la comprobación en tiempo de compilación para detectar errores de sintaxis y seguridad de tipos. Esta integración también garantiza que ya conoce la mayor parte de lo que tiene que saber para escribir consultas enriquecidas y variadas en Visual Basic.  
+El nombre Language-Integrated Query (LINQ) hace referencia a la tecnología de Visual Basic que admite la sintaxis de consulta y otras construcciones de lenguaje directamente en el lenguaje. Con LINQ, no tiene que aprender un nuevo lenguaje para realizar consultas en un origen de datos externo. Puede realizar consultas en los datos de bases de datos relacionales, almacenes XML u objetos mediante Visual Basic. Esta integración de funcionalidades de consulta en el lenguaje habilita la comprobación en tiempo de compilación para detectar errores de sintaxis y seguridad de tipos. Esta integración también garantiza que ya conoce la mayor parte de lo que tiene que saber para escribir consultas enriquecidas y variadas en Visual Basic.  
   
  En las secciones siguientes se describen las construcciones del lenguaje que admiten LINQ con suficiente detalle para que pueda empezar a leer la documentación introductoria, ejemplos de código y aplicaciones de ejemplo. También puede hacer clic en los vínculos para buscar explicaciones más detalladas sobre cómo se unen las características del lenguaje para habilitar la consulta integrada en el lenguaje. Un buen punto de partida es [Tutorial: escribir consultas en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -53,10 +53,10 @@ El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referenci
   
  [!code-vb[VbLINQVbFeatures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#5)]  
   
- Para obtener más información, vea [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ Para obtener más información, consulte [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).  
   
-## <a name="extension-methods"></a>Métodos de extensión  
- Los métodos de extensión permiten agregar métodos a un tipo de datos o una interfaz desde fuera de la definición. Esta característica permite, de hecho, agregar nuevos métodos a un tipo existente sin modificar realmente el tipo. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] funcionalidad de consulta para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>. Otras extensiones para <xref:System.Collections.Generic.IEnumerable%601> incluyen <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>y <xref:System.Linq.Enumerable.Intersect%2A>.  
+## <a name="extension-methods"></a>Métodos de extensión.  
+ Los métodos de extensión permiten agregar métodos a un tipo de datos o una interfaz desde fuera de la definición. Esta característica permite, de hecho, agregar nuevos métodos a un tipo existente sin modificar realmente el tipo. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan la funcionalidad de consulta LINQ para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>. Otras extensiones para <xref:System.Collections.Generic.IEnumerable%601> incluyen <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>y <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  El método de extensión siguiente agrega un método de impresión a la clase <xref:System.String>.  
   
@@ -66,7 +66,7 @@ El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referenci
   
  [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
- Para más información, vea [Métodos de extensión](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Para obtener más información, vea [Métodos de extensión](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Expresiones lambda  
  Una expresión lambda es una función sin un nombre que calcula y devuelve un valor único. A diferencia de las funciones con nombre, una expresión lambda se puede definir y ejecutar al mismo tiempo. En el ejemplo siguiente se muestra 4.  
@@ -77,7 +77,7 @@ El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referenci
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], las expresiones lambda subyacen a muchos de los operadores de consulta estándar. El compilador crea expresiones lambda para capturar los cálculos definidos en métodos de consulta fundamentales como `Where`, `Select`, `Order By`, `Take While`y otros.  
+ En LINQ, las expresiones lambda subyacen a muchos de los operadores de consulta estándar. El compilador crea expresiones lambda para capturar los cálculos definidos en métodos de consulta fundamentales como `Where`, `Select`, `Order By`, `Take While`y otros.  
   
  Por ejemplo, el código siguiente define una consulta que devuelve todos los estudiantes senior de una lista de estudiantes.  
   

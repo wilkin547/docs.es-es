@@ -1,23 +1,23 @@
 ---
-title: Complemento MMC de configuración de WS-AtomicTransaction
+title: Complementos MMC de configuración de WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 04f9a014c3cb3ffd127ccc82fdda731e20136c52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320322"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544634"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Complemento MMC de configuración de WS-AtomicTransaction
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Complementos MMC de configuración de WS-AtomicTransaction
 El complemento MMC de configuración de WS-AtomicTransaction se utiliza para configurar una parte de los valores WS-AtomicTransaction en los equipos local remoto.  
   
-## <a name="remarks"></a>Comentarios  
- Si está ejecutando [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], el complemento MMC se puede encontrar en **Panel de control/herramientas administrativas/servicios de componentes/** , haciendo clic con el botón derecho en **mi PC**y seleccionando **propiedades**. Ésta es la misma ubicación donde puede configurar MSDTC. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .  
+## <a name="remarks"></a>Notas  
+ Si está ejecutando [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003, el complemento MMC se puede encontrar en **Panel de control/herramientas administrativas/servicios de componentes/** , haciendo clic con el botón secundario en **mi PC**y seleccionando **propiedades**. Ésta es la misma ubicación donde puede configurar MSDTC. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .  
   
- Si está ejecutando Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .  
+ Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .  
   
- Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Panel de control/herramientas administrativas/servicios de componentes/** y realizar pasos similares si está ejecutando [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Si está ejecutando Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], siga los pasos anteriores para vista y [!INCLUDE[lserver](../../../includes/lserver-md.md)], pero use el nodo **DTC Coordinator\Local de transacciones distribuidas** en el nodo del equipo remoto.  
+ Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Panel de control/herramientas administrativas/servicios de componentes/** y realizar pasos similares si ejecuta [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003. Si está ejecutando Windows Vista o Windows Server 2008, siga los pasos anteriores para vista y Windows Server 2008, pero use el nodo **DTC (Coordinator\Local de transacciones distribuidas** ) en el nodo del equipo remoto.  
   
  Para utilizar la interfaz de usuario proporcionada por la herramienta, tiene que registrar el archivo WsatUI.dll, que se encuentra en la ruta de acceso siguiente  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Cuentas autorizadas**  
   
- Al hacer clic en el botón **seleccionar** se invoca el editor de lista de Access Control de Windows, donde puede especificar el usuario o grupo que puede participar en transacciones WS-Atomic activando la casilla **permitir** o **denegar** en el cuadro **participar** . Grupo de permisos.  
+ Al hacer clic en el botón **seleccionar** se invoca el editor de lista de Access Control de Windows, donde puede especificar el usuario o grupo que puede participar en transacciones WS-Atomic activando la casilla **permitir** o **denegar** en el grupo de permisos **participar** .  
   
  **Certificados autorizados**  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  Al hacer clic en el botón **Opciones** , se invoca una página en la que puede especificar valores de configuración adicionales.  
   
- El cuadro combinado de **nivel de seguimiento** permite elegir cualquier valor válido de la enumeración <xref:System.Diagnostics.TraceLevel>. También puede utilizar las casillas para especificar si desea realizar seguimiento de actividades, propagación de actividades o recoger información de identificación personal.  
+ El cuadro combinado de **nivel de seguimiento** permite elegir entre cualquier valor válido de la enumeración <xref:System.Diagnostics.TraceLevel>. También puede utilizar las casillas para especificar si desea realizar seguimiento de actividades, propagación de actividades o recoger información de identificación personal.  
   
  También puede especificar sesiones de registro en el cuadro grupo de **sesiones de registro** .  
   

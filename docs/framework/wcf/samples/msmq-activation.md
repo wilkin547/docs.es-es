@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714772"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544718"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 
@@ -19,13 +19,13 @@ Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación d
 > [!NOTE]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
-> \<InstallDrive >: \ WF_WCF_Samples
+> \<InstallDrive>:\WF_WCF_Samples
 >
 > Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de WCF y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
-> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Servicio de activación de procesos de Windows (WAS), el nuevo mecanismo de activación de procesos para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], proporciona características de tipo IIS que solo estaban disponible para aplicaciones basadas en HTTP a aplicaciones que usan protocolos no HTTP. Windows Communication Foundation (WCF) usa la interfaz del adaptador del agente de escucha para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y MSMQ. La funcionalidad para recibir solicitudes a través de protocolos no http está hospedada por servicios de Windows administrados que se ejecutan en SMSvcHost.exe.
+Windows Process Activation Service (WAS), el nuevo mecanismo de activación de procesos para Windows Server 2008, proporciona características similares a las de IIS que anteriormente solo estaban disponibles para aplicaciones basadas en HTTP a aplicaciones que usan protocolos que no son HTTP. Windows Communication Foundation (WCF) usa la interfaz del adaptador del agente de escucha para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y MSMQ. La funcionalidad para recibir solicitudes a través de protocolos no http está hospedada por servicios de Windows administrados que se ejecutan en SMSvcHost.exe.
 
 El servicio Net.Msmq Listener Adapter (NetMsmqActivator) activa aplicaciones en cola basadas en mensajes en la cola.
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Este comando permite tener acceso a la aplicación/servicemodelsamples mediante `http://localhost/servicemodelsamples` y `net.msmq://localhost/servicemodelsamples`.
 
-7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón derecho y seleccione **propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
+7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón secundario y seleccione **Propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
 
 8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:
 

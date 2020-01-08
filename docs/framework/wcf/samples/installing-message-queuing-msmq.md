@@ -2,18 +2,18 @@
 title: Instalar Message Queuing (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039624"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344745"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalar Message Queuing (MSMQ)
 Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
   
 > [!NOTE]
-> Message Queuing 4.0 no está disponible en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ni [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+> Message Queue Server 4,0 no está disponible en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003.  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Para instalar Message Queuing 4.0 en Windows Server 2008 o Windows Server 2008 R2  
   
@@ -31,30 +31,30 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Para instalar Message Queuing 4.0 en Windows 7 o Windows Vista  
   
-1. Abra el **Panel de control**.  
+1. Abra el **Panel de Control**.  
   
 2. Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
   
-3. Expanda Microsoft Message Queuing (MSMQ), expanda Núcleo de Microsoft Message Queuing (MSMQ) y, a continuación, active las casillas para que se instalen las siguientes características de Message Queuing:  
+3. Expanda Microsoft Message Queue (MSMQ) Server, expanda Núcleo de Microsoft Message Queuing (MSMQ) y, a continuación, active las casillas para que se instalen las siguientes características de Message Queuing:  
   
     - Integración de Servicios de dominio de Active Directory MSMQ (para los equipos unidos a un dominio).  
   
     - Compatibilidad con MSMQ HTTP.  
   
-4. Haga clic en **OK**.  
+4. Haga clic en **Aceptar**.  
   
 5. Si se le pide que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.  
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Para instalar Message Queuing 3.0 en Windows XP y Windows Server 2003  
   
-1. Abra el **Panel de control**.  
+1. Abra el **Panel de Control**.  
   
 2. Haga clic en **Agregar o quitar programas** y, a continuación, haga clic en **agregar componentes de Windows**.  
   
 3. Seleccione Message Queue Server y haga clic en **detalles**.  
   
     > [!NOTE]
-    > Si ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], seleccione Servidor de aplicaciones para obtener acceso a Message Queuing.  
+    > Si está ejecutando Windows Server 2003, seleccione servidor de aplicaciones para tener acceso a Message Queue Server.  
   
 4. Asegúrese de que la opción de compatibilidad HTTP con MSMQ está seleccionada en la página de detalles.  
   

@@ -2,12 +2,12 @@
 title: 'Cómo: Proyectar un gráfico de objetos'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 68b58226dbf30f82709a39e96bef0f8cce95d0ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347766"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636684"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Cómo: proyectar un gráfico de objetos (Visual Basic)
 En este tema se ilustra cómo proyectar o rellenar un gráfico de objetos de XML.  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- En este ejemplo, el resultado de la consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se devuelve como un <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. Los elementos de la clase `PurchaseOrder` son del tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. El código usa el método de extensión <xref:System.Linq.Enumerable.ToList%2A> para crear una colección <xref:System.Collections.Generic.List%601> de los resultados de la consulta.  
+ En este ejemplo, el resultado de la consulta LINQ se devuelve como <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. Los elementos de la clase `PurchaseOrder` son del tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. El código usa el método de extensión <xref:System.Linq.Enumerable.ToList%2A> para crear una colección <xref:System.Collections.Generic.List%601> de los resultados de la consulta.  
   
  El ejemplo genera el siguiente resultado:  
   

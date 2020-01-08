@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349465"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545118"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Propiedades de eje secundario XML (Visual Basic)
 Proporciona el acceso a los elementos secundarios de uno de los siguientes: un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.  
@@ -26,19 +26,19 @@ Proporciona el acceso a los elementos secundarios de uno de los siguientes: un o
 object.<child>  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a>Componentes de  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`object`|Obligatorio. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.|  
-|.<|Obligatorio. Denota el inicio de una propiedad de eje secundario.|  
-|`child`|Obligatorio. Nombre de los nodos secundarios a los que se va a tener acceso, con el formato [`prefix:]name`.<br /><br /> -   `Prefix`: opcional. Prefijo de espacio de nombres XML para el nodo secundario. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.<br />-   `Name`: necesario. Nombre del nodo secundario local. Vea [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Obligatorio. Denota el final de una propiedad de eje secundario.|  
+|`object`|Obligatoria. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.|  
+|.<|Obligatoria. Denota el inicio de una propiedad de eje secundario.|  
+|`child`|Obligatoria. Nombre de los nodos secundarios a los que se va a tener acceso, con el formato `[prefix:]name`.<br /><br /> -   `Prefix`: opcional. Prefijo de espacio de nombres XML para el nodo secundario. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.<br />-   `Name`: necesario. Nombre del nodo secundario local. Vea [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Obligatoria. Denota el final de una propiedad de eje secundario.|  
   
 ## <a name="return-value"></a>Valor devuelto  
  Una colección de objetos <xref:System.Xml.Linq.XElement>.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede usar una propiedad de eje secundario XML para tener acceso a los nodos secundarios por nombre desde un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o desde una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Utilice la propiedad XML `Value` para tener acceso al valor del primer nodo secundario de la colección devuelta. Para obtener más información, vea [propiedad valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
  El compilador Visual Basic convierte las propiedades del eje secundario en llamadas al método <xref:System.Xml.Linq.XContainer.Elements%2A>.  

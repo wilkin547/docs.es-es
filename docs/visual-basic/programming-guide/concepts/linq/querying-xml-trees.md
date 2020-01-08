@@ -2,17 +2,17 @@
 title: Consultar árboles XML
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: c8103820a231ba0fb5e8e7c15b7a2b9e7c996e65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 643b19a0cfcd2a81c6f685de65979f83ca32d918
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346579"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636905"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Consultar árboles XML (Visual Basic)
 En esta sección se ofrecen ejemplos de consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Para obtener más información sobre cómo escribir consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vea [Introducción con LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ Para obtener más información sobre cómo escribir consultas LINQ, vea [Introducción con LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Una vez que haya creado una instancia del árbol XML, escribir consultas será la manera más eficaz de extraer datos de dicho árbol. Asimismo, la consulta, combinada con la construcción funcional, permite generar un documento XML nuevo que tiene una forma diferente del documento original.  
   

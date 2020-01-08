@@ -5,15 +5,15 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350452"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636736"
 ---
 # <a name="queries-visual-basic"></a>Consultas (Visual Basic)
-Visual Basic le permite crear expresiones de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] en el código.  
+Visual Basic le permite crear expresiones LINQ (Language-Integrated Query) en el código.  
   
 ## <a name="in-this-section"></a>Esta sección  
  [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md)  

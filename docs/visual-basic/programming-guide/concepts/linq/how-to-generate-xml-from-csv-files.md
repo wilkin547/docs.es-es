@@ -2,18 +2,18 @@
 title: 'Cómo: Generar XML a partir de archivos CSV'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344595"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636827"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Cómo: generar XML a partir de archivos CSV (Visual Basic)
-Este ejemplo muestra el uso de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
+En este ejemplo se muestra cómo usar Language-Integrated Query (LINQ) y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código realiza una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sobre una matriz de cadenas.  
+ En el código siguiente se realiza una consulta LINQ en una matriz de cadenas.  
   
 ```vb  
       ' Create the text file.  

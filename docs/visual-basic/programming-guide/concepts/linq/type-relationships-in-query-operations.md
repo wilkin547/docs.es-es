@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350563"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636918"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 
-Las variables que se usan en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] operaciones de consulta están fuertemente tipadas y deben ser compatibles entre sí. El establecimiento de tipos seguros se usa en el origen de datos, en la propia consulta y en la ejecución de la consulta. En la ilustración siguiente se identifican los términos que se usan para describir una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información acerca de las partes de una consulta, consulte [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Las variables que se usan en las operaciones de consulta de Language-Integrated Query (LINQ) están fuertemente tipadas y deben ser compatibles entre sí. El establecimiento de tipos seguros se usa en el origen de datos, en la propia consulta y en la ejecución de la consulta. En la ilustración siguiente se identifican los términos que se usan para describir una consulta LINQ. Para obtener más información acerca de las partes de una consulta, consulte [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 ![Captura de pantalla que muestra una consulta de pseudocódigo con elementos resaltados.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 El tipo de la variable de rango de la consulta debe ser compatible con el tipo de los elementos del origen de datos. El tipo de la variable de consulta debe ser compatible con el elemento de secuencia definido en la cláusula `Select`. Por último, el tipo de los elementos de la secuencia también debe ser compatible con el tipo de la variable de control de bucle que se utiliza en la instrucción `For Each` que ejecuta la consulta. Este fuertemente tipado facilita la identificación de los errores de tipo en tiempo de compilación.
 
-Visual Basic hace que el establecimiento de tipos seguros sea conveniente implementando la inferencia de tipo local, también conocida como *tipos implícitos*. Esta característica se usa en el ejemplo anterior y la verá en el [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ejemplos y la documentación. En Visual Basic, la inferencia de tipo de variable local se realiza simplemente mediante una instrucción de `Dim` sin una cláusula `As`. En el ejemplo siguiente, `city` se escribe fuertemente tipada como una cadena.
+Visual Basic hace que el establecimiento de tipos seguros sea conveniente implementando la inferencia de tipo local, también conocida como *tipos implícitos*. Esa característica se usa en el ejemplo anterior y la verá utilizada en los ejemplos y la documentación de LINQ. En Visual Basic, la inferencia de tipo de variable local se realiza simplemente mediante una instrucción de `Dim` sin una cláusula `As`. En el ejemplo siguiente, `city` se escribe fuertemente tipada como una cadena.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > La inferencia de tipo local solo funciona cuando `Option Infer` está establecido en `On`. Para obtener más información, vea [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-Sin embargo, incluso si utiliza la inferencia de tipo de variable local en una consulta, las mismas relaciones de tipo están presentes entre las variables en el origen de datos, la variable de consulta y el bucle de ejecución de la consulta. Resulta útil tener un conocimiento básico de estas relaciones de tipo cuando se escriben [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas, o bien se trabaja con los ejemplos y ejemplos de código de la documentación.
+Sin embargo, incluso si utiliza la inferencia de tipo de variable local en una consulta, las mismas relaciones de tipo están presentes entre las variables en el origen de datos, la variable de consulta y el bucle de ejecución de la consulta. Resulta útil tener un conocimiento básico de estas relaciones de tipo al escribir consultas LINQ o al trabajar con los ejemplos y ejemplos de código de la documentación.
 
 Es posible que tenga que especificar un tipo explícito para una variable de rango que no coincida con el tipo devuelto desde el origen de datos. Puede especificar el tipo de la variable de rango mediante el uso de una cláusula `As`. Sin embargo, esto genera un error si la conversión es una [conversión de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) y `Option Strict` está establecido en `On`. Por lo tanto, se recomienda realizar la conversión en los valores recuperados del origen de datos. Puede convertir los valores del origen de datos al tipo de variable de rango explícito mediante el método <xref:System.Linq.Enumerable.Cast%2A>. También puede convertir los valores seleccionados en la cláusula `Select` a un tipo explícito distinto del tipo de la variable de rango. Estos puntos se muestran en el código siguiente.
 
@@ -41,7 +41,7 @@ Es posible que tenga que especificar un tipo explícito para una variable de ran
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Consultas que devuelven elementos completos de los datos de origen
 
-En el ejemplo siguiente se muestra una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operación de consulta que devuelve una secuencia de elementos seleccionados a partir de los datos de origen. El origen, `names`, contiene una matriz de cadenas y el resultado de la consulta es una secuencia que contiene cadenas que comienzan por la letra M.
+En el ejemplo siguiente se muestra una operación de consulta LINQ que devuelve una secuencia de elementos seleccionados a partir de los datos de origen. El origen, `names`, contiene una matriz de cadenas y el resultado de la consulta es una secuencia que contiene cadenas que comienzan por la letra M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
@@ -98,7 +98,7 @@ Sin la inferencia de tipo local, el ejemplo anterior sería más complicado de e
 
 ## <a name="queries-that-require-anonymous-types"></a>Consultas que requieren tipos anónimos
 
-En el ejemplo siguiente se muestra una situación más compleja. En el ejemplo anterior, no era conveniente especificar explícitamente los tipos para todas las variables. En este ejemplo, es imposible. En lugar de seleccionar todos los elementos `Customer` del origen de datos, o un único campo de cada elemento, la cláusula `Select` de esta consulta devuelve dos propiedades del objeto de `Customer` original: `Name` y `City`. En respuesta a la cláusula `Select`, el compilador define un tipo anónimo que contiene esas dos propiedades. El resultado de ejecutar `nameCityQuery` en el bucle de `For Each` es una colección de instancias del nuevo tipo anónimo. Dado que el tipo anónimo no tiene ningún nombre utilizable, no se puede especificar el tipo de `nameCityQuery` o `custInfo` explícitamente. Es decir, con un tipo anónimo, no hay ningún nombre de tipo para usar en lugar de `String` en `IEnumerable(Of String)`. Para obtener más información, vea [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+En el ejemplo siguiente se muestra una situación más compleja. En el ejemplo anterior, no era conveniente especificar explícitamente los tipos para todas las variables. En este ejemplo, es imposible. En lugar de seleccionar todos los elementos `Customer` del origen de datos, o un único campo de cada elemento, la cláusula `Select` de esta consulta devuelve dos propiedades del objeto de `Customer` original: `Name` y `City`. En respuesta a la cláusula `Select`, el compilador define un tipo anónimo que contiene esas dos propiedades. El resultado de ejecutar `nameCityQuery` en el bucle de `For Each` es una colección de instancias del nuevo tipo anónimo. Dado que el tipo anónimo no tiene ningún nombre utilizable, no se puede especificar el tipo de `nameCityQuery` o `custInfo` explícitamente. Es decir, con un tipo anónimo, no hay ningún nombre de tipo para usar en lugar de `String` en `IEnumerable(Of String)`. Para obtener más información, consulte [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).
 
 ```vb
 ' Method GetTable returns a table of Customer objects.

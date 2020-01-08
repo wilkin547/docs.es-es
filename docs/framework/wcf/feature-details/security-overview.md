@@ -1,16 +1,16 @@
 ---
-title: 'Información general de seguridad: WCF'
+title: Información general sobre seguridad
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949353"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344706"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Información general sobre seguridad de Windows Communication Foundation
 Windows Communication Foundation (WCF) es una plataforma de programación distribuida basada en mensajes SOAP, y la protección de los mensajes entre clientes y servicios es esencial para proteger los datos. WCF proporciona una plataforma versátil e interoperable para intercambiar mensajes seguros basados en la infraestructura de seguridad existente y en los estándares de seguridad reconocidos para los mensajes SOAP.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
   
 - Observación del tráfico de red para obtener información confidencial. Por ejemplo, en un escenario de banca electrónica, un cliente solicita la transferencia de fondos desde una cuenta a otra. Un usuario malintencionado intercepta el mensaje y, como tiene el número de cuenta y la contraseña, más tarde realiza una transferencia de fondos desde la cuenta expuesta al peligro.  
   
-- Entidades deshonestas que actúan como servicios sin conocimiento del cliente. En este escenario, un usuario malintencionado (el deshonesto) actúa como servicio en línea e intercepta los mensajes del cliente para obtener información confidencial. A continuación, el usuario deshonesto utiliza los datos robados para transferir fondos de la cuenta expuesta al peligro. Este ataque también se conoce como ataque de suplantación de *identidad (phishing)* .  
+- Entidades deshonestas que actúan como servicios sin conocimiento del cliente. En este escenario, un usuario malintencionado (el deshonesto) actúa como servicio en línea e intercepta los mensajes del cliente para obtener información confidencial. A continuación, el usuario deshonesto utiliza los datos robados para transferir fondos de la cuenta expuesta al peligro. Este ataque también se conoce como *ataque de suplantación de identidad (phishing)* .  
   
 - Alteración de mensajes para obtener un resultado diferente al previsto por el autor de la llamada. Por ejemplo, modificar el número de cuenta en el que se realiza un depósito desvía los fondos a una cuenta deshonesta.  
   
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
 ### <a name="standards-and-interoperability"></a>Normas e interoperabilidad  
  En un mundo en el que existen grandes implementaciones, la homogeneidad no es frecuente. Las plataformas informáticas/de comunicación distribuidas necesitan interoperar con las tecnologías que ofrecen los diferentes proveedores. Del mismo modo, la seguridad también debe ser interoperable.  
   
- Para habilitar los sistemas de seguridad interoperables, las compañías activas en la industria de los servicios Web han creado diversas normas. En concreto con respecto a la seguridad, se han propuesto algunas normas importantes: WS-Security: Seguridad de mensajes SOAP (aceptada por el cuerpo de estándares de OASIS y anteriormente conocido como WS-Security), WS-Trust, WS-SecureConversation y WS-SecurityPolicy.  
+ Para habilitar los sistemas de seguridad interoperables, las compañías activas en la industria de los servicios Web han creado diversas normas. En lo que se refiere a la seguridad, se han propuesto normas importantes: WS-Security: seguridad de Mensaje SOAP (aceptado por las normas OASIS y conocido anteriormente como WS-Security), WS-Trust, WS-SecureConversation, y WS-SecurityPolicy.  
   
  WCF admite una amplia variedad de escenarios de interoperabilidad. La clase <xref:System.ServiceModel.BasicHttpBinding> está destinada al perfil de seguridad básico (BSP), y la clase <xref:System.ServiceModel.WSHttpBinding> está destinada a las normas de seguridad más recientes, como WS-Security 1.1 y WS-SecureConversation. Al cumplir estos estándares, la seguridad de WCF puede interoperar e integrarse con los servicios web que se hospedan en sistemas operativos y plataformas distintos de Microsoft Windows.  
   
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
  La seguridad de WCF se divide en tres áreas funcionales: transferencia de seguridad, control de acceso y auditoría. Las siguientes secciones describen brevemente estas áreas y ofrecen vínculos en los que obtener más información.  
   
 ### <a name="transfer-security"></a>Seguridad de la transferencia  
- La seguridad de la transferencia abarca tres funciones de seguridad principales: integridad, confidencialidad y autenticación. La *integridad* es la capacidad de detectar si un mensaje ha sido alterado. La confidencialidad es la capacidad de mantener un mensaje ilegible para cualquier persona que no sea el destinatario previsto; Esto se logra a través de la criptografía. La *autenticación* es la capacidad de comprobar una identidad reclamada. Juntas, estas tres funciones contribuyen a garantizar que los mensajes llegan de manera segura de un punto a otro.  
+ La seguridad de la transferencia abarca tres funciones de seguridad principales: integridad, confidencialidad y autenticación. La *integridad* es la capacidad de detectar si un mensaje ha sido alterado. La *confidencialidad* es la capacidad de mantener un mensaje ilegible para cualquier persona que no sea el destinatario previsto; Esto se logra a través de la criptografía. La *autenticación* es la capacidad de comprobar una identidad reclamada. Juntas, estas tres funciones contribuyen a garantizar que los mensajes llegan de manera segura de un punto a otro.  
   
 #### <a name="transport-and-message-security-modes"></a>Modos de seguridad de transporte y de mensaje  
  Se usan dos mecanismos principales para implementar la seguridad de transferencia en WCF: el modo de seguridad de *transporte* y el modo de seguridad de *mensajes* .  
@@ -92,10 +92,10 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
 ### <a name="access-control"></a>Control de acceso  
  El *control de acceso* también se conoce como autorización. La *autorización* permite a distintos usuarios tener privilegios diferentes para ver los datos. Por ejemplo, dado que los archivos de recursos humanos de una compañía contienen datos confidenciales de los empleados, solo los administradores pueden consultar estos datos. Lo que es más, los administradores solo pueden consultar datos para sus informes directos. En este caso, el control de acceso está basado tanto en la función ("administrador"), como en la identidad específica del administrador (para evitar que un administrador examine los registros de los empleados de otro administrador).  
   
- En WCF, las características de control de acceso se proporcionan a través de la integración <xref:System.Security.Permissions.PrincipalPermissionAttribute> con el Common Language Runtime (CLR) y a través de un conjunto de API conocido como *modelo de identidad*. Para obtener más información sobre el control de acceso y la autorización basada en notificaciones, vea [ampliar la seguridad](../../../../docs/framework/wcf/extending/extending-security.md).  
+ En WCF, las características de control de acceso se proporcionan a través de la integración con el <xref:System.Security.Permissions.PrincipalPermissionAttribute> de Common Language Runtime (CLR) y a través de un conjunto de API conocidas como *modelo de identidad*. Para obtener más información sobre el control de acceso y la autorización basada en notificaciones, vea [ampliar la seguridad](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Auditoría  
- La *Auditoría* es el registro de eventos de seguridad en el registro de eventos de Windows. Pueden registrarse eventos relacionados con la seguridad, como autenticaciones con errores (o correctas). Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obtener información sobre la [programación, consulte Cómo: Auditar eventos](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)de seguridad.  
+ La *Auditoría* es el registro de eventos de seguridad en el registro de eventos de Windows. Pueden registrarse eventos relacionados con la seguridad, como autenticaciones con errores (o correctas). Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obtener información sobre la programación, consulte [Cómo: auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
 - [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)
 - [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

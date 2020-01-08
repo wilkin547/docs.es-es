@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a977b17d4b2c797bbe38d289a57f3d9d31fa64fa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340243"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345966"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de operador (Visual Basic)
 Se llama a un procedimiento de operador mediante el símbolo de operador en una expresión. En el caso de un operador de conversión, se llama a la [función ctype](../../../../visual-basic/language-reference/functions/ctype-function.md) para convertir un valor de un tipo de datos a otro.  
@@ -50,7 +50,7 @@ Se llama a un procedimiento de operador mediante el símbolo de operador en una 
   
  Para obtener un ejemplo de cómo llamar a un procedimiento de operador de conversación, consulte [Cómo: utilizar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md).  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compile-the-code"></a>Compilar el código  
  Asegúrese de que la clase o estructura que está usando define el operador que desea utilizar.  
   
 ## <a name="see-also"></a>Vea también

@@ -1,17 +1,17 @@
 ---
-title: Segmentos (F#)
-description: Obtenga información sobre cómo usar los segmentos para F# los tipos de datos existentes y cómo definir sus propios segmentos para otros tipos de datos.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: Segmentos
+description: Obtenga información sobre cómo usar los segmentos F# para los tipos de datos existentes y cómo definir sus propios segmentos para otros tipos de datos.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733377"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545104"
 ---
 # <a name="slices"></a>Segmentos
 
-En F#, un segmento es un subconjunto de un tipo de datos. Para poder tomar un segmento de un tipo de datos, el tipo de datos debe definir un método `GetSlice` o en una [extensión de tipo](type-extensions.md) que esté en el ámbito. En este artículo se explica cómo tomar los segmentos F# de los tipos existentes y cómo definir los suyos propios.
+En F#, un segmento es un subconjunto de cualquier tipo de datos que tenga un método `GetSlice` en su definición o en una [extensión de tipo](type-extensions.md)en el ámbito. Normalmente se usa con F# matrices y listas. En este artículo se explica cómo tomar los segmentos F# de los tipos existentes y cómo definir sus propios segmentos.
 
 Los segmentos son similares a los [indizadores](./members/indexed-properties.md), pero en lugar de producir un valor único de la estructura de datos subyacente, producen varios.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-La F# biblioteca principal no define`GetSlice`para las matrices 3D. Si desea segmentar esas u otras matrices de más dimensiones, debe definir el miembro de `GetSlice`.
+La F# biblioteca principal no define actualmente `GetSlice` para las matrices 3D. Si desea segmentar matrices 3D u otras matrices de más dimensiones, defina el miembro de `GetSlice`.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definir segmentos para otras estructuras de datos
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>Los F# segmentos integrados son de fin-inclusivo
+
+Todos los sectores intrínsecos de F# son de fin-inclusivo; es decir, el límite superior se incluye en el segmento. Para un segmento determinado con el índice de inicio `x` y el final `y`de índice, el segmento resultante incluirá el valor de *YTH* .
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>Vea también

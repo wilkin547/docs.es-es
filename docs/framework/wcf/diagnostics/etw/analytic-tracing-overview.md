@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837498"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544748"
 ---
 # <a name="analytic-tracing-overview"></a>Información general de traza analítica
 La traza analítica en [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] es una característica de traza de alto rendimiento y bajo nivel de detalle establecida en Seguimiento de eventos para Windows (ETW). ETW se ejecuta en el kernel para reducir en gran medida la sobrecarga de las operaciones de traza. Almacena en búfer eventos de usuario y en modo kernel, y permite una habilitación dinámica del registro sin requerir un reinicio del servicio. Los datos de la traza están disponibles en los registros de eventos una vez emitidos y recibidos.  
   
  Para obtener más información sobre ETW, vea [mejorar la depuración y el ajuste del rendimiento con ETW](https://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Además de usar los registros de eventos del sistema, de seguridad y de aplicación de Windows para analizar la aplicación, Windows Vista y [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] presentaron registros adicionales en el nodo de nivel superior registros de aplicaciones y servicios. El propósito de estos nuevos registros es almacenar eventos para una aplicación determinada o un componente concreto en lugar de los eventos globales que tienen un impacto en todo el sistema (como el tipo de eventos que el registro de eventos de seguridad podría grabar). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica y correlaciona el registro de eventos de seguimiento de WCF, los registros de mensajes de WCF y los registros de seguimiento de [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] en los registros de aplicaciones y servicios.  
+ Además de usar los registros de eventos del sistema, de seguridad y de aplicación de Windows para analizar la aplicación, Windows Vista y Windows Server 2008 presentaron registros adicionales en el nodo de nivel superior registros de aplicaciones y servicios. El propósito de estos nuevos registros es almacenar eventos para una aplicación determinada o un componente concreto en lugar de los eventos globales que tienen un impacto en todo el sistema (como el tipo de eventos que el registro de eventos de seguridad podría grabar). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica y correlaciona el registro de eventos de seguimiento de WCF, los registros de mensajes de WCF y los registros de seguimiento de [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] en los registros de aplicaciones y servicios.  
   
 ## <a name="concepts-and-capabilities"></a>Conceptos y capacidades  
  Los siguientes conceptos y capacidades se aplican a la traza analítica de WCF.  

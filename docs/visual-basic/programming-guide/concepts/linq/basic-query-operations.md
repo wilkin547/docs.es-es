@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345757"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636879"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operaciones básicas de consulta (Visual Basic)
-En este tema se proporciona una breve introducción a las expresiones [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] en Visual Basic y a algunos de los tipos de operaciones típicas que se realizan en una consulta. Para obtener más información, consulta los temas siguientes:  
+En este tema se proporciona una breve introducción a las expresiones de Language-Integrated Query (LINQ) en Visual Basic y a algunos de los tipos de operaciones más habituales que se realizan en una consulta. Para obtener más información, consulta los temas siguientes:  
   
  [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -32,7 +32,7 @@ En este tema se proporciona una breve introducción a las expresiones [!INCLUDE[
  [Tutorial: escribir consultas en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>Especificar el origen de datos (desde)  
- En una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], el primer paso es especificar el origen de datos que desea consultar. Por lo tanto, la cláusula `From` de una consulta siempre aparece primero. Los operadores de consulta seleccionan y dan forma al resultado en función del tipo de origen.  
+ En una consulta LINQ, el primer paso es especificar el origen de datos que desea consultar. Por lo tanto, la cláusula `From` de una consulta siempre aparece primero. Los operadores de consulta seleccionan y dan forma al resultado en función del tipo de origen.  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Para seleccionar varios campos del origen de datos, tiene dos opciones:  
   
-- En la cláusula `Select`, especifique los campos que desea incluir en el resultado. El compilador definirá un tipo anónimo que tiene esos campos como sus propiedades. Para obtener más información, vea [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- En la cláusula `Select`, especifique los campos que desea incluir en el resultado. El compilador definirá un tipo anónimo que tiene esos campos como sus propiedades. Para obtener más información, consulte [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).  
   
      Dado que los elementos devueltos en el ejemplo siguiente son instancias de un tipo anónimo, no se puede hacer referencia al tipo por su nombre en ningún lugar del código. El nombre designado por el compilador para el tipo contiene caracteres que no son válidos en el código de Visual Basic normal. En el ejemplo siguiente, los elementos de la colección devueltos por la consulta en `londonCusts4` son instancias de un tipo anónimo.  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Garcia, Hugo  
   
- Garcia, Debra  
+ Melgar, Natalia  
   
  Tucker, lance  
   

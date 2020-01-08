@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49e6f79c13c94a3f2f6891b259c4bb2bec54ae6f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348332"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344520"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Tutorial: Validar la complejidad de las contraseñas (Visual Basic)
 Este método comprueba algunas características de contraseña segura y actualiza un parámetro de cadena con información sobre las comprobaciones de errores en la contraseña.  
@@ -23,14 +23,14 @@ Este método comprueba algunas características de contraseña segura y actualiz
 ### <a name="code"></a>Código  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compile-the-code"></a>Compilar el código  
  Llame a este método pasando la cadena que contiene la contraseña.  
   
  Para este ejemplo se necesita:  
   
 - Acceso a los miembros del espacio de nombres <xref:System.Text.RegularExpressions>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-## <a name="security"></a>Seguridad  
+## <a name="security"></a>de seguridad  
  Si va a mover la contraseña a través de una red, debe usar un método seguro para transferir los datos. Para obtener más información, vea [seguridad de aplicaciones Web de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Puede mejorar la precisión de la función de `ValidatePassword` agregando comprobaciones de complejidad adicionales:  

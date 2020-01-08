@@ -2,12 +2,12 @@
 title: Byrefs
 description: Obtenga información sobre los tipos byref y tipo ByRef F#en, que se usan para la programación de bajo nivel.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976827"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545135"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -104,7 +104,7 @@ Todas estas reglas juntas indican que el titular de un puntero `inref` no puede 
 
 ### <a name="outref-semantics"></a>Semántica de Outref
 
-El propósito de `outref<'T>` es indicar que el puntero solo se debe leer desde. De forma inesperada, `outref<'T>` permite leer el valor subyacente a pesar de su nombre. Esto es así por motivos de compatibilidad. Semánticamente, `outref<'T>` no es diferente de `byref<'T>`.
+El propósito de `outref<'T>` es indicar que el puntero solo debe escribirse en. De forma inesperada, `outref<'T>` permite leer el valor subyacente a pesar de su nombre. Esto es así por motivos de compatibilidad. Semánticamente, `outref<'T>` no es diferente de `byref<'T>`.
 
 ### <a name="interop-with-c"></a>Interoperabilidad con C\#
 
@@ -114,17 +114,17 @@ C#admite las palabras clave `in ref` y `out ref`, además de `ref` devuelve. En 
 |------------|---------|
 |`ref` valor devuelto|`outref<'T>`|
 |`ref readonly` valor devuelto|`inref<'T>`|
-|`in ref` parámetro|`inref<'T>`|
-|`out ref` parámetro|`outref<'T>`|
+|Parámetro `in ref`|`inref<'T>`|
+|Parámetro `out ref`|`outref<'T>`|
 
 En la tabla siguiente se F# muestra lo que emite:
 
 |F#construir|Construcción emitida|
 |------------|-----------------|
-|`inref<'T>` argumento|`[In]` atributo en el argumento|
+|Argumento `inref<'T>`|`[In]` atributo en el argumento|
 |`inref<'T>` devolver|`modreq` atributo en el valor|
 |`inref<'T>` en la ranura o la implementación abstracta|`modreq` argumento on o Return|
-|`outref<'T>` argumento|`[Out]` atributo en el argumento|
+|Argumento `outref<'T>`|`[Out]` atributo en el argumento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferencia de tipos y reglas de sobrecarga
 
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` no implica `Struct`. Ambos deben estar presentes en el tipo.
 
-Un struct "`byref`" en F# es un tipo de valor enlazado a la pila. Nunca se asigna en el montón administrado. Una estructura de tipo `byref`es útil para la programación de alto rendimiento, ya que se aplica con un conjunto de comprobaciones fuertes sobre la duración y la no captura. Las reglas son:
+Un struct "`byref`" en F# es un tipo de valor enlazado a la pila. Nunca se asigna en el montón administrado. Una estructura de tipo `byref`es útil para la programación de alto rendimiento, ya que se aplica con un conjunto de comprobaciones fuertes sobre la duración y la no captura. Las reglas son las siguientes:
 
 * Se pueden usar como parámetros de función, parámetros de método, variables locales, devoluciones de métodos.
 * No pueden ser miembros estáticos o de instancia de una clase o un struct normal.

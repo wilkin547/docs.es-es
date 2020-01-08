@@ -2,12 +2,12 @@
 title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837914"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344537"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -16,7 +16,7 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
 > [!NOTE]
-> Este ejemplo muestra cada cola de mensajes con problemas de entrega de la aplicación que solo está disponible en Windows Vista. El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Este ejemplo muestra cada cola de mensajes con problemas de entrega de la aplicación que solo está disponible en Windows Vista. El ejemplo se puede modificar para usar las colas predeterminadas de todo el sistema para MSMQ 3,0 en Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.
 

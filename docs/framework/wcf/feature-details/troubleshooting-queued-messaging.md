@@ -2,12 +2,12 @@
 title: Solución de problemas de la mensajería en cola
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837316"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345588"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 
@@ -25,7 +25,7 @@ Esta sección contiene preguntas comunes y ayuda para el uso de colas en Windows
 
 **P:** ¿Tengo que actualizar MSMQ para usar los enlaces de <xref:System.ServiceModel.NetMsmqBinding> y `MsmqIntegration`?
 
-**A:** No. Ambos enlaces funcionan con MSMQ 3.0 en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Ciertas características de los enlaces están disponibles al actualizar a MSMQ 4,0 en Windows Vista.
+**A:** No. Ambos enlaces funcionan con MSMQ 3,0 en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003. Ciertas características de los enlaces están disponibles al actualizar a MSMQ 4,0 en Windows Vista.
 
 **P:** ¿Qué características de los enlaces de <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> están disponibles en MSMQ 4,0 pero no en MSMQ 3,0?
 

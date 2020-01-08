@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: cf2abd460dcf19346d9efb41e9a5ccef99120fbb
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837069"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345060"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Define un transporte del TCP que puede ser utilizado por un canal para la transferencia de mensajes de un enlace personalizado.  
@@ -48,7 +48,7 @@ Define un transporte del TCP que puede ser utilizado por un canal para la transf
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Attribute|Descripción|  
 |---------------|-----------------|  
 |channelInitializationTimeout|Obtiene o establece el límite de tiempo para inicializar un canal que se va a aceptar.  El tiempo máximo que un canal puede estar en el estado de inicialización antes de que se desconecte, en segundos. Esta cuota incluye el tiempo que una conexión TCP puede realizar para autenticarse a sí misma mediante el protocolo de trama de mensajes de .NET. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. El valor predeterminado es 30 segundos.|  
 |connectionBufferSize|Obtiene o establece el tamaño del búfer usado para transmitir un bloque del mensaje serializado en la conexión del cliente o servicio.|  
@@ -62,7 +62,7 @@ Define un transporte del TCP que puede ser utilizado por un canal para la transf
 |maxPendingConnections|Obtiene o establece el número máximo de conexiones pendientes de distribución en el servicio.|  
 |maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje que se puede recibir.|  
 |portSharingEnabled|Un valor booleano que especifica si el uso compartido de puerto TCP está habilitado para esta conexión. Si éste es `false`, cada enlace utilizará su propio puerto exclusivo. De manera predeterminada, es `false`.<br /><br /> Este valor sólo es pertinente a los servicios. Los clientes no se ven afectados.<br /><br /> Para usar esta configuración se necesita que se habilite el servicio de puerto TCP compartido Windows Communication Foundation (WCF), cambiando su tipo de inicio a manual o automático.|  
-|teredoEnabled|Un valor booleano que especifica si Teredo (una tecnología para direccionar clientes que están detrás de firewalls) está habilitada. De manera predeterminada, es `false`.<br /><br /> Esta propiedad habilita Teredo para el socket TCP subyacente. Para obtener más información, vea [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Esta propiedad solo se aplica en [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. Windows Vista tiene una opción de configuración de todo el equipo para Teredo, por lo que al ejecutar vista, se omite esta propiedad. Teredo requiere que los equipos de servicio y del cliente tengan la pila de Microsoft IPv6 instalada y correctamente configurada para el uso de Teredo. Para obtener más información acerca de cómo configurar Teredo, vea [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obtener más información, vea [centros de tecnología de Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Un valor booleano que especifica si Teredo (una tecnología para direccionar clientes que están detrás de firewalls) está habilitada. De manera predeterminada, es `false`.<br /><br /> Esta propiedad habilita Teredo para el socket TCP subyacente. Para obtener más información, vea [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Esta propiedad solo es aplicable en [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] y Windows Server 2003. Windows Vista tiene una opción de configuración de todo el equipo para Teredo, por lo que al ejecutar vista, se omite esta propiedad. Teredo requiere que los equipos de servicio y del cliente tengan la pila de Microsoft IPv6 instalada y correctamente configurada para el uso de Teredo. Para obtener más información acerca de cómo configurar Teredo, vea [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obtener más información, vea [centros de tecnología de Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Obtiene o establece un valor que indica si los mensajes están almacenados en búfer o se transmiten por secuencias mediante el transporte orientado a la conexión.|  
 |connectionPoolSettings|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
   

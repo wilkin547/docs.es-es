@@ -1,5 +1,5 @@
 ---
-title: Información general sobre eventos (Formularios Windows Forms)
+title: Información general sobre eventos (Windows Forms)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, event handling
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963476"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345002"
 ---
-# <a name="events-overview-windows-forms"></a>Información general sobre eventos (Formularios Windows Forms)
+# <a name="events-overview-windows-forms"></a>Información general sobre eventos (Windows Forms)
 Un evento es una acción a la que puede responder o que puede "controlar" en el código. Los eventos se pueden generar por una acción del usuario, como hacer clic con el mouse o presionar una tecla, por código de programa o por el sistema.
 
  Las aplicaciones controladas por eventos ejecutan código en respuesta a un evento. Cada formulario y control expone un conjunto predefinido de eventos que puede programar. Si se produce uno de estos eventos y hay código en el controlador de evento asociado, se invoca ese código.
@@ -31,9 +31,9 @@ Un evento es una acción a la que puede responder o que puede "controlar" en el 
 ## <a name="delegates-and-their-role"></a>Delegados y sus roles
  Los delegados son clases utilizadas normalmente en el .NET Framework para compilar mecanismos de control de eventos. Los delegados aproximadamente equivalen a los punteros de función C++ , que se usan normalmente en objetos visuales y otros lenguajes orientados a objetos. Sin embargo, a diferencia de los punteros de función, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. Además, mientras que un puntero de función solo contiene una referencia a una función determinada, un delegado consta de una referencia a un objeto y de referencias a uno o varios métodos dentro del objeto.
 
- Este modelo de eventos utiliza delegados para enlazar eventos a los métodos que se usan para controlarlos. El delegado permite especificar un método de controlador para registrar otras clases para la notificación de eventos. Cuando el evento se produce, el delegado llama al método enlazado. Para obtener más información sobre cómo definir los delegados, vea [eventos](../../standard/events/index.md).
+ Este modelo de eventos utiliza *delegados* para enlazar eventos a los métodos que se usan para controlarlos. El delegado permite especificar un método de controlador para registrar otras clases para la notificación de eventos. Cuando el evento se produce, el delegado llama al método enlazado. Para obtener más información sobre cómo definir los delegados, vea [eventos](../../standard/events/index.md).
 
- Los delegados se pueden enlazar a un único método o a varios métodos, lo que se conoce como multidifusión. Al crear un delegado para un evento, usted (o Windows) normalmente crea un evento de multidifusión. Una excepción rara podría ser un evento que produce un procedimiento específico (tal como mostrar un cuadro de diálogo) que lógicamente no se repetiría varias veces por evento. Para obtener información acerca de cómo crear un delegado de multidifusión, consulte [cómo: Combine delegados (delegados de multidifusión)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
+Los delegados se pueden enlazar a un único método o a varios métodos, lo que se conoce como multidifusión. Al crear un delegado para un evento, usted (o Windows) normalmente crea un evento de multidifusión. Una excepción rara podría ser un evento que produce un procedimiento específico (tal como mostrar un cuadro de diálogo) que lógicamente no se repetiría varias veces por evento. Para obtener información sobre cómo crear un delegado de multidifusión, vea [Cómo combinar delegados (delegados de multidifusión)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
 
  Un delegado de multidifusión mantiene una lista de invocación de los métodos a los que está enlazado. El delegado de multidifusión admite un método <xref:System.Delegate.Combine%2A> para agregar un método a la lista de invocación y un método <xref:System.Delegate.Remove%2A> para quitarlo.
 

@@ -1,15 +1,15 @@
 ---
-title: 'Ejemplo de FindPrivateKey: WCF'
+title: Ejemplo de FindPrivateKey
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989885"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346018"
 ---
 # <a name="findprivatekey-sample"></a>Ejemplo de FindPrivateKey
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Para descargar el proyecto, visite los [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Abra el explorador de archivos y vaya a la carpeta *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* bajo la ubicación del directorio donde instaló el ejemplo.
+1. Abra el explorador de archivos y vaya a la carpeta *WF_WCF_Samples \wcf\setup\findprivatekey\cs* bajo la ubicación del directorio donde instaló el ejemplo.
 
 2. Haga doble clic en el icono del archivo .sln para abrir el archivo en Visual Studio.
 
 3. En el menú **compilar** , seleccione **recompilar solución**.
 
-4. Al compilar la solución, se genera el archivo: FindPrivateKey.exe.
+4. Al compilar la solución, se crea el archivo: FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Convenciones: entradas de la línea de comandos
 
@@ -64,15 +64,15 @@ Para descargar el proyecto, visite los [ejemplos de Windows Communication Founda
 
  "\<*valor*>" representa un valor de parámetro que se va a escribir.
 
-## <a name="usage"></a>Uso
+## <a name="usage"></a>Usage
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-Dónde:
+Donde:
 
-| Parámetro         | DESCRIPCIÓN                                                                       |
+| Parámetro         | Descripción                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | `<subjectName>` | Nombre del firmante del certificado.                                               |
 | `<thumbprint>`  | La huella digital del certificado (puede usar la herramienta Certmgr. exe para encontrarlo) |
