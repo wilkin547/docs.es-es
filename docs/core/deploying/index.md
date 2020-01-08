@@ -2,13 +2,12 @@
 title: Implementación de aplicaciones .NET Core
 description: Conozca las formas de implementar una aplicación .NET Core.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089195"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740809"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
@@ -64,7 +63,7 @@ También tiene algunos inconvenientes:
 
 - El tamaño de su paquete de implementación es relativamente grande, ya que tendrá que incluir .NET Core, así como la aplicación y sus dependencias de terceros.
 
-  A partir de .NET Core 2.0, puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. Normalmente, .NET Core en Linux se basa en las [bibliotecas ICU](http://icu-project.org) para la compatibilidad global. En modo invariable, las bibliotecas no se incluyen con la implementación y todas las referencias culturales se comportan como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  A partir de .NET Core 2.0, puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) de .NET Core. Normalmente, .NET Core en Linux se basa en las [bibliotecas ICU](http://icu-project.org) para la compatibilidad global. En modo invariable, las bibliotecas no se incluyen con la implementación y todas las referencias culturales se comportan como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - La implementación de numerosas aplicaciones .NET Core autocontenidas en un sistema puede consumir importantes cantidades de espacio en disco, puesto que cada aplicación duplica archivos de .NET Core.
 

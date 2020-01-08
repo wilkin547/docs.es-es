@@ -1,14 +1,13 @@
 ---
 title: Guías paso a paso de ML.NET
 description: Obtenga información sobre cómo realizar tareas específicas para ayudarle con la creación de soluciones de IA personalizadas y la integración de Machine Learning en sus aplicaciones .NET.
-ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977106"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715666"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guías paso a paso de aprendizaje automático de .NET
 
