@@ -13,44 +13,44 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: a61fa5a3f87c534574d7265dfdc16365c0afbbe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644854"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348430"
 ---
-# <a name="version-tolerant-serialization"></a><span data-ttu-id="1952f-102">Serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="1952f-102">Version tolerant serialization</span></span>
-<span data-ttu-id="1952f-103">En la versión 1.0 y 1.1 de .NET Framework, la creación de tipos serializables que serían reutilizables a partir de una versión de una aplicación a lo siguiente, ha resultado problemática.</span><span class="sxs-lookup"><span data-stu-id="1952f-103">In version 1.0 and 1.1 of the .NET Framework, creating serializable types that would be reusable from one version of an application to the next was problematic.</span></span> <span data-ttu-id="1952f-104">Si un tipo se modificara agregando los campos adicionales, se producirían los problemas siguientes:</span><span class="sxs-lookup"><span data-stu-id="1952f-104">If a type was modified by adding extra fields, the following problems would occur:</span></span>  
-  
-- <span data-ttu-id="1952f-105">Las versiones anteriores de una aplicación produciría excepciones en caso de solicitar la deserialización de las nuevas versiones del tipo anterior.</span><span class="sxs-lookup"><span data-stu-id="1952f-105">Older versions of an application would throw exceptions when asked to deserialize new versions of the old type.</span></span>  
-  
-- <span data-ttu-id="1952f-106">Las versiones más recientes de una aplicación producirían las excepciones al deserializar versiones anteriores de un tipo con datos que faltan.</span><span class="sxs-lookup"><span data-stu-id="1952f-106">Newer versions of an application would throw exceptions when deserializing older versions of a type with missing data.</span></span>  
-  
- <span data-ttu-id="1952f-107">La Serialización Tolerante a versiones (VTS) es un conjunto de características introducido en .NET Framework 2.0 que facilita, con el tiempo, modificar los tipos serializables.</span><span class="sxs-lookup"><span data-stu-id="1952f-107">Version Tolerant Serialization (VTS) is a set of features introduced in .NET Framework 2.0 that makes it easier, over time, to modify serializable types.</span></span> <span data-ttu-id="1952f-108">Específicamente, las características VTS están habilitadas para las clases a las que se ha aplicado el atributo <xref:System.SerializableAttribute>, incluidos los tipos genéricos.</span><span class="sxs-lookup"><span data-stu-id="1952f-108">Specifically, the VTS features are enabled for classes to which the <xref:System.SerializableAttribute> attribute has been applied, including generic types.</span></span> <span data-ttu-id="1952f-109">VTS posibilita el agregar los nuevos campos a esas clases sin interrumpir la compatibilidad con otras versiones del tipo.</span><span class="sxs-lookup"><span data-stu-id="1952f-109">VTS makes it possible to add new fields to those classes without breaking compatibility with other versions of the type.</span></span> <span data-ttu-id="1952f-110">Para obtener una aplicación de ejemplo en funcionamiento, vea [Ejemplo de tecnología de serialización tolerante a versiones](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).</span><span class="sxs-lookup"><span data-stu-id="1952f-110">For a working sample application, see [Version Tolerant Serialization Technology Sample](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).</span></span>  
-  
- <span data-ttu-id="1952f-111">Las características VTS están habilitadas al utilizar <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.</span><span class="sxs-lookup"><span data-stu-id="1952f-111">The VTS features are enabled when using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.</span></span> <span data-ttu-id="1952f-112">Además, todas las características, excepto la tolerancia de datos extraños, están habilitadas también al utilizar <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span><span class="sxs-lookup"><span data-stu-id="1952f-112">Additionally, all features except extraneous data tolerance are also enabled when using the <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span></span> <span data-ttu-id="1952f-113">Para más información sobre el uso de estas clases para la serialización, vea [Serialización binaria](binary-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="1952f-113">For more information about using these classes for serialization, see [Binary Serialization](binary-serialization.md).</span></span>  
-  
+# <a name="version-tolerant-serialization"></a><span data-ttu-id="a1a13-102">Serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="a1a13-102">Version tolerant serialization</span></span>
+
+<span data-ttu-id="a1a13-103">En la versión 1.0 y 1.1 de .NET Framework, la creación de tipos serializables que serían reutilizables a partir de una versión de una aplicación a lo siguiente, ha resultado problemática.</span><span class="sxs-lookup"><span data-stu-id="a1a13-103">In version 1.0 and 1.1 of the .NET Framework, creating serializable types that would be reusable from one version of an application to the next was problematic.</span></span> <span data-ttu-id="a1a13-104">Si un tipo se modificara agregando los campos adicionales, se producirían los problemas siguientes:</span><span class="sxs-lookup"><span data-stu-id="a1a13-104">If a type was modified by adding extra fields, the following problems would occur:</span></span>
+
+- <span data-ttu-id="a1a13-105">Las versiones anteriores de una aplicación produciría excepciones en caso de solicitar la deserialización de las nuevas versiones del tipo anterior.</span><span class="sxs-lookup"><span data-stu-id="a1a13-105">Older versions of an application would throw exceptions when asked to deserialize new versions of the old type.</span></span>
+- <span data-ttu-id="a1a13-106">Las versiones más recientes de una aplicación producirían las excepciones al deserializar versiones anteriores de un tipo con datos que faltan.</span><span class="sxs-lookup"><span data-stu-id="a1a13-106">Newer versions of an application would throw exceptions when deserializing older versions of a type with missing data.</span></span>
+
+<span data-ttu-id="a1a13-107">La Serialización Tolerante a versiones (VTS) es un conjunto de características introducido en .NET Framework 2.0 que facilita, con el tiempo, modificar los tipos serializables.</span><span class="sxs-lookup"><span data-stu-id="a1a13-107">Version Tolerant Serialization (VTS) is a set of features introduced in .NET Framework 2.0 that makes it easier, over time, to modify serializable types.</span></span> <span data-ttu-id="a1a13-108">Específicamente, las características VTS están habilitadas para las clases a las que se ha aplicado el atributo <xref:System.SerializableAttribute>, incluidos los tipos genéricos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-108">Specifically, the VTS features are enabled for classes to which the <xref:System.SerializableAttribute> attribute has been applied, including generic types.</span></span> <span data-ttu-id="a1a13-109">VTS posibilita el agregar los nuevos campos a esas clases sin interrumpir la compatibilidad con otras versiones del tipo.</span><span class="sxs-lookup"><span data-stu-id="a1a13-109">VTS makes it possible to add new fields to those classes without breaking compatibility with other versions of the type.</span></span> <span data-ttu-id="a1a13-110">Para obtener una aplicación de ejemplo en funcionamiento, vea [Ejemplo de tecnología de serialización tolerante a versiones](version-tolerant-serialization-technology-sample.md).</span><span class="sxs-lookup"><span data-stu-id="a1a13-110">For a working sample application, see [Version Tolerant Serialization Technology Sample](version-tolerant-serialization-technology-sample.md).</span></span>
+
+<span data-ttu-id="a1a13-111">Las características VTS están habilitadas al utilizar <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.</span><span class="sxs-lookup"><span data-stu-id="a1a13-111">The VTS features are enabled when using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.</span></span> <span data-ttu-id="a1a13-112">Además, todas las características, excepto la tolerancia de datos extraños, están habilitadas también al utilizar <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span><span class="sxs-lookup"><span data-stu-id="a1a13-112">Additionally, all features except extraneous data tolerance are also enabled when using the <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span></span> <span data-ttu-id="a1a13-113">Para más información sobre el uso de estas clases para la serialización, vea [Serialización binaria](binary-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="a1a13-113">For more information about using these classes for serialization, see [Binary Serialization](binary-serialization.md).</span></span>
+
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-## <a name="feature-list"></a><span data-ttu-id="1952f-114">Lista de características</span><span class="sxs-lookup"><span data-stu-id="1952f-114">Feature list</span></span>  
- <span data-ttu-id="1952f-115">En la lista de características se incluyen las siguientes:</span><span class="sxs-lookup"><span data-stu-id="1952f-115">The set of features includes the following:</span></span>  
-  
-- <span data-ttu-id="1952f-116">Tolerancia de datos extraños o inesperados.</span><span class="sxs-lookup"><span data-stu-id="1952f-116">Tolerance of extraneous or unexpected data.</span></span> <span data-ttu-id="1952f-117">Esto permite a las versiones más recientes del tipo enviar los datos a las versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="1952f-117">This enables newer versions of the type to send data to older versions.</span></span>  
-  
-- <span data-ttu-id="1952f-118">Tolerancia de datos opcionales que faltan.</span><span class="sxs-lookup"><span data-stu-id="1952f-118">Tolerance of missing optional data.</span></span> <span data-ttu-id="1952f-119">Esto permite a las versiones anteriores enviar los datos a las versiones más recientes.</span><span class="sxs-lookup"><span data-stu-id="1952f-119">This enables older versions to send data to newer versions.</span></span>  
-  
-- <span data-ttu-id="1952f-120">Devoluciones de llamada de la serialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-120">Serialization callbacks.</span></span> <span data-ttu-id="1952f-121">Esto habilita el valor predeterminado inteligente en casos donde faltan datos.</span><span class="sxs-lookup"><span data-stu-id="1952f-121">This enables intelligent default value setting in cases where data is missing.</span></span>  
-  
- <span data-ttu-id="1952f-122">Hay además, una característica para declarar cuando se ha agregado un nuevo campo opcional.</span><span class="sxs-lookup"><span data-stu-id="1952f-122">In addition, there is a feature for declaring when a new optional field has been added.</span></span> <span data-ttu-id="1952f-123">Ésta es la propiedad <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> del atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute>.</span><span class="sxs-lookup"><span data-stu-id="1952f-123">This is the <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> property of the <xref:System.Runtime.Serialization.OptionalFieldAttribute> attribute.</span></span>  
-  
- <span data-ttu-id="1952f-124">Estas características se discuten abajo en detalle.</span><span class="sxs-lookup"><span data-stu-id="1952f-124">These features are discussed in greater detail below.</span></span>  
-  
-## <a name="tolerance-of-extraneous-or-unexpected-data"></a><span data-ttu-id="1952f-125">Tolerancia de datos extraños o inesperados</span><span class="sxs-lookup"><span data-stu-id="1952f-125">Tolerance of extraneous or unexpected data</span></span>  
- <span data-ttu-id="1952f-126">En el pasado, durante la deserialización, cualquier dato extraño o inesperado produjeron excepciones.</span><span class="sxs-lookup"><span data-stu-id="1952f-126">In the past, during deserialization, any extraneous or unexpected data caused exceptions to be thrown.</span></span> <span data-ttu-id="1952f-127">Con VTS, en la misma situación, cualquier dato extraño o inesperado se omite en lugar de producir excepciones.</span><span class="sxs-lookup"><span data-stu-id="1952f-127">With VTS, in the same situation, any extraneous or unexpected data is ignored instead of causing exceptions to be thrown.</span></span> <span data-ttu-id="1952f-128">Esto habilita aplicaciones que utilizan versiones más recientes de un tipo (es decir, una versión que incluye más campos) para enviar información a las aplicaciones que esperan versiones anteriores del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="1952f-128">This enables applications that use newer versions of a type (that is, a version that includes more fields) to send information to applications that expect older versions of the same type.</span></span>  
-  
- <span data-ttu-id="1952f-129">En el ejemplo siguiente, los datos adicionales contenidos en `CountryField` de la versión 2.0 de la clase `Address` se omiten cuando una aplicación anterior deserializa la versión más reciente.</span><span class="sxs-lookup"><span data-stu-id="1952f-129">In the following example, the extra data contained in the `CountryField` of version 2.0 of the `Address` class is ignored when an older application deserializes the newer version.</span></span>  
-  
+## <a name="feature-list"></a><span data-ttu-id="a1a13-114">Lista de características</span><span class="sxs-lookup"><span data-stu-id="a1a13-114">Feature list</span></span>
+
+<span data-ttu-id="a1a13-115">En la lista de características se incluyen las siguientes:</span><span class="sxs-lookup"><span data-stu-id="a1a13-115">The set of features includes the following:</span></span>
+
+- <span data-ttu-id="a1a13-116">Tolerancia de datos extraños o inesperados.</span><span class="sxs-lookup"><span data-stu-id="a1a13-116">Tolerance of extraneous or unexpected data.</span></span> <span data-ttu-id="a1a13-117">Esto permite a las versiones más recientes del tipo enviar los datos a las versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="a1a13-117">This enables newer versions of the type to send data to older versions.</span></span>
+- <span data-ttu-id="a1a13-118">Tolerancia de datos opcionales que faltan.</span><span class="sxs-lookup"><span data-stu-id="a1a13-118">Tolerance of missing optional data.</span></span> <span data-ttu-id="a1a13-119">Esto permite a las versiones anteriores enviar los datos a las versiones más recientes.</span><span class="sxs-lookup"><span data-stu-id="a1a13-119">This enables older versions to send data to newer versions.</span></span>
+- <span data-ttu-id="a1a13-120">Devoluciones de llamada de la serialización.</span><span class="sxs-lookup"><span data-stu-id="a1a13-120">Serialization callbacks.</span></span> <span data-ttu-id="a1a13-121">Esto habilita el valor predeterminado inteligente en casos donde faltan datos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-121">This enables intelligent default value setting in cases where data is missing.</span></span>
+
+<span data-ttu-id="a1a13-122">Hay además, una característica para declarar cuando se ha agregado un nuevo campo opcional.</span><span class="sxs-lookup"><span data-stu-id="a1a13-122">In addition, there is a feature for declaring when a new optional field has been added.</span></span> <span data-ttu-id="a1a13-123">Ésta es la propiedad <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> del atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a1a13-123">This is the <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> property of the <xref:System.Runtime.Serialization.OptionalFieldAttribute> attribute.</span></span>
+
+<span data-ttu-id="a1a13-124">Estas características se describen con más detalle en las secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="a1a13-124">These features are discussed in greater detail in the following sections.</span></span>
+
+### <a name="tolerance-of-extraneous-or-unexpected-data"></a><span data-ttu-id="a1a13-125">Tolerancia de datos extraños o inesperados</span><span class="sxs-lookup"><span data-stu-id="a1a13-125">Tolerance of extraneous or unexpected data</span></span>
+
+<span data-ttu-id="a1a13-126">En el pasado, durante la deserialización, cualquier dato extraño o inesperado produjeron excepciones.</span><span class="sxs-lookup"><span data-stu-id="a1a13-126">In the past, during deserialization, any extraneous or unexpected data caused exceptions to be thrown.</span></span> <span data-ttu-id="a1a13-127">Con VTS, en la misma situación, cualquier dato extraño o inesperado se omite en lugar de producir excepciones.</span><span class="sxs-lookup"><span data-stu-id="a1a13-127">With VTS, in the same situation, any extraneous or unexpected data is ignored instead of causing exceptions to be thrown.</span></span> <span data-ttu-id="a1a13-128">Esto habilita aplicaciones que utilizan versiones más recientes de un tipo (es decir, una versión que incluye más campos) para enviar información a las aplicaciones que esperan versiones anteriores del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="a1a13-128">This enables applications that use newer versions of a type (that is, a version that includes more fields) to send information to applications that expect older versions of the same type.</span></span>
+
+<span data-ttu-id="a1a13-129">En el ejemplo siguiente, los datos adicionales contenidos en `CountryField` de la versión 2.0 de la clase `Address` se omiten cuando una aplicación anterior deserializa la versión más reciente.</span><span class="sxs-lookup"><span data-stu-id="a1a13-129">In the following example, the extra data contained in the `CountryField` of version 2.0 of the `Address` class is ignored when an older application deserializes the newer version.</span></span>
+
 ```csharp  
 // Version 1 of the Address class.  
 [Serializable]  
@@ -87,200 +87,200 @@ Public Class Address
     Public CountryField As String  
 End Class  
 ```  
+
+### <a name="tolerance-of-missing-data"></a><span data-ttu-id="a1a13-130">Tolerancia de datos que faltan</span><span class="sxs-lookup"><span data-stu-id="a1a13-130">Tolerance of missing data</span></span>
+
+<span data-ttu-id="a1a13-131">Los campos se pueden marcar como opcionales aplicando el atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute> a ellos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-131">Fields can be marked as optional by applying the <xref:System.Runtime.Serialization.OptionalFieldAttribute> attribute to them.</span></span> <span data-ttu-id="a1a13-132">Durante la deserialización, si faltan datos opcionales, el motor de la serialización omite la ausencia y no inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="a1a13-132">During deserialization, if the optional data is missing, the serialization engine ignores the absence and does not throw an exception.</span></span> <span data-ttu-id="a1a13-133">Así, las aplicaciones que esperan versiones anteriores de un tipo pueden enviar los datos a las aplicaciones que esperan versiones más recientes del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="a1a13-133">Thus, applications that expect older versions of a type can send data to applications that expect newer versions of the same type.</span></span>
+
+<span data-ttu-id="a1a13-134">El ejemplo siguiente muestra la versión 2.0 de la clase `Address` con el campo `CountryField` marcado como opcional.</span><span class="sxs-lookup"><span data-stu-id="a1a13-134">The following example shows version 2.0 of the `Address` class with the `CountryField` field marked as optional.</span></span> <span data-ttu-id="a1a13-135">Si una aplicación más anterior envía la versión 1 a una aplicación más reciente que espera la versión 2.0, se omite la ausencia de los datos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-135">If an older application sends version 1 to a newer application that expects version 2.0, the absence of the data is ignored.</span></span>
+
+```csharp
+[Serializable]
+public class Address
+{
+    public string Street;
+    public string City;
+
+    [OptionalField]
+    public string CountryField;
+}
+```
+
+```vb
+<Serializable> _
+Public Class Address
+    Public Street As String
+    Public City As String
+
+    <OptionalField> _
+    Public CountryField As String
+End Class
+```
   
-## <a name="tolerance-of-missing-data"></a><span data-ttu-id="1952f-130">Tolerancia de datos que faltan</span><span class="sxs-lookup"><span data-stu-id="1952f-130">Tolerance of missing data</span></span>  
- <span data-ttu-id="1952f-131">Los campos se pueden marcar como opcionales aplicando el atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute> a ellos.</span><span class="sxs-lookup"><span data-stu-id="1952f-131">Fields can be marked as optional by applying the <xref:System.Runtime.Serialization.OptionalFieldAttribute> attribute to them.</span></span> <span data-ttu-id="1952f-132">Durante la deserialización, si faltan datos opcionales, el motor de la serialización omite la ausencia y no inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="1952f-132">During deserialization, if the optional data is missing, the serialization engine ignores the absence and does not throw an exception.</span></span> <span data-ttu-id="1952f-133">Así, las aplicaciones que esperan versiones anteriores de un tipo pueden enviar los datos a las aplicaciones que esperan versiones más recientes del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="1952f-133">Thus, applications that expect older versions of a type can send data to applications that expect newer versions of the same type.</span></span>  
-  
- <span data-ttu-id="1952f-134">El ejemplo siguiente muestra la versión 2.0 de la clase `Address` con el campo `CountryField` marcado como opcional.</span><span class="sxs-lookup"><span data-stu-id="1952f-134">The following example shows version 2.0 of the `Address` class with the `CountryField` field marked as optional.</span></span> <span data-ttu-id="1952f-135">Si una aplicación más anterior envía la versión 1 a una aplicación más reciente que espera la versión 2.0, se omite la ausencia de los datos.</span><span class="sxs-lookup"><span data-stu-id="1952f-135">If an older application sends version 1 to a newer application that expects version 2.0, the absence of the data is ignored.</span></span>  
-  
-```csharp  
-[Serializable]  
-public class Address  
-{  
-    public string Street;  
-    public string City;  
-  
-    [OptionalField]  
-    public string CountryField;  
-}  
-```  
-  
-```vb  
-<Serializable> _  
-Public Class Address  
-    Public Street As String  
-    Public City As String  
-  
-    <OptionalField> _  
-    Public CountryField As String  
-End Class  
-```  
-  
-## <a name="serialization-callbacks"></a><span data-ttu-id="1952f-136">Devoluciones de llamada de la serialización</span><span class="sxs-lookup"><span data-stu-id="1952f-136">Serialization callbacks</span></span>  
- <span data-ttu-id="1952f-137">Las devoluciones de llamada de la serialización son un mecanismo que proporciona los enlaces en el proceso de serialización/deserialización en cuatro puntos.</span><span class="sxs-lookup"><span data-stu-id="1952f-137">Serialization callbacks are a mechanism that provides hooks into the serialization/deserialization process at four points.</span></span>  
-  
-|<span data-ttu-id="1952f-138">Atributo</span><span class="sxs-lookup"><span data-stu-id="1952f-138">Attribute</span></span>|<span data-ttu-id="1952f-139">Cuando se llama al método asociado.</span><span class="sxs-lookup"><span data-stu-id="1952f-139">When the Associated Method is Called</span></span>|<span data-ttu-id="1952f-140">Uso típico</span><span class="sxs-lookup"><span data-stu-id="1952f-140">Typical Use</span></span>|  
-|---------------|------------------------------------------|-----------------|  
-|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|<span data-ttu-id="1952f-141">Antes de la deserialización. \*</span><span class="sxs-lookup"><span data-stu-id="1952f-141">Before deserialization.\*</span></span>|<span data-ttu-id="1952f-142">Inicialice los valores predeterminados para los campos opcionales.</span><span class="sxs-lookup"><span data-stu-id="1952f-142">Initialize default values for optional fields.</span></span>|  
-|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|<span data-ttu-id="1952f-143">Después de la deserialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-143">After deserialization.</span></span>|<span data-ttu-id="1952f-144">Corrija valores de campo opcionales basados en el contenido de otros campos.</span><span class="sxs-lookup"><span data-stu-id="1952f-144">Fix optional field values based on contents of other fields.</span></span>|  
-|<xref:System.Runtime.Serialization.OnSerializingAttribute>|<span data-ttu-id="1952f-145">Antes de la serialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-145">Before serialization.</span></span>|<span data-ttu-id="1952f-146">Prepare para la serialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-146">Prepare for serialization.</span></span> <span data-ttu-id="1952f-147">Por ejemplo, cree las estructuras de datos opcionales.</span><span class="sxs-lookup"><span data-stu-id="1952f-147">For example, create optional data structures.</span></span>|  
-|<xref:System.Runtime.Serialization.OnSerializedAttribute>|<span data-ttu-id="1952f-148">Después de la serialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-148">After serialization.</span></span>|<span data-ttu-id="1952f-149">Registre los eventos de serialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-149">Log serialization events.</span></span>|  
-  
- <span data-ttu-id="1952f-150">\* Esta devolución de llamada se invoca antes del constructor de deserialización, si hay alguno.</span><span class="sxs-lookup"><span data-stu-id="1952f-150">\* This callback is invoked before the deserialization constructor, if one is present.</span></span>  
-  
-### <a name="using-callbacks"></a><span data-ttu-id="1952f-151">Empleo de devoluciones de llamada</span><span class="sxs-lookup"><span data-stu-id="1952f-151">Using callbacks</span></span>  
- <span data-ttu-id="1952f-152">Para utilizar las devoluciones de llamada, aplique el atributo adecuado a un método que acepta un parámetro <xref:System.Runtime.Serialization.StreamingContext>.</span><span class="sxs-lookup"><span data-stu-id="1952f-152">To use callbacks, apply the appropriate attribute to a method that accepts a <xref:System.Runtime.Serialization.StreamingContext> parameter.</span></span> <span data-ttu-id="1952f-153">Solo se puede marcar un método por clase con cada uno de estos atributos.</span><span class="sxs-lookup"><span data-stu-id="1952f-153">Only one method per class can be marked with each of these attributes.</span></span> <span data-ttu-id="1952f-154">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1952f-154">For example:</span></span>  
-  
-```csharp  
-[OnDeserializing]  
-private void SetCountryRegionDefault(StreamingContext sc)  
-{  
-    CountryField = "Japan";  
-}  
-```  
-  
-```vb  
-<OnDeserializing>  
-Private Sub SetCountryRegionDefault(StreamingContext sc)  
-    CountryField = "Japan";  
-End Sub  
-```  
-  
- <span data-ttu-id="1952f-155">El uso previsto de estos métodos es para las versiones.</span><span class="sxs-lookup"><span data-stu-id="1952f-155">The intended use of these methods is for versioning.</span></span> <span data-ttu-id="1952f-156">Durante la deserialización, un campo opcional no se puede inicializar correctamente si faltan los datos para el campo.</span><span class="sxs-lookup"><span data-stu-id="1952f-156">During deserialization, an optional field may not be correctly initialized if the data for the field is missing.</span></span> <span data-ttu-id="1952f-157">Esto se puede corregir si se crea el método que asigna el valor correcto y luego se aplica el atributo **OnDeserializingAttribute** u **OnDeserializedAttribute** al método.</span><span class="sxs-lookup"><span data-stu-id="1952f-157">This can be corrected by creating the method that assigns the correct value, then applying either the **OnDeserializingAttribute** or **OnDeserializedAttribute** attribute to the method.</span></span>  
-  
- <span data-ttu-id="1952f-158">El ejemplo siguiente muestra el método en el contexto de un tipo.</span><span class="sxs-lookup"><span data-stu-id="1952f-158">The following example shows the method in the context of a type.</span></span> <span data-ttu-id="1952f-159">Si una versión anterior de una aplicación envía una instancia de la clase `Address` a una versión posterior de la aplicación, faltarán los datos de campo `CountryField`.</span><span class="sxs-lookup"><span data-stu-id="1952f-159">If an earlier version of an application sends an instance of the `Address` class to a later version of the application, the `CountryField` field data will be missing.</span></span> <span data-ttu-id="1952f-160">Pero después de la deserialización, el campo estará establecido con el valor predeterminado "Japan".</span><span class="sxs-lookup"><span data-stu-id="1952f-160">But after deserialization, the field will be set to a default value "Japan."</span></span>  
-  
-```csharp  
-[Serializable]  
-public class Address  
-{  
-    public string Street;  
-    public string City;  
-    [OptionalField]  
-    public string CountryField;  
-  
-    [OnDeserializing]  
-    private void SetCountryRegionDefault (StreamingContext sc)  
-    {  
-        CountryField = "Japan";  
-    }  
-}  
-```  
-  
-```vb  
-<Serializable> _  
-Public Class Address  
-    Public Street As String  
-    Public City As String  
-    <OptionalField> _  
-    Public CountryField As String  
-  
-    <OnDeserializing> _  
-    Private Sub SetCountryRegionDefault(StreamingContext sc)  
-        CountryField = "Japan";  
-    End Sub  
-End Class  
-```  
-  
-## <a name="the-versionadded-property"></a><span data-ttu-id="1952f-161">Propiedad VersionAdded</span><span class="sxs-lookup"><span data-stu-id="1952f-161">The VersionAdded property</span></span>  
- <span data-ttu-id="1952f-162">**OptionalFieldAttribute** tiene la propiedad **VersionAdded**.</span><span class="sxs-lookup"><span data-stu-id="1952f-162">The **OptionalFieldAttribute** has the **VersionAdded** property.</span></span> <span data-ttu-id="1952f-163">En la versión 2.0 de .NET Framework no se usa.</span><span class="sxs-lookup"><span data-stu-id="1952f-163">In version 2.0 of the .NET Framework, this isn't used.</span></span> <span data-ttu-id="1952f-164">Pero es importante establecer correctamente esta propiedad para asegurarse de que el tipo sea compatible con los motores de serialización futuros.</span><span class="sxs-lookup"><span data-stu-id="1952f-164">However, it's important to set this property correctly to ensure that the type will be compatible with future serialization engines.</span></span>  
-  
- <span data-ttu-id="1952f-165">La propiedad indica qué versión de un tipo de un campo determinado se ha agregado.</span><span class="sxs-lookup"><span data-stu-id="1952f-165">The property indicates which version of a type a given field has been added.</span></span> <span data-ttu-id="1952f-166">Se debería incrementar en uno exactamente (comenzando en 2) cada vez que se modifica el tipo, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="1952f-166">It should be incremented by exactly one (starting at 2) every time the type is modified, as shown in the following example:</span></span>  
-  
-```csharp  
-// Version 1.0  
-[Serializable]  
-public class Person  
-{  
-    public string FullName;  
-}  
-  
-// Version 2.0  
-[Serializable]  
-public class Person  
-{  
-    public string FullName;  
-  
-    [OptionalField(VersionAdded = 2)]  
-    public string NickName;  
-    [OptionalField(VersionAdded = 2)]  
-    public DateTime BirthDate;  
-}  
-  
-// Version 3.0  
-[Serializable]  
-public class Person  
-{  
-    public string FullName;  
-  
-    [OptionalField(VersionAdded=2)]  
-    public string NickName;  
-    [OptionalField(VersionAdded=2)]  
-    public DateTime BirthDate;  
-  
-    [OptionalField(VersionAdded=3)]  
-    public int Weight;  
-}  
-```  
-  
-```vb  
-' Version 1.0  
-<Serializable> _  
-Public Class Person  
-    Public FullName  
-End Class  
-  
-' Version 2.0  
-<Serializable> _  
-Public Class Person  
-    Public FullName As String  
-  
-    <OptionalField(VersionAdded := 2)> _  
-    Public NickName As String  
-    <OptionalField(VersionAdded := 2)> _  
-    Public BirthDate As DateTime  
-End Class  
-  
-' Version 3.0  
-<Serializable> _  
-Public Class Person  
-    Public FullName As String  
-  
-    <OptionalField(VersionAdded := 2)> _  
-    Public NickName As String  
-    <OptionalField(VersionAdded := 2)> _  
-    Public BirthDate As DateTime  
-  
-    <OptionalField(VersionAdded := 3)> _  
-    Public Weight As Integer  
-End Class  
-```  
-  
-## <a name="serializationbinder"></a><span data-ttu-id="1952f-167">SerializationBinder</span><span class="sxs-lookup"><span data-stu-id="1952f-167">SerializationBinder</span></span>  
- <span data-ttu-id="1952f-168">Algunos usuarios pueden necesitar controlar qué clase serializar y deserializar porque se necesita una versión diferente de la clase en el servidor y el cliente.</span><span class="sxs-lookup"><span data-stu-id="1952f-168">Some users may need to control which class to serialize and deserialize because a different version of the class is required on the server and client.</span></span> <span data-ttu-id="1952f-169"><xref:System.Runtime.Serialization.SerializationBinder> es una clase abstracta usada para controlar los tipos reales empleados durante la serialización y la deserialización.</span><span class="sxs-lookup"><span data-stu-id="1952f-169"><xref:System.Runtime.Serialization.SerializationBinder> is an abstract class used to control the actual types used during serialization and deserialization.</span></span>  <span data-ttu-id="1952f-170">Para usar esta clase, obtenga una clase de <xref:System.Runtime.Serialization.SerializationBinder> y omita los métodos <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> y <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>.</span><span class="sxs-lookup"><span data-stu-id="1952f-170">To use this class, derive a class from <xref:System.Runtime.Serialization.SerializationBinder> and override the <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> and <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> methods.</span></span> <span data-ttu-id="1952f-171">Para obtener más información, consulte [controlar la serialización y deserialización con SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).</span><span class="sxs-lookup"><span data-stu-id="1952f-171">For more information, see [Controlling Serialization and Deserialization with SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).</span></span>  
-  
-## <a name="best-practices"></a><span data-ttu-id="1952f-172">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="1952f-172">Best practices</span></span>  
- <span data-ttu-id="1952f-173">Para asegurar el comportamiento apropiado de la versión, siga estas reglas al modificar un tipo de la versión para la versión:</span><span class="sxs-lookup"><span data-stu-id="1952f-173">To ensure proper versioning behavior, follow these rules when modifying a type from version to version:</span></span>  
-  
-- <span data-ttu-id="1952f-174">Nunca quite un campo serializado.</span><span class="sxs-lookup"><span data-stu-id="1952f-174">Never remove a serialized field.</span></span>  
-  
-- <span data-ttu-id="1952f-175">Nunca aplique el atributo <xref:System.NonSerializedAttribute> a un campo si el atributo no se aplicó al campo en la versión anterior.</span><span class="sxs-lookup"><span data-stu-id="1952f-175">Never apply the <xref:System.NonSerializedAttribute> attribute to a field if the attribute was not applied to the field in the previous version.</span></span>  
-  
-- <span data-ttu-id="1952f-176">Nunca cambie el nombre o el tipo de un campo serializado.</span><span class="sxs-lookup"><span data-stu-id="1952f-176">Never change the name or the type of a serialized field.</span></span>  
-  
-- <span data-ttu-id="1952f-177">Al agregar un nuevo campo serializado, aplique el atributo **OptionalFieldAttribute**.</span><span class="sxs-lookup"><span data-stu-id="1952f-177">When adding a new serialized field, apply the **OptionalFieldAttribute** attribute.</span></span>  
-  
-- <span data-ttu-id="1952f-178">Al quitar un atributo **NonSerializedAttribute** de un campo (que no era serializable en una versión anterior), aplique el atributo **OptionalFieldAttribute**.</span><span class="sxs-lookup"><span data-stu-id="1952f-178">When removing a **NonSerializedAttribute** attribute from a field (that was not serializable in a previous version), apply the **OptionalFieldAttribute** attribute.</span></span>  
-  
-- <span data-ttu-id="1952f-179">Para todos los campos opcionales, establezca valores predeterminados significativos mediante las devoluciones de llamada de serialización, a menos que se acepten 0 o **null** como valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="1952f-179">For all optional fields, set meaningful defaults using the serialization callbacks unless 0 or **null** as defaults are acceptable.</span></span>  
-  
- <span data-ttu-id="1952f-180">Para asegurarse de que un tipo será compatible con motores de serialización futuros, siga estas instrucciones:</span><span class="sxs-lookup"><span data-stu-id="1952f-180">To ensure that a type will be compatible with future serialization engines, follow these guidelines:</span></span>  
-  
-- <span data-ttu-id="1952f-181">Establezca siempre correctamente la propiedad **VersionAdded** en el atributo **OptionalFieldAttribute**.</span><span class="sxs-lookup"><span data-stu-id="1952f-181">Always set the **VersionAdded** property on the **OptionalFieldAttribute** attribute correctly.</span></span>  
-  
-- <span data-ttu-id="1952f-182">Evite la versión bifurcada.</span><span class="sxs-lookup"><span data-stu-id="1952f-182">Avoid branched versioning.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="1952f-183">Vea también</span><span class="sxs-lookup"><span data-stu-id="1952f-183">See also</span></span>
+### <a name="serialization-callbacks"></a><span data-ttu-id="a1a13-136">Devoluciones de llamada de la serialización</span><span class="sxs-lookup"><span data-stu-id="a1a13-136">Serialization callbacks</span></span>
+
+<span data-ttu-id="a1a13-137">Las devoluciones de llamada de la serialización son un mecanismo que proporciona los enlaces en el proceso de serialización/deserialización en cuatro puntos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-137">Serialization callbacks are a mechanism that provides hooks into the serialization/deserialization process at four points.</span></span>
+
+|<span data-ttu-id="a1a13-138">Attribute</span><span class="sxs-lookup"><span data-stu-id="a1a13-138">Attribute</span></span>|<span data-ttu-id="a1a13-139">Cuando se llama al método asociado.</span><span class="sxs-lookup"><span data-stu-id="a1a13-139">When the Associated Method is Called</span></span>|<span data-ttu-id="a1a13-140">Uso típico</span><span class="sxs-lookup"><span data-stu-id="a1a13-140">Typical Use</span></span>|
+|---------------|------------------------------------------|-----------------|
+|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|<span data-ttu-id="a1a13-141">Antes de la deserialización.\*</span><span class="sxs-lookup"><span data-stu-id="a1a13-141">Before deserialization.\*</span></span>|<span data-ttu-id="a1a13-142">Inicialice los valores predeterminados para los campos opcionales.</span><span class="sxs-lookup"><span data-stu-id="a1a13-142">Initialize default values for optional fields.</span></span>|
+|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|<span data-ttu-id="a1a13-143">Después de la deserialización.</span><span class="sxs-lookup"><span data-stu-id="a1a13-143">After deserialization.</span></span>|<span data-ttu-id="a1a13-144">Corrija valores de campo opcionales basados en el contenido de otros campos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-144">Fix optional field values based on contents of other fields.</span></span>|
+|<xref:System.Runtime.Serialization.OnSerializingAttribute>|<span data-ttu-id="a1a13-145">Antes de la serialización. \*</span><span class="sxs-lookup"><span data-stu-id="a1a13-145">Before serialization.</span></span>|<span data-ttu-id="a1a13-146">Prepare para la serialización.</span><span class="sxs-lookup"><span data-stu-id="a1a13-146">Prepare for serialization.</span></span> <span data-ttu-id="a1a13-147">Por ejemplo, cree las estructuras de datos opcionales.</span><span class="sxs-lookup"><span data-stu-id="a1a13-147">For example, create optional data structures.</span></span>|
+|<xref:System.Runtime.Serialization.OnSerializedAttribute>|<span data-ttu-id="a1a13-148">Después de la serialización.</span><span class="sxs-lookup"><span data-stu-id="a1a13-148">After serialization.</span></span>|<span data-ttu-id="a1a13-149">Registre los eventos de serialización.</span><span class="sxs-lookup"><span data-stu-id="a1a13-149">Log serialization events.</span></span>|
+
+ <span data-ttu-id="a1a13-150">\* Esta devolución de llamada se invoca antes del constructor de deserialización, si hay alguno.</span><span class="sxs-lookup"><span data-stu-id="a1a13-150">\* This callback is invoked before the deserialization constructor, if one is present.</span></span>
+
+#### <a name="using-callbacks"></a><span data-ttu-id="a1a13-151">Empleo de devoluciones de llamada</span><span class="sxs-lookup"><span data-stu-id="a1a13-151">Using callbacks</span></span>
+
+<span data-ttu-id="a1a13-152">Para utilizar las devoluciones de llamada, aplique el atributo adecuado a un método que acepta un parámetro <xref:System.Runtime.Serialization.StreamingContext>.</span><span class="sxs-lookup"><span data-stu-id="a1a13-152">To use callbacks, apply the appropriate attribute to a method that accepts a <xref:System.Runtime.Serialization.StreamingContext> parameter.</span></span> <span data-ttu-id="a1a13-153">Solo se puede marcar un método por clase con cada uno de estos atributos.</span><span class="sxs-lookup"><span data-stu-id="a1a13-153">Only one method per class can be marked with each of these attributes.</span></span> <span data-ttu-id="a1a13-154">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="a1a13-154">For example:</span></span>
+
+```csharp
+[OnDeserializing]
+private void SetCountryRegionDefault(StreamingContext sc)
+{
+    CountryField = "Japan";
+}
+```
+
+```vb
+<OnDeserializing>
+Private Sub SetCountryRegionDefault(sc As StreamingContext)
+    CountryField = "Japan"
+End Sub
+```
+
+<span data-ttu-id="a1a13-155">El uso previsto de estos métodos es para las versiones.</span><span class="sxs-lookup"><span data-stu-id="a1a13-155">The intended use of these methods is for versioning.</span></span> <span data-ttu-id="a1a13-156">Durante la deserialización, un campo opcional no se puede inicializar correctamente si faltan los datos para el campo.</span><span class="sxs-lookup"><span data-stu-id="a1a13-156">During deserialization, an optional field may not be correctly initialized if the data for the field is missing.</span></span> <span data-ttu-id="a1a13-157">Esto se puede corregir si se crea el método que asigna el valor correcto y luego se aplica el atributo **OnDeserializingAttribute** u **OnDeserializedAttribute** al método.</span><span class="sxs-lookup"><span data-stu-id="a1a13-157">This can be corrected by creating the method that assigns the correct value, then applying either the **OnDeserializingAttribute** or **OnDeserializedAttribute** attribute to the method.</span></span>
+
+<span data-ttu-id="a1a13-158">El ejemplo siguiente muestra el método en el contexto de un tipo.</span><span class="sxs-lookup"><span data-stu-id="a1a13-158">The following example shows the method in the context of a type.</span></span> <span data-ttu-id="a1a13-159">Si una versión anterior de una aplicación envía una instancia de la clase `Address` a una versión posterior de la aplicación, faltarán los datos de campo `CountryField`.</span><span class="sxs-lookup"><span data-stu-id="a1a13-159">If an earlier version of an application sends an instance of the `Address` class to a later version of the application, the `CountryField` field data will be missing.</span></span> <span data-ttu-id="a1a13-160">Pero después de la deserialización, el campo se establecerá en un valor predeterminado "Japan".</span><span class="sxs-lookup"><span data-stu-id="a1a13-160">But after deserialization, the field will be set to a default value "Japan".</span></span>
+
+```csharp
+[Serializable]
+public class Address
+{
+    public string Street;
+    public string City;
+    [OptionalField]
+    public string CountryField;
+
+    [OnDeserializing]
+    private void SetCountryRegionDefault(StreamingContext sc)
+    {
+        CountryField = "Japan";
+    }
+}
+```
+
+```vb
+<Serializable> _
+Public Class Address
+    Public Street As String
+    Public City As String
+    <OptionalField> _
+    Public CountryField As String
+
+    <OnDeserializing> _
+    Private Sub SetCountryRegionDefault(sc As StreamingContext)
+        CountryField = "Japan"
+    End Sub
+End Class
+```
+
+## <a name="the-versionadded-property"></a><span data-ttu-id="a1a13-161">Propiedad VersionAdded</span><span class="sxs-lookup"><span data-stu-id="a1a13-161">The VersionAdded property</span></span>
+
+<span data-ttu-id="a1a13-162">**OptionalFieldAttribute** tiene la propiedad **VersionAdded**.</span><span class="sxs-lookup"><span data-stu-id="a1a13-162">The **OptionalFieldAttribute** has the **VersionAdded** property.</span></span> <span data-ttu-id="a1a13-163">En la versión 2.0 de .NET Framework no se usa.</span><span class="sxs-lookup"><span data-stu-id="a1a13-163">In version 2.0 of the .NET Framework, this isn't used.</span></span> <span data-ttu-id="a1a13-164">Pero es importante establecer correctamente esta propiedad para asegurarse de que el tipo sea compatible con los motores de serialización futuros.</span><span class="sxs-lookup"><span data-stu-id="a1a13-164">However, it's important to set this property correctly to ensure that the type will be compatible with future serialization engines.</span></span>
+
+<span data-ttu-id="a1a13-165">La propiedad indica qué versión de un tipo de un campo determinado se ha agregado.</span><span class="sxs-lookup"><span data-stu-id="a1a13-165">The property indicates which version of a type a given field has been added.</span></span> <span data-ttu-id="a1a13-166">Se debería incrementar en uno exactamente (comenzando en 2) cada vez que se modifica el tipo, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="a1a13-166">It should be incremented by exactly one (starting at 2) every time the type is modified, as shown in the following example:</span></span>
+
+```csharp
+// Version 1.0
+[Serializable]
+public class Person
+{
+    public string FullName;
+}
+
+// Version 2.0
+[Serializable]
+public class Person
+{
+    public string FullName;
+
+    [OptionalField(VersionAdded = 2)]
+    public string NickName;
+    [OptionalField(VersionAdded = 2)]
+    public DateTime BirthDate;
+}
+
+// Version 3.0
+[Serializable]
+public class Person
+{
+    public string FullName;
+
+    [OptionalField(VersionAdded=2)]
+    public string NickName;
+    [OptionalField(VersionAdded=2)]
+    public DateTime BirthDate;
+
+    [OptionalField(VersionAdded=3)]
+    public int Weight;
+}
+```
+
+```vb
+' Version 1.0
+<Serializable> _
+Public Class Person
+    Public FullName
+End Class
+
+' Version 2.0
+<Serializable> _
+Public Class Person
+    Public FullName As String
+
+    <OptionalField(VersionAdded := 2)> _
+    Public NickName As String
+    <OptionalField(VersionAdded := 2)> _
+    Public BirthDate As DateTime
+End Class
+
+' Version 3.0
+<Serializable> _
+Public Class Person
+    Public FullName As String
+
+    <OptionalField(VersionAdded := 2)> _
+    Public NickName As String
+    <OptionalField(VersionAdded := 2)> _
+    Public BirthDate As DateTime
+
+    <OptionalField(VersionAdded := 3)> _
+    Public Weight As Integer
+End Class
+```
+
+## <a name="serializationbinder"></a><span data-ttu-id="a1a13-167">SerializationBinder</span><span class="sxs-lookup"><span data-stu-id="a1a13-167">SerializationBinder</span></span>
+
+<span data-ttu-id="a1a13-168">Algunos usuarios pueden necesitar controlar qué clase serializar y deserializar porque se necesita una versión diferente de la clase en el servidor y el cliente.</span><span class="sxs-lookup"><span data-stu-id="a1a13-168">Some users may need to control which class to serialize and deserialize because a different version of the class is required on the server and client.</span></span> <span data-ttu-id="a1a13-169"><xref:System.Runtime.Serialization.SerializationBinder> es una clase abstracta usada para controlar los tipos reales empleados durante la serialización y la deserialización.</span><span class="sxs-lookup"><span data-stu-id="a1a13-169"><xref:System.Runtime.Serialization.SerializationBinder> is an abstract class used to control the actual types used during serialization and deserialization.</span></span> <span data-ttu-id="a1a13-170">Para usar esta clase, obtenga una clase de <xref:System.Runtime.Serialization.SerializationBinder> y omita los métodos <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> y <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>.</span><span class="sxs-lookup"><span data-stu-id="a1a13-170">To use this class, derive a class from <xref:System.Runtime.Serialization.SerializationBinder> and override the <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> and <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> methods.</span></span> <span data-ttu-id="a1a13-171">Para obtener más información, vea [controlar la serialización y deserialización con SerializationBinder](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).</span><span class="sxs-lookup"><span data-stu-id="a1a13-171">For more information, see [Controlling Serialization and Deserialization with SerializationBinder](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).</span></span>
+
+## <a name="best-practices"></a><span data-ttu-id="a1a13-172">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="a1a13-172">Best practices</span></span>
+
+<span data-ttu-id="a1a13-173">Para asegurar el comportamiento apropiado de la versión, siga estas reglas al modificar un tipo de la versión para la versión:</span><span class="sxs-lookup"><span data-stu-id="a1a13-173">To ensure proper versioning behavior, follow these rules when modifying a type from version to version:</span></span>
+
+- <span data-ttu-id="a1a13-174">Nunca quite un campo serializado.</span><span class="sxs-lookup"><span data-stu-id="a1a13-174">Never remove a serialized field.</span></span>
+- <span data-ttu-id="a1a13-175">Nunca aplique el atributo <xref:System.NonSerializedAttribute> a un campo si el atributo no se aplicó al campo en la versión anterior.</span><span class="sxs-lookup"><span data-stu-id="a1a13-175">Never apply the <xref:System.NonSerializedAttribute> attribute to a field if the attribute was not applied to the field in the previous version.</span></span>
+- <span data-ttu-id="a1a13-176">Nunca cambie el nombre o el tipo de un campo serializado.</span><span class="sxs-lookup"><span data-stu-id="a1a13-176">Never change the name or the type of a serialized field.</span></span>
+- <span data-ttu-id="a1a13-177">Al agregar un nuevo campo serializado, aplique el atributo **OptionalFieldAttribute**.</span><span class="sxs-lookup"><span data-stu-id="a1a13-177">When adding a new serialized field, apply the **OptionalFieldAttribute** attribute.</span></span>
+- <span data-ttu-id="a1a13-178">Al quitar un atributo **NonSerializedAttribute** de un campo (que no era serializable en una versión anterior), aplique el atributo **OptionalFieldAttribute**.</span><span class="sxs-lookup"><span data-stu-id="a1a13-178">When removing a **NonSerializedAttribute** attribute from a field (that was not serializable in a previous version), apply the **OptionalFieldAttribute** attribute.</span></span>
+- <span data-ttu-id="a1a13-179">Para todos los campos opcionales, establezca valores predeterminados significativos mediante las devoluciones de llamada de serialización, a menos que se acepten 0 o **null** como valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="a1a13-179">For all optional fields, set meaningful defaults using the serialization callbacks unless 0 or **null** as defaults are acceptable.</span></span>
+
+<span data-ttu-id="a1a13-180">Para asegurarse de que un tipo será compatible con motores de serialización futuros, siga estas instrucciones:</span><span class="sxs-lookup"><span data-stu-id="a1a13-180">To ensure that a type will be compatible with future serialization engines, follow these guidelines:</span></span>
+
+- <span data-ttu-id="a1a13-181">Establezca siempre correctamente la propiedad **VersionAdded** en el atributo **OptionalFieldAttribute**.</span><span class="sxs-lookup"><span data-stu-id="a1a13-181">Always set the **VersionAdded** property on the **OptionalFieldAttribute** attribute correctly.</span></span>
+- <span data-ttu-id="a1a13-182">Evite la versión bifurcada.</span><span class="sxs-lookup"><span data-stu-id="a1a13-182">Avoid branched versioning.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a1a13-183">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1a13-183">See also</span></span>
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
@@ -289,8 +289,8 @@ End Class
 - <xref:System.Runtime.Serialization.OptionalFieldAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
-- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>
 - <xref:System.Runtime.Serialization.OnSerializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
 - <xref:System.NonSerializedAttribute>
-- [<span data-ttu-id="1952f-184">Serialización binaria</span><span class="sxs-lookup"><span data-stu-id="1952f-184">Binary Serialization</span></span>](binary-serialization.md)
+- [<span data-ttu-id="a1a13-184">Serialización binaria</span><span class="sxs-lookup"><span data-stu-id="a1a13-184">Binary Serialization</span></span>](binary-serialization.md)
