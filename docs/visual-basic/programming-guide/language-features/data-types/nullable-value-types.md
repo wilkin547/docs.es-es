@@ -1,5 +1,5 @@
 ---
-title: 'Tipos de valor que aceptan valores NULL: Visual Basic'
+title: Tipos de valor que aceptan valores NULL
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732935"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347837"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
 
@@ -66,7 +66,7 @@ Para recuperar el valor de una variable de un tipo que acepta valores NULL, prim
 
 Cuando se usan variables de `Boolean` que aceptan valores NULL en Expresiones booleanas, el resultado puede ser `True`, `False`o `Nothing`. A continuación se encuentra la tabla de verdad para `And` y `Or`. Dado que `b1` y `b2` ahora tienen tres valores posibles, hay nueve combinaciones que evaluar.
 
-|B1|B2|B1 y B2|B1 o B2|
+|b1|b2|B1 y B2|B1 o B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -110,7 +110,7 @@ Una base de datos es uno de los lugares más importantes para usar tipos que ace
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Tipos de datos](index.md)
-- [Tipos de valores y tipos de referencias](value-types-and-reference-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
 - [Solución de problemas de tipos de datos](troubleshooting-data-types.md)
 - [Llenar conjuntos de datos mediante TableAdapters](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If (operador)](../../../language-reference/operators/if-operator.md)

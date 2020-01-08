@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: bd82b7e83149aaa53cf1b240cb79f8747bccba47
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bff4e9f268e9eac84c244cb58eed8b4384e717d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793913"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634700"
 ---
 # <a name="getting-started"></a>Introducción
-Mediante el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]uso de, puede usar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] la tecnología de para tener acceso a las bases de datos SQL de la misma forma que tendría acceso a una colección en memoria.  
+Mediante el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], puede usar la tecnología LINQ para tener acceso a las bases de datos SQL de la misma forma que tendría acceso a una colección en memoria.  
   
  Por ejemplo, en el código siguiente, se crea el objeto `nw` para representar la base de datos `Northwind`, el destino es la tabla `Customers`, las filas se filtran para `Customers` de `London` y se selecciona para la recuperación una cadena de `CompanyName`.  
   
@@ -27,7 +27,7 @@ Mediante el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]u
   
  Luego, intente realizar algunos tutoriales para obtener experiencia práctica en el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Vea [aprendizaje de los tutoriales](learning-by-walkthroughs.md).  
   
- Por último, aprenda a empezar a trabajar en su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] propio proyecto mediante la lectura de [los pasos típicos para usar LINQ to SQL](typical-steps-for-using-linq-to-sql.md).  
+ Por último, aprenda a empezar a trabajar en su propio proyecto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] leyendo [los pasos típicos para usar LINQ to SQL](typical-steps-for-using-linq-to-sql.md).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569221"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348122"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalización de fuentes (Data Services de WCF)
-WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como una fuente. OData admite los formatos Atom y notación de objetos JavaScript (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, OData proporciona un método estándar para serializar los datos, como entidades y relaciones, en un formato XML que se puede incluir en el cuerpo del mensaje HTTP. OData define una asignación de propiedad de entidad predeterminada entre los datos contenidos en entidades y elementos Atom. Para obtener más información, consulte [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como una fuente. OData admite los formatos Atom y notación de objetos JavaScript (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, OData proporciona un método estándar para serializar los datos, como entidades y relaciones, en un formato XML que se puede incluir en el cuerpo del mensaje HTTP. OData define una asignación de propiedad de entidad predeterminada entre los datos contenidos en entidades y elementos Atom. Para obtener más información, consulte [OData: formato Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
  Quizá tenga un escenario de aplicación que requiera que los datos de la propiedad devueltos por el servicio de datos se serialicen de forma personalizada en vez de hacerlo con el formato de fuente estándar. Con OData, puede personalizar la serialización en una fuente de distribución de datos para que las propiedades de una entidad se puedan asignar a elementos y atributos no usados de una entrada o a elementos personalizados de una entrada en la fuente.  
   
@@ -31,7 +31,7 @@ WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como 
 > Cuando defina las fuentes personalizadas, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, consulte [proyecciones de consultas](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personalizar fuentes con el proveedor de Entity Framework  
- El modelo de datos usado con el proveedor de Entity Framework se representa como XML en el archivo .edmx. En este caso, los atributos que definen las fuentes personalizadas se agregan a los elementos `EntityType` y `Property`, que representan tipos de entidad y propiedades en el modelo de datos. Estos atributos de personalización de fuentes no se definen en [\[MC-CSDL\]: formato de archivo de definición de esquemas conceptuales](https://go.microsoft.com/fwlink/?LinkId=159072), que es el formato que usa el proveedor de Entity Framework para definir el modelo de datos. Por consiguiente, debe declarar los atributos de personalización de fuentes en un espacio de nombres de esquema concreto, que se define como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. El fragmento XML siguiente muestra los atributos de personalización de la fuente aplicados a los elementos `Property` del tipo de entidad `Products` que definen las propiedades `ProductName`, `ReorderLevel` y `UnitsInStock`.  
+ El modelo de datos usado con el proveedor de Entity Framework se representa como XML en el archivo .edmx. En este caso, los atributos que definen las fuentes personalizadas se agregan a los elementos `EntityType` y `Property`, que representan tipos de entidad y propiedades en el modelo de datos. Estos atributos de personalización de fuentes no se definen en [\[MC-CSDL\]: formato de archivo de definición de esquemas conceptuales](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12), que es el formato que usa el proveedor de Entity Framework para definir el modelo de datos. Por consiguiente, debe declarar los atributos de personalización de fuentes en un espacio de nombres de esquema concreto, que se define como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. El fragmento XML siguiente muestra los atributos de personalización de la fuente aplicados a los elementos `Property` del tipo de entidad `Products` que definen las propiedades `ProductName`, `ReorderLevel` y `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

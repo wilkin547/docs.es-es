@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346200"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636086"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Información general sobre literales XML (Visual Basic)
 Un *literal XML* permite incorporar XML directamente en el código de Visual Basic. La sintaxis de los literales XML representa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos y es similar a la sintaxis de XML 1,0. De este modo, resulta más fácil crear elementos y documentos XML mediante programación, ya que el código tiene la misma estructura que el XML final.  
   
- Visual Basic compila literales XML en objetos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona un modelo de objetos simple para crear y manipular XML, y este modelo se integra bien con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Para obtener más información, consulta <xref:System.Xml.Linq.XElement>.  
+ Visual Basic compila literales XML en objetos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona un modelo de objetos simple para crear y manipular XML, y este modelo se integra bien con Language-Integrated Query (LINQ). Para obtener más información, vea <xref:System.Xml.Linq.XElement>.  
   
  Puede incrustar una expresión de Visual Basic en un literal XML. En tiempo de ejecución, la aplicación crea un objeto [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para cada literal, incorporando los valores de las expresiones incrustadas. Esto le permite especificar contenido dinámico dentro de un literal XML. Para obtener más información, vea [expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004034"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636515"
 ---
 # <a name="annotations-overview"></a>Información general sobre anotaciones
 Escribir notas o comentarios en documentos impresos es una actividad tan habitual que prácticamente la subestimamos. Las notas o los comentarios son "anotaciones" que se agregan a un documento para marcar información o resaltar elementos de interés para su posterior referencia. Aunque escribir notas en documentos impresos es fácil y habitual, la capacidad de agregar comentarios personales a documentos electrónicos, si la hay, suele ser muy limitada.  
   
- En este tema se revisan varios tipos comunes de anotaciones, concretamente notas rápidas y resaltados, y se muestra cómo el marco de anotaciones de Microsoft facilita estos tipos de anotaciones en las aplicaciones a través del Windows Presentation Foundation (WPF ). los controles de visualización de documentos.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] los controles de visualización de documentos que admiten anotaciones incluyen <xref:System.Windows.Controls.FlowDocumentReader> y <xref:System.Windows.Controls.FlowDocumentScrollViewer>, así como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> y <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ En este tema se revisan varios tipos comunes de anotaciones, concretamente notas rápidas y resaltados, y se muestra cómo el marco de anotaciones de Microsoft facilita estos tipos de anotaciones en las aplicaciones a través del Windows Presentation Foundation (WPF ). los controles de visualización de documentos.  Los controles de visualización de documentos de WPF que admiten anotaciones incluyen <xref:System.Windows.Controls.FlowDocumentReader> y <xref:System.Windows.Controls.FlowDocumentScrollViewer>, así como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> y <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Notas rápidas  
@@ -27,7 +27,7 @@ Escribir notas o comentarios en documentos impresos es una actividad tan habitua
   
  La siguiente ilustración muestra algunos ejemplos de anotaciones de resaltado, notas rápidas de texto y notas rápidas de lápiz.  
   
- ![Anotaciones de resaltado, notas rápidas de texto y notas rápidas de lápiz.](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Anotaciones de resaltado, texto y nota adhesiva de lápiz.](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  En el ejemplo siguiente se muestra el método que puede usar para habilitar la compatibilidad con las anotaciones de la aplicación.  
   
@@ -36,11 +36,11 @@ Escribir notas o comentarios en documentos impresos es una actividad tan habitua
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Información destacada  
- Las personas usan métodos creativos para atraer la atención a los elementos de interés cuando marcan un documento impreso, como subrayar, resaltar, rodear palabras de una frase con un círculo o dibujar marcas o notaciones en el margen.  Las anotaciones resaltadas en el marco de anotaciones de Microsoft proporcionan una característica similar para marcar la información que se muestra en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controles de visualización de documentos.  
+ Las personas usan métodos creativos para atraer la atención a los elementos de interés cuando marcan un documento impreso, como subrayar, resaltar, rodear palabras de una frase con un círculo o dibujar marcas o notaciones en el margen.  Las anotaciones resaltadas en el marco de anotaciones de Microsoft proporcionan una característica similar para marcar la información que se muestra en los controles de visualización de documentos de WPF.  
   
  En la ilustración siguiente se muestra un ejemplo de una anotación de resaltado.  
   
- ![Anotación de resaltado](./media/caf-callouts.png "CAF_Callouts")  
+ ![Anotación resaltada](./media/caf-callouts.png "CAF_Callouts")  
   
  Normalmente, los usuarios crean anotaciones seleccionando un texto o un elemento de interés y haciendo clic con el botón derecho para mostrar una <xref:System.Windows.Controls.ContextMenu> de opciones de anotación.  En el ejemplo siguiente se muestra la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] puede usar para declarar un <xref:System.Windows.Controls.ContextMenu> con comandos enrutados a los que los usuarios pueden tener acceso para crear y administrar anotaciones.  
   

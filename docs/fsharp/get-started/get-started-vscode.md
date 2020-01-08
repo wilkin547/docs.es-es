@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio Code
 description: Aprenda a usar F# con Visual Studio Code y el conjunto de complementos de Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204909"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559669"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introducción a F# en Visual Studio Code
 
@@ -20,7 +20,7 @@ Para empezar, asegúrese de que tiene [ F# y el complemento Ionide instalado cor
 Para crear un nuevo F# proyecto, abra una línea de comandos y cree un nuevo proyecto con el CLI de .net Core:
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 Una vez finalizado, cambie el directorio al proyecto y abra Visual Studio Code:
@@ -42,7 +42,7 @@ En primer lugar, asegúrese de que el scripting de .NET Core es el entorno de sc
 
 Esto es necesario actualmente debido a algunos comportamientos heredados en scripting basado en .NET Framework que no funcionan con el scripting de .NET Core y Ionide está intentando actualmente la compatibilidad con versiones anteriores. En el futuro, el scripting de .NET Core se convertirá en el valor predeterminado.
 
-### <a name="write-your-first-script"></a>Escribir el primer script
+### <a name="write-your-first-script"></a>escritura del primer script
 
 Una vez que haya configurado Visual Studio Code para usar el scripting de .NET Core, vaya a la vista del explorador en Visual Studio Code y cree un archivo nuevo. Asígnele el nombre *MyFirstScript. FSX*.
 
@@ -133,7 +133,7 @@ Para empezar, abra el archivo *Program. FS* que creó anteriormente con el CLI d
 
 A continuación, cree una nueva [`module`](../language-reference/modules.md) denominada `PigLatin` y copie en ella la función de `toPigLatin` que creó anteriormente:
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 Este módulo debe estar por encima de la `main` función y debajo de la declaración de `open System`. El orden de las declaraciones es F#importante en, por lo que deberá definir la función antes de llamarla en un archivo.
 
@@ -151,7 +151,7 @@ let main argv =
 
 Ahora puede ejecutar la aplicación de consola desde la línea de comandos:
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ Estas son algunas de las formas en que puede solucionar ciertos problemas que pu
 1. Para obtener las características de edición de código de Ionide F# , los archivos deben guardarse en el disco y dentro de una carpeta que esté abierta en el área de trabajo Visual Studio Code.
 1. Si ha realizado cambios en el sistema o ha instalado los requisitos previos de Ionide con Visual Studio Code abrir, reinicie Visual Studio Code.
 1. Si tiene caracteres no válidos en los directorios del proyecto, es posible que Ionide no funcione.  Cambie el nombre de los directorios del proyecto si éste es el caso.
-1. Si no funciona ninguno de los comandos de Ionide, compruebe los enlaces de la [Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) para ver si se están reemplazando por accidente.
+1. Si no funciona ninguno de los comandos de Ionide, compruebe los [enlaces de teclado de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) para ver si se están reemplazando por accidente.
 1. Si Ionide se ha interrumpido en el equipo y ninguno de los anteriores ha solucionado el problema, intente quitar el directorio de `ionide-fsharp` de la máquina y vuelva a instalar el conjunto de complementos.
 1. Si un proyecto no se cargó (el F# explorador de soluciones lo mostrará), haga clic con el botón derecho en el proyecto y haga clic en **Ver detalles** para obtener más información de diagnóstico.
 

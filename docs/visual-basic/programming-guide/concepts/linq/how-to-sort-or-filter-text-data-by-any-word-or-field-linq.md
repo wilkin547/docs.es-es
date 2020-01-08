@@ -2,12 +2,12 @@
 title: 'Cómo: Ordenar o filtrar datos de texto por palabra o campo (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341513"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348043"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)
 
@@ -72,9 +72,9 @@ End Class
 
 En este ejemplo también se muestra cómo devolver una variable de consulta desde una función.
 
-## <a name="compiling-the-code"></a>Compilar el código
+## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 

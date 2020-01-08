@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715157"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338724"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 
@@ -24,11 +24,13 @@ En este ejemplo se explica cómo:
 
 - Invalidar un diseñador predeterminado en una aplicación hospedada en otro host.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Abra la solución de ejemplo **UsingWorkflowItemsPresenter. sln** para C# o para VB en Visual Studio 2010.
+1. Abra la solución de ejemplo **UsingWorkflowItemsPresenter. sln** para C# o para Visual Basic en Visual Studio 2010.
 
-2. Compile y ejecute la solución. Se debe abrir una aplicación de diseñador de flujo de trabajo hospedada en otro host; puede arrastrar actividades al lienzo.
+2. Compile y ejecute la solución.
+
+   Se abre una aplicación de diseñador de flujo de trabajo hospedada en otro host y puede arrastrar actividades al lienzo.
 
 ## <a name="sample-highlights"></a>Aspectos que se deben destacar del ejemplo
 

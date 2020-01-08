@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460031"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544469"
 ---
 # <a name="binding-declarations-overview"></a>Información general sobre declaraciones de enlaces
 
@@ -110,13 +110,13 @@ Use la propiedad <xref:System.Windows.Data.Binding.Path%2A> para especificar el 
 
 - Si establece <xref:System.Windows.Data.Binding.Path%2A> en XAML, también necesitará usar como escape (mediante entidades XML) determinados caracteres que son especiales para la definición del lenguaje XML:
 
-  - Use `&` para realizar el escape del carácter "&".
+  - Use `&amp;` para realizar el escape del carácter "&".
 
-  - Use `>` para realizar el escape de la etiqueta final ">".
+  - Use `&gt;` para realizar el escape de la etiqueta final ">".
 
 - Además, si describe el enlace completo en un atributo mediante la sintaxis de extensión de marcado, deberá realizar el escape (con la barra diagonal inversa \\) de los caracteres que son especiales para el analizador de extensión de marcado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:
 
-  - La barra diagonal inversa (\\) es el carácter de escape.
+  - La barra diagonal inversa (\\) es el mismo carácter de escape.
 
   - El signo igual (=) separa el nombre de propiedad del valor de propiedad.
 

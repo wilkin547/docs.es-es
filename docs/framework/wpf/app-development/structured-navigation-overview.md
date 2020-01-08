@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425324"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636346"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 
@@ -135,7 +135,7 @@ No es necesario pasar parámetros a la página llamada. En su lugar, podría hac
 
   - Recupere y use los parámetros almacenados en <xref:System.Windows.Application.Properties%2A>.
 
-Pero, como verá en breve, aún necesitará utilizar código para crear una instancia y navegar a la página llamada para recopilar los datos devueltos por la página llamada. Por esta razón, el <xref:System.Windows.Navigation.PageFunction%601> debe mantenerse activo; de lo contrario, la próxima vez que navegue al <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] crea una instancia de la <xref:System.Windows.Navigation.PageFunction%601> mediante el constructor sin parámetros.
+Pero, como verá en breve, aún necesitará utilizar código para crear una instancia y navegar a la página llamada para recopilar los datos devueltos por la página llamada. Por esta razón, el <xref:System.Windows.Navigation.PageFunction%601> debe mantenerse activo; de lo contrario, la próxima vez que navegue al <xref:System.Windows.Navigation.PageFunction%601>, WPF crea una instancia del <xref:System.Windows.Navigation.PageFunction%601> mediante el constructor sin parámetros.
 
 Sin embargo, antes de la página llamada pueda volver, debe devolver los datos para que los pueda recuperar la página que llama.
 

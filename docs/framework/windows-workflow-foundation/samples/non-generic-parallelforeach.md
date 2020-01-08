@@ -2,12 +2,12 @@
 title: ParallelForEach no genérico
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ea7f57b8812dca3dfcb4908730dd788182d50c5c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715642"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347615"
 ---
 # <a name="non-generic-parallelforeach"></a>ParallelForEach no genérico
 
@@ -19,7 +19,7 @@ En este ejemplo se muestra cómo implementar una actividad <xref:System.Activiti
 
 ## <a name="parallelforeach-activity"></a>Actividad ParallelForEach
 
-La instrucción `foreach` de C#/VB enumera los elementos de una colección y ejecuta una instrucción incrustada para cada elemento de la colección. Las actividades equivalentes de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] son <xref:System.Activities.Statements.ForEach%601> y <xref:System.Activities.Statements.ParallelForEach%601>. La actividad <xref:System.Activities.Statements.ForEach%601> contiene una lista de valores y un cuerpo. En el tiempo de ejecución, la lista se recorre en iteración y se ejecuta el cuerpo para cada valor de la lista.
+La C#instrucción/visual Basic `foreach` enumera los elementos de una colección y ejecuta una instrucción incrustada para cada elemento de la colección. Las actividades equivalentes de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] son <xref:System.Activities.Statements.ForEach%601> y <xref:System.Activities.Statements.ParallelForEach%601>. La actividad <xref:System.Activities.Statements.ForEach%601> contiene una lista de valores y un cuerpo. En el tiempo de ejecución, la lista se recorre en iteración y se ejecuta el cuerpo para cada valor de la lista.
 
 <xref:System.Activities.Statements.ParallelForEach%601> tiene una condición <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>, para que la actividad <xref:System.Activities.Statements.ParallelForEach%601> se pueda completar antes si la evaluación de la condición <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> devuelve `true`. La propiedad <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> se evalúa después de completar cada iteración.
 

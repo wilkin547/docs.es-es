@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960155"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559656"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>¿Qué son XPDM y WDDM?  
- Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM es el modelo de controladores de pantalla de Microsoft Windows XP y WDDM es el modelo de controladores de pantalla de Windows. WDDM está disponible en equipos que ejecutan Windows Vista y Windows 7. XPDM está disponible en equipos que ejecutan Windows Vista, Microsoft Windows XP y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
+ Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM es el modelo de controladores de pantalla de Microsoft Windows XP y WDDM es el modelo de controladores de pantalla de Windows. WDDM está disponible en equipos que ejecutan Windows Vista y Windows 7. XPDM está disponible en equipos que ejecutan Windows Vista, Microsoft Windows XP y Microsoft Windows Server 2003. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Configuración del Registro  
@@ -68,7 +68,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 |Clave del Registro|Tipo de valor|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadena|  
   
  En noviembre de 2004, Microsoft publicó una nueva versión de las directrices de pruebas de controladores; los controladores escritos después de esta fecha ofrecen una mayor estabilidad. De forma predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará la canalización de aceleración de hardware para estos controladores y recurrirá a la representación de software para los controladores XPDM publicados antes de esta fecha.  
   
@@ -78,7 +78,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 | |  
 |-|  
-|*AAAA* `/` *MM* `/` *DD*|  
+|*YYYY* `/` *mm* `/` *DD*|  
   
  Donde *AAAA* son los cuatro dígitos del año, *MM* son los dos dígitos del mes y *DD* son los dos dígitos del día. Cuando este valor no se establece, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa noviembre de 2004 como fecha obligatoria del controlador de vídeo.  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458728"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559825"
 ---
 # <a name="staticresource-markup-extension"></a>Extensión de marcado StaticResource
-Proporciona un valor para cualquier atributo de propiedad [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mediante la búsqueda de una referencia a un recurso ya definido. El comportamiento de búsqueda de ese recurso es análogo a la búsqueda en tiempo de carga, que buscará los recursos que se cargaron previamente desde el marcado de la página de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] actual, así como otros orígenes de aplicación, y generará ese valor de recurso como la propiedad. valor en los objetos de tiempo de ejecución.  
+Proporciona un valor para cualquier atributo de propiedad [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mediante la búsqueda de una referencia a un recurso ya definido. El comportamiento de búsqueda de ese recurso es análogo a la búsqueda en tiempo de carga, que buscará los recursos que se cargaron previamente desde el marcado de la página de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] actual, así como otros orígenes de aplicación, y generará ese valor de recurso como valor de propiedad en los objetos en tiempo de ejecución.  
   
 ## <a name="xaml-attribute-usage"></a>Uso de atributos XAML  
   
@@ -38,16 +38,16 @@ Proporciona un valor para cualquier atributo de propiedad [!INCLUDE[TLA2#tla_xam
   
 |||  
 |-|-|  
-|`key`|Clave del recurso solicitado. Esta clave se asignó inicialmente mediante la [Directiva x:Key](../../xaml-services/x-key-directive.md) si un recurso se creó en el marcado, o se proporcionó como `key` parámetro al llamar a <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> si el recurso se creó en el código.|  
+|`key`|Clave del recurso solicitado. Esta clave se asignó inicialmente mediante la [Directiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) si un recurso se creó en el marcado, o se proporcionó como `key` parámetro al llamar a <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> si el recurso se creó en el código.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]
 > Un `StaticResource` no debe intentar realizar una referencia adelantada a un recurso que se define léxicamente en el archivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. No se admite el intento de hacerlo y, incluso si no se produce un error en una referencia de este tipo, el intento de la referencia adelantada incurrirá en el rendimiento en tiempo de carga cuando se busquen las tablas hash internas que representan una <xref:System.Windows.ResourceDictionary>. Para obtener los mejores resultados, ajuste la composición de los diccionarios de recursos de forma que se puedan evitar las referencias hacia delante. Si no puede evitar una referencia adelantada, utilice en su lugar la [extensión de marcado DynamicResource](dynamicresource-markup-extension.md) .  
   
- El <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> especificado debe corresponder a un recurso existente, identificado con una [Directiva x:Key](../../xaml-services/x-key-directive.md) en algún nivel de la página, aplicación, los temas de control disponibles y los recursos externos, o los recursos del sistema. La búsqueda de recursos se produce en ese orden. Para obtener más información sobre el comportamiento de búsqueda de recursos para recursos estáticos y dinámicos, vea [recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ El <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> especificado debe corresponder a un recurso existente, identificado con una [Directiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) en algún nivel de la página, aplicación, los temas de control disponibles y los recursos externos, o los recursos del sistema. La búsqueda de recursos se produce en ese orden. Para obtener más información sobre el comportamiento de búsqueda de recursos para recursos estáticos y dinámicos, vea [recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
- Una clave de recurso puede ser cualquier cadena definida en la [gramática de XamlName](../../xaml-services/xamlname-grammar.md). Una clave de recurso también puede ser otros tipos de objeto, como un <xref:System.Type>. Una clave <xref:System.Type> es fundamental para el modo en que los temas pueden aplicar estilos a los controles mediante una clave de estilo implícita. Para obtener más información, consulte [Información general sobre la creación de controles](../controls/control-authoring-overview.md).  
+ Una clave de recurso puede ser cualquier cadena definida en la [gramática de XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md). Una clave de recurso también puede ser otros tipos de objeto, como un <xref:System.Type>. Una clave <xref:System.Type> es fundamental para el modo en que los temas pueden aplicar estilos a los controles mediante una clave de estilo implícita. Para obtener más información, consulte [Información general sobre la creación de controles](../controls/control-authoring-overview.md).  
   
  El método declarativo alternativo de hacer referencia a un recurso es una [extensión de marcado DynamicResource](dynamicresource-markup-extension.md).  
   

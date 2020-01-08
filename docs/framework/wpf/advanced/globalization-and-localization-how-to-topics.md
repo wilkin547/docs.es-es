@@ -7,17 +7,17 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010298"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559414"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Temas "Cómo..." de globalización y localización
-Los temas de esta sección describen cómo desarrollar aplicaciones de uso internacional.  
+En los temas de esta sección se describe cómo desarrollar aplicaciones de uso internacional.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Localizar una aplicación](how-to-localize-an-application.md)  
  [Usar el diseño automático para crear un botón](how-to-use-automatic-layout-to-create-a-button.md)  
  [Usar una cuadrícula para el diseño automático](how-to-use-a-grid-for-automatic-layout.md)  
@@ -31,6 +31,6 @@ Los temas de esta sección describen cómo desarrollar aplicaciones de uso inter
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Control de xml:lang en XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [Control de xml:lang en XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas

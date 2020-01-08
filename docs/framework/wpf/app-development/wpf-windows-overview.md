@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740677"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636411"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
-Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] independientes proporcionan sus propias ventanas mediante el uso de la clase <xref:System.Windows.Window>. En este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
+Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las aplicaciones de WPF independientes proporcionan sus propias ventanas mediante el uso de la clase <xref:System.Windows.Window>. En este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
   
 > [!NOTE]
-> Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedadas en el explorador, incluidas las aplicaciones de explorador XAML (XBAP) y las páginas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sueltos, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
+> Las aplicaciones WPF hospedadas en el explorador, incluidas las aplicaciones de explorador XAML (XBAP) y las páginas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sueltos, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Clase de la ventana  
@@ -49,7 +49,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  Una ventana se divide en dos áreas: el área distinta del cliente y el área cliente.  
   
- El *área no cliente* de una ventana se implementa mediante [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e incluye las partes de una ventana que son comunes a la mayoría de las ventanas, incluidas las siguientes:  
+ WPF implementa el *área no cliente* de una ventana e incluye las partes de una ventana que son comunes a la mayoría de las ventanas, incluidas las siguientes:  
   
 - Un borde.  
   
@@ -65,7 +65,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  El *área de cliente* de una ventana es el área dentro del área no cliente de una ventana y la usan los desarrolladores para agregar contenido específico de la aplicación, como barras de menús, barras de herramientas y controles.  
   
- En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], una ventana se encapsula mediante la clase <xref:System.Windows.Window> que se usa para hacer lo siguiente:  
+ En WPF, una ventana se encapsula mediante la clase <xref:System.Windows.Window> que se utiliza para hacer lo siguiente:  
   
 - Mostrar una ventana.  
   
@@ -77,7 +77,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementar una ventana  
- La implementación de una ventana típica incluye el aspecto y el comportamiento, donde la *apariencia* define el aspecto de una ventana para los usuarios y el *comportamiento* define el modo en que una ventana funciona a medida que los usuarios interactúan con ella. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], puede implementar la apariencia y el comportamiento de una ventana mediante código o marcado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ La implementación de una ventana típica incluye el aspecto y el comportamiento, donde la *apariencia* define el aspecto de una ventana para los usuarios y el *comportamiento* define el modo en que una ventana funciona a medida que los usuarios interactúan con ella. En WPF, puede implementar la apariencia y el comportamiento de una ventana mediante código o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado.  
   
  Sin embargo, en general, la apariencia de una ventana se implementa mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado y su comportamiento se implementa mediante código subyacente, como se muestra en el ejemplo siguiente.  
   
@@ -124,7 +124,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
 </Project>  
 ```  
   
- Para obtener información sobre cómo compilar aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consulte [compilar una aplicación de WPF](building-a-wpf-application-wpf.md).  
+ Para obtener información sobre cómo compilar aplicaciones de WPF, consulte [compilar una aplicación de WPF](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Duración de ventana  
@@ -190,7 +190,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - La ventana actualmente activada permanece activada.  
   
- Sin embargo, la ventana se activará tan pronto como el usuario la active haciendo clic en el área de cliente o en el área distinta del cliente. En este caso:  
+ Sin embargo, la ventana se activará tan pronto como el usuario la active haciendo clic en el área de cliente o en el área distinta del cliente. En ese caso:  
   
 - La ventana se activa.  
   
@@ -293,7 +293,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  También puede especificar la ubicación inicial de un <xref:System.Windows.Window> cuando aparece por primera vez estableciendo la propiedad <xref:System.Windows.Window.WindowStartupLocation%2A> con uno de los siguientes valores de enumeración <xref:System.Windows.WindowStartupLocation>:  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner> (valor predeterminado)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (predeterminado)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  Si desea que el ancho y el alto de la ventana tengan un tamaño que se ajuste al tamaño del contenido de la ventana, puede usar la propiedad <xref:System.Windows.Window.SizeToContent%2A>, que tiene los valores siguientes:  
   
-- <xref:System.Windows.SizeToContent.Manual>Operador Ningún efecto (valor predeterminado).  
+- <xref:System.Windows.SizeToContent.Manual>. Ningún efecto (valor predeterminado).  
   
-- <xref:System.Windows.SizeToContent.Width>Operador Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
+- <xref:System.Windows.SizeToContent.Width>. Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
   
-- <xref:System.Windows.SizeToContent.Height>Operador Ajustar al alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido.  
+- <xref:System.Windows.SizeToContent.Height>. Ajustar al alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>Operador Ajustar al ancho y alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido, y establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Ajustar al ancho y alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido, y establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
   
  En el ejemplo siguiente se muestra una ventana que se redimensiona automáticamente para ajustarse al contenido, tanto vertical como horizontalmente, cuando se muestra por primera vez.  
   
@@ -381,7 +381,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  El estado de una ventana se puede configurar estableciendo su propiedad <xref:System.Windows.Window.WindowState%2A>, que puede tener uno de los siguientes valores de enumeración <xref:System.Windows.WindowState>:  
   
-- <xref:System.Windows.WindowState.Normal> (valor predeterminado)  
+- <xref:System.Windows.WindowState.Normal> (predeterminado)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,7 +401,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modo de cambio de tamaño  
- Dependiendo de la propiedad <xref:System.Windows.Window.WindowStyle%2A>, puede controlar cómo los usuarios (y si) pueden cambiar el tamaño de la ventana. La elección del estilo de ventana afecta a si un usuario puede cambiar el tamaño de la ventana arrastrando el borde con el mouse, si los botones **minimizar**, **maximizar**y **cambiar tamaño** aparecen en el área no cliente y, si aparecen, si son activó.  
+ Dependiendo de la propiedad <xref:System.Windows.Window.WindowStyle%2A>, puede controlar cómo los usuarios (y si) pueden cambiar el tamaño de la ventana. La elección del estilo de ventana afecta a si un usuario puede cambiar el tamaño de la ventana arrastrando el borde con el mouse, si los botones **minimizar**, **maximizar**y **cambiar tamaño** aparecen en el área no cliente y, si aparecen, si están habilitados.  
   
  Puede configurar cómo cambia el tamaño de una ventana estableciendo su <xref:System.Windows.Window.ResizeMode%2A> propiedad, que puede ser uno de los siguientes valores de enumeración de <xref:System.Windows.ResizeMode>:  
   
@@ -409,7 +409,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize> (valor predeterminado)  
+- <xref:System.Windows.ResizeMode.CanResize> (predeterminado)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow> (valor predeterminado)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (predeterminado)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

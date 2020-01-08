@@ -2,12 +2,12 @@
 title: 'Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 4a068f4f5500da5fd26e3dea753ec9591b6c7f5f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347673"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344163"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ) (Visual Basic)
 
@@ -63,9 +63,9 @@ La consulta primero divide el texto en frases y, luego, divide las frases en una
 
 En la llamada a <xref:System.String.Split%2A>, los signos de puntuación se usan como separadores para quitar las frases de la cadena. Si no lo hiciera podría tener, por ejemplo, una cadena "Historically", lo que no coincidiría con el "Historically" de la matriz `wordsToMatch`. Podría tener que usar separadores adicionales, en función de los tipos de puntuación del texto de origen.
 
-## <a name="compiling-the-code"></a>Compilar el código
+## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 

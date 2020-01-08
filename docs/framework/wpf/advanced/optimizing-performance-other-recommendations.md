@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975786"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636437"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimizar el rendimiento: Otras recomendaciones
 <a name="introduction"></a> En este tema se proporcionan recomendaciones de rendimiento, además de las que se incluyen en los temas de la sección [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md).  
@@ -64,13 +64,13 @@ ms.locfileid: "73975786"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>Evitar usar ScrollBarVisibility=Auto  
- Siempre que sea posible, evite usar el valor <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> para las propiedades `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility`. Estas propiedades se definen para los objetos <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> y <xref:System.Windows.Controls.TextBox>, y como una propiedad adjunta para el objeto <xref:System.Windows.Controls.ListBox>. En su lugar, establezca <xref:System.Windows.Controls.ScrollBarVisibility> en <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden> o <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
+ Siempre que sea posible, evite usar el valor <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> para las propiedades `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility`. Estas propiedades se definen para los objetos <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>y <xref:System.Windows.Controls.TextBox>, y como una propiedad adjunta para el objeto <xref:System.Windows.Controls.ListBox>. En su lugar, establezca <xref:System.Windows.Controls.ScrollBarVisibility> en <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>o <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
   
  El valor <xref:System.Windows.Controls.ScrollBarVisibility.Auto> está pensado para los casos en los que el espacio es limitado y las barras de desplazamiento solo deben mostrarse cuando sea necesario. Por ejemplo, puede ser útil usar este valor <xref:System.Windows.Controls.ScrollBarVisibility> con un <xref:System.Windows.Controls.ListBox> de 30 elementos en lugar de un <xref:System.Windows.Controls.TextBox> con cientos de líneas de texto.  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Configurar el servicio de caché de fuente para reducir el tiempo de inicio  
- El servicio de caché de fuente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] comparte los datos de fuente entre aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La primera aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que ejecuta inicia este servicio, si este no se está ejecutando. Si usa Windows Vista, puede establecer el servicio "Windows Presentation Foundation (WPF) cache de fuentes 3.0.0.0" de "manual" (valor predeterminado) en "automático (Inicio retrasado)" para reducir el tiempo de inicio inicial de las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ El servicio de caché de fuentes de WPF comparte datos de fuentes entre aplicaciones de WPF. La primera aplicación de WPF que se ejecuta inicia este servicio si el servicio no se está ejecutando aún. Si usa Windows Vista, puede establecer el servicio "Windows Presentation Foundation (WPF) cache de fuentes 3.0.0.0" de "manual" (valor predeterminado) en "automático (Inicio retrasado)" para reducir el tiempo de inicio inicial de las aplicaciones de WPF.  
   
 ## <a name="see-also"></a>Vea también
 

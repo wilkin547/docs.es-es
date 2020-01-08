@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 8807125bd61c71217ca96f3b5a38148ed100073b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f4462f617eb81d30f893b52bdc674e1eee8961c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794366"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634773"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabla única (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]las consultas funcionan en orígenes de datos que <xref:System.Collections.Generic.IEnumerable%601> implementan la <xref:System.Linq.IQueryable%601> interfaz o la interfaz. La <xref:System.Data.DataTable> clase no implementa ninguna de las interfaces, por lo que debe <xref:System.Data.DataTableExtensions.AsEnumerable%2A> llamar al método si desea utilizar <xref:System.Data.DataTable> como origen en la `From` cláusula de una [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
+Las consultas Language-Integrated Query (LINQ) funcionan en orígenes de datos que implementan la interfaz <xref:System.Collections.Generic.IEnumerable%601> o la interfaz <xref:System.Linq.IQueryable%601>. La clase <xref:System.Data.DataTable> no implementa ninguna de las interfaces, por lo que debe llamar al método <xref:System.Data.DataTableExtensions.AsEnumerable%2A> si desea utilizar la <xref:System.Data.DataTable> como un origen en la cláusula `From` de una consulta LINQ.  
   
  En el ejemplo siguiente se obtienen todos los pedidos en línea desde la tabla SalesOrderHeader y se envían los resultados de id., fecha y número de pedido a la consola.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- La consulta de variable local se inicializa con una expresión de consulta, que funciona en uno o varios orígenes de información mediante la aplicación de uno o más operadores de consulta de los operadores de consulta estándar o, en el caso de LINQ to DataSet, operadores específicos del <xref:System.Data.DataSet>clase. La expresión de consulta del ejemplo anterior utiliza dos de los operadores estándar de consulta: `Where` y `Select`.  
+ La consulta de variable local se inicializa con una expresión de consulta, que funciona en uno o varios orígenes de información aplicando uno o más operadores de consulta de los operadores de consulta estándar o, en el caso de LINQ to DataSet, operadores específicos de la clase <xref:System.Data.DataSet>. La expresión de consulta del ejemplo anterior utiliza dos de los operadores estándar de consulta: `Where` y `Select`.  
   
  La cláusula `Where` filtra la secuencia basándose en una condición, en este caso que `OnlineOrderFlag` se establezca en `true`. El operador `Select` asigna y devuelve un objeto enumerable que captura los argumentos pasados al operador. En el ejemplo anterior, se crea un tipo anónimo con tres propiedades: `SalesOrderID`, `OrderDate` y `SalesOrderNumber`. Los valores de estas tres propiedades se establecen en los valores de las columnas `SalesOrderID`, `OrderDate` y `SalesOrderNumber` a partir de la tabla `SalesOrderHeader`.  
   

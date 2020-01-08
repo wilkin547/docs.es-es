@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5b7246350478bbc8907bb9f52e425821402f8806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569421"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346226"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para programadores de .NET Framework. ADO.NET ofrece abundancia de componentes para la creación de aplicaciones de uso compartido de datos distribuidas. Constituye una parte integral de .NET Framework y proporciona acceso a datos relacionales, XML y de aplicaciones. ADO.NET satisface diversas necesidades de desarrollo, como la creación de clientes de base de datos front-end y objetos empresariales de nivel medio que utilizan aplicaciones, herramientas, lenguajes o exploradores de Internet.  
@@ -19,7 +19,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  [Información general sobre ADO.NET](ado-net-overview.md)  
  Proporciona una introducción al diseño y a los componentes de ADO.NET.  
   
- [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
+ [Entity Framework](/ef/ef6/index)  
  Describe cómo crear aplicaciones con Entity Framework.  
   
  [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)  

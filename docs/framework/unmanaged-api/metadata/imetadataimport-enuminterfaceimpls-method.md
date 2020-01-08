@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449523"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338065"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls (Método)
 Enumera todas las interfaces implementadas por el `TypeDef`especificado. 
@@ -37,7 +37,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `phEnum`  
  [in, out] Puntero al enumerador.  
   
@@ -48,7 +48,7 @@ HRESULT EnumInterfaceImpls (
  enuncia Matriz utilizada para almacenar los tokens de MethodDef.  
   
  `cMax`  
- [in] Tamaño máximo de la matriz `rImpls`.  
+ de Longitud máxima de la matriz de `rImpls`.  
   
  `pcImpls`  
  enuncia Número real de tokens devueltos en `rImpls`.  
@@ -60,18 +60,18 @@ HRESULT EnumInterfaceImpls (
 |`S_OK`|`EnumInterfaceImpls` devolvió correctamente.|  
 |`S_FALSE`|No hay tokens de MethodDef que enumerar. En ese caso, `pcImpls` se establece en cero.|  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 La enumeración devuelve una colección de tokens de `mdInterfaceImpl` para cada interfaz implementada por el `TypeDef`especificado. Los tokens de interfaz se devuelven en el orden en que se especificaron las interfaces (a través de `DefineTypeDef` o `SetTypeDefProps`). Las propiedades de los tokens de `mdInterfaceImpl` devueltos se pueden consultar mediante [getinterfaceimplprops (](imetadataimport-getinterfaceimplprops-method.md).
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

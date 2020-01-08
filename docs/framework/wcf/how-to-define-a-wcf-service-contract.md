@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Definir un contrato de servicio de Windows Communication Foundation'
+title: 'Tutorial: definición de un contrato de servicio de Windows Communication Foundation'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,24 +7,24 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: ba88fc6ba4cba8d46ed1b43080d471b1b7c4bd75
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 49526808a65b68c6df734bd7f3e76eff1e4a6bc5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928870"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338295"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definir un contrato de servicio de Windows Communication Foundation
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: definición de un contrato de servicio de Windows Communication Foundation
 
-En este tutorial se describe la primera de las cinco tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF). Para obtener información general sobre los tutoriales, [vea Tutorial: Introducción a las aplicaciones](getting-started-tutorial.md)Windows Communication Foundation.
+En este tutorial se describe la primera de las cinco tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF). Para obtener información general sobre los tutoriales, vea [Tutorial: Introducción a las aplicaciones de Windows Communication Foundation](getting-started-tutorial.md).
 
-Al crear un servicio WCF, la primera tarea es definir un contrato de servicio. El contrato de servicio especifica qué operaciones admite el servicio. Una operación se puede considerar un método de servicio Web. Los contratos de servicio se crean mediante la C# definición de una interfaz Visual o Visual Basic (VB). Una interfaz tiene las siguientes características:
+Al crear un servicio WCF, la primera tarea es definir un contrato de servicio. El contrato de servicio especifica qué operaciones admite el servicio. Una operación se puede considerar un método de servicio Web. Los contratos de servicio se crean mediante C# la definición de una interfaz o Visual Basic. Una interfaz tiene las siguientes características:
 
 - Cada método de la interfaz se corresponde con una operación de servicio concreta. 
-- Para cada interfaz, debe aplicar el <xref:System.ServiceModel.ServiceContractAttribute> atributo.
-- Para cada operación o método, debe aplicar el <xref:System.ServiceModel.OperationContractAttribute> atributo. 
+- Para cada interfaz, debe aplicar el atributo <xref:System.ServiceModel.ServiceContractAttribute>.
+- Para cada operación o método, debe aplicar el atributo <xref:System.ServiceModel.OperationContractAttribute>. 
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > - Cree un proyecto de **biblioteca de servicios WCF** .
@@ -98,11 +98,11 @@ En este tutorial, aprenderá a:
     End Namespace
     ```
 
-     Este contrato define una calculadora en línea. Observe que `ICalculator` la interfaz está marcada con <xref:System.ServiceModel.ServiceContractAttribute> el atributo (simplificado como `ServiceContract`). Este atributo define un espacio de nombres para eliminar la ambigüedad del nombre del contrato. El código marca cada operación de la calculadora <xref:System.ServiceModel.OperationContractAttribute> con el atributo ( `OperationContract`simplificado como).
+     Este contrato define una calculadora en línea. Observe que la interfaz `ICalculator` está marcada con el atributo <xref:System.ServiceModel.ServiceContractAttribute> (simplificado como `ServiceContract`). Este atributo define un espacio de nombres para eliminar la ambigüedad del nombre del contrato. El código marca cada operación de la calculadora con el <xref:System.ServiceModel.OperationContractAttribute> atributo (simplificado como `OperationContract`).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
 > - Cree un proyecto de biblioteca de servicios WCF.
@@ -111,4 +111,4 @@ En este tutorial aprendió lo siguiente:
 Avance al siguiente tutorial para aprender a implementar el contrato de servicio WCF.
 
 > [!div class="nextstepaction"]
-> [Tutorial: Implementar un contrato de servicio de WCF](how-to-implement-a-wcf-contract.md)
+> [Tutorial: implementar un contrato de servicio WCF](how-to-implement-a-wcf-contract.md)

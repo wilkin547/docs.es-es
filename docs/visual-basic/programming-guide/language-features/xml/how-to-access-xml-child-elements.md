@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: af5ea809cb0777b16230f20e133764dd5f1f86d9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 32bdb1ba476a954bdad1f23c3ecc6129c90ccaac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332338"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347173"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Cómo: Obtener acceso a elementos secundarios XML (Visual Basic)
 En este ejemplo se muestra cómo usar una propiedad de eje secundario para tener acceso a todos los elementos secundarios XML que tienen un nombre especificado en un elemento XML. En concreto, usa la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para obtener el valor del primer elemento de la colección que devuelve la propiedad del eje secundario `name`. La propiedad `name` eje secundario obtiene todos los elementos secundarios denominados `phone` en el objeto `contact`. En este ejemplo también se usa la propiedad del eje secundario `phone` para tener acceso a todos los elementos secundarios denominados `phone` contenidos en el objeto `contact`.  
@@ -20,7 +20,7 @@ En este ejemplo se muestra cómo usar una propiedad de eje secundario para tener
 ## <a name="example"></a>Ejemplo  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compile-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 - Una referencia al espacio de nombres <xref:System.Xml.Linq>.  

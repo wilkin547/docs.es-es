@@ -1,121 +1,121 @@
 ---
-title: Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno
-description: Obtenga información sobre cómo detectar y mitigar las vulnerabilidades de control de tiempo con el descifrado simétrico modo de encadenamiento de bloques de cifrado (CBC), mediante el relleno.
+title: Vulnerabilidad de descifrado de CBC
+description: Obtenga información acerca de cómo detectar y mitigar las vulnerabilidades de tiempo con el descifrado simétrico del modo de encadenamiento de bloques de cifrado (CBC) mediante el relleno.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 1d570cf3da197e7af5c1a1ab4e4df0d21f2cb2d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933905"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347243"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno
 
-Microsoft cree que ya no es seguro descifrar los datos cifrados con el modo de encadenamiento de bloques de cifrado (CBC) del cifrado simétrico cuando se ha aplicado el relleno que se pueda comprobar sin primero asegurarse que la integridad del texto cifrado, excepto para muy específicas circunstancias. Esta decisión se basa en la investigación criptográfica conocido actualmente. 
+Microsoft considera que ya no es seguro descifrar los datos cifrados con el modo de encadenamiento de bloques de cifrado (CBC) del cifrado simétrico cuando se ha aplicado el relleno comprobable sin asegurar primero la integridad del texto cifrado, excepto en el caso de que sea muy específico circunstancias. Este juicio se basa en la investigación criptográfica conocida actualmente. 
 
 ## <a name="introduction"></a>Introducción
 
-Un ataque de oracle de relleno es un tipo de ataque en los datos cifrados que permite al atacante descifrar el contenido de los datos, sin conocer la clave.
+Un ataque de rellenado de Oracle es un tipo de ataque contra datos cifrados que permite al atacante descifrar el contenido de los datos, sin conocer la clave.
 
-Oracle hace referencia a un "proporcione" que proporciona una información atacante sobre si la acción que ejecuta es correcta o no. Imagine un tablero de juego o la tarjeta de juego con un elemento secundario. Cuando su cara ilumina con una gran sonrisa porque considera que es a hacer un buen movimiento, que es una de oracle. Usted, como el oponente, puede usar este oracle para planear correctamente el siguiente movimiento.
+Un Oracle hace referencia a una "información" que proporciona a un atacante información sobre si la acción que se está ejecutando es correcta o no. Imagine que juega un panel o un juego de cartas con un elemento secundario. Cuando su cara se enciende con una gran sonrisa porque considera que está a punto de hacer un buen movimiento, es un Oracle. Usted, como oponente, puede usar este Oracle para planear el siguiente paso correctamente.
 
-Relleno es un término cifrado específico. Algunos cifrados, que son los algoritmos utilizados para cifrar los datos, trabajar en bloques de datos donde cada bloque tiene un tamaño fijo. Si los datos que desea cifrar no del tamaño adecuado para rellenar los bloques, los datos se rellenan hasta que lo haga. Muchas formas de relleno requieren ese relleno para estar siempre presente, incluso si la entrada original era del tamaño correcto. Esto permite que el relleno a siempre eliminarse tras el descifrado.
+El relleno es un término criptográfico específico. Algunos cifrados, que son los algoritmos que se usan para cifrar los datos, funcionan en bloques de datos donde cada bloque tiene un tamaño fijo. Si los datos que quiere cifrar no son el tamaño correcto para rellenar los bloques, los datos se rellenan hasta que lo hace. Muchas formas de relleno requieren que el relleno esté siempre presente, incluso si la entrada original era del tamaño correcto. Esto permite que el relleno se quite siempre de forma segura tras el descifrado.
 
-Juntar las dos cosas, una implementación de software con un relleno de oracle, se muestra si los datos descifrados tienen relleno válido. Oracle podría ser algo tan sencillo como devolver un valor que indica "Relleno no válido" o algo más complicado como realizar una hora diferente de un modo contrastable para procesar un bloque válido en lugar de un bloque no válido.
+Al reunir las dos cosas, una implementación de software con un relleno de Oracle revela si los datos descifrados tienen un relleno válido. Oracle podría ser algo tan sencillo como devolver un valor que diga "relleno no válido" o algo más complicado, como tomar un tiempo muy diferente para procesar un bloque válido en lugar de un bloque no válido.
 
-Los cifrados de bloques tienen otra propiedad, denominada el modo, que determina la relación de los datos en el primer bloque a los datos en el segundo bloque, y así sucesivamente. Uno de los modos más frecuente es CBC. CBC introduce un bloque aleatorio inicial, conocido como el Vector de inicialización (IV) y combina el bloque anterior con el resultado de cifrado estático para que sea de forma que con la misma clave de cifrado del mismo mensaje no siempre genera el mismo resultado cifrado.
+Los cifrados basados en bloques tienen otra propiedad, denominada modo, que determina la relación de los datos en el primer bloque con los datos del segundo bloque, etc. Uno de los modos más usados es CBC. CBC introduce un bloque aleatorio inicial, conocido como el vector de inicialización (IV), y combina el bloque anterior con el resultado de cifrado estático para que sea tal que el cifrado del mismo mensaje con la misma clave no siempre genere la misma salida cifrada.
 
-Un atacante puede usar un relleno oracle, en combinación con estructurar datos CBC, para enviar mensajes ligeramente modificados para el código que expone el oracle y seguir enviando datos hasta que les informa de oracle, los datos son correctos. De esta respuesta, el atacante puede descifrar el mensaje byte a byte.
+Un atacante puede usar un relleno de Oracle, en combinación con cómo se estructuran los datos CBC, para enviar mensajes ligeramente modificados al código que expone el Oracle y seguir enviando datos hasta que Oracle les indique que los datos son correctos. A partir de esta respuesta, el atacante puede descifrar el byte de mensaje por byte.
 
-Las redes de equipos modernos son de alta calidad que un atacante puede detectar muy pequeña (menor que 0,1 ms) las diferencias en la ejecución de tiempo en sistemas remotos. Las aplicaciones que se están dando por sentado que un descifrado correcto solo puede ocurrir si no se ha manipulado los datos pueden ser vulnerables a ataques de las herramientas que están diseñadas para observar las diferencias en descifrado correcta e incorrecta. Aunque esta diferencia de tiempo puede ser más importante en algunos idiomas o bibliotecas que otras, ahora se cree que esto es una amenaza práctica para todos los lenguajes y bibliotecas cuando se toma la respuesta de la aplicación a un error en la cuenta.
+Las redes modernas de equipos son de una calidad tan alta que un atacante puede detectar diferencias muy pequeñas (menos de 0,1 MS) en el tiempo de ejecución de los sistemas remotos. Las aplicaciones que suponen que un descifrado correcto solo se puede producir cuando los datos no se han alterado pueden ser vulnerables a ataques de herramientas diseñadas para observar diferencias en el descifrado correcto e incorrecto. Aunque esta diferencia de tiempo puede ser más importante en algunos lenguajes o bibliotecas que otros, ahora se considera que se trata de una amenaza práctica para todos los lenguajes y bibliotecas cuando se tiene en cuenta la respuesta de la aplicación a los errores.
 
-Este ataque se basa en la capacidad de cambiar los datos cifrados y pruebe el resultado con oracle. La única manera de mitigar por completo el ataque consiste en detectar los cambios realizados en los datos cifrados y rechazar realizar cualquier acción en él. La manera estándar de hacerlo es crear una firma para los datos y validar esa firma antes de que las operaciones se realizan. Se debe poder verificar la firma, no se puede crear el atacante, en caso contrario, podría cambiar los datos cifrados, a continuación, procesar una firma nueva en función de los datos modificados. Un tipo común de la firma apropiada se conoce como un código de autenticación de mensajes hash con claves (HMAC). Un HMAC difiere de una suma de comprobación en que tiene una clave secreta, conocidos solo a la persona que producen el HMAC y a la persona validarlo. Sin la posesión de la clave, no se puede producir un HMAC correcto. Cuando reciba los datos, podría tomar los datos cifrados, proceso por separado el HMAC con la clave secreta y el recurso compartido de remitente y, después, compare calcula el HMAC envían con el. Esta comparación debe ser tiempo constante, de lo contrario haya agregado otro oracle detectable, lo que permite un tipo diferente de ataque.
+Este ataque se basa en la capacidad de cambiar los datos cifrados y probar el resultado con Oracle. La única manera de mitigar completamente el ataque es detectar los cambios en los datos cifrados y rechazar la realización de acciones en él. La manera estándar de hacerlo es crear una firma para los datos y validar esa firma antes de que se realicen las operaciones. La firma debe ser comprobable, no la puede crear el atacante; de lo contrario, cambiaría los datos cifrados y, a continuación, calcularía una nueva firma basada en los datos modificados. Un tipo común de la firma adecuada se conoce como código de autenticación de mensajes hash con clave (HMAC). Un HMAC difiere de una suma de comprobación en que toma una clave secreta, conocida solo por la persona que produce HMAC y a la persona que la valida. Sin la posesión de la clave, no se puede producir un HMAC correcto. Cuando reciba los datos, deberá tomar los datos cifrados, calcular de forma independiente el HMAC con la clave secreta y el recurso compartido de remitente y, a continuación, comparar el HMAC que envió con el que ha calculado. Esta comparación debe ser una hora constante; de lo contrario, se ha agregado otra Oracle que se puede detectar, lo que permite un tipo de ataque diferente.
 
-En resumen usar rellena los cifrados de bloques CBC sin ningún riesgo, debe combinar con un HMAC (u otra comprobación de integridad de datos) que validan utilizando una comparación de tiempo constante antes de tratar de descifrar los datos. Puesto que todos los mensajes modificados aprovechar la misma cantidad de tiempo para generar una respuesta, se impide el ataque.
+En Resumen, para usar cifrados de bloques CBC rellenos de forma segura, debe combinarlos con un HMAC (u otra comprobación de integridad de los datos) que valide mediante una comparación de hora constante antes de intentar descifrar los datos. Dado que todos los mensajes modificados tardan la misma cantidad de tiempo en generar una respuesta, se impide el ataque.
 
-## <a name="who-is-vulnerable"></a>¿Quién es vulnerable
+## <a name="who-is-vulnerable"></a>Quién es vulnerable
 
-Esta vulnerabilidad se aplica a aplicaciones administradas y nativas que están realizando su propio cifrado y descifrado. Esto incluye, por ejemplo:
+Esta vulnerabilidad se aplica a las aplicaciones administradas y nativas que realizan su propio cifrado y descifrado. Esto incluye, por ejemplo:
 
-- Una aplicación que se cifra una cookie para el posterior descifrado en el servidor.
-- Una aplicación de base de datos que proporciona la capacidad de los usuarios insertar datos en una tabla cuyas columnas se descifran más adelante.
-- Una aplicación de transferencia de datos que se basa en el cifrado con una clave compartida para proteger los datos en tránsito.
-- Una aplicación que cifra y descifra los mensajes "por" el túnel TLS.
+- Aplicación que cifra una cookie para el descifrado posterior en el servidor.
+- Aplicación de base de datos que permite a los usuarios insertar datos en una tabla cuyas columnas se descifran más adelante.
+- Una aplicación de transferencia de datos que se basa en el cifrado mediante una clave compartida para proteger los datos en tránsito.
+- Aplicación que cifra y descifra los mensajes "dentro" del túnel TLS.
 
-Tenga en cuenta que utiliza TLS por sí sola puede no protegerá en estos escenarios.
+Tenga en cuenta que el uso de TLS por sí solo puede no protegerle en estos escenarios.
 
 Una aplicación vulnerable:
 
-- Descifra datos con el modo de cifrado CBC con un modo de relleno que se pueda comprobar como PKCS #7 o X.923 ANSI.
-- El descifrado se realiza sin necesidad de realizar una comprobación de integridad de datos (a través de un equipo MAC o una firma digital asimétrica).
+- Descifra los datos mediante el modo de cifrado CBC con un modo de relleno comprobable, como PKCS # 7 o ANSI X. 923.
+- Realiza el descifrado sin tener que realizar una comprobación de integridad de datos (a través de un MAC o una firma digital asimétrica).
 
-Esto también se aplica a las aplicaciones basadas en la parte superior abstracciones encima de estos tipos primitivos, como la estructura de sintaxis de mensajes criptográficos (PKCS #7/CMS) EnvelopedData.
+Esto también se aplica a las aplicaciones compiladas sobre abstracciones en la parte superior de estos primitivos, como la estructura EnvelopedData de la sintaxis de mensajes de cifrado (PKCS # 7/CMS).
 
-## <a name="related-areas-of-concern"></a>Áreas problemáticas relacionadas
+## <a name="related-areas-of-concern"></a>Áreas relacionadas de preocupación
 
-Research ha llevado a Microsoft a preocuparse más acerca de los mensajes de CBC que se rellenan con equivalente en ISO 10126 relleno cuando el mensaje tiene una estructura de pie de página conocidos o de predicción. Por ejemplo, contenido elaborado con arreglo a las reglas de la sintaxis de cifrado de XML de W3C y recomendación de procesamiento (xmlenc, EncryptedXml). Aunque la Guía de W3C para firmar el mensaje, a continuación, cifrar se considera adecuada en el momento, Microsoft recomienda ahora hacer siempre el signo, a continuación, cifrar.
+La investigación ha llevado a Microsoft a preocuparse por los mensajes CBC que se rellenan con el relleno ISO 10126-equivalente cuando el mensaje tiene una estructura de pie de página bien conocida o predecible. Por ejemplo, el contenido está preparado bajo las reglas de la recomendación de cifrado y la recomendación de procesamiento de XML de W3C (xmlenc, EncryptedXml). Aunque la guía del W3C para firmar el mensaje, el cifrado se consideró adecuado en el momento en que Microsoft ahora recomienda realizar siempre el cifrado y luego el signo.
 
-Los desarrolladores de aplicaciones siempre debe prestar atención de comprobar la aplicabilidad de una clave de firma asimétrico, ya que no hay ninguna relación de confianza inherente entre una clave asimétrica y un mensaje arbitrario.
+Los desarrolladores de aplicaciones siempre deben ser conscientes de comprobar la aplicabilidad de una clave de firma asimétrica, ya que no hay ninguna relación de confianza inherente entre una clave asimétrica y un mensaje arbitrario.
 
 ## <a name="details"></a>Detalles
 
-Históricamente, ha habido un consenso que es importante cifrar y autenticar a los datos importantes, utilizando medios, como las firmas HMAC o RSA. Sin embargo, ha habido menos instrucciones claras sobre cómo secuenciar las operaciones de cifrado y autenticación. Debido a la vulnerabilidad que se detallan en este artículo, instrucciones de Microsoft ahora es utilizar siempre el paradigma "cifrar, a continuación,-inicio de sesión". Es decir, en primer lugar cifrar los datos mediante una clave simétrica y luego calcular un MAC o firma asimétrico con el texto cifrado (los datos cifrados). Al descifrar los datos, realice la inversa. En primer lugar, confirme el MAC o la firma del texto cifrado, a continuación, descifrarla.
+Históricamente, se ha dado el consenso de que es importante cifrar y autenticar datos importantes mediante el uso de medios como las firmas HMAC o RSA. Sin embargo, se han realizado instrucciones menos claras sobre cómo secuenciar las operaciones de cifrado y autenticación. Debido a la vulnerabilidad que se detalla en este artículo, la guía de Microsoft es ahora para usar siempre el paradigma "cifrar y luego firmar". Es decir, primero debe cifrar los datos mediante una clave simétrica y, a continuación, calcular una firma MAC o asimétrica a través del texto cifrado (datos cifrados). Al descifrar los datos, realice la ejecución inversa. En primer lugar, confirme el MAC o la firma del texto cifrado y, a continuación, descifre.
 
-Una clase de vulnerabilidades que se conoce como "padding ataques de oracle" se sabe que existe más de 10 años. Estas vulnerabilidades permitir que un atacante descifrar los datos cifrados con algoritmos de bloques simétricos, como AES y 3DES, con no más de 4096 intentos por bloque de datos. Estas vulnerabilidades hacer uso del hecho de que cifrados por bloques se utilizan frecuentemente con relleno que se pueda comprobar datos al final. Se encontró que si un atacante puede alterar el texto cifrado y averiguar si la alteración produjo un error en el formato de relleno al final, el atacante puede descifrar los datos.
+Se sabe que existe una clase de vulnerabilidades conocidas como "los ataques de rellenado de Oracle" durante más de 10 años. Estas vulnerabilidades permiten que un atacante descifre los datos cifrados mediante algoritmos de bloques simétricos, como AES y 3DES, y no use más de 4096 intentos por bloque de datos. Estas vulnerabilidades hacen uso del hecho de que los cifrados de bloques se usan con mayor frecuencia con datos de relleno comprobables al final. Se encontró que, si un atacante puede alterar el texto cifrado y averiguar si la manipulación produjo un error en el formato del relleno al final, el atacante puede descifrar los datos.
 
-Inicialmente, ataques reales se basaban en los servicios que devuelven los códigos de error diferentes en función de si era válido, como la vulnerabilidad de ASP.NET relleno [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Sin embargo, Microsoft ahora cree que es práctico para llevar a cabo ataques similar utilizando solo las diferencias en el tiempo que transcurre entre el procesamiento de caracteres de relleno válido y no válido.
+Inicialmente, los ataques prácticos se basaban en servicios que devolverían códigos de error diferentes en función de si el relleno era válido, como la vulnerabilidad ASP.NET [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Sin embargo, ahora Microsoft considera que es práctico realizar ataques similares usando solo las diferencias de tiempo entre el procesamiento de relleno válido y no válido.
 
-Siempre que el esquema de cifrado emplea una firma y que se realiza la comprobación de firma con un tiempo de ejecución fija durante un período determinado de datos (independientemente del contenido), se puede comprobar la integridad de los datos sin emitir ninguna información a un el atacante a través de un [canal lateral](https://en.wikipedia.org/wiki/Side-channel_attack). Puesto que la comprobación de integridad rechaza los mensajes alterados, se mitiga la amenaza de oracle de relleno.
+Siempre que el esquema de cifrado emplee una firma y que la comprobación de la firma se realice con un tiempo de ejecución fijo para una longitud de datos determinada (con independencia del contenido), la integridad de los datos se puede comprobar sin emitir ninguna información a un atacante a través de un [canal secundario](https://en.wikipedia.org/wiki/Side-channel_attack). Como la comprobación de la integridad rechaza los mensajes alterados, se mitiga la amenaza de rellenado de Oracle.
 
 ## <a name="guidance"></a>Orientación
 
-En primer lugar y ante todo, Microsoft recomienda que todos los datos que tiene la confidencialidad deben transmitirse a través del seguridad de capa de transporte (TLS), el sucesor de a la capa de Sockets seguros (SSL).
+En primer lugar, Microsoft recomienda que todos los datos que tengan confidencialidad se transmitan a través de la seguridad de la capa de transporte (TLS), el sucesor de Capa de sockets seguros (SSL).
 
-A continuación, analizar la aplicación para:
+A continuación, analice la aplicación para:
 
-- Comprender exactamente qué va a realizar el cifrado y el cifrado viene proporcionado por las plataformas y las API que usa.
-- Estar seguro de que cada uso en cada capa de simétrica [algoritmo de cifrado de bloques](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), como AES y 3DES en modo CBC incorporar el uso de una comprobación de integridad de datos con clave de secreto (una signatura asimétrica, un HMAC, o para cambiar el modo de cifrado para un [autenticado cifrado](https://en.wikipedia.org/wiki/Authenticated_encryption) modo (AE) como CCM y GCM).
+- Comprenda exactamente el cifrado que está realizando y el cifrado que proporcionan las plataformas y las API que está usando.
+- Asegúrese de que cada uso en cada capa de un [algoritmo de cifrado de bloques](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)simétricos, como AES y 3DES, en modo CBC incorpore el uso de una comprobación de integridad de datos con clave secreta (una firma asimétrica, un HMAC, o para cambiar el modo de cifrado a un modo de [cifrado autenticado](https://en.wikipedia.org/wiki/Authenticated_encryption) (AE) como GCM o CCM).
 
-En función de la investigación actual, se suele pensar que cuando realice los pasos de autenticación y cifrado por separado para los modos no AE de cifrado, autenticar el texto cifrado (cifrar, a continuación,-inicio de sesión) es la mejor opción general. Sin embargo, no hay ninguna respuesta correcta única a la criptografía y esta generalización no es tan bueno como dirigido consejos desde un criptógrafo profesional.
+En función de la investigación actual, se considera generalmente que cuando los pasos de cifrado y autenticación se realizan de forma independiente para los modos de cifrado no AE, la mejor opción general es autenticar el texto cifrado (cifrar y luego firmar). Sin embargo, no hay ninguna respuesta de un solo tamaño que se ajuste a la criptografía y esta generalización no es tan buena como el Consejo dirigido de un cifrado profesional.
 
-Se recomienda que las aplicaciones que no se puede cambiar su formato de mensajería, pero realizar el descifrado de CBC no autenticado intenta incorporar mitigaciones, como:
+Se recomienda que las aplicaciones que no pueden cambiar su formato de mensajería, pero que realizan descifrado CBC no autenticado intenten incorporar mitigaciones, como:
 
-- Descifrar sin permitir que el sistema de descifrado comprobar o quite el espaciado interno:
-  - Cualquier relleno que se aplicó todavía debe quitarse u omite, que está moviendo la carga en la aplicación.
-  - La ventaja es que la comprobación de relleno y la eliminación se pueden incorporar otra lógica de comprobación de datos de aplicación. Si la comprobación de relleno y la comprobación de datos pueden realizarse en tiempo constante, se reduce la amenaza.
-  - Puesto que la interpretación del relleno cambia la longitud del mensaje percibido, todavía puede haber información de tiempo que se genera a partir de este enfoque.
-- Cambiar el modo de relleno de descifrado para ISO10126:
-  - Relleno de ISO10126 descifrado es compatible con el estándar PKCS7 relleno de cifrado y relleno de ANSIX923 de cifrado.
-  - Cambiar el modo reduce el conocimiento de oracle de relleno a 1 bytes en lugar de todo el bloque. Sin embargo, si el contenido tiene un pie de página conocido, como un elemento XML, cierre ataques relacionados pueden seguir atacar el resto del mensaje.
-  - Además, esto no impide recuperación de texto simple en situaciones donde el atacante puede forzar el mismo texto no cifrado para cifrar varias veces con un desplazamiento de mensaje diferente.
-- Puerta de la evaluación de una llamada de descifrado para desalentar la señal de control de tiempo:
-  - El cálculo del tiempo de espera debe tener un mínimo que supere la cantidad máxima de tiempo que tardaría la operación de descifrado para cualquier segmento de datos que contiene el relleno.
-  - Se deben realizar los cálculos de tiempo según la orientación en [al adquirir las marcas de tiempo de alta resolución](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), no mediante <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeto a roll-over/desbordamiento) o restar dos marcas de tiempo del sistema (de acuerdo con el ajuste de NTP errores).
-  - Los cálculos de tiempo deben favorecer la operación de descifrado, incluidas todas las excepciones posibles en administrar o aplicaciones de C++, no solo se rellena al final.
-  - Si se realizó correctamente o no se ha determinado, debe devolver un error cuando expira la puerta de control de tiempo.
-- Los servicios que están realizando el descifrado no autenticada deben tener supervisión para detectar que una avalancha de mensajes "no válidos" ha llegado a través.
-  - Tenga en cuenta que esta señal lleva (datos dañados legítimamente) de falsos positivos y falsos negativos (tendido de ataque en un tiempo suficientemente largo para evadir la detección).
+- Descifrar sin permitir que el descifrador Compruebe o quite el relleno:
+  - Cualquier relleno aplicado todavía debe quitarse u omitirse, se mueve la carga a la aplicación.
+  - La ventaja es que la comprobación y la eliminación del relleno se pueden incorporar en otra lógica de comprobación de datos de la aplicación. Si la comprobación de relleno y la comprobación de datos se pueden realizar en tiempo constante, se reduce la amenaza.
+  - Dado que la interpretación del relleno cambia la longitud del mensaje percibido, es posible que todavía se emita información de tiempo de este enfoque.
+- Cambie el modo de relleno de descifrado a ISO10126:
+  - El relleno de descifrado de ISO10126 es compatible con el relleno de cifrado PKCS7 y el relleno de cifrado ANSIX923.
+  - Al cambiar el modo, se reduce el relleno de los conocimientos de Oracle a 1 byte en lugar de todo el bloque. Sin embargo, si el contenido tiene un pie de página conocido, como un elemento XML de cierre, los ataques relacionados pueden seguir atacando el resto del mensaje.
+  - Esto tampoco impide la recuperación de texto sin formato en situaciones en las que el atacante puede forzar el mismo texto no cifrado para que se cifre varias veces con un desplazamiento de mensaje diferente.
+- Gate la evaluación de una llamada de descifrado para amortiguar la señal de temporización:
+  - El cálculo del tiempo de espera debe tener un mínimo superior al máximo de tiempo que tardará la operación de descifrado en cualquier segmento de datos que contenga relleno.
+  - Los cálculos de tiempo deben realizarse de acuerdo con las instrucciones de [adquisición de marcas de tiempo de alta resolución](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), no mediante el uso de <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeto a reversión/desbordamiento) o restar dos marcas de tiempo del sistema (sujetas a errores de ajuste de NTP).
+  - Los cálculos de tiempo deben ser inclusivos de la operación de descifrado, incluidas todas las C++ excepciones potenciales en las aplicaciones o administradas, no solo rellenar hasta el final.
+  - Si el éxito o el error se ha determinado todavía, la puerta de tiempo debe devolver un error cuando expire.
+- Los servicios que realizan el descifrado no autenticado deben tener supervisión para detectar que se ha producido un desbordamiento de mensajes "no válidos".
+  - Tenga en cuenta que esta señal contiene falsos positivos (datos dañados de forma legítima) y falsos negativos (repartir el ataque durante un tiempo suficientemente largo para eludir la detección).
 
-## <a name="finding-vulnerable-code---native-applications"></a>Buscar código vulnerable: aplicaciones nativas
+## <a name="finding-vulnerable-code---native-applications"></a>Búsqueda de aplicaciones nativas de código vulnerable
 
-Para los programas que se compiló la criptografía de Windows: Biblioteca próxima generación (CNG):
+En el caso de los programas creados en la biblioteca Cryptography: Next Generation (CNG) de Windows:
 
-- La llamada de descifrado es [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando el `BCRYPT_BLOCK_PADDING` marca.
-- El identificador de clave se ha inicializado mediante una llamada a [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) establecido en `BCRYPT_CHAIN_MODE_CBC`.
-  - Puesto que `BCRYPT_CHAIN_MODE_CBC` es el valor predeterminado, afectado código no ha asignado ningún valor para `BCRYPT_CHAINING_MODE`.
+- La llamada de descifrado es [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando la marca de `BCRYPT_BLOCK_PADDING`.
+- El identificador de clave se ha inicializado mediante una llamada a [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) establecida en `BCRYPT_CHAIN_MODE_CBC`.
+  - Como `BCRYPT_CHAIN_MODE_CBC` es el valor predeterminado, es posible que el código afectado no haya asignado ningún valor para `BCRYPT_CHAINING_MODE`.
 
-Para los programas que se compiló la API criptográfica de Windows anteriores:
+Para programas creados en la antigua API criptográfica de Windows:
 
 - La llamada de descifrado es [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) con `Final=TRUE`.
-- El identificador de clave se ha inicializado mediante una llamada a [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) establecido en `CRYPT_MODE_CBC`.
-  - Puesto que `CRYPT_MODE_CBC` es el valor predeterminado, afectado código no ha asignado ningún valor para `KP_MODE`.
+- El identificador de clave se ha inicializado mediante una llamada a [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) establecida en `CRYPT_MODE_CBC`.
+  - Como `CRYPT_MODE_CBC` es el valor predeterminado, es posible que el código afectado no haya asignado ningún valor para `KP_MODE`.
 
-## <a name="finding-vulnerable-code---managed-applications"></a>Buscar código vulnerable - de las aplicaciones administradas
+## <a name="finding-vulnerable-code---managed-applications"></a>Búsqueda de aplicaciones administradas por código vulnerables
 
-- La llamada de descifrado es la <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> métodos en <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - Esto incluye los siguientes tipos derivados dentro de .NET pero también puede incluir tipos de aplicaciones de terceros:
+- La llamada de descifrado es a los métodos <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> de <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
+  - Esto incluye los siguientes tipos derivados en .NET, pero también puede incluir tipos de terceros:
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -129,24 +129,24 @@ Para los programas que se compiló la API criptográfica de Windows anteriores:
     - <xref:System.Security.Cryptography.TripleDES>
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
-- El <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propiedad se estableció en <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, o <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
-  - Puesto que <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> es el valor predeterminado, afectado código nunca puede haber asignado el <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propiedad.
-- El <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propiedad se estableció en <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Puesto que <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> es el valor predeterminado, afectado código nunca puede haber asignado el <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propiedad.
+- La propiedad <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> se estableció en <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>o <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
+  - Como <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> es el valor predeterminado, es posible que el código afectado nunca haya asignado la propiedad <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>.
+- La propiedad <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> se estableció en <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
+  - Como <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> es el valor predeterminado, es posible que el código afectado nunca haya asignado la propiedad <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Buscar código vulnerable: sintaxis de mensajes criptográficos
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Búsqueda de código vulnerable: sintaxis de mensajes criptográficos
 
-Un mensaje no autenticado de CMS EnvelopedData cuyo contenido cifrado usa el modo CBC de AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) o RC2 (1.2.840.113549.3.2) es vulnerable, así como los mensajes utilizando otros algoritmos de cifrado de bloques en modo CBC.
+Un mensaje CMS EnvelopedData no autenticado cuyo contenido cifrado usa el modo CBC de AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) o RC2 (1.2.840.113549.3.2) es vulnerable, así como los mensajes que utilizan cualquier otro algoritmo de cifrado de bloques en el modo CBC.
 
-Aunque cifrados de flujo no son susceptibles a esta vulnerabilidad, Microsoft recomienda autenticar siempre los datos a través de inspección del valor ContentEncryptionAlgorithm.
+Aunque los cifrados de secuencias no son susceptibles a esta vulnerabilidad determinada, Microsoft recomienda siempre autenticar los datos a través de la inspección del valor de ContentEncryptionAlgorithm.
 
-Para las aplicaciones administradas, un EnvelopedData CMS blob puede ser detectado como cualquier valor que se pasa a <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
+En el caso de las aplicaciones administradas, se puede detectar un BLOB EnvelopedData de CMS como cualquier valor que se pase a <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
 
-Para aplicaciones nativas, se puede detectar un blob EnvelopedData CMS como cualquier valor proporcionado a través de un controlador de CMS [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) cuyo resultante [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) es `CMSG_ENVELOPED` o es el identificador CMS posteriormente se envían un `CMSG_CTRL_DECRYPT` instrucciones a través de [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
+En el caso de las aplicaciones nativas, se puede detectar un BLOB EnvelopedData de CMS como cualquier valor proporcionado a un identificador CMS a través de [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) cuyo [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) resultante sea `CMSG_ENVELOPED` y, posteriormente, el controlador CMS enviará una instrucción `CMSG_CTRL_DECRYPT` a través de [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
 
 ## <a name="vulnerable-code-example---managed"></a>Ejemplo de código vulnerable: administrado
 
-Este método lee una cookie y lo descifra y ninguna comprobación de integridad de datos es visible. Por lo tanto, el contenido de una cookie que se lee por este método puede ser atacado por el usuario que ha recibido o por cualquier atacante que haya obtenido el valor de cookie cifrada.
+Este método lee una cookie y la descifra y no se ve ninguna comprobación de integridad de los datos. Por lo tanto, el usuario que lo recibió o cualquier atacante que haya obtenido el valor de cookie cifrado puede atacar el contenido de una cookie leída por este método.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -171,17 +171,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Siguiente de código de ejemplo recomendados - administrados
+## <a name="example-code-following-recommended-practices---managed"></a>Código de ejemplo con procedimientos recomendados: administrado
 
-El siguiente código de ejemplo usa un formato de mensaje no estándar
+En el código de ejemplo siguiente se usa un formato de mensaje no estándar.
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-donde el `cipher_algorithm_id` y `hmac_algorithm_id` identificadores de algoritmo son representaciones (no estándar) de aplicación local de los algoritmos. Estos identificadores pueden tener sentido en otras partes de su protocolo de mensajería existente en lugar de como una reconstrucción bytestream concatenado.
+donde los identificadores de algoritmo de `cipher_algorithm_id` y `hmac_algorithm_id` son representaciones locales de la aplicación (no estándar) de esos algoritmos. Estos identificadores pueden tener sentido en otras partes del Protocolo de mensajería existente, en lugar de como una bytestream concatenada.
 
-Este ejemplo también utiliza una única clave maestra para derivar una clave de cifrado y una clave HMAC. Esto se proporciona tanto como una comodidad para activar una aplicación con clave individualmente en una aplicación con dos claves y animar a mantener las dos claves diferentes como valores. Aún más garantiza que no se pueden obtener la clave HMAC y clave de cifrado fuera de sincronización.
+En este ejemplo también se usa una única clave maestra para derivar una clave de cifrado y una clave HMAC. Esto se proporciona tanto por comodidad para convertir una aplicación con una clave única en una aplicación con doble clave como para alentar el mantenimiento de las dos claves como valores diferentes. Además, garantiza que la clave HMAC y la clave de cifrado no se pueden obtener de la sincronización.
 
-En este ejemplo no acepta un <xref:System.IO.Stream> para el cifrado o descifrado. La actual datos formato hace que sea un solo paso cifrar difícil porque el `hmac_tag` valor precede el texto cifrado. Sin embargo, este formato se ha elegido porque mantiene todos los elementos de tamaño fijo al principio para mantener el analizador más simple. Con este formato de datos, un solo paso decrypt es posible, aunque se advierte un implementador para llamar a GetHashAndReset y comprobar el resultado antes de llamar a TransformFinalBlock. Si el cifrado de transmisión por secuencias es importante, puede requerirse un modo AE diferente.
+En este ejemplo no se acepta un <xref:System.IO.Stream> para el cifrado o el descifrado. El formato de datos actual dificulta el cifrado de un paso porque el valor de `hmac_tag` precede al texto cifrado. Sin embargo, se ha elegido este formato porque mantiene todos los elementos de tamaño fijo al principio para que el analizador sea más sencillo. Con este formato de datos, es posible descifrar un paso, aunque se puede llamar a un implementador para que llame a GetHashAndReset y compruebe el resultado antes de llamar a TransformFinalBlock. Si el cifrado de streaming es importante, es posible que se requiera un modo AE diferente.
 
 ```csharp
 // ==++==

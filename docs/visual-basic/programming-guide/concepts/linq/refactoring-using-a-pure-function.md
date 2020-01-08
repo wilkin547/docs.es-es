@@ -1,13 +1,13 @@
 ---
-title: Refactorizar utilizando una función pura
+title: Refactorizar mediante una función pura
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: a19285e3a70c14b86898aef0e77c4d04b3abace3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ce07622a030f291bbbee54dc342562ffecd3258c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346529"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341667"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactorizar mediante una función pura (Visual Basic)
 En el ejemplo siguiente se refactoriza el ejemplo anterior, la [refactorización mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar una función pura en este ejemplo, el código para buscar el texto de un párrafo se mueve al método estático puro `ParagraphText`.  
@@ -67,7 +67,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If styleNode Is Nothing Then  

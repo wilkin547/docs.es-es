@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460095"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636178"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Tutorial: Crear un botón mediante Microsoft Expression Blend
 
-Este tutorial le guiará por el proceso de creación de un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] botón personalizado mediante Microsoft Expression Blend.
+Este tutorial le guiará por el proceso de creación de un botón personalizado de WPF mediante Microsoft Expression Blend.
 
 > [!IMPORTANT]
 > Microsoft Expression Blend genera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que se compilan para crear el programa ejecutable. Si prefiere trabajar con XAML directamente, hay otro tutorial que crea la misma aplicación que esta con XAML con Visual Studio en lugar de Blend. Para obtener más información [, vea crear un botón mediante XAML](walkthrough-create-a-button-by-using-xaml.md) .
@@ -40,7 +40,7 @@ En la primera parte de este tutorial, creará la apariencia personalizada del bo
 
 5. Asigne un nombre al proyecto `CustomButton` y presione **Aceptar**.
 
-En este momento tiene un proyecto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en blanco. Puede presionar F5 para ejecutar la aplicación. Como cabría esperar, la aplicación solo se compone de una ventana en blanco. A continuación, se crea un rectángulo redondeado y se convierte en un botón.
+En este momento tiene un proyecto de WPF en blanco. Puede presionar F5 para ejecutar la aplicación. Como cabría esperar, la aplicación solo se compone de una ventana en blanco. A continuación, se crea un rectángulo redondeado y se convierte en un botón.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Para convertir un rectángulo en un botón
 

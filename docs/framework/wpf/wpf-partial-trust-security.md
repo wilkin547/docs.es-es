@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455319"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636554"
 ---
 # <a name="wpf-partial-trust-security"></a>Seguridad de confianza parcial de WPF
-<a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada, los lenguajes de scripting de HTML y de cliente no pueden tener acceso a los recursos críticos del sistema. Dado que las aplicaciones hospedadas en un explorador Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben ajustarse a un conjunto similar de restricciones. Para aplicar estas restricciones, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se basa en la seguridad de acceso del código (CAS) y en ClickOnce (consulte [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en el explorador solicitan el conjunto de permisos de la zona de Internet, independientemente de si se inician desde Internet, la Intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  
+<a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada, los lenguajes de scripting de HTML y de cliente no pueden tener acceso a los recursos críticos del sistema. Dado que las aplicaciones hospedadas en un explorador Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben ajustarse a un conjunto similar de restricciones. Para aplicar estas restricciones, WPF se basa en la seguridad de acceso del código (CAS) y en ClickOnce (consulte [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en el explorador solicitan el conjunto de permisos de la zona de Internet, independientemente de si se inician desde Internet, la Intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] proporciona una amplia variedad de compatibilidad para asegurarse de que se pueda usar tanta funcionalidad como sea posible de forma segura en confianza parcial y, junto con las CA, proporciona compatibilidad adicional para la programación de confianza parcial.  
+ WPF proporciona una amplia variedad de compatibilidad para garantizar que tanta funcionalidad como sea posible se pueda usar de forma segura en confianza parcial y, junto con las CA, proporciona compatibilidad adicional para la programación de confianza parcial.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -44,13 +44,13 @@ ms.locfileid: "73455319"
 |Área de características|Característica|  
 |------------------|-------------|  
 |General|Ventana del explorador<br /><br /> Acceso al sitio de origen<br /><br /> IsolatedStorage (límite de 512 KB)<br /><br /> Proveedores de UIAutomation<br /><br /> Comandos<br /><br /> Editores de métodos de entrada (IMEs)<br /><br /> Lápiz y entrada de lápiz de tableta<br /><br /> Movimiento simulado de arrastrar y colocar con los eventos de captura y movimiento del mouse<br /><br /> OpenFileDialog<br /><br /> Deserialización XAML (mediante XamlReader.Load)|  
-|Integración en Internet|Cuadro de diálogo de descarga del explorador<br /><br /> Navegación iniciada por el usuario de nivel superior<br /><br /> mailto:links<br /><br /> Parámetros de identificador de recursos uniforme<br /><br /> HTTPWebRequest<br /><br /> Contenido de WPF hospedado en un IFRAME<br /><br /> Hospedaje de páginas HTML del mismo sitio con marco<br /><br /> Hospedaje de páginas HTML del mismo sitio con WebBrowser<br /><br /> Servicios web (ASMX)<br /><br /> Servicios Web (con Windows Communication Foundation)<br /><br /> Scripting<br /><br /> Modelo de objetos de documento|  
+|Integración en Internet|Cuadro de diálogo de descarga del explorador<br /><br /> Navegación iniciada por el usuario de nivel superior<br /><br /> mailto:links<br /><br /> Parámetros de identificador de recursos uniforme<br /><br /> HTTPWebRequest<br /><br /> Contenido de WPF hospedado en un IFRAME<br /><br /> Hospedaje de páginas HTML del mismo sitio con marco<br /><br /> Hospedaje de páginas HTML del mismo sitio con WebBrowser<br /><br /> Servicios web (ASMX)<br /><br /> Servicios Web (con Windows Communication Foundation)<br /><br /> Secuencias de comandos<br /><br /> Modelo de objetos de documento|  
 |Objetos visuales|2D y 3D<br /><br /> Animación<br /><br /> Multimedia (sitio de origen y entre dominios)<br /><br /> Creación de imágenes, audio y vídeo|  
 |Lectura|FlowDocuments<br /><br /> Documentos XPS<br /><br /> Fuentes insertadas y del sistema<br /><br /> Fuentes CFF y TrueType|  
 |Editar|Revisión ortográfica<br /><br /> RichTextBox<br /><br /> Compatibilidad con texto sin formato y portapapeles de entrada de lápiz<br /><br /> Pegado iniciado por el usuario<br /><br /> Copiar contenido seleccionado|  
 |Controles|Controles generales|  
   
- En esta tabla se tratan las características de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] en un nivel alto. Para obtener información más detallada, el Windows SDK documenta los permisos que requiere cada miembro en [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Además, las características siguientes ofrecen más información detallada sobre la ejecución de confianza parcial, incluidas algunas consideraciones especiales.  
+ En esta tabla se tratan las características de WPF en un nivel alto. Para obtener información más detallada, el Windows SDK documenta los permisos requeridos por cada miembro en WPF. Además, las características siguientes ofrecen más información detallada sobre la ejecución de confianza parcial, incluidas algunas consideraciones especiales.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (vea [información general sobre XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73455319"
   
 - Cuadro de diálogo Abrir archivo (vea <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- En la tabla siguiente se describen las características de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] que no son seguras para ejecutarse dentro de los límites del conjunto de permisos de la zona de Internet.  
+ En la tabla siguiente se describen las características de WPF que no son seguras para ejecutarse dentro de los límites del conjunto de permisos de la zona de Internet.  
   
  Tabla 2: Características de WPF que no son seguras en confianza parcial  
   
@@ -78,18 +78,18 @@ ms.locfileid: "73455319"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programación de confianza parcial  
- En el caso de las aplicaciones XBAP, el código que supera el conjunto de permisos predeterminado tendrá un comportamiento diferente en función de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.  
+ En el caso de las aplicaciones XBAP, el código que supera el conjunto de permisos predeterminado tendrá un comportamiento diferente en función de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarlo. El usuario puede elegir continuar con la instalación o cancelarla. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.  
   
 |Zona de seguridad|Comportamiento|Obtener plena confianza|  
 |-------------------|--------------|------------------------|  
-|Equipo local|Plena confianza automática|No es necesario realizar ninguna acción.|  
+|Equipo local|Plena confianza automática|No se necesita realizar ninguna acción.|  
 |Intranet y sitios de confianza|Pedir plena confianza|Firme la aplicación XBAP con un certificado para que el usuario vea el origen en la petición.|  
 |Internet|Error: "Confianza no concedida"|Firme la aplicación XBAP con un certificado.|  
   
 > [!NOTE]
 > El comportamiento descrito en la tabla anterior es para XBAP de plena confianza que no siguen el modelo de implementación de confianza ClickOnce.  
   
- En general, el código que puede superar los permisos permitidos es probable que sea código común compartido entre aplicaciones independientes y hospedadas en explorador. Las CA y [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ofrecen varias técnicas para administrar este escenario.  
+ En general, el código que puede superar los permisos permitidos es probable que sea código común compartido entre aplicaciones independientes y hospedadas en explorador. CAS y WPF ofrecen varias técnicas para administrar este escenario.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Detectar permisos con CAS  
@@ -123,27 +123,27 @@ ms.locfileid: "73455319"
 > <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> solo distingue si una aplicación se ejecuta en un explorador, no el conjunto de permisos con el que se ejecuta una aplicación.  
   
 <a name="Managing_Permissions"></a>   
-## <a name="managing-permissions"></a>Gestión de permisos  
+## <a name="managing-permissions"></a>Managing Permissions  
  De forma predeterminada, las XBAP se ejecutan con confianza parcial (conjunto de permisos predeterminados de la zona Internet). Sin embargo, según los requisitos de la aplicación, es posible cambiar el conjunto de permisos predeterminado. Por ejemplo, si se inicia una XBAP desde una Intranet local, puede aprovechar un conjunto de permisos aumentado, que se muestra en la tabla siguiente.  
   
  Tabla 3: Permisos de LocalIntranet e Internet  
   
-|Permiso|Atributo|LocalIntranet|Internet|  
+|Permiso|Attribute|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Servidores DNS de acceso|Sí|No|  
-|Variables de entorno|Leer|Sí|No|  
+|Variables de entorno|Lectura|Sí|No|  
 |Cuadros de diálogo de archivo|Abrir|Sí|Sí|  
-|Cuadros de diálogo de archivo|Sin restricción|Sí|No|  
+|Cuadros de diálogo de archivo|Unrestricted|Sí|No|  
 |Almacenamiento aislado|Aislamiento de ensamblados por el usuario|Sí|No|  
 |Almacenamiento aislado|Aislamiento desconocido|Sí|Sí|  
 |Almacenamiento aislado|Cuota de usuario ilimitada|Sí|No|  
-|Multimedia|Imágenes, vídeo y audio seguros|Sí|Sí|  
+|Medios|Imágenes, vídeo y audio seguros|Sí|Sí|  
 |Impresión|Impresión predeterminada|Sí|No|  
 |Impresión|Impresión segura|Sí|Sí|  
 |Reflexión|Emitir|Sí|No|  
-|Seguridad|Ejecución de código administrado|Sí|Sí|  
-|Seguridad|Permisos de aserción concedidos|Sí|No|  
-|Interfaz de usuario|Sin restricción|Sí|No|  
+|de seguridad|Ejecución de código administrado|Sí|Sí|  
+|de seguridad|Permisos de aserción concedidos|Sí|No|  
+|Interfaz de usuario|Unrestricted|Sí|No|  
 |Interfaz de usuario|Ventanas seguras de nivel superior|Sí|Sí|  
 |Interfaz de usuario|Portapapeles propio|Sí|Sí|  
 |Explorador web|Navegación de marcos segura a HTML|Sí|Sí|  
@@ -159,7 +159,7 @@ ms.locfileid: "73455319"
   
 - [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
- Si su aplicación XBAP requiere plena confianza, puede usar las mismas herramientas para aumentar los permisos solicitados. Aunque una aplicación XBAP solo recibirá plena confianza si se instala y se inicia desde el equipo local, la intranet o desde una dirección URL que se muestra en sitios de confianza o permitidos del explorador. Si la aplicación se instala desde la intranet o un sitio de confianza, el usuario recibirá el mensaje estándar de ClickOnce, que le notificará los permisos elevados. El usuario puede elegir continuar o cancelar la instalación.  
+ Si su aplicación XBAP requiere plena confianza, puede usar las mismas herramientas para aumentar los permisos solicitados. Aunque una aplicación XBAP solo recibirá plena confianza si se instala y se inicia desde el equipo local, la intranet o desde una dirección URL que se muestra en sitios de confianza o permitidos del explorador. Si la aplicación se instala desde la intranet o un sitio de confianza, el usuario recibirá el mensaje estándar de ClickOnce, que le notificará los permisos elevados. El usuario puede elegir continuar con la instalación o cancelarla.  
   
  Como alternativa, puede usar el modelo de implementación de confianza de ClickOnce para realizar una implementación de plena confianza desde cualquier zona de seguridad. Para obtener más información, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview) y [seguridad](security-wpf.md).  
   

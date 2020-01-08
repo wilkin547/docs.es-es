@@ -2,12 +2,12 @@
 title: Herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837758"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346587"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)
 El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramienta independiente que puede utilizarse para agregar, quitar o reparar los elementos de configuración de los servicios de Windows Workflow Foundation (WF).  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  La herramienta también registra los controladores y las asignaciones de secuencias de comandos de .xoml y .rules en la metabase de IIS.  
   
- En máquinas [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 e IIS 6,0), se registra un conjunto de asignaciones de scripts. xoml y. rules.  
+ En Windows Server 2003 y máquinas [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 e IIS 6,0), se registra un conjunto de asignaciones de scripts. xoml y. rules.  
   
  En equipos de 64 bits, la herramienta registra asignaciones de secuencias de comandos en el modo WOW si el modificador `Enable32BitAppOnWin64` está habilitado, o asignaciones de secuencias de comandos nativas de 64 bits si el modificador `Enable32BitAppOnWin64` está deshabilitado.  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Escenarios de uso  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Instalar IIS una vez instalado .NET Framework 3.5  
- En una máquina [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .NET Framework 3,5 se instala antes de la instalación de IIS. Debido a la falta de disponibilidad de la metabase de IIS, la instalación de .NET Framework 3,5 se realiza correctamente sin instalar las asignaciones de scripts. xoml y. rules.  
+ En un equipo con Windows Server 2003, .NET Framework 3,5 se instala antes de la instalación de IIS. Debido a la falta de disponibilidad de la metabase de IIS, la instalación de .NET Framework 3,5 se realiza correctamente sin instalar las asignaciones de scripts. xoml y. rules.  
   
  Una vez instalado IIS, puede utilizar la herramienta WFServicesReg.exe con el modificador `/c` para instalar estas asignaciones de secuencias de comandos concretas.  
   
 ### <a name="repairing-the-scriptmaps"></a>Reparar asignaciones de secuencias de comandos  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>Asignación de secuencias de comandos eliminada en el nodo de sitios web  
- En un equipo [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], los archivos .xoml o .rules se eliminaron accidentalmente del nodo de sitios web. Esto puede repararse ejecutando la herramienta WFServicesReg.exe con el modificador `/c`.  
+ En un equipo con Windows Server 2003,. xoml o. rules se eliminan accidentalmente del nodo sitios Web. Esto puede repararse ejecutando la herramienta WFServicesReg.exe con el modificador `/c`.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Asignación de secuencias de comandos eliminada en un sitio web determinado  
- En un equipo [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .los archivos xoml o .rules se eliminaron accidentalmente de un sitio web determinado (por ejemplo, el sitio web predeterminado), en lugar de eliminarse del nodo de sitios web.  
+ En un equipo con Windows Server 2003,. xoml o. rules se eliminan accidentalmente de un sitio Web determinado (por ejemplo, el sitio web predeterminado) en lugar de hacerlo del nodo sitios Web.  
   
  Para reparar los controladores eliminados de un sitio Web determinado, debe ejecutar "WFServicesReg. exe/r" para quitar los controladores de todos los sitios web y, a continuación, ejecutar "WFServicesReg. exe/c" para crear los controladores adecuados para todos los sitios Web.  
   

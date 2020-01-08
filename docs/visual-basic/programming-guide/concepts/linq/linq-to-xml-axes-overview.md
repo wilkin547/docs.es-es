@@ -2,12 +2,12 @@
 title: Información general de los ejes de LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 47e95fcca251212475c925a24d382ba2dceedd62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352035"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636489"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Información general sobre los ejes de LINQ to XML (Visual Basic)
 Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, puede realizar consultas sobre él para encontrar elementos y atributos, así como para recuperar sus valores. Las colecciones se recuperan mediante los *métodos de eje*, también denominados *ejes*. Algunos de los ejes son métodos de las clases <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument>, que devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601>. Algunos de los métodos Axes son métodos de extensión de la clase <xref:System.Xml.Linq.Extensions>. Los ejes que se han implementado como métodos de extensión trabajan colecciones y devuelven colecciones.  
@@ -16,7 +16,7 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
   
  Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
   
- Por diversas razones, las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y para transformarlos. Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] trabajan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601> y los ejes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
+ Para muchos propósitos, las consultas LINQ proporcionan la manera más eficaz de examinar un árbol, extraer datos de él y transformarlos. Las consultas LINQ operan en objetos que implementan <xref:System.Collections.Generic.IEnumerable%601>, y los ejes de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] devuelven <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> colecciones y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> colecciones. Para poder realizar las consultas, necesitará estas colecciones.  
   
  A parte de los métodos de ejes que permiten recuperar colecciones de elementos y atributos, existen métodos de ejes que le permiten iterar por un árbol con gran detalle. Por ejemplo, en vez de tratar directamente con los elementos y los atributos, podría trabajar con los nodos del árbol. Los nodos tienen un nivel de granularidad mayor que los elementos y atributos. Si trabaja con nodos, podrá examinar comentarios XML, nodos de texto, instrucciones de procesamiento, etc. Esta funcionalidad resultaría interesante, por ejemplo, para una persona que estuviese escribiendo un procesador de textos y quisiera guardar los documentos en formato XML. No obstante, la mayoría de programadores en XML se centran más en los elementos, los atributos y sus valores.  
   

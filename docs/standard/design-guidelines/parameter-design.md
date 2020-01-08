@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353745"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347849"
 ---
 # <a name="parameter-design"></a>Diseño de parámetros
+
 En esta sección se proporcionan instrucciones generales sobre el diseño de parámetros, incluidas las secciones con instrucciones para comprobar los argumentos. Además, debe consultar las directrices descritas en nomenclatura de [parámetros](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
  **✓ DO** usar el tipo de parámetro menos derivado que proporciona la funcionalidad requerida por el miembro.  
@@ -40,7 +41,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
   
  Esto comunica mejor la relación entre los métodos.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración  
+### <a name="choose-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración  
  **✓ DO** utilice enumeraciones si un miembro podría tener dos o más parámetros booleanos.  
   
  **X DO NOT** utilice valores booleanos a menos que esté completamente seguro de que nunca será una necesidad de más de dos valores.  
@@ -49,7 +50,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
   
  **✓ CONSIDER** con valores booleanos para parámetros de constructor que son valores realmente de dos Estados y simplemente se utilizan para inicializar propiedades booleanas.  
   
-### <a name="validating-arguments"></a>Validar argumentos  
+### <a name="validate-arguments"></a>Validar argumentos  
  **✓ DO** validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Produce <xref:System.ArgumentException?displayProperty=nameWithType>, o una de sus subclases, si se produce un error en la validación.  
   
  Tenga en cuenta que no es necesario que la validación real se produzca en el propio miembro público o protegido. Podría producirse en un nivel inferior en algunas rutinas internas o privadas. El punto principal es que todo el área expuesta que se expone a los usuarios finales comprueba los argumentos.  
@@ -66,10 +67,10 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
   
  Si el miembro es sensible a la seguridad, se recomienda hacer una copia y, a continuación, validar y procesar el argumento.  
   
-### <a name="parameter-passing"></a>Paso de parámetros  
+### <a name="pass-parameters"></a>Paso de parámetros  
  Desde la perspectiva de un diseñador de Marcos, hay tres grupos principales de parámetros: por valor, parámetros `ref` y parámetros de `out`.  
   
- Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, C#como, VB.net y C++, de forma predeterminada pasan los parámetros por valor.  
+ Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, C#como, Visual Basic y C++, de forma predeterminada pasan los parámetros por valor.  
   
  Cuando un argumento se pasa a través de un parámetro `ref`, el miembro recibe una referencia al argumento real pasado. Si el argumento es un tipo de valor, se coloca una referencia al argumento en la pila. Si el argumento es un tipo de referencia, se coloca en la pila una referencia a la referencia. `Ref` parámetros se pueden usar para permitir que el miembro modifique los argumentos pasados por el autor de la llamada.  
   

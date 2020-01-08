@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: 6647e52ef8477221dd5849a19809a34fb06189a6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 899955a9f3302e67de4efa0ce0cb6baf6bf0ec5d
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455421"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559786"
 ---
 # <a name="merged-resource-dictionaries"></a>Diccionarios de recursos combinados
 Los recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] admiten una característica de diccionario de recursos combinados. Esta característica proporciona una manera de definir la parte de recursos de una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fuera de la aplicación [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilada. Los recursos se pueden compartir entre aplicaciones y también se aíslan de forma más conveniente para la localización.  
@@ -20,7 +20,7 @@ Los recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
   
  [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Tenga en cuenta que el elemento <xref:System.Windows.ResourceDictionary> no tiene una [Directiva x:Key](../../xaml-services/x-key-directive.md), que normalmente es necesaria para todos los elementos de una colección de recursos. Pero otra referencia <xref:System.Windows.ResourceDictionary> dentro de la colección <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> es un caso especial, reservado para este escenario de Diccionario de recursos combinados. El <xref:System.Windows.ResourceDictionary> que introduce un diccionario de recursos combinados no puede tener una [Directiva x:Key](../../xaml-services/x-key-directive.md). Normalmente, cada <xref:System.Windows.ResourceDictionary> dentro de la colección <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> especifica un atributo <xref:System.Windows.ResourceDictionary.Source%2A>. El valor de <xref:System.Windows.ResourceDictionary.Source%2A> debe ser un identificador uniforme de recursos (URI) que se resuelva en la ubicación del archivo de recursos que se va a combinar. El destino de ese URI debe ser otro archivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], con <xref:System.Windows.ResourceDictionary> como su elemento raíz.  
+ Tenga en cuenta que el elemento <xref:System.Windows.ResourceDictionary> no tiene una [Directiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md), que normalmente es necesaria para todos los elementos de una colección de recursos. Pero otra referencia <xref:System.Windows.ResourceDictionary> dentro de la colección <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> es un caso especial, reservado para este escenario de Diccionario de recursos combinados. El <xref:System.Windows.ResourceDictionary> que introduce un diccionario de recursos combinados no puede tener una [Directiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md). Normalmente, cada <xref:System.Windows.ResourceDictionary> dentro de la colección <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> especifica un atributo <xref:System.Windows.ResourceDictionary.Source%2A>. El valor de <xref:System.Windows.ResourceDictionary.Source%2A> debe ser un identificador uniforme de recursos (URI) que se resuelva en la ubicación del archivo de recursos que se va a combinar. El destino de ese URI debe ser otro archivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], con <xref:System.Windows.ResourceDictionary> como su elemento raíz.  
   
 > [!NOTE]
 > Es válido definir recursos dentro de una <xref:System.Windows.ResourceDictionary> que se especifica como un diccionario combinado, como alternativa a especificar <xref:System.Windows.ResourceDictionary.Source%2A>, o además de los recursos incluidos en el origen especificado. Sin embargo, esto no es un escenario común: el escenario principal para los diccionarios combinados es combinar recursos desde ubicaciones de archivo externas. Si desea especificar recursos dentro del marcado de una página, normalmente debe definirlos en el <xref:System.Windows.ResourceDictionary> principal y no en los diccionarios combinados.  

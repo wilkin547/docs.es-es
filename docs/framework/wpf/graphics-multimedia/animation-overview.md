@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039187"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559721"
 ---
 # <a name="animation-overview"></a>Información general sobre animaciones
 
@@ -201,7 +201,7 @@ A continuación se muestra cómo crear un rectángulo que se intensifica y se at
 
 Dado que las animaciones generan valores de propiedad, existen distintos tipos de animaciones para los diversos tipos de propiedades. Para animar una propiedad que toma un <xref:System.Double>, como la propiedad <xref:System.Windows.FrameworkElement.Width%2A> de un elemento, utilice una animación que genere valores <xref:System.Double>. Para animar una propiedad que toma un <xref:System.Windows.Point>, utilice una animación que genere valores de <xref:System.Windows.Point>, etc. Debido al número de tipos de propiedad diferentes, hay varias clases de animación en el espacio de nombres <xref:System.Windows.Media.Animation>. Afortunadamente se rigen por una convención de nomenclatura estricta que hace que sea fácil diferenciarlas:
 
-- \<*tipo*> animación
+- \<*Tipo*>Animation
 
   Conocidas como animaciones "From/To/By" o "basic", generan una animación entre un valor inicial y de destino o agregan un valor de desplazamiento al valor inicial.
 
@@ -213,17 +213,17 @@ Dado que las animaciones generan valores de propiedad, existen distintos tipos d
 
   En los ejemplos de este tema se incluyen estas animaciones porque son las más fáciles de usar. Las animaciones From/to/by se describen en detalle en la información general de las animaciones From/to/by.
 
-- \<*Type*>AnimationUsingKeyFrames
+- \<*Tipo*>AnimationUsingKeyFrames
 
   Las animaciones de fotogramas clave son más eficaces que las animaciones From/To/By porque se puede especificar cualquier número de valores de destino e incluso controlar su método de interpolación. Algunos tipos solo se pueden animar con animaciones de fotogramas clave. Las animaciones de fotogramas clave se describen en detalle en [información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md).
 
-- \<*tipo*> AnimationUsingPath
+- \<*Tipo*>AnimationUsingPath
 
   Las animaciones de trazado permiten usar un trazado geométrico para generar valores animados.
 
-- \<*tipo*> AnimationBase
+- \<*Tipo*>AnimationBase
 
-  Clase abstracta que, cuando se implementa, anima un \<*tipo*> valor. Esta clase actúa como la clase base para \<*tipo*> animación y \<*tipo*> AnimationUsingKeyFrames. Tiene que tratar directamente con estas clases solo si desea crear sus propias animaciones personalizadas. De lo contrario, use un *tipo*de \<> animación o fotograma clave\<*tipo*> animación.
+  Clase abstracta que, cuando se implementa, anima un valor de \<*Tipo*>. Esta clase actúa como clase base para las clases \<*Tipo*>Animation y \<*Tipo*>AnimationUsingKeyFrames. Tiene que tratar directamente con estas clases solo si desea crear sus propias animaciones personalizadas. En caso contrario, use \<*Tipo*>Animation o KeyFrame\<*Tipo*>Animation.
 
 En la mayoría de los casos, querrá usar el *tipo*de \<> clases de animación, como <xref:System.Windows.Media.Animation.DoubleAnimation> y <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -248,7 +248,7 @@ Tres propiedades de temporización usadas con frecuencia son <xref:System.Window
 
 #### <a name="the-duration-property"></a>Propiedad Duration
 
-Como se ha mencionado previamente, una escala de tiempo representa un segmento de tiempo. La longitud de ese segmento viene determinada por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la escala de tiempo, que normalmente se especifica mediante un valor de <xref:System.Windows.Duration.TimeSpan%2A>. Cuando una escala de tiempo llega al final de su duración, ha completado una iteración.
+Como se ha mencionado previamente, un objeto Timeline representa un segmento de tiempo. La longitud de ese segmento viene determinada por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la escala de tiempo, que normalmente se especifica mediante un valor de <xref:System.Windows.Duration.TimeSpan%2A>. Cuando una escala de tiempo llega al final de su duración, ha completado una iteración.
 
 Una animación utiliza su propiedad <xref:System.Windows.Media.Animation.Timeline.Duration%2A> para determinar su valor actual. Si no se especifica un valor de <xref:System.Windows.Media.Animation.Timeline.Duration%2A> para una animación, se usa 1 segundo, que es el valor predeterminado.
 
@@ -258,7 +258,7 @@ La sintaxis siguiente muestra una versión simplificada de la sintaxis de atribu
 
 En la tabla siguiente se muestran varias configuraciones de <xref:System.Windows.Duration> y sus valores resultantes.
 
-|Parámetro|Valor resultante|
+|Configuración de|Valor resultante|
 |-------------|---------------------|
 |0:0:5.5|5,5 segundos.|
 |0:30:5.5|30 minutos y 5,5 segundos.|
@@ -292,7 +292,7 @@ Asignar un nombre a un <xref:System.Windows.FrameworkElement> difiere de asignar
 
 - Para convertir un <xref:System.Windows.FrameworkElement> en un destino de animación, asígnele un nombre estableciendo su propiedad <xref:System.Windows.FrameworkElement.Name%2A>. En el código, también debe usar el método <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar el nombre del elemento con la página a la que pertenece.
 
-- Para convertir un objeto de <xref:System.Windows.Freezable> en un destino de animación en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], se usa la [Directiva x:Name](../../xaml-services/x-name-directive.md) para asignarle un nombre. En el código, solo se usa el método <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar el objeto con la página a la que pertenece.
+- Para convertir un objeto de <xref:System.Windows.Freezable> en un destino de animación en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], se usa la [Directiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) para asignarle un nombre. En el código, solo se usa el método <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar el objeto con la página a la que pertenece.
 
 En las secciones siguientes se proporciona un ejemplo de cómo asignar un nombre a un elemento en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y en el código. Para obtener información más detallada sobre la asignación de nombres y destinos, vea la [información general sobre los guiones gráficos](storyboards-overview.md).
 
@@ -367,7 +367,7 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----------|-----------------|
 |[Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)|Describe cómo el sistema de control de tiempo utiliza las clases <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock>, que permiten crear animaciones.|
 |[Sugerencias y trucos para animaciones](animation-tips-and-tricks.md)|Enumera las sugerencias útiles para solucionar problemas con animaciones, como el rendimiento.|
@@ -377,10 +377,10 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 |[Funciones de aceleración ](easing-functions.md)|Explica cómo aplicar fórmulas matemáticas a las animaciones para obtener un comportamiento realista, como el rebote.|
 |[Información general sobre animaciones en trazados ](path-animations-overview.md)|Describe cómo mover o girar un objeto a lo largo de un trazado complejo.|
 |[Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)|Describe las animaciones de propiedades mediante guiones gráficos, animaciones locales, relojes y animaciones por fotograma.|
-|[Información general sobre objetos Storyboard](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|
+|[Información general sobre objetos Storyboard ](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|
 |[Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)|Describe los tipos de <xref:System.Windows.Media.Animation.Timeline> y las propiedades que se usan en las animaciones.|
 |[Información general sobre eventos de control de tiempo](timing-events-overview.md)|Describe los eventos disponibles en los objetos <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> para ejecutar el código en los puntos de la escala de tiempo, como iniciar, pausar, reanudar, omitir o detener.|
-|[Temas de procedimientos](animation-and-timing-how-to-topics.md)|Contiene ejemplos de código para usar animaciones y escalas de tiempo en una aplicación.|
+|[Temas "Cómo..."](animation-and-timing-how-to-topics.md)|Contiene ejemplos de código para usar animaciones y escalas de tiempo en una aplicación.|
 |[Temas de procedimientos de relojes](clocks-how-to-topics.md)|Contiene ejemplos de código para usar el objeto <xref:System.Windows.Media.Animation.Clock> en la aplicación.|
 |[Temas de procedimientos de fotogramas clave](key-frame-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de fotogramas clave en una aplicación.|
 |[Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de trazado en una aplicación.|

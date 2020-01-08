@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 3eba16097648bee1ea80cf62ab3bca900ddf6280
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837355"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337644"
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
@@ -21,7 +21,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 - `ReceiveRetryCount`. Un valor entero que indica el número máximo de horas para reintentar la entrega de un mensaje de la cola de la aplicación a la aplicación. El valor predeterminado es 5. Esto es suficiente en casos donde un reintento inmediato corrige el problema, como ocurre con un interbloqueo temporal en una base de datos.  
   
-- `MaxRetryCycles`. Un valor entero que indica el número máximo de ciclos de reintento. Un ciclo de reintento consiste en transferir un mensaje de la cola de la aplicación a una subcola de intento y, después de un retraso configurable, de la subcola de intento de vuelta a la cola de la aplicación para reintentar la entrega. El valor predeterminado es 2. En Windows Vista, el mensaje se prueba como máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) veces. `MaxRetryCycles` se omite en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Un valor entero que indica el número máximo de ciclos de reintento. Un ciclo de reintento consiste en transferir un mensaje de la cola de la aplicación a una subcola de intento y, después de un retraso configurable, de la subcola de intento de vuelta a la cola de la aplicación para reintentar la entrega. El valor predeterminado es 2. En Windows Vista, el mensaje se prueba como máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) veces. `MaxRetryCycles` se omite en Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 - `RetryCycleDelay`. El tiempo de retardo entre los ciclos de reintento. El valor predeterminado es de 30 minutos. `MaxRetryCycles` y `RetryCycleDelay` proporcionan juntos un mecanismo para resolver el problema donde un reintento después de un retraso periódico corrige el problema. Por ejemplo, esto controla un conjunto de filas bloqueado en confirmación de la transacción pendiente de SQL Server.  
   
@@ -39,12 +39,12 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) en Windows Vista.  
   
-- (ReceiveRetryCount + 1) en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) en Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 > [!NOTE]
 > No se realiza ningún reintento para un mensaje que se entrega correctamente.  
   
- Para realizar un seguimiento del número de veces que se intenta leer un mensaje, Windows Vista mantiene una propiedad de mensaje durable que cuenta el número de anulaciones y una propiedad de recuento de movimiento que cuenta el número de veces que el mensaje se mueve entre la cola de la aplicación y las subcolas. El canal de WCF los usa para calcular el número de reintentos de recepción y el número de ciclos de reintento. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], el canal de WCF mantiene el número de anulaciones en la memoria y se restablece si se produce un error en la aplicación. Además, el canal de WCF puede mantener los recuentos de anulación de hasta 256 mensajes en memoria en cualquier momento. Si se lee el mensaje número 257, se restablece el recuento de la anulación del mensaje más antiguo.  
+ Para realizar un seguimiento del número de veces que se intenta leer un mensaje, Windows Vista mantiene una propiedad de mensaje durable que cuenta el número de anulaciones y una propiedad de recuento de movimiento que cuenta el número de veces que el mensaje se mueve entre la cola de la aplicación y las subcolas. El canal de WCF los usa para calcular el número de reintentos de recepción y el número de ciclos de reintento. En Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], el número de anulaciones se mantiene en la memoria por el canal de WCF y se restablece si se produce un error en la aplicación. Además, el canal de WCF puede mantener los recuentos de anulación de hasta 256 mensajes en memoria en cualquier momento. Si se lee el mensaje número 257, se restablece el recuento de la anulación del mensaje más antiguo.  
   
  Las propiedades de recuento de la anulación y recuento de movimiento están disponibles para la operación del servicio a través del contexto de la operación. En el ejemplo de código siguiente se muestra cómo obtener acceso.  
   
@@ -66,7 +66,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
  La aplicación puede requerir algún tipo de control automatizado de mensajes dudosos que los aparte a una cola específica de manera que el servicio pueda tener acceso al resto de los mensajes de la cola. El único escenario para utilizar el mecanismo del controlador de errores para realizar escuchas para las excepciones de mensajes dudosos es cuando <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> está establecido en <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. El ejemplo de mensaje dudoso para Message Queuing 3.0 demuestra este comportamiento. A continuación se dibujan los pasos a realizar para controlar los mensajes dudosos, incluyendo los procedimientos recomendados:  
   
-1. Asegúrese de que la configuración de mensajes dudosos refleja los requisitos de la aplicación. Al trabajar con la configuración, asegúrese de que comprende las diferencias entre las capacidades de Message Queue Server en Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Asegúrese de que la configuración de mensajes dudosos refleja los requisitos de la aplicación. Al trabajar con la configuración, asegúrese de que comprende las diferencias entre las capacidades de Message Queue Server en Windows Vista, Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 2. Si se requiere, implemente `IErrorHandler` para controlar los errores de los mensajes dudosos. Dado que al establecer `ReceiveErrorHandling` en `Fault` se requiere un mecanismo manual para quitar el mensaje dudoso de la cola o corregir un problema derivado externo, lo normal es implementar `IErrorHandler` cuando `ReceiveErrorHandling` se establece en `Fault`, como se muestra en el código siguiente.  
   
@@ -95,13 +95,13 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
  El control de mensajes dudosos no finaliza cuando un mensaje se coloca en la cola de mensajes dudosos. Los mensajes de la cola de mensajes dudosos también se deben leer y controlar. Puede utilizar un subconjunto de los valores de control de mensajes dudosos al leer mensajes de la subcola final de mensajes dudosos. La configuración aplicable es `ReceiveRetryCount` y `ReceiveErrorHandling`. Puede establecer `ReceiveErrorHandling` en Drop, Reject o Fault. Se omite `MaxRetryCycles` y se produce una excepción si `ReceiveErrorHandling` se establece en Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Diferencias entre Windows Vista, Windows Server 2003, y Windows XP  
- Como se ha apuntado anteriormente, no todos los valores de control de mensajes dudosos son aplicables a [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Las siguientes diferencias principales entre Message Queue Server en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)]y Windows Vista son relevantes para el control de mensajes dudosos:  
+ Como se indicó anteriormente, no todas las configuraciones de control de mensajes dudosos se aplican a Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Las siguientes diferencias principales entre Message Queue Server en Windows Server 2003, [!INCLUDE[wxp](../../../../includes/wxp-md.md)]y Windows Vista son relevantes para el control de mensajes dudosos:  
   
-- Message Queue Server en Windows Vista admite subcolas, mientras que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no admiten subcolas. Las subcolas se utilizan en el control de mensajes dudosos. Las colas de reintento y la cola dudosa son subcolas en la cola de la aplicación que se crea dependiendo de los valores de control del mensaje dudoso. `MaxRetryCycles` dicta cuántas subcolas de reintento se crean. Por lo tanto, cuando se ejecutan en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` se omiten y no se permite `ReceiveErrorHandling.Move`.  
+- Message Queue Server en Windows Vista admite subcolas, mientras que Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no admiten subcolas. Las subcolas se utilizan en el control de mensajes dudosos. Las colas de reintento y la cola dudosa son subcolas en la cola de la aplicación que se crea dependiendo de los valores de control del mensaje dudoso. `MaxRetryCycles` dicta cuántas subcolas de reintento se crean. Por lo tanto, cuando se ejecuta en Windows Server 2003 o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` se omiten y `ReceiveErrorHandling.Move` no se permite.  
   
-- Message Queue Server en Windows Vista admite la confirmación negativa, mientras que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no lo hacen. Una confirmación de que no se pudo realizar la acción del administrador de la cola receptora hace que el administrador de la cola emisora coloque el mensaje rechazado en la cola de mensajes no enviados. Como tal, `ReceiveErrorHandling.Reject` no se permite con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Message Queue Server en Windows Vista admite la confirmación negativa, mientras que Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no. Una confirmación de que no se pudo realizar la acción del administrador de la cola receptora hace que el administrador de la cola emisora coloque el mensaje rechazado en la cola de mensajes no enviados. Como tal, no se permite `ReceiveErrorHandling.Reject` con Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-- Message Queue Server en Windows Vista admite una propiedad de mensaje que mantiene el recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja.  
+- Message Queue Server en Windows Vista admite una propiedad de mensaje que mantiene el recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja.  
   
 ## <a name="see-also"></a>Vea también
 

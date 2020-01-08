@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424588"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636333"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Información general sobre las aplicaciones de explorador XAML de WPF
 <a name="introduction"></a>Las aplicaciones de explorador XAML (XBAP) combinan características de las aplicaciones web y las aplicaciones cliente enriquecidas. Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciar desde Internet Explorer o Firefox. Al igual que las aplicaciones cliente enriquecidas, las XBAP pueden aprovechar las capacidades de WPF. El desarrollo de aplicaciones XBAP también se parece al desarrollo de clientes enriquecidos. En este tema se proporciona una sencilla introducción de alto nivel al desarrollo de aplicaciones XBAP y se describe en qué se diferencia este del desarrollo estándar de clientes enriquecidos.
@@ -34,7 +34,7 @@ ms.locfileid: "73424588"
 
 <a name="creating_a_new_xaml_browser_application_xbap"></a>
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Creación de una aplicación de explorador XAML (XBAP)
- La manera más sencilla de crear un nuevo proyecto de XBAP es con Visual Studio. Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).
+ La manera más sencilla de crear un nuevo proyecto de XBAP es con Visual Studio. Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).
 
  Cuando se ejecuta el proyecto de XBAP, se abre en una ventana del explorador en lugar de en una independiente. Al depurar la aplicación XBAP desde Visual Studio, la aplicación se ejecuta con el permiso de zona de Internet y, por tanto, producirá excepciones de seguridad si se superan esos permisos. Para más información, consulte [Seguridad](../security-wpf.md) y [Seguridad de confianza parcial de WPF](../wpf-partial-trust-security.md).
 
@@ -45,13 +45,13 @@ ms.locfileid: "73424588"
 ## <a name="deploying-an-xbap"></a>Implementación de una aplicación XBAP
  Cuando se compila una aplicación XBAP, en la salida se incluyen los tres archivos siguientes:
 
-|Archivo|Descripción|
+|File|Descripción|
 |----------|-----------------|
 |Ejecutable (.exe)|Contiene el código compilado y tiene la extensión .exe.|
 |Manifiesto de aplicación (.manifest)|Contiene metadatos asociados con la aplicación y tiene la extensión .manifest.|
 |Manifiesto de implementación (.xbap)|Este archivo contiene la información que usa ClickOnce para implementar la aplicación y tiene la extensión. XBAP.|
 
- Las XBAP se implementan en un servidor Web, por ejemplo, Microsoft Internet Information Services (IIS) 5,0 o versiones posteriores. No es necesario que instale el .NET Framework en el servidor Web, pero tiene que registrar los tipos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Extensiones multipropósito de correo Internet (MIME) y las extensiones de nombre de archivo. Para más información, consulte [Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
+ Las XBAP se implementan en un servidor Web, por ejemplo, Microsoft Internet Information Services (IIS) 5,0 o versiones posteriores. No es necesario que instale el .NET Framework en el servidor Web, pero tiene que registrar los tipos de extensiones multipropósito de correo Internet (MIME) y las extensiones de nombre de archivo de WPF. Para más información, consulte [Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
 
  Para preparar la aplicación XBAP para la implementación, copie el archivo .exe y los manifiestos asociados al servidor web. Cree una página HTML que contenga un hipervínculo para abrir el manifiesto de implementación, que es el archivo con la extensión .xbap. Cuando el usuario hace clic en el vínculo al archivo. XBAP, ClickOnce controla automáticamente los mecanismos de descarga e inicio de la aplicación. En el ejemplo de código siguiente, se muestra una página HTML que contiene un hipervínculo que apunta a una aplicación XBAP.
 
@@ -164,11 +164,11 @@ ms.locfileid: "73424588"
     ```
 
 ### <a name="deploying-a-full-trust-xbap"></a>Implementación de una aplicación XBAP de plena confianza
- Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.
+ Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarlo. El usuario puede elegir continuar con la instalación o cancelarla. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.
 
 |Zona de seguridad|Comportamiento|Obtener plena confianza|
 |-------------------|--------------|------------------------|
-|Equipo local|Plena confianza automática|No es necesario realizar ninguna acción.|
+|Equipo local|Plena confianza automática|No se necesita realizar ninguna acción.|
 |Intranet y sitios de confianza|Pedir plena confianza|Firme la aplicación XBAP con un certificado para que el usuario vea el origen en la petición.|
 |Internet|Error: "Confianza no concedida"|Firme la aplicación XBAP con un certificado.|
 

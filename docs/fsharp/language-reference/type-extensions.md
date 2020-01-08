@@ -2,12 +2,12 @@
 title: Extensiones de tipo
 description: Obtenga información F# sobre cómo las extensiones de tipo permiten agregar nuevos miembros a un tipo de objeto definido previamente.
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978254"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341567"
 ---
 # <a name="type-extensions"></a>Extensiones de tipo
 
@@ -98,7 +98,7 @@ Las extensiones opcionales no aparecen en el tipo extendido cuando se examinan p
 
 Los miembros de extensión opcionales se compilan en miembros estáticos para los que la instancia de objeto se pasa implícitamente como el primer parámetro. Sin embargo, actúan como si fueran miembros de instancia o miembros estáticos según cómo se declaran.
 
-Los miembros de extensión opcionales tampoco son visibles C# para los consumidores de o VB. Solo se pueden consumir en otro F# código.
+Los miembros de extensión opcionales tampoco son visibles C# para los consumidores o Visual Basic. Solo se pueden consumir en otro F# código.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitación genérica de las extensiones de tipo intrínsecas y opcionales
 

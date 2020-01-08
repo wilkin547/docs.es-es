@@ -1,13 +1,13 @@
 ---
-title: Tipos en F#
+title: Tipos
 description: Obtenga información sobre los tipos que se usan F# en y F# cómo se denominan y describen los tipos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8f2526dce46d53a92c01c9347e1ed97681a45ecc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 70d79525318c8d2eb0711d6a1b50be1ac0cf0226
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425306"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348217"
 ---
 # <a name="f-types"></a>Tipos en F#
 
@@ -33,22 +33,22 @@ En F# el código, a menudo tiene que escribir los nombres de los tipos. Cada tip
 
 En la tabla siguiente se muestran los aspectos de la F# sintaxis de tipos para los tipos.
 
-|Type|Sintaxis de tipos|Ejemplos|
+|Tipo de|Sintaxis de tipos|Ejemplos|
 |----|-----------|--------|
-|tipo primitivo|*nombre de tipo*|`int`<br /><br />`float`<br /><br />`string`|
-|tipo de agregado (clase, estructura, Unión, registro, enumeración, etc.)|*nombre de tipo*|`System.DateTime`<br /><br />`Color`|
-|abreviatura de tipo|*nombre de la abreviatura de tipo*|`bigint`|
-|tipo completo|*namespaces. type-name*<br /><br />o<br /><br />*modules. Type: nombre*<br /><br />o<br /><br />*namespaces. modules. Type: nombre*|`System.IO.StreamWriter`|
-|array|*nombre de tipo*[] o<br /><br />matriz *de nombres de tipo*|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|matriz bidimensional|*nombre de tipo*[,]|`int[,]`<br /><br />`float[,]`|
+|tipo primitivo|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|tipo de agregado (clase, estructura, Unión, registro, enumeración, etc.)|*type-name*|`System.DateTime`<br /><br />`Color`|
+|abreviatura de tipo|*type-abbreviation-name*|`bigint`|
+|tipo completo|*namespaces.type-name*<br /><br />o<br /><br />*modules.type-name*<br /><br />o<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|matriz|*nombre de tipo*[] o<br /><br />matriz *de nombres de tipo*|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|matriz bidimensional|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
 |matriz tridimensional|*nombre de tipo*[,,]|`float[,,]`|
 |tuple|*Type-nombre1* &#42; *Type-nombre2* ...|Por ejemplo, `(1,'b',3)` tiene el tipo `int * char * int`|
-|tipo genérico|*nombre-tipo genérico* -parámetro-de-tipo<br /><br />o<br /><br />*Generic-type-name*&lt;*tipo-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|tipo construido (un tipo genérico que tiene un argumento de tipo específico proporcionado)|*nombre-tipo genérico* -tipo-argumento<br /><br />o<br /><br />*Generic-type-name*&lt;*tipo-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|tipo de función que tiene un parámetro único|*parámetro-type1* -&gt; *tipo de valor devuelto*|Función que toma un `int` y devuelve un `string` tiene el tipo `int -> string`|
+|tipo genérico|*type-parameter* *generic-type-name*<br /><br />o<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|tipo construido (un tipo genérico que tiene un argumento de tipo específico proporcionado)|*type-argument* *generic-type-name*<br /><br />o<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|tipo de función que tiene un parámetro único|*parameter-type1* -&gt; *return-type*|Función que toma un `int` y devuelve un `string` tiene el tipo `int -> string`|
 |tipo de función que tiene varios parámetros|*parámetro-type1* -&gt; *parámetro-tipo2* -&gt;...-&gt; *tipo de valor devuelto*|Una función que toma un `int` y un `float` y devuelve una `string` tiene el tipo `int -> float -> string`|
 |función de orden superior como parámetro|(*tipo de función*)|`List.map` tiene el tipo `('a -> 'b) -> 'a list -> 'b list`|
-|delegado|Delegado de *tipo de función*|`delegate of unit -> int`|
+|delegate|Delegado de *tipo de función*|`delegate of unit -> int`|
 |tipo flexible|*nombre del tipo de* #|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Temas relacionados

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348611"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344202"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Cómo: Determinar el tipo al que hace referencia una variable de objeto (Visual Basic)
 
@@ -50,7 +50,7 @@ Una variable de objeto contiene un puntero a los datos que se almacenan en otro 
 
     El criterio de compatibilidad depende de si el tipo especificado es una clase, una estructura o una interfaz. En general, los tipos son compatibles si el objeto es del mismo tipo que, hereda de o implementa el tipo especificado. Para obtener más información, vea [operador typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
-## <a name="compiling-the-code"></a>Compilar el código
+## <a name="compile-the-code"></a>Compilar el código
 
 Tenga en cuenta que el tipo especificado no puede ser una variable o una expresión. Debe ser el nombre de un tipo definido, como una clase, una estructura o una interfaz. Esto incluye tipos intrínsecos como `Integer` y `String`.
 

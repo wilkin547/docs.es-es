@@ -11,17 +11,17 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010285"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559427"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona una amplia compatibilidad para el desarrollo de aplicaciones internacionalizadas.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una amplia compatibilidad para el desarrollo de aplicaciones de uso internacional.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general sobre la globalización y la localización de WPF](wpf-globalization-and-localization-overview.md)  
  [Globalización de WPF](globalization-for-wpf.md)  
  [Información general sobre el uso del diseño automático](use-automatic-layout-overview.md)  
@@ -36,6 +36,6 @@ ms.locfileid: "62010285"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Control de xml:lang en XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [Control de xml:lang en XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas

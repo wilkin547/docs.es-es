@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345848"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347561"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros (Visual Basic)
 Si un procedimiento tiene un parámetro [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) , no se puede definir una versión sobrecargada que tome una matriz unidimensional para la matriz de parámetros. Para obtener más información, vea "sobrecargas implícitas para un parámetro paramarray" en [consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
@@ -47,7 +47,7 @@ Si un procedimiento tiene un parámetro [ParamArray](../../../../visual-basic/la
   
  El código de las versiones sobrecargadas no tiene que comprobar si el código de llamada proporcionó uno o varios valores para el parámetro `ParamArray`, o si es así, el número de. Visual Basic pasa el control a la versión que coincide con la lista de argumentos de llamada.  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compile-the-code"></a>Compilar el código  
  Dado que un procedimiento con un parámetro `ParamArray` es equivalente a un conjunto de versiones sobrecargadas, no puede sobrecargar este procedimiento con una lista de parámetros que se corresponda con cualquiera de estas sobrecargas implícitas. Para obtener más información, vea [consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  

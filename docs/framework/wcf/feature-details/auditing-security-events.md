@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838096"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338018"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden registrar eventos de seguridad (correcto, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
@@ -73,7 +73,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 </configuration>  
 ```  
   
- Si auditar está habilitado y no se especifica una `auditLogLocation`, el nombre del registro predeterminado es "Seguridad", para que la plataforma admita la escritura en el registro de seguridad; de lo contrario, el nombre será "Aplicación". Solo los sistemas operativos [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y Windows Vista admiten la escritura en el registro de seguridad. Para obtener más información, vea la sección "sistema operativo" más adelante en este tema.  
+ Si auditar está habilitado y no se especifica una `auditLogLocation`, el nombre del registro predeterminado es "Seguridad", para que la plataforma admita la escritura en el registro de seguridad; de lo contrario, el nombre será "Aplicación". Solo los sistemas operativos Windows Server 2003 y Windows Vista admiten la escritura en el registro de seguridad. Para obtener más información, vea la sección "sistema operativo" más adelante en este tema.  
   
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
  Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y de este modo hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla. Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información, consulte el artículo Soporte técnico de Microsoft sobre cómo ver y administrar registros de eventos mediante el Visor de eventos de Windows XP disponible en [Cómo ver y administrar registros de eventos en visor de eventos en Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
@@ -88,14 +88,14 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 |System|Registro de aplicaciones|Registro de seguridad|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] o posterior|admitido|No compatibles|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] y Windows Vista|admitido|El contexto del subproceso debe poseer `SeAuditPrivilege`|  
+|Windows Server 2003 SP1 y Windows Vista|admitido|El contexto del subproceso debe poseer `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Otros factores  
  Además del sistema operativo, la tabla siguiente describe otros valores que controlan la habilitación de los registros.  
   
 |Factor|Registro de aplicaciones|Registro de seguridad|  
 |------------|---------------------|------------------|  
-|Administración de la directiva de auditoría|No disponible.|La directiva de la autoridad de seguridad local (LSA) controla el registro de Seguridad, además de la configuración. También se ha de habilitar la categoría “Acceso a objetos de auditoría”.|  
+|Administración de la directiva de auditoría|No es aplicable.|La directiva de la autoridad de seguridad local (LSA) controla el registro de Seguridad, además de la configuración. También se ha de habilitar la categoría “Acceso a objetos de auditoría”.|  
 |Experiencia de usuario predeterminada|Todos los usuarios autenticados pueden escribir en el registro de aplicaciones, por lo que no es necesario ningún paso de permiso adicional para los procesos de aplicación.|El proceso de aplicación (contexto) debe tener `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Vea también

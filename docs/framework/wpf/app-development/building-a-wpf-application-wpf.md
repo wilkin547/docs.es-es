@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740666"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636320"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilar una aplicación de WPF (WPF)
 
-Las aplicaciones Windows Presentation Foundation (WPF) se pueden compilar como .NET Framework ejecutables (. exe), bibliotecas (. dll) o una combinación de ambos tipos de ensamblados. En este tema se ofrece una introducción a la compilación de aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describen los pasos clave del proceso de compilación.
+Las aplicaciones Windows Presentation Foundation (WPF) se pueden compilar como .NET Framework ejecutables (. exe), bibliotecas (. dll) o una combinación de ambos tipos de ensamblados. En este tema se presenta cómo crear aplicaciones de WPF y se describen los pasos clave del proceso de compilación.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -34,7 +34,7 @@ Una aplicación WPF se puede compilar de las maneras siguientes:
 
 ## <a name="wpf-build-pipeline"></a>Canalización de compilación de WPF
 
-Cuando se compila un proyecto de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], se invoca la combinación de destinos específicos del lenguaje y de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. El proceso de ejecución de estos destinos se denomina canalización de compilación y los pasos principales se muestran en la siguiente ilustración.
+Cuando se compila un proyecto de WPF, se invoca la combinación de destinos específicos del lenguaje y específicos de WPF. El proceso de ejecución de estos destinos se denomina canalización de compilación y los pasos principales se muestran en la siguiente ilustración.
 
 ![Proceso de compilación de WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ Antes de compilar, MSBuild determina la ubicación de herramientas y bibliotecas
 
 - Directorios de Windows SDK.
 
-- La ubicación de los ensamblados de referencia de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- La ubicación de los ensamblados de referencia de WPF.
 
 - La propiedad de las rutas de búsqueda de ensamblados.
 
@@ -58,7 +58,7 @@ La primera ubicación en la que MSBuild busca ensamblados es el directorio de en
 
 ### <a name="resolving-references"></a>Resolver referencias
 
-El proceso de compilación busca y enlaza los ensamblados necesarios para generar el proyecto de aplicación. Esta lógica se incluye en la tarea `ResolveAssemblyReference`. Todos los ensamblados declarados como `Reference` en el archivo de proyecto se proporcionan a la tarea junto con información sobre las rutas de búsqueda y los metadatos de los ensamblados que ya están instalados en el sistema. La tarea busca los ensamblados y usa los metadatos del ensamblado instalado para filtrar los ensamblados de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] básicos que no deben mostrarse en los manifiestos de salida. Esto es necesario para evitar información redundante en los manifiestos de ClickOnce. Por ejemplo, como PresentationFramework. dll se puede considerar representativo de una aplicación basada en y para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y, además, ya que todos los ensamblados de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] existen en la misma ubicación en todos los equipos que tienen instalado el .NET Framework, hay no es necesario incluir toda la información sobre todos los ensamblados de referencia de .NET Framework en los manifiestos.
+El proceso de compilación busca y enlaza los ensamblados necesarios para generar el proyecto de aplicación. Esta lógica se incluye en la tarea `ResolveAssemblyReference`. Todos los ensamblados declarados como `Reference` en el archivo de proyecto se proporcionan a la tarea junto con información sobre las rutas de búsqueda y los metadatos de los ensamblados que ya están instalados en el sistema. La tarea busca ensamblados y usa los metadatos del ensamblado instalado para filtrar los ensamblados de WPF principales que no se deben mostrar en los manifiestos de salida. Esto es necesario para evitar información redundante en los manifiestos de ClickOnce. Por ejemplo, dado que PresentationFramework. dll se puede considerar representativo de una aplicación compilada en y para WPF, y dado que todos los ensamblados de WPF existen en la misma ubicación en todos los equipos que tienen instalado el .NET Framework, no es necesario incluir todos información sobre todos los ensamblados de referencia de .NET Framework en los manifiestos.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ El manifiesto de aplicación (un archivo .exe.manifest) describe los ensamblados
 
 Estos archivos de manifiesto siempre se crean para XBAP. Para las aplicaciones instaladas, no se crean a menos que la propiedad `GenerateManifests` se especifique en el archivo de proyecto con el valor `true`.
 
-Las XBAP obtienen dos permisos adicionales por encima de los permisos asignados a las aplicaciones típicas de zona de Internet: <xref:System.Security.Permissions.WebBrowserPermission> y <xref:System.Security.Permissions.MediaPermission>. El sistema de compilación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] declara esos permisos en el manifiesto de la aplicación.
+Las XBAP obtienen dos permisos adicionales por encima de los permisos asignados a las aplicaciones típicas de zona de Internet: <xref:System.Security.Permissions.WebBrowserPermission> y <xref:System.Security.Permissions.MediaPermission>. El sistema de compilación de WPF declara esos permisos en el manifiesto de aplicación.
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>Compatibilidad con la compilación incremental
 
-El sistema de compilación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona compatibilidad con compilaciones incrementales. Es bastante inteligente a la hora de detectar los cambios efectuados en el marcado o el código, y solo detecta los artefactos afectados por el cambio. El mecanismo de compilación incremental usa los archivos siguientes:
+El sistema de compilación de WPF proporciona compatibilidad con las compilaciones incrementales. Es bastante inteligente a la hora de detectar los cambios efectuados en el marcado o el código, y solo detecta los artefactos afectados por el cambio. El mecanismo de compilación incremental usa los archivos siguientes:
 
 - Un archivo $(*nombreDeEnsamblado*)_MarkupCompiler.Cache para mantener el estado actual del compilador.
 

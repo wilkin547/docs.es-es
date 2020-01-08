@@ -2,12 +2,12 @@
 title: 'Cómo: Calcular valores de columna en un archivo de texto CSV (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9ce6ec4c8d109fa06e672e967ac36c615a8fb38e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348393"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338499"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Cómo: calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)
 
@@ -143,9 +143,9 @@ End Class
 
 La consulta funciona usando el método <xref:System.String.Split%2A> para convertir cada línea de texto en una matriz. Cada elemento de matriz representa una columna. Por último, el texto de cada columna se convierte en su representación numérica. Si el archivo es un archivo separado por tabulaciones, actualice el argumento del método `Split` a `\t`.
 
-## <a name="compiling-the-code"></a>Compilar el código
+## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 

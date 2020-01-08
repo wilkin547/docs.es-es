@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460136"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636307"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
-Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación WPF depende del tipo de aplicación. En este tema se proporciona una breve introducción a cada tecnología de implementación y cómo se usan junto con los requisitos de implementación de cada tipo de aplicación de WPF.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologías de implementación  
@@ -63,7 +63,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>Implementar aplicaciones de WPF  
- Las opciones de implementación para una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dependen del tipo de aplicación. Desde una perspectiva de implementación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tiene tres tipos de aplicación significativos:  
+ Las opciones de implementación de una aplicación de WPF dependen del tipo de aplicación. Desde la perspectiva de la implementación, WPF tiene tres tipos de aplicación importantes:  
   
 - Aplicaciones independientes.  
   
@@ -79,7 +79,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 ### <a name="deploying-markup-only-xaml-applications"></a>Implementar aplicaciones XAML solo de marcado  
  Las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado normalmente se publican en servidores Web, como páginas HTML, y se pueden ver con Internet Explorer. Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se ejecutan dentro de un recinto de seguridad de confianza parcial con restricciones definidas por el conjunto de permisos de zona de Internet. Esto proporciona un espacio aislado de seguridad equivalente a las aplicaciones web basadas en HTML.  
   
- Para obtener más información sobre los cambios en materia de seguridad que se han realizado en las aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vea [Seguridad (WPF)](../security-wpf.md).  
+ Para obtener más información sobre la seguridad de las aplicaciones de WPF, consulte [seguridad](../security-wpf.md).  
   
  Las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de marcado solo se pueden instalar en el sistema de archivos local mediante XCopy o Windows Installer. Estas páginas se pueden ver con Internet Explorer o el explorador de Windows.  
   
@@ -98,7 +98,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 > [!NOTE]
 > Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
   
- Estos archivos se generan cuando se compila una aplicación XBAP. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Al igual que las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado, las XBAP se publican normalmente en un servidor Web y se ven con Internet Explorer.  
+ Estos archivos se generan cuando se compila una aplicación XBAP. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Al igual que las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado, las XBAP se publican normalmente en un servidor Web y se ven con Internet Explorer.  
   
  Las XBAP se pueden implementar en los clientes mediante cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
   
@@ -112,7 +112,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalar .NET Framework  
- Para ejecutar una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el marco de Microsoft .NET debe estar instalado en el cliente. Internet Explorer detecta automáticamente si los clientes se instalan con .NET Framework cuando se ven [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones hospedadas en el explorador. Si el .NET Framework no está instalado, Internet Explorer solicita a los usuarios que lo instalen.  
+ Para ejecutar una aplicación de WPF, el marco de trabajo de Microsoft .NET debe estar instalado en el cliente. Internet Explorer detecta automáticamente si los clientes se instalan con .NET Framework cuando se ven aplicaciones hospedadas en el explorador WPF. Si el .NET Framework no está instalado, Internet Explorer solicita a los usuarios que lo instalen.  
   
  Para detectar si el .NET Framework está instalado, Internet Explorer incluye una aplicación de programa previo que se registra como el controlador de las extensiones multipropósito de correo Internet (MIME) de reserva para los archivos de contenido con las siguientes extensiones:. XAML,. XPS,. XBAP y. Application. Si navega a estos tipos de archivo y el .NET Framework no está instalado en el cliente, la aplicación de arranque solicita permiso para instalarlo. Si no se proporciona el permiso, no se instalará ni el .NET Framework ni la aplicación.  
   

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2998de7dee34f9b5410bfe53988e0b7cfa797784
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782722"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634760"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordenar con DataView (LINQ to DataSet)
-La capacidad de ordenar datos basándose en criterios específicos y, a continuación, presentarlos a un cliente mediante un control de interfaz de usuario es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de ordenar datos y devolver filas de datos ordenados según criterios de ordenación específicos. Además de las funciones de ordenación basadas en cadenas, <xref:System.Data.DataView> también permite utilizar [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expresiones para los criterios de ordenación. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]las expresiones permiten operaciones de ordenación mucho más complejas y eficaces que la ordenación basada en cadena. En este tema se describen ambos enfoques de ordenación utilizando <xref:System.Data.DataView>.  
+La capacidad de ordenar datos basándose en criterios específicos y, a continuación, presentarlos a un cliente mediante un control de interfaz de usuario es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de ordenar datos y devolver filas de datos ordenados según criterios de ordenación específicos. Además de las funcionalidades de ordenación basada en cadena, <xref:System.Data.DataView> también permite usar expresiones LINQ (Language Integrated Query) para los criterios de ordenación. Las expresiones LINQ permiten operaciones de ordenación mucho más complejas y eficaces que la ordenación basada en cadena. En este tema se describen ambos enfoques de ordenación utilizando <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Crear DataView desde una consulta con información de ordenación  
- Se <xref:System.Data.DataView> puede crear un objeto a partir de una consulta de LINQ to DataSet. Si esa consulta contiene una <xref:System.Linq.Enumerable.OrderBy%2A>cláusula <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, o <xref:System.Linq.Enumerable.ThenByDescending%2A> , se <xref:System.Data.DataView>usan las expresiones de estas cláusulas como base para ordenar los datos de. Por ejemplo, si la consulta contiene las `Order By…`cláusulas y `Then By…` , el resultante <xref:System.Data.DataView> ordenará los datos por ambas columnas especificadas.  
+ Se puede crear un objeto <xref:System.Data.DataView> a partir de una consulta de LINQ to DataSet. Si esa consulta contiene una cláusula <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>o <xref:System.Linq.Enumerable.ThenByDescending%2A>, las expresiones de estas cláusulas se utilizan como base para ordenar los datos de la <xref:System.Data.DataView>. Por ejemplo, si la consulta contiene las cláusulas `Order By…`y `Then By…`, el <xref:System.Data.DataView> resultante ordenará los datos por ambas columnas especificadas.  
   
  La ordenación basada en expresión es más eficaz y compleja que la simple ordenación basada en cadena. Observe que la ordenación basada en cadena y expresión se excluyen mutuamente. Cuando el <xref:System.Data.DataView.Sort%2A> basado en cadena se establece después de haber creado <xref:System.Data.DataView> desde una consulta, el filtro basado en expresión inferido a partir de la consulta se borra y no se puede volver a restablecer.  
   
- El índice de <xref:System.Data.DataView> se compila cuando se crea <xref:System.Data.DataView> y cuando se modifica cualquier información de filtro u ordenación. Para obtener el mejor rendimiento, proporcione criterios de ordenación en la LINQ to DataSet consulta en <xref:System.Data.DataView> la que se crea y no modifica la información de ordenación más adelante. Para obtener más información, vea [rendimiento de DataView](dataview-performance.md).  
+ El índice de <xref:System.Data.DataView> se compila cuando se crea <xref:System.Data.DataView> y cuando se modifica cualquier información de filtro u ordenación. Para obtener el mejor rendimiento, proporcione criterios de ordenación en la consulta LINQ to DataSet en la que se crea el <xref:System.Data.DataView> y sin modificar la información de ordenación, más adelante. Para obtener más información, vea [rendimiento de DataView](dataview-performance.md).  
   
 > [!NOTE]
 > En la mayor parte de los casos, las expresiones utilizadas en la ordenación no deben tener efectos secundarios y deben ser deterministas. Además, las expresiones no deben tener ninguna lógica que dependa de un número de conjunto de ejecuciones, porque las operaciones de ordenación se pueden ejecutar un número ilimitado de veces.  
@@ -44,11 +44,11 @@ La capacidad de ordenar datos basándose en criterios específicos y, a continua
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderbythenby)]  
   
 ## <a name="using-the-string-based-sort-property"></a>Utilizar la propiedad Sort basada en cadena  
- La funcionalidad de ordenación basada en cadena <xref:System.Data.DataView> de sigue funcionando con LINQ to DataSet. Una vez que se ha creado a partir de una consulta de LINQ to DataSet, <xref:System.Data.DataView.Sort%2A> puede utilizar la propiedad para establecer <xref:System.Data.DataView>la ordenación en. <xref:System.Data.DataView>  
+ La funcionalidad de ordenación basada en cadena de <xref:System.Data.DataView> sigue funcionando con LINQ to DataSet. Después de crear una <xref:System.Data.DataView> a partir de una consulta de LINQ to DataSet, puede utilizar la propiedad <xref:System.Data.DataView.Sort%2A> para establecer la ordenación en el <xref:System.Data.DataView>.  
   
  Las funcionalidades de ordenación basada en cadena y expresión se excluyen mutuamente. Al establecer la propiedad <xref:System.Data.DataView.Sort%2A> se borrará la ordenación basada en expresión heredada de la consulta a partir de la que se ha creado <xref:System.Data.DataView>.  
   
- Para obtener más información sobre el filtrado <xref:System.Data.DataView.Sort%2A> basado en cadena, vea [ordenar y filtrar datos](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Para obtener más información sobre el filtrado de <xref:System.Data.DataView.Sort%2A> basado en cadenas, vea [ordenar y filtrar datos](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea <xref:System.Data.DataView> a partir de la tabla Contact y ordena las filas por apellido en orden descendente y luego por nombres en orden ascendente:  

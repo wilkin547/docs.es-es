@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354180"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636541"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ en Visual Basic
-Esta sección contiene información general, ejemplos e información contextual que le ayudará a comprender y usar Visual Basic y [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+Esta sección contiene información general, ejemplos e información general que le ayudará a entender y usar Visual Basic y Language-Integrated Query (LINQ).  
   
 ## <a name="in-this-section"></a>Esta sección  
  [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Proporciona una introducción a proveedores, operadores, estructuras de consulta y características del lenguaje en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Proporciona una introducción a los proveedores, operadores, estructuras de consulta y características de lenguaje de LINQ.  
   
  [Cómo: Consultar una base de datos](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  Proporciona un ejemplo de cómo conectarse a una base de datos de SQL Server y ejecutar una consulta mediante LINQ.  

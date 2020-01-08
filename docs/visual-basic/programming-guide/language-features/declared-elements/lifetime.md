@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345311"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347777"
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 La *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen duración. Para este propósito, el compilador trata los parámetros de procedimiento y la función devuelve como casos especiales de variables. La duración de una variable representa el período de tiempo durante el que puede contener un valor. Su valor puede cambiar a lo largo de su duración, pero siempre contiene algún valor.  
@@ -65,10 +65,10 @@ La *duración* de un elemento declarado es el período de tiempo durante el cual
   
  Si `applesSold` se hubiera declarado sin usar `Static`, los valores acumulados anteriores no se conservarían entre las llamadas a `runningTotal`. La próxima vez que se llame a `runningTotal`, `applesSold` se habrían vuelto a crear e inicializar en 0, y `runningTotal` habrían devuelto simplemente el mismo valor con el que se llamó.  
   
-### <a name="compiling-the-code"></a>Compilar el código  
+### <a name="compile-the-code"></a>Compilar el código  
  Puede inicializar el valor de una variable local estática como parte de su declaración. Si declara una matriz para que sea `Static`, puede inicializar su rango (número de dimensiones), la longitud de cada dimensión y los valores de cada uno de los elementos.  
   
-### <a name="security"></a>Seguridad  
+### <a name="security"></a>de seguridad  
  En el ejemplo anterior, puede generar la misma duración declarando `applesSold` en el nivel de módulo. Sin embargo, si cambia el ámbito de una variable de esta manera, el procedimiento ya no tendrá acceso exclusivo a él. Dado que otros procedimientos podían acceder a `applesSold` y cambiar su valor, el total acumulado podría ser poco confiable y el código podría ser más difícil de mantener.  
   
 ## <a name="see-also"></a>Vea también

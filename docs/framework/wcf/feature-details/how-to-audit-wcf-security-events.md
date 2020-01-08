@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838018"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346759"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Cómo auditar los eventos de seguridad de Windows Communication Foundation
 Windows Communication Foundation (WCF) permite registrar eventos de seguridad en el registro de eventos de Windows, que se pueden ver mediante el Visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de la auditoría de WCF, vea [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) permite registrar eventos de seguridad en
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     La enumeración <xref:System.ServiceModel.AuditLogLocation> tiene tres valores: `Application`, `Security`o `Default`. El valor especifica uno de los registros visibles en el visor de eventos, el registro de seguridad o de aplicaciones. Si utiliza el valor `Default`, el registro real dependerá del sistema operativo en el que se está ejecutando la aplicación. Si se habilita la auditoría y no se especifica la ubicación del registro, el valor predeterminado es el registro de `Security` en las plataformas que admiten escribir en el registro de seguridad; de lo contrario, se escribirá en el registro `Application`. Solo [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y Windows Vista admiten la escritura en el registro de seguridad de forma predeterminada.  
+     La enumeración <xref:System.ServiceModel.AuditLogLocation> tiene tres valores: `Application`, `Security`o `Default`. El valor especifica uno de los registros visibles en el visor de eventos, el registro de seguridad o de aplicaciones. Si utiliza el valor `Default`, el registro real dependerá del sistema operativo en el que se está ejecutando la aplicación. Si se habilita la auditoría y no se especifica la ubicación del registro, el valor predeterminado es el registro de `Security` en las plataformas que admiten escribir en el registro de seguridad; de lo contrario, se escribirá en el registro `Application`. Solo Windows Server 2003 y Windows Vista admiten la escritura en el registro de seguridad de forma predeterminada.  
   
 2. Establezca los tipos de eventos que se van a auditar. Puede auditar, simultáneamente, eventos de nivel de servicio o eventos de nivel de autorización. Establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> o la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> en uno de los valores de enumeración <xref:System.ServiceModel.AuditLevel>, como muestra el siguiente código.  
   
