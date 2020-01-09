@@ -4,12 +4,12 @@ description: Aprenda a crear componentes de interfaz de usuario reutilizables co
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337394"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705735"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Cree componentes de interfaz de usuario reutilizables con un increíble
 
@@ -269,7 +269,7 @@ Los controladores de eventos se pueden ejecutar de forma sincrónica o asincrón
 Una vez que se controla un evento, el componente se representa para tener en cuenta los cambios de estado de componente. Con los controladores de eventos asincrónicos, el componente se representa inmediatamente después de que se complete la ejecución del controlador. El componente se representará de *nuevo* después de que se complete la `Task` asincrónica. Este modo de ejecución asincrónica proporciona una oportunidad para representar una interfaz de usuario adecuada mientras el `Task` asincrónico todavía está en curso.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {
