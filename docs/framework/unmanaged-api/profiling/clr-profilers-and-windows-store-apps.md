@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140386"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344767"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -53,7 +53,7 @@ Se trata de la aplicación que está analizando el generador de perfiles. Normal
 
 **DLL del generador de perfiles**
 
-Este es el componente que se carga en el espacio de proceso de la aplicación que se está analizando. Este componente, también conocido como "agente" de Profiler, implementa las interfaces [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback](icorprofilercallback-interface.md)(2, 3, etc.) y consume las interfaces [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3, etc.) para recopilar datos sobre el aplicación analizada y potencialmente modifica aspectos del comportamiento de la aplicación.
+Este es el componente que se carga en el espacio de proceso de la aplicación que se está analizando. Este componente, también conocido como "agente" de Profiler, implementa las interfaces de la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback](icorprofilercallback-interface.md)(2, 3, etc.) y consume las interfaces [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3, etc.) para recopilar datos sobre la aplicación analizada y, potencialmente, modificar aspectos del comportamiento de la aplicación.
 
 **IU de Profiler**
 
@@ -342,7 +342,7 @@ Está fuera del ámbito de este documento profundizar en los archivos de metadat
 
 ### <a name="managed-and-non-managed-winmds"></a>Archivos winmd administrados y no administrados
 
-Si un desarrollador usa Visual Studio para crear un nuevo proyecto de componente de Windows Runtime, una compilación de ese proyecto genera un archivo WinMD que describe los metadatos (las descripciones de tipo de clases, interfaces, etc.) creadas por el desarrollador. Si este proyecto es un proyecto de lenguaje administrado escrito C# en o en VB, el mismo archivo WinMD también contiene la implementación de esos tipos (lo que significa que contiene todos los Il compilados desde el código fuente del desarrollador). Estos archivos se conocen como archivos WinMD administrados. Son interesantes en que contienen metadatos de Windows Runtime y la implementación subyacente.
+Si un desarrollador usa Visual Studio para crear un nuevo proyecto de componente de Windows Runtime, una compilación de ese proyecto genera un archivo WinMD que describe los metadatos (las descripciones de tipo de clases, interfaces, etc.) creadas por el desarrollador. Si este proyecto es un proyecto de lenguaje administrado escrito C# en o Visual Basic, el mismo archivo WinMD también contiene la implementación de esos tipos (lo que significa que contiene todo el Il compilado desde el código fuente del desarrollador). Estos archivos se conocen como archivos WinMD administrados. Son interesantes en que contienen metadatos de Windows Runtime y la implementación subyacente.
 
 Por el contrario, si un desarrollador crea un proyecto de componente C++de Windows Runtime para, una compilación de ese proyecto genera un archivo WinMD que solo contiene metadatos y la implementación se compila en un archivo dll nativo independiente. Del mismo modo, los archivos WinMD que se incluyen en el Windows SDK solo contienen metadatos, con la implementación compilada en archivos DLL nativos independientes que se incluyen como parte de Windows.
 
@@ -352,7 +352,7 @@ La información siguiente se aplica a los archivos winmd administrados, que cont
 
 En lo que respecta a CLR, todos los archivos WinMD son módulos. Por lo tanto, la API de generación de perfiles de CLR indica el archivo DLL del generador de perfiles cuando se cargan los archivos WinMD y cuáles son sus los moduleids, de la misma forma que para otros módulos administrados.
 
-El archivo DLL del generador de perfiles puede distinguir los archivos WinMD de otros módulos llamando al método [ICorProfilerInfo3:: GetModuleInfo2 (](icorprofilerinfo3-getmoduleinfo2-method.md) e inspeccionando el parámetro de salida `pdwModuleFlags` para la marca [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Se establece si el valor de ModuleID representa un WinMD).
+El archivo DLL del generador de perfiles puede distinguir los archivos WinMD de otros módulos llamando al método [ICorProfilerInfo3:: GetModuleInfo2 (](icorprofilerinfo3-getmoduleinfo2-method.md) e inspeccionando el parámetro de salida `pdwModuleFlags` para la marca de [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Se establece si el valor de ModuleID representa un WinMD).
 
 ### <a name="reading-metadata-from-winmds"></a>Leer metadatos de archivos winmd
 
@@ -382,7 +382,7 @@ Para entender las consecuencias de esto, es importante comprender las diferencia
 
 El punto relevante es que las llamadas realizadas en los subprocesos creados por el generador de perfiles siempre se consideran sincrónicas, incluso si esas llamadas se realizan desde fuera de una implementación de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) del archivo DLL del generador de perfiles. Como mínimo, que solía ser el caso. Ahora que CLR ha convertido el subproceso del generador de perfiles en un subproceso administrado debido a su llamada al [método forcegc (](icorprofilerinfo-forcegc-method.md), ese subproceso ya no se considera el subproceso del generador de perfiles. Como tal, el CLR exige una definición más rigurosa de lo que se refiere como sincrónico para ese subproceso, es decir, que una llamada se debe originar desde dentro de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) de la dll del generador de perfiles para calificarse como sincrónica.
 
-¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas realizadas normalmente en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), tendrá problemas . Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) ).
+¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas que normalmente se realizan en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), se le va a tener problemas. Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) ).
 
 Por lo tanto, se recomienda que todos los subprocesos que crea el archivo DLL del generador de perfiles para llamar al [método forcegc (](icorprofilerinfo-forcegc-method.md) se deben usar *únicamente* con el fin de desencadenar GC y después responder a las devoluciones de llamada GC. No debe llamar a la API de generación de perfiles para realizar otras tareas, como el muestreo o desasociación de la pila.
 

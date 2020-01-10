@@ -2,12 +2,12 @@
 title: Instrucciones de firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837849"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544777"
 ---
 # <a name="firewall-instructions"></a>Instrucciones de firewall
 Debe habilitar varios puertos o programas en el firewall para que los ejemplos de Windows Communication Foundation (WCF) funcionen. Muchos de los ejemplos se comunican utilizando los puertos del intervalo 8000-8003 y el puerto 9000. El firewall se activa de forma predeterminada y evita el acceso a estos puertos. Para habilitar el firewall para los ejemplos, complete uno de los procedimientos siguientes, dependiendo de sus requisitos y entorno de seguridad:  
@@ -36,7 +36,7 @@ Debe habilitar varios puertos o programas en el firewall para que los ejemplos d
   
     - En Windows 7 o Windows Server 2008 R2, haga clic en **permitir un programa o una característica a través de Firewall de Windows**. Haga clic en **Cambiar configuración**, permitir **otro programa..** .  
   
-    - En Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], haga clic en **permitir un programa a través de Firewall de Windows**.  
+    - En Windows Vista o Windows Server 2008, haga clic en **permitir un programa a través de Firewall de Windows**.  
   
 4. En la pestaña **excepciones** , haga clic en **Agregar programa**.  
   
@@ -72,7 +72,7 @@ Debe habilitar varios puertos o programas en el firewall para que los ejemplos d
   
     10. Haga clic en **reglas de salida** y repita los pasos de c a h.  
   
-3. En Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estos pasos.  
+3. En Windows Vista o Windows Server 2008, siga estos pasos.  
   
     1. Haga clic en **Permitir un programa a través del Firewall de Windows**.  
   

@@ -1,24 +1,24 @@
 ---
-title: Seguridad de transporte con clientes anónimos - WCF
+title: Seguridad de transporte con un cliente anónimo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637434"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344760"
 ---
-# <a name="transport-security-with-an-anonymous-client"></a>Seguridad de transporte con clientes anónimos
+# <a name="transport-security-with-an-anonymous-client"></a>Seguridad de transporte con un cliente anónimo
 
-Este escenario Windows Communication Foundation (WCF) utiliza la seguridad de transporte (HTTPS) para garantizar la confidencialidad e integridad. El servidor debe autenticarse con un certificado de Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.
+En este escenario de Windows Communication Foundation (WCF) se usa la seguridad de transporte (HTTPS) para garantizar la confidencialidad y la integridad. El servidor debe autenticarse con un certificado de Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.
 
-Para una aplicación de ejemplo, vea [seguridad de transporte WS](../samples/ws-transport-security.md). Para obtener más información acerca de la seguridad de transporte, vea [información general sobre la seguridad de transporte](transport-security-overview.md).
+Para obtener una aplicación de ejemplo, vea [seguridad de transporte de WS](../samples/ws-transport-security.md). Para obtener más información sobre la seguridad de transporte, vea [información general](transport-security-overview.md)sobre la seguridad de transporte.
 
-Para obtener más información sobre el uso de un certificado con un servicio, consulte [trabajar con certificados](working-with-certificates.md) y [Cómo: Configurar un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
+Para obtener más información sobre el uso de un certificado con un servicio, consulte [trabajar con certificados](working-with-certificates.md) y [Cómo: configurar un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
 
 ![Utilización de la seguridad de transporte con un cliente anónimo](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
@@ -26,13 +26,13 @@ Para obtener más información sobre el uso de un certificado con un servicio, c
 |--------------------|-----------------|
 |Modo de seguridad|Transporte|
 |Interoperabilidad|Con servicios y clientes Web existentes|
-|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí<br /><br /> Nivel de aplicación (no hay compatibilidad WCF)|
+|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí<br /><br /> Nivel de aplicación (sin compatibilidad con WCF)|
 |Integridad|Sí|
 |Confidencialidad|Sí|
 |Transporte|HTTPS|
-|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|
+|Enlace|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>web de Office
+## <a name="service"></a>Service
 
 El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
@@ -126,4 +126,4 @@ Se puede usar la configuración siguiente en lugar del código para configurar e
 - [Información general sobre seguridad](security-overview.md)
 - [Seguridad de transporte WS](../samples/ws-transport-security.md)
 - [Información general de la seguridad del transporte](transport-security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
