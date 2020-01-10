@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800294"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741396"
 ---
 # <a name="ui-automation-tree-overview"></a>Información general sobre el árbol de la UI Automation
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800294"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Vista sin formato  
- La vista sin formato del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] es el árbol completo de objetos <xref:System.Windows.Automation.AutomationElement> del que el escritorio es la raíz. La vista sin formato sigue estrechamente la estructura de programación nativa de una aplicación y es, por tanto, la vista más detallada disponible. También es la base sobre la que se crean las otras vistas del árbol. Como esta vista depende del marco de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] subyacente, la vista sin formato de un botón [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tendrá una vista sin formato diferente de la de un botón [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+ La vista sin formato del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] es el árbol completo de objetos <xref:System.Windows.Automation.AutomationElement> del que el escritorio es la raíz. La vista sin formato sigue estrechamente la estructura de programación nativa de una aplicación y es, por tanto, la vista más detallada disponible. También es la base sobre la que se crean las otras vistas del árbol. Dado que esta vista depende del marco de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] subyacente, la vista sin formato de un botón [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tendrá una vista sin formato diferente de la de un botón de Win32.  
   
  La vista sin formato se obtiene mediante la búsqueda de elementos sin especificar propiedades o usando el elemento <xref:System.Windows.Automation.TreeWalker.RawViewWalker> para navegar por el árbol.  
   

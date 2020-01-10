@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636359"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740217"
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
 En este tema se proporciona un paseo guiado por la jerarquía de clases de Windows Presentation Foundation (WPF). Abarca la mayoría de los subsistemas principales de WPF y describe cómo interactúan. También se detallan algunas de las opciones realizadas por los arquitectos de WPF.  
@@ -38,7 +38,7 @@ En este tema se proporciona un paseo guiado por la jerarquía de clases de Windo
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- La mayoría de los objetos de WPF se derivan de <xref:System.Windows.Threading.DispatcherObject>, que proporciona las construcciones básicas para tratar la simultaneidad y el subprocesamiento. WPF se basa en un sistema de mensajería implementado por el distribuidor. Esto funciona de forma muy similar a la conocida [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] bombeo de mensajes; de hecho, el distribuidor de WPF usa mensajes User32 para realizar llamadas entre subprocesos.  
+ La mayoría de los objetos de WPF se derivan de <xref:System.Windows.Threading.DispatcherObject>, que proporciona las construcciones básicas para tratar la simultaneidad y el subprocesamiento. WPF se basa en un sistema de mensajería implementado por el distribuidor. Esto funciona de forma muy similar al conocido bombeo de mensajes Win32; de hecho, el distribuidor de WPF usa mensajes User32 para realizar llamadas entre subprocesos.  
   
  En realidad hay dos conceptos básicos que se deben comprender al hablar de la simultaneidad en WPF: el distribuidor y la afinidad de subprocesos.  
   

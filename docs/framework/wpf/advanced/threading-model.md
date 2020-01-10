@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974073"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740270"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de los desarrolladores de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no tendrán que escribir una interfaz que use más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.
@@ -203,7 +203,7 @@ ms.locfileid: "73974073"
  Es posible que `handler2` tarde mucho tiempo en procesar este evento. `handler2` podría usar <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> para iniciar un bucle de mensajes anidados que no devuelve para horas. Si `handler2` no marca el evento como controlado cuando se completa este bucle de mensajes, el evento se pasa al árbol aunque sea muy antiguo.
 
 ### <a name="reentrancy-and-locking"></a>Reentrada y bloqueo
- El mecanismo de bloqueo del Common Language Runtime (CLR) no se comporta exactamente como puede imaginarse; podría esperar que un subproceso deje de funcionar completamente al solicitar un bloqueo. En realidad, el subproceso continúa recibiendo y procesando mensajes de alta prioridad. Esto ayuda a evitar interbloqueos y a que la capacidad de respuesta de las interfaces sea mínima, pero introduce la posibilidad de errores sutiles.  La inmensa mayoría del tiempo no necesita saber nada sobre esto, pero en raras circunstancias (normalmente implican [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] mensajes de ventana o componentes de COM STA), esto puede merecer la pena conocer.
+ El mecanismo de bloqueo del Common Language Runtime (CLR) no se comporta exactamente como puede imaginarse; podría esperar que un subproceso deje de funcionar completamente al solicitar un bloqueo. En realidad, el subproceso continúa recibiendo y procesando mensajes de alta prioridad. Esto ayuda a evitar interbloqueos y a que la capacidad de respuesta de las interfaces sea mínima, pero introduce la posibilidad de errores sutiles.  La inmensa mayoría del tiempo no necesita saber nada sobre esto, pero en raras circunstancias (normalmente implican mensajes de ventana de Win32 o componentes de COM STA), esto puede merecer la pena conocer.
 
  La mayoría de las interfaces no se crean teniendo en cuenta la seguridad para subprocesos, ya que los desarrolladores trabajan bajo la suposición de que más de un subproceso no tiene acceso nunca a un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. En este caso, ese subproceso único puede realizar cambios en el entorno en momentos inesperados, provocando así los efectos indebidos que se supone que el mecanismo de exclusión mutua <xref:System.Windows.Threading.DispatcherObject>. Considere el siguiente seudocódigo:
 

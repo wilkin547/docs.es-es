@@ -9,15 +9,15 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581892"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740359"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introducción al objeto GlyphRun y al elemento Glyphs
-En este tema se describe el objeto <xref:System.Windows.Media.GlyphRun> y el elemento <xref:System.Windows.Documents.Glyphs>.  
+En este tema se describen el objeto <xref:System.Windows.Media.GlyphRun> y el elemento <xref:System.Windows.Documents.Glyphs>.  
 
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>Introducción a GlyphRun  
@@ -31,7 +31,7 @@ En este tema se describe el objeto <xref:System.Windows.Media.GlyphRun> y el ele
   
     - Escritor de documentos XPS de Microsoft.  
   
-    - Controladores de impresora anteriores: salida de aplicaciones [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] al formato fijo.  
+    - Controladores de impresora anteriores, que se envían desde aplicaciones Win32 al formato fijo.  
   
     - Formato de cola de impresión.  
   
@@ -42,11 +42,11 @@ En este tema se describe el objeto <xref:System.Windows.Media.GlyphRun> y el ele
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>Objeto GlyphRun  
- El objeto <xref:System.Windows.Media.GlyphRun> representa una secuencia de glifos de un único aspecto de una única fuente en un solo tamaño y con un único estilo de representación.  
+ El objeto <xref:System.Windows.Media.GlyphRun> representa una secuencia de glifos de un solo aspecto de una sola fuente con un solo tamaño y con un único estilo de representación.  
   
  <xref:System.Windows.Media.GlyphRun> incluye los detalles de fuente como <xref:System.Windows.Documents.Glyphs.Indices%2A> de glifos y posiciones de glifo individuales. También incluye los puntos de código Unicode originales desde los que se generó la ejecución, la información de asignación de desplazamiento de búfer de carácter a glifo y las marcas por carácter y por glifo.  
   
- <xref:System.Windows.Media.GlyphRun> tiene una <xref:System.Windows.FrameworkElement> de alto nivel correspondiente <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> puede usarse en el árbol de elementos y en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado para representar <xref:System.Windows.Media.GlyphRun> salida.  
+ <xref:System.Windows.Media.GlyphRun> tiene una <xref:System.Windows.FrameworkElement>de alto nivel correspondiente <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> puede usarse en el árbol de elementos y en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado para representar <xref:System.Windows.Media.GlyphRun> salida.  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Elemento Glyphs  
@@ -56,7 +56,7 @@ En este tema se describe el objeto <xref:System.Windows.Media.GlyphRun> y el ele
   
  Las definiciones de propiedad siguientes corresponden a los primeros cuatro atributos del marcado del ejemplo.  
   
-|Propiedad.|Descripción|  
+|La propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Especifica un identificador de recurso: nombre de archivo, identificador uniforme de recursos (URI) de web o referencia de recurso en el contenedor Application. exe o.|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Especifica el tamaño de fuente en unidades de superficie de dibujo (el valor predeterminado es de 0,96 pulgadas) .|  

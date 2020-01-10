@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442478"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741731"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Automation y ajuste de escala de la pantalla
 > [!NOTE]
@@ -58,14 +58,14 @@ A partir de Windows Vista, Windows permite a los usuarios cambiar la configuraci
   
  La solución consta de dos partes.  
   
-1. En primer lugar, haga que la aplicación cliente sea compatible con PPP. Para ello, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]`SetProcessDPIAware` al inicio. En código administrado, la siguiente declaración hace que esta función esté disponible.  
+1. En primer lugar, haga que la aplicación cliente sea compatible con PPP. Para ello, llame a la función de Win32 `SetProcessDPIAware` en el inicio. En código administrado, la siguiente declaración hace que esta función esté disponible.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Esta función hace que todo el proceso sea compatible con PPP, lo que significa que todas las ventanas que pertenecen al proceso no se escalan. En el [ejemplo de marcador de resaltado](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de la automatización de la interfaz de usuario, no en las coordenadas lógicas. Si el ejemplo no tiene en cuenta el valor de PPP, el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no es de 96 ppp.  
   
-2. Para obtener coordenadas de cursor, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. En el ejemplo siguiente se muestra cómo declarar y usar esta función.  
+2. Para obtener las coordenadas de cursor, llame a la función de Win32 `GetPhysicalCursorPos`. En el ejemplo siguiente se muestra cómo declarar y usar esta función.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,7 +73,7 @@ A partir de Windows Vista, Windows permite a los usuarios cambiar la configuraci
 > [!CAUTION]
 > No use <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. El comportamiento de esta propiedad fuera de las ventanas de cliente en un entorno de escala es indefinido.  
   
- Si la aplicación realiza una comunicación directa entre procesos con aplicaciones que no reconocen los valores de PPP, puede que tenga que convertir entre las coordenadas lógicas y físicas mediante las funciones de [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` y `LogicalToPhysicalPoint`.  
+ Si la aplicación realiza una comunicación directa entre procesos con aplicaciones que no reconocen los valores de PPP, puede que tenga que convertir entre las coordenadas lógicas y físicas mediante las funciones de Win32 `PhysicalToLogicalPoint` y `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Vea también
 

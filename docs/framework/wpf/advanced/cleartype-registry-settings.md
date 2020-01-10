@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151847"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740383"
 ---
 # <a name="cleartype-registry-settings"></a>Configuración del Registro de ClearType
 En este tema se proporciona información general sobre la configuración del registro de ClearType de Microsoft que usan las aplicaciones de WPF.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Información general sobre la tecnología  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones que representan texto en un dispositivo de pantalla usan las características de ClearType para proporcionar una experiencia de lectura mejorada. ClearType es una tecnología de software desarrollada por Microsoft que mejora la legibilidad del texto en pantallas de cristal líquido (LCD) existentes, como pantallas de equipos portátiles, pantallas de Pocket PC y monitores de pantalla plana. ClearType funciona mediante el acceso a los elementos de franjas de color vertical individuales en cada píxel de una pantalla LCD. Para obtener más información sobre ClearType, consulte [información general sobre ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones que representan texto en un dispositivo de pantalla usan las características de ClearType para proporcionar una experiencia de lectura mejorada. ClearType es una tecnología de software desarrollada por Microsoft que mejora la legibilidad del texto en pantallas de cristal líquido (LCD) existentes, como pantallas de equipos portátiles, pantallas de Pocket PC y monitores de pantalla plana. ClearType funciona mediante el acceso a los elementos de franjas de color vertical individuales en cada píxel de una pantalla LCD. Para obtener más información sobre ClearType, consulte [información general sobre ClearType](cleartype-overview.md).  
   
  El texto que se representa con ClearType puede ser significativamente diferente cuando se ve en varios dispositivos de pantalla. Por ejemplo, un pequeño número de monitores implementa los elementos de franjas de color en orden azul, verde, rojo en lugar del orden rojo, verde y azul (RGB) más común.  
   
@@ -26,22 +26,22 @@ En este tema se proporciona información general sobre la configuración del reg
  En cada uno de estos casos, es necesario modificar las características de ClearType para proporcionar la mejor experiencia de lectura para cada individuo.  
   
 <a name="registry_settings"></a>   
-## <a name="registry-settings"></a>Configuración de registro  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]especifica cuatro valores del registro para controlar las características de ClearType:  
+## <a name="registry-settings"></a>Configuración del Registro  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] especifica cuatro valores del registro para controlar las características de ClearType:  
   
-|Parámetro|Descripción|  
+|Configuración de|Descripción|  
 |-------------|-----------------|  
 |Nivel de ClearType|Describe el nivel de claridad de color de ClearType.|  
 |Nivel de gamma|Describe el nivel del componente de color de píxel de una pantalla.|  
 |Estructura de píxeles|Describe la distribución de píxeles de una pantalla.|  
 |Nivel de contraste del texto|Describe el nivel de contraste del texto que se muestra.|  
   
- Se puede tener acceso a esta configuración mediante una utilidad de configuración externa que sabe cómo hacer referencia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a la configuración del registro de ClearType identificada. Esta configuración también se puede crear o modificar si se obtiene acceso a los valores directamente mediante el editor del registro de Windows.  
+ Se puede tener acceso a esta configuración mediante una utilidad de configuración externa que sabe cómo hacer referencia a la configuración del registro de ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]identificada. Esta configuración también se puede crear o modificar si se obtiene acceso a los valores directamente mediante el editor del registro de Windows.  
   
- Si no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]se establece la configuración del registro de ClearType (que es el estado predeterminado) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , la aplicación consulta la información de parámetros del sistema de Windows para obtener la configuración de suavizado de fuentes.  
+ Si no se establece la configuración del registro de ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)](que es el estado predeterminado), la aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consulta la información de los parámetros del sistema de Windows para la configuración del suavizado de fuentes.  
   
 > [!NOTE]
-> Para obtener información sobre cómo enumerar los nombres de los `SystemParametersInfo` dispositivos de pantalla, consulte la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] función.  
+> Para obtener información sobre cómo enumerar los nombres de los dispositivos de pantalla, vea la `SystemParametersInfo`función de Win32.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Nivel de ClearType  
@@ -54,12 +54,12 @@ En este tema se proporciona información general sobre la configuración del reg
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nombre de dispositivo de visualización de un usuario `ClearTypeLevel` , se define un valor DWORD. En la captura de pantalla siguiente se muestra la configuración del editor del registro para el nivel ClearType.  
+ Para cada nombre de dispositivo de visualización de un usuario, se define un valor DWORD `ClearTypeLevel`. En la captura de pantalla siguiente se muestra la configuración del editor del registro para el nivel ClearType.  
   
  ![Configuración de ClearType en el editor del registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones representan texto en uno de estos dos modos, con y sin ClearType. Cuando el texto se representa sin ClearType, se conoce como representación de escala de grises.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones representan texto en uno de estos dos modos, con y sin ClearType. Cuando el texto se representa sin ClearType, se conoce como representación de escala de grises.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Nivel de gamma  
@@ -72,7 +72,7 @@ En este tema se proporciona información general sobre la configuración del reg
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nombre de dispositivo de visualización de un usuario `GammaLevel` , se define un valor DWORD. La captura de pantalla siguiente muestra la configuración del Editor del Registro para el nivel de gamma.  
+ Para cada nombre de dispositivo de visualización de un usuario, se define un valor DWORD `GammaLevel`. La captura de pantalla siguiente muestra la configuración del Editor del Registro para el nivel de gamma.  
   
  ![Configuración de nivel gamma de ClearType en el editor del registro](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
@@ -80,7 +80,7 @@ En este tema se proporciona información general sobre la configuración del reg
 ## <a name="pixel-structure"></a>Estructura de píxeles  
  La estructura de píxeles describe el tipo de píxeles que componen una pantalla. La estructura de píxeles se define como uno de estos tres tipos:  
   
-|Tipo|Valor|Descripción|  
+|Tipo de|{2&gt;Value&lt;2}|Descripción|  
 |----------|-----------|-----------------|  
 |Plano|0|La pantalla no tiene ninguna estructura de píxeles. Esto significa que los orígenes de la luz de cada color se expanden por igual en el área de píxeles, lo que se conoce como representación en escala de grises. Así es como funciona una pantalla estándar. ClearType nunca se aplica al texto representado.|  
 |RGB|1|La pantalla tiene píxeles que se componen de tres franjas en el orden siguiente: rojo, verde y azul. ClearType se aplica al texto representado.|  
@@ -89,14 +89,14 @@ En este tema se proporciona información general sobre la configuración del reg
  La estructura de píxeles corresponde a un valor entero comprendido entre 0 y 2. El nivel predeterminado es 0, que representa una estructura de píxeles plana.  
   
 > [!NOTE]
-> Para obtener información sobre cómo enumerar los nombres de los `EnumDisplayDevices` dispositivos de pantalla, consulte la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] función.  
+> Para obtener información sobre cómo enumerar los nombres de los dispositivos de pantalla, vea la `EnumDisplayDevices`función de Win32.  
   
 ### <a name="registry-setting"></a>Configuración del Registro  
  La ubicación de la configuración del Registro para la estructura de píxeles es una configuración de equipo local que corresponde a un nombre de pantalla específico:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nombre de dispositivo de visualización de un usuario `PixelStructure` , se define un valor DWORD. La captura de pantalla siguiente muestra la configuración del Editor del Registro para la estructura de píxeles.  
+ Para cada nombre de dispositivo de visualización de un usuario, se define un valor DWORD `PixelStructure`. La captura de pantalla siguiente muestra la configuración del Editor del Registro para la estructura de píxeles.  
   
  ![Configuración de nivel gamma de ClearType en el editor del registro](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
@@ -109,7 +109,7 @@ En este tema se proporciona información general sobre la configuración del reg
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nombre de dispositivo de visualización de un usuario `TextContrastLevel` , se define un valor DWORD. La captura de pantalla siguiente muestra la configuración del Editor del Registro para el nivel de contraste del texto.  
+ Para cada nombre de dispositivo de visualización de un usuario, se define un valor DWORD `TextContrastLevel`. La captura de pantalla siguiente muestra la configuración del Editor del Registro para el nivel de contraste del texto.  
   
  ![Configuración de ClearType en el editor del registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   

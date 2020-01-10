@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433942"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741783"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Almacenar en caché en los clientes de automatización de la interfaz de usuario
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74433942"
   
  En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], almacenamiento en caché implica la captura previa de datos. Así, es posible acceder a los datos sin necesidad de más comunicación entre procesos. Normalmente, el almacenamiento en caché se utiliza en aplicaciones cliente de Automatización de la interfaz de usuario para recuperar los patrones de control y las propiedades de forma masiva. La información se recupera después desde la caché según sea necesario. La aplicación actualiza periódicamente la caché, normalmente en respuesta a eventos que indican que algo en [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ha cambiado.  
   
- Las ventajas del almacenamiento en caché son más evidentes con los controles de Windows Presentation Foundation (WPF) y los controles personalizados que tienen proveedores de automatización de la interfaz de usuario del lado servidor. Las ventajas son menores si se accede a proveedores de lado cliente, como los proveedores predeterminados de los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ Las ventajas del almacenamiento en caché son más evidentes con los controles de Windows Presentation Foundation (WPF) y los controles personalizados que tienen proveedores de automatización de la interfaz de usuario del lado servidor. El acceso a los proveedores del lado cliente, como los proveedores predeterminados para los controles Win32, supone menos ventajas.  
   
  El almacenamiento en caché se produce cuando la aplicación activa un elemento <xref:System.Windows.Automation.CacheRequest> y después utiliza cualquier método o propiedad que devuelva un elemento <xref:System.Windows.Automation.AutomationElement>; por ejemplo, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Los métodos de la clase <xref:System.Windows.Automation.TreeWalker> son una excepción; el almacenamiento en caché solo se realiza si se especifica un elemento <xref:System.Windows.Automation.CacheRequest> como un parámetro (por ejemplo, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>).  
   
@@ -103,6 +103,6 @@ ms.locfileid: "74433942"
   
 ## <a name="see-also"></a>Vea también
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [Eventos de Automatización de la interfaz de usuario para clientes](ui-automation-events-for-clients.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)
 - [Ejemplo de FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

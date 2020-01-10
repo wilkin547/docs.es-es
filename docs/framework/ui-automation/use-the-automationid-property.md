@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800306"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741378"
 ---
 # <a name="use-the-automationid-property"></a>Utilizar la propiedad AutomationID
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "74800306"
  Se han identificado tres escenarios principales de aplicación de cliente de Automatización de la interfaz de usuario que requieren el uso de <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> para conseguir resultados precisos y coherentes cuando se buscan elementos.  
   
 > [!NOTE]
-> Todos los elementos de Automatización de la interfaz de usuario admiten<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> en la vista de control con la excepción de las ventanas de aplicación de nivel superior, los elementos de Automatización de la interfaz de usuario derivados de controles [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] que no tienen un identificador o un elemento x:Uid, y los elementos de Automatización de la interfaz de usuario derivados de controles [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] que no tienen un identificador de control.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> es compatible con todos los elementos de automatización de la interfaz de usuario de la vista de control, excepto las ventanas de la aplicación de nivel superior, los elementos de automatización de la interfaz de usuario derivados de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controles que no tienen un identificador o x:Uid, y los elementos de automatización de la interfaz de usuario derivados de controles Win32 que no tienen un identificador de control.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usar un valor de AutomationID único y reconocible para buscar un elemento concreto en el árbol de Automatización de la interfaz de usuario  
   

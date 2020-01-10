@@ -3,12 +3,12 @@ title: REST y gRPC
 description: Obtenga información sobre gRPC, su rol en aplicaciones nativas de la nube y cómo difiere de HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4c829407d494a3529d1fb9953cd3f56f73e90636
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337071"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711641"
 ---
 # <a name="rest-and-grpc"></a>REST y gRPC
 
@@ -24,7 +24,7 @@ gRPC es un marco de RPC moderno que es ligero y de alto rendimiento. Utiliza HTT
 
 - Aunque HTTP 1,1 envía datos como texto sin cifrar, HTTP/2 es un protocolo binario. Analiza los datos más rápidamente con menos memoria, reduce la latencia de red con las mejoras relacionadas con la velocidad y administra los recursos de red de forma más eficaz.
 - Aunque HTTP 1,1 está limitado a procesar una solicitud/respuesta de ida y vuelta a la vez, HTTP/2 admite la multiplexación o varias solicitudes paralelas a través de la misma conexión.
-- HTTP/2 es compatible con la comunicación de dúplex completo o bidireccional, donde tanto el cliente como el servidor pueden comunicarse al mismo tiempo. El cliente puede cargar datos de solicitud al mismo tiempo que el servidor envía datos de respuesta.
+- HTTP/2 admite la comunicación dúplex completo o bidireccional, donde tanto el cliente como el servidor pueden comunicarse al mismo tiempo. El cliente puede cargar datos de solicitud al mismo tiempo que el servidor envía datos de respuesta.
 - El streaming está integrado en HTTP/2, lo que significa que las solicitudes y respuestas pueden transmitir de forma asincrónica conjuntos de datos grandes.
 - La combinación de gRPC y HTTP/2 aumenta considerablemente el rendimiento. En el lenguaje de [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) , el rendimiento de gRPC cumple y supera la velocidad y eficacia de los [enlaces de NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Sin embargo, a diferencia de NetTCP, gRPC no está restringido a los lenguajes de Microsoft como C# o Visual Basic.
 

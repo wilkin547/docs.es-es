@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441504"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741310"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventos de UI Automation para clientes
 > [!NOTE]
@@ -18,12 +18,12 @@ ms.locfileid: "74441504"
   
  En este tema se describe cómo usan los clientes de UI Automation los eventos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite a los clientes suscribirse a eventos de interés. Esta capacidad mejora el rendimiento eliminando la necesidad de sondear continuamente todos los elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] del sistema para ver si ha cambiado cualquier información, estructura o estado.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que los clientes se suscriban a eventos de interés. Esta capacidad mejora el rendimiento eliminando la necesidad de sondear continuamente todos los elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] del sistema para ver si ha cambiado cualquier información, estructura o estado.  
   
  La eficacia también mejora gracias a la capacidad para realizar escuchas de eventos que solo se encuentran dentro de un ámbito definido. Por ejemplo, un cliente puede estar a la escucha de eventos de cambio de foco en todos los elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del árbol o solo en un elemento y sus descendientes.  
   
 > [!NOTE]
-> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad provocan que los proveedores de proxy estándares generen eventos para los controles [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad hacen que los proveedores de proxy estándar generen eventos para los controles de [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] y Win32.  
   
  Para obtener una vista más amplia de los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [UI Automation Events Overview](ui-automation-events-overview.md).  
   

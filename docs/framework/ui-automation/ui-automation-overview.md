@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: a306bfe4b794409f7f64359daee7e18d34826921
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3619214bcd8830e82c827680d08260e95dc2b36
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441445"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741715"
 ---
 # <a name="ui-automation-overview"></a>Información general sobre UI Automation
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441445"
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] no permite la comunicación entre procesos iniciados por usuarios diferentes mediante el comando **Ejecutar como** .  
   
- Las aplicaciones cliente de la automatización de la interfaz de usuario se pueden escribir con la certeza de que funcionarán en varios marcos de trabajo. El núcleo de la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] enmascara las diferencias entre los marcos de trabajo que subyacen a distintas partes de la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Por ejemplo, la propiedad `Content` de un botón [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , la propiedad `Caption` de un botón [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y la propiedad `ALT` de una imagen HTML se asignan a una sola propiedad, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, en la vista [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
+ Las aplicaciones cliente de la automatización de la interfaz de usuario se pueden escribir con la certeza de que funcionarán en varios marcos de trabajo. El núcleo de la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] enmascara las diferencias entre los marcos de trabajo que subyacen a distintas partes de la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Por ejemplo, la propiedad `Content` de un botón [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], la propiedad `Caption` de un botón Win32 y la propiedad `ALT` de una imagen HTML se asignan todos a una sola propiedad, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, en la vista [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 La automatización de la interfaz de usuario proporciona una funcionalidad completa en los sistemas operativos Windows compatibles que ejecutan el .NET Framework (consulte [.NET Framework requisitos del sistema](../get-started/system-requirements.md) o versiones de .net Core a partir de .net Core 3,0.  
   
@@ -43,18 +43,18 @@ La automatización de la interfaz de usuario proporciona una funcionalidad compl
   
  Desde la perspectiva del desarrollador de software, hay dos formas de usar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: crear compatibilidad con controles personalizados (mediante la API de proveedor) y creando aplicaciones que usan el núcleo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para comunicarse con elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (mediante la API del cliente). En función de su enfoque, debe hacer referencia a diferentes partes de la documentación. Puede obtener más información sobre los conceptos y adquirir conocimientos prácticos en las secciones siguientes.  
   
-|Section|Materia|Público|  
+|Sección|Materia|Audiencia|  
 |-------------|--------------------|--------------|  
-|[Aspectos básicos](index.md) de la automatización de la interfaz de usuario (esta sección)|Amplias introducciones a los conceptos.|Todo.|  
+|[Aspectos básicos](index.md) de la automatización de la interfaz de usuario (esta sección)|Amplias introducciones a los conceptos.|All.|  
 |[Proveedores de Automatización de la interfaz de usuario para código administrado](ui-automation-providers-for-managed-code.md)|Información general y temas de procedimientos que le ayudarán a usar la API del proveedor.|Desarrolladores de controles.|  
 |[Clientes de Automatización de la interfaz de usuario para código administrado](ui-automation-clients-for-managed-code.md)|Información general y temas de procedimientos que le ayudarán a usar la API del cliente.|Desarrolladores de aplicaciones de cliente.|  
-|[Patrones de control de Automatización de la interfaz de usuario](ui-automation-control-patterns.md)|Información sobre cómo sedeben implementar los patrones de control por los proveedores y qué funcionalidad está disponible para los clientes.|Todo.|  
-|[Patrón de texto de Automatización de la interfaz de usuario](ui-automation-text-pattern.md)|Información sobre cómo sedeben implementar el patrón de control Text por los proveedores y qué funcionalidad está disponible para los clientes.|Todo.|  
-|[UI Automation Control Types](ui-automation-control-types.md)|Información sobre las propiedades y los patrones de control admitidos por diferentes tipos de control.|Todo.|  
+|[Patrones de control de Automatización de la interfaz de usuario](ui-automation-control-patterns.md)|Información sobre cómo sedeben implementar los patrones de control por los proveedores y qué funcionalidad está disponible para los clientes.|All.|  
+|[Patrón de texto de Automatización de la interfaz de usuario](ui-automation-text-pattern.md)|Información sobre cómo sedeben implementar el patrón de control Text por los proveedores y qué funcionalidad está disponible para los clientes.|All.|  
+|[UI Automation Control Types](ui-automation-control-types.md)|Información sobre las propiedades y los patrones de control admitidos por diferentes tipos de control.|All.|  
   
  En la tabla siguiente se muestran espacios de nombres [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , archivos DLL que los contienen y el público que los usa.  
   
-|Espacio de nombres|DLL a las que se hace referencia|Público|  
+|Espacio de nombres|DLL a las que se hace referencia|Audiencia|  
 |---------------|---------------------|--------------|  
 |<xref:System.Windows.Automation>|UIAutomationClientUIAutomationTypes|Desarrolladores de cliente de automatización de la interfaz de usuario; se utiliza para buscar objetos <xref:System.Windows.Automation.AutomationElement> , registrarse para eventos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y trabajar con patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.Provider>|UIAutomationProviderUIAutomationTypes|Los desarrolladores de los proveedores de automatización de la interfaz de usuario para marcos de trabajo distintos de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].|  

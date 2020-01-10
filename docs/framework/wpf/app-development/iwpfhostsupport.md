@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 91a29233d12a842a64b7d3dd497312f6dc6742ca
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4855fae2954e5650d8c9bbb81153ebe64249a867
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423652"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740185"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Las aplicaciones que hospedan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contenido mediante PresentationHost. exe implementan esta interfaz para proporcionar un punto de integración entre el host y PresentationHost. exe.  
   
-## <a name="remarks"></a>Comentarios  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplicaciones como los exploradores Web pueden hospedar contenido de WPF, incluidas las aplicaciones de explorador XAML (XBAP) y XAML dinámico. Para hospedar contenido de WPF, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplicaciones crean una instancia del [control WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Para hospedarse, WPF crea una instancia de PresentationHost. exe, que proporciona el contenido de WPF hospedado al host para su presentación en el [control WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
+## <a name="remarks"></a>Notas  
+ Las aplicaciones Win32, como los exploradores Web, pueden hospedar contenido de WPF, incluidas las aplicaciones de explorador XAML (XBAP) y XAML dinámico. Para hospedar contenido de WPF, las aplicaciones Win32 crean una instancia del [control WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Para hospedarse, WPF crea una instancia de PresentationHost. exe, que proporciona el contenido de WPF hospedado al host para su presentación en el [control WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
   
  La integración habilitada por `IWpfHostSupport` permite a PresentationHost. exe:  
   

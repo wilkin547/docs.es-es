@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675421"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741022"
 ---
 # <a name="coreresponsedata-class"></a>Clase CoreResponseData
 
-La `CoreResponseData` clase representa el análisis de los encabezados HTTP y el cuerpo de respuesta.
+La clase `CoreResponseData` representa el análisis de los encabezados HTTP y el cuerpo de la respuesta.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Esta API es interna y no está diseñada para usarse directamente en el código. En su lugar, debe usar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [manual del usuario de DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Esta API es interna y no está diseñada para usarse directamente en el código. En su lugar, debe usar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System. dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

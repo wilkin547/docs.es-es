@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740724"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740277"
 ---
 # <a name="typography-in-wpf"></a>Tipografía en WPF
 En este tema se presentan las características tipográficas principales de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estas características incluyen mejor calidad y rendimiento de la representación de texto, compatibilidad con la tipografía OpenType, texto internacional mejorado, compatibilidad con fuentes mejorada y nuevas interfaces de programación de aplicaciones (API) de texto.  
@@ -59,7 +59,7 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
   
 - El comportamiento de la fuente es independiente de la configuración global, como la configuración regional del sistema.  
   
-- Separe los tipos de <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>y <xref:System.Windows.FontStyle> para definir un <xref:System.Windows.Media.FontFamily>. Esto proporciona mayor flexibilidad que en la programación de [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], en la que se usan combinaciones booleanas de negrita y cursiva para definir una familia de fuentes.  
+- Separe los tipos de <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>y <xref:System.Windows.FontStyle> para definir un <xref:System.Windows.Media.FontFamily>. Esto proporciona mayor flexibilidad que en la programación de Win32, en la que se usan combinaciones booleanas de cursiva y negrita para definir una familia de fuentes.  
   
 - La dirección de escritura (horizontal o vertical) se controla con independencia del nombre de la fuente.  
   
