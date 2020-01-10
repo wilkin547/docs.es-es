@@ -6,66 +6,64 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428168"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716211"
 ---
-# <a name="clr-etw-events"></a><span data-ttu-id="000df-102">Eventos ETW de CLR</span><span class="sxs-lookup"><span data-stu-id="000df-102">CLR ETW Events</span></span>
-<span data-ttu-id="000df-103">Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="000df-103">The topics in this section describe event tracing for Windows (ETW) events.</span></span> <span data-ttu-id="000df-104">Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).</span><span class="sxs-lookup"><span data-stu-id="000df-104">Each event has an associated keyword and level, which are described in the [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md) topic.</span></span> <span data-ttu-id="000df-105">CLR tiene dos proveedores para los eventos:</span><span class="sxs-lookup"><span data-stu-id="000df-105">The CLR has two providers for the events:</span></span>  
+# <a name="clr-etw-events"></a><span data-ttu-id="092c8-102">Eventos ETW de CLR</span><span class="sxs-lookup"><span data-stu-id="092c8-102">CLR ETW Events</span></span>
+<span data-ttu-id="092c8-103">Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="092c8-103">The topics in this section describe event tracing for Windows (ETW) events.</span></span> <span data-ttu-id="092c8-104">Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).</span><span class="sxs-lookup"><span data-stu-id="092c8-104">Each event has an associated keyword and level, which are described in the [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md) topic.</span></span> <span data-ttu-id="092c8-105">CLR tiene dos proveedores para los eventos:</span><span class="sxs-lookup"><span data-stu-id="092c8-105">The CLR has two providers for the events:</span></span>  
   
-- <span data-ttu-id="000df-106">El proveedor en tiempo de ejecución genera eventos en función de las palabras clave (categorías de eventos) que están habilitadas.</span><span class="sxs-lookup"><span data-stu-id="000df-106">The runtime provider, which raises events depending on which keywords (categories of events) are enabled.</span></span> <span data-ttu-id="000df-107">El GUID del proveedor en tiempo de ejecución de CLR es e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.</span><span class="sxs-lookup"><span data-stu-id="000df-107">The CLR runtime provider GUID is e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.</span></span>  
+- <span data-ttu-id="092c8-106">El proveedor en tiempo de ejecución genera eventos en función de las palabras clave (categorías de eventos) que están habilitadas.</span><span class="sxs-lookup"><span data-stu-id="092c8-106">The runtime provider, which raises events depending on which keywords (categories of events) are enabled.</span></span> <span data-ttu-id="092c8-107">El GUID del proveedor en tiempo de ejecución de CLR es e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.</span><span class="sxs-lookup"><span data-stu-id="092c8-107">The CLR runtime provider GUID is e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.</span></span>  
   
-- <span data-ttu-id="000df-108">El proveedor de informe detallado, que es para fines especiales.</span><span class="sxs-lookup"><span data-stu-id="000df-108">The rundown provider, which has special-purpose uses.</span></span> <span data-ttu-id="000df-109">El GUID del proveedor de informe detallado de CLR es a669021c-c450-4609-a035-5af59af4df18.</span><span class="sxs-lookup"><span data-stu-id="000df-109">The CLR rundown provider GUID is a669021c-c450-4609-a035-5af59af4df18.</span></span>  
+- <span data-ttu-id="092c8-108">El proveedor de informe detallado, que es para fines especiales.</span><span class="sxs-lookup"><span data-stu-id="092c8-108">The rundown provider, which has special-purpose uses.</span></span> <span data-ttu-id="092c8-109">El GUID del proveedor de informe detallado de CLR es a669021c-c450-4609-a035-5af59af4df18.</span><span class="sxs-lookup"><span data-stu-id="092c8-109">The CLR rundown provider GUID is a669021c-c450-4609-a035-5af59af4df18.</span></span>  
   
- <span data-ttu-id="000df-110">Para más información, vea [Proveedores ETW de CLR](clr-etw-providers.md).</span><span class="sxs-lookup"><span data-stu-id="000df-110">For more information about the providers, see [CLR ETW Providers](clr-etw-providers.md).</span></span>  
+ <span data-ttu-id="092c8-110">Para más información, vea [Proveedores ETW de CLR](clr-etw-providers.md).</span><span class="sxs-lookup"><span data-stu-id="092c8-110">For more information about the providers, see [CLR ETW Providers](clr-etw-providers.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="000df-111">Esta sección</span><span class="sxs-lookup"><span data-stu-id="000df-111">In This Section</span></span>  
- [<span data-ttu-id="000df-112">Eventos de información en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="000df-112">Runtime Information Events</span></span>](runtime-information-etw-events.md)  
- <span data-ttu-id="000df-113">Capturan información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante.</span><span class="sxs-lookup"><span data-stu-id="000df-113">Captures information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="092c8-111">Esta sección</span><span class="sxs-lookup"><span data-stu-id="092c8-111">In This Section</span></span>  
+ [<span data-ttu-id="092c8-112">Eventos de información en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="092c8-112">Runtime Information Events</span></span>](runtime-information-etw-events.md)  
+ <span data-ttu-id="092c8-113">Capturan información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante.</span><span class="sxs-lookup"><span data-stu-id="092c8-113">Captures information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span>  
   
- [<span data-ttu-id="000df-114">Evento de excepción Thrown_V1</span><span class="sxs-lookup"><span data-stu-id="000df-114">Exception Thrown_V1 Event</span></span>](exception-thrown-v1-etw-event.md)  
- <span data-ttu-id="000df-115">Captura información de excepciones.</span><span class="sxs-lookup"><span data-stu-id="000df-115">Captures information about exceptions that are thrown.</span></span>  
+ [<span data-ttu-id="092c8-114">Evento de excepción Thrown_V1</span><span class="sxs-lookup"><span data-stu-id="092c8-114">Exception Thrown_V1 Event</span></span>](exception-thrown-v1-etw-event.md)  
+ <span data-ttu-id="092c8-115">Captura información de excepciones.</span><span class="sxs-lookup"><span data-stu-id="092c8-115">Captures information about exceptions that are thrown.</span></span>  
   
- [<span data-ttu-id="000df-116">Eventos de contención</span><span class="sxs-lookup"><span data-stu-id="000df-116">Contention Events</span></span>](contention-etw-events.md)  
- <span data-ttu-id="000df-117">Capturan información sobre la contención para bloqueos de monitor o nativos que use el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="000df-117">Captures information about contention for monitor locks or native locks that the runtime uses.</span></span>  
+ [<span data-ttu-id="092c8-116">Eventos de contención</span><span class="sxs-lookup"><span data-stu-id="092c8-116">Contention Events</span></span>](contention-etw-events.md)  
+ <span data-ttu-id="092c8-117">Capturan información sobre la contención para bloqueos de monitor o nativos que use el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="092c8-117">Captures information about contention for monitor locks or native locks that the runtime uses.</span></span>  
   
- [<span data-ttu-id="000df-118">Eventos de grupos de subprocesos</span><span class="sxs-lookup"><span data-stu-id="000df-118">Thread Pool Events</span></span>](thread-pool-etw-events.md)  
- <span data-ttu-id="000df-119">Capturan información sobre grupos de subprocesos de trabajo y de E/S.</span><span class="sxs-lookup"><span data-stu-id="000df-119">Captures information about worker thread pools and I/O thread pools.</span></span>  
+ [<span data-ttu-id="092c8-118">Eventos de grupos de subprocesos</span><span class="sxs-lookup"><span data-stu-id="092c8-118">Thread Pool Events</span></span>](thread-pool-etw-events.md)  
+ <span data-ttu-id="092c8-119">Capturan información sobre grupos de subprocesos de trabajo y de E/S.</span><span class="sxs-lookup"><span data-stu-id="092c8-119">Captures information about worker thread pools and I/O thread pools.</span></span>  
   
- [<span data-ttu-id="000df-120">Eventos de cargador</span><span class="sxs-lookup"><span data-stu-id="000df-120">Loader Events</span></span>](loader-etw-events.md)  
- <span data-ttu-id="000df-121">Capturan información sobre la carga y descarga de dominios, ensamblados y módulos de aplicación.</span><span class="sxs-lookup"><span data-stu-id="000df-121">Captures information about loading and unloading application domains, assemblies, and modules.</span></span>  
+ [<span data-ttu-id="092c8-120">Eventos de cargador</span><span class="sxs-lookup"><span data-stu-id="092c8-120">Loader Events</span></span>](loader-etw-events.md)  
+ <span data-ttu-id="092c8-121">Capturan información sobre la carga y descarga de dominios, ensamblados y módulos de aplicación.</span><span class="sxs-lookup"><span data-stu-id="092c8-121">Captures information about loading and unloading application domains, assemblies, and modules.</span></span>  
   
- [<span data-ttu-id="000df-122">Eventos de método</span><span class="sxs-lookup"><span data-stu-id="000df-122">Method Events</span></span>](method-etw-events.md)  
- <span data-ttu-id="000df-123">Capturan información sobre métodos CLR para resolución de símbolo.</span><span class="sxs-lookup"><span data-stu-id="000df-123">Captures information about CLR methods for symbol resolution.</span></span>  
+ [<span data-ttu-id="092c8-122">Eventos de método</span><span class="sxs-lookup"><span data-stu-id="092c8-122">Method Events</span></span>](method-etw-events.md)  
+ <span data-ttu-id="092c8-123">Capturan información sobre métodos CLR para resolución de símbolo.</span><span class="sxs-lookup"><span data-stu-id="092c8-123">Captures information about CLR methods for symbol resolution.</span></span>  
   
- [<span data-ttu-id="000df-124">Eventos de recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="000df-124">Garbage Collection Events</span></span>](garbage-collection-etw-events.md)  
- <span data-ttu-id="000df-125">Capturan información relativa a la recolección de elementos no utilizados, para facilitar la depuración y el diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="000df-125">Captures information pertaining to garbage collection, to help in diagnostics and debugging.</span></span>  
+ [<span data-ttu-id="092c8-124">Eventos de recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="092c8-124">Garbage Collection Events</span></span>](garbage-collection-etw-events.md)  
+ <span data-ttu-id="092c8-125">Capturan información relativa a la recolección de elementos no utilizados, para facilitar la depuración y el diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="092c8-125">Captures information pertaining to garbage collection, to help in diagnostics and debugging.</span></span>  
   
- [<span data-ttu-id="000df-126">Eventos de traza JIT</span><span class="sxs-lookup"><span data-stu-id="000df-126">JIT Tracing Events</span></span>](jit-tracing-etw-events.md)  
- <span data-ttu-id="000df-127">Capturan información sobre inclusión en línea JIT y llamadas de cola.</span><span class="sxs-lookup"><span data-stu-id="000df-127">Captures information about just-in-time (JIT) inlining and tail calls.</span></span>  
+ [<span data-ttu-id="092c8-126">Eventos de traza JIT</span><span class="sxs-lookup"><span data-stu-id="092c8-126">JIT Tracing Events</span></span>](jit-tracing-etw-events.md)  
+ <span data-ttu-id="092c8-127">Capturan información sobre inclusión en línea JIT y llamadas de cola.</span><span class="sxs-lookup"><span data-stu-id="092c8-127">Captures information about just-in-time (JIT) inlining and tail calls.</span></span>  
   
- [<span data-ttu-id="000df-128">Eventos de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="000df-128">Interop Events</span></span>](interop-etw-events.md)  
- <span data-ttu-id="000df-129">Capturan información sobre generación de código auxiliar y almacenamiento en memoria caché del lenguaje intermedio de Microsoft (MSIL).</span><span class="sxs-lookup"><span data-stu-id="000df-129">Captures information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
+ [<span data-ttu-id="092c8-128">Eventos de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="092c8-128">Interop Events</span></span>](interop-etw-events.md)  
+ <span data-ttu-id="092c8-129">Capturan información sobre generación de código auxiliar y almacenamiento en memoria caché del lenguaje intermedio de Microsoft (MSIL).</span><span class="sxs-lookup"><span data-stu-id="092c8-129">Captures information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
   
- [<span data-ttu-id="000df-130">Eventos ARM</span><span class="sxs-lookup"><span data-stu-id="000df-130">ARM Events</span></span>](application-domain-resource-monitoring-arm-etw-events.md)  
- <span data-ttu-id="000df-131">Capturan información de diagnóstico detallada sobre el estado de un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="000df-131">Captures detailed diagnostic information about the state of an application domain.</span></span>  
+ [<span data-ttu-id="092c8-130">Eventos ARM</span><span class="sxs-lookup"><span data-stu-id="092c8-130">ARM Events</span></span>](application-domain-resource-monitoring-arm-etw-events.md)  
+ <span data-ttu-id="092c8-131">Capturan información de diagnóstico detallada sobre el estado de un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="092c8-131">Captures detailed diagnostic information about the state of an application domain.</span></span>  
   
- [<span data-ttu-id="000df-132">Eventos de seguridad</span><span class="sxs-lookup"><span data-stu-id="000df-132">Security Events</span></span>](security-etw-events.md)  
- <span data-ttu-id="000df-133">Capturan información sobre verificación de nombres seguros y Authenticode.</span><span class="sxs-lookup"><span data-stu-id="000df-133">Captures information about strong name and Authenticode verification.</span></span>  
+ [<span data-ttu-id="092c8-132">Eventos de seguridad</span><span class="sxs-lookup"><span data-stu-id="092c8-132">Security Events</span></span>](security-etw-events.md)  
+ <span data-ttu-id="092c8-133">Capturan información sobre verificación de nombres seguros y Authenticode.</span><span class="sxs-lookup"><span data-stu-id="092c8-133">Captures information about strong name and Authenticode verification.</span></span>  
   
- [<span data-ttu-id="000df-134">Evento de pila</span><span class="sxs-lookup"><span data-stu-id="000df-134">Stack Event</span></span>](stack-etw-event.md)  
- <span data-ttu-id="000df-135">Captura información usada con otros eventos para generar seguimientos de pilas después de que se haya generado un evento.</span><span class="sxs-lookup"><span data-stu-id="000df-135">Captures information that is used with other events to generate stack traces after an event is raised.</span></span>  
+ [<span data-ttu-id="092c8-134">Evento de pila</span><span class="sxs-lookup"><span data-stu-id="092c8-134">Stack Event</span></span>](stack-etw-event.md)  
+ <span data-ttu-id="092c8-135">Captura información usada con otros eventos para generar seguimientos de pilas después de que se haya generado un evento.</span><span class="sxs-lookup"><span data-stu-id="092c8-135">Captures information that is used with other events to generate stack traces after an event is raised.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="000df-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="000df-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="092c8-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="092c8-136">See also</span></span>
 
-- [<span data-ttu-id="000df-137">Mejorar la depuración y el ajuste del rendimiento con ETW</span><span class="sxs-lookup"><span data-stu-id="000df-137">Improve Debugging And Performance Tuning With ETW</span></span>](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [<span data-ttu-id="000df-138">Blog de rendimiento de Windows</span><span class="sxs-lookup"><span data-stu-id="000df-138">Windows Performance Blog</span></span>](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
-- [<span data-ttu-id="000df-139">Controlar el registro de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="000df-139">Controlling .NET Framework Logging</span></span>](controlling-logging.md)
-- [<span data-ttu-id="000df-140">Proveedores ETW de CLR</span><span class="sxs-lookup"><span data-stu-id="000df-140">CLR ETW Providers</span></span>](clr-etw-providers.md)
-- [<span data-ttu-id="000df-141">Palabras clave y niveles ETW de CLR</span><span class="sxs-lookup"><span data-stu-id="000df-141">CLR ETW Keywords and Levels</span></span>](clr-etw-keywords-and-levels.md)
-- [<span data-ttu-id="000df-142">Eventos ETW en Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="000df-142">ETW Events in the Common Language Runtime</span></span>](etw-events-in-the-common-language-runtime.md)
+- [<span data-ttu-id="092c8-137">Mejorar la depuración y el ajuste del rendimiento con ETW</span><span class="sxs-lookup"><span data-stu-id="092c8-137">Improve Debugging And Performance Tuning With ETW</span></span>](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [<span data-ttu-id="092c8-138">Blog de rendimiento de Windows</span><span class="sxs-lookup"><span data-stu-id="092c8-138">Windows Performance Blog</span></span>](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [<span data-ttu-id="092c8-139">Controlar el registro de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="092c8-139">Controlling .NET Framework Logging</span></span>](controlling-logging.md)
+- [<span data-ttu-id="092c8-140">Proveedores ETW de CLR</span><span class="sxs-lookup"><span data-stu-id="092c8-140">CLR ETW Providers</span></span>](clr-etw-providers.md)
+- [<span data-ttu-id="092c8-141">Palabras clave y niveles ETW de CLR</span><span class="sxs-lookup"><span data-stu-id="092c8-141">CLR ETW Keywords and Levels</span></span>](clr-etw-keywords-and-levels.md)
+- [<span data-ttu-id="092c8-142">Eventos ETW en Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="092c8-142">ETW Events in the Common Language Runtime</span></span>](etw-events-in-the-common-language-runtime.md)

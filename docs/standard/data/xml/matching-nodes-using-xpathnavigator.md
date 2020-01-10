@@ -6,23 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 882e92c6c8cb6e638ca299ed4c43b9da8f4bf235
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f0988c3a112fefc351175de02c790dc25fe6e94a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923328"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710692"
 ---
-# <a name="matching-nodes-using-xpathnavigator"></a><span data-ttu-id="43eb7-102">Coincidencia de nodos con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="43eb7-102">Matching Nodes using XPathNavigator</span></span>
-<span data-ttu-id="43eb7-103">La clase <xref:System.Xml.XPath.XPathNavigator> incluye el método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> para determinar si un nodo coincide con una expresión XPath.</span><span class="sxs-lookup"><span data-stu-id="43eb7-103">The <xref:System.Xml.XPath.XPathNavigator> class provides the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method to determine if a node matches an XPath expression.</span></span> <span data-ttu-id="43eb7-104">El método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> toma una expresión XPath como entrada y devuelve <xref:System.Boolean> que indica si el nodo actual coincide con la expresión XPath especificada o el objeto <xref:System.Xml.XPath.XPathExpression> compilado especificado.</span><span class="sxs-lookup"><span data-stu-id="43eb7-104">The <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method takes an XPath expression as input and returns a <xref:System.Boolean> that indicates if the current node matches the given XPath expression or the given compiled <xref:System.Xml.XPath.XPathExpression> object.</span></span>  
+# <a name="matching-nodes-using-xpathnavigator"></a><span data-ttu-id="39589-102">Coincidencia de nodos con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="39589-102">Matching Nodes using XPathNavigator</span></span>
+<span data-ttu-id="39589-103">La clase <xref:System.Xml.XPath.XPathNavigator> incluye el método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> para determinar si un nodo coincide con una expresión XPath.</span><span class="sxs-lookup"><span data-stu-id="39589-103">The <xref:System.Xml.XPath.XPathNavigator> class provides the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method to determine if a node matches an XPath expression.</span></span> <span data-ttu-id="39589-104">El método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> toma una expresión XPath como entrada y devuelve <xref:System.Boolean> que indica si el nodo actual coincide con la expresión XPath especificada o el objeto <xref:System.Xml.XPath.XPathExpression> compilado especificado.</span><span class="sxs-lookup"><span data-stu-id="39589-104">The <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method takes an XPath expression as input and returns a <xref:System.Boolean> that indicates if the current node matches the given XPath expression or the given compiled <xref:System.Xml.XPath.XPathExpression> object.</span></span>  
   
-## <a name="matching-nodes"></a><span data-ttu-id="43eb7-105">Coincidencia de nodos</span><span class="sxs-lookup"><span data-stu-id="43eb7-105">Matching Nodes</span></span>  
- <span data-ttu-id="43eb7-106">El método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> devuelve `true` si el nodo actual coincide con la expresión XPath especificada.</span><span class="sxs-lookup"><span data-stu-id="43eb7-106">The <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method returns `true` if the current node matches the XPath expression specified.</span></span> <span data-ttu-id="43eb7-107">Por ejemplo, en el siguiente código de ejemplo, el método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> devolverá `true` si el nodo actual es el elemento `b` y el elemento `b` tiene el atributo `c`.</span><span class="sxs-lookup"><span data-stu-id="43eb7-107">For example, in the code example that follows, the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method will return `true` if the current node is the element `b`, and element `b` has an attribute `c`.</span></span>  
+## <a name="matching-nodes"></a><span data-ttu-id="39589-105">Coincidencia de nodos</span><span class="sxs-lookup"><span data-stu-id="39589-105">Matching Nodes</span></span>  
+ <span data-ttu-id="39589-106">El método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> devuelve `true` si el nodo actual coincide con la expresión XPath especificada.</span><span class="sxs-lookup"><span data-stu-id="39589-106">The <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method returns `true` if the current node matches the XPath expression specified.</span></span> <span data-ttu-id="39589-107">Por ejemplo, en el siguiente código de ejemplo, el método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> devolverá `true` si el nodo actual es el elemento `b` y el elemento `b` tiene el atributo `c`.</span><span class="sxs-lookup"><span data-stu-id="39589-107">For example, in the code example that follows, the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method will return `true` if the current node is the element `b`, and element `b` has an attribute `c`.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="43eb7-108">El método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> no cambia el estado de <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="43eb7-108">The <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method does not change the state of the <xref:System.Xml.XPath.XPathNavigator>.</span></span>  
+> <span data-ttu-id="39589-108">El método <xref:System.Xml.XPath.XPathNavigator.Matches%2A> no cambia el estado de <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="39589-108">The <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method does not change the state of the <xref:System.Xml.XPath.XPathNavigator>.</span></span>  
   
 ```vb  
 Dim document as XPathDocument = New XPathDocument("input.xml")  
@@ -38,14 +36,14 @@ XPathNavigator navigator = document.CreateNavigator();
 navigator.Matches("b[@c]");  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="43eb7-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="43eb7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39589-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="39589-109">See also</span></span>
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [<span data-ttu-id="43eb7-110">Procesamiento de datos XML con el modelo de datos XPath</span><span class="sxs-lookup"><span data-stu-id="43eb7-110">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [<span data-ttu-id="43eb7-111">Seleccionar datos XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="43eb7-111">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [<span data-ttu-id="43eb7-112">Evaluación de expresiones XPath con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="43eb7-112">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [<span data-ttu-id="43eb7-113">Tipos de nodos reconocidos con consultas XPath</span><span class="sxs-lookup"><span data-stu-id="43eb7-113">Node Types Recognized with XPath Queries</span></span>](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [<span data-ttu-id="43eb7-114">Espacios de nombres y consultas XPath</span><span class="sxs-lookup"><span data-stu-id="43eb7-114">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [<span data-ttu-id="43eb7-115">Expresiones XPath compiladas</span><span class="sxs-lookup"><span data-stu-id="43eb7-115">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [<span data-ttu-id="39589-110">Procesamiento de datos XML con el modelo de datos XPath</span><span class="sxs-lookup"><span data-stu-id="39589-110">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [<span data-ttu-id="39589-111">Seleccionar datos XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="39589-111">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [<span data-ttu-id="39589-112">Evaluación de expresiones XPath con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="39589-112">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
+- [<span data-ttu-id="39589-113">Tipos de nodos reconocidos con consultas XPath</span><span class="sxs-lookup"><span data-stu-id="39589-113">Node Types Recognized with XPath Queries</span></span>](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
+- [<span data-ttu-id="39589-114">Espacios de nombres y consultas XPath</span><span class="sxs-lookup"><span data-stu-id="39589-114">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [<span data-ttu-id="39589-115">Expresiones XPath compiladas</span><span class="sxs-lookup"><span data-stu-id="39589-115">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
