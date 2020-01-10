@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967350"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710640"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificación de datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para modificar nodos y valores en un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  
@@ -32,10 +30,10 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos 
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
 |<xref:System.Xml.XPath.XPathNodeType.Root>|No se admite.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|El contenido del elemento.|  
-|<xref:System.Xml.XPath.XPathNodeType.Attribute>|El valor del atributo.|  
-|<xref:System.Xml.XPath.XPathNodeType.Text>|Contenido de texto.|  
+|<xref:System.Xml.XPath.XPathNodeType.Attribute>|Valor del atributo.|  
+|<xref:System.Xml.XPath.XPathNodeType.Text>|Contenido del texto.|  
 |<xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>|El contenido, sin incluir el destino.|  
-|<xref:System.Xml.XPath.XPathNodeType.Comment>|El contenido del comentario.|  
+|<xref:System.Xml.XPath.XPathNodeType.Comment>|Contenido del comentario.|  
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|No admitido.|  
   
 > [!NOTE]

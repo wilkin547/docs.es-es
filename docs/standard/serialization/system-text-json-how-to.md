@@ -1,19 +1,17 @@
 ---
 title: Cómo serializar y deserializar JSON mediante C# .net
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283328"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705800"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Cómo serializar y deserializar JSON en .NET
 
@@ -23,7 +21,7 @@ Las instrucciones y el código de ejemplo usan la biblioteca directamente, no a 
 
 La mayor parte del código de ejemplo de la serialización establece <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> en `true` para "imprimir en la misma" el JSON (con sangría y espacio en blanco para la legibilidad humana). Para su uso en producción, normalmente aceptaría el valor predeterminado de `false` para esta configuración.
 
-## <a name="namespaces"></a>Espacios de nombres
+## <a name="namespaces"></a>Espacios de nombres de
 
 El espacio de nombres <xref:System.Text.Json> contiene todos los puntos de entrada y los tipos principales. El espacio de nombres <xref:System.Text.Json.Serialization> contiene atributos y API para escenarios avanzados y personalización específicos de la serialización y deserialización. Los ejemplos de código que se muestran en este artículo requieren directivas de `using` para uno o ambos espacios de nombres:
 
@@ -377,11 +375,11 @@ Para excluir todas las propiedades de valores NULL, establezca la propiedad <xre
 
 A continuación se muestra un ejemplo de un objeto para serializar y la salida JSON:
 
-|Propiedad |Valor  |
+|La propiedad |{2&gt;Value&lt;2}  |
 |---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00|
+| Fecha    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| Resumen| null|
+| Resumen| nulo|
 
 ```json
 {
@@ -460,7 +458,7 @@ Para minimizar el escape, puede usar <xref:System.Text.Encodings.Web.JavaScriptE
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serializar propiedades de clases derivadas
 
-No se admite la serialización polimórfica cuando se especifica en tiempo de compilación el tipo que se va a serializar. Por ejemplo, supongamos que tiene una clase `WeatherForecast` y una clase derivada `WeatherForecastWithWind`:
+No se admite la serialización polimórfica cuando se especifica en tiempo de compilación el tipo que se va a serializar. Por ejemplo, supongamos que tiene una clase `WeatherForecast` y una clase derivada `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ Y Supongamos que el argumento de tipo del método `Serialize` en tiempo de compi
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-En este escenario, la propiedad `WindSpeed` no se serializa aunque el objeto `weatherForecast` sea realmente un objeto `WeatherForecastWithWind`. Solo se serializan las propiedades de la clase base:
+En este escenario, la propiedad `WindSpeed` no se serializa aunque el objeto `weatherForecast` sea realmente un objeto `WeatherForecastDerived`. Solo se serializan las propiedades de la clase base:
 
 ```json
 {
@@ -571,9 +569,9 @@ Si deserializa el JSON que se muestra en el tipo que se muestra, las propiedades
 
 Al deserializar el JSON que se muestra anteriormente en este tipo de ejemplo, los datos adicionales se convierten en pares de clave y valor de la propiedad `ExtensionData`:
 
-|Propiedad |Valor  |Notas  |
+|La propiedad |{2&gt;Value&lt;2}  |Notas  |
 |---------|---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00||
+| Fecha    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | No coinciden las mayúsculas y minúsculas (`temperatureCelsius` en el JSON), por lo que no se establece la propiedad. |
 | Resumen | Caliente ||
 | Extensiondata ( | temperatureCelsius: 25 |Dado que el caso no coincidía, esta propiedad JSON es un extra y se convierte en un par clave-valor en el diccionario.|

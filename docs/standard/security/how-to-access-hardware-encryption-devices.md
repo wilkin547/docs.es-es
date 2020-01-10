@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
+title: 'Cómo: Obtener acceso a los dispositivos de cifrado de hardware'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654376"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706180"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
+# <a name="how-to-access-hardware-encryption-devices"></a>Cómo: Obtener acceso a los dispositivos de cifrado de hardware
 Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obtener acceso a los dispositivos de cifrado de hardware. Por ejemplo, puede usar esta clase para integrar la aplicación con una tarjeta inteligente, un generador de números aleatorios de hardware o una implementación de hardware de un determinado algoritmo criptográfico.  
   
- La clase <xref:System.Security.Cryptography.CspParameters> crea un proveedor de servicios criptográficos (CSP) que tiene acceso a un dispositivo de cifrado de hardware correctamente instalado.  Puede comprobar la disponibilidad de un CSP inspeccionando la siguiente clave del registro mediante el Editor del registro (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ La clase <xref:System.Security.Cryptography.CspParameters> crea un proveedor de servicios criptográficos (CSP) que tiene acceso a un dispositivo de cifrado de hardware correctamente instalado.  Puede comprobar la disponibilidad de un CSP inspeccionando la siguiente clave del registro con el Editor del registro (Regedit.exe): HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>Para firmar datos mediante una tarjeta de claves  
   

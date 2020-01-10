@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910320"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709626"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parámetros Stylesheet y objetos de extensión
 La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible Stylesheet Language for Transformations (XSLT) y objetos de extensión XSLT. Cuando se pasan al método <xref:System.Xml.Xsl.XslTransform.Transform%2A> se puede invocar a estos parámetros y objetos de extensión desde hojas de estilos.  
@@ -40,9 +38,9 @@ La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible 
   
 |Tipo W3C|Clase equivalente .NET Framework (tipo)|Tipo de XPath o tipo XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
+|Cadena|System.String|XPath|  
 |Booleano|System.Boolean|XPath|  
-|número|System.Double|XPath|  
+|Número|System.Double|XPath|  
 |Fragmento del árbol de resultados|System.Xml.XPath.XPathNavigator|XSLT|  
 |Conjunto de nodos|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -139,7 +137,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Entrada  
+### <a name="input"></a>Input  
  order.xml  
   
 ```xml  
@@ -171,7 +169,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Salida  
+### <a name="output"></a>Resultados  
   
 ```xml  
 <order>  
@@ -307,7 +305,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Entrada  
+### <a name="input"></a>Input  
  number.xml  
   
 ```xml  
@@ -343,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Salida  
+### <a name="output"></a>Resultados  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

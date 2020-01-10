@@ -3,14 +3,12 @@ title: Espacios de nombres y DTD en DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a3a3ec957a55ff23dec728ccd31fe9e1f52ce78f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590214"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710601"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Espacios de nombres y DTD en DOM
 Las definiciones de tipo de documento (DTD) complican la compatibilidad del espacio de nombres. Por ejemplo, el siguiente código XML contiene atributos predeterminados que incluyen signos de dos puntos en su nombre.  

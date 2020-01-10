@@ -3,14 +3,12 @@ title: Tipos de nodos reconocidos con consultas XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: cc1aa668ccf6fc7f210f48a28cf76b364459c784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590201"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710549"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Tipos de nodos reconocidos con consultas XPath
 Los tipos de nodos que se reconocen en una consulta XPath no son los mismos que se encuentran en el Modelo de objetos de documento (DOM).  

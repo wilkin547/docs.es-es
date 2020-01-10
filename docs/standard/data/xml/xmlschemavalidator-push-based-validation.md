@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a420a134eda6c62758b0d218e3c0a4a4922b048c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250044"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709808"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Validación basada en inserción de XmlSchemaValidator
 
@@ -172,11 +170,11 @@ Para obtener un ejemplo de los métodos que se utilizan para validar elementos, 
 
 #### <a name="validating-content-using-an-xmlvaluegetter"></a>Validación de contenido con XmlValueGetter
 
-<xref:System.Xml.Schema.XmlValueGetter>`delegate` se puede utilizar para pasar el valor de los nodos de atributos, textos o espacios en blanco como tipos Common Language Runtime (CLR) compatibles con el tipo del lenguaje de definición de esquema XML (XSD) del nodo de atributos, textos o espacios en blanco. <xref:System.Xml.Schema.XmlValueGetter> `delegate` es útil si el valor CLR de un nodo de atributos, textos o espacios en blanco ya está disponible y evita el costo de convertirlo en un valor `string` y luego volver a analizarlo para validarlo.
+<xref:System.Xml.Schema.XmlValueGetter>`delegate` se puede utilizar para pasar el valor de los nodos de atributos, textos o espacios en blanco como tipos Common Language Runtime (CLR) compatibles con el tipo del lenguaje de definición de esquema XML (XSD) del nodo de atributos, textos o espacios en blanco. <xref:System.Xml.Schema.XmlValueGetter>`delegate` es útil si el valor CLR de un nodo de atributos, textos o espacios en blanco ya está disponible y evita el costo de convertirlo en un valor `string` y luego volver a analizarlo para validarlo.
 
 Los métodos <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> y <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> están sobrecargados y aceptan el valor de los nodos de atributos, textos o espacios en blanco como un `string` o <xref:System.Xml.Schema.XmlValueGetter>`delegate`.
 
-Los siguientes métodos de la clase <xref:System.Xml.Schema.XmlSchemaValidator> aceptan un <xref:System.Xml.Schema.XmlValueGetter> `delegate` como parámetro.
+Los siguientes métodos de la clase <xref:System.Xml.Schema.XmlSchemaValidator> aceptan un <xref:System.Xml.Schema.XmlValueGetter>`delegate` como parámetro.
 
 - <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>
 
@@ -214,7 +212,7 @@ static XmlValueGetter DateTimeGetter(DateTime dateTime)
 }
 ```
 
-Para obtener un ejemplo completo de <xref:System.Xml.Schema.XmlValueGetter>`delegate`, vea el ejemplo de la introducción. Para obtener más información sobre <xref:System.Xml.Schema.XmlValueGetter> `delegate`, vea la documentación de referencia de las clases <xref:System.Xml.Schema.XmlValueGetter> y <xref:System.Xml.Schema.XmlSchemaValidator>.
+Para obtener un ejemplo completo de <xref:System.Xml.Schema.XmlValueGetter>`delegate`, vea el ejemplo de la introducción. Para obtener más información sobre <xref:System.Xml.Schema.XmlValueGetter>`delegate`, vea la documentación de referencia de las clases <xref:System.Xml.Schema.XmlValueGetter> y <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 #### <a name="post-schema-validation-information"></a>Información posterior a la validación del esquema
 
@@ -442,9 +440,9 @@ En la siguiente tabla se describe la transición de estado de la clase <xref:Sys
 
 |Estado|Transición|
 |-----------|----------------|
-|Validar|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
-|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
+|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (\*de contenido<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>) <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> contenido\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
 |Contenido|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
 
 > [!NOTE]
@@ -478,7 +476,7 @@ En la siguiente tabla se describen los resultados de las llamadas a estos métod
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Si contentType del elemento del contexto es Mixed, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve la secuencia de elementos esperada en la siguiente posición.<br /><br /> Si contentType del elemento del contexto es TextOnly o Empty, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve una matriz vacía.<br /><br /> Si contentType del elemento del contexto es ElementOnly, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve la secuencia de elementos esperada en la siguiente posición, pero ya se ha producido un error de validación.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve la lista de atributos del elemento del contexto no validada.|Como anteriormente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Si el espacio en blanco del contexto es un espacio en blanco de nivel superior, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve una matriz vacía.<br /><br /> De lo contrario, el comportamiento del método <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> es el mismo que en <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Si el espacio en blanco del contexto es un espacio en blanco de nivel superior, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve una matriz vacía.<br /><br /> De lo contrario, el comportamiento del método <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> es el mismo que en <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Como anteriormente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve la secuencia de elementos esperada después del elemento del contexto (posibles elementos relacionados).|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve la lista de atributos del elemento del contexto no validada.<br /><br /> Si el elemento del contexto no tiene elemento primario, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve una lista vacía (el elemento del contexto es el elemento primario del elemento actual en el que se ha llamado a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>).|Como anteriormente.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Igual a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Igual a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Como anteriormente.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Igual que <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Igual que <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Como anteriormente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Devuelve una matriz vacía.|Devuelve una matriz vacía.|Como anteriormente.|
 
 > [!NOTE]

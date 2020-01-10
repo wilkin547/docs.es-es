@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046737"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716184"
 ---
 # <a name="clr-etw-providers"></a>Proveedores ETW de CLR
 El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime y el proveedor del informe detallado.  
@@ -37,7 +35,7 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
  Normalmente, el registro ETW se habilita antes de iniciar un proceso y el registro se desactiva al salir del proceso. Sin embargo, si se activa el registro ETW mientras el proceso se está ejecutando, se necesita información adicional sobre el proceso. Por ejemplo, para la resolución de símbolos es preciso registrar eventos de método para los métodos que ya estaban cargados antes de que se activara el registro.  
   
- Los eventos `DCStart` y `DCEnd` capturan el estado del proceso cuando se inició y detuvo la recolección de datos. (El estado hace referencia a información de alto nivel, incluidos los métodos que ya estaban compilados Just-In-Time (JIT) y los ensamblados que ya estaban cargados.) Estos dos eventos pueden proporcionar información sobre lo que pasó en el proceso; por ejemplo, qué métodos estaban compilados JIT, etc.  
+ Los eventos `DCStart` y `DCEnd` capturan el estado del proceso cuando se inició y detuvo la recolección de datos. (El estado hace referencia a información en un nivel alto, incluidos los métodos que ya estaban compilados Just-in-Time (JIT) y ensamblados que se cargaron). Estos dos eventos pueden proporcionar información sobre lo que ya ha sucedido en el proceso; por ejemplo, los métodos que se compilaron JIT, etc.  
   
  Solo los eventos con `DC`, `DCStart`, `DCEnd` o `DCInit` en sus nombres se provocan con el proveedor de informe detallado. Además, estos eventos solo se provocan con el proveedor de informe detallado.  
   

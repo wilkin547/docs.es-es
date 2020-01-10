@@ -3,14 +3,12 @@ title: Errores XSLT recuperables
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590054"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710380"
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  
@@ -41,7 +39,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 |El resultado de la creación de instancias del contenido de `xsl:processing-instruction` contiene la cadena "--" o finaliza con "-".|7.4|Recuperar|  
 |El resultado de la creación de instancias del contenido de `xsl:comment` crea nodos que no son de texto.|7.4|Error*|  
 |La plantilla de un elemento de enlace de variables devuelve un nodo de atributo o un nodo de espacio de nombres.|11.2|Error*|  
-|Se produce un error al recuperar el recurso del identificador URI pasado a la función de documento.|12.1|Error|  
+|Se produce un error al recuperar el recurso del identificador URI pasado a la función de documento.|12.1|Error de :|  
 |La referencia de URI de la función de documento contiene un identificador de fragmento y se produce un error al procesarlo.|12.1|Recuperar*|  
 |Hay varios atributos con el mismo nombre, aunque con valores diferentes, que no son elementos cdata-section con nombre de `xsl:output` con la misma prioridad de importación.|16|Recuperar|  
 |El procesador no es compatible con la codificación del atributo de codificación `xsl:output`.|16.1|Recuperar|  

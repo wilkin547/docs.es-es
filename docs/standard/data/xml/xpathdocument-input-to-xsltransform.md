@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c7c8f6739fc5132af2c8cf1af2c111d51565db0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e19e0d18dc0f4aceb38bf006c3b9b80276455510
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923299"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709769"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Entrada XPathDocument Input para XslTransform
 <xref:System.Xml.XPath.XPathDocument>es una caché de solo lectura que se utiliza para procesar documentos con <xref:System.Xml.Xsl.XslTransform>. Es estructuralmente similar al modelo de documento de objeto XML (DOM), pero está más optimizado para el procesamiento Extensible Stylesheet Language for Transformations (XSLT) y el modelo de datos XML Path Language (XPath) mediante las funciones de optimización XPath en <xref:System.Xml.XPath.XPathNavigator>.  

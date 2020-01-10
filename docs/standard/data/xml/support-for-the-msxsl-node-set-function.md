@@ -3,14 +3,12 @@ title: Compatibilidad con la función msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939521"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710133"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Compatibilidad con la función msxsl:node-set()
 La función `msxsl:node-set` permite convertir un fragmento del árbol de resultados en un conjunto de nodos. El conjunto de nodos resultante siempre contiene un único nodo, que es el nodo raíz del árbol.  
@@ -45,7 +43,7 @@ La función `msxsl:node-set` permite convertir un fragmento del árbol de result
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  El resultado de la transformación es  
   
 ```xml  

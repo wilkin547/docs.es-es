@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 043c37a17375bf2dcdad9e4b429cfca7b96ef7cb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9aae85aa4516dc0555e959358ba1b7db3002145d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966968"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710744"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Entradas en la clase XslCompiledTransform
 El método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> acepta tres tipos de entradas para el documento de origen: un objeto que implementa la interfaz <xref:System.Xml.XPath.IXPathNavigable>, un objeto <xref:System.Xml.XmlReader> que lee el documento de origen o un identificador URI de cadena.  
@@ -29,9 +27,9 @@ El método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> acepta tres t
 - La clase <xref:System.Xml.XPath.XPathDocument> es un almacén de datos de solo lectura basado en el modelo de datos XPath. <xref:System.Xml.XPath.XPathDocument> es la clase recomendada para el procesamiento XSLT. Proporciona un rendimiento mayor comparada con la clase <xref:System.Xml.XmlNode>.  
   
 > [!NOTE]
-> Las transformaciones se aplican al documento en su totalidad. En otras palabras, si se pasa un nodo distinto del nodo raíz del documento, esto no evita que el proceso de transformación pueda obtener acceso a todos los nodos del documento cargado. Para transformar un fragmento del nodo, debe crear un objeto que contenga solo el fragmento del nodo y pasar ese objeto al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Para obtener más información, vea [Cómo: Transformación de un fragmento de nodo](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
+> Las transformaciones se aplican al documento en su totalidad. En otras palabras, si se pasa un nodo distinto del nodo raíz del documento, esto no evita que el proceso de transformación pueda obtener acceso a todos los nodos del documento cargado. Para transformar un fragmento del nodo, debe crear un objeto que contenga solo el fragmento del nodo y pasar ese objeto al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Para obtener más información, consulte [Transformación de un fragmento del nodo](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
   
- En el siguiente ejemplo se utiliza el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar el archivo books.xml en el archivo books.html mediante la hoja de estilos transform.xsl. Los archivos books.xml y transform.xsl pueden encontrarse en este tema: [Cómo: Ejecución de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ En el siguiente ejemplo se utiliza el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar el archivo books.xml en el archivo books.html mediante la hoja de estilos transform.xsl. Los archivos books.xml y transform.xsl pueden encontrarse en este tema: [Cómo realizar una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
@@ -39,7 +37,7 @@ El método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> acepta tres t
 ## <a name="xmlreader-object"></a>Objeto XmlReader  
  El método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> se carga desde el nodo actual del <xref:System.Xml.XmlReader> a través de todos sus nodos secundarios. Esto le permite utilizar una parte de un documento como documento de contexto. Una vez devuelto el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>, <xref:System.Xml.XmlReader> se sitúa en el siguiente nodo después del final del documento de contexto. Si se llega al final del documento, <xref:System.Xml.XmlReader> se sitúa al final del archivo.  
   
- En el siguiente ejemplo se utiliza el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar el archivo books.xml en el archivo books.html mediante la hoja de estilos transform.xsl. Los archivos books.xml y transform.xsl pueden encontrarse en este tema: [Cómo: Ejecución de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ En el siguiente ejemplo se utiliza el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar el archivo books.xml en el archivo books.html mediante la hoja de estilos transform.xsl. Los archivos books.xml y transform.xsl pueden encontrarse en este tema: [Cómo realizar una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
@@ -47,7 +45,7 @@ El método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> acepta tres t
 ## <a name="string-uri"></a>Identificador URI de cadena  
  También puede especificar el identificador URI del documento de origen como entrada XSLT. Se utiliza un <xref:System.Xml.XmlResolver> para resolver el identificador URI. Puede especificar el <xref:System.Xml.XmlResolver> que se va a utilizar pasándolo al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Si no se especifica un <xref:System.Xml.XmlResolver>, el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> utiliza un <xref:System.Xml.XmlUrlResolver> predeterminado sin ninguna credencial.  
   
- En el siguiente ejemplo se utiliza el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar el archivo books.xml en el archivo books.html mediante la hoja de estilos transform.xsl. Los archivos books.xml y transform.xsl pueden encontrarse en este tema: [Cómo: Ejecución de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ En el siguiente ejemplo se utiliza el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar el archivo books.xml en el archivo books.html mediante la hoja de estilos transform.xsl. Los archivos books.xml y transform.xsl pueden encontrarse en este tema: [Cómo realizar una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  

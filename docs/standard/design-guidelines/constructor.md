@@ -12,13 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-author: KrzysztofCwalina
-ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972115"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709483"
 ---
 # <a name="constructor-design"></a>Diseño de constructores
 
@@ -76,9 +75,9 @@ Si se produce una excepción desde un constructor de tipos, el tipo no se puede 
 
 **✓ CONSIDER** inicializar campos estáticos en línea, en lugar de utilizar explícitamente constructores estáticos, como el tiempo de ejecución se puede optimizar el rendimiento de tipos que no tienen un constructor estático definido explícitamente.
 
-*Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*
+*Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
-*Se reimprimió por el permiso de Pearson Education, Inc [. desde las directrices de diseño del marco: Convenciones, expresiones y patrones de las bibliotecas de .net reutilizables, 2ª](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) edición de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 de Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*
+*Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
 ## <a name="see-also"></a>Vea también
 

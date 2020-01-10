@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d7ef11dde882d99c21fe541c2689c52a634edf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915948"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709834"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilación de esquema XmlSchemaCollection
 **XmlSchemaCollection** es una caché o una biblioteca en la que se pueden almacenar y validar esquemas de esquema reducido de datos XML (XDR) y de lenguaje de definición de esquema XML (XSD). **XmlSchemaCollection** mejora el rendimiento al almacenar en memoria caché los esquemas, en lugar obtener acceso a ellos desde un archivo o dirección URL.  

@@ -12,46 +12,45 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: KrzysztofCwalina
-ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34ab2589364e244fed1c64c1703205fb4b0832e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615268"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709522"
 ---
 # <a name="choosing-between-class-and-struct"></a>Elegir entre clases y structs
-Una de las decisiones de diseño básicos que se enfrenta a cada diseñador framework es si va a diseñar un tipo como una clase (un tipo de referencia) o como un struct (un tipo de valor). Buen conocimiento de las diferencias en el comportamiento de los tipos de referencia y tipos de valor es fundamental para tomar esta decisión.  
+Una de las decisiones de diseño básicas a las que se enfrenta cada diseñador de Marcos es si se debe diseñar un tipo como una clase (un tipo de referencia) o como un struct (un tipo de valor). Es fundamental comprender mejor las diferencias en el comportamiento de los tipos de referencia y los tipos de valor para tomar esta decisión.  
   
- La primera diferencia entre los tipos de referencia y tipos de valor que se tendrá en cuenta es que los tipos de referencia son asignados en el montón y se recolectan, mientras que se asignan los tipos de valor en la pila o en línea en que contiene los tipos y se desasigna cuando la pila desenreda o cuando se desasigna su tipo contenedor. Por lo tanto, las asignaciones y desasignaciones de tipos de valor son en general, más barato que las asignaciones y desasignaciones de tipos de referencia.  
+ La primera diferencia entre los tipos de referencia y los tipos de valor que se consideraremos es que los tipos de referencia se asignan en el montón y se recolectan como elementos no utilizados, mientras que los tipos de valor se asignan en la pila o en línea en los tipos contenedores y se desasignan cuando la pila desenredado o cuando se cancela la asignación de su tipo contenedor. Por lo tanto, las asignaciones y desasignaciones de tipos de valor son en general más barata que las asignaciones y desasignaciones de tipos de referencia.  
   
- A continuación, matrices de referencia son tipos asignan fuera de línea, lo que significa que la matriz de elementos son las referencias a las instancias del tipo de referencia que se encuentran en el montón. Matrices de tipos de valor se asignan en línea, lo que significa que los elementos de matriz son las instancias reales del tipo de valor. Por lo tanto, las asignaciones y desasignaciones de matrices de tipos de valor son mucho más baratos que las asignaciones y desasignaciones de matrices de tipos de referencia. Además, en la mayoría de los casos las matrices de tipo de valor presentan mucho mejor localidad de referencia.  
+ A continuación, las matrices de tipos de referencia se asignan fuera de línea, lo que significa que los elementos de la matriz son simplemente referencias a las instancias del tipo de referencia que residen en el montón. Las matrices de tipos de valor se asignan en línea, lo que significa que los elementos de la matriz son las instancias reales del tipo de valor. Por lo tanto, las asignaciones y desasignaciones de matrices de tipos de valor son mucho más baratas que las asignaciones y desasignaciones de matrices de tipos de referencia. Además, en la mayoría de los casos, las matrices de tipos de valor presentan una ubicación de referencia mucho mejor.  
   
- La diferencia siguiente está relacionada con el uso de memoria. Tipos de valor obtengan conversión boxing cuando se convierte a un tipo de referencia o una de las interfaces que implementan. Obtienen conversión unboxing cuando se convierte al tipo de valor. Dado que los cuadros son objetos que se asignan en el montón y están recolección, demasiado conversión boxing y unboxing puede tener un impacto negativo en el montón, el recolector de elementos no utilizados y, en última instancia, el rendimiento de la aplicación.  Por el contrario, se produce ninguna conversión boxing tal como se convierten tipos de referencia. (Para obtener más información, consulte [conversión Boxing y Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
+ La diferencia siguiente está relacionada con el uso de memoria. Los tipos de valor se aplican a la conversión boxing cuando se convierten a un tipo de referencia o a una de las interfaces que implementan. Se les aplica la conversión unboxing cuando se convierten de nuevo al tipo de valor. Dado que los cuadros son objetos que se asignan en el montón y se recolectan como elementos no utilizados, demasiadas conversiones boxing y unboxing pueden tener un impacto negativo en el montón, el recolector de elementos no utilizados y, en última instancia, el rendimiento de la aplicación.  Por el contrario, no se produce ninguna conversión boxing cuando se convierten tipos de referencia. (Para obtener más información, vea [conversión boxing y conversión unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
- A continuación, las asignaciones de tipo de referencia copia la referencia, mientras que las asignaciones de tipo de valor copian el valor completo. Por lo tanto, las asignaciones de tipos de referencia de gran tamaño son menos costosas que las asignaciones de tipos de valor grande.  
+ A continuación, las asignaciones de tipos de referencia copian la referencia, mientras que las asignaciones de tipos de valor copian el valor completo. Por lo tanto, las asignaciones de tipos de referencia grandes son más baratas que las asignaciones de tipos de valores grandes.  
   
- Por último, los tipos de referencia se pasan por referencia, mientras que los tipos de valor se pasan por valor. Cambios en una instancia de un tipo de referencia afectan a todas las referencias que apunta a la instancia. Cuando se pasan por valor, se copian las instancias del tipo de valor. Cuando se cambia una instancia de un tipo de valor, por supuesto no afecta cualquiera de sus copias. Dado que las copias no se crean explícitamente por el usuario, pero se crean implícitamente cuando se pasan argumentos o se devuelven los valores se devuelven, que se pueden cambiar los tipos de valor pueden ser confusos para muchos usuarios. Por lo tanto, los tipos de valor deben ser inmutables.  
+ Por último, los tipos de referencia se pasan por referencia, mientras que los tipos de valor se pasan por valor. Los cambios en una instancia de un tipo de referencia afectan a todas las referencias que señalan a la instancia. Las instancias de tipo de valor se copian cuando se pasan por valor. Cuando se cambia una instancia de un tipo de valor, no afecta a ninguna de sus copias. Dado que el usuario no crea las copias explícitamente, pero se crean implícitamente cuando se pasan argumentos o se devuelven valores, los tipos de valor que se pueden cambiar pueden resultar confusos para muchos usuarios. Por lo tanto, los tipos de valor deben ser inmutables.  
   
- Como regla general, la mayoría de los tipos en un marco de trabajo debe ser clases. Sin embargo, hay algunas situaciones en que las características de un tipo de valor que sea más adecuado usar structs.  
+ Como regla general, la mayoría de los tipos de un marco de trabajo deben ser clases. Sin embargo, hay algunas situaciones en las que las características de un tipo de valor hacen que sea más apropiado usar estructuras.  
   
  **✓ CONSIDER** definir una estructura en lugar de una clase si instancias del tipo son pequeñas y normalmente corta duración o suelen estar incrustadas en otros objetos.  
   
  **X AVOID** definir un struct a menos que el tipo tenga todas las características siguientes:  
   
-- Representa un valor único, similar a los tipos primitivos lógicamente (`int`, `double`, etcetera.).  
+- Representa lógicamente un valor único, similar a los tipos primitivos (`int`, `double`, etc.).  
   
 - Tiene un tamaño de instancia inferior a 16 bytes.  
   
 - Es inmutable.  
   
-- No tendrá que realizar la conversión boxing con frecuencia.  
+- No será necesario aplicar la conversión boxing a menudo.  
   
  En todos los demás casos, debe definir los tipos como clases.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también
 

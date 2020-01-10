@@ -5,14 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974863"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715902"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de grupo de subprocesos
 Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.  
@@ -29,13 +27,13 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart y ThreadPoolWorkerThreadStop  
  En la tabla siguiente se muestra la palabra clave y el nivel correspondientes a estos eventos. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Se crea un subproceso de trabajo.|  
 |`ThreadPoolWorkerThreadStop`|51|Se detiene un subproceso de trabajo.|  
@@ -56,13 +54,13 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Se refiere a la recopilación de información para un ejemplo; es decir, una medición del rendimiento con un determinado nivel de simultaneidad en un instante de tiempo.|  
   
@@ -76,13 +74,13 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra un cambio en el control, cuando el algoritmo de inserción de subproceso (hill-climbing) determina que tiene lugar un cambio en el nivel de simultaneidad.|  
   
@@ -98,13 +96,13 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Recopila datos en el grupo de subprocesos.|  
   
@@ -130,13 +128,13 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Se crea un subproceso de E/S en el grupo de subprocesos.|  
   
@@ -144,20 +142,20 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
   
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S, incluido el subproceso recién creado.|  
+|cuenta|win:UInt64|Número de subprocesos de E/S, incluido el subproceso recién creado.|  
 |NumRetired|win:UInt64|Número de subprocesos de trabajo retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Un subproceso de E/S se convierte en un candidato para la retirada.|  
   
@@ -165,20 +163,20 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
   
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
+|cuenta|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|La retirada de un subproceso de E/S se anula debido a que llega una E/S dentro de un período de espera y después de que el subproceso se convierte en un candidato para la retirada.|  
   
@@ -186,20 +184,20 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
   
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S en el grupo de subprocesos, incluido este.|  
+|cuenta|win:UInt64|Número de subprocesos de E/S en el grupo de subprocesos, incluido este.|  
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Se crea un subproceso de E/S en el grupo de subprocesos.|  
   
@@ -207,7 +205,7 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
   
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
+|cuenta|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   

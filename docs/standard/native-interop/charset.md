@@ -1,15 +1,13 @@
 ---
 title: 'Juegos de caracteres y serialización: .NET'
 description: Obtenga información acerca cómo distintos valores de CharSet pueden cambiar la forma en que .NET serializa los datos al código nativo.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: a29d53f8e422da1a78e131110972d83987c5464a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 4be4bd5a968eb5c0d6959a0f378ee1223ed906ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337920"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706392"
 ---
 # <a name="charsets-and-marshaling"></a>Juegos de caracteres y serialización
 

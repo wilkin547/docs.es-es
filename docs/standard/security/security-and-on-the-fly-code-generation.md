@@ -8,14 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860547"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705891"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Seguridad y generación de código inmediata
 Algunas bibliotecas funcionan generando código y ejecutándolo para realizar algunas operaciones para el llamador. El problema fundamental es generar código en nombre de código de menor confianza y ejecutarlo con una confianza superior. El problema empeora cuando el llamador puede influir en la generación de código, por lo que debe asegurarse de generar solo código que considere seguro.  

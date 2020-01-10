@@ -3,14 +3,12 @@ title: Convertir tipos de .NET Framework en cadenas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 98ebc9248b0585295adf12e04dece0fef654c2e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a63e0175f6660967eb4aa678c6731d353e44e2d5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583134"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711082"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Convertir tipos de .NET Framework en cadenas
 Si desea convertir un tipo de .NET Framework en una cadena, utilice el método **ToString**. El método **ToString** devuelve una representación de cadena del tipo que se le pasa. En la tabla siguiente se enumeran los tipos de .NET Framework que devuelven una cadena en un formato que se asigna a las especificaciones de los esquemas XML (XSD).  

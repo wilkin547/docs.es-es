@@ -3,14 +3,12 @@ title: Resultados de XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924969"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710497"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Resultados de XslTransform
 Como las hojas de estilos pueden determinar el formato del resultado utilizando una instrucción `<xsl:output>` con el atributo `method`, en la tabla siguiente se describe cuál es el formato del resultado cuando se utiliza el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> para escribir el resultado, y el formato del resultado se declara como <xref:System.IO.Stream> o <xref:System.IO.TextWriter>.  
@@ -24,10 +22,10 @@ Como las hojas de estilos pueden determinar el formato del resultado utilizando 
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
-|method="text"|Texto|  
+|method="text"|Text|  
   
 > [!NOTE]
-> Nota: La instrucción `<xsl:output>` se ignora cuando el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
+> Nota: la instrucción `<xsl:output>` se ignora cuando el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
   
  Los siguientes atributos son compatibles cuando el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.IO.Stream> o <xref:System.IO.TextWriter>:  
   
@@ -35,7 +33,7 @@ Como las hojas de estilos pueden determinar el formato del resultado utilizando 
   
 - omit-xml-declaration  
   
-- independiente  
+- standalone  
   
 - doctype-public  
   

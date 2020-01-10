@@ -3,14 +3,12 @@ title: Copia de nodos existentes de un documento a otro
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e08c86ebdd71746520085844de5743692e84640e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965923"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711030"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copia de nodos existentes de un documento a otro
 El método **ImportNode** es el mecanismo por el que un nodo o todo el subárbol de nodos se copia de una clase **XmlDocument** a otra. El nodo que devuelve la llamada es una copia del nodo del documento de origen, incluidos los valores de atributo, el nombre del nodo, el tipo de nodo y todos los atributos relacionados con el espacio de nombres como el prefijo, el nombre local y el identificador de recursos uniformes (URI) del espacio de nombres. El documento de origen no cambia. Una vez importado el nodo, todavía tiene que agregarlo al árbol utilizando uno de los métodos usados para insertar nodos.  
@@ -28,7 +26,7 @@ El método **ImportNode** es el mecanismo por el que un nodo o todo el subárbol
 |XmlComment|Copia el nodo, junto con sus datos.|Copia el nodo, junto con sus datos.|  
 |XmlDocumentFragment|Los descendientes del nodo de origen se importan de forma recursiva y los nodos resultantes se reensamblan para crear el subárbol correspondiente.|Se crea una clase **XmlDocumentFragment** vacía.|  
 |XmlDocumentType|Copia el nodo, junto con sus datos.*|Copia el nodo, junto con sus datos.*|  
-|XmlElement|Los descendientes del elemento de origen se importan de forma recursiva y los nodos resultantes se reensamblan para crear el subárbol correspondiente. **Nota:**  Los atributos predeterminados no se copian. Si el documento que se va a importar define atributos predeterminados para este nombre de elemento, dichos atributos se asignan.|Los nodos del atributo especificado del elemento de origen se importan y los nodos **XmlAttribute** se adjuntan al nuevo elemento. Los nodos descendientes no se copian. **Nota:**  Los atributos predeterminados no se copian. Si el documento que se va a importar define atributos predeterminados para este nombre de elemento, dichos atributos se asignan.|  
+|XmlElement|Los descendientes del elemento de origen se importan de forma recursiva y los nodos resultantes se reensamblan para crear el subárbol correspondiente. **Nota:** Los atributos predeterminados no se copian. Si el documento que se va a importar define atributos predeterminados para este nombre de elemento, dichos atributos se asignan.|Los nodos del atributo especificado del elemento de origen se importan y los nodos **XmlAttribute** se adjuntan al nuevo elemento. Los nodos descendientes no se copian. **Nota:** Los atributos predeterminados no se copian. Si el documento que se va a importar define atributos predeterminados para este nombre de elemento, dichos atributos se asignan.|  
 |XmlEntityReference|Como los documentos de origen y de destino podrían tener definidas las entidades de forma diferente, este método solo copia el nodo **XmlEntityReference**. El texto de sustitución no se incluye. Si el documento de destino tiene definida la entidad, se asigna su valor.|Como los documentos de origen y de destino podrían tener definidas las entidades de forma diferente, este método solo copia el nodo **XmlEntityReference**. El texto de sustitución no se incluye. Si el documento de destino tiene definida la entidad, se asigna su valor.|  
 |XmlProcessingInstruction|Copia el valor de destino y de datos del nodo importado.|Copia el valor de destino y de datos del nodo importado.|  
 |XmlText|Copia el nodo, junto con sus datos.|Copia el nodo, junto con sus datos.|  
