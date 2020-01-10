@@ -1,15 +1,13 @@
 ---
 title: Guía de la biblioteca .NET de código abierto
 description: Procedimientos recomendados para desarrolladores a la hora de crear bibliotecas .NET de alta calidad
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928959"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706457"
 ---
 # <a name="open-source-library-guidance"></a>Guía de la biblioteca de código abierto
 
@@ -42,11 +40,11 @@ Por otro lado, las recomendaciones de tipo **Es recomendable** generalmente debe
 
 Las recomendaciones de tipo **Evite** mencionan prácticas que, en general, no son convenientes, aunque a veces tiene sentido no seguirlas:
 
-**❌ EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
+**❌EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
 
 Y, por último, las recomendaciones de tipo **No está permitido** indican qué no se puede hacer casi nunca:
 
-**❌ NO ESTÁ PERMITIDO** publicar versiones de una biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
+**❌ NO** publique versiones de la biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Siguiente](get-started.md)

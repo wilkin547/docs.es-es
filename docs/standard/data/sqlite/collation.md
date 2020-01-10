@@ -2,12 +2,12 @@
 title: Collation
 ms.date: 12/13/2019
 description: Obtenga información sobre cómo crear una secuencia de intercalación personalizada.
-ms.openlocfilehash: 0942ad4523a149ad74321cbe0f63021f53303579
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9cc574a75c8f5347dd9bb44e36af72e50afa57b4
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450289"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777384"
 ---
 # <a name="collation"></a>Collation
 
@@ -21,7 +21,7 @@ SQLite usa las secuencias de intercalación cuando se comparan valores de texto 
 
 ## <a name="custom-collation"></a>Intercalación personalizada
 
-También puede definir sus propias secuencias de intercalación o invalidar las creadas mediante <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. En el ejemplo siguiente se muestra cómo invalidar la intercalación nocase para admitir caracteres Unicode. El [código de ejemplo completo](https://github.com/dotnet/samples/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) está disponible en github.
+También puede definir sus propias secuencias de intercalación o invalidar las creadas mediante <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. En el ejemplo siguiente se muestra cómo invalidar la intercalación nocase para admitir caracteres Unicode. El [código de ejemplo completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) está disponible en github.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

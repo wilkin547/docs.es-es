@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802321"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740411"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -841,7 +841,7 @@ End Class
 
 A continuación, puede crear un archivo de recursos DataAnnotation.Localization.fr.resx cuya clave sea la cadena del mensaje de error y cuyo valor sea el mensaje de error localizado. El archivo debe encontrarse en la carpeta `App.LocalResources`. Por ejemplo, a continuación se muestra la clave y su valor en un mensaje de error localizado en idioma francés (fr):
 
-| Name                                 | Valor                                     |
+| NOMBRE                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La clasificación debe estar entre 1 y 10. | La note doit être comprise entre 1 et 10. |
 
@@ -955,7 +955,7 @@ End Function
 
 Para solucionarlo en .NET Framework 4.6.2, se han agregado los tres métodos siguientes a la clase base <xref:System.Security.Cryptography.ECDiffieHellman> para manifestar con mayor claridad estas rutinas KDF y sus entradas:
 
-|Método ECDiffieHellman|DESCRIPCIÓN|
+|Método ECDiffieHellman|Descripción|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva el material de clave mediante la fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> donde *x* es el resultado calculado del algoritmo de Diffie-Hellman de curva elíptica.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva el material de clave mediante la fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> donde *x* es el resultado calculado del algoritmo de Diffie-Hellman de curva elíptica.|
@@ -1743,7 +1743,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Compatibilidad para codificaciones de páginas de códigos**
 
-  .NET Core admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad con codificaciones de páginas de códigos disponibles en .NET Framework pero que no se admiten en .NET Core mediante el registro de las codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para más información, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+  .NET Core admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad con codificaciones de páginas de códigos disponibles en .NET Framework pero que no se admiten en .NET Core mediante el registro de las codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1755,7 +1755,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Paquetes de .NET Framework de código abierto**
 
-  Los paquetes de .NET Core como las colecciones inmutables, las [API de SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) y las API de red, como las que se encuentran en el espacio de nombres <xref:System.Net.Http>, ahora están disponibles como paquetes de código abierto en [GitHub](https://github.com/). Para tener acceso al código, vea [CoreFx en GitHub](https://github.com/dotnet/corefx). Para obtener más información y saber cómo contribuir a estos paquetes, vea [.NET Core y código abierto](../get-started/net-core-and-open-source.md) y la [página principal de .NET en GitHub](https://github.com/dotnet/home).
+  Los paquetes de .NET Core como las colecciones inmutables, las [API de SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) y las API de red, como las que se encuentran en el espacio de nombres <xref:System.Net.Http>, ahora están disponibles como paquetes de código abierto en [GitHub](https://github.com/). Para acceder al código, consulte [.NET en GitHub](https://github.com/dotnet/runtime). Para obtener más información y saber cómo contribuir a estos paquetes, vea [.NET Core y código abierto](../get-started/net-core-and-open-source.md) y la [página principal de .NET en GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 

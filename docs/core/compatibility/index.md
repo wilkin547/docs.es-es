@@ -2,12 +2,12 @@
 title: 'Tipos de cambios importantes: .NET Core'
 description: Obtenga más información sobre los esfuerzos de .NET Core por mantener la compatibilidad entre versiones de .NET para los desarrolladores, así como sobre los tipos de cambios que se consideran importantes.
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567717"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740897"
 ---
 # <a name="changes-that-affect-compatibility"></a>Cambios que afectan a la compatibilidad
 
@@ -19,7 +19,7 @@ A lo largo de su historia, .NET ha intentado mantener un alto nivel de compatibi
 
 Junto con la compatibilidad entre las implementaciones de .NET, los desarrolladores esperan un alto nivel de compatibilidad entre las versiones .NET Core. En particular, el código escrito para una versión anterior de .NET Core debería funcionar sin problemas en una versión posterior de .NET Core. De hecho, muchos desarrolladores esperan que las nuevas API que se encuentran en las versiones más recientes de .NET Core también sean compatibles con las versiones preliminares en las que se introdujeron dichas API.
 
-En este artículo se describen las categorías de cambios de compatibilidad (o cambios importantes) y la forma en que el equipo de .NET evalúa los cambios en cada una de estas categorías. Entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios en el repositorio de GitHub [dotnet/corefx](https://github.com/dotnet/corefx) que tienen por objetivo modificar el comportamiento de las API existentes.
+En este artículo se describen las categorías de cambios de compatibilidad (o cambios importantes) y la forma en que el equipo de .NET evalúa los cambios en cada una de estas categorías. Entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios en el repositorio de GitHub [dotnet/runtime](https://github.com/dotnet/runtime) que tienen por objetivo modificar el comportamiento de las API existentes.
 
 > [!NOTE]
 > Para una definición de las categorías de compatibilidad, como la compatibilidad binaria y la compatibilidad con versiones anteriores, consulte [Breaking change categories](categories.md) (Categorías de cambios importantes).
@@ -296,7 +296,7 @@ Los cambios en esta categoría modifican el área expuesta pública de un tipo. 
 
 - **❌ Cambio de una API sincrónica en asincrónica (y viceversa)**
 
-## <a name="code-changes"></a>Cambios de código
+## <a name="code-changes"></a>Cambios en el código
 
 - **✔️ Adición de [params](../../csharp/language-reference/keywords/params.md) a un parámetro**
 

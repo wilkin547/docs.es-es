@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975680"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716461"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 
@@ -160,12 +158,12 @@ Las cuestiones de seguridad pueden afectar también al modo en que se implementa
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](how-the-runtime-locates-assemblies.md)|Describe la forma en que Common Language Runtime determina el ensamblado que se va a utilizar para llevar a cabo una solicitud de enlace.|
 |[Procedimientos recomendados para cargar ensamblados](best-practices-for-assembly-loading.md)|Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.|
 |[Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](reducing-system-restarts.md)|Describe el Administrador de reinicio, que evita, en la medida de lo posible, los reinicios del equipo y explica cómo pueden aprovecharlo las aplicaciones que instalan .NET Framework.|
-|[Guía de implementación para administradores](guide-for-administrators.md)|Explica cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red utilizando System Center Configuration Manager (SCCM).|
+|[Guía de implementación para administradores](guide-for-administrators.md)|Explica cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red con Microsoft Endpoint Configuration Manager.|
 |[Guía de implementación para desarrolladores](deployment-guide-for-developers.md)|Explica cómo los desarrolladores de software pueden instalar .NET Framework en los equipos de los usuarios con sus aplicaciones.|
 |[Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components)|Describe las opciones de implementación de Visual Studio e incluye instrucciones para publicar una aplicación mediante las tecnologías ClickOnce y Windows Installer.|
 |[Publicar aplicaciones ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Describe cómo empaquetar una aplicación de Windows Forms e implementarla con ClickOnce en los equipos cliente en una red.|

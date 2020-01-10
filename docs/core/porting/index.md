@@ -3,17 +3,16 @@ title: Portabilidad de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3dbd4a1f608d71f28fa507da2e11fc41226664c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714338"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>Información general sobre el proceso de portabilidad de .NET Framework a .NET Core
 
-Es posible que tenga código que se ejecuta actualmente en .NET Framework que le interesa portar a .NET Core. Este artículo ofrece:
+Es posible que tenga código que se ejecuta actualmente en .NET Framework que le interesa portar a .NET Core. En este artículo se proporciona:
 
 * Una introducción al proceso de portabilidad.
 * Una lista de las herramientas que puede encontrar de utilidad al portar el código a .NET Core.

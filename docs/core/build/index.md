@@ -3,13 +3,12 @@ title: Compilación de .NET Core a partir del código fuente
 description: Obtenga información sobre cómo compilar .NET Core y la CLI de .NET Core a partir del código fuente.
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105396"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740918"
 ---
 # <a name="build-net-core-from-source"></a>Compilación de .NET Core a partir del código fuente
 
@@ -18,7 +17,7 @@ En este artículo, se proporcionan instrucciones para los desarrolladores que qu
 
 ## <a name="build-the-clr-from-source"></a>Compilación de CLR a partir del código fuente
 
-El código fuente de CLR de .NET Core puede encontrarse en el repositorio [dotnet/coreclr](https://github.com/dotnet/coreclr/) en GitHub.
+El código fuente de CLR de .NET Core puede encontrarse en el repositorio [dotnet/runtime](https://github.com/dotnet/runtime/) en GitHub.
 
 Actualmente, la compilación depende de los siguientes requisitos previos:
 
@@ -27,7 +26,7 @@ Actualmente, la compilación depende de los siguientes requisitos previos:
 - [Python](https://www.python.org/)
 - un compilador de C++.
 
-Para compilar CLR después de instalar estos requisitos previos, invoque el script de compilación (`build.cmd` en Windows, o `build.sh` en Linux y macOS) en la base del repositorio [dotnet/coreclr](https://github.com/dotnet/coreclr/).
+Para compilar CLR después de instalar estos requisitos previos, invoque el script de compilación (`build.cmd` en Windows, o `build.sh` en Linux y macOS) en la base del repositorio [dotnet/runtime](https://github.com/dotnet/runtime/).
 
 La instalación de los componentes varía según el sistema operativo (SO). Consulte las instrucciones de compilación de su sistema operativo específico:
 
@@ -43,7 +42,7 @@ Debe estar en la plataforma concreta para compilar esa plataforma.
 La compilación tiene dos `buildTypes` principales:
 
 - Debug (valor predeterminado): compila el tiempo de ejecución con las optimizaciones mínimas y las comprobaciones (aserciones) en tiempo de ejecución adicionales. Aunque esta reducción en el nivel de optimización y las comprobaciones adicionales ralentizan la ejecución en tiempo de ejecución, resultan útiles para realizar la depuración. Este es el valor recomendado para los entornos de desarrollo y pruebas.
-- Release: compila el tiempo de ejecución con las optimizaciones completas y sin las comprobaciones en tiempo de ejecución adicionales. Aunque el rendimiento en tiempo de ejecución será mucho más rápido, el tiempo de ejecución puede tardar un poco más en compilarse y puede resultar complicado realizar la depuración. Pase `release` al script de compilación para seleccionar este tipo de compilación.
+- Release: compila el tiempo de ejecución con las optimizaciones completas y sin las comprobaciones en tiempo de ejecución adicionales. Aunque el rendimiento en tiempo de ejecución será mucho más rápido, puede tardar un poco más en compilarse y puede resultar complicado realizar la depuración. Pase `release` al script de compilación para seleccionar este tipo de compilación.
 
 Además, de forma predeterminada, la compilación no solo crea los archivos ejecutables en tiempo de ejecución, sino que también compila todas las pruebas.
 Hay bastantes pruebas, lo que exige una cantidad considerable de tiempo que no es necesario si tan solo se quiere experimentar con los cambios.
@@ -72,13 +71,13 @@ Aunque el resultado de la compilación "sin procesar" a veces resulta útil, nor
 Hay dos técnicas básicas para usar el nuevo tiempo de ejecución:
 
  1. **Use dotnet.exe y NuGet para crear una aplicación**.
-    Vea [Usar la compilación](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) para obtener instrucciones sobre cómo crear un programa que use el nuevo tiempo de ejecución mediante paquetes de NuGet que acaba de crear y la interfaz de la línea de comandos (CLI) de "dotnet". Esta técnica es la forma probable en que los desarrolladores que no usan el tiempo de ejecución van a consumir el nuevo tiempo de ejecución.
+    Vea [Usar la compilación](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md) para obtener instrucciones sobre cómo crear un programa que use el nuevo tiempo de ejecución mediante paquetes de NuGet que acaba de crear y la interfaz de la línea de comandos (CLI) de "dotnet". Esta técnica es la forma probable en que los desarrolladores que no usan el tiempo de ejecución van a consumir el nuevo tiempo de ejecución.
 
  2. **Use corerun.exe para ejecutar una aplicación con archivos DLL sin empaquetar**.
     Este repositorio también define un host simple denominado corerun.exe que NO tiene ninguna dependencia en NuGet.
     Debe indicar al host de dónde obtiene los archivos DLL necesarios que usa y tiene que recopilarlos manualmente.
-    Esta técnica se usa en todas las pruebas del repositorio [dotnet/coreclr](https://github.com/dotnet/coreclr), y es útil para el bucle local rápido "editar-compilar-depurar", como en el caso de las pruebas unitarias preliminares.
-    Vea [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) (Ejecutar aplicaciones de .NET Core con CoreRun.exe) para obtener más información sobre el uso de esta técnica.
+    Esta técnica se usa en todas las pruebas del repositorio [dotnet/runtime](https://github.com/dotnet/runtime), y es útil para el bucle local rápido "editar-compilar-depurar", como en el caso de las pruebas unitarias preliminares.
+    Vea [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md) (Ejecutar aplicaciones de .NET Core con CoreRun.exe) para obtener más información sobre el uso de esta técnica.
 
 ## <a name="build-the-cli-from-source"></a>Compilar la CLI a partir del código fuente
 
@@ -101,6 +100,6 @@ Use el ejecutable `dotnet` de *artifacts/{os}-{arch}/stage2* para probar la CLI 
 
 ## <a name="see-also"></a>Vea también
 
-- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md) [Common Language Runtime de .NET Core (CoreCLR)]
+- [Entorno de ejecución .NET](https://github.com/dotnet/runtime/blob/master/README.md)
 - [.NET Core CLI Developer Guide](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md) (Guía para desarrolladores de la CLI de .NET Core)
 - [Empaquetado de distribución de .NET Core](./distribution-packaging.md)
