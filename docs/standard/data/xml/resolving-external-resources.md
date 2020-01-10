@@ -3,14 +3,12 @@ title: Resolver recursos externos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918206"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710276"
 ---
 # <a name="resolving-external-resources"></a>Resolver recursos externos
 La clase **XmlDocument** utiliza la propiedad **XmlResolver** de **XmlDocument** para localizar recursos que no están alineados en los datos XML, como las definiciones de tipo de documento (DTD), entidades y esquemas externos. Estos elementos se pueden localizar en una red o en una unidad local, y se identifican mediante un identificador de recursos uniforme (URI). Esto permite a **XmlDocument** resolver los nodos **EntityReference** presentes en el documento y validar el documento de acuerdo con la DTD o el esquema externos.  
@@ -43,7 +41,7 @@ La clase **XmlDocument** utiliza la propiedad **XmlResolver** de **XmlDocument**
   
 |Propiedad XmlResolver|Función|Notas|  
 |--------------------------|--------------|-----------|  
-|La clase **XmlResolver** que utiliza el objeto **XmlDocument** es la misma clase que la que utiliza **XmlReader**.|El objeto **XmlDocument** utiliza la clase **XmlResolver** asignada a **XmlReader**.<br /><br /> No se puede establecer la propiedad **XmlDocument.Resolver**, independientemente del nivel de confianza de **XmlDocument** porque obtiene una clase **XmlResolver** de **XmlReader**. No se puede intentar invalidar la configuración **XmlReaders** **XmlResolver** estableciendo la propiedad **XmlResolver** de **XmlDocument**.|La clase **XmlReader** puede ser **XmlTextReader**, validando <xref:System.Xml.XmlReader>, o un lector de escritura personalizada. Si el sistema de lectura utilizado admite la resolución de entidades, las entidades externas se resuelven. Si el sistema de lectura que se ha pasado no admite las referencias de entidad, entonces no se resuelven.|  
+|La clase **XmlResolver** que utiliza el objeto **XmlDocument** es la misma clase que la que utiliza **XmlReader**.|El objeto **XmlDocument** utiliza la clase **XmlResolver** asignada a **XmlReader**.<br /><br /> No se puede establecer la propiedad **XmlDocument.Resolver**, independientemente del nivel de confianza de **XmlDocument** porque obtiene una clase **XmlResolver** de **XmlReader**. No se puede intentar invalidar la configuración de **XmlResolver** de XmlReader estableciendo la propiedad **XmlResolver** de **XmlDocument**.|La clase **XmlReader** puede ser **XmlTextReader**, validando <xref:System.Xml.XmlReader>, o un lector de escritura personalizada. Si el sistema de lectura utilizado admite la resolución de entidades, las entidades externas se resuelven. Si el sistema de lectura que se ha pasado no admite las referencias de entidad, entonces no se resuelven.|  
   
  El ajuste de XmlResolver para contener las credenciales correctas permite el acceso a los recursos externos.  
   

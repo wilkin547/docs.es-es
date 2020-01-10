@@ -3,14 +3,12 @@ title: Carga de datos desde un sistema de lectura
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 90a66e04bda4fb2ee4216e8aabd631afb2f28dd0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647870"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710718"
 ---
 # <a name="load-data-from-a-reader"></a>Carga de datos desde un sistema de lectura
 Si se carga un documento XML utilizando el método <xref:System.Xml.XmlDocument.Load%2A> y un parámetro de <xref:System.Xml.XmlReader>, existen diferencias en el comportamiento que se produce cuando se compara con el comportamiento derivado de la carga de datos desde otros formatos. Si el sistema de lectura está en su estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consume todo el contenido del sistema de lectura y compila el Modelo de objetos de documento (DOM) XML a partir de todos los datos del sistema de lectura.  

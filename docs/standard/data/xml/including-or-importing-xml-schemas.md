@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343576"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710783"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusión o importación de esquemas XML
 Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`. Estos elementos de esquema hacen referencia a otros esquemas XML que se pueden utilizar para complementar la estructura del esquema que los incluye o importa. Las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine> se asignan estos elementos en la API del modelo de objetos de esquema (SOM).  

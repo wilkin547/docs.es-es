@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974913"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715994"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
@@ -26,7 +24,7 @@ Todos los eventos de método se generan mediante la palabra clave `JITKeyword` (
 
 En la tabla siguiente se muestra la palabra clave y el nivel. Para obtener más información, vea [palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)|Informativo (4)|
 |`NGenKeyword` (0x20)|Informativo (4)|
@@ -35,7 +33,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel. Para obtener más 
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Descripción|
+|Event|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Se genera cuando un método se carga just-in-time (carga JIT) o se carga una imagen NGEN. Los métodos dinámicos y genéricos no usan esta versión para cargas de método. Los asistentes de JIT nunca usan esta versión.|
 |`MethodUnLoad_V1`|137|Se genera cuando se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos nunca usan esta versión para descargas de método.|
@@ -60,7 +58,7 @@ Además, estos eventos solo se generan con el proveedor de detención y signific
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800)|Informativo (4)|
 |`JitRundownKeyword` (0x10)|Informativo (4)|
@@ -68,7 +66,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Descripción|
+|Event|Id. de evento|Descripción|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Se envía antes del inicio de la enumeración durante un informe detallado de inicio.|
 |`DCStartComplete_V1`|145|Se envía al final de la enumeración durante un informe detallado de inicio.|
@@ -85,7 +83,7 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)|Detallado (5)|
 |`NGenKeyword` (0x20)|Detallado (5)|
@@ -94,7 +92,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Descripción|
+|Event|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Se genera cuando la carga de un método es JIT o se carga una imagen NGEN. Los métodos dinámicos y genéricos siempre usan esta versión para cargas de método. Los asistentes de JIT siempre usan esta versión.|
 |`MethodUnLoadVerbose_V1`|144|Se genera cuando se destruye un método dinámico, se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos siempre usan esta versión para descargas de método.|
@@ -120,7 +118,7 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)|Detallado (5)|
 |`NGenKeyword` (0x20)|Detallado (5)|
@@ -129,7 +127,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Descripción|
+|Event|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Se genera cuando se está realizando la compilación JIT de un método.|
 

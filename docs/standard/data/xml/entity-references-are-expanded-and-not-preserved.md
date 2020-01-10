@@ -3,14 +3,12 @@ title: Se expanden las referencias de entidad pero no se preservan
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998427"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710939"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Se expanden las referencias de entidad pero no se preservan
 Cuando se expande la referencia de entidad y se reemplaza por el texto que representa, no se crea el nodo **XmlEntityReference**. En su lugar, se analiza la declaración de entidad y los nodos creados a partir del contenido de la declaración se copian en lugar del nodo **XmlEntityReference**. Por tanto, en el ejemplo de `&publisher;`, `&publisher;` no se guarda, sino que se crea un nodo **XmlText**.  

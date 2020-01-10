@@ -2,18 +2,18 @@
 title: Novedades de F# 4,5- F# guía
 description: Obtenga información general sobre las nuevas características disponibles en F# 4,5.
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644161"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715689"
 ---
 # <a name="whats-new-in-f-45"></a>Novedades de F# 4,5
 
 F#4,5 agrega varias mejoras en el F# lenguaje. Muchas de estas características se agregaron juntas para que pueda escribir código eficaz en F# y, al mismo tiempo, garantizar la seguridad de este código. Esto significa agregar algunos conceptos al lenguaje y una cantidad significativa de análisis del compilador cuando se usan estas construcciones.
 
-## <a name="get-started"></a>Introducción
+## <a name="get-started"></a>Primeros pasos
 
 F#4,5 está disponible en todas las distribuciones de .NET Core y las herramientas de Visual Studio. Comience a usar para obtener más información. [ F# ](../get-started/index.md)
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Esto no le permite declarar un miembro mutable en el struct y emite metadatos que permiten F# y C# lo tratan como de solo lectura cuando se consumen de un ensamblado. Para obtener más información, vea [Structs de solo lectura](../language-reference/structures.md#readonly-structs) .
+Esto no le permite declarar un miembro mutable en el struct y emite metadatos que permiten F# y C# lo tratan como de solo lectura cuando se consumen de un ensamblado. Para obtener más información, vea [Structs de solo lectura](../language-reference/structures.md#readonly-structs).
 
 ## <a name="void-pointers"></a>Punteros void
 
@@ -88,7 +88,7 @@ El tipo de `voidptr` se agrega F# a 4,5, al igual que las siguientes funciones:
 
 Esto resulta útil al interoperar con un componente nativo que hace uso de punteros void.
 
-## <a name="the-match-keyword"></a>Palabra clave `match!`
+## <a name="the-match-keyword"></a>La palabra clave `match!`.
 
 La palabra clave `match!` mejora la coincidencia de patrones cuando se encuentra dentro de una expresión de cálculo:
 

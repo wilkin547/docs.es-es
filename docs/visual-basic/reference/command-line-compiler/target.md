@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351717"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716686"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
 
@@ -23,13 +23,13 @@ Especifica el formato de los resultados del compilador.
 -target:{exe | library | module | winexe | appcontainerexe | winmdobj}
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 En la tabla siguiente se resume el efecto de la opción `-target`.
 
 |**Opción**|**Behavior**|
 |----------------|------------------|
-|`-target:exe`|Hace que el compilador cree una aplicación de consola ejecutable.<br /><br /> Esta es la opción predeterminada cuando no se especifica ninguna opción de `-target`. El archivo ejecutable se crea con una extensión. exe.<br /><br /> A menos que se especifique lo contrario con la opción `/out`, el nombre del archivo de salida toma el nombre del archivo de entrada que contiene el procedimiento `Sub Main`.<br /><br /> Solo se requiere un procedimiento `Sub Main` en los archivos de código fuente que se compilan en un archivo. exe. Use la opción del compilador `-main` para especificar qué clase contiene el procedimiento de `Sub Main`.|
+|`-target:exe`|Hace que el compilador cree una aplicación de consola ejecutable.<br /><br /> Esta es la opción predeterminada cuando no se especifica ninguna opción de `-target`. El archivo ejecutable se crea con una extensión. exe.<br /><br /> A menos que se especifique lo contrario con la opción `-out`, el nombre del archivo de salida toma el nombre del archivo de entrada que contiene el procedimiento `Sub Main`.<br /><br /> Solo se requiere un procedimiento `Sub Main` en los archivos de código fuente que se compilan en un archivo. exe. Use la opción del compilador `-main` para especificar qué clase contiene el procedimiento de `Sub Main`.|
 |`-target:library`|Hace que el compilador cree una biblioteca de vínculos dinámicos (DLL).<br /><br /> El archivo de biblioteca de vínculos dinámicos se crea con una extensión. dll.<br /><br /> A menos que se especifique lo contrario con la opción `-out`, el nombre del archivo de salida toma el nombre del primer archivo de entrada.<br /><br /> Al compilar un archivo DLL, no es necesario un procedimiento `Sub Main`.|
 |`-target:module`|Hace que el compilador genere un módulo que se puede Agregar a un ensamblado.<br /><br /> El archivo de salida se crea con una extensión de. netmodule.<br /><br /> .NET Common Language Runtime no puede cargar un archivo que no tiene un ensamblado. Sin embargo, puede incorporar este tipo de archivo en el manifiesto del ensamblado de un ensamblado mediante `-reference`.<br /><br /> Cuando el código de un módulo hace referencia a tipos internos en otro módulo, ambos módulos deben incorporarse en un manifiesto de ensamblado mediante `-reference`.<br /><br /> La opción [-AddModule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa los metadatos de un módulo.|
 |`-target:winexe`|Hace que el compilador cree una aplicación ejecutable basada en Windows.<br /><br /> El archivo ejecutable se crea con una extensión. exe. Una aplicación basada en Windows es aquella que proporciona una interfaz de usuario de la biblioteca de clases de .NET Framework o con las API de Windows.<br /><br /> A menos que se especifique lo contrario con la opción `-out`, el nombre del archivo de salida toma el nombre del archivo de entrada que contiene el procedimiento `Sub Main`.<br /><br /> Solo se requiere un procedimiento `Sub Main` en los archivos de código fuente que se compilan en un archivo. exe. En los casos en los que el código tenga más de una clase que tenga un procedimiento `Sub Main`, use la opción del compilador `-main` para especificar qué clase contiene el procedimiento `Sub Main`|

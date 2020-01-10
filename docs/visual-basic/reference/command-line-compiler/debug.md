@@ -1,5 +1,5 @@
 ---
-title: /debug
+title: -debug
 ms.date: 03/10/2018
 helpviewer_keywords:
 - debug compiler switches
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 3beb9ad3829c2f55120a9136e6e54185551bd20b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344775"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716774"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
@@ -32,16 +32,16 @@ o
 
 ## <a name="arguments"></a>Argumentos
 
-|Término|Definición|
+|Término|de esquema JSON|
 |---|---|
-|`+` &#124; `-`|Opcional. Al especificar `+` o `/debug`, el compilador genera información de depuración y la coloca en un archivo. pdb. Especificar `-` tiene el mismo efecto que no especificar `/debug`.|
-|`full` &#124; `pdbonly`|Opcional. Especifica el tipo de información de depuración generado por el compilador. Si no especifica `/debug:pdbonly`, el valor predeterminado es `full`, lo que le permite asociar un depurador al programa en ejecución. El argumento `pdbonly` permite la depuración del código fuente cuando el programa se inicia en el depurador, pero solo muestra código de lenguaje de ensamblado cuando el programa en ejecución está asociado al depurador.|
+|`+` &#124; `-`|Opcional. Al especificar `+` o `-debug`, el compilador genera información de depuración y la coloca en un archivo. pdb. Especificar `-` tiene el mismo efecto que no especificar `-debug`.|
+|`full` &#124; `pdbonly`|Opcional. Especifica el tipo de información de depuración generado por el compilador. Si no especifica `-debug:pdbonly`, el valor predeterminado es `full`, lo que le permite asociar un depurador al programa en ejecución. El argumento `pdbonly` permite la depuración del código fuente cuando el programa se inicia en el depurador, pero solo muestra código de lenguaje de ensamblado cuando el programa en ejecución está asociado al depurador.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Use esta opción para crear versiones de depuración. Si no especifica `/debug`, `/debug+`o `/debug:full`, no podrá depurar el archivo de salida del programa.
+Use esta opción para crear versiones de depuración. Si no especifica `-debug`, `-debug+`o `-debug:full`, no podrá depurar el archivo de salida del programa.
 
-De forma predeterminada, no se emite información de depuración (`/debug-`). Para emitir información de depuración, especifique `/debug` o `/debug+`.
+De forma predeterminada, no se emite información de depuración (`-debug-`). Para emitir información de depuración, especifique `-debug` o `-debug+`.
 
 Para obtener información sobre cómo configurar el rendimiento de depuración de una aplicación, consulte [Facilitar la depuración de una imagen](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 

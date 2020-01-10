@@ -1,21 +1,19 @@
 ---
-title: Procedimiento para realizar una transformación XSLT mediante un ensamblado
+title: Cómo realizar una transformación XSLT mediante un ensamblado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957143"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710835"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procedimiento para realizar una transformación XSLT mediante un ensamblado
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Cómo realizar una transformación XSLT mediante un ensamblado
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. Dicho ensamblado se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Para copiar los archivos XML y XSLT al ordenador  
@@ -173,7 +171,7 @@ Para vincular dinámicamente el ensamblado compilado, sustituya
 xslt.Load(typeof(Transform));  
 ```  
   
-with  
+con  
   
 ```csharp 
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  

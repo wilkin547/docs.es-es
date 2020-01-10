@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 91503ce0bffa1a9390432a51bff1ef10d80f563a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615348"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709782"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Espacios de nombres y consultas XPath
 Las consultas XPath distinguen los espacios de nombres de un documento XML y pueden utilizar prefijos de espacio de nombres para calificar nombres de atributos y elementos. Al calificar los nombres de atributos y elementos con un prefijo de espacio de nombres, se limitan los nodos que devuelve la consulta XPath a únicamente aquellos nodos que pertenecen a un espacio de nombres específico.  

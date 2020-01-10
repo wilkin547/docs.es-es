@@ -3,14 +3,12 @@ title: Reglas para deducir los tipos de nodo de esquema y estructura
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939642"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710250"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Reglas para deducir los tipos de nodo de esquema y estructura
 Este tema describe cómo el proceso de deducción del esquema traduce los tipos de nodo de un documento XML a una estructura de lenguaje de definición de esquema XML (XSD).  
@@ -44,7 +42,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>text</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root" type="xs:string" />`<br /><br /> `</xs:schema>`|  
   
@@ -53,7 +51,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<empty/>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="empty" />`<br /><br /> `</xs:schema>`|  
   
@@ -62,7 +60,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<empty attribute1="text"/>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="empty">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -71,7 +69,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">value</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:simpleContent>`<br /><br /> `<xs:extension base="xs:string">`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:extension>`<br /><br /> `</xs:simpleContent>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -83,7 +81,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>`<br /><br /> `<subElement/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:element name="subElement" />`<br /><br /> `</xs:sequence>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -95,7 +93,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -107,7 +105,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -119,7 +117,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-|XML|Schema|  
+|XML|Esquema|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -137,12 +135,12 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
 |Tipo de nodo|Conversión|  
 |---------------|-----------------|  
-|Instrucción de procesamiento|ignorado.|  
-|Comentario|ignorado.|  
+|Instrucción de procesamiento|Se omite.|  
+|Comentario|Se omite.|  
 |Referencia de entidad|La clase <xref:System.Xml.Schema.XmlSchemaInference> no controla las referencias de entidad. Si un documento XML contiene referencias de entidad, es necesario utilizar un lector que expanda las entidades. Por ejemplo, se puede pasar un <xref:System.Xml.XmlTextReader> con la <xref:System.Xml.XmlTextReader.EntityHandling%2A> propiedad establecida en <xref:System.Xml.EntityHandling.ExpandEntities> como parámetro. Si se encuentran referencias de entidad y el lector no expande entidades, se lanza una excepción.|  
 |CDATA|Cualquier sección `<![CDATA[ … ]]` en un documento XML será deducida como `xs:string`.|  
-|Tipo de documento|ignorado.|  
-|Espacios de nombres|ignorado.|  
+|Tipo de documento|Se omite.|  
+|Espacios de nombres de|Se omite.|  
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   

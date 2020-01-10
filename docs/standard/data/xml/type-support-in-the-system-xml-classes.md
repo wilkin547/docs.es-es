@@ -3,14 +3,12 @@ title: Compatibilidad de tipos en las clases System.Xml
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 954ff12ae1ac8b4d601c35fcd76ea35b2bb3acbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939448"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710107"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Compatibilidad de tipos en las clases System.Xml
 En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales para incluir características de compatibilidad de tipos. Las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.XPath.XPathNavigator> tienen características de compatibilidad de tipos, incluyendo la capacidad de realizar conversiones entre tipos de esquemas XML y tipos de Common Language Runtime (CLR).  
@@ -28,7 +26,7 @@ En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales
 > [!NOTE]
 > En la versión 1.0 de .NET Framework, se necesitaba la clase <xref:System.Xml.XmlConvert> para realizar la conversión entre esquemas XML y tipos CLR.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Asignación de tipos de datos XML a tipos CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
  Describe las asignaciones predeterminadas de tipos de datos XML en tipos CLR.  
   

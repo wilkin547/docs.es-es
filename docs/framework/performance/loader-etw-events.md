@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974587"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716025"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de cargador
 Estos eventos recopilan información relativa a la carga y descarga de dominios de aplicación, ensamblados y módulos.  
@@ -22,7 +20,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 ## <a name="application-domain-events"></a>Eventos de dominio de aplicación
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|evento|Nivel|  
+|Palabra clave para generar el evento|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` y `AppDomainUnLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informativo (4)|  
@@ -30,7 +28,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (registrado para todos los dominios de aplicación)|156|Se genera cuando se crea un dominio de aplicación durante un proceso.|  
 |`AppDomainUnLoad_V1`|157|Se genera cuando se destruye un dominio de aplicación durante un proceso.|  
@@ -50,7 +48,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 ## <a name="clr-loader-assembly-events"></a>Eventos de ensamblado de cargador CLR  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|evento|Nivel|  
+|Palabra clave para generar el evento|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` y `AssemblyUnload`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informativo (4)|  
@@ -58,7 +56,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Se genera cuando se carga un ensamblado.|  
 |`AssemblyUnload_V1`|155|Se genera cuando se descarga un ensamblado.|  
@@ -79,7 +77,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 ## <a name="module-events"></a>Eventos de módulo
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|evento|Nivel|  
+|Palabra clave para generar el evento|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` y `ModuleUnload_V2`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informativo (4)|  
@@ -88,7 +86,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Se genera cuando se carga un módulo durante la duración de un proceso.|  
 |`ModuleUnload_V2`|153|Se genera cuando se descarga un módulo durante la duración de un proceso.|  
@@ -113,7 +111,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |NativePdbAge|win:UInt32|Número de antigüedad escrito en la PDB de NGen que coincide con este módulo, en su caso. (Vea la sección Comentarios).|  
 |NativePdbBuildPath|win:UnicodeString|Ruta de acceso a la ubicación donde se creó la PDB de NGen que coincide con este módulo, en su caso. En algunos casos, puede tratarse simplemente de un nombre de archivo. (Vea la sección Comentarios).|  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Notas  
   
 - Los campos que tienen “Pdb” en sus nombres pueden ser usados por herramientas de generación de perfiles con el objetivo de buscar las PDB que coincidan con los módulos que se cargaron durante la sesión de generación de perfiles. Los valores de estos campos se corresponden a los datos escritos en las secciones IMAGE_DIRECTORY_ENTRY_DEBUG del módulo usadas normalmente en los depuradores para ayudar a localizar las PDB que coinciden con los módulos cargados.  
   
@@ -124,7 +122,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 ## <a name="clr-domain-module-events"></a>Eventos del módulo de dominio CLR
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|evento|Nivel|  
+|Palabra clave para generar el evento|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informativo (4)|  
@@ -132,7 +130,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Se genera cuando se carga un módulo para un dominio de aplicación.|  
 |`DomainModuleDCStart_V1`|151|Enumera los módulos cargados para un dominio de aplicación durante una detención de inicio y se registra para todos los dominios de aplicación.|  
@@ -154,7 +152,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 ## <a name="module-range-events"></a>Eventos de intervalo de módulo
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|evento|Nivel|  
+|Palabra clave para generar el evento|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Informativo (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informativo (4)|  
@@ -162,7 +160,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Descripción|  
+|Event|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Este evento está presente si una imagen cargada del generador de imágenes nativas (NGen) se ha optimizado con IBC y contiene información sobre las secciones activas de la imagen de NGen.|  
 |`ModuleRangeDCStart`|160|Un evento `ModuleRange` se desencadenó al principio de una detención.|  
@@ -180,7 +178,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |RangeSize1|win:UInt32|0 indica que los datos son incorrectos.|  
 |RangeBegin2|win:UnicodeString||  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Notas  
  Si una imagen de NGen cargada en un proceso de .NET Framework se optimiza con IBC, el evento `ModuleRange` que contiene los intervalos calientes en la imagen de NGen se registra junto con su `moduleID` y `ClrInstanceID`.  Si la imagen de NGen no está optimizada con IBC, este evento no se registra. Para determinar el nombre del módulo, el evento debe estar intercalado con los eventos ETW de carga de módulo.  
   
  El tamaño de carga para este evento es variable; el campo `Count` indica el número de desplazamientos de intervalo contenido en el evento.  Este evento debe estar intercalado con el evento `IStart` de Windows para determinar los intervalos reales. El evento de carga de imagen de Windows se registra siempre que se carga una imagen y contiene la dirección virtual de la imagen cargada.  

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975513"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716190"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palabras clave y niveles ETW de CLR
 El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y nivel. Las [Palabras clave ETW de CLR](#clr-etw-keywords) de evento permiten el filtrado de eventos por categoría; se usan en combinaciones para los proveedores de tiempo de ejecución y detención. Los [niveles de evento](#etw-event-levels) se identifican mediante marcas.  
@@ -36,7 +34,7 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 ### <a name="clr-etw-runtime-keywords"></a>Palabras clave de runtime de ETW de CLR  
  En la tabla siguiente se enumeran las palabras clave de runtime de ETW de CLR, sus valores y se explica para qué se usan.  
   
-|Nombre de la palabra clave de runtime|Valor|Finalidad|  
+|Nombre de la palabra clave de runtime|{2&gt;Value&lt;2}|Finalidad|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Habilita la recopilación de [eventos de recolección de elementos no utilizados](garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Habilita la recopilación de [eventos de cargador](loader-etw-events.md).|  
@@ -59,7 +57,7 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 ### <a name="clr-etw-rundown-keywords"></a>Palabras clave de detención de ETW de CLR  
  En la tabla siguiente se enumeran las palabras clave de detención de ETW de CLR, sus valores y se explica para qué se usan.  
   
-|Nombre de la palabra clave de detención|Valor|Finalidad|  
+|Nombre de la palabra clave de detención|{2&gt;Value&lt;2}|Finalidad|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Habilita la recopilación de eventos de cargador cuando se usa con `StartRundownKeyword` y `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Habilita la recopilación de eventos de método `DCStart` y `DCEnd` para métodos compilados JIT cuando se usa con `StartRundownKeyword` y `EndRundownKeyword`.|  
@@ -76,24 +74,24 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
   
 |Palabras clave y marcas|Dominio de aplicación, ensamblado, eventos de carga/descarga de módulos|Eventos de carga/descarga de método (excepto eventos dinámicos)|Eventos de carga/destrucción de métodos dinámicos|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|Eventos de carga y descarga.|Ninguno.|Ninguno.|  
-|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` no agrega nada)|Ninguno.|Eventos de carga.|Eventos de carga y descarga.|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de carga y descarga.|Eventos de carga y descarga.|  
-|`NGenKeyword`|Ninguno.|Ninguno.|No disponible.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Ninguno.|Eventos de carga.|No disponible.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de descarga.|No disponible.|  
+|`LoaderKeyword`|Eventos de carga y descarga.|Ninguna.|Ninguna.|  
+|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` no agrega nada)|Ninguna.|Eventos de carga.|Eventos de carga y descarga.|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguna.|Eventos de carga y descarga.|Eventos de carga y descarga.|  
+|`NGenKeyword`|Ninguna.|Ninguna.|No es aplicable.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Ninguna.|Eventos de carga.|No es aplicable.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguna.|Eventos de descarga.|No es aplicable.|  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Combinaciones de palabras clave para la resolución de símbolos para el proveedor de detención  
   
 |Palabras clave y marcas|Dominio de aplicación, ensamblado, eventos DCStart/DCEnd de módulos|Eventos DCStart/DCEnd de método (incluidos los eventos de métodos dinámicos)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos`DCStart` .|Ninguno.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos`DCEnd` .|Ninguno.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos`DCStart` .|Ninguna.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos`DCEnd` .|Ninguna.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Ninguna.|Eventos`DCStart` .|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguna.|Eventos`DCEnd` .|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguna.|Eventos`DCStart` .|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguna.|Eventos`DCEnd` .|  
 
 ## <a name="etw-event-levels"></a>Niveles de eventos ETW  
  Los eventos ETW también se pueden filtrar por nivel. Si el nivel se establece en 0x5, se generan eventos de todos los niveles, incluidos 0 x 5 e inferiores (que son eventos que pertenecen a las categorías habilitadas mediante palabras clave). Si el nivel se establece en 0x2, tan solo se producen los eventos que pertenecen al nivel 0x2 e inferiores.  

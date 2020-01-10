@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974934"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716017"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidad
 Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
@@ -21,13 +19,13 @@ Los eventos de interoperabilidad capturan información sobre el almacenamiento e
 
 En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0 x 2000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Se generó código auxiliar MSIL.|  
   
@@ -51,13 +49,13 @@ En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más
 
 En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0 x 2000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Se tuvo acceso a la memoria caché MSIL.|  
   

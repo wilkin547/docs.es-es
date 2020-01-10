@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348591"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716705"
 ---
 # <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
 Hace que el compilador haga que la información de tipo de los ensamblados especificados esté disponible para el proyecto que se está compilando actualmente.  
@@ -33,11 +33,11 @@ o
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
+|`fileList`|Obligatoria. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los archivos que importe deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. La opción [-AddModule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa los metadatos de un módulo.  
   
  Si hace referencia a un ensamblado (ensamblado A) que a su vez hace referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
@@ -52,7 +52,7 @@ o
   
  De forma predeterminada, se utiliza el archivo de respuesta VBC. RSP, que hace referencia a los ensamblados .NET Framework utilizados habitualmente. Use `-noconfig` si no desea que el compilador use VBC. rsp.  
   
- La forma abreviada de `-reference` es `/r`.  
+ La forma abreviada de `-reference` es `-r`.  
   
 ## <a name="example"></a>Ejemplo  
  El comando siguiente compila los ensamblados de referencia y `Input.vb` del archivo de código fuente desde `Metad1.dll` y `Metad2.dll` para generar `Out.exe`.  

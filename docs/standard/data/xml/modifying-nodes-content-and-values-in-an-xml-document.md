@@ -3,17 +3,15 @@ title: Modificación de nodos, contenido y valores en un documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647887"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710679"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificación de nodos, contenido y valores en un documento XML
-Existen muchas formas de modificar los nodos y el contenido de un documento. Puede realizar lo siguiente:  
+Existen muchas formas de modificar los nodos y el contenido de un documento. Puede:  
   
 - Cambiar el valor de los nodos utilizando la propiedad <xref:System.Xml.XmlNode.Value%2A>.  
   
@@ -29,11 +27,11 @@ Existen muchas formas de modificar los nodos y el contenido de un documento. Pue
   
 |Tipo de nodo|Datos cambiados|  
 |---------------|------------------|  
-|Atributo|El valor del atributo.|  
+|Attribute|Valor del atributo.|  
 |CDATASection|El contenido de CDATASection.|  
-|Comentario|El contenido del comentario.|  
+|Comentario|Contenido del comentario.|  
 |ProcessingInstruction|El contenido, sin incluir el destino.|  
-|Texto|El contenido del texto.|  
+|Text|El contenido del texto.|  
 |XmlDeclaration|El contenido de la declaración, sin incluir el marcado `<?xml` y `?>`.|  
 |Whitespace|El valor del espacio en blanco. Puede establecer este valor en uno de los cuatro caracteres de espacio en blanco XML reconocidos: space, tab, CR o LF.|  
 |SignificantWhitespace|El valor del espacio en blanco significativo. Puede establecer este valor en uno de los cuatro caracteres de espacio en blanco XML reconocidos: space, tab, CR o LF.|  

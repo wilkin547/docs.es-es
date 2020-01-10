@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083824"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710484"
 ---
 # <a name="post-schema-compilation-infoset"></a>Conjunto de información posterior a la compilación de esquemas
 La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://www.w3.org/XML/Schema) trata acerca del conjunto de información que debe presentarse para la validación del esquema previo y para la compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +21,7 @@ La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://
   
  El SOM es el modelo de objetos que representa los conjuntos de información previos a la validación del esquema y posteriores a la compilación del esquema; consta de las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Todas las propiedades de lectura y escritura de las clases del espacio de nombres <xref:System.Xml.Schema> pertenecen al conjunto de información previo a la validación del esquema, mientras que todas las propiedades de solo lectura de las clases del espacio de nombres <xref:System.Xml.Schema> pertenecen al conjunto de información posterior a la compilación del esquema. Las siguientes propiedades son la excepción a esta norma, ya que se trata de propiedades del conjunto de información previo a la validación del esquema y del conjunto de información posterior a la compilación del esquema.  
   
-|Clase|Propiedad.|  
+|Clase|La propiedad|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  

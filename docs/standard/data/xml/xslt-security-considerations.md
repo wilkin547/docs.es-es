@@ -3,14 +3,12 @@ title: Consideraciones de seguridad de XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910487"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709691"
 ---
 # <a name="xslt-security-considerations"></a>Consideraciones de seguridad de XSLT
 El lenguaje XSLT posee un amplio conjunto de características que aportan gran potencia y flexibilidad. Incluye muchas características que, aunque son útiles, también se podrían aprovechar desde orígenes externos. Para poder utilizar XSLT con seguridad, debe conocer los tipos de problemas de seguridad que surgen al utilizar XSLT y las estrategias básicas que puede emplear para mitigar estos riesgos.  

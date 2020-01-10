@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975499"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716008"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de traza JIT
 Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no.
@@ -22,13 +20,13 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
  En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Error de inclusión de JIT.|  
   
@@ -52,13 +50,13 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjitinliningsucceeded-event"></a>Evento MethodJitInliningSucceeded  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|El método de inclusión se realizó correctamente.|  
   
@@ -82,13 +80,13 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjittailcallfailed-event"></a>Evento MethodJITTailCallFailed  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Error en la llamada de cola del método.|  
   
@@ -112,13 +110,13 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjittailcallsucceeded-event"></a>Evento MethodJITTailCallSucceeded  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Nivel|  
+|Palabra clave para generar el evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|evento|Id. de evento|Se genera cuando|  
+|Event|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La llamada de cola del método se realizó correctamente.|  
   

@@ -1,15 +1,13 @@
 ---
 title: Procedimientos recomendados de interoperabilidad nativa (.NET)
 description: Conozca los procedimientos recomendados para interactuar con componentes nativos en. NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706405"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedimientos recomendados de interoperabilidad nativa
 
@@ -29,7 +27,7 @@ La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 
 ## <a name="dllimport-attribute-settings"></a>Configuración del atributo DllImport
 
-| Parámetro | Default | Recomendación | Detalles |
+| Configuración de | Predeterminado | Recomendación | Detalles |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantener el valor predeterminado  | Cuando se establece explícitamente en false, los valores devueltos de HRESULT con errores se convierten en excepciones (y el valor devuelto en la definición se convierte en NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Depende de la API  | Establezca este valor en true si la API utiliza GetLastError y use Marshal.GetLastWin32Error para obtener el valor. Si la API establece una condición que indica que tiene un error, obtenga el error antes de realizar otras llamadas para evitar que accidentalmente se sobrescriba.|
@@ -38,26 +36,26 @@ La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 
 ## <a name="string-parameters"></a>Parámetros de cadena
 
-Cuando el juego de caracteres es Unicode o el argumento se marca explícitamente como `[MarshalAs(UnmanagedType.LPWSTR)]` _y_ la cadena se pasa por valor (`ref` ni `out`), la cadena se anclará y se usará directamente mediante código nativo (en lugar de una copia).
+Cuando el juego de caracteres es Unicode o el argumento se marca explícitamente como `[MarshalAs(UnmanagedType.LPWSTR)]` _y_ la cadena se pasa por valor (no `ref` ni `out`), la cadena se anclará y usará directamente el código nativo (en lugar de copiarse).
 
 Recuerde marcar `[DllImport]` como `Charset.Unicode`, a menos que explícitamente desee un tratamiento ANSI de las cadenas.
 
-**❌ NO** use parámetros `[Out] string`. Los parámetros de cadena pasados por valor con el atributo `[Out]` pueden llegar a desestabilizar el entorno de ejecución si la cadena es una cadena internalizada. Obtenga más información sobre el internamiento de cadenas en la documentación de <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+**❌ no** utilizan parámetros de `[Out] string`. Los parámetros de cadena pasados por valor con el atributo `[Out]` pueden llegar a desestabilizar el entorno de ejecución si la cadena es una cadena internalizada. Obtenga más información sobre el internamiento de cadenas en la documentación de <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌EVITE** usar parámetros `StringBuilder`. La serialización `StringBuilder` *siempre* crea una copia del búfer nativo. Por lo tanto, puede ser extremadamente ineficaz. Siga el escenario típico de una llamada a una API de Windows que toma una cadena:
+**❌ evitar** `StringBuilder` parámetros. La serialización `StringBuilder`*siempre* crea una copia del búfer nativo. Por lo tanto, puede ser extremadamente ineficaz. Siga el escenario típico de una llamada a una API de Windows que toma una cadena:
 
 1. Cree un SB de la capacidad deseada (asigna la capacidad administrada) **{1}** .
 2. Invocar
    1. Asigna un búfer nativo **{2}** .  
-   2. Copia el contenido si `[In]` _(el valor predeterminado de un `StringBuilder` parámetro)_ .  
-   3. Copia el búfer de nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado de`StringBuilder`)_ .  
+   2. Copia el contenido si `[In]` _(el valor predeterminado de un parámetro `StringBuilder`)_ .  
+   3. Copia el búfer nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado para `StringBuilder`)_  
 3. `ToString()` asigna otra matriz administrada **{4}** .
 
 Es decir, asignaciones *{4}* para obtener una cadena del código nativo. Lo mejor que puede hacer para limitar esto consiste en reutilizar `StringBuilder` en otra llamada, pero esta todavía solo guarda la asignación *1*. Es mucho mejor usar y almacenar en caché un búfer de caracteres de `ArrayPool`; después, puede llegar a la asignación de `ToString()` en las llamadas posteriores.
 
 El otro problema con `StringBuilder` es que siempre copia la copia de seguridad del búfer de retorno en el primer valor NULL. Si la cadena pasada anterior no está terminada o es una cadena terminada en doble NULL, el valor P/Invoke será incorrecto en el mejor de los casos.
 
-Si *usa* `StringBuilder`, un último problema es que la capacidad **no** incluyen un valor NULL oculto, que siempre se tiene en cuenta en la interoperabilidad. Es habitual equivocarse, ya que la mayoría de las API quieren que el tamaño del búfer *incluyan* el valor NULL. Esto puede dar lugar a asignaciones innecesarias. Además, este problema impide que el entorno de ejecución optimice la serialización `StringBuilder` para minimizar las copias.
+Si *usa*`StringBuilder`, un último problema es que la capacidad **no** incluyen un valor NULL oculto, que siempre se tiene en cuenta en la interoperabilidad. Es habitual equivocarse, ya que la mayoría de las API quieren que el tamaño del búfer *incluyan* el valor NULL. Esto puede dar lugar a asignaciones innecesarias. Además, este problema impide que el entorno de ejecución optimice la serialización `StringBuilder` para minimizar las copias.
 
 **✔️ PLANTÉESE** usar `char[]` desde `ArrayPool`.
 
@@ -68,8 +66,8 @@ Para obtener más información sobre la serialización cadenas, vea [Cálculo de
 **Para la mayoría de las API con un búfer de cadena de salida:**  
 > El número de caracteres pasados debe incluir el valor NULL. Si el valor devuelto es menor que el número de caracteres pasados, la llamada se realiza correctamente y el valor es el número de caracteres *sin* el carácter NULL. En caso contrario, el número es el tamaño del búfer necesario *incluyendo* el carácter NULL.  
 >
-> - Pase 5 y obtenga 4: la cadena tiene 4 caracteres de longitud con un valor NULL final.
-> - Pase 5 y obtenga 6: la cadena tiene 5 caracteres de longitud y necesita un búfer de 6 caracteres para contener el valor NULL.  
+> - Pass en 5, Get 4: la cadena tiene una longitud de 4 caracteres con un valor null final.
+> - Pass en 5, Get 6: la cadena tiene una longitud de 5 caracteres; se necesita un búfer de 6 caracteres para contener el valor null.  
 > [Tipos de datos de Windows para cadenas](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parámetros y campos booleanos
@@ -84,7 +82,7 @@ Los GUID se pueden usar directamente en las firmas. Muchas de las API de Windows
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ NO** use `[MarshalAs(UnmanagedType.LPStruct)]` para parámetros GUID que no sean `ref`.
+**❌** no Use `[MarshalAs(UnmanagedType.LPStruct)]` para cualquier elemento que no sea `ref` parámetros de GUID.
 
 ## <a name="blittable-types"></a>Tipos que pueden transferirse en bloque de bits
 
@@ -124,7 +122,7 @@ Puede ver si un tipo puede transferirse en bloque de bits al intentar crear un c
 
 **✔️ CREE** estructuras que puedan transferirse en bloque de bits cuando sea posible.
 
-Para obtener más información, consulte:
+Para obtener más información, vea:
 
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [Serialización de tipos](type-marshaling.md)
@@ -165,7 +163,7 @@ Esta es una lista de los tipos de datos que se usan frecuentemente en las API de
 
 Los siguientes tipos tienen el mismo tamaño en Windows 32 bits y 64 bits, a pesar de sus nombres.
 
-| Ancho | Windows          | C (Windows)          | C#       | Alternativa                          |
+| Ancho | Portal          | C (Windows)          | C#       | Alternativa                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -207,7 +205,7 @@ Un tipo `PVOID` de Windows que es un tipo `void*` de C se pueden serializar como
 
 [Intervalos de tipo de datos](/cpp/cpp/data-type-ranges)
 
-## <a name="structs"></a>Estructuras
+## <a name="structs"></a>Structs
 
 Las estructuras administradas se crean en la pila y no se quitan hasta que el método se devuelve. Por definición, se anclan (la recolección de elementos no utilizados no las mueve). Puede simplemente tomar la dirección en bloques de código no seguros si el código nativo no utilizará el puntero más allá del final del método actual.
 

@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966954"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710731"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Inserción de datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para insertar nodos de atributos, secundarios y relacionados en un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  
@@ -256,7 +254,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  En la siguiente tabla se describen los métodos de la clase <xref:System.Xml.XmlWriter> que no son compatibles con la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Inicia una excepción <xref:System.NotSupportedException>.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Se omite en el nivel raíz e inicia una excepción <xref:System.NotSupportedException> si se llama desde cualquier otro nivel del documento XML.|  

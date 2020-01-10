@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306321"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709704"
 ---
 # <a name="xslt-parameters"></a>Parámetros XSLT
 Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. En ese momento se asocia al objeto de parámetro un nombre completo y un identificador URI de espacio de nombres.  
@@ -40,7 +38,7 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
   
  *Es equivalente a un conjunto de nodos que contiene un solo nodo.  
   
- Si el objeto de parámetro no pertenece a una de las clases anteriores, se convierte de acuerdo con las siguientes reglas. Los tipos de Common Language Runtime (CLR) numéricos se convierten en <xref:System.Double>.  El tipo <xref:System.DateTime> se convierte en <xref:System.String>. Los tipos <xref:System.Xml.XPath.IXPathNavigable> se convierten en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** se convierte en <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Si el objeto de parámetro no pertenece a una de las clases anteriores, se convierte de acuerdo con las siguientes reglas. Los tipos de Common Language Runtime (CLR) numéricos se convierten en <xref:System.Double>. El tipo <xref:System.DateTime> se convierte en <xref:System.String>. Los tipos <xref:System.Xml.XPath.IXPathNavigable> se convierten en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** se convierte en <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  El resto de los tipos inician un error.  
   
@@ -50,7 +48,7 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a>Entrada  
+### <a name="input"></a>Input  
   
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
@@ -58,7 +56,7 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Salida  
+### <a name="output"></a>Resultados  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

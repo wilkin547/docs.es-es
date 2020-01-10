@@ -38,14 +38,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834536"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715983"
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 
@@ -241,7 +239,7 @@ Para SQL Server, todos los métodos que se usan para introducir la sincronizaci�
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>No bloquear indefinidamente en código no administrado
 
-El bloqueo en código no administrado en lugar de en código administrado puede provocar un ataque por denegación de servicio porque el CLR no puede anular el subproceso.  Un subproceso bloqueado impide al CLR descargar <xref:System.AppDomain>, al menos sin tener que realizar algunas operaciones extremadamente no seguras.  El bloqueo mediante una primitiva de sincronización de Windows es un claro ejemplo de algo que no se puede permitir.  El bloqueo en una llamada `ReadFile` a en un socket debe evitarse si es posible; idealmente, la API de Windows debe proporcionar un mecanismo para una operación como esta para agotar el tiempo de espera.
+El bloqueo en código no administrado en lugar de en código administrado puede provocar un ataque por denegación de servicio porque el CLR no puede anular el subproceso.  Un subproceso bloqueado impide al CLR descargar <xref:System.AppDomain>, al menos sin tener que realizar algunas operaciones extremadamente no seguras.  El bloqueo mediante una primitiva de sincronización de Windows es un claro ejemplo de algo que no se puede permitir.  El bloqueo en una llamada a `ReadFile` en un socket debe evitarse si es posible; idealmente, la API de Windows debe proporcionar un mecanismo para que una operación como esta agote el tiempo de espera.
 
 Cualquier método que realice llamadas nativas debería usar idealmente una llamada de Win32 con un tiempo de espera razonable y finito.  Si se permite al usuario especificar el tiempo de espera, el usuario no debería poder especificar un tiempo de espera infinito sin algunos permisos de seguridad específicos.  Como norma, si un método se va a bloquear durante más de 10 segundos, se debe usar una versión que admita tiempos de espera o necesitará soporte adicional del CLR.
 
@@ -277,7 +275,7 @@ Considere la posibilidad de cambiar todos los lugares en que se detectan todas l
 
 #### <a name="code-analysis-rule"></a>Regla de análisis de código
 
-Revise todos los bloques catch en código administrado que detectan todos los objetos o todas las excepciones.  En C# `catch` , esto significa marcar {} y `catch(Exception)` .{}  Considere la posibilidad de hacer que el tipo de excepción sea muy específico, o bien revise el código para asegurarse de que no actúa de forma incorrecta si detecta un tipo de excepción inesperada.
+Revise todos los bloques catch en código administrado que detectan todos los objetos o todas las excepciones.  En C#, esto significa marcar ambos `catch` {} y `catch(Exception)` {}.  Considere la posibilidad de hacer que el tipo de excepción sea muy específico, o bien revise el código para asegurarse de que no actúa de forma incorrecta si detecta un tipo de excepción inesperada.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>No asuma que un subproceso administrado es un subproceso de Win32, es una fibra
 

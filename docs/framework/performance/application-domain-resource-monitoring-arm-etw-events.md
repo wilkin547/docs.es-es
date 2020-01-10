@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040562"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716218"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
 
@@ -24,14 +22,14 @@ Este evento también se genera con el proveedor de informe detallado como `Threa
 
 En la tabla siguiente se muestra la palabra clave y el nivel. Para obtener más información, vea [palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Se genera cuando|
+|Event|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|Se crea un subproceso para el dominio de aplicación.|
 
@@ -50,13 +48,13 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Se genera cuando|
+|Event|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|Cada vez que se asignan 4 MB de memoria (aproximadamente) en el dominio de aplicación.|
 
@@ -72,13 +70,13 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Se genera cuando|
+|Event|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|Fnalizadas todas las recolecciones de elementos no utilizados.|
 
@@ -95,14 +93,14 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Se genera cuando|
+|Event|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|Un subproceso entra en un dominio de aplicación.|
 
@@ -118,14 +116,14 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Nivel|
+|Palabra clave para generar el evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|evento|Id. de evento|Se genera cuando|
+|Event|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|Finaliza un subproceso.|
 

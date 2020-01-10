@@ -1,21 +1,19 @@
 ---
-title: Procedimiento para migrar el código XslTransform
+title: Cómo migrar el código XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7022a0f55cd7994141148bc6b2faefb10bfea416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2bc5cbc1b0857a82d3b0a11f05a4eb5756724546
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966977"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710848"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>Procedimiento para migrar el código XslTransform
+# <a name="how-to-migrate-your-xsltransform-code"></a>Cómo migrar el código XslTransform
 Las nuevas clases XSLT se han diseñado para que sean muy similares a las clases existentes. La clase <xref:System.Xml.Xsl.XslCompiledTransform> reemplaza a la clase <xref:System.Xml.Xsl.XslTransform>. Las hojas de estilos se compilan utilizando el método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Las transformaciones se ejecutan utilizando el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Los siguientes procedimientos muestran tareas XSLT comunes y comparan el código utilizando la clase <xref:System.Xml.Xsl.XslTransform> y la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Para transformar un archivo y una salida en un identificador URI  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005635"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716789"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -22,7 +22,7 @@ Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica
 -deterministic
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 De forma predeterminada, la salida del compilador para un conjunto determinado de entradas es única, ya que el compilador agrega una marca de tiempo y un GUID que se genera a partir de números aleatorios. Use la opción `-deterministic` para generar un *ensamblado determinista*, cuyo contenido binario es idéntico en todas las compilaciones, siempre y cuando la entrada siga siendo la misma.
 
@@ -44,7 +44,7 @@ El compilador tiene en cuenta las entradas siguientes con el fin de garantizar e
   - Archivos adicionales que podrían usar los analizadores
 - La referencia cultural actual (para el idioma en el que se producen los diagnósticos y los mensajes de excepción).
 - La codificación predeterminada (o página de códigos actual) si no se especifica la codificación.
-- La existencia (o la inexistencia) de archivos y su contenido en las rutas de búsqueda del compilador (especificada, por ejemplo, mediante `/lib` o `/recurse`).
+- La existencia (o la inexistencia) de archivos y su contenido en las rutas de búsqueda del compilador (especificada, por ejemplo, mediante `-lib` o `-recurse`).
 - La plataforma CLR en la que se ejecuta el compilador.
 - El valor de `%LIBPATH%`, que pueden afectar a la carga de dependencias del analizador.
 

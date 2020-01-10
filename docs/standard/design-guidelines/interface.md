@@ -7,20 +7,19 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-author: KrzysztofCwalina
-ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06b2e0d281314f3bd6346a7dbbd8bb56928fe58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026372"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709301"
 ---
 # <a name="interface-design"></a>Diseño de interfaces
-Aunque la mayoría de las API se modela mejor mediante las clases y structs, hay casos en que las interfaces son más adecuadas o son la única opción.  
+Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay casos en los que las interfaces son más adecuadas o son la única opción.  
   
- El CLR no admite herencia múltiple (es decir, las clases CLR no pueden heredar de más de una clase base), pero le permite implementar uno o más interfaces heredar una clase base además de los tipos. Por lo tanto, las interfaces se usan con frecuencia para lograr el efecto de herencia múltiple. Por ejemplo, <xref:System.IDisposable> es una interfaz que permite que los tipos admitir disposability independiente de cualquier otra jerarquía de herencia en el que desea participar.  
+ CLR no admite la herencia múltiple (es decir, las clases CLR no pueden heredar de más de una clase base), pero permite que los tipos implementen una o varias interfaces además de heredar de una clase base. Por lo tanto, las interfaces se usan a menudo para lograr el efecto de la herencia múltiple. Por ejemplo, <xref:System.IDisposable> es una interfaz que permite que los tipos admitan la eliminación independientemente de cualquier otra jerarquía de herencia en la que deseen participar.  
   
- Es la otra situación en que define una interfaz es adecuada en la creación de una interfaz común que puede ser compatibles con varios tipos, incluidos algunos tipos de valor. Tipos de valor no pueden heredar de tipos distintos de <xref:System.ValueType>, pero pueden implementar interfaces, por lo que usar una interfaz es la única opción para proporcionar un tipo base común.  
+ La otra situación en la que la definición de una interfaz es adecuada es crear una interfaz común que pueda ser compatible con varios tipos, incluidos algunos tipos de valor. Los tipos de valor no pueden heredar de tipos distintos de <xref:System.ValueType>, pero pueden implementar interfaces, por lo que el uso de una interfaz es la única opción para proporcionar un tipo base común.  
   
  **✓ DO** defina una interfaz si necesita algunas API comunes que deben admitir un conjunto de tipos que incluye los tipos de valor.  
   
@@ -28,25 +27,25 @@ Aunque la mayoría de las API se modela mejor mediante las clases y structs, hay
   
  **X AVOID** mediante las interfaces de marcador (interfaces sin miembros).  
   
- Si necesita marcar una clase como si tuviera una característica específica (marcador), en general, utilice un atributo personalizado en lugar de una interfaz.  
+ Si necesita marcar una clase como una característica específica (marcador), en general, use un atributo personalizado en lugar de una interfaz.  
   
  **✓ DO** proporcionar al menos un tipo que es una implementación de una interfaz.  
   
- Si hace esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601> es una implementación de la <xref:System.Collections.Generic.IList%601> interfaz.  
+ Esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601> es una implementación de la interfaz de <xref:System.Collections.Generic.IList%601>.  
   
  **✓ DO** proporcionan al menos una API que consuma cada interfaz definida (un método que toma la interfaz como un parámetro o una propiedad con tipo como la interfaz).  
   
- Si hace esto ayuda a validar el diseño de interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consume el <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfaz.  
+ Esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consume la interfaz <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>.  
   
  **X DO NOT** agregar miembros a una interfaz que se haya distribuido previamente.  
   
- Si lo hace, se interrumpirían implementaciones de la interfaz. Debe crear una nueva interfaz con el fin de evitar problemas de control de versiones.  
+ Si lo hace, se interrumpirán las implementaciones de la interfaz. Debe crear una nueva interfaz con el fin de evitar problemas de control de versiones.  
   
- Excepto para las situaciones descritas en estas instrucciones, en general, debería, elija clases en lugar de las interfaces para diseñar bibliotecas reutilizables de código administrado.  
+ A excepción de las situaciones descritas en estas instrucciones, debe, en general, elegir clases en lugar de interfaces al diseñar bibliotecas reutilizables de código administrado.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también
 

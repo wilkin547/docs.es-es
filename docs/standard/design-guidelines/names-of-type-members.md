@@ -12,13 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353706"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709223"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
 Los tipos están conformados por miembros: métodos, propiedades, eventos, constructores y campos. En las siguientes secciones se detallan las instrucciones para asignar un nombre a los miembros de tipos.  
@@ -48,9 +47,9 @@ public class String {
   
  Este patrón suele indicar que la propiedad en realidad debería ser un método.  
   
- **✓ DO** Los nombres de propiedades de colecciones deben escribirse con una frase en plural que describa los elementos de una colección, en lugar de con una frase en singular seguida de los términos "lista" o "colección".  
+ **✓** Las propiedades de la colección de nombres con una frase plural que describe los elementos de la colección en lugar de usar una frase singular seguida de "list" o "Collection".  
   
- **✓ DO** Los nombres de propiedades booleanas deben ser un enunciado positivo, es decir, `CanSeek` en lugar de `CantSeek`. De forma opcional, también puede agregar un prefijo a las propiedades booleanas, por ejemplo, "es", "puede" o "tiene", pero solo en los casos en los que realmente convenga.  
+ **✓ DO** Los nombres de propiedades booleanas deben ser un enunciado positivo, es decir, `CanSeek` en lugar de `CantSeek`. Opcionalmente, también puede prefijar las propiedades booleanas con "es", "puede" o "tiene", pero solo cuando agrega valor.  
   
  **✓ CONSIDER** El nombre de una propiedad puede ser el mismo que el del tipo.  
   

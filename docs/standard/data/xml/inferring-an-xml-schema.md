@@ -3,21 +3,19 @@ title: Deducción de esquema XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3056ead487cc737003f7de5b877a706f1d444c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a65247f1786acea11879abf0405038446068c118
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577628"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710770"
 ---
 # <a name="inferring-an-xml-schema"></a>Deducción de esquema XML
 Describe cómo utilizar la clase del Modelo de objetos de esquema (SOM) <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML a partir de la estructura de un documento XML.  
   
  La clase del modelo de objeto de esquema (SOM) <xref:System.Xml.Schema.XmlSchemaInference> en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> le permite deducir un lenguaje de definición de esquema XML (XSD) para la estructura de un documento XML. La clase <xref:System.Xml.Schema.XmlSchemaInference> produce como resultado un esquema XML que puede validar el documento XML.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  Describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un esquema de la estructura de un documento XML.  
   

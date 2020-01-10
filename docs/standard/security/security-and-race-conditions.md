@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933814"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705878"
 ---
 # <a name="security-and-race-conditions"></a>Seguridad y condiciones de carrera
-Otra área de preocupación es la posibilidad de vulnerabilidades de seguridad utilizado por las condiciones de carrera. Hay varias maneras en que esto puede ocurrir. Los subtemas siguientes describen algunas de las dificultades principales que debe evitar el programador.  
+Otro área de preocupación es el potencial de los agujeros de seguridad aprovechados por las condiciones de carrera. Hay varias maneras en las que esto puede ocurrir. En los subtemas siguientes se describen algunos de los principales problemas que debe evitar el desarrollador.  
   
 ## <a name="race-conditions-in-the-dispose-method"></a>Condiciones de carrera en el método Dispose  
- Si una clase **Dispose** método (para obtener más información, consulte [recolección](../../../docs/standard/garbage-collection/index.md)) no es sincronizada, es posible que ese código de limpieza de **Dispose** se puede ejecutar más de vez, como se muestra en el ejemplo siguiente.  
+ Si el método **Dispose** de una clase (para obtener más información, consulte recolección de [elementos no utilizados](../../../docs/standard/garbage-collection/index.md)) no está sincronizado, es posible que el código de limpieza dentro de **Dispose** se ejecute más de una vez, tal como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- Dado que esto **Dispose** implementación no está sincronizada, es posible que `Cleanup` para ser llamado por el primer subproceso y, a continuación, un segundo subproceso antes de `_myObj` está establecido en **null**. Si se trata de un problema de seguridad depende de lo que sucede cuando el `Cleanup` ejecuta el código. Un problema importante que no sincronizadas **Dispose** implementaciones implica el uso de identificadores de recursos como archivos. Eliminación incorrecta puede hacer que el controlador incorrecto que se usará, lo que conduce a menudo a las vulnerabilidades de seguridad.  
+ Dado que esta implementación de **Dispose** no está sincronizada, es posible que se llame a `Cleanup` en el primer subproceso y, después, a un segundo subproceso antes de que `_myObj` se establezca en **null**. Tanto si se trata de un problema de seguridad depende de lo que ocurre cuando se ejecuta el código `Cleanup`. Un problema importante con las implementaciones de **Dispose** no sincronizadas implica el uso de identificadores de recursos como los archivos. Una eliminación incorrecta puede provocar que se use un identificador incorrecto, lo que a menudo conduce a vulnerabilidades de seguridad.  
   
 ## <a name="race-conditions-in-constructors"></a>Condiciones de carrera en constructores  
- En algunas aplicaciones, es posible que otros subprocesos tener acceso a los miembros de clase antes de que finalice la ejecución sus constructores de clases. Debe revisar todos los constructores de clase para asegurarse de que no hay ningún problema de seguridad, si esto debería ocurrir o sincronizar los subprocesos si es necesario.  
+ En algunas aplicaciones, es posible que otros subprocesos accedan a los miembros de clase antes de que sus constructores de clase se ejecuten por completo. Debe revisar todos los constructores de clase para asegurarse de que no hay ningún problema de seguridad si esto ocurre, o sincronizar los subprocesos si es necesario.  
   
-## <a name="race-conditions-with-cached-objects"></a>Condiciones de carrera con objetos en caché  
- Código que se almacena en caché información de seguridad o utiliza la seguridad de acceso del código [Assert](../../../docs/framework/misc/using-the-assert-method.md) operación podría también ser vulnerable a las condiciones de carrera si otras partes de la clase no están sincronizadas correctamente, tal como se muestra en el ejemplo siguiente.  
+## <a name="race-conditions-with-cached-objects"></a>Condiciones de carrera con objetos almacenados en caché  
+ El código que almacena en memoria caché la información de seguridad o usa la operación de [aserción](../../../docs/framework/misc/using-the-assert-method.md) de seguridad de acceso del código también podría ser vulnerable a las condiciones de carrera si otras partes de la clase no se sincronizan correctamente, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,12 +95,12 @@ void DoOtherWork()
 }  
 ```  
   
- Si hay otras rutas de acceso a `DoOtherWork` que pueden llamarse desde otro subproceso con el mismo objeto, un llamador de confianza se puede retrasar una petición.  
+ Si hay otras rutas de acceso a `DoOtherWork` a las que se puede llamar desde otro subproceso con el mismo objeto, un llamador que no es de confianza puede posponerse después de una solicitud.  
   
- Si el código almacena en caché información de seguridad, asegúrese de revisarlo para esta vulnerabilidad.  
+ Si el código almacena en caché la información de seguridad, asegúrese de revisarla para ver esta vulnerabilidad.  
   
-## <a name="race-conditions-in-finalizers"></a>Condiciones de carrera en los finalizadores  
- También pueden producirse condiciones de carrera en un objeto que hace referencia a un recurso estático o no administrado que se libera en su finalizador. Si varios objetos que comparten un recurso que se ha manipulado de finalizador de la clase, los objetos deben sincronizar todo el acceso a ese recurso.  
+## <a name="race-conditions-in-finalizers"></a>Condiciones de carrera en finalizadores  
+ También se pueden producir condiciones de carrera en un objeto que hace referencia a un recurso estático o no administrado que, a continuación, libera en su finalizador. Si varios objetos comparten un recurso que se manipula en el finalizador de una clase, los objetos deben sincronizar todo el acceso a ese recurso.  
   
 ## <a name="see-also"></a>Vea también
 

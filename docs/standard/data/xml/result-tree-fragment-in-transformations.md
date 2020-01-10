@@ -3,14 +3,12 @@ title: Fragmento del árbol de resultados en transformaciones
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170774"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710263"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragmento del árbol de resultados en transformaciones
 
@@ -35,7 +33,7 @@ En el caso del elemento `parameter`, el valor se asigna a (`Qname`) de varias fo
 
 En el caso del elemento `variable`, el valor se asigna también de varias formas. Puede asignar un valor mediante la devolución del contenido de la expresión XPath en el atributo `select` o asignándole el contenido del cuerpo de la plantilla.
 
-Tanto para el elemento `parameter` como para el `variable`, si se asigna un valor mediante la expresión XPath, se devolverá uno de los cuatro tipos básicos de XPath: booleano, de cadena, numérico o de conjunto de nodos. Cuando se asigna un valor mediante un cuerpo de plantilla que no está vacío, se devuelve un tipo de dato que no es de XPath, que será un fragmento del árbol de resultados.
+Tanto para el elemento `parameter` como para el elemento `variable`, si se asigna un valor mediante la expresión XPath, se devolverá uno de los cuatro tipos básicos de XPath:tipo booleano, tipo de cadena, tipo numérico o tipo de conjunto de nodos. Cuando se asigna un valor mediante un cuerpo de plantilla que no está vacío, se devuelve un tipo de dato que no es de XPath, que será un fragmento del árbol de resultados.
 
 Cuando se enlaza una variable a un fragmento del árbol de resultados en lugar de uno de los cuatro tipos de datos básicos de XPath, esta es la única vez que una consulta XPath devuelve un tipo que no pertenece a uno de los cuatro tipos de objetos de XPath. Los fragmentos del árbol de resultados y el comportamiento de estos se analizan en la [especificación del consorcio W3C](https://www.w3.org/TR/xslt-10/), [de la sección 11.1, Fragmentos de árboles de resultados](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments), a la [sección 11.6, Cómo pasar parámetros a plantillas](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Además, en la [sección 1, Introducción](https://www.w3.org/TR/xslt-10/#section-Introduction), se analiza la forma en que las plantillas pueden contener elementos del espacio de nombres XSLT que devuelven o crean fragmentos de árboles de resultados.
 
@@ -113,7 +111,7 @@ Este es otro ejemplo que muestra una variable, que es un RTF, y, por tanto, un t
 
 El resultado de transformar cualquier XML con esta hoja de estilos se muestra en la siguiente salida.
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Resultados
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>

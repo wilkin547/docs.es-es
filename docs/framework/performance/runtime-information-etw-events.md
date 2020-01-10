@@ -5,31 +5,29 @@ helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ab3844b293d09cec02236fb9befd836aa4113ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2927ed088ba6c9e46b9676d55d0046575e23cfb1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046225"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715953"
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de información en tiempo de ejecución
 Estos eventos ETW registran información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante. Si se están ejecutando varios tiempos de ejecución dentro de un proceso, la información proporcionada por estos eventos (ClrInstanceID) ayuda a eliminar la ambigüedad de los tiempos de ejecución.  
   
  En la tabla siguiente se muestran los dos eventos de información en tiempo de ejecución. Los eventos se pueden generar bajo cualquier palabra clave o máscara. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|Evento|Id. de evento|Proveedor|DESCRIPCIÓN|  
+|Event|Id. de evento|Proveedor|Descripción|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Se genera cuando se carga un tiempo de ejecución.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Enumera los tiempos de ejecución que se han cargado.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre del campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
-|SKU|win:UInt16|1 – CLR de escritorio.<br /><br /> 2 – CoreCLR.|  
+|Sku|win:UInt16|1 – CLR de escritorio.<br /><br /> 2 – CoreCLR.|  
 |BclVersion – Versión principal|win:UInt16|Versión principal de mscorlib.dll.|  
 |BclVersion – Versión secundaria|win:UInt16|Número de versión secundaria de mscorlib.dll.|  
 |BclVersion – Número de compilación|win:UInt16|Número de compilación de mscorlib.dll.|  

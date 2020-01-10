@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912045"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709678"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
@@ -31,7 +29,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  donde `msxsl` es un prefijo enlazado al espacio de nombres `urn:schemas-microsoft-com:xslt`.  
   
- El atributo `language` no es obligatorio, pero si se especifica, su valor deberá ser uno de los siguientes: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Si no se especifica, el lenguaje predeterminado es JScript. `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
+ El atributo `language` no es obligatorio, pero si se especifica, su valor debe ser uno de los siguientes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`o `CSharp`. Si no se especifica, el lenguaje predeterminado es JScript. `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
   
  El atributo `implements-prefix` es obligatorio. Este atributo se utiliza para declarar un espacio de nombres y asociarlo con el bloque del script. El valor de este atributo es el prefijo que representa el espacio de nombres. Este espacio de nombres puede definirse en cualquier parte de la hoja de estilos.  
   
@@ -49,9 +47,9 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   
-|Espacios de nombres predeterminados|DESCRIPCIÓN|  
+|Espacios de nombres predeterminados|Descripción|  
 |------------------------|-----------------|  
-|Sistema|Clase del sistema.|  
+|System|Clase del sistema.|  
 |System.Collection|Clases de colección|  
 |System.Text|Clases de texto.|  
 |System.Text.RegularExpressions|Clases de expresión regular.|  
@@ -64,15 +62,15 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Los argumentos proporcionados y los valores devueltos definidos en las funciones del script deben ser de los tipos XPath o XSLT del W3C. En la siguiente tabla se muestran los tipos correspondientes del W3C, las clases de .NET Framework equivalentes (tipo) y si el tipo del W3C es un tipo de XPath o un tipo de XSLT.  
   
-|Tipo|Clase equivalente .NET Framework (tipo)|Tipo de XPath o tipo XSLT|  
+|Tipo de|Clase equivalente .NET Framework (tipo)|Tipo de XPath o tipo XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
+|Cadena|System.String|XPath|  
 |Booleano|System.Boolean|XPath|  
-|número|System.Double|XPath|  
+|Número|System.Double|XPath|  
 |Fragmento del árbol de resultados|System.Xml.XPath.XPathNavigator|XSLT|  
 |Conjunto de nodos|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Si la función de script utiliza uno de los siguientes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, se convierten obligatoriamente en Double, que se asigna a un número de tipo W3C XPath. El resto de los tipos se convierten obligatoriamente en tipos String con el método `ToString`.  
+ Si la función de script utiliza uno de los siguientes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, se convierten obligatoriamente en Double, que se asigna al número de tipo W3C XPath. El resto de los tipos se convierten obligatoriamente en tipos String con el método `ToString`.  
   
  Si la función del script utiliza un tipo distinto a los mencionados anteriormente o si no se compila al cargar la hoja de estilos en el objeto <xref:System.Xml.Xsl.XslTransform>, se inicia una excepción.  
   
@@ -167,7 +165,7 @@ public class Sample
 }  
 ```  
   
-## <a name="input"></a>Entrada  
+## <a name="input"></a>Input  
  number.xml  
   
 ```xml  
@@ -216,7 +214,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

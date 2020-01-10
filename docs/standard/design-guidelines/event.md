@@ -10,18 +10,17 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-author: KrzysztofCwalina
-ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78d765a7af77b1e6a6ecd483677cea2d4c6b0d5b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026450"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709431"
 ---
 # <a name="event-design"></a>Diseño de eventos
-Los eventos son la forma más frecuente de las devoluciones de llamada (construcciones que permiten el marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen a miembros tomar basado en la interfaz de complementos, los miembros virtuales y los delegados. Datos de estudios de uso indican que la mayoría de los desarrolladores son más cómodos si usan los eventos que usan otros mecanismos de devolución de llamada. Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.  
+Los eventos son la forma de devoluciones de llamada que se usa con más frecuencia (construcciones que permiten al marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen miembros que toman delegados, miembros virtuales y complementos basados en interfaz. los datos de los estudios de facilidad de uso indican que la mayoría de los desarrolladores se sienten más cómodos con eventos que si usan los otros mecanismos de devolución de llamada. . Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.  
   
- Es importante tener en cuenta que hay dos grupos de eventos: eventos provocados antes de que un estado de los cambios del sistema, denominados eventos previos y los eventos generados después de un estado cambie, denominan eventos posteriores. Un ejemplo de un evento previo sería `Form.Closing`, que se genera antes de que se cierra un formulario. Un ejemplo de un evento posterior a la sería `Form.Closed`, que se desencadena cuando se cierra un formulario.  
+ Es importante tener en cuenta que hay dos grupos de eventos: los eventos que se generan antes de que cambie un estado del sistema, denominados eventos previos, y eventos generados después de un cambio de estado, denominados eventos posteriores. Un ejemplo de evento previo sería `Form.Closing`, que se desencadena antes de que se cierre un formulario. Un ejemplo de un evento posterior sería `Form.Closed`, que se produce después de cerrar un formulario.  
   
  **✓ DO** se usa el término "generar" para los eventos en lugar de "activar" o "activar".  
   
@@ -29,17 +28,17 @@ Los eventos son la forma más frecuente de las devoluciones de llamada (construc
   
  **✓ CONSIDER** con una subclase de <xref:System.EventArgs> como el argumento de evento, a menos que esté totalmente seguro nunca tendrá que realizar ningún dato para el método de control de eventos el evento en cuyo caso puede utilizar la `EventArgs` escribir directamente.  
   
- Si envía una API mediante `EventArgs` directamente, nunca podrá agregar los datos se realice con el evento sin interrumpir la compatibilidad. Si usa una subclase, incluso si inicialmente completamente vacía, podrá agregar propiedades a la subclase cuando sea necesario.  
+ Si envía una API mediante `EventArgs` directamente, nunca podrá agregar ningún dato que se lleve a cabo con el evento sin interrumpir la compatibilidad. Si utiliza una subclase, incluso si inicialmente está completamente vacía, podrá agregar propiedades a la subclase cuando sea necesario.  
   
- **✓ DO** utilizar un método virtual protegido para provocar cada evento. Esto solo es aplicable a los eventos no estáticos en clases no selladas, no a las estructuras, clases selladas o eventos estáticos.  
+ **✓ DO** utilizar un método virtual protegido para provocar cada evento. Esto solo se aplica a eventos no estáticos en clases no selladas, no en Structs, clases selladas ni eventos estáticos.  
   
- El propósito del método es proporcionar una forma de una clase derivada para controlar el evento mediante una invalidación. Reemplazar es una manera más flexible, rápida y más natural para controlar los eventos de la clase base en clases derivadas. Por convención, el nombre del método debe empezar por "On" y seguir con el nombre del evento.  
+ El propósito del método es proporcionar una manera para que una clase derivada controle el evento mediante una invalidación. Reemplazar es una forma más flexible, más rápida y más natural de controlar eventos de clase base en clases derivadas. Por Convención, el nombre del método debe empezar por "ON" y debe ir seguido del nombre del evento.  
   
- La clase derivada puede elegir no llamar a la implementación base del método en su reemplazo. Estar preparadas para ello, no incluya ningún procesamiento en el método que se requiere para la clase base para que funcione correctamente.  
+ La clase derivada puede elegir no llamar a la implementación base del método en su invalidación. Para ello, no incluya ningún procesamiento en el método necesario para que la clase base funcione correctamente.  
   
  **✓ DO** tomar un parámetro para el método protegido que genera un evento.  
   
- El parámetro debe denominarse `e` y debe escribirse como la clase de argumento de evento.  
+ El parámetro debe tener un nombre `e` y debe escribirse como la clase de argumento de evento.  
   
  **X DO NOT** pasa null como el remitente cuando cuando se genera un evento no estático.  
   
@@ -47,18 +46,18 @@ Los eventos son la forma más frecuente de las devoluciones de llamada (construc
   
  **X DO NOT** pasa null como parámetro de datos del evento al generar un evento.  
   
- Debería pasar `EventArgs.Empty` si no desea pasar ningún dato para el método de control de eventos. Los desarrolladores esperan este parámetro no sea null.  
+ Debe pasar `EventArgs.Empty` si no desea pasar datos al método de control de eventos. Los desarrolladores esperan que este parámetro no sea NULL.  
   
- **✓ CONSIDER** generar eventos que se puede cancelar el usuario final. Esto solo se aplica a los eventos anteriores.  
+ **✓ CONSIDER** generar eventos que se puede cancelar el usuario final. Esto solo se aplica a eventos previos.  
   
- Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o su subclase como el argumento de evento para permitir que el usuario final cancelar los eventos.  
+ Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o su subclase como argumento de evento para permitir que el usuario final cancele los eventos.  
   
-### <a name="custom-event-handler-design"></a>Diseño de controlador de eventos personalizados  
- Hay casos en los que `EventHandler<T>` no se puede usar, por ejemplo, cuando el marco de trabajo necesita para trabajar con versiones anteriores de CLR, que no eran compatibles con los genéricos. En tales casos, es posible que necesita diseñar y desarrollar a un delegado de controlador de eventos personalizado.  
+### <a name="custom-event-handler-design"></a>Diseño de controladores de eventos personalizados  
+ Hay casos en los que no se puede usar `EventHandler<T>`, como cuando el marco de trabajo necesita trabajar con versiones anteriores de CLR, que no admiten genéricos. En tales casos, es posible que tenga que diseñar y desarrollar un delegado de controlador de eventos personalizado.  
   
  **✓ DO** utilizar un tipo de valor devuelto de void para controladores de eventos.  
   
- Un controlador de eventos puede invocar varios métodos, posiblemente en varios objetos de control de eventos. Si los métodos de control de eventos se pueden devolver un valor, habrá varios valores devueltos para cada invocación del evento.  
+ Un controlador de eventos puede invocar varios métodos de control de eventos, posiblemente en varios objetos. Si los métodos de control de eventos podían devolver un valor, hubiera varios valores devueltos por cada invocación de evento.  
   
  **✓ DO** usar `object` como el tipo del primer parámetro del controlador de eventos y llámelo `sender`.  
   
@@ -66,9 +65,9 @@ Los eventos son la forma más frecuente de las devoluciones de llamada (construc
   
  **X DO NOT** tiene más de dos parámetros en controladores de eventos.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también
 

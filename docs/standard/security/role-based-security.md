@@ -11,14 +11,12 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dfb1f6246e86d6f565c9338fb09f34a1608e9b0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018585"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705930"
 ---
 # <a name="role-based-security"></a>Seguridad basada en roles
 Suelen usarse roles en aplicaciones empresariales o financieras para aplicar la directiva. Por ejemplo, una aplicación puede imponer límites en el tamaño de la transacción que se va a procesar según si el usuario que realiza la solicitud es un miembro de rol especificado. Los empleados podrían tener autorización para procesar las transacciones que son inferiores a un umbral especificado, los supervisores podrían tener un límite mayor y los vicepresidentes podrían tener un límite aún mayor (o ningún límite). La seguridad basada en roles también se puede usar cuando una aplicación requiere varias aprobaciones para completar una acción. Este caso podría ser un sistema de compras en el que cualquier empleado puede generar una solicitud de compra, pero solo un agente de compras puede convertir la solicitud en un pedido de compras que se pueden enviar a un proveedor.  
@@ -33,7 +31,7 @@ Suelen usarse roles en aplicaciones empresariales o financieras para aplicar la 
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)|Explica cómo configurar y administrar identidades y entidades de seguridad de Windows y genéricas.|  
 |[Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)|Presenta los conceptos fundamentales que debe conocer antes de usar la seguridad de .NET Framework.|  

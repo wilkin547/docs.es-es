@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6040a7aa8f3244ea0ce2e66042537bc45c347b05
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037852"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710120"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 
@@ -24,7 +22,7 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
 
 Las siguientes propiedades de la clase <xref:System.Xml.Schema.XmlSchema> proporcionan acceso a la colección de todos los elementos globales que se agregan al esquema XML.
 
-|Propiedad.|Tipo de objeto almacenado en la colección o matriz|
+|La propiedad|Tipo de objeto almacenado en la colección o matriz|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|

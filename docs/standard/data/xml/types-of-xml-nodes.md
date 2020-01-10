@@ -3,19 +3,17 @@ title: Tipos de nodos XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.openlocfilehash: 83b8c09323e73a9b3ba7dea8d272d7d41d03add1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396895"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710094"
 ---
 # <a name="types-of-xml-nodes"></a>Tipos de nodos XML
 Cuando se lee un documento XML en la memoria como un árbol de nodos, el tipo de nodo se decide al crear los nodos. El modelo de objetos de documento (DOM) dispone de varias clases de tipos de nodos, determinados por el World Wide Web Consortium (W3C) y enumerados en la sección 1.1.1 El modelo de estructura DOM. En la tabla siguiente se muestran los tipos de nodo, el objeto asignado a dicho tipo de nodo y una breve descripción de cada uno.  
   
-|Tipo de nodo DOM|Object|Descripción|  
+|Tipo de nodo DOM|Objeto de|Descripción|  
 |-------------------|------------|-----------------|  
 |Documento|<xref:System.Xml.XmlDocument>|Contenedor de todos los nodos del árbol. También se conoce como la raíz del documento, que no siempre coincide con el elemento raíz.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Contenedor temporal de uno o varios nodos sin estructura de árbol.|  
@@ -25,7 +23,7 @@ Cuando se lee un documento XML en la memoria como un árbol de nodos, el tipo de
 |Attr|<xref:System.Xml.XmlAttribute>|Atributo de un elemento.|  
 |ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|Nodo de instrucción de procesamiento.|  
 |Comentario|<xref:System.Xml.XmlComment>|Nodo de comentario.|  
-|Texto|<xref:System.Xml.XmlText>|Texto que pertenece a un elemento o atributo.|  
+|Text|<xref:System.Xml.XmlText>|Texto que pertenece a un elemento o atributo.|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|Representa CDATA.|  
 |Entity|<xref:System.Xml.XmlEntity>|Representa las declaraciones `<!ENTITY…>` de un documento XML, desde un subconjunto de definición de tipo de documento (DTD) interno o desde DTD externas y entidades de parámetros.|  
 |Notation|<xref:System.Xml.XmlNotation>|Representa una notación declarada en la DTD.|  

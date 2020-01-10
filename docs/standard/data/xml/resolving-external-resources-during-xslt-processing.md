@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590026"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710289"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Resolución de recursos externos durante el procesamiento XSLT
 Hay varios momentos a lo largo de una transformación XSLT en los cuales puede que necesite resolver recursos externos.  
@@ -23,8 +21,8 @@ Hay varios momentos a lo largo de una transformación XSLT en los cuales puede q
   
 |Tarea de XSLT|XmlResolver se utiliza para|  
 |---------------|--------------------------------------|  
-|Compilar la hoja de estilos.|Resolver el identificador URI de la hoja de estilos.<br /><br /> - y -<br /><br /> Resolver referencias URI en cualquier elemento `xsl:import` o `xsl:include`.|  
-|Ejecutar la hoja de estilos.|Resolver el identificador URI del documento de contexto.<br /><br /> - y -<br /><br /> Resolver referencias URI en cualquier función `document()` de XSLT.|  
+|Compilar la hoja de estilos.|Resolver el identificador URI de la hoja de estilos.<br /><br /> y<br /><br /> Resolver referencias URI en cualquier elemento `xsl:import` o `xsl:include`.|  
+|Ejecutar la hoja de estilos.|Resolver el identificador URI del documento de contexto.<br /><br /> y<br /><br /> Resolver referencias URI en cualquier función `document()` de XSLT.|  
   
  Los métodos <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> y <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> incluyen sobrecargas que toman un objeto <xref:System.Xml.XmlResolver> como uno de sus argumentos. Si no se especifica un código <xref:System.Xml.XmlResolver>, se utiliza una referencia <xref:System.Xml.XmlUrlResolver> predeterminada sin ninguna credencial.  
   

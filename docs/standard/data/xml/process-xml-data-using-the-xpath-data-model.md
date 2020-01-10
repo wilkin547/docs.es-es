@@ -3,14 +3,12 @@ title: Procesamiento de datos XML con el modelo de datos XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728403"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710445"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Procesamiento de datos XML con el modelo de datos XPath
 El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona una representación mediante programación de documentos XML, fragmentos, nodos o conjuntos de nodos en memoria utilizando las clases <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>.  
@@ -19,7 +17,7 @@ El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona
   
  En las siguientes secciones se describe la funcionalidad de la clase <xref:System.Xml.XPath.XPathNavigator> basándose en la clase que la devuelve.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Lectura de datos XML con XPathDocument y XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Se describe cómo crear un objeto de clase <xref:System.Xml.XPath.XPathDocument> de solo lectura para leer un documento XML y cómo crear un objeto de clase <xref:System.Xml.XmlDocument> editable para leer y editar un documento XML. En este tema también se describe cómo devolver un objeto <xref:System.Xml.XPath.XPathNavigator> desde cada clase para navegar por un documento XML y editarlo.  
   
@@ -27,7 +25,7 @@ El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona
  Se describen los métodos de la clase <xref:System.Xml.XPath.XPathNavigator> que se utilizan para seleccionar nodos en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> utilizando una consulta XPath, evaluar y examinar los resultados de una expresión XPath y determinar si un nodo de un documento XML coincide con una expresión XPath determinada.  
   
  [Acceso a datos XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- Se describen los métodos de la clase <xref:System.Xml.XPath.XPathNavigator> que se utilizan para navegar por los nodos, extraer datos XML fuertemente tipados en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.   
+ Se describen los métodos de la clase <xref:System.Xml.XPath.XPathNavigator> que se utilizan para navegar por los nodos, extraer datos XML fuertemente tipados en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   
  [Edición de datos XML con XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
  Se describen los métodos de la clase <xref:System.Xml.XPath.XPathNavigator> que se utilizan para insertar, modificar y quitar nodos y valores de un documento XML contenido en un objeto <xref:System.Xml.XmlDocument>.  

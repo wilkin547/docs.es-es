@@ -8,44 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-author: KrzysztofCwalina
-ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cea3c17de40a873d977223f36b6dcef4f2c2d78
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756863"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709145"
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
-Las sobrecargas del operador permiten tipos de marco de trabajo que aparezca como si fueran primitivas del lenguaje integrado.  
+Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fueran primitivos de lenguaje integrados.  
   
- Aunque permitidos y útil en algunas situaciones, las sobrecargas del operador deben usarse con precaución. Hay muchos casos en qué operador sobrecarga ha sido en peligro, como los diseñadores de framework que comenzó a usar operadores para las operaciones que deben ser métodos sencillos. Las instrucciones siguientes le ayudarán a decidir cuándo y cómo usar la sobrecarga de operadores.  
+ Aunque se permite y útil en algunas situaciones, las sobrecargas de operador deben usarse con precaución. Hay muchos casos en los que la sobrecarga de operadores se ha desusado, por ejemplo, cuando los diseñadores de Marcos empezaron a usar operadores para las operaciones que deberían ser métodos simples. Las instrucciones siguientes le ayudarán a decidir cuándo y cómo usar la sobrecarga de operadores.  
   
  **X AVOID** definir sobrecargas de operador, excepto en tipos que se sentirá como los tipos primitivos (integrados).  
   
  **✓ CONSIDER** definir sobrecargas de operador en un tipo que se sentirá como un tipo primitivo.  
   
- Por ejemplo, <xref:System.String?displayProperty=nameWithType> tiene `operator==` y `operator!=` definido.  
+ Por ejemplo, <xref:System.String?displayProperty=nameWithType> tiene `operator==` y `operator!=` definidas.  
   
  **✓ DO** definir sobrecargas de operador en las estructuras que representan números (como <xref:System.Decimal?displayProperty=nameWithType>).  
   
  **X DO NOT** ser hermosa al definir las sobrecargas de operador.  
   
- Sobrecarga de operadores es útil en casos en los que es evidente de inmediato cuál será el resultado de la operación. Por ejemplo, tiene sentido que poder restar uno <xref:System.DateTime> desde otro `DateTime` y obtenga un <xref:System.TimeSpan>. Sin embargo, no es adecuado para utilizar el operador de unión lógico para las consultas de unión de dos bases de datos, o utilizar el operador de desplazamiento para escribir en una secuencia.  
+ La sobrecarga de operadores es útil en los casos en los que es inmediatamente obvio cuál será el resultado de la operación. Por ejemplo, tiene sentido poder restar una <xref:System.DateTime> de otra `DateTime` y obtener una <xref:System.TimeSpan>. Sin embargo, no es apropiado usar el operador de Unión lógica para unir dos consultas de base de datos o usar el operador Shift para escribir en una secuencia.  
   
  **X DO NOT** proporcionan las sobrecargas de operador, a menos que al menos uno de los operandos es de tipo que define la sobrecarga.  
   
  **✓ DO** sobrecargar los operadores de forma simétrica.  
   
- Por ejemplo, si sobrecarga el `operator==`, también debe sobrecargar el `operator!=`. De forma similar, si sobrecarga el `operator<`, también debe sobrecargar el `operator>`, y así sucesivamente.  
+ Por ejemplo, si sobrecarga el `operator==`, también debe sobrecargar el `operator!=`. Del mismo modo, si sobrecarga el `operator<`, también debe sobrecargar el `operator>`, etc.  
   
  **✓ CONSIDER** proporcionar métodos con nombres descriptivos que corresponden a cada operador sobrecargado.  
   
- Muchos lenguajes no admiten la sobrecarga de operadores. Por este motivo, se recomienda que los tipos que sobrecargan operadores incluyen un método secundario con un nombre específico de dominio adecuado que proporciona una funcionalidad equivalente.  
+ Muchos lenguajes no admiten la sobrecarga de operadores. Por esta razón, se recomienda que los tipos que sobrecargan operadores incluyan un método secundario con un nombre específico del dominio adecuado que proporcione una funcionalidad equivalente.  
   
- En la tabla siguiente contiene una lista de operadores y los nombres de método descriptivo correspondiente.  
+ La tabla siguiente contiene una lista de operadores y los nombres de método descriptivos correspondientes.  
   
-|Símbolo de operador de C#|Nombre de metadatos|Nombre descriptivo|  
+|C#Operador Symbol|Nombre de metadatos|Nombre descriptivo|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -86,31 +85,31 @@ Las sobrecargas del operador permiten tipos de marco de trabajo que aparezca com
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|  
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
-### <a name="overloading-operator-"></a>Sobrecargar el operador ==  
- Sobrecarga `operator ==` es bastante complicado. La semántica del operador debe ser compatible con otros miembros, como <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+### <a name="overloading-operator-"></a>Sobrecargar operador = =  
+ La sobrecarga de `operator ==` es bastante complicada. La semántica del operador debe ser compatible con otros miembros, como <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
   
 ### <a name="conversion-operators"></a>Operadores de conversión  
- Operadores de conversión son operadores unarios que permiten la conversión de un tipo a otro. Los operadores se deben definir como miembros estáticos en el operando o el tipo de valor devuelto. Hay dos tipos de operadores de conversión: implícitos y explícitos.  
+ Los operadores de conversión son operadores unarios que permiten la conversión de un tipo a otro. Los operadores deben definirse como miembros estáticos en el operando o en el tipo de valor devuelto. Hay dos tipos de operadores de conversión: implícito y explícito.  
   
  **X DO NOT** proporcionar un operador de conversión si los usuarios finales no esperan claramente dicha conversión.  
   
  **X DO NOT** definir operadores de conversión fuera del dominio de un tipo.  
   
- Por ejemplo, <xref:System.Int32>, <xref:System.Double>, y <xref:System.Decimal> son todos los tipos numéricos, mientras que <xref:System.DateTime> no es. Por lo tanto, no debe haber ningún operador de conversión para convertir un `Double(long)` a un `DateTime`. En tal caso, es preferible un constructor.  
+ Por ejemplo, <xref:System.Int32>, <xref:System.Double>y <xref:System.Decimal> son tipos numéricos, mientras que <xref:System.DateTime> no. Por lo tanto, no debería haber ningún operador de conversión para convertir un `Double(long)` en un `DateTime`. En tal caso, se prefiere un constructor.  
   
  **X DO NOT** proporciona un operador de conversión implícita si la conversión es potencialmente pérdida.  
   
- Por ejemplo, no debería haber una conversión implícita de `Double` a `Int32` porque `Double` tiene un intervalo más amplio que `Int32`. Incluso si la conversión es potencialmente con pérdida de datos, se puede proporcionar un operador de conversión explícita.  
+ Por ejemplo, no debería haber una conversión implícita de `Double` a `Int32` porque `Double` tiene un intervalo más amplio que `Int32`. Se puede proporcionar un operador de conversión explícito aunque la conversión sea potencialmente perdida.  
   
  **X DO NOT** genere excepciones desde conversiones implícitas.  
   
- Es muy difícil para los usuarios finales a saber qué está ocurriendo, ya que no pueden tener en cuenta que está realizando una conversión.  
+ Es muy difícil que los usuarios finales sepan lo que sucede, ya que es posible que no sean conscientes de que se está llevando a cabo una conversión.  
   
  **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> si una llamada a un operador de conversión produce una conversión con pérdida de datos y el contrato del operador no permite conversiones con pérdida de datos.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también
 

@@ -3,21 +3,19 @@ title: Modelo de objetos de esquema XML (SOM)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40a792f91ecd343684ff4c7921d6b21d25abecf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45bfba7bdab31b3edda59a350788e50182123ce0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570130"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709912"
 ---
 # <a name="xml-schema-object-model-som"></a>Modelo de objetos de esquema XML (SOM)
 Un esquema XML es una herramienta potente y compleja que sirve para crear y validar estructuras en documentos conforme a XML. De forma similar al modelado de datos en una base de datos relacional, un esquema proporciona una forma de definir la estructura de los documentos XML al especificar los elementos que se pueden utilizar en los documentos, así como la estructura y los tipos que deben seguir estos elementos con el fin de ser válidos en ese esquema específico.  
   
  El Modelo de objetos de esquema (SOM) incluye un conjunto de clases en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que le permiten leer un esquema desde un archivo o crear un esquema en memoria mediante programación. Luego, el esquema se puede atravesar, editar, compilar, validar o escribir en un archivo.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  Describe el Modelo de objetos de esquema (SOM) y las características y clases que incluye.  
   

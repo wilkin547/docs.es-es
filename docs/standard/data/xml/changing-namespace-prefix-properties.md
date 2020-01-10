@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
+ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46525709"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711121"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Cambiar propiedades de prefijo de espacio de nombres
 La clase **XmlNode** permite cambiar el prefijo de espacio de nombres asociado a un nodo concreto. Por ejemplo, en el código siguiente se muestra el prefijo de un elemento que se está cambiando.  
@@ -34,7 +32,7 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Salida**  
+ **Resultado**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -58,7 +56,7 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Salida**  
+ **Resultado**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  

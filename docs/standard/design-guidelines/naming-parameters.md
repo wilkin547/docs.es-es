@@ -6,16 +6,15 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-author: KrzysztofCwalina
-ms.openlocfilehash: 0e5b33839372e303b96bd6b84949f9a82da2f689
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bb67056bb39b6a5f372191a1d0b0bb0dc1fe4d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026317"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709184"
 ---
 # <a name="naming-parameters"></a>Asignar nombres a parámetros
-Más allá de la razón obvia de legibilidad, es importante seguir las instrucciones para los nombres de parámetro porque los parámetros se muestran en la documentación y en el diseñador cuando las herramientas de diseño visual proporcionan Intellisense y la funcionalidad de exploración de clase.  
+Aparte de la razón obvia de legibilidad, es importante seguir las directrices para los nombres de parámetro, ya que los parámetros se muestran en la documentación y en el diseñador cuando las herramientas de diseño visual proporcionan la funcionalidad de exploración de clases y de IntelliSense.  
   
  **✓ DO** utilice seguir el estilo Camel en los nombres de parámetro.  
   
@@ -23,7 +22,7 @@ Más allá de la razón obvia de legibilidad, es importante seguir las instrucci
   
  **✓ CONSIDER** con nombres basados en el significado de un parámetro en lugar de en el tipo del parámetro.  
   
-### <a name="naming-operator-overload-parameters"></a>Asignar nombres a parámetros de sobrecarga de operador  
+### <a name="naming-operator-overload-parameters"></a>Parámetros de sobrecarga del operador de nomenclatura  
  **✓ DO** usar `left` y `right` para nombres de parámetros de sobrecarga de operador binario si no hay ningún significado para los parámetros.  
   
  **✓ DO** usar `value` para unario sobrecarga de operador nombres de parámetro si no hay ningún significado para los parámetros.  
@@ -32,9 +31,9 @@ Más allá de la razón obvia de legibilidad, es importante seguir las instrucci
   
  **X DO NOT** use abreviaturas o índices numéricos para el operador de sobrecarga nombres de parámetro.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también
 

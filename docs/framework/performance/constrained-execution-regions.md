@@ -5,14 +5,12 @@ helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0561ff5212fd6bc4e9015bea8da1d1082dd027e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046694"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716169"
 ---
 # <a name="constrained-execution-regions"></a>regiones de ejecución restringidas
 Una región de ejecución restringida (CER) es parte de un mecanismo para crear código administrado de confianza. Una CER define un área en la que Common Language Runtime (CLR) no puede producir excepciones fuera de banda que eviten que el código del área se ejecute en su totalidad. Dentro de esa región, el código de usuario no puede ejecutar código que pueda producir excepciones fuera de banda. El método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> debe ir inmediatamente antes del bloque `try` y marca los bloques `catch`, `finally` y `fault` como regiones de ejecución restringidas. Una vez marcada como región restringida, el código solo debe llamar a otro código con contratos de fiabilidad estables y no debe asignar ni realizar llamadas virtuales a métodos no preparados o no confiables a menos que esté preparado para controlar errores. CLR retrasa las anulaciones de subprocesos del código que se está ejecutando en una CER.  
@@ -49,7 +47,7 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
 ### <a name="reliability-guarantees"></a>Garantías de fiabilidad  
  Las garantías de fiabilidad, representadas por valores de enumeración <xref:System.Runtime.ConstrainedExecution.Cer>, indican el grado de fiabilidad de un método determinado:  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail> En condiciones excepcionales, se puede producir un error en el método. En este caso, el método informa al método de la llamada de si esta se ha realizado correctamente o no. El método debe estar incluido en una CER para garantizar que puede notificar el valor devuelto.  
+- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. En condiciones excepcionales, se puede producir un error en el método. En este caso, el método informa al método de la llamada de si esta se ha realizado correctamente o no. El método debe estar incluido en una CER para garantizar que puede notificar el valor devuelto.  
   
 - <xref:System.Runtime.ConstrainedExecution.Cer.None>. El método, tipo o ensamblado no tiene ningún concepto de una CER y lo más probable es que no sea seguro llamar desde dentro de una CER sin mitigación significativa de daños de estado. No se aprovecha de las garantías de la CER. Esto implica lo siguiente:  
   
@@ -72,7 +70,7 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 - <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. En condiciones excepcionales, CLR no ofrece ninguna garantía con respecto a la coherencia del estado; es decir, la condición podría dañar el proceso.  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState> En condiciones excepcionales, se garantiza que el método no dañe el estado.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. En condiciones excepcionales, se garantiza que el método no dañe el estado.  
   
 ## <a name="reliability-trycatchfinally"></a>try/catch/finally de fiabilidad  
  `try/catch/finally` de fiabilidad es un mecanismo de control de excepciones con el mismo nivel de garantías de previsibilidad que la versión no administrada. El bloque `catch/finally` es la CER. Los métodos del bloque necesitan preparación anticipada y deben ser no interrumpibles.  

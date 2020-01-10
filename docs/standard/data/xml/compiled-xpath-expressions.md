@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916661"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711108"
 ---
 # <a name="compiled-xpath-expressions"></a>Expresiones XPath compiladas
 Un objeto <xref:System.Xml.XPath.XPathExpression> representa una consulta XPath compilada devuelta desde el método <xref:System.Xml.XPath.XPathExpression.Compile%2A> estático de la clase <xref:System.Xml.XPath.XPathExpression> o desde el método <xref:System.Xml.XPath.XPathNavigator.Compile%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
@@ -37,10 +35,10 @@ Un objeto <xref:System.Xml.XPath.XPathExpression> representa una consulta XPath 
   
  En la siguiente tabla se describe cada uno de los tipos de valores devueltos de XPath del W3C, sus equivalencias en Microsoft .NET Framework y con qué métodos se puede utilizar el objeto <xref:System.Xml.XPath.XPathExpression> basándose en su tipo de valor devuelto.  
   
-|Tipo de valor devuelto de XPath del W3C|Tipo equivalente en .NET Framework|DESCRIPCIÓN|Métodos|  
+|Tipo de valor devuelto de XPath del W3C|Tipo equivalente en .NET Framework|Descripción|Métodos|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Una colección no ordenada de nodos sin duplicados creados en el orden del documento.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> o <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|Un valor `true` o `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>, o bien<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Boolean`|<xref:System.Boolean>|Un valor `true` o `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> o<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|Número en punto flotante.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|Una secuencia de caracteres UCS.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   

@@ -3,14 +3,12 @@ title: Implementación de comportamientos discrecionales en la clase XslTransfor
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170835"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710809"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementación de comportamientos discrecionales en la clase XslTransform
 
@@ -56,7 +54,7 @@ Algunos comportamientos son únicos de la implementación de la clase <xref:Syst
 
 ## <a name="xslsort"></a>xsl:sort
 
-Al utilizar una transformación para ordenar, en la recomendación de XSLT versión 1.0 de W3C se realizan algunas observaciones, Son estos:
+Al utilizar una transformación para ordenar, en la recomendación de XSLT versión 1.0 de W3C se realizan algunas observaciones, Son:
 
 - Aunque dos procesadores XSLT pueden ser compatibles, pueden ordenar de forma diferente.
 
@@ -68,8 +66,8 @@ En la siguiente tabla se muestra el comportamiento de ordenación implementado p
 
 |Tipo de datos|Comportamiento de ordenación|
 |---------------|----------------------|
-|Texto|Los datos se ordenan con el método String.Compare de Common Language Runtime (CLR) y la referencia cultural local. Cuando el tipo de datos es "text", la ordenación en la clase <xref:System.Xml.Xsl.XslTransform> se comporta de forma idéntica a la comparación de cadenas de CLR.|
-|número|Los valores numéricos se tratan como números XPath y se ordenan según los detalles descritos en la [sección 3.5 de la recomendación de XML Path Language (XPath) Version 1.0](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) del W3C.|
+|Text|Los datos se ordenan con el método String.Compare de Common Language Runtime (CLR) y la referencia cultural local. Cuando el tipo de datos es "text", la ordenación en la clase <xref:System.Xml.Xsl.XslTransform> se comporta de forma idéntica a la comparación de cadenas de CLR.|
+|Número|Los valores numéricos se tratan como números XPath y se ordenan según los detalles descritos en la [sección 3.5 de la recomendación de XML Path Language (XPath) Version 1.0](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) del W3C.|
 
 ## <a name="optional-features-supported"></a>Características opcionales admitidas
 

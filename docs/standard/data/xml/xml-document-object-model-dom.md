@@ -3,20 +3,18 @@ title: Modelo de objetos de documento (DOM) XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 160d056491ca71f6de039e8cac7302a61504fcd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662476"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709964"
 ---
 # <a name="xml-document-object-model-dom"></a>Modelo de objetos de documento (DOM) XML
 
 La clase Modelo de objetos de documento XML (DOM) es una representación en la memoria de un documento XML. DOM permite leer, manipular y modificar un documento XML mediante programación. La clase **XmlReader** también lee XML, aunque proporciona acceso de solo avance y de solo lectura sin almacenamiento en memoria caché. Esto significa que no hay funciones para editar los valores de un atributo o contenido de un elemento, ni la posibilidad de agregar y quitar nodos con **XmlReader**. La edición es la función principal de DOM. Es la forma común y estructurada mediante la que se representan datos XML en la memoria, aunque los datos XML reales se almacenan de forma lineal cuando se encuentran en un archivo o proceden de otro objeto. A continuación se muestran datos XML:
 
-## <a name="input"></a>Entrada
+## <a name="input"></a>Input
 
 ```xml
 <?xml version="1.0"?>
@@ -35,7 +33,7 @@ La clase Modelo de objetos de documento XML (DOM) es una representación en la m
 
 En la ilustración siguiente se muestra cómo se estructura la memoria cuando se leen estos datos XML en la estructura DOM.
 
-![Estructura de documentos XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Estructura de documentos XML
+![Estructura del documento XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Estructura del documento XML
 
 Dentro de la estructura de los documentos XML, cada círculo de esta ilustración representa un nodo, que se denomina objeto **XmlNode**. El objeto **XmlNode** es el objeto básico del árbol de DOM. La clase **XmlDocument**, que extiende la clase **XmlNode**, admite métodos para realizar operaciones en el documento en conjunto (por ejemplo, cargarlo en la memoria o guardar el código XML en un archivo). Además, la clase **XmlDocument** proporciona un medio para ver y manipular los nodos de todo el documento XML. Las clases **XmlNode** y **XmlDocument** han mejorado el rendimiento y la capacidad de uso y disponen de métodos y propiedades para realizar lo siguiente:
 

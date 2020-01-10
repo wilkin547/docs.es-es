@@ -3,14 +3,12 @@ title: Crear nuevas referencias de entidad
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8d4e9e1e2dfd9882504c935912bcf235608485
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8c81aae89bbe5979dffdc47a369349bd2b3f2df7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710991"
 ---
 # <a name="creating-new-entity-references"></a>Crear nuevas referencias de entidad
 El método **CreateEntityReference** crea un nuevo nodo **XmlEntityReference**. El Modelo de objetos de documento (DOM) busca si el nombre de entidad al que se hace referencia ya se ha declarado. Si es así, los nodos secundarios del nodo **XmlEntityReference** se copian desde el nodo de declaración de entidad. Si no hay declaración de entidad equivalente, se adjunta un nodo de texto vacío como el único nodo secundario del nodo de referencia de entidad. Puesto que los nodos secundarios de **XmlEntityReference** se copian de otros nodos, son de solo lectura y no pueden modificarse.  
