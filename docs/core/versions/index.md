@@ -1,14 +1,13 @@
 ---
 title: Creación de versiones del entorno de ejecución y el SDK de .NET Core
 description: En este artículo se le enseña cómo se crean versiones del entorno de ejecución y el SDK de .NET Core (parecido al control de versiones semántico).
-author: bleroy
 ms.date: 07/26/2018
-ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713962"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777315"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
@@ -24,7 +23,7 @@ El SDK de .NET Core no sigue el esquema de control de versiones semántico. El S
 
 La tercera posición del número de versión del SDK comunica tanto la versión secundaria como el número de revisión. La versión secundaria se multiplica por 100. La versión secundaria 1 y la revisión 2 se representan con 102. Los dos dígitos finales representan el número de revisión. Por ejemplo, la versión de .NET Core 2.2 puede crear versiones como en la tabla siguiente:
 
-| Cambio                | Runtime de .NET Core | SDK de .NET Core (*) |
+| Cambio                | Runtime de .NET Core | SDK de .NET Core (\*) |
 |-----------------------|-------------------|-------------------|
 | Versión inicial       | 2.2.0             | 2.2.100           |
 | Revisión del SDK             | 2.2.0             | 2.2.101           |
