@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733156"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900595"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -91,7 +91,7 @@ En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. P
 
 ## <a name="related-content"></a>Contenido relacionado
 
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Contenido de los ensamblados](contents.md)|Elementos que componen un ensamblado.|
 |[Manifiesto del ensamblado](manifest.md)|Datos del manifiesto del ensamblado y cómo se almacenan en los ensamblados.|
@@ -111,7 +111,6 @@ En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. P
 ## <a name="see-also"></a>Vea también
 
 - [Formato de archivo de ensamblado .NET](file-format.md)
-- [Ensamblados de .NET](index.md)
 - [Ensamblados de confianza](friend.md)
 - [Ensamblados de referencia](reference-assemblies.md)
 - [Cómo: para cargar y descargar ensamblados](load-unload.md)

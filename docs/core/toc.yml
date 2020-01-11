@@ -339,8 +339,9 @@
     - name: Generador de serializador XML
       href: additional-tools/xml-serializer-generator.md
 - name: Portabilidad de .NET Framework
-  href: porting/index.md
   items:
+    - name: Información general
+      href: porting/index.md
     - name: Tecnologías de .NET Framework no disponibles para .NET Core
       href: porting/net-framework-tech-unavailable.md
     - name: Análisis de las dependencias de terceros

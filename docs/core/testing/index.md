@@ -4,12 +4,12 @@ description: En este artículo se proporciona información general breve de las 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714298"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899894"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard
 
@@ -28,7 +28,7 @@ Automatizar pruebas es un método magnífico para asegurarse de que una aplicaci
 Además, es recomendable que tenga en cuenta que hay procedimientos recomendados para la escritura de pruebas. Por ejemplo, [Test Driven Development (TTD)](https://deviq.com/test-driven-development/) es un proceso en el que una prueba unitaria se escribe antes que el código que debería comprobar. Este método se puede comparar a la creación del esquema de un libro antes de escribirlo. Está diseñado para ayudar a los desarrolladores a escribir código más simple, legible y eficaz. 
 
 > [!NOTE]
-> El equipo de ASP.NET sigue [estas convenciones](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) para ayudar a los desarrolladores a asignar buenos nombres a clases de prueba y métodos.
+> El equipo de ASP.NET sigue [estas convenciones](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) para ayudar a los desarrolladores a asignar buenos nombres a clases de prueba y métodos.
 
 No intente incluir dependencias en la infraestructura al escribir pruebas unitarias. Estas vuelven las pruebas lentas y frágiles, por lo que deberían reservarse para pruebas de integración. Puede evitar esas dependencias en su aplicación si sigue el [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) (Principio de dependencias explícitas) y usando la [Inserción de dependencias](/aspnet/core/fundamentals/dependency-injection). También puede mantener las pruebas unitarias en un proyecto separado de las pruebas de integración. Esto asegurará que el proyecto de pruebas unitarias no tiene referencias a paquetes de infraestructura ni dependencias de estos.
 
