@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 5110cdf53953bebd1a5ccd2781afa5c57175ea54
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8b86944808aa7a35341f4fdafb3a92c6d9d127ec
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568753"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900852"
 ---
 # <a name="wcf-data-services-resources"></a>Recursos de Servicios de datos de WCF
 WCF Data Services temas de introducción se pueden encontrar en las siguientes ubicaciones. Muchos de estos temas también contienen vínculos a temas relacionados que contienen información más detallada.  
@@ -29,34 +29,28 @@ WCF Data Services temas de introducción se pueden encontrar en las siguientes u
 ## <a name="external-resources"></a>Recursos externos  
  Los recursos externos siguientes proporcionan información adicional y admiten la creación de aplicaciones WCF Data Services que exponen y consumen fuentes de OData.  
   
- [Foro de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150512)  
+ [Foro de WCF Data Services](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  
  Compatibilidad con la programación de datos para desarrolladores de WCF Data Services.  
   
- [Blog del equipo de Servicios de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=150511)  
+ [Blog del equipo de Servicios de datos de WCF](https://docs.microsoft.com/archive/blogs/astoriateam/)  
  Blog que contiene actualizaciones y análisis de WCF Data Services características y funcionalidades.  
   
- [Sitio web de OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
+ [Sitio web de OData](https://www.odata.org/)  
  La fuente principal de información sobre OData.  
   
- [SDK de OData](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ [SDK de OData: código de ejemplo](https://www.odata.org/ecosystem/#sdk)  
  Contiene servicios de ejemplo, ejemplos y bibliotecas de programación que permiten trabajar con fuentes de OData.  
   
- [Blog de OData](https://go.microsoft.com/fwlink/?LinkId=185868)  
+ [Blog de OData](https://www.odata.org/blog/)  
  Blog que contiene discusiones sobre la programación de OData.  
   
- [Centro para desarrolladores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?LinkId=91903)  
- Ubicación central para buscar información y recursos para trabajar con datos.  
-  
- [Procedimientos de la plataforma de datos Vídeos: serie WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
- Contiene un conjunto de conversiones de pantalla de vídeo que muestra cómo compilar y obtener acceso a los servicios de datos.  
-  
- [Información general: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Información general: WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
  Notas del producto que proporcionan más información de alto nivel sobre las ventajas de WCF Data Services.  
   
- [Uso de Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
+ [Uso de Microsoft WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  Notas del producto que proporcionan información adicional y ejemplos para la creación de servicios de datos y para obtener acceso a los servicios de datos en aplicaciones cliente.  
   
- [El modelo entidad-relación: hacia una vista unificada de los datos de](https://go.microsoft.com/fwlink/?LinkId=91909) Peter PIN-Shan Chen, Massachusetts Institute of Technology  
+ [El modelo entidad-relación: hacia una vista unificada de los datos de](https://dl.acm.org/doi/10.1145/320434.320440) Peter PIN-Shan Chen, Massachusetts Institute of Technology  
  Describe la base para el modelo de entidad relacional implementado por WCF Data Services. Escrito en 1976, este es uno de los documentos que se cita con más frecuencia en el campo de la informática.  
   
 ## <a name="see-also"></a>Vea también

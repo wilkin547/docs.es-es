@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568805"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900923"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
@@ -39,7 +39,7 @@ La configuración de un servicio de datos para que admita la transmisión por se
 
 5. Habilite el acceso a los recursos binarios en el servidor o en un origen de datos.
 
-Los ejemplos de este tema se basan en un ejemplo de servicio fotográfico de streaming, que se describe en profundidad en la [serie post Data Services streaming Provider series: Implementing a streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989). El código fuente de este servicio de ejemplo está disponible en la [Página de ejemplo streaming Photo Service](https://go.microsoft.com/fwlink/?LinkID=198988) de la galería de código de MSDN.
+Los ejemplos de este tema se basan en un ejemplo de servicio fotográfico de streaming, que se describe en profundidad en la [serie post Data Services streaming Provider series: Implementing a streaming Provider (Part 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1). El código fuente del ejemplo de streaming de datos de transmisión por secuencias está disponible en [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample).
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definir una entrada de vínculo multimedia en el modelo de datos
 
@@ -53,7 +53,7 @@ Para indicar que una entidad es una entrada de vínculo multimedia, agregue el a
 
 También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.
 
-Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea la [serie post Data Services streaming Provider: Implementing a streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea la [serie post Data Services streaming Provider: Implementing a streaming Provider (Part 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Proveedor de reflexión**
 
@@ -67,7 +67,7 @@ Cuando se usan proveedores de servicios personalizados, implemente la interfaz <
 
 Para crear un servicio de datos que admita flujos de datos binarios, debe implementar la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Esta implementación habilita el servicio de datos para devolver al cliente datos binarios como flujo y utilizar los datos binarios como flujo enviado desde el cliente. El servicio de datos crea una instancia de esta interfaz cuando sea necesario para acceder a los datos binarios como flujo. La interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider> especifica los siguientes miembros:
 
-|Nombre del miembro|Descripción|
+|Nombre de miembro|Descripción|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|El servicio de datos invoca este método para eliminar el recurso multimedia correspondiente cuando se elimina su entrada de vínculo multimedia. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que elimina el recurso multimedia asociado con la entrada de vínculo multimedia proporcionada.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|El servicio de datos invoca este método para devolver un recurso multimedia como un flujo. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que proporciona un flujo que el servicio de datos utiliza para devolver el recurso multimedia que está asociado a la entrada de vínculo multimedia proporcionada.|

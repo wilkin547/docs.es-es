@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 34614fe24127787a113bab4975a50f1c8d2d875e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134995"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899495"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -39,7 +39,7 @@ HRESULT StrongNameSignatureGenerationEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `wszFilePath`  
  de La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
   
@@ -72,9 +72,9 @@ HRESULT StrongNameSignatureGenerationEx (
 - `SN_TEST_SIGN` (0x00000002): prueba-firma del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Especifique NULL en `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
  La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
@@ -83,14 +83,14 @@ HRESULT StrongNameSignatureGenerationEx (
   
  Si se especifica `SN_TEST_SIGN`, el encabezado de Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

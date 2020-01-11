@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568897"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900970"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
 
-La proyección proporciona un mecanismo en el Open Data Protocol (OData) para reducir la cantidad de datos en la fuente devuelta por una consulta especificando que solo se devuelvan determinadas propiedades de una entidad en la respuesta. Para obtener más información, vea [OData: SELECT System Query Option ($Select)](https://go.microsoft.com/fwlink/?LinkId=186076).
+La proyección proporciona un mecanismo en el Open Data Protocol (OData) para reducir la cantidad de datos en la fuente devuelta por una consulta especificando que solo se devuelvan determinadas propiedades de una entidad en la respuesta. Para obtener más información, vea la sección 4,8. Seleccione la opción de consulta del sistema ($select) en [convenciones de URI (versión 2,0 de oData)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 En este tema se describen la definición de la proyección de una consulta, cuáles son los requisitos para los tipos con entidad y sin ella, la realización de actualizaciones en los resultados proyectados, la creación de tipos proyectados y la enumeración de algunas consideraciones de proyecciones.
 

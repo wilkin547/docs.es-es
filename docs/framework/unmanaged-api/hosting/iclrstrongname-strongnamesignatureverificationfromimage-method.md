@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-ms.openlocfilehash: adb3b4e33edafe6d25c8259e316a9b62e339f896
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bfc41fdad35a7e0560d251179ea035c96aecab7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092670"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899532"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage (Método)
 Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.  
@@ -36,7 +36,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pbBase`  
  de Dirección virtual relativa del manifiesto del ensamblado asignado.  
   
@@ -44,7 +44,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
  de Tamaño, en bytes, de la imagen asignada.  
   
  `dwInFlags`  
- de Marcas que influyen en el comportamiento de la comprobación. Se admiten los siguientes valores:  
+ de Marcas que influyen en el comportamiento de la comprobación. Se admiten los valores siguientes:  
   
 - `SN_INFLAG_FORCE_VER` (0x00000001): fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
   
@@ -64,16 +64,16 @@ HRESULT StrongNameSignatureVerificationFromImage (
 - `SN_OUTFLAG_WAS_VERIFIED` (0x00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

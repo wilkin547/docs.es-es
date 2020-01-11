@@ -2,12 +2,12 @@
 title: Copia de seguridad en línea
 ms.date: 12/13/2019
 description: Obtenga información sobre cómo usar la característica de copia de seguridad en línea de SQLite.
-ms.openlocfilehash: 885aa2c5555b58deb2551c0a4e6933742a093457
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d857dcb69f2b2d10b034a0abf222b30c2e20bb41
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450349"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901282"
 ---
 # <a name="online-backup"></a>Copia de seguridad en línea
 
@@ -15,4 +15,4 @@ SQLite puede realizar copias de seguridad de archivos de base de datos mientras 
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/BackupSample/Program.cs?name=snippet_Backup)]
 
-Actualmente, `BackupDatabase` realizará una copia de seguridad de la base de datos lo más rápidamente posible y bloqueará la escritura de otras conexiones en la base de datos. Problema [#13834](https://github.com/aspnet/EntityFrameworkCore/issues/13834) proporcionar una API alternativa para realizar una copia de seguridad de la base de datos en segundo plano y permitir que otras conexiones interrumpan la copia de seguridad y escriban en la base de datos. Si está interesado, proporcione comentarios sobre el problema.
+Actualmente, `BackupDatabase` realizará una copia de seguridad de la base de datos lo más rápidamente posible y bloqueará la escritura de otras conexiones en la base de datos. Problema [#13834](https://github.com/dotnet/efcore/issues/13834) proporcionar una API alternativa para realizar una copia de seguridad de la base de datos en segundo plano y permitir que otras conexiones interrumpan la copia de seguridad y escriban en la base de datos. Si está interesado, proporcione comentarios sobre el problema.

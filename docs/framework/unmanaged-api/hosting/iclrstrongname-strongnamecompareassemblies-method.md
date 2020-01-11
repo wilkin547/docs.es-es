@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1fb356c-72cf-4aa4-8376-f291a6d97c01
 topic_type:
 - apiref
-ms.openlocfilehash: fdca03b781e07b709cbc54e673dbaa2a1130fbe3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16b51393c945061efb0e94e48e5388c60472ee11
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135146"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899751"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies (Método)
 Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros.  
@@ -35,7 +35,7 @@ HRESULT StrongNameCompareAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `wszAssembly1`  
  de Ruta de acceso al primer ensamblado.  
   
@@ -52,18 +52,18 @@ HRESULT StrongNameCompareAssemblies (
 - `SN_CMP_SIGONLY` (2): especifica que los ensamblados difieren solo en la firma y la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La firma de nombre seguro de un ensamblado consta del nombre de texto, la versión, la referencia cultural y el token de clave pública del ensamblado.  
   
 ## <a name="see-also"></a>Vea también

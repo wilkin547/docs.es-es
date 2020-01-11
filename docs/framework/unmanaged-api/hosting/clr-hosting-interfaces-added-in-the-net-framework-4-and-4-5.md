@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8484b47549f83795778420048d610e2d1626d87b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195923"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899718"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5
 En esta sección se describen las interfaces que los hosts no administrados pueden utilizar para integrar el Common Language Runtime (CLR) en el .NET Framework 4, .NET Framework 4,5 y versiones posteriores en sus aplicaciones. Estas interfaces proporcionan métodos para que un host configure y cargue el tiempo de ejecución en un proceso.  
@@ -22,9 +22,9 @@ En esta sección se describen las interfaces que los hosts no administrados pued
   
 - No utilizan tipos COM como `BSTR`, `SAFEARRAY`o `VARIANT`.  
   
-- No hay ningún modelo de apartamento, agregación o activación del registro que use la [función CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
+- No hay ningún modelo de apartamento, agregación o activación del registro que use la [función CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [ICLRAppDomainResourceMonitor (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
  Proporciona métodos que inspeccionan el uso de la CPU y la memoria de un dominio de aplicación.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 43cd34ad02f1e2d212ff5e2ff4694591fbed52e5
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800351"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900958"
 ---
 # <a name="quickstart-wcf-data-services"></a>Inicio rápido (Servicios de datos de WCF)
 
@@ -45,7 +45,7 @@ Para completar este tutorial rápido, debe instalar los siguientes componentes:
  Cree una aplicación de WPF para usar la fuente de OData, enlace datos a controles de Windows, cambie los datos en los controles enlazados y, a continuación, envíe los cambios de vuelta al servicio de datos.
 
 > [!NOTE]
-> Los archivos de proyecto de una versión completada del tutorial rápido se pueden descargar en la página de [ejemplos de documentación de Servicios de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=179994) .
+> Los archivos de proyecto de una versión completada del tutorial rápido se pueden descargar desde [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client)).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

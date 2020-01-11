@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 734dc4d1-0a76-4736-b5ac-cb4253b3dd49
 topic_type:
 - apiref
-ms.openlocfilehash: 6b473466aefc06dc83526e65f8ee9e37703ba9e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6375fd8e4a314403267a4cdf2e8356677e9e7a06
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134961"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899483"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification (Método)
 Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba en función de las marcas especificadas.  
@@ -35,12 +35,12 @@ HRESULT StrongNameSignatureVerification (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `wszFilePath`  
  de Ruta de acceso al archivo portable ejecutable (. dll o. exe) para que lo compruebe el ensamblado.  
   
  `dwInFlags`  
- de Marcas para modificar el comportamiento de la comprobación. Se admiten los siguientes valores:  
+ de Marcas para modificar el comportamiento de la comprobación. Se admiten los valores siguientes:  
   
 - `SN_INFLAG_FORCE_VER` (0x00000001): fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
   
@@ -60,16 +60,16 @@ HRESULT StrongNameSignatureVerification (
 - `SN_OUTFLAG_WAS_VERIFIED` (0x00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

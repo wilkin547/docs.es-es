@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a76377857c3cf1e40a328b9a13fb4834321707e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135040"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899569"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall (Método)
 Importa un par de claves pública y privada a un contenedor.  
@@ -35,7 +35,7 @@ HRESULT StrongNameKeyInstall (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `wszKeyContainer`  
  de Nombre del contenedor de claves. `wszKeyContainer` debe ser una cadena no vacía.  
   
@@ -46,19 +46,19 @@ HRESULT StrongNameKeyInstall (
  de Tamaño, en bytes, de `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use el método [ICLRStrongName:: StrongNameKeyDelete (](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) para eliminar el contenedor de claves.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

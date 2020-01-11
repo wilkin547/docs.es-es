@@ -2,16 +2,16 @@
 title: Detalles de implementación del protocolo WCF Data Services
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 5cd73caf848badc058c1f6df75973e1bb0a4fad4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2302b5577bec3fc4221bc6e5161c87905c38bec3
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568764"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900868"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Detalles de implementación del protocolo WCF Data Services
 ## <a name="odata-protocol-implementation-details"></a>Detalles de implementación del protocolo OData  
- El Open Data Protocol (OData) requiere que un servicio de datos que implemente el protocolo proporcione un determinado conjunto mínimo de funcionalidades. Estas funcionalidades se describen en los documentos del protocolo en términos de "debe" y "debe". Otra funcionalidad opcional se describe en términos de "mayo". En este tema se describen estas funcionalidades opcionales que no implementa actualmente WCF Data Services. Para obtener más información, consulte la [documentación del protocolo OData](https://go.microsoft.com/fwlink/?LinkID=184554).  
+El Open Data Protocol (OData) requiere que un servicio de datos que implemente el protocolo proporcione un determinado conjunto mínimo de funcionalidades. Estas funcionalidades se describen en los documentos del protocolo en términos de "debe" y "debe". Otras funciones opcionales se describen en términos de "mayo". En este artículo se describen estas funcionalidades opcionales que no implementa actualmente WCF Data Services.
   
 ### <a name="support-for-the-format-query-option"></a>Compatibilidad con la opción de consulta $format  
  El protocolo OData es compatible con las fuentes JavaScript Notation (JSON) y Atom, y OData proporciona la opción de consulta del sistema `$format` para permitir que un cliente solicite el formato de la fuente de respuesta. Esta opción de consulta del sistema, si el servicio de datos la admite, debe invalidar el valor del encabezado Accept de la solicitud. WCF Data Services admite la devolución de fuentes JSON y Atom. Sin embargo, la implementación predeterminada no admite la opción de consulta `$format` y usa solo el valor del encabezado Accept para determinar el formato de la respuesta. Hay casos en los que el servicio de datos quizás necesite admitir la opción de consulta `$format`, como cuando los clientes no pueden establecer el encabezado Accept. Para admitir estos escenarios, debe extender su servicio de datos para administrar esta opción en el URI. Puede Agregar esta funcionalidad al servicio de datos descargando el [JSONP y la compatibilidad con el formato controlado por la dirección URL de ADO.NET Data Services](https://go.microsoft.com/fwlink/?LinkId=208228) proyecto de ejemplo en el sitio web de la galería de código de MSDN y agregándolo a su proyecto de servicio de datos. Este ejemplo quita la opción de consulta `$format` y cambia el encabezado Accept a `application/json`. Al incluir el proyecto de ejemplo y agregar `JSONPSupportBehaviorAttribute` a la clase del servicio de datos permite al servicio administrar la opción de consulta `$format``$format=json`. Se requiere mayor personalización de este proyecto de ejemplo para administrar también `$format=atom` u otros formatos personalizados.  

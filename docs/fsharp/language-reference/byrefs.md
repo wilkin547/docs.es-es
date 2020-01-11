@@ -2,12 +2,12 @@
 title: Byrefs
 description: Obtenga información sobre los tipos byref y tipo ByRef F#en, que se usan para la programación de bajo nivel.
 ms.date: 11/04/2019
-ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545135"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901311"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -175,7 +175,7 @@ Un struct "`byref`" en F# es un tipo de valor enlazado a la pila. Nunca se asign
 
 Este último punto es fundamental para F# la programación de estilo de canalización, dado que `|>` es una función genérica que parametriza sus tipos de entrada. Esta restricción puede ser relajada para `|>` en el futuro, ya que está alineada y no realiza ninguna llamada a funciones genéricas no insertadas en su cuerpo.
 
-Aunque estas reglas restringen considerablemente el uso, lo hacen para satisfacer la promesa de la informática de alto rendimiento de una manera segura.
+Aunque estas reglas restringen el uso de forma rigurosa, lo hacen para satisfacer la promesa de la informática de alto rendimiento de una manera segura.
 
 ## <a name="byref-returns"></a>ByRef devuelve
 

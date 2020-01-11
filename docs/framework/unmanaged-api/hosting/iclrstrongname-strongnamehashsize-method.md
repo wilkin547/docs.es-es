@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-ms.openlocfilehash: 8db3b1854e334cef4d91d21eb5f666ba2e88fc2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: abcae4a89dc2ee3895d6ff246fa7358a5fe2f06e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135063"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901113"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize (Método)
 Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  
@@ -34,7 +34,7 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `ulHashAlg`  
  de Algoritmo hash que se usa para calcular el tamaño del búfer.  
   
@@ -42,16 +42,16 @@ HRESULT StrongNameHashSize (
  enuncia Tamaño de búfer devuelto, en bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

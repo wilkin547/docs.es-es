@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110994"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901013"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess (Método)
 Inicia un proceso y su subproceso primario bajo el control del depurador.  
@@ -44,7 +44,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `lpApplicationName`  
  de Puntero a una cadena terminada en null que especifica el módulo que va a ser ejecutado por el proceso iniciado. El módulo se ejecuta en el contexto de seguridad del proceso de llamada.  
   
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  de Se establece en `true` para indicar que los identificadores heredables del proceso de llamada son heredados por el proceso iniciado, o `false` para indicar que no se heredan los identificadores. Los identificadores heredados tienen el mismo valor y derechos de acceso que los identificadores originales.  
   
  `dwCreationFlags`  
- de Combinación bit a bit de las [marcas de creación de procesos de Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlan la clase de prioridad y el comportamiento del proceso iniciado.  
+ de Combinación bit a bit de las [marcas de creación de procesos de Win32](/windows/win32/procthread/process-creation-flags) que controlan la clase de prioridad y el comportamiento del proceso iniciado.  
   
  `lpEnvironment`  
  de Puntero a un bloque de entorno para el nuevo proceso.  
@@ -81,23 +81,23 @@ HRESULT CreateProcess (
  `ppProcess`  
  enuncia Puntero a la dirección de un objeto ICorDebugProcess que representa el proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los parámetros de este método son los mismos que los del método `CreateProcess` de Win32.  
   
  Para habilitar la depuración en modo mixto no administrada, establezca `dwCreationFlags` &#124; en DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS. Si solo desea usar la depuración administrada, no establezca estas marcas.  
   
- Si el depurador y el proceso que se va a depurar (el proceso asociado) comparten una sola consola y se usa la depuración de interoperabilidad, es posible que el proceso asociado mantenga bloqueos de la consola y se detenga en un evento de depuración. Después, el depurador bloqueará cualquier intento de usar la consola. Para evitar este problema, establezca la marca CREATE_NEW_CONSOLE en el parámetro `dwCreationFlags`.  
+ Si el depurador y el proceso que se va a depurar (el proceso asociado) comparten una sola consola y se usa la depuración de interoperabilidad, es posible que el proceso asociado mantenga bloqueos de la consola y se detenga en un evento de depuración. Después, el depurador bloqueará cualquier intento de usar la consola. Para evitar este problema, establezca la marca de CREATE_NEW_CONSOLE en el parámetro `dwCreationFlags`.  
   
  No se admite la depuración de interoperabilidad en las plataformas Win9x y no x86, como las plataformas basadas en IA-64 y AMD64.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
