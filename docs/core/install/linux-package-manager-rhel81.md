@@ -4,21 +4,18 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8781d6bd14daf975fcc602fd2924a333750d4256
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998916"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714373"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>Administrador de paquetes de RHEL 8.1: instalación de .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en RHEL 8.1. .NET Core 3.1 todavía no está disponible para RHEL 8.1.
-
-> [!NOTE]
-> RHEL 8.0 no incluye .NET Core 3.0. Use el comando `yum upgrade` para actualizar a RHEL 8.1.
 
 > [!NOTE]
 > RHEL 8.0 no incluye .NET Core 3.0. Use el comando `yum upgrade` para actualizar a RHEL 8.1.
@@ -40,7 +37,6 @@ scl enable dotnet-sdk-3.0 bash
 
 Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el entorno de ejecución de ASP.NET Core. En el terminal, ejecute los comandos siguientes.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 dnf install aspnetcore-runtime-3.0
 scl enable aspnetcore-runtime-3.0 bash

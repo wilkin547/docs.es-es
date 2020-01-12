@@ -1,15 +1,13 @@
 ---
 title: 'Depuradores administrados: .NET Core'
 description: Información general de los depuradores administrados de Visual Studio y Visual Studio Code.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 3741011d22ab6c4240b7f88a9ab790ea61ecd0d2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303651"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715568"
 ---
 # <a name="net-core-managed-debuggers"></a>Depuradores administrados de .Net Core
 
@@ -19,7 +17,7 @@ Microsoft proporciona depuradores para código administrado en **Visual Studio**
 
 ## <a name="visual-studio-managed-debugger"></a>Depurador administrado de Visual Studio
 
-**Visual Studio ** es un entorno de desarrollo integrado con el depurador más completo disponible. Visual Studio es una opción excelente para los desarrolladores que trabajan en Windows.
+**Visual Studio**  es un entorno de desarrollo integrado con el depurador más completo disponible. Visual Studio es una opción excelente para los desarrolladores que trabajan en Windows.
 
 - [Tutorial: Depuración de una aplicación .NET Core en Windows con Visual Studio](../tutorials/debugging-with-visual-studio.md)
 

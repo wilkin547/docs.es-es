@@ -3,13 +3,12 @@ title: 'Paquetes, metapaquetes y marcos de trabajo: .NET Core'
 description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de trabajo.
 author: richlander
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715507"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 

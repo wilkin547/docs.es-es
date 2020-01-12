@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: f17a410ccea1ef4dec32de1d80ef6aac889aa6f3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bcc41bfcd7c6d03038952e3faaf07952c3deb69d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998910"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715534"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>Administrador de paquetes de RHEL 7: instalación de .NET Core
 
@@ -35,7 +35,6 @@ scl enable rh-dotnet30 bash
 
 Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el entorno de ejecución de ASP.NET Core. En el terminal, ejecute los comandos siguientes.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
