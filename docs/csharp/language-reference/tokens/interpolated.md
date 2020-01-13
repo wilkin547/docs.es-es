@@ -1,6 +1,5 @@
 ---
 title: '$ - Interpolación de cadenas: referencia de C#'
-ms.custom: seodec18
 description: La interpolación de cadenas proporciona una sintaxis más legible y cómoda para aplicar formato al resultado de la cadena, en comparación con el formato compuesto de cadenas tradicional.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421857"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715085"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas: referencia de C#
 
@@ -38,7 +37,7 @@ La estructura de un elemento con una expresión de interpolación es como se mue
 
 Los elementos entre corchetes son opcionales. En esta tabla se describe cada elemento:
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |`interpolationExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|

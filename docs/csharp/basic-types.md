@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos principales (valores numérico
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: e1cb5b103459ff691bf6ed8f8ebc1fa3fd8487c3
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552317"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339285"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -58,7 +58,7 @@ C# proporciona un conjunto estándar de tipos numéricos integrados para represe
   
 ## <a name="custom-types"></a>Tipos personalizados
 
-Las construcciones [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) y [enum](language-reference/keywords/enum.md) se usan para crear sus propios tipos personalizados. La biblioteca de clases .NET Framework es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente.
+Las construcciones [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) y [enum](language-reference/builtin-types/enum.md) se usan para crear sus propios tipos personalizados. La biblioteca de clases .NET Framework es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente.
   
 ## <a name="generic-types"></a>Tipos genéricos
 

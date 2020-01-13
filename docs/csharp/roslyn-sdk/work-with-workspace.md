@@ -3,12 +3,12 @@ title: Trabajar con el modelo de área de trabajo del SDK de .NET Compiler Platf
 description: En este tema se proporciona una descripción del tipo que se usa para consultar y manipular el área de trabajo y los proyectos del código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354808"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346909"
 ---
 # <a name="work-with-a-workspace"></a>Trabajar con un área de trabajo
 
@@ -40,4 +40,4 @@ El diagrama siguiente es una representación de la relación entre el área de t
 
 ## <a name="summary"></a>Resumen
 
-Roslyn expone un conjunto de API de compilador y API de áreas de trabajo que proporciona información detallada sobre el código fuente y que tiene plena fidelidad con los lenguajes C# y Visual Basic.  El SDK de .NET Compiler Platform reduce notablemente la barrera para crear herramientas y aplicaciones centradas en el código. Crea numerosas oportunidades para la innovación en áreas como metaprogramación, generación y transformación de código, uso interactivo de los lenguajes C# y VB e incrustación de C# y VB en lenguajes específicos de dominio.  
+Roslyn expone un conjunto de API de compilador y API de áreas de trabajo que proporciona información detallada sobre el código fuente y que tiene plena fidelidad con los lenguajes C# y Visual Basic.  El SDK de .NET Compiler Platform reduce notablemente la barrera para crear herramientas y aplicaciones centradas en el código. Crea numerosas oportunidades para la innovación en áreas como la metaprogramación, la generación y la transformación de código, el uso interactivo de los lenguajes C# y Visual Basic, y la inserción de C# y Visual Basic en lenguajes específicos del dominio.  

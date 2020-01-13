@@ -1,17 +1,16 @@
 ---
 title: 'Delegados con métodos con nombre y Métodos anónimos: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418030"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712382"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegados con métodos con nombre y Métodos anónimos (Guía de programación de C#)
 Un [delegado](../../language-reference/builtin-types/reference-types.md) puede asociarse con un método con nombre. Cuando crea una instancia de un delegado mediante un método con nombre, el método se pasa como un parámetro, por ejemplo:  
@@ -41,5 +40,5 @@ Un [delegado](../../language-reference/builtin-types/reference-types.md) puede a
 
 - [Guía de programación de C#](../index.md)
 - [Delegados](./index.md)
-- [Cómo: Combinar delegados (delegados de multidifusión)](./how-to-combine-delegates-multicast-delegates.md)
+- [Procedimiento para combinar delegados (delegados de multidifusión)](./how-to-combine-delegates-multicast-delegates.md)
 - [Eventos](../events/index.md)

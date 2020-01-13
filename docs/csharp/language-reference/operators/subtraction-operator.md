@@ -1,6 +1,5 @@
 ---
 title: '- Operadores - y -= (referencia de C#)'
-ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
 - -_CSharpKeyword
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 775f06b05d75078e53ab777d09713d69467ace14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038881"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712616"
 ---
 # <a name="--and---operators-c-reference"></a>Operadores - y -= (referencia de C#)
 
@@ -68,7 +67,7 @@ En el siguiente ejemplo se muestra el uso del operador `-=`:
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
-También se usa el operador `-=` con el fin de especificar un método de controlador de eventos para eliminar cuando se finaliza la suscripción a un [evento](../keywords/event.md). Para obtener más información, vea [Procedimientos para suscribir y cancelar la suscripción a eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+También se usa el operador `-=` con el fin de especificar un método de controlador de eventos para eliminar cuando se finaliza la suscripción a un [evento](../keywords/event.md). Para obtener más información, vea [Procedimiento para suscribir y cancelar la suscripción a eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 

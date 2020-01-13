@@ -1,6 +1,5 @@
 ---
 title: while - Referencia de C#
-ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
 - while_CSharpKeyword
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: fad0ceae9cf1080e7f4b553e0808fd531fd28c57
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552377"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712798"
 ---
 # <a name="while-c-reference"></a>while (Referencia de C#)
 
-La instrucción `while` ejecuta una instrucción o un bloque de instrucciones mientras una expresión booleana especificada se evalúa como `true`. Como esa expresión se evalúa antes de cada ejecución del bucle, un bucle `while` se ejecuta cero o varias veces. Esto es diferente del bucle [do](do.md) que se ejecuta una o varias veces.
+La instrucción `while` ejecuta una instrucción o un bloque de instrucciones mientras que una expresión booleana especificada se evalúa como `true`. Como esa expresión se evalúa antes de cada ejecución del bucle, un bucle `while` se ejecuta cero o varias veces. Esto es diferente del bucle [do](do.md) que se ejecuta una o varias veces.
 
 En cualquier punto del bloque de instrucciones `while`, se puede salir del bucle mediante la instrucción [break](break.md).
 

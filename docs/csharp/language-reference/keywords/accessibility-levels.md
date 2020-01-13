@@ -1,17 +1,16 @@
 ---
 title: 'Niveles de accesibilidad: Referencia de C#'
-ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602387"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713814"
 ---
 # <a name="accessibility-levels-c-reference"></a>Niveles de accesibilidad (Referencia de C#)
 

@@ -1,6 +1,5 @@
 ---
 title: '<c>: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - c
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: 9454ef8cc4b72d1d6bdcac26faf76eb17080328c
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 97d5949a1a1528befeffdc27a3e727ac510e8da2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523535"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697239"
 ---
 # <a name="c-c-programming-guide"></a>\<c> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  

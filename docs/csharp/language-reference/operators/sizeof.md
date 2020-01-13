@@ -1,6 +1,5 @@
 ---
 title: 'Operador sizeof: Referencia de C#'
-ms.custom: seodec18
 ms.date: 07/25/2019
 f1_keywords:
 - sizeof_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c88f205a616587e5437bf4fc81bcbdcbbc19a9ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038937"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712642"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operador sizeof (referencia de C#)
 
@@ -37,7 +36,7 @@ El operador `sizeof` requiere un contexto de [unsafe](../keywords/unsafe.md). Si
 |`sizeof(decimal)`|16|
 |`sizeof(bool)`|1|
 
-Tampoco es necesario usar un contexto de unsafe cuando el operando del operador `sizeof` es el nombre de un tipo [enum](../keywords/enum.md).
+Tampoco es necesario usar un contexto de unsafe cuando el operando del operador `sizeof` es el nombre de un tipo [enum](../builtin-types/enum.md).
 
 En el siguiente ejemplo se muestra el uso del operador `sizeof`:
 

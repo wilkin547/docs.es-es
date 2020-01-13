@@ -1,16 +1,15 @@
 ---
 title: 'Estructura general de un programa de C#: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 7e38181440dec17206563aeddc809810f5155b14
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: cdb739b585722ca5988192d288a7ef4fbcfe7d8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417733"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702582"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estructura general de un programa de C# (Guía de programación de C#)
 Los programas de C# pueden constar de uno o más archivos. Cada archivo puede contener cero o más espacios de nombres. Un espacio de nombres puede contener tipos como clases, structs, interfaces, enumeraciones y delegados, además de otros espacios de nombres. El siguiente es el esqueleto de un programa de C# que contiene todos estos elementos.  

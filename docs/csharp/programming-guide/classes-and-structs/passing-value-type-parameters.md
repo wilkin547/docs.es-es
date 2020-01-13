@@ -1,17 +1,16 @@
 ---
 title: 'Pasar parámetros de tipo de valor: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: dfd2c39eff44b431ec10d85f855fb015a2391f29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b6999c90bbe254542419232ab719a2754018d295
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596241"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705462"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Pasar parámetros de tipo de valor (Guía de programación de C#)
 Una variable [tipo de valor](../../language-reference/keywords/value-types.md) contiene sus datos directamente, en oposición a la variable [tipo de referencia](../../language-reference/keywords/reference-types.md), que contiene una referencia a sus datos. Pasar una variable tipo de valor a un método en función del valor significa pasar una copia de la variable al método. Ningún cambio realizado en el parámetro dentro del método afecta a los datos originales almacenados en la variable de argumentos. Si desea que el método al que se llama cambie el valor del argumento, debe pasarlo en función de la referencia, con la palabra clave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). También puede usar la palabra clave [in](../../language-reference/keywords/in-parameter-modifier.md) para pasar un parámetro de valor por referencia para evitar la copia, a la vez que se asegura de que el valor no se modificará. Para simplificar, en el ejemplo siguiente se usa `ref`.  

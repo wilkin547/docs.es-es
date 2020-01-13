@@ -1,17 +1,16 @@
 ---
 title: 'Genéricos y reflexión: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659883"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712174"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos y reflexión (Guía de programación de C#)
 Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos genéricos en tiempo de ejecución, se puede usar la reflexión para obtener información sobre los tipos genéricos de la misma manera que para los tipos no genéricos. Para obtener más información, vea [Generics in the Run Time](./generics-in-the-run-time.md) (Genéricos en el tiempo de ejecución).  
@@ -20,7 +19,7 @@ Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos g
   
  Para obtener una lista de las condiciones invariables para los términos usados en la reflexión genérica, vea los comentarios de la propiedad <xref:System.Type.IsGenericType%2A>.  
   
-|Nombre de miembro System.Type|DESCRIPCIÓN|  
+|Nombre de miembro System.Type|Descripción|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Devuelve true si un tipo es genérico.|  
 |<xref:System.Type.GetGenericArguments%2A>|Devuelve una matriz de objetos `Type` que representan los argumentos de tipo proporcionados para un tipo construido, o los parámetros de tipo de una definición de tipo genérico.|  
@@ -36,7 +35,7 @@ Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos g
   
  Además, los miembros de la clase <xref:System.Reflection.MethodInfo> habilitan la información en tiempo de ejecución para métodos genéricos. Para obtener una lista de las condiciones invariables para los términos usados para reflejarse en métodos genéricos, vea los comentarios de la propiedad <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
-|Nombre de miembro System.Reflection.MemberInfo|DESCRIPCIÓN|  
+|Nombre de miembro System.Reflection.MemberInfo|Descripción|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Devuelve true si un método es genérico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Devuelve una matriz de objetos Type que representan los argumentos de tipo de un método genérico construido o los parámetros de tipo de una definición de método genérico.|  

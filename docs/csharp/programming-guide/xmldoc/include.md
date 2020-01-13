@@ -1,6 +1,5 @@
 ---
 title: <include> - Guía de programación de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 125ab9476507babae9a707a6c42d24adda632267
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587995"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696563"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  

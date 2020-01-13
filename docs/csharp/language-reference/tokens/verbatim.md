@@ -1,6 +1,5 @@
 ---
 title: '@: Referencia de C#'
-ms.custom: seodec18
 ms.date: 02/09/2017
 f1_keywords:
 - '@_CSharpKeyword'
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-ms.openlocfilehash: 6f9f16b2639cd9ea57ee7a3030deabf4c1decfbb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3446eceb0d3c415e36ea1d2c7d8d6d34f65350d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101560"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712421"
 ---
 # <a name="-c-reference"></a>@ (Referencia de C#)
 

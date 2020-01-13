@@ -1,18 +1,17 @@
 ---
 title: 'Clases y métodos parciales: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419180"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714744"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Clases y métodos parciales (Guía de programación de C#)
 
@@ -113,7 +112,7 @@ Para obtener más información, vea [Restricciones de tipos de parámetros](../g
 
 ## <a name="example-1"></a>Ejemplo 1
 
-### <a name="description"></a>DESCRIPCIÓN
+### <a name="description"></a>Descripción
 
 En el ejemplo siguiente, los campos y el constructor de la clase, `Coords`, se declaran en una definición de clase parcial y el miembro `PrintCoords` se declara en otra definición de clase parcial.
 
@@ -123,7 +122,7 @@ En el ejemplo siguiente, los campos y el constructor de la clase, `Coords`, se d
 
 ## <a name="example-2"></a>Ejemplo 2
 
-### <a name="description"></a>DESCRIPCIÓN
+### <a name="description"></a>Descripción
 
 En el ejemplo siguiente se muestra que también se pueden desarrollar structs e interfaces parciales.
 

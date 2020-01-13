@@ -1,6 +1,5 @@
 ---
 title: when (Palabra clave contextual, Referencia de C#)
-ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
 - when_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: f0dbfb611ab563c16c97b1f6313134df38a174df
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633106"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712837"
 ---
 # <a name="when-c-reference"></a>when (Referencia de C#)
 

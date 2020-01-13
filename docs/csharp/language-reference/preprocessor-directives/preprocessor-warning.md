@@ -1,18 +1,17 @@
 ---
 title: '#warning: Referencia de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#warning'
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 3d09cd95ef4d53e3f11d9feb9675ebba22d6f857
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608523"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715070"
 ---
 # <a name="warning-c-reference"></a>#warning (Referencia de C#)
 `#warning` permite generar una advertencia del compilador [CS1030](../../misc/cs1030.md) de nivel uno desde una ubicación específica en el código. Por ejemplo:  

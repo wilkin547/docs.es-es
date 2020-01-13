@@ -1,18 +1,17 @@
 ---
 title: 'Utilizar propiedades: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579161"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705410"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizar propiedades (Guía de programación de C#)
 

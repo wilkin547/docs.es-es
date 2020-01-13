@@ -1,6 +1,5 @@
 ---
 title: + Operadores + y += (referencia de C#)
-ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972631"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712772"
 ---
 # <a name="-and--operators-c-reference"></a>Operadores + y += (referencia de C#)
 

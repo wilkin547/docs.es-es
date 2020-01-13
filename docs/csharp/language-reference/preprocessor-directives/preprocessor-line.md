@@ -1,18 +1,17 @@
 ---
 title: '#line: Referencia de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608541"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712499"
 ---
 # <a name="line-c-reference"></a>#line (Referencia de C#)
 

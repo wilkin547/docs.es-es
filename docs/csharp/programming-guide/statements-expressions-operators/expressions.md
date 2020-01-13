@@ -1,17 +1,16 @@
 ---
 title: 'Expresiones: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417695"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699098"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 

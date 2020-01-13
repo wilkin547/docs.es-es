@@ -1,6 +1,5 @@
 ---
 title: 'Palabra clave namespace: Referencia de C#'
-ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422683"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713366"
 ---
 # <a name="namespace-c-reference"></a>espacio de nombres (Referencia de C#)
 
@@ -34,9 +33,9 @@ En un espacio de nombres, se pueden declarar cero o más de los siguientes tipos
 
 - [struct](struct.md)
 
-- [enum](enum.md)
+- [enum](../builtin-types/enum.md)
 
-- [delegate](../builtin-types/reference-types.md)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 Tanto si se declara explícitamente un espacio de nombres en un archivo de código fuente de C# como si no, el compilador agrega un espacio de nombres predeterminado. Este espacio de nombres sin nombre, que a veces se denomina espacio de nombres global, está presente en todos los archivos. Todos los identificadores del espacio de nombres global están disponibles para su uso en un espacio de nombres con nombre.
 

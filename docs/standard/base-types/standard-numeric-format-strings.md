@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121755"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346641"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -51,7 +51,7 @@ Las cadenas con formato numérico estándar son compatibles con:
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico estándar y se muestran los resultados de ejemplo generados por cada especificador de formato. Consulte la sección [Notas](#NotesStandardFormatting) para obtener información adicional sobre cómo usar las cadenas con formato numérico estándar y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
-|Especificador de formato|Name|DESCRIPCIÓN|Ejemplos|
+|Especificador de formato|NOMBRE|Descripción|Ejemplos|
 |----------------------|----------|-----------------|--------------|
 |"C" o "c"|Moneda|Resultado:  un valor de divisa.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número de dígitos decimales.<br /><br /> Especificador de precisión predeterminado: Definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato de divisa ("C")](#CFormatString).|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" o "d"|Decimal|Resultado:  dígitos enteros con signo negativo opcional.<br /><br /> Compatible con: solo tipos enteros.<br /><br /> Especificador de precisión: número mínimo de dígitos.<br /><br /> Especificador de precisión predeterminado: número mínimo de dígitos necesario.<br /><br /> Más información: [Especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
@@ -104,7 +104,7 @@ Si el valor al que se va a dar formato tiene más posiciones decimales que el n�
 
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Define la posición del símbolo de divisa para los valores positivos.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Define la posición del símbolo de divisa para los valores negativos y especifica si el signo negativo está representado por paréntesis o por la propiedad <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -133,7 +133,7 @@ El especificador de precisión indica el número mínimo de dígitos deseado en 
 
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. Como se muestra en la tabla siguiente, una única propiedad afecta al formato de la cadena de resultado.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|
 
@@ -157,7 +157,7 @@ El modelo de mayúsculas o minúsculas del especificador de formato indica si se
 
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo tanto para el coeficiente como para el exponente.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa el dígito integral de los dígitos decimales en el coeficiente.|
@@ -181,7 +181,7 @@ El especificador de precisión indica el número deseado de cifras decimales. Si
 
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|
@@ -228,7 +228,7 @@ Cuando se usa con un valor <xref:System.Single>, el especificador de formato "G9
 
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|
@@ -250,7 +250,7 @@ El especificador de formato numérico ("N") convierte un número en una cadena c
 
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Define el formato de los valores negativos y especifica si el signo negativo se representa mediante paréntesis o por la propiedad <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -275,7 +275,7 @@ El especificador de formato de porcentaje ("P") multiplica un número por 100 y 
 
 En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Define la posición del símbolo de porcentaje para los valores positivos.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Define la posición del símbolo de porcentaje y del símbolo negativo para los valores negativos.|
@@ -307,7 +307,7 @@ Cuando se da formato a un valor <xref:System.Numerics.BigInteger> mediante este 
 Aunque puede incluir un especificador de precisión, se omite. Los especificadores de ida y vuelta tienen prioridad sobre la precisión al utilizar este especificador.
 La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.
 
-|Propiedad de NumberFormatInfo|DESCRIPCIÓN|
+|Propiedad de NumberFormatInfo|Descripción|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|

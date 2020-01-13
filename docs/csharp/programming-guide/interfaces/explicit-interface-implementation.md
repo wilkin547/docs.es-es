@@ -1,17 +1,16 @@
 ---
 title: 'Implementación de interfaz explícita: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: 498c45ff1c5837f5dcb0d4a80d0e3bb249abd694
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ac90726fd50f104d1b9251d4f9b097b721ea5e7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589217"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701763"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Implementación de interfaz explícita (Guía de programación de C#)
 Si una [clase](../../language-reference/keywords/class.md) implementa dos interfaces que contienen un miembro con la misma firma, entonces al implementar ese miembro en la clase ambas interfaces usarán ese miembro como su implementación. En el ejemplo siguiente, todas las llamadas a `Paint` invocan el mismo método.  

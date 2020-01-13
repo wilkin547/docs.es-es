@@ -1,16 +1,15 @@
 ---
 title: 'Conversiones de puntero: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698370"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversiones de puntero (Guía de programación de C#)
 En la tabla siguiente se muestran las conversiones de puntero implícitas predefinidas. Las conversiones implícitas pueden ocurrir en muchas situaciones, incluidas las instrucciones de asignación y de invocación de método.  
@@ -42,8 +41,9 @@ En la tabla siguiente se muestran las conversiones de puntero implícitas predef
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [Tipos de puntero](./pointer-types.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
+- [Tipos de puntero](pointer-types.md)
+- [Tipos de referencia](../../language-reference/keywords/reference-types.md)
+- [Tipos de valor](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed (instrucción)](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

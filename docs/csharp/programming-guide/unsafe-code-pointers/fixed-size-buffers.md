@@ -1,17 +1,16 @@
 ---
 title: 'Búferes de tamaño fijo: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552397"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711849"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Búferes de tamaño fijo (Guía de programación de C#)
 
