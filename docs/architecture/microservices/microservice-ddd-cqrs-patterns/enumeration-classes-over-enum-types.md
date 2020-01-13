@@ -2,24 +2,24 @@
 title: Uso de las clases de enumeración en lugar de los tipos de enumeración
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre cómo se pueden usar las clases de enumeración en lugar de las enumeraciones como una forma de resolver algunas limitaciones de estas últimas.
 ms.date: 10/08/2018
-ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093863"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337688"
 ---
-# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="cecbf-103">Uso de las clases de enumeración en lugar de los tipos de enumeración</span><span class="sxs-lookup"><span data-stu-id="cecbf-103">Use enumeration classes instead of enum types</span></span>
+# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="5b32b-103">Uso de las clases de enumeración en lugar de los tipos de enumeración</span><span class="sxs-lookup"><span data-stu-id="5b32b-103">Use enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="cecbf-104">Las [enumeraciones](../../../csharp/language-reference/keywords/enum.md) (o *tipos enum* abreviado) son un contenedor de lenguaje fino alrededor de un tipo entero.</span><span class="sxs-lookup"><span data-stu-id="cecbf-104">[Enumerations](../../../csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="cecbf-105">Es posible que quiera limitar su uso al momento en que almacena un valor de un conjunto cerrado de valores.</span><span class="sxs-lookup"><span data-stu-id="cecbf-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="cecbf-106">La clasificación basada en tamaños (pequeño, mediano, grande) es un buen ejemplo.</span><span class="sxs-lookup"><span data-stu-id="cecbf-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="cecbf-107">Usar las enumeraciones para el flujo de control o abstracciones más sólidas puede producir un [problema en el código](https://deviq.com/code-smells/).</span><span class="sxs-lookup"><span data-stu-id="cecbf-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="cecbf-108">Este tipo de uso da lugar a código frágil con muchas instrucciones de flujo de control que comprueban los valores de la enumeración.</span><span class="sxs-lookup"><span data-stu-id="cecbf-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="5b32b-104">Las [enumeraciones](../../../csharp/language-reference/builtin-types/enum.md) (o *tipos enum* abreviado) son un contenedor de lenguaje fino alrededor de un tipo entero.</span><span class="sxs-lookup"><span data-stu-id="5b32b-104">[Enumerations](../../../csharp/language-reference/builtin-types/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="5b32b-105">Es posible que quiera limitar su uso al momento en que almacena un valor de un conjunto cerrado de valores.</span><span class="sxs-lookup"><span data-stu-id="5b32b-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="5b32b-106">La clasificación basada en tamaños (pequeño, mediano, grande) es un buen ejemplo.</span><span class="sxs-lookup"><span data-stu-id="5b32b-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="5b32b-107">Usar las enumeraciones para el flujo de control o abstracciones más sólidas puede producir un [problema en el código](https://deviq.com/code-smells/).</span><span class="sxs-lookup"><span data-stu-id="5b32b-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="5b32b-108">Este tipo de uso da lugar a código frágil con muchas instrucciones de flujo de control que comprueban los valores de la enumeración.</span><span class="sxs-lookup"><span data-stu-id="5b32b-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="cecbf-109">En su lugar, puede crear clases de enumeración que habilitan todas las características enriquecidas de un lenguaje orientado a objetos.</span><span class="sxs-lookup"><span data-stu-id="cecbf-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
+<span data-ttu-id="5b32b-109">En su lugar, puede crear clases de enumeración que habilitan todas las características enriquecidas de un lenguaje orientado a objetos.</span><span class="sxs-lookup"><span data-stu-id="5b32b-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-<span data-ttu-id="cecbf-110">Sin embargo, esto no es un tema crítico y, en muchos casos, por simplicidad, puede seguir usando [tipos enum](../../../csharp/language-reference/keywords/enum.md) normales si lo prefiere.</span><span class="sxs-lookup"><span data-stu-id="cecbf-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/keywords/enum.md) if that's your preference.</span></span> <span data-ttu-id="cecbf-111">En cualquier caso, el uso de las clases de enumeración está más relacionado con los conceptos de tipo empresarial.</span><span class="sxs-lookup"><span data-stu-id="cecbf-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
+<span data-ttu-id="5b32b-110">Sin embargo, esto no es un tema crítico y, en muchos casos, por simplicidad, puede seguir usando [tipos enum](../../../csharp/language-reference/builtin-types/enum.md) normales si lo prefiere.</span><span class="sxs-lookup"><span data-stu-id="5b32b-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/builtin-types/enum.md) if that's your preference.</span></span> <span data-ttu-id="5b32b-111">En cualquier caso, el uso de las clases de enumeración está más relacionado con los conceptos de tipo empresarial.</span><span class="sxs-lookup"><span data-stu-id="5b32b-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
 
-## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="cecbf-112">Implementación de una clase base de enumeración</span><span class="sxs-lookup"><span data-stu-id="cecbf-112">Implement an Enumeration base class</span></span>
+## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="5b32b-112">Implementación de una clase base de enumeración</span><span class="sxs-lookup"><span data-stu-id="5b32b-112">Implement an Enumeration base class</span></span>
 
-<span data-ttu-id="cecbf-113">El microservicio de pedidos en eShopOnContainers proporciona una implementación de clase base de enumeración de ejemplo, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="cecbf-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+<span data-ttu-id="5b32b-113">El microservicio de pedidos en eShopOnContainers proporciona una implementación de clase base de enumeración de ejemplo, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="5b32b-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -64,7 +64,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="cecbf-114">Puede usar esta clase como un tipo en cualquier entidad u objeto de valor, como ocurre con la clase `CardType` : `Enumeration` siguiente:</span><span class="sxs-lookup"><span data-stu-id="cecbf-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
+<span data-ttu-id="5b32b-114">Puede usar esta clase como un tipo en cualquier entidad u objeto de valor, como ocurre con la clase `CardType` : `Enumeration` siguiente:</span><span class="sxs-lookup"><span data-stu-id="5b32b-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
 
 ```csharp
 public class CardType : Enumeration
@@ -80,30 +80,30 @@ public class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="cecbf-115">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="cecbf-115">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="5b32b-115">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="5b32b-115">Additional resources</span></span>
 
-- <span data-ttu-id="cecbf-116">**Enum’s are evil—update (Las enumeraciones son contraproducentes: actualice)**  </span><span class="sxs-lookup"><span data-stu-id="cecbf-116">**Enum’s are evil—update** </span></span>\
+- <span data-ttu-id="5b32b-116">**Enum’s are evil—update (Las enumeraciones son contraproducentes: actualice)**  </span><span class="sxs-lookup"><span data-stu-id="5b32b-116">**Enum’s are evil—update** </span></span>\
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- <span data-ttu-id="cecbf-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It (Cómo las enumeraciones contagian la enfermedad y cómo curarla)**  </span><span class="sxs-lookup"><span data-stu-id="cecbf-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** </span></span>\
+- <span data-ttu-id="5b32b-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It (Cómo las enumeraciones contagian la enfermedad y cómo curarla)**  </span><span class="sxs-lookup"><span data-stu-id="5b32b-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** </span></span>\
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- <span data-ttu-id="cecbf-118">**Jimmy Bogard. Enumeration classes (Clases de enumeración)**  </span><span class="sxs-lookup"><span data-stu-id="cecbf-118">**Jimmy Bogard. Enumeration classes** </span></span>\
+- <span data-ttu-id="5b32b-118">**Jimmy Bogard. Enumeration classes (Clases de enumeración)**  </span><span class="sxs-lookup"><span data-stu-id="5b32b-118">**Jimmy Bogard. Enumeration classes** </span></span>\
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- <span data-ttu-id="cecbf-119">**Steve Smith. Enum Alternatives in C# (Alternativas de enumeración en C#)**  </span><span class="sxs-lookup"><span data-stu-id="cecbf-119">**Steve Smith. Enum Alternatives in C#** </span></span>\
+- <span data-ttu-id="5b32b-119">**Steve Smith. Enum Alternatives in C# (Alternativas de enumeración en C#)**  </span><span class="sxs-lookup"><span data-stu-id="5b32b-119">**Steve Smith. Enum Alternatives in C#** </span></span>\
   <https://ardalis.com/enum-alternatives-in-c>
 
-- <span data-ttu-id="cecbf-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="cecbf-120">**Enumeration.cs.**</span></span> <span data-ttu-id="cecbf-121">Base Enumeration class in eShopOnContainers (Clase base de enumeración en eShopOnContainers) </span><span class="sxs-lookup"><span data-stu-id="cecbf-121">Base Enumeration class in eShopOnContainers </span></span>\
+- <span data-ttu-id="5b32b-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="5b32b-120">**Enumeration.cs.**</span></span> <span data-ttu-id="5b32b-121">Base Enumeration class in eShopOnContainers (Clase base de enumeración en eShopOnContainers) </span><span class="sxs-lookup"><span data-stu-id="5b32b-121">Base Enumeration class in eShopOnContainers </span></span>\
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
-- <span data-ttu-id="cecbf-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="cecbf-122">**CardType.cs**.</span></span> <span data-ttu-id="cecbf-123">Sample Enumeration class in eShopOnContainers (CardType.cs. Clase de enumeración de ejemplo en eShopOnContainers)</span><span class="sxs-lookup"><span data-stu-id="cecbf-123">Sample Enumeration class in eShopOnContainers.</span></span> \
+- <span data-ttu-id="5b32b-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="5b32b-122">**CardType.cs**.</span></span> <span data-ttu-id="5b32b-123">Sample Enumeration class in eShopOnContainers (CardType.cs. Clase de enumeración de ejemplo en eShopOnContainers)</span><span class="sxs-lookup"><span data-stu-id="5b32b-123">Sample Enumeration class in eShopOnContainers.</span></span> \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
 
-- <span data-ttu-id="cecbf-124">**SmartEnum**.</span><span class="sxs-lookup"><span data-stu-id="cecbf-124">**SmartEnum**.</span></span> <span data-ttu-id="cecbf-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET. (Ardalis: clases para ayudar a crear enumeraciones fuertemente tipadas de manera más inteligente en .NET)</span><span class="sxs-lookup"><span data-stu-id="cecbf-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
+- <span data-ttu-id="5b32b-124">**SmartEnum**.</span><span class="sxs-lookup"><span data-stu-id="5b32b-124">**SmartEnum**.</span></span> <span data-ttu-id="5b32b-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET. (Ardalis: clases para ayudar a crear enumeraciones fuertemente tipadas de manera más inteligente en .NET)</span><span class="sxs-lookup"><span data-stu-id="5b32b-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="cecbf-126">[Anterior](implement-value-objects.md)
->[Siguiente](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="cecbf-126">[Previous](implement-value-objects.md)
+><span data-ttu-id="5b32b-126">[Anterior](implement-value-objects.md)
+>[Siguiente](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="5b32b-126">[Previous](implement-value-objects.md)
 [Next](domain-model-layer-validations.md)</span></span>

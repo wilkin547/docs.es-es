@@ -1,85 +1,83 @@
 ---
 title: Instalación de .NET Framework en Windows 10
 description: Aprenda a instalar .NET Framework en Windows 10 o Windows Server 2016.
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853943"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716378"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a><span data-ttu-id="0c59d-103">Instalación de .NET Framework en Windows 10 y Windows Server 2016 y posterior</span><span class="sxs-lookup"><span data-stu-id="0c59d-103">Install the .NET Framework on Windows 10 and Windows Server 2016 and later</span></span>
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a><span data-ttu-id="4f78e-103">Instalación de .NET Framework en Windows 10 y Windows Server 2016 y posterior</span><span class="sxs-lookup"><span data-stu-id="4f78e-103">Install the .NET Framework on Windows 10 and Windows Server 2016 and later</span></span>
 
-<span data-ttu-id="0c59d-104">.NET Framework se requiere para ejecutar muchas aplicaciones en Windows.</span><span class="sxs-lookup"><span data-stu-id="0c59d-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="0c59d-105">Las instrucciones de este artículo puede ayudarle a instalar las versiones de .NET Framework que necesite.</span><span class="sxs-lookup"><span data-stu-id="0c59d-105">The instructions in this article should help you install the .NET Framework versions that you need.</span></span> <span data-ttu-id="0c59d-106">[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) es la última versión disponible.</span><span class="sxs-lookup"><span data-stu-id="0c59d-106">The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest available version.</span></span>
+<span data-ttu-id="4f78e-104">.NET Framework se requiere para ejecutar muchas aplicaciones en Windows.</span><span class="sxs-lookup"><span data-stu-id="4f78e-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="4f78e-105">Las instrucciones de este artículo puede ayudarle a instalar las versiones de .NET Framework que necesite.</span><span class="sxs-lookup"><span data-stu-id="4f78e-105">The instructions in this article should help you install the .NET Framework versions that you need.</span></span> <span data-ttu-id="4f78e-106">[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) es la última versión disponible.</span><span class="sxs-lookup"><span data-stu-id="4f78e-106">The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest available version.</span></span>
 
-<span data-ttu-id="0c59d-107">Es posible que haya llegado a esta página tras haber intentado ejecutar una aplicación y que haya aparecido un cuadro de diálogo en el equipo similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="0c59d-107">You may have arrived on this page after trying to run an application and seeing a dialog on your machine similar to the following one:</span></span>
+<span data-ttu-id="4f78e-107">Es posible que haya llegado a esta página tras haber intentado ejecutar una aplicación y que haya aparecido un cuadro de diálogo en el equipo similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="4f78e-107">You may have arrived on this page after trying to run an application and seeing a dialog on your machine similar to the following one:</span></span>
 
 ![No se pudo iniciar esta aplicación.](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-48"></a><span data-ttu-id="0c59d-109">.NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="0c59d-109">.NET Framework 4.8</span></span>
+## <a name="net-framework-48"></a><span data-ttu-id="4f78e-109">.NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="4f78e-109">.NET Framework 4.8</span></span>
 
-<span data-ttu-id="0c59d-110">.NET Framework 4.8 se incluye con:</span><span class="sxs-lookup"><span data-stu-id="0c59d-110">The .NET Framework 4.8 is included with:</span></span>
+<span data-ttu-id="4f78e-110">.NET Framework 4.8 se incluye con:</span><span class="sxs-lookup"><span data-stu-id="4f78e-110">The .NET Framework 4.8 is included with:</span></span>
 
-- [<span data-ttu-id="0c59d-111">Actualización de mayo de 2019 de Windows 10</span><span class="sxs-lookup"><span data-stu-id="0c59d-111">Windows 10 May 2019 Update</span></span>](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [<span data-ttu-id="4f78e-111">Actualización de mayo de 2019 de Windows 10</span><span class="sxs-lookup"><span data-stu-id="4f78e-111">Windows 10 May 2019 Update</span></span>](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [<span data-ttu-id="0c59d-112">Descarga de .NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="0c59d-112">Download .NET Framework 4.8</span></span>](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [<span data-ttu-id="4f78e-112">Descarga de .NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="4f78e-112">Download .NET Framework 4.8</span></span>](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-<span data-ttu-id="0c59d-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) se puede usar para ejecutar aplicaciones creadas para .NET Framework 4.0 a 4.7.2.</span><span class="sxs-lookup"><span data-stu-id="0c59d-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) can be used to run applications built for the .NET Framework 4.0 through 4.7.2.</span></span>
+<span data-ttu-id="4f78e-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) se puede usar para ejecutar aplicaciones creadas para .NET Framework 4.0 a 4.7.2.</span><span class="sxs-lookup"><span data-stu-id="4f78e-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) can be used to run applications built for the .NET Framework 4.0 through 4.7.2.</span></span>
 
-<span data-ttu-id="0c59d-114">Se puede instalar [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) en:</span><span class="sxs-lookup"><span data-stu-id="0c59d-114">You can install [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) on:</span></span>
+<span data-ttu-id="4f78e-114">Se puede instalar [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) en:</span><span class="sxs-lookup"><span data-stu-id="4f78e-114">You can install [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) on:</span></span>
 
-- <span data-ttu-id="0c59d-115">Actualización de octubre de 2018 de Windows 10 (versión 1809)</span><span class="sxs-lookup"><span data-stu-id="0c59d-115">Windows 10 October 2018 Update (version 1809)</span></span>
-- <span data-ttu-id="0c59d-116">Actualización de abril de 2018 de Windows 10 (versión 1803)</span><span class="sxs-lookup"><span data-stu-id="0c59d-116">Windows 10 April 2018 Update (version 1803)</span></span>
-- <span data-ttu-id="0c59d-117">Windows 10 Fall Creators Update (versión 1709)</span><span class="sxs-lookup"><span data-stu-id="0c59d-117">Windows 10 Fall Creators Update (version 1709)</span></span>
-- <span data-ttu-id="0c59d-118">Windows 10 Creators Update (versión 1703)</span><span class="sxs-lookup"><span data-stu-id="0c59d-118">Windows 10 Creators Update (version 1703)</span></span>
-- <span data-ttu-id="0c59d-119">Actualización de aniversario de Windows 10 (versión 1607)</span><span class="sxs-lookup"><span data-stu-id="0c59d-119">Windows 10 Anniversary Update (version 1607)</span></span>
-- <span data-ttu-id="0c59d-120">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="0c59d-120">Windows Server 2019</span></span>
-- <span data-ttu-id="0c59d-121">Windows Server, versión 1809</span><span class="sxs-lookup"><span data-stu-id="0c59d-121">Windows Server, version 1809</span></span>
-- <span data-ttu-id="0c59d-122">Windows Server, versión 1803</span><span class="sxs-lookup"><span data-stu-id="0c59d-122">Windows Server, version 1803</span></span>
-- <span data-ttu-id="0c59d-123">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="0c59d-123">Windows Server 2016</span></span>
+- <span data-ttu-id="4f78e-115">Actualización de octubre de 2018 de Windows 10 (versión 1809)</span><span class="sxs-lookup"><span data-stu-id="4f78e-115">Windows 10 October 2018 Update (version 1809)</span></span>
+- <span data-ttu-id="4f78e-116">Actualización de abril de 2018 de Windows 10 (versión 1803)</span><span class="sxs-lookup"><span data-stu-id="4f78e-116">Windows 10 April 2018 Update (version 1803)</span></span>
+- <span data-ttu-id="4f78e-117">Windows 10 Fall Creators Update (versión 1709)</span><span class="sxs-lookup"><span data-stu-id="4f78e-117">Windows 10 Fall Creators Update (version 1709)</span></span>
+- <span data-ttu-id="4f78e-118">Windows 10 Creators Update (versión 1703)</span><span class="sxs-lookup"><span data-stu-id="4f78e-118">Windows 10 Creators Update (version 1703)</span></span>
+- <span data-ttu-id="4f78e-119">Actualización de aniversario de Windows 10 (versión 1607)</span><span class="sxs-lookup"><span data-stu-id="4f78e-119">Windows 10 Anniversary Update (version 1607)</span></span>
+- <span data-ttu-id="4f78e-120">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="4f78e-120">Windows Server 2019</span></span>
+- <span data-ttu-id="4f78e-121">Windows Server, versión 1809</span><span class="sxs-lookup"><span data-stu-id="4f78e-121">Windows Server, version 1809</span></span>
+- <span data-ttu-id="4f78e-122">Windows Server, versión 1803</span><span class="sxs-lookup"><span data-stu-id="4f78e-122">Windows Server, version 1803</span></span>
+- <span data-ttu-id="4f78e-123">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="4f78e-123">Windows Server 2016</span></span>
 
-<span data-ttu-id="0c59d-124">.NET Framework 4.8 no se admite en:</span><span class="sxs-lookup"><span data-stu-id="0c59d-124">The .NET Framework 4.8 is not supported on:</span></span>
+<span data-ttu-id="4f78e-124">.NET Framework 4.8 no se admite en:</span><span class="sxs-lookup"><span data-stu-id="4f78e-124">The .NET Framework 4.8 is not supported on:</span></span>
 
-- <span data-ttu-id="0c59d-125">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="0c59d-125">Windows 10 1507</span></span>
-- <span data-ttu-id="0c59d-126">Windows 10 1511</span><span class="sxs-lookup"><span data-stu-id="0c59d-126">Windows 10 1511</span></span>
+- <span data-ttu-id="4f78e-125">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="4f78e-125">Windows 10 1507</span></span>
+- <span data-ttu-id="4f78e-126">Windows 10 1511</span><span class="sxs-lookup"><span data-stu-id="4f78e-126">Windows 10 1511</span></span>
 
-<span data-ttu-id="0c59d-127">Si está usando Windows 10 1507 o 1511 y quiere instalar .NET Framework 4.8, primero debe actualizar a una versión posterior de Windows 10.</span><span class="sxs-lookup"><span data-stu-id="0c59d-127">If you're using Windows 10 1507 or 1511 and you want to install the .NET Framework 4.8, you first need to upgrade to a later Windows 10 version.</span></span>
+<span data-ttu-id="4f78e-127">Si está usando Windows 10 1507 o 1511 y quiere instalar .NET Framework 4.8, primero debe actualizar a una versión posterior de Windows 10.</span><span class="sxs-lookup"><span data-stu-id="4f78e-127">If you're using Windows 10 1507 or 1511 and you want to install the .NET Framework 4.8, you first need to upgrade to a later Windows 10 version.</span></span>
 
-## <a name="net-framework-462"></a><span data-ttu-id="0c59d-128">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="0c59d-128">.NET Framework 4.6.2</span></span>
+## <a name="net-framework-462"></a><span data-ttu-id="4f78e-128">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="4f78e-128">.NET Framework 4.6.2</span></span>
 
-<span data-ttu-id="0c59d-129">[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) es la versión más reciente admitida de .NET Framework en Windows 10 1507 y 1511.</span><span class="sxs-lookup"><span data-stu-id="0c59d-129">The [.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) is the latest supported .NET Framework version on Windows 10 1507 and 1511.</span></span>
+<span data-ttu-id="4f78e-129">[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) es la versión más reciente admitida de .NET Framework en Windows 10 1507 y 1511.</span><span class="sxs-lookup"><span data-stu-id="4f78e-129">The [.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) is the latest supported .NET Framework version on Windows 10 1507 and 1511.</span></span>
 
-<span data-ttu-id="0c59d-130">.NET Framework 4.6.2 es compatible con aplicaciones desarrolladas para .NET Framework de 4.0 a 4.6.2.</span><span class="sxs-lookup"><span data-stu-id="0c59d-130">The .NET Framework 4.6.2 supports apps built for the .NET Framework 4.0 through 4.6.2.</span></span>
+<span data-ttu-id="4f78e-130">.NET Framework 4.6.2 es compatible con aplicaciones desarrolladas para .NET Framework de 4.0 a 4.6.2.</span><span class="sxs-lookup"><span data-stu-id="4f78e-130">The .NET Framework 4.6.2 supports apps built for the .NET Framework 4.0 through 4.6.2.</span></span>
 
-## <a name="net-framework-35"></a><span data-ttu-id="0c59d-131">.NET Framework 3,5</span><span class="sxs-lookup"><span data-stu-id="0c59d-131">.NET Framework 3.5</span></span>
+## <a name="net-framework-35"></a><span data-ttu-id="4f78e-131">.NET Framework 3,5</span><span class="sxs-lookup"><span data-stu-id="4f78e-131">.NET Framework 3.5</span></span>
 
-<span data-ttu-id="0c59d-132">Siga las instrucciones para instalar [.NET Framework 3.5 en Windows 10](dotnet-35-windows-10.md).</span><span class="sxs-lookup"><span data-stu-id="0c59d-132">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
+<span data-ttu-id="4f78e-132">Siga las instrucciones para instalar [.NET Framework 3.5 en Windows 10](dotnet-35-windows-10.md).</span><span class="sxs-lookup"><span data-stu-id="4f78e-132">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
 
-<span data-ttu-id="0c59d-133">.NET Framework 3.5 es compatible con aplicaciones desarrolladas para .NET Framework de 1.0 a 3.5.</span><span class="sxs-lookup"><span data-stu-id="0c59d-133">The .NET Framework 3.5 supports apps built for the .NET Framework 1.0 through 3.5.</span></span>
+<span data-ttu-id="4f78e-133">.NET Framework 3.5 es compatible con aplicaciones desarrolladas para .NET Framework de 1.0 a 3.5.</span><span class="sxs-lookup"><span data-stu-id="4f78e-133">The .NET Framework 3.5 supports apps built for the .NET Framework 1.0 through 3.5.</span></span>
 
-## <a name="additional-information"></a><span data-ttu-id="0c59d-134">Información adicional</span><span class="sxs-lookup"><span data-stu-id="0c59d-134">Additional information</span></span>
+## <a name="additional-information"></a><span data-ttu-id="4f78e-134">Información adicional</span><span class="sxs-lookup"><span data-stu-id="4f78e-134">Additional information</span></span>
 
-<span data-ttu-id="0c59d-135">Las versiones de .NET Framework 4.x son actualizaciones locales de versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="0c59d-135">.NET Framework 4.x versions are in-place updates to earlier versions.</span></span> <span data-ttu-id="0c59d-136">Esto significa lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="0c59d-136">That means the following:</span></span>
+<span data-ttu-id="4f78e-135">Las versiones de .NET Framework 4.x son actualizaciones locales de versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="4f78e-135">.NET Framework 4.x versions are in-place updates to earlier versions.</span></span> <span data-ttu-id="4f78e-136">Esto significa lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="4f78e-136">That means the following:</span></span>
 
-- <span data-ttu-id="0c59d-137">Solo puede tener una versión de .NET Framework 4.x instalada en su equipo.</span><span class="sxs-lookup"><span data-stu-id="0c59d-137">You can only have one version of the .NET Framework 4.x installed on your machine.</span></span>
+- <span data-ttu-id="4f78e-137">Solo puede tener una versión de .NET Framework 4.x instalada en su equipo.</span><span class="sxs-lookup"><span data-stu-id="4f78e-137">You can only have one version of the .NET Framework 4.x installed on your machine.</span></span>
 
-- <span data-ttu-id="0c59d-138">No puede instalar una versión anterior de .NET Framework en el equipo si ya hay instalada una versión posterior.</span><span class="sxs-lookup"><span data-stu-id="0c59d-138">You cannot install an earlier version of the .NET Framework on your machine if a later version is already installed.</span></span>
+- <span data-ttu-id="4f78e-138">No puede instalar una versión anterior de .NET Framework en el equipo si ya hay instalada una versión posterior.</span><span class="sxs-lookup"><span data-stu-id="4f78e-138">You cannot install an earlier version of the .NET Framework on your machine if a later version is already installed.</span></span>
 
-- <span data-ttu-id="0c59d-139">Las versiones 4.x de .NET Framework se pueden usar para ejecutar aplicaciones creadas para un rango que va desde .NET Framework 4.0 hasta esa versión.</span><span class="sxs-lookup"><span data-stu-id="0c59d-139">4.x versions of the .NET Framework can be used to run applications built for the .NET Framework 4.0 through that version.</span></span> <span data-ttu-id="0c59d-140">Por ejemplo, .NET Framework 4.7 se puede usar para ejecutar aplicaciones creadas para .NET Framework de 4.0 a 4.7.</span><span class="sxs-lookup"><span data-stu-id="0c59d-140">For example, .NET Framework 4.7 can be used to run applications built for the .NET Framework 4.0 through 4.7.</span></span> <span data-ttu-id="0c59d-141">La versión más reciente (.NET Framework 4.8) se puede usar para ejecutar aplicaciones desarrolladas con todas las versiones de .NET Framework a partir de 4.0.</span><span class="sxs-lookup"><span data-stu-id="0c59d-141">The latest version (the .NET Framework 4.8) can be used to run applications built with all versions of the .NET Framework starting with 4.0.</span></span>
+- <span data-ttu-id="4f78e-139">Las versiones 4.x de .NET Framework se pueden usar para ejecutar aplicaciones creadas para un rango que va desde .NET Framework 4.0 hasta esa versión.</span><span class="sxs-lookup"><span data-stu-id="4f78e-139">4.x versions of the .NET Framework can be used to run applications built for the .NET Framework 4.0 through that version.</span></span> <span data-ttu-id="4f78e-140">Por ejemplo, .NET Framework 4.7 se puede usar para ejecutar aplicaciones creadas para .NET Framework de 4.0 a 4.7.</span><span class="sxs-lookup"><span data-stu-id="4f78e-140">For example, .NET Framework 4.7 can be used to run applications built for the .NET Framework 4.0 through 4.7.</span></span> <span data-ttu-id="4f78e-141">La versión más reciente (.NET Framework 4.8) se puede usar para ejecutar aplicaciones desarrolladas con todas las versiones de .NET Framework a partir de 4.0.</span><span class="sxs-lookup"><span data-stu-id="4f78e-141">The latest version (the .NET Framework 4.8) can be used to run applications built with all versions of the .NET Framework starting with 4.0.</span></span>
 
-<span data-ttu-id="0c59d-142">Para obtener una lista de todas las versiones de .NET Framework disponibles para su descarga, vea la página [.NET Downloads](https://dotnet.microsoft.com/download) (Descargas de .NET).</span><span class="sxs-lookup"><span data-stu-id="0c59d-142">For a list of all the versions of the .NET Framework available to download, see the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span>
+<span data-ttu-id="4f78e-142">Para obtener una lista de todas las versiones de .NET Framework disponibles para su descarga, vea la página [.NET Downloads](https://dotnet.microsoft.com/download) (Descargas de .NET).</span><span class="sxs-lookup"><span data-stu-id="4f78e-142">For a list of all the versions of the .NET Framework available to download, see the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span>
 
-## <a name="help"></a><span data-ttu-id="0c59d-143">Ayuda</span><span class="sxs-lookup"><span data-stu-id="0c59d-143">Help</span></span>
+## <a name="help"></a><span data-ttu-id="4f78e-143">Ayuda</span><span class="sxs-lookup"><span data-stu-id="4f78e-143">Help</span></span>
 
-<span data-ttu-id="0c59d-144">Si no puede obtener la versión correcta de la versión de .NET Framework instalada, puede [ponerse en contacto con Microsoft para obtener ayuda](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span><span class="sxs-lookup"><span data-stu-id="0c59d-144">If you cannot get the correct version of the .NET Framework installed, you can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span></span>
+<span data-ttu-id="4f78e-144">Si no puede obtener la versión correcta de la versión de .NET Framework instalada, puede [ponerse en contacto con Microsoft para obtener ayuda](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span><span class="sxs-lookup"><span data-stu-id="4f78e-144">If you cannot get the correct version of the .NET Framework installed, you can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0c59d-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="0c59d-145">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f78e-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="4f78e-145">See also</span></span>
 
-- <span data-ttu-id="0c59d-146">[.NET Downloads](https://dotnet.microsoft.com/download) (Descargas de .NET)</span><span class="sxs-lookup"><span data-stu-id="0c59d-146">[.NET Downloads](https://dotnet.microsoft.com/download)</span></span>
-- [<span data-ttu-id="0c59d-147">Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0c59d-147">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
-- [<span data-ttu-id="0c59d-148">Instalación de .NET Framework para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="0c59d-148">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
+- <span data-ttu-id="4f78e-146">[.NET Downloads](https://dotnet.microsoft.com/download) (Descargas de .NET)</span><span class="sxs-lookup"><span data-stu-id="4f78e-146">[.NET Downloads](https://dotnet.microsoft.com/download)</span></span>
+- [<span data-ttu-id="4f78e-147">Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4f78e-147">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
+- [<span data-ttu-id="4f78e-148">Instalación de .NET Framework para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="4f78e-148">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
