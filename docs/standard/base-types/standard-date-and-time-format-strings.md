@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121718"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346649"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 
@@ -105,7 +105,7 @@ El especificador de formato estándar "d" representa una cadena de formato de fe
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define el formato global de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Define la cadena que separa los componentes de año, mes y día de una fecha.|
@@ -125,7 +125,7 @@ El especificador de formato estándar "D" representa una cadena de formato de fe
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define el formato global de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define los nombres de días traducidos que pueden aparecer en la cadena de resultado.|
@@ -146,7 +146,7 @@ El especificador de formato estándar "f" representa una combinación de los pat
 
 La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por las propiedades <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> y <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define el formato del componente de fecha de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
@@ -171,7 +171,7 @@ El especificador de formato estándar "F" representa una cadena de formato de fe
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define el formato global de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define los nombres de días traducidos que pueden aparecer en la cadena de resultado.|
@@ -195,7 +195,7 @@ El especificador de formato estándar "g" representa una combinación de los pat
 
 La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por las propiedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> y <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define el formato del componente de fecha de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
@@ -219,7 +219,7 @@ El especificador de formato estándar "G" representa una combinación de los pat
 
 La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por las propiedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> y <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define el formato del componente de fecha de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
@@ -243,7 +243,7 @@ El especificador de formato estándar "M" o "m" representa una cadena de formato
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Define el formato global de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define los nombres de meses traducidos que pueden aparecer en la cadena de resultado.|
@@ -295,7 +295,7 @@ El especificador de formato estándar "R" o "r" representa una cadena de formato
 
 Las siguientes propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> que representa la referencia cultural de todos los idiomas afectan a la cadena de resultado.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Define el formato de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Define los nombres de días abreviados que pueden aparecer en la cadena de resultado.|
@@ -335,7 +335,7 @@ El especificador de formato estándar "t" representa una cadena de formato de fe
 
 La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|
@@ -357,7 +357,7 @@ El especificador de formato estándar "T" representa una cadena de formato de fe
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|
@@ -394,7 +394,7 @@ El especificador de formato estándar "U" representa una cadena de formato de fe
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algunas referencias culturales quizás no use todas las propiedades.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define el formato global de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define los nombres de días traducidos que pueden aparecer en la cadena de resultado.|
@@ -420,7 +420,7 @@ El especificador de formato estándar "Y" o "y" representa una cadena de formato
 
 En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.
 
-|Propiedad.|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Define el formato global de la cadena de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define los nombres de meses traducidos que pueden aparecer en la cadena de resultado.|
