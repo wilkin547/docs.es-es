@@ -3,13 +3,13 @@ title: 'Tutorial: Análisis de comentarios del sitio web: clasificación binaria
 description: En este tutorial se muestra cómo crear una aplicación de consola de .NET Core que clasifica las opiniones de los comentarios del sitio web y toma las medidas oportunas. El clasificador binario de opiniones usa C# en Visual Studio.
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc
+ms.openlocfilehash: 4f54d867875efc3aa966f683a39b18d09952d8e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974776"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711615"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Análisis de opinión de los comentarios del sitio web con clasificación binaria de ML.NET
 
@@ -200,7 +200,7 @@ Ajuste el modelo a los datos `splitTrainSet` y devuelva el modelo entrenado. Par
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
 
-El método [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) entrena el modelo transformando el conjunto de datos y aplicando el entrenamiento.
+El método [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) entrena el modelo al transformar el conjunto de datos y aplicar el aprendizaje.
 
 ### <a name="return-the-model-trained-to-use-for-evaluation"></a>Devolución del modelo entrenado para su uso para la evaluación
 
@@ -376,7 +376,7 @@ Press any key to continue . . .
 
 ¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir los sentimientos de los mensajes.
 
-La creación de modelos correctos es un proceso iterativo. Este modelo tiene una calidad inicial más baja, ya que el tutorial utiliza pequeños conjuntos de datos para proporcionar un entrenamiento rápido del modelo. Si no está satisfecho con la calidad del modelo, puede intentar mejorarlo proporcionando conjuntos de datos de entrenamiento más grandes o eligiendo distintos algoritmos de entrenamiento con distintos [hiperparámetros](../resources/glossary.md##hyperparameter) para cada algoritmo.
+La creación de modelos correctos es un proceso iterativo. Este modelo tiene una calidad inicial más baja, ya que el tutorial utiliza pequeños conjuntos de datos para proporcionar un entrenamiento rápido del modelo. Si no está satisfecho con la calidad del modelo, puede intentar mejorarlo proporcionando conjuntos de datos de entrenamiento más grandes o eligiendo distintos algoritmos de entrenamiento con distintos [hiperparámetros](../resources/glossary.md#hyperparameter) para cada algoritmo.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a7fa901d887701e0fa41a0887b363adec07dba2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 223e83a5ff6a73825985ec4e3b6b601fb196fe5e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644691"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707905"
 ---
 # <a name="how-to-copy-directories"></a>Procedimiento para copiar directorios
 En este tema se muestra cómo usar las clases de E/S para copiar de forma sincrónica el contenido de un directorio en otra ubicación. 

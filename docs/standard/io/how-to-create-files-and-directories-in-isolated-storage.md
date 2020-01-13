@@ -14,14 +14,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e8c800dc74d9689f1bfdb506a6b454e87b36ca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709018"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707875"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Procedimiento para crear archivos y directorios en almacenamiento aislado
 Después de haber obtenido un almacén aislado, puede crear directorios y archivos para almacenar los datos. Dentro de un almacén, los nombres de archivos y directorios se especifican con respecto a la raíz del sistema de archivos virtual.  

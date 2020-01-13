@@ -5,14 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052181"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716554"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurar la redirección del enlace de ensamblados
 De forma predeterminada, las aplicaciones usan los ensamblados de .NET Framework que se incluyen con la versión del tiempo de ejecución usada para compilar la aplicación. Puede usar el atributo **appliesTo** en el elemento [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) de un archivo de configuración de la aplicación para redirigir las referencias de enlace de ensamblados a una versión específica de los ensamblados de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework.  

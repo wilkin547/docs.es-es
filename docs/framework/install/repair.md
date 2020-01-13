@@ -1,15 +1,13 @@
 ---
 title: Reparar .NET Framework
 description: Aprenda a reparar .NET Framework
-author: rlander
-ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 74c2fdc3443741790549845eae3dabe83b46278c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 734fb948728aed21ea5d5e908fbd7aee82c7ac62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716283"
 ---
 # <a name="repair-the-net-framework"></a>Reparar .NET Framework
 

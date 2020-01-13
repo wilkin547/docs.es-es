@@ -1,5 +1,5 @@
 ---
-title: Creación y uso de ensamblados con nombre seguro
+title: Crear y utilizar ensamblados con nombre seguro
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122509"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738687"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 
@@ -29,7 +29,7 @@ Un nombre seguro se compone de la identidad del ensamblado, es decir, de su nomb
 Un ensamblado con nombre seguro solo puede usar tipos de otros ensamblados con nombre seguro. De lo contrario, se pondría en peligro la integridad del ensamblado con nombre seguro.
 
 > [!NOTE]
-> Aunque .NET Core admite ensamblados con nombre seguro, y todos los ensamblados de la biblioteca .NET Core están firmados, la mayoría de los ensamblados de terceros no necesitan nombres seguros. Para obtener más información, consulte [Strong Name Signing (Firma con nombre seguro)](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) en GitHub.
+> Aunque .NET Core admite ensamblados con nombre seguro, y todos los ensamblados de la biblioteca .NET Core están firmados, la mayoría de los ensamblados de terceros no necesitan nombres seguros. Para obtener más información, consulte [Strong Name Signing (Firma con nombre seguro)](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) en GitHub.
 
 ## <a name="strong-name-scenario"></a>Escenario de nombre seguro
 
@@ -68,7 +68,7 @@ Esta característica puede deshabilitarse en aplicaciones concretas o en todo un
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Cómo: Crear un par de claves privada y pública](create-public-private-key-pair.md)|Describe cómo crear un par de claves criptográficas para firmar un ensamblado.|
 |[Cómo: Firmar un ensamblado con un nombre seguro](sign-strong-name.md)|Describe cómo crear un ensamblado con nombre seguro.|

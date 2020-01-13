@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802471"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348255"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato en .NET
 
@@ -313,7 +313,7 @@ En el ejemplo siguiente se crea una instancia de un objeto `Temperature` . A con
 
 ## <a name="composite-formatting"></a>Formatos compuestos
 
-Algunos métodos, como <xref:System.String.Format%2A?displayProperty=nameWithType> y <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, admiten formatos compuestos. Una cadena de formato compuesto es un tipo de plantilla que devuelve una sola cadena que incorpora la representación de cadena de cero, uno o más objetos. Cada objeto se representa en la cadena de formato compuesto mediante un elemento de formato indizado. El índice del elemento de formato corresponde a la posición del objeto que representa en la lista de parámetros del método. Los índices son de base cero. Por ejemplo, en la siguiente llamada al método <xref:System.String.Format%2A?displayProperty=nameWithType>, el primer elemento de formato, `{0:D}` se reemplaza con la representación de cadena de `thatDate`; el segundo elemento de formato, `{1}`, se reemplaza con la representación de cadena de `item1` y el tercer elemento de formato, `{2:C2}`, se reemplaza con la representación de cadena de `item1.Value`.
+Algunos métodos, como <xref:System.String.Format%2A?displayProperty=nameWithType> y <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, admiten formatos compuestos. Una cadena de formato compuesto es un tipo de plantilla que devuelve una sola cadena que incorpora la representación de cadena de cero, uno o más objetos. Cada objeto se representa en la cadena de formato compuesto mediante un elemento de formato indizado. El índice del elemento de formato corresponde a la posición del objeto que representa en la lista de parámetros del método. Los índices son de base cero. Por ejemplo, en la siguiente llamada al método <xref:System.String.Format%2A?displayProperty=nameWithType> , el primer elemento de formato, `{0:D}`se reemplaza con la representación de cadena de `thatDate`; el segundo elemento de formato, `{1}`, se reemplaza con la representación de cadena de `item1`y el tercer elemento de formato, `{2:C2}`, se reemplaza con la representación de cadena de `item1.Value`.
 
 [!code-csharp[Conceptual.Formatting.Overview#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite1.cs#14)]
 [!code-vb[Conceptual.Formatting.Overview#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite1.vb#14)]

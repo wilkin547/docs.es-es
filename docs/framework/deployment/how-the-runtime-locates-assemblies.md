@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052127"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741339"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 
@@ -35,7 +33,7 @@ La mejor manera de hacer referencia a un ensamblado es usar una referencia compl
 
 También puede hacer una referencia dinámica a un ensamblado proporcionando el método de llamada únicamente con información parcial sobre el ensamblado, por ejemplo especificando solo el nombre de ensamblado. En este caso, el ensamblado solo se busca en el directorio de la aplicación y no se realiza ninguna otra comprobación. Se hace una referencia parcial mediante cualquiera de los diversos métodos para cargar ensamblados, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>.
 
-Por último, puede hacer una referencia dinámica mediante un método como <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> y facilitar solo información parcial. Después, califique la referencia mediante el elemento [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.
+Por último, puede hacer una referencia dinámica mediante un método como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> y facilitar solo información parcial. Después, califique la referencia mediante el elemento [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.
 
 > [!NOTE]
 > Este tipo de referencia parcial no debe usarse con ensamblados que se comparten entre varias aplicaciones. Como los valores de configuración se aplican por aplicación y no por ensamblado, un ensamblado compartido que use este tipo de referencia parcial requerirá que cada aplicación que use el ensamblado compartido tenga la información calificadora en su archivo de configuración.

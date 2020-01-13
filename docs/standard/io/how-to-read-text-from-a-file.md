@@ -12,14 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 49ea989a2b11c6572dc08970cf96e2df5f4fa024
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834958"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706665"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Procedimiento Leer texto de un archivo
 En los ejemplos siguientes se muestra cómo leer texto desde un archivo de texto de forma sincrónica y asincrónica mediante .NET para aplicaciones de escritorio. En ambos ejemplos, cuando se crea la instancia de la clase <xref:System.IO.StreamReader>, se proporciona la ruta de acceso relativa o absoluta del archivo. 

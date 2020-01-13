@@ -12,14 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182468"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716588"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedimientos recomendados para cargar ensamblados
 En este artículo se abordan formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros. En él se ofrecen las siguientes recomendaciones:  

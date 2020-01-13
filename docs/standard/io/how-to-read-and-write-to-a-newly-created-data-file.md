@@ -1,5 +1,5 @@
 ---
-title: Filtrar Leer y escribir en un archivo de datos recién creado
+title: Procedimiento Leer y escribir en un archivo de datos recién creado
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,14 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 065907ae0d4a38ff2ef68de6025251e28220ee96
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 0bb06f42542d6acb3214fd4a1a3ca5c54f7caab2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674625"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706704"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Filtrar Leer y escribir en un archivo de datos recién creado
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Procedimiento Leer y escribir en un archivo de datos recién creado
 Las clases <xref:System.IO.BinaryWriter?displayProperty=nameWithType> y <xref:System.IO.BinaryReader?displayProperty=nameWithType> se usan para escribir y leer datos distintos de cadenas de caracteres. En el ejemplo siguiente se muestra cómo se crea un flujo de archivos vacío y cómo se escriben y se leen datos de este. 
 
 El ejemplo crea un archivo de datos llamado *Test.data* en el directorio actual, crea los objetos <xref:System.IO.BinaryWriter> y <xref:System.IO.BinaryReader> asociados y usa el objeto <xref:System.IO.BinaryWriter> para escribir los enteros de 0 a 10 en *Test.data*, que deja el puntero de archivo al final del archivo. A continuación, el objeto <xref:System.IO.BinaryReader> vuelve a establecer el puntero de archivo en el origen y lee el contenido especificado.  

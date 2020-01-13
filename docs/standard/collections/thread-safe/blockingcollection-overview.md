@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb01d29c723962e28d8ec4afc984cb4d6c48f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664547"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711329"
 ---
 # <a name="blockingcollection-overview"></a>Información general sobre BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> es una clase de colección segura para subprocesos que proporciona las siguientes características:  

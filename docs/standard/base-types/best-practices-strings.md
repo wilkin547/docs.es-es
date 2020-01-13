@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973940"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711485"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 
@@ -57,7 +56,7 @@ Evite lo siguiente cuando use cadenas:
 
 La mayoría de los métodos de manipulación de cadenas de .NET están sobrecargados. Normalmente, una o más sobrecargas aceptan la configuración predeterminada, mientras que otras no aceptan ningún valor predeterminado y en su lugar definen la manera precisa en la que se van a comparar o manipular las cadenas. La mayoría de los métodos que no confían en los valores predeterminados incluye un parámetro de tipo <xref:System.StringComparison>, que es una enumeración que especifica explícitamente reglas para la comparación de cadenas por referencia cultural y uso de mayúsculas y minúsculas. En la tabla siguiente se describen los miembros de la enumeración <xref:System.StringComparison> .
 
-|Miembro de StringComparison|DESCRIPCIÓN|
+|Miembro de StringComparison|Descripción|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Realiza una comparación con distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Realiza una comparación sin distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|
@@ -112,7 +111,7 @@ Las comparaciones que usan semántica de la referencia cultural actual son el va
 - Sobrecargas de<xref:System.String.Compare%2A?displayProperty=nameWithType> que no incluyen un parámetro <xref:System.StringComparison> .
 - Sobrecargas de<xref:System.String.CompareTo%2A?displayProperty=nameWithType> .
 - El método predeterminado <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo> .
-- El método predeterminado <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo> .
+- El método predeterminado <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.
 - Sobrecargas de<xref:System.String.IndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison> .
 - Sobrecargas de<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison> .
 
@@ -204,8 +203,8 @@ En la tabla siguiente se describe la asignación del contexto de cadena semánti
 |----------|--------------|-----------------------------------------------------|
 |Identificadores internos con distinción entre mayúsculas y minúsculas.<br /><br /> Identificadores con distinción entre mayúsculas y minúsculas en estándares como XML y HTTP.<br /><br /> Configuraciones relacionadas con la seguridad con distinción entre mayúsculas y minúsculas.|Identificador no lingüístico, donde los bytes coinciden exactamente.|<xref:System.StringComparison.Ordinal>|
 |Identificadores internos sin distinción entre mayúsculas y minúsculas.<br /><br /> Identificadores sin distinción entre mayúsculas y minúsculas en estándares como XML y HTTP.<br /><br /> Rutas de acceso a archivos.<br /><br /> Claves del Registro y valores.<br /><br /> Variables de entorno.<br /><br /> Identificadores de recursos (por ejemplo, nombres de identificadores).<br /><br /> Configuraciones relacionadas con la seguridad sin distinción entre mayúsculas y minúsculas.|Identificador no lingüístico, donde el uso de mayúsculas y minúsculas no es pertinente; especialmente datos almacenados en la mayoría de los servicios del sistema de Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Algunos datos almacenados lingüísticamente pertinentes.<br /><br /> Presentación de datos lingüísticos que necesitan un criterio de ordenación fijo.|Datos válidos culturalmente que siguen siendo lingüísticamente pertinentes.|<xref:System.StringComparison.InvariantCulture><br /><br /> O bien<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Datos mostrados al usuario.<br /><br /> La mayoría de los datos proporcionados por el usuario.|Datos que necesitan personalizaciones lingüísticas locales.|<xref:System.StringComparison.CurrentCulture><br /><br /> O bien<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Algunos datos almacenados lingüísticamente pertinentes.<br /><br /> Presentación de datos lingüísticos que necesitan un criterio de ordenación fijo.|Datos válidos culturalmente que siguen siendo lingüísticamente pertinentes.|<xref:System.StringComparison.InvariantCulture><br /><br /> o bien<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Datos mostrados al usuario.<br /><br /> La mayoría de los datos proporcionados por el usuario.|Datos que necesitan personalizaciones lingüísticas locales.|<xref:System.StringComparison.CurrentCulture><br /><br /> o bien<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>Métodos comunes de comparación de cadenas en .NET
 

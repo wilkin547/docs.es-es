@@ -5,14 +5,12 @@ helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779484"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716245"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Procedimiento Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores
 

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42860f549877436f43bfdc20fb3abde91d36101d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783190"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708880"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>Cómo crear excepciones definidas por el usuario
 

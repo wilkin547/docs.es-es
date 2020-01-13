@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67beeba6ce33fb1a8c3d02337d98282ccf30341a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 12b8df3195b2708e4556d4f8065227054db9eb14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991292"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711576"
 ---
 # <a name="strong-named-assemblies"></a>Ensamblados con nombre seguro
 

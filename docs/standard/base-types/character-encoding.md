@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120602"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711446"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 
@@ -67,7 +66,7 @@ Todas las clases de codificación de caracteres de .NET heredan de la clase <xre
 
 Se puede recuperar información sobre todas las codificaciones disponibles en .NET llamando al método <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET admite los sistemas de codificación de caracteres que se muestran en la tabla siguiente.
 
-|Codificación|Clase|DESCRIPCIÓN|Ventajas y desventajas|
+|Codificación|Clase|Descripción|Ventajas y desventajas|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|Codifica un intervalo limitado de caracteres usando los siete bits inferiores de un byte.|Como esta codificación solo admite valores de caracteres de U+0000 a U+007F, en la mayoría de los casos no resulta suficiente para aplicaciones de uso internacional.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|Representa los caracteres como secuencias de caracteres ASCII de 7 bits. Los caracteres Unicode no ASCII se representan con una secuencia de escape de caracteres ASCII.|UTF-7 admite protocolos como los protocolos de correo electrónico y de grupos de noticias. Sin embargo, la codificación UTF-7 no es particularmente segura ni sólida. En algunos casos, cambiar un bit puede modificar radicalmente la interpretación de toda una cadena UTF-7. En otros casos, diferentes cadenas UTF-7 pueden codificar el mismo texto. Para las secuencias que incluyen caracteres no ASCII, UTF-7 necesita más espacio que UTF-8, y la codificación y descodificación son más lentas. Por tanto, debe usar UTF-8 en lugar de UTF-7 si es posible.|

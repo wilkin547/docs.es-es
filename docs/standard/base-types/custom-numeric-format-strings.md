@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 72b60d0a91fda3e89448a19b506a6f8457835304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124408"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348305"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -34,7 +34,7 @@ Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
-|Especificador de formato|Name|DESCRIPCIÓN|Ejemplos|
+|Especificador de formato|NOMBRE|Descripción|Ejemplos|
 |----------------------|----------|-----------------|--------------|
 |"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [Especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
@@ -205,7 +205,7 @@ En el ejemplo siguiente se usa el carácter de escape para evitar que la operaci
 
 El punto y coma (;) es un especificador de formato condicional que aplica distinto formato a un número dependiendo de si su valor es positivo, negativo o cero. Para generar este comportamiento, una cadena de formato personalizado puede contener hasta tres secciones separadas por signos de punto y coma. Estas secciones se describen en la siguiente tabla.
 
-|Número de secciones|DESCRIPCIÓN|
+|Número de secciones|Descripción|
 |------------------------|-----------------|
 |Una sección|La cadena de formato se aplica a todos los valores.|
 |Dos secciones|La primera sección se aplica a valores positivos y ceros, y la segunda, sólo a valores negativos.<br /><br /> Si el número al que se va a dar formato es negativo, pero se convierte en cero después de redondearlo según el formato de la segunda sección, se da formato al cero resultante según la primera sección.|

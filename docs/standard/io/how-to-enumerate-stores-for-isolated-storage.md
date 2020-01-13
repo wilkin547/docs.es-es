@@ -13,14 +13,12 @@ helpviewer_keywords:
 - isolated storage, enumerating stores
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f14259afe4ee296d930b042d9e9ef069a81e65f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ba38093e9e978c89cdb2bb7a584ed9e04c1096d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591765"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707533"
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>Procedimiento para enumerar los almacenes de almacenamiento aislado
 Puede enumerar todos los almacenes aislados para el usuario actual con el uso del método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType>. Este método adopta un valor <xref:System.IO.IsolatedStorage.IsolatedStorageScope> y devuelve un enumerador <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Para enumerar los almacenes, debe tener el permiso <xref:System.Security.Permissions.IsolatedStorageFilePermission> que especifica el valor <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>. Si se llama al método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> con el valor <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User>, devuelve una matriz de objetos <xref:System.IO.IsolatedStorage.IsolatedStorageFile> definidos para el usuario actual.  

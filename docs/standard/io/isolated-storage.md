@@ -18,14 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802458"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706587"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
 <a name="top"></a> Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
@@ -164,7 +162,7 @@ Muchas aplicaciones usan bases de datos para almacenar y aislar los datos y, en 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Tipos de aislamiento](../../../docs/standard/io/types-of-isolation.md)|Describe los distintos tipos de aislamiento.|
 |[Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Proporciona un ejemplo de uso de la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obtener un almacén aislado por usuario y ensamblado.|

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Escribir caracteres en una cadena
+title: Procedimiento Escribir caracteres en una cadena
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb35c61b34fa571f35da6691ebe7fa2516eb2df1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674755"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706626"
 ---
-# <a name="how-to-write-characters-to-a-string"></a>Filtrar Escribir caracteres en una cadena
+# <a name="how-to-write-characters-to-a-string"></a>Procedimiento Escribir caracteres en una cadena
 Los siguientes ejemplos de código escriben caracteres de forma sincrónica y asincrónica desde una matriz de caracteres en una cadena.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>Ejemplo: Escribir caracteres de forma sincrónica en una aplicación de consola  

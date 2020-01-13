@@ -6,14 +6,12 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491011"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711212"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
 Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ventaja inmediata de la seguridad de tipos sin necesidad de derivar de un tipo de colección base ni de implementar miembros específicos de tipo. Los tipos de colección genéricos también suelen funcionan mejor que los correspondientes tipos de colección no genéricos (y mejor que los tipos que se derivan de los tipos de colección base no genéricos) cuando los elementos de la colección son tipos de valor; esto se debe a que con los genéricos no es necesario realizar una conversión boxing de los elementos.  

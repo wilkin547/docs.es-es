@@ -1,5 +1,5 @@
 ---
-title: Filtrar para enumerar directorios y archivos
+title: Procedimiento para enumerar directorios y archivos
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 6a26d0ef529b81976c4d2caafed34bb5f08d8d46
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758669"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707750"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a>Filtrar para enumerar directorios y archivos
+# <a name="how-to-enumerate-directories-and-files"></a>Procedimiento para enumerar directorios y archivos
 Las colecciones enumerables ofrecen mayor rendimiento que las matrices cuando se trabaja con colecciones grandes de directorios y archivos. Para enumerar directorios y archivos, use métodos que devuelvan una colección enumerable de nombres de directorio o archivo, o bien sus objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> o <xref:System.IO.FileSystemInfo>.  
   
 Si quiere buscar y devolver solo los nombres de directorios o archivos, use los métodos de enumeración de la clase <xref:System.IO.Directory>. Si quiere buscar y devolver otras propiedades de directorios o archivos, use las clases <xref:System.IO.DirectoryInfo> y <xref:System.IO.FileSystemInfo>.  

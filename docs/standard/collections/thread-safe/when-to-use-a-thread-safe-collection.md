@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490991"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711225"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Cuándo usar una colección segura para subprocesos
 .NET Framework 4 presenta cinco nuevos tipos de colección que están especialmente diseñadas para admitir operaciones multiproceso de agregar y quitar. Para obtener seguridad para los subprocesos, estos nuevos tipos usan diversas clases de mecanismos de sincronización eficientes con bloqueo y sin bloqueo. La sincronización agrega sobrecarga a las operaciones. La cantidad de sobrecarga depende del tipo de sincronización que se use, el tipo de operaciones que se realicen y otros factores, como el número de subprocesos que intentan obtener acceso simultáneamente a la colección.  

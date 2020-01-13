@@ -2,12 +2,12 @@
 title: Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar HttpClientFactory, disponible desde .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737751"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900325"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -37,7 +37,7 @@ Para resolver esos problemas mencionados y facilitar la administración de las i
 - Administre la duración de `HttpClientMessageHandlers` para evitar los problemas mencionados y los que se puedan producir al administrar las duraciones de `HttpClient` usted mismo.
 
 > [!NOTE]
-> `HttpClientFactory` está estrechamente ligado a la implementación de la inserción de dependencias (DI) en el paquete de NuGet `Microsoft.Extensions.DependencyInjection`. Para más información sobre el uso de otros contenedores de inserción de dependencias, consulte esta [conversación de GitHub](https://github.com/aspnet/Extensions/issues/1345).
+> `HttpClientFactory` está estrechamente ligado a la implementación de la inserción de dependencias (DI) en el paquete de NuGet `Microsoft.Extensions.DependencyInjection`. Para más información sobre el uso de otros contenedores de inserción de dependencias, consulte esta [conversación de GitHub](https://github.com/dotnet/extensions/issues/1345).
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Varias formas de usar HttpClientFactory
 
@@ -188,14 +188,14 @@ Hasta el momento, el código que se ha mostrado solo realiza solicitudes HTTP co
 - **Uso de HttpClientFactory en .NET Core**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **Código fuente de HttpClientFactory en el repositorio de GitHub `aspnet/Extensions`**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **Código fuente de HttpClientFactory en el repositorio de GitHub `dotnet/extensions`**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (.NET resilience and transient-fault-handling library) (Polly [Biblioteca de control de errores transitorios y resistencia de .NET])**  
   <http://www.thepollyproject.org/>
   
 - **Uso de HttpClientFactory sin inserción de dependencias (problema de GitHub)**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[Anterior](explore-custom-http-call-retries-exponential-backoff.md)

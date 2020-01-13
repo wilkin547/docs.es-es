@@ -16,13 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.custom: seodec18
-ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105704"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711420"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -71,7 +70,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
  En la tabla siguiente se describen algunas de las características que una clase puede tener. Cada lenguaje compatible con el motor en tiempo de ejecución proporciona una forma de indicar que una clase o un miembro de clase tiene una o varias de estas características. En cambio, puede que no estén disponibles todas estas características en los lenguajes de programación orientados a .NET.  
   
-|Característica|DESCRIPCIÓN|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |sealed|Especifica que no se puede derivar otra clase de este tipo.|  
 |implementa|Indica que la clase utiliza una o varias interfaces proporcionando implementaciones de miembros de la interfaz.|  
@@ -188,7 +187,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ### <a name="type-accessibility"></a>Accesibilidad a tipos  
  Todos los tipos tienen un modificador que rige su accesibilidad desde otros tipos. En la tabla siguiente se describen las accesibilidades a tipos que admite el motor en tiempo de ejecución.  
   
-|Accesibilidad|DESCRIPCIÓN|  
+|Accesibilidad|Descripción|  
 |-------------------|-----------------|  
 |public|Todos los ensamblados pueden tener acceso al tipo.|  
 |ensamblado|El tipo sólo es accesible desde su ensamblado.|  
@@ -289,7 +288,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ## <a name="characteristics-of-type-members"></a>Características de los miembros de tipos  
  Common Type System permite que los miembros de tipos tengan diversas características; sin embargo, no es necesario que los lenguajes admitan todas estas características. En la siguiente tabla se describen las características de los miembros.  
   
-|Característica|Se puede aplicar a|DESCRIPCIÓN|  
+|Característica|Se puede aplicar a|Descripción|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propiedades y eventos|El tipo no proporciona la implementación del método. Los tipos que heredan o implementan métodos abstractos deben proporcionar una implementación para el método. La única excepción es que el tipo derivado sea un tipo abstracto. Todos lo métodos abstractos son virtuales.|  
 |private, family, assembly, family y assembly, family o assembly, o public|Todas|Define la accesibilidad del miembro:<br /><br /> private<br /> Solo es accesible desde el mismo tipo que el miembro o desde un tipo anidado.<br /><br /> family<br /> Accesible desde el mismo tipo que el miembro y desde tipos derivados que heredan de él.<br /><br /> ensamblado<br /> Accesible sólo en el ensamblado en que está definido el tipo.<br /><br /> family y assembly<br /> Accesible sólo desde los tipos que estén calificados para el acceso de familia y ensamblado.<br /><br /> family o assembly<br /> Accesible sólo desde los tipos que califican el acceso de familia o ensamblado.<br /><br /> public<br /> Accesible desde cualquier tipo.|  

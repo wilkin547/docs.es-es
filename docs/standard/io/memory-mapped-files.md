@@ -9,14 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80eb5fd8b6c3b9ca8473efd1cab23a406280f1fa
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: add109e285dfc435a3d4fd7753fb647e28a6a2fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392908"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706574"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
 Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de .NET Framework 4, se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052100"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716479"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  

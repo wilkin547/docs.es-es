@@ -15,14 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddd862480a5977a4bada17945e10a25753b44de4
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402495"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706639"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Procedimiento para usar canalizaciones con nombre para la comunicación de red entre procesos
 Las canalizaciones con nombre permiten la comunicación entre procesos entre un servidor de canalización y uno o varios clientes de canalización. Proporcionan más funcionalidad que las canalizaciones anónimas, que permiten la comunicación entre procesos en un equipo local. Las canalizaciones con nombre admiten la comunicación dúplex completa a través de una red y varias instancias de servidor, la comunicación mediante mensajes y la suplantación de clientes, que permite a los procesos que se conectan utilizar su propio conjunto de permisos en servidores remotos.  

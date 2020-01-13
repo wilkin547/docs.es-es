@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052166"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716545"
 ---
 # <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
 En esta sección de la documentación de .NET Framework se proporciona información para los desarrolladores que quieran instalar .NET Framework con sus aplicaciones y para los administradores que quieran implementar .NET Framework en una red. También se describen los problemas de activación y reinicio asociados a la implementación, así como la manera de supervisar el progreso de la instalación de .NET Framework.  
@@ -22,7 +20,7 @@ En esta sección de la documentación de .NET Framework se proporciona informaci
  Explica cómo los desarrolladores de software pueden instalar .NET Framework en los equipos de los usuarios con sus aplicaciones.  
   
  [Guía de implementación para administradores](guide-for-administrators.md)  
- Explica cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red utilizando System Center Configuration Manager (SCCM).  
+ Explica cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red con Microsoft Endpoint Configuration Manager.  
   
  [Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](reducing-system-restarts.md)  
  Describe el Administrador de reinicio, que evita, en la medida de lo posible, los reinicios del equipo y explica cómo pueden aprovecharlo las aplicaciones que instalan .NET Framework.  

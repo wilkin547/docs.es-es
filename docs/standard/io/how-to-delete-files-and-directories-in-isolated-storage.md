@@ -17,14 +17,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d05b7fa3010ab089d1a97e9a0516096326fd4bb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec4de3e3a139cfcf66f1f6252c03c467f4ccfbc5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538029"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707862"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Procedimiento para eliminar archivos y directorios en almacenamiento aislado
 Puede eliminar directorios y archivos en un archivo de almacenamiento aislado. Dentro de un almacén, los nombres de archivos y directorios dependen del sistema operativo y se especifican con respecto a la raíz del sistema de archivos virtual. No distinguen mayúsculas de minúsculas en sistemas operativos Windows.  

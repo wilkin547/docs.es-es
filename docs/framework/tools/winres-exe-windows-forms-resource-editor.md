@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043901"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715707"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
@@ -35,11 +33,11 @@ winres /?
 
 ## <a name="arguments"></a>Argumentos
 
-|Argumento|DESCRIPCIÓN|
+|Argumento|Descripción|
 |--------------|-----------------|
 |`resourceFile`|Archivo de recursos que se va a adaptar. Este archivo debe ser un archivo .resx o .resources de Windows Forms generado por el diseñador de Visual Studio. Winres.exe no puede abrir archivos .resx o .resources genéricos.|
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
 
@@ -110,7 +108,7 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
 
 2. Para abrir los recursos predeterminados de un formulario que quiera adaptar, haga clic en el comando **Abrir** del menú **Archivo** y navegue hasta el archivo que quiera abrir.
 
-     O bien
+     o bien
 
      Especifique el archivo que desee abrir en la línea de comandos al iniciar Winres.exe.
 

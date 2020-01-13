@@ -2,20 +2,20 @@
 title: Uso de las clases de enumeración en lugar de los tipos de enumeración
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre cómo se pueden usar las clases de enumeración en lugar de las enumeraciones como una forma de resolver algunas limitaciones de estas últimas.
 ms.date: 10/08/2018
-ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093863"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337688"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Uso de las clases de enumeración en lugar de los tipos de enumeración
 
-Las [enumeraciones](../../../csharp/language-reference/keywords/enum.md) (o *tipos enum* abreviado) son un contenedor de lenguaje fino alrededor de un tipo entero. Es posible que quiera limitar su uso al momento en que almacena un valor de un conjunto cerrado de valores. La clasificación basada en tamaños (pequeño, mediano, grande) es un buen ejemplo. Usar las enumeraciones para el flujo de control o abstracciones más sólidas puede producir un [problema en el código](https://deviq.com/code-smells/). Este tipo de uso da lugar a código frágil con muchas instrucciones de flujo de control que comprueban los valores de la enumeración.
+Las [enumeraciones](../../../csharp/language-reference/builtin-types/enum.md) (o *tipos enum* abreviado) son un contenedor de lenguaje fino alrededor de un tipo entero. Es posible que quiera limitar su uso al momento en que almacena un valor de un conjunto cerrado de valores. La clasificación basada en tamaños (pequeño, mediano, grande) es un buen ejemplo. Usar las enumeraciones para el flujo de control o abstracciones más sólidas puede producir un [problema en el código](https://deviq.com/code-smells/). Este tipo de uso da lugar a código frágil con muchas instrucciones de flujo de control que comprueban los valores de la enumeración.
 
 En su lugar, puede crear clases de enumeración que habilitan todas las características enriquecidas de un lenguaje orientado a objetos.
 
-Sin embargo, esto no es un tema crítico y, en muchos casos, por simplicidad, puede seguir usando [tipos enum](../../../csharp/language-reference/keywords/enum.md) normales si lo prefiere. En cualquier caso, el uso de las clases de enumeración está más relacionado con los conceptos de tipo empresarial.
+Sin embargo, esto no es un tema crítico y, en muchos casos, por simplicidad, puede seguir usando [tipos enum](../../../csharp/language-reference/builtin-types/enum.md) normales si lo prefiere. En cualquier caso, el uso de las clases de enumeración está más relacionado con los conceptos de tipo empresarial.
 
 ## <a name="implement-an-enumeration-base-class"></a>Implementación de una clase base de enumeración
 

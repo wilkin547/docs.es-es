@@ -1,5 +1,5 @@
 ---
-title: Filtrar Abrir y anexar a un archivo de registro
+title: Procedimiento Abrir y anexar a un archivo de registro
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 921b13e057929d7d6b283b26014a4c1f195f39c9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: b0e399ba3c0cfa0ad3b92afbc7e07af7659e8ae6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674846"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706717"
 ---
-# <a name="how-to-open-and-append-to-a-log-file"></a>Filtrar Abrir y anexar a un archivo de registro
+# <a name="how-to-open-and-append-to-a-log-file"></a>Procedimiento Abrir y anexar a un archivo de registro
 <xref:System.IO.StreamWriter> y <xref:System.IO.StreamReader> escriben y leen caracteres de secuencias. En el siguiente ejemplo de código se abre el archivo *log.txt* para realizar entradas o se crea el archivo en caso de que no exista y se adjunta información de registro al final del archivo. El ejemplo, a continuación, escribe el contenido del archivo en la salida estándar para su presentación. 
 
 Como alternativa a este ejemplo, podría almacenar la información como una sola cadena o como una matriz de cadenas, y usar el método <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> o <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> para lograr la misma funcionalidad.  

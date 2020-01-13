@@ -2,15 +2,13 @@
 title: Instalar .NET Framework en Windows Vista
 description: Aprenda a instalar .NET Framework en Windows Vista.
 ms.custom: updateeachrelease
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 630ab717e44d72de248bb0f0b1abf3d781d26a93
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204729"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716320"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalación de .NET Framework en Windows Vista y Windows Server 2008
 

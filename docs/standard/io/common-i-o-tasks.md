@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609634"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708183"
 ---
 # <a name="common-io-tasks"></a>Tareas de E/S comunes
 El espacio de nombres <xref:System.IO> proporciona varias clases que permiten realizar diferentes acciones, como leer y escribir, en archivos, directorios y secuencias. Para más información, vea [E/S de archivos y secuencias](../../../docs/standard/io/index.md).  
@@ -28,7 +26,7 @@ El espacio de nombres <xref:System.IO> proporciona varias clases que permiten re
 |Cambiar el nombre de un archivo o moverlo|Método <xref:System.IO.File.Move%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType>|  
 |Eliminar un archivo|Método <xref:System.IO.File.Delete%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType>|  
 |Copiar un archivo|Método <xref:System.IO.File.Copy%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType>|  
-|Obtener el tamaño de un archivo|Propiedad<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType> |  
+|Obtener el tamaño de un archivo|Propiedad<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
 |Obtener los atributos de un archivo|Método <xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
 |Establecer los atributos de un archivo|Método <xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
 |Determinar si existe un archivo|Método <xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
@@ -44,7 +42,7 @@ El espacio de nombres <xref:System.IO> proporciona varias clases que permiten re
 |Para...|Vea el ejemplo de este tema...|  
 |-------------------|--------------------------------------|  
 |Obtener acceso a un archivo de una carpeta especial como Mis documentos|[Cómo: Escribir texto en un archivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Crear un directorio|Método <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Propiedad<xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> |  
+|Crear un directorio|Método <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Propiedad<xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>|  
 |Crear un subdirectorio|Método <xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType>|  
 |Cambiar el nombre de un directorio o moverlo|Método <xref:System.IO.Directory.Move%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType>|  
 |Copiar un directorio|[Cómo: Copiar directorios](../../../docs/standard/io/how-to-copy-directories.md)|  

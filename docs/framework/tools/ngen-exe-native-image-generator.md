@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085205"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741790"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.
 
 > [!NOTE]
-> Ngen.exe compila las imágenes nativas de los ensamblados que tienen como destino solo .NET Framework. El generador de imágenes nativas equivalente para .NET Core es [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
+> Ngen.exe compila las imágenes nativas de los ensamblados que tienen como destino solo .NET Framework. El generador de imágenes nativas equivalente para .NET Core es [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md).
 
 Cambios en Ngen.exe en .NET Framework 4:
 
@@ -75,20 +75,20 @@ ngen /? | /help
 
 En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ver descripciones de los distintos elementos de una `action`, consulte las tablas [Argumentos](#ArgumentTable), [Niveles de prioridad](#PriorityTable), [Escenarios](#ScenarioTable) y [Configuración](#ConfigTable). En la tabla [Opciones](#OptionTable) se describe el parámetro `options` y los modificadores de ayuda.
 
-|Acción|DESCRIPCIÓN|
+|Acción|Descripción|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera imágenes nativas para un ensamblado y sus dependencias e instala las imágenes en la memoria caché de imágenes nativas.<br /><br /> Si se especifica `/queue`, la acción se pone en la cola del servicio de imágenes nativas. La prioridad predeterminada es 3. Consulte la tabla [Niveles de prioridad](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:**  A partir de .NET Framework 4:, ya no se admite la acción `uninstall` *.|
 |`update` [`/queue`]|Actualiza las imágenes nativas que han dejado de ser válidas.<br /><br /> Si se especifica `/queue`, las actualizaciones se ponen en la cola del servicio de imágenes nativas. Las actualizaciones siempre se programan con una prioridad de 3, por lo que se ejecutan cuando el equipo se encuentra inactivo.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Muestra el estado de las imágenes nativas para un ensamblado y sus dependencias.<br /><br /> Si no se proporciona ningún argumento, se muestra todo el contenido de la memoria caché de imágenes nativas.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> O bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> o bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Pausa el servicio de imágenes nativas, permite la reanudación del servicio en pausa o consulta el estado del servicio.|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>Argumentos
 
-|Argumento|DESCRIPCIÓN|
+|Argumento|Descripción|
 |--------------|-----------------|
 |`assemblyName`|El nombre para mostrar completo del ensamblado. Por ejemplo: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:**  Puede proporcionar un nombre de ensamblado parcial, como `myAssembly`, para las acciones `display` y `uninstall`. <br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|
 |`assemblyPath`|La ruta de acceso explícita del ensamblado. Se puede especificar una ruta de acceso completa o relativa.<br /><br /> Si se especifica un nombre de archivo sin una ruta de acceso, el ensamblado deberá estar ubicado en el directorio actual.<br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|
@@ -97,7 +97,7 @@ En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ve
 
 ## <a name="priority-levels"></a>Niveles de prioridad
 
-|Prioridad|DESCRIPCIÓN|
+|Prioridad|Descripción|
 |--------------|-----------------|
 |`1`|Las imágenes nativas se generan e instalan de forma inmediata, sin esperar al tiempo de inactividad.|
 |`2`|Las imágenes nativas se generan e instalan sin esperar al tiempo de inactividad, pero después de que se hayan completado todas las acciones de prioridad 1 (y sus dependencias).|
@@ -107,7 +107,7 @@ En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ve
 
 ## <a name="scenarios"></a>Escenarios
 
-|Escenario|DESCRIPCIÓN|
+|Escenario|Descripción|
 |--------------|-----------------|
 |`/Debug`|Genera imágenes nativas que pueden usarse con un depurador.|
 |`/Profile`|Genera imágenes nativas que pueden usarse con un generador de perfiles.|
@@ -117,7 +117,7 @@ En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ve
 
 ## <a name="config"></a>Configuración
 
-|Configuración|DESCRIPCIÓN|
+|Configuración|Descripción|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Usa la configuración del ensamblado ejecutable especificado.<br /><br /> Ngen.exe tiene que tomar las mismas decisiones que el cargador al enlazarse a las dependencias. Cuando se carga un componente compartido en tiempo de ejecución usando el método <xref:System.Reflection.Assembly.Load%2A>, el archivo de configuración de la aplicación determina las dependencias que se cargan para el componente compartido como, por ejemplo, la versión que se carga de una dependencia. El modificador `/ExeConfig` proporciona a Ngen.exe orientación sobre las dependencias que se cargarán en tiempo de ejecución.|
 |`/AppBase:` `directoryPath`|Al buscar dependencias, usa el directorio especificado como base de la aplicación.|
@@ -126,7 +126,7 @@ En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ve
 
 ## <a name="options"></a>Opciones
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |`/nologo`|Suprime la presentación de la pancarta de inicio de Microsoft.|
 |`/silent`|Suprime la presentación de mensajes de operaciones correctas.|
