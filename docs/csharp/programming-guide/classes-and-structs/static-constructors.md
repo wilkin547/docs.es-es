@@ -1,17 +1,16 @@
 ---
 title: 'Constructores estáticos: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596038"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714677"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Constructores estáticos (Guía de programación de C#)
 Un constructor estático se usa para inicializar cualquier dato [estático](../../language-reference/keywords/static.md) o realizar una acción determinada que solo debe realizarse una vez. Es llamado automáticamente antes de crear la primera instancia o de hacer referencia a cualquier miembro estático.  

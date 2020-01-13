@@ -3,12 +3,12 @@ title: 'Tutorial: Crear el primer analizador y la corrección de código'
 description: En este tutorial se proporcionan instrucciones detalladas para compilar un analizador y la corrección del código con el SDK del compilador de .NET (API de Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 99401e74588088d56b3fbd916e050f5d468722a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837056"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346940"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Crear el primer analizador y la corrección de código
 
@@ -520,7 +520,7 @@ int k = i + j;
 
 Después de estos cambios, obtendrá un subrayado ondulado rojo solo en las dos primeras variables. Agregue `const` a `i` y `j`, y obtendrá una nueva advertencia sobre `k` porque ahora puede ser `const`.
 
-¡Enhorabuena! Ha creado su primera extensión de .NET Compiler Platform que realiza un análisis de código sobre la marcha para detectar un problema y proporciona una solución rápida para corregirlo. Durante el proceso, ha aprendido muchas de las API de código que forman parte del SDK de .NET Compiler Platform (API de Roslyn). Puede comprobar su trabajo con el [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) en nuestro repositorio de ejemplos de GitHub. También puede descargar el [archivo ZIP del proyecto completado](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip).
+¡Enhorabuena! Ha creado su primera extensión de .NET Compiler Platform que realiza un análisis de código sobre la marcha para detectar un problema y proporciona una solución rápida para corregirlo. Durante el proceso, ha aprendido muchas de las API de código que forman parte del SDK de .NET Compiler Platform (API de Roslyn). Puede comprobar su trabajo con el [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) en nuestro repositorio de ejemplos de GitHub.
 
 ## <a name="other-resources"></a>Otros recursos
 

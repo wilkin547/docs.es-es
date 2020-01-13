@@ -1,6 +1,5 @@
 ---
 title: 'Conversión boxing y unboxing: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 849983bb9cce6c9e0f41247a898747300fd29435
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4c17ba1917589dfd534b53ee3fb3efe67ddd02d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588538"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698799"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversión boxing y unboxing (Guía de programación de C#)
 La conversión boxing es el proceso de convertir un [tipo de valor](../../language-reference/keywords/value-types.md) en el tipo `object` o en cualquier tipo de interfaz implementado por este tipo de valor. Cuando CLR aplica la conversión boxing a un tipo de valor, ajusta el valor dentro de una instancia <xref:System.Object?displayProperty=nameWithType>y lo almacena en el montón administrado. La conversión unboxing extrae el tipo de valor del objeto. La conversión boxing es implícita y la conversión unboxing es explícita. El concepto de conversión boxing y unboxing es la base de la vista unificada del sistema de tipos de C#, en el que un valor de cualquier tipo se puede tratar como objeto.  
@@ -54,7 +53,7 @@ La conversión boxing es el proceso de convertir un [tipo de valor](../../langua
   
  [!code-csharp[csProgGuideTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#19)]  
   
-## <a name="description"></a>DESCRIPCIÓN  
+## <a name="description"></a>Descripción  
  Este ejemplo convierte una variable de entero `i` en un objeto `o` mediante la conversión boxing. A continuación, el valor almacenado en la variable `i` se cambia de `123` a `456`. El ejemplo muestra que el tipo de valor original y el objeto al que se ha aplicado la conversión boxing usan ubicaciones de memoria independientes y, por consiguiente, pueden almacenar valores diferentes.  
   
 ## <a name="example"></a>Ejemplo  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039066"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345331"
 ---
 # <a name="comparison-operators-c-reference"></a>Operadores de comparación (referencia de C#)
 
@@ -33,7 +33,7 @@ Los operadores de la comparación [`<` (menor que)](#less-than-operator-), [`>` 
 > [!NOTE]
 > Para los operadores `==`, `<`, `>`, `<=` y `>=`, si cualquier operando no es un número (<xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>), el resultado del operador será `false`. Esto significa que el valor `NaN` no es mayor, inferior ni igual que cualquier otro valor `double` o `float`, incluido `NaN`. Para obtener más información y ejemplos, vea el artículo de referencia <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
 
-Los tipos de enumeración también admiten operadores de comparación. Para los operandos del mismo tipo [enum](../keywords/enum.md), se comparan los valores correspondientes del tipo entero subyacente.
+Los tipos de enumeración también admiten operadores de comparación. Para los operandos del mismo tipo [enum](../builtin-types/enum.md), se comparan los valores correspondientes del tipo entero subyacente.
 
 Los [operadores `==` y `!=`](equality-operators.md) comprueban si los operandos son iguales.
 

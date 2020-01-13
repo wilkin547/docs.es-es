@@ -1,6 +1,5 @@
 ---
 title: Restricción de la accesibilidad del descriptor de acceso - Guía de programación de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: ca990693d29f8c8abd2e4ba2488a429a797afaec
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596176"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714691"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)
 Las partes [get](../../language-reference/keywords/get.md) y [set](../../language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
