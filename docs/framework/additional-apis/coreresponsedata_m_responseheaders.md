@@ -1,5 +1,5 @@
 ---
-title: Campo CoreResponseData.m_ResponseHeaders
+title: Campo CoreResponseData. m_ResponseHeaders
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705979"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741012"
 ---
-# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders campo
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData. m\_campo ResponseHeaders
 
-`CoreResponseData.m_ResponseHeaders` es un <xref:System.Net.WebHeaderCollection> de encabezados asociados con la respuesta del servidor.
+`CoreResponseData.m_ResponseHeaders` es una <xref:System.Net.WebHeaderCollection> de encabezados asociada a la respuesta del servidor.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Esta API no está pensada para usarse directamente en el código. En su lugar, debe usar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [manual del usuario de DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Esta API no está pensada para usarse directamente en el código. En su lugar, debe usar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System. dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.
