@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711251"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938112"
 ---
 # <a name="thread-safe-collections"></a>Colecciones seguras para subprocesos
 .NET Framework 4 introduce el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que incluye varias clases de colección que son a la vez seguras para subprocesos y escalables. Varios subprocesos pueden agregar o quitar elementos de estas colecciones sin ningún riesgo y de un modo eficaz, sin requerir una sincronización adicional en código de usuario. Al escribir un código nuevo, utilice las clases de colección simultáneas siempre que varios subprocesos se vayan a escribir en la colección de forma simultánea. Si solo está leyendo en una colección compartida, puede utilizar las clases en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Recomendamos no utilizar clases de colección 1.0 a menos que estén destinadas a .NET Framework 1.1. o un runtime de una versión anterior.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronización de subprocesos en las colecciones de .NET Framework 1.0 y 2.0  
- Las colecciones introducidas en .NET Framework 1.0 se encuentran en el espacio de nombres <xref:System.Collections?displayProperty=nameWithType>. Estas colecciones, que incluyen <xref:System.Collections.ArrayList> y <xref:System.Collections.Hashtable> utilizados habitualmente, proporcionan cierta seguridad para subprocesos mediante la propiedad `Synchronized`, que devuelve un contenedor seguro para subprocesos en torno a la colección. El contenedor funciona bloqueando toda la colección en cada operación de agregar o quitar. Por consiguiente, cada subproceso que intenta tener acceso a la colección debe esperar su turno para tomar el único bloqueo. Esto no es escalable y puede producir una degradación significativa del rendimiento en las colecciones grandes. Asimismo, el diseño no está totalmente protegido de las condiciones de carrera. Para obtener más información, vea [Synchronization in Generic Collections](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/) (Sincronización de colecciones genéricas).  
+ Las colecciones introducidas en .NET Framework 1.0 se encuentran en el espacio de nombres <xref:System.Collections?displayProperty=nameWithType>. Estas colecciones, que incluyen <xref:System.Collections.ArrayList> y <xref:System.Collections.Hashtable> utilizados habitualmente, proporcionan cierta seguridad para subprocesos mediante la propiedad `Synchronized`, que devuelve un contenedor seguro para subprocesos en torno a la colección. El contenedor funciona bloqueando toda la colección en cada operación de agregar o quitar. Por consiguiente, cada subproceso que intenta tener acceso a la colección debe esperar su turno para tomar el único bloqueo. Esto no es escalable y puede producir una degradación significativa del rendimiento en las colecciones grandes. Asimismo, el diseño no está totalmente protegido de las condiciones de carrera. Para obtener más información, vea [Synchronization in Generic Collections](https://docs.microsoft.com/archive/blogs/bclteam/synchronization-in-generic-collections-brian-grunkemeyer) (Sincronización de colecciones genéricas).  
   
  Las clases de colección introducidas en .NET Framework 2.0 se encuentran en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Éstas incluyen <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, etc. Estas clases proporcionan una seguridad de tipos y un rendimiento mejorados comparados con las clases de .NET Framework 1.0. Sin embargo, las clases de colección de .NET Framework 2.0 no proporcionan ninguna sincronización de subprocesos; el código de usuario debe proporcionar toda la sincronización cuando se agregan o quitan elementos en varios subprocesos simultáneamente.  
   
