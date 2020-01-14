@@ -2,12 +2,12 @@
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978182"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938177"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  
@@ -16,12 +16,12 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
  Un subconjunto de funcionalidad de WCF está disponible en una aplicación de la Tienda Windows; vea las secciones siguientes para obtener más detalles.  
   
 > [!IMPORTANT]
-> Use las API de distribución de WinRT en lugar de las expuestas por WCF. Para obtener más información, vea [API de distribución de WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Use las API de distribución de WinRT en lugar de las expuestas por WCF. Para obtener más información, vea [API de distribución de WinRT](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > No se admite el uso de Agregar referencia de servicio para agregar una referencia de servicio web a un componente de Windows en tiempo de ejecución.  
   
-### <a name="supported-bindings"></a>Enlaces admitidos  
+### <a name="supported-bindings"></a>Enlaces compatibles  
  Los siguientes enlaces de WCF se admiten en aplicaciones de la Tienda Windows:  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
@@ -106,7 +106,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write(DateTime) ahora escribe el objeto DateTime como una cadena.  
   
-### <a name="security"></a>Seguridad  
+### <a name="security"></a>de seguridad  
 
 En las aplicaciones de la tienda Windows se admiten los siguientes modos de seguridad:
   
@@ -122,15 +122,15 @@ En las aplicaciones de la tienda Windows se admiten los siguientes tipos de cred
   
 1. Ninguno  
   
-2. Básico  
+2. Basic  
   
-3. Implícita  
+3. Digest  
   
-4. Negociar  
+4. Negotiate  
   
 5. NTLM  
   
-6. Windows  
+6. Portal  
   
 7. Nombre de usuario (seguridad de mensaje)  
   
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Vea también
 
-- [Blog de WCF en aplicaciones de la tienda Windows](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [Seguridad y clientes de la tienda Windows de WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Aplicaciones de la tienda Windows y llamadas entre equipos](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Llamar a un servicio WCF implementado en Azure desde una aplicación de la tienda Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Blog de WCF en aplicaciones de la tienda Windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [Seguridad y clientes de la tienda Windows de WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Aplicaciones de la tienda Windows y llamadas entre equipos](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Llamar a un servicio WCF implementado en Azure desde una aplicación de la tienda Windows](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Enlaces](../../../../docs/framework/wcf/bindings.md)

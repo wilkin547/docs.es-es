@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428189"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935290"
 ---
 # <a name="caching-in-net-framework-applications"></a>Almacenamiento en caché en aplicaciones .NET Framework
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.  
@@ -69,7 +69,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
   
 - Cree una clase personalizada que derive de la clase <xref:System.Runtime.Caching.ObjectCache> y luego proporcione una implementación de caché personalizada en la clase derivada.  
   
-- Cree una clase que derive de la clase <xref:System.Runtime.Caching.MemoryCache> y personalice o extienda la clase derivada. Para obtener un ejemplo de cómo hacerlo, vea [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application (Almacenamiento en caché de datos de aplicación mediante varios objetos de caché en una aplicación ASP.NET)](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
+- Cree una clase que derive de la clase <xref:System.Runtime.Caching.MemoryCache> y personalice o extienda la clase derivada. Para obtener un ejemplo de cómo hacerlo, vea [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application (Almacenamiento en caché de datos de aplicación mediante varios objetos de caché en una aplicación ASP.NET)](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application).  
   
 - Cree una clase que derive de la clase <xref:System.Web.Caching.OutputCacheProvider> y configure la aplicación de modo que use el proveedor de caché de salida personalizado.  
   
@@ -79,5 +79,5 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación WPF](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Tutorial: Almacenar en caché datos de la aplicación en ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

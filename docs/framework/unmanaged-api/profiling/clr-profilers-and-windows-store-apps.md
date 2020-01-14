@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344767"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938135"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -76,7 +76,7 @@ Los dispositivos Windows RT están bastante bloqueados. Simplemente no se pueden
 
 En una serie de escenarios descritos en las secciones siguientes, la aplicación de escritorio de la interfaz de usuario del generador de perfiles debe consumir algunas nuevas API de Windows Runtime. Querrá consultar la documentación para saber qué Windows Runtime API se pueden usar desde aplicaciones de escritorio y si su comportamiento es diferente cuando se llama desde aplicaciones de escritorio y aplicaciones de la tienda Windows.
 
-Si la interfaz de usuario del generador de perfiles está escrita en código administrado, habrá que realizar algunos pasos para que el consumo de esas Windows Runtime API sea fácil. Consulte el artículo [aplicaciones de escritorio administradas y Windows Runtime](https://go.microsoft.com/fwlink/?LinkID=271858) para obtener más información.
+Si la interfaz de usuario del generador de perfiles está escrita en código administrado, habrá que realizar algunos pasos para que el consumo de esas Windows Runtime API sea fácil. Para obtener más información, consulte el artículo [aplicaciones de escritorio administradas y Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Carga del archivo DLL del generador de perfiles
 
@@ -378,11 +378,11 @@ El recolector de elementos no utilizados y el montón administrado no son fundam
 
 Al realizar la generación de perfiles de memoria, la DLL del generador de perfiles crea normalmente un subproceso independiente a partir del cual se llama al método [forcegc (](icorprofilerinfo-forcegc-method.md) . No es nada nuevo. Pero lo que podría ser sorprendente es que el hecho de realizar una recolección de elementos no utilizados dentro de una aplicación de la tienda Windows puede transformar el subproceso en un subproceso administrado (por ejemplo, se creará un ThreadID de la API de generación de perfiles para ese subproceso).
 
-Para entender las consecuencias de esto, es importante comprender las diferencias entre las llamadas sincrónicas y asincrónicas, tal y como se define en la API de generación de perfiles de CLR. Tenga en cuenta que esto es muy diferente del concepto de llamadas asincrónicas en aplicaciones de la tienda Windows. Vea la entrada de blog [por qué tenemos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) para obtener más información.
+Para entender las consecuencias de esto, es importante comprender las diferencias entre las llamadas sincrónicas y asincrónicas, tal y como se define en la API de generación de perfiles de CLR. Tenga en cuenta que esto es muy diferente del concepto de llamadas asincrónicas en aplicaciones de la tienda Windows. Vea la entrada de blog [por qué tenemos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) para obtener más información.
 
 El punto relevante es que las llamadas realizadas en los subprocesos creados por el generador de perfiles siempre se consideran sincrónicas, incluso si esas llamadas se realizan desde fuera de una implementación de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) del archivo DLL del generador de perfiles. Como mínimo, que solía ser el caso. Ahora que CLR ha convertido el subproceso del generador de perfiles en un subproceso administrado debido a su llamada al [método forcegc (](icorprofilerinfo-forcegc-method.md), ese subproceso ya no se considera el subproceso del generador de perfiles. Como tal, el CLR exige una definición más rigurosa de lo que se refiere como sincrónico para ese subproceso, es decir, que una llamada se debe originar desde dentro de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) de la dll del generador de perfiles para calificarse como sincrónica.
 
-¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas que normalmente se realizan en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), se le va a tener problemas. Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) ).
+¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas que normalmente se realizan en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), se le va a tener problemas. Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) ).
 
 Por lo tanto, se recomienda que todos los subprocesos que crea el archivo DLL del generador de perfiles para llamar al [método forcegc (](icorprofilerinfo-forcegc-method.md) se deben usar *únicamente* con el fin de desencadenar GC y después responder a las devoluciones de llamada GC. No debe llamar a la API de generación de perfiles para realizar otras tareas, como el muestreo o desasociación de la pila.
 
