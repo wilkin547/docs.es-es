@@ -10,13 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.custom: seodec18
-ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105721"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711498"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -103,7 +102,7 @@ De forma predeterminada, se almacenan en caché los 15 últimos patrones de expr
 
 La expresión regular `\p{Sc}+\s*\d+` que se usa en este ejemplo comprueba que la cadena de entrada consta de un símbolo de moneda y al menos un dígito decimal. El patrón se define como se muestra en la tabla siguiente.
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`\p{Sc}+`|Buscar coincidencias con uno o más caracteres de la categoría Símbolo Unicode, Moneda.|
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|
@@ -191,7 +190,7 @@ Por ejemplo, el patrón de expresión regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` e
 
 En estos casos, puede optimizar el rendimiento de la expresión regular quitando los cuantificadores anidados y reemplazando la subexpresión externa con una aserción de búsqueda anticipada o de búsqueda tardía de ancho cero. Las aserciones de búsqueda anticipada y de búsqueda tardía son delimitadores; no mueven el puntero en la cadena de entrada, sino que realizan una búsqueda hacia delante o hacia atrás para comprobar si se cumple una condición especificada. Por ejemplo, la expresión regular de número de pieza se puede volver a escribir como `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Este patrón de expresión regular se define como se muestra en la tabla siguiente.
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. El número de pieza debe constar al menos de este carácter.|
@@ -207,7 +206,7 @@ En el ejemplo siguiente se muestra el uso de esta expresión regular para encont
 
 El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-|Elemento del lenguaje|DESCRIPCIÓN|
+|Elemento del lenguaje|Descripción|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Búsqueda anticipada positiva de ancho cero. Realizar una búsqueda anticipada de la posición actual para determinar si `subexpression` coincide con la cadena de entrada.|
 |`(?!` `subexpression` `)`|Búsqueda anticipada negativa de ancho cero. Realizar una búsqueda anticipada de la posición actual para determinar si `subexpression` no coincide con la cadena de entrada.|
@@ -272,7 +271,7 @@ Puede deshabilitar las capturas de una de las maneras siguientes:
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina la implementación del motor de expresiones regulares de .NET. El tema se centra en la flexibilidad de las expresiones regulares y explica la responsabilidad del desarrollador para garantizar un funcionamiento eficaz y sólido del motor de expresiones regulares.|
 |[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica qué es el retroceso y cómo afecta al rendimiento de las expresiones regulares, y examine los elementos del lenguaje que proporcionan alternativas al retroceso.|
