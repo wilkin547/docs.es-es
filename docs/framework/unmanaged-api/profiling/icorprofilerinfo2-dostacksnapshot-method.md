@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426827"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936854"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot (Método)
 Recorre los marcos administrados de la pila para el subproceso especificado y envía información al generador de perfiles a través de una devolución de llamada.  
@@ -37,7 +37,7 @@ HRESULT DoStackSnapshot(
     [in] ULONG32 contextSize);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `thread`  
  de IDENTIFICADOR del subproceso de destino.  
   
@@ -64,14 +64,14 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  de Tamaño de la estructura de `CONTEXT`, a la que hace referencia el parámetro `context`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se pasa null para `thread`, se produce una instantánea del subproceso actual. Las instantáneas se pueden tomar de otros subprocesos solo si el subproceso de destino se suspende en el momento.  
   
  Cuando el generador de perfiles desea recorrer la pila, llama a `DoStackSnapshot`. Antes de que CLR vuelva de esa llamada, llama a la `StackSnapshotCallback` varias veces, una vez por cada fotograma administrado (o la ejecución de marcos no administrados) en la pila. Cuando se encuentren fotogramas no administrados, debe recorrerlos usted mismo.  
   
  El orden en el que se recorre la pila es el inverso de cómo se insertaron los fotogramas en la pila: primero el fotograma (última inserción), el marco principal (primero insertado).  
   
- Para obtener más información sobre cómo programar el generador de perfiles para guiar pilas administradas, consulte [recorrido de la pila del generador de perfiles en el .NET Framework 2,0: aspectos básicos y más allá](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Para obtener más información sobre cómo programar el generador de perfiles para guiar pilas administradas, consulte [recorrido de la pila del generador de perfiles en el .NET Framework 2,0: aspectos básicos y más allá](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Un recorrido de pila puede ser sincrónico o asincrónico, como se explica en las secciones siguientes.  
   
@@ -97,14 +97,14 @@ HRESULT DoStackSnapshot(
   
  También hay un riesgo de interbloqueo si se llama a `DoStackSnapshot` desde un subproceso creado por el generador de perfiles para que pueda recorrer la pila de un subproceso de destino independiente. La primera vez que el subproceso creado entra en determinados métodos `ICorProfilerInfo*` (incluido `DoStackSnapshot`), CLR realizará la inicialización específica de CLR por subproceso en ese subproceso. Si el generador de perfiles ha suspendido el subproceso de destino cuya pila está intentando recorrer y el subproceso de destino ha tenido que poseer un bloqueo necesario para realizar esta inicialización por subproceso, se producirá un interbloqueo. Para evitar este interbloqueo, realice una llamada inicial en `DoStackSnapshot` desde el subproceso creado por el generador de perfiles para recorrer un subproceso de destino independiente, pero no suspenda el subproceso de destino en primer lugar. Esta llamada inicial garantiza que la inicialización por subproceso se puede completar sin interbloqueo. Si `DoStackSnapshot` se realiza correctamente y notifica al menos un fotograma, después de ese punto, será seguro que el subproceso creado por el generador de perfiles suspenda cualquier subproceso de destino y llame a `DoStackSnapshot` para recorrer la pila del subproceso de destino.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

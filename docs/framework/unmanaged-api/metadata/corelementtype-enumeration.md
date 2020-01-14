@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443627"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937947"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType (Enumeración)
 
@@ -79,7 +79,7 @@ typedef enum CorElementType {
 
 |Miembro|Descripción|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|Se usa internamente.|
+|`ELEMENT_TYPE_END`|Utilizado de forma interna.|
 |`ELEMENT_TYPE_VOID`|Un tipo void.|
 |`ELEMENT_TYPE_BOOLEAN`|Un tipo booleano|
 |`ELEMENT_TYPE_CHAR`|Tipo de carácter.|
@@ -110,18 +110,18 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_MVAR`|Modificador de tipo variable de método.|
 |`ELEMENT_TYPE_CMOD_REQD`|Modificador obligatorio en el lenguaje C.|
 |`ELEMENT_TYPE_CMOD_OPT`|Modificador opcional del lenguaje C.|
-|`ELEMENT_TYPE_INTERNAL`|Se usa internamente.|
+|`ELEMENT_TYPE_INTERNAL`|Utilizado de forma interna.|
 |`ELEMENT_TYPE_MAX`|Tipo no válido.|
-|`ELEMENT_TYPE_MODIFIER`|Se usa internamente.|
+|`ELEMENT_TYPE_MODIFIER`|Utilizado de forma interna.|
 |`ELEMENT_TYPE_SENTINEL`|Modificador de tipo que es un centinela para una lista de un número variable de parámetros.|
-|`ELEMENT_TYPE_PINNED`|Se usa internamente.|
+|`ELEMENT_TYPE_PINNED`|Utilizado de forma interna.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Los modificadores de tipo constituyen la base para representar tipos más complejos. Un valor de modificador de tipo de `CorElementType` se aplica al valor que lo sigue inmediatamente en la signatura de tipo. El valor que sigue a la `CorElementType` valor del modificador de tipo puede ser un `CorElementType` valor de tipo simple, un token de metadatos u otro valor, como se especifica en la tabla siguiente.
 
 > [!NOTE]
-> Todos los números *(número, número*de *argumentos*, *token de metadatos*, *rango*, *recuento*y *enlazado*) se almacenan como enteros comprimidos. Consulte el [estándar ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) en el sitio web de ECMA para obtener más información.
+> Todos los números *(número, número*de *argumentos*, *token de metadatos*, *rango*, *recuento*y *enlazado*) se almacenan como enteros comprimidos. Consulte el [estándar ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) en el sitio web de ECMA para obtener más información.
 
 |Modificador de tipo|Formato|
 |-------------------|------------|
@@ -129,22 +129,22 @@ Los modificadores de tipo constituyen la base para representar tipos más comple
 |`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<un valor de `CorElementType` >|
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<un token de metadatos de `mdTypeDef` >|
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<un token de metadatos de `mdTypeDef` >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR número de \<>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR número de \<|
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<un valor `CorElementType` > \<Rank > \<count1 > \<bound1 >... \<counton > \<boundn >|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<un token de metadatos `mdTypeDef` > \<Count > \<arg1 >... \<argN >|
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa de la función, incluida la Convención de llamada >|
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<un valor de `CorElementType` >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR número de \<>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR número de \<|
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<un token de metadatos de `mdTypeRef` o `mdTypeDef` >|
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<un token de metadatos de `mdTypeRef` o `mdTypeDef` >|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Encabezado:** CorHdr. h
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Vea también
 

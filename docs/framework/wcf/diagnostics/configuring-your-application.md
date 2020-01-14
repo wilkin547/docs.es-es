@@ -2,23 +2,23 @@
 title: Configuración de su aplicación
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 4e19e4d0ecb6bc90402f99dddd280ee1dbcf7ea0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6fc33e7b114bb78f823575a2b456d601ae75db94
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798152"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937636"
 ---
 # <a name="configuring-your-application"></a>Configuración de su aplicación
 Windows Communication Foundation (WCF) usa el sistema de configuración de .NET y permite configurar los servicios en el ámbito de la máquina y de la aplicación.  
   
- Las opciones de configuración definidas por WCF se encuentran `<system.serviceModel>` en el grupo de secciones. Para obtener más información sobre cómo configurar un servicio WCF, vea los temas siguientes:  
+ Los valores de configuración definidos por WCF se encuentran en el grupo de la sección `<system.serviceModel>`. Para obtener más información sobre cómo configurar un servicio WCF, vea los temas siguientes:  
   
 - [Configuración de servicios](../configuring-services.md)  
   
 - [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Los valores de configuración definidos por la aplicación se definen en el grupo de la sección `<appSettings>`. Para obtener más información sobre la configuración de la aplicación en los archivos de configuración de .net, consulte [ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
+ Los valores de configuración definidos por la aplicación se definen en el grupo de la sección `<appSettings>`. Para obtener más información sobre la configuración de la aplicación en los archivos de configuración de .NET, vea [\<appSettings >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)).  
   
 ## <a name="using-the-configuration-editor"></a>Utilización del editor de configuración  
  La [herramienta editor de configuración de WCF (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md) permite a los administradores y desarrolladores crear y modificar la configuración de los servicios WCF mediante una interfaz gráfica de usuario. Con esta herramienta, puede administrar la configuración de enlaces, comportamientos, servicios y diagnósticos de WCF sin tener que editar directamente los archivos de configuración XML.  

@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343511"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937756"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic opciones del compilador por orden alfabético
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. A continuación se muestra una lista de las opciones del compilador de la línea de comandos Visual Basic ordenadas alfabéticamente.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |------------|-------------|  
 |[@ (especificar archivo de respuesta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Especifica un archivo de respuesta.|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `-help`. No se produce ninguna compilación.|  
@@ -57,7 +57,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Permite el uso de la inferencia de tipo de variable local en declaraciones de variables.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Exige una semántica de lenguaje estricta.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Especifica un directorio de salida.|  
-|`-parallel[+&#124;-]`|Especifica si hay que usar la compilación simultánea (+).|  
+|<code>-parallel[+&#124;-]</code>|Especifica si hay que usar la compilación simultánea (+).|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Especifica la plataforma del procesador que el compilador destina para el archivo de salida.|  
 |`-preferreduilang`|Especifique el nombre del lenguaje de salida preferido.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Evita que el compilador muestre código de errores y advertencias relacionados con la sintaxis.|  

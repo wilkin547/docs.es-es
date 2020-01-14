@@ -2,12 +2,12 @@
 title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345101"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936792"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 
@@ -101,9 +101,9 @@ El esquema de configuración de WCF es complejo y ofrece a los usuarios muchas c
 
 - [Elemento de punto de conexión estándar](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Mejoras en la configuración del servicio en .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
+- [Mejoras en la configuración del servicio en .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [Error de usuario común en .NET 4: escribir indirectamente el nombre de configuración del servicio WF/WCF](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
+- [Error de usuario común en .NET 4: escribir indirectamente el nombre de configuración del servicio WF/WCF](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Escenarios de configuración simplificados
 
@@ -127,7 +127,7 @@ En .NET 3.5, había unas cuantas limitaciones en el diseño de tipos conocidos:
 
 - [Documentación de la API de resolución de contrato de datos](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Introducción a la resolución del contrato de datos](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
+- [Introducción a la resolución del contrato de datos](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Ejemplos:
 
@@ -287,7 +287,7 @@ El servicio de enrutamiento en .NET 4 está diseñado para facilitar la resoluci
 
 2. Ejemplos: [servicios &#91;de enrutamiento ejemplos&#93; de WCF](../wcf/samples/routing-services.md)
 
-3. Blog: [reglas de enrutamiento.](https://blogs.msdn.microsoft.com/RoutingRules/)
+3. Blog: [reglas de enrutamiento.](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Escenarios de enrutamiento
 

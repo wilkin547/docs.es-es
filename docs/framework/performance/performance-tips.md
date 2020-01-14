@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 48b62990abf85eac4d4ab30c9a4b891de0875cd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444533"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937898"
 ---
 # <a name="net-performance-tips"></a>Sugerencias para mejorar el rendimiento de .NET
 El término *rendimiento* suele hacer referencia a la velocidad de ejecución de un programa. A veces se puede aumentar la velocidad de ejecución si se siguen algunas reglas básicas en el código fuente. En algunos programas, es importante examinar el código detenidamente y usar generadores de perfiles para asegurarse de que se está ejecutando lo más rápidamente posible. En otros programas, no es necesario realizar esta optimización, ya que el código se ejecuta con una velocidad aceptable mientras se escribe. En este artículo se enumeran algunas áreas donde el rendimiento puede verse afectado y sugerencias para mejorar, así como vínculos a temas de rendimiento adicionales. Para más información sobre cómo planear y medir el rendimiento, vea [Rendimiento](index.md)  
@@ -38,9 +38,9 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
   
 - [Performance Tips and Tricks in .NET Applications](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10)) (Sugerencias y trucos de rendimiento en aplicaciones .NET)  
 
-- [Rico Mariani's Performance Tidbits](https://blogs.msdn.microsoft.com/ricom/) (Curiosidades sobre rendimiento de Rico Mariani)  
+- [Rico Mariani's Performance Tidbits](https://docs.microsoft.com/archive/blogs/ricom/) (Curiosidades sobre rendimiento de Rico Mariani)  
 
-- [Blog de Saavedra Morrison](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog de Saavedra Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>Vea también
 

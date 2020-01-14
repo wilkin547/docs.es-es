@@ -2,12 +2,12 @@
 title: Traza de datos en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: be82500920ce9d5f8bc7ee979cf8ec5006f4f12b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347803"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937629"
 ---
 # <a name="data-tracing-in-adonet"></a>Traza de datos en ADO.NET
 
@@ -33,7 +33,7 @@ Para obtener más información sobre cómo establecer y configurar el seguimient
 
 En el proveedor de datos de .NET Framework para SQL Server, el seguimiento de acceso a datos ([seguimiento de acceso a datos](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) se ha actualizado para facilitar la correlación de eventos de cliente con información de diagnóstico, como errores de conexión, desde el búfer de anillo de Conectividad del servidor y la información de rendimiento de la aplicación en el registro de eventos extendidos. Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
-Para las operaciones de conexión, ADO.NET enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://blogs.msdn.microsoft.com/sql_protocols/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer/)) y buscar el campo de `ClientConnectionID` y obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión de cliente inician sesión el búfer de anillo solo si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión de cliente). El identificador de conexión de cliente es un GUID de 16 bytes. También puede buscar el identificador de la conexión de cliente en la salida de destino de los eventos extendidos si la acción `client_connection_id` se agregó a los eventos en una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos y volver a ejecutar el comando de conexión y observar el campo `ClientConnectionID` en el seguimiento de acceso a datos, si necesita ayuda adicional de diagnóstico del controlador del cliente.
+Para las operaciones de conexión, ADO.NET enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) y buscar el campo de `ClientConnectionID` y obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión de cliente inician sesión el búfer de anillo solo si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión de cliente). El identificador de conexión de cliente es un GUID de 16 bytes. También puede buscar el identificador de la conexión de cliente en la salida de destino de los eventos extendidos si la acción `client_connection_id` se agregó a los eventos en una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos y volver a ejecutar el comando de conexión y observar el campo `ClientConnectionID` en el seguimiento de acceso a datos, si necesita ayuda adicional de diagnóstico del controlador del cliente.
 
 Puede obtener el identificador de la conexión de cliente mediante programación con la propiedad `SqlConnection.ClientConnectionID`.
 

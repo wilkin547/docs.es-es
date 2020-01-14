@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427096"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937818"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 
@@ -131,7 +131,7 @@ En la mayoría de los casos, el subproceso que genera un evento ejecuta también
 
 Tenga en cuenta que estas devoluciones de llamada no se serializan. Los usuarios deben proteger su código creando estructuras de datos seguras para subprocesos y bloqueando el código del generador de perfiles donde sea necesario para evitar el acceso paralelo desde varios subprocesos. Por consiguiente, en ciertos casos puede recibir una secuencia poco habitual de devoluciones de llamada. Por ejemplo, suponga que una aplicación administrada está generando dos subprocesos que está ejecutando código idéntico. En este caso, es posible recibir un evento [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) para alguna función de un subproceso y una devolución de llamada de `FunctionEnter` desde el otro subproceso antes de recibir la devolución de llamada [ICorProfilerCallback:: JITCompilationFinished (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) . En este caso, el usuario recibirá una devolución de llamada `FunctionEnter` para una función que puede no haberse compilado totalmente Just-In-Time (JIT) todavía.
 
-## <a name="security"></a>Seguridad
+## <a name="security"></a>de seguridad
 
 Una DLL del generador de perfiles es una DLL no administrada que se ejecuta como parte del motor de ejecución de Common Language Runtime. Como resultado, el código de la DLL del generador de perfiles no está sujeto a las restricciones de seguridad de acceso del código administrado. Las únicas limitaciones sobre la DLL del generador de perfiles son las impuestas por el sistema operativo sobre el usuario que está ejecutando la aplicación para la que se ha generado el perfil.
 
@@ -175,7 +175,7 @@ La API de generación de perfiles proporciona dos maneras de obtener pilas de ll
 
 Una instantánea de pila es un registro de la pila de un subproceso en un momento determinado. La API de generación de perfiles permite la traza de funciones administradas en la pila, pero deja la traza de las funciones no administradas al rastreador de pila propio del generador de perfiles.
 
-Para obtener más información sobre cómo programar el generador de perfiles para recorrer pilas administradas, vea el método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) en este conjunto de documentación y [el recorrido de la pila del generador de perfiles en el .NET Framework 2,0: Basics y versiones posteriores](https://go.microsoft.com/fwlink/?LinkId=73638).
+Para obtener más información sobre cómo programar el generador de perfiles para recorrer pilas administradas, vea el método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) en este conjunto de documentación y [el recorrido de la pila del generador de perfiles en el .NET Framework 2,0: Basics y versiones posteriores](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Pila sombra
 
@@ -189,7 +189,7 @@ Las devoluciones de llamada del generador de perfiles se pueden emitir en circun
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----------|-----------------|
 |[Configuración de un entorno de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Explica cómo inicializar un generador de perfiles, establecer notificaciones de eventos y generar perfiles para un servicio de Windows.|
 |[Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Describe las interfaces no administradas que utiliza la API de generación de perfiles.|

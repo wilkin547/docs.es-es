@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458024"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937908"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 
@@ -281,7 +281,7 @@ Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejempl
   
  **Ejemplo 5: lambdas, List\<T> e IEnumerable\<T>**  
   
- En este ejemplo se usa [LINQ y código de estilo funcional](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
+ En este ejemplo se usa [LINQ y código de estilo funcional](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- En la primera línea, la [expresión lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra sobre](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) la variable local `name`. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
+ En la primera línea, la [expresión lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra sobre](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) la variable local `name`. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283283"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938054"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.
 
-En resumen, un certificado digital forma una parte de una *infraestructura de clave pública* (PKI), que es un sistema de certificados digitales, entidades de certificación y otras autoridades de registro que comprueban y autentican la validez de cada parte implicada en una transacción electrónica a través del uso de criptografía de claves públicas. Una entidad de certificación emite certificados y cada certificado tiene un conjunto de campos que contienen datos, como el *asunto* (la entidad a la que se emite el certificado), las fechas de validez (cuándo es válido el certificado), el emisor (la entidad que emitió el certificado) y una clave pública. En WCF, cada una de estas propiedades se procesa como una <xref:System.IdentityModel.Claims.Claim>, y cada notificación se divide en dos tipos: identidad y derecho. Para obtener más información sobre los certificados X.509, vea [X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates) (Certificados X.509 de clave pública). Para obtener más información sobre las notificaciones y la autorización en WCF, vea [Administración de notificaciones y autorización con el modelo de identidad](managing-claims-and-authorization-with-the-identity-model.md). Para obtener más información acerca de la implementación de una PKI, consulte [PKI de empresa con Windows Server 2012 R2 Active Directory servicios de servidor de certificados](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).
+En resumen, un certificado digital forma una parte de una *infraestructura de clave pública* (PKI), que es un sistema de certificados digitales, entidades de certificación y otras autoridades de registro que comprueban y autentican la validez de cada parte implicada en una transacción electrónica a través del uso de criptografía de claves públicas. Una entidad de certificación emite certificados y cada certificado tiene un conjunto de campos que contienen datos, como el *asunto* (la entidad a la que se emite el certificado), las fechas de validez (cuándo es válido el certificado), el emisor (la entidad que emitió el certificado) y una clave pública. En WCF, cada una de estas propiedades se procesa como una <xref:System.IdentityModel.Claims.Claim>, y cada notificación se divide en dos tipos: identidad y derecho. Para obtener más información sobre los certificados X.509, vea [X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates) (Certificados X.509 de clave pública). Para obtener más información sobre las notificaciones y la autorización en WCF, vea [Administración de notificaciones y autorización con el modelo de identidad](managing-claims-and-authorization-with-the-identity-model.md). Para obtener más información acerca de la implementación de una PKI, consulte [PKI de empresa con Windows Server 2012 R2 Active Directory servicios de servidor de certificados](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 La función principal de un certificado es la de autenticar la identidad del propietario del certificado ante los demás. Un certificado contiene la *clave pública* del propietario, mientras que el propietario conserva la clave privada. La clave pública se puede usar para cifrar los mensajes enviados al propietario del certificado. Solo el propietario tiene acceso a la clave privada, por lo que únicamente él puede descifrar esos mensajes.
 
@@ -72,7 +72,7 @@ Los certificados digitales se usan para autenticar una entidad confiando en esta
 
 Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.
 
-|Clase|Propiedad|
+|Clase|La propiedad|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|

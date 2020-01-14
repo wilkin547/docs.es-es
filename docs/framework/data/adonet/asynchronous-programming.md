@@ -2,12 +2,12 @@
 title: Programación asincrónica
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: ae6153f9613be7723d7e750ed6969ea550ad4af7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7bf492e45a9ebabdd36caa8e21605739bb410695
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785002"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937588"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -15,7 +15,7 @@ En este tema se describe la compatibilidad con la programación asincrónica en 
 
 ## <a name="legacy-asynchronous-programming"></a>Programación asincrónica heredada
 
-Antes de .NET Framework 4,5, la programación asincrónica con SqlClient se realizaba con los siguientes métodos y `Asynchronous Processing=true` la propiedad de conexión:
+Antes de .NET Framework 4,5, la programación asincrónica con SqlClient se realizaba con los siguientes métodos y la propiedad de conexión `Asynchronous Processing=true`:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -26,7 +26,7 @@ Antes de .NET Framework 4,5, la programación asincrónica con SqlClient se real
 Esta funcionalidad permanece en SqlClient en .NET Framework 4,5.
 
 > [!TIP]
-> A partir del .NET Framework 4,5, estos métodos heredados ya no `Asynchronous Processing=true` requieren en la cadena de conexión.
+> A partir de la .NET Framework 4,5, estos métodos heredados ya no requieren `Asynchronous Processing=true` en la cadena de conexión.
 
 ## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>Características de programación asincrónica agregadas en .NET Framework 4,5
 
@@ -38,15 +38,15 @@ Para obtener más información acerca de la característica de programación asi
 
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 1)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 2)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 Cuando la interfaz de usuario no responde o el servidor no escala, es probable que necesite que el código sea más asincrónico. La escritura de código asincrónico ha implicado tradicionalmente la instalación de una devolución de llamada (también denominada continuación) para expresar la lógica que tiene lugar después de que la operación asincrónica finalice. Esto complica la estructura del código asincrónico con respecto al código sincrónico.
 
 Ahora puede llamar a métodos asincrónicos sin usar devoluciones de llamada y sin dividir el código en varios métodos o expresiones lambda.
 
-El modificador `async` especifica que un método es asincrónico. Al llamar a un método `async`, se devuelve una tarea. Cuando el `await` operador se aplica a una tarea, el método actual finaliza inmediatamente. Cuando la tarea finaliza, la ejecución se reanuda en el mismo método.
+El modificador `async` especifica que un método es asincrónico. Al llamar a un método `async`, se devuelve una tarea. Cuando se aplica el operador de `await` a una tarea, el método actual finaliza inmediatamente. Cuando la tarea finaliza, la ejecución se reanuda en el mismo método.
 
 > [!WARNING]
 > Las llamadas asincrónicas no se admiten si una aplicación también usa la palabra clave de cadena de conexión `Context Connection`.
@@ -640,10 +640,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>Usar varios comandos de forma asincrónica con MARS
 
-En el ejemplo se abre una única conexión a la base de datos **AdventureWorks** . Al utilizar un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea un objeto <xref:System.Data.SqlClient.SqlDataReader>. A medida que se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, que utiliza datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada a la cláusula WHERE del segundo lector.
+En el ejemplo se abre una única conexión a la base de datos **AdventureWorks**. Al utilizar un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea un objeto <xref:System.Data.SqlClient.SqlDataReader>. A medida que se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, que utiliza datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada a la cláusula WHERE del segundo lector.
 
 > [!NOTE]
-> En el ejemplo siguiente se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.
+> En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.
 
 ```csharp
 using System;
@@ -711,12 +711,12 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Leer y actualizar datos de forma asincrónica con MARS
 
-MARS permite que se utilice una conexión para las operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que las aplicaciones solucionen los errores de falta de disponibilidad de las conexiones. Además, MARS puede reemplazar al uso de cursores en el servidor, que generalmente consume más recursos. Por último, dado que varias operaciones pueden funcionar en una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession** .
+MARS permite que se utilice una conexión para las operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que las aplicaciones solucionen los errores de falta de disponibilidad de las conexiones. Además, MARS puede reemplazar al uso de cursores en el servidor, que generalmente consume más recursos. Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.
 
-La siguiente aplicación de consola demuestra cómo utilizar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un solo objeto <xref:System.Data.SqlClient.SqlConnection> teniendo MARS habilitado. El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5. El segundo objeto de comando utiliza el id. de proveedor proporcionado a partir de un <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular. El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro de producto. Se realiza un cálculo para determinar cuál debe ser el nuevo **OnOrderQty** . El tercer objeto de comando se utiliza para actualizar la tabla **ProductVendor** con el nuevo valor. Todo este proceso tiene lugar en una única transacción, que al final se revierte.
+La siguiente aplicación de consola demuestra cómo utilizar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un solo objeto <xref:System.Data.SqlClient.SqlConnection> teniendo MARS habilitado. El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5. El segundo objeto de comando utiliza el id. de proveedor proporcionado a partir de un <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular. El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro de producto. Para determinar cuál debe ser la nueva **OnOrderQty**, se realiza un cálculo. Luego, se usa el tercer objeto de comando para actualizar la tabla **ProductVendor** con el nuevo valor. Todo este proceso tiene lugar en una única transacción, que al final se revierte.
 
 > [!NOTE]
-> En el ejemplo siguiente se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.
+> En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.
 
 ```csharp
 using System;

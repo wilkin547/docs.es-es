@@ -2,12 +2,12 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795948"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935766"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -88,7 +88,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
  Los cambios solo son efectivos cuando la aplicación se inicia o reinicia. Un evento está registrado en el inicio cuando ambos atributos están establecidos en `true`. Un evento también está registrado si `logKnownPii` está establecido en `true` pero `enableLoggingKnownPii` es `false`.  
   
- El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más detallada sobre la privacidad y la protección de PII, vea privacidad de los [usuarios](https://go.microsoft.com/fwlink/?LinkID=94647).  
+ El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más detallada sobre la privacidad y la protección de PII, vea privacidad de los [usuarios](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
 > [!CAUTION]
 > PII no se oculta en mensajes incorrectos. Tales mensajes se registran tal cual sin ninguna modificación. Los atributos mencionados previamente no tienen ningún efecto sobre esto.  
@@ -99,13 +99,13 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 ## <a name="events-triggered-by-message-logging"></a>Eventos activados mediante el registro de mensajes  
  La siguiente es una lista de todos los eventos emitidos por el registro de mensajes.  
   
-- Inicio de sesión de mensajes: Se genera este evento cuando el registro de mensajes está habilitado en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  
+- Registro de mensajes activado: se emite este evento cuando el registro de mensajes está habilitado en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  
   
-- Cierre de sesión de mensajes: Se genera este evento cuando el registro de mensajes está deshabilitado a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
+- Registro de mensajes desactivado: se emite este evento cuando el registro de mensajes se deshabilita a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
   
-- Registrar PII conocida en: Este evento se genera cuando está habilitado el registro de PII conocido. Esto sucede cuando el `enableLoggingKnownPii` atributo `machineSettings` del elemento del archivo Machine. config se establece en `true`y el `logKnownPii` atributo del `source` elemento en el archivo app. config o Web. config se establece en. `true`.  
+- Registro PII conocido activado: se emite este evento cuando el registro de PII conocido está habilitado. Esto sucede cuando el atributo `enableLoggingKnownPii` del elemento `machineSettings` del archivo Machine. config se establece en `true`y el atributo `logKnownPii` del elemento `source` en el archivo app. config o Web. config se establece en `true`.  
   
-- No se permite el registro de PII conocido: Este evento se genera cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo `source` del elemento en el archivo app. config o Web. config está establecido en `true`, pero el `enableLoggingKnownPii` atributo `machineSettings` del elemento del archivo Machine. config se establece en. `false`. No se inicia ninguna excepción.  
+- Registro de PII conocido no permitido: se emite este evento cuando no se permite el registro de PII conocido. Esto sucede cuando el atributo `logKnownPii` del elemento `source` en el archivo app. config o Web. config está establecido en `true`, pero el atributo `enableLoggingKnownPii` del elemento `machineSettings` del archivo Machine. config se establece en `false`. No se inicia ninguna excepción.  
   
  Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información sobre esto, vea [registro de eventos](./event-logging/index.md).  
   
