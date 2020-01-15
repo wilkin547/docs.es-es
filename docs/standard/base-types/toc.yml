@@ -30,21 +30,17 @@
         - name: Efectuar operaciones de formato
           href: performing-formatting-operations.md
           items:
-            - name: 'Procedimientos para: para rellenar un número con ceros a la izquierda'
+            - name: Procedimiento para rellenar un número con ceros a la izquierda
               href: how-to-pad-a-number-with-leading-zeros.md
-            - name: 'Procedimientos para: para extraer el día de la semana de una fecha concreta'
+            - name: Procedimiento para extraer el día de la semana de una fecha concreta
               href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-            - name: 'Procedimientos para: para definir y usar proveedores de formato numérico personalizado'
+            - name: Procedimiento para definir y usar proveedores de formato numérico personalizado
               href: how-to-define-and-use-custom-numeric-format-providers.md
-            - name: 'Procedimientos para: para valores de fecha y hora de ida y vuelta'
+            - name: Procedimiento para valores de fecha y hora de ida y vuelta
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Procedimientos para: para convertir en números datos numéricos proporcionados por el usuario en controles web'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 'Procedimientos para: para mostrar información localizada de fecha y hora a usuarios web'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
-            - name: 'Procedimientos para: para mostrar milisegundos en los valores de fecha y hora'
+            - name: Procedimiento para mostrar milisegundos en los valores de fecha y hora
               href: how-to-display-milliseconds-in-date-and-time-values.md
-            - name: 'Procedimientos para: para mostrar fechas en calendarios no gregorianos'
+            - name: Procedimiento para mostrar fechas en calendarios no gregorianos
               href: how-to-display-dates-in-non-gregorian-calendars.md
     - name: Manipulación de cadenas
       href: manipulating-strings.md
@@ -66,7 +62,7 @@
               href: changing-case.md
             - name: Uso de la clase StringBuilder
               href: stringbuilder.md
-            - name: 'Procedimientos para: para realizar manipulaciones de cadena básicas'
+            - name: Procedimiento para realizar manipulaciones de cadena básicas
               href: basic-manipulations.md
         - name: Expresiones regulares en .NET
           href: regular-expressions.md
@@ -114,9 +110,9 @@
                   href: regular-expression-example-scanning-for-hrefs.md
                 - name: 'Ejemplo: Cambiar formatos de fecha'
                   href: regular-expression-example-changing-date-formats.md
-                - name: 'Procedimientos para: para extraer un protocolo y un número de puerto de una dirección URL'
+                - name: Procedimiento para extraer un protocolo y un número de puerto de una dirección URL
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-                - name: 'Procedimientos para: para quitar caracteres no válidos de una cadena'
+                - name: Procedimiento para quitar caracteres no válidos de una cadena
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: Cómo comprobar si las cadenas tienen un formato de correo electrónico válido
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
