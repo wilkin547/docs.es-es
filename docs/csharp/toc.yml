@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: Tipos no administrados
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: Valores predeterminados
+              href: language-reference/builtin-types/default-values.md
             - name: Tablas de referencia para tipos
               items:
                 - name: Tabla de tipos integrados
                   href: language-reference/keywords/built-in-types-table.md
                 - name: Tabla de tipos de valor
                   href: language-reference/keywords/value-types-table.md
-                - name: Tabla de valores predeterminados
-                  href: language-reference/keywords/default-values-table.md
                 - name: Tabla de formatos de presentación para resultados numéricos
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modificadores

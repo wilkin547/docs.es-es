@@ -3,12 +3,12 @@ title: Portabilidad de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777355"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937310"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Introducción a la portabilidad de .NET Framework a .NET Core
 
@@ -31,7 +31,7 @@ Le recomendamos que use el siguiente proceso al portar un proyecto a .NET Core:
 
 3. Instale el [analizador de API de .NET](../../standard/analyzers/api-analyzer.md) en los proyectos para identificar las API que inician <xref:System.PlatformNotSupportedException> en algunas plataformas y otros posibles problemas de compatibilidad.
 
-   Esta herramienta es similar al analizador de portabilidad, pero en lugar de analizar si las cosas se pueden basar en .NET Core, analiza si se usa una API de una forma que iniciará <xref:System.PlatformNotSupportedException> en tiempo de ejecución. Aunque esto no es habitual si va a realizar la portabilidad desde .NET Framework 4.7.2 o superior, es conveniente comprobarlo.
+   Esta herramienta es similar al analizador de portabilidad, pero en lugar de analizar si el código se pueden basar en .NET Core, analiza si se usa una API de forma que se inicie <xref:System.PlatformNotSupportedException> en tiempo de ejecución. Aunque esto no es habitual si va a realizar la portabilidad desde .NET Framework 4.7.2 o superior, es conveniente comprobarlo. Para obtener más información sobre las [API que generan excepciones en .NET Core](../compatibility/unsupported-apis.md), consulte el artículo.
 
 4. Convierta todas las dependencias de `packages.config` en el formato de [PackageReference](/nuget/consume-packages/package-references-in-project-files) con la [herramienta de conversión en Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
@@ -50,4 +50,4 @@ Además, puede intentar portar soluciones más pequeñas o proyectos individuale
 ## <a name="next-steps"></a>Pasos siguientes
 
 >[!div class="nextstepaction"]
->[Tecnologías no disponibles en .NET Core](net-framework-tech-unavailable.md)
+>[Análisis de dependencias](third-party-deps.md)
