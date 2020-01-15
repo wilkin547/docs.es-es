@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544727"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964582"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Configuración de la compatibilidad con transacciones WS-Atomic
 
@@ -59,7 +59,7 @@ En el ejemplo siguiente, se detallan los pasos para establecer la confianza entr
 
 Este procedimiento requiere el Complemento de Certificados MMC. Se puede tener acceso al complemento abriendo el menú Inicio/Ejecutar, escribiendo "mmc" en el cuadro de entrada y presionando Aceptar. A continuación, en la ventana **consola1** , navegue hasta **el complemento archivo/agregar-quitar** , haga clic en agregar y elija **certificados** en la lista **complementos independientes disponibles** . Por último, seleccione **cuenta de equipo** para administrar y haga clic en **Aceptar**. El nodo **certificados** aparece en la consola del complemento.
 
-En este momento, poseerá los certificados necesarios para establecer la confianza. Para obtener información sobre cómo crear e instalar nuevos certificados antes de realizar los pasos siguientes, vea [Cómo: crear e instalar certificados de cliente temporales en WCF durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=158925).
+En este momento, poseerá los certificados necesarios para establecer la confianza. Para obtener información sobre cómo crear e instalar nuevos certificados antes de realizar los pasos siguientes, vea [Cómo: crear e instalar certificados de cliente temporales en WCF durante el desarrollo](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10)).
 
 1. En el equipo A, usando el complemento de los certificados MMC, importe el certificado existente (certA) en el almacén LocalMachine\MY (Nodo Personal) y LocalMachine\ROOT (nodo de entidad de certificación raíz de confianza). Para importar un certificado a un nodo específico, haga clic con el botón secundario en el nodo y elija **todas las tareas/importar**.
 

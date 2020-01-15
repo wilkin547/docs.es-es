@@ -5,28 +5,28 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 8c605b310f19a05f994296d8f4268b91b408fb18
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0097adc3d9677d9ce5595a3ac632b51d94d53f6f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881202"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964683"
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
-La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. Los temas de esta sección muestran cómo realizar esta tarea básica en Windows Communication Foundation (WCF) en una variedad de formas.  
+La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. En los temas de esta sección se muestra cómo realizar esta tarea básica en Windows Communication Foundation (WCF) de varias maneras.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Mecanismos de control de acceso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- Proporciona una descripción breve de los mecanismos de autorización en WCF y usos sugeridos.  
+ Proporciona una breve descripción de los mecanismos de autorización en WCF y los usos sugeridos.  
   
- [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Muestra el proceso de restringir el acceso a un servicio con <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- Describe la configuración de un servicio para que pueda usar la característica de proveedor de roles de ASP.NET.  
+ [Uso del proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ Le guía a través de la configuración de un servicio para que pueda usar la característica de proveedor de roles de ASP.NET.  
   
- [Cómo: Usar el proveedor de roles de administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- ASP.NET puede usar el Administrador de autorización para administrar la autorización para un sitio Web. WCF de forma similar puede aprovechar la combinación de ASP.NET/Authorization Manager para la autorización de clientes.  
+ [Uso del proveedor de funciones del administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ ASP.NET puede usar el administrador de autorización para administrar la autorización de un sitio Web. WCF puede aprovechar de forma similar la combinación de ASP.NET/Authorization Manager para la autorización de clientes.  
   
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  Explica los fundamentos para utilizar la infraestructura del modelo de identidad para la autorización basada en demandas.  
@@ -49,4 +49,4 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

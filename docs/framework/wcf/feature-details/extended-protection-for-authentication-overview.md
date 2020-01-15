@@ -1,15 +1,15 @@
 ---
-title: Información general sobre la protección extendida para la autenticación
+title: Información general para la protección ampliada para la autenticación
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665951"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964608"
 ---
-# <a name="extended-protection-for-authentication-overview"></a>Información general sobre la protección extendida para la autenticación
+# <a name="extended-protection-for-authentication-overview"></a>Información general para la protección ampliada para la autenticación
 La protección extendida para la autenticación ayuda a protegerse de los ataques de tipo "man-in-the-middle" (MITM), en los que un atacante intercepta las credenciales de un cliente y las reenvía a un servidor.  
   
  Considere un escenario con tres participantes: un cliente, un servidor y un atacante. El servidor tiene la dirección URL `https://server`, mientras que el atacante tiene la dirección URL `https://attacker`. El atacante engaña al cliente para que este tenga acceso a él como si fuese el servidor. A continuación, el atacante envía una solicitud al servidor. Si el atacante intenta tener acceso a un recurso seguro, el servidor le responde con un encabezado WWW-Authenticate. El atacante no dispone de la información de autenticación, por lo que envía el encabezado WWW-Authenticate al cliente. El cliente envía el encabezado de autorización al atacante, y este lo envía a su vez al servidor, obteniendo así acceso a los recursos seguros mediante las credenciales del cliente.  
@@ -24,7 +24,7 @@ La protección extendida para la autenticación ayuda a protegerse de los ataque
   
  El servidor puede tener los niveles de protección siguientes:  
   
-- Ninguno. No se realiza ninguna validación de enlace de canal. Este es el comportamiento de todos los servidores que no se han actualizado.  
+- Ninguna. No se realiza ninguna validación de enlace de canal. Este es el comportamiento de todos los servidores que no se han actualizado.  
   
 - Parcial. Todos los clientes que se han actualizado deben proporcionar información de enlace de canal al servidor. No es obligatorio para los clientes que no se han actualizado. Esta es una opción intermedia que permite la compatibilidad entre aplicaciones.  
   
@@ -34,4 +34,4 @@ La protección extendida para la autenticación ayuda a protegerse de los ataque
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

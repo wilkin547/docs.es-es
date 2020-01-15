@@ -2,17 +2,17 @@
 title: Procedimiento para hospedar un servicio WCF en WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9945e398bbd33776cce808b44388a4415da297a1
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972205"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964772"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedimiento para hospedar un servicio WCF en WAS
 En este tema se describen los pasos básicos necesarios para crear un servicio Windows Communication Foundation hospedado de Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. WCF usa la interfaz del adaptador de escucha para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y Message Queue Server.  
   
- Esta opción de hospedaje necesita que los componentes de activación WAS se instalen y configuren correctamente, pero no necesita que se escriba ningún código de hospedaje como parte de la aplicación. Para obtener más información acerca de cómo instalar y configurar [was, consulte Cómo: Instale y configure los componentes](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)de activación de WCF.  
+ Esta opción de hospedaje necesita que los componentes de activación WAS se instalen y configuren correctamente, pero no necesita que se escriba ningún código de hospedaje como parte de la aplicación. Para obtener más información acerca de cómo instalar y configurar WAS, consulte [Cómo: instalar y configurar los componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 > La activación de WAS no se admite si la canalización de procesamiento de solicitudes del servidor web está establecida en el modo clásico. La canalización de procesamiento de solicitudes del servidor web debe estar establecida en el modo integrado si debe usarse la activación de WAS.  
@@ -101,4 +101,4 @@ En este tema se describen los pasos básicos necesarios para crear un servicio W
 ## <a name="see-also"></a>Vea también
 
 - [Activación TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

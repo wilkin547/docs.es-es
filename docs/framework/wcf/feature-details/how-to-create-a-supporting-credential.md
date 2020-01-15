@@ -1,24 +1,24 @@
 ---
-title: Procedimiento para crear una credencial de apoyo
+title: 'Cómo: Crear una credencial de apoyo'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1f95748235aa5238193b8869f8330f0a7fc650d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968898"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964556"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Procedimiento para crear una credencial de apoyo
+# <a name="how-to-create-a-supporting-credential"></a>Cómo: Crear una credencial de apoyo
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es una *credencial de apoyo*. En este tema se explica cómo implementar estas credenciales en un cliente de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
-> La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, vea [Especificaciones de seguridad de servicios web](https://go.microsoft.com/fwlink/?LinkId=88537).  
+> La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, vea [Especificaciones de seguridad de servicios web](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
   
 ## <a name="supporting-tokens"></a>Tokens auxiliares  
  En Resumen, cuando se usa la seguridad de mensajes, siempre se usa una *credencial principal* para proteger el mensaje (por ejemplo, un certificado X. 509 o un vale de Kerberos).  
   
- Tal y como se define en la especificación, un enlace de seguridad utiliza tokens para proteger el intercambio de mensajes. Un *token* es una representación de una credencial de seguridad.  
+ Tal y como se define en la especificación, un enlace de seguridad utiliza *tokens* para proteger el intercambio de mensajes. Un *token* es una representación de una credencial de seguridad.  
   
  El enlace de seguridad utiliza un token primario identificado en la directiva de enlace de seguridad para crear una firma. Esta firma se conoce como la *firma del mensaje*.  
   
@@ -27,7 +27,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 ## <a name="endorsing-signing-and-encrypting"></a>Endosar, firmar y cifrar  
  Una credencial de apoyo da como resultado un *token auxiliar* que se transmite dentro del mensaje. La especificación de WS-SecurityPolicy define cuatro maneras de adjuntar un token de aprobación al mensaje, tal y como se describe en la tabla siguiente.  
   
-|Propósito|DESCRIPCIÓN|  
+|Finalidad|Descripción|  
 |-------------|-----------------|  
 |Firmado|El token de aprobación está incluido en el encabezado de seguridad y es firmado por la firma del mensaje.|  
 |Endosar|Un *token* de aprobación firma la firma del mensaje.|  
@@ -35,7 +35,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 |Firmar y cifrar|Los tokens de aprobación firmados y cifrados son tokens de aprobación firmados que también se cifran cuando aparecen en `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programar credenciales de aprobación  
- Para crear un servicio que use tokens auxiliares, debe crear un [ \<> customBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, [consulte Cómo: Cree un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)).  
+ Para crear un servicio que use tokens auxiliares, debe crear un [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, consulte [Cómo: crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)).  
   
  El primer paso cuando se crea un enlace personalizado es crear un elemento de enlace de seguridad, que puede ser uno de tres tipos:  
   
@@ -74,7 +74,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
+### <a name="description"></a>Descripción  
  En el ejemplo siguiente se crea una instancia de<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y agrega una instancia de la clase <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> a la colección que ha devuelto la propiedad endosada.  
   
 ### <a name="code"></a>Código  
@@ -82,4 +82,4 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

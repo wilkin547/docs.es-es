@@ -2,15 +2,16 @@
 title: Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141786"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964232"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] le permite usar el mecanismo de almacenamiento en caché declarativo que ya está disponible en ASP.NET en los servicios Web HTTP de WCF. Esto le permite almacenar en memoria caché las respuestas de las operaciones de servicio Web HTTP de WCF. Cuando un usuario envía un protocolo HTTP GET al servicio que está configurado para almacenarlo en memoria caché, ASP.NET devuelve la respuesta almacenada en memoria caché y no se llama al método de servicio. Cuando la memoria caché expira, la próxima vez que un usuario envía un protocolo HTTP GET, se llama al método de servicio y la respuesta se vuelve a almacenar en memoria caché. Para obtener más información sobre el almacenamiento en caché de ASP.NET, consulte [Introducción al almacenamiento en caché de ASP.net](https://go.microsoft.com/fwlink/?LinkId=152534)  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] le permite usar el mecanismo de almacenamiento en caché declarativo que ya está disponible en ASP.NET en los servicios Web HTTP de WCF. Esto le permite almacenar en memoria caché las respuestas de las operaciones de servicio Web HTTP de WCF. Cuando un usuario envía un protocolo HTTP GET al servicio que está configurado para almacenarlo en memoria caché, ASP.NET devuelve la respuesta almacenada en memoria caché y no se llama al método de servicio. Cuando la memoria caché expira, la próxima vez que un usuario envía un protocolo HTTP GET, se llama al método de servicio y la respuesta se vuelve a almacenar en memoria caché. Para obtener más información sobre el almacenamiento en caché de ASP.NET, consulte [información general sobre Caching de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Almacenamiento en memoria caché básico del servicio Web HTTP  
  Para habilitar el almacenamiento en memoria caché del servicio WEB HTTP, debe habilitar primero la compatibilidad de ASP.NET aplicando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> al servicio, definiendo <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> como <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -122,10 +123,10 @@ public class Service
  Aquí, la duración del almacenamiento en memoria caché está establecida en 60 segundos, `varyByParam` no está establecido en ninguno y `sqlDependency` está establecido en una lista delimitada por punto y coma con pares de nombre de base de datos/tabla separados por dos puntos. Cuando los datos de `MyTable` se cambian, se elimina la respuesta almacenada en memoria caché para la operación del servicio y, cuando se invoca la operación, la nueva respuesta se genera (llamando a la operación del servicio), se almacena en memoria caché y se devuelve al cliente.  
   
 > [!IMPORTANT]
-> Para que ASP.NET tenga acceso a una base de datos SQL, debe usar la [herramienta de registro de ASP.NET SQL Server](https://go.microsoft.com/fwlink/?LinkId=152536). Además, debe permitir el acceso de la cuenta de usuario correspondiente tanto a la base de datos como a la tabla. Para obtener más información, consulte [acceso a SQL Server desde una aplicación web](https://go.microsoft.com/fwlink/?LinkId=178988).  
+> Para que ASP.NET tenga acceso a una base de datos SQL, debe usar la [herramienta de registro de ASP.NET SQL Server](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90)). Además, debe permitir el acceso de la cuenta de usuario correspondiente tanto a la base de datos como a la tabla. Para obtener más información, consulte [acceso a SQL Server desde una aplicación web](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Almacenamiento en memoria caché basado en HTTP GET condicional  
- En escenarios HTTP Web, los servicios suelen usar una instrucción HTTP GET condicional para implementar el almacenamiento en caché de HTTP inteligente, como se describe en la [especificación http](https://go.microsoft.com/fwlink/?LinkId=165800). Para ello, el servicio debe establecer el valor del encabezado ETag en la respuesta HTTP. También debe comprobar el encabezado If-None-Match en la solicitud HTTP para ver si alguno de los ETag especificados coincide con el ETag actual.  
+ En escenarios HTTP Web, los servicios suelen usar una instrucción HTTP GET condicional para implementar el almacenamiento en caché de HTTP inteligente, como se describe en la [especificación http](https://www.w3.org/Protocols/rfc2616/rfc2616.html). Para ello, el servicio debe establecer el valor del encabezado ETag en la respuesta HTTP. También debe comprobar el encabezado If-None-Match en la solicitud HTTP para ver si alguno de los ETag especificados coincide con el ETag actual.  
   
  Para las solicitudes GET y HEAD, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> toma un valor de ETag y lo comprueba con respecto al encabezado If-None-Match de la solicitud. Si el encabezado está presente y hay una coincidencia, se produce <xref:System.ServiceModel.Web.WebFaultException> con un código de estado HTTP 304 (No modificado) y se añade un encabezado de ETag a la respuesta con el ETag coincidente.  
   

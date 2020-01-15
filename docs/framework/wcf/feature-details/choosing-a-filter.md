@@ -2,23 +2,23 @@
 title: Elegir un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 908e905b4196409b00abccccae03436640cbe986
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 282f6e9e2bc986feee0d1825ee9d87217d453e50
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045975"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964815"
 ---
 # <a name="choosing-a-filter"></a>Elegir un filtro
 Al configurar el servicio de enrutamiento, es importante seleccionar filtros de mensajes adecuados y configurarlos para poder obtener coincidencias exactas con los mensajes que recibe. Si los filtros que selecciona son demasiado anchos en sus coincidencias o se configuran incorrectamente, los mensajes se enrutan de forma incorrecta. Si los filtros son demasiado restrictivos, puede que no tenga ninguna ruta válida disponible para algunos de sus mensajes.
 
-## <a name="filter-types"></a>Tipos de filtros
+## <a name="filter-types"></a>Tipos de filtro
 
 Al seleccionar los filtros que utiliza el servicio de enrutamiento, es importante que entienda cómo funciona cada filtro, así como qué información está disponible como parte de los mensajes entrantes. Por ejemplo, si todos los mensajes se reciben en el mismo punto de conexión, los filtros EndpointName y de dirección no son útiles porque todos los mensajes coinciden con dichos filtros.
 
-### <a name="action"></a>.
+### <a name="action"></a>Acción de
 
-El filtro de acción inspecciona la propiedad <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si el contenido del encabezado de acción en el mensaje coincide con el valor de datos de filtro especificado en la configuración del filtro, este filtro devuelve `true`. En el ejemplo siguiente se `FilterElement` define un que utiliza el filtro de acción para hacer coincidir los mensajes con un encabezado `http://namespace/contract/operation/`de acción que contiene un valor de.
+El filtro de acción inspecciona la propiedad <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si el contenido del encabezado de acción en el mensaje coincide con el valor de datos de filtro especificado en la configuración del filtro, este filtro devuelve `true`. En el ejemplo siguiente se define un `FilterElement` que usa el filtro de acción para hacer coincidir los mensajes con un encabezado de acción que contiene un valor de `http://namespace/contract/operation/`.
 
 ```xml
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />
@@ -32,7 +32,7 @@ Se debería utilizar este filtro al enrutar mensajes que contienen un encabezado
 
 ### <a name="endpointaddress"></a>EndpointAddress
 
-El filtro EndpointAddress inspecciona las direcciones EndpointAddress en las que se recibió el mensaje. Si la dirección a la que llega el mensaje coincide exactamente con la dirección del filtro especificada en la configuración del filtro, este filtro devuelve `true`. En el ejemplo siguiente se `FilterElement` define un que utiliza el filtro de direcciones para buscar coincidencias\<con cualquier mensaje dirigido a "http://hostname >/vdir/s.SVC/b".
+El filtro EndpointAddress inspecciona las direcciones EndpointAddress en las que se recibió el mensaje. Si la dirección a la que llega el mensaje coincide exactamente con la dirección del filtro especificada en la configuración del filtro, este filtro devuelve `true`. En el ejemplo siguiente se define un `FilterElement` que usa el filtro de direcciones para buscar coincidencias con cualquier mensaje dirigido a "http://\<hostname >/vdir/s.SVC/b".
 
 ```xml
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />
@@ -51,7 +51,7 @@ Se debería utilizar este filtro cuando los mensajes entrantes se dirijan a una 
 
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix
 
-El filtro EndpointAddressPrefix es similar al filtro EndpointAddress. El filtro EndpointAddressPrefix inspecciona las direcciones EndpointAddress en las que se recibió el mensaje. No obstante, el filtro EndpointAddressPrefix actúa como comodín, coincidiendo con las direcciones que comienzan con el valor especificado en la configuración del filtro. En el ejemplo siguiente se `FilterElement` define un que utiliza el filtro EndpointAddressPrefix para buscar coincidencias con los mensajes dirigidos a. `http://<hostname>/vdir*`
+El filtro EndpointAddressPrefix es similar al filtro EndpointAddress. El filtro EndpointAddressPrefix inspecciona las direcciones EndpointAddress en las que se recibió el mensaje. No obstante, el filtro EndpointAddressPrefix actúa como comodín, coincidiendo con las direcciones que comienzan con el valor especificado en la configuración del filtro. En el ejemplo siguiente se define un `FilterElement` que usa el filtro EndpointAddressPrefix para buscar coincidencias con cualquier mensaje dirigido a `http://<hostname>/vdir*`.
 
 ```xml
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />
@@ -66,7 +66,7 @@ PrefixEndpointAddressMessageFilter prefix1 = new PrefixEndpointAddressMessageFil
 
 Se debería utilizar este filtro al enrutar mensajes entrantes que comparten un prefijo de dirección común.
 
-### <a name="and"></a>Y
+### <a name="and"></a>AND
 
 El filtro AND no filtra directamente un valor dentro del mensaje, sino que le permite combinar dos filtros para crear una condición `AND` donde ambos filtros deben coincidir con el mensaje para que el filtro AND lo evalúe como `true`. Esto le permite crear filtros complejos que solo coinciden si todos los sub-filtros coinciden. El siguiente ejemplo define un filtro de dirección y un filtro de acción y, a continuación, define un filtro AND que evalúa un mensaje con respecto a los filtros de acción y dirección. Si tanto el filtro de dirección como el de acción coinciden, entonces el filtro AND devuelve `true`.
 
@@ -84,7 +84,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 Se debería utilizar este filtro al tener que combinar la lógica de varios filtros para determinar cuándo se debería realizar una coincidencia. Por ejemplo, si tiene varios destinos que solo deben recibir ciertas combinaciones de acciones y mensajes en determinadas direcciones, puede utilizar un filtro AND para combinar los filtros de acción y dirección necesarios.
 
-### <a name="custom"></a>Personalizados
+### <a name="custom"></a>Personalizado
 
 Al seleccionar el tipo de filtro personalizado, debe proporcionar un valor de customType que contenga el tipo del ensamblado que contiene la implementación de **MessageFilter** que se va a usar para este filtro. Además, filterData debe contener cualquier valor que el filtro personalizado pueda requerir en su evaluación de mensajes. En el siguiente ejemplo, se define un `FilterElement` que utiliza la implementación `CustomAssembly.MyCustomMsgFilter` MessageFilter.
 
@@ -96,11 +96,11 @@ Al seleccionar el tipo de filtro personalizado, debe proporcionar un valor de cu
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-Si necesita realizar una lógica de coincidencia personalizada con un mensaje que no esté incluido en los filtros proporcionados [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]con, debe crear un filtro personalizado que sea una implementación de la clase **MessageFilter** . Por ejemplo, puede crear un filtro personalizado que compare un campo en el mensaje entrante con una lista de valores conocidos indicados al filtro como configuración, o que aplica un algoritmo hash a un elemento de mensaje determinado y, a continuación, examina ese valor para determinar si el filtro debería devolver `true` o `false`.
+Si necesita realizar una lógica de coincidencia personalizada con un mensaje que no esté incluido en los filtros proporcionados con [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], debe crear un filtro personalizado que sea una implementación de la clase **MessageFilter** . Por ejemplo, puede crear un filtro personalizado que compare un campo en el mensaje entrante con una lista de valores conocidos indicados al filtro como configuración, o que aplica un algoritmo hash a un elemento de mensaje determinado y, a continuación, examina ese valor para determinar si el filtro debería devolver `true` o `false`.
 
 ### <a name="endpointname"></a>EndpointName
 
-El filtro EndpointName inspecciona el nombre del punto de conexión que recibió el mensaje. En el ejemplo siguiente se `FilterElement` define un que utiliza el filtro EndpointName para enrutar los mensajes recibidos en "SvcEndpoint".
+El filtro EndpointName inspecciona el nombre del punto de conexión que recibió el mensaje. En el ejemplo siguiente se define un `FilterElement` que usa el filtro EndpointName para enrutar los mensajes recibidos en "SvcEndpoint".
 
 ```xml
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />
@@ -128,7 +128,7 @@ MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 
 ### <a name="xpath"></a>XPath
 
-El filtro XPath le permite especificar una consulta XPath que se usa para inspeccionar un elemento concreto dentro del mensaje. El filtrado XPath es una opción de filtrado eficaz que le permite inspeccionar directamente cualquier entrada direccionable XML dentro del mensaje; sin embargo, requiere que posea conocimientos específicos sobre la estructura de los mensajes que recibe. En el ejemplo siguiente se `FilterElement` define un que utiliza el filtro XPath para inspeccionar el mensaje para un elemento denominado "Element" en el espacio de nombres al que hace referencia el prefijo de espacio de nombres "NS".
+El filtro XPath le permite especificar una consulta XPath que se usa para inspeccionar un elemento concreto dentro del mensaje. El filtrado XPath es una opción de filtrado eficaz que le permite inspeccionar directamente cualquier entrada direccionable XML dentro del mensaje; sin embargo, requiere que posea conocimientos específicos sobre la estructura de los mensajes que recibe. En el ejemplo siguiente se define un `FilterElement` que usa el filtro XPath para inspeccionar el mensaje para un elemento denominado "Element" en el espacio de nombres al que hace referencia el prefijo de espacio de nombres "NS".
 
 ```xml
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />
@@ -142,9 +142,9 @@ Este filtro es útil si sabe que los mensajes que recibe contienen un valor conc
 
 Dado que las consultas XPath suelen incluir espacios de nombres únicos, que son a menudo valores de cadena largos y complejos, el filtro XPath le permite usar la tabla de espacio de nombres para definir prefijos únicos para los espacios de nombres. Para obtener más información acerca de la tabla de espacio de nombres, vea [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).
 
-Para obtener más información sobre el diseño de consultas XPath, vea [Sintaxis de XPath](https://go.microsoft.com/fwlink/?LinkId=164592).
+Para obtener más información sobre el diseño de consultas XPath, vea [Sintaxis de XPath](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
 ## <a name="see-also"></a>Vea también
 
 - [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Cómo: Usar filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Uso de los filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
