@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: Portabilidad de los proyectos de WPF
       href: porting/wpf.md
+    - name: Portabilidad de los proyectos de C++/CLI
+      href: porting/cpp-cli.md
 - name: Carga de dependencias
   items:
     - name: Información general
