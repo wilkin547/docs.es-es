@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837940"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347781"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3,0, la aplicación puede afectar a la privacidad de los usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final decida enviarla.  
@@ -44,7 +44,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  La autenticación puede producir una sesión segura establecida entre los extremos en comunicación. Un GUID, cuya duración es igual a la sesión de seguridad, identifica la sesión. La tabla siguiente muestra lo que se guarda y dónde.  
   
-|Datos|Almacenamiento de|  
+|data|Almacenamiento|  
 |----------|-------------|  
 |Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
 |Información de pertenencia del usuario, como nombres de usuario y contraseñas.|Proveedores de pertenencia a ASP.NET.|  
@@ -54,7 +54,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ## <a name="auditing"></a>Auditoría  
  La auditoría registra si se ha completado o se ha producido un error en la autenticación y eventos de autorización. Los registros de la auditoría contienen los datos siguientes: servicio URI, acción URI y la identificación del agente de llamada.  
   
- La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos. Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación. En Windows Vista y [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], se registra un registro en el registro de eventos de seguridad.  
+ La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos. Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación. En Windows Vista y Windows Server 2003, se registra un registro en el registro de eventos de seguridad.  
   
 ## <a name="transactions"></a>Transacciones  
  La característica de transacciones proporciona servicios transaccionales a una aplicación WCF.  
@@ -95,7 +95,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ### <a name="tracing"></a>Traza  
  La característica de diagnóstico de la infraestructura de WCF registra los mensajes que pasan a través de las capas del modelo de transporte y servicio, así como las actividades y eventos asociados a estos mensajes. Esta característica está desactivada de forma predeterminada. Se habilita mediante el archivo de configuración de la aplicación y el comportamiento del seguimiento se puede modificar con el proveedor de WMI de WCF en tiempo de ejecución. Cuando se habilita, la infraestructura de la traza emite una traza de diagnóstico que contiene mensajes, actividades y eventos de procesamiento a los agentes de escucha configurados. Las opciones de configuración del agente de escucha del administrador determinan el formato y ubicación del resultado, pero es normalmente un archivo con formato XML. El administrador es responsable de establecer la lista de control de acceso (ACL) en los archivos de seguimiento. En particular, cuando está hospedado por el Sistema de Activación de Windows (WAS), el administrador debería asegurarse de que los archivos no provienen del directorio raíz virtual público si no se desea.  
   
- Hay dos tipos de traza: registro de mensajes y traza de diagnóstico de modelo de servicio, descritos en la sección siguiente. Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>. Estos orígenes de traza de registro capturan locales a la aplicación.  
+ Hay dos tipos de seguimiento: Seguimiento de diagnóstico del modelo de servicio y registro de mensajes, que se describe en la sección siguiente. Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>. Estos orígenes de traza de registro capturan locales a la aplicación.  
   
 ### <a name="message-logging"></a>Registro de mensajes  
  El origen de traza del registro de mensajes (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite a un administrador registrar los mensajes que fluyen a través del sistema. A través de la configuración, el usuario puede decidir si quiere registrar mensajes completos o solamente encabezados de mensaje, registrar en el transporte y/o niveles de modelo de servicio y si quiere incluir mensajes incorrectos. Además, el usuario puede configurar el filtro para restringir qué mensajes están registrados.  
