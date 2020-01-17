@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955340"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211992"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
 En el siguiente escenario se muestra un servicio de Windows Communication Foundation (WCF) y un cliente protegido mediante el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
@@ -22,18 +22,18 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
   
  ![Seguridad de mensajes con certificados mutuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Característica|DESCRIPCIÓN|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Message|  
+|Modo de seguridad|Mensaje|  
 |Interoperabilidad|Sí, clientes y servicios compatibles con WS-Security y el perfil de token de certificado X.509.|  
-|Authentication|Autenticación mutua del servidor y el cliente.|  
+|Autenticación|Autenticación mutua del servidor y el cliente.|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
-|Transporte|HTTP|  
+|Transport|HTTP|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -45,7 +45,7 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a>Configuración  
+### <a name="configuration"></a>Configuración de  
  La configuración siguiente se puede utilizar en lugar del código para crear el mismo servicio.  
   
 ```xml  
@@ -90,8 +90,8 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
 </configuration>  
 ```  
   
-## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="client"></a>Client  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -106,8 +106,8 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a>Configuración  
- Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante el [ \<> clientCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica mediante el [ \<> defaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+### <a name="configuration"></a>Configuración de  
+ Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante el [\<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica mediante el [\<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad para Windows Server App fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Cómo: Crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Cómo: crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

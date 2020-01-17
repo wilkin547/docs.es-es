@@ -1,17 +1,20 @@
 ---
 title: Cómo serializar y deserializar JSON mediante C# .net
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904656"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163207"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Cómo serializar y deserializar (calcular las referencias y anular la serialización) JSON en .NET
 
@@ -563,7 +566,7 @@ En el ejemplo siguiente se muestra el JSON resultante del código anterior:
 }
 ```
 
-Para obtener más información sobre la **serialización**polimórfica y para obtener información sobre la **deserialización**, consulte [How to Migrate from Newtonsoft. JSON to System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Para obtener más información sobre la **serialización**polimórfica y para obtener información sobre la **deserialización**, consulte [How to migrate from Newtonsoft.Json to System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Permitir comentarios y comas finales
 
@@ -777,9 +780,9 @@ A continuación se muestra un ejemplo de JSON que el código anterior puede leer
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Información general de System. Text. JSON](system-text-json-overview.md)
+* [Información general de System.Text.Json](system-text-json-overview.md)
 * [Cómo escribir convertidores personalizados](system-text-json-converters-how-to.md)
-* [Cómo migrar desde Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [Compatibilidad con DateTime y DateTimeOffset en System. Text. JSON](../datetime/system-text-json-support.md)
-* [Referencia de la API System. Text. JSON](xref:System.Text.Json)
+* [Cómo migrar desde Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Compatibilidad con DateTime y DateTimeOffset en System.Text.Json](../datetime/system-text-json-support.md)
+* [referencia de API de System.Text.Json](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

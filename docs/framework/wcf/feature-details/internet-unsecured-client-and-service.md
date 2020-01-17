@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a84b32664c16dad48dd415e430134c5fb98303a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638630"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211926"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Cliente y servicio de Internet no protegidos
-La siguiente ilustración muestra un ejemplo de un cliente de Windows Communication Foundation (WCF) público, no seguro y servicio:  
+En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio de Windows Communication Foundation (WCF) públicos y no seguros:  
   
- ![Captura de pantalla que muestra una situación de Internet no protegido](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![Captura de pantalla que muestra un escenario de Internet no seguro](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Ninguna|  
-|Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.BasicHttpBinding> en el código, o la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento de configuración.|  
+|Modo de seguridad|Ninguno|  
+|Transport|HTTP|  
+|Enlace|<xref:System.ServiceModel.BasicHttpBinding> en el código o en el elemento de [\<basicHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) en la configuración.|  
 |Interoperabilidad|Con clientes de servicios Web existentes y servicios|  
-|Autenticación|Ninguna|  
-|Integridad|Ninguna|  
-|Confidencialidad|Ninguna|  
+|Autenticación|Ninguno|  
+|Integridad|Ninguno|  
+|Confidencialidad|Ninguno|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -67,8 +67,8 @@ La siguiente ilustración muestra un ejemplo de un cliente de Windows Communicat
 </configuration>  
 ```  
   
-## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="client"></a>Client  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -78,7 +78,7 @@ La siguiente ilustración muestra un ejemplo de un cliente de Windows Communicat
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- El código siguiente muestra a un cliente WCF básico que tiene acceso a un punto de conexión no segura.  
+ En el código siguiente se muestra un cliente de WCF básico que tiene acceso a un punto de conexión no seguro.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
@@ -113,4 +113,4 @@ La siguiente ilustración muestra un ejemplo de un cliente de Windows Communicat
 
 - [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

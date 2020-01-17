@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 65b8597727da256e832351792b9d5d9bd016eb28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587004"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212098"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
-La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) sencillo desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF. No se requiere seguridad porque los datos son de poca importancia, espera que la red es intrínsecamente segura o una capa debajo de la infraestructura de WCF proporciona seguridad.  
+En la ilustración siguiente se muestra un servicio de Windows Communication Foundation simple (WCF) desarrollado para proporcionar información sobre una red privada segura a una aplicación WCF. No es necesaria la seguridad porque los datos son de poca importancia, se espera que la red sea intrínsecamente segura, o bien la seguridad la proporciona una capa por debajo de la infraestructura de WCF.  
   
- ![Escenario de servicio y cliente no segura de la intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![Escenario de servicio y cliente no seguro de la intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Ninguna|  
-|Transporte|TCP|  
-|Enlaces|<xref:System.ServiceModel.NetTcpBinding>|  
-|Interoperabilidad|WCF solo|  
-|Autenticación|Ninguna|  
-|Integridad|Ninguna|  
-|Confidencialidad|Ninguna|  
+|Modo de seguridad|Ninguno|  
+|Transport|TCP|  
+|Enlace|<xref:System.ServiceModel.NetTcpBinding>|  
+|Interoperabilidad|Solo WCF|  
+|Autenticación|Ninguno|  
+|Integridad|Ninguno|  
+|Confidencialidad|Ninguno|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -40,7 +40,7 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configuración  
+### <a name="configuration"></a>Configuración de  
  El código siguiente establece el mismo extremo utilizando la configuración.  
   
 ```xml  
@@ -70,8 +70,8 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
 </configuration>  
 ```  
   
-## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="client"></a>Client  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -81,12 +81,12 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- El código siguiente muestra a un cliente WCF básico que tiene acceso a un punto de conexión no segura mediante el protocolo TCP.  
+ En el código siguiente se muestra un cliente de WCF básico que tiene acceso a un punto de conexión no seguro mediante el protocolo TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configuración  
+### <a name="configuration"></a>Configuración de  
  El código de configuración siguiente se aplica al cliente:  
   
 ```xml  
@@ -116,4 +116,4 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

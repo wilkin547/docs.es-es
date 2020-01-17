@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de hospedaje de Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e09a42f0f4a98728e588961425d8b6f5b50e6ccb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 092e6ab675cf807db44c2085f8b0e7bbf67d7b28
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957214"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211916"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedimientos recomendados de hospedaje de Internet Information Services
 En este tema se describen algunas prácticas recomendadas para hospedar servicios de Windows Communication Foundation (WCF).  
@@ -30,19 +30,19 @@ En este tema se describen algunas prácticas recomendadas para hospedar servicio
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Optimización del rendimiento en escenarios de nivel medio  
  Para obtener un rendimiento óptimo en un *escenario de nivel intermedio*(un servicio que llama a otros servicios en respuesta a los mensajes entrantes), cree una instancia del cliente de servicio de WCF para el servicio remoto una vez y reutilícelo en varias solicitudes entrantes. La creación de instancias de clientes de servicio WCF es una operación costosa en relación con la realización de una llamada de servicio en una instancia de cliente existente, y los escenarios de nivel medio generan diferencias de rendimiento distintas al almacenar en caché los clientes remotos en todas las solicitudes. Los clientes del servicio WCF son seguros para subprocesos, por lo que no es necesario sincronizar el acceso a un cliente a través de varios subprocesos.  
   
- Los escenarios de nivel medio también generan ganancias de rendimiento utilizando API asincrónicas generadas por la opción `svcutil /a`. La `/a` opción hace que la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genere `BeginXXX/EndXXX` métodos para cada operación de servicio, lo que permite realizar llamadas de ejecución prolongada a servicios remotos en subprocesos en segundo plano.  
+ Los escenarios de nivel medio también generan ganancias de rendimiento utilizando API asincrónicas generadas por la opción `svcutil /a`. La opción `/a` hace que la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genere `BeginXXX/EndXXX` métodos para cada operación de servicio, lo que permite realizar llamadas de ejecución prolongada a servicios remotos en subprocesos en segundo plano.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF en escenarios multitarjeta o de varios nombres  
- Puede implementar servicios WCF dentro de una granja de servidores Web de IIS, en la que un conjunto de equipos comparte un nombre externo `http://www.contoso.com`común (como), pero que se direccionan individualmente mediante distintos `http://www.contoso.com` nombres de host (por ejemplo, puede dirigir el tráfico a dos equipos diferentes. denominado `http://machine1.internal.contoso.com` y`http://machine2.internal.contoso.com`). Este escenario de implementación es totalmente compatible con WCF, pero requiere una configuración especial del sitio web de IIS que hospeda los servicios WCF para mostrar el nombre de host (externo) correcto en los metadatos del servicio (lenguaje de descripción de servicios web).  
+ Puede implementar servicios WCF dentro de una granja de servidores Web de IIS, en la que un conjunto de equipos comparte un nombre externo común (como `http://www.contoso.com`), pero que se direccionan individualmente mediante distintos nombres de host (por ejemplo, `http://www.contoso.com` podría dirigir el tráfico a dos equipos diferentes denominados `http://machine1.internal.contoso.com` y `http://machine2.internal.contoso.com`). Este escenario de implementación es totalmente compatible con WCF, pero requiere una configuración especial del sitio web de IIS que hospeda los servicios WCF para mostrar el nombre de host (externo) correcto en los metadatos del servicio (lenguaje de descripción de servicios web).  
   
- Para asegurarse de que el nombre de host correcto aparece en los metadatos de servicio que genera WCF, configure la identidad predeterminada del sitio web de IIS que hospeda los servicios WCF para que use un nombre de host explícito. Por ejemplo, los equipos que residen dentro de `www.contoso.com` la granja deben usar un enlace de sitio de IIS de *: 80: www. contoso. com \*para http y: 443: www. contoso. com para HTTPS.  
+ Para asegurarse de que el nombre de host correcto aparece en los metadatos de servicio que genera WCF, configure la identidad predeterminada del sitio web de IIS que hospeda los servicios WCF para que use un nombre de host explícito. Por ejemplo, los equipos que residen dentro de la granja de `www.contoso.com` deben usar un enlace de sitio de IIS de *: 80: www. contoso. com para HTTP y \*: 443: www. contoso. com para HTTPS.  
   
  Puede configurar los enlaces de sitio web de IIS utilizando el complemento de Microsoft Management Console (MMC).  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Los grupos de aplicaciones que se ejecutan en contextos de usuario diferentes sobrescriben los ensamblados desde otras cuentas en la carpeta temporal  
  Para asegurarse de que los grupos de aplicaciones que se ejecutan en distintos contextos de usuario no pueden sobrescribir ensamblados de otras cuentas en la carpeta Temporary ASP.NET files, utilice identidades y carpetas temporales diferentes para las diferentes aplicaciones. Por ejemplo, si tiene dos aplicaciones virtuales /Application1 y / Application2, puede crear dos grupos de aplicaciones, A y B, con dos identidades diferentes. El grupo de aplicaciones A se puede ejecutar bajo una identidad de usuario (user1), mientras que el grupo de aplicaciones B se puede ejecutar bajo otra identidad de usuario (user2) y configurar /Application1 para que use A y /Application2 para que use B.  
   
- En Web. config, puede configurar la carpeta temporal mediante \< system.web/compilation/@tempFolder>. En el caso de/application1, puede ser "c:\tempForUser1" y para Application2 puede ser "c:\tempForUser2". Conceda el permiso de escritura correspondiente a estas carpetas para las dos identidades.  
+ En Web. config, puede configurar la carpeta temporal mediante \<system.web/compilation/@tempFolder>. En el caso de/application1, puede ser "c:\tempForUser1" y para Application2 puede ser "c:\tempForUser2". Conceda el permiso de escritura correspondiente a estas carpetas para las dos identidades.  
   
  A continuación, user2 no puede cambiar la carpeta de generación de código para /application2 (bajo c:\tempForUser1).  
   
@@ -84,4 +84,4 @@ En este tema se describen algunas prácticas recomendadas para hospedar servicio
 ## <a name="see-also"></a>Vea también
 
 - [Ejemplos de hospedaje de servicio](../samples/hosting.md)
-- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

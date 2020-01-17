@@ -2,12 +2,12 @@
 title: Divulgación de información
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0e45a71855ecb172f36aae8139f89d4b8c8ffd0d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425303"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211954"
 ---
 # <a name="information-disclosure"></a>Divulgación de información
 
@@ -19,11 +19,11 @@ Si utiliza la seguridad del nivel de mensaje sobre una capa de transporte HTTP, 
 
 ## <a name="policy-information"></a>Información de directiva
 
-Es importante proteger la directiva, sobre todo en escenarios de federación donde confidenciales requisitos de tokens emitidos o información sobre el emisor del token se exponen en la directiva. En estos casos, la recomendación es proteger el punto de conexión de la directiva del servicio federado para evitar que los atacantes obtengan información sobre el servicio, como el tipo de demandas que colocar en el token emitido o redirigir a los clientes a emisores de tokens malintencionados. Por ejemplo, un atacante podría detectar pares de nombre de usuario/contraseña reconfigurando la cadena de confianza federada para finalizar en un emisor que ejecutó un ataque de tipo “man-in-the-middle”. También se recomienda que los clientes federados que obtienen sus enlaces a través de la recuperación de directivas comprueben que confían en los emisores en la cadena de confianza federada obtenida. Para obtener más información acerca de los escenarios de federación, consulte [federación](../../../../docs/framework/wcf/feature-details/federation.md).
+Es importante proteger la directiva, sobre todo en escenarios de federación donde confidenciales requisitos de tokens emitidos o información sobre el emisor del token se exponen en la directiva. En estos casos, la recomendación es proteger el punto de conexión de la directiva del servicio federado para evitar que los atacantes obtengan información sobre el servicio, como el tipo de demandas que colocar en el token emitido o redirigir a los clientes a emisores de tokens malintencionados. Por ejemplo, un atacante podría detectar pares de nombre de usuario/contraseña reconfigurando la cadena de confianza federada para finalizar en un emisor que ejecutó un ataque de tipo “man-in-the-middle”. También se recomienda que los clientes federados que obtienen sus enlaces a través de la recuperación de directivas comprueben que confían en los emisores en la cadena de confianza federada obtenida. Para obtener más información sobre los escenarios de Federación, vea [Federación](../../../../docs/framework/wcf/feature-details/federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Los volcados de memoria pueden revelar información de la demanda
 
-Cuando se produce un error en una aplicación, los archivos de registro, como los generados por Dr. Watson, puede contener información de notificaciones. Esta información no se debería exportar a otras entidades, como equipos de compatibilidad; de lo contrario, se exporta también la información de la demanda que contiene los datos privados. Esto se puede paliar si no se envían los archivos de registro a entidades desconocidas. Para obtener más información, consulte [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160).
+Cuando se produce un error en una aplicación, los archivos de registro, como los generados por Dr. Watson, puede contener información de la demanda. Esta información no se debería exportar a otras entidades, como equipos de compatibilidad; de lo contrario, se exporta también la información de la demanda que contiene los datos privados. Esto se puede paliar si no se envían los archivos de registro a entidades desconocidas.
 
 ## <a name="endpoint-addresses"></a>Direcciones de extremo
 
@@ -35,13 +35,13 @@ Al utilizar un certificado X.509 para autenticar un cliente, el certificado se t
 
 ## <a name="service-references"></a>Referencias del servicio
 
-Una referencia de servicio es una referencia a otro servicio. Por ejemplo, un servicio puede pasar una referencia de servicio a un cliente en el curso de una operación. La referencia de servicio también se usa con un *Comprobador de identidad de confianza*, un componente interno que garantiza la identidad de la entidad de destino antes de desvelar información como datos de la aplicación o las credenciales al destino. Si la identidad de confianza remota no se puede comprobar o es incorrecta, el remitente debería garantizar que no se divulgó ningún dato que se podría poner en peligro a la aplicación o el usuario.
+Una referencia de servicio es una referencia a otro servicio. Por ejemplo, un servicio puede pasar una referencia de servicio a un cliente en el curso de una operación. La referencia de servicio también se usa con un *Comprobador de identidad de confianza*, un componente interno que garantiza la identidad de la entidad de seguridad de destino antes de revelar información como datos de aplicación o credenciales al destino. Si la identidad de confianza remota no se puede comprobar o es incorrecta, el remitente debería garantizar que no se divulgó ningún dato que se podría poner en peligro a la aplicación o el usuario.
 
 Entre las mitigaciones se encuentran las siguientes:
 
 - Se supone que las referencias de servicio son de confianza. Tenga cuidado al transferir instancias de referencias de servicio para asegurarse de que no se han manipulado.
 
-- Algunas aplicaciones pueden mostrar una experiencia de usuario que permite el establecimiento interactivo de confianza según los datos de la referencia de servicio y los datos de confianza demostrados por el host remoto. WCF proporciona puntos de extensibilidad para esa función, pero el usuario debe implementarlos.
+- Algunas aplicaciones pueden mostrar una experiencia de usuario que permite el establecimiento interactivo de confianza según los datos de la referencia de servicio y los datos de confianza demostrados por el host remoto. WCF proporciona puntos de extensibilidad para este tipo de instalaciones, pero el usuario debe implementarlas.
 
 ## <a name="ntlm"></a>NTLM
 
@@ -55,7 +55,7 @@ De manera predeterminada, en el entorno de dominio de Windows, la autenticación
 
 Al crear un cliente, especificar las credenciales del cliente sin un nombre de dominio o especificar una identidad de servidor no válida, hace que NTLM sea utilizado en lugar del protocolo Kerberos (si la propiedad `AllowNtlm` está establecida en `true`). Dado que NTLM no hace la autenticación de servidor, se puede divulgar información de manera potencial.
 
-Por ejemplo, es posible especificar las credenciales de cliente de Windows sin un nombre de dominio, tal como se muestra en el siguiente código de Visual C#.
+Por ejemplo, es posible especificar credenciales de cliente de Windows sin un nombre de dominio, tal y como se C# muestra en el siguiente código Visual.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,7 +63,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 El código no especifica un nombre de dominio y, por consiguiente, se utilizará NTLM.
 
-Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. Para obtener más información acerca de cómo se especifica la identidad de extremo, vea [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. Para obtener más información sobre cómo se especifica la identidad del punto de conexión, consulte [identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
 
 ## <a name="see-also"></a>Vea también
 

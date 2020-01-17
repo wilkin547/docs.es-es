@@ -2,12 +2,12 @@
 title: Compatibilidad de característica de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: adeef7a8fa12751c53e2096ae6bf844f091a5545
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e0f1c2f673d4ba603df7da431d10c211cf779ac
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965315"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212123"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidad de característica de confianza parcial
 Windows Communication Foundation (WCF) admite un subconjunto limitado de funcionalidad cuando se ejecuta en un entorno de confianza parcial. Las características admitidas en confianza parcial están diseñadas alrededor de un conjunto concreto de escenarios, tal y como se describe en el tema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
  No se admiten los codificadores del mecanismo de optimización de transmisión del mensaje (MTOM).  
   
-### <a name="security"></a>Seguridad  
+### <a name="security"></a>de seguridad  
  Las aplicaciones de confianza parcial pueden utilizar las características de seguridad de nivel de transporte de WCF para proteger su comunicación. No se admite la seguridad de nivel de mensaje. Al configurar un enlace para que use la seguridad de nivel de mensaje, se produce una excepción en tiempo de ejecución.  
   
 ### <a name="unsupported-bindings"></a>Enlaces no admitidos  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
 ### <a name="collection-types"></a>Tipos de colección  
  Algunos tipos de colección implementan <xref:System.Collections.Generic.IEnumerable%601> y <xref:System.Collections.IEnumerable>. Los ejemplos incluyen tipos que implementan <xref:System.Collections.Generic.ICollection%601>. Tales tipos pueden implementar una implementación `public` de `GetEnumerator()`y una implementación explícita de `GetEnumerator()`. En este caso, <xref:System.Runtime.Serialization.DataContractSerializer> invoca la implementación `public` de `GetEnumerator()`y no la implementación explícita de `GetEnumerator()`. Si ninguna de las implementaciones de `GetEnumerator()` es `public` y todas son implementaciones explícitas, <xref:System.Runtime.Serialization.DataContractSerializer> invoca a `IEnumerable.GetEnumerator()`.  
   
- En el caso de los tipos de colección cuando WCF se está ejecutando en un entorno de `GetEnumerator()` confianza parcial, `public`si ninguna de las implementaciones es, o ninguna de ellas son implementaciones de interfaz explícitas, se produce una excepción de seguridad.  
+ En el caso de los tipos de colección cuando WCF se está ejecutando en un entorno de confianza parcial, si ninguna de las implementaciones de `GetEnumerator()` se `public`, o ninguna de ellas son implementaciones de interfaz explícitas, se produce una excepción de seguridad.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  <xref:System.Collections.Generic.List%601>no admite muchos tipos de colección de .NET Framework, como <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> , <xref:System.Collections.Hashtable> y <xref:System.Runtime.Serialization.NetDataContractSerializer> , en un entorno de confianza parcial. Estos tipos tienen el atributo `[Serializable]` establecido y, tal y como se explicó previamente en la sección acerca de la serialización, este atributo no se admite en confianza parcial. <xref:System.Runtime.Serialization.DataContractSerializer> trata las colecciones de una manera especial y, por lo tanto, puede resolver esta restricción, pero <xref:System.Runtime.Serialization.NetDataContractSerializer> no tiene ningún mecanismo para evitarla.  
@@ -86,16 +86,16 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
  No se puede usar un suplente con <xref:System.Runtime.Serialization.NetDataContractSerializer> (mediante el mecanismo <xref:System.Runtime.Serialization.SurrogateSelector> ) cuando se ejecuta con confianza parcial. Observe que esta restricción se aplica al uso de un suplente, no a su serialización.  
   
 ## <a name="enabling-common-behaviors-to-run"></a>Habilitación de comportamientos habituales que se van a ejecutar  
- Los comportamientos de servicio o de extremo que <xref:System.Security.AllowPartiallyTrustedCallersAttribute> no están marcados con el atributo (APTCA) que se agregan a la [ \<sección > de commonBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) de un archivo de configuración no se ejecutan cuando la aplicación se ejecuta en un entorno de confianza parcial y no Cuando esto ocurre, se produce una excepción. Para forzar la ejecución de los comportamientos habituales, debe realizar una de las siguientes opciones:  
+ Los comportamientos de servicio o de extremo que no están marcados con el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) que se agregan a la sección [\<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) de un archivo de configuración no se ejecutan cuando la aplicación se ejecuta en un entorno de confianza parcial y no se produce ninguna excepción cuando esto ocurre. Para forzar la ejecución de los comportamientos habituales, debe realizar una de las siguientes opciones:  
   
 - Marcar el comportamiento habitual con el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de modo que pueda ejecutarse cuando se implementa como una aplicación de confianza parcial. Tenga en cuenta que puede establecerse una entrada de registro en el equipo para evitar que se ejecuten los ensamblados marcados con APTCA. .  
   
 - Asegurarse de implementar la aplicación como una aplicación de confianza total en la que los usuarios no pueden modificar los valores de la seguridad de acceso del código para ejecutar la aplicación en un entorno de confianza parcial. De poder hacerlo, el comportamiento no se ejecutaría y no se iniciaría ninguna excepción. Para asegurarse de esto, vea la opción **LevelFinal** mediante [Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Para obtener un ejemplo de un comportamiento común, [consulte Cómo: Bloquee los puntos de conexión en](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)la empresa.  
+ Para obtener un ejemplo de un comportamiento común, consulte [Cómo: bloquear puntos de conexión en la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
-## <a name="configuration"></a>Configuración  
- Con una excepción, el código de confianza parcial solo puede cargar secciones de configuración de WCF `app.config` en el archivo local. Para cargar las secciones de configuración de WCF que hacen referencia a las secciones de WCF en Machine. config o en un archivo raíz Web. config, se requiere ConfigurationPermission (Unrestricted). Sin este permiso, las referencias a las secciones de configuración de WCF (comportamientos, enlaces) fuera del archivo de configuración local producen una excepción cuando se carga la configuración.  
+## <a name="configuration"></a>Configuración de  
+ Con una excepción, el código de confianza parcial solo puede cargar secciones de configuración de WCF en el archivo de `app.config` local. Para cargar las secciones de configuración de WCF que hacen referencia a las secciones de WCF en Machine. config o en un archivo raíz Web. config, se requiere ConfigurationPermission (Unrestricted). Sin este permiso, las referencias a las secciones de configuración de WCF (comportamientos, enlaces) fuera del archivo de configuración local producen una excepción cuando se carga la configuración.  
   
  La única excepción es la configuración de tipos conocidos para la serialización, tal y como se describe en la sección relativa a la serialización de este tema.  
   
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
  El registro de mensajes no funciona cuando se ejecuta WCF en un entorno de confianza parcial. Si está habilitado bajo confianza parcial, no produce un error en la activación del servicio, pero no se registra ningún mensaje.  
   
 ### <a name="tracing"></a>Traza  
- La funcionalidad de seguimiento restringido está disponible al ejecutarse en un entorno de confianza parcial. En el elemento`listeners`< > del archivo de configuración, los únicos tipos que puede Agregar son <xref:System.Diagnostics.TextWriterTraceListener> y el nuevo <xref:System.Diagnostics.EventSchemaTraceListener>. El uso del <xref:System.Diagnostics.XmlWriterTraceListener> estándar puede producir registros incompletos o incorrectos.  
+ La funcionalidad de seguimiento restringido está disponible al ejecutarse en un entorno de confianza parcial. En el <`listeners`elemento > del archivo de configuración, los únicos tipos que puede Agregar son <xref:System.Diagnostics.TextWriterTraceListener> y el nuevo <xref:System.Diagnostics.EventSchemaTraceListener>. El uso del <xref:System.Diagnostics.XmlWriterTraceListener> estándar puede producir registros incompletos o incorrectos.  
   
  Los orígenes de seguimiento admitidos son:  
   
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>y <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> y <xref:System.IdentityModel.Tokens>.  
   
  No se admiten los siguientes orígenes de seguimiento:  
   
@@ -144,7 +144,8 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
  El host de servicio WCF no admite la confianza parcial. Si desea usar un servicio WCF en confianza parcial, no use la plantilla de proyecto Biblioteca de servicios WCF de Visual Studio para compilar el servicio. En su lugar, cree un nuevo sitio web en Visual Studio; para ello, elija la plantilla sitio web del servicio WCF, que puede hospedar el servicio en un servidor Web en el que se admita la confianza parcial de WCF.  
   
 ## <a name="other-limitations"></a>Otras limitaciones  
- WCF generalmente se limita a las consideraciones de seguridad impuestas por la aplicación de hospedaje. Por ejemplo, si WCF se hospeda en una aplicación de explorador XAML (XBAP), está sujeto a las limitaciones de XBAP, como se describe en [Windows Presentation Foundation la seguridad de confianza parcial](https://go.microsoft.com/fwlink/?LinkId=89138).  
+
+  WCF generalmente se limita a las consideraciones de seguridad impuestas por la aplicación de hospedaje. Por ejemplo, si WCF se hospeda en una aplicación de explorador XAML (XBAP), está sujeto a las limitaciones de XBAP, como se describe en [Windows Presentation Foundation la seguridad de confianza parcial](../../wpf/wpf-partial-trust-security.md).  
   
  Las características adicionales siguientes no están habilitadas al ejecutar indigo2 en un entorno de confianza parcial:  
   
@@ -166,4 +167,4 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [Escenarios de implementación admitidos](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Procedimientos recomendados de confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

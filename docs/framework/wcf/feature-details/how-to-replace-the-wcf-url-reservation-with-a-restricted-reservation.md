@@ -2,15 +2,16 @@
 title: 'Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544652"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212193"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida
-Una reserva de direcciones URL le permite restringir quién puede recibir mensajes desde una URL o un conjunto de ellas. Una reserva consta de una plantilla de dirección URL, una lista de control de acceso (ACL) y un conjunto de marcas. La plantilla de dirección URL define a qué direcciones URL afecta la reserva. Para obtener más información sobre cómo se procesan las plantillas de dirección URL, vea [enrutar solicitudes entrantes](https://go.microsoft.com/fwlink/?LinkId=136764). La ACL determina qué usuario o grupo de usuarios pueden recibir mensajes desde las direcciones URL especificadas. Las marcas indican si la reserva proporciona permiso a un usuario o a un grupo de ellos para realizar escuchas directamente en la dirección URL o delega el permiso de escucha en otro proceso.  
+
+Una reserva de direcciones URL le permite restringir quién puede recibir mensajes desde una URL o un conjunto de ellas. Una reserva consta de una plantilla de dirección URL, una lista de control de acceso (ACL) y un conjunto de marcas. La plantilla de dirección URL define a qué direcciones URL afecta la reserva. Para obtener más información sobre cómo se procesan las plantillas de dirección URL, vea [enrutar solicitudes entrantes](/windows/win32/http/routing-incoming-requests). La ACL determina qué usuario o grupo de usuarios pueden recibir mensajes desde las direcciones URL especificadas. Las marcas indican si la reserva proporciona permiso a un usuario o a un grupo de ellos para realizar escuchas directamente en la dirección URL o delega el permiso de escucha en otro proceso.  
   
  Como parte de la configuración predeterminada del sistema operativo, Windows Communication Foundation (WCF) crea una reserva accesible globalmente para el puerto 80 a fin de permitir que todos los usuarios ejecuten aplicaciones que usan un enlace HTTP doble para la comunicación dúplex. Dado que la ACL en esta reserva es para todos los usuarios, los administradores no pueden conceder o denegar explícitamente el permiso para realizar escuchas en una dirección URL o en un conjunto de ellas. En este tema se explica cómo eliminar esta reserva y cómo volver a crearla con una ACL restringida.  
   
@@ -24,7 +25,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```
 
- La reserva consta de una plantilla de dirección URL que se usa cuando una aplicación WCF usa un enlace HTTP dual para la comunicación dúplex. Las direcciones URL de este formulario se utilizan para que un servicio WCF envíe mensajes de vuelta al cliente WCF al comunicarse a través de un enlace HTTP dual. Todos los usuarios tienen permiso para realizar escuchas en la dirección URL, pero no para delegar la escucha en otro proceso. Por último, la ACL se describe en el lenguaje de definición de descriptor de seguridad (SSDL). Para obtener más información sobre SSDL, vea [SSDL](https://go.microsoft.com/fwlink/?LinkId=136789)  
+ La reserva consta de una plantilla de dirección URL que se usa cuando una aplicación WCF usa un enlace HTTP dual para la comunicación dúplex. Las direcciones URL de este formulario se utilizan para que un servicio WCF envíe mensajes de vuelta al cliente WCF al comunicarse a través de un enlace HTTP dual. Todos los usuarios tienen permiso para realizar escuchas en la dirección URL, pero no para delegar la escucha en otro proceso. Por último, la ACL se describe en el lenguaje de definición de descriptor de seguridad (SSDL). Para obtener más información sobre SSDL, vea [SSDL](/windows/win32/secauthz/security-descriptor-definition-language)  
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>Para eliminar la reserva de direcciones URL de WCF  
   

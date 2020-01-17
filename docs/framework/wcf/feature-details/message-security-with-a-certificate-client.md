@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: fb68487746a7dc9cec1d1473b445bccc7b2b23c2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4b282062040ccfc18534ad88effc4c0f1972c5a6
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424876"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212053"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Seguridad de mensajes con un cliente de certificado
-El escenario siguiente muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido utilizando el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, consulte [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+El siguiente escenario muestra un cliente y un servicio de Windows Communication Foundation (WCF) protegidos mediante el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, vea [seguridad de aplicaciones distribuidas](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
 
- ![Captura de pantalla que muestra a un cliente con el certificado.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![Captura de pantalla que muestra un cliente con certificado.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Para una aplicación de ejemplo, vea [certificado de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
+ Para obtener una aplicación de ejemplo, vea [certificado de seguridad de mensajes](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
 
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Mensaje|  
-|Interoperabilidad|WCF solo|  
+|Interoperabilidad|Solo WCF|  
 |Autenticación (servidor)|Con el certificado del servicio|  
 |Autenticación (cliente)|Con el certificado del cliente|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
-|Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
+|Transport|HTTP|  
+|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -43,7 +43,7 @@ El escenario siguiente muestra un cliente de Windows Communication Foundation (W
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### <a name="configuration"></a>Configuración  
+### <a name="configuration"></a>Configuración de  
  En lugar del código, se puede utilizar la siguiente configuración.  
   
 ```xml  
@@ -84,8 +84,8 @@ El escenario siguiente muestra un cliente de Windows Communication Foundation (W
 </configuration>  
 ```  
   
-## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="client"></a>Client  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -100,8 +100,8 @@ El escenario siguiente muestra un cliente de Windows Communication Foundation (W
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### <a name="configuration"></a>Configuración  
- La configuración siguiente especifica el certificado de cliente mediante un comportamiento del punto de conexión. Para más información, consulte [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). El código también usa un <`identity`> elemento para especificar un sistema de nombres de dominio (DNS) de la identidad del servidor esperada. Para obtener más información acerca de la identidad, vea [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+### <a name="configuration"></a>Configuración de  
+ La configuración siguiente especifica el certificado de cliente mediante un comportamiento del punto de conexión. Para más información, consulte [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). El código también usa un <`identity`> elemento para especificar un sistema de nombres de dominio (DNS) de la identidad de servidor esperada. Para obtener más información acerca de la identidad, consulte [identidad de servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,4 +148,4 @@ El escenario siguiente muestra un cliente de Windows Communication Foundation (W
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
