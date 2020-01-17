@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900923"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116602"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que la carga y la serialización de datos binarios de gran tamaño de esta manera pueden afectar al rendimiento, el Open Data Protocol (OData) define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.
 
-- Recurso multimedia: los datos binarios que pertenecen a una entidad, como vídeo, audio, imagen u otro tipo de flujo de recursos multimedia.
+- Recurso multimedia: datos binarios que pertenecen a una entidad, como un vídeo, audio, imagen u otro tipo de flujo de recursos multimedia.
 
 - Entrada de vínculo multimedia: entidad con una referencia a un flujo de recursos multimedia relacionado.
 
@@ -88,14 +88,14 @@ Para obtener información general sobre cómo crear un servicio de datos, vea [c
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Habilitar flujos binarios grandes en el entorno de hospedaje
 
-Cuando se crea un servicio de datos en una aplicación Web de ASP.NET, se utiliza Windows Communication Foundation (WCF) para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 kilobytes. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:
+Cuando se crea un servicio de datos en una aplicación Web de ASP.NET, se utiliza Windows Communication Foundation (WCF) para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 KB. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:
 
 > [!NOTE]
 > Debe usar un modo de transferencia de <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> para asegurarse de que WCF transmite los datos binarios en los mensajes de solicitud y respuesta, y no los almacena en búfer.
 
 Para obtener más información, consulte [transferencia de mensajes de streaming](../../wcf/feature-details/streaming-message-transfer.md) y [cuotas de transporte](../../wcf/feature-details/transport-quotas.md).
 
-De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para permitir que el servicio de datos reciba flujos mayores de 4 MB cuando se ejecute en IIS, también debe establecer el atributo `maxRequestLength` del [Elemento httpRuntime (esquema de configuración de ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la sección configuración de `<system.web />`, como se muestra en el ejemplo siguiente:
+De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las solicitudes a 4 MB. Para permitir que el servicio de datos reciba flujos de más de 4 MB cuando se ejecute en IIS, también debe establecer el atributo `maxRequestLength` del [Elemento httpRuntime (esquema de configuración de ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la sección configuración de `<system.web />`, como se muestra en el ejemplo siguiente:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Usar flujos de datos en una aplicación cliente
 
@@ -117,7 +117,7 @@ A continuación se enumeran algunas de las consideraciones que debe tener en cue
 
   - En el modelo de datos no debe incluirse una propiedad binaria que sea un recurso multimedia. Todas las propiedades expuestas en un modelo de datos se devuelven en la entrada de una fuente de respuesta.
 
-  - Para mejorar el rendimiento con un flujo binario grande, recomendamos crear una clase de flujo personalizado para almacenar datos binarios en la base de datos. La implementación de <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> devuelve esta clase y envía los datos binarios a la base de datos en fragmentos. En el caso de una base de datos SQL Server, se recomienda utilizar una secuencia de archivos para transmitir los datos a la base de datos cuando los datos binarios superen los 1 MB.
+  - Para mejorar el rendimiento con un flujo binario grande, recomendamos crear una clase de flujo personalizado para almacenar datos binarios en la base de datos. La implementación de <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> devuelve esta clase y envía los datos binarios a la base de datos en fragmentos. En el caso de una base de datos de SQL Server, se recomienda utilizar una secuencia de archivos para transmitir los datos a la base de datos cuando los datos binarios superen 1 MB.
 
   - Asegúrese de que la base de datos esté diseñada para almacenar los flujos binarios grandes que vaya a recibir el servicio de datos.
 
