@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Aprenda sobre los scripts de dotnet-install para instalar las herramientas de la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 ms.date: 01/16/2019
-ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 765141ae92645db448ac7c9c3448a79b895faac6
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740534"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964345"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -189,7 +189,8 @@ Puede instalar una versión específica mediante el argumento `--version`. La ve
   Windows:
 
   ```powershell
-  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
+  # Run a separate PowerShell process because the script calls exit, so it will end the current PowerShell session.
+  &powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
   ```
 
   macOS y Linux:

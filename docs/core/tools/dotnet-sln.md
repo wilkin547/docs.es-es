@@ -2,12 +2,12 @@
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191826"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937247"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -17,7 +17,7 @@ ms.locfileid: "73191826"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet sln`: modifica un archivo de solución de .NET Core.
 
@@ -27,7 +27,7 @@ ms.locfileid: "73191826"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
 
 El comando `dotnet sln` proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>Ejemplos
 
-Agregue un proyecto de C# a una solución:
+- Agregue un proyecto de C# a una solución:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-Quite un proyecto de C# de una solución:
+- Quite un proyecto de C# de una solución:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-Agregue varios proyectos de C# a una solución:
+- Agregue varios proyectos de C# a una solución:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Quite varios proyectos de C# de una solución:
+- Quite varios proyectos de C# de una solución:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo para Unix y Linux):
+- Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo para Unix y Linux):
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-Quite varios proyectos de C# de una solución mediante un patrón de comodines (solo para Unix y Linux):
+- Quite varios proyectos de C# de una solución mediante un patrón de comodines (solo para Unix y Linux):
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```
