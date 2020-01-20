@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 9c57ff6dd9acd8a8bcff6de4fce7d898f1135703
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714966"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964671"
 ---
 # <a name="constructors-c-programming-guide"></a>Constructores (Guía de programación de C#)
 
@@ -19,7 +19,7 @@ Cada vez que se crea una [clase](../../language-reference/keywords/class.md) o [
 
 ## <a name="parameterless-constructors"></a>Constructores sin parámetros
   
-Si no proporciona un constructor para la clase, C# creará uno de manera predeterminada que cree instancias del objeto y establezca las variables miembro en los valores predeterminados que se indican en [Tabla de valores predeterminados](../../language-reference/keywords/default-values-table.md). Si no proporciona un constructor para su struct, C# se basa en un *constructor sin parámetros implícito* para inicializar automáticamente cada campo de un tipo de valor en su valor predeterminado como se muestra en la [Tabla de valores predeterminados](../../language-reference/keywords/default-values-table.md). Para obtener más información y ejemplos, vea [Constructores de instancias](./instance-constructors.md).  
+Si no proporciona un constructor para la clase, C# creará uno de manera predeterminada que cree instancias del objeto y establezca las variables miembro en los valores predeterminados que se indican en el artículo [Valores predeterminados de los tipos de C#](../../language-reference/builtin-types/default-values.md). Si no proporciona un constructor para su struct, C# se basa en un *constructor sin parámetros implícito* para inicializar automáticamente cada campo en su valor predeterminado. Para obtener más información y ejemplos, vea [Constructores de instancias](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Sintaxis del constructor
 
@@ -33,13 +33,13 @@ Si un constructor puede implementarse como una instrucción única, puede usar u
 
 ## <a name="static-constructors"></a>Constructores estáticos
 
-En los ejemplos anteriores se han mostrado constructores de instancia, que crean un objeto nuevo. Una clase o struct también puede tener un constructor estático, que inicializa los miembros estáticos del tipo.  Los constructores estáticos no tienen parámetros. Si no proporciona un constructor estático para inicializar los campos estáticos, el compilador de C# inicializa los campos estáticos en su valor predeterminado como se muestra en la [Tabla de valores predeterminados](../../language-reference/keywords/default-values-table.md).
+En los ejemplos anteriores se han mostrado constructores de instancia, que crean un objeto nuevo. Una clase o struct también puede tener un constructor estático, que inicializa los miembros estáticos del tipo.  Los constructores estáticos no tienen parámetros. Si no proporciona un constructor estático para inicializar los campos estáticos, el compilador de C# inicializa los campos estáticos en su valor predeterminado, tal como se muestra en el artículo [Valores predeterminados de los tipos de C#](../../language-reference/builtin-types/default-values.md).
 
 En el ejemplo siguiente se usa un constructor estático para inicializar un campo estático.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-También puede definir un constructor estático con una definición de cuerpo de expresión, como se muestra en el ejemplo siguiente. 
+También puede definir un constructor estático con una definición de cuerpo de expresión, como se muestra en el ejemplo siguiente.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
@@ -62,4 +62,4 @@ Para obtener más información y ejemplos, vea [Constructores estáticos](./stat
 - [Clases y structs](./index.md)
 - [Finalizadores](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [Why Do Initializers Run In The Opposite Order As Constructors? Part One](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one) (¿Por qué los inicializadores se ejecutan en orden contrario a los constructores? Parte uno)
+- [Why Do Initializers Run In The Opposite Order As Constructors? Part One](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one) (¿Por qué los inicializadores se ejecutan en orden contrario a los constructores? Parte uno)

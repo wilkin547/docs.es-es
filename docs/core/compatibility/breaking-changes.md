@@ -2,12 +2,12 @@
 title: Cambios importantes en .NET Core
 description: Obtenga información sobre los cambios de cada versión de .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900155"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937346"
 ---
 # <a name="breaking-change-selectors"></a>Selectores de cambios importantes
 
@@ -18,9 +18,6 @@ Los siguientes selectores de versión y área proporcionan una lista filtrada de
 Seleccione la versión de destino actual de .NET y la versión de .NET Core a la que quiere migrar:
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-> [!TIP]
-> Si va a migrar una aplicación de Windows Forms de .NET Framework a .NET Core, vea [Cambios importantes de Windows Forms (.NET Framework a .NET Core)](../porting/winforms-breaking-changes.md) en lugar de usar el selector de versiones.
 
 ## <a name="by-area"></a>Por área
 

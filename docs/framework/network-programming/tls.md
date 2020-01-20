@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196371"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937692"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -46,7 +46,7 @@ La sección [Revisión del código y aplicación de cambios en el código](#audi
 
 En este artículo se explica cómo habilitar el mayor nivel de seguridad disponible para la versión de .NET Framework que tiene como destino la aplicación y en la que esta se ejecuta. Cuando una aplicación establece explícitamente un protocolo de seguridad y una versión, deja de recibir cualquier otra alternativa y se mantiene al margen del comportamiento predeterminado de .NET Framework y el sistema operativo. Si desea que la aplicación pueda negociar una conexión TLS 1.2, el establecimiento explícito de una versión de TLS anterior impide una conexión de TLS 1.2.
 
-Si no puede evitar la codificación rígida de una versión del protocolo, le recomendamos encarecidamente que especifique TLS 1.2. Para obtener instrucciones sobre cómo identificar y quitar dependencias de TLS 1.0, descargue el documento [Solving the TLS 1.0 Problem](https://www.microsoft.com/download/details.aspx?id=55266) (Solución del problema de TLS 1.0).
+Si no puede evitar la codificación rígida de una versión del protocolo, le recomendamos encarecidamente que especifique TLS 1.2. Para obtener instrucciones sobre cómo identificar y quitar dependencias de TLS 1.0, descargue el documento [Solución del problema de TLS 1.0](https://www.microsoft.com/download/details.aspx?id=55266).
 
 WCF admite TLS 1.0, 1.1 y 1.2 como valor predeterminado en .NET Framework 4.7. A partir de .NET Framework 4.7.1, WCF toma como valor predeterminado la versión configurada en el sistema operativo. Si una aplicación se configura explícitamente con `SslProtocols.None`, WCF utiliza los parámetros predeterminados del sistema operativo al utilizar el transporte NetTcp.
 
@@ -104,7 +104,7 @@ Si **no** utiliza un enlace personalizado **y** está estableciendo los ajustes 
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>Para la seguridad de mensaje de WCF con credenciales de certificado
 
-.NET Framework 4.7, así como sus versiones posteriores, utiliza de forma predeterminada el protocolo especificado en la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol>. Cuando [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` se establece en `true`, WCF elige el mejor protocolo hasta TLS 1.0.
+.NET Framework 4.7, así como sus versiones posteriores, utiliza de forma predeterminada el protocolo especificado en la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol>. Cuando `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` de [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) se establece en `true`, WCF elige el mejor protocolo hasta TLS 1.0.
 
 ## <a name="if-your-app-targets-a-net-framework-version-earlier-than-47"></a>Si la aplicación tiene como destino una versión de .NET Framework anterior a 4.7
 
@@ -185,7 +185,7 @@ Para obtener más información sobre protocolos TLS, consulte [Mitigación: prot
 
 Si la configuración de uno o los dos conmutadores de `AppContext` no es una opción, puede controlar los protocolos de seguridad que usa su aplicación con las claves del Registro de Windows que se describen en esta sección. Quizá no pueda utilizar uno de los conmutadores de `AppContext`, o los dos, si la aplicación se ejecuta en .NET Framework 4.5.2 o en versiones anteriores, o no puede editar el archivo de configuración. Si desea configurar la seguridad con el Registro, no especifique un valor de protocolo de seguridad en el código; de hacerlo, se reemplazará la configuración del Registro.
 
-Los nombres de las claves del Registro son similares a los nombres de los conmutadores de `AppContext` correspondientes, pero sin `DontEnable` antepuesto al nombre. Por ejemplo, el conmutador de `AppContext` `DontEnableSchUseStrongCrypto` es la clave del Registro llamada [SchUseStrongCrypto](#schusestrongcrypto).
+Los nombres de las claves del Registro son similares a los nombres de los conmutadores de `AppContext` correspondientes, pero sin `DontEnable` antepuesto al nombre. Por ejemplo, el conmutador de `AppContext``DontEnableSchUseStrongCrypto` es la clave del Registro llamada [SchUseStrongCrypto](#schusestrongcrypto).
 
 Estas claves están disponibles en todas las versiones de .NET Framework para las que existe una revisión de seguridad reciente. Consulte [Actualizaciones de seguridad](#security-updates).
 

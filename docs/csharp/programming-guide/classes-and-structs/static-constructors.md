@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714677"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115761"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Constructores estáticos (Guía de programación de C#)
 Un constructor estático se usa para inicializar cualquier dato [estático](../../language-reference/keywords/static.md) o realizar una acción determinada que solo debe realizarse una vez. Es llamado automáticamente antes de crear la primera instancia o de hacer referencia a cualquier miembro estático.  
@@ -30,9 +30,9 @@ Los constructores estáticos tienen las propiedades siguientes:
 
 - El usuario no puede controlar cuándo se ejecuta el constructor estático en el programa.
   
-- Se le llama automáticamente para inicializar la [clase](../../language-reference/keywords/class.md) antes de crear la primera instancia o de hacer referencia a cualquier miembro estático. Un constructor estático se ejecutará antes que un constructor de instancia. Observe que se llama al constructor estático de un tipo cuando se invoca a un método estático asignado a un evento o un delegado y no cuando se asigna. Si los inicializadores de variable del campo estático están presentes en la clase o el constructor estático, se ejecutarán en el orden textual en el que aparecen en la declaración de clase inmediatamente anterior a la ejecución del constructor estático.
+- Se le llama automáticamente para inicializar la [clase](../../language-reference/keywords/class.md) antes de crear la primera instancia o de hacer referencia a cualquier miembro estático. Un constructor estático se ejecutará antes que un constructor de instancia. Se llama al constructor estático de un tipo cuando se invoca un método estático asignado a un evento o un delegado y no cuando este se asigna. Si los inicializadores de variable del campo estático están presentes en la clase o el constructor estático, se ejecutarán en el orden textual en el que aparecen en la declaración de clase inmediatamente anterior a la ejecución del constructor estático.
 
-- Si no proporciona un constructor estático para inicializar los campos estáticos, todos los campos estáticos se inicializan en su valor predeterminado como se muestra en la [Tabla de valores predeterminados](../../language-reference/keywords/default-values-table.md). 
+- Si no proporciona un constructor estático para inicializar los campos estáticos, todos los campos estáticos se inicializan en su valor predeterminado como se muestra en [Valores predeterminados de los tipos de C#](../../language-reference/builtin-types/default-values.md).
   
 - Si un constructor estático inicia una excepción, el motor en tiempo de ejecución no lo invocará una segunda vez y el tipo seguirá sin inicializar durante el período de duración del dominio de aplicación donde se ejecuta el programa. Normalmente, se inicia una excepción <xref:System.TypeInitializationException> cuando un constructor estático no puede crear una instancia de un tipo o para una excepción no controlada que se produce dentro de un constructor estático. En el caso de los constructores estáticos implícitos no definidos de forma explícita en el código fuente, la solución de problemas puede requerir la inspección del código de lenguaje intermedio (IL).
 

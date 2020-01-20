@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712915"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964649"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -33,7 +33,7 @@ A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un ti
 
 Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos de valor que admiten un valor NULL](../builtin-types/nullable-value-types.md) correspondientes pueden ser `null`.
 
-Cada tipo de valor tiene un constructor sin parámetros implícito que inicializa el valor predeterminado de ese tipo. Para información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](default-values-table.md).
+Cada tipo de valor tiene un constructor sin parámetros implícito que inicializa el valor predeterminado de ese tipo. Para obtener información sobre los valores predeterminados de los tipos de valor, vea [Valores predeterminados de los tipos de C#](../builtin-types/default-values.md).
 
 ## <a name="simple-types"></a>Tipos simples
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Con el operador [new](../operators/new-operator.md) se llama al constructor sin parámetros del tipo específico y se asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor sin parámetros ha asignado el valor `0` a `myInt`. Para más información sobre los valores que se han asignado llamando a los constructores sin parámetros, consulte [Tabla de valores predeterminados](default-values-table.md).
+Con el operador [new](../operators/new-operator.md) se llama al constructor sin parámetros del tipo específico y se asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor sin parámetros ha asignado el valor `0` a `myInt`. Para obtener más información sobre los valores que se han asignado llamando a los constructores sin parámetros, vea [Valores predeterminados de los tipos de C#](../builtin-types/default-values.md).
 
 Con tipos definidos por el usuario, use [new](../operators/new-operator.md) para invocar al constructor sin parámetros. Por ejemplo, la siguiente instrucción invoca al constructor sin parámetros del struct `Point`:
 

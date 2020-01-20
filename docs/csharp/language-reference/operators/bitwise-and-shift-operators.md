@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345339"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115833"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operadores de desplazamiento y bit a bit (referencia de C#)
 
@@ -60,7 +60,7 @@ También se puede usar el símbolo `~` para declarar finalizadores. Para obtener
 
 ## <a name="left-shift-operator-"></a>Operador de desplazamiento izquierdo \<\<
 
-El operador `<<` desplaza el operando izquierdo a la izquierda el número de bits definido por el operando derecho.
+El operador `<<` desplaza el operando izquierdo a la izquierda el [número de bits definido por el operando derecho](#shift-count-of-the-shift-operators).
 
 La operación de desplazamiento izquierdo descarta los bits de orden superior que están fuera del rango del tipo de resultado y establece las posiciones de bits vacías de orden inferior en cero, como se muestra en el ejemplo siguiente:
 
@@ -74,7 +74,7 @@ Para obtener información sobre cómo el operando derecho del operador `<<` defi
 
 ## <a name="right-shift-operator-"></a>Operador de desplazamiento derecho >>
 
-El operador `>>` desplaza el operando izquierdo a la derecha el número de bits definido por el operando derecho.
+El operador `>>` desplaza el operando izquierdo a la derecha el [número de bits definido por el operando derecho](#shift-count-of-the-shift-operators).
 
 La operación de desplazamiento derecho descarta los bits de orden inferior, como se muestra en el ejemplo siguiente:
 
@@ -169,6 +169,9 @@ En el caso de las expresiones `x << count` y `x >> count`, el recuento de despla
 En el ejemplo siguiente se muestra ese comportamiento:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> Tal y como se muestra en el ejemplo anterior, el resultado de una operación de desplazamiento puede ser distinto de cero incluso si el valor del operando derecho es mayor que el número de bits del operando izquierdo.
 
 ## <a name="enumeration-logical-operators"></a>Operadores lógicos de enumeración
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973014"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163103"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referencia integrados (referencia de C#)
 
@@ -33,7 +33,7 @@ C# tiene un número de tipos de referencia integrados. Tienen palabras clave u o
 
 ## <a name="the-object-type"></a>Tipo object
 
-El tipo `object` es un alias de <xref:System.Object?displayProperty=nameWithType> en .NET. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de <xref:System.Object?displayProperty=nameWithType>. Puede asignar valores de cualquier tipo a las variables de tipo `object`. Cualquier variable `object` puede asignarse a su valor predeterminado con el literal `null`. Cuando una variable de un tipo de valor se convierte en objeto, se dice que se aplica la *conversión boxing*. Cuando una variable de tipo de objeto se convierte en un tipo de valor, se dice que se aplica la *conversión unboxing*. Para obtener más información, vea [Conversión boxing y unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+El tipo `object` es un alias de <xref:System.Object?displayProperty=nameWithType> en .NET. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de <xref:System.Object?displayProperty=nameWithType>. Puede asignar valores de cualquier tipo a las variables de tipo `object`. Cualquier variable `object` puede asignarse a su valor predeterminado con el literal `null`. Cuando una variable de un tipo de valor se convierte en objeto, se dice que se aplica la *conversión boxing*. Cuando una variable de tipo `object` se convierte en un tipo de valor, se dice que se *aplica la conversión unboxing*. Para obtener más información, vea [Conversión boxing y unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
 
 ## <a name="the-string-type"></a>Tipo string
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-El [operador](../operators/member-access-operators.md#indexer-operator-) `[]` puede usarse para acceso de solo lectura a determinados caracteres de una `string`. Los valores válidos comienzan por `0` y deben ser menores que la longitud de la `string`:
+El [operador](../operators/member-access-operators.md#indexer-operator-) `[]` puede usarse para el acceso de solo lectura a determinados caracteres de una cadena. Los valores válidos comienzan por `0` y deben ser menores que la longitud de la cadena:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-De igual manera, el operador `[]` también puede usarse para recorrer en iteración cada carácter en `string`:
+De igual manera, el operador `[]` también puede usarse para recorrer en iteración cada carácter en una cadena:
 
 ```csharp-interactive
 string str = "test";

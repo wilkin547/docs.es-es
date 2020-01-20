@@ -4,16 +4,16 @@ description: Información sobre los tipos de valor de C# que admiten un valor NU
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740970"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964324"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor que admiten valores NULL (referencia de C#)
 
-Un tipo de valor que admite valores NULL `T?` representa todos los valores de su [tipo de valor](../keywords/value-types.md) `T` subyacente y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
+Un tipo de valor `T?` que admite valores NULL representa todos los valores de su [tipo de valor](../keywords/value-types.md) `T` subyacente y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
 
 > [!NOTE]
 > C# 8.0 presenta la característica de tipos de referencia que admiten un valor NULL. Para más información, consulte [Tipos de referencia que admiten un valor NULL](../../nullable-references.md). Los tipos de valor que admiten valores NULL están disponibles a partir de C# 2.
@@ -56,7 +56,7 @@ Si desea asignar un valor de un tipo que admite valores NULL a una variable de t
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-Si desea utilizar el valor [predeterminado](../keywords/default-values-table.md) del tipo de valor subyacente en lugar de `null`, use el método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
+Si desea utilizar el valor [predeterminado](default-values.md) del tipo de valor subyacente en lugar de `null`, use el método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 También puede convertir de forma explícita un tipo de valor que admite valores NULL en uno que no los admite, como se indica en el ejemplo siguiente:
 
@@ -133,7 +133,7 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [¿Qué significa exactamente "elevado"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [¿Qué significa exactamente "elevado"?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

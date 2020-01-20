@@ -4,16 +4,16 @@ description: Uso del operador default para generar el valor predeterminado de un
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712720"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964619"
 ---
 # <a name="default-operator-c-reference"></a>Operador default (Referencia de C#)
 
-El operador `default` genera el [valor predeterminado](../keywords/default-values-table.md) de un tipo. El argumento del operador `default` debe ser el nombre de un tipo o un parámetro de tipo.
+El operador `default` genera el [valor predeterminado](../builtin-types/default-values.md) de un tipo. El argumento del operador `default` debe ser el nombre de un tipo o un parámetro de tipo.
 
 En el ejemplo siguiente se muestra el uso del operador `default`:
 
@@ -44,5 +44,5 @@ Para más información sobre el literal `default`, consulte la [nota de propuest
 
 - [Referencia de C#](../index.md)
 - [Operadores de C#](index.md)
-- [Tabla de valores predeterminados](../keywords/default-values-table.md)
+- [Valores predeterminados de los tipos de C#](../builtin-types/default-values.md)
 - [Elementos genéricos en .NET](../../../standard/generics/index.md)

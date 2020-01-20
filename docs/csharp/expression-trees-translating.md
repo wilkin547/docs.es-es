@@ -4,14 +4,14 @@ description: Obtenga información sobre cómo visitar cada nodo en un árbol de 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036622"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115777"
 ---
-# <a name="translating-expression-trees"></a>Traducción de árboles de expresión
+# <a name="translate-expression-trees"></a>Traslado de árboles de expresión
 
 [Anterior: Generación de expresiones](expression-trees-building.md)
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 Aquí hay gran cantidad de código, pero los conceptos son muy accesibles.
-Este código visita los elementos secundarios en una primera búsqueda de profundidad. Cuando encuentra un nodo constante, el visitante devuelve el valor de la constante. Después de que el visitante visite los dos secundarios, esos elementos secundarios habrán calculado la suma calculada para ese subárbol. El nodo de adición ahora puede calcular la suma.
+Este código visita los elementos secundarios en una primera búsqueda de profundidad. Cuando encuentra un nodo constante, el visitante devuelve el valor de la constante. Tras la visita a los dos elementos secundarios por parte del visitante, ambos elementos habrán obtenido la suma calculada para ese subárbol. El nodo de adición ahora puede calcular la suma.
 Una vez que se visiten todos los nodos en el árbol de expresión, se habrá calculado la suma. Se puede hacer el seguimiento de la ejecución ejecutando el ejemplo en el depurador y realizando el seguimiento de la ejecución.
 
 Vamos a facilitar el seguimiento de cómo se analizan los nodos y cómo se calcula la suma mediante el recorrido del árbol. Esta es una versión actualizada del método agregado que incluye gran cantidad de información de seguimiento:
@@ -192,7 +192,7 @@ Aunque la respuesta final es la misma, el recorrido del árbol es completamente 
 
 ## <a name="learning-more"></a>Obtener más información
 
-En este ejemplo se muestra un pequeño subconjunto del código que se compilaría para recorrer e interpretar los algoritmos representados por un árbol de expresión. Para obtener una descripción completa de todo el trabajo necesario para compilar una biblioteca de propósito general que traduce árboles de expresión a otro lenguaje, lea [esta serie](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/) de Matt Warren. Describe en detalle cómo traducir cualquier código que es posible encontrar en un árbol de expresión.
+En este ejemplo se muestra un pequeño subconjunto del código que se compilaría para recorrer e interpretar los algoritmos representados por un árbol de expresión. Para obtener una descripción completa de todo el trabajo necesario para compilar una biblioteca de propósito general que traduce árboles de expresión a otro lenguaje, lea [esta serie](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) de Matt Warren. Describe en detalle cómo traducir cualquier código que es posible encontrar en un árbol de expresión.
 
 Espero que haya visto la verdadera eficacia de los árboles de expresión.
 Puede examinar un conjunto de código, realizar los cambios que quiera en ese código y ejecutar la versión modificada. Como los árboles de expresión son inmutables, se pueden crear árboles nuevos mediante el uso de los componentes de árboles existentes. Esto minimiza la cantidad de memoria necesaria para crear árboles de expresión modificados.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: cc57bd01c5626c889b5d94eac1e7358cafa4ab10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ffc275c588775fb79da276be904ada90a5a31bad
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447313"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937927"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)
 La herramienta Anotador de seguridad de .NET (SecAnnotate.exe) es una aplicación de línea de comandos que identifica los elementos `SecurityCritical` y `SecuritySafeCritical` de uno o más ensamblados.  
@@ -29,7 +29,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/a`<br /><br /> o<br /><br /> `/showstatistics`|Muestra estadísticas sobre el uso de transparencia en los ensamblados que se van a analizar.|  
 |`/d:` *directory*<br /><br /> o<br /><br /> `/referencedir:` *directory*|Especifica el directorio en el que buscar los ensamblados dependientes durante la anotación.|  
@@ -50,6 +50,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Comentarios  
  Los parámetros y ensamblados también se pueden proporcionar en un archivo de respuesta que se especifica en la línea de comandos y lleva el prefijo de una arroba (@). Cada línea del archivo de respuesta debe contener un nombre de ensamblado o parámetro único.  
   
- Para obtener más información sobre el Anotador de seguridad de .NET, vea la entrada sobre [cómo usar SecAnnotate para analizar los ensamblados y detectar infracciones de transparencia](https://blogs.msdn.microsoft.com/shawnfa/2009/11/18/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example/) en el blog de seguridad de .NET.  
+ Para obtener más información sobre el Anotador de seguridad de .NET, vea la entrada sobre [cómo usar SecAnnotate para analizar los ensamblados y detectar infracciones de transparencia](https://docs.microsoft.com/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) en el blog de seguridad de .NET.  
   
 ## <a name="examples"></a>Ejemplos
