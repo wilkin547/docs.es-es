@@ -17,13 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.custom: seodec18
-ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968253"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711524"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
@@ -139,7 +138,7 @@ El retroceso se produce cuando un patrón de expresión regular contiene [cuanti
   
  El primer patrón de expresión regular, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`, se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -150,7 +149,7 @@ El retroceso se produce cuando un patrón de expresión regular contiene [cuanti
   
  El segundo patrón de expresión regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, emplea una aserción de búsqueda tardía positiva. Se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -170,7 +169,7 @@ El retroceso se produce cuando un patrón de expresión regular contiene [cuanti
   
  El primer patrón de expresión regular, `^(([A-Z]\w*)+\.)*[A-Z]\w*$`, se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`([A-Z]\w*)+\.`|Buscar coincidencias con un carácter alfabético (A-Z) seguido de cero o más caracteres alfabéticos una o más veces, seguidas de un punto. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -180,7 +179,7 @@ El retroceso se produce cuando un patrón de expresión regular contiene [cuanti
   
  El segundo patrón de expresión regular, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, emplea una aserción de búsqueda anticipada positiva. Se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`(?=[A-Z])`|Examinar hacia delante el primer carácter y continuar la búsqueda de coincidencias si es alfabético (A-Z). Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  

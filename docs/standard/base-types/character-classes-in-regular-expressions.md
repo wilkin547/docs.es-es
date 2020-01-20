@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120611"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711459"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de caracteres en expresiones regulares
 
@@ -72,7 +71,7 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
 
 En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen clases de caracteres positivos.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`[aeiou]`|Coincide con todas las vocales.|  
 |`[\p{P}\d]`|Coincide con todos los caracteres de puntuación y de dígitos decimales.|  
@@ -85,7 +84,7 @@ En la tabla siguiente se recogen algunos de los patrones de expresiones regulare
   
  La expresión regular `gr[ae]y\s\S+?[\s|\p{P}]` se define de la siguiente manera:  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`gr`|Coincide con los caracteres literales "gr".|  
 |`[ae]`|Coincide con una "a" o una "e".|  
@@ -100,7 +99,7 @@ En la tabla siguiente se recogen algunos de los patrones de expresiones regulare
   
  La expresión regular `\b[A-Z]\w*\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`[A-Z]`|Coincide con cualquier letra mayúscula de la A a la Z.|  
@@ -135,7 +134,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen grupos de caracteres negativos.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`[^aeiou]`|Coincide con todos los caracteres excepto las vocales.|  
 |`[^\p{P}\d]`|Coincide con todos los caracteres excepto los caracteres de puntuación y de dígitos decimales.|  
@@ -147,7 +146,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  La expresión regular `\bth[^o]\w+\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`th`|Coincide con los caracteres literales "th".|  
@@ -183,7 +182,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  La construcción de expresión regular  
   
- `\p{` *nombre* `}`  
+ `\p{`*nombre* `}`  
   
  coincide con cualquier carácter que pertenezca a una categoría general o bloque con nombre de Unicode, donde *nombre* es la abreviatura de la categoría o el nombre del bloque con nombre. Para obtener una lista de abreviaturas de categorías, consulte la sección [Categorías generales Unicode compatibles](#SupportedUnicodeGeneralCategories) más adelante en este tema. Para obtener una lista de bloques con nombre, consulte la sección [Bloques con nombre compatibles](#SupportedNamedBlocks) más adelante en este tema.  
   
@@ -194,7 +193,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  La expresión regular `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\p{IsGreek}+`|Coincide con uno o varios caracteres griegos.|  
@@ -227,7 +226,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="word-character-w"></a>Carácter de palabra: \w  
  `\w` coincide con cualquier carácter de palabra. Un carácter de palabra es un miembro de alguna de las categorías Unicode enumeradas en la tabla siguiente.  
   
-|Categoría|DESCRIPCIÓN|  
+|Categoría|Descripción|  
 |--------------|-----------------|  
 |Ll|Letra, minúscula|  
 |Lu|Letra, mayúscula|  
@@ -245,7 +244,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se usa el elemento del lenguaje `\w` para buscar coincidencias de caracteres duplicados en una palabra. El ejemplo define un patrón de expresión regular, `(\w)\1`, que se puede interpretar de la siguiente manera.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |(\w)|Coincide con un carácter de palabra. Este es el primer grupo de captura.|  
 |\1|Coincide con el valor de la primera captura.|  
@@ -261,7 +260,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En otras palabras, coincide con cualquier carácter excepto con los que figuran en las categorías Unicode de la tabla siguiente.  
   
-|Categoría|DESCRIPCIÓN|  
+|Categoría|Descripción|  
 |--------------|-----------------|  
 |Ll|Letra, minúscula|  
 |Lu|Letra, mayúscula|  
@@ -279,7 +278,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\W`.  Define un patrón de expresión regular, `\b(\w+)(\W){1,2}`, que coincide con una palabra seguida de uno o dos caracteres que no son de palabra, como un espacio en blanco o un signo de puntuación. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |\b|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |(\w+)|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -294,7 +293,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="whitespace-character-s"></a>Carácter de espacio en blanco: \s  
  `\s` coincide con cualquier carácter de espacio en blanco. Equivale a las secuencias de escape y las categorías Unicode que figuran en la tabla siguiente.  
   
-|Categoría|DESCRIPCIÓN|  
+|Categoría|Descripción|  
 |--------------|-----------------|  
 |`\f`|El carácter de avance de página, \u000C.|  
 |`\n`|El carácter de nueva línea, \u000A.|  
@@ -308,7 +307,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\s`. Define un patrón de expresión regular, `\b\w+(e)?s(\s|$)`, que coincide con una palabra que termina por "s" o "es" seguida de un carácter de espacio en blanco o el final de la cadena de entrada. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |\b|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |\w+|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -327,7 +326,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se ilustra el elemento del lenguaje `\S`. El patrón de expresión regular `\b(\S+)\s?` coincide con cadenas delimitadas por caracteres de espacio en blanco. El segundo elemento del objeto <xref:System.Text.RegularExpressions.GroupCollection> de la coincidencia contiene la cadena coincidente. La expresión regular puede interpretarse como se muestra en la tabla siguiente.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\S+)`|Coincide con caracteres que no son espacio en blanco. Este es el primer grupo de captura.|  
@@ -344,7 +343,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se ilustra el elemento del lenguaje `\d`. Comprueba si una cadena de entrada representa un número de teléfono válido de los Estados Unidos y Canadá. El patrón de expresión regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` se define como se muestra en la tabla siguiente.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`\(?`|Coincide con cero o un carácter "(" literal.|  
@@ -366,7 +365,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se muestra el elemento del lenguaje \D. Comprueba si una cadena, como un número de pieza, consta de la combinación adecuada de caracteres decimales y no decimales. El patrón de expresión regular `^\D\d{1,5}\D*$` se define como se muestra en la tabla siguiente.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`\D`|Coincide con un carácter que no sea un dígito.|  
@@ -381,7 +380,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="supported-unicode-general-categories"></a>Categorías generales Unicode compatibles  
  Unicode define las categorías generales que se muestran en la tabla siguiente. Para obtener más información, consulte las secciones sobre el "formato de archivo UCD" y los "valores de categorías generales" en la [base de datos de caracteres Unicode](https://www.unicode.org/reports/tr44/).  
   
-|Categoría|DESCRIPCIÓN|  
+|Categoría|Descripción|  
 |--------------|-----------------|  
 |`Lu`|Letra, mayúscula|  
 |`Ll`|Letra, minúscula|  
@@ -440,7 +439,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> O bien<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> o bien<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -484,7 +483,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> O bien<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> o bien<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -545,7 +544,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  Una expresión de sustracción de clases de caracteres tiene el formato siguiente:  
   
- `[`*grupo_base* `-[` *grupo_excluido*`]]`  
+ `[` *base_group* `-[` *excluded_group* `]]`  
   
  Los corchetes (`[]`) y el guion (`-`) son obligatorios. El *grupo_base* es un [grupo de caracteres positivos](#PositiveGroup) o un [grupo de caracteres negativos](#NegativeGroup). El componente *grupo_excluido* es otro grupo de caracteres positivos o negativos, u otra expresión de sustracción de clases de caracteres (es decir, pueden anidarse expresiones de sustracción de clases de caracteres).  
   
@@ -559,7 +558,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En el ejemplo siguiente se define una expresión regular, `^[0-9-[2468]]+$`, que coincide con cero y con los dígitos impares de una cadena de entrada.  La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |^|Comienza la búsqueda de coincidencias al principio de la cadena de entrada.|  
 |`[0-9-[2468]]+`|Coincide con una o varias apariciones de cualquier carácter del 0 al 9, salvo con el 2, 4, 6 y 8. En otras palabras, busca una o varias coincidencias con cero o un dígito impar.|  

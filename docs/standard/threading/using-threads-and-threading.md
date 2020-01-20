@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131497"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936841"
 ---
 # <a name="using-threads-and-threading"></a>Uso de subprocesos y subprocesamiento
 
@@ -28,11 +28,13 @@ Un subproceso se crea mediante la creación de una instancia de la clase <xref:S
 
 ## <a name="how-to-stop-a-thread"></a>Procedimiento para detener un subproceso
 
-Para terminar la ejecución de un subproceso, use el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ese método genera una excepción <xref:System.Threading.ThreadAbortException> en el subproceso en el que se invoca. Para obtener más información, vea [Destruir subprocesos](destroying-threads.md).
+Para terminar la ejecución de un subproceso, use <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Proporciona una manera unificada de detener los subprocesos de forma cooperativa. Para más información, consulte [Cancelación de subprocesos administrados](cancellation-in-managed-threads.md).
 
-A partir de .NET Framework 4, se puede usar <xref:System.Threading.CancellationToken?displayProperty=nameWithType> para cancelar un subproceso de forma cooperativa. Para más información, consulte [Cancelación de subprocesos administrados](cancellation-in-managed-threads.md).
+A veces no es posible detener un subproceso de forma cooperativa, ya que ejecuta código de terceros no diseñado para la cancelación cooperativa. En este caso, es posible que desee terminar la ejecución forzosamente. Para terminar la ejecución de un subproceso forzosamente, en .NET Framework puede utilizar el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ese método genera una excepción <xref:System.Threading.ThreadAbortException> en el subproceso en el que se invoca. Para obtener más información, vea [Destruir subprocesos](destroying-threads.md). El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> no se admite en .NET Core. Si necesita terminar la ejecución de código de terceros de forma forzada en .NET Core, ejecútelo en el proceso independiente y use <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
-Use el método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para hacer que el subproceso que realiza la llamada espere a la finalización del subproceso en el que se invoca el método.
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> no está disponible antes de .NET Framework 4. Para detener un subproceso en versiones anteriores de .NET Framework, debe implementar manualmente la cancelación cooperativa mediante las técnicas de sincronización de subprocesos. Por ejemplo, puede crear el campo booleano volatile `shouldStop` y usarlo para solicitar que se detenga el código ejecutado por el subproceso. Para más información, vea [volatile](../../csharp/language-reference/keywords/volatile.md) en Referencia de C# y <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+
+Use el método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para hacer que el subproceso que realiza la llamada espere a la finalización del subproceso que se está deteniendo.
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>Procedimiento para pausar o interrumpir un subproceso
 
@@ -42,7 +44,7 @@ El método <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 
 
 En la tabla siguiente se muestran algunas de las propiedades de <xref:System.Threading.Thread>:  
   
-|Propiedad.|DESCRIPCIÓN|  
+|Propiedad.|Descripción|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Devuelve `true` si el subproceso se ha iniciado y todavía no ha terminado con normalidad o se ha anulado.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtiene o establece un valor booleano que indica si un subproceso es un subproceso en segundo plano. Los subprocesos en segundo plano son como los subprocesos en primer plano, con la diferencia de que un subproceso en segundo plano no impide que un proceso se detenga. Una vez que se hayan detenido todos los subprocesos en primer plano que pertenecen a un proceso, Common Language Runtime finaliza el proceso mediante una llamada al método <xref:System.Threading.Thread.Abort%2A> en los subprocesos en segundo plano que continúan activos. Para obtener más información, vea [Subprocesos de primer y segundo plano](foreground-and-background-threads.md).|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.custom: seodec18
-ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120586"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711433"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  
@@ -36,7 +35,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
 ## <a name="character-escapes-in-net"></a>Escapes de carácter en .NET  
  En la tabla siguiente se enumeran los escapes de caracteres admitidos en las expresiones regulares de .NET.  
   
-|Carácter o secuencia|DESCRIPCIÓN|  
+|Carácter o secuencia|Descripción|  
 |---------------------------|-----------------|  
 |Todos los caracteres excepto los siguientes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Los caracteres que no aparecen en la columna **Carácter o secuencia** no tienen ningún significado especial en las expresiones regulares, sino que equivalen a sí mismos.<br /><br /> Los caracteres incluidos en la columna **Carácter o secuencia** son elementos del lenguaje especial de expresiones regulares. Para que coincidan en una expresión regular, deben escribirse entre secuencias de escape o incluirse en un [grupo de caracteres positivos](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por ejemplo, las expresiones regulares `\$\d+` o `[$]\d+` coinciden con "$1200".|  
 |`\a`|Coincide con un carácter de campana (alarma), `\u0007`.|  
@@ -61,7 +60,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
   
  La expresión regular `\G(.+)[\t|\u007c](.+)\r?\n` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\G`|Comienza la búsqueda de coincidencias donde finalizó la última coincidencia.|  
 |`(.+)`|Buscar cualquier carácter coincidente una o más veces. Este es el primer grupo de captura.|  

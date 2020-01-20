@@ -2,12 +2,12 @@
 title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737078"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116539"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -141,7 +141,7 @@ Por lo tanto, si usa el comando docker-compose, puede fijar como objetivo los si
 
 #### <a name="development-environments"></a>Entornos de desarrollo
 
-Al desarrollar aplicaciones, es importante poder ejecutar una aplicación en un entorno de desarrollo aislado. Puede usar el comando de la CLI docker-compose para crear ese entorno o usar Visual Studio, que usa docker-compose en segundo plano.
+Al desarrollar aplicaciones, es importante poder ejecutar una aplicación en un entorno de desarrollo aislado. Puede usar el comando de la CLI docker-compose para crear ese entorno o Visual Studio, que usa docker-compose en segundo plano.
 
 El archivo docker-compose.yml le permite configurar y documentar todas las dependencias de servicio de la aplicación (otros servicios, la caché, bases de datos, colas, etc.). Con el comando de la CLI docker-compose puede crear e iniciar uno o varios contenedores para cada dependencia con un solo comando (docker-compose up).
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-compose espera que cada línea de los archivos .env tenga el formato \<variable\>=\<valor\>.
 
-Tenga en cuenta que los valores establecidos en el entorno en tiempo de ejecución siempre invalidan los valores definidos en el archivo .env. De forma similar, los valores que se pasan a través de argumentos de comando de la línea de comandos también invalidan los valores predeterminados establecidos en el archivo .env.
+Los valores establecidos en el entorno en tiempo de ejecución siempre invalidan los valores definidos en el archivo .env. De forma similar, los valores que se pasan a través de argumentos de la línea de comandos también invalidan los valores predeterminados establecidos en el archivo .env.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
@@ -470,7 +470,7 @@ Para un inicio más rápido, las imágenes en tiempo de ejecución también conf
 #### <a name="additional-resources"></a>Recursos adicionales
 
 - **Building Optimized Docker Images with ASP.NET Core** (Compilación de imágenes de Docker optimizadas con ASP.NET Core)  
-  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+  <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
 - **Creación de imágenes de Docker para aplicaciones de .NET Core**  
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
