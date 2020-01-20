@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714662"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964744"
 ---
 # <a name="using-structs-c-programming-guide"></a>Uso de estructuras (Guía de programación de C#)
 
@@ -21,7 +21,7 @@ Definir un constructor sin parámetros para una estructura es un error. como tam
 
 Cuando se crea un objeto de struct con el operador [new](../../language-reference/operators/new-operator.md), el objeto se crea y se llama al constructor apropiado en función de cuál sea la [firma del constructor](constructors.md#constructor-syntax). A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` . En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz. Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen. Esto abarca la imposibilidad de obtener o establecer valores a través de propiedades.
 
-Si se crea una instancia de un objeto de estructura usando el constructor sin parámetros, todos los miembros se asignarán según sus [valores predeterminados](../../language-reference/keywords/default-values-table.md).
+Si se crea una instancia de un objeto de estructura usando el constructor sin parámetros, todos los miembros se asignarán según sus [valores predeterminados](../../language-reference/builtin-types/default-values.md).
 
 Al escribir un constructor con parámetros de una estructura, todos los miembros se deben inicializar explícitamente o, de lo contrario, uno o varios de ellos permanecerán sin asignar y la estructura no se podrá usar, lo que generará el error de compilador [CS0171](../../misc/cs0171.md).
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 13a1ca2d85be0c61b9d0f09c0c5cb670b49f5625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75703226"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937504"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Clases genéricas (Guía de programación de C#)
 Las clases genéricas encapsulan operaciones que no son específicas de un tipo de datos determinado. El uso más común de las clases genéricas es con colecciones como listas vinculadas, tablas hash, pilas, colas y árboles, entre otros. Las operaciones como la adición y eliminación de elementos de la colección se realizan básicamente de la misma manera independientemente del tipo de datos que se almacenan.  
@@ -70,5 +70,5 @@ Las clases genéricas encapsulan operaciones que no son específicas de un tipo 
 - <xref:System.Collections.Generic>
 - [Guía de programación de C#](../index.md)
 - [Genéricos](./index.md)
-- [Guardar el estado de los enumeradores](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
-- [Un puzle de herencia, parte uno](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+- [Guardar el estado de los enumeradores](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
+- [Un puzle de herencia, parte uno](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)
