@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036425"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345363"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
@@ -51,13 +51,13 @@ El operador de incremento se admite en dos formas: el operador de incremento pos
 
 ### <a name="postfix-increment-operator"></a>Operador de incremento de postfijo
 
-El resultado de `x++` es el valor de `x` *antes* de la operación, tal y como se muestra en el ejemplo siguiente:
+El resultado de `x++` es el valor de `x`*antes* de la operación, tal y como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>Operador de incremento prefijo
 
-El resultado de `++x` es el valor de `x` *después* de la operación, tal y como se muestra en el ejemplo siguiente:
+El resultado de `++x` es el valor de `x`*después* de la operación, tal y como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ El operador de decremento se admite en dos formas: el operador de decremento pos
 
 ### <a name="postfix-decrement-operator"></a>Operador de decremento de postfijo
 
-El resultado de `x--` es el valor de `x` *antes* de la operación, como se muestra en el ejemplo siguiente:
+El resultado de `x--` es el valor de `x`*antes* de la operación, tal y como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>Operador de decremento de prefijo
 
-El resultado de `--x` es el valor de `x` *después* de la operación, tal y como se muestra en el ejemplo siguiente:
+El resultado de `--x` es el valor de `x`*después* de la operación, tal y como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -187,7 +187,7 @@ A causa de las [promociones numéricas](~/_csharplang/spec/expressions.md#numeri
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-Los operadores `+=` y `-=` también se usan para suscribirse y cancelar la suscripción a un [evento](../keywords/event.md), respectivamente. Para obtener más información, vea [Procedimientos para suscribir y cancelar la suscripción a eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Los operadores `+=` y `-=` también se usan para suscribirse y cancelar la suscripción a un [evento](../keywords/event.md), respectivamente. Para obtener más información, vea [Procedimiento para suscribir y cancelar la suscripción a eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>Prioridad y asociatividad de los operadores
 

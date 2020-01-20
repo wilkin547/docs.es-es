@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423196"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635358"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 
@@ -106,7 +106,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
          No es posible crear propiedades indizadas propias. La característica solo admite el uso de las propiedades indizadas existentes.
 
-         Para obtener más información, vea [Cómo: Uso de propiedades indexadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Para más información, consulte [Procedimiento para usar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
 
 2. Agregue el código siguiente al final de `DisplayInExcel` para ajustar los anchos de columna a fin de adaptarlos al contenido.
 
@@ -203,7 +203,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 - [Uso de tipo dinámico](../types/using-type-dynamic.md)
 - [Expresiones lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Expresiones lambda (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Procedimiento para usar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office en Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Tutorial: Inserción de tipos de ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
 - [Tutorial: Creación del primer complemento VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar un único elemento secundario (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 5f2f675f5ce4914124f62981a2591441260b6976
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592632"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347476"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Procedimiento para recuperar un único elemento secundario (LINQ to XML) (C#)
 En este tema se explica cómo recuperar un único elemento secundario, dado el nombre del elemento secundario. Si conoce el nombre del elemento secundario y que solo hay un elemento que tiene ese nombre, puede resultar cómodo recuperar solamente un elemento, en lugar de una recopilación.  

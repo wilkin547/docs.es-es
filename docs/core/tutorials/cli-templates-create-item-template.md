@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926149"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340380"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Creación de una plantilla de elemento
 
@@ -33,7 +33,7 @@ En esta parte de la serie, aprenderá a:
 
   En el artículo de referencia se explican los aspectos básicos de las plantillas y cómo se unen. Parte de esta información se repetirá en este tutorial.
 
-* Abrir un terminal y navegar a la carpeta _working\templates\\_ .
+* Abra un terminal y vaya a la carpeta _working\templates_.
 
 ## <a name="create-the-required-folders"></a>Creación de las carpetas necesarias
 
@@ -54,7 +54,7 @@ parent_folder
 
 Una plantilla de elemento es un tipo de plantilla específico que contiene uno o varios archivos. Estos tipos de plantillas son útiles cuando se quiere generar algún contenido como un archivo de solución, código o configuración. En este ejemplo, creará una clase que agrega un método de extensión al tipo de cadena.
 
-En el terminal, vaya a la carpeta _working\templates\\_ y cree una subcarpeta denominada _extensions_. Entre a la carpeta.
+En el terminal, vaya a la carpeta _working\templates_ y cree una subcarpeta llamada _extensions_. Entre a la carpeta.
 
 ```console
 working
@@ -85,7 +85,7 @@ Ahora que creó el contenido de la plantilla, debe crear su configuración en la
 
 ## <a name="create-the-template-config"></a>Creación de la configuración de una plantilla
 
-En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\extensions\\_ .
+En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\extensions_.
 
 Cuando se crea una plantilla, todos los archivos y las carpetas de la carpeta de la plantilla se incluyen como parte de la plantilla, a excepción de la carpeta de configuración especial. Esta carpeta de configuración se denomina _.template.config_.
 

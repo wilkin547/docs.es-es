@@ -1,16 +1,15 @@
 ---
 title: 'Valores devueltos de Main(): Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884402"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712044"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
 
@@ -98,4 +97,4 @@ Cuando el punto de entrada de la aplicación devuelve `Task` o `Task<int>`, el c
 - [Guía de programación de C#](../index.md)
 - [Referencia de C#](../index.md)
 - [Main() y argumentos de la línea de comandos](index.md)
-- [Cómo: Mostrar argumentos de la línea de comandos](./how-to-display-command-line-arguments.md)
+- [Procedimiento para mostrar argumentos de la línea de comandos](./how-to-display-command-line-arguments.md)

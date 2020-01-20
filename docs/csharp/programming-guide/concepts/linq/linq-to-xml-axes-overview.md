@@ -2,12 +2,12 @@
 title: Información general sobre los ejes de LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: b984232f03815ac78b792af2289f15eeb0578cd5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418196"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635527"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Información general sobre los ejes de LINQ to XML (C#)
 Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, puede realizar consultas sobre él para encontrar elementos y atributos, así como para recuperar sus valores. Las colecciones se recuperan mediante los *métodos de eje*, también denominados *ejes*. Algunos de los ejes son métodos de las clases <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument>, que devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601>. Algunos de los métodos Axes son métodos de extensión de la clase <xref:System.Xml.Linq.Extensions>. Los ejes que se han implementado como métodos de extensión trabajan colecciones y devuelven colecciones.  
@@ -16,14 +16,14 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
   
  Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
   
- Por diversas razones, las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y para transformarlos. Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] trabajan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601> y los ejes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
+ Por diversas razones, las consultas LINK ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y transformarlos. Las consultas LINQ operan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601>, y los ejes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] devuelven <xref:System.Collections.Generic.IEnumerable%601> de colecciones <xref:System.Xml.Linq.XElement>, y <xref:System.Collections.Generic.IEnumerable%601> de colecciones <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
   
  A parte de los métodos de ejes que permiten recuperar colecciones de elementos y atributos, existen métodos de ejes que le permiten iterar por un árbol con gran detalle. Por ejemplo, en vez de tratar directamente con los elementos y los atributos, podría trabajar con los nodos del árbol. Los nodos tienen un nivel de granularidad mayor que los elementos y atributos. Si trabaja con nodos, podrá examinar comentarios XML, nodos de texto, instrucciones de procesamiento, etc. Esta funcionalidad resultaría interesante, por ejemplo, para una persona que estuviese escribiendo un procesador de textos y quisiera guardar los documentos en formato XML. No obstante, la mayoría de programadores en XML se centran más en los elementos, los atributos y sus valores.  
   
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>Métodos para recuperar una colección de elementos  
  A continuación encontrará un resumen de los métodos de la clase <xref:System.Xml.Linq.XElement> (o de sus clases base) a los que podrá pasar un <xref:System.Xml.Linq.XElement> para devolver una colección de elementos.  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores que tengan el <xref:System.Xml.Linq.XName> especificado.|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes que tengan el <xref:System.Xml.Linq.XName> especificado.|  
@@ -36,21 +36,21 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
 ## <a name="method-for-retrieving-a-single-element"></a>Método para recuperar un único elemento  
  El siguiente método recupera un único elemento secundario a partir del objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Devuelve el objeto del primer elemento <xref:System.Xml.Linq.XElement> secundario que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Método para recuperar una colección de atributos  
  El siguiente método recupera atributos a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> de todos los atributos.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Método para recuperar un único atributo  
  El siguiente método recupera un único atributo a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   

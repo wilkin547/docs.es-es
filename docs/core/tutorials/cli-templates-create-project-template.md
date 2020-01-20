@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318278"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340364"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Creación de una plantilla de proyecto
 
@@ -29,13 +29,13 @@ En esta parte de la serie, aprenderá a:
 ## <a name="prerequisites"></a>Requisitos previos
 
 * Complete la [parte 1](cli-templates-create-item-template.md) de esta serie de tutoriales.
-* Abrir un terminal y navegar a la carpeta _working\templates\\_ .
+* Abra un terminal y vaya a la carpeta _working\templates_.
 
 ## <a name="create-a-project-template"></a>Creación de una plantilla de proyecto
 
 Las plantillas de proyecto generan proyectos listos para ejecutarse que facilita a los usuarios empezar a trabajar con un espacio de trabajo de código. .NET Core incluye algunas plantillas de proyecto, como una aplicación de consola o una biblioteca de clases. En este ejemplo, creará un proyecto de consola nuevo que habilita C# 8.0 y genera un punto de entrada `async main`.
 
-En el terminal, vaya a la carpeta _working\templates\\_ y cree una subcarpeta denominada _consoleasync_. Entre a la subcarpeta y ejecute `dotnet new console` para generar la aplicación de consola estándar. Para crear una plantilla nueva, tendrá que editar los archivos que genere esta plantilla.
+En el terminal, vaya a la carpeta _working\templates_ y cree una subcarpeta denominada _consoleasync_. Entre a la subcarpeta y ejecute `dotnet new console` para generar la aplicación de consola estándar. Para crear una plantilla nueva, tendrá que editar los archivos que genere esta plantilla.
 
 ```console
 working
@@ -98,7 +98,7 @@ Ahora que creó el contenido de la plantilla, debe crear su configuración en la
 
 ## <a name="create-the-template-config"></a>Creación de la configuración de una plantilla
 
-En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\consoleasync\\_ .
+En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\consoleasync_.
 
 Cuando se crea una plantilla, todos los archivos y las carpetas de la carpeta de la plantilla se incluyen como parte de la plantilla, a excepción de la carpeta de configuración especial. Esta carpeta de configuración se denomina _.template.config_.
 

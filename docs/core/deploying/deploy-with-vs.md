@@ -5,13 +5,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.custom: vs-dotnet
+ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428897"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740842"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -75,7 +75,7 @@ La implementación de una implementación dependiente de la plataforma con una o
 
 1. Si `Newtonsoft.Json` ya está instalado en el sistema, agréguelo al proyecto seleccionando el proyecto en el panel derecho de la pestaña **Administrar paquetes para la solución**.
 
-Tenga en cuenta que una implementación dependiente de la plataforma con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
+Una implementación dependiente del marco con dependencias de terceros solo es tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
 ## <a name="simpleSelf"></a> Implementación independiente sin dependencias de terceros
 
@@ -94,7 +94,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
 1. Determine si quiere usar el modo de globalización invariable.
 
-   Especialmente si la aplicación es para Linux, puede reducir el tamaño total de la implementación si aprovecha las ventajas del [modo de globalización invariable](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). El modo de globalización invariable es útil para aquellas aplicaciones que no son globales y que pueden usar las convenciones de formato, las convenciones de mayúsculas y minúsculas y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture).
+   Especialmente si la aplicación es para Linux, puede reducir el tamaño total de la implementación si aprovecha las ventajas del [modo de globalización invariable](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md). El modo de globalización invariable es útil para aquellas aplicaciones que no son globales y que pueden usar las convenciones de formato, las convenciones de mayúsculas y minúsculas y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture).
 
    Para habilitar el modo invariable, haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Editar SCD.csproj** o **Editar SCD.vbproj**. Luego agregue las siguientes líneas resaltadas al archivo:
 
@@ -120,7 +120,7 @@ Para publicar la aplicación desde Visual Studio, siga estos pasos:
 
    1. Haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Editar SCD.csproj**.
 
-   1. Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo *csproj* que defina las plataformas a las que se destina la aplicación y especifique el identificador en tiempo de ejecución (RID) de cada una. Tenga en cuenta que también debe agregar un punto y coma para separar los RID. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md).
+   1. Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo *csproj* que defina las plataformas a las que se destina la aplicación y especifique el identificador en tiempo de ejecución (RID) de cada una. También debe agregar un punto y coma para separar los RID. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md).
 
    Por ejemplo, el ejemplo siguiente indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.11 de 64 bits.
 
@@ -130,7 +130,7 @@ Para publicar la aplicación desde Visual Studio, siga estos pasos:
    </PropertyGroup>
    ```
 
-   Tenga en cuenta que el elemento `<RuntimeIdentifiers>` puede ir en cualquier `<PropertyGroup>` que tenga en el archivo *csproj*. Más adelante en esta sección aparece un ejemplo completo del archivo *csproj*.
+   El elemento `<RuntimeIdentifiers>` puede ir en cualquier `<PropertyGroup>` que tenga en el archivo *csproj*. Más adelante en esta sección aparece un ejemplo completo del archivo *csproj*.
 
 1. Publique la aplicación.
 
@@ -158,7 +158,7 @@ Para publicar la aplicación desde Visual Studio, siga estos pasos:
 
          1. Siga los pasos anteriores de nuevo para crear un perfil para la plataforma `osx.10.11-x64`. La **Ubicación de destino** es *bin\Release\PublishOutput\osx.10.11-x64* y el **Tiempo de ejecución de destino** es `osx.10.11-x64`. El nombre que Visual Studio asigna a este perfil es **FolderProfile2**.
 
-      Tenga en cuenta que cada ubicación de destino contiene el conjunto completo de archivos (los archivos de aplicación y todos los archivos de .NET Core) necesarios para iniciar la aplicación.
+      Cada ubicación de destino contiene el conjunto completo de archivos (los archivos de aplicación y todos los archivos de .NET Core) necesarios para iniciar la aplicación.
 
 Junto con los archivos de la aplicación, el proceso de publicación emite un archivo de base de datos de programa (.pdb) que contiene información de depuración sobre la aplicación. El archivo es útil principalmente para depurar excepciones. Puede decidir no empaquetarlo con los archivos de la aplicación. Pero se debe guardar en caso de que se quiera depurar la compilación de versión de la aplicación.
 
@@ -194,7 +194,7 @@ Haga lo siguiente para cada plataforma que sea destino de la aplicación:
 
    Si solo se va a publicar en una plataforma, se puede aceptar el valor predeterminado del cuadro de texto **Elegir una carpeta**; así, se publica la implementación dependiente del marco de la aplicación en el directorio *\<directorio-del-proyecto>\bin\Release\netcoreapp2.1\publish*.
 
-   Si va a publicar en más de una plataforma, anexe una cadena que identifique a la plataforma de destino. Por ejemplo, si anexa la cadena "linux" a la ruta de acceso de archivo, Visual Studio publica la implementación dependiente del marco de trabajo de la aplicación en el directorio *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux*.
+   Si va a publicar en más de una plataforma, anexe una cadena que identifique a la plataforma de destino. Por ejemplo, si anexa la cadena "linux" a la ruta de acceso de archivo, Visual Studio publica la implementación dependiente del marco de la aplicación en el directorio *\<directorio-del-proyecto>\bin\Release\netcoreapp2.1\publish\linux*.
 
 1. Para crear el perfil, seleccione el icono de lista desplegable situado junto al botón **Publicar** y luego **Crear perfil**. Después, seleccione el botón **Crear perfil** para crear el perfil.
 
@@ -222,7 +222,7 @@ Ha configurado los perfiles y ahora está listo para publicar la aplicación. Pa
 
    2. Seleccione el perfil que quiere publicar y luego **Publicar**. Realice este procedimiento para cada perfil que se vaya a publicar.
 
-   Tenga en cuenta que cada ubicación de destino (en el caso de nuestro ejemplo, bin\release\netcoreapp2.1\publish\\*profile-name* contiene el conjunto completo de archivos (los archivos de aplicación y todos los archivos de .NET Core) necesarios para iniciar la aplicación.
+   Cada ubicación de destino (en el caso de nuestro ejemplo, bin\release\netcoreapp2.1\publish\\*profile-name* contiene el conjunto completo de archivos (los archivos de aplicación y todos los archivos de .NET Core) necesarios para iniciar la aplicación.
 
 Junto con los archivos de la aplicación, el proceso de publicación emite un archivo de base de datos de programa (.pdb) que contiene información de depuración sobre la aplicación. El archivo es útil principalmente para depurar excepciones. Puede decidir no empaquetarlo con los archivos de la aplicación. Pero se debe guardar en caso de que se quiera depurar la compilación de versión de la aplicación.
 
@@ -307,7 +307,7 @@ A continuación se muestra el archivo *csproj* completo de este proyecto:
 
 Al implementar la aplicación, los archivos de aplicación también contienen las dependencias de terceros usadas en la aplicación. No se requieren las bibliotecas de terceros en el sistema en el que se ejecuta la aplicación.
 
-Tenga en cuenta que solo puede implementar una implementación autocontenida con una biblioteca de terceros en plataformas compatibles con esa biblioteca. Esto es similar a tener dependencias de terceros con dependencias nativas en la implementación dependiente de la plataforma, donde las dependencias nativas no existirán en la plataforma de destino a menos que se hayan instalado allí previamente.
+Solo puede implementar una implementación autocontenida con una biblioteca de terceros en plataformas compatibles con esa biblioteca. Esto es similar a tener dependencias de terceros con dependencias nativas en la implementación dependiente de la plataforma, donde las dependencias nativas no existirán en la plataforma de destino a menos que se hayan instalado allí previamente.
 
 ## <a name="see-also"></a>Vea también
 

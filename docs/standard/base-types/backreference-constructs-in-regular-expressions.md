@@ -12,13 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.custom: seodec18
-ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140535"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711537"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 
@@ -51,7 +50,7 @@ Si la ambigüedad constituye un problema, puede usar la notación `\k<`*nombre*`
 
 En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(\w)\1`, que consta de los siguientes elementos.
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |`(\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|
 |`\1`|Coincide con el siguiente carácter que sea igual que el valor del primer grupo de captura.|
@@ -73,7 +72,7 @@ donde *nombre* es el nombre de un grupo de captura definido en el patrón de exp
 
 En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(?<char>\w)\k<char>`, que consta de los siguientes elementos.
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |`(?<char>\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna a un grupo de captura denominado `char`.|
 |`\k<char>`|Coincide con el siguiente carácter que sea igual que el valor del grupo de captura `char`.|
@@ -104,7 +103,7 @@ Una referencia inversa constituye la definición más reciente de un grupo (la d
 
 En el ejemplo siguiente, se incluye un patrón de expresión regular, `(?<1>a)(?<1>\1b)*`, que redefine el grupo con nombre \1. En la tabla siguiente, se describe cada patrón de la expresión regular.
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`(?<1>a)`|Coincide con el carácter "a" y asigna el resultado al grupo de captura denominado `1`.|
 |`(?<1>\1b)*`|Coincide con ninguna o más apariciones del grupo denominado `1` junto con una "b" y asigna el resultado al grupo de captura denominado `1`.|
@@ -124,7 +123,7 @@ En este ejemplo, `*` es un cuantificador de bucle: se evalúa repetidas veces ha
 
 Si un grupo no ha capturado ninguna subcadena, no se define una referencia inversa a ese grupo y no coincide nunca. Así lo ilustra el patrón de expresión regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` que se define de la siguiente forma:
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|
 |`(\p{Lu}{2})`|Coincide con dos letras mayúsculas. Este es el primer grupo de captura.|

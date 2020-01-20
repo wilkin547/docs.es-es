@@ -2,12 +2,12 @@
 title: Construcción funcional (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486042"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635761"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Construcción funcional (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona una manera eficaz de crear elementos XML denominada *construcción funcional*. La construcción funcional es la capacidad de crear un árbol XML en una sola instrucción.  
@@ -18,7 +18,7 @@ ms.locfileid: "66486042"
   
 - El constructor <xref:System.Xml.Linq.XElement> toma una matriz de `params` del tipo <xref:System.Object>, de forma que puede pasar cualquier número de objetos al constructor. Esto permite crear un elemento que tiene un contenido complejo.  
   
-- Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Esto es importante porque le permite pasar los resultados de una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] al constructor.  
+- Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Esto es importante porque le permite pasar los resultados de una consulta LINQ al constructor.  
   
  Estas características permiten escribir código para crear un árbol XML. A continuación se muestra un ejemplo:  
   
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Estas características también permiten escribir código que usa los resultados de las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] cuando crea un árbol XML, de la siguiente manera:  
+ Estas características también permiten escribir código que usa los resultados de las consultas LINQ cuando crea un árbol XML, de la siguiente manera:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

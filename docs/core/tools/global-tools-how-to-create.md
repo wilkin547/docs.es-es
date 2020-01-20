@@ -4,12 +4,12 @@ description: Se describe cómo crear una herramienta global. La herramienta glob
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117446"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343519"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creación de una herramienta global de .NET Core mediante la CLI de .NET Core
 
@@ -115,7 +115,7 @@ static void ShowBot(string message)
 
 ### <a name="test-the-tool"></a>Probar la herramienta
 
-Ejecute el proyecto y observe la salida. Pruebe estas variaciones de la línea de comandos para ver resultados diferentes:
+Ejecute el proyecto y observe la salida. Pruebe estas variaciones en la línea de comandos para ver resultados diferentes:
 
 ```dotnetcli
 dotnet run
@@ -125,7 +125,7 @@ dotnet run -- hello from the bot
 
 Todos los argumentos después del delimitador `--` se pasan a la aplicación.
 
-## <a name="setup-the-global-tool"></a>Configurar la herramienta global
+## <a name="set-up-the-global-tool"></a>Configuración de la herramienta global
 
 Antes de que pueda empaquetar y distribuir la aplicación como una herramienta global, debe modificar el archivo de proyecto. Abra el archivo `botsay.csproj` y agregue tres nuevos nodos XML al nodo `<Project><PropertyGroup>`:
 

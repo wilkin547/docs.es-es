@@ -4,14 +4,12 @@ description: ML.NET ofrece la posibilidad de agregar aprendizaje automático en 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976735"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740084"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
@@ -32,7 +30,7 @@ Algunos ejemplos del tipo de predicciones que puede hacer con ML.NET:
 |Detección de anomalías|Detecte transacciones bancarias fraudulentas. |
 |Recomendaciones|Sugiera productos que los compradores en línea pueden comprar, en función de sus compras anteriores.|
 |Series temporales y datos secuenciales|Haga una previsión del tiempo y de las ventas de productos|
-|Clasificación de imágenes|Clasifique las patologías de imágenes médicas|
+|Clasificación de la imagen|Clasifique las patologías de imágenes médicas|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
@@ -214,7 +212,7 @@ Una vez que se han creado los objetos en la canalización, se pueden usar datos 
 
 Una llamada a `Fit()` usa los datos de entrenamiento de entrada para calcular los parámetros del modelo. Esto se conoce como entrenar el modelo. Recuerde que el modelo de regresión lineal anterior tenía dos parámetros de modelo: **sesgo** y **peso**. Después de la llamada de `Fit()`, se conocen los valores de los parámetros. La mayoría de los modelos tendrá muchos más parámetros que esto.
 
-Puede obtener más información acerca del entrenamiento del modelo en [Cómo entrenar el modelo](./how-to-guides/train-machine-learning-model-ml-net.md)
+Puede obtener más información acerca del entrenamiento del modelo en [Cómo entrenar el modelo](./how-to-guides/train-machine-learning-model-ml-net.md).
 
 El objeto del modelo resultante implementa la interfaz <xref:Microsoft.ML.ITransformer>. Es decir, el modelo transforma datos de entrada en predicciones.
 
@@ -242,7 +240,7 @@ Cada transformación en la canalización tiene un esquema de entrada (nombres, t
 
 Si el esquema de salida de una transformación en la canalización no coincide con el esquema de entrada de la siguiente transformación, ML.NET producirá una excepción.
 
-Un objeto de vista de datos tiene columnas y filas. Cada columna tiene un nombre, un tipo y una longitud. Por ejemplo: las columnas de entrada en el ejemplo de precios de vivienda son **Tamaño** y **Precio**. Ambas son tipos y cantidades escalares, en lugar de vectores.
+Un objeto de vista de datos tiene columnas y filas. Cada columna tiene un nombre, un tipo y una longitud. Por ejemplo, las columnas de entrada en el ejemplo de precios de vivienda son **Tamaño** y **Precio**. Ambas son tipos y cantidades escalares, en lugar de vectores.
 
    ![Ejemplo de vista de datos de ML.NET con datos de predicción de precios de la vivienda](./media/ml-net-dataview.png)
 

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para realizar transformaciones de streaming de texto en XML (C#)
+title: Procedimiento para efectuar transformaciones en streaming de texto en XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 6dc48a7342bbeedb79e8e7f4a9270899be336f91
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851024"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345795"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procedimiento para realizar transformaciones de streaming de texto en XML (C#)
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procedimiento para efectuar transformaciones en streaming de texto en XML (C#)
 
 Un enfoque del procesamiento de un archivo de texto es escribir un método de extensión que transmita el archivo de texto por secuencias de línea en línea mediante la construcción `yield return`. Después, puede escribir una consulta LINQ que procese el archivo de texto de forma aplazada y lenta. Si después usa <xref:System.Xml.Linq.XStreamingElement> para transmitir el resultado, puede crear una transformación del archivo de texto al XML usando una cantidad mínima de memoria, independientemente del tamaño del archivo de texto de origen.
 

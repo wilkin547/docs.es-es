@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929076"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708209"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -58,7 +58,7 @@ Este CLR se crea a partir del mismo código base que el CLR. Originalmente, Core
 
 Biblioteca de clases base (BCL) de .NET Core
 
-Un conjunto de bibliotecas que conforman los espacios de nombres de System.* (y hasta cierto punto Microsoft.*). BCL es un marco de nivel inferior de uso general donde se compilan marcos de trabajo de la aplicación de nivel superior, como ASP.NET Core. El código fuente de la BCL de .NET Core se encuentra en el [repositorio CoreFX](https://github.com/dotnet/corefx). En cambio, la mayoría de las API de .NET Core también están disponibles en .NET Framework, por lo que puede considerar CoreFX como una bifurcación de la BCL de .NET Framework.
+Un conjunto de bibliotecas que conforman los espacios de nombres de System.\* (y hasta cierto punto Microsoft.\*). BCL es un marco de nivel inferior de uso general donde se compilan marcos de trabajo de la aplicación de nivel superior, como ASP.NET Core. El código fuente de la BCL de .NET Core se encuentra en el [repositorio del entorno de ejecución de .NET Core](https://github.com/dotnet/runtime). En cambio, la mayoría de las API de .NET Core también están disponibles en .NET Framework, por lo que puede considerar CoreFX como una bifurcación de la BCL de .NET Framework.
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,7 +66,7 @@ Entorno de ejecución .NET Core.
 
 A diferencia de CLR o CoreCLR, CoreRT no es una máquina virtual, lo que significa que no incluye las funciones para generar y ejecutar código sobre la marcha porque no incluye un [JIT](#jit). En cambio, incluye [GC](#gc), reflexión y capacidad de identificación del tipo en tiempo de ejecución (RTTI). Con todo, su sistema de tipos está diseñado para que no sean necesarios los metadatos para la reflexión. Esto permite tener una cadena de herramientas de [AOT](#aot) que puede vincular metadatos superfluos y (más importante) identificar código que no usa la aplicación. CoreRT está en desarrollo.
 
-Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (Introducción a .NET Native y CoreRT).
+Consulte [Introducción a .NET Native u CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>multiplataforma
 
@@ -157,7 +157,7 @@ El término que engloba [.NET Standard](#net-standard) y todas las cargas de tra
 
 Consulte la [Guía de la plataforma .NET](index.md).
 
-## <a name="net-core"></a>Núcleo de .NET 
+## <a name="net-core"></a>.NET Core 
 
 Una implementación multiplataforma, de alto rendimiento y de código abierto de .NET. Incluye Core Common Language Runtime (CoreCLR), el entorno de ejecución AOT de Core (CoreRT, en desarrollo), la biblioteca de clases base de Core y el SDK de Core.
 
@@ -269,7 +269,7 @@ Vea [Plataformas de destino](frameworks.md).
 
 Plataforma universal de Windows.
 
-Una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, phablets, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Las aplicaciones pueden escribirse en C++, C#, VB.NET y JavaScript. Al usar C# y VB.NET, .NET Core proporciona las API de .NET.
+Una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, phablets, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Pueden escribirse aplicaciones en C++, C#, Visual Basic y JavaScript. Al usar C# y Visual Basic, .NET Core proporciona las API de .NET.
 
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: Categorías de cambios importantes - .NET Core
 description: Obtenga información sobre la forma de clasificar los cambios importantes en .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567923"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343597"
 ---
 # <a name="breaking-change-categories"></a>Categorías de cambios importantes
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567923"
 - [compatibilidad de origen](#source-compatibility)
 - [compatibilidad en tiempo de diseño](#design-time-compatibility)
 - [compatibilidad con versiones anteriores](#backwards-compatibility)
-
-La [compatibilidad con versiones posteriores](#forward-compatibility) no es un objetivo de .NET Core.
+- La [compatibilidad con versiones posteriores](#forward-compatibility) no es un objetivo de .NET Core.
 
 ## <a name="behavioral-change"></a>Cambio de comportamiento
 

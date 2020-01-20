@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418561"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635800"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 
-La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0. Aunque estas nuevas características se usan hasta cierto punto con consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no se limitan a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y se pueden usar en cualquier contexto en las que se consideren de utilidad.
+La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0. Aunque estas nuevas características se usan hasta cierto punto con consultas LINQ, no se limitan a LINQ y se pueden usar en cualquier contexto en las que se consideren de utilidad.
 
 ## <a name="query-expressions"></a>Expresiones de consulta
 
-Las expresiones de consulta usan una sintaxis declarativa similar a SQL o XQuery para consultar colecciones de IEnumerable. En tiempo de compilación, la sintaxis de consulta se convierte en llamadas de método a la implementación de un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] de los métodos de extensión de operador de consulta estándar. Las aplicaciones controlan los operadores de consulta estándar que están en el ámbito al especificar el espacio de nombres adecuado con una directiva `using`. La siguiente expresión de consulta toma una matriz de cadenas, las agrupa por el primer carácter de la cadena y ordena los grupos.
+Las expresiones de consulta usan una sintaxis declarativa similar a SQL o XQuery para consultar colecciones de IEnumerable. En tiempo de compilación, la sintaxis de consulta se convierte en llamadas de método a la implementación de un proveedor de LINQ de los métodos de extensión de operador de consulta estándar. Las aplicaciones controlan los operadores de consulta estándar que están en el ámbito al especificar el espacio de nombres adecuado con una directiva `using`. La siguiente expresión de consulta toma una matriz de cadenas, las agrupa por el primer carácter de la cadena y ordena los grupos.
 
 ```csharp
 var query = from str in stringArray
@@ -84,13 +84,13 @@ Para obtener más información, vea [Tipos anónimos](../../classes-and-structs/
 
 ## <a name="extension-methods"></a>Métodos de extensión.
 
-Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo. Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.
+Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo. Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas LINQ para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.
 
 Para obtener más información, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Expresiones lambda
 
-Una expresión lambda es una función insertada que usa el operador => para separar los parámetros de entrada del cuerpo de la función y que se puede convertir en tiempo de compilación en un delegado o un árbol de expresión. En la programación de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], encontrará expresiones lambda al realizar llamadas de método directas a los operadores de consulta estándar.
+Una expresión lambda es una función insertada que usa el operador => para separar los parámetros de entrada del cuerpo de la función y que se puede convertir en tiempo de compilación en un delegado o un árbol de expresión. En la programación de LINQ, encontrará expresiones lambda al realizar llamadas de método directas a los operadores de consulta estándar.
 
 Para obtener más información, consulte:
 

@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 7d40324e6b0bc4afab9dd39b236f0909f360cc9b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2c1362d6982206b14475f77700add0bae61da173
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394272"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901682"
 ---
 ### <a name="caching-compactonmemorypressure-property-removed"></a>Almacenamiento en caché: se ha quitado la propiedad CompactOnMemoryPressure
 
-En la versión ASP.NET Core 3.0 se han quitado las [API MemoryCacheOptions](https://github.com/aspnet/Extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18) obsoletas.
+En la versión ASP.NET Core 3.0 se han quitado las [API MemoryCacheOptions](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18) obsoletas.
 
 #### <a name="change-description"></a>Descripción del cambio
 
-Este cambio es una continuación de [aspnet/Caching#221](https://github.com/aspnet/Caching/issues/221). Para obtener información, vea [aspnet/Extensions#1062](https://github.com/aspnet/Extensions/issues/1062).
+Este cambio es una continuación de [aspnet/Caching#221](https://github.com/aspnet/Caching/issues/221). Para obtener información, vea [dotnet/extensions#1062](https://github.com/dotnet/extensions/issues/1062).
 
 #### <a name="version-introduced"></a>Versión introducida
 

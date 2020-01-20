@@ -1,17 +1,16 @@
 ---
 title: 'Procedimiento Probar la igualdad de referencias (identidad): Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588630"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699059"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Procedimiento Probar la igualdad de referencias (identidad) (Guía de programación de C#)
 No tiene que implementar ninguna lógica personalizada para admitir las comparaciones de igualdad de referencias en los tipos. Esta funcionalidad se proporciona para todos los tipos mediante el método <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> estático.  

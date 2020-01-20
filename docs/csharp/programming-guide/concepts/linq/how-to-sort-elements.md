@@ -2,12 +2,12 @@
 title: Procedimiento para ordenar elementos (C#)
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: e5f76518437954ac683ec2e3e30ad9007c280f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7fad9fcb43905072c88a5704c56672917bfc377c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253300"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347362"
 ---
 # <a name="how-to-sort-elements-c"></a>Procedimiento para ordenar elementos (C#)
 Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.  

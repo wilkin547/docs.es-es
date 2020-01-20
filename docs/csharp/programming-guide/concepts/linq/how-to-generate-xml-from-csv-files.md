@@ -2,18 +2,18 @@
 title: Procedimiento para generar XML a partir de archivos CSV (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: bcae061bd5899f4ae5cbb89f8e05079bc9222312
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486786"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635813"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Procedimiento para generar XML a partir de archivos CSV (C#)
-Este ejemplo muestra el uso de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
+En este ejemplo se muestra el uso de Language Integrated Query (LINQ) y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código realiza una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sobre una matriz de cadenas.  
+ El siguiente código realiza una consulta LINQ sobre una matriz de cadenas.  
   
  La consulta usa la cláusula `let` para dividir cada cadena en una matriz de campos.  
   

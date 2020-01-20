@@ -1,6 +1,5 @@
 ---
 title: 'Procedimiento Leer de un archivo de texto: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -10,20 +9,20 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 2b98f24da7f13ae752f248eb8f26c75c1d47a824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923951"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705020"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Procedimiento Leer de un archivo de texto (Guía de programación de C#)
 En este ejemplo se lee el contenido de un archivo de texto con los métodos estáticos <xref:System.IO.File.ReadAllText%2A> y <xref:System.IO.File.ReadAllLines%2A> de la clase <xref:System.IO.File?displayProperty=nameWithType>.  
   
- Para obtener un ejemplo que use <xref:System.IO.StreamReader>, vea [Cómo: Leer un archivo de texto línea a línea](./how-to-read-a-text-file-one-line-at-a-time.md).  
+Para obtener un ejemplo en el que se usa <xref:System.IO.StreamReader>, consulte [Procedimiento Leer un archivo de texto línea a línea](./how-to-read-a-text-file-one-line-at-a-time.md).
   
 > [!NOTE]
-> Los archivos que se usan en este ejemplo se crean en el tema [Cómo: Escribir en un archivo de texto](./how-to-write-to-a-text-file.md).  
+> Los archivos que se usan en este ejemplo se crean en el tema [Procedimiento Escribir en un archivo texto](./how-to-write-to-a-text-file.md).
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
@@ -31,7 +30,7 @@ En este ejemplo se lee el contenido de un archivo de texto con los métodos est�
 ## <a name="compiling-the-code"></a>Compilar el código  
  Copie el código y péguelo en una aplicación de consola de C#.  
   
- Si no usa los archivos de texto de [Cómo: Escribir en un archivo texto](./how-to-write-to-a-text-file.md), reemplace el argumento a `ReadAllText` y a `ReadAllLines` con la ruta de acceso adecuada y el nombre de archivo en el equipo.  
+Si no está usando los archivos de texto de [Procedimiento Escribir en un archivo texto](./how-to-write-to-a-text-file.md), reemplace el argumento a `ReadAllText` y a `ReadAllLines` por la ruta de acceso adecuada y el nombre de archivo en el equipo.
   
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  

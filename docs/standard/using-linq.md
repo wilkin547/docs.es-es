@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: Obtenga información sobre cómo proporciona LINQ capacidades de consulta de nivel de lenguaje y una API para C# y VB que permite escribir código expresivo y declarativo.
+description: Conozca cómo LINK proporciona funcionalidades de consulta de nivel de lenguaje y una API para C# y Visual Basic que permite escribir código expresivo y declarativo.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238629"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347273"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>¿Qué es?
 
-LINQ proporciona capacidades de consulta de nivel de lenguaje y una API de [función de orden superior](https://en.wikipedia.org/wiki/Higher-order_function) para C# y VB que permite escribir código expresivo y declarativo.
+LINQ proporciona funcionalidades de consulta de nivel de lenguaje y una API de [función de orden superior](https://en.wikipedia.org/wiki/Higher-order_function) para C# y Visual Basic que permite escribir código expresivo y declarativo.
 
 Sintaxis de consulta de nivel de lenguaje:
 
@@ -395,5 +395,5 @@ Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente
 ## <a name="further-resources"></a>Recursos adicionales:
 
 * [Ejemplos de LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/VB
+* [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un libro electrónico para aprender cómo se implementa LINQ to Objects

@@ -3,12 +3,12 @@ title: Conceptos básicos de las expresiones de consulta (LINQ en C#)
 description: En este tema se presentan los conceptos relacionados con las expresiones de consulta.
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709122"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635865"
 ---
 # <a name="query-expression-basics"></a>Conceptos básicos de las expresiones de consultas
 
@@ -114,7 +114,7 @@ Use la cláusula `select` para generar todos los demás tipos de secuencias. Una
 
 [!code-csharp[csrefQueryExpBasics#56](~/samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]
 
-La cláusula `select` puede usarse para transformar los datos de origen en secuencias de nuevos tipos. Esta transformación también se denomina *proyección*. En el ejemplo siguiente, la cláusula `select` *proyecta* una secuencia de tipos anónimos que solo contiene un subconjunto de los campos del elemento original. Tenga en cuenta que los nuevos objetos se inicializan mediante un inicializador de objeto.
+La cláusula `select` puede usarse para transformar los datos de origen en secuencias de nuevos tipos. Esta transformación también se denomina *proyección*. En el ejemplo siguiente, la cláusula `select`*proyecta* una secuencia de tipos anónimos que solo contiene un subconjunto de los campos del elemento original. Tenga en cuenta que los nuevos objetos se inicializan mediante un inicializador de objeto.
 
 [!code-csharp[csrefQueryExpBasics#57](~/samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]
 
@@ -170,7 +170,7 @@ Una cláusula de consulta puede contener una expresión de consulta, en ocasione
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-Para obtener más información, vea [How to: perform a subquery on a grouping operation](perform-a-subquery-on-a-grouping-operation.md) (Cómo: Realizar una subconsulta en una operación de agrupación).
+Para más información, consulte [Realizar una subconsulta en una operación de agrupación](perform-a-subquery-on-a-grouping-operation.md).
 
 ## <a name="see-also"></a>Vea también
 

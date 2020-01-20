@@ -2,12 +2,12 @@
 title: Cambios importantes en .NET Core
 description: Obtenga información sobre los cambios de cada versión de .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568026"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900155"
 ---
 # <a name="breaking-change-selectors"></a>Selectores de cambios importantes
 
@@ -15,9 +15,12 @@ Los siguientes selectores de versión y área proporcionan una lista filtrada de
 
 ## <a name="by-version"></a>Por versión
 
-Seleccione la versión de destino actual de .NET Core y la versión de .NET Core a la que quiere migrar:
+Seleccione la versión de destino actual de .NET y la versión de .NET Core a la que quiere migrar:
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+
+> [!TIP]
+> Si va a migrar una aplicación de Windows Forms de .NET Framework a .NET Core, vea [Cambios importantes de Windows Forms (.NET Framework a .NET Core)](../porting/winforms-breaking-changes.md) en lugar de usar el selector de versiones.
 
 ## <a name="by-area"></a>Por área
 
@@ -31,7 +34,7 @@ También puede ver las incidencias individuales que detallan los cambios importa
 
 - Para .NET Core, el repositorio [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change).
 - Para ASP.NET Core, el repositorio [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0).
-- Para Entity Framework Core, el repositorio [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change).
+- Para Entity Framework Core, el repositorio [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change).
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,15 +1,13 @@
 ---
 title: Dependencias y bibliotecas de .NET
 description: Procedimientos recomendados para administrar las dependencias de NuGet en las bibliotecas de. NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644261"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706509"
 ---
 # <a name="dependencies"></a>Dependencias
 
@@ -19,7 +17,7 @@ La principal manera de agregar dependencias a una biblioteca de .NET es hacer re
 
 Es una situación común para un proyecto de .NET tener varias versiones de un paquete en el árbol de dependencias. Por ejemplo, una aplicación depende de dos paquetes NuGet, cada uno de los cuales depende de las diferentes versiones del mismo paquete. Ahora existe una dependencia de rombo en el gráfico de dependencias de la aplicación.
 
-![Dependencia de rombo](./media/dependencies/diamond-dependency.png "Diamond dependency")
+![Dependencias de rombo](./media/dependencies/diamond-dependency.png "Dependencias de rombo")
 
 En el momento de la compilación, NuGet analiza todos los paquetes de los que depende un proyecto, incluidas las dependencias de dependencias. Cuando se detectan varias versiones de un paquete, se evalúan las reglas para elegir una. La unificación de paquetes es necesaria porque la ejecutan de versiones en paralelo de un ensamblado en la misma aplicación es problemática en. NET.
 
@@ -56,11 +54,11 @@ Debido a la regla de versión más baja aplicable de NuGet, no es necesario colo
 
 Los límites de versión superiores provocarán que NuGet genere un error si hay un conflicto. Por ejemplo, una biblioteca acepta exactamente la versión 1.0 mientras otra biblioteca requiere la versión 2.0 o una superior. Aunque se pueden haber introducido cambios importantes en la versión 2.0, una dependencia de versión con límite superior o estricta garantiza un error.
 
-![Conflicto de dependencias de rombo](./media/dependencies/diamond-dependency-conflict.png "Diamond dependency conflict")
+![Conflicto de dependencias de rombo](./media/dependencies/diamond-dependency-conflict.png "Conflicto de dependencias de rombo")
 
 **❌ NO** tenga referencias de paquetes NuGet sin versión mínima.
 
-**❌ EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
+**❌EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
 
 **❌ EVITE** las referencias de paquetes NuGet con un límite superior de versión.
 
@@ -70,13 +68,13 @@ Una forma de reducir las dependencias externas de los paquetes NuGet es hacer re
 
 Los paquetes de código fuente compartido son excelentes para incluir pequeños fragmentos de funcionalidad. Por ejemplo, un paquete de código fuente compartido de los métodos auxiliares para llamadas HTTP.
 
-![Paquete de código fuente compartido](./media/dependencies/shared-source-package.png "Shared source package")
+![Paquete de código fuente compartido](./media/dependencies/shared-source-package.png "Paquete de código fuente compartido")
 
 ```xml
 <PackageReference Include="Microsoft.Extensions.Buffers.Testing.Sources" PrivateAssets="All" Version="1.0" />
 ```
 
-![Proyecto de código fuente compartido](./media/dependencies/shared-source-project.png "Shared source project")
+![Proyecto de código fuente compartido](./media/dependencies/shared-source-project.png "Proyecto de código fuente compartido")
 
 Los paquetes de código fuente compartido tienen algunas limitaciones. Solo `PackageReference` puede hacer referencia a ellos, por lo que los proyectos `packages.config` más antiguos se excluyen. Asimismo, los paquetes de código fuente compartido solo resultan útiles para los proyectos con el mismo tipo de lenguaje. Debido a estas limitaciones, los paquetes de código fuente compartido son útiles para compartir la funcionalidad dentro de un proyecto de código abierto.
 

@@ -1,6 +1,5 @@
 ---
 title: 'Tabla de formatos de presentación para valores numéricos: Referencia de C#'
-ms.custom: seodec18
 description: Obtenga información sobre las cadenas de formato numérico estándar de C#
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422751"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713509"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabla de formatos de presentación para valores numéricos (Referencia de C#)
 
@@ -21,7 +20,7 @@ La siguiente tabla muestra los especificadores de formato admitidos para dar for
 
 |Especificador de formato|Descripción|Ejemplos|Resultado|  
 |----------------------|-----------------|--------------|------------|  
-|C o c|Moneda|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C o c|Moneda|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2,50<br /><br /> (\\$2,50)|  
 |D o d|Decimal|`string s = $"{25:D5}";`|00025|  
 |E o e|Exponencial|`string s = $"{250000:E2}";`|2.50E+005|  
 |F o f|Punto fijo|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  

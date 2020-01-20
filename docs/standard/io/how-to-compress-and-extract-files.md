@@ -1,5 +1,5 @@
 ---
-title: Filtrar para comprimir y extraer archivos
+title: Procedimiento para comprimir y extraer archivos
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a4ea4c32f5b73b283a5982f16e55a4d078171c1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255008"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708107"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Filtrar para comprimir y extraer archivos
+# <a name="how-to-compress-and-extract-files"></a>Procedimiento para comprimir y extraer archivos
 
 El espacio de nombres <xref:System.IO.Compression> contiene los siguientes tipos para comprimir y descomprimir archivos y secuencias. También puede usar estos tipos para leer y modificar el contenido de un archivo comprimido.
 
@@ -31,7 +29,7 @@ El espacio de nombres <xref:System.IO.Compression> contiene los siguientes tipos
 
 Los siguientes ejemplos muestran algunas de las operaciones que se pueden ejecutar con archivos comprimidos.
 
-## <a name="example-1-create-and-extract-a-zip-file"></a>Ejemplo 1: Crear y extraer un archivo .zip
+## <a name="example-1-create-and-extract-a-zip-file"></a>Ejemplo 1: Crear y extraer un archivo .zip
 
 En este ejemplo se muestra cómo crear y extraer un archivo comprimido *.zip* mediante la clase <xref:System.IO.Compression.ZipFile>. El ejemplo comprime el contenido de una carpeta en un nuevo archivo *.zip* y, a continuación, extrae el archivo zip a una nueva carpeta. 
 
@@ -65,7 +63,7 @@ En el ejemplo siguiente se utiliza la clase <xref:System.IO.Compression.ZipArchi
 [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]
 
-## <a name="example-4-compress-and-decompress-gz-files"></a>Ejemplo 4: Comprimir y descomprimir archivos .gz
+## <a name="example-4-compress-and-decompress-gz-files"></a>Ejemplo 4: Comprimir y descomprimir archivos .gz
 
 También puede usar las clases <xref:System.IO.Compression.GZipStream> y <xref:System.IO.Compression.DeflateStream> para comprimir y descomprimir los datos. Usan el mismo algoritmo de compresión. Puede descomprimir objetos <xref:System.IO.Compression.GZipStream> que se escriben en un archivo *.gz* mediante muchas herramientas comunes. En este ejemplo se muestra cómo comprimir y descomprimir un directorio de archivos con la clase <xref:System.IO.Compression.GZipStream>:
 

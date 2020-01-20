@@ -1,15 +1,13 @@
 ---
 title: Publicación de un paquete NuGet
 description: Procedimientos recomendados para publicar bibliotecas de .NET en NuGet.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706470"
 ---
 # <a name="publishing-a-nuget-package"></a>Publicación de un paquete NuGet
 
@@ -24,7 +22,7 @@ Los paquetes NuGet se publican y consumen desde repositorios de paquetes. Aunque
 > [!NOTE]
 > NuGet.org [no permite que se elimine un paquete](/nuget/policies/deleting-packages) una vez cargado este. Se puede quitar de la lista un paquete para que no esté visible en la interfaz de usuario, pero aún puede descargarse `*.nupkg` en la restauración. Además, nuget.org no permite versiones de paquetes duplicadas. Para corregir un paquete NuGet con un error, debe quitar de la lista el paquete incorrecto, aumentar el número de versión y publicar una nueva versión del paquete.
 
-**✔️ HACER** [publique en NuGet.org paquetes estables y paquetes de versión preliminar](/nuget/create-packages/publish-a-package) en los que desee incluir comentarios de la comunidad.
+**✔️ HACER** [publicación en NuGet.org de paquetes estables y paquetes de versión preliminar](/nuget/create-packages/publish-a-package) en los que desee incluir comentarios de la comunidad.
 
 **✔️ CONSIDERAR** publicación de paquetes de versión preliminar en una fuente de MyGet desde una compilación de integración continua.
 
@@ -34,7 +32,7 @@ Los paquetes NuGet se publican y consumen desde repositorios de paquetes. Aunque
 
 Es importante que los actores malos no puedan tener acceso a su cuenta NuGet ni cargar una versión malintencionada de su biblioteca. NuGet.org ofrece autenticación en dos fases y notificaciones por correo electrónico al publicarse un paquete. Habilite estas características después de iniciar sesión en NuGet.org en la página **Configuración de cuenta**.
 
-![alt text](./media/publish-nuget-package/nuget-2fa.png "Seguridad de la cuenta NuGet")
+![texto alternativo](./media/publish-nuget-package/nuget-2fa.png "Seguridad de la cuenta NuGet")
 
 **✔️ HACER** use una cuenta Microsoft para iniciar sesión en NuGet.
 

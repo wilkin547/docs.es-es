@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838200"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348057"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -49,7 +49,7 @@ Para más información sobre .NET Framework, consulte la [Guía de .NET Framewor
 
 ### <a name="mono"></a>Mono
 
-Mono es una implementación de .NET que se usa principalmente cuando se requiere un entorno de ejecución pequeño. Es el entorno de ejecución que activa las aplicaciones de Xamarin en Android, Mac, iOS, tvOS y watchOS, y se centra principalmente en una superficie pequeña. Mono también proporciona juegos creados con el motor de Unity.
+Mono es una implementación de .NET que se usa principalmente cuando se requiere un entorno de ejecución pequeño. Es el entorno de ejecución que activa las aplicaciones Xamarin en Android, macOS, iOS, tvOS y watchOS, y se centra principalmente en una superficie pequeña. Mono también proporciona juegos creados con el motor de Unity.
 
 Admite todas las versiones de .NET Standard publicadas actualmente.
 
@@ -61,7 +61,7 @@ Para más información sobre Mono, consulte la [documentación de Mono](https://
 
 ### <a name="universal-windows-platform-uwp"></a>Plataforma universal de Windows (UWP)
 
-UWP es una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, phablets, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Las aplicaciones pueden escribirse en C++, C#, VB.NET y JavaScript. Al usar C# y VB.NET, .NET Core proporciona las API de .NET.
+UWP es una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, phablets, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Pueden escribirse aplicaciones en C++, C#, Visual Basic y JavaScript. Al usar C# y Visual Basic, .NET Core proporciona las API de .NET.
 
 Para obtener más información sobre UWP, vea [Introducción a la Plataforma universal de Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
@@ -112,4 +112,4 @@ Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Está
 - [Guía de .NET Framework](../framework/index.md)
 - [Guía de C#](../csharp/index.yml)
 - [Guía de F#](../fsharp/index.yml)
-- [Guía de VB.NET](../visual-basic/index.yml)
+- [Guía de Visual Basic](../visual-basic/index.yml)

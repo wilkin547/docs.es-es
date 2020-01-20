@@ -2,12 +2,12 @@
 title: Procedimiento para transformar la forma de un árbol XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: c6f78decdcc32d202f4a0f1e51a012dce8aa7d6c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592228"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347306"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Procedimiento para transformar la forma de un árbol XML (C#)
 La *forma* de un documento XML hace referencia a sus nombres de elemento, sus nombres de atributo y las características de su jerarquía.  

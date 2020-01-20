@@ -5,12 +5,12 @@ ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557801"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739573"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>Mejora de la precisión del modelo de ML.NET
 
@@ -32,7 +32,7 @@ El significado de un único punto de datos puede ser difícil de interpretar. Cr
 
 Aunque más muestras de datos y características pueden ayudar a mejorar la precisión del modelo, también es posible introducir ruido ya que no todos los datos y las características son significativos. Por lo tanto, es importante entender qué características son las que tienen mayor impacto en las decisiones que toma el algoritmo. El uso de técnicas como la importancia de características de permutación (PFI) puede ayudar a identificar esas características más destacadas y no solo ayuda a explicar el modelo, sino también a usar la salida como un método de selección de características para reducir la cantidad de características ruidosas que entran en el proceso de entrenamiento.
 
-Para aprender a usar la PFI, visite el siguiente [vínculo](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)
+Para obtener más información sobre cómo usar PFI, consulte [Explicación de las predicciones del modelo mediante la importancia de características de permutación](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
 ## <a name="cross-validation"></a>Validación cruzada
 

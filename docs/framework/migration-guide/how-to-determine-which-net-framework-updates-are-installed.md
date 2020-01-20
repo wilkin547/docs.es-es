@@ -1,5 +1,5 @@
 ---
-title: ¿Qué actualizaciones de seguridad y revisiones de .NET Framework que están instaladas?
+title: Consulta de las actualizaciones de seguridad y revisiones de .NET Framework instaladas
 description: Aprenda a determinar qué actualizaciones de seguridad y revisiones de .NET Framework están instaladas en un equipo.
 ms.date: 11/27/2017
 dev_langs:
@@ -9,14 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735206"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716252"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Determinación de las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
 

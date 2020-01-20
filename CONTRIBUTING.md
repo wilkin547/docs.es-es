@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191695"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336722"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -22,12 +22,9 @@ En este documento se describe el proceso para colaborar en los artículos y ejem
 
 Este repositorio contiene documentación conceptual de .NET. El sitio de documentación de .NET se compiló a partir de varios repositorios, además de este:
 
-- [Ejemplos y fragmentos de código](https://github.com/dotnet/samples)  
-    Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
-- [Referencia de API de REST](https://github.com/dotnet/dotnet-api-docs)  
-    Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
-- [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
-    Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Ejemplos de código y fragmentos de código](https://github.com/dotnet/samples) Se realiza un seguimiento de los problemas y tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Referencia de API .NET](https://github.com/dotnet/dotnet-api-docs) Se realiza un seguimiento de los problemas y tareas de este repositorio en [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs) Se realiza un seguimiento de los problemas y tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
@@ -37,7 +34,7 @@ En la lista siguiente se muestran algunas reglas orientativas que se deben tener
 - **EXAMINE** las incidencias [up for grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (para seleccionar) actuales para obtener sugerencias sobre tareas.
 - **CREE** una solicitud de incorporación de cambios (PR) para cada tarea. Las PR que incluyen varios cambios no relacionados son mucho más difíciles de revisar. Esto retrasa las revisiones y la combinación de las PR. Esta instrucción también se aplica a las revisiones: evitamos sugerir cambios no relacionados en las revisiones; pedimos que las revisiones de la comunidad cumplan esta instrucción.
 - **PROPORCIONE** una descripción clara del error en la PR. Díganos qué ha cambiado y por qué. La descripción predeterminada de "actualizar artículo.md" no es útil para los revisores.
-- **NO** envíe PR para cambios que solo sean de estilo sin consultarlo antes. Estas PR requieren un tiempo adicional para revisar la precisión y su combinación suele provocar conflictos de combinación con otras actualizaciones importantes. Estamos trabajando para seguir un estilo coherente, pero equilibramos ese trabajo con otras tareas. Los artículos se adecúan para que cumplan el estilo cuando se realizan actualizaciones importantes por otras razones. 
+- **NO** envíe PR para cambios que solo sean de estilo sin consultarlo antes. Estas PR requieren un tiempo adicional para revisar la precisión y su combinación suele provocar conflictos de combinación con otras actualizaciones importantes. Estamos trabajando para seguir un estilo coherente, pero equilibramos ese trabajo con otras tareas. Los artículos se adecúan para que cumplan el estilo cuando se realizan actualizaciones importantes por otras razones.
 - **LEA** la [guía de estilo](./styleguide/template.md) y las instrucciones de [voz y tono](./styleguide/voice-tone.md). Las nuevas adiciones deben seguir estas instrucciones.
 - **CREE** una rama independiente en la bifurcación antes de trabajar en los artículos.
 - **SIGA** el [flujo de trabajo de GitHub](https://guides.github.com/introduction/flow/).
@@ -54,7 +51,7 @@ Necesita tener conocimientos básicos de [Git y GitHub.com](https://guides.githu
 **Paso 1:** En el caso de pequeños cambios, omita este paso (por ejemplo, si corrige un error de escritura o abre inmediatamente una solicitud de incorporación de cambios para resolver un problema que encuentre en los documentos). Si está interesado en escribir nuevo contenido o en revisar exhaustivamente el contenido existente, abra una [incidencia ](https://github.com/dotnet/docs/issues) que describa lo que quiere hacer.
 El contenido de la carpeta *docs* se organiza en secciones que se reflejan en la tabla de contenido (TOC). Defina dónde se ubicará el tema en la tabla de contenido. Recabe opiniones sobre su propuesta.
 
-O bien
+o bien
 
 Puede elegir entre las incidencias existentes aquellas en las que las contribuciones son bienvenidas. En [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para los colaboradores de la comunidad de .NET) se muestran muchos de los elementos de trabajo que están disponibles para los colaboradores de la comunidad. En función de sus intereses y su nivel de compromiso, puede elegir entre las incidencias de las siguientes categorías:
 
@@ -64,7 +61,7 @@ Puede elegir entre las incidencias existentes aquellas en las que las contribuci
 
 - **Creación de nuevo contenido**. Si está interesado en crear su propio tema, estas incidencias muestran los temas que sabemos que nos gustaría agregar a nuestro conjunto de documentación. Pero, antes de empezar a trabajar en un tema, comuníquenoslo. Si está interesado en escribir un tema que no aparece aquí, abra una incidencia.
 
-También puede consultar nuestra lista de [incidencias abiertas](https://github.com/dotnet/docs/issues) y ofrecerse para trabajar en las que le interesan. Se utiliza la etiqueta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) para identificar las incidencias abiertas para la contribución. 
+También puede consultar nuestra lista de [incidencias abiertas](https://github.com/dotnet/docs/issues) y ofrecerse para trabajar en las que le interesan. Se utiliza la etiqueta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) para identificar las incidencias abiertas para la contribución.
 
 **Paso 2:** Bifurque los repositorios `dotnet/docs`, `dotnet/samples` o `dotnet/dotnet-api-docs` según sea necesario y cree una rama para los cambios.
 
@@ -138,7 +135,7 @@ Para más información, vea el archivo [Léame de samples](https://github.com/do
 
 ## <a name="the-c-interactive-experience"></a>La experiencia interactiva de C#
 
-Los ejemplos de código corto en C# pueden usar la etiqueta de idioma `csharp-interactive` para especificar un ejemplo de C# que se ejecuta en el navegador. (Los ejemplos de código en línea usan la etiqueta `csharp-interactive`, para fragmentos de código incluidos en el origen, usan la etiqueta `code-csharp-interactive`). Estos ejemplos de código muestran una ventana de código y una ventana de salida en el artículo. La ventana de salida muestra el resultado de ejecutar el código interactivo cuando el usuario haya ejecutado el ejemplo. 
+Los ejemplos de código corto en C# pueden usar la etiqueta de idioma `csharp-interactive` para especificar un ejemplo de C# que se ejecuta en el navegador. (Los ejemplos de código en línea usan la etiqueta `csharp-interactive`, para fragmentos de código incluidos en el origen, usan la etiqueta `code-csharp-interactive`). Estos ejemplos de código muestran una ventana de código y una ventana de salida en el artículo. La ventana de salida muestra el resultado de ejecutar el código interactivo cuando el usuario haya ejecutado el ejemplo.
 
 La experiencia interactiva de C# cambia la forma en que se trabaja con ejemplos. Los visitantes pueden ejecutar el ejemplo para ver la salida. Una serie de factores ayudan a determinar si el ejemplo o el texto correspondiente deben incluir información sobre la salida.
 
@@ -149,7 +146,7 @@ La experiencia interactiva de C# cambia la forma en que se trabaja con ejemplos.
 - Cuando tanto el ejemplo como la salida esperada es breve, considere la posibilidad de mostrar la salida. Ahorra un poco de tiempo.
 - Los artículos que describen cómo la referencia cultural actual o la referencia cultural invariable inciden en la salida deben explicar la salida esperada. El REPL (read–eval–print loop) interactivo se ejecuta en un host basado en Linux. La referencia cultural predeterminada y la referencia cultural invariable generan distintas salidas en los distintos sistemas operativos y máquinas. En el artículo se debe explicar la salida en los sistemas Windows, Linux y Mac.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>Cuándo debe excluirse la salida esperada del ejemplo 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>Cuándo debe excluirse la salida esperada del ejemplo
 
 - Los artículos en los que el ejemplo genera una salida de mayor tamaño no deben incluirla en los comentarios. Oculta el código una vez que se ha ejecutado el ejemplo.
 - Los artículos en los que el ejemplo muestra un tema, pero la salida no es suficiente para su comprensión. Por ejemplo, código que ejecuta una consulta LINQ para explicar la sintaxis de consulta y luego muestra todos los elementos en la colección de salida.

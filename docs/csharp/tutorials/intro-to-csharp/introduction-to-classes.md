@@ -3,12 +3,12 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736829"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634955"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
@@ -73,7 +73,7 @@ namespace classes
 
 Antes de avanzar, se va a dar un repaso a lo que ha compilado.  La declaración `namespace` permite organizar el código de forma lógica. Este tutorial es relativamente pequeño, por lo que deberá colocar todo el código en un espacio de nombres. 
 
-`public class BankAccount` define la clase o el tipo que va a crear. Todo lo que se encuentra entre `{` y `}` después de la declaración de clase define el comportamiento de la clase. Hay cinco ***miembros*** de la clase `BankAccount`. Los tres primeros son ***propiedades***. Las propiedades son elementos de datos que pueden contener código que exige la validación u otras reglas. Los dos últimos son ***métodos***. Los métodos son bloques de código que realizan una única función. La lectura de los nombres de cada miembro debe proporcionar suficiente información tanto al usuario como a otro desarrollador para entender cuál es la función de la clase.
+`public class BankAccount` define la clase o el tipo que va a crear. Todo lo que se encuentra entre `{` y `}` después de la declaración de clase define el estado y el comportamiento de la clase. Hay cinco ***miembros*** de la clase `BankAccount`. Los tres primeros son ***propiedades***. Las propiedades son elementos de datos que pueden contener código que exige la validación u otras reglas. Los dos últimos son ***métodos***. Los métodos son bloques de código que realizan una única función. La lectura de los nombres de cada miembro debe proporcionar suficiente información tanto al usuario como a otro desarrollador para entender cuál es la función de la clase.
 
 ## <a name="open-a-new-account"></a>Apertura de una cuenta nueva
 
@@ -145,7 +145,7 @@ Esta operación introduce el concepto de las ***excepciones***. La forma habitua
 
 [!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
-La instrucción [`throw`](../../language-reference/keywords/throw.md) **genera** una excepción. La ejecución del bloque actual finaliza y el control se transfiere al primer bloque `catch` coincidente que se encuentra en la pila de llamadas. Se agregará un bloque `catch` para probar este código un poco más adelante.
+La instrucción [`throw`](../../language-reference/keywords/throw.md)**genera** una excepción. La ejecución del bloque actual finaliza y el control se transfiere al primer bloque `catch` coincidente que se encuentra en la pila de llamadas. Se agregará un bloque `catch` para probar este código un poco más adelante.
 
 El constructor debe obtener un cambio para que agregue una transacción inicial, en lugar de actualizar el saldo directamente. Puesto que ya escribió el método `MakeDeposit`, llámelo desde el constructor. El constructor terminado debe tener este aspecto:
 

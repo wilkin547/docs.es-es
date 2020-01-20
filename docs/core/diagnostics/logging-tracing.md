@@ -1,15 +1,13 @@
 ---
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303657"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714421"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -31,7 +29,7 @@ Esta técnica sencilla es sorprendentemente eficaz. Se puede usar en situaciones
 
 Cada una de las clases <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType> y <xref:System.Diagnostics.Debug?displayProperty=nameWithType> proporcionan API de estilo de impresión parecidas para el registro.
 
-La elección de la API de estilo de impresión que se va a usar depende de usted. Las principales diferencias son:
+La elección de la API de estilo de impresión que se va a usar depende de usted. Las diferencias clave son:
 
 - <xref:System.Console?displayProperty=nameWithType>
   - Siempre está habilitada y siempre escribe en la consola.

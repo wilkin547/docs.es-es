@@ -2,12 +2,12 @@
 title: LINQ to XML frente a Otras tecnologías XML
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591875"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635683"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML frente a otras tecnologías XML
 Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las siguientes tecnologías XML: <xref:System.Xml.XmlReader>, XSLT, MSXML y XmlLite. Esta información puede ayudarle a decidir la tecnología que utilizará.  
@@ -50,7 +50,7 @@ Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las 
   
  La principal ventaja de XmlLite es que es un analizador XML rápido y ligero que es seguro en la mayoría de casos. Su área de exposición a amenazas es muy pequeña. Si debe analizar documentos que no son de confianza y desea protegerse de ataques tales como denegación de servicio o exposición de datos, XmlLite puede ser una buena opción.  
   
- XmlLite no se integra con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. No proporciona al programador mejoras de productividad que sean la fuerza motivadora detrás de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ XmlLite no está integrado con Language-Integrated Query (LINQ). No proporciona al programador mejoras de productividad que sean la fuerza motivadora detrás de LINQ.  
   
 ## <a name="see-also"></a>Vea también
 

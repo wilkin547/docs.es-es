@@ -1,18 +1,17 @@
 ---
 title: 'Procedimiento Utilizar propiedades indizadas en la programación de interoperabilidad COM: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexed properties [C#]
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 0d4e85646a1e7f8c4ee9a73fbf7bf5a01b10b14b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423219"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712070"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Procedimiento Utilizar propiedades indizadas en la programación de interoperabilidad COM (Guía de programación de C#)
 Las *propiedades indexadas* mejoran la manera en que se usan las propiedades COM con parámetros en la programación de C#. Las propiedades indexadas funcionan junto con otras características de Visual C#, como los [argumentos con nombre y opcionales](../classes-and-structs/named-and-optional-arguments.md), un nuevo tipo ([dinámico](../../language-reference/builtin-types/reference-types.md)) y la [información de tipo insertada](../../../standard/assembly/embed-types-visual-studio.md), para mejorar la programación en Microsoft Office.  
@@ -39,7 +38,7 @@ Las *propiedades indexadas* mejoran la manera en que se usan las propiedades COM
  No es posible crear propiedades indizadas propias. La característica solo admite el uso de las propiedades indizadas existentes.  
   
 ## <a name="example"></a>Ejemplo  
- En el código siguiente se muestra un ejemplo completo. Para obtener más información sobre cómo preparar un proyecto con acceso a la API de Office, consulte [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](./how-to-access-office-onterop-objects.md).  
+ En el código siguiente se muestra un ejemplo completo. Para más información sobre cómo preparar un proyecto con acceso a la API de Office, consulte [Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)](./how-to-access-office-onterop-objects.md).
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
@@ -48,6 +47,6 @@ Las *propiedades indexadas* mejoran la manera en que se usan las propiedades COM
 - [Argumentos opcionales y con nombre](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Uso de tipo dinámico](../types/using-type-dynamic.md)
-- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](./how-to-access-office-onterop-objects.md)
+- [Procedimiento para usar argumentos opcionales y con nombre en la programación de Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Procedimiento para acceder a objetos de interoperabilidad de Office mediante características de C#](./how-to-access-office-onterop-objects.md)
 - [Tutorial: Programación de Office](./walkthrough-office-programming.md)

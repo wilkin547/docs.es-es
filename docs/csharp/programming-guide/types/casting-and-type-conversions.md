@@ -1,6 +1,5 @@
 ---
 title: 'Conversiones de tipos: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969610"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711901"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversiones definidas por el usuario**: las conversiones definidas por el usuario se realizan por medio de métodos especiales que se pueden definir para habilitar las conversiones explícitas e implícitas entre tipos personalizados que no tienen una relación de clase base-clase derivada. Para obtener más información, vea [Operadores de conversión definidos por el usuario](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Conversiones con clases del asistente**: para realizar conversiones entre tipos no compatibles, como enteros y objetos <xref:System.DateTime?displayProperty=nameWithType>, o cadenas hexadecimales y matrices de bytes puede usar la clase <xref:System.BitConverter?displayProperty=nameWithType>, la clase <xref:System.Convert?displayProperty=nameWithType> y los métodos `Parse` de los tipos numéricos integrados, como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obtener más información, vea [Cómo: Convertir una matriz de bytes en un valor int](./how-to-convert-a-byte-array-to-an-int.md), [Cómo: Convertir una cadena en un número](./how-to-convert-a-string-to-a-number.md) y [Cómo: Convertir cadenas hexadecimales en tipos numéricos](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Conversiones con clases del asistente**: para realizar conversiones entre tipos no compatibles, como enteros y objetos <xref:System.DateTime?displayProperty=nameWithType>, o cadenas hexadecimales y matrices de bytes puede usar la clase <xref:System.BitConverter?displayProperty=nameWithType>, la clase <xref:System.Convert?displayProperty=nameWithType> y los métodos `Parse` de los tipos numéricos integrados, como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Procedimiento Convertir una matriz de bytes en un valor int](./how-to-convert-a-byte-array-to-an-int.md), [Procedimiento Convertir una cadena en un número](./how-to-convert-a-string-to-a-number.md) y [Procedimiento Convertir cadenas hexadecimales en tipos numéricos](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
   
 ## <a name="implicit-conversions"></a>Conversiones implícitas
 
@@ -96,4 +95,4 @@ Para obtener más información, vea la sección sobre [conversiones](~/_csharpla
 - [Operador de conversión ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [Operadores de conversión definidos por el usuario](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Conversión de tipos generalizada](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [Cómo: Convertir una cadena en un número](./how-to-convert-a-string-to-a-number.md)
+- [Procedimiento Convertir una cadena en un número](./how-to-convert-a-string-to-a-number.md)

@@ -3,17 +3,16 @@ title: Publicación de aplicaciones .NET Core con la CLI
 description: Obtenga información sobre cómo publicar una aplicación .NET Core con las herramientas de la interfaz de la línea de comandos (CLI) del SDK de .NET Core.
 author: thraka
 ms.author: adegeo
-ms.date: 01/16/2019
+ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.custom: seodec18
-ms.openlocfilehash: 41af1c708a264833f1f7217529b5c0206d405449
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428911"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740856"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
 
@@ -43,9 +42,9 @@ Si quiere tener como destino más de una plataforma, puede establecer el valor `
 
 A menos que se establezca otro, el directorio de salida del comando [`dotnet publish`](../tools/dotnet-publish.md) es `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. El modo **BUILD-CONFIGURATION** predeterminado es **Depurar** a menos que se cambie con el parámetro `-c`. Por ejemplo, `dotnet publish -c Release -f netcoreapp2.1` publica en `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
-Si usa el SDK 3.0 de .NET Core, el modo de publicación predeterminado para las aplicaciones destinadas a las versiones 2.1, 2.2 y 3.0 de .NET Core es el ejecutable dependiente de la plataforma.
+Si usa el SDK 3.0 de .NET Core o versiones posteriores, el modo de publicación predeterminado para las aplicaciones destinadas a las versiones 2.1, 2.2, 3.0 o una versión posterior de .NET Core es el ejecutable dependiente del marco.
 
-Si usa el SDK 2.1 de .NET Core, el modo de publicación predeterminado para las aplicaciones destinadas a las versiones 2.1 y 2.2 de .NET Core es la implementación dependiente de la plataforma.
+Si usa el SDK 2.1 de .NET Core, el modo de publicación predeterminado para las aplicaciones destinadas a las versiones 2.1 y 2.2 de .NET Core es la implementación dependiente del marco.
 
 ### <a name="native-dependencies"></a>Dependencias nativas
 
@@ -110,7 +109,7 @@ Para la CLI del SDK de .NET Core 2.x, la implementación dependiente de la plata
 
 Cuando la aplicación se publica como una FDD, se crea un archivo `<PROJECT-NAME>.dll` en la carpeta `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Para ejecutar la aplicación, vaya a la carpeta de salida y use el comando `dotnet <PROJECT-NAME>.dll`.
 
-La aplicación está configurada para tener como destino una versión específica de .NET Core. Es obligatorio que ese runtime de .NET Core de destino esté en el equipo donde se quiere ejecutar la aplicación. Por ejemplo, si la aplicación tiene como destino .NET Core 2.2, todos los equipos en los que se ejecute la aplicación deben tener instalado el runtime de .NET Core 2.2. Como se indica en la sección [Conceptos básicos de publicación](#publishing-basics), se puede editar el archivo de proyecto para cambiar la plataforma de destino predeterminada o seleccionar más de una como destino.
+La aplicación está configurada para tener como destino una versión específica de .NET Core. Es obligatorio que ese runtime de .NET Core de destino esté en cualquier equipo donde se ejecute la aplicación. Por ejemplo, si la aplicación tiene como destino .NET Core 2.2, todos los equipos en los que se ejecute la aplicación deben tener instalado el runtime de .NET Core 2.2. Como se indica en la sección [Conceptos básicos de publicación](#publishing-basics), se puede editar el archivo de proyecto para cambiar la plataforma de destino predeterminada o seleccionar más de una como destino.
 
 Al publicar una FDD se crea una aplicación que realiza la puesta al día automática a la revisión de seguridad de .NET Core más reciente disponible en el sistema en el que se ejecuta la aplicación. Para más información sobre el enlace de versión en tiempo de compilación, vea [Selección de la versión de .NET Core que se va a usar](../versions/selection.md#framework-dependent-apps-roll-forward).
 
@@ -118,13 +117,13 @@ Al publicar una FDD se crea una aplicación que realiza la puesta al día autom�
 
 Para la CLI del SDK de .NET Core 3.x, el archivo ejecutable dependiente de la plataforma (FDE) es el modo predeterminado para el comando `dotnet publish` básico. No es necesario especificar ningún otro parámetro, siempre que se quiera establecer como destino el sistema operativo actual.
 
-En este modo, se crea un host ejecutable específico de la plataforma para hospedar la aplicación multiplataforma. Este modo es similar a FDD ya requiere un host en forma del comando `dotnet`. El nombre de archivo ejecutable de host varía según la plataforma y es similar a `<PROJECT-FILE>.exe`. Este archivo ejecutable se puede ejecutar directamente en lugar de llamar a `dotnet <PROJECT-FILE>.dll`, que sigue siendo una forma aceptable de ejecutar la aplicación.
+En este modo, se crea un host ejecutable específico de la plataforma para hospedar la aplicación multiplataforma. Este modo es similar a FDD, ya que requiere un host en forma del comando `dotnet`. El nombre de archivo ejecutable de host varía según la plataforma y es similar a `<PROJECT-FILE>.exe`. Este archivo ejecutable se puede ejecutar directamente en lugar de llamar a `dotnet <PROJECT-FILE>.dll`, que sigue siendo una forma aceptable de ejecutar la aplicación.
 
-La aplicación está configurada para tener como destino una versión específica de .NET Core. Es obligatorio que ese runtime de .NET Core de destino esté en el equipo donde se quiere ejecutar la aplicación. Por ejemplo, si la aplicación tiene como destino .NET Core 2.2, todos los equipos en los que se ejecute la aplicación deben tener instalado el runtime de .NET Core 2.2. Como se indica en la sección [Conceptos básicos de publicación](#publishing-basics), se puede editar el archivo de proyecto para cambiar la plataforma de destino predeterminada o seleccionar más de una como destino.
+La aplicación está configurada para tener como destino una versión específica de .NET Core. Es obligatorio que ese runtime de .NET Core de destino esté en cualquier equipo donde se ejecute la aplicación. Por ejemplo, si la aplicación tiene como destino .NET Core 2.2, todos los equipos en los que se ejecute la aplicación deben tener instalado el runtime de .NET Core 2.2. Como se indica en la sección [Conceptos básicos de publicación](#publishing-basics), se puede editar el archivo de proyecto para cambiar la plataforma de destino predeterminada o seleccionar más de una como destino.
 
 Al publicar un FDE se crea una aplicación que realiza la puesta al día automática a la revisión de seguridad de .NET Core más reciente disponible en el sistema en el que se ejecuta la aplicación. Para más información sobre el enlace de versión en tiempo de compilación, vea [Selección de la versión de .NET Core que se va a usar](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Excepto para .NET Core 3.x cuando el destino es la plataforma actual, se deben usar los siguientes modificadores con el comando `dotnet publish` para publicar un FDE:
+En el caso de .NET Core 2.2 y versiones anteriores, debe usar los modificadores siguientes con el comando `dotnet publish` para publicar un FDE:
 
 - `-r <RID>` Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
 
@@ -135,7 +134,7 @@ Siempre que se usa el modificador `-r`, la ruta de acceso de la carpeta de salid
 Si usa la [aplicación de ejemplo](#sample-app), ejecute `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Este comando crea el archivo ejecutable siguiente: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Implementación autocontenida
 
@@ -150,7 +149,7 @@ Debe usar los modificadores siguientes con el comando `dotnet publish` para publ
 - `--self-contained true` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como una SCD.
 
 > [!NOTE]
-> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Vea también
 

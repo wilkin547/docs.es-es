@@ -2,12 +2,12 @@
 title: Procedimiento para buscar caracteres en una cadena (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140961"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345678"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Procedimiento para buscar caracteres en una cadena (LINQ) (C#)
 Como la clase <xref:System.String> implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> genérica, cualquier cadena puede consultarse como una secuencia de caracteres. Pero esto no es un uso habitual de LINQ. Para operaciones de coincidencia de patrones complejas, use la clase <xref:System.Text.RegularExpressions.Regex>.  

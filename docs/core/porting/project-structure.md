@@ -3,23 +3,22 @@ title: Organización de proyectos para .NET Framework y .NET Core
 description: Ayuda para los propietarios del proyecto que quieren compilar su solución en .NET Framework y en .NET Core, en paralelo.
 author: conniey
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801926"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777334"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
 
-Aprenda a crear una solución que se compila para .NET Framework y .NET Core en paralelo. Consulte varias opciones para organizar los proyectos para alcanzar este objetivo. Los siguientes son algunos escenarios típicos que debe considerar cuando decida cómo va a configurar el diseño del proyecto con .NET Core. Es posible que la lista no abarque todos los aspectos que quiere, pero debe darles prioridad en función de las necesidades del proyecto.
+Puede crear una solución que se compila para .NET Framework y .NET Core en paralelo. En este artículo se tratan varias opciones de organización del proyecto para ayudarlo a lograr este objetivo. Los siguientes son algunos escenarios típicos que debe considerar cuando decida cómo va a configurar el diseño del proyecto con .NET Core. Es posible que la lista no abarque todos los aspectos que quiere, pero debe darles prioridad en función de las necesidades del proyecto.
 
 - [**Combinar los proyectos existentes y los proyectos de .NET Core en proyectos únicos**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *Para qué se usa:*
-  - Para simplificar el proceso de compilación mediante la compilación de un proyecto único en lugar de compilar varios proyectos, donde cada uno de ellos tiene como destino una plataforma o versión distinta de .NET Framework.
-  - Simplifique la administración de archivos de origen en proyectos con compatibilidad con múltiples versiones, porque debe administrar un solo archivo de proyecto. Cuando agrega o quita archivos de origen, las alternativas requieren que los sincronice manualmente con los otros proyectos.
+  - Simplifica el proceso de compilación mediante la compilación de un proyecto único en lugar de varios proyectos, donde cada uno de ellos tiene como destino una plataforma o versión distinta de .NET Framework.
+  - Simplifica la administración de archivos de origen en proyectos con compatibilidad con múltiples versiones, porque debe administrar un solo archivo de proyecto. Cuando agrega o quita archivos de origen, las alternativas requieren que los sincronice manualmente con los otros proyectos.
   - Para generar fácilmente un paquete NuGet para consumo.
   - Le permite escribir código para una versión específica de .NET Framework en las bibliotecas a través del uso de directivas de compilador.
 
@@ -62,10 +61,7 @@ Si hay proyectos existentes que tienen como destino marcos de trabajo anteriores
 
 [**Código fuente**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
-Los cambios que debe tener en cuenta son los siguientes:
-
-- .NET Core y los proyectos existentes se mantienen en carpetas independientes.
-  - Mantener los proyectos en carpetas independientes evita que sea necesario tener Visual Studio 2017 o versiones posteriores. Puede crear una solución independiente que solo abra los proyectos anteriores.
+.NET Core y los proyectos existentes se mantienen en carpetas independientes. Mantener los proyectos en carpetas independientes evita que sea necesario tener Visual Studio 2017 o versiones posteriores. Puede crear una solución independiente que solo abra los proyectos anteriores.
 
 ## <a name="see-also"></a>Vea también
 

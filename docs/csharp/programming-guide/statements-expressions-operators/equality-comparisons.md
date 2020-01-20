@@ -1,16 +1,15 @@
 ---
 title: 'Comparaciones de igualdad: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d8dc1fd9ba99116d4d6ec84ca6e48b4307b30dbb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552421"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699189"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (guía de programación de C#)
 
@@ -24,7 +23,7 @@ A veces es necesario comparar si dos valores son iguales. En algunos casos, se p
   
  En este código, se crean dos objetos, pero después de la instrucción de asignación, ambas referencias hacen referencia al mismo objeto. Por consiguiente, presentan igualdad de referencia. Use el método <xref:System.Object.ReferenceEquals%2A> para determinar si dos referencias hacen referencia al mismo objeto.  
   
- El concepto de igualdad de la referencia solo se aplica a los tipos de referencia. Los objetos de tipo de valor no pueden presentar igualdad de referencia porque al asignar una instancia de un tipo de valor a una variable, se realiza una copia del valor. Por consiguiente, nunca puede haber dos structs con conversión unboxing que hagan referencia a la misma ubicación de la memoria. Además, si se usa <xref:System.Object.ReferenceEquals%2A> para comparar dos tipos de valor, el resultado siempre será `false`, aunque todos los valores que contengan los objetos sean idénticos. Esto se debe a que a cada variable se aplica la conversión boxing en una instancia de objeto independiente. Para obtener más información, vea [Cómo: Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md).  
+El concepto de igualdad de la referencia solo se aplica a los tipos de referencia. Los objetos de tipo de valor no pueden presentar igualdad de referencia porque al asignar una instancia de un tipo de valor a una variable, se realiza una copia del valor. Por consiguiente, nunca puede haber dos structs con conversión unboxing que hagan referencia a la misma ubicación de la memoria. Además, si se usa <xref:System.Object.ReferenceEquals%2A> para comparar dos tipos de valor, el resultado siempre será `false`, aunque todos los valores que contengan los objetos sean idénticos. Esto se debe a que a cada variable se aplica la conversión boxing en una instancia de objeto independiente. Para más información, consulte [Procedimiento Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md).
 
 ## <a name="value-equality"></a>Igualdad de valores
 
@@ -43,7 +42,7 @@ if( b == a)
   
  Para la mayoría de los otros tipos, las pruebas de igualdad de valores son más complejas, porque es preciso entender cómo la define el tipo. Para las clases y los structs que tienen varios campos o propiedades, la igualdad de valores suele definirse de modo que significa que todos los campos o propiedades tienen el mismo valor. Por ejemplo, podrían definirse dos objetos `Point` que fueran equivalentes si pointA.X es igual a pointB.X y pointA.Y es igual a pointB.Y.  
   
- En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para obtener más información sobre cómo definir la igualdad de valores en sus propias clases y structs, vea [Cómo: Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md).  
+En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para más información sobre cómo definir la igualdad de valores en sus propias clases y structs, consulte [Procedimiento Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md).
   
 ### <a name="value-equality-for-floating-point-values"></a>Igualdad de valores en valores de número de punto flotante
 
@@ -51,10 +50,10 @@ if( b == a)
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|DESCRIPCIÓN|  
+|Title|Descripción|  
 |-----------|-----------------|  
-|[Cómo: Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
-|[Cómo: Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  
+|[Procedimiento Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
+|[Procedimiento Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  
 |[Guía de programación de C#](../index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET Framework.|  
 |[Tipos](../types/index.md)|Proporciona información sobre el sistema de tipos de C# y vínculos a información adicional.|  
   

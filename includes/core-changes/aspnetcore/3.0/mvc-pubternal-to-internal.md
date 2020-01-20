@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393979"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901643"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: los tipos "pubternal" se han cambiado a internal
 
@@ -34,7 +34,7 @@ El uso accidental de los tipos "pubternal" es habitual, lo que da lugar a cambio
 
 Si usa tipos que se han convertido realmente en `public` y se han movido a un nuevo espacio de nombres compatible, actualice las referencias para que coincidan con los espacios de nombres nuevos.
 
-Si utiliza tipos que se han marcado como `internal`, deberá buscar una alternativa. Los tipos "pubternal" anteriores nunca se admitieron para uso público. Si hay tipos específicos en estos espacios de nombres que son fundamentales para las aplicaciones, registre una incidencia en [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues). Se pueden pensar ideas para hacer los tipos solicitados `public`.
+Si utiliza tipos que se han marcado como `internal`, deberá buscar una alternativa. Los tipos "pubternal" anteriores nunca se admitieron para uso público. Si hay tipos específicos en estos espacios de nombres que son fundamentales para las aplicaciones, registre una incidencia en [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues). Se pueden pensar ideas para hacer los tipos solicitados `public`.
 
 #### <a name="category"></a>Categoría
 

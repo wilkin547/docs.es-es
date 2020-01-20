@@ -1,6 +1,5 @@
 ---
 title: 'Procedimiento: Definición de la igualdad de valores para un tipo (Guía de programación de C#)'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 0e1c736c7a2826c1218cb078a6e9f874b3b72c3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755009"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711979"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedimiento: Definición de la igualdad de valores para un tipo (Guía de programación de C#)
 
@@ -34,7 +33,7 @@ Cuando defina una clase o un struct, debe decidir si tiene sentido crear una def
   
  Los detalles de implementación para la igualdad de valores son diferentes para las clases y los structs. A pesar de ello, tanto las clases como los structs requieren los mismos pasos básicos para implementar la igualdad:  
   
-1. Invalide el método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> [virtual](../../language-reference/keywords/virtual.md). En la mayoría de los casos, la implementación de `bool Equals( object obj )` debería llamar solamente al método `Equals` específico del tipo que es la implementación de la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType>. (Vea el paso 2).  
+1. Invalide el método [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. En la mayoría de los casos, la implementación de `bool Equals( object obj )` debería llamar solamente al método `Equals` específico del tipo que es la implementación de la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType>. (Vea el paso 2).  
   
 2. Implemente la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType> proporcionando un método `Equals` específico del tipo. Aquí es donde se realiza la comparación de equivalencias propiamente dicha. Por ejemplo, podría decidir que, para definir la igualdad, solo se comparen uno o dos campos del tipo. No genere excepciones desde `Equals`. Solo para las clases: este método debe examinar únicamente los campos que se declaran en la clase. Debe llamar a `base.Equals` para examinar los campos que están en la clase base. (No realice esto si el tipo hereda directamente de <xref:System.Object>, porque la implementación <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> realiza una comprobación de igualdad de referencia).  
   

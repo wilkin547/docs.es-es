@@ -1,6 +1,5 @@
 ---
 title: 'Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -8,16 +7,16 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6c2313f7b600bc1670c944f6a93868c1bc4c7c16
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3ea90f0739ad45c31e4f25836c9de8e708dff2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039323"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700827"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido (Guía de programación de C#)
+# <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido (Guía de programación de C#)
 
-En el siguiente ejemplo de código de C# se muestra cómo se usan los servicios de invocación de plataforma para reproducir un archivo de sonido en el sistema operativo Windows.
+En el siguiente ejemplo de código de C# se muestra cómo se usan los servicios de invocación de plataforma para reproducir un archivo de sonido WAV en el sistema operativo Windows.
 
 ## <a name="example"></a>Ejemplo
 

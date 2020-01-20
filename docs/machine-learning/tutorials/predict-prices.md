@@ -3,13 +3,13 @@ title: 'Tutorial: Predicción de precios mediante regresión'
 description: En este tutorial se muestra cómo compilar un modelo de regresión con ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: e4014dbdfb81af65c35d2f7693ef2c57885303ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459163"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711628"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Predicción de precios mediante regresión con ML.NET
 
@@ -130,7 +130,7 @@ ML.NET usa la [clase IDataView](xref:Microsoft.ML.IDataView) como una forma flex
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-Como quiere predecir la tarifa de carreras de taxi, la columna `FareAmount` es la `Label` que va a predecir (la salida del modelo). Use la clase de transformación `CopyColumnsEstimator` para copiar `FareAmount` y agregue el código siguiente:
+Como quiere predecir la tarifa de carreras de taxi, la columna `FareAmount` es la `Label` que va a predecir (la salida del modelo). Para ello, use la clase de transformación `CopyColumnsEstimator` para copiar `FareAmount` y agregue el código siguiente:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -215,7 +215,7 @@ Console.WriteLine($"*------------------------------------------------");
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) es una de las métricas de evaluación del modelo de regresión. Cuanto menor sea su valor, mejor será el modelo. Agregue el código siguiente al método `Evaluate` para mostrar el valor de RMS:
+[RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) es una de las métricas de evaluación del modelo de regresión. Cuanto menor sea su valor, mejor será el modelo. Agregue el código siguiente al método `Evaluate` para mostrar el valor de RMS:
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 

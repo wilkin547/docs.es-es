@@ -1,6 +1,5 @@
 ---
 title: 'Cláusula group: Referencia de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428507"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713467"
 ---
 # <a name="group-clause-c-reference"></a>group (Cláusula, Referencia de C#)
 
@@ -54,7 +53,7 @@ En el ejemplo siguiente se muestra el uso de un valor booleano para una clave co
 
 ### <a name="grouping-by-numeric-range"></a>Agrupar por intervalo numérico
 
-En el ejemplo siguiente se usa una expresión para crear claves de grupo numéricas que representan un intervalo de percentil. Observe el uso de [let](let-clause.md) como ubicación adecuada para almacenar el resultado de una llamada de método, para no tener que llamar al método dos veces en la cláusula `group`. Para obtener más información sobre cómo usar métodos en expresiones de consulta de manera segura, vea [Cómo: Controlar excepciones en expresiones de consulta](../../linq/handle-exceptions-in-query-expressions.md).
+En el ejemplo siguiente se usa una expresión para crear claves de grupo numéricas que representan un intervalo de percentil. Observe el uso de [let](let-clause.md) como ubicación adecuada para almacenar el resultado de una llamada de método, para no tener que llamar al método dos veces en la cláusula `group`. Para más información sobre cómo usar métodos en expresiones de consulta de manera segura, consulte [Controlar excepciones en expresiones de consulta](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ Use una clave compuesta cuando quiera agrupar los elementos según más de una c
 group person by new {name = person.surname, city = person.city};
 ```
 
-Use un tipo con nombre si debe pasar la variable de consulta a otro método. Cree una clase especial usando las propiedades autoimplementadas para las claves y, luego, invalide los métodos <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A>. También puede usar un struct, en cuyo caso no es estrictamente necesario invalidar esos métodos. Para obtener más información, vea [Procedimiento para implementar una clase ligera con propiedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) y [Cómo: Buscar archivos duplicados en un árbol de directorios](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). El último artículo contiene un ejemplo de código en el que se muestra cómo usar una clave compuesta con un tipo con nombre.
+Use un tipo con nombre si debe pasar la variable de consulta a otro método. Cree una clase especial usando las propiedades autoimplementadas para las claves y, luego, invalide los métodos <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A>. También puede usar un struct, en cuyo caso no es estrictamente necesario invalidar esos métodos. Para más información, consulte [Procedimiento Implementar una clase ligera con propiedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) y [Procedimiento para buscar archivos duplicados en un árbol de directorios](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). El último artículo contiene un ejemplo de código en el que se muestra cómo usar una clave compuesta con un tipo con nombre.
 
 ## <a name="example"></a>Ejemplo
 

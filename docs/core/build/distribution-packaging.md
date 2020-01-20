@@ -3,13 +3,12 @@ title: Empaquetado de distribución de .NET Core
 description: Obtenga información sobre cómo empaquetar, nombrar y versionar .NET Core para su distribución.
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393582"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740925"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 
@@ -104,7 +103,7 @@ Varios paquetes usan las carpetas marcadas con `(*)`. Algunos formatos de paquet
 
 El control de versiones de .NET Core se basa en los números de versión `[major].[minor]` del componente del entorno de ejecución.
 La versión del SDK usa el mismo valor `[major].[minor]` y tiene un valor `[patch]` independiente que combina la semántica de la característica y la revisión del SDK.
-Por ejemplo:  la versión 2.2.302 del SDK es la segunda versión de revisión de la tercera versión de características del SDK que admite el runtime 2.2. Para obtener más información sobre el funcionamiento del control de versiones, vea [.NET Core versioning overview](../versions/index.md) (Introducción al control de versiones de .NET Core).
+Por ejemplo: la versión 2.2.302 del SDK es la segunda versión de revisión de la tercera versión de características del SDK que admite el runtime 2.2. Para obtener más información sobre el funcionamiento del control de versiones, vea [.NET Core versioning overview](../versions/index.md) (Introducción al control de versiones de .NET Core).
 
 Algunos de los paquetes incluyen parte del número de versión en su nombre. Esto permite instalar una versión concreta.
 No se incluye el resto de la versión en el nombre de la versión. Esto permite al administrador de paquetes del sistema operativo actualizar los paquetes (por ejemplo, instalar automáticamente correcciones de seguridad). Los administradores de paquetes compatibles son específicos de Linux.
@@ -120,19 +119,19 @@ A continuación se enumeran los paquetes recomendados:
 - `aspnetcore-runtime-[major].[minor]`: instala un runtime concreto de ASP.NET Core.
   - **Versión:** \<versión aspnetcore de runtime>
   - **Ejemplo:** aspnetcore-runtime-2.1
-  - **Contiene:**  (6)
+  - **Contiene:** (6)
   - **Dependencias:** `dotnet-runtime-[major].[minor]`
 
 - `dotnet-runtime-deps-[major].[minor]` _(Opcional)_ : instala las dependencias para ejecutar aplicaciones independientes.
   - **Versión:** \<versión de runtime>
   - **Ejemplo:** dotnet-runtime-deps-2.1
-  - **Dependencias:** _dependencias concretas de distribución_
+  - **Dependencias:** _dependencias específicas de la distribución_
 
 - `dotnet-runtime-[major].[minor]`: instala un runtime concreto.
   - **Versión:** \<versión de runtime>
   - **Ejemplo:** dotnet-runtime-2.1
   - **Contiene:** (5)
-  - **Dependencias:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
+  - **Dependencias:** `dotnet-hostfxr-[major].[minor]` y `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`: dependencia.
   - **Versión:** \<versión de runtime>

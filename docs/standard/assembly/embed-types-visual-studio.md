@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733192"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338555"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Tutorial: Inserción de tipos de ensamblados administrados en Visual Studio
 
@@ -22,7 +22,7 @@ Después de especificar las interfaces públicas que se pueden insertar, puede c
 
 Si crea otra versión del ensamblado de tiempo de ejecución con nombre seguro, el programa cliente no tiene que volver a compilarse. El programa cliente sigue usando cualquier versión del ensamblado de tiempo de ejecución que encuentre disponible y usa la información de tipo insertada para las interfaces públicas.
 
-En este tutorial realizará lo siguiente:
+En este tutorial, hará lo siguiente:
 
 1. Crear un ensamblado con nombre seguro que tenga una interfaz pública e incluya información de tipo que se puede insertar.
 1. Crear un ensamblado de tiempo de ejecución con nombre seguro que implemente la interfaz pública.
@@ -53,7 +53,7 @@ El primer paso es crear el ensamblado de la interfaz de equivalencia de tipos.
 
 1. En Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto**.
 
-1. En el cuadro de diálogo **Crear un nuevo proyecto**, escriba *biblioteca de clases* en el cuadro **Buscar plantillas**. Seleccione la plantilla **Biblioteca de clases (.NET Framework)** de C# o VB de la lista y, a continuación, seleccione **Siguiente**.
+1. En el cuadro de diálogo **Crear un nuevo proyecto**, escriba *biblioteca de clases* en el cuadro **Buscar plantillas**. Seleccione la plantilla **Biblioteca de clases (.NET Framework)** de C# o Visual Basic de la lista y, luego, seleccione **Siguiente**.
 
 1. En el cuadro de diálogo **Configure su nuevo proyecto**, en **Nombre del proyecto**, escriba *TypeEquivalenceInterface* y, a continuación, seleccione **Crear**. Se crea el proyecto.
 
@@ -120,7 +120,7 @@ A continuación, cree la clase en tiempo de ejecución de equivalencia de tipos.
 
 1. En Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto**.
 
-1. En el cuadro de diálogo **Crear un nuevo proyecto**, escriba *biblioteca de clases* en el cuadro **Buscar plantillas**. Seleccione la plantilla **Biblioteca de clases (.NET Framework)** de C# o VB de la lista y, a continuación, seleccione **Siguiente**.
+1. En el cuadro de diálogo **Crear un nuevo proyecto**, escriba *biblioteca de clases* en el cuadro **Buscar plantillas**. Seleccione la plantilla **Biblioteca de clases (.NET Framework)** de C# o Visual Basic de la lista y, luego, seleccione **Siguiente**.
 
 1. En el cuadro de diálogo **Configure su nuevo proyecto**, en **Nombre del proyecto**, escriba *TypeEquivalenceRuntime* y, a continuación, seleccione **Crear**. Se crea el proyecto.
 
@@ -192,7 +192,7 @@ Por último, cree un programa cliente de equivalencia de tipos que haga referenc
 
 1. En Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto**.
 
-1. En el cuadro de diálogo **Crear un nuevo proyecto**, escriba *consola* en el cuadro **Buscar plantillas**. Seleccione la plantilla **Aplicación de consola (.NET Framework)** de C# o VB de la lista y, a continuación, seleccione **Siguiente**.
+1. En el cuadro de diálogo **Crear un nuevo proyecto**, escriba *consola* en el cuadro **Buscar plantillas**. Seleccione la plantilla **Aplicación de consola (.NET Framework)** de C# o Visual Basic de la lista y, a continuación, seleccione **Siguiente**.
 
 1. En el cuadro de diálogo **Configure su nuevo proyecto**, en **Nombre del proyecto**, escriba *TypeEquivalenceClient* y, a continuación, seleccione **Crear**. Se crea el proyecto.
 

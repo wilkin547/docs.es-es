@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198574"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901748"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: herramienta de precompilación en desuso
 
@@ -30,7 +30,7 @@ El SDK de Razor proporciona más funcionalidad y comprueba la exactitud de los a
 
 #### <a name="recommended-action"></a>Acción recomendada
 
-Para los usuarios de ASP.NET Core 2.1 o versiones posteriores, actualice para usar la compatibilidad nativa con la precompilación en el [SDK de Razor](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Si los errores o las características que faltan impiden la migración al SDK de Razor, abra una incidencia en [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues).
+Para los usuarios de ASP.NET Core 2.1 o versiones posteriores, actualice para usar la compatibilidad nativa con la precompilación en el [SDK de Razor](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Si los errores o las características que faltan impiden la migración al SDK de Razor, abra una incidencia en [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues).
 
 #### <a name="category"></a>Categoría
 

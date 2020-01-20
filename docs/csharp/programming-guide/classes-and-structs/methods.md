@@ -1,17 +1,16 @@
 ---
 title: 'Métodos: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699962"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714766"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 
@@ -120,7 +119,7 @@ Para obtener más información, consulta [return](../../language-reference/keywo
 
 Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda.
 
-Si marca un método con el modificador [async](../../language-reference/keywords/async.md) , puede usar el operador [await](../../language-reference/operators/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
+Si marca un método con el modificador [async](../../language-reference/keywords/async.md), puede usar el operador [await](../../language-reference/operators/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
 
 > [!NOTE]
 > Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
@@ -158,7 +157,7 @@ Un iterador realiza una iteración personalizada en una colección, como una lis
 
 Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../language-reference/keywords/foreach-in.md) .
 
-El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
+El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
 Para obtener más información, consulta [Iteradores](../concepts/iterators.md).
 

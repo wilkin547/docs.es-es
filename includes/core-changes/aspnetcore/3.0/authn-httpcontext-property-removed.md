@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2945465bb6a3a362dc640641056712dffd73d559
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394194"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901615"
 ---
 ### <a name="authentication-httpcontextauthentication-property-removed"></a>Autenticación: se ha quitado la propiedad HttpContext.Authentication
 
@@ -12,9 +12,9 @@ La propiedad `Authentication` en desuso se ha quitado en `HttpContext`.
 
 #### <a name="change-description"></a>Descripción del cambio
 
-Como parte de [aspnet/AspNetCore#6504](https://github.com/aspnet/AspNetCore/pull/6504), la propiedad `Authentication` en desuso se ha quitado en `HttpContext`. La propiedad `Authentication` se ha dejado en desuso desde la versión 2.0. Se ha publicado una [guía de migración](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) para migrar código con esta propiedad en desuso a las nuevas API de reemplazo. Las clases o API restantes no utilizadas relacionadas con la pila de autenticación antigua ASP.NET Core 1.x se han quitado en la confirmación [aspnet/AspNetCore@d7a7c65](https://github.com/aspnet/AspNetCore/commit/d7a7c65).
+Como parte de [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504), la propiedad `Authentication` en desuso se ha quitado en `HttpContext`. La propiedad `Authentication` se ha dejado en desuso desde la versión 2.0. Se ha publicado una [guía de migración](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) para migrar código con esta propiedad en desuso a las nuevas API de reemplazo. Las clases o API restantes no utilizadas relacionadas con la pila de autenticación antigua ASP.NET Core 1.x se han quitado en la confirmación [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65).
 
-Para obtener información, consulte [aspnet/AspNetCore#6533](https://github.com/aspnet/AspNetCore/issues/6533).
+Para obtener información, vea [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533).
 
 #### <a name="version-introduced"></a>Versión introducida
 

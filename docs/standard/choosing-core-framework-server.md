@@ -4,12 +4,12 @@ description: Una guía sobre qué implementación de .NET debe tener en cuenta a
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799258"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738674"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -95,7 +95,7 @@ Algunas tecnologías de .NET Framework no están disponibles en .NET Core. Algun
 
 - Compatibilidad con lenguajes: Visual Basic y F# se admiten actualmente en .NET Core, pero no para todos los tipos de proyecto. Para obtener una lista de plantillas de proyecto compatibles, consulte [Opciones de plantilla para dotnet new](../core/tools/dotnet-new.md#arguments).
 
-Además del mapa de ruta oficial, hay otros marcos de trabajo para migrar a .NET Core. Para obtener una lista completa, vea los problemas de CoreFX marcados como [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Esta lista no representa un compromiso de Microsoft para migrar esos componentes a .NET Core. Simplemente representa el deseo de la comunidad de hacerlo. Si le preocupa cualquiera de los componentes marcados como `port-to-core`, participe en las discusiones en GitHub. Y, si piensa que falta algo, registre un nuevo problema en el [repositorio de CoreFX](https://github.com/dotnet/corefx/issues/new).
+Además del mapa de ruta oficial, hay otros marcos de trabajo para migrar a .NET Core. Para obtener una lista completa, vea los problemas de CoreFX marcados como [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Esta lista no representa un compromiso de Microsoft para migrar esos componentes a .NET Core. Simplemente representa el deseo de la comunidad de hacerlo. Si le preocupa cualquiera de los componentes marcados como `port-to-core`, participe en las discusiones en GitHub. Y, si piensa que falta algo, registre un nuevo problema en el [repositorio de .NET](https://github.com/dotnet/runtime/issues/new).
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Necesidad de usar una plataforma que no es compatible con .NET Core
 

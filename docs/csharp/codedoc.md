@@ -4,14 +4,14 @@ description: Obtenga información sobre cómo documentar el código con comentar
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710987"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713936"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
+# <a name="document-your-code-with-xml-comments"></a>Documentación del código con comentarios XML
 
 Los comentarios de documentación XML son un tipo especial de comentarios que se agregan encima de la definición de un tipo o un miembro definido por el usuario.
 Son especiales porque los puede procesar el compilador para generar un archivo de documentación XML en tiempo de compilación.
@@ -137,7 +137,7 @@ Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
 ## <a name="param"></a>\<param>
 
-La etiqueta `<param>` se usa para describir los parámetros de un método. Este es un ejemplo sobre el método doble `Add`: El parámetro que describe la etiqueta se especifica en el atributo `name` **obligatorio**.
+La etiqueta `<param>` se usa para describir los parámetros de un método. Este es un ejemplo sobre el método doble `Add`: El parámetro que describe la etiqueta se especifica en el atributo **necesario** `name`.
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -170,7 +170,7 @@ Cree una lista sin ordenar con todas las operaciones matemáticas que admita su 
 
 Para crear una lista ordenada o una tabla, cambie el atributo `type` a `number` o `table`, respectivamente.
 
-### <a name="putting-it-all-together"></a>En resumen
+### <a name="put-it-all-together"></a>En resumen
 
 Si ha seguido este tutorial y ha aplicado las etiquetas al código en los casos en que era necesario, el código debe ser ahora similar al siguiente:
 
@@ -206,7 +206,7 @@ El atributo `id`, que se puede usar en lugar de `name`, representa el identifica
 ### <a name="user-defined-tags"></a>Etiquetas definidas por el usuario
 
 Todas las etiquetas descritas anteriormente son las que reconoce el compilador de C#, pero el usuario puede definir sus propias etiquetas.
-Las herramientas como Sandcastle proporcionan compatibilidad con etiquetas adicionales como [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) y [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), e incluso permiten [documentar espacios de nombres](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Las herramientas como Sandcastle proporcionan compatibilidad con etiquetas adicionales como [\<event>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) y [\<note>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), e incluso permiten [documentar espacios de nombres](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 También se pueden usar herramientas de generación de documentación internas o personalizadas con las etiquetas estándar y se admiten varios formatos de salida, de HTML a PDF.
 
 ## <a name="recommendations"></a>Recomendaciones

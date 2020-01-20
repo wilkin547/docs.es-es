@@ -1,15 +1,13 @@
 ---
 title: Control de versiones y bibliotecas de .NET
 description: Procedimientos recomendados para el control de versiones de las bibliotecas de .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969018"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706418"
 ---
 # <a name="versioning"></a>Control de versiones
 
@@ -75,7 +73,7 @@ La versión del archivo de ensamblado se usa para mostrar una versión de archiv
 <FileVersion>11.0.2.21924</FileVersion>
 ```
 
-![Explorador de Windows](./media/versioning/win-properties.png "Windows Explorer")
+![Explorador de Windows](./media/versioning/win-properties.png "Explorador de Windows")
 
 **✔️ ES RECOMENDABLE**  incluir un número de compilación de integración continua como la revisión AssemblyFileVersion.
 

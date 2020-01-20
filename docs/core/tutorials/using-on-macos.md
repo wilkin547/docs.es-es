@@ -1,14 +1,13 @@
 ---
 title: 'Tutorial: Creación de una solución de .NET Core en macOS con Visual Studio Code'
 description: En este documento se proporcionan los pasos y el flujo de trabajo para crear una solución de .NET Core con Visual Studio Code.
-ms.date: 03/23/2017
-ms.custom: seodec18
-ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/19/2019
+ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117361"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715302"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: Creación de una solución de .NET Core en macOS con Visual Studio Code
 
@@ -23,13 +22,13 @@ Instale el [SDK de .NET Core](https://dotnet.microsoft.com/download). El SDK de 
 
 Instale [Visual Studio Code](https://code.visualstudio.com). Durante el transcurso de este artículo, también instalará las extensiones de Visual Studio Code que mejoran la experiencia de desarrollo de .NET Core.
 
-Instale la extensión de C# de Visual Studio Code; para ello, abra Visual Studio Code y presione <kbd>F1</kbd> para abrir la paleta de Visual Studio Code. Escriba **ext install** para ver la lista de extensiones. Seleccione la extensión de C#. Reinicie Visual Studio Code para activar la extensión. Para obtener más información, vea la [documentación de la extensión de C# en Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+Instale la extensión de C# de Visual Studio Code; para ello, abra Visual Studio Code y presione <kbd>Fn</kbd>+<kbd>F1</kbd> para abrir la paleta de Visual Studio Code. Escriba **ext install** para ver la lista de extensiones. Seleccione la extensión de C#. Reinicie Visual Studio Code para activar la extensión. Para obtener más información, vea la [documentación de la extensión de C# enVisual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
 ## <a name="get-started"></a>Primeros pasos
 
-En este tutorial, creará tres proyectos: un proyecto de biblioteca, pruebas para ese proyecto de biblioteca y una aplicación de consola que usa la biblioteca. Puede [ver o descargar el origen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) de este tema en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+En este tutorial, creará tres proyectos: un proyecto de biblioteca, pruebas para ese proyecto de biblioteca y una aplicación de consola que usa la biblioteca. Puede [ver o descargar el origen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) de este artículo en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Inicie Visual Studio Code. Presione <kbd>Ctrl</kbd>+<kbd>\`</kbd> (el carácter de comilla inversa o tilde aguda) o seleccione **Ver > Terminal integrado** desde el menú para abrir un terminal insertado en Visual Studio Code. Todavía puede abrir un shell externo con el comando **Abrir en símbolo del sistema** del Explorador (**Abrir en terminal** en Mac o Linux) si prefiere trabajar fuera de Visual Studio Code.
+Inicie Visual Studio Code. Presione <kbd>Ctrl</kbd>+<kbd>\`</kbd> (el carácter de comilla inversa o tilde aguda) o seleccione **Ver > Terminal** desde el menú para abrir un terminal insertado en Visual Studio Code. Todavía puede abrir un shell externo con el comando **Abrir en símbolo del sistema** del Explorador (**Abrir en terminal** en Mac o Linux) si prefiere trabajar fuera de Visual Studio Code.
 
 Comience creando un archivo de solución, que actúa como un contenedor para uno o más proyectos de .NET Core. En el terminal, ejecute el comando [`dotnet new`](../tools/dotnet-new.md) para crear una solución *golden.sln* dentro de una nueva carpeta denominada *golden*:
 
@@ -210,13 +209,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>Depurar la aplicación
 
-Establezca un punto de interrupción en la instrucción `WriteLine` del método `Main`. Haga esto presionando la tecla <kbd>F9</kbd> cuando el cursor se encuentre encima de la línea `WriteLine` o haciendo clic con el mouse en el margen izquierdo de la línea donde quiera establecer el punto de interrupción. Aparecerá un círculo rojo en el margen junto a la línea de código. Cuando se alcance el punto de interrupción, la ejecución de código se detendrá *antes* de que se ejecute la línea del punto de interrupción.
+Establezca un punto de interrupción en la instrucción `WriteLine` del método `Main`. Haga esto presionando la tecla <kbd>Fn</kbd>+<kbd>F9</kbd> cuando el cursor se encuentre encima de la línea `WriteLine` o haciendo clic con el mouse en el margen izquierdo de la línea donde quiera establecer el punto de interrupción. Aparecerá un círculo rojo en el margen junto a la línea de código. Cuando se alcance el punto de interrupción, la ejecución de código se detendrá *antes* de que se ejecute la línea del punto de interrupción.
 
-Abra la pestaña del depurador; para ello, seleccione el icono Depurar en la barra de herramientas de Visual Studio Code, seleccione **Ver > Depurar** desde la barra de menús o con el método abreviado de teclado <kbd>CTRL</kbd>+<kbd>Mayús</kbd>+<kbd>D</kbd>:
+Abra la pestaña del depurador; para ello, seleccione el icono Depurar en la barra de herramientas de Visual Studio Code, seleccione **Ver > Depurar** desde la barra de menús o con el método abreviado de teclado <kbd>Comando</kbd>+<kbd>MAYÚS</kbd>+<kbd>D</kbd>:
 
 ![Depurador de Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 
-Presione el botón Reproducir para iniciar la aplicación en el depurador. La aplicación comienza la ejecución y se ejecuta hasta el punto de interrupción, donde se detiene. Recorra paso a paso el método `Get` y asegúrese de que hayan pasado los argumentos correctos. Confirme que la respuesta es 42.
+Presione el botón Reproducir para iniciar la aplicación en el depurador. En este proyecto ha creado un proyecto de prueba y una aplicación. El depurador pregunta qué proyecto desea iniciar. Seleccione el proyecto "aplicación". La aplicación comienza la ejecución y se ejecuta hasta el punto de interrupción, donde se detiene. Recorra paso a paso el método `Get` y asegúrese de que hayan pasado los argumentos correctos. Confirme que la respuesta es 42.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -4,14 +4,12 @@ description: En este tutorial se muestra cómo usar un modelo de TensorFlow prev
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204920"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738700"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -135,7 +133,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
     |Palabra     |Índice    |
     |---------|---------|
     |niños     |  362    |
-    |want     |  181    |
+    |quiero     |  181    |
     |incorrecto    |  355    |
     |efectos  |  302    |
     |sentimiento  |  547    |

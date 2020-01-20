@@ -4,28 +4,28 @@ description: En este tutorial se enseña cómo generar secuencias con LINQ, escr
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039172"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345609"
 ---
-# <a name="working-with-linq"></a>Trabajar con LINQ
+# <a name="work-with-language-integrated-query-linq"></a>Uso de Language-Integrated Query (LINQ)
 
 ## <a name="introduction"></a>Introducción
 
-En este tutorial aprenderá varias características de .NET Core y el lenguaje C#. Aprenderá lo siguiente:
+En este tutorial aprenderá varias características de .NET Core y el lenguaje C#. Aprenderá a:
 
-- Generación de secuencias con LINQ
-- Cómo escribir métodos que pueden utilizarse fácilmente en las consultas LINQ.
-- Cómo distinguir entre la evaluación diligente y diferida.
+- Generar secuencias con LINQ.
+- Escribir métodos que puedan usarse fácilmente en las consultas LINQ.
+- Distinguir entre evaluación diligente y diferida.
 
 Aprenderá estas técnicas mediante la creación de una aplicación que muestra uno de los conocimientos básicos de cualquier mago: el [orden aleatorio faro](https://en.wikipedia.org/wiki/Faro_shuffle). En resumen, el orden aleatorio faro es una técnica basada en dividir la baraja exactamente por la mitad; a continuación, el orden aleatorio intercala cada carta de cada mitad de la baraja hasta volver a crear la original.
 
 Los magos usan esta técnica porque cada carta está en una ubicación conocida después de cada orden aleatorio, y el orden sigue un patrón de repetición.
 
-Para el propósito sobre el que trata este artículo, resulta divertido ocuparnos de la manipulación de secuencias de datos. La aplicación que se va a crear compilará una baraja y después realizará una secuencia de órdenes aleatorios, escribiendo cada vez la secuencia completa. También podrá comparar el orden actualizado con el original.
+Para el propósito sobre el que trata este artículo, resulta divertido ocuparnos de la manipulación de secuencias de datos. La aplicación que se va a crear compilará una baraja de cartas y después realizará una secuencia de órdenes aleatorios, que escribirá cada vez la secuencia completa. También podrá comparar el orden actualizado con el original.
 
 Este tutorial consta de varios pasos. Después de cada paso, puede ejecutar la aplicación y ver el progreso. También puede ver el [ejemplo completo](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -39,7 +39,7 @@ El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cr
 
 Si nunca ha usado C# antes, en [este tutorial](console-teleprompter.md) se explica la estructura de un programa con C#. Puede leerlo y después volver aquí para obtener más información sobre LINQ.
 
-## <a name="creating-the-data-set"></a>Creación del conjunto de datos
+## <a name="create-the-data-set"></a>Creación del conjunto de datos
 
 Antes de empezar, asegúrese de que las líneas siguientes se encuentran al principio del archivo `Program.cs` generado por `dotnet new console`:
 
@@ -118,7 +118,7 @@ Continúe y ejecute el ejemplo que se ha creado en este punto. Mostrará todas l
 
 ![Una ventana de la consola que muestra la aplicación escribiendo 52 tarjetas.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>Manipulación del orden
+## <a name="manipulate-the-order"></a>Manipulación del orden
 
 Seguidamente, céntrese en cómo va a establecer el orden aleatorio de las cartas de la baraja. El primer paso en cualquier orden aleatorio consiste en dividir la baraja en dos. Los métodos <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> que forman parte de las LINQ API le ofrecen esa característica: Colóquelos debajo del bucle `foreach`:
 
@@ -351,8 +351,8 @@ Aparte de LINQ, ha aprendido algo sobre una técnica que los magos utilizan para
 Para más información sobre LINQ, vea:
 
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [Introducción a LINQ](../programming-guide/concepts/linq/index.md)
-  - [Operaciones básicas de consulta LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [Transformaciones de datos con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [Sintaxis de consultas y sintaxis de métodos en LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [Características de C# compatibles con LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [Introducción a LINQ](../programming-guide/concepts/linq/index.md)
+- [Operaciones básicas de consulta LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [Transformaciones de datos con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Sintaxis de consultas y sintaxis de métodos en LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [Características de C# compatibles con LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

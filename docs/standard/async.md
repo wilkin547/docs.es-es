@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106685"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346085"
 ---
 # <a name="async-overview"></a>Información general de Async
 
@@ -20,7 +20,7 @@ No hace tanto tiempo, las aplicaciones funcionaban más rápido simplemente al c
 - Se espera que las aplicaciones cliente estén siempre activadas y conectadas, y que respondan adecuadamente a la interacción del usuario (p. ej., función táctil) con altas calificaciones en la tienda de aplicaciones.
 - Se espera que los servicios controlen los picos de tráfico al escalar y reducir verticalmente con facilidad. 
 
-La programación de Async es una técnica clave que facilita controlar las operaciones simultáneas y de E/S de bloqueo en varios núcleos. .NET proporciona a servicios y aplicaciones la capacidad de ser dinámicos y elásticos con modelos de programación asincrónicos de nivel de lenguaje y fáciles de usar en C#, VB y F#.
+La programación de Async es una técnica clave que facilita controlar las operaciones simultáneas y de E/S de bloqueo en varios núcleos. .NET proporciona la funcionalidad de que servicios y aplicaciones sean dinámicos y elásticos con modelos de programación asincrónicos de nivel de lenguaje y fáciles de usar en C#, Visual Basic y F#.
 
 ## <a name="why-write-async-code"></a>¿Por qué escribir código asincrónico?
 

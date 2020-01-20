@@ -1,6 +1,5 @@
 ---
 title: 'Hola mundo: su primer programa con Visual Studio en Windows o Mac - Guía C# de programación'
-ms.custom: seodec18
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196217"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712148"
 ---
 # <a name="hello-world----your-first-program"></a>Hola mundo, su primer programa
 
@@ -67,7 +66,7 @@ Seleccione **Nuevo** en la esquina superior derecha de la imagen. Visual Studio
 
 En el cuadro de diálogo de nuevo proyecto, elija ".NET Core" y "Aplicación de consola" y luego presione **Siguiente**. Tendrá que seleccionar la plataforma de destino. El valor predeterminado es correcto, así que presione Siguiente. Asigne un nombre al proyecto, como "HolaMundo" y, después, presione **Crear**. Puede usar la ubicación predeterminada del proyecto. No agregue este proyecto al control de código fuente.
 
-Visual Studio para Mac abre el proyecto. Ya es un ejemplo básico de "Hola mundo". Presione `Ctrl` + `Fn`  + `F5` para ejecutar el proyecto. Visual Studio para Mac compila el proyecto y convierte el código fuente en un archivo ejecutable. Después, inicia una ventana de comandos que ejecuta la nueva aplicación. Debería mostrarse el texto siguiente en la ventana:
+Visual Studio para Mac abre el proyecto. Ya es un ejemplo básico de "Hola mundo". Presione `Ctrl` + `Fn` + `F5` para ejecutar el proyecto. Visual Studio para Mac compila el proyecto y convierte el código fuente en un archivo ejecutable. Después, inicia una ventana de comandos que ejecuta la nueva aplicación. Debería mostrarse el texto siguiente en la ventana:
 
 ```console
 Hello World!
@@ -105,7 +104,7 @@ El método `Main` es un método [estático](../../language-reference/keywords/st
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-O bien
+o bien
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 

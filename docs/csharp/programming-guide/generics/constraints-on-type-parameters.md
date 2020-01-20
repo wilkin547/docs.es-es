@@ -1,24 +1,23 @@
 ---
 title: 'Restricciones de tipos de parámetros: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204636"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712239"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
 Las restricciones informan al compilador sobre las capacidades que debe tener un argumento de tipo. Sin restricciones, el argumento de tipo puede ser cualquier tipo. El compilador solo puede suponer los miembros de <xref:System.Object?displayProperty=nameWithType>, que es la clase base fundamental de los tipos .NET. Para más información, vea [Por qué usar restricciones](#why-use-constraints). Si el código de cliente intenta crear una instancia de su clase mediante un tipo que no se permite por una restricción, el resultado es un error en tiempo de compilación. Las restricciones se especifican con la palabra clave contextual `where`. En la tabla siguiente se muestran los siete tipos de restricciones:
 
-|Restricción|DESCRIPCIÓN|
+|Restricción|Descripción|
 |----------------|-----------------|
 |`where T : struct`|El argumento de tipo debe ser un tipo que no acepta valores NULL. Para más información sobre los tipos de valor que admiten un valor NULL, consulte [Tipos de valor que admiten un valor NULL](../../language-reference/builtin-types/nullable-value-types.md). Todos los tipos de valor tienen un constructor sin parámetros accesible, por lo que la restricción `struct` implica la restricción `new()` y no se puede combinar con la restricción `new()`. Tampoco se puede combinar la restricción `struct` con la restricción `unmanaged`.|
 |`where T : class`|El argumento de tipo debe ser un tipo de referencia. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
@@ -107,15 +106,15 @@ Si quita la marca de comentario de la última línea, no se compilará. Tanto `f
 
 A partir de C# 7.3, también puede especificar el tipo <xref:System.Enum?displayProperty=nameWithType> como una restricción de clase base. CLR siempre permitía esta restricción, pero el lenguaje C# no la permitía. Los genéricos que usan `System.Enum` proporcionan programación con seguridad de tipos para almacenar en caché los resultados de usar los métodos estáticos en `System.Enum`. En el ejemplo siguiente se buscan todos los valores válidos para un tipo de enumeración y, después, se compila un diccionario que asigna esos valores a su representación de cadena.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Los métodos empleados usan reflexión, lo que tiene consecuencias en el rendimiento. Puede llamar a este método para compilar una recopilación que se almacene en caché y se vuelva a usar, en lugar de repetir las llamadas que requieren reflexión.
+Los métodos empleados usan la reflexión, lo que tiene consecuencias en el rendimiento. Puede llamar a este método para compilar una recopilación que se almacene en caché y se vuelva a usar, en lugar de repetir las llamadas que requieren reflexión.
 
 Podría usarla como se muestra en el ejemplo siguiente para crear una enumeración y compilar un diccionario con sus nombres y valores:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>Vea también
 

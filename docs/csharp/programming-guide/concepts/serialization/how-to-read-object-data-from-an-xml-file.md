@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para leer datos de objetos en un archivo XML (C#)
+title: Procedimiento para leer datos de objeto de un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590740"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346431"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objetos en un archivo XML (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objeto de un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre del archivo que contiene los datos serializados. Para más información sobre cómo serializar los datos, vea [Procedimiento para escribir datos de objeto en un archivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md).  
+Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre del archivo que contiene los datos serializados. Para más información sobre la serialización de datos, consulte [Procedimiento para escribir datos de objeto en un archivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md).
   
  La clase debe tener un constructor público sin parámetros.  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IO.StreamWriter>
-- [Cómo: Escribir datos de objeto en un archivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Procedimiento para escribir datos de objeto en un archivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [Serialización (C#)](./index.md)
 - [Guía de programación de C#](../../index.md)

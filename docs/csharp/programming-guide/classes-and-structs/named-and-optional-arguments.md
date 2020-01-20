@@ -1,6 +1,5 @@
 ---
 title: 'Argumentos opcionales y con nombre: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970504"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714796"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  
@@ -70,7 +69,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
 - una expresión constante;  
   
-- una expresión con el formato `new ValType()`, donde `ValType` es un tipo de valor, como [enum](../../language-reference/keywords/enum.md) o [struct](./structs.md);  
+- una expresión con el formato `new ValType()`, donde `ValType` es un tipo de valor, como [enum](../../language-reference/builtin-types/enum.md) o [struct](structs.md);  
   
 - una expresión con el formato [default(ValType)](../../language-reference/operators/default.md), donde `ValType` es un tipo de valor.  
   
@@ -113,7 +112,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Para obtener más información y ejemplos, vea [Procedimiento para usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) y [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](../interop/how-to-access-office-onterop-objects.md).  
+ Para obtener más información y ejemplos, vea [Procedimiento para usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)](./how-to-use-named-and-optional-arguments-in-office-programming.md) y [Procedimiento para tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  El uso de argumentos opcionales y con nombre afecta a la resolución de sobrecarga de las maneras siguientes:  

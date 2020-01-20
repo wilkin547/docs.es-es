@@ -4,13 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias para F# en .NET Core: c
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117007"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714274"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y MSTest
 
@@ -21,7 +20,7 @@ Este tutorial le guía por una experiencia interactiva de creación de una soluc
 ## <a name="creating-the-source-project"></a>Crear el proyecto de origen
 
 Abra una ventana del Shell. Cree un directorio llamado *unit-testing-with-fsharp* que contenga la solución.
-En este directorio nuevo, ejecute [`dotnet new sln`](../tools/dotnet-new.md) para crear una solución nueva. Esto permite facilitar la administración de la biblioteca de clases y del proyecto de prueba unitaria.
+En este directorio nuevo, ejecute `dotnet new sln` para crear una solución nueva. Esto permite facilitar la administración de la biblioteca de clases y del proyecto de prueba unitaria.
 En el directorio de la solución, cree un directorio *MathService*. Esta es la estructura de directorios y archivos hasta el momento:
 
 ```
@@ -30,14 +29,14 @@ En el directorio de la solución, cree un directorio *MathService*. Esta es la e
     /MathService
 ```
 
-Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.  Creará una implementación de errores del servicio de matemáticas:
+Convierta *MathService* en el directorio actual y ejecute `dotnet new classlib -lang "F#"` para crear el proyecto de origen.  Creará una implementación de errores del servicio de matemáticas:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Cambie nuevamente el directorio al directorio *unit-testing-with-fsharp*. Ejecute [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) para agregar el proyecto de biblioteca de clases a la solución.
+Cambie nuevamente el directorio al directorio *unit-testing-with-fsharp*. Ejecute `dotnet sln add .\MathService\MathService.fsproj` para agregar el proyecto de biblioteca de clases a la solución.
 
 ## <a name="creating-the-test-project"></a>Crear el proyecto de prueba
 
@@ -52,7 +51,7 @@ A continuación, cree el directorio *MathService.Tests*. En el esquema siguiente
     /MathService.Tests
 ```
 
-Convierta el directorio *MathService.Tests* en el directorio actual y cree un proyecto nuevo con [`dotnet new mstest -lang F#`](../tools/dotnet-new.md). Esto crea un proyecto de prueba que usa MSTest como el marco de pruebas. La plantilla generada configura el ejecutor de pruebas en *MathServiceTests.fsproj*:
+Convierta el directorio *MathService.Tests* en el directorio actual y cree un proyecto nuevo con `dotnet new mstest -lang "F#"`. Esto crea un proyecto de prueba que usa MSTest como el marco de pruebas. La plantilla generada configura el ejecutor de pruebas en *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -62,7 +61,7 @@ Convierta el directorio *MathService.Tests* en el directorio actual y cree un pr
 </ItemGroup>
 ```
 
-El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias. `dotnet new` en el paso anterior agregó MSTest y el ejecutor de MSTest. Ahora, agregue la biblioteca de clases `MathService` como otra dependencia al proyecto. Use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias. `dotnet new` en el paso anterior agregó MSTest y el ejecutor de MSTest. Ahora, agregue la biblioteca de clases `MathService` como otra dependencia al proyecto. Use el comando `dotnet add reference`:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,7 +82,7 @@ Tiene el diseño de solución final siguiente:
         MathServiceTests.fsproj
 ```
 
-Ejecute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-with-fsharp*.
+Ejecute `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` en el directorio *unit-testing-with-fsharp*.
 
 ## <a name="creating-the-first-test"></a>Crear la primera prueba
 
@@ -107,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-El atributo `[<TestClass>]` indica una clase que contiene pruebas. El atributo `[<TestMethod>]` indica un método de prueba que el ejecutor de pruebas ejecuta. En el directorio *unit-testing-with-fsharp*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de MSTest tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
+El atributo `[<TestClass>]` indica una clase que contiene pruebas. El atributo `[<TestMethod>]` indica un método de prueba que el ejecutor de pruebas ejecuta. En el directorio *unit-testing-with-fsharp*, ejecute `dotnet test` para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de MSTest tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
 
 Estas dos pruebas muestran las pruebas superadas y con errores más básicas. `My test` indica que se supera y `Fail every time` indica que no. Ahora, cree una prueba para el método `squaresOfOdds`. El método `squaresOfOdds` devuelve una lista de los cuadrados de todos los valores enteros impares que forman parte de la secuencia de entrada. En lugar de intentar escribir todas esas funciones a la vez, puede crear de forma iterativa pruebas que validen la funcionalidad. Hacer cada prueba superada significa crear la funcionalidad necesaria para el método.
 
@@ -180,3 +179,10 @@ let squaresOfOdds xs =
 ```
 
 Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca. Ha estructurado la solución, por lo que agregar pruebas y paquetes nuevos es parte del flujo de trabajo normal. Ha centrado la mayor parte del tiempo y del esfuerzo en resolver los objetivos de la aplicación.
+
+## <a name="see-also"></a>Vea también
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-sln.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

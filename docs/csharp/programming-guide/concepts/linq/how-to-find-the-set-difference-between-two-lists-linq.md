@@ -2,12 +2,12 @@
 title: Procedimiento para buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 9e2a42a466a71d4e351df89398be197197a54042
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140994"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345937"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Procedimiento para buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)
 En este ejemplo se muestra cómo usar LINQ para comparar dos listas de cadenas y generar estas líneas, que están en names1.txt pero no en names2.txt.  

@@ -7,16 +7,16 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582037"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738661"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) es una especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET. La finalidad de .NET Standard es establecer una mayor uniformidad en el ecosistema de .NET. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) sigue estableciendo uniformidad en el comportamiento de las implementaciones de .NET, pero no hay ninguna especificación parecida para las bibliotecas de clases base (BCL) de .NET para implementaciones de la biblioteca de .NET.
+[.NET Standard](https://github.com/dotnet/standard) es una especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET. La finalidad de .NET Standard es establecer una mayor uniformidad en el ecosistema de .NET. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) sigue estableciendo uniformidad en el comportamiento de las implementaciones de .NET, pero no hay ninguna especificación parecida para las bibliotecas de clases base (BCL) de .NET para implementaciones de la biblioteca de .NET.
 
 .NET Standard habilita los escenarios clave siguientes:
 
@@ -84,7 +84,7 @@ Se proporcionan artefactos derivados para permitir una lectura más cómoda y ha
 
 El principal vehículo de distribución de los ensamblados de referencia de .NET Standard son los [paquetes NuGet](../core/packages.md). Las implementaciones se entregarán de diversas formas, adecuadas para cada implementación de .NET.
 
-Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco de trabajo ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md) `netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Para obtener el conjunto más amplio de API, indique `netstandard2.0` como destino, puesto que el número de API disponibles se ha doblado entre .NET Standard 1.6 y 2.0.
+Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco de trabajo ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md)`netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Para obtener el conjunto más amplio de API, indique `netstandard2.0` como destino, puesto que el número de API disponibles se ha doblado entre .NET Standard 1.6 y 2.0.
 
 El metapaquete [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) hace referencia al conjunto completo de paquetes NuGet que definen .NET Standard.  La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente 40 bibliotecas de .NET y las API asociadas que definen .NET Standard. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API.
 

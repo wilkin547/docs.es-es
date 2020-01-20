@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418724"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635943"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operaciones básicas de consulta LINQ (C#)
-En este tema se ofrece una breve introducción a las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y algunas de las clases de operaciones típicas que se realizan en una consulta. En los temas siguientes se ofrece información más detallada:  
+En este tema se ofrece una breve introducción a las expresiones de consulta LINQ y algunas de las clases de operaciones típicas que se realizan en una consulta. En los temas siguientes se ofrece información más detallada:  
   
  [Expresiones de consulta LINQ](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ En este tema se ofrece una breve introducción a las expresiones de consulta [!I
  [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> Si ya está familiarizado con un lenguaje de consultas como SQL o XQuery, puede omitir la mayoría de este tema. Lea la parte dedicada a la "cláusula `from`" en la sección siguiente para obtener información sobre el orden de las cláusulas en las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+> Si ya está familiarizado con un lenguaje de consultas como SQL o XQuery, puede omitir la mayoría de este tema. Lea la parte dedicada a la "cláusula `from`" en la sección siguiente para obtener información sobre el orden de las cláusulas en las expresiones de consulta LINQ.  
   
 ## <a name="obtaining-a-data-source"></a>Obtener un origen de datos  
- En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], el primer paso es especificar el origen de datos. En C#, como en la mayoría de los lenguajes de programación, se debe declarar una variable antes de poder usarla. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la cláusula `from` aparece en primer lugar para introducir el origen de datos (`customers`) y la *variable de rango* (`cust`).  
+ En una consulta LINQ, el primer paso es especificar el origen de datos. En C#, como en la mayoría de los lenguajes de programación, se debe declarar una variable antes de poder usarla. En una consulta LINQ, la cláusula `from` aparece en primer lugar para introducir el origen de datos (`customers`) y la *variable de rango* (`cust`).  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  La variable de rango es como la variable de iteración en un bucle `foreach`, con la diferencia de que en una expresión de consulta realmente no se produce ninguna iteración. Cuando se ejecuta la consulta, la variable de rango actúa como referencia para cada elemento sucesivo de `customers`. Dado que el compilador puede deducir el tipo de `cust`, no tiene que especificarlo explícitamente. Una cláusula `let` puede introducir variables de rango adicionales. Para obtener más información, vea [let (Cláusula)](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
-> Para los orígenes de datos no genéricos, como <xref:System.Collections.ArrayList>, el tipo de la variable de rango debe establecerse explícitamente. Para obtener más información, vea [Cómo: Consultar un objeto ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) y la [cláusula from](../../../language-reference/keywords/from-clause.md).  
+> Para los orígenes de datos no genéricos, como <xref:System.Collections.ArrayList>, el tipo de la variable de rango debe establecerse explícitamente. Para más información, consulte el [procedimiento para consultar un objeto ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) y [Cláusula from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtrado  
  Probablemente la operación de consulta más común es aplicar un filtro en forma de expresión booleana. El filtro hace que la consulta devuelva solo los elementos para los que la expresión es verdadera. El resultado se genera mediante la cláusula `where`. El filtro aplicado especifica qué elementos se deben excluir de la secuencia de origen. En el ejemplo siguiente, solo se devuelven los `customers` cuya dirección se encuentra en Londres.  
@@ -84,11 +84,11 @@ En este tema se ofrece una breve introducción a las expresiones de consulta [!I
  Para obtener más información, vea [group (Cláusula)](../../../language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Combinación  
- Las operaciones de combinación crean asociaciones entre las secuencias que no se modelan explícitamente en los orígenes de datos. Por ejemplo, puede realizar una combinación para buscar todos los clientes y distribuidores que tengan la misma ubicación. En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la cláusula `join` funciona siempre con colecciones de objetos, en lugar de con tablas de base de datos directamente.  
+ Las operaciones de combinación crean asociaciones entre las secuencias que no se modelan explícitamente en los orígenes de datos. Por ejemplo, puede realizar una combinación para buscar todos los clientes y distribuidores que tengan la misma ubicación. En LINQ, la cláusula `join` funciona siempre con colecciones de objetos, en lugar de con tablas de base de datos directamente.  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] no es necesario usar `join` tan a menudo como en SQL, porque las claves externas en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se representan en el modelo de objetos como propiedades que contienen una colección de elementos. Por ejemplo, un objeto `Customer` contiene una colección de objetos `Order`. En lugar de realizar una combinación, tiene acceso a los pedidos usando la notación de punto:  
+ En LINQ no es necesario usar `join` tan a menudo como en SQL, porque las claves externas en LINQ se representan en el modelo de objetos como propiedades que contienen una colección de elementos. Por ejemplo, un objeto `Customer` contiene una colección de objetos `Order`. En lugar de realizar una combinación, tiene acceso a los pedidos usando la notación de punto:  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,7 +97,7 @@ from order in Customer.Orders...
  Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Selección (proyecciones)  
- La cláusula `select` genera resultados de consulta y especifica la "forma" o el tipo de cada elemento devuelto. Por ejemplo, puede especificar si sus resultados estarán compuestos de objetos `Customer` completos, un solo miembro, un subconjunto de miembros o algún tipo de resultado completamente diferente basado en un cálculo o en un objeto nuevo. Cuando la cláusula `select` genera algo distinto de una copia del elemento de origen, la operación se denomina *proyección*. El uso de proyecciones para transformar los datos es una función eficaz de las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](./data-transformations-with-linq.md) y [select (cláusula)](../../../language-reference/keywords/select-clause.md).  
+ La cláusula `select` genera resultados de consulta y especifica la "forma" o el tipo de cada elemento devuelto. Por ejemplo, puede especificar si sus resultados estarán compuestos de objetos `Customer` completos, un solo miembro, un subconjunto de miembros o algún tipo de resultado completamente diferente basado en un cálculo o en un objeto nuevo. Cuando la cláusula `select` genera algo distinto de una copia del elemento de origen, la operación se denomina *proyección*. El uso de proyecciones para transformar los datos es una función eficaz de las expresiones de consulta LINQ. Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](./data-transformations-with-linq.md) y [select (cláusula)](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>Vea también
 

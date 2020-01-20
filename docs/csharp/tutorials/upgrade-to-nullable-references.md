@@ -1,15 +1,15 @@
 ---
-title: Diseño con tipos de referencia que aceptan valores NULL
-description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
+title: Actualización a tipos de referencias que aceptan valores NULL
+description: En este tutorial avanzado se muestra cómo migrar código existente con tipos de referencias que aceptan valores NULL.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969346"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740466"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -167,4 +167,4 @@ El parámetro `IMapper` se escribe como una referencia que no admite valores NUL
 
 Ha corregido las advertencias que identificó en la compilación de prueba inicial, así que ahora puede activar el contexto de anotación que acepta valores NULL para ambos proyectos. Vuelva a compilar los proyectos; el compilador no notifica advertencias. Puede obtener el código del proyecto finalizado en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) de GitHub.
 
-Las nuevas características compatibles con tipos de referencia que admiten valores NULL le ayudan a encontrar y corregir los posibles errores en la forma de controlar valores `null` en el código. La habilitación del contexto de anotación que acepta valores NULL permite expresar la intención del diseño: algunas variables nunca deberían ser NULL y otras pueden contener valores NULL. Estas características hacen que sea más fácil declarar la intención del diseño. De forma similar, el contexto de advertencia que admite valores NULL indica al compilador que emita advertencias cuando se haya infringido dicha intención. Esas advertencias le guían para realizar actualizaciones que hacen que el código sea más resistente y tenga menos probabilidad de iniciar `NullReferenceException` durante la ejecución. Puede controlar el ámbito de estos contextos para que pueda centrarse en áreas locales del código que desea migrar mientras el código base restante permanece intacto. En la práctica, puede hacer que esta tarea de migración sea una parte del mantenimiento convencional de las clases. En este tutorial se ha mostrado el proceso para migrar una aplicación para usar tipos de referencia que admiten valores NULL. Puede explorar un ejemplo más grande real de este proceso mediante el examen del repositorio popular [Jon Skeet](https://github.com/jskeet) creado para incorporar tipos de referencia que admitan valores NULL en [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits).
+Las nuevas características compatibles con tipos de referencia que admiten valores NULL le ayudan a encontrar y corregir los posibles errores en la forma de controlar valores `null` en el código. La habilitación del contexto de anotación que acepta valores NULL permite expresar la intención del diseño: algunas variables nunca deberían ser NULL y otras pueden contener valores NULL. Estas características hacen que sea más fácil declarar la intención del diseño. De forma similar, el contexto de advertencia que admite valores NULL indica al compilador que emita advertencias cuando se haya infringido dicha intención. Esas advertencias le guían para realizar actualizaciones que hacen que el código sea más resistente y tenga menos probabilidad de iniciar `NullReferenceException` durante la ejecución. Puede controlar el ámbito de estos contextos para que pueda centrarse en áreas locales del código que desea migrar mientras el código base restante permanece intacto. En la práctica, puede hacer que esta tarea de migración sea una parte del mantenimiento convencional de las clases. En este tutorial se ha mostrado el proceso para migrar una aplicación para usar tipos de referencia que admiten valores NULL. Puede explorar un ejemplo más grande real de este proceso mediante el examen del repositorio popular [Jon Skeet](https://github.com/jskeet) creado para incorporar tipos de referencia que admitan valores NULL en [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Además, puede aprender técnicas para usar tipos de referencias que aceptan valores NULL con Entity Framework Core en [Entity Framework Core: trabajar con tipos de referencia que aceptan valores NULL](/ef/core/miscellaneous/nullable-reference-types).

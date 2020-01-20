@@ -5,21 +5,19 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975566"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716537"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 
-En este artículo paso a paso se describe cómo puede implementar un administrador del sistema .NET Framework 4.5 y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar .NET Framework 4.5, consulte [Requisitos de sistema](../get-started/system-requirements.md).
+En este artículo paso a paso se describe cómo puede implementar un administrador del sistema .NET Framework 4.5 y sus dependencias del sistema en una red mediante Microsoft Endpoint Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar .NET Framework 4.5, consulte [Requisitos de sistema](../get-started/system-requirements.md).
 
 > [!NOTE]
-> El software al que se hace referencia en este documento, a título enunciativo y en ningún caso limitativo, .NET Framework 4.5, System Center Configuration Manager y Active Directory, está sujeto a los términos y condiciones de licencia. En estas instrucciones se asume que los usuarios con la licencia apropiada del software han leído y aceptado dichos términos y condiciones. Estas instrucciones no anulan ninguno de los términos y condiciones de dichos contratos de licencia.
+> El software al que se hace referencia en este documento, a título enunciativo y en ningún caso limitativo, .NET Framework 4.5, Configuration Manager y Active Directory, está sujeto a los términos y condiciones de licencia. En estas instrucciones se asume que los usuarios con la licencia apropiada del software han leído y aceptado dichos términos y condiciones. Estas instrucciones no anulan ninguno de los términos y condiciones de dichos contratos de licencia.
 >
 > Para obtener información sobre el soporte técnico de .NET Framework, consulte [Directiva de ciclo soporte técnico oficial de .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) en el sitio web de soporte técnico de Microsoft.
 
@@ -38,13 +36,13 @@ Este tema contiene las siguientes secciones:
 
 ## <a name="the-deployment-process"></a>Proceso de implementación
 
-Una vez implementada la infraestructura de apoyo, se utiliza System Center 2012 Configuration Manager para implementar el paquete redistribuible de .NET Framework en equipos de la red. La creación de la infraestructura implica crear y definir cinco áreas primarias: colecciones, un paquete y un programa para el software, puntos de distribución e implementaciones.
+Una vez implementada la infraestructura de apoyo, se utiliza Configuration Manager para implementar el paquete redistribuible de .NET Framework en equipos de la red. La creación de la infraestructura implica crear y definir cinco áreas primarias: colecciones, un paquete y un programa para el software, puntos de distribución e implementaciones.
 
-- Las **colecciones** son grupos de recursos de Configuration Manager, tales como usuarios, grupos de usuarios o equipos, en los que se implementa .NET Framework. Para más información, vea [Introducción a las recopilaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) en la biblioteca de documentación de Configuration Manager.
+- Las **colecciones** son grupos de recursos de Configuration Manager, tales como usuarios, grupos de usuarios o equipos, en los que se implementa .NET Framework. Para más información, consulte [Introducción a las recopilaciones en Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) en la biblioteca de documentación de Configuration Manager.
 
-- Los **paquetes y programas** suelen representar aplicaciones de software que se van a instalar en un equipo cliente, aunque también pueden contener archivos individuales, actualizaciones o incluso comandos individuales. Para más información, vea el tema [Paquetes y programas en System Center Configuration](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) en la biblioteca de documentación de Configuration Manager.
+- Los **paquetes y programas** suelen representar aplicaciones de software que se van a instalar en un equipo cliente, aunque también pueden contener archivos individuales, actualizaciones o incluso comandos individuales. Para obtener más información, consulte el tema sobre [paquetes y programas en Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) en la biblioteca de documentación de Configuration Manager.
 
-- Los **puntos de distribución** son roles del sistema de sitio de Configuration Manager que almacenan los archivos necesarios para que el software se ejecute en los equipos cliente. Cuando un cliente de Configuration Manager recibe y procesa una implementación de software, se pone en contacto con un punto de distribución para descargar el contenido asociado al software e iniciar el proceso de instalación. Para más información, vea [Aspectos básicos de la administración de contenido en Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) en la biblioteca de documentación de Configuration Manager.
+- Los **puntos de distribución** son roles del sistema de sitio de Configuration Manager que almacenan los archivos necesarios para que el software se ejecute en los equipos cliente. Cuando un cliente de Configuration Manager recibe y procesa una implementación de software, se pone en contacto con un punto de distribución para descargar el contenido asociado al software e iniciar el proceso de instalación. Para más información, vea [Aspectos básicos de la administración de contenido en Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) en la biblioteca de documentación de Configuration Manager.
 
 - Las **implementaciones** indican a los miembros correspondientes de la colección de destino especificada que instalen el paquete de software.
 
@@ -55,7 +53,7 @@ Una vez implementada la infraestructura de apoyo, se utiliza System Center 2012 
 
 ## <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
 
-Se puede usar System Center 2012 Configuration Manager para implementar una instalación silenciosa de .NET Framework 4.5, donde los usuarios no interactúan con el proceso de instalación. Siga estos pasos:
+Se puede usar Configuration Manager para implementar una instalación silenciosa de .NET Framework 4.5, donde los usuarios no interactúan con el proceso de instalación. Siga estos pasos:
 
 1. [Cree una colección](#creating_a_collection).
 
@@ -69,7 +67,7 @@ Se puede usar System Center 2012 Configuration Manager para implementar una ins
 
 ### <a name="create-a-collection"></a>Crear una colección
 
-En este paso, se seleccionan los equipos donde se implementará el paquete y el programa y se agruparán en una colección de dispositivos. Para crear una colección en Configuration Manager, puede usar reglas de pertenencia directa (donde se especifican manualmente los miembros de la colección) o reglas de consulta (donde Configuration Manager determina los miembros de la colección en función de los criterios que especifique el usuario). Para más información sobre las reglas de pertenencia, incluidas las reglas de consulta y las reglas directas, vea [Introducción a las recopilaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) en la biblioteca de documentación de Configuration Manager.
+En este paso, se seleccionan los equipos donde se implementará el paquete y el programa y se agruparán en una colección de dispositivos. Para crear una colección en Configuration Manager, puede usar reglas de pertenencia directa (donde se especifican manualmente los miembros de la colección) o reglas de consulta (donde Configuration Manager determina los miembros de la colección en función de los criterios que especifique el usuario). Para obtener más información sobre las reglas de pertenencia, incluidas las reglas de consulta y las reglas directas, consulte [Introducción a las recopilaciones en Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) en la biblioteca de documentación de Configuration Manager.
 
 Para crear una colección:
 
@@ -135,7 +133,7 @@ En la tabla siguiente se describen las opciones de la línea de comandos especif
 |------------|-----------------|
 |**/q**|Establece el modo silencioso. No se requiere proporcionar ningún dato y no se muestra ningún resultado.|
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, Configuration Manager debe controlar el reinicio del equipo.|
-|**/chainingpackage** *NombrePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft. Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"** .|
+|**/chainingpackage** *NombreDePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft. Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"** .|
 
 Mediante estos pasos se crea un paquete denominado .NET Framework 4.5. El programa implementa una instalación silenciosa de .NET Framework 4.5. En una instalación silenciosa, los usuarios no interactúan con el proceso de instalación y la aplicación de encadenamiento tiene que capturar el código devuelto y controlar el reinicio; vea [Getting Progress Information from an Installation Package (Obtener información de progreso de un paquete de instalación)](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
@@ -163,7 +161,7 @@ Realice los pasos siguientes para seleccionar un punto de distribución para el 
 
 8. Complete el asistente.
 
-Ahora el paquete contiene toda la información necesaria para realizar una implementación silenciosa de .NET Framework 4.5. Antes de implementar el paquete y el programa, compruebe que se haya instalado en el punto de distribución; vea la sección de supervisión de contenido de [Supervisión del contenido que se ha distribuido con System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) en la biblioteca de documentación de Configuration Manager.
+Ahora el paquete contiene toda la información necesaria para realizar una implementación silenciosa de .NET Framework 4.5. Antes de implementar el paquete y el programa, compruebe que se haya instalado en el punto de distribución; vea la sección de supervisión de contenido de [Supervisión del contenido que se ha distribuido con Configuration Manager](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) en la biblioteca de documentación de Configuration Manager.
 
 <a name="deploying_package"></a>
 

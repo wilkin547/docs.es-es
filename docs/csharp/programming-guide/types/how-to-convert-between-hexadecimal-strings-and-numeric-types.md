@@ -1,6 +1,5 @@
 ---
 title: 'Procedimiento Convertir cadenas hexadecimales en tipos numéricos: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429440"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698526"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Procedimiento Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
@@ -57,4 +56,4 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
 
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Tipos](./index.md)
-- [Cómo: Determinar si una cadena representa un valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Determinación de si una cadena representa un valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

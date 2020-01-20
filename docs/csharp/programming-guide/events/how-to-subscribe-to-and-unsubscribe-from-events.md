@@ -1,18 +1,17 @@
 ---
 title: 'Procedimiento Suscribir y cancelar la suscripción a eventos: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590401"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705332"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
 La suscripción a un evento publicado por otra clase se realiza cuando quiere escribir código personalizado al que se llama cuando se produce ese evento. Por ejemplo, puede suscribirse al evento `click` de un botón para que la aplicación realice alguna operación cuando el usuario haga clic en el botón.  
@@ -102,6 +101,6 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
 
 - [Eventos](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Cómo: Publicar eventos que cumplan las directrices de .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Procedimiento para publicar eventos que cumplan las instrucciones de .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operadores - y -=](../../language-reference/operators/subtraction-operator.md)
 - [Operadores + y +=](../../language-reference/operators/addition-operator.md)

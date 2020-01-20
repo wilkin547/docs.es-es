@@ -2,15 +2,15 @@
 title: Creación de un paquete de plantillas para dotnet new
 description: Obtenga información sobre cómo crear un archivo csproj que compilará un paquete de plantillas para el comando dotnet new.
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117402"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340169"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Creación de un paquete de plantillas
 
@@ -29,9 +29,9 @@ En esta parte de la serie, aprenderá a:
 
 * Complete la [parte 1](cli-templates-create-item-template.md) y la [parte 2](cli-templates-create-project-template.md) de esta serie de tutoriales.
 
-  En este tutorial se usan las dos plantillas que se crearon en las dos primeras partes de este tutorial. Es posible que pueda usar otra plantilla siempre que la copie como una carpeta en la carpeta _working\templates\\_ .
+  En este tutorial se usan las dos plantillas que se crearon en las dos primeras partes de este tutorial. Puede usar otra plantilla siempre que la copie como una carpeta en la carpeta _working\templates\\_ .
 
-* Abrir un terminal y navegar a la carpeta _working\templates\\_ .
+* Abra un terminal y vaya a la carpeta _working\\_ .
 
 ## <a name="create-a-template-pack-project"></a>Creación de un proyecto de paquete de plantillas
 

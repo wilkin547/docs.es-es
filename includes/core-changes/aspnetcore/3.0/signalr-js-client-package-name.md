@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394450"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901688"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: se ha cambiado el nombre del paquete de cliente de JavaScript
 
@@ -12,7 +12,7 @@ En ASP.NET Core 3.0, versión preliminar 7, el nombre del paquete de cliente de 
 
 Para reaccionar a este cambio, cambie las referencias en los archivos *package.json*, las instrucciones `require` y las instrucciones `import` de ECMAScript. No se cambiará ninguna API como parte de este cambio de nombre.
 
-Para obtener información, consulte [aspnet/AspNetCore#11637](https://github.com/aspnet/AspNetCore/issues/11637).
+Para obtener información, vea [dotnet/aspnetcore#11637](https://github.com/dotnet/aspnetcore/issues/11637).
 
 #### <a name="version-introduced"></a>Versión introducida
 

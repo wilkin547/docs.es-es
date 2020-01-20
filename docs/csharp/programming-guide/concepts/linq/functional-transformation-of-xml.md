@@ -2,12 +2,12 @@
 title: Transformación funcional de XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594302"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336794"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Transformación funcional de XML (C#)
 Este tema trata acerca de la aproximación enfocada a la transformación funcional pura para modificar documentos XML, comparándola con la aproximación basada en procedimientos.  
@@ -30,7 +30,7 @@ Este tema trata acerca de la aproximación enfocada a la transformación funcion
   
  Para obtener una comparación más completa entre LINQ to XML y otras tecnologías XML de Microsoft, vea [LINQ to XML vs. Other XML Technologies](./linq-to-xml-vs-other-xml-technologies.md) (LINQ to XML frente a otras tecnologías XML).  
   
- XSLT es una herramienta recomendada para transformaciones basadas en el documento, cuando el origen de éste tiene una estructura irregular. No obstante, LINQ to XML también puede realizar transformaciones basadas en el documento. Para obtener más información, vea [Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+XSLT es una herramienta recomendada para transformaciones basadas en el documento, cuando el origen de éste tiene una estructura irregular. No obstante, LINQ to XML también puede realizar transformaciones basadas en el documento. Para más información, consulte [Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
   
 ## <a name="see-also"></a>Vea también
 

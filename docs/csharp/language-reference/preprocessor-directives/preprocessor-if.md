@@ -1,22 +1,21 @@
 ---
 title: '#Directiva de preprocesador if: Referencia de C#'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552442"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899853"
 ---
-# <a name="if-c-reference"></a>#if (Referencia de C#)
+# <a name="if-c-reference"></a>#if (referencia de C#)
 
-Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por una directiva [#endif](preprocessor-endif.md), compila el código entre las directivas solo si se ha definido el símbolo especificado. A diferencia de C y C++, no se puede asignar un valor numérico a un símbolo. La instrucción #if en C# es booleana y solo comprueba si el símbolo se ha definido o no. Por ejemplo:
+Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por una directiva [#endif](preprocessor-endif.md), compila el código entre las directivas solo si se ha definido el símbolo especificado. A diferencia de C y C++, no se puede asignar un valor numérico a un símbolo. La instrucción `#if` en C# es booleana y solo comprueba si el símbolo se ha definido o no. Por ejemplo:
 
 ```csharp
 #if DEBUG
@@ -24,7 +23,7 @@ Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por
 #endif
 ```
 
-Puede usar los operadores [==](../operators/equality-operators.md#equality-operator-) (igualdad) y [!=](../operators/equality-operators.md#inequality-operator-) (desigualdad) solo para comprobar los valores [booleanos](../builtin-types/bool.md) `true` o `false`. True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (y), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (o) y [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
+Puede usar los operadores [==](../operators/equality-operators.md#equality-operator-) (igualdad) y [!=](../operators/equality-operators.md#inequality-operator-) (desigualdad) solo para comprobar los valores [booleanos](../builtin-types/bool.md)`true` o `false`. `true` significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&& (AND)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124; (OR)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) y [! (NOT)](../operators/boolean-logical-operators.md#logical-negation-operator-) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
 
 ## <a name="remarks"></a>Comentarios
 

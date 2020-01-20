@@ -5,14 +5,14 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 54eb3038594e1d4becf8a1bddd58b1e0e6464d68
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039286"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694561"
 ---
-# <a name="using-attributes-in-c"></a>Uso de atributos en C\#
+# <a name="use-attributes-in-c"></a>Uso de atributos en C\#
 
 Los atributos proporcionan una manera de asociar la información con el código de manera declarativa. También pueden proporcionar un elemento reutilizable que se puede aplicar a diversos destinos.
 
@@ -22,7 +22,8 @@ En este tutorial, se le introducirá a cómo agregar atributos al código, cómo
 
 ## <a name="prerequisites"></a>Requisitos previos
 Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download).
-Puede ejecutar esta aplicación en Windows, Ubuntu Linux, macOS o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
+Puede ejecutar esta aplicación en Windows, Ubuntu Linux, macOS o en un contenedor de Docker.
+Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 
 ## <a name="create-the-application"></a>Crear la aplicación
 
@@ -39,9 +40,9 @@ Para ejecutar el programa, use `dotnet run`. Deberá ver la salida "Hola a todos
 ## <a name="how-to-add-attributes-to-code"></a>Cómo agregar atributos al código
 
 En C#, los atributos son clases que se heredan de la clase base `Attribute`. Cualquier clase que se hereda de `Attribute` puede usarse como una especie de "etiqueta" en otros fragmentos de código.
-Por ejemplo, hay un atributo llamado `ObsoleteAttribute`, que se usa para indicar que el código está obsoleto y ya no debe utilizarse. Puede colocar este atributo en una clase, por ejemplo, mediante corchetes.
+Por ejemplo, hay un atributo llamado `ObsoleteAttribute`,  que se usa para indicar que el código está obsoleto y ya no debe utilizarse. Puede colocar este atributo en una clase, por ejemplo, mediante corchetes.
 
-[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
 Tenga en cuenta que, mientras que la clase se denomina `ObsoleteAttribute`, solo es necesario usar `[Obsolete]` en el código. Se trata de una convención que sigue C#.
 Puede usar el nombre completo `[ObsoleteAttribute]` si así lo prefiere.
@@ -111,7 +112,7 @@ Los atributos actúan como metadatos. Sin algo de fuerza exterior, no harían re
 
 Para buscar y actuar sobre los atributos, se requiere en general [reflexión](../programming-guide/concepts/reflection.md). En este tutorial no se tratará la reflexión de forma detallada, pero la idea básica es que la reflexión le permite escribir código en C# que examina otro código.
 
-Por ejemplo, puede usar reflexión para obtener información sobre una clase (agregue `using System.Reflection;` al principio del código): 
+Por ejemplo, puede usar reflexión para obtener información sobre una clase (agregue `using System.Reflection;` al principio del código):
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

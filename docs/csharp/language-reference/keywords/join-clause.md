@@ -1,6 +1,5 @@
 ---
 title: 'Cláusula join: Referencia de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 21d4d1f9878fb7df4692fdeacd23b042680c14f1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633621"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713403"
 ---
 # <a name="join-clause-c-reference"></a>join (Cláusula, Referencia de C#)
 
@@ -56,7 +55,7 @@ Para obtener más información, vea [Realizar combinaciones agrupadas](../../lin
 
 ## <a name="left-outer-join"></a>Combinación externa izquierda
 
-En una combinación externa izquierda se devuelven todos los elementos de la secuencia de origen izquierda, incluso si no hay elementos coincidentes en la secuencia derecha. Para efectuar una combinación externa izquierda en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], use el método `DefaultIfEmpty` junto con una combinación agrupada para especificar un elemento derecho predeterminado para que se genere si un elemento izquierdo no tiene coincidencias. Puede usar `null` como valor predeterminado para cualquier tipo de referencia, aunque también puede especificar un tipo predeterminado definido por el usuario. En el ejemplo siguiente se muestra un tipo predeterminado definido por el usuario:
+En una combinación externa izquierda se devuelven todos los elementos de la secuencia de origen izquierda, incluso si no hay elementos coincidentes en la secuencia derecha. Para efectuar una combinación externa izquierda en LINQ, use el método `DefaultIfEmpty` junto con una combinación agrupada para especificar un elemento derecho predeterminado para que se genere si un elemento izquierdo no tiene coincidencias. Puede usar `null` como valor predeterminado para cualquier tipo de referencia, aunque también puede especificar un tipo predeterminado definido por el usuario. En el ejemplo siguiente se muestra un tipo predeterminado definido por el usuario:
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -72,7 +71,7 @@ Puede efectuar combinaciones de desigualdad, combinaciones cruzadas y otras oper
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Uniones en las colecciones de objetos frente a las tablas relacionales
 
-En una expresión de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], las operaciones de combinación se efectúan en las colecciones de objetos. Las colecciones de objetos no se pueden "combinar" exactamente igual que dos tablas relacionales. En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], las cláusulas `join` explícitas solo son necesarias cuando dos secuencias de origen no están unidas por ninguna relación. Cuando se trabaja con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], las tablas de claves externas se representan en el modelo de objetos como propiedades de la tabla principal. Por ejemplo, en la base de datos Northwind, la tabla Customer (Cliente) tiene una relación de clave externa con la tabla Orders (Pedidos). Al asignar las tablas al modelo de objetos, la clase Customer tiene una propiedad Orders que contiene la colección Orders asociada a ese cliente. De hecho, la combinación ya se ha llevado a cabo automáticamente.
+En una expresión de consulta LINQ, las operaciones de combinación se efectúan en las colecciones de objetos. Las colecciones de objetos no se pueden "combinar" exactamente igual que dos tablas relacionales. En LINQ, las cláusulas `join` explícitas solo son necesarias cuando dos secuencias de origen no están unidas por ninguna relación. Cuando se trabaja con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], las tablas de claves externas se representan en el modelo de objetos como propiedades de la tabla principal. Por ejemplo, en la base de datos Northwind, la tabla Customer (Cliente) tiene una relación de clave externa con la tabla Orders (Pedidos). Al asignar las tablas al modelo de objetos, la clase Customer tiene una propiedad Orders que contiene la colección Orders asociada a ese cliente. De hecho, la combinación ya se ha llevado a cabo automáticamente.
 
 Para obtener más información sobre las consultas en tablas relacionadas en el contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], vea [Cómo: Asignar relaciones de base de datos](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 

@@ -1,21 +1,20 @@
 ---
 title: Operadores true y false (referencia de C#)
-ms.custom: seodec18
 ms.date: 12/10/2018
 helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: f65ed3b362080d7a8afe89e22bd132d1fc190b06
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552462"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712603"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operadores true y false (referencia de C#)
 
-El operador `true` devuelve el valor [bool](../builtin-types/bool.md) `true` para indicar que su operando es definitivamente true. El operador `false` devuelve el valor `bool` `true` para indicar que su operando es definitivamente false. Los operadores `true` y `false` no garantizan que se complementan entre sí. Es decir, tanto el operador `true` como `false` podrían devolver el valor `bool` `false` del mismo operando. Si un tipo define uno de los dos operadores, también debe definir otro operador.
+El operador `true` devuelve el valor [bool](../builtin-types/bool.md)`true` para indicar que su operando es definitivamente true. El operador `false` devuelve el valor `bool``true` para indicar que su operando es definitivamente false. Los operadores `true` y `false` no garantizan que se complementan entre sí. Es decir, tanto el operador `true` como `false` podrían devolver el valor `bool``false` del mismo operando. Si un tipo define uno de los dos operadores, también debe definir otro operador.
 
 > [!TIP]
 > Use el tipo `bool?`, si tiene que admitir la lógica de tres valores (por ejemplo, cuando trabaja con bases de datos que admiten un tipo booleano de tres valores). C# proporciona los operadores `&` y `|` que admiten la lógica de tres valores con los operandos `bool?`. Para más información, consulte la sección [Operadores lógicos booleanos que aceptan valores NULL](boolean-logical-operators.md#nullable-boolean-logical-operators) del artículo [Operadores lógicos booleanos](boolean-logical-operators.md).

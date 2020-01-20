@@ -2,12 +2,12 @@
 title: Procedimiento para proyectar un gráfico de objetos (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253482"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635696"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Procedimiento para proyectar un gráfico de objetos (C#)
 En este tema se ilustra cómo proyectar o rellenar un gráfico de objetos de XML.  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- En este ejemplo, el resultado de la consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se devuelve como un <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. Los elementos de la clase `PurchaseOrder` son del tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. El código usa el método de extensión <xref:System.Linq.Enumerable.ToList%2A> para crear una colección <xref:System.Collections.Generic.List%601> de los resultados de la consulta.  
+ En este ejemplo, el resultado de la consulta se devuelve como un tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. Los elementos de la clase `PurchaseOrder` son del tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. El código usa el método de extensión <xref:System.Linq.Enumerable.ToList%2A> para crear una colección <xref:System.Collections.Generic.List%601> de los resultados de la consulta.  
   
  El ejemplo genera el siguiente resultado:  
   

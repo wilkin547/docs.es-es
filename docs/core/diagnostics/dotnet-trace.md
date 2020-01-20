@@ -1,15 +1,13 @@
 ---
 title: 'La herramienta dotnet-trace: .NET Core'
 description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428881"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714433"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace
 
@@ -17,7 +15,7 @@ ms.locfileid: "74428881"
 
 ## <a name="install-dotnet-trace"></a>Instalación de dotnet-trace
 
-Instale el [paquete de NuGet](https://www.nuget.org/packages/dotnet-trace) `dotnet-trace` con el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+Instale el [paquete NuGet](https://www.nuget.org/packages/dotnet-trace) `dotnet-trace` con el comando [dotnet tool install](../tools/dotnet-tool-install.md):
 
 ```dotnetcli
 dotnet tool install --global dotnet-trace
@@ -29,7 +27,7 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
 
 La herramienta `dotnet-trace`:
 

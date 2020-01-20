@@ -1,19 +1,18 @@
 ---
-title: 'Procedimiento Usar las características de documentación XML: Guía de programación de C#'
-ms.custom: seodec18
+title: 'Procedimiento para usar las características de documentación XML: Guía de programación de C#'
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523453"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696719"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Procedimiento Usar las características de documentación XML
+# <a name="how-to-use-the-xml-documentation-features"></a>Procedimiento para usar las características de la documentación XML
 
 En el ejemplo siguiente se proporciona una introducción básica de un tipo que se ha documentado.
 

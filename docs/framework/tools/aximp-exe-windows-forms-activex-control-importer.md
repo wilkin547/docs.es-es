@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044885"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715781"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -36,20 +34,20 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Comentarios  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*file*|Nombre del archivo de código fuente que contiene el control ActiveX que se va a convertir. Este argumento debe tener la extensión .ocx o .dll.|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../standard/assembly/delay-sign.md).|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|`/keycontainer:` *containerName*|Firma el control resultante con un nombre seguro mediante el par de claves pública y privada que se encuentra en el contenedor de claves especificado mediante *containerName*.|  
-|`/keyfile:` *filename*|Firma el control resultante con un nombre seguro mediante el par de claves pública y privada oficial del editor que se encuentra en *filename*.|  
+|`/keycontainer:` *nombreContenedor*|Firma el control resultante con un nombre seguro mediante el par de claves pública y privada que se encuentra en el contenedor de claves especificado mediante *containerName*.|  
+|`/keyfile:` *nombre de archivo*|Firma el control resultante con un nombre seguro mediante el par de claves pública y privada oficial del editor que se encuentra en *filename*.|  
 |`/nologo`|Suprime la presentación de la portada de inicio de Microsoft.|  
-|`/out:` *filename*|Especifica el nombre del ensamblado que se va a crear.|  
-|`/publickey:` *filename*|Firma el control resultante con un nombre seguro mediante la clave pública que se encuentra en el archivo especificado por *filename*.|  
-|`/rcw:` *filename*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/out:` *nombre de archivo*|Especifica el nombre del ensamblado que se va a crear.|  
+|`/publickey:` *nombre de archivo*|Firma el control resultante con un nombre seguro mediante la clave pública que se encuentra en el archivo especificado por *filename*.|  
+|`/rcw:` *nombre de archivo*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime la presentación de mensajes de aprobación.|  
 |`/source`|Genera código fuente de C# para el contenedor de Windows Forms.|  
 |`/verbose`|Especifica el modo detallado; muestra información adicional del progreso.|  

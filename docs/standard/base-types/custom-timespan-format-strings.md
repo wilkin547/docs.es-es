@@ -1,5 +1,5 @@
 ---
-title: 'Cadenas de formato TimeSpan personalizado: .NET'
+title: Cadenas de formato TimeSpan personalizado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126555"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348320"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadenas de formato TimeSpan personalizado
 
@@ -41,7 +41,7 @@ Los métodos <xref:System.TimeSpan> y <xref:System.TimeSpan.ParseExact%2A?displa
 
 <a name="table"></a> En la siguiente tabla se describen los especificadores de formato de fecha y hora personalizado.
 
-| Especificador de formato | DESCRIPCIÓN | Ejemplo |
+| Especificador de formato | Descripción | Ejemplo |
 |----------------------|-----------------|-------------|
 |"d", "%d"|Número de días completos de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|Número de días completos de un intervalo de tiempo, que se completa con tantos ceros iniciales como sean necesarios.<br /><br /> Más información: [Especificadores de formato personalizado "dd"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|

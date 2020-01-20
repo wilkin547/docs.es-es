@@ -3,15 +3,14 @@ title: Desarrollo de bibliotecas con herramientas multiplataforma
 description: Obtenga información sobre cómo crear bibliotecas de .NET Core con las herramientas de la CLI de .NET Core. Creará una biblioteca que admite varios marcos de trabajo.
 author: cartermp
 ms.date: 05/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420459"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714031"
 ---
-# <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
+# <a name="develop-libraries-with-cross-platform-tools"></a>Desarrollar bibliotecas con herramientas multiplataforma
 
 En este artículo se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI. La CLI proporciona una experiencia eficaz y de bajo nivel que funciona en todos los SO compatibles. De todos modos puede seguir compilando bibliotecas con Visual Studio; si esa es la experiencia de su preferencia, [consulte la guía sobre Visual Studio](library-with-visual-studio.md).
 
@@ -21,7 +20,7 @@ Necesita [la CLI y el SDK de .NET Core](https://dotnet.microsoft.com/download) q
 
 En las secciones de este documento que se refieren a las versiones de .NET Framework, necesita tener instalado [.NET Framework](https://dotnet.microsoft.com) en una máquina con Windows.
 
-Además, si desea admitir destinos de .NET Framework anteriores, deberá instalar paquetes de compatibilidad/desarrollador para versiones anteriores del marco que se encuentran en la [página de archivos de descarga de .NET](https://dotnet.microsoft.com/download/archives). Consulte la tabla siguiente:
+Además, si desea admitir destinos de .NET Framework anteriores, deberá instalar paquetes de destino o desarrollador desde la [página de archivos de descarga de .NET](https://dotnet.microsoft.com/download/archives). Consulte la tabla siguiente:
 
 | Versión de .NET Framework | Qué debe descargar                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -35,9 +34,9 @@ Además, si desea admitir destinos de .NET Framework anteriores, deberá instala
 
 ## <a name="how-to-target-the-net-standard"></a>Estándar .NET como destino
 
-Si no conoce bien el estándar .NET, consulte el tema [Estándar .NET](../../standard/net-standard.md) para más información.
+Si no conoce .NET Standard, consulte el tema [.NET Standard](../../standard/net-standard.md) para más información.
 
-En ese artículo podrá ver una tabla que asigna las versiones del estándar .NET a diversas implementaciones:
+En ese artículo podrá ver una tabla que asigna las versiones de .NET Standard a diversas implementaciones:
 
 [!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
@@ -45,9 +44,9 @@ Este es el significado de la tabla para crear una biblioteca:
 
 La versión de .NET Standard que elija será un equilibrio entre el acceso a las API más recientes y la capacidad de apuntar a más implementaciones .NET y más versiones de .NET Standard. Puede controlar el intervalo de versiones y plataformas de destino si elige una versión de `netstandardX.X` (donde `X.X` es un número de versión) y la agrega al archivo del proyecto (`.csproj` o `.fsproj`).
 
-En función de sus necesidades, tiene 3 opciones principales cuando el destino es el estándar .NET.
+En función de sus necesidades, tiene tres opciones principales cuando el destino es .NET Standard.
 
-1. Puede usar la versión predeterminada de .NET Standard que se proporciona con plantillas, `netstandard1.4`, que le permite acceder a la mayoría de API en .NET Standard mientras sigue siendo compatible con UWP, .NET Framework 4.6.1 y el próximo .NET Standard 2.0.
+1. Puede usar la versión predeterminada de .NET Standard que se proporciona con plantillas, `netstandard1.4`, que le permite acceder a la mayoría de API en .NET Standard mientras sigue siendo compatible con UWP, .NET Framework 4.6.1 y .NET Standard 2.0.
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -59,18 +58,18 @@ En función de sus necesidades, tiene 3 opciones principales cuando el destino e
 
 2. Puede usar una versión anterior o posterior de .NET Standard modificando el valor en el nodo `TargetFramework` de su archivo del proyecto.
 
-    Las versiones del estándar .NET son compatibles con versiones anteriores. Eso significa que las bibliotecas `netstandard1.0` se pueden ejecutar en plataformas `netstandard1.1` y versiones superiores. Sin embargo, no existe compatibilidad con versiones posteriores: las plataformas del estándar .NET inferiores no pueden hacer referencia a las superiores. Esto significa que las bibliotecas `netstandard1.0` no pueden hacer referencia a las bibliotecas que tienen como destino `netstandard1.1` o una versión superior. Seleccione la versión estándar que tiene la combinación adecuada de compatibilidad con API y plataformas que necesita. Por ahora le recomendamos `netstandard1.4`.
+    Las versiones del estándar .NET son compatibles con versiones anteriores. Eso significa que las bibliotecas `netstandard1.0` se pueden ejecutar en plataformas `netstandard1.1` y versiones superiores. Sin embargo, no hay compatibilidad con versiones posteriores. Las plataformas de .NET Standard anteriores no pueden hacer referencia a las posteriores. Esto significa que las bibliotecas `netstandard1.0` no pueden hacer referencia a las bibliotecas que tienen como destino `netstandard1.1` o una versión superior. Seleccione la versión estándar que tiene la combinación adecuada de compatibilidad con API y plataformas que necesita. Por ahora le recomendamos `netstandard1.4`.
 
 3. Si desea tener como destino .NET Framework versión 4.0 o inferior, o bien desea usar una API disponible en .NET Framework pero no disponible en el estándar .NET (por ejemplo, `System.Drawing`), lea las secciones siguientes y sepa cómo tener compatibilidad con múltiples versiones.
 
-## <a name="how-to-target-the-net-framework"></a>.NET Framework como destino
+## <a name="how-to-target-net-framework"></a>Uso de .NET Framework como destino
 
 > [!NOTE]
-> Estas instrucciones suponen que tiene instalado .NET Framework en su máquina. Consulte los [requisitos previos](#prerequisites) para instalar las dependencias.
+> En estas instrucciones se supone que tiene instalado .NET Framework en su máquina. Consulte los [requisitos previos](#prerequisites) para instalar las dependencias.
 
 Tenga en cuenta que algunas de las versiones de .NET Framework que se usan aquí ya no cuentan con soporte técnico. Consulte las [P+F sobre la directiva del ciclo de vida de soporte técnico de .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us) sobre las versiones sin soporte técnico.
 
-Si quiere llegar a la mayor cantidad posible de desarrolladores y proyectos, use .NET Framework 4.0 como el destino de línea base. Para tener .NET Framework como destino, deberá comenzar por el uso del moniker de la plataforma de destino (TFM) correcto que corresponda a la versión de .NET Framework que desea admitir.
+Si quiere llegar a la mayor cantidad posible de desarrolladores y proyectos, use .NET Framework 4.0 como el destino de línea base. Para tener .NET Framework como destino, comience utilizando el moniker de la plataforma de destino (TFM) correcto que corresponda a la versión de .NET Framework que desea admitir.
 
 | Versión de .NET Framework | TFM      |
 | ---------------------- | -------- |
@@ -87,7 +86,7 @@ Si quiere llegar a la mayor cantidad posible de desarrolladores y proyectos, use
 | .NET Framework 4.7     | `net47`  |
 | .NET Framework 4.8     | `net48`  |
 
-Después, inserte el TFM en la sección `TargetFramework` de su archivo del proyecto. El siguiente es un ejemplo de cómo podría escribir una biblioteca que tenga como destino la versión .NET Framework 4.0:
+Después, inserte el TFM en la sección `TargetFramework` de su archivo del proyecto. El siguiente es un ejemplo de cómo podría escribir una biblioteca que tenga como destino .NET Framework 4.0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -99,7 +98,7 @@ Después, inserte el TFM en la sección `TargetFramework` de su archivo del proy
 
 Y listo. Aunque esto solo hace la compilación para .NET Framework 4, puede usar la biblioteca en las versiones más recientes de .NET Framework.
 
-## <a name="how-to-multitarget"></a>Cómo lograr la compatibilidad con múltiples versiones
+## <a name="how-to-multitarget"></a>Cómo lograr la compatibilidad con varias versiones
 
 > [!NOTE]
 > Las instrucciones siguientes suponen que tiene instalado .NET Framework en su máquina. Consulte la sección de [requisitos previos](#prerequisites) para información sobre las dependencias que debe instalar y dónde descargarlas.
@@ -295,7 +294,7 @@ let doWork data = async {
 
 Escenarios de consumo similares a este significan que las API a las que se tiene acceso deben tener una estructura distinta para C# y para F#.  Un enfoque común para lograrlo es factorizar toda la lógica de una biblioteca en un proyecto central, con los proyectos de C# y F# definiendo los niveles de API que hacen llamadas a ese proyecto central.  En el resto de la sección se usarán los siguientes nombres:
 
-* **AwesomeLibrary.Core**: un proyecto central que contiene toda la lógica de la biblioteca.
+* **AwesomeLibrary.Core**: un proyecto central que contiene toda la lógica de la biblioteca
 * **AwesomeLibrary.CSharp**: un proyecto con API públicas pensado para el consumo en C#
 * **AwesomeLibrary.FSharp**: un proyecto con API públicas pensado para el consumo en F#
 
@@ -308,7 +307,7 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj

@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838312"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342862"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novedades de .NET Core 3.1
 
 En este artículo se describen las novedades de .NET Core 3.1. Esta versión contiene ligeras mejoras de .NET Core 3.0, y se centra en pequeñas correcciones, pero importantes. La característica más importante sobre .NET Core 3.1 es que es una versión de [soporte técnico a largo plazo (LTS)](#long-term-support).
 
-Si usa Visual Studio 2019, debe actualizar a [Visual Studio 2019 16.4](https://visualstudio.microsoft.com/downloads/) para trabajar con proyectos de .NET Core 3.1. Para más información sobre las novedades de Visual Studio, consulte el [blog de Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+Si usa Visual Studio 2019, debe actualizar a [Visual Studio 2019, versión 16.4](https://visualstudio.microsoft.com/downloads/) para trabajar con proyectos de .NET Core 3.1. Para más información sobre las novedades de Visual Studio, consulte el [blog de Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
 
 Visual Studio para Mac también admite e incluye .NET Core 3.1 en el canal de la versión preliminar de Visual Studio para Mac 8.4. Deberá participar en el canal de versión preliminar para usar .NET Core 3.1.
 
@@ -25,7 +25,7 @@ Para más información sobre la versión, consulte el [anuncio de .NET Core 3.1
 
 - [Descargue .NET Core 3.1 y empiece a trabajar](https://dotnet.microsoft.com/download/dotnet-core/3.1) en Windows, macOS o Linux.
 
-## <a name="long-term-support"></a>Soporte técnico a largo plazo
+## <a name="long-term-support"></a>Compatibilidad a largo plazo
 
 .NET Core 3.1 es una versión LTS con soporte técnico de Microsoft durante los próximos tres años. Se recomienda encarecidamente mover las aplicaciones a .NET Core 3.1. El ciclo de vida actual de otras versiones principales es el siguiente:
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198567"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901608"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: se ha deshabilitado la E/S sincrónica en todos los servidores
 
@@ -41,7 +41,7 @@ if (syncIOFeature != null)
 
 Si tiene problemas con una elemento `TextWriter` u otra secuencia que llama a una API sincrónica en `Dispose`, llame a la nueva API de `DisposeAsync` en su lugar.
 
-Para obtener información, vea [aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644).
+Para obtener información, vea [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).
 
 #### <a name="version-introduced"></a>Versión introducida
 

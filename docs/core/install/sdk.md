@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999066"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740568"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
 
@@ -44,9 +44,11 @@ macOS tiene instaladores independientes que se pueden usar para instalar el SDK 
 
 Se puede instalar el SDK de .NET Core con muchos de los administradores de paquetes comunes de Linux. Para obtener más información, vea [Administrador de paquetes de Linux: instalación de .NET Core](linux-package-managers.md).
 
+Su instalación con un administrador de paquetes solo se admite en la arquitectura x64. Si va a instalar el SDK de .NET Core con otra arquitectura, como ARM, siga las instrucciones de [Descarga e instalación de forma manual](#download-and-manually-install) a continuación. Para obtener más información sobre qué arquitecturas se admiten, consulte [Dependencias y requisitos de .NET Core](dependencies.md).
+
 ## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
 
-Para extraer el SDK y hacer que los comandos estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. Después, abra un terminal y ejecute los comandos siguientes.
+Para extraer el SDK y hacer que los comandos de la CLI de .NET Core estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. Después, abra un terminal y ejecute los comandos siguientes.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Los comandos anteriores solo harán que los comandos del SDK de .NET estén disponibles para la sesión de terminal en la que se ha ejecutado.
+> Los comandos `export` anteriores solo hacen que los comandos de la CLI de .NET Core estén disponibles para la sesión de terminal en la que se ha ejecutado.
 >
 > Puede editar el perfil del shell para agregar los comandos de forma permanente. Hay una serie de shells distintos disponibles para Linux, y cada uno de ellos tiene un perfil diferente. Por ejemplo:
 >
 > - **Shell de Bash**: *~/.bash_profile*, *~/.bashrc*
 > - **Shell de Korn**: *~/.kshrc* or *.profile*
 > - **Shell de Z**: *~/.zshrc* or *.zprofile*
-> 
+>
 > Edite el archivo de origen adecuado para el shell y agregue `:$HOME/dotnet` al final de la instrucción `PATH` existente. Si no se incluye ninguna instrucción `PATH`, agregue una nueva línea con `export PATH=$PATH:$HOME/dotnet`.
 >
 > Además, agregue `export DOTNET_ROOT=$HOME/dotnet` al final del archivo.
@@ -90,11 +92,11 @@ Si ya tiene Visual Studio instalado, puede comprobar la versión siguiendo los 
 
 Visual Studio puede instalar el SDK y el entorno de ejecución de .NET Core más recientes.
 
-- [Descargue Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+- [Descargue Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>Selección de una carga de trabajo
 
-Al instalar o modificar Visual Studio, seleccione una de las cargas de trabajo siguientes, en función del tipo de aplicación que quiera compilar:
+Al instalar o modificar Visual Studio, seleccione una de las cargas de trabajo siguientes o más, en función del tipo de aplicación que quiera compilar:
 
 - La carga de trabajo **Desarrollo multiplataforma de .NET Core** en la sección **Otros conjuntos de herramientas**.
 - La carga de trabajo **Desarrollo de ASP.NET y web** en la sección **Web y nube**.
@@ -131,7 +133,7 @@ Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core 
 
 Los [scripts de dotnet-install](../tools/dotnet-install-script.md) se usan para la automatización y las instalaciones que no son de administrador del SDK. Se puede descargar el script desde la [página de referencia del script dotnet-install](../tools/dotnet-install-script.md).
 
-El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 2.1. Para instalar la versión actual de .NET Core, ejecute el script con el modificador siguiente.
+El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 3.1. Para instalar la versión actual de .NET Core, ejecute el script con el modificador siguiente.
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -145,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 Los [scripts de dotnet-install](../tools/dotnet-install-script.md) se usan para la automatización y las instalaciones que no son de administrador del SDK. Se puede descargar el script desde la [página de referencia del script dotnet-install](../tools/dotnet-install-script.md).
 
-El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 2.1. Para instalar la versión actual de .NET Core, ejecute el script con el modificador siguiente.
+El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 3.1. Para instalar la versión actual de .NET Core, ejecute el script con el modificador siguiente.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -176,8 +178,7 @@ Para obtener más información sobre el uso de .NET Core en un contenedor de Doc
 
 ::: zone pivot="os-windows"
 
-- [Tutorial: Tutorial Hola mundo de C#](../tutorials/with-visual-studio.md).
-- [Tutorial: Tutorial Hola mundo de Visual Basic](../tutorials/vb-with-visual-studio.md).
+- [Tutorial: Tutorial Hola mundo](../tutorials/with-visual-studio.md).
 - [Tutorial: Creación de una aplicación con Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).
 

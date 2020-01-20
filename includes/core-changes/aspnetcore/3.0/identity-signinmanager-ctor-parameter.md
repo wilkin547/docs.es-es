@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 56b394c4698f60baeb70d3c17d1abee5d867deb7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394180"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902037"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Identity: el constructor SignInManager acepta un nuevo parámetro
 
-A partir de ASP.NET Core 3.0, se ha agregado un nuevo parámetro `IUserConfirmation<TUser>` al constructor `SignInManager`. Para obtener más información, consulte [aspnet/AspNetCore#8356](https://github.com/aspnet/AspNetCore/issues/8356).
+A partir de ASP.NET Core 3.0, se ha agregado un nuevo parámetro `IUserConfirmation<TUser>` al constructor `SignInManager`. Para obtener más información, consulte [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356).
 
 #### <a name="version-introduced"></a>Versión introducida
 

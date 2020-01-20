@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038999"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345304"
 ---
 # <a name="member-access-operators-c-reference"></a>Operadores de acceso a miembros (referencia de C#)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operadores condicionales NULL ?. y ?[]
 
-Disponible en C# 6 y versiones posteriores, un operador condicional NULL aplica una operación de acceso a miembros, `?.`, o acceso a elementos, `?[]`, a su operando solo si dicho operando se evalúa como no NULL. Si el operando se evalúa como `null`, el resultado de aplicar el operador es `null`. El operador de acceso de miembro condicional NULL `?.` también se conoce con el nombre de operador Elvis.
+Disponible en C# 6 y versiones posteriores, un operador condicional NULL aplica una operación de [acceso a miembros](#member-access-operator-), `?.`, o [acceso a elementos](#indexer-operator-), `?[]`, a su operando solo si dicho operando se evalúa como no `null`. Es decir:
+
+- Si `a` se evalúa como `null`, el resultado de `a?.x` o `a?[x]` es `null`.
+- Si `a` se evalúa como no NULL, el resultado de `a?.x` o `a?[x]` es el mismo que el resultado de `a.x` o `a[x]`, respectivamente.
+
+  > [!NOTE]
+  > Si `a.x` o `a[x]` producen una excepción, `a?.x` o `a?[x]` produciría la misma excepción para `a` no NULL. Por ejemplo, si `a` es una instancia de matriz que no es NULL y `x` está fuera de los límites de `a`, `a?[x]` produciría una excepción <xref:System.IndexOutOfRangeException>.
 
 Los operadores de condición NULL se cortocircuitan. Es decir, si una operación en una cadena de la operación de acceso a elementos o miembros condicional devuelve `null`, no se ejecuta el resto de la cadena. En el ejemplo siguiente, `B` no se evalúa si `A` se evalúa como `null` y `C` no se evalúa si `A` o `B` se evalúan como `null`:
 
@@ -123,6 +129,8 @@ En el siguiente ejemplo se muestra el uso de los operadores `?.` y `?[]`:
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 En el ejemplo anterior también se usa el [operador de fusión de NULL `??`](null-coalescing-operator.md) para especificar una expresión alternativa que se evaluará en caso de que el resultado de la operación condicional NULL sea `null`.
+
+El operador de acceso de miembro condicional NULL `?.` también se conoce con el nombre de operador Elvis.
 
 ### <a name="thread-safe-delegate-invocation"></a>Invocación de delegado seguro para subprocesos
 
@@ -168,7 +176,7 @@ Como se muestra en el ejemplo anterior, la expresión `^e` es del tipo <xref:Sy
 
 También puede usar el operador `^` con el [operador de intervalo](#range-operator-) para crear un intervalo de índices. Para más información, consulte [Índices y rangos](../../tutorials/ranges-indexes.md).
 
-## <a name="range-operator-"></a>Operador de intervalo ..
+## <a name="range-operator-"></a>Operador de intervalo .
 
 Disponible en C# 8.0 y versiones posteriores, el operador `..` especifica el inicio y el final de un intervalo de índices como sus operandos. El operando izquierdo es un inicio *inclusivo* de un intervalo. El operando derecho es un inicio *exclusivo* de un intervalo. Cualquiera de los operandos puede ser un índice desde el inicio o desde el final de una secuencia, tal y como muestra el ejemplo siguiente:
 

@@ -4,12 +4,12 @@ description: En este tutorial avanzado se explica cómo explorar datos con índi
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039666"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345632"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
@@ -78,9 +78,11 @@ El ejemplo siguiente muestra muchos de los motivos para esas opciones. Modifique
 
 ## <a name="type-support-for-indices-and-ranges"></a>Compatibilidad con tipos para los índices y los rangos
 
-Si un tipo proporciona un [indizador](../programming-guide/indexers/index.md) con un parámetro <xref:System.Index> o <xref:System.Range>, admite de manera explícita los índices o rangos, respectivamente.
+Los índices y los intervalos proporcionan una sintaxis clara y concisa para acceder a un único elemento o a un subconjunto de elementos de una secuencia. Normalmente, una expresión de índice devuelve el tipo de los elementos de una secuencia. Una expresión de rango suele devolver el mismo tipo de secuencia que la secuencia de origen.
 
-Un tipo es **contable** si tiene una propiedad denominada `Length` o `Count` con un captador accesible y un tipo de valor devuelto de `int`. Un tipo contable que no admite índices ni rangos de manera explícita podría admitirlos implícitamente. Para más información, consulte las secciones [Compatibilidad implícita de índices](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) y [Compatibilidad implícita de rangos](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) de la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/ranges.md).
+Si un tipo proporciona un [indizador](../programming-guide/indexers/index.md) con un parámetro <xref:System.Index> o <xref:System.Range>, admite de manera explícita los índices o rangos, respectivamente. Cuando el tipo proporciona un indexador que toma un único parámetro de <xref:System.Range>, puede optar por devolver un tipo de secuencia diferente, como <xref:System.Span%601?displayProperty=nameWithType>.
+
+Un tipo es **contable** si tiene una propiedad denominada `Length` o `Count` con un captador accesible y un tipo de valor devuelto de `int`. Un tipo contable que no admite índices ni rangos de manera explícita podría admitirlos implícitamente. Para más información, consulte las secciones [Compatibilidad implícita de índices](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) y [Compatibilidad implícita de rangos](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) de la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/ranges.md). Los rangos que usan la compatibilidad implícita del rango devuelven el mismo tipo de secuencia que la secuencia de origen.
 
 Por ejemplo, los tipos de .NET siguientes admiten tanto índices como rangos: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> y <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> admite índices, pero no rangos.
 

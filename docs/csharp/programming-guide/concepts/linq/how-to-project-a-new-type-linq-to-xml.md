@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para proyectar un tipo nuevo (LINQ to XML) (C#)
+title: Procedimiento para proyectar un nuevo tipo (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a54677fa0fa2845dd635f89ddb7ed1c5c279e03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253504"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345721"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Procedimiento para proyectar un tipo nuevo (LINQ to XML) (C#)
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Procedimiento para proyectar un nuevo tipo (LINQ to XML) (C#)
 
 Otros ejemplos de esta sección han mostrado consultados que devuelven resultados como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string` y <xref:System.Collections.Generic.IEnumerable%601> de `int`. Se trata de tipos de resultados comunes, pero no son adecuados para cada caso. En muchos casos querrá que sus consultas devuelvan un <xref:System.Collections.Generic.IEnumerable%601> de algún otro tipo.
 
@@ -49,7 +49,7 @@ class Program {
 }
 ```
 
-En este ejemplo se usa el método <xref:System.Xml.Linq.XContainer.Element%2A> que se presentó en el tema [Cómo: Recuperar un único elemento secundario (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md). También utiliza conversiones para recuperar los valores de los elementos devueltos por el método <xref:System.Xml.Linq.XContainer.Element%2A>.  
+En este ejemplo se usa el método <xref:System.Xml.Linq.XContainer.Element%2A> que se introdujo en el tema [Procedimiento para recuperar un único elemento secundario (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md). También utiliza conversiones para recuperar los valores de los elementos devueltos por el método <xref:System.Xml.Linq.XContainer.Element%2A>.  
 
 Este ejemplo produce el siguiente resultado:
 

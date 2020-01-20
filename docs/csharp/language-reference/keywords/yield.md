@@ -1,6 +1,5 @@
 ---
 title: yield (Palabra clave contextual, Referencia de C#)
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363124"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712785"
 ---
 # <a name="yield-c-reference"></a>yield (Referencia de C#)
 
-Cuando se usa la [palabra clave contextual](index.md#contextual-keywords) `yield` en una instrucción, se indica que el método, el operador o el descriptor de acceso `get` en el que aparece es un iterador. Al usar `yield` para definir un iterador ya no es necesaria una clase adicional explícita (la clase que retiene el estado para una enumeración, consulte <xref:System.Collections.Generic.IEnumerator%601> para ver un ejemplo) al implementar los patrones <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> para un tipo de colección personalizado.
+Cuando se usa la `yield` [palabra clave contextual](index.md#contextual-keywords) en una instrucción, se indica que el método, el operador o el descriptor de acceso `get` en el que aparece es un iterador. Al usar `yield` para definir un iterador ya no es necesaria una clase adicional explícita (la clase que retiene el estado para una enumeración, consulte <xref:System.Collections.Generic.IEnumerator%601> para ver un ejemplo) al implementar los patrones <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> para un tipo de colección personalizado.
 
 En el ejemplo siguiente se muestran las dos formas de la instrucción `yield`.
 

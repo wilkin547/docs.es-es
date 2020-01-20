@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: cb65811d5cae5c747c2660b4b10486f3162b9f33
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a7b4a76d780714850fe0792f51f1fa1282f6525d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998994"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740733"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>Administrador de paquetes de CentOS 7: instalación de .NET Core
 

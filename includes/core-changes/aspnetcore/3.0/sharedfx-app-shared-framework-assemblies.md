@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198576"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901716"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Marco compartido: se han quitado los ensamblados de Microsoft.AspNetCore.App
 
@@ -34,13 +34,13 @@ Además, `Microsoft.AspNetCore.App` incluía los subcomponentes siguientes:
 
 Una referencia a `Microsoft.AspNetCore.App` ya no requiere un elemento `<PackageReference>` en el archivo de proyecto. El SDK de .NET Core admite un nuevo elemento denominado `<FrameworkReference>`, que reemplaza el uso de `<PackageReference>`.
 
-Para más información, vea [aspnet/AspNetCore#3612](https://github.com/aspnet/AspNetCore/issues/3612).
+Para obtener más información, vea [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
 Entity Framework Core se distribuye como paquetes NuGet. Este cambio alinea el modelo de envío con el resto de las bibliotecas de acceso a datos de .NET. Proporciona a Entity Framework Core la ruta más sencilla para continuar con la innovación al tiempo que admite las distintas plataformas .NET. La exclusión de Entity Framework Core del marco compartido no tiene ningún impacto en su estado como biblioteca desarrollada, admitida y mantenida por Microsoft. Continúa bajo la cobertura de la [directiva de compatibilidad de .NET Core](https://www.microsoft.com/net/platform/support-policy).
 
 Json.NET y Entity Framework Core siguen funcionando con ASP.NET Core. Pero no se incluirán en el marco compartido.
 
-Para obtener más información, vea [El futuro de JSON en .NET Core 3.0](https://github.com/dotnet/announcements/issues/90). Vea también [la lista completa de archivos binarios](https://github.com/aspnet/AspNetCore/issues/3755) que se han quitado del marco compartido.
+Para obtener más información, vea [El futuro de JSON en .NET Core 3.0](https://github.com/dotnet/announcements/issues/90). Vea también [la lista completa de archivos binarios](https://github.com/dotnet/aspnetcore/issues/3755) que se han quitado del marco compartido.
 
 #### <a name="reason-for-change"></a>Motivo del cambio
 
@@ -54,16 +54,16 @@ No será necesario que los proyectos consuman ensamblados en `Microsoft.AspNetCo
 
 Este cambio no se aplica a todos los archivos binarios a los que se hace referencia a través de `Microsoft.AspNetCore.App` en ASP.NET Core 2.x. Entre las excepciones destacables se incluyen las siguientes:
 
-- Las bibliotecas de `Microsoft.Extensions` que todavía tienen .NET Standard como destino estarán disponibles como paquetes NuGet (vea https://github.com/aspnet/Extensions) ).
+- Las bibliotecas de `Microsoft.Extensions` que todavía tienen .NET Standard como destino estarán disponibles como paquetes NuGet (vea https://github.com/dotnet/extensions)).
 - API generadas por el equipo de ASP.NET Core que no forman parte de `Microsoft.AspNetCore.App`. Por ejemplo, los componentes siguientes están disponibles como paquetes NuGet:
   - Entity Framework Core
   - API que proporcionan integración de terceros
   - Características experimentales
-  - API con dependencias que no han podido [cumplir los requisitos para ser incluidas en el marco compartido](https://github.com/aspnet/AspNetCore/blob/4e44e5bcbedd961cc0d4f6b846699c7c494f5597/docs/SharedFramework.md)
+  - API con dependencias que no han podido [cumplir los requisitos para ser incluidas en el marco compartido](https://github.com/dotnet/aspnetcore/blob/4e44e5bcbedd961cc0d4f6b846699c7c494f5597/docs/SharedFramework.md)
 - Extensiones para MVC que mantienen la compatibilidad con Json.NET. Se proporcionará una API como paquete NuGet para admitir el uso de Json.NET y MVC.
 - El cliente de SignalR para .NET seguirá admitiendo .NET Standard y se enviará como un paquete NuGet. Está diseñado para usarse en muchos entornos de ejecución de .NET, como Xamarin y UWP.
 
-Para obtener más información, vea [Detección de la generación de paquetes para ensamblados de marco compartido en 3.0](https://github.com/aspnet/AspNetCore/issues/3756). Para obtener información, vea [aspnet/AspNetCore#3757](https://github.com/aspnet/AspNetCore/issues/3757).
+Para obtener más información, vea [Detección de la generación de paquetes para ensamblados de marco compartido en 3.0](https://github.com/dotnet/aspnetcore/issues/3756). Para obtener información, vea [dotnet/aspnetcore#3757](https://github.com/dotnet/aspnetcore/issues/3757).
 
 #### <a name="category"></a>Categoría
 

@@ -1,6 +1,6 @@
 ---
 title: -nostdlib (Opciones del compilador de C#)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602691"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345074"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (Opciones del compilador de C#)
 
@@ -34,7 +34,7 @@ Si no se especifica **-nostdlib**, el archivo mscorlib.dll se importa en el prog
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para establecer esta opción del compilador en Visual Studio
 
 > [!NOTE]
-> Las instrucciones siguientes solo se aplican a Visual Studio 2015 (y versiones anteriores). La propiedad de compilación **No hacer referencia a mscorlib.dll** no existe en Visual Studio 2017.
+> Las instrucciones siguientes solo se aplican a Visual Studio 2015 (y versiones anteriores). La propiedad de compilación **No hacer referencia a mscorlib.dll** no existe en Visual Studio.
 
 1. Abra la página **Propiedades** del proyecto.
 

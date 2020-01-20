@@ -1,15 +1,13 @@
 ---
 title: 'dotnet-dump: .NET Core'
 description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973452"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740781"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado (`dotnet-dump`)
 
@@ -32,7 +30,7 @@ dotnet tool install -g dotnet-dump
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
 
 La herramienta global `dotnet-dump` es una forma de recopilar y analizar los volcados de Windows y Linux sin necesidad de un depurador nativo implicado, como `lldb` en Linux. Esta herramienta es importante en plataformas como Alpine Linux, donde no está disponible una versión de `lldb` totalmente operativa. La herramienta `dotnet-dump` permite ejecutar comandos SOS para analizar bloqueos y el recolector de elementos no utilizados (GC), pero no es un depurador nativo, por lo que no se admiten elementos como la visualización de marcos de pila nativos.
 
@@ -46,9 +44,9 @@ La herramienta global `dotnet-dump` es una forma de recopilar y analizar los vol
 
   Muestra la ayuda de la línea de comandos.
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 
-| Get-Help                                     |
+| Comando                                     |
 | ------------------------------------------- |
 | [dotnet-dump collect](#dotnet-dump-collect) |
 | [dotnet-dump analyze](#dotnet-dump-analyze) |
@@ -121,7 +119,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>Análisis de comandos SOS
 
-| Get-Help                             | Función                                                                                      |
+| Comando                             | Función                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | Muestra todos los comandos disponibles.                                                               |
 | `soshelp|help <command>`            | Muestra el comando especificado.                                                               |
@@ -160,7 +158,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>Uso de `dotnet-dump`
 
-El primer paso es recopilar un volcado. Este paso se puede omitir si ya se ha generado un volcado principal. El sistema operativo o la [característica de generación de volcado](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) integrada del runtime de .NET Core pueden crear volcados principales.
+El primer paso es recopilar un volcado. Este paso se puede omitir si ya se ha generado un volcado principal. El sistema operativo o la [característica de generación de volcado](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) integrada del runtime de .NET Core pueden crear volcados principales.
 
 ```console
 $ dotnet-dump collect --process-id 1902

@@ -1,16 +1,15 @@
 ---
 title: 'Procedimiento Implementar explícitamente miembros de interfaz: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 5ef8b42fe5ca07548d52b88720ea4845d2408bb1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589207"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712096"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Procedimiento Implementar explícitamente miembros de interfaz (Guía de programación de C#)
 Este ejemplo declara una [interfaz](../../language-reference/keywords/interface.md), `IDimensions`, y una clase, `Box`, que implementa explícitamente los miembros de interfaz `getLength` y `getWidth`. Se tiene acceso a los miembros mediante la instancia de interfaz `dimensions`.  
@@ -33,4 +32,4 @@ Este ejemplo declara una [interfaz](../../language-reference/keywords/interface.
 - [Guía de programación de C#](../index.md)
 - [Clases y structs](../classes-and-structs/index.md)
 - [Interfaces](./index.md)
-- [Cómo: Implementar explícitamente miembros de dos interfaces](./how-to-explicitly-implement-members-of-two-interfaces.md)
+- [Procedimiento para implementar miembros de dos interfaces de forma explícita](./how-to-explicitly-implement-members-of-two-interfaces.md)

@@ -2,12 +2,12 @@
 title: Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 31cb7b936f58653e6223501f3b03cd9472b92453
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253460"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347653"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
 Un archivo de valores separados por comas (CSV) es un archivo de texto que se usa a menudo para almacenar datos de hoja de cálculo u otros datos tabulares que se representan mediante filas y columnas. Mediante el uso del método <xref:System.String.Split%2A> para separar los campos, es muy fácil consultar y manipular los archivos CSV con LINQ. De hecho, la misma técnica puede usarse para reordenar los elementos de cualquier línea estructurada de texto, no se limita a un archivo CSV.  
@@ -82,4 +82,4 @@ Cree un proyecto de aplicación de consola de C# con directivas `using` para los
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
 - [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)
-- [Cómo: Generar XML a partir de archivos CSV (C#)](./how-to-generate-xml-from-csv-files.md)
+- [Procedimiento para generar XML a partir de archivos CSV (C#)](./how-to-generate-xml-from-csv-files.md)

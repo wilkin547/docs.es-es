@@ -1,17 +1,16 @@
 ---
 title: 'Procedimiento Implementar eventos de interfaz: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590505"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712343"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Procedimiento Implementar eventos de interfaz (Guía de programación de C#)
 Un [interfaz](../../language-reference/keywords/interface.md) puede declarar un [evento](../../language-reference/keywords/event.md). En el siguiente ejemplo, se muestra cómo implementar eventos de interfaz en una clase. Básicamente, las reglas son las mismas que para implementar cualquier propiedad o método de interfaz.  
@@ -64,4 +63,4 @@ Al proporcionar sus propios descriptores de acceso, puede especificar si los dos
 - [Eventos](./index.md)
 - [Delegados](../delegates/index.md)
 - [Implementación de interfaz explícita](../interfaces/explicit-interface-implementation.md)
-- [Cómo: Producir eventos de una clase base en clases derivadas](./how-to-raise-base-class-events-in-derived-classes.md)
+- [Procedimiento para generar eventos de una clase base en clases derivadas](./how-to-raise-base-class-events-in-derived-classes.md)

@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739300"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899881"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -156,7 +156,7 @@ El atributo `ExcludeAssets` especifica qué recursos que pertenecen al paquete e
 El atributo `PrivateAssets` especifica qué recursos que pertenecen al paquete especificado por `<PackageReference>` se deben consumir, pero no pasar al proyecto siguiente. Cuando este atributo no existe, los recursos `Analyzers`, `Build` y `ContentFiles` son privados de forma predeterminada.
 
 > [!NOTE]
-> `PrivateAssets` es equivalente al elemento *project.json*/*xproj* `SuppressParent`.
+> `PrivateAssets` es equivalente al elemento *project.json*/*xproj*`SuppressParent`.
 
 Estos atributos pueden contener uno o varios de los siguientes elementos, separados por punto y coma `;` si aparece más de uno:
 
@@ -179,6 +179,8 @@ Un elemento `<DotNetCliToolReference>` especifica la herramienta de la CLI que e
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
+
+Tenga en cuenta que `DotNetCliToolReference` está [ahora en desuso](https://github.com/dotnet/announcements/issues/107) en favor de las [herramientas locales de .NET Core](https://aka.ms/local-tools).
 
 #### <a name="version"></a>Versión
 
@@ -276,7 +278,7 @@ Una lista separada por punto y coma de los autores de los paquetes, que coincide
 
 Una descripción larga del paquete para su visualización en la interfaz de usuario.
 
-### <a name="description"></a>DESCRIPCIÓN
+### <a name="description"></a>Descripción
 
 Una descripción larga del ensamblado. Si `PackageDescription` no se especifica, esta propiedad también se utiliza como la descripción del paquete.
 

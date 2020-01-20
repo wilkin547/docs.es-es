@@ -1,15 +1,14 @@
 ---
 title: Glosario de aprendizaje automático
 description: Un glosario de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977283"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739878"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -57,7 +56,7 @@ Los datos son esenciales en cualquier aplicación de aprendizaje automático. En
 
 Clase de ML.NET que implementa la interfaz <xref:Microsoft.ML.IEstimator%601>.
 
-Se trata de una especificación de una transformación (tanto la transformación de la preparación de datos como la transformación de entrenamiento de modelos de aprendizaje automático). Los estimadores pueden encadenarse en una canalización de transformaciones. Los parámetros de un estimador o una canalización de estimadores se aprenden al llamar a <xref:Microsoft.ML.IEstimator`1.Fit*>. El resultado de <xref:Microsoft.ML.IEstimator`1.Fit*> es un [transformador](#transformer).
+Se trata de una especificación de una transformación (tanto la transformación de la preparación de datos como la transformación de entrenamiento de modelos de aprendizaje automático). Los estimadores pueden encadenarse en una canalización de transformaciones. Los parámetros de un estimador o una canalización de estimadores se aprenden al llamar a <xref:Microsoft.ML.IEstimator%601.Fit%2A>. El resultado de <xref:Microsoft.ML.IEstimator%601.Fit%2A> es un [transformador](#transformer).
 
 ## <a name="extension-method"></a>Método de extensión
 

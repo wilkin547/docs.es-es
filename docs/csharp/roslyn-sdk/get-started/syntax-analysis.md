@@ -3,12 +3,12 @@ title: Introducción al análisis de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931764"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347002"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introducción al análisis de sintaxis
 
@@ -51,14 +51,14 @@ Un árbol de sintaxis es una estructura de datos que usan los compiladores de C#
 
 Los cuatro pilares principales de los árboles de sintaxis son los siguientes:
 
-* La clase <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, una instancia de lo que representa un árbol de análisis completo. <xref:Microsoft.CodeAnalysis.SyntaxTree> es una clase abstracta que tiene derivados específicos del lenguaje. Use los métodos de análisis de la clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analizar texto en C# o VB.
+* La clase <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, una instancia de lo que representa un árbol de análisis completo. <xref:Microsoft.CodeAnalysis.SyntaxTree> es una clase abstracta que tiene derivados específicos del lenguaje. Use los métodos de análisis de la clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analizar texto en C# o Visual Basic.
 * La clase <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, instancias de lo que representan las construcciones sintácticas como declaraciones, instrucciones, cláusulas y expresiones.
 * La estructura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, que representa una palabra clave, identificador, operador o puntuación individuales.
 * Por último, la estructura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, que representa sintácticamente bits de información insignificante, como el espacio en blanco entre tokens, las directivas de preprocesamiento y los comentarios.
 
 La trivialidad, los tokens y los nodos se componen de forma jerárquica para formar un árbol que representa por completo todo lo que hay en un fragmento de código de Visual Basic o C#. Puede ver esta estructura mediante la ventana **Syntax Visualizer** (Visualizador de sintaxis). En Visual Studio, elija **Vista** > **Otras ventanas** > **Syntax Visualizer** (Visualizador de sintaxis). Por ejemplo, el archivo de código fuente de C# anterior examinado con **Syntax Visualizer** (Visualizador de sintaxis) tiene el mismo aspecto que en la siguiente ilustración:
 
-**SyntaxNode**: azul | **SyntaxToken**: verde | **SyntaxTrivia**: rojo ![Archivo de código de C#](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: Blue | **SyntaxToken**: Green | **SyntaxTrivia**: Red ![Archivo de código de C#](media/walkthrough-csharp-syntax-figure1.png)
 
 Si se desplaza por esta estructura de árbol, podrá encontrar cualquier instrucción, expresión, token o bit de espacio en blanco en un archivo de código.
 
@@ -78,7 +78,7 @@ Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub
 Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#:
 
 * En Visual Studio, elija **Archivo** > **Nuevo** > **Proyecto** para mostrar el cuadro de diálogo Nuevo proyecto.
-* En **Visual C#** > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente).
+* En **Visual C#**  > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente).
 * Asigne al proyecto el nombre "**SyntaxTreeManualTraversal**" y haga clic en Aceptar.
 
 Va a analizar el programa básico "Hola mundo" mostrado anteriormente.

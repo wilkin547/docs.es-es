@@ -3,17 +3,16 @@ title: Análisis de las dependencias para trasladar código a .NET Core
 description: Obtenga información sobre cómo analizar dependencias externas para trasladar el proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 2aa09e551a99358d3a6961fafcfc0aa8dbd976b1
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798797"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777250"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Análisis de las dependencias para trasladar código a .NET Core
 
-Para trasladar el código a .NET Core o .NET Standard, debe comprender las dependencias. Las dependencias externas son los paquetes NuGet o `.dll` a los que hace referencia en el proyecto, pero que no compila por su cuenta.
+Para trasladar el código a .NET Core o .NET Standard, debe comprender las dependencias. Las dependencias externas son los paquetes NuGet o archivos `.dll` a los que hace referencia en el proyecto, pero que no compila por su cuenta.
 
 ## <a name="migrate-your-nuget-packages-to-packagereference"></a>Migración de los paquetes NuGet a `PackageReference`
 
@@ -23,7 +22,7 @@ Para obtener información sobre cómo migrar, consulte el artículo [Migración 
 
 ## <a name="upgrade-your-nuget-packages"></a>Actualización de los paquetes NuGet
 
-Después de migrar el proyecto al formato `PackageReference`, debe comprobar si los paquetes son compatibles con .NET Core.
+Después de migrar el proyecto al formato `PackageReference`, compruebe si los paquetes son compatibles con .NET Core.
 
 En primer lugar, actualice los paquetes a la versión más reciente posible. Esto se puede realizar con la interfaz de usuario del administrador de paquetes NuGet en Visual Studio. Es probable que las versiones más recientes de las dependencias del paquete ya sean compatibles con .NET Core.
 
@@ -39,7 +38,7 @@ Aunque el uso del sitio es un método más sencillo para comprobar la compatibil
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>Analizar los paquetes NuGet con NuGet Package Explorer
 
-Los paquetes NuGet son un conjunto de carpetas que contienen ensamblados específicos de plataforma, por lo que debe comprobar si hay una carpeta que contenga un ensamblado compatible dentro del paquete.
+Los paquetes NuGet son un conjunto de carpetas que contienen ensamblados específicos de plataforma, Compruebe si hay una carpeta que contenga un ensamblado compatible dentro del paquete.
 
 La manera más fácil de inspeccionar las carpetas de paquetes NuGet consiste en usar la herramienta [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer). Después de instalarla, siga estos pasos para ver los nombres de las carpetas:
 
@@ -83,21 +82,23 @@ Para más información sobre cómo suprimir advertencias del compilador en Visua
 
 Si un paquete NuGet del que depende no se ejecuta en .NET Core, puede hacer lo siguiente:
 
-1. Si el proyecto es de código abierto y está hospedado en algún lugar como GitHub, puede implicar directamente a los desarrolladores.
-2. Puede ponerse en contacto directamente con el autor en [nuget.org](https://www.nuget.org/). Busque el paquete y haga clic en **Contact Owners** (Póngase en contacto con los propietarios) a la izquierda de la página del paquete.
-3. Puede buscar otro paquete que se ejecute en .NET Core que efectúe la misma tarea que el paquete que estaba usando.
-4. Puede intentar volver a escribir el código de lo que hacía el paquete usted mismo.
-5. Puede eliminar la dependencia en el paquete mediante el cambio de la funcionalidad de la aplicación, al menos hasta que esté disponible una versión compatible del paquete.
+- Si el proyecto es de código abierto y está hospedado en algún lugar como GitHub, puede implicar directamente a los desarrolladores.
+- Puede ponerse en contacto directamente con el autor en [nuget.org](https://www.nuget.org/). Busque el paquete y haga clic en **Contact Owners** (Póngase en contacto con los propietarios) a la izquierda de la página del paquete.
+- Puede buscar otro paquete que se ejecute en .NET Core que efectúe la misma tarea que el paquete que estaba usando.
+- Puede intentar volver a escribir el código de lo que hacía el paquete usted mismo.
+- Puede eliminar la dependencia en el paquete mediante el cambio de la funcionalidad de la aplicación, al menos hasta que esté disponible una versión compatible del paquete.
 
-No olvide que los mantenedores de los proyectos de código abierto y los publicadores de paquetes NuGet suelen ser voluntarios. Colaboran porque les importa un dominio determinado, lo hacen de forma gratuita y en muchas ocasiones tienen otro trabajo, por lo que debe ser consciente de ello al ponerse en contacto con ellos para solicitar soporte técnico de .NET Core.
+No olvide que los mantenedores de los proyectos de código abierto y los publicadores de paquetes NuGet suelen ser voluntarios. Colaboran porque les importa un dominio determinado, lo hacen de forma gratuita y en muchas ocasiones tienen otro trabajo, Sea consciente de ello al ponerse en contacto con ellos para solicitar soporte técnico de .NET Core.
 
-Si no puede resolver el problema con ninguna de las sugerencias anteriores, puede que deba efectuar la portabilidad a .NET Core en otro momento.
+Si no puede resolver el problema con ninguna de estas opciones, puede que deba efectuar la portabilidad a .NET Core en otro momento.
 
 Al equipo de .NET le gustaría saber qué bibliotecas son las más importantes para que sean compatibles con .NET Core. Puede enviar un correo electrónico a dotnet@microsoft.com indicando las bibliotecas que le gustaría usar.
 
 ## <a name="analyze-dependencies-that-arent-nuget-packages"></a>Analizar dependencias que no son paquetes NuGet
 
-Puede que tenga una dependencia que no sea un paquete NuGet, como un archivo DLL, en el sistema de archivos. La única manera de determinar la portabilidad de esa dependencia consiste en ejecutar la herramienta [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport). La herramienta puede analizar ensamblados que tienen como destino .NET Framework e identificar API que no se pueden portar a otras plataformas de .NET, como .NET Core. Puede ejecutar la herramienta como una aplicación de consola o como [extensión de Visual Studio](../../standard/analyzers/portability-analyzer.md).
+Puede que tenga una dependencia que no sea un paquete NuGet, como un archivo DLL, en el sistema de archivos. La única manera de determinar la portabilidad de esa dependencia consiste en ejecutar la herramienta [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport). La herramienta analiza ensamblados que tienen como destino .NET Framework e identifica API que no se pueden portar a otras plataformas de .NET, como .NET Core. Puede ejecutar la herramienta como una aplicación de consola o como [extensión de Visual Studio](../../standard/analyzers/portability-analyzer.md).
 
->[!div class="step-by-step"]
->[Siguiente](libraries.md)
+## <a name="next-steps"></a>Pasos siguientes
+
+>[!div class="nextstepaction"]
+>[Portabilidad de las bibliotecas](libraries.md)

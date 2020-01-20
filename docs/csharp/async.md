@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037688"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713948"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -219,7 +218,7 @@ Aunque es menos código, tenga cuidado al combinar LINQ con código asincrónico
 
 Aunque la programación asincrónica es relativamente sencilla, hay algunos detalles que debe tener en cuenta para evitar un comportamiento inesperado.
 
-* **Los métodos `async` deben tener una palabra clave** `await` **en su cuerpo o nunca proporcionarán resultados.**
+* Los métodos `async` **deben tener una palabra clave** `await` **en el cuerpo o nunca proporcionarán resultados**.
 
 Es importante que tenga esto en cuenta.  Si no se usa `await` en el cuerpo de un método `async`, el compilador de C# generará una advertencia, pero el código se compilará y se ejecutará como si se tratara de un método normal.  Tenga en cuenta también que esto sería muy ineficaz, ya que la máquina de estados generada por el compilador de C# para el método asincrónico no realizaría nada.
 

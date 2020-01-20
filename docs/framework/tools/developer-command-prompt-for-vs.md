@@ -1,6 +1,6 @@
 ---
 title: Símbolo del sistema para desarrolladores de Visual Studio
-ms.date: 08/14/2018
+ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -10,87 +10,89 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044728"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715842"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Símbolo del sistema para desarrolladores de Visual Studio
 
-El Símbolo del sistema para desarrolladores de Visual Studio permite usar herramientas de .NET Framework más fácilmente. Es un símbolo del sistema que establece automáticamente variables de entorno específicas.
+El Símbolo del sistema para desarrolladores de Visual Studio permite usar herramientas de .NET Framework más fácilmente. Es un símbolo del sistema que establece automáticamente variables de entorno específicas. Una vez abierto el Símbolo del sistema para desarrolladores, puede escribir los comandos para [herramientas de .NET Framework](index.md) como `ildasm` o `clrver`.
 
-> [!div class="button"]
-> [Descarga de Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+## <a name="prerequisites"></a>Requisitos previos
+
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Búsqueda del símbolo del sistema en el equipo
 
-Es posible que tenga varios símbolos del sistema, en función de la versión de Visual Studio y de los SDK adicionales que haya instalado. Por ejemplo, las versiones de 64 bits de Visual Studio proporcionan los símbolos del sistema de 32 y de 64 bits. (Las versiones de 32 y 64 bits de la mayoría de las herramientas son iguales; pero algunas herramientas realizan cambios específicos para los entornos de 32 o 64 bits). Si los pasos siguientes no funcionan, puede probar los que se describen en [Buscar manualmente los archivos en el equipo](#manually-locate-the-files-on-your-machine) o [Ejecutar el símbolo del sistema desde Visual Studio](#run-the-command-prompt-from-inside-visual-studio).
+Es posible que tenga varios símbolos del sistema, en función de la versión de Visual Studio y de los SDK y las cargas de trabajo adicionales que haya instalado. Si los pasos siguientes no funcionan, puede intentar [buscar manualmente los archivos en el equipo](#manually-locate-the-files-on-your-machine) o [ejecutar el símbolo del sistema desde Visual Studio](#start-the-command-prompt-from-inside-visual-studio).
 
-### <a name="in-windows-10"></a>En Windows 10
+### <a name="windows-10"></a>Windows 10
 
-1. En el cuadro de búsqueda de la barra de tareas, comience a escribir el nombre de la herramienta, como `dev` o `developer command prompt`. Esto muestra una lista de las aplicaciones instaladas que coinciden con el patrón de búsqueda. Si busca un símbolo del sistema diferente, pruebe a escribir otro término de búsqueda, como `prompt`.
+1. Seleccione **Inicio** ![Tecla del logotipo de Windows del teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) y desplácese hasta la letra **V**.
 
-2. Elija **Símbolo del sistema para desarrolladores de Visual Studio** (o el símbolo del sistema que quiera usar).
+1. Expanda la carpeta **Visual Studio 2019**.
 
-### <a name="in-windows-81"></a>En Windows 8.1
+1. Elija el **Símbolo del sistema para desarrolladores de VS 2019** (o el símbolo del sistema que quiera usar).
 
-1. Vaya a la pantalla **Inicio** al presionar la tecla de logotipo de Windows ![Tecla de logotipo de Windows en el teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) en el teclado, por ejemplo.
+   Como alternativa, puede empezar a escribir el nombre del símbolo del sistema en el cuadro de búsqueda de la barra de tareas y elegir el resultado que desee a medida que la lista de resultados empiece a mostrar las coincidencias de búsqueda.
 
-2. En la pantalla **Inicio**, presione **Ctrl**+**Tabulador** para abrir la lista **Aplicaciones** y escriba `V`. Esto muestra una lista que incluye los símbolos del sistema de Visual Studio instalados.
+   ![GIF animado que muestra el comportamiento de búsqueda en Windows 10](./media/developer-command-prompt-for-vs/windows10-search.gif)
 
-3. Elija el **Símbolo del sistema para desarrolladores** (o el símbolo del sistema que quiera usar).
-
-### <a name="in-windows-8"></a>En Windows 8
+### <a name="windows-81"></a>Windows 8.1
 
 1. Vaya a la pantalla **Inicio** al presionar la tecla de logotipo de Windows ![Tecla de logotipo de Windows en el teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) en el teclado, por ejemplo.
 
-2. En la pantalla **Inicio**, presione la tecla de logotipo de Windows ![Tecla de logotipo de Windows en el teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
+1. En la pantalla **Inicio**, presione **Ctrl**+**Tabulador** para abrir la lista **Aplicaciones** y presione **V**. Esto muestra una lista que incluye todos los símbolos del sistema de Visual Studio instalados.
 
-3. Elija el icono **Vista Aplicaciones** en la parte inferior de la pantalla y después escriba `V`. Esto muestra una lista que incluye los símbolos del sistema de Visual Studio instalados.
+1. Elija el **Símbolo del sistema para desarrolladores de VS 2019** (o el símbolo del sistema que quiera usar).
 
-4. Elija el **Símbolo del sistema para desarrolladores** (o el símbolo del sistema que quiera usar).
+### <a name="windows-7"></a>Windows 7
 
-### <a name="in-windows-7"></a>En Windows 7
+1. Elija **Inicio** y, a continuación, expanda **Todos los programas**.
 
-1. Elija **Inicio**, expanda **Todos los programas** y luego, **Microsoft Visual Studio**.
+1. Elija **Visual Studio 2019** > **Herramientas de Visual Studio** > **Símbolo del sistema para desarrolladores de VS 2019**, o bien el símbolo del sistema que quiera usar.
 
-2. Según la versión de Visual Studio que tenga instalada, elija **Visual Studio Tools**, **Visual Studio Command Prompt** o el símbolo del sistema que quiera usar.
+   ![Menú Inicio de Windows 7 con el símbolo del sistema resaltado](./media/developer-command-prompt-for-vs/windows7-menu.png)
 
-Si tiene instalados otros SDK, como el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) o [versiones anteriores](https://developer.microsoft.com/windows/downloads/sdk-archive), es posible que vea símbolos del sistema adicionales para las arquitecturas ARM, x86 o x64. Consulte la documentación de cada herramienta para conocer la versión del símbolo del sistema que debe utilizar.
+Si tiene instalados otros SDK, como el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) o [versiones anteriores](https://developer.microsoft.com/windows/downloads/sdk-archive), es posible que vea símbolos del sistema adicionales. Consulte la documentación de cada herramienta para conocer la versión del símbolo del sistema que debe utilizar.
 
 ## <a name="manually-locate-the-files-on-your-machine"></a>Buscar manualmente los archivos en el equipo
 
-Normalmente, los accesos directos de los símbolos del sistema que haya instalado se colocan en la carpeta **Menú Inicio** para Visual Studio; por ejemplo, en C:\ProgramData\Microsoft\Windows\Menú Inicio\Programas\Visual Studio 2017\Visual Studio Tools. Pero si por alguna razón, la búsqueda del símbolo del sistema no muestra los resultados esperados, puede intentar buscar manualmente el acceso directo en el equipo. Pruebe a buscar el nombre del archivo de símbolo del sistema; por ejemplo, *VsDevCmd.bat* o vaya a la carpeta de herramientas; por ejemplo, C:\Archivos de programa (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (la ruta de acceso cambia según la versión de Visual Studio, la edición y la ubicación de instalación).
+Normalmente, los accesos directos de los símbolos del sistema que haya instalado se colocan en la carpeta **Menú Inicio** para Visual Studio; por ejemplo, en *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019\Visual Studio Tools*. Pero si por alguna razón, la búsqueda del símbolo del sistema no produce los resultados esperados, puede intentar buscar manualmente el acceso directo en el equipo. Pruebe a buscar el nombre del archivo de símbolo del sistema; por ejemplo, *VsDevCmd.bat* o vaya a la carpeta de herramientas; por ejemplo, *%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools* (la ruta de acceso cambia según la versión de Visual Studio, la edición y la ubicación de instalación).
 
-## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Ejecutar el símbolo del sistema desde Visual Studio
+## <a name="start-the-command-prompt-from-inside-visual-studio"></a>Iniciar el símbolo del sistema desde Visual Studio
 
-Para un acceso más sencillo, puede agregar el símbolo del sistema para desarrolladores de Visual Studio o cualquier otro símbolo del sistema al menú **Herramientas** de Visual Studio. Para que la herramienta esté disponible, agréguela a la lista de herramientas externas. Estos son los pasos:
+Para un acceso más sencillo, puede agregar el Símbolo del sistema para desarrolladores o cualquier otro símbolo del sistema al menú Herramientas de Visual Studio. Para que la herramienta esté disponible, agréguela a la lista de herramientas externas. Estos son los pasos:
 
 1. Abra Visual Studio.
 
-2. Seleccione el menú **Herramientas** y, después, elija **Herramientas externas**.
+1. En la ventana de inicio, elija **Continuar sin código**.
 
-3. En el cuadro de diálogo **Herramientas externas**, elija el botón **Agregar**. Aparecerá una nueva entrada.
+1. En la barra de menús, elija **Herramientas** > **Herramientas externas**.
 
-4. Escriba el **Título** correspondiente al nuevo elemento de menú (por ejemplo, `Command Prompt`).
+1. En el cuadro de diálogo **Herramientas externas**, elija el botón **Agregar**. Aparecerá una nueva entrada.
 
-5. En el campo **Comando**, especifique el archivo que quiere iniciar, como `%comspec%` o `C:\Windows\System32\cmd.exe`.
+1. Escriba el **Título** correspondiente al nuevo elemento de menú (por ejemplo, `Command Prompt`).
 
-6. En el campo **Argumentos** indique dónde se encuentra el símbolo del sistema específico que quiere usar como, por ejemplo, `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (este comando inicia el símbolo del sistema para desarrolladores que se instala con Visual Studio 2017 Enterprise). Cambie este valor según la ubicación de instalación, la edición y la versión de Visual Studio.
+1. En el campo **Comando**, especifique el archivo que quiere iniciar, como `%comspec%` o `C:\Windows\System32\cmd.exe`.
 
-7. Elija un valor para el campo **Directorio inicial**, como **Directorio del proyecto**.
+1. En el campo **Argumentos** indique dónde se encuentra el símbolo del sistema específico que quiere usar como, por ejemplo, `/k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"`. Este comando inicia el Símbolo del sistema para desarrolladores instalado con Visual Studio 2019 Community. Cambie este valor según la ubicación de instalación, la edición y la versión de Visual Studio.
 
-8. Elija el botón **Aceptar** .
+1. En el campo **Directorio inicial**, especifique el directorio en el que se iniciará el símbolo del sistema. Elija un valor como **Directorio del proyecto** seleccionando la flecha situada junto al campo.
 
-   Se agregará el nuevo elemento de menú y podrá acceder al símbolo del sistema desde el menú **Herramientas**.
+1. Elija el botón **Aceptar** .
 
-   ![Elemento de menú del símbolo del sistema en Visual Studio](./media/command-prompt-vs-menu.png)
+   ![Cuadro de diálogo Herramientas externas con los valores de campo rellenados.](./media/developer-command-prompt-for-vs/add-external-tool.png)
+
+   Se agregará el nuevo elemento de menú y podrá acceder al símbolo del sistema desde el menú Herramientas.
+
+   ![Elemento de menú del símbolo del sistema en Visual Studio](./media/developer-command-prompt-for-vs/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](index.md)
+- [Herramientas de .NET Framework](index.md)
 - [Administrar herramientas externas](/visualstudio/ide/managing-external-tools)
+- [Uso del conjunto de herramientas de Microsoft C++ desde la línea de comandos](/cpp/build/building-on-the-command-line)

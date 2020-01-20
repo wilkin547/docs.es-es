@@ -1,17 +1,16 @@
 ---
 title: 'Procedimiento Implementar explícitamente miembros de dos interfaces: Guía de programación de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 1d4dd0485be1d859e3e9594ab1558a907b8f1f7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589198"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701243"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Procedimiento Implementar explícitamente miembros de dos interfaces (Guía de programación de C#)
 La implementación explícita de [interfaces](../../language-reference/keywords/interface.md) también permite al programador implementar dos interfaces que tienen los mismos nombres de miembros y dar a cada miembro de una interfaz una implementación independiente. En este ejemplo se muestran las dimensiones de un cuadro en unidades métricas e inglesas. La [clase](../../language-reference/keywords/class.md) Box implementa dos interfaces, IEnglishDimensions e IMetricDimensions, que representan los diferentes sistemas de medida. Ambas interfaces tienen nombres de miembros idénticos, Length y Width.  
@@ -33,4 +32,4 @@ La implementación explícita de [interfaces](../../language-reference/keywords/
 - [Guía de programación de C#](../index.md)
 - [Clases y structs](../classes-and-structs/index.md)
 - [Interfaces](./index.md)
-- [Cómo: Implementar explícitamente miembros de interfaz](./how-to-explicitly-implement-interface-members.md)
+- [Procedimiento para implementar miembros de interfaz de forma explícita](./how-to-explicitly-implement-interface-members.md)

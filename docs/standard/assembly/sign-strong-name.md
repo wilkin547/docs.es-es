@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138606"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738770"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedimiento para firmar un ensamblado con un nombre seguro
 
 > [!NOTE]
-> Aunque .NET Core admite ensamblados con nombre seguro, y todos los ensamblados de la biblioteca .NET Core están firmados, la mayoría de los ensamblados de terceros no necesitan nombres seguros. Para obtener más información, consulte [Strong Name Signing (Firma con nombre seguro)](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) en GitHub.
+> Aunque .NET Core admite ensamblados con nombre seguro, y todos los ensamblados de la biblioteca .NET Core están firmados, la mayoría de los ensamblados de terceros no necesitan nombres seguros. Para obtener más información, consulte [Strong Name Signing (Firma con nombre seguro)](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) en GitHub.
 
 Existen varias formas de firmar un ensamblado con un nombre seguro:  
   

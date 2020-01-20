@@ -1,19 +1,17 @@
 ---
-title: Introducción a .NET Core en macOS con Visual Studio para Mac
+title: Introducción a .NET Core con Visual Studio para Mac
 description: Este tema le guía en la creación de una aplicación de consola sencilla con Visual Studio para Mac y .NET Core.
-author: mairaw
-ms.date: 07/11/2019
-ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/19/2019
+ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428582"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740495"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introducción a .NET Core en macOS con Visual Studio para Mac
 
-Visual Studio para Mac proporciona un entorno de desarrollo integrado (IDE) completo para el desarrollo de aplicaciones .NET Core. Este tema le guía en la creación de una aplicación de consola sencilla con Visual Studio para Mac y .NET Core.
+Visual Studio para Mac proporciona un entorno de desarrollo integrado (IDE) completo para el desarrollo de aplicaciones .NET Core. Este artículo le guía en la creación de una aplicación de consola sencilla con Visual Studio para Mac y .NET Core.
 
 > [!NOTE]
 > Sus comentarios son muy importantes. Hay dos maneras de proporcionar comentarios al equipo de desarrollo de Visual Studio para Mac:
@@ -23,7 +21,7 @@ Visual Studio para Mac proporciona un entorno de desarrollo integrado (IDE) comp
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Vea el tema [Dependencias y requisitos de .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos)
+Consulte el artículo [Dependencias y requisitos de .NET Core](../install/dependencies.md?pivots=os-macos).
 
 Consulte el artículo [Compatibilidad de .NET Core](/visualstudio/mac/net-core-support) para asegurarse de que usa una versión compatible de .NET Core.
 

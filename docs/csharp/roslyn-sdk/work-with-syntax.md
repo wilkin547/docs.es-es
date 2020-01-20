@@ -3,12 +3,12 @@ title: Usar el modelo de sintaxis del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción de los tipos que se usan para entender y manipular nodos de sintaxis.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774100"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740473"
 ---
 # <a name="work-with-syntax"></a>Trabajar con sintaxis
 
@@ -65,11 +65,11 @@ A diferencia de los nodos y los tokens de sintaxis, las curiosidades de sintaxis
 
 Cada nodo, token o curiosidad conoce su posición dentro del texto de origen y el número de caracteres del que se compone. Una posición de texto se representa como un entero de 32 bits, que es un índice `char` de base cero. Un objeto <xref:Microsoft.CodeAnalysis.Text.TextSpan> es la posición inicial y un recuento de caracteres, ambos representados como enteros. Si <xref:Microsoft.CodeAnalysis.Text.TextSpan> tiene una longitud cero, hace referencia a una ubicación entre dos caracteres.
 
-Cada nodo tiene dos propiedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
+Cada nodo tiene dos propiedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> es el intervalo de texto desde el principio del primer token del subárbol del nodo al final del último token. Este intervalo no incluye ninguna curiosidad inicial ni final.
+La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> es el intervalo de texto desde el principio del primer token del subárbol del nodo al final del último token. Este intervalo no incluye ninguna curiosidad inicial ni final.
 
-La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> es el intervalo de texto que incluye el intervalo normal del nodo, así como el intervalo de cualquier curiosidad inicial o final.
+La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> es el intervalo de texto que incluye el intervalo normal del nodo, así como el intervalo de cualquier curiosidad inicial o final.
 
 Por ejemplo:
 
@@ -85,11 +85,11 @@ El nodo de la instrucción dentro del bloque tiene un intervalo indicado por las
 
 ## <a name="kinds"></a>Tipos
 
-Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Dicha conversión se puede realizar automáticamente. Para ello, es necesario acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje. Cada lenguaje, C# o Visual Basic, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Dicha conversión se puede realizar automáticamente. Para ello, es necesario acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType>.
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite anular fácilmente la ambigüedad de los tipos de nodos de sintaxis que comparten la misma clase de nodos. En el caso de los tokens y las curiosidades, esta propiedad es la única manera de distinguir un tipo de elemento de otro.
 
-Por ejemplo, una sola clase <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tiene <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> y <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> como elementos secundarios. La propiedad <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> distingue si es un tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> o <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> de nodo de sintaxis.
+Por ejemplo, una sola clase <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tiene <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> y <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> como elementos secundarios. La propiedad <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> distingue si es un tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> o <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> de nodo de sintaxis.
 
 ## <a name="errors"></a>Errores
 

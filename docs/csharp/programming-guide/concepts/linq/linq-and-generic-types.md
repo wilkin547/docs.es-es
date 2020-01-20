@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 8ec2a599a6762d62d101f7660892a6d85a100794
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9a2d1ac72f70e7cd314d349e81ab2bc815a5bf13
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591944"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635579"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ y tipos genéricos (C#)
-Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipos genéricos incorporados en la versión 2.0 de .NET Framework. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  
+Las consultas LINQ se basan en tipos genéricos incorporados en la versión 2.0 de .NET Framework. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  
   
 1. Al crear una instancia de una clase de colección genérica como <xref:System.Collections.Generic.List%601>, reemplace la "T" por el tipo de objetos que contendrá la lista. Por ejemplo, una lista de cadenas se expresa como `List<string>` y una lista de objetos `Customer` se expresa como `List<Customer>`. Las listas genéricas están fuertemente tipadas y ofrecen muchas ventajas respecto a las colecciones que almacenan sus elementos como <xref:System.Object>. Si intenta agregar un `Customer` a una `List<string>`, se producirá un error en tiempo de compilación. Usar colecciones genéricas es fácil porque no es necesario efectuar ninguna conversión de tipos en tiempo de ejecución.  
   
@@ -23,7 +23,7 @@ Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en t
  Para obtener más información sobre los genéricos, vea [Genéricos](../../generics/index.md).  
   
 ## <a name="ienumerablet-variables-in-linq-queries"></a>Variables IEnumerable<T\> en las consultas LINQ  
- Las variables de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tienen el tipo <xref:System.Collections.Generic.IEnumerable%601> o un tipo derivado como <xref:System.Linq.IQueryable%601>. Cuando vea una variable de consulta que tiene el tipo `IEnumerable<Customer>`, significa que, al ejecutarse, la consulta generará una secuencia de cero o más objetos `Customer`.  
+ Las variables de consulta LINQ tienen el tipo <xref:System.Collections.Generic.IEnumerable%601> o un tipo derivado como <xref:System.Linq.IQueryable%601>. Cuando vea una variable de consulta que tiene el tipo `IEnumerable<Customer>`, significa que, al ejecutarse, la consulta generará una secuencia de cero o más objetos `Customer`.  
   
  [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   

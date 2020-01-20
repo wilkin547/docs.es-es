@@ -3,13 +3,12 @@ title: Reducción de dependencias de paquete con project.json
 description: Reduzca las dependencias de paquete al crear bibliotecas basadas en project.json.
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674970"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740825"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reducción de dependencias de paquete con project.json
 
@@ -17,7 +16,7 @@ En este artículo se analiza todo lo que necesita saber sobre cómo reducir las 
 
 ## <a name="why-its-important"></a>Por qué es importante
 
-.NET Core es un producto que consta de paquetes NuGet.  Un paquete esencial es el [metapaquete .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que es un paquete NuGet que consta de otros paquetes.  Proporciona el conjunto de paquetes que se garantiza que funcionan con varias implementaciones de .NET, como .NET Framework, .NET Core y Xamarin/Mono.
+.NET Core es un producto que consta de paquetes NuGet.  Un paquete esencial es el [metapaquete .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que es un paquete NuGet que consta de otros paquetes. Proporciona el conjunto de paquetes que se garantiza que funcionan con varias implementaciones de .NET, como .NET Framework, .NET Core y Xamarin/Mono.
 
 Sin embargo, hay muchas posibilidades de que la biblioteca no use cada uno de los paquetes que contiene.  Cuando se crea una biblioteca y se la distribuye en NuGet, un procedimiento recomendado es "recortar" las dependencias para que solo queden los paquetes que realmente usa.  Esto da como resultado una superficie total menor de los paquetes NuGet.
 
@@ -34,12 +33,12 @@ Actualmente, no hay ningún comando de `dotnet` oficial que recorte las referenc
 
 Una de las siguientes formas le permite saber cuáles son los paquetes que no necesita:
 
-1. Prueba y error.  Esto implica quitar un paquete, realizar la restauración, ver si la biblioteca se compila y repetir este proceso.
-2. Mediante el uso de una herramienta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para echar un vistazo a las referencias y ver las que realmente usa el código.  De ese modo, puede quitar los paquetes que no corresponden a los tipos que usa.
+1. Prueba y error. Esto implica quitar un paquete, realizar la restauración, ver si la biblioteca se compila y repetir este proceso.
+2. Mediante el uso de una herramienta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para echar un vistazo a las referencias y ver las que realmente usa el código. De ese modo, puede quitar los paquetes que no corresponden a los tipos que usa.
 
 ## <a name="example"></a>Ejemplo
 
-Imagine que escribió una biblioteca que brindó una funcionalidad adicional a los tipos de colección genéricos.  Dicha biblioteca debería depender de paquetes como `System.Collections`, pero probablemente no dependería para nada de paquetes tales como `System.Net.Http`.  Por lo tanto, sería bueno recortar las dependencias de paquete para que solo queden las que necesita esta biblioteca.
+Imagine que escribió una biblioteca que brindó una funcionalidad adicional a los tipos de colección genéricos. Dicha biblioteca debería depender de paquetes como `System.Collections`, pero probablemente no dependería para nada de paquetes tales como `System.Net.Http`. Por lo tanto, sería bueno recortar las dependencias de paquete para que solo queden las que necesita esta biblioteca.
 
 Para recortar esta biblioteca, comience con el archivo `project.json` y agregue una referencia a `NETStandard.Library` versión `1.6.0`.
 

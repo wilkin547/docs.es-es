@@ -1,6 +1,6 @@
 ---
 title: Establecimiento de variables de entorno para la línea de comandos de Visual Studio
-ms.date: 09/29/2017
+ms.date: 12/20/2019
 f1_keywords:
 - cs.build.commandline
 helpviewer_keywords:
@@ -15,27 +15,27 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 3b69a92d28663bbbd34245435a69aea80d20fdc9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99e2a837877494dd4c7e0106047bce3cc39a9282
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972827"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342362"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Establecimiento de variables de entorno para la línea de comandos de Visual Studio
 
 El archivo VsDevCmd.bat establece las variables de entorno apropiadas para habilitar compilaciones desde la línea de comandos.
 
 > [!NOTE]
-> El archivo VsDevCmd.bat es un nuevo archivo que se proporciona con Visual Studio 2017. Visual Studio 2015 y las versiones anteriores usaban VSVARS32.bat para el mismo propósito. Este archivo se almacena en \Archivos de programa\Microsoft Visual Studio\\*Versión*\Common7\Tools o Archivos de programa (x86)\Microsoft Visual Studio\\*Versión*\Common7\Tools.
+> Visual Studio 2015 y versiones anteriores usaban VSVARS32.bat, no VsDevCmd.bat, para el mismo propósito. Este archivo se almacena en \Archivos de programa\Microsoft Visual Studio\\*Versión*\Common7\Tools o Archivos de programa (x86)\Microsoft Visual Studio\\*Versión*\Common7\Tools.
 
 Si se instala la versión actual de Visual Studio en un equipo que también tiene una versión anterior de Visual Studio, no se deben ejecutar los archivos VsDevCmd.bat y VSVARS32.BAT de versiones diferentes en la misma ventana del símbolo del sistema. En su lugar, debe ejecutar el comando para cada versión en su propia ventana.
 
 ### <a name="to-run-vsdevcmdbat"></a>Para ejecutar VsDevCmd.BAT:
 
-1. En el menú **Inicio**, abra **Símbolo del sistema para desarrolladores de VS 2017**.  Se encuentra en la carpeta **Visual Studio 2017**.
+1. En el menú **Inicio**, abra el **símbolo del sistema para desarrolladores de VS 2019**.  Se encuentra en la carpeta **Visual Studio 2019**.
 
-2. Cambie al subdirectorio \Archivos de programa\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools o Archivos de programa (x86)\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools de la instalación.  (*Versión* es *2017* para la versión actual. *Oferta* es una de las opciones siguientes: *Enterprise*, *Professional* o *Community*.)
+2. Cambie al subdirectorio \Archivos de programa\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools o Archivos de programa (x86)\Microsoft Visual Studio\\*Versión*\\*Oferta*\Common7\Tools de la instalación.  (*Versión* es *2019* para la versión actual. *Oferta* es una de las opciones siguientes: *Enterprise*, *Professional* o *Community*.)
 
 3. Ejecute VsDevCmd.bat escribiendo **VsDevCmd**.
 

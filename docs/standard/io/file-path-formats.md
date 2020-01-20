@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120784"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337676"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -71,7 +71,7 @@ Las rutas de acceso UNC siempre deben ser completas. Pueden incluir segmentos de
 
 El sistema operativo Windows tiene un modelo de objetos unificado que apunta a todos los recursos, incluidos los archivos. Estas rutas de acceso de objeto son accesibles desde la ventana de consola y se exponen a la capa de Win32 a través de una carpeta especial para vínculos simbólicos a la que se asignan las rutas de acceso DOS y UNC heredadas. A esta carpeta especial se accede a través de la sintaxis de ruta de acceso de dispositivo DOS, que es una de las siguientes:
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 Además de identificar una unidad por su letra de unidad, puede identificar un volumen mediante su GUID de volumen. Esto toma la forma:
@@ -95,10 +95,10 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 
    Existe un vínculo específico para las UNC que, de forma lógica, se denomina `UNC`. Por ejemplo:
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Para las UNC de dispositivo, la parte del servidor o recurso compartido forma el volumen. Por ejemplo, en `\\?\server1\e:\utilities\\filecomparer\`, la parte del servidor o recurso compartido es server1\utilities. Esto es importante cuando se llama a un método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmentos de directorio relativos, pues nunca se puede ir más allá del volumen. 
+    Para las UNC de dispositivo, la parte del servidor o recurso compartido forma el volumen. Por ejemplo, en `\\?\server1\e:\utilities\\filecomparer\`, la parte del servidor o recurso compartido es server1\utilities. Esto es importante cuando se llama a un método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmentos de directorio relativos, pues nunca se puede ir más allá del volumen.
 
 Por definición, las rutas de acceso de dispositivo DOS son completas. No se permiten los segmentos de directorio relativos (`.` y `..`). Los directorios actuales nunca entran en uso.
 
@@ -126,7 +126,7 @@ Esta normalización se produce de manera implícita, pero se puede realizar de f
 El primer paso de la normalización de la ruta de acceso consiste en identificar el tipo de ruta de acceso. Las rutas de acceso se incluyen en una de estas categorías:
 
 - Son rutas de acceso de dispositivo; es decir, comienzan con dos separadores y un signo de interrogación o un punto (`\\?` o `\\.`).
-- Son rutas de acceso UNC, es decir, comienzan por dos separadores sin un signo de interrogación o un punto. 
+- Son rutas de acceso UNC, es decir, comienzan por dos separadores sin un signo de interrogación o un punto.
 - Son rutas de acceso DOS completas, es decir, comienzan por una letra de unidad, un separador de volumen y un separador de componentes (`C:\`).
 - Designan un dispositivo heredado (`CON`, `LPT1`).
 - Son relativas a la raíz de la unidad actual; es decir, comienzan con un único separador de componente (`\`).
@@ -137,7 +137,7 @@ El tipo de la ruta de acceso determina si se aplica o no un directorio actual de
 
 ### <a name="handling-legacy-devices"></a>Control de dispositivos heredados
 
-Si la ruta de acceso es un dispositivo DOS heredado como `CON`, `COM1` o `LPT1`, se convierte en una ruta de acceso de dispositivo mediante la anteposición `\\.\` y se devuelve. 
+Si la ruta de acceso es un dispositivo DOS heredado como `CON`, `COM1` o `LPT1`, se convierte en una ruta de acceso de dispositivo mediante la anteposición `\\.\` y se devuelve.
 
 Una ruta de acceso que comienza por un nombre de dispositivo heredado se interpreta siempre como un dispositivo heredado por el método <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Por ejemplo la ruta de acceso de dispositivo DOS para `CON.TXT` es `\\.\CON`, y la de `COM1.TXT\file1.txt` es `\\.\COM1`.
 
@@ -152,7 +152,7 @@ Si la ruta de acceso comienza por una letra de unidad, el separador de volumen y
 Si la ruta de acceso comienza por un valor distinto de un separador, se aplican la unidad y el directorio actuales. Por ejemplo, si la ruta de acceso es `filecompare` y el directorio actual es `C:\utilities\`, el resultado es `C:\utilities\filecompare\`.
 
 > [!IMPORTANT]
-> El uso de rutas de acceso relativas en las aplicaciones multiproceso (es decir, en la mayoría de aplicaciones) es peligroso, porque el directorio actual es un valor de cada proceso. Cualquier subproceso puede cambiar el directorio actual en cualquier momento. A partir de .NET Core 2.1, se puede llamar al método <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> para obtener una ruta de acceso absoluta a partir de una ruta de acceso relativa y la ruta de acceso base (el directorio actual) sobre la que se quiere resolver. 
+> El uso de rutas de acceso relativas en las aplicaciones multiproceso (es decir, en la mayoría de aplicaciones) es peligroso, porque el directorio actual es un valor de cada proceso. Cualquier subproceso puede cambiar el directorio actual en cualquier momento. A partir de .NET Core 2.1, se puede llamar al método <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> para obtener una ruta de acceso absoluta a partir de una ruta de acceso relativa y la ruta de acceso base (el directorio actual) sobre la que se quiere resolver.
 
 ### <a name="canonicalizing-separators"></a>Asignación canónica de separadores
 
@@ -160,7 +160,7 @@ Todas las barras diagonales (`/`) se convierten en el separador estándar de Win
 
 ### <a name="evaluating-relative-components"></a>Evaluación de componentes relativos
 
-Cuando se procesa la ruta de acceso, se evalúan los componentes o segmentos que se componen de un punto o un punto doble (`.` o `..`): 
+Cuando se procesa la ruta de acceso, se evalúan los componentes o segmentos que se componen de un punto o un punto doble (`.` o `..`):
 
 - Para un punto, se quita el segmento actual, ya que hace referencia al directorio actual.
 
@@ -174,9 +174,9 @@ Junto con las ejecuciones de los separadores y segmentos relativos que se han qu
 
 - Si un segmento termina en un punto, se quita ese punto. (Un segmento de un punto o un punto doble se normaliza en el paso anterior. Un segmento de tres o más puntos no se normaliza y, en realidad, es un nombre de archivo o directorio válido).
 
-- Si la ruta de acceso no termina en un separador, se quitan todos los puntos y espacios finales (U+0020). Si el último segmento es simplemente un punto o un punto doble, se aplica la regla anterior de componentes relativos. 
+- Si la ruta de acceso no termina en un separador, se quitan todos los puntos y espacios finales (U+0020). Si el último segmento es simplemente un punto o un punto doble, se aplica la regla anterior de componentes relativos.
 
-   Esta regla significa que se puede crear un nombre de directorio con un espacio final si se agrega un separador final después del espacio.  
+   Esta regla significa que se puede crear un nombre de directorio con un espacio final si se agrega un separador final después del espacio.
 
    > [!IMPORTANT]
    > **Nunca** se debe crear un nombre de archivo o directorio con un espacio final. Los espacios finales pueden dificultar o impedir el acceso a un directorio, y se suelen producir errores en las aplicaciones cuando se intenta controlar directorios o archivos con nombres que incluyen espacios.
@@ -187,7 +187,7 @@ Normalmente, todas las rutas de acceso que se pasan a una API de Windows se pasa
 
 ¿Por qué querría omitir la normalización? Hay tres razones principales:
 
-1. Para obtener acceso a las rutas de acceso que normalmente no están disponibles pero que son válidas. A un archivo o directorio denominado `hidden.`, por ejemplo, no se puede acceder de otra forma. 
+1. Para obtener acceso a las rutas de acceso que normalmente no están disponibles pero que son válidas. A un archivo o directorio denominado `hidden.`, por ejemplo, no se puede acceder de otra forma.
 
 1. Para mejorar el rendimiento omitiendo la normalización, si ya se ha normalizado.
 
@@ -200,7 +200,7 @@ La omisión de la normalización y las comprobaciones de ruta de acceso máximas
 
 Las rutas de acceso que empiezan por `\\?\` se siguen normalizando si se pasan de forma explícita a la [función GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Tenga en cuenta que puede pasar rutas de acceso de más de `MAX_PATH` caracteres a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sin `\\?\`. Admite rutas de acceso de longitud arbitraria hasta el tamaño de cadena máximo admitido por Windows.
+Puede pasar rutas de acceso de más de `MAX_PATH` caracteres a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sin `\\?\`. Admite rutas de acceso de longitud arbitraria hasta el tamaño de cadena máximo admitido por Windows.
 
 ## <a name="case-and-the-windows-file-system"></a>Las mayúsculas y minúsculas y el sistema de archivos de Windows
 

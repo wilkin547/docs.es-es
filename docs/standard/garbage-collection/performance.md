@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974757"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900583"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
@@ -327,7 +327,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   En este ejemplo, el tamaño de la mayor región disponible es de aproximadamente 24000 KB (3A980 en hexadecimal). Esta región es mucho menor que cuando el recolector de elementos no utilizados necesita un segmento.
 
-  O bien
+  o bien
 
 - Use el comando **vmstat**:
 

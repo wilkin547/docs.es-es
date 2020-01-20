@@ -4,14 +4,14 @@ description: Este tutorial le enseña varias características de .NET Core y el 
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039259"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714601"
 ---
-# <a name="console-application"></a>Aplicación de consola
+# <a name="console-app"></a>Aplicación de consola
 
 Este tutorial le enseña varias características de .NET Core y el lenguaje C#. Aprenderá lo siguiente:
 
@@ -27,21 +27,21 @@ Hay muchas características en este tutorial. Vamos a compilarlas una a una.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker.
-Deberá instalar su editor de código favorito.
+- Configure la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download). Puede ejecutar esta aplicación en Windows, Linux, macOS o en un contenedor de Docker.
 
-## <a name="create-the-application"></a>Crear la aplicación
+- Instale su editor de código favorito.
+
+## <a name="create-the-app"></a>Creación de la aplicación
 
 El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola mundo".
 
-Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para ejecutar la aplicación Hola a todos sencilla. Después de crear la aplicación, escriba `dotnet restore` en el símbolo del sistema. Este comando ejecuta el proceso de restauración de paquetes de NuGet. NuGet es un administrador de paquetes .NET. Este comando permite descargar cualquiera de las dependencias que faltan para el proyecto. Como se trata de un nuevo proyecto, ninguna de las dependencias está en su lugar, así que con la primera ejecución se descargará .NET Core Framework. Después de este paso inicial, solo deberá ejecutar `dotnet restore` al agregar nuevos paquetes dependientes, o actualizar las versiones de cualquiera de sus dependencias.
+Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para ejecutar la aplicación Hola mundo sencilla. Después de crear la aplicación, escriba `dotnet restore` en el símbolo del sistema. Este comando ejecuta el proceso de restauración de paquetes de NuGet. NuGet es un administrador de paquetes .NET. Este comando permite descargar cualquiera de las dependencias que faltan para el proyecto. Como se trata de un nuevo proyecto, ninguna de las dependencias está en su lugar, así que con la primera ejecución se descargará .NET Core Framework. Después de este paso inicial, solo deberá ejecutar `dotnet restore` al agregar nuevos paquetes dependientes, o actualizar las versiones de cualquiera de sus dependencias.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Después de restaurar los paquetes, ejecutará `dotnet build`. Esta acción ejecuta el motor de compilación y crea el ejecutable de aplicación. Por último, ejecute `dotnet run` para ejecutar la aplicación.
 
-El código de la aplicación sencilla Hola a todos está todo en Program.cs. Abra ese archivo con el editor de texto de su elección. Nos disponemos a realizar nuestros primeros cambios.
-En la parte superior del archivo, verá una instrucción using:
+El código de la aplicación sencilla Hola a todos está todo en Program.cs. Abra ese archivo con el editor de texto de su elección. Nos disponemos a realizar nuestros primeros cambios. En la parte superior del archivo, verá una instrucción using:
 
 ```csharp
 using System;
@@ -156,8 +156,7 @@ Ejecute el ejemplo y podrá leer en alto a su ritmo preconfigurado.
 
 ## <a name="async-tasks"></a>Tareas asincrónicas
 
-En este paso final, agregará el código para escribir la salida de manera asincrónica en una tarea, mientras se ejecuta también otra tarea para leer la entrada del usuario si quiere aumentar o reducir la velocidad de la pantalla de texto, o detendrá la presentación del texto por completo. Incluye unos cuantos pasos y, al final, tendrá todas las actualizaciones que necesita.
-El primer paso es crear un método de devolución <xref:System.Threading.Tasks.Task> asincrónico que represente el código que ha creado hasta el momento para leer y visualizar el archivo.
+En este paso final, agregará el código para escribir la salida de manera asincrónica en una tarea, mientras se ejecuta también otra tarea para leer la entrada del usuario si quiere aumentar o reducir la velocidad de la pantalla de texto, o detendrá la presentación del texto por completo. Incluye unos cuantos pasos y, al final, tendrá todas las actualizaciones que necesita. El primer paso es crear un método de devolución <xref:System.Threading.Tasks.Task> asincrónico que represente el código que ha creado hasta el momento para leer y visualizar el archivo.
 
 Agregue este método a su clase `Program` (se toma del cuerpo del método `Main`):
 
@@ -176,8 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-Advertirá dos cambios. Primero, en el cuerpo del método, en lugar de llamar a <xref:System.Threading.Tasks.Task.Wait> para esperar a que finalice una tarea de manera sincrónica, esta versión usa la palabra clave `await`. Para ello, debe agregar el modificador `async` a la signatura del método. Este método devuelve un objeto `Task`. Observe que no hay ninguna instrucción Return que devuelva un objeto `Task`. En su lugar, ese objeto `Task` se crea mediante el código que genera el compilador cuando usa el operador `await`. Puede imaginar que este método devuelve cuando alcanza un valor de `await`. El valor devuelto de `Task` indica que el trabajo no ha finalizado.
-El método se reanuda cuando se completa la tarea en espera. Cuando se ha ejecutado hasta su finalización, el valor de `Task` devuelto indica que se ha completado.
+Advertirá dos cambios. Primero, en el cuerpo del método, en lugar de llamar a <xref:System.Threading.Tasks.Task.Wait> para esperar a que finalice una tarea de manera sincrónica, esta versión usa la palabra clave `await`. Para ello, debe agregar el modificador `async` a la signatura del método. Este método devuelve un objeto `Task`. Observe que no hay ninguna instrucción Return que devuelva un objeto `Task`. En su lugar, ese objeto `Task` se crea mediante el código que genera el compilador cuando usa el operador `await`. Puede imaginar que este método devuelve cuando alcanza un valor de `await`. El valor devuelto de `Task` indica que el trabajo no ha finalizado. El método se reanuda cuando se completa la tarea en espera. Cuando se ha ejecutado hasta su finalización, el valor de `Task` devuelto indica que se ha completado.
 El código de llamada puede supervisar ese valor de `Task` devuelto para determinar cuándo se ha completado.
 
 Puede llamar a este nuevo método en su método `Main`:
@@ -219,8 +217,7 @@ private static async Task GetInput()
 }
 ```
 
-Se crea una expresión lambda que representa un delegado de <xref:System.Action> que lee una clave de la consola y modifica una variable local que representa el retraso cuando el usuario presiona las teclas "<" (menor que) o ">" (mayor que). El método de delegado finaliza cuando el usuario presiona las teclas "X" o "x", que permiten al usuario detener la presentación del texto en cualquier momento.
-Este método usa <xref:System.Console.ReadKey> para bloquear y esperar a que el usuario presione una tecla.
+Se crea una expresión lambda que representa un delegado de <xref:System.Action> que lee una clave de la consola y modifica una variable local que representa el retraso cuando el usuario presiona las teclas "<" (menor que) o ">" (mayor que). El método de delegado finaliza cuando el usuario presiona las teclas "X" o "x", que permiten al usuario detener la presentación del texto en cualquier momento. Este método usa <xref:System.Console.ReadKey> para bloquear y esperar a que el usuario presione una tecla.
 
 Para finalizar esta característica, debe crear un nuevo método de devolución `async Task` que inicie estas dos tareas (`GetInput` y `ShowTeleprompter`) y también administre los datos compartidos entre ellas.
 
@@ -314,7 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Conclusión
 
-En este tutorial se han mostrado varias características en torno al lenguaje C# y las bibliotecas .NET Core, relacionadas con el trabajo en aplicaciones de consola.
-Puede partir de este conocimiento para explorar más sobre el lenguaje y las clases aquí presentadas. Ha visto los conceptos básicos de E/S de archivo y consola, el uso con bloqueo y sin bloqueo de la programación asincrónica basada en tareas, un paseo por el lenguaje C# y cómo se organizan los programas en C#. También ha conocido la interfaz de la línea de comandos y las herramientas de .NET Core.
+En este tutorial se han mostrado varias características en torno al lenguaje C# y las bibliotecas .NET Core, relacionadas con el trabajo en aplicaciones de consola. Puede partir de este conocimiento para explorar más sobre el lenguaje y las clases aquí presentadas. Ha visto los conceptos básicos de E/S de archivo y consola, el uso con bloqueo y sin bloqueo de la programación asincrónica basada en tareas, un paseo por el lenguaje C# y cómo se organizan los programas en C#. También ha conocido la interfaz de la línea de comandos y las herramientas de .NET Core.
 
 Para obtener más información sobre la E/S de archivo, consulte el tema [E/S de archivos y secuencias](../../standard/io/index.md). Para obtener más información sobre el modelo de programación asincrónica que se ha usado en este tutorial, vea los temas [Programación asincrónica basada en tareas](../..//standard/parallel-programming/task-based-asynchronous-programming.md) y [Programación asincrónica](../async.md).

@@ -3,15 +3,15 @@ title: 'Tutorial: Detección de objetos mediante aprendizaje profundo con ONNX y
 description: En este tutorial se muestra cómo usar en ML.NET un modelo de aprendizaje profundo de ONNX entrenado previamente para detectar objetos en imágenes.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/27/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420064"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345047"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -51,7 +51,7 @@ Entre algunos casos de uso para la detección de objetos se incluyen:
 
 - Automóviles sin conductor
 - Robótica
-- Detección de caras
+- Detección facial
 - Seguridad en el lugar de trabajo
 - Recuento de objetos
 - Reconocimiento de actividades
@@ -74,7 +74,7 @@ El modelo YOLO toma una imagen `3(RGB) x 416px x 416px`. El modelo toma esta ent
 
 Open Neural Network Exchange (ONNX) es un formato de código abierto para los modelos de IA. ONNX admite la interoperabilidad entre marcos. Esto significa que puede entrenar un modelo en uno de los muchos marcos de aprendizaje automático populares, como PyTorch, convertirlo en formato ONNX y consumir el modelo ONNX en otro marco, como ML.NET. Para más información, visite el [sitio web de ONNX](https://onnx.ai/).
 
-![Diagrama de los formatos de ONNX admitidos en uso.](./media/object-detection-onnx/onyx-supported-formats.png)
+![Diagrama de los formatos de ONNX admitidos en uso.](./media/object-detection-onnx/onnx-supported-formats.png)
 
 El modelo Tiny YOLOv2 entrenado previamente se almacena en formato ONNX, una representación serializada de las capas y los patrones aprendidos de esas capas. En ML.NET, la interoperabilidad con ONNX se logra con los paquetes NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) y [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer). El paquete [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) contiene una serie de transformaciones que toman una imagen y la codifican en valores numéricos que se pueden usar como entrada en una canalización de entrenamiento o de predicción. El paquete [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) aprovecha el tiempo de ejecución de ONNX para cargar un modelo de ONNX y usarlo para hacer predicciones basadas en la entrada proporcionada.
 
@@ -152,7 +152,7 @@ Cree la clase de datos de entrada en el directorio *DataStructures* recién crea
     - `ImagePath` contiene la ruta de acceso donde se almacena la imagen.
     - `Label` contiene el nombre del archivo.
 
-    Además, `ImageNetData` contiene un método `ReadFromFile` que carga varios archivos de imagen almacenados en la ruta `imageFolder`especificada y los devuelve como colección de objetos `ImageNetData`.
+    Además, `ImageNetData` contiene un método `ReadFromFile` que carga varios archivos de imagen almacenados en la ruta `imageFolder` especificada y los devuelve como una colección de objetos `ImageNetData`.
 
 Cree la clase de predicción en el directorio *DataStructures*.
 
@@ -302,7 +302,7 @@ Los métodos auxiliares que usa el analizador son los siguientes:
 - `Softmax` normaliza un vector de entrada en una distribución de probabilidad.
 - `GetOffset` asigna los elementos de la salida del modelo unidimensional a la posición correspondiente en un tensor de `125 x 13 x 13`.
 - `ExtractBoundingBoxes` extrae las dimensiones del rectángulo delimitador mediante el método `GetOffset` de la salida del modelo.
-- `GetConfidence` extrae el valor de confianza que indica qué tan seguro está el modelo de que ha detectado un objeto y usa la función `Sigmoid` para convertirlo en porcentaje.
+- `GetConfidence` extrae el valor de confianza que indica cómo de seguro está el modelo de que ha detectado un objeto y usa la función `Sigmoid` para convertirlo en porcentaje.
 - `MapBoundingBoxToCell` usa las dimensiones del rectángulo delimitador y las asigna a su celda correspondiente dentro de la imagen.
 - `ExtractClasses` extrae las predicciones de clase para el rectángulo delimitador de la salida del modelo usando el método `GetOffset` y las convierte en una distribución de probabilidad mediante el método `Softmax`.
 - `GetTopResult` selecciona la clase de la lista de clases predichas con la probabilidad más alta.
@@ -448,7 +448,7 @@ Por último, fuera del bucle for inicial del método `FilterBoundingBoxes`, devu
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Estupendo. Ahora es el momento de usar este código junto con el modelo para la puntuación.
+Perfecto. Ahora es el momento de usar este código junto con el modelo para la puntuación.
 
 ## <a name="use-the-model-for-scoring"></a>Uso del modelo para puntuación
 

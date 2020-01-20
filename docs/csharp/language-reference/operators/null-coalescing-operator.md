@@ -1,6 +1,5 @@
 ---
 title: ?? Operadores ?? y ?? - Referencia de C#
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3d56c6c08443d344002b8e780a72fc547c316bb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739660"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712655"
 ---
 # <a name="-and--operators-c-reference"></a>?? Operadores ?? y ?? (referencia de C#)
 
@@ -75,7 +74,7 @@ Los operadores `??` y `??=` puede resultar útiles en los siguientes escenarios:
   }
   ```
 
-  por el siguiente:
+  por el siguiente código:
 
   ```csharp
   variable ??= expression;

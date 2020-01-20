@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198571"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901779"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: se ha recortado el sufijo Async de los nombres de acción de controlador
 
-Como parte de la solución de [aspnet/AspNetCore#4849](https://github.com/aspnet/AspNetCore/issues/4849), en ASP.NET Core MVC se recorta el sufijo `Async` de los nombres de acción de forma predeterminada. A partir de ASP.NET Core 3.0, este cambio afecta tanto al enrutamiento como a la generación de vínculos.
+Como parte de la solución de [dotnet/aspnetcore#4849](https://github.com/dotnet/aspnetcore/issues/4849), en ASP.NET Core MVC se recorta el sufijo `Async` de los nombres de acción de forma predeterminada. A partir de ASP.NET Core 3.0, este cambio afecta tanto al enrutamiento como a la generación de vínculos.
 
 #### <a name="version-introduced"></a>Versión introducida
 

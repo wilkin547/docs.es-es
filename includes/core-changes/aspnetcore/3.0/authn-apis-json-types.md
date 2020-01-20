@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad451329d7b9ec15bc8b3c49159346d79944d692
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 494e792d63a611cdaedf3e40aa607cfbb0420ae4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393981"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901691"
 ---
 ### <a name="authentication-newtonsoftjson-types-replaced"></a>Autenticación: se han reemplazado los tipos Newtonsoft.Json
 
@@ -13,7 +13,7 @@ En ASP.NET Core 3.0, los tipos de `Newtonsoft.Json` utilizados en las API de aut
 * Clases que se derivan de los proveedores de OAuth, como las de [aspnet-contrib](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers).
 * Implementaciones avanzadas de manipulación de notificaciones.
 
-Para obtener más información, consulte [aspnet/AspNetCore#7105](https://github.com/aspnet/AspNetCore/pull/7105). También puede consultar [aspnet/AspNetCore#7289](https://github.com/aspnet/AspNetCore/issues/7289).
+Para obtener más información, consulte [dotnet/aspnetcore#7105](https://github.com/dotnet/aspnetcore/pull/7105). Para obtener información, vea [dotnet/aspnetcore#7289](https://github.com/dotnet/aspnetcore/issues/7289).
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -21,13 +21,13 @@ Para obtener más información, consulte [aspnet/AspNetCore#7105](https://github
 
 #### <a name="recommended-action"></a>Acción recomendada
 
-En el caso de las implementaciones de OAuth derivadas, el cambio más común es reemplazar `JObject.Parse` por `JsonDocument.Parse` en la invalidación `CreateTicketAsync`, tal como se muestra [aquí](https://github.com/aspnet/AspNetCore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40). `JsonDocument` implementa `IDisposable`.
+En el caso de las implementaciones de OAuth derivadas, el cambio más común es reemplazar `JObject.Parse` por `JsonDocument.Parse` en la invalidación `CreateTicketAsync`, tal como se muestra [aquí](https://github.com/dotnet/aspnetcore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40). `JsonDocument` implementa `IDisposable`.
 
 En la lista siguiente se describen los cambios conocidos:
 
 - <xref:Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimAction.Run(Newtonsoft.Json.Linq.JObject,System.Security.Claims.ClaimsIdentity,System.String)?displayProperty=nameWithType> se convierte en `ClaimAction.Run(JsonElement userData, ClaimsIdentity identity, string issuer)`. Todas las implementaciones derivadas de `ClaimAction` se ven afectadas de manera similar.
-- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType> se convierte en `MapCustomJson(this ClaimActionCollection collection, string claimType, Func<JsonElement, string> resolver)`
-- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType> se convierte en `MapCustomJson(this ClaimActionCollection collection, string claimType, string valueType, Func<JsonElement, string> resolver)`
+- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType> se convierte en `MapCustomJson(this ClaimActionCollection collection, string claimType, Func<JsonElement, string> resolver)`.
+- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType> se convierte en `MapCustomJson(this ClaimActionCollection collection, string claimType, string valueType, Func<JsonElement, string> resolver)`.
 - Ha habido un constructor anterior de <xref:Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext> que se ha quitado y otro que ha reemplazado `JObject` por `JsonElement`. La propiedad `User` y el método `RunClaimActions` se han actualizado para que coincidan.
 - <xref:Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse.Success(Newtonsoft.Json.Linq.JObject)> ahora acepta un parámetro de tipo `JsonDocument` en lugar de `JObject`. La propiedad `Response` se ha actualizado para que coincida. `OAuthTokenResponse` ahora es descartable y se eliminará mediante `OAuthHandler`. Las implementaciones de OAuth derivadas que invalidan `ExchangeCodeAsync` no necesitan desechar `JsonDocument` o `OAuthTokenResponse`.
 - <xref:Microsoft.AspNetCore.Authentication.OpenIdConnect.UserInformationReceivedContext.User?displayProperty=nameWithType> ha cambiado de `JObject` a `JsonDocument`.

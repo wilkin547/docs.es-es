@@ -2,12 +2,12 @@
 title: Procedimiento para proyectar un tipo anónimo (C#)
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 3ed14ae6e7bc4b84ae9dc416b76e37443b831c73
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253492"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345733"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Procedimiento para proyectar un tipo anónimo (C#)
 En algunos casos quizás desee proyectar una consulta a un nuevo tipo, aunque sepa que solo utilizará este tipo durante un breve período. Crear un nuevo tipo solamente para usarlo en la proyección conlleva mucho trabajo adicional. En este caso un enfoque más eficiente consiste en proyectar en un tipo anónimo. Los tipos anónimos permiten definir una clase y, a continuación, declarar e inicializar un objeto de esa clase, sin dar un nombre a la clase.  

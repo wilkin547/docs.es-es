@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129041"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632368"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 
@@ -21,7 +21,7 @@ ms.locfileid: "73129041"
 
 Language Integrated Query (LINQ) apareció por primera vez en .NET Framework 3.5. Ofrece un modelo unificado para consultar cualquier origen de datos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> en un modo con seguridad de tipos. LINQ to Objects es el nombre de las consultas LINQ que se ejecutan en colecciones en memoria, como <xref:System.Collections.Generic.List%601> y matrices. En este artículo, se da por echo que posee un conocimiento básico de LINQ. Para obtener más información, vea [Language Integrated Query (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) o [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).
 
-Parallel LINQ (PLINQ) es una implementación en paralelo del modelo LINQ. En muchos sentidos, una consulta PLINQ se parece a una consulta LINQ to Objects no en paralelo. Las consultas PLINQ, al igual que las consultas [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] en secuencia, funcionan en cualquier origen de datos <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> en memoria y tienen ejecución aplazada, lo que significa que no se empiezan a ejecutar hasta que se enumera la consulta. La principal diferencia es que PLINQ intenta usar completamente todos los procesadores del sistema. Para ello, crea particiones del origen de datos en segmentos y, luego, ejecuta la consulta en cada segmento en subprocesos de trabajo independientes en paralelo en varios procesadores. En muchos casos, la ejecución en paralelo significa que la consulta se ejecuta considerablemente más rápido.
+Parallel LINQ (PLINQ) es una implementación en paralelo del modelo LINQ. En muchos sentidos, una consulta PLINQ se parece a una consulta LINQ to Objects no en paralelo. Las consultas PLINQ, al igual que las consultas LINQ secuenciales, funcionan en cualquier origen de datos <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> en memoria y tienen ejecución aplazada, lo que significa que no se empiezan a ejecutar hasta que se enumera la consulta. La principal diferencia es que PLINQ intenta usar completamente todos los procesadores del sistema. Para ello, crea particiones del origen de datos en segmentos y, luego, ejecuta la consulta en cada segmento en subprocesos de trabajo independientes en paralelo en varios procesadores. En muchos casos, la ejecución en paralelo significa que la consulta se ejecuta considerablemente más rápido.
 
 A través de la ejecución en paralelo, PLINQ puede alcanzar importantes mejoras de rendimiento con respecto al código heredado en ciertos tipos de consultas, a menudo solo con agregar la operación de consulta <xref:System.Linq.ParallelEnumerable.AsParallel%2A> al origen de datos. Sin embargo, el paralelismo puede presentar sus propias complejidades y no todas las operaciones de consulta se ejecutan más rápido en PLINQ. De hecho, la paralelización en realidad ralentiza ciertas consultas. Por lo tanto, debe entender cómo ciertos problemas, como la ordenación, afectan a las consultas en paralelo. Para más información, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
@@ -34,11 +34,11 @@ En el resto del artículo se ofrece información general de las principales clas
 
 La clase <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> expone casi toda la funcionalidad de PLINQ. Junto con el resto de los tipos de espacios de nombres <xref:System.Linq?displayProperty=nameWithType>, se compilan en el ensamblado System.Core.dll. Los proyectos C# y Visual Basic predeterminados en Visual Studio hacen referencia al ensamblado e importan el espacio de nombres.
 
-<xref:System.Linq.ParallelEnumerable> incluye implementaciones de todos los operadores de consulta estándar que LINQ to Objects admite, a pesar de que no intenta ejecutar en paralelo cada uno de ellos. Si no está familiarizado con [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], vea los artículos sobre [introducción a LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) e [introducción a LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
+<xref:System.Linq.ParallelEnumerable> incluye implementaciones de todos los operadores de consulta estándar que LINQ to Objects admite, a pesar de que no intenta ejecutar en paralelo cada uno de ellos. Si no está familiarizado con LINK, consulte [Introducción a LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) e [Introducción a LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 
 Además de los operadores de consulta estándar, la clase <xref:System.Linq.ParallelEnumerable> contiene un conjunto de métodos que permiten comportamientos específicos de la ejecución en paralelo. Estos métodos específicos de PLINQ se muestran en la tabla siguiente.
 
-|Operador ParallelEnumerable|DESCRIPCIÓN|
+|Operador ParallelEnumerable|Descripción|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto de entrada de PLINQ. Especifica que el resto de la consulta se debe ejecutar en paralelo, si es posible.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Especifica que el resto de la consulta se debe ejecutar en secuencia, como una consulta LINQ no en paralelo.|
@@ -94,7 +94,7 @@ Cuando una consulta PLINQ se ejecuta en paralelo, sus resultados a partir de cad
 
 ## <a name="the-forall-operator"></a>El operador ForAll
 
-En las consultas [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] secuenciales, la ejecución se aplaza hasta que la consulta se enumera en un bucle `foreach` (`For Each` en Visual Basic) o mediante la invocación de un método como <xref:System.Linq.ParallelEnumerable.ToList%2A>, <xref:System.Linq.ParallelEnumerable.ToArray%2A> o <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. En PLINQ, también puede usar `foreach` para ejecutar la consulta e iterar a través de los resultados. Sin embargo, `foreach` no se ejecuta en paralelo y, por lo tanto, requiere que el resultado de todas las tareas en paralelo se combinen nuevamente en el subproceso en el que se ejecuta el bucle. En PLINQ, puede usar `foreach` cuando deba conservar la ordenación final de los resultados de la consulta y también cada vez que procese los resultados de forma serial; por ejemplo, cuando llama a `Console.WriteLine` para cada elemento. Para lograr un ejecución más rápida de las consultas cuando no es necesario conservar el orden y cuando el procesamiento mismo de los resultados se puede ejecutar en paralelo, use el método <xref:System.Linq.ParallelEnumerable.ForAll%2A> para ejecutar una consulta PLINQ. <xref:System.Linq.ParallelEnumerable.ForAll%2A> no lleva a cabo este paso de combinación final. En el ejemplo de código siguiente, se muestra cómo se utiliza el método <xref:System.Linq.ParallelEnumerable.ForAll%2A>. Aquí se usa <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> porque está optimizado para varios subprocesos, lo que agrega simultaneidad sin intentar quitar ningún elemento.
+En las consultas LINK secuenciales, la ejecución se aplaza hasta que la consulta se enumera en un bucle `foreach` (`For Each` en Visual Basic) o mediante la invocación de un método como <xref:System.Linq.ParallelEnumerable.ToList%2A>, <xref:System.Linq.ParallelEnumerable.ToArray%2A> o <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. En PLINQ, también puede usar `foreach` para ejecutar la consulta e iterar a través de los resultados. Sin embargo, `foreach` no se ejecuta en paralelo y, por lo tanto, requiere que el resultado de todas las tareas en paralelo se combinen nuevamente en el subproceso en el que se ejecuta el bucle. En PLINQ, puede usar `foreach` cuando deba conservar la ordenación final de los resultados de la consulta y también cada vez que procese los resultados de forma serial; por ejemplo, cuando llama a `Console.WriteLine` para cada elemento. Para lograr un ejecución más rápida de las consultas cuando no es necesario conservar el orden y cuando el procesamiento mismo de los resultados se puede ejecutar en paralelo, use el método <xref:System.Linq.ParallelEnumerable.ForAll%2A> para ejecutar una consulta PLINQ. <xref:System.Linq.ParallelEnumerable.ForAll%2A> no lleva a cabo este paso de combinación final. En el ejemplo de código siguiente, se muestra cómo se utiliza el método <xref:System.Linq.ParallelEnumerable.ForAll%2A>. Aquí se usa <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> porque está optimizado para varios subprocesos, lo que agrega simultaneidad sin intentar quitar ningún elemento.
 
 [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
 [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]

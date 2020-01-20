@@ -1,108 +1,87 @@
 ---
-title: Consumo de una biblioteca de .NET Standard en Visual Studio 2017
-description: Cree una aplicación de .NET Core que llame a los miembros de otra biblioteca de clases con Visual Studio 2017.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 06/05/2018
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: cfceb7ba384a28a09f172032f6edb6f5e495e9c0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+title: Consumo de una biblioteca de .NET Standard en Visual Studio
+description: Cree una aplicación de .NET Core que llame a los miembros de otra biblioteca de clases con Visual Studio 2019.
+ms.date: 12/20/2019
+dev_langs:
+- csharp
+- vb
+ms.custom: vs-dotnet
+ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420908"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714064"
 ---
-# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Consumo de una biblioteca de .NET Standard en Visual Studio 2017
+# <a name="consume-a-net-standard-library-in-visual-studio"></a>Consumo de una biblioteca de .NET Standard en Visual Studio
 
-Una vez que haya creado una biblioteca de clases de .NET Standard siguiendo los pasos de [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017) o [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases de Visual Basic con .NET Core en Visual Studio 2017), pruébela en [Testing a class library with .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) (Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017), y compile una versión de lanzamiento de la biblioteca; el paso siguiente consiste en hacer que esté disponible para los autores de llamadas. Existen dos maneras de hacerlo:
+Una vez que haya creado una biblioteca de clases de .NET Standard, la haya probado y haya creado una versión de lanzamiento de dicha biblioteca, el siguiente paso es ponerla a disposición de los autores de las llamadas. Existen dos maneras de hacerlo:
 
-* Si una única solución va a usar la biblioteca (por ejemplo, si es un componente de una sola aplicación más grande), se puede incluir como proyecto en la solución.
+- Si una única solución va a usar la biblioteca (por ejemplo, si es un componente de una sola aplicación más grande), se puede incluir como proyecto en la solución.
+- Si la biblioteca va a estar accesible públicamente, puede distribuirla como un paquete NuGet.
 
-* Si la biblioteca va a ser accesible con carácter general, puede distribuirla como un paquete NuGet.
+En este tutorial aprenderá a:
+> [!div class="checklist"]
+>
+> - Agregue una aplicación de consola a la solución que haga referencia a un proyecto de biblioteca de .NET Standard.
+> - Cree un paquete NuGet que contenga un proyecto de biblioteca de .NET Standard.
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>Inclusión de una biblioteca como proyecto en una solución
+## <a name="add-a-console-app-to-your-solution"></a>Incorporación de una aplicación de consola a la solución
 
-Así como se incluyen pruebas unitarias en la misma solución que la biblioteca de clases, se puede incluir la aplicación como parte de esa solución. Por ejemplo, se puede usar la biblioteca de clases en una aplicación de consola que pide al usuario que inserte una cadena e informa de si su primer carácter está en mayúsculas:
+Así como incluyó pruebas unitarias en la misma solución que la biblioteca de clases en [Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017](testing-library-with-visual-studio.md), puede incluir la aplicación como parte de esa solución. Por ejemplo, se puede usar la biblioteca de clases en una aplicación de consola que pide al usuario que inserte una cadena e informa de si su primer carácter está en mayúsculas:
 
-<!-- markdownlint-disable MD025 -->
+1. Abra la solución `ClassLibraryProjects` que creó en el artículo [Creación de una biblioteca de clases de .NET Standard en Visual Studio](library-with-visual-studio.md).
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+1. Agregue una nueva aplicación de consola de .NET Core denominada "Showcase" a la solución.
 
-1. Abra la solución `ClassLibraryProjects` creada en el tema [Building a C# Class Library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017). En el **Explorador de soluciones**, haga clic con el botón derecho en la solución **ClassLibraryProject** y seleccione **Agregar** > **Nuevo proyecto** en el menú contextual.
+   1. Haga clic con el botón derecho en la solución en el **Explorador de soluciones** y seleccione **Agregar** > **Nuevo proyecto**.
 
-1. En el cuadro de diálogo **Agregar nuevo proyecto**, expanda el nodo **Visual C#** y seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "Presentación" y pulse el botón **Aceptar**.
+   1. En el cuadro de búsqueda de la página **Agregar un nuevo proyecto**, escriba **consola**. Elija **C#** o **Visual Basic** en la lista de lenguajes y luego, **Todas las plataformas** en la lista de plataformas. Elija la plantilla **Aplicación de consola (.NET Core)** y haga clic en **Siguiente**.
 
-   ![Cuadro de diálogo Agregar nuevo proyecto de Visual Studio: C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
+   1. En la página **Configure el nuevo proyecto**, escriba **ShowCase** en el cuadro **Nombre del proyecto**. Luego, elija **Crear**.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Presentación** y seleccione **Establecer como proyecto de inicio** en el menú contextual.
 
-   ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio: C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+   ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Inicialmente, el proyecto no tiene acceso a la biblioteca de clases. Para permitir que se llame a métodos de la biblioteca de clases, puede crear una referencia a la biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto `ShowCase` y seleccione **Agregar referencia**.
 
-   ![Menú contextual Agregar referencia del proyecto de Visual Studio: C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Menú contextual Agregar referencia de Visual Studio](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. En el cuadro de diálogo **Administrador de referencias**, seleccione **StringLibrary**, el proyecto de biblioteca de clases, y pulse el botón **Aceptar**.
 
-   ![Cuadro de diálogo Administrar referencias de Visual Studio: C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![Cuadro de diálogo Administrador de referencias con StringLibrary seleccionado](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. En la ventana de código del archivo *Program.cs*, reemplace todo el código por el código siguiente:
+1. En la ventana de código del archivo *Program.vb* o *Program.vb*, reemplace todo el código con el código siguiente:
 
-   [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
-
-   El código usa la variable `row` para mantener un recuento del número de filas de datos escritas en la ventana de consola. Siempre que sea mayor o igual a 25, el código borra la ventana de consola y muestra un mensaje al usuario.
-
-   El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla Entrar sin especificar una cadena, la aplicación finaliza y la ventana de consola se cierra.
-
-1. Si es necesario, cambie la barra de herramientas para compilar la versión de **depuración** del proyecto `ShowCase`. Compile y ejecute el programa haciendo clic en la flecha verde en el botón **Presentación**.
-
-   ![Barra de herramientas del proyecto de Visual Studio en la que se muestra el botón Depurar: C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
-
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-
-1. Abra la solución `ClassLibraryProjects` creada en el tema [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017). En el **Explorador de soluciones**, haga clic con el botón derecho en la solución **ClassLibraryProject** y seleccione **Agregar** > **Nuevo proyecto** en el menú contextual.
-
-1. En el cuadro de diálogo **Agregar nuevo proyecto**, expanda el nodo **Visual Basic** y seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "Presentación" y pulse el botón **Aceptar**.
-
-   ![Cuadro de diálogo Agregar nuevo proyecto de Visual Studio: Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
-
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Presentación** y seleccione **Establecer como proyecto de inicio** en el menú contextual. 
-
-   ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio: Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
-
-1. Inicialmente, el proyecto no tiene acceso a la biblioteca de clases. Para permitir que se llame a métodos de la biblioteca de clases, puede crear una referencia a la biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto `ShowCase` y seleccione **Agregar referencia**.
-
-   ![Menú contextual Agregar referencia del proyecto de Visual Studio: Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
-
-1. En el cuadro de diálogo **Administrador de referencias**, seleccione **StringLibrary**, el proyecto de biblioteca de clases, y pulse el botón **Aceptar**.
-
-   ![Cuadro de diálogo Administrar referencias de Visual Studio: Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
-
-1. En la ventana de código del archivo *Program.vb*, reemplace todo el código por el código siguiente:
-
-    [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
+   [!code-csharp[UsingClassLib#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
+   [!code-vb[UsingClassLib#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
    El código usa la variable `row` para mantener un recuento del número de filas de datos escritas en la ventana de consola. Siempre que sea mayor o igual a 25, el código borra la ventana de consola y muestra un mensaje al usuario.
 
-   El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla Entrar sin especificar una cadena, la aplicación finaliza y la ventana de consola se cierra.
+   El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla Entrar sin especificar una cadena, la aplicación finaliza y la ventana de la consola se cierra.
 
 1. Si es necesario, cambie la barra de herramientas para compilar la versión de **depuración** del proyecto `ShowCase`. Compile y ejecute el programa haciendo clic en la flecha verde en el botón **Presentación**.
 
-   ![Depurar en la barra de herramientas: Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![Barra de herramientas del proyecto de Visual Studio en la que se muestra el botón Depurar](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 
----
+La aplicación que usa esta biblioteca se puede depurar y publicar siguiendo los pasos indicados en [Depuración de la aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017](debugging-with-visual-studio.md) y [Publicación de la aplicación Hola mundo de .NET Core con Visual Studio 2017](publishing-with-visual-studio.md).
 
-La aplicación que usa esta biblioteca se puede depurar y publicar siguiendo los pasos indicados en [Debugging your Hello World Application with Visual Studio 2017](debugging-with-visual-studio.md) (Depuración de la aplicación Hola a todos con Visual Studio 2017) y [Publishing your Hello World Application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicación de la aplicación Hola a todos con Visual Studio 2017).
+## <a name="create-a-nuget-package"></a>Creación de un paquete NuGet
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>Distribución de la biblioteca en un paquete NuGet
+Puede hacer que la biblioteca de clases tenga una disponibilidad amplia si la publica como un paquete NuGet. Visual Studio no admite la creación de paquetes NuGet. Para crear uno, debe usar los comandos de la CLI de .NET Core:
 
-Puede hacer que la biblioteca de clases tenga una disponibilidad amplia si la publica como un paquete NuGet. Visual Studio no admite la creación de paquetes NuGet. Para crear uno, se usa la [utilidad de línea de comandos `dotnet`](../tools/dotnet.md):
+1. Abra una ventana de consola.
 
-1. Abra una ventana de consola. Por ejemplo, en el cuadro de texto **Pregúntame cualquier cosa** de la barra de tareas de Windows, escriba `Command Prompt` (o `cmd` para abreviar) y abra una ventana de consola seleccionando la aplicación de escritorio **Símbolo del sistema** o presionando Entrar si está seleccionada en los resultados de búsqueda.
+   Por ejemplo, escriba **Símbolo del sistema** en el cuadro de búsqueda de la barra de tareas de Windows. Seleccione la aplicación de escritorio **Símbolo del sistema** o presione **Entrar** si ya está seleccionado en los resultados de búsqueda.
 
-1. Vaya al directorio del proyecto de la biblioteca. A menos que haya reconfigurado la ubicación típica del archivo, se encuentra en el directorio *Documentos\Visual Studio 2017\Projects\ClassLibraryProjects\StringLibrary*. El directorio contiene el código fuente y un archivo de proyecto, *StringLibrary.csproj*.
+1. Vaya al directorio del proyecto de la biblioteca. El directorio contiene el código fuente y un archivo de proyecto, *StringLibrary.csproj* o *StringLibrary.vbproj*.
 
-1. Emita el comando `dotnet pack --no-build`: La utilidad `dotnet` genera un paquete con una extensión *.nupkg*.
+1. Ejecute el comando [dotnet pack](../tools/dotnet-pack.md) para generar un paquete con una extensión *.nupkg*:
+
+   ```dotnetcli
+   dotnet pack --no-build
+   ```
 
    > [!TIP]
    > Si el directorio que contiene *dotnet.exe* no está en la ruta de acceso, puede encontrar su ubicación escribiendo `where dotnet.exe` en la ventana de consola.

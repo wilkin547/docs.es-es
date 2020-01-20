@@ -4,12 +4,12 @@ description: Obtenga información sobre por qué no puede usar una declaración 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: c6b0f2666a5c67ce8c89222da5959304ecb8fb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cf16bb4d9ed27f536ae163284f36a0f305877139
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039134"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713887"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>Expresiones lambda con tipo implícito
 

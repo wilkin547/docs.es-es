@@ -2,12 +2,12 @@
 title: Procedimiento para escribir consultas con filtrado complejo (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a4918631fed21967b402c5c56cfb8a211d44c139
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253183"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337362"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Procedimiento para escribir consultas con filtrado complejo (C#)
 Es posible que desee escribir consultas LINQ to XML con filtros complejos. Por ejemplo, quizás debe buscar todos los elementos que tienen un elemento secundario con un valor y un nombre específicos. En este tema se proporciona un ejemplo de escritura de una consulta con un filtrado complejo.  

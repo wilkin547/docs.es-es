@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204590"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634929"
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -48,7 +48,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  Muestra algunas de las tareas realizadas normalmente como agregar o quitar una pestaña en un `TabControl`, acoplar un control a su elemento primario y cambiar la orientación de un control `SplitContainer`.  
   
  [Escribir consultas en C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINK.  
   
  [Manipulating Data (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md) (Manipular datos [C#] [LINQ to SQL])  
  Describe un escenario [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos.  

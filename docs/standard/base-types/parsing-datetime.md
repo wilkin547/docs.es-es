@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127613"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348068"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
 
@@ -56,7 +56,7 @@ En el ejemplo siguiente se muestra el uso del método <xref:System.DateTime.Pars
 > Todos los ejemplos de C# en este artículo se ejecutan en el explorador. Presione el botón **Ejecutar** para ver el resultado. También puede modificarlos para experimentar.
 
 > [!NOTE]
-> Estos ejemplos están disponibles en el repositorio de documentos de GitHub para ambos lenguajes, [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) y [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). También puede descargar el proyecto como un archivo comprimido para [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) o [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Estos ejemplos están disponibles en el repositorio de documentos de GitHub para [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) y [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). También, puede descargar el proyecto como un archivo ZIP para [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) o [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

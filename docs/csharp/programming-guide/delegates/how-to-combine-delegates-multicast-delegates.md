@@ -1,19 +1,18 @@
 ---
-title: 'Procedimiento Combinar delegados (delegados de multidifusión): Guía de programación de C#'
-ms.custom: seodec18
+title: 'Procedimiento para combinar delegados (delegados de multidifusión): Guía de programación de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
-ms.openlocfilehash: d7098bb5518b92b407f905ddabbfafdcb77536bf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b5b9ba5c9bf70983fac9f869836b4c8c5449eca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423349"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705384"
 ---
-# <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Procedimiento Combinar delegados (delegados de multidifusión) (Guía de programación de C#)
+# <a name="how-to-combine-delegates-multicast-delegates-c-programming-guide"></a>Procedimiento para combinar delegados (delegados de multidifusión) (Guía de programación de C#)
 En este ejemplo se muestra cómo crear delegados de multidifusión. Una propiedad útil de los objetos [delegados](../../language-reference/builtin-types/reference-types.md) es que puedan asignarse objetos múltiples a una instancia de delegado con el operador `+`. El delegado de multidifusión contiene una lista de los delegados asignados. Cuando se llama al delegado de multidifusión, invoca a los delegados de la lista, en orden. Solo los delegados del mismo tipo pueden combinarse.  
   
  El operador `-` puede usarse para quitar un delegado de componente de un delegado de multidifusión.  

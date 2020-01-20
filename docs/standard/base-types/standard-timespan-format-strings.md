@@ -17,16 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972090"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346627"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadenas de formato TimeSpan estándar
 
-Una cadena de formato estándar <xref:System.TimeSpan> usa un único especificador de formato para definir la representación de texto de un valor <xref:System.TimeSpan> resultante de una operación de formato. Cualquier cadena de formato que contenga más de un carácter, incluido el espacio en blanco, se interpreta como una cadena de formato <xref:System.TimeSpan> personalizado. Para más información, consulte [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) (Cadenas de formato TimeSpan personalizadas).  
+Una cadena de formato estándar <xref:System.TimeSpan> usa un único especificador de formato para definir la representación de texto de un valor <xref:System.TimeSpan> resultante de una operación de formato. Cualquier cadena de formato que contenga más de un carácter, incluido el espacio en blanco, se interpreta como una cadena de formato <xref:System.TimeSpan> personalizado. Para más información, consulte [Cadenas de formato TimeSpan personalizadas](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Las representaciones de cadena de los valores <xref:System.TimeSpan> se generan mediante llamadas a las sobrecargas del método <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, y también mediante métodos que admiten formatos compuestos, como <xref:System.String.Format%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md) y [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md). En el siguiente ejemplo se muestra el uso de cadenas de formato estándar en operaciones de formato.  
   
@@ -40,7 +40,7 @@ Una cadena de formato estándar <xref:System.TimeSpan> usa un único especificad
   
 En la tabla siguiente se muestran los especificadores de formato de intervalo de tiempo estándar.  
   
-|Especificador de formato|Name|DESCRIPCIÓN|Ejemplos|  
+|Especificador de formato|NOMBRE|Descripción|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato constante (invariable)|Este especificador no tiene en cuenta la referencia cultural. Toma la forma `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Las cadenas de formato "t" y "T" producen los mismos resultados).<br /><br /> Más información: [Especificador de formato constante ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato corto general|Este especificador solo genera lo necesario. Tiene en cuenta la referencia cultural y su forma es `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Más información: [Especificador de formato corto general ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -53,7 +53,7 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
   
  Los elementos de los corchetes ([ y ]) son opcionales. El punto (.) y los dos puntos (:) son símbolos literales. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número opcional de días, sin ceros a la izquierda.|  
@@ -79,7 +79,7 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número opcional de días, sin ceros a la izquierda.|  
@@ -103,7 +103,7 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número de días, sin ceros a la izquierda.|  

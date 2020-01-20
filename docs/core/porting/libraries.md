@@ -3,13 +3,12 @@ title: Traslado de bibliotecas a .NET Core
 description: Obtenga información sobre cómo portar proyectos de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105287"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777349"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -19,29 +18,28 @@ Obtenga información sobre cómo trasladar el código de biblioteca de .NET Fram
 
 En este artículo se asume lo siguiente:
 
-- Se usa Visual Studio 2017 o posterior.
-  - .NET Core no es compatible con versiones anteriores de Visual Studio.
+- Se usa Visual Studio 2017 o posterior. .NET Core no es compatible con versiones anteriores de Visual Studio.
 - Se conoce el [proceso de portabilidad recomendado](index.md).
 - Se han resuelto los problemas con las [dependencias de terceros](third-party-deps.md).
 
-También debe estar familiarizado con el contenido de los temas siguientes:
+También debe estar familiarizado con el contenido de los artículos siguientes:
 
 [Estándar .NET](../../standard/net-standard.md)\
-En este tema se describe la especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET.
+En este artículo se describe la especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET.
 
-[Paquetes, metapaquetes y marcos de trabajo](../packages.md)   
+[Paquetes, metapaquetes y marcos de trabajo](../packages.md)\
 En este artículo se trata cómo .NET Core define y usa paquetes y cómo los paquetes admiten el código que se ejecuta en varias implementaciones de .NET.
 
-[Desarrollo de bibliotecas con herramientas multiplataforma](../tutorials/libraries.md)   
-En este tema se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI.
+[Desarrollo de bibliotecas con herramientas multiplataforma](../tutorials/libraries.md)\
+En este artículo se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI.
 
-[Adiciones al formato *csproj* para .NET Core](../tools/csproj.md)   
+[Adiciones al formato *csproj* para .NET Core](../tools/csproj.md)\
 En este artículo se describen los cambios que se han agregado al archivo de proyecto como parte del cambio a *csproj* y MSBuild.
 
-[Migración a .NET Core - Análisis de las dependencias de terceros](third-party-deps.md)   
-En este tema se trata la portabilidad de dependencias de terceros y qué hacer cuando una dependencia de paquetes de .NET Core no se ejecuta en .NET Core.
+[Migración a .NET Core - Análisis de las dependencias de terceros](third-party-deps.md)\
+En este artículo se trata la portabilidad de dependencias de terceros y qué hacer cuando una dependencia de paquetes de NuGet no se ejecuta en .NET Core.
 
-## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Redestinar el código de .NET Framework a .NET Framework 4.7.2
+## <a name="retarget-to-net-framework-472"></a>Redestinar a .NET Framework 4.7.2
 
 Si el código no apunta a .NET Framework 4.7.2, se recomienda que lo redestine a esta plataforma. De esta forma, se garantiza la disponibilidad de las últimas alternativas de API en los casos donde el estándar .NET no admite las API existentes.
 
@@ -49,27 +47,27 @@ Haga lo siguiente para cada uno de los proyectos de Visual Studio que desea tras
 
 1. Haga clic con el botón derecho en el proyecto y seleccione **Propiedades**.
 1. En la lista desplegable **Plataforma de destino**, seleccione **.NET Framework 4.7.2**.
-1. Vuelva a compilar los proyectos.
+1. Compile de nuevo el proyecto.
 
 Debido a que sus proyectos ahora apuntan a .NET Framework 4.7.2, use esa versión de .NET Framework como la base para portar el código.
 
-## <a name="determining-the-portability-of-your-code"></a>Determinación de la portabilidad del código
+## <a name="determine-portability"></a>Determinar la portabilidad
 
 El paso siguiente es ejecutar API Portability Analyzer (ApiPort), a fin de generar un informe de portabilidad para analizarlo.
 
-Asegúrese de que comprende la herramienta [API Portability (ApiPort)](../../standard/analyzers/portability-analyzer.md) y de que puede generar informes de portabilidad que apunten a .NET Core. La forma de hacer esto posiblemente variará en función de sus necesidades y de sus preferencias personales. A continuación se muestran diferentes enfoques. Es probable que tenga que combinar los pasos de estos enfoques en función de cómo esté estructurado el código.
+Asegúrese de que comprende la herramienta [API Portability (ApiPort)](../../standard/analyzers/portability-analyzer.md) y de que puede generar informes de portabilidad que apunten a .NET Core. La forma de hacer esto posiblemente variará en función de sus necesidades y de sus preferencias personales. En las secciones siguientes se detallan algunos enfoques diferentes. Es probable que tenga que combinar los pasos de estos enfoques en función de cómo esté estructurado el código.
 
-### <a name="dealing-primarily-with-the-compiler"></a>Trabajar primero con el compilador
+### <a name="deal-primarily-with-the-compiler"></a>Trabajar primero con el compilador
 
-Este puede ser el mejor enfoque para proyectos pequeños o proyectos que no usan muchas API de .NET Framework. El enfoque es sencillo:
+Este enfoque funciona bien con proyectos pequeños o proyectos que no usan muchas API de .NET Framework. El enfoque es sencillo:
 
 1. De manera opcional, ejecute ApiPort en el proyecto. Si ejecuta ApiPort, consulte el informe para obtener información sobre los problemas que encontrará.
 1. Copie todo el código a un nuevo proyecto de .NET Core.
 1. Mientras consulta el informe de portabilidad (en caso de que se haya generado), solucione los errores del compilador hasta que el proyecto esté totalmente compilado.
 
-A pesar de que este enfoque no es estructurado, el enfoque centrado en el código suele permitir solucionar rápidamente cualquier problema y es posible que sea el mejor enfoque para las bibliotecas o los proyectos más pequeños. Un proyecto que solo contiene modelos de datos puede ser un candidato ideal para este enfoque.
+Aunque no está estructurado, este enfoque centrado en el código suele resolver problemas rápidamente. Un proyecto que solo contiene modelos de datos puede ser un candidato ideal para este enfoque.
 
-### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>Permanecer en .NET Framework hasta solucionar los problemas de portabilidad
+### <a name="stay-on-the-net-framework-until-portability-issues-are-resolved"></a>Permanecer en .NET Framework hasta solucionar los problemas de portabilidad
 
 Este puede ser el mejor enfoque si prefiere que el código se compile durante todo el proceso. El enfoque es el siguiente:
 
@@ -82,7 +80,7 @@ Este puede ser el mejor enfoque si prefiere que el código se compile durante to
 
 Este enfoque prudente es más estructurado que simplemente solucionar los errores del compilador, pero de todos modos está relativamente centrado en el código y tiene la ventaja de que siempre hay código que se puede compilar. La manera en que puede solucionar ciertos problemas que no se podrían solucionar si solo se usa otra API varía considerablemente. Es posible que deba desarrollar un plan más integral para ciertos proyectos, un aspecto que se abarca en el enfoque siguiente.
 
-### <a name="developing-a-comprehensive-plan-of-attack"></a>Desarrollar un plan integral de ataque
+### <a name="develop-a-comprehensive-plan-of-attack"></a>Desarrollar un plan integral de ataque
 
 Este puede ser el mejor enfoque para proyectos de mayor tamaño y más complejos, en los que puede ser necesario volver a estructurar el código o reescribir ciertas áreas de código por completo para admitir .NET Core. El enfoque es el siguiente:
 
@@ -104,11 +102,11 @@ La fase de análisis puede tardar un poco en función del tamaño de la base de 
 
 El plan podría significar realizar cambios importantes en la base de código mientras se sigue apuntando a .NET Framework 4.7.2, lo que hace que esta sea una versión más estructurada del enfoque anterior. La forma de ejecutar el plan depende de la base de código.
 
-### <a name="mixing-approaches"></a>Combinación de enfoques
+### <a name="mixed-approach"></a>Enfoque mixto
 
 Es probable que vaya a combinar los enfoques anteriores en función de cada proyecto. Debe hacer lo que corresponda para usted y su base de código.
 
-## <a name="porting-your-tests"></a>Portar las pruebas
+## <a name="port-your-tests"></a>Portar las pruebas
 
 La mejor forma de asegurarse de que todo funciona correctamente cuando traslada el código es probarlo mientras lo traslada a .NET Core. Para ello, debe usar un marco de pruebas que compila y ejecuta pruebas para .NET Core. Actualmente tiene 3 opciones:
 
@@ -118,9 +116,9 @@ La mejor forma de asegurarse de que todo funciona correctamente cuando traslada 
 - [NUnit](https://nunit.org/)
   - [Introducción](https://github.com/nunit/docs/wiki/Installation)
   - [Entrada de blog sobre la migración de MSTest a NUnit.](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-- [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
+- [MSTest](/visualstudio/test/unit-test-basics)
 
-## <a name="recommended-approach-to-porting"></a>Enfoque recomendado de portabilidad
+## <a name="recommended-approach"></a>Enfoque recomendado
 
 En última instancia, el esfuerzo de portabilidad depende significativamente de la estructura del código .NET Framework. Una forma conveniente de portar el código consiste en comenzar por la *base* de la biblioteca, que son los componentes fundamentales del código. Pueden ser los modelos de datos u otras clases y métodos fundamentales que todo lo demás usa directa o indirectamente.
 
@@ -132,5 +130,7 @@ En última instancia, el esfuerzo de portabilidad depende significativamente de 
 
 Si empieza por la base de la biblioteca y avanza a partir de ella para probar cada nivel según sea necesario, la portabilidad es un proceso sistemático en el que se aíslan los problemas a un nivel de código a la vez.
 
->[!div class="step-by-step"]
->[Siguiente](project-structure.md)
+## <a name="next-steps"></a>Pasos siguientes
+
+>[!div class="nextstepaction"]
+>[Organización de proyectos para .NET Core](project-structure.md)

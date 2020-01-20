@@ -2,12 +2,12 @@
 title: LINQ to XML frente a DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 68d380873e71d767ddd60f8f9d0f4b82846d1371
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f6a89bba1ff2753f04406a060beb37bf2bf6552c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591771"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344794"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML frente a DOM (C#)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
@@ -105,7 +105,7 @@ doc.AppendChild(name);
  Otro problema de DOM consiste en que no permite cambiar el nombre de un nodo. Por el contrario, hay que crear un nuevo nodo y copiar en él todos los nodos secundarios, por lo que se pierde la identidad del nodo original. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] evita este problema al permitir que se establezca la propiedad <xref:System.Xml.Linq.XName> en un nodo.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Compatibilidad con el método estático para cargar XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para obtener más información, vea [Cómo: Cargar un documento XML desde un archivo (C#)](./how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para más información, consulte [Procedimiento para cargar un documento XML desde un archivo (C#)](./how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Eliminación de la compatibilidad con construcciones DTD  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica aún más la programación XML quitando la compatibilidad con entidades y referencias a entidades. La administración de entidades es compleja y su uso es muy poco común. La eliminación de la compatibilidad aumenta el rendimiento y simplifica la interfaz de programación. Cuando se rellena un árbol de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se expanden todas las entidades DTD.  
@@ -114,7 +114,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no proporciona un equivalente para la clase `XmlDocumentFragment`. En cambio, es bastante común que el concepto `XmlDocumentFragment` se pueda controlar mediante el resultado de una consulta que se escribe como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XNode> o <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="support-for-xpathnavigator"></a>Compatibilidad con XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante los métodos de extensión del espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. Para más información, consulte <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante los métodos de extensión del espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Compatibilidad con espacios en blanco y sangría  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] trata los espacios en blanco de forma más sencilla que DOM.  
@@ -129,7 +129,7 @@ doc.AppendChild(name);
  Los elementos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admiten un conjunto extensible de anotaciones. Esto puede resultar útil para realizar un seguimiento de información diversa de un elemento, como la información de esquema, información acerca de si un elemento está enlazado a una interfaz de usuario o cualquier otro tipo de información específica de una aplicación. Para obtener más información, vea [Anotaciones en LINQ to XML](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Compatibilidad con la información de esquema  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con la validación XSD mediante métodos de extensión en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Puede validar que un árbol XML sea compatible con un XSD. Puede rellenar el árbol XML con el conjunto de información posterior a la validación del esquema (PSVI). Para obtener más información, vea [Cómo: Validar con XSD](./how-to-validate-using-xsd-linq-to-xml.md) y <xref:System.Xml.Schema.Extensions>.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con la validación XSD mediante métodos de extensión en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Puede validar que un árbol XML sea compatible con un XSD. Puede rellenar el árbol XML con el conjunto de información posterior a la validación del esquema (PSVI). Para más información, consulte [Procedimiento para validar con XSD (LINQ to XML) (C#)](./how-to-validate-using-xsd-linq-to-xml.md) y <xref:System.Xml.Schema.Extensions>.
   
 ## <a name="see-also"></a>Vea también
 

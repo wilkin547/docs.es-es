@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
+title: Procedimiento para consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592915"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345689"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Procedimiento Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Procedimiento para consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
 
 Las API de reflexión de la biblioteca de clases de .NET Framework se pueden usar para examinar los metadatos de un ensamblado .NET y para crear colecciones de tipos, escribir miembros, parámetros etc. que se encuentren en ese ensamblado. Dado que estas colecciones admiten la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>, se pueden consultar mediante LINQ.  
   

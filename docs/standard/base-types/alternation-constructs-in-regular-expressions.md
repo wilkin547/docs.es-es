@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140554"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711563"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 
@@ -43,7 +42,7 @@ Como sucede con la clase de caracteres positivos, el carácter `|` puede utiliza
 
 La expresión regular que usa el carácter `|`, `\bgr(a|e)y\b`, se interpreta como se muestra en la tabla siguiente:
 
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`gr`|Coincide con los caracteres "gr".|  
@@ -57,7 +56,7 @@ El carácter `|` también se puede usar para realizar una coincidencia either/or
 
 La expresión regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente:
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Coincide con cualquiera de las siguientes opciones: dos dígitos decimales seguidos de un guión seguido de siete dígitos decimales; o tres dígitos decimales, un guión, dos dígitos decimales, otro guión y cuatro dígitos decimales.|  
@@ -86,7 +85,7 @@ El siguiente ejemplo es una variación del que aparece en la sección [Coinciden
 
 El patrón de la expresión regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente:
 
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?(\d{2}-)`|Determina si los tres caracteres siguientes están compuestos de dos dígitos seguidos de un guión.|  
@@ -99,7 +98,7 @@ El patrón de la expresión regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\
 
 Este elemento del lenguaje intenta coincidir con uno de dos patrones en función de si coincidió con un grupo de captura especificado. Su sintaxis es:
 
-`(?(` *name* `)` *sí* `|` *no* `)`
+`(?(` *nombre* `)` *sí* `|` *no* `)`
 
 o
 
@@ -116,7 +115,7 @@ El siguiente ejemplo es una variación del que aparece en la sección [Coinciden
 
 El patrón de la expresión regular `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente:
 
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?<n2>\d{2}-)?`|Coincide con cero o con dos dígitos seguidos por un guión. Este grupo de captura se denomina `n2`.|  

@@ -3,10 +3,10 @@ title: Implementación del nivel de aplicación de microservicios mediante la AP
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 10/08/2018
 ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73737541"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
@@ -439,7 +439,7 @@ Un mediador es un objeto que encapsula el "cómo" de este proceso: coordina la e
 
 Los elementos Decorator y los comportamientos son similares a la [Programación orientada a aspectos (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), solo se aplican a una canalización de proceso específica administrada por el componente de mediador. Los aspectos en AOP que implementan cuestiones transversales se aplican en función de *tejedores de aspectos* que se insertan en tiempo de compilación o en función de la intercepción de llamadas de objeto. En ocasiones, se dice que ambos enfoques típicos de AOP funcionan "de forma mágica", porque no es fácil ver cómo realiza AOP su trabajo. Cuando se trabaja con problemas graves o errores, AOP puede ser difícil de depurar. Por otro lado, estos elementos Decorator o comportamientos son explícitos y solo se aplican en el contexto del mediador, por lo que la depuración es mucho más sencilla y predecible.
 
-Por ejemplo, en el microservicio de pedidos de eShopOnContainers, se implementaron dos comportamientos de ejemplo, las clases [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) y [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). En la siguiente sección se explica la implementación de los comportamientos mostrando cómo eShopOnContainers usa los [comportamientos](https://github.com/jbogard/MediatR/wiki/Behaviors) de [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0).
+Por ejemplo, en el microservicio de pedidos de eShopOnContainers, se implementaron dos comportamientos de ejemplo, las clases [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) y [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). En la siguiente sección se explica la implementación de los comportamientos y se muestra cómo eShopOnContainers usa los [comportamientos](https://github.com/jbogard/MediatR/wiki/Behaviors) de [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0).
 
 ### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Uso de colas de mensajes (fuera de proceso) en la canalización del comando
 
