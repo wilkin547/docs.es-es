@@ -1,31 +1,30 @@
 ---
 title: 'Palabra clave contextual remove: Referencia de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: b5c604cbb0fef158750b0fa487374ab293795fc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ea3ea1910e28c03b2a894c64415cb2ccff942d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633720"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713149"
 ---
-# <a name="remove-c-reference"></a><span data-ttu-id="b8bb1-102">remove (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="b8bb1-102">remove (C# Reference)</span></span>
+# <a name="remove-c-reference"></a><span data-ttu-id="538e2-102">remove (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="538e2-102">remove (C# Reference)</span></span>
 
-<span data-ttu-id="b8bb1-103">La palabra clave contextual `remove` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción a su [evento](event.md).</span><span class="sxs-lookup"><span data-stu-id="b8bb1-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](event.md).</span></span> <span data-ttu-id="b8bb1-104">Si proporciona un descriptor de acceso `remove` personalizado, también debe proporcionar un descriptor de acceso [add](add.md).</span><span class="sxs-lookup"><span data-stu-id="b8bb1-104">If you supply a custom `remove` accessor, you must also supply an [add](add.md) accessor.</span></span>
+<span data-ttu-id="538e2-103">La palabra clave contextual `remove` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción a su [evento](event.md).</span><span class="sxs-lookup"><span data-stu-id="538e2-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](event.md).</span></span> <span data-ttu-id="538e2-104">Si proporciona un descriptor de acceso `remove` personalizado, también debe proporcionar un descriptor de acceso [add](add.md).</span><span class="sxs-lookup"><span data-stu-id="538e2-104">If you supply a custom `remove` accessor, you must also supply an [add](add.md) accessor.</span></span>
 
-## <a name="example"></a><span data-ttu-id="b8bb1-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b8bb1-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="538e2-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="538e2-105">Example</span></span>
 
-<span data-ttu-id="b8bb1-106">En el ejemplo siguiente, se muestra un evento con descriptores de acceso [add](add.md) y `remove` personalizados.</span><span class="sxs-lookup"><span data-stu-id="b8bb1-106">The following example shows an event with custom [add](add.md) and `remove` accessors.</span></span> <span data-ttu-id="b8bb1-107">Para obtener el ejemplo completo, vea [Cómo:  Implementar eventos de interfaz](../../programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="b8bb1-107">For the full example, see [How to:  Implement Interface Events](../../programming-guide/events/how-to-implement-interface-events.md).</span></span>
+<span data-ttu-id="538e2-106">En el ejemplo siguiente, se muestra un evento con descriptores de acceso [add](add.md) y `remove` personalizados.</span><span class="sxs-lookup"><span data-stu-id="538e2-106">The following example shows an event with custom [add](add.md) and `remove` accessors.</span></span> <span data-ttu-id="538e2-107">Para obtener el ejemplo completo, consulte [Procedimiento Implementar eventos de interfaz](../../programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="538e2-107">For the full example, see [How to implement interface events](../../programming-guide/events/how-to-implement-interface-events.md).</span></span>
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 
-<span data-ttu-id="b8bb1-108">Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="b8bb1-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="b8bb1-109">Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.</span><span class="sxs-lookup"><span data-stu-id="b8bb1-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>
+<span data-ttu-id="538e2-108">Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="538e2-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="538e2-109">Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.</span><span class="sxs-lookup"><span data-stu-id="538e2-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b8bb1-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8bb1-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="538e2-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="538e2-110">See also</span></span>
 
-- [<span data-ttu-id="b8bb1-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8bb1-111">Events</span></span>](../../programming-guide/events/index.md)
+- [<span data-ttu-id="538e2-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="538e2-111">Events</span></span>](../../programming-guide/events/index.md)
