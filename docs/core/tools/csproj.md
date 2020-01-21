@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899881"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115831"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -366,7 +366,7 @@ Este valor booleano indica si el proceso de empaquetado debe crear un paquete de
 
 ### <a name="istool"></a>IsTool
 
-Especifica si se copian todos los archivos de salida en la carpeta *tools* en lugar de la carpeta *lib*. Tenga en cuenta que esto es diferente de un elemento `DotNetCliTool`, que se especifica estableciendo el elemento `PackageType` en el archivo *.csproj*.
+Especifica si se copian todos los archivos de salida en la carpeta *tools* en lugar de la carpeta *lib*. Esto es diferente de un elemento `DotNetCliTool`, que se especifica estableciendo el elemento `PackageType` en el archivo *.csproj*.
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 

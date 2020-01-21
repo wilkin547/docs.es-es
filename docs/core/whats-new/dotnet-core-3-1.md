@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342862"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936924"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novedades de .NET Core 3.1
 
@@ -72,4 +72,4 @@ Para agregar compatibilidad con C++/CLI en Visual Studio 2019 16.4, instale la 
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Revise los cambios importantes entre .NET Core 3.0 y 3.1.](../compatibility/3.0-3.1.md)
-- [Revise los cambios importantes entre .NET Framework y .NET Core 3.0 para aplicaciones de Windows Forms.](../porting/winforms-breaking-changes.md)
+- [Revise los cambios importantes en .NET Core 3.1 para aplicaciones de Windows Forms.](../compatibility/winforms.md#net-core-31)

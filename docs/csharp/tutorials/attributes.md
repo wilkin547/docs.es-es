@@ -1,16 +1,16 @@
 ---
-title: 'Atributos: C#'
+title: 'Tutorial: Uso de atributos: C#'
 description: Aprenda cómo funcionan los atributos en C#.
 author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694561"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937469"
 ---
 # <a name="use-attributes-in-c"></a>Uso de atributos en C\#
 
@@ -40,7 +40,7 @@ Para ejecutar el programa, use `dotnet run`. Deberá ver la salida "Hola a todos
 ## <a name="how-to-add-attributes-to-code"></a>Cómo agregar atributos al código
 
 En C#, los atributos son clases que se heredan de la clase base `Attribute`. Cualquier clase que se hereda de `Attribute` puede usarse como una especie de "etiqueta" en otros fragmentos de código.
-Por ejemplo, hay un atributo llamado `ObsoleteAttribute`,  que se usa para indicar que el código está obsoleto y ya no debe utilizarse. Puede colocar este atributo en una clase, por ejemplo, mediante corchetes.
+Por ejemplo, hay un atributo llamado `ObsoleteAttribute`, que se usa para indicar que el código está obsoleto y ya no debe utilizarse. Puede colocar este atributo en una clase, por ejemplo, mediante corchetes.
 
 [!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
