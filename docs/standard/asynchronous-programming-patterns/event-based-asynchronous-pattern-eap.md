@@ -67,4 +67,4 @@ Hay varias maneras de exponer las características asincrónicas al código de c
 
 - [Procedimientos recomendados para el subprocesamiento administrado](../threading/managed-threading-best-practices.md)
 - [Eventos](../events/index.md)
-- [Asynchronous Programming Design Patterns](index.md) (Patrones de diseño para programación asincrónica)
+- [Patrones para la programación asincrónica](index.md)

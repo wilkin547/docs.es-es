@@ -17,7 +17,7 @@ Es posible que desee escribir consultas LINQ to XML con filtros complejos. Por e
   
  Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Para obtener más información sobre el operador `Any`, vea [Quantifier Operations (C#)](./quantifier-operations.md) (Operaciones cuantificadoras (C#)).  
+ Para obtener más información sobre el operador `Any`, vea [ Operaciones cuantificadoras (C#)](./quantifier-operations.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  

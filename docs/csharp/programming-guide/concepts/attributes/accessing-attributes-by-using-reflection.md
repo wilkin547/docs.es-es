@@ -118,7 +118,7 @@ class TestAuthorAttribute
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guía de programación de C#](../../index.md)
-- [Retrieving Information Stored in Attributes](../../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
+- [Recuperar información almacenada en atributos](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Reflexión (C#)](../reflection.md)
 - [Atributos (C#)](./index.md)
 - [Crear atributos personalizados (C#)](./creating-custom-attributes.md)

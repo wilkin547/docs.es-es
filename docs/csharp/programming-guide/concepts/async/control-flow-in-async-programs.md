@@ -388,6 +388,6 @@ int contentLength = await getLengthTask;
 ## <a name="see-also"></a>Vea también
 
 - [Programación asincrónica con Async y Await (C#)](./index.md)
-- [Async Return Types (C#)](./async-return-types.md) (Tipos de valor devuelto de async [C#])
+- [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md)
 - [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Flujo de control en programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Ejemplo de async: Flujo de control en programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

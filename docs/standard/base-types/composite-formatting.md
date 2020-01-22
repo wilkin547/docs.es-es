@@ -25,7 +25,7 @@ ms.locfileid: "75338510"
 La característica de formato compuesto de .NET toma una lista de objetos y una cadena de formato compuesto como entrada. Una cadena de formato compuesto está formada por texto fijo combinado con marcadores de posición indizados, que reciben el nombre de elementos de formato, y que se corresponden con los objetos de la lista. La operación de formato genera una cadena de resultado compuesta por el texto fijo original combinado con la representación de cadena de los objetos de la lista.  
   
 > [!IMPORTANT]
-> En lugar de usar cadenas de formato compuesto, puede usar *cadenas interpoladas* si el idioma y la versión de idioma que está usando son compatibles con ellos. Una cadena interpolada es una cadena que contiene *expresiones interpoladas*. Cada expresión interpolada se resuelve con el valor de la expresión y se incluye en la cadena de resultado cuando se asigna la cadena. Para obtener más información, vea [Interpolación de cadenas (Referencia de C#)](../../csharp/language-reference/tokens/interpolated.md) e [Interpolated strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) (Cadenas interpoladas [referencia de Visual Basic]).
+> En lugar de usar cadenas de formato compuesto, puede usar *cadenas interpoladas* si el idioma y la versión de idioma que está usando son compatibles con ellos. Una cadena interpolada es una cadena que contiene *expresiones interpoladas*. Cada expresión interpolada se resuelve con el valor de la expresión y se incluye en la cadena de resultado cuando se asigna la cadena. Para obtener más información, vea [Interpolación de cadenas (Referencia de C#)](../../csharp/language-reference/tokens/interpolated.md) y [Cadenas interpoladas (referencia de Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 La característica de formato compuesto se admite mediante métodos como los siguientes:  
   
@@ -87,9 +87,9 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
 |Tipo o categoría de tipo|Vea|  
 |---------------------------|---------|  
-|Tipos de fecha y hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipos de enumeración (todos los tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipos de fecha y hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Tipos de enumeración (todos los tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadenas de formato de enumeración](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -162,7 +162,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Interpolación de cadenas en C#](../../csharp/language-reference/tokens/interpolated.md)
-- [Interpolated Strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) [Cadenas interpoladas (referencia de Visual Basic)]
+- [Cadenas interpoladas (referencia de Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 - [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
 - [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
@@ -170,4 +170,4 @@ La característica de formato compuesto se admite mediante métodos como los sig
 - [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Cadenas de formato de enumeración](../../../docs/standard/base-types/enumeration-format-strings.md)

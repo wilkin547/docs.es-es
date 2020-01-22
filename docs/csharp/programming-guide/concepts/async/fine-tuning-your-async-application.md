@@ -16,7 +16,7 @@ Puede agregar precisión y flexibilidad a sus aplicaciones asincrónicas mediant
   
 - `WhenAny` devuelve una tarea que se completa cuando se complete cualquier tarea de una colección.  
   
-     Para obtener ejemplos del uso de `WhenAny`, vea [Cancel Remaining Async Tasks after One Is Complete (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) (Cancelar las tareas asincrónicas restantes cuando se completa una (C#)) y [Start Multiple Async Tasks and Process Them As They Complete (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md) (Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)).  
+     Para obtener ejemplos del uso de `WhenAny`, vea [Cancelar las tareas asincrónicas restantes cuando se completa una (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) y [Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md).  
   
 - `WhenAll` devuelve una tarea que se completa cuando se completen todas las tareas de una colección.  
   

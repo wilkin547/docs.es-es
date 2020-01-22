@@ -20,7 +20,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123976"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidad con otros tipos y patrones asincrónicos
-.NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult> , conocido también como [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  
+.NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult>, conocido también como [Modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  
   
  En este tema:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73123976"
   
 <a name="EAP"></a>   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Tareas y el patrón asincrónico basado en eventos (EAP)  
- El encapsulamiento de una implementación de [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) es más complejo que encapsular un patrón de APM, ya que el patrón de EAP tiene más variaciones y menos estructura que el de APM.  Para mostrarlo, el código siguiente encapsula el método `DownloadStringAsync` .  `DownloadStringAsync` acepta un URI, genera el evento `DownloadProgressChanged` durante la descarga para informar de varias estadísticas sobre el progreso y genera el evento `DownloadStringCompleted` cuando termina.  El resultado final es una cadena que incluye el contenido de la página en el URI especificado.  
+ El encapsulamiento de una implementación de [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) es más complejo que encapsular un patrón de APM, ya que el patrón de EAP tiene más variaciones y menos estructura que el de APM.  Para mostrarlo, el código siguiente encapsula el método `DownloadStringAsync` .  `DownloadStringAsync` acepta un URI, genera el evento `DownloadProgressChanged` durante la descarga para informar de varias estadísticas sobre el progreso y genera el evento `DownloadStringCompleted` cuando termina.  El resultado final es una cadena que incluye el contenido de la página en el URI especificado.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  

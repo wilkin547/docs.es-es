@@ -55,4 +55,4 @@ El espacio de nombres <xref:System.IO> proporciona varias clases que permiten re
 
 - [E/S de archivos y secuencias](../../../docs/standard/io/index.md)
 - [Crear secuencias](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md)

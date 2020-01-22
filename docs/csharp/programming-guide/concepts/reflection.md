@@ -44,20 +44,20 @@ El resultado es `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, Publi
 
 La reflexión resulta útil en las siguientes situaciones:
 
-- Cuando tenga que acceder a atributos en los metadatos del programa. Para obtener más información, consulte [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos).
+- Cuando tenga que acceder a atributos en los metadatos del programa. Para obtener más información, consulte [Recuperar información almacenada en atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).
 - Para examinar y crear instancias de tipos en un ensamblado.
 - Para generar nuevos tipos en tiempo de ejecución. Usar clases en <xref:System.Reflection.Emit>.
-- Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Cargar y usar tipos dinámicamente).
+- Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Cargar y utilizar tipos dinámicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
 Para obtener más información:
 
 - [Reflexión](../../../framework/reflection-and-codedom/reflection.md)
-- [Viewing Type Information](../../../framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
-- [Reflection and Generic Types](../../../framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)
+- [Ver información tipos](../../../framework/reflection-and-codedom/viewing-type-information.md)
+- [Reflexión y tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - <xref:System.Reflection.Emit>
-- [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
+- [Recuperar la información almacenada en atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 
 ## <a name="see-also"></a>Vea también
 

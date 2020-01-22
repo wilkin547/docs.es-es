@@ -45,7 +45,7 @@ Aplicar formato es el proceso de convertir una instancia de una clase, una estru
 - Puede que una aplicación muestre el mismo valor de diferentes maneras. Por ejemplo, es posible que una aplicación represente un miembro de enumeración mostrando una representación de cadena de su nombre o mostrando su valor subyacente. Para obtener un ejemplo en el que se da formato a un miembro de la enumeración <xref:System.DayOfWeek> de maneras diferentes, consulte la sección [Cadenas de formato estándar](#standard-format-strings) .
 
 > [!NOTE]
-> La aplicación de formato convierte el valor de un tipo en una representación de cadena. El análisis es lo contrario que la aplicación de formato. Una operación de análisis crea una instancia de un tipo de datos a partir de su representación de cadena. Para información sobre cómo convertir cadenas en otros tipos de datos, vea [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md).
+> La aplicación de formato convierte el valor de un tipo en una representación de cadena. El análisis es lo contrario que la aplicación de formato. Una operación de análisis crea una instancia de un tipo de datos a partir de su representación de cadena. Para información sobre cómo convertir cadenas en otros tipos de datos, vea [Analizar cadenas en .NET](../../../docs/standard/base-types/parsing-strings.md).
 
 .NET proporciona compatibilidad de formato enriquecida que permite a los desarrolladores hacer frente a estos requisitos.
 
@@ -329,7 +329,7 @@ Además de reemplazar un elemento de formato con la representación de cadena de
 
      Tenga en cuenta que, si están presentes tanto el componente de cadena de alineación como el componente de cadena de formato, el primero precede al último (por ejemplo, `{0,-20:g}`).
 
-Para más información sobre los formatos compuestos, vea [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).
+Para más información sobre los formatos compuestos, vea [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).
 
 ## <a name="custom-formatting-with-icustomformatter"></a>Formato personalizado con ICustomFormatter
 
@@ -360,7 +360,7 @@ En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
 |[Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)|Describe cómo incrustar uno o más valores con formato en una cadena. Posteriormente se puede mostrar la cadena en la consola o escrita en una secuencia.|
 |[Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)|Muestra los temas en los que se proporcionan instrucciones paso a paso para realizar operaciones de formato concretas.|
-|[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.|
+|[Analizar cadenas en .NET](../../../docs/standard/base-types/parsing-strings.md)|Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.|
 
 ## <a name="reference"></a>Referencia
 

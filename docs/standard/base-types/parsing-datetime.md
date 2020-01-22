@@ -86,7 +86,7 @@ Cada sobrecarga de los métodos <xref:System.DateTime.Parse%2A> y <xref:System.D
 
 ## <a name="see-also"></a>Vea también
 
-- [Parsing Strings](parsing-strings.md)
+- [Analizar cadenas](parsing-strings.md)
 - [Aplicación de formato a tipos](formatting-types.md)
 - [Conversión de tipos en .NET](type-conversion.md)
 - [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)

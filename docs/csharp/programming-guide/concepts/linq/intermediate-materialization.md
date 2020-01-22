@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  Los operadores de consulta estándar también se pueden encadenar juntos. Esto se ilustra en el tema final de este tutorial.  
   
-- [Chaining Standard Query Operators Together (C#)](./chaining-standard-query-operators-together.md) (Encadenar juntos operadores de consulta estándar [C#])  
+- [Encadenar operadores de consulta estándar juntos (C#)](./chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>Vea también
 

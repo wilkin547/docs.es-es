@@ -27,7 +27,7 @@ Un archivo es una colección de bytes ordenada y con nombre que tiene un almacen
 
 Se pueden utilizar los tipos del espacio de nombres <xref:System.IO?displayProperty=nameWithType> para interactuar con archivos y directorios. Por ejemplo, se pueden obtener y establecer las propiedades de los archivos y directorios, y recuperar colecciones de archivos y de directorios basándose en criterios de búsqueda.
 
-Para obtener las convenciones de nomenclatura de las rutas de acceso y las maneras de expresar una ruta de acceso de archivo para los sistemas Windows, incluidos con la sintaxis de dispositivo DOS compatible en .NET Core 1.1 y versiones posteriores, y .NET Framework 4.6.2 y versiones posteriores, vea [File path formats on Windows systems](file-path-formats.md) (Formatos de ruta de acceso de archivo en sistemas Windows).
+Para obtener las convenciones de nomenclatura de las rutas de acceso y las maneras de expresar una ruta de acceso de archivo para los sistemas Windows, incluidos con la sintaxis de dispositivo DOS compatible en .NET Core 1.1 y versiones posteriores, y .NET Framework 4.6.2 y versiones posteriores, vea [Formatos de ruta de acceso de archivo en los sistemas Windows](file-path-formats.md).
 
 Estas son algunas clases de archivo y directorio de uso general:
 
@@ -41,7 +41,7 @@ Estas son algunas clases de archivo y directorio de uso general:
 
 - <xref:System.IO.Path>: proporciona métodos y propiedades para procesar cadenas de directorio entre plataformas.
 
-Siempre debe proporcionar un control de excepciones sólido al llamar a métodos del sistema de archivos. Para más información, vea [Handling I/O errors](handling-io-errors.md) (Control de errores de E/S).
+Siempre debe proporcionar un control de excepciones sólido al llamar a métodos del sistema de archivos. Para más información, vea [Control de errores de E/S](handling-io-errors.md).
 
 Además de usar estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para la E/S de archivos.
 
@@ -77,7 +77,7 @@ Estas son algunas de las clases de secuencias de uso general:
 
 - <xref:System.Security.Cryptography.CryptoStream>: para vincular secuencias de datos con transformaciones criptográficas.
 
-Para obtener un ejemplo de cómo trabajar con flujos de forma asincrónica, vea [Asynchronous File I/O](asynchronous-file-i-o.md) (E/S de archivos asincrónica).
+Para obtener un ejemplo de cómo trabajar con flujos de forma asincrónica, vea [E/S de archivos asincrónica](asynchronous-file-i-o.md).
 
 ## <a name="readers-and-writers"></a>Lectores y escritores
 
@@ -101,7 +101,7 @@ Leer o escribir una gran cantidad de datos puede requerir muchos recursos. Estas
 
 Los miembros asincrónicos contienen `Async` en sus nombres, como los métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A>. Estos métodos se usan con las palabras clave `async` y `await`.
 
-Para más información, consulte [Asynchronous File I/O](asynchronous-file-i-o.md) (E/S de archivos asincrónica).
+Para más información, consulte [E/S de archivos asincrónica](asynchronous-file-i-o.md).
 
 ## <a name="compression"></a>Compresión
 

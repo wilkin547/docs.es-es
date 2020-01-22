@@ -36,11 +36,11 @@ La *programación funcional* es una técnica de programación que permite el uso
 
 Tradicionalmente, los lenguajes de programación funcionales de uso general, como ML, Scheme, Haskell y F#, han atraído principalmente la atención de la comunidad académica. Aunque siempre ha sido posible escribir transformaciones funcionales puras en C#, la dificultad para hacerlo no la ha convertido en una opción atractiva de cara a los programadores. No obstante, en las versiones recientes de C# se han incorporado nuevos constructores del lenguaje, como son las expresiones lambda o la inferencia de tipos, que simplifican enormemente la programación funcional y permiten aumentar la productividad.
 
-Para obtener más información sobre la programación funcional, consulte [Functional Programming vs. Imperative Programming (C#)](./functional-programming-vs-imperative-programming.md) (Diferencias entre la programación funcional y la programación imperativa [C#]).
+Para obtener más información sobre la programación funcional, consulte [Diferencias entre la programación funcional y la programación imperativa (C#)](./functional-programming-vs-imperative-programming.md).
 
 #### <a name="domain-specific-fp-languages"></a>Lenguajes de programación funcionales para ciertos campos
 
-Aunque todavía no se han adoptado mayoritariamente los lenguajes de programación funcionales, sí han tenido más éxito los lenguajes de programación funcionales específicos para ciertos campos. Por ejemplo, las hojas de estilos en cascada (CSS) se utilizan para definir la apariencia de numerosas paginas web y las hojas de estilos del Lenguaje de transformación basado en hojas de estilo (XSLT) se utilizan muy a menudo para la manipulación de datos XML. Para obtener más información sobre XSLT, consulte [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md) (Transformaciones XSLT).
+Aunque todavía no se han adoptado mayoritariamente los lenguajes de programación funcionales, sí han tenido más éxito los lenguajes de programación funcionales específicos para ciertos campos. Por ejemplo, las hojas de estilos en cascada (CSS) se utilizan para definir la apariencia de numerosas paginas web y las hojas de estilos del Lenguaje de transformación basado en hojas de estilo (XSLT) se utilizan muy a menudo para la manipulación de datos XML. Para obtener más información sobre XSLT, consulte [Transformaciones XSLT](../../../../standard/data/xml/xslt-transformations.md).
 
 ## <a name="terminology"></a>Terminología
 
@@ -54,7 +54,7 @@ Para obtener más información, vea [Standard Query Operators Overview (C#)](./s
 Expresión lambda \
 En esencia, es posible utilizar una función anónima alineada siempre que se espere como argumento un tipo delegado. Esta es una definición simplificada de las expresiones lambda, pero resulta adecuada para los objetivos de este tutorial.
 
-Para obtener más información, consulte [Lambda Expressions](../../statements-expressions-operators/lambda-expressions.md) (Expresiones lambda).
+Para obtener más información, consulte [Expresiones lambda](../../statements-expressions-operators/lambda-expressions.md).
 
 Colección \
 Conjunto de datos estructurados, normalmente del mismo tipo. Para que una colección sea compatible con LINQ, ésta debe implementar la interfaz <xref:System.Collections.IEnumerable> o la interfaz <xref:System.Linq.IQueryable> (o una de sus equivalentes genéricas), <xref:System.Collections.Generic.IEnumerator%601> o <xref:System.Linq.IQueryable%601>).
@@ -72,7 +72,7 @@ Para más información, vea [Variables locales con asignación implícita de tip
 Ejecución aplazada y evaluación diferida \
 Es posible retrasar la evaluación de una expresión hasta que se requiera el valor resultante. Las colecciones admiten la ejecución aplazada.
 
-Para obtener más información, consulte [Introduction to LINQ Queries (C#)](./introduction-to-linq-queries.md) (Introducción a las consultas LINQ [C#]) y [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) (Ejecución aplazada y evaluación diferida en LINQ to XML [C#]).
+Para obtener más información, consulte [Introducción a las consultas LINQ (C#)](./introduction-to-linq-queries.md) y [Ejecución aplazada y evaluación diferida en LINQ to XML](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 Estas características del lenguaje se utilizarán en códigos de ejemplo a lo largo de esta sección.
 

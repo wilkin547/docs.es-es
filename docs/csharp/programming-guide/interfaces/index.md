@@ -28,7 +28,7 @@ Cualquier clase o estructura que implementa la interfaz <xref:System.IEquatable%
   
 La definición de `IEquatable<T>` no proporciona una implementación para `Equals`. Una clase o estructura puede implementar varias interfaces, pero una clase solo puede heredar de una sola clase.
   
-Para obtener más información sobre las clases abstractas, vea [Abstract and Sealed Classes and Class Members](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md) (Clases y miembros de clase abstractos y sellados [Guía de programación de C#]).  
+Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados (Guía de programación de C#)](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 Las interfaces pueden contener métodos, propiedades, eventos, indizadores o cualquier combinación de estos cuatro tipos de miembros. Para obtener vínculos a ejemplos, vea [Secciones relacionadas](./index.md#BKMK_RelatedSections). Una interfaz no puede contener constantes, campos, operadores, constructores de instancias, finalizadores ni tipos. Los miembros de interfaz son públicos automáticamente y no pueden incluir modificadores de acceso. Los miembros tampoco pueden ser [estáticos](../../language-reference/keywords/static.md).  
   

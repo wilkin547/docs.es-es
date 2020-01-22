@@ -23,7 +23,7 @@ En las próximas siguientes se describen las herramientas disponibles para inves
 
 ### <a name="memory-performance-counters"></a>Contadores de rendimiento de memoria
 
-Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Generación de perfiles en tiempo de ejecución). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework), ofrece información sobre el recolector de elementos no utilizados.
+Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), ofrece información sobre el recolector de elementos no utilizados.
 
 ### <a name="debugging-with-sos"></a>Depurar con SOS
 
@@ -45,13 +45,13 @@ El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimie
 
 ### <a name="the-profiling-api"></a>La API de generación de perfiles
 
-Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados. Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados. Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación. Para más información, consulte [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) (Información general sobre generación de perfiles).
+Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados. Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados. Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación. Para más información, consulte [Información general sobre la generación de perfiles](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
 
 Los generadores de perfiles pueden proporcionar información completa. Sin embargo, los generadores de perfiles complejos pueden modificar el comportamiento de una aplicación.
 
 ### <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 
-A partir de .NET Framework 4, la supervisión de recursos de dominio de aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de aplicación. Para más información, consulte [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md) (Supervisión de recursos de dominio de aplicación).
+A partir de .NET Framework 4, la supervisión de recursos de dominio de aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de aplicación. Para más información, consulte [Supervisión de recursos de dominio de aplicación](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Solucionar problemas de rendimiento
 
@@ -181,7 +181,7 @@ Es probable que la generación 0 tenga un número mayor de objetos en un sistema
 
 El uso de CPU será elevado durante una recolección de elementos no utilizados. Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado. Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia. Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.
 
-Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para más información, consulte [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework).
+Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para más información, consulte [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).
 
 La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación. El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos. El trabajo para compactar los supervivientes lleva mucho tiempo. Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.
 

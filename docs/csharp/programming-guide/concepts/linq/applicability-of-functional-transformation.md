@@ -16,7 +16,7 @@ Las transformaciones funcionales puras se pueden aplicar en una amplia variedad 
   
  Este enfoque es aplicable a muchos problemas que a primera vista pueden no parecer candidatos. La transformación funcional, usada en conjunción con o de forma separada de LINQ, debe tenerse en cuenta para las siguientes áreas:  
   
-- Documentos basados en XML. Los datos bien formados de cualquier dialecto XML se pueden manipular fácilmente mediante la transformación funcional. Para obtener más información, consulte [Functional Transformation of XML (C#)](./functional-transformation-of-xml.md) (Transformación funcional de XML [C#]).  
+- Documentos basados en XML. Los datos bien formados de cualquier dialecto XML se pueden manipular fácilmente mediante la transformación funcional. Para obtener más información, consulte [Transformación funcional de XML (C#)](./functional-transformation-of-xml.md).  
   
 - Otros formatos de archivo estructurados. Desde archivos Windows.ini a documentos de texto sin formato, la mayoría de archivos tienen alguna estructura que se presta a análisis y transformación.  
   

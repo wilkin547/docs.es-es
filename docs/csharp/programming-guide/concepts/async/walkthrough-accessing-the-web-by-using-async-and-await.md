@@ -13,7 +13,7 @@ ms.locfileid: "74281790"
 
 Puede escribir programas asincrónicos de manera más fácil e intuitiva usando las características async/await. Puede escribir código asincrónico parecido al código sincrónico y dejar que el compilador gestione las difíciles funciones de devolución de llamada y continuaciones que normalmente implica el código asincrónico.
 
-Para obtener más información sobre la característica Async, consulte [Asynchronous Programming with async and await (C#)](./index.md) (Programación asincrónica con async y await [C#]).
+Para obtener más información sobre la característica Async, consulte [Programación asincrónica con async y await (C#)](./index.md).
 
 Este tutorial comienza con una aplicación sincrónica de Windows Presentation Foundation (WPF) que suma el número de bytes de una lista de sitios web. A continuación, el tutorial convierte la aplicación en una solución asincrónica mediante el uso de las características nuevas.
 

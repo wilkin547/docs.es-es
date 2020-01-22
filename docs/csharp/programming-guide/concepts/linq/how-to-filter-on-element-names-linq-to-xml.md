@@ -73,4 +73,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML Axes (C#)](./linq-to-xml-axes-overview.md) (Ejes de LINQ to XML [C#])
+- [Ejes de LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

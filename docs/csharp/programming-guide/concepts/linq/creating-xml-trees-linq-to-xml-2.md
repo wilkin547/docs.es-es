@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>Vea también
 
-- [Creating XML Trees (C#)](./linq-to-xml-overview.md) (Crear árboles XML (C#))
+- [Creación de árboles XML (C#)](./linq-to-xml-overview.md)

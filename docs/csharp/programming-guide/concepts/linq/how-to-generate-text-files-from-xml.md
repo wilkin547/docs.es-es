@@ -13,7 +13,7 @@ ms.locfileid: "75345931"
 Este ejemplo muestra cómo generar un archivo de valores separados por comas (CSV) a partir de un archivo XML.  
   
 ## <a name="example"></a>Ejemplo  
- La versión en C# de este ejemplo utiliza sintaxis de métodos y el operador `Aggregate` para generar un archivo CSV a partir de un documento XML en una única expresión. Para obtener más información, vea [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
+ La versión en C# de este ejemplo utiliza sintaxis de métodos y el operador `Aggregate` para generar un archivo CSV a partir de un documento XML en una única expresión. Para obtener más información, vea [Sintaxis de consultas y sintaxis de métodos en LINQ](./query-syntax-and-method-syntax-in-linq.md)  
   
  Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   

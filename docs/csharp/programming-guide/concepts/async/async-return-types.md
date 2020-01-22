@@ -81,6 +81,6 @@ Como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujos de control en programas asincrónicos [C#])
+- [Controlar el flujo en los programas asincrónicos (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)

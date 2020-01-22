@@ -12,7 +12,7 @@ ms.locfileid: "75347306"
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Procedimiento para transformar la forma de un árbol XML (C#)
 La *forma* de un documento XML hace referencia a sus nombres de elemento, sus nombres de atributo y las características de su jerarquía.  
   
- A veces, deberá cambiar la forma de un elemento XML. Por ejemplo, es posible que deba enviar un documento XML a otro sistema que requiere nombres de elemento y atributo diferentes. Podría revisar el documento y eliminar y cambiar el nombre de los elementos necesarios, pero el uso de la construcción funcional proporciona un código más legible y fácil de mantener. Para obtener más información sobre la construcción funcional, consulte [Functional Construction (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md) (Construcción funcional [LINQ to XML] [C#]).  
+ A veces, deberá cambiar la forma de un elemento XML. Por ejemplo, es posible que deba enviar un documento XML a otro sistema que requiere nombres de elemento y atributo diferentes. Podría revisar el documento y eliminar y cambiar el nombre de los elementos necesarios, pero el uso de la construcción funcional proporciona un código más legible y fácil de mantener. Para obtener más información sobre la construcción funcional, consulte [Construcción funcional (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).  
   
  El primer ejemplo cambia la organización del documento XML. Mueve los elementos complejos de una ubicación del árbol a otra.  
   

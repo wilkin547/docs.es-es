@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintaxis de expresiones de consulta  
- Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave dedicadas de lenguaje C# y Visual Basic para que se puedan invocar como parte de una *expresión* *de consulta*. Para obtener más información sobre los operadores de consulta estándar que incluyen palabras clave dedicadas y sus sintaxis correspondientes, vea [Query Expression Syntax for Standard Query Operators (C#)](./query-expression-syntax-for-standard-query-operators.md) (Sintaxis de las expresiones de consulta para operadores de consulta estándar [C#]).  
+ Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave dedicadas de lenguaje C# y Visual Basic para que se puedan invocar como parte de una *expresión* *de consulta*. Para obtener más información sobre los operadores de consulta estándar que incluyen palabras clave dedicadas y sus sintaxis correspondientes, vea [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Extender los operadores de consulta estándar  
  Puede aumentar el conjunto de operadores de consulta estándar creando métodos específicos de dominio que sean adecuados para su tecnología o dominio de destino. También puede reemplazar los operadores de consulta estándar con sus propias implementaciones que proporcionen otros servicios tales como evaluación remota, traducción de consultas y optimización. Vea <xref:System.Linq.Enumerable.AsEnumerable%2A> para obtener un ejemplo.  
@@ -75,33 +75,33 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>Secciones relacionadas  
  Los vínculos siguientes le llevan a temas que ofrecen información adicional sobre los distintos operadores de consulta estándar según la funcionalidad.  
   
- [Sorting Data (C#)](./sorting-data.md) (Ordenación de datos [C#])  
+ [Ordenación de datos [C#]](./sorting-data.md)  
   
- [Set Operations (C#)](./set-operations.md) (Operaciones set [C#])  
+ [Operaciones set [C#]](./set-operations.md)  
   
- [Filtering Data (C#)](./filtering-data.md) (Filtrado de datos [C#])  
+ [Filtrado de datos [C#]](./filtering-data.md)  
   
- [Quantifier Operations (C#)](./quantifier-operations.md) (Operaciones cuantificadoras [C#])  
+ [Operaciones cuantificadoras [C#]](./quantifier-operations.md)  
   
- [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])  
+ [Operaciones de proyección [C#]](./projection-operations.md)  
   
- [Partitioning Data](./partitioning-data.md) (Realizar particiones de datos [C#])  
+ [Realizar particiones de datos [C#]](./partitioning-data.md)  
   
- [Join Operations (C#)](./join-operations.md) (Operaciones de combinación [C#])  
+ [Operaciones de combinación [C#]](./join-operations.md)  
   
- [Grouping Data (C#)](./grouping-data.md) (Agrupar datos [C#])  
+ [Agrupar datos [C#]](./grouping-data.md)  
   
- [Generation Operations (C#)](./generation-operations.md) (Operaciones de generación [C#])  
+ [Operaciones de generación [C#]](./generation-operations.md)  
   
- [Equality Operations (C#)](./equality-operations.md) (Operaciones de igualdad [C#])  
+ [Operaciones de igualdad [C#]](./equality-operations.md)  
   
- [Element Operations (C#)](./element-operations.md) (Operaciones de elementos [C#])  
+ [Operaciones de elementos [C#]](./element-operations.md)  
   
- [Converting Data Types (C#)](./converting-data-types.md) (Convertir tipos de datos [C#])  
+ [Convertir tipos de datos [C#]](./converting-data-types.md)  
   
- [Concatenation Operations (C#)](./concatenation-operations.md) (Operaciones de concatenación [C#])  
+ [Operaciones de concatenación [C#]](./concatenation-operations.md)  
   
- [Aggregation Operations (C#)](./aggregation-operations.md) (Operaciones de agregación [C#])  
+ [Operaciones de agregación [C#]](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>Vea también
 

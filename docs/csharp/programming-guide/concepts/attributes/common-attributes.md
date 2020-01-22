@@ -225,9 +225,9 @@ class SampleClass
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea del archivo de código fuente desde el que se llama al método.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [Caller Information (C#)](../caller-information.md) (Información del llamador (C#)).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [Información del llamador (C#)](../caller-information.md).|`String`|  
   
- Para obtener más información sobre los atributos de información del llamador, vea [Caller Information (C#)](../caller-information.md) (Información del llamador (C#)).  
+ Para obtener más información sobre los atributos de información del llamador, vea [Información del llamador (C#)](../caller-information.md).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -47,7 +47,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
   
 - La propia lista se inicializa con un inicializador de colección.  
   
- Toda la estructura de datos se inicializará y creará una instancia sin llamadas explícitas a ningún constructor ni acceso a miembro explícito. Para obtener más información sobre estas nuevas características, vea [Auto-Implemented Properties](../../classes-and-structs/auto-implemented-properties.md) (Propiedades implementadas automáticamente) y [Inicializadores de objeto y de colección](../../classes-and-structs/object-and-collection-initializers.md).  
+ Toda la estructura de datos se inicializará y creará una instancia sin llamadas explícitas a ningún constructor ni acceso a miembro explícito. Para obtener más información sobre estas nuevas características, vea [Propiedades autoimplementadas](../../classes-and-structs/auto-implemented-properties.md) (Propiedades implementadas automáticamente) y [Inicializadores de objeto y de colección](../../classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Para agregar el origen de datos  
   
@@ -137,7 +137,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     Para obtener más información sobre [var](../../../language-reference/keywords/var.md), vea [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md) (Variables locales con tipo implícito).  
+     Para obtener más información sobre [var](../../../language-reference/keywords/var.md), vea [Variables locales con asignación implícita de tipos](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>Para ordenar los grupos por su valor clave  
   

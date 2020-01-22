@@ -110,4 +110,4 @@ Algunas plataformas de terceros o de Microsoft no son compatibles con .NET Core.
 - [Portabilidad de .NET Framework a .NET Core](../core/porting/index.md)
 - [Introducción a .NET y Docker](../core/docker/introduction.md)
 - [Introducción a los componentes de .NET](components.md)
-- [.NET Microservices. Architecture for Containerized .NET Applications](../architecture/microservices/index.md) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor)
+- [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](../architecture/microservices/index.md)

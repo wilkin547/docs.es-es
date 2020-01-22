@@ -20,7 +20,7 @@ En el siguiente ejemplo se usa una consulta para crear una colección de tareas.
 
 ## <a name="download-an-example-solution"></a>Descargue una solución de ejemplo
 
-Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.
+Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) y después seguir estos pasos.
 
 > [!TIP]
 > Si no quiere descargar el proyecto, en su lugar, puede revisar el archivo *MainWindow.xaml.cs* al final de este tema.
@@ -87,7 +87,7 @@ Ejecute el programa varias veces para comprobar que las longitudes que se han de
 
 El código siguiente es el texto completo del archivo *MainWindow.xaml.cs* para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo. Además, observe que debe agregar una referencia para <xref:System.Net.Http>.
 
-Puede descargar el proyecto desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación).
+Puede descargar el proyecto desde [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Fine-Tuning Your Async Application (C#)](fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])
+- [Ajustar una aplicación asincrónica (C#)](fine-tuning-your-async-application.md)
 - [Programación asincrónica con Async y Await (C#)](index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación)
+- [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

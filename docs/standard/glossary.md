@@ -98,7 +98,7 @@ Recolector de elementos no utilizados.
 
 El recolector de elementos no utilizados es una implementación de administración de memoria automática.  GC libera la memoria ocupada por objetos que ya no se usan. 
 
-Vea [Garbage Collection](garbage-collection/index.md) (Recolección de elementos no utilizados).
+Vea [Recolección de elementos no utilizados](garbage-collection/index.md).
 
 ## <a name="il"></a>IL
 

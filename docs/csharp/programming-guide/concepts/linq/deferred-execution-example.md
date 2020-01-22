@@ -61,7 +61,7 @@ Main: str GHI
   
  En el siguiente tema de este tutorial se ilustra el encadenado de cadenas juntas:  
   
-- [Chaining Queries Example (C#)](./chaining-queries-example.md) (Ejemplo de encadenamiento de consultas (C#))  
+- [Ejemplo de encadenamiento de consultas (C#)](./chaining-queries-example.md)  
   
 ## <a name="see-also"></a>Vea también
 

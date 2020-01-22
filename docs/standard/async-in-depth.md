@@ -30,7 +30,7 @@ Las tareas exponen un protocolo de API para supervisar, esperar y acceder al val
 
 Mediante `await`, su aplicación o servicio puede realizar trabajo útil mientras se ejecuta una tarea al ceder el control a su llamador hasta que se realiza la tarea. El código no tiene que depender de las devoluciones de llamada ni eventos para seguir ejecutándose una vez completada la tarea. La integración de la API de tareas y lenguajes se encarga de ello. Si está usando `Task<T>`, la palabra clave `await` "desencapsulará" también el valor devuelto cuando se completa la tarea.  Más adelante se explican los detalles sobre cómo funciona esto.
 
-Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el tema [Task-based Asynchronous Pattern (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP]).
+Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el tema [Modelo asincrónico basado en tareas (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Tareas para una operación enlazada a E/S en profundidad
 

@@ -53,7 +53,7 @@ Para aplicar un atributo a un elemento del código se puede utilizar el proceso 
 ## <a name="see-also"></a>Vea también
 
 - [Atributos](../../../docs/standard/attributes/index.md)
-- [Retrieving Information Stored in Attributes](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
+- [Recuperar la información almacenada en atributos](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Conceptos](/cpp/windows/attributed-programming-concepts)
 - [Atributos (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Información general sobre los atributos (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

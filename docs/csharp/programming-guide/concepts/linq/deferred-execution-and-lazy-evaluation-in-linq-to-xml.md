@@ -31,11 +31,11 @@ Las operaciones de consulta y de eje a menudo se implementan para usar la ejecuc
 ## <a name="next-steps"></a>Pasos siguientes  
  El siguiente tema de este tutorial ilustra la ejecución aplazada:  
   
-- [Deferred Execution Example (C#)](./deferred-execution-example.md) (Ejemplo de ejecución diferida (C#))  
+- [Ejemplo de ejecución diferida (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Vea también
 
 - [Tutorial: Encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [Conceptos y terminología (transformación funcional) (C#)](./concepts-and-terminology-functional-transformation.md)
-- [Aggregation Operations (C#)](./aggregation-operations.md) (Operaciones de agregación [C#])
+- [Operaciones de agregación (C#)](./aggregation-operations.md)
 - [yield](../../../language-reference/keywords/yield.md)

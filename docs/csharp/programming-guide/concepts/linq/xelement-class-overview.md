@@ -19,7 +19,7 @@ Este tema describe la funcionalidad que ofrece la clase <xref:System.Xml.Linq.XE
   
 - Puede construir un árbol XML mediante código. Para obtener más información, consulte [Crear árboles XML (C#)](./linq-to-xml-overview.md).  
   
-- Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Parsing XML (C#)](./how-to-parse-a-string.md) (Analizar XML [C#]).  
+- Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Analizar XML (C#)](./how-to-parse-a-string.md).  
   
 - También puede utilizar un <xref:System.Xml.XmlReader> para rellenar el árbol. Para obtener más información, vea <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   

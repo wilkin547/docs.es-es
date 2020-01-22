@@ -62,6 +62,6 @@ Para más información, consulte [Consumir funciones DLL no administradas](../..
 - [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29) (Mejorar el rendimiento interoperativo)
 - [Introducción a la interoperabilidad entre COM y .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
 - [Información general sobre la interoperabilidad COM (Visual Basic)](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
-- [Marshaling between Managed and Unmanaged Code](../../../framework/interop/interop-marshaling.md) (Calcular las referencias entre el código administrado y el código no administrado)
+- [Serialización de interoperabilidad](../../../framework/interop/interop-marshaling.md)
 - [Interoperating with Unmanaged Code](../../../framework/interop/index.md) (Interoperar con código no administrado)
 - [Guía de programación de C#](../index.md)

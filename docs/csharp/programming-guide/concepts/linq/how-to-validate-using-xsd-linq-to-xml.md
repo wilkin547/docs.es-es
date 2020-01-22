@@ -123,4 +123,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [Creating XML Trees (C#)](creating-xml-trees-linq-to-xml-2.md) (Crear árboles XML (C#))
+- [Crear árboles XML en C# ](creating-xml-trees-linq-to-xml-2.md)

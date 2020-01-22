@@ -14,7 +14,7 @@ ms.locfileid: "69595308"
 Puede declarar parámetros de tipo genérico en las interfaces como covariantes o contravariantes. La *covarianza* permite que los métodos de interfaz tengan tipos de valor devuelto más derivados que los que se definen en los parámetros de tipo genérico. La *contravarianza* permite que los métodos de interfaz tengan tipos de argumento menos derivados que los que se especifican en los parámetros genéricos. Las interfaces genéricas que tienen parámetros de tipo genérico covariantes o contravariantes se llaman *variantes*.
 
 > [!NOTE]
-> En .NET Framework 4 se introdujo la compatibilidad con la varianza para varias interfaces genéricas existentes. Para ver la lista de interfaces variantes de .NET Framework, vea [Variance in Generic Interfaces (C#)](./variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (C#)).
+> En .NET Framework 4 se introdujo la compatibilidad con la varianza para varias interfaces genéricas existentes. Para ver la lista de interfaces variantes de .NET Framework, vea [Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Declarar interfaces genéricas variantes
 
@@ -37,7 +37,7 @@ Puede declarar un parámetro de tipo genérico covariante mediante la palabra cl
     }
     ```
 
-    Hay una excepción para esta regla. Si tiene un delegado genérico contravariante como parámetro de método, puede usar el tipo como parámetro de tipo genérico para el delegado. Esto se muestra en el siguiente ejemplo con el tipo `R`. Para obtener más información, vea [Variance in Delegates (C#)](./variance-in-delegates.md) (Varianza en los delegados (C#)) y [Using Variance for Func and Action Generic Delegates (C#)](./using-variance-for-func-and-action-generic-delegates.md) (Usar la varianza para los delegados genéricos Func y Action (C#)).
+    Hay una excepción para esta regla. Si tiene un delegado genérico contravariante como parámetro de método, puede usar el tipo como parámetro de tipo genérico para el delegado. Esto se muestra en el siguiente ejemplo con el tipo `R`. Para obtener más información, vea [Varianza en delegados (C#)](./variance-in-delegates.md) y [Usar la varianza para los delegados genéricos Func y Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).
 
     ```csharp
     interface ICovariant<out R>

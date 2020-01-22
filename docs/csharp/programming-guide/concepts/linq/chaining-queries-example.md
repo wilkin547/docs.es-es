@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  El siguiente tema de este tutorial ilustra la materialización intermedia:  
   
-- [Intermediate Materialization (C#)](./intermediate-materialization.md) (Materialización intermedia (C#))  
+- [Materialización intermedia (C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Vea también
 

@@ -76,7 +76,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- Para obtener otros ejemplos de `new` y `override`, vea [Knowing When to Use Override and New Keywords](./knowing-when-to-use-override-and-new-keywords.md) (Saber cuándo usar las palabras clave override y new [Guía de programación de C#]).  
+ Para obtener otros ejemplos de `new` y `override`, vea [Saber cuándo utilizar las palabras clave Override y New (Guía de programación de C#)](./knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Vea también
 

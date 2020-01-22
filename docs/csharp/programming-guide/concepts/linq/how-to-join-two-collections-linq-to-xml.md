@@ -19,7 +19,7 @@ Con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], puede aprovechar esta
 
 Como no se dispone de ningún índice, la combinación tendrá un rendimiento en tiempo de ejecución bajo.
 
-Para obtener más información sobre `join`, consulte [Join Operations (C#)](./join-operations.md) (Operaciones de combinación [C#]).
+Para obtener más información sobre `join`, consulte [Operaciones de combinación (C#)](./join-operations.md).
 
 ## <a name="example"></a>Ejemplo
 

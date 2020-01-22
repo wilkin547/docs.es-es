@@ -567,7 +567,7 @@ Los *iteradores* se usan para efectuar una iteración personalizada en una colec
 
 Llame a un iterador mediante una instrucción [foreach](../../language-reference/keywords/foreach-in.md). Cada iteración del bucle `foreach` llama al iterador. Cuando se alcanza una instrucción `yield return` en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.
 
-Para obtener más información, vea [Iterators (C#)](./iterators.md) (Iteradores (C#)).
+Para obtener más información, vea [Iteradores (C#)](./iterators.md).
 
 El siguiente ejemplo usa el método del iterador. El método del iterador tiene una instrucción `yield return` que se encuentra dentro de un bucle [for](../../language-reference/keywords/for.md). En el método `ListEvenNumbers`, cada iteración del cuerpo de la instrucción `foreach` crea una llamada al método iterador, que continúa con la siguiente instrucción `yield return`.
 

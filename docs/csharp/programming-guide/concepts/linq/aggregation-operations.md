@@ -33,7 +33,7 @@ Una operación de agregación calcula un valor único a partir de una colección
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
 - [Procedimiento para calcular valores de columna en un archivo de texto CSV (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
 - [Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
 - [Procedimiento para buscar el número total de bytes de un conjunto de carpetas (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

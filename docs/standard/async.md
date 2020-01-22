@@ -39,10 +39,10 @@ Para obtener más información, vea el tema [Async en profundidad](async-in-dept
 
 En el tema [Modelos para la programación asincrónica](asynchronous-programming-patterns/index.md), se proporciona una introducción de los tres modelos de programación asincrónica que se admiten en .NET:  
   
-- [Asynchronous Programming Model (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) [Modelo de programación asincrónica (APM)] (heredado)  
+- [Modelo de programación asincrónica (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (heredado)  
   
-- [Event-based Asynchronous Pattern (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) [Modelo asincrónico basado en eventos (EAP)] (heredado)  
+- [Modelo asincrónico basado en eventos (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (heredado)  
   
-- [Task-based Asynchronous Pattern (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) [Modelo asincrónico basado en tareas (TAP)] (recomendado para nuevos desarrollos)  
+- [Modelo asincrónico basado en tareas (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (recomendado para nuevos desarrollos)  
 
 Para obtener más información sobre el modelo de programación basado en tareas recomendado, consulte el tema [Programación asincrónica basada en tareas](parallel-programming/task-based-asynchronous-programming.md).

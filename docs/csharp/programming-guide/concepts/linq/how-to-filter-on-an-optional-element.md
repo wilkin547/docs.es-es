@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
+- [Operaciones de proyección (C#)](./projection-operations.md)

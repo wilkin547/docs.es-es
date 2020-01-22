@@ -69,4 +69,4 @@ foreach (decimal el in prices)
   
 ## <a name="see-also"></a>Vea también
 
-- [Sorting Data (C#)](./sorting-data.md) (Ordenación de datos [C#])
+- [Ordenación de datos (C#)](./sorting-data.md)
