@@ -72,7 +72,7 @@ El uso del parámetro de tipo permite reutilizar la misma clase para incluir cua
 
 Como se ha mencionado anteriormente, puede asignar implícitamente un tipo a una variable local (pero no miembros de clase) mediante la palabra clave [var](language-reference/keywords/var.md). La variable sigue recibiendo un tipo en tiempo de compilación, pero este lo proporciona el compilador. Para obtener más información, consulte [Variables locales con asignación implícita de tipos](programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no quiera almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para obtener más información, consulte [Anonymous Types](programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).
+En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no quiera almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para obtener más información, consulte [Tipos anónimos (Guía de programación de C#)](programming-guide/classes-and-structs/anonymous-types.md).
 
 Es habitual querer devolver más de un valor de un método. Puede crear *tipos de tupla* que devuelven varios valores en una única llamada de método. Para más información, consulte [Tuplas](tuples.md).
 
