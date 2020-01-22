@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 610f2a1020cc15f855b3ddfc0917e14aae34fb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344934"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315868"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
 Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y proporciona funcionalidades sencillas y eficaces cuando se trabaja con todos los tipos de datos. En lugar de enviar una consulta a una base de datos que se va a procesar o trabajar con una sintaxis de consulta diferente para cada tipo de datos que se está buscando, LINQ presenta las consultas como parte del lenguaje Visual Basic. Utiliza una sintaxis unificada independientemente del tipo de datos.  
@@ -94,9 +94,9 @@ Opcional. Una [cláusula`Where`](../../../../visual-basic/language-reference/que
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Order by, cláusula]
+### <a name="order-by-clause"></a>Order By (cláusula)
 
-| Opta. Una [cláusula`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) especifica el criterio de ordenación de las columnas de una consulta. Por ejemplo:
+Opcional. Una [cláusula`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) especifica el criterio de ordenación de las columnas de una consulta. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
