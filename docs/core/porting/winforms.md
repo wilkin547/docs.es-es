@@ -4,12 +4,12 @@ description: Se detalla cómo migrar una aplicación de Windows Forms de .NET Fr
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567272"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116027"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento para: Migrar una aplicación de escritorio de Windows Forms a .NET Core
 
@@ -17,7 +17,7 @@ En este artículo se explica cómo migrar una aplicación de escritorio basada e
 
 En este artículo, se usan diferentes nombres para identificar los tipos de archivos que se utilizan para la migración. Al migrar su proyecto, sus archivos se nombrarán de manera diferente, así que establezca una relación mental con los que se enumeran a continuación:
 
-| Archivo | DESCRIPCIÓN |
+| Archivo | Descripción |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyForms.csproj** | Nombre del proyecto de Windows Forms de .NET Framework para migrar. |
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-Tendrá que agregar el proyecto **MyFormsCore.csproj** a **MyApps.sln** con Visual Studio o la CLI de .NET Core desde el directorio **SolutionFolder**:
+Agregue el proyecto **MyFormsCore.csproj** a **MyApps.sln** con Visual Studio o la CLI de .NET Core desde el directorio **SolutionFolder**:
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -188,7 +188,7 @@ Si tiene un proyecto de biblioteca de controles de Windows Forms para migrar, la
 
 Usando el ejemplo del paso anterior, vamos a expandir los proyectos y archivos con los que estamos trabajando.
 
-| Archivo | DESCRIPCIÓN |
+| Archivo | Descripción |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyControls.csproj** | Nombre del proyecto de controles de Windows Forms de .NET Framework para migrar. |
@@ -287,7 +287,7 @@ El comando anterior agrega lo siguiente al proyecto **MyFormsCore.csproj**:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Una vez que Visual Studio 2019 sea compatible con el Diseñador de Windows Forms
 
 ## <a name="next-steps"></a>Pasos siguientes
 
+- Obtenga información sobre los [Cambios importantes para la migración de .NET Framework a .NET Core](../compatibility/fx-core.md).
 - Obtenga más información sobre el [paquete de compatibilidad de Windows][compat-pack].
 - Vea un [vídeo sobre cómo migrar](https://www.youtube.com/watch?v=upVQEUc_KwU) el proyecto de Windows Forms de .NET Framework a .NET Core.
 

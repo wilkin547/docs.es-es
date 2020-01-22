@@ -17,7 +17,7 @@ En el ejemplo siguiente se muestra cómo crear grupos anidados en una expresión
 ## <a name="example"></a>Ejemplo
 
 > [!NOTE]
-> Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo de [Query a collection of objects](query-a-collection-of-objects.md) (Consultar una colección de objetos).
+> Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo del tema [Consultar una colección de objetos](query-a-collection-of-objects.md).
 
 [!code-csharp[csProgGuideLINQ#24](~/samples/snippets/csharp/concepts/linq/how-to-create-a-nested-group_1.cs)]
 

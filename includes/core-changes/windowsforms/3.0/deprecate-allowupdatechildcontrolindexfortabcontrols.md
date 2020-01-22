@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 1d01de4b978309e05a6036953f2a6909628a2480
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643890"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937097"
 ---
-### <a name="switchsystemwindowsformsallowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad AllowUpdateChildControlIndexForTabControls
 
 El modificador de compatibilidad `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` se admite en Windows Forms en .NET Framework 4.6 y en versiones posteriores, pero no se admite en Windows Forms a partir de .NET Core 3.0.
 

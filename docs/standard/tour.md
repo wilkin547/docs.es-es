@@ -37,7 +37,7 @@ Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual B
 
 ## <a name="automatic-memory-management"></a>Administración de memoria automática
 
-.NET usa la [recolección de elementos no utilizados](garbage-collection/index.md) para proporcionar administración automática de memoria para los programas. La GC funciona con un enfoque diferido para la administración de memoria y prefiere el rendimiento de la aplicación sobre la recolección inmediata de la memoria. Para más información sobre GC de .NET, consulte [Fundamentals of garbage collection (GC)](garbage-collection/fundamentals.md) (Fundamentos de la recolección de elementos no utilizados [GC]).
+.NET usa la [recolección de elementos no utilizados](garbage-collection/index.md) para proporcionar administración automática de memoria para los programas. La GC funciona con un enfoque diferido para la administración de memoria y prefiere el rendimiento de la aplicación sobre la recolección inmediata de la memoria. Para más información sobre GC de .NET, consulte [Fundamentos de la recolección de elementos no utilizados (GC)](garbage-collection/fundamentals.md).
 
 Las dos líneas siguientes asignan memoria:
 
@@ -65,7 +65,7 @@ Para obtener más información, consulte los siguientes temas:
 
 * Para C#, vea el tema [using (Instrucción, Referencia de C#)](../csharp/language-reference/keywords/using-statement.md).
 * En F#, consulte [Administración de recursos: la palabra clave use](../fsharp/language-reference/resource-management-the-use-keyword.md).
-* Para Visual Basic, consulte el tema [Instrucción using (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
+* Para VB, vea el tema [Using (Instrucción, Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="type-safety"></a>Seguridad de tipos
 
@@ -83,7 +83,7 @@ C#, Visual Basic y F# admiten *inferencia de tipos* local. La inferencia de tipo
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# tiene incluso más funcionalidades de inferencia de tipos que la inferencia de tipos method-local encontrada en C# y Visual Basic. Para obtener más información, consulte [Type Inference](../fsharp/language-reference/type-inference.md) (Inferencia de tipos).
+F# tiene incluso más funcionalidades de inferencia de tipos que la inferencia de tipos method-local encontrada en C# y Visual Basic. Para obtener más información, consulte [Inferencia de tipos](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Delegados y expresiones lambda
 
@@ -139,7 +139,7 @@ El ejemplo siguiente es una versión modificada del método `ToString()` desde l
 
 Si está interesado en un paseo por las características de C#, consulte [Paseo por C#](../csharp/tour-of-csharp/index.md).
 
-Si está interesado en un paseo por las características de F#, consulte [Tour of F#](../fsharp/tour.md) (Paseo por F#).
+Si está interesado en un paseo por las características de F#, consulte [Paseo por F#](../fsharp/tour.md).
 
 Si quiere empezar a escribir su propio código, consulte [Introducción](get-started.md).
 

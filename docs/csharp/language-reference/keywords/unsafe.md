@@ -16,7 +16,7 @@ ms.locfileid: "75712993"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (Referencia de C#)
 
-La palabra clave `unsafe` denota un contexto no seguro, que es necesario para realizar cualquier operación que implique punteros. Para obtener más información, vea [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md) (Código no seguro y punteros [Guía de programación de C#]).
+La palabra clave `unsafe` denota un contexto no seguro, que es necesario para realizar cualquier operación que implique punteros. Para obtener más información, vea [Código no seguro y punteros (Guía de programación de C#)](../../programming-guide/unsafe-code-pointers/index.md).
 
 Puede usar el codificador `unsafe` en la declaración de un tipo o miembro. Por consiguiente, toda la extensión textual del tipo o miembro se considera un contexto no seguro. Por ejemplo, el siguiente método se declara con el modificador `unsafe`:
 

@@ -22,7 +22,7 @@ Junto con la compatibilidad entre las implementaciones de .NET, los desarrollado
 En este artículo se describen las categorías de cambios de compatibilidad (o cambios importantes) y la forma en que el equipo de .NET evalúa los cambios en cada una de estas categorías. Entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios en el repositorio de GitHub [dotnet/runtime](https://github.com/dotnet/runtime) que tienen por objetivo modificar el comportamiento de las API existentes.
 
 > [!NOTE]
-> Para una definición de las categorías de compatibilidad, como la compatibilidad binaria y la compatibilidad con versiones anteriores, consulte [Breaking change categories](categories.md) (Categorías de cambios importantes).
+> Para una definición de las categorías de compatibilidad, como la compatibilidad binaria y la compatibilidad con versiones anteriores, consulte [Categorías de cambios importantes](categories.md).
 
 En las secciones siguientes se describen las categorías de los cambios realizados en las API de .NET Core y su impacto sobre la compatibilidad de aplicaciones. El icono ✔️ indica que se permite un determinado tipo de cambio, ❌ indica que no se permite y ❓ indica un cambio que puede permitirse o no. Los cambios en esta última categoría requieren un criterio y una evaluación de cuán predecible, obvio y coherente era el comportamiento anterior.
 
@@ -95,7 +95,7 @@ Los cambios en esta categoría modifican el área expuesta pública de un tipo. 
 
   Sin embargo, no se permite agregar un miembro de tipo abstract a un tipo que tenga constructores accesibles (públicos o protegidos) y que no sea `sealed`.
 
-- **✔️ Restricción de la visibilidad de un miembro [protegido](../../csharp/language-reference/keywords/protected.md) cuando el tipo no tiene constructores accesibles (públicos o protegidos) o el tipo es [sellado](../../csharp/language-reference/keywords/sealed.md)** .
+- **✔️ Restricción de la visibilidad de un miembro [protegido](../../csharp/language-reference/keywords/protected.md) cuando el tipo no tiene constructores accesibles (públicos o protegidos) o el tipo es [sellado](../../csharp/language-reference/keywords/sealed.md)**.
 
 - **✔️ Desplazamiento de un miembro a una clase superior en la jerarquía que el tipo del que fue eliminado**
 

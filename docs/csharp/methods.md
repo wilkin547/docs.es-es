@@ -81,7 +81,7 @@ Los tipos pueden invalidar miembros heredados usando la palabra clave `override`
 
 ## <a name="passing-parameters"></a>Pasar parámetros
 
-Todos los tipos de C# son *tipos de valor* o *tipos de referencia*. Para obtener una lista de tipos de valor integrados, vea [Types and variables](./tour-of-csharp/types-and-variables.md) (Tipos y variables). De forma predeterminada, los tipos de valor y los tipos de referencia se pasan a un método por valor.
+Todos los tipos de C# son *tipos de valor* o *tipos de referencia*. Para obtener una lista de tipos de valor integrados, vea [Tipos y variables](./tour-of-csharp/types-and-variables.md). De forma predeterminada, los tipos de valor y los tipos de referencia se pasan a un método por valor.
 
 <a name="byval"></a>
 

@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: 843007ac6467584fbe6350b6ea19ef67609d73e2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643848"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937004"
 ---
-### <a name="controldefaultfont-changed-to-segoe-ui-9pt"></a>Cambio de `Control.DefaultFont` a `Segoe UI 9pt`
+### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Fuente de control predeterminada cambiada a Segoe UI 9 pt
 
 #### <a name="change-description"></a>Descripción del cambio
 
-En .NET Framework, la propiedad <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> se estableció en `Microsoft Sans Serif 8pt`. En la figura siguiente se muestra una ventana en la que se usa la fuente predeterminada.
+En .NET Framework, la propiedad <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> estaba establecida en `Microsoft Sans Serif 8 pt`. En la imagen siguiente se muestra una ventana con la fuente predeterminada.
 
-![fuente de control predeterminada en .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
+![Fuente de control predeterminada de .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-En .NET Core, a partir de .NET Core 3.0, se establece en `Segoe UI 9pt` (la misma fuente que <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). Como resultado de este cambio, los formularios y controles tendrán un tamaño predeterminado aproximadamente un 27 % más grande para tener en cuenta el mayor tamaño de la nueva fuente predeterminada. Por ejemplo:
+A partir de .NET Core 3.0, la fuente predeterminada está establecida en `Segoe UI 9 pt` (la misma fuente que <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). Como resultado de este cambio, los formularios y los controles tienen un tamaño aproximadamente un 27 % mayor en razón del mayor tamaño de la nueva fuente predeterminada. Por ejemplo:
 
-![fuente de control predeterminada en .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
+![Fuente de control predeterminada de .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-Este cambio se realizó para alinearse con las [directrices para la experiencia de usuario de Windows](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).
+Este cambio se ha realizado a fin de adaptarse a las [directrices para la experiencia de usuario de Windows](/windows/win32/uxguide/vis-fonts#fonts-and-colors).
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -28,7 +28,7 @@ Este cambio se realizó para alinearse con las [directrices para la experiencia 
 
 Debido al cambio en el tamaño de los formularios y controles, asegúrese de que la aplicación se representa correctamente.
 
-Para conservar la fuente original, establezca la fuente predeterminada del formulario en `Microsoft Sans Serif 8pt`. Por ejemplo:
+Para conservar la fuente original, establezca la fuente predeterminada del formulario en `Microsoft Sans Serif 8 pt`. Por ejemplo:
 
 ```csharp
 public MyForm()

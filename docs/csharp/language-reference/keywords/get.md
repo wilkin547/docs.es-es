@@ -16,7 +16,7 @@ ms.locfileid: "75713489"
 ---
 # <a name="get-c-reference"></a>get (Referencia de C#)
 
-La palabra clave `get` define un método de *descriptor de acceso* en una propiedad o un indizador que devuelve el valor de la propiedad o el elemento del indizador. Para obtener más información, consulte [Properties](../../programming-guide/classes-and-structs/properties.md) (Propiedades), [Auto-Implemented Properties](../../programming-guide/classes-and-structs/auto-implemented-properties.md) (Propiedades implementadas automáticamente) e [Indexers](../../programming-guide/indexers/index.md) (Indizadores).  
+La palabra clave `get` define un método de *descriptor de acceso* en una propiedad o un indizador que devuelve el valor de la propiedad o el elemento del indizador. Para obtener más información, consulte [Propiedades](../../programming-guide/classes-and-structs/properties.md), [Propiedades autoimplementadas](../../programming-guide/classes-and-structs/auto-implemented-properties.md) e [Indexers Indizadores](../../programming-guide/indexers/index.md).  
   
 En el ejemplo siguiente se definen unos descriptores de acceso `get` y `set` para una propiedad denominada `Seconds`. Usa un campo privado denominado `_seconds` para respaldar el valor de la propiedad.  
  

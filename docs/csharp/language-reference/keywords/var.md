@@ -23,7 +23,7 @@ var i = 10; // Implicitly typed.
 int i = 10; // Explicitly typed.
 ```
 
-Para obtener más información, vea [Implicitly typed local variables](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) (Variables locales con tipo implícito) y [Type relationships in LINQ query operations](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md) (Relaciones entre tipos en las operaciones de consulta de LINQ).
+Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) y [Relaciones entre tipos en operaciones de consulta LINQ](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
 
 ## <a name="example"></a>Ejemplo
 

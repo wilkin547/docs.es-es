@@ -50,7 +50,7 @@ ms.locfileid: "73138148"
   
 - <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
   
- Para más información, consulte [Chaining Tasks by Using Continuation Tasks](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md) (Encadenar tareas mediante tareas de continuación).  
+ Para más información, consulte [Encadenar tareas mediante tareas de continuación](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
 ## <a name="see-also"></a>Vea también
 

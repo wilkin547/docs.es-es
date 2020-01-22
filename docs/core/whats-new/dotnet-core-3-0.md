@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567332"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115795"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -74,7 +74,7 @@ Para publicar un ejecutable de archivo único, establezca `PublishSingleFile` en
 </PropertyGroup>
 ```
 
-O bien
+o bien
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Compatibilidad con JSON integrada con rápido rendimiento
 
-Los usuarios de .NET han contado en gran medida en [**Json.NET**](https://www.newtonsoft.com/json) y otras bibliotecas populares de JSON, que siguen siendo buenas opciones. **Json.NET** utiliza cadenas de .NET como tipo de datos base, que, en esencia, es UTF-16.
+Los usuarios de .NET se han basado en gran medida en [Newtonsoft.Json](https://www.newtonsoft.com/json) y otras bibliotecas populares de JSON, que siguen siendo buenas opciones. `Newtonsoft.Json` usa cadenas de .NET como tipo de datos base, que, en esencia, es UTF-16.
 
-La nueva compatibilidad con JSON integrada es el alto rendimiento, una baja asignación y se basa en `Span<byte>`. Para obtener más información sobre el espacio de nombres y los tipos de <xref:System.Text.Json>, vea [Serialización de JSON en .NET: Introducción](../../standard/serialization/system-text-json-overview.md). Para obtener tutoriales sobre escenarios comunes de serialización de JSON, vea [Procedimientos para serializar y deserializar JSON en .NET](../../standard/serialization/system-text-json-how-to.md).
+La nueva compatibilidad integrada con JSON es de alto rendimiento, baja asignación y funciona con texto JSON codificado UTF-8. Para obtener más información sobre el espacio de nombres <xref:System.Text.Json> y los tipos, vea los artículos siguientes:
+
+* [Serialización JSON en .NET: información general](../../standard/serialization/system-text-json-overview.md)
+* En [Procedimiento para serializar y deserializar JSON en .NET](../../standard/serialization/system-text-json-how-to.md)
+* [Migración desde Newtonsoft.json a System.Text.Json](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>Compatibilidad con HTTP/2
 
@@ -520,4 +524,4 @@ Muchas veces cuando está desarrollando una aplicación, desea utilizar una cone
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Revise los cambios importantes entre .NET Core 2.2 y 3.0.](../compatibility/2.2-3.0.md)
-- [Revise los cambios importantes entre .NET Framework y .NET Core 3.0 para aplicaciones de Windows Forms.](../porting/winforms-breaking-changes.md)
+- [Revise los cambios importantes de .NET Core 3.0 para aplicaciones de Windows Forms.](../compatibility/winforms.md#net-core-30)

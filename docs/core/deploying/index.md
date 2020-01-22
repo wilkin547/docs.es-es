@@ -27,7 +27,7 @@ En una implementación dependiente del marco de trabajo, solo se implementa la a
 
 La implementación de FDD tienen varias ventajas:
 
-- No es necesario definir por adelantado los sistemas operativos de destino en los que se ejecutará la aplicación .NET Core. Como .NET Core usa un formato de archivo PE común para archivos ejecutables y bibliotecas independientemente del sistema operativo, .NET Core puede ejecutar la aplicación con independencia del sistema operativo subyacente. Para más información sobre el formato de archivo PE, consulte [.NET Assembly File Format](../../standard/assembly/file-format.md) (Formato de archivo de ensamblado .NET).
+- No es necesario definir por adelantado los sistemas operativos de destino en los que se ejecutará la aplicación .NET Core. Como .NET Core usa un formato de archivo PE común para archivos ejecutables y bibliotecas independientemente del sistema operativo, .NET Core puede ejecutar la aplicación con independencia del sistema operativo subyacente. Para más información sobre el formato de archivo PE, consulte [Formato de archivo de ensamblado .NET](../../standard/assembly/file-format.md).
 
 - El tamaño de su paquete de implementación es pequeño. Solo tendrá que implementar la aplicación y sus dependencias, .NET Core propiamente dicho.
 
@@ -91,7 +91,7 @@ Hay también algunas desventajas:
 
 ## <a name="step-by-step-examples"></a>Ejemplos paso a paso
 
-Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Implementación de aplicaciones de .NET Core con herramientas de la CLI). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Implementación de aplicaciones de .NET Core con Visual Studio). 
+Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Publicación de aplicaciones .NET Core con la CLI](deploy-with-cli.md). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Implementación de aplicaciones de .NET Core con Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Vea también
 

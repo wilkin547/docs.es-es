@@ -42,7 +42,7 @@ Cada tipo de entero admite un conjunto de operadores aritméticos estándar. La 
 También puede trabajar con los bits individuales de un valor entero usando la clase <xref:System.BitConverter?displayProperty=nameWithType>.  
 
 > [!NOTE]  
-> Los tipos enteros sin signo no son conformes a CLS. Para obtener más información, consulta [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md).
+> Los tipos enteros sin signo no son conformes a CLS. Para obtener más información, consulte [Independencia del lenguaje y componentes independientes del lenguaje](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -96,4 +96,4 @@ Los tipos habilitados para SIMD se implementan de tal forma que se pueden utiliz
 ## <a name="see-also"></a>Vea también
 
 - [Elementos esenciales de aplicaciones](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [Cadenas con formato numérico estándar](base-types/standard-numeric-format-strings.md)

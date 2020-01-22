@@ -39,4 +39,4 @@ Las combinaciones agrupadas resultan ideales para crear XML con LINQ to XML. El 
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Realizar combinaciones internas](perform-inner-joins.md)
 - [Realizar operaciones de combinación externa izquierda](perform-left-outer-joins.md)
-- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])
+- [Tipos anónimos (Guía de programación de C#)](../programming-guide/classes-and-structs/anonymous-types.md).

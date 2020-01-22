@@ -390,7 +390,7 @@ En forma de diagrama:
 
 ![Diagrama de PLINQ](./media/using-linq/plinq-diagram.png)
 
-Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente con LINQ (es decir, que son funciones puras y no tienen efectos secundarios) son un candidato excelente para PLINQ. Para tareas que _sí_ tienen efectos secundarios, considere el uso de [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).
+Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente con LINQ (es decir, que son funciones puras y no tienen efectos secundarios) son un candidato excelente para PLINQ. Para tareas que _sí_ tienen efectos secundarios, considere el uso de [la Biblioteca TLP](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Recursos adicionales:
 

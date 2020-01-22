@@ -54,7 +54,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
   
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
+ [Información general sobre las primitivas de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  Se describen las clases administradas utilizadas para sincronizar las actividades de varios subprocesos.  
   
  [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md)  

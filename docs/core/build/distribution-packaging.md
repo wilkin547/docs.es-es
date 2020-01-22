@@ -67,19 +67,19 @@ Cuando se instala, .NET Core consta de varios componentes que están dispuestos
 
 Aunque hay un único host, la mayoría del resto de componentes está en directorios con versión (2,3,5,6). Esto significa que puede haber varias versiones en el sistema ya que se instalan en paralelo.
 
-- (2) **host/fxr/\<versión de fxr>** : contiene la lógica de resolución del marco que usa el host. El host usa la versión más reciente de hostfxr que está instalada. Hostfxr es responsable de seleccionar el entorno de ejecución adecuado cuando se ejecuta una aplicación de .NET Core. Por ejemplo, una aplicación compilada para .NET Core 2.0.0 utiliza el runtime de 2.0.5 cuando esté disponible. De forma similar, hostfxr selecciona el SDK adecuado durante el desarrollo.
+- (2) **host/fxr/\<versión de fxr>**: contiene la lógica de resolución del marco que usa el host. El host usa la versión más reciente de hostfxr que está instalada. Hostfxr es responsable de seleccionar el entorno de ejecución adecuado cuando se ejecuta una aplicación de .NET Core. Por ejemplo, una aplicación compilada para .NET Core 2.0.0 utiliza el runtime de 2.0.5 cuando esté disponible. De forma similar, hostfxr selecciona el SDK adecuado durante el desarrollo.
 
-- (3) **sdk/\<versión sdk>** : el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
+- (3) **sdk/\<versión sdk>**: el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
 
 - (4) **sdk/NuGetFallbackFolder**: contiene una caché de paquetes NuGet que un SDK usa durante la operación de restauración, como cuando se ejecuta `dotnet restore` o `dotnet build`. Esta carpeta solo se usa antes de .NET Core 3.0. No se puede compilar desde el origen, porque contiene recursos binarios compilados previamente desde `nuget.org`.
 
 La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjunto de bibliotecas en una ubicación central para que las puedan usar diferentes aplicaciones.
 
-- (5) **shared/Microsoft.NETCore.App/\<versión del entorno de ejecución>** : este marco contiene el entorno de ejecución de .NET Core y compatibilidad con las bibliotecas administradas.
+- (5) **shared/Microsoft.NETCore.App/\<versión del entorno de ejecución>**: este marco contiene el entorno de ejecución de .NET Core y compatibilidad con las bibliotecas administradas.
 
-- (6) **shared/Microsoft.AspNetCore.{App,All}/\<versión de aspnetcore>** : contiene las bibliotecas de ASP.NET Core. Las bibliotecas de `Microsoft.AspNetCore.App` se desarrollan y se admiten como parte del proyecto de .NET Core. Las bibliotecas de `Microsoft.AspNetCore.All` son un superconjunto que también contiene bibliotecas de terceros.
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<versión de aspnetcore>**: contiene las bibliotecas de ASP.NET Core. Las bibliotecas de `Microsoft.AspNetCore.App` se desarrollan y se admiten como parte del proyecto de .NET Core. Las bibliotecas de `Microsoft.AspNetCore.All` son un superconjunto que también contiene bibliotecas de terceros.
 
-- (7) **shared/Microsoft.Desktop.App/\<versión de aplicación de escritorio>** : contiene las bibliotecas de escritorio de Windows. Esto no se incluye en plataformas que no son de Windows.
+- (7) **shared/Microsoft.Desktop.App/\<versión de aplicación de escritorio>**: contiene las bibliotecas de escritorio de Windows. Esto no se incluye en plataformas que no son de Windows.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**: son las licencias .NET Core y de bibliotecas de terceros que se usan en .NET Core.
 
@@ -87,7 +87,7 @@ La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjun
 
 - (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref**: describe la API de una versión `x.y` de .NET Core y de ASP.NET Core respectivamente. Estos paquetes se utilizan al compilar para esas versiones de destino.
 
-- (13) **Microsoft.NETCore.App.Host.\<rid>** : contiene un binario nativo para la plataforma `rid`. Este binario es una plantilla cuando se compila una aplicación de .NET Core en un archivo binario nativo para esa plataforma.
+- (13) **Microsoft.NETCore.App.Host.\<rid>**: contiene un binario nativo para la plataforma `rid`. Este binario es una plantilla cuando se compila una aplicación de .NET Core en un archivo binario nativo para esa plataforma.
 
 - (14) **Microsoft.WindowsDesktop.App.Ref**: describe la API de la versión `x.y` de las aplicaciones de escritorio de Windows. Estos archivos se usan al compilar para ese destino. Esto no se proporciona en plataformas que no son de Windows.
 
@@ -103,7 +103,7 @@ Varios paquetes usan las carpetas marcadas con `(*)`. Algunos formatos de paquet
 
 El control de versiones de .NET Core se basa en los números de versión `[major].[minor]` del componente del entorno de ejecución.
 La versión del SDK usa el mismo valor `[major].[minor]` y tiene un valor `[patch]` independiente que combina la semántica de la característica y la revisión del SDK.
-Por ejemplo: la versión 2.2.302 del SDK es la segunda versión de revisión de la tercera versión de características del SDK que admite el runtime 2.2. Para obtener más información sobre el funcionamiento del control de versiones, vea [.NET Core versioning overview](../versions/index.md) (Introducción al control de versiones de .NET Core).
+Por ejemplo: la versión 2.2.302 del SDK es la segunda versión de revisión de la tercera versión de características del SDK que admite el runtime 2.2. Para obtener más información sobre el funcionamiento del control de versiones, vea [Introducción a la creación de versiones de .NET Core](../versions/index.md).
 
 Algunos de los paquetes incluyen parte del número de versión en su nombre. Esto permite instalar una versión concreta.
 No se incluye el resto de la versión en el nombre de la versión. Esto permite al administrador de paquetes del sistema operativo actualizar los paquetes (por ejemplo, instalar automáticamente correcciones de seguridad). Los administradores de paquetes compatibles son específicos de Linux.
@@ -122,7 +122,7 @@ A continuación se enumeran los paquetes recomendados:
   - **Contiene:** (6)
   - **Dependencias:** `dotnet-runtime-[major].[minor]`
 
-- `dotnet-runtime-deps-[major].[minor]` _(Opcional)_ : instala las dependencias para ejecutar aplicaciones independientes.
+- `dotnet-runtime-deps-[major].[minor]` _(Opcional)_: instala las dependencias para ejecutar aplicaciones independientes.
   - **Versión:** \<versión de runtime>
   - **Ejemplo:** dotnet-runtime-deps-2.1
   - **Dependencias:** _dependencias específicas de la distribución_

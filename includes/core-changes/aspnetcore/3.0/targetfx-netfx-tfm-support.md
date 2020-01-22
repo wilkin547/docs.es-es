@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393999"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937274"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Plataforma de destino: se ha quitado la compatibilidad con .NET Framework
 
@@ -20,7 +20,7 @@ Para más información sobre cómo migrar de .NET Framework a .NET Core, vea [Po
 
 Los paquetes `Microsoft.Extensions` (como el registro, la inserción de dependencias y la configuración) y Entity Framework Core no se ven afectados. Seguirán admitiendo .NET Standard.
 
-Para más información sobre la motivación de este cambio, vea [la entrada de blog original](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Para más información sobre la motivación de este cambio, vea [la entrada de blog original](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="version-introduced"></a>Versión introducida
 

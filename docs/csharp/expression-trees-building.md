@@ -13,7 +13,7 @@ ms.locfileid: "73037092"
 ---
 # <a name="building-expression-trees"></a>Crear árboles de expresión
 
-[Previous -- Interpreting Expressions](expression-trees-interpreting.md) (Anterior: Interpretación de expresiones)
+[Anterior: Interpretación de expresiones](expression-trees-interpreting.md)
 
 Hasta ahora, todos los árboles de expresión que ha visto se han creado con el compilador de C#. Todo lo que tenía que hacer era crear una expresión lambda que se asignaba a una variable de tipo `Expression<Func<T>>` o de algún tipo similar. Esa no es la única manera de crear un árbol de expresión. En muchos escenarios, puede que necesite crear una expresión en memoria en tiempo de ejecución. 
 
@@ -172,4 +172,4 @@ Las API del árbol de expresión son algunas de las más difíciles para navegar
 
 Además, en este momento, existen expresiones de C# que no pueden crearse directamente con métodos de clase `Expression`. En general, estos serán las expresiones y los operadores más recientes que se han agregado a C# 5 y C# 6. (Por ejemplo, las expresiones `async` no pueden crearse y el operador `?.` nuevo no puede crearse directamente).
 
-[Next -- Translating Expressions](expression-trees-translating.md) (Siguiente: Traducción de expresiones)
+[Siguiente: Traducción de árboles de expresión](expression-trees-translating.md)

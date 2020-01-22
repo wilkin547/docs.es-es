@@ -92,5 +92,5 @@ Hay varios escenarios en los que es adecuado crear y administrar sus propios sub
 - [Cómo: Devolver un valor a partir de una tarea](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [Objetos y características de subprocesos](threading-objects-and-features.md)
 - [Subprocesos y subprocesamiento](threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [E/S de archivos asincrónica](../io/asynchronous-file-i-o.md)
 - [Timers](timers.md) (Temporizadores)

@@ -37,7 +37,7 @@ Si el programa realiza operaciones que pueden realizarse en paralelo, puede redu
 
 ## <a name="how-to-use-multithreading-in-net"></a>Cómo usar el multithreading en .NET
 
-A partir de .NET Framework 4, el método recomendado para utilizar el multithreading es usar las bibliotecas [TPL](../parallel-programming/task-parallel-library-tpl.md) y [PLINQ](../parallel-programming/parallel-linq-plinq.md). Para obtener más información, vea [Parallel Programming](../parallel-programming/index.md) (Programación en paralelo).
+A partir de .NET Framework 4, el método recomendado para utilizar el multithreading es usar las bibliotecas [TPL](../parallel-programming/task-parallel-library-tpl.md) y [PLINQ](../parallel-programming/parallel-linq-plinq.md). Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md).
 
 Las bibliotecas TPL y PLINQ se basan en los subprocesos de <xref:System.Threading.ThreadPool>. La clase <xref:System.Threading.ThreadPool?displayProperty=nameWithType> proporciona una aplicación .NET con un grupo de subprocesos de trabajo. También puede usar grupos de subprocesos. Para obtener más información, vea [Grupo de subprocesos administrado](the-managed-thread-pool.md).
 

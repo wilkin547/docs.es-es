@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 265fc5bea97bf85bcb9cc8111f915e14297d9957
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3f0e8fb4d0d727b40cff5de7cfdc7529bf32dac4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643878"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937042"
 ---
-### <a name="switchsystemwindowsformsdonotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl
+### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad DoNotLoadLatestRichEditControl
 
 El modificador de compatibilidad `Switch.System.Windows.Forms.UseLegacyImages`, que se introdujo en .NET Framework 4.7.1, no se admite en Windows Forms en .NET Core 3.0.
 

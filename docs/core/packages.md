@@ -3,14 +3,14 @@ title: 'Paquetes, metapaquetes y marcos de trabajo: .NET Core'
 description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de trabajo.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715507"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116069"
 ---
-# <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
+# <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos
 
 .NET Core es una plataforma conformada por paquetes NuGet. Algunas experiencias del producto se benefician de la definición específica de los paquetes, mientras que otras lo hacen de la definición general de las mismas. Para dar cabida a esta dualidad, el producto se distribuye como un conjunto específico de paquetes y en fragmentos más generales con un tipo de paquete que recibe informalmente el nombre de [metapaquete](#metapackages).
 
@@ -18,7 +18,7 @@ Cada uno de los paquetes de .NET Core admite su ejecución en varias implementac
 
 ## <a name="packages"></a>Paquetes
 
-.NET Core se divide en un conjunto de paquetes, que proporcionan primitivas, tipos de datos de nivel superior, tipos de composición de aplicaciones y utilidades comunes. Cada uno de estos paquetes representa un solo ensamblado con el mismo nombre. Por ejemplo, [System.Runtime](https://www.nuget.org/packages/System.Runtime) contiene System.Runtime.dll. 
+.NET Core se divide en un conjunto de paquetes que proporcionan primitivas, tipos de datos de nivel superior, tipos de composición de aplicaciones y utilidades comunes. Cada uno de estos paquetes representa un solo ensamblado del mismo nombre. Por ejemplo, el [paquete System.Runtime](https://www.nuget.org/packages/System.Runtime) contiene System.Runtime.dll. 
 
 Hay ventajas si los paquetes se definen de manera específica:
 
@@ -108,7 +108,7 @@ Los dos principales marcos de trabajo basados en paquete que se usan con .NET Co
 
 ### <a name="net-standard"></a>.NET Standard
 
-El marco .NET Standard ([moniker de la plataforma de destino](../standard/frameworks.md): `netstandard`) representa las API definidas por [.NET Standard](../standard/net-standard.md) y que se basan en esta especificación. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admitirán en cualquier entorno de ejecución compatible con el estándar .NET, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan.
+El marco .NET Standard ([moniker de la plataforma de destino](../standard/frameworks.md): `netstandard`) representa las API definidas por [.NET Standard](../standard/net-standard.md) y que se basan en esta especificación. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admiten en cualquier runtime compatible con .NET Standard, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan.
 
 El marco `netstandard` hace referencia implícitamente al metapaquete [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Por ejemplo, el siguiente archivo del proyecto de MSBuild indica que el proyecto tiene como destino `netstandard1.6`, que hace referencia al metapaquete de la [versión 1.6 de `NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 

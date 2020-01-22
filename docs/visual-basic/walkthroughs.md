@@ -73,7 +73,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
 - [Manipular archivos y directorios en Visual Basic](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo usar funciones de Visual Basic para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.
 
-- [Manipulating Files Using .NET Framework Methods](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md) (Manipular archivos usando métodos de .NET Framework)  
+- [Manipular archivos utilizando métodos de .NET Framework](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Muestra cómo usar métodos de .NET Framework para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.
 
 - [Conservar un objeto en Visual Basic](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  

@@ -56,7 +56,7 @@ El modificador `abstract` indica que lo que se modifica carece de implementació
   
 - Una propiedad abstracta heredada se puede invalidar en una clase derivada incluyendo una declaración de propiedad que use el modificador [override](./override.md).  
   
- Para obtener más información sobre las clases abstractas, vea [Abstract and Sealed Classes and Class Members](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md) (Clases y miembros de clase abstractos y sellados [Guía de programación de C#]).  
+ Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados (Guía de programación de C#)](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
  Una clase abstracta debe proporcionar implementación para todos los miembros de interfaz.  
   

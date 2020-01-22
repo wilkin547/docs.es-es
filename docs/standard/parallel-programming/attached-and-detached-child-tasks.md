@@ -59,7 +59,7 @@ Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Thread
  La cancelación de tareas es cooperativa. Es decir, para que se pueda cancelar, cada tarea secundaria asociada o desasociada debe supervisar el estado del token de cancelación. Si desea cancelar un elemento primario y todos sus elementos secundarios utilizando una solicitud de cancelación, debe pasar el mismo token como argumento a todas las tareas y proporcionar en cada tarea la lógica de respuesta a la solicitud en cada tarea. Para más información, vea [Cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md) y [Cómo: Cancelar una tarea y sus elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Cuando la tarea primaria se cancela  
- Si una tarea primaria se cancela antes de que se inicie su tarea secundaria, la tarea secundaria nunca se inicia. Si una tarea primaria se cancela después de que se ha iniciado su tarea secundaria, la tarea secundaria se ejecutará hasta completarse a menos que tenga su propia lógica de cancelación. Para más información, vea [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Si una tarea primaria se cancela antes de que se inicie su tarea secundaria, la tarea secundaria nunca se inicia. Si una tarea primaria se cancela después de que se ha iniciado su tarea secundaria, la tarea secundaria se ejecutará hasta completarse a menos que tenga su propia lógica de cancelación. Para más información, vea [Cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ### <a name="when-a-detached-child-task-cancels"></a>Cuando una tarea secundaria desasociada se cancela  
  Si una tarea secundaria desasociada se cancela usando el mismo token que se pasó a la tarea primaria, y la tarea primaria no espera a la tarea secundaria, no se propagará ninguna excepción puesto que la excepción se trata cono una cancelación de cooperación benigna. Este comportamiento es igual que el de cualquier tarea de nivel superior.  
@@ -79,4 +79,4 @@ Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Thread
 ## <a name="see-also"></a>Vea también
 
 - [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Paralelismo de datos](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

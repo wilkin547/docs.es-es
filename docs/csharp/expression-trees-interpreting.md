@@ -13,7 +13,7 @@ ms.locfileid: "73036907"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
-[Previous -- Executing Expressions](expression-trees-execution.md) (Anterior: Ejecución de expresiones)
+[Anterior: Ejecución de expresiones](expression-trees-execution.md)
 
 Ahora, vamos a escribir código para examinar la estructura de un *árbol de expresión*. Cada nodo de un árbol de expresión será un objeto de una clase derivada de `Expression`.
 
@@ -521,4 +521,4 @@ Por último, la biblioteca que he usado en este artículo se ha creado con fines
 
 Incluso con esas limitaciones, se encuentra en el camino correcto para escribir algoritmos que lean y comprendan árboles de expresión.
 
-[Next -- Building Expressions](expression-trees-building.md) (Siguiente: Creación de expresiones)
+[Siguiente: Crear árboles de expresión](expression-trees-building.md)

@@ -114,7 +114,7 @@ En la programación asincrónica, es habitual que una operación asincrónica, a
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- El estado final de la tarea antecedente depende del estado final de las tareas secundarias asociadas. El estado de las tareas secundarias desasociadas no afecta al elemento primario. Para más información, consulte [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas).  
+ El estado final de la tarea antecedente depende del estado final de las tareas secundarias asociadas. El estado de las tareas secundarias desasociadas no afecta al elemento primario. Para más información, consulte [Tareas secundarias asociadas y desasociadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="associating-state-with-continuations"></a>Asociación de estado con continuaciones  
  Un estado arbitrario se puede asociar con una continuación de tarea. El método <xref:System.Threading.Tasks.Task.ContinueWith%2A> proporciona versiones sobrecargadas, y cada una de ellas toma un valor <xref:System.Object> que representa el estado de la continuación. Más adelante se puede tener acceso a este objeto de estado mediante la propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> . Si no se proporciona un valor, este objeto de estado es `null` .  
@@ -148,7 +148,7 @@ En la programación asincrónica, es habitual que una operación asincrónica, a
   
      Para más información, consulte [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
-- Si la continuación es una tarea secundaria asociada que se creó mediante la opción <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> , sus excepciones serán propagadas por el elemento primario hacia el subproceso de llamada, como sucede con cualquier otro elemento secundario asociado. Para más información, consulte [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas).  
+- Si la continuación es una tarea secundaria asociada que se creó mediante la opción <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> , sus excepciones serán propagadas por el elemento primario hacia el subproceso de llamada, como sucede con cualquier otro elemento secundario asociado. Para más información, consulte [Tareas secundarias asociadas y desasociadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="see-also"></a>Vea también
 

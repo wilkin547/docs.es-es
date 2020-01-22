@@ -33,7 +33,7 @@ Se puede proporcionar un valor inicial a un campo mediante el operador de asigna
 
 [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]
 
-Los campos se inicializan inmediatamente antes de que se llame al constructor para la instancia del objeto. Si el constructor asigna el valor de un campo, sobrescribirá cualquier valor dado durante la declaración del campo. Para obtener más información, vea [Using Constructors](./using-constructors.md) (Uso de constructores).
+Los campos se inicializan inmediatamente antes de que se llame al constructor para la instancia del objeto. Si el constructor asigna el valor de un campo, sobrescribirá cualquier valor dado durante la declaración del campo. Para obtener más información, vea [Utilizar constructores](./using-constructors.md).
 
 > [!NOTE]
 > Un inicializador de campo no puede hacer referencia a otros campos de instancia.

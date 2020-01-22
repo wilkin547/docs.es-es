@@ -41,7 +41,7 @@ Los datos contenidos en la secuencia pueden proceder de la memoria, de un archiv
 
 - **Búsqueda**. Puede consultar y modificar su posición en la secuencia.
 
-Para obtener más información, consulta [Composing Streams](../../../../standard/io/composing-streams.md).
+Para obtener más información, consulta [Redactar flujos](../../../../standard/io/composing-streams.md).
 
 ## <a name="types-of-streams"></a>Tipos de secuencias
 
@@ -110,5 +110,5 @@ El componente <xref:System.IO.FileSystemWatcher> permite ver los cambios en los 
 
 - [Crear secuencias](../../../../standard/io/composing-streams.md)
 - [E/S de archivos y secuencias](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [E/S de archivos asincrónica](../../../../standard/io/asynchronous-file-i-o.md)
 - [Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

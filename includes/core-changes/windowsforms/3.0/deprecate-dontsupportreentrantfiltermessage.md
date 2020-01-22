@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: cb72e1b92172b8989ce99b47181c13561a7ccd76
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643896"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937051"
 ---
-### <a name="switchsystemwindowsformsdontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad Switch.System.Windows.Forms.DontSupportReentrantFilterMessage
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad DontSupportReentrantFilterMessage
 
 El modificador de compatibilidad `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage`, que se introdujo en .NET Framework 4.6.1, no se admite en Windows Forms en .NET Core 3.0.
 

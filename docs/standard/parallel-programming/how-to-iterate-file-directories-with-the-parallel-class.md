@@ -24,7 +24,7 @@ En muchos casos, la iteración de archivo es una operación que se puede paralel
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- En este ejemplo, la E/S de archivo se realiza de forma sincrónica. Al trabajar con archivos grandes o conexiones de red lentas, puede ser preferible obtener acceso a los archivos de forma asincrónica. Puede combinar las técnicas de E/S asincrónica con la iteración paralela. Para más información, consulte [TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) (TPL y la programación asincrónica tradicional de .NET).  
+ En este ejemplo, la E/S de archivo se realiza de forma sincrónica. Al trabajar con archivos grandes o conexiones de red lentas, puede ser preferible obtener acceso a los archivos de forma asincrónica. Puede combinar las técnicas de E/S asincrónica con la iteración paralela. Para más información, consulte [TPL y la programación asincrónica tradicional de .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md).  
   
  El ejemplo utiliza la variable local `fileCount` para mantener un número total de archivos procesados. Dado que varias tareas podrían tener acceso simultáneamente a la variable, el acceso a la misma se sincroniza llamando al método <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.  
   

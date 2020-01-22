@@ -64,7 +64,7 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
 - Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.  
   
- En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md) (Instrucciones de diseño de excepciones).  
+ En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Instrucciones de diseño de excepciones](../../../docs/standard/design-guidelines/exceptions.md).  
   
 ### <a name="application-compatibility-flag"></a>Marca de compatibilidad de aplicaciones  
  Como medida temporal de compatibilidad, los administradores pueden colocar una marca de compatibilidad en la sección `<runtime>` del archivo de configuración de la aplicación. De ese modo, Common Language Runtime revierte al comportamiento de las versiones 1.0 y 1.1.  

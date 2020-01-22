@@ -14,7 +14,7 @@ ms.locfileid: "75964730"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Constructores de instancias (Guía de programación de C#)
 
-Los constructores de instancias se usan para crear e inicializar las variables miembro de instancia cuando se usa la expresión [new](../../language-reference/operators/new-operator.md) para crear un objeto de una [clase](../../language-reference/keywords/class.md). Para inicializar una clase [estática](../../language-reference/keywords/static.md), o variables estáticas en una clase no estática, se define un constructor estático. Para obtener más información, vea [Static Constructors](./static-constructors.md) (Constructores estáticos [Guía de programación de C#]).  
+Los constructores de instancias se usan para crear e inicializar las variables miembro de instancia cuando se usa la expresión [new](../../language-reference/operators/new-operator.md) para crear un objeto de una [clase](../../language-reference/keywords/class.md). Para inicializar una clase [estática](../../language-reference/keywords/static.md), o variables estáticas en una clase no estática, se define un constructor estático. Para obtener más información, vea [Constructores estáticos (Guía de programación de C#)](./static-constructors.md).  
   
  En el siguiente ejemplo se muestra un constructor de instancias:  
   

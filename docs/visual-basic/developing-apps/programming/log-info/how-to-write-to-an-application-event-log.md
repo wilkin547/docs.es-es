@@ -20,7 +20,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para escribir informació
 
 No se puede escribir en el registro de seguridad. Para poder escribir en el registro del sistema, debe ser miembro de la cuenta LocalSystem o Administrador.
 
-Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [Eventos de ETW en .NET Framework](../../../../framework/performance/etw-events.md).
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>Para agregar y configurar el agente de escucha de registro de eventos
 

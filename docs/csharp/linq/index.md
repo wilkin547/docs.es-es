@@ -26,7 +26,7 @@ En el ejemplo siguiente se muestra la operación de consulta completa. La operac
 
 - Las expresiones de consulta son fáciles de controlar porque utilizan muchas construcciones de lenguaje C# familiares.
 
-- Todas las variables de una expresión de consulta están fuertemente tipadas, aunque en muchos casos no es necesario proporcionar el tipo explícitamente porque el compilador puede deducirlo. Para más información, vea [Type Relationships in LINQ Query Operations](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md) (Relaciones entre tipos en las operaciones de consulta LINQ).
+- Todas las variables de una expresión de consulta están fuertemente tipadas, aunque en muchos casos no es necesario proporcionar el tipo explícitamente porque el compilador puede deducirlo. Para más información, vea [Relaciones entre tipos en las operaciones de consulta LINQ](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
 
 - Una consulta no se ejecuta hasta que no se realiza la iteración a través de la variable de consulta, por ejemplo, en una instrucción `foreach`. Para más información, vea [Introduction to LINQ queries](../programming-guide/concepts/linq/introduction-to-linq-queries.md) (Introducción a las consultas LINQ).
 
@@ -34,9 +34,9 @@ En el ejemplo siguiente se muestra la operación de consulta completa. La operac
 
 - Como regla al escribir consultas LINQ, se recomienda utilizar la sintaxis de consulta siempre que sea posible y la sintaxis de método cuando sea necesario. No hay diferencias semánticas ni de rendimiento entre estas dos formas diversas. Las expresiones de consulta suelen ser más legibles que las expresiones equivalentes escritas con la sintaxis de método.
 
-- Algunas operaciones de consulta, como <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, no tienen ninguna cláusula de expresión de consulta equivalente, de modo que deben expresarse como una llamada de método. La sintaxis de método se puede combinar con la sintaxis de consulta de varias maneras. Para más información, vea [Query syntax and method syntax in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).
+- Algunas operaciones de consulta, como <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, no tienen ninguna cláusula de expresión de consulta equivalente, de modo que deben expresarse como una llamada de método. La sintaxis de método se puede combinar con la sintaxis de consulta de varias maneras. Para más información, vea [Sintaxis de consultas y sintaxis de métodos en LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).
 
-- Las expresiones de consulta pueden compilarse en árboles de expresión o en delegados, en función del tipo al que se aplica la consulta. Las consultas <xref:System.Collections.Generic.IEnumerable%601> se compilan en delegados. Las consultas <xref:System.Linq.IQueryable> y <xref:System.Linq.IQueryable%601> se compilan en árboles de expresión. Para más información, vea [Expression trees](../expression-trees.md) (Árboles de expresión).
+- Las expresiones de consulta pueden compilarse en árboles de expresión o en delegados, en función del tipo al que se aplica la consulta. Las consultas <xref:System.Collections.Generic.IEnumerable%601> se compilan en delegados. Las consultas <xref:System.Linq.IQueryable> y <xref:System.Linq.IQueryable%601> se compilan en árboles de expresión. Para más información, vea [Árboles de expresión](../expression-trees.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -50,4 +50,4 @@ Para obtener más información sobre LINQ, empiece a familiarizarse con algunos 
 
 Para comprender mejor los aspectos generales de LINQ, vea [LINQ in C#](linq-in-csharp.md) (LINQ en C#).
 
-Para empezar a trabajar con LINQ en C#, vea el tutorial [Working with LINQ](../tutorials/working-with-linq.md) (Trabajar con LINQ).
+Para empezar a trabajar con LINQ en C#, vea el tutorial [Trabajar con LINQ](../tutorials/working-with-linq.md).
