@@ -49,7 +49,7 @@ Para resolver los problemas subyacentes y proporcionarle una mejor experiencia (
 
 - En aplicaciones .NET Framework 3.5 (y versiones anteriores): Configure la aplicación para que admita .NET Framework 4 o versiones posteriores (vea las [instrucciones](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).
 
-- En aplicaciones .NET Framework 4: Instale el paquete redistribuible de .NET Framework 4 como parte de la instalación de la aplicación. Vea [Deployment Guide for Developers](deployment-guide-for-developers.md) (Guía de implementación para desarrolladores).
+- En aplicaciones .NET Framework 4: Instale el paquete redistribuible de .NET Framework 4 como parte de la instalación de la aplicación. Vea [Guía de implementación para desarrolladores](deployment-guide-for-developers.md).
 
 ## <a name="controlling-the-error-message"></a>Control del mensaje de error
 
@@ -78,7 +78,7 @@ CLR incluye un conjunto de hosts para diversos escenarios, y todos ellos muestra
 
 ## <a name="windows-8-behavior-and-ui"></a>Comportamiento e interfaz de usuario de Windows 8
 
-El sistema de activación de CLR proporciona el mismo comportamiento e interfaz de usuario en Windows 8 que en otras versiones del sistema operativo Windows, excepto cuando tiene problemas el cargar CLR 2.0. Windows 8 incluye .NET Framework 4.5, que usa CLR 4.5. Sin embargo, Windows 8 no incluye .NET Framework 2.0, 3.0 ni 3.5, los cuales utilizan CLR 2.0. Como resultado, las aplicaciones que dependen de CLR 2.0 no se ejecutan en Windows 8 de forma predeterminada. En su lugar, muestran el siguiente cuadro de diálogo que permite a los usuarios instalar .NET Framework 3.5. Los usuarios también pueden habilitar .NET Framework 3.5 en el Panel de control. Ambas opciones se describen en el artículo [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../install/dotnet-35-windows-10.md) (Instalar .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8).
+El sistema de activación de CLR proporciona el mismo comportamiento e interfaz de usuario en Windows 8 que en otras versiones del sistema operativo Windows, excepto cuando tiene problemas el cargar CLR 2.0. Windows 8 incluye .NET Framework 4.5, que usa CLR 4.5. Sin embargo, Windows 8 no incluye .NET Framework 2.0, 3.0 ni 3.5, los cuales utilizan CLR 2.0. Como resultado, las aplicaciones que dependen de CLR 2.0 no se ejecutan en Windows 8 de forma predeterminada. En su lugar, muestran el siguiente cuadro de diálogo que permite a los usuarios instalar .NET Framework 3.5. Los usuarios también pueden habilitar .NET Framework 3.5 en el Panel de control. Ambas opciones se describen en el artículo [Instalación de .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8](../install/dotnet-35-windows-10.md).
 
 ![Cuadro de diálogo para instalar 3.5 en Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Símbolo del sistema para instalar .NET Framework 3.5 a petición")
 

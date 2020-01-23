@@ -20,7 +20,7 @@ ms.locfileid: "71048891"
 # <a name="best-practices-for-systemnet-classes"></a>Procedimientos recomendados para las clases System.Net
 Las siguientes recomendaciones le ayudarán a usar las clases incluidas en <xref:System.Net> para su beneficio:  
   
-- Para más información sobre los procedimientos recomendados sobre la Seguridad de la capa de transporte (TLS), vea [Transport Layer Security (TLS) best practices with .NET Framework](tls.md) (Procedimientos recomendados sobre la Seguridad de la capa de transporte (TLS) con .NET Framework).
+- Para más información sobre los procedimientos recomendados sobre la Seguridad de la capa de transporte (TLS), vea [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](tls.md).
 
 - Use <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> siempre que sea posible en lugar de la conversión de tipos en clases descendientes. Las aplicaciones que usan **WebRequest** y **WebResponse** pueden aprovechar los nuevos protocolos de Internet sin necesidad de grandes cambios de código.  
   

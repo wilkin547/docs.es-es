@@ -60,7 +60,7 @@ Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core]
 
 * [Aplicación de consola](console-teleprompter.md): muestra la E/S de consola, la estructura de una aplicación de consola y los aspectos básicos del modelo de programación asincrónica basado en tareas.
 * [Cliente de REST](console-webapiclient.md): muestra las comunicaciones web, la serialización de JSON y las características orientadas a objetos del lenguaje C#.
-* [Inheritance in C# and .NET](inheritance.md) (Herencia en C# y .NET): muestra la herencia en C#, incluido el uso de la herencia para definir clases base, clases base abstractas y clases derivadas.
-* [Working with LINQ](working-with-linq.md) (Trabajar con LINQ): muestra muchas de las características de LINQ y los elementos del lenguaje compatibles.
+* [Herencia en C# y .NET](inheritance.md): muestra la herencia en C#, incluido el uso de la herencia para definir clases base, clases base abstractas y clases derivadas.
+* [Trabajar con LINQ](working-with-linq.md): muestra muchas de las características de LINQ y los elementos del lenguaje compatibles.
 * [Uso de atributos](attributes.md): muestra cómo crear y usar atributos en C#.
 * En el tutorial [Interpolación de cadenas](exploration/interpolated-strings.yml) se muestra cómo insertar valores en una cadena. Aprenderá a crear una cadena interpolada con expresiones C# insertadas y a controlar la apariencia del texto de los resultados de expresión en la cadena de resultado. Este tutorial también está disponible [para ejecutarse localmente en su máquina](exploration/interpolated-strings-local.md).

@@ -32,7 +32,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  [Crear y usar objetos dinámicos (C# y Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  Muestra cómo crear un objeto personalizado que expone dinámicamente el contenido de un archivo de texto y cómo crear un proyecto que utiliza la biblioteca `IronPython`.  
    
- [Authoring a Composite Control with Visual C#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md) (Crear un control compuesto con Visual C#)  
+ [Crear un control compuesto con Visual C#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Muestra cómo crear un control compuesto simple y ampliar su funcionalidad mediante la herencia.  
   
  [Crear un control de Windows Forms que aproveche las características en tiempo de diseño de Visual Studio](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
@@ -50,16 +50,16 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  [Escribir consultas en C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINK.  
   
- [Manipulating Data (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md) (Manipular datos [C#] [LINQ to SQL])  
+ [Manipular datos (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Describe un escenario [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos.  
   
- [Simple Object Model and Query (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md) (Modelo de objetos simple y consultas [C#] [LINQ to SQL])  
+ [Modelo de objetos simple y consultas (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  Muestra cómo crear una clase de entidad y una consulta simple para filtrar la clase de entidad.  
   
- [Using Only Stored Procedures (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md) (Usar solo procedimientos almacenados [C#] [LINQ to SQL])  
+ [Usar solo procedimientos almacenados (C#)  (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  Muestra cómo utilizar LINQ to SQL para acceder a datos mediante la ejecución solamente de los procedimientos almacenados.  
   
- [Querying Across Relationships (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) (Realizar consultas en varias relaciones [C#] [LINQ to SQL])  
+ [Realizar consultas en varias relaciones (C#)  (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  Muestra el uso de asociaciones [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para representar relaciones de clave externa en una base de datos.  
 
  [Escribir un visualizador en C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  

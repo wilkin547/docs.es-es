@@ -42,7 +42,7 @@ Cree un nuevo proyecto con los comandos **Archivo** > **Nuevo proyecto**. Puede 
 
 Como se muestra en las imágenes anteriores, la ventana de herramientas del visualizador muestra el árbol de sintaxis en la parte superior y una cuadrícula de propiedades en la parte inferior. La cuadrícula de propiedades muestra las propiedades del elemento que está seleccionado actualmente en el árbol, incluido el *Tipo* de .NET y la *Variante* (SyntaxKind) del elemento.
 
-Los árboles de sintaxis incluyen tres tipos de elementos: *nodos*, *tokens* y *curiosidades*. Encontrará más información sobre estos tipos en el artículo [Work with syntax](work-with-syntax.md) (Trabajar con sintaxis). Los elementos de cada tipo se representan mediante un color diferente. Haga clic en el botón “Leyenda” para saber más sobre los colores usados.
+Los árboles de sintaxis incluyen tres tipos de elementos: *nodos*, *tokens* y *curiosidades*. Encontrará más información sobre estos tipos en el artículo [Trabajar con sintaxis](work-with-syntax.md). Los elementos de cada tipo se representan mediante un color diferente. Haga clic en el botón “Leyenda” para saber más sobre los colores usados.
 
 Cada elemento del árbol también muestra su propio **intervalo**. El **intervalo** está comprendido por los índices (la posición inicial y la final) de ese nodo en el archivo de texto.  En el anterior ejemplo de C#, el token “UsingKeyword [0..5)” seleccionado tiene un **intervalo** de cinco caracteres de ancho [0..5). La notación “[.)” significa que el índice inicial forma parte del intervalo, pero el índice final no.
 

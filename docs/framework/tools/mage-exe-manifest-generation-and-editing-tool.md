@@ -16,7 +16,7 @@ ms.locfileid: "74714472"
 
 La herramienta de generación y edición de manifiestos (*Mage.exe*) es una herramienta de línea de comandos que permite crear y editar manifiestos de aplicación y de implementación. Como herramienta de línea de comandos, *Mage.exe* se puede ejecutar desde scripts por lotes y desde otras aplicaciones basadas en Windows, incluidas las aplicaciones de ASP.NET.
 
-También puede usar *MageUI.exe*, una aplicación gráfica, en lugar de *Mage.exe*. Para obtener más información, consulta [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+También puede usar *MageUI.exe*, una aplicación gráfica, en lugar de *Mage.exe*. Para obtener más información, consulte [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
 Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 

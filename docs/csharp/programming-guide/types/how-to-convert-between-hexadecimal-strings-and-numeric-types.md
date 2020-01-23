@@ -54,6 +54,6 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
   
 ## <a name="see-also"></a>Vea también
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Tipos](./index.md)
 - [Determinación de si una cadena representa un valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

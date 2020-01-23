@@ -59,7 +59,7 @@ La resolución de sobrecarga se produce en tiempo de ejecución y no en tiempo d
 
 ## <a name="dynamic-language-runtime"></a>Dynamic Language Runtime
 
-Dynamic Language Runtime (DLR) es una nueva API en .NET Framework 4. Proporciona la infraestructura que admite el tipo `dynamic` en C# y también la implementación de lenguajes de programación dinámicos como IronPython e IronRuby. Para obtener más información sobre el entorno DLR, vea [Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Información general sobre Dynamic Language Runtime).
+Dynamic Language Runtime (DLR) es una nueva API en .NET Framework 4. Proporciona la infraestructura que admite el tipo `dynamic` en C# y también la implementación de lenguajes de programación dinámicos como IronPython e IronRuby. Para obtener más información sobre el entorno DLR, vea [Información general acerca de Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
 
 ## <a name="com-interop"></a>Interoperabilidad COM
 

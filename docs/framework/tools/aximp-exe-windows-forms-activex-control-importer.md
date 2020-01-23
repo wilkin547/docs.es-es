@@ -47,7 +47,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Suprime la presentación de la portada de inicio de Microsoft.|  
 |`/out:` *nombre de archivo*|Especifica el nombre del ensamblado que se va a crear.|  
 |`/publickey:` *nombre de archivo*|Firma el control resultante con un nombre seguro mediante la clave pública que se encuentra en el archivo especificado por *filename*.|  
-|`/rcw:` *nombre de archivo*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *nombre de archivo*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Ccontenedor RCW](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime la presentación de mensajes de aprobación.|  
 |`/source`|Genera código fuente de C# para el contenedor de Windows Forms.|  
 |`/verbose`|Especifica el modo detallado; muestra información adicional del progreso.|  

@@ -26,10 +26,10 @@ Este tema y los temas secundarios relacionados describen el almacenamiento en ca
  [Directiva de caché](cache-policy.md)  
  Explica qué es una directiva de caché y cómo definirla.  
   
- [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](location-based-cache-policies.md)  
+ [Directivas de caché basadas en la ubicación](location-based-cache-policies.md)  
  Define cada tipo de directiva de caché basada en la ubicación disponible para recursos de protocolo de transferencia de hipertexto (http y https).  
   
- [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)  
+ [Directivas de caché de duración definida](time-based-cache-policies.md)  
  Describe los criterios que pueden usarse para personalizar una directiva de caché basada en el tiempo.  
   
  [Configurar el almacenamiento en caché de las aplicaciones de red](configuring-caching-in-network-applications.md)  

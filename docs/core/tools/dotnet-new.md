@@ -188,7 +188,7 @@ Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet
 
 Instala un paquete de plantillas u origen desde los parámetros `PATH` o `NUGET_ID` proporcionados. Si quiere instalar una versión preliminar de un paquete de plantilla, tendrá que especificar la versión en el formato de `<package-name>::<package-version>`. De manera predeterminada, `dotnet new` pasa \* para la versión, que representa la última versión estable del paquete. Vea un ejemplo en la sección [Ejemplos](#examples).
 
-Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
+Para obtener información sobre cómo crear plantillas personalizadas, consulte [Plantillas personalizadas para dotnet new](custom-templates.md).
 
 `-l|--list`
 
@@ -239,7 +239,7 @@ Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet
 
 Instala un paquete de plantillas u origen desde los parámetros `PATH` o `NUGET_ID` proporcionados. Si quiere instalar una versión preliminar de un paquete de plantilla, tendrá que especificar la versión en el formato de `<package-name>::<package-version>`. De manera predeterminada, `dotnet new` pasa \* para la versión, que representa la última versión estable del paquete. Vea un ejemplo en la sección [Ejemplos](#examples).
 
-Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
+Para obtener información sobre cómo crear plantillas personalizadas, consulte [Plantillas personalizadas para dotnet new](custom-templates.md).
 
 `-l|--list`
 
@@ -290,7 +290,7 @@ Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet
 
 Instala un paquete de plantillas u origen desde los parámetros `PATH` o `NUGET_ID` proporcionados. Si quiere instalar una versión preliminar de un paquete de plantilla, tendrá que especificar la versión en el formato de `<package-name>::<package-version>`. De manera predeterminada, `dotnet new` pasa \* para la versión, que representa la última versión estable del paquete. Vea un ejemplo en la sección [Ejemplos](#examples).
 
-Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
+Para obtener información sobre cómo crear plantillas personalizadas, consulte [Plantillas personalizadas para dotnet new](custom-templates.md).
 
 `-l|--list`
 
@@ -775,7 +775,7 @@ Creación de un archivo *global.json* en el directorio actual que establezca la 
 
 ## <a name="see-also"></a>Vea también
 
-- [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)
+- [Plantillas personalizadas para dotnet new](custom-templates.md)
 - [Creación de una plantilla personalizada para dotnet new](../tutorials/cli-templates-create-item-template.md)
 - [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)

@@ -17,7 +17,7 @@ ms.locfileid: "73975537"
 Cada versión de .NET Framework contiene Common Language Runtime (CLR), las bibliotecas de clases base y otras bibliotecas administradas. En este tema se describen las características principales de cada versión de .NET Framework, se proporciona información sobre las versiones de CLR subyacentes y los entornos de desarrollo asociados, y se identifican las versiones que instala el sistema operativo Windows.  
   
 > [!NOTE]
-> Para obtener información sobre cómo descargar e instalar .NET Framework, consulte [Install the .NET Framework for developers](../install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).  
+> Para obtener información sobre cómo descargar e instalar .NET Framework, consulte [Instalación de .NET Framework para desarrolladores](../install/guide-for-developers.md).  
   
 En la tabla siguiente se resume el historial de versiones de .NET Framework y relaciona cada versión con Visual Studio, Windows y Windows Server. Visual Studio proporciona compatibilidad con múltiples versiones (multi-targeting), por lo que no está limitado a la versión de .NET Framework que se muestra.  
   

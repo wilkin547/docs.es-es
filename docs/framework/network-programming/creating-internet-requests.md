@@ -25,7 +25,7 @@ Las aplicaciones crean instancias <xref:System.Net.WebRequest> con el método <x
   
  .NET Framework también proporciona las clases <xref:System.Net.FileWebRequest> y <xref:System.Net.FileWebResponse> para controlar las solicitudes de los recursos que usan el esquema de URI "file:". Igualmente, las clases <xref:System.Net.FtpWebRequest> y <xref:System.Net.FtpWebResponse> se proporcionan para controlar las solicitudes de los recursos que usan el esquema "ftp:". Si la solicitud es para un recurso que usa cualquiera de estos esquemas, puede usar el método **WebRequest.Create** para obtener un objeto con el que realizar la solicitud.  
   
- Para controlar las solicitudes que usan otros protocolos de nivel de aplicación, debe implementar las clases específicas de protocolo derivadas de **WebRequest** y **WebResponse**. Para obtener más información, vea [Programming Pluggable Protocols](programming-pluggable-protocols.md) (Programar protocolos acoplables).  
+ Para controlar las solicitudes que usan otros protocolos de nivel de aplicación, debe implementar las clases específicas de protocolo derivadas de **WebRequest** y **WebResponse**. Para obtener más información, vea [Programar protocolos acoplables](programming-pluggable-protocols.md).  
   
 ## <a name="see-also"></a>Vea también
 

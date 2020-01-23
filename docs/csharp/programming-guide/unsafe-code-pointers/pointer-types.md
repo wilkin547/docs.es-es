@@ -51,7 +51,7 @@ int* myVariable;
 
 La expresión `*myVariable` denota la variable `int` que se encuentra en la dirección contenida en `myVariable`.
 
-Hay varios ejemplos de punteros en los temas [fixed Statement](../../language-reference/keywords/fixed-statement.md) (fixed [Instrucción, Referencia de C#])y [Pointer Conversions](./pointer-conversions.md) (Conversiones de puntero [Guía de programación de C#]). En el ejemplo siguiente se usa la palabra clave `unsafe` y la instrucción `fixed` y se muestra cómo incrementar un puntero interior.  Puede pegar este código en la función Main de una aplicación de consola para ejecutarla. Estos ejemplos deben compilarse con el conjunto de opciones del compilador [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).
+Hay varios ejemplos de punteros en los temas [fixed (Instrucción)](../../language-reference/keywords/fixed-statement.md) y [Conversiones de puntero (Guía de programación de C#)](./pointer-conversions.md). En el ejemplo siguiente se usa la palabra clave `unsafe` y la instrucción `fixed` y se muestra cómo incrementar un puntero interior.  Puede pegar este código en la función Main de una aplicación de consola para ejecutarla. Estos ejemplos deben compilarse con el conjunto de opciones del compilador [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 

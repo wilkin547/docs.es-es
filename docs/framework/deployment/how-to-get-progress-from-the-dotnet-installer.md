@@ -48,7 +48,7 @@ ms.locfileid: "75716490"
 
 ## <a name="chainer-sample"></a>Ejemplo de encadenador
 
-El ejemplo de Chainer inicia de forma silenciosa el programa de instalación de .NET Framework 4.5 y realiza un seguimiento de este mientras se muestra el progreso. Este ejemplo es similar al ejemplo de encadenador proporcionado para .NET Framework 4. Sin embargo, también puede evitar reinicios del sistema procesando el cuadro de mensaje para cerrar las aplicaciones de .NET Framework 4. Para más información sobre este cuadro de mensaje, vea [Reducing System Restarts During .NET Framework 4.5 Installations](reducing-system-restarts.md) (Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5). Puede usar este ejemplo con el programa de instalación de .NET Framework 4; en ese caso, el mensaje simplemente no se envía.
+El ejemplo de Chainer inicia de forma silenciosa el programa de instalación de .NET Framework 4.5 y realiza un seguimiento de este mientras se muestra el progreso. Este ejemplo es similar al ejemplo de encadenador proporcionado para .NET Framework 4. Sin embargo, también puede evitar reinicios del sistema procesando el cuadro de mensaje para cerrar las aplicaciones de .NET Framework 4. Para más información sobre este cuadro de mensaje, vea el tema [Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](reducing-system-restarts.md). Puede usar este ejemplo con el programa de instalación de .NET Framework 4; en ese caso, el mensaje simplemente no se envía.
 
 > [!WARNING]
 > Debe ejecutar el ejemplo como administrador.
