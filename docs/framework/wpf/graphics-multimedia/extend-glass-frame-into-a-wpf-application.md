@@ -1,5 +1,6 @@
 ---
-title: Ampliar el marco de vidrio en una aplicación de WPF
+title: Extender el marco de cristal en una aplicación WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b78547aa8b414c585bb2e5c9c6680ed159731bc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636203"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746531"
 ---
-# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="7c304-102">Ampliar el marco de vidrio en una aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="7c304-102">Extend Glass Frame Into a WPF Application</span></span>
+# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="5a61c-102">Ampliar el marco de vidrio en una aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="5a61c-102">Extend Glass Frame Into a WPF Application</span></span>
 
-<span data-ttu-id="7c304-103">En este tema se muestra cómo extender el marco Glass de Windows Vista en el área cliente de una aplicación Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="7c304-103">This topic demonstrates how to extend the Windows Vista glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>
+<span data-ttu-id="5a61c-103">En este tema se muestra cómo extender el marco Glass de Windows Vista en el área cliente de una aplicación Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="5a61c-103">This topic demonstrates how to extend the Windows Vista glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7c304-104">Este ejemplo solo funcionará en un equipo con Windows Vista que ejecute el Administrador de ventanas de escritorio (DWM) con Glass habilitado.</span><span class="sxs-lookup"><span data-stu-id="7c304-104">This example will only work on a Windows Vista machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> <span data-ttu-id="7c304-105">Windows Vista Home Basic Edition no admite el efecto de cristal transparente.</span><span class="sxs-lookup"><span data-stu-id="7c304-105">Windows Vista Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="7c304-106">Las áreas que normalmente se representarían con el efecto de cristal transparente en otras ediciones de Windows Vista se representan opacas.</span><span class="sxs-lookup"><span data-stu-id="7c304-106">Areas that would typically render with the transparent glass effect on other editions of Windows Vista are rendered opaque.</span></span>
+> <span data-ttu-id="5a61c-104">Este ejemplo solo funcionará en un equipo con Windows Vista que ejecute el Administrador de ventanas de escritorio (DWM) con Glass habilitado.</span><span class="sxs-lookup"><span data-stu-id="5a61c-104">This example will only work on a Windows Vista machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> <span data-ttu-id="5a61c-105">Windows Vista Home Basic Edition no admite el efecto de cristal transparente.</span><span class="sxs-lookup"><span data-stu-id="5a61c-105">Windows Vista Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="5a61c-106">Las áreas que normalmente se representarían con el efecto de cristal transparente en otras ediciones de Windows Vista se representan opacas.</span><span class="sxs-lookup"><span data-stu-id="5a61c-106">Areas that would typically render with the transparent glass effect on other editions of Windows Vista are rendered opaque.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7c304-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7c304-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5a61c-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5a61c-107">Example</span></span>
 
-<span data-ttu-id="7c304-108">En la imagen siguiente se muestra el marco Glass extendido en la barra de direcciones de Internet Explorer 7:</span><span class="sxs-lookup"><span data-stu-id="7c304-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7:</span></span>
+<span data-ttu-id="5a61c-108">En la imagen siguiente se muestra el marco Glass extendido en la barra de direcciones de Internet Explorer 7:</span><span class="sxs-lookup"><span data-stu-id="5a61c-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7:</span></span>
 
 ![Captura de pantalla que muestra el marco de cristal ampliado detrás de la barra de direcciones de IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-<span data-ttu-id="7c304-110">Para extender el marco Glass en una aplicación WPF, se necesita acceso a la API no administrada.</span><span class="sxs-lookup"><span data-stu-id="7c304-110">To extend the glass frame on a WPF application, access to unmanaged API is needed.</span></span> <span data-ttu-id="7c304-111">En el ejemplo de código siguiente se realiza una invocación de plataforma (PInvoke) para las dos API necesarias para extender el marco en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="7c304-111">The following code example does a Platform Invoke (pinvoke) for the two API needed to extend the frame into the client area.</span></span> <span data-ttu-id="7c304-112">Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.</span><span class="sxs-lookup"><span data-stu-id="7c304-112">Each of these API are declared in a class called **NonClientRegionAPI**.</span></span>
+<span data-ttu-id="5a61c-110">Para extender el marco Glass en una aplicación WPF, se necesita acceso a la API no administrada.</span><span class="sxs-lookup"><span data-stu-id="5a61c-110">To extend the glass frame on a WPF application, access to unmanaged API is needed.</span></span> <span data-ttu-id="5a61c-111">En el ejemplo de código siguiente se realiza una invocación de plataforma (PInvoke) para las dos API necesarias para extender el marco en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="5a61c-111">The following code example does a Platform Invoke (pinvoke) for the two API needed to extend the frame into the client area.</span></span> <span data-ttu-id="5a61c-112">Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.</span><span class="sxs-lookup"><span data-stu-id="5a61c-112">Each of these API are declared in a class called **NonClientRegionAPI**.</span></span>
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +63,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-<span data-ttu-id="7c304-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) es la función de DWM que amplia el marco en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="7c304-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="7c304-114">Toma dos parámetros; un identificador de ventana y una estructura [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins).</span><span class="sxs-lookup"><span data-stu-id="7c304-114">It takes two parameters; a window handle and a [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) structure.</span></span> <span data-ttu-id="7c304-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) se usa para indicarle al DWM cuánto más debe ampliarse el marco en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="7c304-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>
+<span data-ttu-id="5a61c-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) es la función de DWM que amplia el marco en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="5a61c-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="5a61c-114">Toma dos parámetros; un identificador de ventana y una estructura [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins).</span><span class="sxs-lookup"><span data-stu-id="5a61c-114">It takes two parameters; a window handle and a [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) structure.</span></span> <span data-ttu-id="5a61c-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) se usa para indicarle al DWM cuánto más debe ampliarse el marco en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="5a61c-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7c304-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7c304-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5a61c-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5a61c-116">Example</span></span>
 
-<span data-ttu-id="7c304-117">Para usar la función [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), debe obtenerse un identificador de ventana.</span><span class="sxs-lookup"><span data-stu-id="7c304-117">To use the [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) function, a window handle must be obtained.</span></span> <span data-ttu-id="7c304-118">En WPF, el identificador de ventana se puede obtener de la propiedad <xref:System.Windows.Interop.HwndSource.Handle%2A> de una <xref:System.Windows.Interop.HwndSource>.</span><span class="sxs-lookup"><span data-stu-id="7c304-118">In WPF, the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="7c304-119">En el ejemplo siguiente, el marco se extiende en el área cliente del evento <xref:System.Windows.FrameworkElement.Loaded> de la ventana.</span><span class="sxs-lookup"><span data-stu-id="7c304-119">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>
+<span data-ttu-id="5a61c-117">Para usar la función [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), debe obtenerse un identificador de ventana.</span><span class="sxs-lookup"><span data-stu-id="5a61c-117">To use the [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) function, a window handle must be obtained.</span></span> <span data-ttu-id="5a61c-118">En WPF, el identificador de ventana se puede obtener de la propiedad <xref:System.Windows.Interop.HwndSource.Handle%2A> de una <xref:System.Windows.Interop.HwndSource>.</span><span class="sxs-lookup"><span data-stu-id="5a61c-118">In WPF, the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="5a61c-119">En el ejemplo siguiente, el marco se extiende en el área cliente del evento <xref:System.Windows.FrameworkElement.Loaded> de la ventana.</span><span class="sxs-lookup"><span data-stu-id="5a61c-119">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -109,9 +110,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="7c304-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7c304-120">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5a61c-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5a61c-120">Example</span></span>
 
-<span data-ttu-id="7c304-121">En el ejemplo siguiente se muestra una ventana simple en la que el marco se amplía en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="7c304-121">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="7c304-122">El marco se extiende detrás del borde superior que contiene los dos objetos <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="7c304-122">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>
+<span data-ttu-id="5a61c-121">En el ejemplo siguiente se muestra una ventana simple en la que el marco se amplía en el área cliente.</span><span class="sxs-lookup"><span data-stu-id="5a61c-121">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="5a61c-122">El marco se extiende detrás del borde superior que contiene los dos objetos <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="5a61c-122">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +146,12 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-<span data-ttu-id="7c304-123">En la imagen siguiente se muestra el marco Glass extendido en una aplicación WPF:</span><span class="sxs-lookup"><span data-stu-id="7c304-123">The following image illustrates the glass frame extended into a WPF application:</span></span>
+<span data-ttu-id="5a61c-123">En la imagen siguiente se muestra el marco Glass extendido en una aplicación WPF:</span><span class="sxs-lookup"><span data-stu-id="5a61c-123">The following image illustrates the glass frame extended into a WPF application:</span></span>
 
 ![Captura de pantalla que muestra un marco de cristal ampliado en una aplicación WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a><span data-ttu-id="7c304-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="7c304-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a61c-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="5a61c-125">See also</span></span>
 
-- [<span data-ttu-id="7c304-126">Información general de Administrador de ventanas de escritorio</span><span class="sxs-lookup"><span data-stu-id="7c304-126">Desktop Window Manager Overview</span></span>](/windows/desktop/dwm/dwm-overview)
-- [<span data-ttu-id="7c304-127">Información general sobre desenfoque Administrador de ventanas de escritorio</span><span class="sxs-lookup"><span data-stu-id="7c304-127">Desktop Window Manager Blur Overview</span></span>](/windows/desktop/dwm/blur-ovw)
-- <span data-ttu-id="7c304-128">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) (DwmExtendFrameIntoClientArea [función])</span><span class="sxs-lookup"><span data-stu-id="7c304-128">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)</span></span>
+- [<span data-ttu-id="5a61c-126">Información general de Administrador de ventanas de escritorio</span><span class="sxs-lookup"><span data-stu-id="5a61c-126">Desktop Window Manager Overview</span></span>](/windows/desktop/dwm/dwm-overview)
+- [<span data-ttu-id="5a61c-127">Información general sobre desenfoque Administrador de ventanas de escritorio</span><span class="sxs-lookup"><span data-stu-id="5a61c-127">Desktop Window Manager Blur Overview</span></span>](/windows/desktop/dwm/blur-ovw)
+- <span data-ttu-id="5a61c-128">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) (DwmExtendFrameIntoClientArea [función])</span><span class="sxs-lookup"><span data-stu-id="5a61c-128">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)</span></span>
