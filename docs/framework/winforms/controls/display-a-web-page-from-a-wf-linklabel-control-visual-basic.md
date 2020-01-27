@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
+title: Mostrar página web desde el control LinkLabel (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651799"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745919"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedimiento para mostrar una página web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
-En este ejemplo se muestra una página Web en el explorador predeterminado cuando un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.LinkLabel> control.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Cómo: Mostrar una página Web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
+En este ejemplo se muestra una página web en el explorador predeterminado cuando un usuario hace clic en un control de <xref:System.Windows.Forms.LinkLabel> de Windows Forms.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -40,14 +40,14 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
-- Un formulario de Windows denominado `Form1`.  
+- Un Windows Form denominado `Form1`.  
   
 - Control <xref:System.Windows.Forms.LinkLabel> denominado `LinkLabel1`.  
   
-- Una conexión activa a Internet.  
+- Una conexión a Internet activa.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- La llamada a la <xref:System.Diagnostics.Process.Start%2A> método requiere plena confianza. Para obtener más información, consulta <xref:System.Security.SecurityException>.  
+ La llamada al método <xref:System.Diagnostics.Process.Start%2A> requiere plena confianza. Para obtener más información, vea <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Vea también
 

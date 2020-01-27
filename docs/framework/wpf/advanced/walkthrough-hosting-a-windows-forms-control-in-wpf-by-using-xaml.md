@@ -1,15 +1,16 @@
 ---
-title: 'Tutorial: Hospedar un control de Windows Forms en WPF mediante XAML'
+title: Hospedar un control de Windows Forms en WPF mediante XAML
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 3b4b743b07876f240366b2d2d19667405941a40b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a0a88c39a25e5292365a6447cefdd8f31db5e5c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976541"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744923"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Tutorial: Hospedar un control de Windows Forms en WPF mediante XAML
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona numerosos controles con un conjunto de características enriquecidas. Sin embargo, a veces es posible que desee usar controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] en las páginas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por ejemplo, puede tener una inversión sustancial en los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] existentes o puede tener un control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] que proporcione una funcionalidad única.  

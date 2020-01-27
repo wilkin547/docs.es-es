@@ -41,7 +41,7 @@ La herramienta Instalación de servicios de .NET realiza las siguientes acciones
   
 |Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|Archivo de ensamblado de origen con el que se va a trabajar. El ensamblado debe estar firmado con un nombre seguro. Para obtener más información, vea [Signing an Assembly with a Strong Name](../../standard/assembly/sign-strong-name.md) (Firmar un ensamblado con un nombre seguro).|  
+|*assemblyFile.dll*|Archivo de ensamblado de origen con el que se va a trabajar. El ensamblado debe estar firmado con un nombre seguro. Para obtener más información, vea [Procedimiento para firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).|  
   
 |Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
@@ -63,7 +63,7 @@ La herramienta Instalación de servicios de .NET realiza las siguientes acciones
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
- Regsvcs.exe requiere un archivo de ensamblado de origen especificado por *assemblyFile.dll*. Este ensamblado debe estar firmado con un nombre seguro. Para obtener más información sobre la firma con nombres seguros, vea [Signing an Assembly with a Strong Name](../../standard/assembly/sign-strong-name.md) (Firmar un ensamblado con un nombre seguro). Los nombres de la aplicación de destino y del archivo de biblioteca de tipos son opcionales. El argumento *applicationName* se puede generar a partir del archivo de ensamblado de origen, y Regsvcs.exe lo creará si no existe todavía. El argumento *typelibraryfile* puede especificar un nombre de biblioteca de tipos. Si no se especifica ningún nombre de biblioteca de tipos, Regsvcs.exe utiliza el nombre del ensamblado como valor predeterminado.  
+ Regsvcs.exe requiere un archivo de ensamblado de origen especificado por *assemblyFile.dll*. Este ensamblado debe estar firmado con un nombre seguro. Para obtener más información sobre la firma con nombres seguros, vea [Procedimiento para firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md). Los nombres de la aplicación de destino y del archivo de biblioteca de tipos son opcionales. El argumento *applicationName* se puede generar a partir del archivo de ensamblado de origen, y Regsvcs.exe lo creará si no existe todavía. El argumento *typelibraryfile* puede especificar un nombre de biblioteca de tipos. Si no se especifica ningún nombre de biblioteca de tipos, Regsvcs.exe utiliza el nombre del ensamblado como valor predeterminado.  
   
  Cuando Regsvcs.exe registra los métodos de un componente, se le aplican las [peticiones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) y las [peticiones de vínculos](../misc/link-demands.md) de estos métodos. Como la herramienta se ejecuta en un entorno de confianza total, la mayoría de las peticiones de permisos se llevan a cabo satisfactoriamente. Sin embargo, Regsvcs.exe no puede registrar componentes con métodos protegidos por una petición o una petición de vínculo para <xref:System.Security.Permissions.StrongNameIdentityPermission> o <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para reflejar las actualizaciones de los orígenes de datos en un control de formularios Windows Forms con BindingSource
+title: Reflejar las actualizaciones del origen de datos en el control con BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-ms.openlocfilehash: 9b3f3c53a74fa00c4e2c674fe6270a22e6e8cef5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f98296b477dbb674cdbdbd8d03e291dd6ca0c8a3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591458"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742438"
 ---
-# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Procedimiento para reflejar las actualizaciones de los orígenes de datos en un control de formularios Windows Forms con BindingSource
+# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Cómo: Reflejar las actualizaciones de los orígenes de datos en un control de Windows Forms con BindingSource
 Cuando utilice controles enlazados a datos, a veces tendrá que responder a los cambios del origen de datos cuando el origen de datos no provoque eventos cambiados en la lista. Cuando utiliza el componente <xref:System.Windows.Forms.BindingSource> para enlazar el origen de datos a un control de Windows Forms, se puede notificar al control que el origen de datos ha cambiado llamando al método <xref:System.Windows.Forms.BindingSource.ResetBindings%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,4 +40,4 @@ Cuando utilice controles enlazados a datos, a veces tendrá que responder a los 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Cómo: Enlazar un Control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Cómo: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

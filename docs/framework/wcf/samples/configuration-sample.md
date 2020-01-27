@@ -2,12 +2,12 @@
 title: Ejemplo de configuración
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 78108dc9b28657f0479e9e39ad134f03cf6c877b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714953"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741953"
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -259,7 +259,7 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1. En este ejemplo se usan extremos HTTP y para ejecutar este ejemplo, se deben agregar las ACL de dirección URL adecuadas, consulte [configuración de http y https](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Para obtener más información, consulte [configuración de http y https](../feature-details/configuring-http-and-https.md). Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Compile la solución.  
   

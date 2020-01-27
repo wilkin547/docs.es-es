@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: crear su primera aplicación de WPF en Visual Studio 2019-.NET Framework'
+title: Cree su primera aplicación de WPF en Visual Studio 2019-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336810"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746974"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: crear su primera aplicación de WPF en Visual Studio 2019
 
@@ -83,7 +84,7 @@ El primer paso es crear la infraestructura de la aplicación, que incluye una de
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Abra *MainWindow.xaml*.
+3. Abra *MainWindow. Xaml*.
 
     Este archivo XAML es la ventana principal de la aplicación y muestra el contenido creado en las páginas. La clase <xref:System.Windows.Window> define las propiedades de una ventana, como su título, tamaño o icono, y controla los eventos, como el cierre o la ocultación.
 
@@ -151,7 +152,7 @@ En esta sección, agregará dos páginas y una imagen a la aplicación.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Abra *MainWindow.xaml*.
+1. Abra *MainWindow. Xaml*.
 
 1. Agregue una propiedad <xref:System.Windows.Navigation.NavigationWindow.Source%2A> al elemento <xref:System.Windows.Navigation.NavigationWindow> y establézcala en "`ExpenseItHome.xaml`".
 
@@ -483,7 +484,7 @@ En este tutorial ha aprendido varias técnicas para crear una interfaz de usuari
 
 - [Arquitectura de WPF](../advanced/wpf-architecture.md)
 - [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md)
+- [Información general sobre propiedades de dependencia](../advanced/dependency-properties-overview.md)
 - [Diseño](../advanced/layout.md)
 
 Para más información sobre la creación de aplicaciones, vea los temas siguientes:

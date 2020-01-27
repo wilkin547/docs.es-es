@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms
+title: Limitaciones de la propiedad Interval del componente Timer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: a9c4fda179e45ad2cf2ee2183e5881e97b763cdc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15626a53f0541ff79e2098377d9dfdb4626ac155
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644938"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745231"
 ---
-# <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms
-Los formularios de Windows <xref:System.Windows.Forms.Timer> componente tiene un <xref:System.Windows.Forms.Timer.Interval%2A> propiedad que especifica el número de milisegundos que transcurren entre un evento del temporizador y el siguiente. A menos que el componente está deshabilitado, un temporizador continúa recibiendo el <xref:System.Windows.Forms.Timer.Tick> eventos a intervalos de tiempo aproximadamente iguales.  
+# <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Limitaciones de la propiedad Interval del componente Timer de Windows Forms
+El componente <xref:System.Windows.Forms.Timer> de Windows Forms tiene una propiedad <xref:System.Windows.Forms.Timer.Interval%2A> que especifica el número de milisegundos que transcurren entre un evento de temporizador y el siguiente. A menos que el componente esté deshabilitado, un temporizador sigue recibiendo el evento <xref:System.Windows.Forms.Timer.Tick> a intervalos de tiempo aproximadamente iguales.  
   
  Este componente está diseñado para un entorno de Windows Forms. Si necesita un temporizador que sea adecuado para un entorno de servidor, consulte [Introducción a los temporizadores basados en servidor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 ## <a name="the-interval-property"></a>La propiedad Interval  
- El <xref:System.Windows.Forms.Timer.Interval%2A> propiedad tiene algunas limitaciones a tener en cuenta al programar un <xref:System.Windows.Forms.Timer> componente:  
+ La propiedad <xref:System.Windows.Forms.Timer.Interval%2A> tiene algunas limitaciones que se deben tener en cuenta al programar un componente <xref:System.Windows.Forms.Timer>:  
   
-- Si la aplicación u otra aplicación está realizando fuertes exigencias del sistema, como bucles largos, cálculos intensivos o unidad, red o acceso a los puertos, la aplicación no es posible que obtenga los eventos del temporizador con tanta frecuencia como los <xref:System.Windows.Forms.Timer.Interval%2A> especifica la propiedad.  
+- Si su aplicación u otra aplicación está realizando demandas pesadas en el sistema (por ejemplo, bucles largos, cálculos intensivos o acceso de unidad, red o puerto), es posible que la aplicación no obtenga eventos de temporizador con la frecuencia que especifica la propiedad <xref:System.Windows.Forms.Timer.Interval%2A>.  
   
-- El intervalo no se garantiza que transcurran exactamente en el tiempo. Para garantizar la precisión, el temporizador debe comprobar el reloj del sistema según sea necesario, en lugar de intentar realizar un seguimiento del tiempo acumulado internamente.  
+- No se garantiza que el intervalo transcurra exactamente en el tiempo. Para garantizar la precisión, el temporizador debe comprobar el reloj del sistema según sea necesario, en lugar de intentar realizar un seguimiento de la hora acumulada internamente.  
   
-- La precisión de la <xref:System.Windows.Forms.Timer.Interval%2A> propiedad está en milisegundos. Algunos equipos proporcionan un contador de alta resolución que tenga una resolución mayor que milisegundos. La disponibilidad de este tipo de contador depende del hardware del procesador del equipo.
+- La precisión de la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> se encuentra en milisegundos. Algunos equipos proporcionan un contador de alta resolución que tiene una resolución superior a milisegundos. La disponibilidad de este contador depende del hardware del procesador del equipo.
   
 ## <a name="see-also"></a>Vea también
 

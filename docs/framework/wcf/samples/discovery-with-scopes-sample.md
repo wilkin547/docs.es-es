@@ -2,12 +2,12 @@
 title: Ejemplo de detección con ámbitos
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 23991002a5236c491a9f74c7efe71ceb2bf51a37
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8ba5618f472fc8a6e1751776060f99103a67a073
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712063"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728754"
 ---
 # <a name="discovery-with-scopes-sample"></a>Ejemplo de detección con ámbitos
 
@@ -23,7 +23,7 @@ El método `FindCalculatorServiceAddress()` muestra cómo utilizar <xref:System.
 
 ### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Consulte [configuración de http y https](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Para obtener más información, consulte [configuración de http y https](../feature-details/configuring-http-and-https.md). Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. Compile la solución.
 

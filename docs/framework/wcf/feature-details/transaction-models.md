@@ -2,35 +2,35 @@
 title: Modelos de transacción
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: 8731b72d0657aa420dbb020e216c3af059916ce9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c78a5342bf19d19308352cddc241f436bfcb3a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050784"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745326"
 ---
 # <a name="transaction-models"></a>Modelos de transacción
 En este tema se describe la relación entre los modelos de programación de la transacción y los componentes de infraestructura que Microsoft proporciona.  
   
- Cuando se usan transacciones en Windows Communication Foundation (WCF), es importante entender que no está seleccionando entre modelos transaccionales diferentes pero operando en diferentes niveles de un modelo integrado y coherente.  
+ Al utilizar transacciones en Windows Communication Foundation (WCF), es importante entender que no está seleccionando entre diferentes modelos transaccionales, sino que funciona en diferentes capas de un modelo integrado y coherente.  
   
  Las secciones siguientes describen los tres componentes de transacción primarios.  
   
 ## <a name="windows-communication-foundation-transactions"></a>Transacciones de Windows Communication Foundation  
- La compatibilidad con transacciones en WCF permite que escribir servicios transaccionales. Además, con su compatibilidad con el protocolo WS-AtomicTransaction (WS-AT), las aplicaciones pueden fluir transacciones a servicios Web creados mediante WCF o tecnología de otro fabricante.  
+ La compatibilidad con transacciones en WCF permite escribir servicios transaccionales. Además, gracias a la compatibilidad con el protocolo WS-AtomicTransaction (WS-AT), las aplicaciones pueden fluir transacciones a servicios web creados mediante WCF o tecnología de terceros.  
   
- En una aplicación o servicio WCF, características de la transacción de WCF proporcionan atributos y configuración para especificar mediante declaración cómo y cuándo la infraestructura debe crear, fluir y sincronizar transacciones.  
+ En una aplicación o servicio WCF, las características de transacción WCF proporcionan atributos y configuraciones para especificar mediante declaración cómo y cuándo la infraestructura debe crear, fluir y sincronizar transacciones.  
   
 ## <a name="systemtransactions-transactions"></a>Información general sobre las transacciones de System.Transactions  
  El espacio de nombres <xref:System.Transactions> proporciona un modelo de programación explícito según la clase <xref:System.Transactions.Transaction>, así como un modelo de programación implícito utilizando la clase <xref:System.Transactions.TransactionScope>, en la que la infraestructura administra automáticamente las transacciones.  
   
- Para obtener más información sobre cómo crear una aplicación transaccional utilizando estos dos modelos, vea [crear una aplicación transaccional](https://go.microsoft.com/fwlink/?LinkId=94947).  
+ Para obtener más información sobre cómo crear una aplicación transaccional con estos dos modelos, vea [escribir una aplicación transaccional](https://go.microsoft.com/fwlink/?LinkId=94947).  
   
- En una aplicación, o un servicio WCF <xref:System.Transactions> proporciona el modelo de programación para crear las transacciones dentro de una aplicación cliente y para interactuar explícitamente con una transacción, cuando sea necesario, dentro de un servicio.  
+ En una aplicación o servicio WCF, <xref:System.Transactions> proporciona el modelo de programación para crear transacciones en una aplicación cliente y para interactuar explícitamente con una transacción, cuando es necesario, dentro de un servicio.  
   
 ## <a name="msdtc-transactions"></a>Transacciones de MSDTC  
  Microsoft DTC (Coordinador de transacciones distribuidas) (MSDTC) es un administrador de transacciones que proporciona compatibilidad con transacciones distribuidas.  
   
- Para obtener más información, consulte el [referencia del programador de DTC](https://go.microsoft.com/fwlink/?LinkId=94948).  
+ Para obtener más información, vea la [Referencia del programador de DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108(v=vs.85)).  
   
- En una aplicación o servicio WCF, MSDTC proporciona la infraestructura para la coordinación de transacciones creada dentro de un cliente o servicio.
+ En una aplicación o servicio WCF, MSDTC proporciona la infraestructura para la coordinación de transacciones creadas dentro de un cliente o servicio.

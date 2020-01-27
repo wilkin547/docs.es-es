@@ -1,32 +1,32 @@
 ---
-title: Label (Control, formularios Windows Forms)
+title: Control de etiqueta
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Label control [Windows Forms]
 - labels
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-ms.openlocfilehash: a66eda1236a751daa87c67dae8311c9aaf71ae24
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8450e32f131921dca0335f66b75905a4b01c9454
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962556"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745270"
 ---
 # <a name="label-control-windows-forms"></a>Label (Control, formularios Windows Forms)
 > [!IMPORTANT]
-> El <xref:System.Windows.Forms.ToolStripLabel> control reemplaza y agrega funcionalidad <xref:System.Windows.Forms.Label> al control. Puede usar <xref:System.Windows.Forms.ToolStripLabel> con otros controles nuevos, como <xref:System.Windows.Forms.ToolStripDropDown>. Sin embargo, <xref:System.Windows.Forms.Label> el control se conserva por compatibilidad con versiones anteriores y uso futuro, si así lo decide.  
+> El control <xref:System.Windows.Forms.ToolStripLabel> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.Label>. Puede usar el <xref:System.Windows.Forms.ToolStripLabel> con otros controles nuevos como el <xref:System.Windows.Forms.ToolStripDropDown>. Sin embargo, el control de <xref:System.Windows.Forms.Label> se conserva por compatibilidad con versiones anteriores y uso futuro, si así lo decide.  
   
- Windows Forms <xref:System.Windows.Forms.Label> controles se usan para mostrar texto o imágenes que el usuario no puede editar. Se usan para identificar objetos en un formulario, para proporcionar una descripción de lo que hará un determinado control si se hace clic en él, por ejemplo, o para mostrar información en respuesta a un evento o proceso en tiempo de ejecución de la aplicación. Dado que <xref:System.Windows.Forms.Label> el control no puede recibir el foco, también se puede usar para crear teclas de acceso para otros controles.  
+ Los controles de <xref:System.Windows.Forms.Label> de Windows Forms se usan para mostrar texto o imágenes que el usuario no puede editar. Se usan para identificar objetos en un formulario, para proporcionar una descripción de lo que hará un determinado control si se hace clic en él, por ejemplo, o para mostrar información en respuesta a un evento o proceso en tiempo de ejecución de la aplicación. Dado que el control de <xref:System.Windows.Forms.Label> no puede recibir el foco, también se puede usar para crear teclas de acceso para otros controles.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general sobre el control Label](label-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Procedimientos: Crear teclas de acceso con controles Label de Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ [Crear teclas de acceso con controles Label de formularios Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)  
  Describe cómo utilizar una etiqueta para definir una tecla de acceso para otro control.  
   
- [Cómo: Cambiar el tamaño de un control etiqueta de Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  Explica cómo ajustar el tamaño de un control de etiqueta para su título.  
   
 ## <a name="reference"></a>Referencia  
@@ -34,5 +34,5 @@ ms.locfileid: "69962556"
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

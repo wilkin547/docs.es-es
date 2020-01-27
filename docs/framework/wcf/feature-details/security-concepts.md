@@ -2,25 +2,25 @@
 title: Conceptos de seguridad
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: d23ef86c2ccf315300a9290c3055388469df2e0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8da822c6a4d55ee916bc1e0243bc8b2f9a5742fb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990904"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730834"
 ---
 # <a name="security-concepts"></a>Conceptos de seguridad
-En esta sección explica brevemente los conceptos asociados con la seguridad de Windows Communication Foundation (WCF).  
+En esta sección se explican brevemente los conceptos asociados a la seguridad de Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Conceptos de seguridad empleados en WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Una información general de conceptos de alto nivel utilizada en implementaciones de seguridad.  
   
  [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- Información general de cómo WCF proporciona seguridad en la topología de la aplicación distribuida.  
+ Información general sobre cómo WCF proporciona seguridad en la topografía de aplicaciones distribuidas.  
   
  [Terminología de seguridad](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- Glosario de términos usados al hablar sobre seguridad WCF.  
+ Un glosario de términos usados al hablar de la seguridad de WCF.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.ServiceModel>  
@@ -40,4 +40,4 @@ En esta sección explica brevemente los conceptos asociados con la seguridad de 
 
 - [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

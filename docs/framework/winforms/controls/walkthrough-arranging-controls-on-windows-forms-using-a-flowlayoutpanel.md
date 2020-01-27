@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Organizar controles en formularios Windows Forms mediante FlowLayoutPanel'
+title: Organizar controles mediante FlowLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771663"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745404"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Tutorial: Organizar controles en formularios Windows Forms mediante FlowLayoutPanel
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel
 
 Algunas aplicaciones requieren un formulario con un diseño que se organice de manera adecuada y automática a medida que el formulario o el contenido cambien de tamaño. Si necesita un diseño dinámico y no desea controlar los eventos <xref:System.Windows.Forms.Control.Layout> de forma explícita en el código, considere la posibilidad de usar un panel de diseño.
 
 El control <xref:System.Windows.Forms.FlowLayoutPanel> y el control <xref:System.Windows.Forms.TableLayoutPanel> proporcionan formas intuitivas para organizar los controles en el formulario. Ambos proporcionan una capacidad automática y configurable para controlar las posiciones relativas de los controles secundarios que contienen, y ambos ofrecen características de diseño dinámico en tiempo de ejecución, lo que permite cambiar el tamaño y la posición de los controles secundarios a medida que las dimensiones del formulario primario cambian. Los paneles de diseño se pueden anidar dentro de paneles de diseño para habilitar la creación de interfaces de usuario sofisticadas.
 
-El <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en una cuadrícula, que proporciona funcionalidad similar a HTML \<tabla > elemento. Las celdas se organizan en filas y columnas, y pueden tener distintos tamaños. Para obtener más información, vea [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+El <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en una cuadrícula, lo que proporciona una funcionalidad similar a la de la tabla del \<HTML > elemento. Las celdas se organizan en filas y columnas, y pueden tener distintos tamaños. Para obtener más información, consulta [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en una dirección de flujo específica: horizontal o vertical. Su contenido puede ajustarse desde una fila a la siguiente o desde una columna a la siguiente. Además, el contenido puede recortarse en lugar de ajustarse. Las tareas ilustradas en este tutorial incluyen:
 
@@ -42,11 +42,11 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en 
 
 - Reasignar controles existentes en un elemento primario diferente
 
-Cuando haya terminado, tendrá una descripción de la función desempeñada por estas importantes características de diseño.
+Cuando haya terminado, tendrá conocimientos sobre el rol que desempeñan estas características de diseño importantes.
 
 ## <a name="create-the-project"></a>Crear el proyecto
 
-1. En Visual Studio, cree un proyecto de aplicación basada en Windows llamado "FlowLayoutPanelExample" (**archivo** > **New** > **proyecto**  >  **Visual C#**  o **Visual Basic** > **escritorio clásico de** > **deaplicacióndeformulariosdeWindows**).
+1. En Visual Studio, cree un proyecto de aplicación basada en Windows llamado "FlowLayoutPanelExample" **(archivo** > **nuevo** **proyecto** de >  > **Visual C#**  o **Visual Basic** > **aplicación**de **escritorio clásico** > Windows Forms.
 
 2. Seleccione el formulario en el **Diseñador de Windows Forms**.
 
@@ -119,7 +119,7 @@ Cuando haya terminado, tendrá una descripción de la función desempeñada por 
 
 1. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. Si el formulario es suficientemente grande, los controles <xref:System.Windows.Forms.Button> se moverán a la primera columna del control <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-2. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Padding%2A> mediante la expansión de la entrada <xref:System.Windows.Forms.Control.Padding%2A> en la ventana **Propiedades** y la configuración de la propiedad <xref:System.Windows.Forms.Padding.All%2A> en **20**. Para obtener más información, vea [Tutorial: Diseño de Windows Forms con relleno, márgenes y la propiedad AutoSize los controles](windows-forms-controls-padding-autosize.md). Tenga en cuenta que los controles secundarios se mueven hacia el centro del control <xref:System.Windows.Forms.FlowLayoutPanel> . El valor aumentado de la propiedad <xref:System.Windows.Forms.Control.Padding%2A> inserta los controles secundarios fuera de los bordes del control <xref:System.Windows.Forms.FlowLayoutPanel> .
+2. Cambie el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel> del control <xref:System.Windows.Forms.Control.Padding%2A> mediante la expansión de la entrada <xref:System.Windows.Forms.Control.Padding%2A> en la ventana **Propiedades** y la configuración de la propiedad <xref:System.Windows.Forms.Padding.All%2A> en **20**. Para obtener más información, vea [Tutorial: diseñar Windows Forms controles con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md). Tenga en cuenta que los controles secundarios se mueven hacia el centro del control <xref:System.Windows.Forms.FlowLayoutPanel> . El valor aumentado de la propiedad <xref:System.Windows.Forms.Control.Padding%2A> inserta los controles secundarios fuera de los bordes del control <xref:System.Windows.Forms.FlowLayoutPanel> .
 
 3. Seleccione todos los controles <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.FlowLayoutPanel> y establezca el valor de la propiedad <xref:System.Windows.Forms.Control.Margin%2A> en **20**. Observe que el espaciado entre los controles <xref:System.Windows.Forms.Button> aumenta, por lo que se separan más. Puede que necesite cambiar el tamaño del control <xref:System.Windows.Forms.FlowLayoutPanel> para aumentarlo y ver todos los controles secundarios.
 
@@ -150,7 +150,7 @@ Cuando haya terminado, tendrá una descripción de la función desempeñada por 
 
 ### <a name="to-insert-a-control-using-the-caret"></a>Para insertar un control mediante el símbolo de intercalación
 
-1. Arrastre un control <xref:System.Windows.Forms.Button> desde el **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel> y señale el espacio entre los dos controles <xref:System.Windows.Forms.Button> . Tenga en cuenta que se dibuja una barra de inserción, que indica dónde el <xref:System.Windows.Forms.Button> se colocarán cuando se coloca en el <xref:System.Windows.Forms.FlowLayoutPanel> control. Antes de colocar el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> , mueva el puntero del mouse para observar cómo se mueve la barra de inserción.
+1. Arrastre un control <xref:System.Windows.Forms.Button> desde el **cuadro de herramientas** al control <xref:System.Windows.Forms.FlowLayoutPanel> y señale el espacio entre los dos controles <xref:System.Windows.Forms.Button> . Observe que se dibuja una barra de inserción, que indica dónde se colocará la <xref:System.Windows.Forms.Button> cuando se coloque en el control <xref:System.Windows.Forms.FlowLayoutPanel>. Antes de colocar el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> , mueva el puntero del mouse para observar cómo se mueve la barra de inserción.
 
 2. Coloque el nuevo control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.FlowLayoutPanel> . Tenga en cuenta que el nuevo control <xref:System.Windows.Forms.Button> no está alineado con los demás, porque su propiedad <xref:System.Windows.Forms.Control.Margin%2A> tiene un valor diferente.
 
@@ -186,10 +186,9 @@ Cuando haya terminado, tendrá una descripción de la función desempeñada por 
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Experiencia de usuario de Microsoft Windows, Official Guidelines for diseñadores y desarrolladores de interfaz de usuario. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
-- [Cómo: Acoplar controles en Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procedimientos: Delimitar controles en Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Tutorial: Diseñar Windows controles Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedimiento para acoplar controles en formularios Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Procedimiento para delimitar controles en formularios Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

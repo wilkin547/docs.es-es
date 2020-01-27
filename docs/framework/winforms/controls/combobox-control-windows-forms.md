@@ -1,5 +1,5 @@
 ---
-title: ComboBox (Control, formularios Windows Forms)
+title: ComboBox (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drop-down lists [Windows Forms], Windows Forms
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df56a777c40cd41af6086e8adbcb0a733660df6e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956044"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746181"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox (Control, formularios Windows Forms)
-Los formularios de Windows `ComboBox` control se usa para mostrar datos en un cuadro combinado desplegable. De forma predeterminada, el `ComboBox` control aparece en dos partes: la parte superior es un cuadro de texto que permite al usuario escribir un elemento de lista. La segunda parte es un cuadro de lista que muestra una lista de elementos desde el que el usuario puede seleccionar uno.  
+El control `ComboBox` de Windows Forms se usa para mostrar los datos en un cuadro combinado desplegable. De forma predeterminada, el control `ComboBox` aparece en dos partes: la parte superior es un cuadro de texto que permite al usuario escribir un elemento de lista. La segunda parte es un cuadro de lista que muestra una lista de los elementos de los que el usuario puede seleccionar uno.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general sobre el control ComboBox](combobox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Cómo: Crear texto de tamaño Variable en un Control ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
- Muestra el dibujo personalizado de texto en un `ComboBox` control.  
+ [Procedimiento para crear texto de tamaño variable en un control ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ Muestra el dibujo personalizado de texto en un control de `ComboBox`.  
   
 ## <a name="reference"></a>Referencia  
  Clase <xref:System.Windows.Forms.ComboBox>  
@@ -33,8 +33,8 @@ Los formularios de Windows `ComboBox` control se usa para mostrar datos en un cu
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)  
- Proporciona una lista de cosas que puede hacer con cuadros de lista, cuadros combinados y cuadros de lista activados.  
+ Proporciona una lista de las acciones que puede realizar con cuadros de lista, cuadros combinados y cuadros de lista marcados.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)

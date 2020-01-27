@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel'
+title: Organizar controles mediante un control TableLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7b7380690d8668f46b98272e1d42640f23679b19
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 803a56f6416cf3b718890e96cf9f36ae6c4ee471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799120"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740320"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel
 
@@ -199,4 +199,4 @@ Puede lograr un diseño complejo mediante una combinación de controles y panele
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
 - [Procedimiento para acoplar controles en formularios Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Procedimiento para delimitar controles en formularios Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para enlazar un control de formularios Windows Forms a un objeto Factory
+title: Enlazar el control a un objeto de generador
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2b4d9aca3345a0cb1e7e995f66a8982dee983ca8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589735"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745096"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedimiento para enlazar un control de formularios Windows Forms a un objeto Factory
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Cómo: Enlazar un control de Windows Forms a un objeto Factory
 Al crear controles que interactúan con datos, a veces considerará necesario enlazar un control a un objeto o un método que genere otros objetos. Este tipo de objetos o métodos se denomina generador. El origen de datos podría ser, por ejemplo, el valor devuelto de una llamada al método, en lugar de un objeto en la memoria o un tipo. Puede enlazar un control a este tipo de origen de datos mientras el origen devuelve una colección.  
   
  Puede enlazar fácilmente un control a un objeto de generador utilizando el control <xref:System.Windows.Forms.BindingSource>.  
@@ -41,4 +41,4 @@ Al crear controles que interactúan con datos, a veces considerará necesario en
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Cómo: Enlazar un Control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Cómo: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

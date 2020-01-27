@@ -1,16 +1,17 @@
 ---
-title: 'Tutorial: Hospedar contenido Direct3D9 en WPF'
+title: Hospedar contenido de Direct3D9 en WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976517"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742607"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Tutorial: Hospedar contenido Direct3D9 en WPF
 
@@ -68,7 +69,7 @@ Por último, utilice la clase <xref:System.Windows.Interop.D3DImage> para hosped
 
     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]
 
-2. Compile el proyecto.
+2. Generar el proyecto.
 
 3. Copie el archivo DLL que contiene el contenido de Direct3D9 en la carpeta bin/Debug.
 

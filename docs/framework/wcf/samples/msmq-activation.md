@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544718"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744793"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Este comando permite tener acceso a la aplicación/servicemodelsamples mediante `http://localhost/servicemodelsamples` y `net.msmq://localhost/servicemodelsamples`.
 
-7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón secundario y seleccione **Propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
+7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón derecho y seleccione **propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
 
 8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:
 
@@ -349,4 +349,4 @@ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguri
 
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de hospedaje y persistencia de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Ejemplos de hospedaje y persistencia de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

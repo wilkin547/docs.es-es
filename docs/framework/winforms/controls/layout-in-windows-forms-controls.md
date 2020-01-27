@@ -1,5 +1,5 @@
 ---
-title: Diseño de los controles de formularios Windows Forms
+title: Diseño de controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms]
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed8603e997e7d0c1ed7a2ebda6dc960726d32f45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012833"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745253"
 ---
-# <a name="layout-in-windows-forms-controls"></a>Diseño de los controles de formularios Windows Forms
+# <a name="layout-in-windows-forms-controls"></a>Diseño de los controles de Windows Forms
 
-La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El <xref:System.Windows.Forms?displayProperty=nameWithType> espacio de nombres le ofrece muchas herramientas de diseño para realizar esta acción.
+La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> ofrece muchas herramientas de diseño para lograr esto.
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
-[Información general de la propiedad AutoSize](autosize-property-overview.md)\
-Describe el <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad y su función en el diseño.
+[Información general sobre la propiedad AutoSize](autosize-property-overview.md)\
+Describe la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> y su función en el diseño.
 
-[Márgenes y relleno en Windows Forms, controles](margin-and-padding-in-windows-forms-controls.md)\
-Describe el <xref:System.Windows.Forms.Control.Margin%2A> y <xref:System.Windows.Forms.Control.Padding%2A> propiedades y sus funciones de diseño.
+[Margen y relleno en Windows Forms controles](margin-and-padding-in-windows-forms-controls.md)\
+Describe las propiedades <xref:System.Windows.Forms.Control.Margin%2A> y <xref:System.Windows.Forms.Control.Padding%2A> y sus roles en el diseño.
 
-[Cómo: Alinear un Control con los bordes de formularios](how-to-align-a-control-to-the-edges-of-forms.md)\
-Muestra cómo usar el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para alinear el control con el borde del formulario que ocupa.
+[Cómo: alinear un control con los bordes de los formularios](how-to-align-a-control-to-the-edges-of-forms.md)\
+Muestra cómo usar la propiedad <xref:System.Windows.Forms.Control.Dock%2A> para alinear el control con el borde del formulario que ocupa.
 
-[Cómo: Crear un borde alrededor de un formulario Windows Forms con relleno de Control](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
-Muestra cómo usar el <xref:System.Windows.Forms.Control.Padding%2A> propiedad para describir un control.
+[Cómo: crear un borde alrededor de un control de Windows Forms mediante relleno](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
+Muestra cómo utilizar la propiedad <xref:System.Windows.Forms.Control.Padding%2A> para describir un control.
 
-[Cómo: Implementar un motor de diseño personalizado](how-to-implement-a-custom-layout-engine.md)\
-Muestra cómo implementar un <xref:System.Windows.Forms.Layout.LayoutEngine> para organizar los controles de formularios Windows Forms.
+[Cómo: implementar un motor de diseño personalizado](how-to-implement-a-custom-layout-engine.md)\
+Muestra cómo implementar un <xref:System.Windows.Forms.Layout.LayoutEngine> para organizar los controles de Windows Forms.
 
 ## <a name="reference"></a>Referencia
 
@@ -45,7 +45,7 @@ Proporciona documentación de referencia para el control <xref:System.Windows.Fo
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Delimitar y acoplar controles secundarios en un Control FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Cómo: Delimitar y acoplar controles secundarios en un Control TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Cómo: Crear un diseño de formularios de Windows que sea apropiado para la localización](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Delimitar y acoplar controles secundarios en un control FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Delimitar y acoplar controles secundarios en un control TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Crear un diseño de formularios Windows Forms que sea apropiado para la localización](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [Comportamiento de AutoSize en el control TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)

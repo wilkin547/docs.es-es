@@ -1,19 +1,20 @@
 ---
-title: 'Tutorial: Hospedar un reloj de WPF en Win32'
+title: 'Tutorial: hospedar un reloj de WPF en Win32'
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740240"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744901"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Tutorial: Hospedar un reloj de WPF en Win32
+# <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Tutorial: hospedar un reloj de WPF en Win32
 
 Para colocar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de las aplicaciones de Win32, use <xref:System.Windows.Interop.HwndSource>, que proporciona el HWND que incluye el contenido de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En primer lugar, cree el <xref:System.Windows.Interop.HwndSource>, proporcionándole parámetros similares a CreateWindow. A continuación, indique al <xref:System.Windows.Interop.HwndSource> sobre el contenido de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que desea incluir en él. Por último, se obtiene el HWND de la <xref:System.Windows.Interop.HwndSource>. En este tutorial se muestra cómo crear una [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mixta dentro de la aplicación Win32 que vuelve a implementar el cuadro de diálogo **propiedades de fecha y hora** del sistema operativo.
 

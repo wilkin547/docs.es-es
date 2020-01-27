@@ -4,16 +4,16 @@ description: Información sobre los tipos de valor de C# que admiten un valor NU
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964324"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740947"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor que admiten valores NULL (referencia de C#)
 
-Un tipo de valor `T?` que admite valores NULL representa todos los valores de su [tipo de valor](../keywords/value-types.md) `T` subyacente y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
+Un tipo de valor `T?` que admite valores NULL representa todos los valores de su [tipo de valor](value-types.md) `T` subyacente y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
 
 > [!NOTE]
 > C# 8.0 presenta la característica de tipos de referencia que admiten un valor NULL. Para más información, consulte [Tipos de referencia que admiten un valor NULL](../../nullable-references.md). Los tipos de valor que admiten valores NULL están disponibles a partir de C# 2.

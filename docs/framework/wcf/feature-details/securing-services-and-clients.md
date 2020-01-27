@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 719ab26198bd7b83310025e03e541fa11b109612
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990943"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746414"
 ---
 # <a name="securing-services-and-clients"></a>Protección de servicios y clientes
-La información de esta sección se centra en programar la seguridad en Windows Communication Foundation (WCF). Generalmente, esto incluye la selección de un enlace proporcionado por el sistema adecuado, el establecimiento de las propiedades del elemento de seguridad y, a continuación, el establecimiento de las propiedades de los comportamientos del servicio que rigen la recuperación de las credenciales utilizadas por el servicio o el cliente. Estas técnicas abarcan los requisitos de seguridad de la mayoría de los usuarios para la mayoría de los escenarios, como se muestra en [escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Si su escenario requiere más capacidades, consulte primero [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); si una solución no es evidente, consulte [extender seguridad](../../../../docs/framework/wcf/extending/extending-security.md). Si está creando (o interopera con) un sistema que utiliza notificaciones enriquecidas, vea los temas de [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+La información de esta sección se centra en la programación de la seguridad en Windows Communication Foundation (WCF). Generalmente, esto incluye la selección de un enlace proporcionado por el sistema adecuado, el establecimiento de las propiedades del elemento de seguridad y, a continuación, el establecimiento de las propiedades de los comportamientos del servicio que rigen la recuperación de las credenciales utilizadas por el servicio o el cliente. Estas técnicas cubren los requisitos de seguridad de la mayoría de los usuarios para la mayoría de los escenarios, tal como se muestra en [escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Si su escenario requiere más capacidades, consulte en primer lugar las [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md). Si una solución no es aparente, vea [ampliar la seguridad](../../../../docs/framework/wcf/extending/extending-security.md). Si va a crear (o interoperar con) un sistema que utiliza notificaciones enriquecidas, consulte los temas de [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Información general del modelo de programación utilizado para proteger los mensajes.  
   
@@ -22,10 +22,10 @@ La información de esta sección se centra en programar la seguridad en Windows 
  Información general de cómo proteger los mensajes en el nivel de transporte.  
   
  [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- Se resumen las razones para usar seguridad de nivel de mensaje en Windows Communication Foundation (WCF).  
+ Resume las razones para utilizar la seguridad de nivel de mensaje en Windows Communication Foundation (WCF).  
   
  [Sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- Una explicación de las consideraciones necesarias para proteger una sesión WCF.  
+ Explicación de las consideraciones necesarias para proteger una sesión de WCF.  
   
  [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Explicación de algunas de las tareas comunes necesarias para la utilización de los certificados X.509.  
@@ -55,4 +55,4 @@ La información de esta sección se centra en programar la seguridad en Windows 
 ## <a name="see-also"></a>Vea también
 
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

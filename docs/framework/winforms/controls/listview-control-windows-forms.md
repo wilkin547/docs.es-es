@@ -1,5 +1,5 @@
 ---
-title: ListView (Control, formularios Windows Forms)
+title: Control ListView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960358"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745148"
 ---
 # <a name="listview-control-windows-forms"></a>ListView (Control, formularios Windows Forms)
 El control `ListView` de Windows Forms muestra una lista de elementos con iconos. Puede usar una vista de lista para crear una interfaz de usuario similar al panel derecho del Explorador de Windows.  
@@ -78,4 +78,4 @@ El control `ListView` de Windows Forms muestra una lista de elementos con iconos
   
 ## <a name="see-also"></a>Vea también
 
-- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)

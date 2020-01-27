@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para guardar archivos con el control RichTextBox de formularios Windows Forms
+title: Guardar archivos con el control RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046265"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744823"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procedimiento para guardar archivos con el control RichTextBox de formularios Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Cómo: Guardar archivos con el control RichTextBox de formularios Windows Forms
 
-El control <xref:System.Windows.Forms.RichTextBox> Windows Forms puede escribir la información que se muestra en uno de varios formatos:
+El control <xref:System.Windows.Forms.RichTextBox> de Windows Forms puede escribir la información que se muestra en uno de varios formatos:
 
 - Texto sin formato
 
@@ -36,17 +36,17 @@ El control <xref:System.Windows.Forms.RichTextBox> Windows Forms puede escribir 
 
 - Texto sin formato con una representación textual de objetos OLE
 
-Para guardar un archivo, llame al <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método. También puede utilizar el método **SaveFile** para guardar los datos en una secuencia. Para obtener más información, consulta <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Para guardar un archivo, llame al método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. También puede utilizar el método **SaveFile** para guardar los datos en una secuencia. Para obtener más información, vea <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Para guardar el contenido del control en un archivo
 
 1. Determine la ruta de acceso del archivo que se va a guardar.
 
-    Para hacer esto en una aplicación real, normalmente usaría el <xref:System.Windows.Forms.SaveFileDialog> componente. Para obtener información general, consulte [información general sobre el componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
+    Para hacer esto en una aplicación real, normalmente usaría el componente <xref:System.Windows.Forms.SaveFileDialog>. Para obtener información general, consulte [información general sobre el componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
 
-2. Llame al <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método <xref:System.Windows.Forms.RichTextBox> del control, especificando el archivo que se va a guardar y, opcionalmente, un tipo de archivo. Si llama al método con un nombre de archivo como su único argumento, el archivo se guardará como RTF. Para especificar otro tipo de archivo, llame al método con un valor de la enumeración <xref:System.Windows.Forms.RichTextBoxStreamType> como segundo argumento.
+2. Llame al método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> del control <xref:System.Windows.Forms.RichTextBox>, especificando el archivo que se va a guardar y, opcionalmente, un tipo de archivo. Si llama al método con un nombre de archivo como su único argumento, el archivo se guardará como RTF. Para especificar otro tipo de archivo, llame al método con un valor de la enumeración <xref:System.Windows.Forms.RichTextBoxStreamType> como segundo argumento.
 
-    En el ejemplo siguiente, la ruta de acceso establecida para la ubicación del archivo de texto enriquecido es la carpeta **Mis documentos** . Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta. La elección de esta ubicación también permite a los usuarios con niveles de acceso mínimos del sistema ejecutar la aplicación de forma segura. En el ejemplo siguiente se supone que ya <xref:System.Windows.Forms.RichTextBox> se ha agregado un formulario con un control.
+    En el ejemplo siguiente, la ruta de acceso establecida para la ubicación del archivo de texto enriquecido es la carpeta **Mis documentos** . Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta. La elección de esta ubicación también permite a los usuarios con niveles de acceso mínimos del sistema ejecutar la aplicación de forma segura. En el ejemplo siguiente se supone que ya se ha agregado un formulario con un control <xref:System.Windows.Forms.RichTextBox>.
 
     ```vb
     Public Sub SaveFile()
@@ -93,4 +93,4 @@ Para guardar un archivo, llame al <xref:System.Windows.Forms.RichTextBox.SaveFil
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox (control)](richtextbox-control-windows-forms.md)
-- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)

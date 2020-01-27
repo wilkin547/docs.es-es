@@ -1,5 +1,5 @@
 ---
-title: Información general sobre los complementos de WPF
+title: Introducción a los complementos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421097"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738941"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 
@@ -252,7 +252,7 @@ Por su naturaleza, <xref:System.Windows.Interop.HwndHost> tiene ciertas limitaci
 
 ## <a name="wpf-add-in-benefits"></a>Ventajas del complemento de WPF
 
-Dado que las interfaces de usuario de los complementos de WPF se muestran desde las aplicaciones host mediante una clase interna que deriva de <xref:System.Windows.Interop.HwndHost>, esas interfaces de usuario están restringidas por las capacidades de <xref:System.Windows.Interop.HwndHost> con respecto a los servicios de IU de WPF, como el diseño, la representación, los datos enlace, estilos, plantillas y recursos. Sin embargo, WPF aumenta su subclase <xref:System.Windows.Interop.HwndHost> interna con capacidades adicionales que incluyen lo siguiente:
+Dado que las interfaces de usuario de los complementos de WPF se muestran desde las aplicaciones host mediante una clase interna que deriva de <xref:System.Windows.Interop.HwndHost>, esas interfaces de usuario están restringidas por las capacidades de <xref:System.Windows.Interop.HwndHost> con respecto a los servicios de IU de WPF, como el diseño, la representación, el enlace de datos, los estilos, las plantillas y los recursos. Sin embargo, WPF aumenta su subclase <xref:System.Windows.Interop.HwndHost> interna con capacidades adicionales que incluyen lo siguiente:
 
 - Tabulación entre la interfaz de usuario de una aplicación host y la interfaz de usuario de un complemento. Tenga en cuenta que el modelo de programación "el complemento es una interfaz de usuario" requiere que el adaptador del complemento invalide <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar la tabulación, si el complemento es de plena confianza o de confianza parcial.
 

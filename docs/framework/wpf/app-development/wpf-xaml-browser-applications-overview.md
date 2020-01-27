@@ -1,5 +1,5 @@
 ---
-title: Información general sobre las aplicaciones de explorador XAML de WPF
+title: Información general sobre las aplicaciones de explorador XAML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636333"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742283"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Información general sobre las aplicaciones de explorador XAML de WPF
 <a name="introduction"></a>Las aplicaciones de explorador XAML (XBAP) combinan características de las aplicaciones web y las aplicaciones cliente enriquecidas. Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciar desde Internet Explorer o Firefox. Al igual que las aplicaciones cliente enriquecidas, las XBAP pueden aprovechar las capacidades de WPF. El desarrollo de aplicaciones XBAP también se parece al desarrollo de clientes enriquecidos. En este tema se proporciona una sencilla introducción de alto nivel al desarrollo de aplicaciones XBAP y se describe en qué se diferencia este del desarrollo estándar de clientes enriquecidos.

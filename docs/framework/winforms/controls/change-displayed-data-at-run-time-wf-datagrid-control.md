@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms
+title: Cambiar los datos mostrados en tiempo de ejecución en el control DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: c7bf70a67729744f4cf96318f6b270a5ea81b812
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f91e2ea01ef4a52dd649efed70319017efb8368a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917726"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740595"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedimiento para cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Cómo: Cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Después de crear un Windows Forms <xref:System.Windows.Forms.DataGrid> mediante las características en tiempo de diseño, puede que también desee cambiar dinámicamente los elementos <xref:System.Data.DataSet> del objeto de la cuadrícula en tiempo de ejecución. Esto puede incluir cambios en los valores individuales de la tabla o en el origen de datos que se enlaza <xref:System.Windows.Forms.DataGrid> al control. Los cambios en los valores individuales se realizan <xref:System.Data.DataSet> a través del objeto <xref:System.Windows.Forms.DataGrid> , no del control.  
+ Después de crear un Windows Forms <xref:System.Windows.Forms.DataGrid> mediante las características de tiempo de diseño, puede que también desee cambiar dinámicamente los elementos del objeto <xref:System.Data.DataSet> de la cuadrícula en tiempo de ejecución. Esto puede incluir cambios en los valores individuales de la tabla o en cambiar el origen de datos enlazado al control de <xref:System.Windows.Forms.DataGrid>. Los cambios en los valores individuales se realizan a través del objeto <xref:System.Data.DataSet>, no del control <xref:System.Windows.Forms.DataGrid>.  
   
 ### <a name="to-change-data-programmatically"></a>Para cambiar los datos mediante programación  
   
-1. Especifique la tabla deseada del <xref:System.Data.DataSet> objeto y la fila y el campo deseados de la tabla y establezca la celda igual al nuevo valor.  
+1. Especifique la tabla deseada del objeto <xref:System.Data.DataSet> y la fila y el campo deseados de la tabla y establezca la celda igual al nuevo valor.  
   
     > [!NOTE]
-    > Para especificar la primera tabla de <xref:System.Data.DataSet> la o de la primera fila de la tabla, use 0.  
+    > Para especificar la primera tabla del <xref:System.Data.DataSet> o de la primera fila de la tabla, use 0.  
   
-     En el ejemplo siguiente se muestra cómo cambiar la segunda entrada de la primera fila de la primera tabla de un conjunto de `Button1`filas haciendo clic en. Las <xref:System.Data.DataSet> tablas`ds`() y (`0` y `1`) se crearon previamente.  
+     En el ejemplo siguiente se muestra cómo cambiar la segunda entrada de la primera fila de la primera tabla de un conjunto de filas haciendo clic en `Button1`. Los <xref:System.Data.DataSet> (`ds`) y las tablas (`0` y `1`) se crearon previamente.  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -64,13 +64,13 @@ ms.locfileid: "69917726"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     En tiempo de ejecución, puede utilizar <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> el método para enlazar el <xref:System.Windows.Forms.DataGrid> control a un origen de datos diferente. Por ejemplo, puede tener varios controles de datos ADO.NET, cada uno conectado a una base de datos diferente.  
+     En tiempo de ejecución, puede utilizar el método <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> para enlazar el control de <xref:System.Windows.Forms.DataGrid> a un origen de datos diferente. Por ejemplo, puede tener varios controles de datos ADO.NET, cada uno conectado a una base de datos diferente.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>Para cambiar el origen de los código mediante programación  
   
-1. Establezca el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método en el nombre del origen de datos y la tabla a la que desea enlazar.  
+1. Establezca el método <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> en el nombre del origen de datos y la tabla a la que desea enlazar.  
   
-     En el ejemplo siguiente se muestra cómo cambiar el origen de fecha <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> mediante el método a un control de datos ADO.net (adoPubsAuthors) que está conectado a la tabla authors en la base de datos pubs.  
+     En el ejemplo siguiente se muestra cómo cambiar el origen de fecha mediante el método <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> a un control de datos ADO.NET (adoPubsAuthors) que está conectado a la tabla authors en la base de datos pubs.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -96,6 +96,6 @@ ms.locfileid: "69917726"
 ## <a name="see-also"></a>Vea también
 
 - [Objetos DataSet de ADO.NET](../../data/adonet/ado-net-datasets.md)
-- [Cómo: Eliminar u ocultar columnas en el control DataGrid de Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Cómo: Eliminar u ocultar columnas del control DataGrid de formularios Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Cómo: Agregar tablas y columnas al control DataGrid de Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Cómo: Enlazar el control DataGrid de Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Cómo: Enlazar el control DataGrid de formularios Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

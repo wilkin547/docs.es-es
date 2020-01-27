@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para validar datos en el control DataGridView de formularios Windows Forms
+title: Validar datos en el control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], validating data
 - data validation [Windows Forms], Windows Forms
 ms.assetid: d10aef35-701e-4a3c-a684-2a2ed1aeaca6
-ms.openlocfilehash: 12fd668e22703271f8c629baf56487dd084cfd8b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fd881829f87fa1dec135d936f22996f196b0594
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591034"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728310"
 ---
-# <a name="how-to-validate-data-in-the-windows-forms-datagridview-control"></a>Procedimiento para validar datos en el control DataGridView de formularios Windows Forms
+# <a name="how-to-validate-data-in-the-windows-forms-datagridview-control"></a>Cómo: Validar datos en el control DataGridView de formularios Windows Forms
 El ejemplo de código siguiente muestra cómo validar datos introducidos por un usuario en un control <xref:System.Windows.Forms.DataGridView>. En este ejemplo, <xref:System.Windows.Forms.DataGridView> se rellena con filas de la tabla `Customers` de la base de datos de ejemplo Northwind. Cuando el usuario edita una celda en la columna `CompanyName`, se comprueba la validez de su valor verificando que no está vacío. Si el controlador de eventos del evento <xref:System.Windows.Forms.DataGridView.CellValidating> detecta que el valor es una cadena vacía, <xref:System.Windows.Forms.DataGridView> impide que el usuario salga de la celda hasta que se especifique una cadena que no esté vacía.  
   
- Para obtener una explicación completa de este ejemplo de código, vea [Tutorial: Validar datos en el Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+ Para una explicación más completa de este ejemplo de código, consulte [Tutorial: Validar datos en el control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#00)]
@@ -38,7 +38,7 @@ El ejemplo de código siguiente muestra cómo validar datos introducidos por un 
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Tutorial: Validar datos en el Control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Validar datos en el control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Tutorial: Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

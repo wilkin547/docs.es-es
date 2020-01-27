@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Habilitar la vista en mosaico en un control ListView de formularios Windows Forms mediante el Diseñador'
+title: Habilitar la vista en mosaico en el control ListView mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 4f51d3a596bc3358942cdfd654b3e4515d96cd07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a0429efaab14995ab1e3f3b0dfd91db61de72fbf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960102"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745803"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Cómo: Habilitar la vista en mosaico en un control ListView de formularios Windows Forms mediante el Diseñador
 La característica de vista en mosaico del control <xref:System.Windows.Forms.ListView> permite proporcionar un equilibrio visual entre la información gráfica y de texto. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. Las funciones de la vista de mosaico en combinación con las características de agrupación o de marca de inserción del control <xref:System.Windows.Forms.ListView>.

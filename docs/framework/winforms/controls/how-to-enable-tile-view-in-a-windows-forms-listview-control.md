@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Habilitar la vista en mosaico en un control ListView de Windows Forms'
+title: Habilitar vista en mosaico en el control ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 489b9a9d0341391c756175acb19d962d642eb7b2
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 8ccbd42d870e44fc6fd80169327922409ea4f6e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960451"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745471"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Cómo: Habilitar la vista en mosaico en un control ListView de Windows Forms
 Con la característica de vista de mosaico del control <xref:System.Windows.Forms.ListView>, puede proporcionar equilibrio visual entre la información gráfica y de texto. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. La vista de mosaico funciona en combinación con las características de marca de inserción o agrupación del control <xref:System.Windows.Forms.ListView>.  
@@ -57,5 +57,5 @@ Con la característica de vista de mosaico del control <xref:System.Windows.Form
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView (Control)](listview-control-windows-forms.md)
+- [ListView (control)](listview-control-windows-forms.md)
 - [Información general del control ListView](listview-control-overview-windows-forms.md)

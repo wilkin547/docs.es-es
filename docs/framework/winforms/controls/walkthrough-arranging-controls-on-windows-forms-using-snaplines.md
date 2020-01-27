@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste'
+title: Organizar controles mediante líneas de ajuste
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460644"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740222"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Tutorial: organizar controles en Windows Forms mediante líneas de ajuste
 
@@ -29,7 +29,7 @@ Las guías de alineación facilitan la alineación de los controles, para una ap
 
 1. En Visual Studio, cree un proyecto de aplicación basado en Windows denominado "SnaplineExample".
 
-2. Seleccione el formulario en el diseñador de formularios.
+2. Seleccione el formulario en el Diseñador de Windows Forms.
 
 ## <a name="space-and-align-controls"></a>Controlar espacio y alinear controles
 
@@ -193,4 +193,4 @@ Las guías de alineación ofrecen un medio intuitivo de alinear los controles en
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

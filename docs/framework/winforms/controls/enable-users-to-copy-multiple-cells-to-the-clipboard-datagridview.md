@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
+title: Permitir a los usuarios copiar varias celdas en el Portapapeles desde el control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], copying multiple cells
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
-ms.openlocfilehash: b220603adcaeae6f3380a2e3c10ea524c9a61f24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2bb74a1f0c59b28ab496ce9c89c1c1b5f9d8147b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591923"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745777"
 ---
-# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Procedimiento para permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
+# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Cómo: Permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms
 Cuando se habilita la copia de celdas, los datos de su control <xref:System.Windows.Forms.DataGridView> son más fácilmente accesibles para otras aplicaciones mediante el <xref:System.Windows.Forms.Clipboard>. Los valores de las celdas seleccionadas se convierten en cadenas y se agregan al Portapapeles como valores de texto delimitados por tabulaciones para pegarlos en aplicaciones como el Bloc de notas y Excel, y como una tabla con formato HTML para pegarlos en aplicaciones como Word.  
   
  Puede configurar la copia de celdas para copiar solo valores de celda, para incluir el texto de encabezado de filas y columnas en los datos del Portapapeles, o para incluir el texto de encabezado solo cuando los usuarios seleccionan filas o columnas completas.  

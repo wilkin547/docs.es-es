@@ -1,18 +1,19 @@
 ---
-title: 'Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms'
+title: Hospedar un control compuesto de WPF en Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458922"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742684"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, si tiene una inversión sustancial en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, puede ser más eficaz ampliar su aplicación de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] existente con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en lugar de volver a escribirla desde el principio. Un escenario común es cuando desea incrustar uno o más controles implementados con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de la aplicación de Windows Forms. Para obtener más información sobre cómo personalizar controles de WPF, vea [Personalización](../controls/control-customization.md)de controles.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, si tiene una inversión sustancial en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, puede ser más eficaz ampliar su aplicación de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] existente con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en lugar de volver a escribirla desde el principio. Un escenario común es cuando desea incrustar uno o más controles implementados con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de la aplicación de Windows Forms. Para obtener más información sobre cómo personalizar controles de WPF, vea [Personalización de controles](../controls/control-customization.md).  
   
  Este tutorial le guía a través de una aplicación que hospeda un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control compuesto para realizar la entrada de datos en una aplicación Windows Forms. El control compuesto se empaqueta en un archivo DLL. Este procedimiento general se puede extender a aplicaciones y controles más complejos. Este tutorial está diseñado para ser casi idéntico en aspecto y funcionalidad al [Tutorial: hospedar un Windows Forms control compuesto en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). La principal diferencia es que se invierte el escenario de hospedaje.  
   
@@ -58,7 +59,7 @@ Necesita Visual Studio para completar este tutorial.
   
 - PresentationFramework  
   
-- Sistema  
+- System  
   
 - WindowsBase  
   
@@ -267,7 +268,7 @@ La siguiente imagen muestra un control compuesto de WPF hospedado en una aplicac
     |--------------|----------|----------|  
     |groupBox7|lblName|Nombre:|  
     |groupBox7|lblAddress|Dirección postal:|  
-    |groupBox7|lblCity|Ciudad:|  
+    |groupBox7|lblCity|City:|  
     |groupBox7|lblState|Estado:|  
     |groupBox7|lblZip|Código postal:|  
   

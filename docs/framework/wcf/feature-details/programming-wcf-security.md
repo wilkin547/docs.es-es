@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 18942c2d486038c3ebfbe11d21b41d0ba9412500
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e19f858818866f16b8af44abe462ddb826d43b69
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909863"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741479"
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
 En este tema se describen las tareas de programación fundamentales que se usan para crear una aplicación Secure Windows Communication Foundation (WCF). En este tema solo se trata la autenticación, la confidencialidad y la integridad, que se conocen colectivamente como *seguridad de transferencia*. En este tema no se trata la autorización (el control de acceso a los recursos o servicios). para obtener información sobre la autorización, vea [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
-> Para obtener una introducción valiosa a los conceptos de seguridad, especialmente en relación con WCF, vea el conjunto de tutoriales de patrones y prácticas de MSDN en [escenarios, patrones e instrucciones de implementación para Web Services Enhancements (WSE) 3,0](https://go.microsoft.com/fwlink/?LinkID=88250).  
+> Para obtener una introducción valiosa a los conceptos de seguridad, especialmente en relación con WCF, vea el conjunto de tutoriales de patrones y prácticas de MSDN en [escenarios, patrones e instrucciones de implementación para Web Services Enhancements (WSE) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
  La programación de la seguridad de WCF se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
   
 ## <a name="setting-the-security-mode"></a>Establecimiento del modo de seguridad  
  A continuación se explican los pasos generales para programar con el modo de seguridad en WCF:  
   
-1. Seleccione uno de los enlaces predefinidos adecuado a sus requisitos de aplicación. Para obtener una lista de las opciones de enlace, vea [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md)por el sistema. De forma predeterminada, prácticamente todos los enlaces tienen la seguridad habilitada. La única excepción es la <xref:System.ServiceModel.BasicHttpBinding> clase (mediante la configuración, el [ \<> basicHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Seleccione uno de los enlaces predefinidos adecuado a sus requisitos de aplicación. Para obtener una lista de las opciones de enlace, vea [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md)por el sistema. De forma predeterminada, prácticamente todos los enlaces tienen la seguridad habilitada. La única excepción es la <xref:System.ServiceModel.BasicHttpBinding> clase (mediante la configuración, el [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      El enlace que seleccione determina el transporte. Por ejemplo, <xref:System.ServiceModel.WSHttpBinding> utiliza HTTP como el transporte; <xref:System.ServiceModel.NetTcpBinding> utiliza TCP.  
   
@@ -35,7 +35,7 @@ En este tema se describen las tareas de programación fundamentales que se usan 
   
     1. `Transport`  
   
-         La seguridad de transporte depende del mecanismo que use el enlace que ha seleccionado. Por ejemplo, si utiliza `WSHttpBinding`, el mecanismo de seguridad es Secure Sockets Layer (SSL) (también es el mecanismo para el protocolo HTTPS). Generalmente hablando, la principal ventaja de la seguridad de transporte es que proporciona un buen rendimiento independientemente del transporte que esté utilizando. Sin embargo, tiene dos limitaciones: La primera es que el mecanismo de transporte dicta el tipo de credencial que se usa para autenticar a un usuario. Ésta es una desventaja solo si un servicio necesita interoperar con otros servicios que exigen tipos diferentes de credenciales. La segunda es que, puesto que la seguridad no se aplica en el nivel de mensaje, la seguridad se implementa salto por salto en lugar de de extremo a extremo. Esta última limitación es un problema solo si la ruta de mensajes entre el cliente y el servicio incluye intermediarios. Para obtener más información acerca del transporte que se va a usar, consulte [elección de un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obtener más información sobre el uso de la seguridad de transporte, vea [información general](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)sobre la seguridad de transporte.  
+         La seguridad de transporte depende del mecanismo que use el enlace que ha seleccionado. Por ejemplo, si utiliza `WSHttpBinding`, el mecanismo de seguridad es Secure Sockets Layer (SSL) (también es el mecanismo para el protocolo HTTPS). Generalmente hablando, la principal ventaja de la seguridad de transporte es que proporciona un buen rendimiento independientemente del transporte que esté utilizando. No obstante, tiene dos limitaciones: la primera es que el mecanismo de transporte dicta el tipo de credencial utilizado para autenticar a un usuario. Ésta es una desventaja solo si un servicio necesita interoperar con otros servicios que exigen tipos diferentes de credenciales. La segunda es que, puesto que la seguridad no se aplica en el nivel de mensaje, la seguridad se implementa salto por salto en lugar de de extremo a extremo. Esta última limitación es un problema solo si la ruta de mensajes entre el cliente y el servicio incluye intermediarios. Para obtener más información acerca del transporte que se va a usar, consulte [elección de un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obtener más información sobre el uso de la seguridad de transporte, vea [información general](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)sobre la seguridad de transporte.  
   
     2. `Message`  
   

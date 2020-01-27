@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para ajustar un control de formularios Windows Forms con ToolStripControlHost
+title: Ajustar el control con ToolStripControlHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 6335d09a89225ae1e202a781a73bfd149608f5fc
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c7dbe042623006ed9501016669d6451ba0667cbc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364191"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728176"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Procedimiento para ajustar un control de formularios Windows Forms con ToolStripControlHost
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Cómo: Ajustar un control de formularios Windows Forms con ToolStripControlHost
 <xref:System.Windows.Forms.ToolStripControlHost> está diseñado para habilitar el hospedaje de controles de Windows Forms arbitrarios mediante el constructor <xref:System.Windows.Forms.ToolStripControlHost> o extendiendo el propio <xref:System.Windows.Forms.ToolStripControlHost>. Es más sencillo ajustar el control extendiendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando las propiedades y los métodos que exponen las propiedades y los métodos del control que se usan con frecuencia. También puede exponer los eventos del control en el nivel de <xref:System.Windows.Forms.ToolStripControlHost>.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Para hospedar un control en un ToolStripControlHost por derivación  

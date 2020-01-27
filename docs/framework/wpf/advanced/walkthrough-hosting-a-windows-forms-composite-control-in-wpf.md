@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF'
+title: Hospedar un control compuesto de Windows Forms en WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197952"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744997"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, si tiene una inversión sustancial en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, puede ser más eficaz reutilizar al menos parte de ese código en su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en lugar de volver a escribirlo desde el principio. El escenario más común es cuando tiene controles de Windows Forms existentes. En algunos casos, incluso podría no tener acceso al código fuente de estos controles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un procedimiento sencillo para hospedar estos controles en una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por ejemplo, puede usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para la mayor parte de la programación mientras hospeda los controles de <xref:System.Windows.Forms.DataGridView> especializados.  
@@ -58,7 +59,7 @@ Necesita Visual Studio para completar este tutorial.
   
  El proyecto debe tener referencias a los siguientes archivos DLL del sistema. Si alguno de estos archivos DLL no está incluido de forma predeterminada, agréguelo al proyecto.  
   
-- Sistema  
+- System  
   
 - System.Data  
   

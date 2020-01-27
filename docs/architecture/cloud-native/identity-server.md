@@ -2,12 +2,12 @@
 title: IdentityServer para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568464"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728580"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer para aplicaciones nativas para la nube
 
@@ -96,13 +96,13 @@ IdentityServer también hospeda un sitio de demostración público que se puede 
 
 ## <a name="javascript-clients"></a>Clientes de JavaScript
 
-Muchas aplicaciones nativas en la nube aprovechan las API del lado servidor y las aplicaciones de página única de cliente enriquecidas (Spa) en el front-end. IdentityServer envía un [cliente de JavaScript](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`) a través de NPM que se puede Agregar a Spa para permitirles usar IdentityServer para el inicio de sesión, cierre de sesión y la autenticación basada en tokens de las API Web.
+Muchas aplicaciones nativas en la nube aprovechan las API del lado servidor y las aplicaciones de página única de cliente enriquecidas (Spa) en el front-end. IdentityServer envía un [cliente de JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) a través de NPM que se puede Agregar a Spa para permitirles usar IdentityServer para el inicio de sesión, cierre de sesión y la autenticación basada en tokens de las API Web.
 
 ## <a name="references"></a>Referencias
 
 - [Documentación de IdentityServer](http://docs.identityserver.io/en/latest/)
 - [Tipos de aplicación](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [Cliente OIDC de JavaScript](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [Cliente OIDC de JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Anterior](azure-active-directory.md)

@@ -1,5 +1,5 @@
 ---
-title: Mostrar datos en el control DataGridView de formularios Windows Forms
+title: Mostrar datos en el control DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
@@ -7,63 +7,63 @@ helpviewer_keywords:
 - displaying data [Windows Forms], data grids
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-ms.openlocfilehash: c153d422470ff20491567aed70557e461dc2b4e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02362895d75df3735d19554bd44bb8ac443c6c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972229"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745866"
 ---
-# <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Mostrar datos en el control DataGridView de formularios Windows Forms
-El `DataGridView` control se usa para mostrar los datos desde una variedad de orígenes de datos externos. Como alternativa, puede agregar filas y columnas al control y rellenarlo con datos manualmente.  
+# <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Mostrar datos en el control DataGridView de Windows Forms
+El control `DataGridView` se utiliza para mostrar los datos de diversos orígenes de datos externos. Como alternativa, puede Agregar filas y columnas al control y rellenarlas manualmente con los datos.  
   
- Al enlazar el control a un origen de datos, puede generar columnas automáticamente según el esquema del origen de datos. Si estas columnas no aparecen tal como desea a, puede ocultar, quitar o reorganizarlos. También puede agregar columnas sin enlazar para mostrar datos complementarios que no proceden del origen de datos.  
+ Al enlazar el control a un origen de datos, puede generar columnas automáticamente según el esquema del origen de datos. Si estas columnas no aparecen exactamente como desea, puede ocultarlas, quitarlas o reorganizarlas. También puede Agregar columnas sin enlazar para Mostrar datos complementarios que no proceden del origen de datos.  
   
- Además, puede mostrar los datos con formatos estándares (por ejemplo, el formato de moneda), o puede personalizar el formato de presentación para presentar los datos, sin embargo, debe (por ejemplo, cambiar el color de fondo para los números negativos o reemplazar los valores de cadena con las imágenes correspondientes).  
+ Además, puede mostrar los datos mediante formatos estándar (como el formato de moneda), o puede personalizar el formato de presentación para presentar los datos, sin embargo, es necesario (por ejemplo, cambiar el color de fondo de los números negativos o reemplazar los valores de cadena). con las imágenes correspondientes).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Modos de presentación de datos en el control DataGridView de Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Describe las opciones para rellenar el control con datos.  
   
  [Formato de datos en el control DataGridView de Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)  
- Describe las opciones para dar formato a valores de celda para mostrar.  
+ Describe las opciones para dar formato a los valores de presentación de la celda.  
   
- [Tutorial: Crear una independiente de Windows Forms DataGridView Control](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ [Tutorial: Crear un control DataGridView sin enlazar en Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
  Describe cómo rellenar manualmente el control con datos.  
   
- [Cómo: Enlazar datos al Control DataGridView de formularios Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Describe cómo rellenar el control con datos mediante su enlace a un `BindingSource` que contiene información extraída de una base de datos.  
+ [Enlazar datos al control DataGridView de formularios Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ Describe cómo rellenar el control con datos enlazándolo a un `BindingSource` que contiene información extraída de una base de datos.  
   
- [Cómo: Generar columnas automáticamente en un Control DataGridView de formularios de Windows enlazados a datos](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Describe cómo generar automáticamente columnas basándose en un origen de datos enlazado.  
+ [Generar columnas automáticamente en un control DataGridView de formularios Windows Forms enlazado a datos](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ Describe cómo generar automáticamente columnas basadas en un origen de datos enlazado.  
   
- [Cómo: Quitar columnas generadas automáticamente desde un Control DataGridView de formularios Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ [Quitar columnas generadas automáticamente desde un control DataGridView de formularios Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
  Describe cómo ocultar o eliminar columnas generadas automáticamente desde un origen de datos enlazado.  
   
- [Cómo: Cambiar el orden de columnas en el Control DataGridView de formularios de Windows](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
- Describe cómo reorganizar columnas generadas automáticamente desde un origen de datos enlazado.  
+ [Cambiar el orden de las columnas en el control DataGridView de formularios Windows Forms](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ Describe cómo reorganizar las columnas generadas automáticamente a partir de un origen de datos enlazado.  
   
- [Cómo: Agregar una columna independiente a un Control DataGridView de formularios de Windows enlazados a datos](unbound-column-to-a-data-bound-datagridview.md)  
- Describe cómo complementar los datos de un origen de datos enlazado al mostrar columnas adicionales e independientes.  
+ [Agregar una columna independiente a un control DataGridView de formularios Windows Forms enlazado a datos](unbound-column-to-a-data-bound-datagridview.md)  
+ Describe cómo complementar los datos de un origen de datos enlazado mostrando columnas adicionales y sin enlazar.  
   
- [Cómo: Enlazar objetos a controles DataGridView de formularios Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Describe cómo enlazar el control a una colección de objetos arbitrarios para que cada objeto se muestran en su propia fila.  
+ [Cómo: Enlazar objetos a controles DataGridView de Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ Describe cómo enlazar el control a una colección de objetos arbitrarios para que cada objeto se muestre en su propia fila.  
   
- [Cómo: Obtener acceso a objetos enlazados a Windows Forms filas DataGridView](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ [Cómo: Obtener acceso a objetos enlazados a filas DataGridView de Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
  Describe cómo recuperar un objeto enlazado a una fila determinada del control.  
   
- [Tutorial: Creación de un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)  
- Describe cómo mostrar datos de dos tablas relacionadas de la base de datos para que los valores mostrados en uno `DataGridView` control dependen de la fila seleccionada actualmente en otro control.  
+ [Tutorial: Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)  
+ Describe cómo mostrar los datos de dos tablas de base de datos relacionadas para que los valores mostrados en un control `DataGridView` dependan de la fila seleccionada actualmente en otro control.  
   
- [Cómo: Personalizar el formato de datos en el Control DataGridView de Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Describe cómo controlar la <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> eventos para cambiar la apariencia de las celdas según sus valores.  
+ [Personalizar el formato de los datos en el control DataGridView de formularios Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ Describe cómo controlar el evento <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> para cambiar la apariencia de las celdas en función de sus valores.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.DataGridView>  
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- Proporciona documentación de referencia para el <xref:System.Windows.Forms.DataGridView.DataSource%2A> propiedad.  
+ Proporciona documentación de referencia para la propiedad <xref:System.Windows.Forms.DataGridView.DataSource%2A>.  
   
  <xref:System.Windows.Forms.BindingSource>  
  Proporciona documentación de referencia para el componente <xref:System.Windows.Forms.BindingSource>.  
