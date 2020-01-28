@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para implementar el modo virtual en el control DataGridView de formularios Windows Forms
+title: Implementar el modo virtual en el control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - virtual mode
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-ms.openlocfilehash: 064b58b64e0a9f55e3ef7d15b4962cfec514eff3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8612a808ac5c9facee55d820529945f481a2cea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592396"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736507"
 ---
-# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="17e0a-102">Procedimiento para implementar el modo virtual en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="17e0a-102">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="17e0a-103">El ejemplo de código siguiente muestra cómo administrar grandes conjuntos de datos mediante un control <xref:System.Windows.Forms.DataGridView> con su propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> establecida en `true`.</span><span class="sxs-lookup"><span data-stu-id="17e0a-103">The following code example demonstrates how to manage large sets of data using a <xref:System.Windows.Forms.DataGridView> control with its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property set to `true`.</span></span>  
+# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="bd419-102">Cómo: Implementar el modo virtual en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd419-102">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="bd419-103">El ejemplo de código siguiente muestra cómo administrar grandes conjuntos de datos mediante un control <xref:System.Windows.Forms.DataGridView> con su propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> establecida en `true`.</span><span class="sxs-lookup"><span data-stu-id="bd419-103">The following code example demonstrates how to manage large sets of data using a <xref:System.Windows.Forms.DataGridView> control with its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property set to `true`.</span></span>  
   
- <span data-ttu-id="17e0a-104">Para obtener una explicación completa de este ejemplo de código, vea [Tutorial: Implementar el modo Virtual en el Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="17e0a-104">For a complete explanation of this code example, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
+ <span data-ttu-id="bd419-104">Para una explicación más completa de este ejemplo de código, vea [Tutorial: Implementar el modo virtual en el control DataGridView de Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="bd419-104">For a complete explanation of this code example, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="17e0a-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="17e0a-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bd419-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bd419-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
  [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#000)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="17e0a-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="17e0a-106">Compiling the Code</span></span>  
- <span data-ttu-id="17e0a-107">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="17e0a-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="bd419-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="bd419-106">Compiling the Code</span></span>  
+ <span data-ttu-id="bd419-107">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="bd419-107">This example requires:</span></span>  
   
-- <span data-ttu-id="17e0a-108">Referencias a los ensamblados System y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="17e0a-108">References to the System and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="bd419-108">Referencias a los ensamblados System y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="bd419-108">References to the System and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17e0a-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="17e0a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd419-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="bd419-109">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
@@ -44,6 +44,6 @@ ms.locfileid: "65592396"
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [<span data-ttu-id="17e0a-110">Tutorial: Implementar el modo Virtual en el Control DataGridView de formularios de Windows</span><span class="sxs-lookup"><span data-stu-id="17e0a-110">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)
-- [<span data-ttu-id="17e0a-111">Ajuste del rendimiento del control DataGridView en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="17e0a-111">Performance Tuning in the Windows Forms DataGridView Control</span></span>](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="17e0a-112">Modo virtual del control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="17e0a-112">Virtual Mode in the Windows Forms DataGridView Control</span></span>](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="bd419-110">Tutorial: Implementar el modo virtual en el control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd419-110">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)
+- [<span data-ttu-id="bd419-111">Ajuste del rendimiento del control DataGridView en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd419-111">Performance Tuning in the Windows Forms DataGridView Control</span></span>](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="bd419-112">Modo virtual del control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd419-112">Virtual Mode in the Windows Forms DataGridView Control</span></span>](virtual-mode-in-the-windows-forms-datagridview-control.md)
