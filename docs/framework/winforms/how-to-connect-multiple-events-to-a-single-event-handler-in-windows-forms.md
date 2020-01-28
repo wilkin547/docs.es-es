@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para conectar varios eventos con un único controlador de eventos en formularios Windows Forms
+title: 'Cómo: conectar varios eventos a un solo controlador de eventos'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967021"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739610"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedimiento para conectar varios eventos con un único controlador de eventos en formularios Windows Forms
-En el diseño de aplicaciones, puede que sea necesario para usar un único controlador de eventos para varios eventos o tener varios eventos de realizar el mismo procedimiento. Por ejemplo, a menudo es ahorrar mucho tiempo si un comando de menú producen el mismo evento que un botón en el formulario si expone la misma funcionalidad. Puede hacerlo mediante el uso de la vista eventos de la ventana Propiedades de C# o mediante el `Handles` palabra clave y el **nombre de la clase** y **nombre del método** listas desplegables en el Editor de código de Visual Basic.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Cómo: Conectar varios eventos con un único controlador de eventos en Windows Forms
+En el diseño de la aplicación, es posible que sea necesario usar un solo controlador de eventos para varios eventos o que varios eventos realicen el mismo procedimiento. Por ejemplo, a menudo es un eficaz ahorro de tiempo para que un comando de menú genere el mismo evento que un botón en el formulario, si expone la misma funcionalidad. Para ello, puede usar la vista eventos del ventana Propiedades en C# o utilizar la palabra clave `Handles` y los cuadros de lista desplegable nombre de **clase** y nombre de **método** en el editor de código Visual Basic.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Para conectar varios eventos con un único controlador de eventos en Visual Basic  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Para conectar varios eventos a un solo controlador de eventos en Visual Basic  
   
-1. Haga clic en el formulario y elija **ver código**.  
+1. Haga clic con el botón secundario en el formulario y elija **Ver código**.  
   
-2. Desde el **nombre de la clase** cuadro de lista desplegable, seleccione uno de los controles que desea agregar el controlador de eventos.  
+2. En el cuadro de lista desplegable **nombre de clase** , seleccione uno de los controles que desea que tengan el identificador de controlador de eventos.  
   
-3. Desde el **nombre del método** cuadro de lista desplegable, seleccione uno de los eventos que desea que el controlador de eventos.  
+3. En el cuadro de lista desplegable **nombre de método** , seleccione uno de los eventos que desea que controle el controlador de eventos.  
   
-4. El Editor de código se inserta el controlador de eventos adecuado y coloca el punto de inserción dentro del método. En el ejemplo siguiente, es el <xref:System.Windows.Forms.Control.Click> eventos para el <xref:System.Windows.Forms.Button> control.  
+4. El editor de código inserta el controlador de eventos adecuado y coloca el punto de inserción en el método. En el ejemplo siguiente, es el evento <xref:System.Windows.Forms.Control.Click> para el control <xref:System.Windows.Forms.Button>.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +36,7 @@ En el diseño de aplicaciones, puede que sea necesario para usar un único contr
     End Sub  
     ```  
   
-5. Agregue los otros eventos que desea que administran el `Handles` cláusula.  
+5. Anexe los otros eventos que desea que se controlen a la cláusula `Handles`.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -44,19 +44,19 @@ En el diseño de aplicaciones, puede que sea necesario para usar un único contr
     End Sub  
     ```  
   
-6. Agregue el código adecuado para el controlador de eventos.  
+6. Agregue el código adecuado al controlador de eventos.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Para conectar varios eventos con un único controlador de eventos en C\#
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Para conectar varios eventos a un solo controlador de eventos en C\#
   
-1. Seleccione el control al que desea conectarse a un controlador de eventos.  
+1. Seleccione el control al que desea conectar un controlador de eventos.  
   
-2. En la ventana Propiedades, haga clic en el **eventos** botón (![botón eventos](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
+2. En el ventana Propiedades, haga clic en el botón **eventos** (![botón eventos](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3. Haga clic en el nombre del evento que desea controlar.  
   
-4. En la sección de valor junto al nombre del evento, haga clic en el botón de lista desplegable para mostrar una lista de controladores de eventos existentes que coincidan con la firma del método del evento que desea controlar.  
+4. En la sección valor junto al nombre del evento, haga clic en el botón desplegable para mostrar una lista de controladores de eventos existentes que coincidan con la firma del método del evento que desea controlar.  
   
-5. Seleccione el controlador de eventos apropiado en la lista.  
+5. Seleccione en la lista el controlador de eventos adecuado.  
   
      Se agregará código al formulario para enlazar el evento al controlador de eventos existente.  
   

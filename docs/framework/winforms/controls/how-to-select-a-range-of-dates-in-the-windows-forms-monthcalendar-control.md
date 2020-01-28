@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms
+title: Seleccionar un intervalo de fechas en el control MonthCalendar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bda96af21a8f86a54d5c0fe0204546b980076d26
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013314"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732899"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Procedimiento para seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms
-Una característica importante de los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control es que el usuario puede seleccionar un intervalo de fechas. Esta característica es una mejora de la característica de selección de fecha de la <xref:System.Windows.Forms.DateTimePicker> control, que solo permite al usuario seleccionar un valor único de fecha y hora. Puede establecer un intervalo de fechas u obtener un intervalo de selección establecido por el usuario mediante las propiedades de la <xref:System.Windows.Forms.MonthCalendar> control. En el ejemplo de código siguiente se muestra cómo establecer un intervalo de selección.  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Cómo: Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms
+Una característica importante del control de <xref:System.Windows.Forms.MonthCalendar> Windows Forms es que el usuario puede seleccionar un intervalo de fechas. Esta característica es una mejora respecto a la característica de selección de fecha del control <xref:System.Windows.Forms.DateTimePicker>, que solo permite al usuario seleccionar un valor de fecha y hora único. Puede establecer un intervalo de fechas u obtener un intervalo de selección establecido por el usuario mediante las propiedades del control <xref:System.Windows.Forms.MonthCalendar>. En el ejemplo de código siguiente se muestra cómo establecer un intervalo de selección.  
   
 ### <a name="to-select-a-range-of-dates"></a>Para seleccionar un intervalo de fechas  
   
-1. Crear <xref:System.DateTime> objetos que representan la primera y última fecha en un intervalo.  
+1. Cree <xref:System.DateTime> objetos que representen la primera y la última fecha de un intervalo.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -77,6 +77,6 @@ Una característica importante de los formularios de Windows <xref:System.Window
 ## <a name="see-also"></a>Vea también
 
 - [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
-- [Cómo: Cambiar la apariencia de Windows Forms MonthCalendar del Control](how-to-change-monthcalendar-control-appearance.md)
-- [Cómo: Mostrar días específicos en negrita con el Windows Forms Control MonthCalendar de formularios](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Cómo: Mostrar más de un mes en el Control MonthCalendar de formularios de Windows](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Cambiar la apariencia del control MonthCalendar de formularios Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Mostrar más de un mes en el control MonthCalendar de formularios Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

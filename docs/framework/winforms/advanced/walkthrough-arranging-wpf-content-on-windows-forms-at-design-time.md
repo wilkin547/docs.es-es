@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Organizar el contenido de WPF en Windows Forms en tiempo de diseño'
+title: Organizar el contenido de WPF en Windows Forms en tiempo de diseño
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,12 +13,12 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460686"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746821"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: organizar el contenido de WPF en Windows Forms en tiempo de diseño
 
@@ -46,7 +47,7 @@ Después de agregar un control WPF al proyecto, puede organizarlo en el formular
 
 4. Establezca el valor de la propiedad <xref:System.Windows.Controls.Control.Background%2A> en **Blue**.
 
-5. Compile el proyecto.
+5. Generar el proyecto.
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>Hospedar controles WPF en un panel de diseño
 

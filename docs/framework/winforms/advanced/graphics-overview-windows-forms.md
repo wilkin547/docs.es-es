@@ -1,5 +1,5 @@
 ---
-title: Información general de gráficos (Formularios Windows Forms)
+title: Información general sobre gráficos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: cc99f0fda4625b278b2bea56e7d8642edb0a63d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505391"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742267"
 ---
-# <a name="graphics-overview-windows-forms"></a>Información general de gráficos (Formularios Windows Forms)
-GDI + es una interfaz de dispositivo gráfico que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de GDI + se exponen a través de un conjunto de clases administradas.  
+# <a name="graphics-overview-windows-forms"></a>Información general de gráficos (Windows Forms)
+GDI+ es una Interfaz de dispositivo gráfico que permite a los programadores escribir aplicaciones independientes del dispositivo. Los servicios de GDI+ se exponen a través de un conjunto de clases administradas.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general de gráficos](overview-of-graphics.md)  
- Proporciona una introducción general a GDI +.  
+ Proporciona una introducción general a GDI+.  
   
  [Tres categorías de servicios gráficos](three-categories-of-graphics-services.md)  
- Describe las tres categorías que constituyen la programación con GDI +.  
+ Describe las tres categorías que componen la programación con GDI+.  
   
  [Estructura de la interfaz gráfica](structure-of-the-graphics-interface.md)  
- Describe la interfaz de clase administrada de GDI +.  
+ Describe la interfaz de clase administrada de GDI+.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Drawing>  
- Proporciona acceso a la funcionalidad básica de gráficos GDI +.  
+ Proporciona acceso a la funcionalidad de gráficos básica de GDI+.  
   
  <xref:System.Drawing.Drawing2D>  
  Proporciona funcionalidad avanzada de gráficos vectoriales y bidimensionales.  
   
  <xref:System.Drawing.Imaging>  
- Proporciona funciones de imagen avanzadas para GDI +.  
+ Proporciona funcionalidad avanzada de imágenes de GDI+.  
   
  <xref:System.Drawing.Text>  
- Proporciona funciones de tipografía avanzadas para GDI +.  
+ Proporciona funcionalidad avanzada de tipografía de GDI+.  
   
  <xref:System.Drawing.Printing>  
  Proporciona servicios relacionados con la impresión.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Proporciona el dibujo de texto GDI y medir la funcionalidad.
+ Proporciona funcionalidad de dibujo y medición de texto GDI.

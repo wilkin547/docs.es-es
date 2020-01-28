@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para copiar píxeles para reducir el parpadeo en formularios Windows Forms
+title: 'Cómo: copiar píxeles para reducir el parpadeo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299041e7038d5bd5b9824d668b3f47d842030ac7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950146"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746486"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedimiento para copiar píxeles para reducir el parpadeo en formularios Windows Forms
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Cómo: Copiar píxeles para reducir el parpadeo en formularios Windows Forms
 Al animar un gráfico simple, a veces los usuarios pueden encontrar parpadeo u otros efectos visuales no deseados. Una manera de limitar este problema es utilizar un proceso "bitblt" en el gráfico. Bitblt es la "transferencia de bloque de bits" de los datos de color de un rectángulo de origen de píxeles a un rectángulo de destino de píxeles.  
   
- Con Windows Forms, bitblt se consigue mediante el <xref:System.Drawing.Graphics.CopyFromScreen%2A> método de la <xref:System.Drawing.Graphics> clase. En los parámetros del método, se especifican el origen y el destino (como puntos), el tamaño del área que se va a copiar y el objeto gráfico que se usa para dibujar la nueva forma.  
+ Con Windows Forms, bitblt se consigue mediante el método <xref:System.Drawing.Graphics.CopyFromScreen%2A> de la clase <xref:System.Drawing.Graphics>. En los parámetros del método, se especifican el origen y el destino (como puntos), el tamaño del área que se va a copiar y el objeto gráfico que se usa para dibujar la nueva forma.  
   
- En el ejemplo siguiente, se dibuja una forma en el formulario en su <xref:System.Windows.Forms.Control.Paint> controlador de eventos. A continuación, <xref:System.Drawing.Graphics.CopyFromScreen%2A> se usa el método para duplicar la forma.  
+ En el ejemplo siguiente, se dibuja una forma en el formulario en su controlador de eventos <xref:System.Windows.Forms.Control.Paint>. A continuación, se usa el método <xref:System.Drawing.Graphics.CopyFromScreen%2A> para duplicar la forma.  
   
 > [!NOTE]
-> El establecimiento de la <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propiedad del `true` formulario en hará que el <xref:System.Windows.Forms.Control.Paint> código basado en gráficos del evento tenga doble búfer. Aunque esto no tendrá ningún aumento de rendimiento de la información al usar el código siguiente, es algo que debe tener en cuenta al trabajar con código de manipulación de gráficos más complejo.  
+> Establecer la propiedad <xref:System.Windows.Forms.Control.DoubleBuffered%2A> del formulario en `true` hará que el código basado en gráficos del evento <xref:System.Windows.Forms.Control.Paint> se almacene en búfer doble. Aunque esto no tendrá ningún aumento de rendimiento de la información al usar el código siguiente, es algo que debe tener en cuenta al trabajar con código de manipulación de gráficos más complejo.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -60,7 +60,7 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El código anterior se ejecuta en el controlador de <xref:System.Windows.Forms.Control.Paint> eventos del formulario para que los gráficos se conserven cuando se vuelva a dibujar el formulario. Como tal, no llame a los métodos relacionados con gráficos en <xref:System.Windows.Forms.Form.Load> el controlador de eventos, ya que el contenido dibujado no se volverá a dibujar si el formulario cambia de tamaño o está oculto por otro formulario.  
+ El código anterior se ejecuta en el controlador de eventos <xref:System.Windows.Forms.Control.Paint> del formulario para que los gráficos se conserven cuando se vuelva a dibujar el formulario. Como tal, no llame a los métodos relacionados con gráficos en el controlador de eventos <xref:System.Windows.Forms.Form.Load>, porque el contenido dibujado no se volverá a dibujar si el formulario cambia de tamaño o está oculto por otro formulario.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Aplicaciones de Windows Forms y aplicaciones no administradas
+title: Aplicaciones no administradas
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls [Windows Forms]
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: 65465f22b1806d385523c894cce2103afe33c2f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17dc20653d1628dfd460a9891e1b0a21c0ebecbd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746737"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746370"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Aplicaciones de Windows Forms y aplicaciones no administradas
 Los controles y aplicaciones de Windows Forms pueden interoperar con aplicaciones no administradas, con algunas advertencias. En las secciones siguientes se describen los escenarios y las configuraciones que las aplicaciones y los controles de Windows Forms admiten y no admiten.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general sobre formularios Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications-overview.md)  
  Proporciona información general acerca de cómo utilizar e implementar controles de Windows Forms que funcionan con aplicaciones no administradas.  
   
- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)  
+ [Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)  
  Proporciona un ejemplo de código que muestra cómo utilizar el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para ejecutar Windows Forms en una aplicación no administrada.  
   
- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Proporciona un ejemplo de código que muestra cómo ejecutar Windows Forms en su propio subproceso.  
   
  Consulte también [Tutorial: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  

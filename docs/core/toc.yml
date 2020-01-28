@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: Uso y depuración de la descargabilidad de ensamblado en .NET Core
           href: ../standard/assembly/unloadability-howto.md
-- name: Compilación de .NET Core a partir del código fuente
-  href: build/index.md
+- name: Empaquetado de distribución de .NET Core
   items:
-    - name: Empaquetado de distribución de .NET Core
-      href: build/distribution-packaging.md
-- name: Documentos de VS 2015/project.json
-  href: ../project-json.md
+    - name: Información general
+      href: distribution-packaging.md

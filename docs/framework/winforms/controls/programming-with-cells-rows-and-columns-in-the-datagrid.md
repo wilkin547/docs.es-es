@@ -1,5 +1,5 @@
 ---
-title: Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms
+title: Programar con celdas, filas y columnas en el control DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], elements
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2d5927ecff734b359b860701e094480bbf3188f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012534"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741349"
 ---
-# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms
-Esta sección proporciona temas que explican diversas tareas de programación relacionadas con objetos de celda, fila y columna.  
+# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programar con celdas, filas y columnas en el control DataGridView de Windows Forms
+En esta sección se proporcionan temas que muestran diversas tareas de programación relacionadas con objetos de celda, fila y columna.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo: Agregar información sobre herramientas a celdas individuales en un Control DataGridView de formularios Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
- Describe cómo controlar la <xref:System.Windows.Forms.DataGridView.CellFormatting> eventos para proporcionar información sobre herramientas distinta para celdas individuales.  
+## <a name="in-this-section"></a>Esta sección  
+ [Agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ Describe cómo controlar el evento <xref:System.Windows.Forms.DataGridView.CellFormatting> para proporcionar información sobre herramientas para celdas individuales.  
   
- [Cómo: Realizar una acción personalizada según los cambios en una celda de un Control DataGridView de formularios Windows Forms](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
- Describe cómo controlar la <xref:System.Windows.Forms.DataGridView.CellValueChanged> y <xref:System.Windows.Forms.DataGridView.CellStateChanged> eventos.  
+ [Llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ Describe cómo controlar los eventos <xref:System.Windows.Forms.DataGridView.CellValueChanged> y <xref:System.Windows.Forms.DataGridView.CellStateChanged>.  
   
- [Cómo: Manipular bandas en el Control DataGridView de Windows Forms](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
- Describe cómo programar con objetos de tipo <xref:System.Windows.Forms.DataGridViewBand>, que es el tipo base para las filas y columnas.  
+ [Manipular bandas en el control DataGridView de formularios Windows Forms](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ Describe cómo programar con objetos de tipo <xref:System.Windows.Forms.DataGridViewBand>, que es el tipo base para filas y columnas.  
   
- [Cómo: Manipular filas en el Control DataGridView de Windows Forms](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [Manipular filas en el control DataGridView de formularios Windows Forms](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  Describe cómo programar con objetos de tipo `DataGridViewRow`.  
   
- [Cómo: Manipular columnas en el Control DataGridView de Windows Forms](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [Manipular columnas en el control DataGridView de formularios Windows Forms](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  Describe cómo programar con objetos de tipo `DataGridViewColumn`.  
   
- [Cómo: Trabajar con columnas de imagen en el Control DataGridView de Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- Describe cómo programar con la `DataGridViewImageColumn` clase.  
+ [Trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ Describe cómo programar con la clase `DataGridViewImageColumn`.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.DataGridView>  
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridViewCell>  
- Proporciona documentación de referencia para la <xref:System.Windows.Forms.DataGridViewCell> clase.  
+ Proporciona documentación de referencia para la clase <xref:System.Windows.Forms.DataGridViewCell>.  
   
  <xref:System.Windows.Forms.DataGridViewRow>  
- Proporciona documentación de referencia para la <xref:System.Windows.Forms.DataGridViewRow> clase.  
+ Proporciona documentación de referencia para la clase <xref:System.Windows.Forms.DataGridViewRow>.  
   
  <xref:System.Windows.Forms.DataGridViewColumn>  
- Proporciona documentación de referencia para la <xref:System.Windows.Forms.DataGridViewColumn> clase.  
+ Proporciona documentación de referencia para la clase <xref:System.Windows.Forms.DataGridViewColumn>.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Proporciona temas que describen normalmente usan las propiedades de celda, fila y columna.  
+ Proporciona temas que describen las propiedades de celda, fila y columna que se usan habitualmente.  
   
 ## <a name="see-also"></a>Vea también
 

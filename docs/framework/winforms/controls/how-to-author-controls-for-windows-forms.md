@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear controles de formularios Windows Forms'
+title: 'Cómo: crear controles'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
@@ -9,12 +9,12 @@ ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 169104f51898f9bda08efa08685207e50406a7ff
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459418"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746722"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Cómo: crear controles para Windows Forms
 
@@ -40,7 +40,7 @@ Un control representa un vínculo gráfico entre el usuario y el programa. Un co
 
 5. Si necesita que el control utilice una representación personalizada, agregue el código necesario. Para información detallada, vea [Dibujo y representación personalizados de controles](custom-control-painting-and-rendering.md).
 
-6. Si el control hereda de <xref:System.Windows.Forms.UserControl>, puede probar su comportamiento en tiempo de ejecución compilando el proyecto de control y ejecutando en el **contenedor de pruebas de UserControl**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
+6. Si el control hereda de <xref:System.Windows.Forms.UserControl>, puede probar su comportamiento en tiempo de ejecución compilando el proyecto de control y ejecutando en el **contenedor de pruebas de UserControl**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 7. También puede probar y depurar el control creando un nuevo proyecto, como una Aplicación Windows, y colocándola en un contenedor. Este proceso se muestra como parte del [Tutorial: crear un control compuesto](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
@@ -53,7 +53,7 @@ Un control representa un vínculo gráfico entre el usuario y el programa. Un co
 ## <a name="see-also"></a>Vea también
 
 - [Cómo: Heredar de una clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Cómo: Heredar de una clase de control](how-to-inherit-from-the-control-class.md)
+- [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
 - [Cómo: Heredar de controles de Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
 - [Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

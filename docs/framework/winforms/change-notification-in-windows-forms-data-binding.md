@@ -1,36 +1,36 @@
 ---
-title: Notificación de cambios en el enlace de datos de Windows Forms
+title: Notificación de cambios en el enlace de datos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: b4a70f96ad256b22ce0d933a633475161160e5a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2dffea46bf0db54d28ef55e507767d88bd29ebc2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665863"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746355"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificación de cambios en el enlace de datos de Windows Forms
-Uno de los conceptos más importantes de enlace de datos de Windows Forms es *notificación de cambio*. Para asegurarse de que el origen de datos y los controles enlazados siempre tienen los datos más recientes, debe agregar la notificación de cambio para el enlace de datos. En concreto, para asegurarse de que los controles enlazados se le notifican los cambios realizados en su origen de datos y el origen de datos se le notifican los cambios realizados en las propiedades de un control enlazadas.  
+Uno de los conceptos más importantes de Windows Forms enlace de datos es la *notificación de cambios*. Para asegurarse de que el origen de datos y los controles enlazados siempre tienen los datos más recientes, debe agregar la notificación de cambios para el enlace de datos. En concreto, desea asegurarse de que los controles enlazados reciben notificaciones de los cambios que se realizaron en su origen de datos, y se notifica al origen de datos los cambios realizados en las propiedades enlazadas de un control.  
   
- Hay diferentes tipos de notificación de cambios, según el tipo de enlace de datos:  
+ Hay diferentes tipos de notificación de cambios, dependiendo del tipo de enlace de datos:  
   
-- Enlace simple en el que una sola propiedad de control se enlaza a una sola instancia de un objeto.  
+- Enlace simple, en el que una única propiedad de control está enlazada a una única instancia de un objeto.  
   
-- Enlace basado en lista, que puede incluir una sola propiedad de control enlazada a la propiedad de un elemento en una lista o una propiedad de control enlazado a una lista de objetos.  
+- Enlace basado en lista, que puede incluir una propiedad de control única enlazada a la propiedad de un elemento en una lista o una propiedad de control enlazada a una lista de objetos.  
   
- Además, si va a crear controles de Windows Forms que se desean utilizar para el enlace de datos, debe aplicar el *PropertyName*cambiado patrón a los controles, para que se propagan los cambios a la propiedad de un control enlazado a la origen de datos.  
+ Además, si está creando Windows Forms controles que desea utilizar para el enlace de datos, debe aplicar el patrón *PropertyName*Changed a los controles, de modo que los cambios en la propiedad enlazada de un control se propaguen al origen de datos.  
   
-## <a name="change-notification-for-simple-binding"></a>Notificación de cambio para el enlace sencillo  
- Para el enlace sencillo, objetos de negocios deben proporcionar una notificación de cambios cuando cambia el valor de una propiedad enlazada. Puede hacerlo mediante la exposición de un *PropertyName*evento Changed para cada propiedad de un objeto comercial y enlace el objeto de negocios a los controles con el <xref:System.Windows.Forms.BindingSource> o el método preferido en el que implementa el objeto comercial el <xref:System.ComponentModel.INotifyPropertyChanged> interfaz y genera un <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> evento cuando cambia el valor de una propiedad. Para obtener más información, vea [Cómo: Implementar la interfaz INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md). Al utilizar los objetos que implementan la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz, no es necesario usar el <xref:System.Windows.Forms.BindingSource> para enlazar el objeto a un control, pero al usar el <xref:System.Windows.Forms.BindingSource> se recomienda.  
+## <a name="change-notification-for-simple-binding"></a>Notificación de cambio para el enlace simple  
+ En el caso de los enlaces simples, los objetos comerciales deben proporcionar la notificación de cambios cuando cambia el valor de una propiedad enlazada. Puede hacerlo si expone un evento *PropertyName*Changed para cada propiedad del objeto comercial y enlaza el objeto comercial a los controles con la <xref:System.Windows.Forms.BindingSource> o el método preferido en el que el objeto comercial implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> y genera un evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> cuando cambia el valor de una propiedad. Para obtener más información, vea [Cómo: implementar la interfaz INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md). Cuando se usan objetos que implementan la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>, no es necesario usar el <xref:System.Windows.Forms.BindingSource> para enlazar el objeto a un control, pero se recomienda usar el <xref:System.Windows.Forms.BindingSource>.  
   
 ## <a name="change-notification-for-list-based-binding"></a>Notificación de cambio para el enlace basado en lista  
- Windows Forms depende de una lista enlazada al proporcionar cambio de propiedad (la cambia un valor de propiedad de elemento de lista) y cambiar (un elemento se elimina o se agrega a la lista) información a los controles enlazados. Por lo tanto, deben implementar las listas que se usan para el enlace de datos el <xref:System.ComponentModel.IBindingList>, que proporciona ambos tipos de notificación de cambios. El <xref:System.ComponentModel.BindingList%601> es una implementación genérica de <xref:System.ComponentModel.IBindingList> y está diseñado para su uso con enlace de datos de Windows Forms. Puede crear un <xref:System.ComponentModel.BindingList%601> que contiene un tipo de objeto comercial que implementa <xref:System.ComponentModel.INotifyPropertyChanged> y la lista se convertirá automáticamente el <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> eventos a <xref:System.ComponentModel.IBindingList.ListChanged> eventos. Si la lista con enlace no es un <xref:System.ComponentModel.IBindingList>, se debe enlazar la lista de objetos a controles de formularios Windows Forms mediante el <xref:System.Windows.Forms.BindingSource> componente. El <xref:System.Windows.Forms.BindingSource> componente proporcionará la conversión de la lista de propiedades similar de la <xref:System.ComponentModel.BindingList%601>. Para obtener más información, vea [Cómo: Provocar notificaciones de cambios mediante BindingSource y la interfaz INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md).  
+ Windows Forms depende de una lista enlazada para proporcionar el cambio de propiedad (cambios en el valor de la propiedad de un elemento de lista) y la lista cambiada (se elimina o agrega un elemento a la lista) a los controles enlazados. Por lo tanto, las listas utilizadas para el enlace de datos deben implementar el <xref:System.ComponentModel.IBindingList>, que proporciona ambos tipos de notificación de cambios. El <xref:System.ComponentModel.BindingList%601> es una implementación genérica de <xref:System.ComponentModel.IBindingList> y está diseñado para su uso con Windows Forms enlace de datos. Puede crear un <xref:System.ComponentModel.BindingList%601> que contenga un tipo de objeto comercial que implemente <xref:System.ComponentModel.INotifyPropertyChanged> y la lista convertirá automáticamente los eventos <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> en eventos de <xref:System.ComponentModel.IBindingList.ListChanged>. Si la lista enlazada no es una <xref:System.ComponentModel.IBindingList>, debe enlazar la lista de objetos a los controles Windows Forms mediante el componente <xref:System.Windows.Forms.BindingSource>. El componente <xref:System.Windows.Forms.BindingSource> proporcionará una conversión de propiedad a lista similar a la de la <xref:System.ComponentModel.BindingList%601>. Para obtener más información, vea [Cómo: generar notificaciones de cambios mediante BindingSource y la interfaz INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md).  
   
-## <a name="change-notification-for-custom-controls"></a>Notificación de cambio para controles personalizados  
- Por último, desde el control debe exponer un *PropertyName*evento Changed para cada propiedad diseñado para estar enlazado a datos. Los cambios en la propiedad de control, a continuación, se propagan al origen de datos enlazado. Para obtener más información, vea [Cómo: Aplicar el modelo PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
+## <a name="change-notification-for-custom-controls"></a>Notificación de cambios para controles personalizados  
+ Finalmente, en el lado del control debe exponer un evento *PropertyName*Changed para cada propiedad diseñada para enlazarse a los datos. Los cambios que se realicen en la propiedad del control se propagan al origen de datos enlazado. Para obtener más información, consulte [Cómo: aplicar el patrón PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,32 +1,32 @@
 ---
-title: PictureBox (Control, formularios Windows Forms)
+title: PictureBox (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-ms.openlocfilehash: 06633583bf99d9888ec7f9180b503a46f2451691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34e6e7a58e8a022d1359281ddfbe1a90a7ab5593
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903219"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744230"
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox (Control, formularios Windows Forms)
-Los formularios de Windows `PictureBox` control se usa para mostrar gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.  
+El control de `PictureBox` de Windows Forms se usa para mostrar gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Cómo: Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- Explica qué es el <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propiedad hace y cómo configurarlo.  
+ [Modificar el tamaño o la situación de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ Explica lo que hace la propiedad <xref:System.Windows.Forms.PictureBox.SizeMode%2A> y cómo establecerla.  
   
- [Cómo: Establecer imágenes en tiempo de ejecución](how-to-set-pictures-at-run-time-windows-forms.md)  
+ [Establecer imágenes en tiempo de ejecución](how-to-set-pictures-at-run-time-windows-forms.md)  
  Describe cómo mostrar y borrar una imagen en tiempo de ejecución.  
   
- [Cómo: Cargar una imagen mediante el diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Cargar una imagen mediante el Diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)  
  Describe cómo cargar y mostrar una imagen en un formulario en tiempo de diseño.  
   
 ## <a name="reference"></a>Referencia  
@@ -34,5 +34,5 @@ Los formularios de Windows `PictureBox` control se usa para mostrar gráficos en
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

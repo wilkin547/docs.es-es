@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para enlazar a un servicio web mediante el componente BindingSource de formularios Windows Forms
+title: Enlazar a un servicio Web mediante BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 0680c73e578577cf40158761f6c635fe30ff9f4d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833995"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746671"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedimiento para enlazar a un servicio web mediante el componente BindingSource de formularios Windows Forms
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Cómo: Enlazar a un servicio Web mediante el componente BindingSource de formularios Windows Forms
 Si quiere enlazar un control de Windows Forms a los resultados obtenidos de la llamada a un servicio Web XML, puede usar un componente <xref:System.Windows.Forms.BindingSource>. Este procedimiento es similar a enlazar un componente <xref:System.Windows.Forms.BindingSource> a un tipo. Debe crear un proxy de cliente que contenga los métodos y los tipos expuestos por el servicio Web. El proxy de cliente se genera desde el propio servicio Web (.asmx) o desde su archivo de lenguaje de descripción de servicios Web (WSDL). Además, el proxy de cliente debe exponer los campos de tipos complejos usados por el servicio Web como propiedades públicas. Después, enlace el <xref:System.Windows.Forms.BindingSource> a uno de los tipos expuestos en el proxy de servicio Web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Para crear y enlazar a un proxy de cliente  
@@ -28,11 +28,11 @@ Si quiere enlazar un control de Windows Forms a los resultados obtenidos de la l
   
 2. Agregue un componente <xref:System.Windows.Forms.BindingSource> al formulario.  
   
-3. Abra el símbolo del Kit de desarrollo de Software (SDK) de Windows y navegue hasta el mismo directorio que el formulario se encuentra en.  
+3. Abra el símbolo del sistema del kit de desarrollo de software (SDK) de Windows y vaya al mismo directorio en el que se encuentra el formulario.  
   
 4. En la herramienta WSDL, escriba `wsdl` y la dirección URL del archivo .asmx o WSDL del servicio web, seguido por el espacio de nombres de la aplicación y, opcionalmente, el lenguaje con el que está trabajando.  
   
-     En el ejemplo de código siguiente se usa el servicio Web ubicado en `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Por ejemplo, para C# escriba `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, o para Visual Basic escriba `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Al pasar la ruta de acceso como un argumento a la herramienta WSDL, se generará un proxy de cliente en el mismo directorio y espacio de nombres que la aplicación, en el lenguaje especificado. Si utiliza Visual Studio, agregue el archivo al proyecto.  
+     En el ejemplo de código siguiente se usa el servicio Web ubicado en `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Por ejemplo, para C# escriba `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, o para Visual Basic escriba `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Al pasar la ruta de acceso como un argumento a la herramienta WSDL, se generará un proxy de cliente en el mismo directorio y espacio de nombres que la aplicación, en el lenguaje especificado. Si usa Visual Studio, agregue el archivo al proyecto.  
   
 5. En el proxy de cliente, seleccione el tipo al que se enlazará.  
   
@@ -73,4 +73,4 @@ Si quiere enlazar un control de Windows Forms a los resultados obtenidos de la l
 ## <a name="see-also"></a>Vea también
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Cómo: Enlazar un Control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Cómo: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

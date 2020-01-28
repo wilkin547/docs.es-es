@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar funcionalidades de explorador web a una aplicación de formularios Windows Forms
+title: Agregar funcionalidades del explorador Web a la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 60b544c630fc5c7c876293b27a5c5e159e57a797
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5feecd975700745541103e81fd09bfc5e788c729
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588894"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747228"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Procedimiento para agregar funcionalidades de explorador web a una aplicación de formularios Windows Forms
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Cómo: Agregar funciones de explorador Web a una aplicación de Windows Forms
 Con el control <xref:System.Windows.Forms.WebBrowser>, puede agregar funcionalidades del explorador web a la aplicación. De forma predeterminada, el control funciona como un explorador web. Después de cargar una dirección URL inicial estableciendo la propiedad <xref:System.Windows.Forms.WebBrowser.Url%2A>, puede navegar haciendo clic en hipervínculos o utilizando métodos abreviados de teclado para avanzar y retroceder por el historial de navegación. De forma predeterminada, puede acceder a funcionalidades adicionales del explorador a través del menú contextual. También puede abrir documentos nuevos colocándolos en el control. El control <xref:System.Windows.Forms.WebBrowser> también tiene varias propiedades, métodos y eventos que puede utilizar para implementar características de interfaz de usuario similares a las que se encuentran en Internet Explorer.  
   
  En el ejemplo de código siguiente, se implementa una barra de direcciones, los botones de exploración típicos, un menú **Archivo**, una barra de estado y una barra de título que muestra el título de la página actual.  

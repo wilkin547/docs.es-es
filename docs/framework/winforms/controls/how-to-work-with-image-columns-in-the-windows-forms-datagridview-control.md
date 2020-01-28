@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms
+title: Trabajar con columnas de imagen en el control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 110422000fad3d52d936302cca7a3d635f44b917
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0ec51b825c476576a224b43c5431ba230018ef7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591401"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728254"
 ---
-# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Procedimiento para trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms
+# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Cómo: Trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms
 El ejemplo de código siguiente muestra cómo utilizar las columnas de imagen <xref:System.Windows.Forms.DataGridView> en una interfaz de usuario interactiva (UI). El ejemplo también muestra las posibilidades de diseño y ajuste de tamaño de la imagen con <xref:System.Windows.Forms.DataGridViewImageColumn>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,4 +35,4 @@ El ejemplo de código siguiente muestra cómo utilizar las columnas de imagen <x
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Cómo: Mostrar imágenes en celdas del Control DataGridView de formularios Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Cómo: Mostrar imágenes en celdas del control DataGridView de Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

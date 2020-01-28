@@ -2,15 +2,16 @@
 title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728855"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
-La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admite la [especificación de detección 2005](https://go.microsoft.com/fwlink/?LinkId=177912) y la [versión 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
+
+La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admite la [especificación de detección 2005](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) y la [versión 1,1](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf).  
   
  El canal personalizado se aplica encima de la pila del canal existente para los puntos de conexión de anuncio y detección. De esta manera, se aplica un encabezado de firma para cada mensaje enviado. La firma se comprueba en los mensajes recibidos, y cuando no coincide o cuando los mensajes no tienen una firma, los mensajes se quitan. Para firmar y comprobar los mensajes, el ejemplo utiliza los certificados.  
   

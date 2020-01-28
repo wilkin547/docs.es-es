@@ -11,40 +11,40 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: 8841a30f1dd0420b2ea45740b1e33bde5199c3f9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b6d06bc8a1e8535f1452af0726138abaebfd4951
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709054"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743607"
 ---
 # <a name="struct-design"></a>Diseño de structs
-Normalmente, el tipo de valor de uso general se conoce como struct, su C# palabra clave. En esta sección se proporcionan instrucciones para el diseño de estructuras generales.  
-  
- **X** no proporciona un constructor sin parámetros para un struct.  
-  
- La siguiente instrucción permite crear matrices de Structs sin tener que ejecutar el constructor en cada elemento de la matriz. Tenga en C# cuenta que no permite que los Structs tengan constructores sin parámetros.  
-  
- **X DO NOT** definir tipos de valor mutable.  
-  
- Los tipos de valores mutables tienen varios problemas. Por ejemplo, cuando un captador de propiedad devuelve un tipo de valor, el llamador recibe una copia. Dado que la copia se crea implícitamente, es posible que los desarrolladores no sepan que están mutando la copia y no el valor original. Además, algunos lenguajes (lenguajes dinámicos, en particular) tienen problemas al usar tipos de valores mutables porque incluso las variables locales, cuando se desreferencian, hacen que se realice una copia.  
-  
- **✓ DO** asegurarse de que un estado donde todos los datos de la instancia se establece en cero, false o null (según corresponda) es válido.  
-  
- Esto evita la creación accidental de instancias no válidas cuando se crea una matriz de estructuras.  
-  
- **✓ DO** implementar <xref:System.IEquatable%601> en tipos de valor.  
-  
- El método <xref:System.Object.Equals%2A?displayProperty=nameWithType> en tipos de valor produce la conversión boxing y su implementación predeterminada no es muy eficaz, ya que utiliza la reflexión. <xref:System.IEquatable%601.Equals%2A> puede tener un rendimiento mucho mejor y se puede implementar para que no cause la conversión boxing.  
-  
- **X DO NOT** extender explícitamente <xref:System.ValueType>. De hecho, la mayoría de los lenguajes lo impiden.  
-  
- En general, los Structs pueden ser muy útiles, pero solo se deben usar para los valores pequeños, únicos e inmutables a los que no se les aplicará la conversión boxing con frecuencia.  
-  
- *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
-  
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
-  
+Normalmente, el tipo de valor de uso general se conoce como struct, su C# palabra clave. En esta sección se proporcionan instrucciones para el diseño de estructuras generales.
+
+ ❌ no proporcionan un constructor sin parámetros para un struct.
+
+ La siguiente instrucción permite crear matrices de Structs sin tener que ejecutar el constructor en cada elemento de la matriz. Tenga en C# cuenta que no permite que los Structs tengan constructores sin parámetros.
+
+ ❌ no definen tipos de valores mutables.
+
+ Los tipos de valores mutables tienen varios problemas. Por ejemplo, cuando un captador de propiedad devuelve un tipo de valor, el llamador recibe una copia. Dado que la copia se crea implícitamente, es posible que los desarrolladores no sepan que están mutando la copia y no el valor original. Además, algunos lenguajes (lenguajes dinámicos, en particular) tienen problemas al usar tipos de valores mutables porque incluso las variables locales, cuando se desreferencian, hacen que se realice una copia.
+
+ ✔️ asegurarse de que el estado de todos los datos de instancia se establece en cero, falso o null (según corresponda) es válido.
+
+ Esto evita la creación accidental de instancias no válidas cuando se crea una matriz de estructuras.
+
+ ✔️ implementar <xref:System.IEquatable%601> en tipos de valor.
+
+ El método <xref:System.Object.Equals%2A?displayProperty=nameWithType> en tipos de valor produce la conversión boxing y su implementación predeterminada no es muy eficaz, ya que utiliza la reflexión. <xref:System.IEquatable%601.Equals%2A> puede tener un rendimiento mucho mejor y se puede implementar para que no cause la conversión boxing.
+
+ ❌ no extienden explícitamente <xref:System.ValueType>. De hecho, la mayoría de los lenguajes lo impiden.
+
+ En general, los Structs pueden ser muy útiles, pero solo se deben usar para los valores pequeños, únicos e inmutables a los que no se les aplicará la conversión boxing con frecuencia.
+
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
+
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
+
 ## <a name="see-also"></a>Vea también
 
 - [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)

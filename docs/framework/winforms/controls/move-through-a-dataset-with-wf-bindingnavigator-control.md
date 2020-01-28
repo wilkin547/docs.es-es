@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para desplazarse por un conjunto de datos con el control BindingNavigator de Windows Forms
+title: Desplazarse por un conjunto de DataSet con el control BindingNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d33cad4d0a60aa29d8c9f5e2217532963e8358c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 73a102da74a3a2a00b5042331cffcaf3d858ea5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952695"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742152"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Procedimiento para desplazarse por un conjunto de datos con el control BindingNavigator de Windows Forms
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Cómo: Desplazarse por un conjunto de datos con el control BindingNavigator de Windows Forms
 Al crear aplicaciones controladas por datos, a menudo necesitará mostrar colecciones de datos a los usuarios. El control <xref:System.Windows.Forms.BindingNavigator>, junto con el componente <xref:System.Windows.Forms.BindingSource>, proporciona una solución cómoda y extensible para desplazarse por una colección y mostrar sus elementos secuencialmente.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,4 +40,4 @@ Al crear aplicaciones controladas por datos, a menudo necesitará mostrar colecc
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedimientos: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Cómo: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

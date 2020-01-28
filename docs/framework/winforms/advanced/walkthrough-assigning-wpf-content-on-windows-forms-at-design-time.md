@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Asignar el contenido de WPF en Windows Forms en tiempo de diseño'
+title: Seleccionar controles WPF para Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,16 +12,16 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0c1e0c91b7ab8bded677a86b597b02b9cb442d98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 19f1dfec282b025f5a1fa367ec5fa9a52472c691
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460672"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746803"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: asignar contenido de WPF en Windows Forms en tiempo de diseño
 
-En este artículo se muestra cómo seleccionar los tipos de control de Windows Presentation Foundation (WPF) que desea mostrar en el formulario. Puede seleccionar cualquier tipo de control WPF incluido en su proyecto.
+En este artículo se muestra cómo seleccionar los tipos de control de Windows Presentation Foundation (WPF) que desea mostrar en el formulario. Puede seleccionar los tipos de control de WPF que se incluyen en el proyecto.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -54,7 +55,7 @@ Después de agregar los tipos de control WPF al proyecto, puede hospedarlos en d
    > [!NOTE]
    > Por lo general, debería hospedar contenido WPF más sofisticado. El control <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> se usa aquí únicamente con fines ilustrativos.
 
-8. Compile el proyecto.
+8. Generar el proyecto.
 
 ## <a name="select-wpf-controls"></a>Seleccionar controles WPF
 

@@ -1,5 +1,5 @@
 ---
-title: Información general sobre la seguridad en formularios Windows Forms
+title: Información general sobre seguridad
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972127"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734845"
 ---
-# <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en formularios Windows Forms
+# <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en Windows Forms
 
 Antes del lanzamiento del .NET Framework, todo el código que se ejecuta en el equipo de un usuario tenía los mismos derechos o permisos para acceder a los recursos que tenía un usuario del equipo. Por ejemplo, si el usuario tenía acceso al sistema de archivos, el código también tenía acceso al sistema de archivos; si el usuario tenía acceso a una base de datos, el código también tenía acceso a esa base de datos. Aunque estos derechos o permisos pueden ser aceptables para el código de los ejecutables que el usuario ha instalado explícitamente en el equipo local, no pueden ser aceptables para el código potencialmente malintencionado procedente de Internet o de una intranet local. Este código no debe tener acceso a los recursos del equipo del usuario sin permiso.
 
@@ -56,7 +56,7 @@ A veces es difícil saber si ha declarado todos los permisos adecuados. Por ejem
 
 Los temas siguientes describen características de seguridad adicionales de Windows Forms.
 
-|Tema|DESCRIPCIÓN|
+|Tema|Descripción|
 |-----------|-----------------|
 |- [Acceso más seguro a archivos y datos en Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)|Describe cómo tener acceso a archivos y datos en un entorno de confianza parcial.|
 |- [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md)|Describe cómo tener acceso a las características de impresión en un entorno de confianza parcial.|
@@ -70,20 +70,20 @@ ClickOnce tiene dos tecnologías para solicitar permisos elevados en un equipo c
 
 En la tabla siguiente se describen estas tecnologías.
 
-|Tecnología de permiso elevado|DESCRIPCIÓN|
+|Tecnología de permiso elevado|Descripción|
 |------------------------------------|-----------------|
 |Elevación de permisos|Le pide confirmación al usuario mediante un cuadro de diálogo de seguridad la primera vez que se ejecuta la aplicación. El cuadro de diálogo **Elevación de permisos** informa al usuario sobre quién publicó la aplicación para que el usuario pueda tomar una decisión informada antes de conceder confianza adicional.|
 |Implementación de aplicaciones de confianza|Implica a un administrador del sistema que realiza una instalación única del certificado de Authenticode de un editor en un equipo cliente. Desde ese momento, todas las aplicaciones firmadas con el certificado se considerarán de confianza y se podrán ejecutar con plena confianza en el equipo local sin necesidad de confirmar de nuevo.|
 
 La tecnología elegida dependerá de su entorno de implementación. Para más información, consulte el artículo [Elegir una estrategia de implementación de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-De forma predeterminada, las aplicaciones ClickOnce implementadas mediante Visual Studio o las herramientas del SDK de .NET Framework (Mage. exe y MageUI. exe) se configuran para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o con la herramienta de SDK de .NET Framework MageUI. exe cuando configure la implementación. Para obtener más información sobre cómo usar MageUI. exe, vea [Tutorial: Implementación manual de una aplicación](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)ClickOnce.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ClickOnce o [cómo: Establecer permisos personalizados para una aplicación](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)ClickOnce.
+De forma predeterminada, las aplicaciones ClickOnce implementadas mediante Visual Studio o las herramientas del SDK de .NET Framework (Mage. exe y MageUI. exe) se configuran para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o con la herramienta de SDK de .NET Framework MageUI. exe cuando configure la implementación. Para obtener más información sobre cómo usar MageUI. exe, vea [Tutorial: implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Para obtener más información sobre los aspectos de seguridad de ClickOnce y la elevación de permisos, vea [proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Probar la aplicación
 
-Si ha implementado la aplicación de Windows Forms mediante Visual Studio, puede habilitar la depuración en confianza parcial o un conjunto de permisos restringido desde el entorno de desarrollo.  Consulte también [Cómo: Depuración de una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
+Si ha implementado la aplicación de Windows Forms mediante Visual Studio, puede habilitar la depuración en confianza parcial o un conjunto de permisos restringido desde el entorno de desarrollo.  Consulte también [Cómo: depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
 ## <a name="see-also"></a>Vea también
 

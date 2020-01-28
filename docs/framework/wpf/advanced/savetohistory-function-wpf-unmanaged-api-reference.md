@@ -1,5 +1,6 @@
 ---
-title: SaveToHistory (función) (referencia de API no administrada de WPF)
+title: 'Función SaveToHistory: referencia de la API no administrada de WPF'
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: 3f6413558ff1f259e497c6a1c31eb2664f70cc48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7337e5dc23a3dce5de8270902bce228c49bc6edb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053462"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731747"
 ---
-# <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory (función) (referencia de API no administrada de WPF)
-Esta API admite la infraestructura de Windows Presentation Foundation (WPF) y no está pensada para utilizarse directamente desde el código.  
+# <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>Función SaveToHistory (referencia de la API no administrada de WPF)
+Esta API es compatible con la infraestructura de Windows Presentation Foundation (WPF) y no está diseñada para utilizarse directamente desde el código.  
   
- Usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de windows.  
+ Lo usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -28,22 +29,22 @@ HRESULT SaveToHistory(
 )  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  pHistoryStream  
- Un puntero a la secuencia de historial.  
+ Puntero a la secuencia del historial.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos de  
+ **Plataformas:** Consulte [.NET Framework requisitos del sistema](../../get-started/system-requirements.md).  
   
- **ARCHIVO DLL:**  
+ **DLL**  
   
- En .NET Framework 3.0 y 3.5: PresentationHostDLL.dll  
+ En el .NET Framework 3,0 y 3,5: PresentationHostDLL. dll  
   
- En .NET Framework 4 y versiones posteriores: PresentationHost_v0400.dll  
+ En el .NET Framework 4 y versiones posteriores: PresentationHost_v0400. dll  
   
- **Versión de .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Versión de .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

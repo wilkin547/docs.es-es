@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964744"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743975"
 ---
 # <a name="using-structs-c-programming-guide"></a>Uso de estructuras (Guía de programación de C#)
 
@@ -27,7 +27,7 @@ Al escribir un constructor con parámetros de una estructura, todos los miembros
 
 En los structs no existe el concepto de herencia que sí hay en las clases. Así, un struct no puede heredar de otra clase o de otro struct, como tampoco puede ser la base de una clase. Pero los structs sí heredan de la clase base <xref:System.Object>. Un struct puede implementar interfaces y lo hace exactamente igual que las clases.
 
-No se puede declarar una clase mediante la palabra clave `struct`. En C#, las clases y los structs son distintos semánticamente. Un struct es un tipo de valor, mientras que una clase es un tipo de referencia. Para obtener más información, consulte [Tipos de valor](../../language-reference/keywords/value-types.md) y [Tipos de referencia](../../language-reference/keywords/reference-types.md).
+No se puede declarar una clase mediante la palabra clave `struct`. En C#, las clases y los structs son distintos semánticamente. Un struct es un tipo de valor, mientras que una clase es un tipo de referencia. Para obtener más información, consulte [Tipos de valor](../../language-reference/builtin-types/value-types.md) y [Tipos de referencia](../../language-reference/keywords/reference-types.md).
 
 A menos que necesite una semántica de tipo de referencia, es probable que el sistema controle una clase pequeña más eficazmente si se declara como un struct.
 

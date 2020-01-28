@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Dar formato al control DataGrid de formularios Windows Forms mediante el Diseñador'
+title: Dar formato al control DataGrid mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666171"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736795"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Cómo: Dar formato al control DataGrid de formularios Windows Forms mediante el Diseñador
 
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
 Aplicar distintos colores a varias partes de un control de <xref:System.Windows.Forms.DataGrid> puede ayudar a facilitar la lectura y la interpretación de la información. El color se puede aplicar a filas y columnas. Las filas y columnas también se pueden ocultar o mostrar a su discreción.
 
@@ -41,11 +41,11 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 2. En la ventana **propiedades** , establezca las siguientes propiedades, según corresponda.
 
-    |Propiedad.|Descripción|
+    |La propiedad|Descripción|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La propiedad `BackColor` define el color de las filas pares de la cuadrícula. Al establecer la propiedad <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> en un color diferente, todas las demás filas se establecen en este nuevo color (filas 1, 3, 5, etc.).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Color de fondo de las filas pares de la cuadrícula (filas 0, 2, 4, 6, etc.).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mientras que las propiedades <xref:System.Windows.Forms.DataGrid.BackColor%2A> y <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinan el color de las filas de la cuadrícula, la propiedad <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> determina el color del área fuera del área de fila, que solo está visible cuando la cuadrícula se desplaza hasta la parte inferior, o si solo unas pocas filas están contenidas en el cuadrícula.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mientras que las propiedades <xref:System.Windows.Forms.DataGrid.BackColor%2A> y <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinan el color de las filas de la cuadrícula, la propiedad <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> determina el color del área fuera del área de fila, que solo está visible cuando la cuadrícula se desplaza hasta la parte inferior o si solo unas pocas filas están contenidas en la cuadrícula.|
     |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Estilo de borde de la cuadrícula, uno de los valores de enumeración de <xref:System.Windows.Forms.BorderStyle>.|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Color de fondo del título de la ventana de la cuadrícula que aparece justo encima de la cuadrícula.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Fuente del título en la parte superior de la cuadrícula.|
@@ -86,7 +86,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
      El nombre de la asignación se utiliza para especificar qué estilo de tabla se debe utilizar con cada tabla.
 
-5. En el **Editor de la colección DataGridTableStyle**, seleccione la propiedad <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> y haga clic en el botón de puntos suspensivos (![The botón de puntos suspensivos (...) en el ventana Propiedades de Visual Studio. ](./media/visual-studio-ellipsis-button.png)).
+5. En el **Editor de la colección DataGridTableStyle**, seleccione la propiedad <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> y haga clic en el botón de puntos suspensivos (![el botón de puntos suspensivos (...) en el ventana Propiedades de Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 6. En el cuadro de diálogo Editor de la **colección DataGridColumnStyle** , agregue estilos de columna al estilo de tabla que ha creado.
 

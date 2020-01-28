@@ -1,5 +1,6 @@
 ---
-title: SetFakeActiveWindow (función) (referencia de API no administrada de WPF)
+title: 'Función SetFakeActiveWindow: referencia de la API no administrada de WPF'
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: d83833a0f18f94f3aa590896f0a1eb4c53dc16d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9282ec6f4c6fb9c1410ca07e707db98a02d0b02a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053410"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731730"
 ---
-# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>SetFakeActiveWindow (función) (referencia de API no administrada de WPF)
-Esta API admite la infraestructura de Windows Presentation Foundation (WPF) y no está pensada para utilizarse directamente desde el código.  
+# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>Función SetFakeActiveWindow (referencia de la API no administrada de WPF)
+Esta API es compatible con la infraestructura de Windows Presentation Foundation (WPF) y no está diseñada para utilizarse directamente desde el código.  
   
- Usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de windows.  
+ Lo usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -28,16 +29,16 @@ void __stdcall SetFakeActiveWindow(
 )  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  hwnd  
- Un identificador de ventana.  
+ Identificador de ventana.  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos de  
+ **Plataformas:** Consulte [.NET Framework requisitos del sistema](../../get-started/system-requirements.md).  
   
- **ARCHIVO DLL:** PresentationHost_v0400.dll  
+ **Dll:** PresentationHost_v0400. dll  
   
- **Versión de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versión de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

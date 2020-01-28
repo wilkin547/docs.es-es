@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
+title: 'Cómo: Anexar un elemento MenuStrip a una ventana primaria MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: fdd5a24d444e494caedeed56402658399e97b90a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 06e5c9daab8b7eb72024fff27d661c0eb3bf84c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457499"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747159"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Procedimiento Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Cómo: Anexar un elemento MenuStrip a una ventana primaria MDI (Windows Forms)
 En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múltiples documentos (MDI) puede ser diferente de la ventana primaria MDI. Por ejemplo, el elemento primario MDI podría ser una hoja de cálculo y el elemento secundario MDI podría ser un gráfico. En ese caso, querrá actualizar el contenido del menú del elemento primario MDI con el contenido del menú del elemento secundario MDI cuando se activan ventanas secundarias MDI de diferentes tipos.  
   
  El siguiente procedimiento usa las propiedades <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> para anexar el menú secundario MDI al menú primario MDI. Al cerrar la ventana secundaria MDI se quita el menú anexado del elemento primario MDI.  
   
- Consulte también [aplicaciones de interfaz de múltiples documentos (MDI)](../advanced/multiple-document-interface-mdi-applications.md).  
+ Vea también [aplicaciones de interfaz de múltiples documentos (MDI)](../advanced/multiple-document-interface-mdi-applications.md).  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Para anexar un elemento de menú a un elemento primario MDI  
   
@@ -43,7 +43,7 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
 9. Establezca la propiedad <xref:System.Windows.Forms.MergeAction> de los elementos de menú `&Special`, `Command&1` y `Command&2` en <xref:System.Windows.Forms.MergeAction.Append>.  
   
-10. Crear un controlador de eventos para el <xref:System.Windows.Forms.Control.Click> eventos de la `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Cree un controlador de eventos para el evento <xref:System.Windows.Forms.Control.Click> de la <xref:System.Windows.Forms.ToolStripMenuItem>de `&Open`.  
   
 11. En el controlador de eventos, inserte código similar al ejemplo de código siguiente para crear y mostrar nuevas instancias de `Form2` como elementos secundarios MDI de `Form1`.  
   

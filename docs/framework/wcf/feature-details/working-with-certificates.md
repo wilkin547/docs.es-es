@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938054"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746887"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 
@@ -164,9 +164,9 @@ También puede establecer certificados mediante configuración. Si va a crear un
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Asignación de un certificado a una cuenta de usuario
 
-Una característica de IIS y de Active Directory es la capacidad de asignar un certificado a una cuenta de usuario de Windows. Para obtener más información sobre la característica, vea [Map certificates to user accounts](https://go.microsoft.com/fwlink/?LinkId=88917) (Asignar certificados a cuentas de usuario).
+Una característica de IIS y de Active Directory es la capacidad de asignar un certificado a una cuenta de usuario de Windows. Para obtener más información sobre la característica, vea [Map certificates to user accounts](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10)) (Asignar certificados a cuentas de usuario).
 
-Para obtener más información sobre el uso de la asignación de Active Directory, vea [Mapping Client Certificates with Directory Service Mapping](https://go.microsoft.com/fwlink/?LinkId=88918) (Asignación de certificados de cliente mediante la asignación del servicio de directorio).
+Para obtener más información sobre el uso de la asignación de Active Directory, vea [Mapping Client Certificates with Directory Service Mapping](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)) (Asignación de certificados de cliente mediante la asignación del servicio de directorio).
 
 Con esta capacidad habilitada, puede definir la propiedad <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> de la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> en `true`. En la configuración, se puede establecer el atributo `mapClientCertificateToWindowsAccount` del elemento [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) en `true`, como se muestra en el código siguiente.
 

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para implementar el modo virtual en el control DataGridView de formularios Windows Forms
+title: Implementar el modo virtual en el control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - virtual mode
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-ms.openlocfilehash: 064b58b64e0a9f55e3ef7d15b4962cfec514eff3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8612a808ac5c9facee55d820529945f481a2cea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592396"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736507"
 ---
-# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procedimiento para implementar el modo virtual en el control DataGridView de formularios Windows Forms
+# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Cómo: Implementar el modo virtual en el control DataGridView de formularios Windows Forms
 El ejemplo de código siguiente muestra cómo administrar grandes conjuntos de datos mediante un control <xref:System.Windows.Forms.DataGridView> con su propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> establecida en `true`.  
   
- Para obtener una explicación completa de este ejemplo de código, vea [Tutorial: Implementar el modo Virtual en el Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
+ Para una explicación más completa de este ejemplo de código, vea [Tutorial: Implementar el modo virtual en el control DataGridView de Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
@@ -44,6 +44,6 @@ El ejemplo de código siguiente muestra cómo administrar grandes conjuntos de d
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Tutorial: Implementar el modo Virtual en el Control DataGridView de formularios de Windows](implementing-virtual-mode-wf-datagridview-control.md)
+- [Tutorial: Implementar el modo virtual en el control DataGridView de Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
 - [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Modo virtual del control DataGridView de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)

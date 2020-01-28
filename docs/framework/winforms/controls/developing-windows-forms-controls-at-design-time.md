@@ -1,5 +1,5 @@
 ---
-title: Desarrollar controles de formularios Windows Forms en tiempo de diseño
+title: Desarrollo de controles en tiempo de diseño
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls [Windows Forms]
@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460083"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745983"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Desarrollar controles Windows Forms en tiempo de diseño
 
@@ -72,7 +72,7 @@ Muestra el procedimiento para instalar el control de modo que aparezca en el cua
 [Cómo: proporcionar un mapa de bits del cuadro de herramientas para un Control](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
 Muestra cómo utilizar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el cuadro de **herramientas**.
 
-[Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
+[Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
 Muestra cómo utilizar **UserControl Test Container** para probar el comportamiento de un control compuesto.
 
 [Errores en tiempo de diseño en el Diseñador de Windows Forms](design-time-errors-in-the-windows-forms-designer.md)\
@@ -89,7 +89,7 @@ Muestra cómo diagnosticar y corregir los problemas comunes que pueden producirs
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)\
+[Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)\
 Describe cómo crear sus propios controles personalizados con .NET Framework.
 
 [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\

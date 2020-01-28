@@ -1,5 +1,5 @@
 ---
-title: Eventos del mouse (ratón) en formularios Windows Forms
+title: Eventos del mouse
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4909f56fc3935848fd18bc35c1cb56b5407a24c8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834609"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740966"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos del mouse (ratón) en formularios Windows Forms
 
@@ -88,7 +88,7 @@ Los controles siguientes no siguen el comportamiento estándar de los eventos de
 
   - Doble clic con el botón secundario: no se generan eventos
 
-- <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>y <xref:System.Windows.Forms.CheckedListBox> controles
+- Controles <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> y <xref:System.Windows.Forms.CheckedListBox>
 
   > [!NOTE]
   > Se produce el comportamiento de eventos que se describe a continuación cuando el usuario hace clic en cualquier parte dentro de estos controles.

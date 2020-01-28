@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar y quitar elementos de un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms
+title: Agregar y quitar elementos de un control ComboBox, ListBox o CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a83d98af42386b566b4af7bc11ff383dea8fd6b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640448"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746294"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedimiento para agregar y quitar elementos de un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms
-Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro de lista, o activado la casilla de lista en una variedad de formas, ya que estos controles se pueden enlazar a una variedad de orígenes de datos. Sin embargo, en este tema se muestra el método más sencillo y no requiere ningún enlace de datos. Los elementos mostrados normalmente son cadenas; Sin embargo, puede utilizarse cualquier objeto. El texto que se muestra en el control es el valor devuelto por el objeto `ToString` método.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Cómo: Agregar y quitar elementos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms
+Los elementos se pueden agregar a un Windows Forms cuadro combinado, un cuadro de lista o un cuadro de lista activado de diversas formas, ya que estos controles pueden estar enlazados a diversos orígenes de datos. Sin embargo, en este tema se muestra el método más sencillo y no se requiere ningún enlace de datos. Los elementos que se muestran suelen ser cadenas; sin embargo, se puede usar cualquier objeto. El texto que se muestra en el control es el valor devuelto por el método `ToString` del objeto.  
   
 ### <a name="to-add-items"></a>Para agregar elementos  
   
-1. Agregue la cadena u objeto a la lista mediante el uso de la `Add` método de la `ObjectCollection` clase. Se hace referencia a la colección utilizando el `Items` propiedad:  
+1. Agregue la cadena o el objeto a la lista mediante el método `Add` de la clase `ObjectCollection`. Se hace referencia a la colección mediante la propiedad `Items`:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro d
   
      - O  
   
-2. Insertar la cadena u objeto en el punto deseado en la lista con el `Insert` método:  
+2. Inserte la cadena o el objeto en el punto deseado de la lista con el método `Insert`:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro d
   
      - O  
   
-3. Asigne una matriz completa a la `Items` colección:  
+3. Asigne una matriz completa a la colección de `Items`:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,9 +89,9 @@ Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro d
   
 ### <a name="to-remove-an-item"></a>Para quitar un elemento  
   
-1. Llame a la `Remove` o `RemoveAt` método para eliminar elementos.  
+1. Llame al método `Remove` o `RemoveAt` para eliminar elementos.  
   
-     `Remove` tiene un argumento que especifica el elemento que se va a quitar.`RemoveAt` Quita el elemento con el número de índice especificado.  
+     `Remove` tiene un argumento que especifica el elemento que se va a quitar.`RemoveAt` quita el elemento con el número de índice especificado.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -122,7 +122,7 @@ Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro d
   
 ### <a name="to-remove-all-items"></a>Para quitar todos los elementos  
   
-1. Llame a la `Clear` método para quitar todos los elementos de la colección:  
+1. Llame al método `Clear` para quitar todos los elementos de la colección:  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -141,6 +141,6 @@ Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro d
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Cómo: Ordenar el contenido de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Ordenar el contenido de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)

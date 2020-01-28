@@ -1,19 +1,19 @@
 ---
-title: Funcionalidad de arrastrar y colocar en formularios Windows Forms
+title: Funcionalidad de arrastrar y colocar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966876"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732752"
 ---
-# <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidad de arrastrar y colocar en formularios Windows Forms
-Windows Forms incluye un conjunto de métodos, eventos y clases que implementan el comportamiento de arrastrar y colocar. En este tema se proporciona una introducción a la compatibilidad para arrastrar y colocar en Windows Forms.  Consulte también [operaciones de arrastrar y colocar y la compatibilidad con el Portapapeles](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
+# <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidad de arrastrar y colocar en Windows Forms
+Windows Forms incluye un conjunto de métodos, eventos y clases que implementan el comportamiento de arrastrar y colocar. En este tema se proporciona una introducción a la compatibilidad para arrastrar y colocar en Windows Forms.  Vea también [operaciones de arrastrar y colocar y soporte del portapapeles](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Realizar operaciones de arrastrar y colocar  
  Para realizar una operación de arrastrar y colocar, use el método <xref:System.Windows.Forms.Control.DoDragDrop%2A> de la clase <xref:System.Windows.Forms.Control>. Para obtener más información acerca de cómo se realiza una operación de arrastrar y colocar, consulte <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Para obtener el rectángulo sobre el cual debe arrastrarse el puntero del mouse antes de que comience una operación de arrastrar y colocar, use la propiedad <xref:System.Windows.Forms.SystemInformation.DragSize%2A> de la clase <xref:System.Windows.Forms.SystemInformation>.  

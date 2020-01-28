@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Determinar en qué nodo de TreeView se hizo clic (Windows Forms)
+title: 'Cómo: Determinar en qué nodo de TreeView se hizo clic'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: ab93158daf987e2f19516b8fb3abf80bfe79a12c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a0e2b69bbec0eb03d40bee2c8e2d4bc9c3558f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967344"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742011"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Procedimiento Determinar en qué nodo de TreeView se hizo clic (Windows Forms)
-Al trabajar con el control <xref:System.Windows.Forms.TreeView> de Windows Forms, una tarea habitual es determinar en qué nodo se hizo clic y responder de forma adecuada.  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Cómo: Determinar en qué nodo de TreeView se hizo clic (Windows Forms)
+Al trabajar con el control de <xref:System.Windows.Forms.TreeView> de Windows Forms, una tarea habitual es determinar en qué nodo se hizo clic y responder de forma adecuada.  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>Para determinar en qué nodo de TreeView se hizo clic  
   
-1. Use el <xref:System.EventArgs> objeto para devolver una referencia al objeto de nodo en el que se ha hecho clic.  
+1. Utilice el objeto <xref:System.EventArgs> para devolver una referencia al objeto de nodo en el que se ha hecho clic.  
   
-2. Determine en qué nodo se hizo clic comprobando la <xref:System.Windows.Forms.TreeViewEventArgs> clase, que contiene los datos relacionados con el evento.  
+2. Determine en qué nodo se hizo clic comprobando la clase <xref:System.Windows.Forms.TreeViewEventArgs>, que contiene los datos relacionados con el evento.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,7 +56,7 @@ Al trabajar con el control <xref:System.Windows.Forms.TreeView> de Windows Forms
     ```  
   
     > [!NOTE]
-    > Como alternativa, puede <xref:System.Windows.Forms.MouseEventArgs> utilizar el <xref:System.Windows.Forms.Control.MouseDown> del evento o <xref:System.Drawing.Point.Y%2A> <xref:System.Windows.Forms.Control.MouseUp> paraobtener<xref:System.Drawing.Point.X%2A> los valores de coordenada y de dondeseprodujoelclic.<xref:System.Drawing.Point> A continuación, use <xref:System.Windows.Forms.TreeView> el método <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> del control para determinar en qué nodo se hizo clic.  
+    > Como alternativa, puede usar el <xref:System.Windows.Forms.MouseEventArgs> del evento <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.MouseUp> para obtener los valores de las coordenadas <xref:System.Drawing.Point.X%2A> y <xref:System.Drawing.Point.Y%2A> de la <xref:System.Drawing.Point> en la que se ha producido el clic. A continuación, use el método <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> del control <xref:System.Windows.Forms.TreeView> para determinar en qué nodo se hizo clic.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,6 @@
 ---
 title: Compartir bucles de mensajes entre Win32 y WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Win32 code [WPF], sharing message loops
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 5c1d75ab9598196e9cffc78a2f116993e722fd38
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e1b96284d69645876d3e383beb03a2cc540d8b7b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740314"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731712"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartir bucles de mensajes entre Win32 y WPF
 En este tema se describe cómo implementar un bucle de mensajes para la interoperación con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], ya sea mediante la exposición de los bucles de mensajes existentes en <xref:System.Windows.Threading.Dispatcher> o mediante la creación de un bucle de mensajes independiente en el lado de Win32 del código de interoperación.  

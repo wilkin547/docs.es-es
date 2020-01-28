@@ -2,12 +2,12 @@
 title: Protección de mensajes mediante la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395716"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746448"
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
 En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -41,9 +41,9 @@ En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <
   
  Teniendo en cuenta la naturaleza desconectada de las colas, es posible que el cliente y el servicio no estén en línea al mismo tiempo. Como tales, el cliente y servicio tienen que intercambiar certificados fuera de banda. En particular, el cliente, en virtud de guardar el certificado del servicio (que se puede encadenar a una entidad de certificación) en su almacén de confianza, debe confiar en que se está comunicando con el servicio correcto. Para autenticar el cliente, el servicio utiliza el certificado X.509 adjunto con el mensaje para compararlo con el certificado en su almacén y verificar la autenticidad del cliente. De nuevo, el certificado se debe encadenar a una entidad de certificación.  
   
- En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. Para obtener más información sobre los diferentes almacenes, vea [almacenes de certificados](https://go.microsoft.com/fwlink/?LinkId=87787).  
+ En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. Para obtener más información sobre los diferentes almacenes, vea [almacenes de certificados](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
-### <a name="windows"></a>Windows  
+### <a name="windows"></a>Portal  
  El tipo de credencial de mensaje de Windows utiliza el protocolo Kerberos.  
   
  El protocolo Kerberos es un mecanismo de seguridad que autentica a los usuarios en un dominio y permite a los usuarios autenticados establecer contextos seguros con otras entidades en un dominio.  
@@ -68,4 +68,4 @@ En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <
 - [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

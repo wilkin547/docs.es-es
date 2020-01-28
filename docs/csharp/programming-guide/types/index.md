@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711888"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745380"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -113,7 +113,7 @@ Puede usar la palabra clave [struct](../../language-reference/keywords/struct.md
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Para más información sobre estructuras, vea [Structs](../classes-and-structs/structs.md). Para más información sobre los tipos de valor en. NET, vea [Tipos de valor](../../language-reference/keywords/value-types.md).
+Para más información sobre estructuras, vea [Structs](../classes-and-structs/structs.md). Para más información sobre los tipos de valor, vea [Tipos de valor](../../language-reference/builtin-types/value-types.md).
 
 La otra categoría de tipos de valor es [enum](../../language-reference/builtin-types/enum.md). Una enumeración define un conjunto de constantes integrales con nombre. Por ejemplo, la enumeración <xref:System.IO.FileMode?displayProperty=nameWithType> de la biblioteca de clases .NET contiene un conjunto de enteros constantes con nombre que especifican cómo se debe abrir un archivo. Se define como se muestra en el ejemplo siguiente:
 
@@ -148,7 +148,7 @@ Los tipos de referencia admiten la herencia completamente. Al crear una clase, p
 
 ## <a name="types-of-literal-values"></a>Tipos de valores literales
 
-En C#, los valores literales reciben un tipo del compilador. Puede especificar cómo debe escribirse un literal numérico; para ello, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá un tipo para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea las páginas de referencia de los tipos individuales en [Tipos de valor](../../language-reference/keywords/value-types.md).
+En C#, los valores literales reciben un tipo del compilador. Puede especificar cómo debe escribirse un literal numérico; para ello, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá un tipo para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea [Tipos numéricos integrales](../../language-reference/builtin-types/integral-numeric-types.md) y [Tipos numéricos de punto flotante](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Dado que los literales tienen tipo y todos los tipos derivan en última instancia de <xref:System.Object?displayProperty=nameWithType>, puede escribir y compilar código como el siguiente:
 
@@ -171,7 +171,7 @@ El uso del parámetro de tipo permite reutilizar la misma clase para incluir cua
 
 Como se ha mencionado anteriormente, puede asignar implícitamente un tipo a una variable local (pero no miembros de clase) mediante la palabra clave [var](../../language-reference/keywords/var.md). La variable sigue recibiendo un tipo en tiempo de compilación, pero este lo proporciona el compilador. Para más información, vea [Variables locales con asignación implícita de tipos](../classes-and-structs/implicitly-typed-local-variables.md).
 
-En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no desea almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para más información, vea [Tipos anónimos](../classes-and-structs/anonymous-types.md).
+En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no desea almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para obtener más información, consulte [Tipos anónimos](../classes-and-structs/anonymous-types.md) (Guía de programación de C#).
 
 Los tipos de valor normales no pueden tener un valor [null](../../language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](../../language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos. Para más información, vea [Tipos que admiten un valor NULL](../../language-reference/builtin-types/nullable-value-types.md).
 
@@ -185,7 +185,7 @@ Para obtener más información, vea los temas siguientes:
 
 - [Uso de tipo dinámico](./using-type-dynamic.md)
 
-- [Tipos de valor](../../language-reference/keywords/value-types.md)
+- [Tipos de valor](../../language-reference/builtin-types/value-types.md)
 
 - [Tipos de referencia](../../language-reference/keywords/reference-types.md)
 

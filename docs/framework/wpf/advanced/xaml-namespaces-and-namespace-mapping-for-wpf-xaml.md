@@ -1,5 +1,5 @@
 ---
-title: Espacios de nombres y asignación de espacios de nombres XAML para WPF
+title: Espacios de nombres y asignación de espacios de nombres XAML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976776"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741823"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espacios de nombres y asignación de espacios de nombres XAML para WPF
 En este tema se explica con mayor detalle la presencia y el propósito de las dos asignaciones de espacio de nombres XAML que se encuentran a menudo en la etiqueta raíz de cada archivo XAML de WPF. También se describe cómo generar asignaciones similares para usar elementos definidos en su propio código y/o dentro de ensamblados independientes.  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Asignar espacios de nombres CLR a espacios de nombres XML en un ensamblado  
  WPF define un atributo CLR que usan los procesadores XAML para asignar varios espacios de nombres CLR a un mismo espacio de nombres XAML. Este atributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, se coloca en el nivel de ensamblado en el código fuente que genera el ensamblado. El código fuente del ensamblado de WPF usa este atributo para asignar los distintos espacios de nombres comunes, como <xref:System.Windows> y <xref:System.Windows.Controls>, al espacio de nombres `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
- El <xref:System.Windows.Markup.XmlnsDefinitionAttribute> toma dos parámetros: el nombre del espacio de nombres XML/XAML y el nombre del espacio de nombres CLR. Puede haber más de un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para asignar varios espacios de nombres CLR al mismo espacio de nombres XML. Una vez asignados, si se quiere se puede hacer referencia también a los miembros de esos espacios de nombres aunque no estén completos, proporcionando la instrucción `using` adecuada en la página de código subyacente de la clase parcial. Para obtener más información, vea <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ El <xref:System.Windows.Markup.XmlnsDefinitionAttribute> toma dos parámetros: el nombre del espacio de nombres XML/XAML y el nombre del espacio de nombres CLR. Puede haber más de un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para asignar varios espacios de nombres CLR al mismo espacio de nombres XML. Una vez asignados, si se quiere se puede hacer referencia también a los miembros de esos espacios de nombres aunque no estén completos, proporcionando la instrucción `using` adecuada en la página de código subyacente de la clase parcial. Para obtener más detalles, vea <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Espacios de nombres de diseñador y otros prefijos de las plantillas XAML  
  Si trabaja con entornos de desarrollo o herramientas de diseño para XAML de WPF, tal vez observe que hay otros espacios de nombres XAML / prefijos definidos dentro del marcado XAML.  

@@ -1,54 +1,54 @@
 ---
-title: Utilizar el Diseñador con el control DataGridView de formularios Windows Forms
+title: Usar el diseñador con el control DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
 - DataGridView control [Windows Forms], designer support
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
-ms.openlocfilehash: daac7dca27ac5dca8df4db24c9a3e22dae831377
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50e8bddb97c2dfb84cebdbb2ca4d42a6c5743304
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948010"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728357"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Utilizar el Diseñador con el control DataGridView de formularios Windows Forms
-Visual Studio proporciona compatibilidad con el diseñador para el `DataGridView` control que le permite realizar muchas tareas de configuración sin necesidad de escribir código. Estas tareas incluyen enlace el control a un origen de datos, modificar las columnas que se usa para mostrar los datos y ajustar la apariencia y el comportamiento básico del control.  
+Visual Studio proporciona compatibilidad con el diseñador para el control `DataGridView` que permite realizar muchas tareas de configuración sin escribir código. Estas tareas incluyen enlazar el control a un origen de datos, modificar las columnas que se usan para mostrar los datos y ajustar la apariencia y el comportamiento básico del control.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo: Agregar y quitar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **agregar columnas** y **Edit Columns** cuadros de diálogo para rellenar y modificar la colección de columnas.  
+## <a name="in-this-section"></a>Esta sección  
+ [Agregar y quitar columnas en el control DataGridView de Windows Forms mediante el Diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar los cuadros de diálogo **Agregar columnas** y **Editar columnas** para rellenar y modificar la colección de columnas.  
   
- [Cómo: Enlazar datos con el Control de DataGridView de Windows Forms mediante el diseñador](bind-data-to-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **Elegir origen de datos** opción en la etiqueta inteligente del control para conectarse a datos.  
+ [Enlazar datos al control DataGridView de formularios Windows Forms mediante el Diseñador](bind-data-to-the-datagrid-using-the-designer.md)  
+ Describe cómo usar la opción **elegir origen de datos** en la etiqueta inteligente del control para conectarse a los datos.  
   
- [Cómo: Cambiar el orden de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **Edit Columns** cuadro de diálogo para reorganizar las columnas.  
+ [Cambiar el orden de las columnas en el control DataGridView de Windows Forms mediante el Diseñador](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar el cuadro de diálogo **Editar columnas** para reorganizar las columnas.  
   
- [Cómo: Cambiar el tipo de una columna DataGridView de Windows Forms mediante el diseñador](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
- Describe cómo utilizar el **Edit Columns** cuadro de diálogo para cambiar los tipos de columna.  
+ [Cambiar el tipo de una columna DataGridView de Windows Forms mediante el Diseñador](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
+ Describe cómo usar el cuadro de diálogo **Editar columnas** para cambiar los tipos de columna.  
   
- [Cómo: Habilitar la reordenación de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](enable-column-reordering-in-the-datagrid-using-the-designer.md)  
- Describe cómo usar la etiqueta inteligente del control para permitir que los usuarios reorganizar las columnas.  
+ [Habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador](enable-column-reordering-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar la etiqueta inteligente del control para permitir que los usuarios reorganicen las columnas.  
   
- [Cómo: Inmovilizar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](freeze-columns-in-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **Edit Columns** cuadro de diálogo para evitar que se desplacen columnas específicas.  
+ [Inmovilizar columnas en el control DataGridView de Windows Forms mediante el Diseñador](freeze-columns-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar el cuadro de diálogo **Editar columnas** para evitar que se desplacen columnas concretas.  
   
- [Cómo: Ocultar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](hide-columns-in-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **Edit Columns** cuadro de diálogo para ocultar columnas concretas.  
+ [Ocultar columnas en el control DataGridView de Windows Forms mediante el Diseñador](hide-columns-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar el cuadro de diálogo **Editar columnas** para ocultar columnas específicas.  
   
- [Cómo: Que las columnas de sólo lectura en el Control de DataGridView de Windows Forms mediante el diseñador](make-columns-read-only-in-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **Edit Columns** cuadro de diálogo para impedir que los usuarios editen los valores en columnas específicas.  
+ [Crear columnas de sólo lectura en el control DataGridView de Windows Forms mediante el Diseñador](make-columns-read-only-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar el cuadro de diálogo **Editar columnas** para impedir que los usuarios editen valores en columnas específicas.  
   
- [Cómo: Impedir la adición de fila y eliminación en el Control de DataGridView de Windows Forms mediante el diseñador](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)  
- Describe cómo usar la etiqueta inteligente del control para evitar que los usuarios agreguen o eliminen filas.  
+ [Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms mediante el Diseñador](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)  
+ Describe cómo usar la etiqueta inteligente del control para impedir que los usuarios agreguen o eliminen filas.  
   
- [Cómo: Establecer estilos de fila alternos para el Control de DataGridView de Windows Forms mediante el diseñador](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
- Describe cómo utilizar el **generador de CellStyle** cuadro de diálogo para crear una apariencia de la carta en el control.  
+ [Establecer estilos de fila alternos en el control DataGridView de formularios Windows Forms mediante el Diseñador](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
+ Describe cómo usar el cuadro de diálogo **generador de CellStyle** para crear una apariencia de libro de contabilidad en el control.  
   
- [Cómo: Establecer estilos de celda predeterminados y formatos de datos para el Control de DataGridView de Windows Forms mediante el diseñador](default-cell-styles-datagridview.md)  
- Describe cómo utilizar el **generador de CellStyle** formatos de cuadro de diálogo para configurar la apariencia básica y la visualización de datos para el control.  
+ [Establecer estilos de celdas y formatos de datos predeterminados en el control DataGridView de formularios Windows Forms mediante el Diseñador](default-cell-styles-datagridview.md)  
+ Describe cómo usar el cuadro de diálogo **generador de CellStyle** para configurar el aspecto básico y los formatos de presentación de datos para el control.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.DataGridView>  
