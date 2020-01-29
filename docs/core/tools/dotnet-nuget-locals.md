@@ -3,16 +3,16 @@ title: Comando dotnet nuget locals
 description: El comando dotnet nuget locals borra o muestra los recursos de NuGet locales, como la caché de solicitudes http, la caché temporal o la carpeta de paquetes global de toda la máquina.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087405"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734079"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Este tema se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]

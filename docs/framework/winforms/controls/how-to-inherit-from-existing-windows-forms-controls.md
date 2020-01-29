@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Heredar de controles de formularios Windows Forms existentes'
+title: para heredar desde controles existentes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 063f5bb87b6348ee83573cf1506c9fabdaf651ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0025ba136698c0a74a73e64a83fa4f526e44843
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460569"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736485"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Cómo: Heredar de controles de formularios Windows Forms existentes
 
@@ -88,8 +88,8 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
 ## <a name="see-also"></a>Vea también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Cómo: Heredar de una clase de control](how-to-inherit-from-the-control-class.md)
+- [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
 - [Cómo: Heredar de una clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Cómo: Crear controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Tutorial: heredar de un control Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

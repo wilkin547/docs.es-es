@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971541"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738387"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -94,7 +94,7 @@ Una variante de este enfoque finaliza cada nombre de clase de prueba con "Should
 
 - `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
-Para algunos equipos el segundo método de nomenclatura es más claro, aunque un poco más detallado. En cualquier caso, intente usar una convención de nomenclatura que proporcione información del comportamiento de la prueba, para que cuando se produzca un error en una o varias pruebas, sea obvio a partir de los nombres en qué casos se ha producido el error. Evite asignar nombres a las pruebas de forma vaga, como PruebasControlador.Prueba1, dado que no ofrecen ningún valor cuando se ven en los resultados de las pruebas.
+Para algunos equipos el segundo método de nomenclatura es más claro, aunque un poco más detallado. En cualquier caso, intente usar una convención de nomenclatura que proporcione información del comportamiento de la prueba, para que cuando se produzca un error en una o varias pruebas, sea obvio a partir de los nombres en qué casos se ha producido el error. Evite asignar nombre a las pruebas de forma vaga, como ControllerTests.Test1, dado que eso no ofrece ningún valor cuando se ven en los resultados de las pruebas.
 
 Si sigue una convención de nomenclatura como la anterior que genera muchas clases de prueba pequeñas, es aconsejable organizar más las pruebas mediante carpetas y espacios de nombres. En la figura 9-4 se muestra un enfoque para organizar las pruebas por carpeta en varios proyectos de prueba.
 

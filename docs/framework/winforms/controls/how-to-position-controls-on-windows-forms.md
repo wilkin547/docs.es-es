@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Colocar los controles en formularios Windows Forms'
+title: para controles de posición
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bb57d14397a4626e01c41dd687dfed7331282a10
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 144a0021c74f0fb5afec1d511315168fb28528e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458329"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735912"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Cómo: colocar controles en Windows Forms
 
@@ -103,6 +103,6 @@ button1->Left += 200;
 - [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
 - [Cómo: establecer la ubicación de la pantalla de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

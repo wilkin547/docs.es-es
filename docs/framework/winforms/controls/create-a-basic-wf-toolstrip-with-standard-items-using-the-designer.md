@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un control ToolStrip de Windows Forms básico con elementos estándar mediante el diseñador
+title: para crear un control ToolStrip básico con elementos estándar mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 5b205aee6df537fdeafd14a98869fb23ce972011
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4518376fae51a9be7c2b754cef20871c747fb47b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039968"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737379"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Procedimiento Crear un control ToolStrip de Windows Forms básico con elementos estándar mediante el diseñador
-En el siguiente procedimiento se muestra cómo crear <xref:System.Windows.Forms.ToolStrip> un y agregar <xref:System.Windows.Forms.ToolStripButton> siete controles que representan tareas típicas.
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Creación de un control ToolStrip básico de Windows Forms con elementos estándar mediante el Diseñador
+En el siguiente procedimiento se muestra cómo crear un <xref:System.Windows.Forms.ToolStrip> y agregar siete controles <xref:System.Windows.Forms.ToolStripButton> que representan tareas típicas.
 
 ## <a name="to-add-standard-items-in-the-designer"></a>Para agregar elementos estándar en el diseñador
 
-1. Cree un <xref:System.Windows.Forms.ToolStrip> control.
+1. Cree un control de <xref:System.Windows.Forms.ToolStrip>.
 
-2. En la esquina superior derecha de la <xref:System.Windows.Forms.ToolStrip>, haga clic en la flecha de la tarea inteligente para mostrar el panel **tareas de ToolStrip** .
+2. En la esquina superior derecha del <xref:System.Windows.Forms.ToolStrip>, haga clic en la flecha de la tarea inteligente para mostrar el panel **tareas de ToolStrip** .
 
 3. En el panel **tareas de ToolStrip** , elija **insertar elementos estándar**.
 

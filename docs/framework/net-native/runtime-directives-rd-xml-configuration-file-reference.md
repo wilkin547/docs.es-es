@@ -2,12 +2,12 @@
 title: Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128129"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738410"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 
@@ -39,27 +39,69 @@ El elemento raíz es [Directives](directives-element-net-native.md). Puede conte
 
 Para obtener información de referencia, seleccione los elementos de la siguiente estructura o vea [Runtime Directive Elements](runtime-directive-elements.md) (Elementos de directivas en tiempo de ejecución) En la siguiente jerarquía, los puntos suspensivos marcan una estructura recursiva. La información entre paréntesis indica si el elemento es obligatorio u opcional y, si se utiliza, el número de instancias permitidas (una o varias).
 
-[Directivas](directives-element-net-native.md) [[1:1] [](application-element-net-native.md) 0:1] [ensamblado](assembly-element-net-native.md) [0: m] [espacio de nombres](namespace-element-net-native.md) [0: m]. . .
-[Tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[Espacio de nombres [0](namespace-element-net-native.md) : m] [espacio de nombres](namespace-element-net-native.md) [0: m]. . .
-[Tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[Tipos](type-element-net-native.md) [0: m] [subtipos](subtypes-element-net-native.md) (subclases del tipo contenedor) [O:1] [tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (el tipo contenedor es un atributo) [O:1 [] GenericParameter](genericparameter-element-net-native.md) [0: m] [método](method-element-net-native.md) [0: M] [parámetro](parameter-element-net-native.md) [0: m] [TypeParameter](typeparameter-element-net-native.md) [0: m] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) ( método genérico construido) [0: M] [propiedad](property-element-net-native.md) [0: m] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0: m] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: m] [tipo](type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[Método](method-element-net-native.md) [0: m] [parámetro](parameter-element-net-native.md) [0: m] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0: m] [propiedad](property-element-net-native.md) [0: M] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0: m] [ Biblioteca](library-element-net-native.md) [0: m] [ensamblado](assembly-element-net-native.md) [0: m] [espacio de nombres](namespace-element-net-native.md) [0: m]. . .
-[Tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[Espacio de nombres [0](namespace-element-net-native.md) : m] [espacio de nombres](namespace-element-net-native.md) [0: m]. . .
-[Tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[Tipos](type-element-net-native.md) [0: m] [subtipos](subtypes-element-net-native.md) (subclases del tipo contenedor) [O:1] [tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (el tipo contenedor es un atributo) [O:1 [] GenericParameter](genericparameter-element-net-native.md) [0: m [] método](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0: m] [propiedad](property-element-net-native.md) [0: m] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0 : M] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: m] [tipo](type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
-[Método](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0: m] [propiedad](property-element-net-native.md) [0: M] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0: m]
+- [Directives](directives-element-net-native.md) [1:1]
+  - [Application](application-element-net-native.md) [0:1]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [Espacio de nombres](namespace-element-net-native.md) [0: M]. . .
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [Espacio de nombres](namespace-element-net-native.md) [0: M]. . .
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (subclases del tipo contenedor) [O:1]
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (el tipo contenedor es un atributo) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0:M]
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+  - [Library](library-element-net-native.md) [0:M]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [Espacio de nombres](namespace-element-net-native.md) [0: M]. . .
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [Espacio de nombres](namespace-element-net-native.md) [0: M]. . .
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (subclases del tipo contenedor) [O:1]
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (el tipo contenedor es un atributo) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0:M]
+      - [Tipo](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construido) [0: M]. . .
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construido) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
 
 El elemento [Application](application-element-net-native.md) no puede tener atributos o puede tener los atributos de directiva tratados en la [sección sobre política y directivas de tiempo de ejecución](#Directives).
 
@@ -90,43 +132,43 @@ La directiva que puede expresarse mediante los elementos [Application](applicati
 
 Los elementos [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) y [Type](type-element-net-native.md) admiten los siguientes tipos de directivas:
 
-- `Activate`Operador Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de las instancias.
+- `Activate`. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de las instancias.
 
-- `Browse`Operador Controla la consulta de información sobre elementos del programa, pero no permite el acceso en tiempo de ejecución.
+- `Browse`. Controla la consulta de información sobre elementos del programa, pero no permite el acceso en tiempo de ejecución.
 
-- `Dynamic`Operador Controla el acceso en tiempo de ejecución a todos los miembros de tipo (incluidos constructores, métodos, campos, propiedades y eventos) para permitir la programación dinámica.
+- `Dynamic`. Controla el acceso en tiempo de ejecución a todos los miembros de tipo (incluidos constructores, métodos, campos, propiedades y eventos) para permitir la programación dinámica.
 
-- `Serialize`Operador Controla el acceso en tiempo de ejecución a constructores, campos y propiedades, para permitir que bibliotecas de terceros (como el serializador de JSON Newtonsoft) puedan serializar y deserializar las instancias de tipos.
+- `Serialize`. Controla el acceso en tiempo de ejecución a constructores, campos y propiedades, para permitir que bibliotecas de terceros (como el serializador de JSON Newtonsoft) puedan serializar y deserializar las instancias de tipos.
 
-- `DataContractSerializer`Operador Controla la directiva de serialización que usa la clase <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer`. Controla la directiva de serialización que usa la clase <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer`Operador Controla la directiva de serialización JSON que usa la clase <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer`. Controla la directiva de serialización JSON que usa la clase <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer`Operador Controla la directiva de serialización XML que usa la clase <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer`. Controla la directiva de serialización XML que usa la clase <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`Operador Controla la directiva de cálculo de referencias de tipos de referencia para WinRT y COM.
+- `MarshalObject`. Controla la directiva de cálculo de referencias de tipos de referencia para WinRT y COM.
 
-- `MarshalDelegate`Operador Controla la directiva de serialización de tipos de delegado como punteros de función a código nativo.
+- `MarshalDelegate`. Controla la directiva de serialización de tipos de delegado como punteros de función a código nativo.
 
 - `MarshalStructure` . Controla la directiva para calcular referencias de estructuras a código nativo.
 
 Los valores asociados con estos tipos de directiva son:
 
-- `All`Operador Habilita la directiva para todos los tipos y miembros que no se eliminan con la cadena de herramientas.
+- `All`. Habilita la directiva para todos los tipos y miembros que no se eliminan con la cadena de herramientas.
 
-- `Auto`Operador Usa el comportamiento predeterminado. (No especificar una directiva es equivalente a establecer esa directiva en `Auto`, a menos que se invalide la directiva, por ejemplo, por un elemento primario).
+- `Auto`. Usa el comportamiento predeterminado. (No especificar una directiva es equivalente a establecer esa directiva en `Auto`, a menos que se invalide la directiva, por ejemplo, por un elemento primario).
 
-- `Excluded`Operador Deshabilita la directiva para el elemento de programa.
+- `Excluded`. Deshabilita la directiva para el elemento de programa.
 
-- `Public`Operador Habilita la directiva para tipos o miembros públicos a menos que la cadena de herramientas determine que el miembro es innecesario y, por tanto, lo quita. (En este último caso, debe utilizar `Required Public` para asegurarse de que el miembro se conserva y tiene capacidades de reflexión).
+- `Public`. Habilita la directiva para tipos o miembros públicos a menos que la cadena de herramientas determine que el miembro es innecesario y, por tanto, lo quita. (En este último caso, debe utilizar `Required Public` para asegurarse de que el miembro se conserva y tiene capacidades de reflexión).
 
-- `PublicAndInternal`Operador Habilita la directiva para tipos o miembros públicos e internos si la cadena de herramientas no los quita.
+- `PublicAndInternal`. Habilita la directiva para tipos o miembros públicos e internos si la cadena de herramientas no los quita.
 
-- `Required Public`Operador Exige que la cadena de herramientas mantenga los tipos y miembros públicos tanto si se utilizan como si no, y habilita la directiva para ellos.
+- `Required Public`. Exige que la cadena de herramientas mantenga los tipos y miembros públicos tanto si se utilizan como si no, y habilita la directiva para ellos.
 
-- `Required PublicAndInternal`Operador Exige que la cadena de herramientas mantenga los tipos y miembros públicos e internos tanto si se utilizan como si no, y habilita la directiva para ellos.
+- `Required PublicAndInternal`. Exige que la cadena de herramientas mantenga los tipos y miembros públicos e internos tanto si se utilizan como si no, y habilita la directiva para ellos.
 
-- `Required All`Operador Exige que la cadena de herramientas mantenga todos los tipos y miembros tanto si se utilizan como si no, y habilita la directiva para ellos.
+- `Required All`. Exige que la cadena de herramientas mantenga todos los tipos y miembros tanto si se utilizan como si no, y habilita la directiva para ellos.
 
 Por ejemplo, el siguiente archivo de directivas de tiempo de ejecución define una directiva para todos los tipos y miembros del ensamblado DataClasses.dll. Permite reflexión para la serialización de todas las propiedades públicas, permite buscar todos los tipos y miembros de tipo, permite la activación para todos los tipos (debido al atributo `Dynamic`) y permite la reflexión para todos los tipos y miembros públicos.
 
@@ -414,4 +456,4 @@ Para más información, vea la sección "Diferencias en los serializadores" en [
 ## <a name="see-also"></a>Vea también
 
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Reflexión y .NET Native](reflection-and-net-native.md)
+- [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)

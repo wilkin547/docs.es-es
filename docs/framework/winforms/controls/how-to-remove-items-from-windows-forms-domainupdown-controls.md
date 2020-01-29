@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para quitar elementos de los controles DomainUpDown de formularios Windows Forms
+title: Quitar elementos de los controles DomainUpDown
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: f56bc2b7b7b8a783ac298b220c83281f38da29da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e52af5c5add4fda93e2b51c8afdb90c92e8d2f62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735768"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procedimiento para quitar elementos de los controles DomainUpDown de formularios Windows Forms
-Se pueden quitar elementos de los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control mediante una llamada a la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase. El <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método quita un elemento específico, mientras que el <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método quita un elemento por su posición.  
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Cómo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms
+Puede quitar elementos del control de <xref:System.Windows.Forms.DomainUpDown> de Windows Forms llamando al método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> de la clase <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>. El método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> quita un elemento específico, mientras que el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> quita un elemento por su posición.  
   
 ### <a name="to-remove-an-item"></a>Para quitar un elemento  
   
-- Use la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase para quitar un elemento por su nombre.  
+- Use el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> de la clase <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> para quitar un elemento por nombre.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -35,9 +35,9 @@ Se pueden quitar elementos de los formularios de Windows <xref:System.Windows.Fo
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     -o bien-  
+     O bien,  
   
-- Use el <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método para quitar un elemento por su posición.  
+- Use el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> para quitar un elemento por su posición.  
   
     ```vb  
     ' Removes the first item in the list.  
@@ -59,5 +59,5 @@ Se pueden quitar elementos de los formularios de Windows <xref:System.Windows.Fo
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
-- [DomainUpDown (control)](domainupdown-control-windows-forms.md)
+- [DomainUpDown (Control)](domainupdown-control-windows-forms.md)
 - [Información general sobre el control DomainUpDown](domainupdown-control-overview-windows-forms.md)

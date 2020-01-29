@@ -1,5 +1,5 @@
 ---
-title: Filtrar para establecer el texto mostrado por un control de formularios Windows Forms
+title: Establecer el texto mostrado por un control
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666151"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738420"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Filtrar Establecer el texto mostrado por un control de Windows Forms
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Cómo: establecer el texto mostrado por un control Windows Forms
 
-Windows Forms controles suelen mostrar algún texto relacionado con la función principal del control. Por ejemplo, un <xref:System.Windows.Forms.Button> control suele mostrar un título que indica la acción que se realizará si se hace clic en el botón. Para todos los controles, puede establecer o devolver el texto usando la propiedad <xref:System.Windows.Forms.Control.Text%2A>. Puede cambiar la fuente usando la propiedad <xref:System.Windows.Forms.Control.Font%2A>.
+Windows Forms controles suelen mostrar algún texto relacionado con la función principal del control. Por ejemplo, un control de <xref:System.Windows.Forms.Button> normalmente muestra un título que indica la acción que se realizará si se hace clic en el botón. Para todos los controles, puede establecer o devolver el texto usando la propiedad <xref:System.Windows.Forms.Control.Text%2A>. Puede cambiar la fuente usando la propiedad <xref:System.Windows.Forms.Control.Font%2A>.
 
 También puede establecer el texto mediante el [Diseñador](#designer).
 
@@ -72,18 +72,18 @@ También puede establecer el texto mediante el [Diseñador](#designer).
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>Diseñador
+## <a name="designer"></a>Diseñador de
 
 1. En la ventana **propiedades** de Visual Studio, establezca la propiedad **texto** del control en una cadena adecuada.
 
    Para crear una tecla de método abreviado subrayada, incluye una y comercial (&) delante de la letra que será la tecla de método abreviado.
 
-2. En la ventana **propiedades** , seleccione el botón de puntos![suspensivos (botón de puntos suspensivos (...) en el](./media/visual-studio-ellipsis-button.png)ventana Propiedades de Visual Studio) junto a la propiedad **Font** .
+2. En la ventana **propiedades** , seleccione el botón de puntos suspensivos (![botón de puntos suspensivos (...) en el ventana Propiedades de Visual Studio](./media/visual-studio-ellipsis-button.png)) junto a la propiedad **Font** .
 
    En el cuadro de diálogo fuente estándar, seleccione la fuente, el estilo de fuente, el tamaño, los efectos (como tachado o subrayado) y el script que desee.
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Cómo: Crear claves de acceso para controles de Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Cómo: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Crear teclas de acceso para controles de Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Responder a clics de botones en Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

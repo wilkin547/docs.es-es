@@ -2,12 +2,12 @@
 title: Información general de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 56d19aa72cc5e7217a2135ef919d611c8b2c2f27
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424518"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737481"
 ---
 # <a name="wcf-discovery-overview"></a>Información general de Detección de WCF
 Las API de detección proporcionan un modelo de programación unificado para la detección y la publicación dinámica de servicios Web mediante el protocolo WS-Discovery. Estas API permiten a los servicios publicarse y a los clientes encontrar los servicios publicados. Una vez que un servicio es reconocible, tiene la capacidad de enviar mensajes de anuncio, así como realizar escuchas y responder a solicitudes de detección. Los servicios reconocibles pueden enviar mensajes de Hola para anunciar su llegada a la red, así como mensajes de Adiós para anunciar su salida de la red. Para encontrar un servicio, los clientes envían a una solicitud `Probe` que contiene criterios específicos, como tipos de contratos de servicios, palabras clave y ámbito de red. Los servicios reciben la solicitud `Probe` y determinan si coinciden con los criterios. Si un servicio coincide, responde devolviendo un mensaje `ProbeMatch` al cliente con la información necesaria para ponerse en contacto con el servicio. Los clientes también pueden enviar solicitudes `Resolve` para buscar servicios que pueden haber cambiado la dirección de punto de conexión. Los servicios coincidentes responden a las solicitudes `Resolve` devolviendo un mensaje `ResolveMatch` al cliente.  
@@ -153,7 +153,7 @@ class Client
   
 2. Usar un proxy de detección para comunicarse en nombre del servicio  
   
- Windows Server AppFabric tiene una característica de inicio automático que permite que un servicio se inicie antes de recibir ningún mensaje. Con este inicio automático establecido, un servicio hospedado por IIS/WAS se puede configurar como detectable. Para obtener más información acerca de la característica de inicio automático, consulte [característica de inicio automático de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Además de activar la característica de inicio automático, debe configurar el servicio para la detección. Para obtener más información, consulte [Cómo: agregar detectabilidad a un servicio WCF y configurar la](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[detección en un archivo de configuración](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)mediante programación.  
+ Windows Server AppFabric tiene una característica de inicio automático que permite que un servicio se inicie antes de recibir ningún mensaje. Con este inicio automático establecido, un servicio hospedado por IIS/WAS se puede configurar como detectable. Para obtener más información acerca de la característica de inicio automático, consulte [característica de inicio automático de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Además de activar la característica de inicio automático, debe configurar el servicio para la detección. Para obtener más información, consulte [Cómo: agregar detectabilidad a un servicio WCF y configurar la](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[detección en un archivo de configuración](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)mediante programación.  
   
  Se puede usar un proxy de detección para comunicarse en nombre del servicio WCF cuando el servicio no se está ejecutando. El proxy puede escuchar para sondear o resolver los mensajes, y responder al cliente. El cliente puede entonces enviar los mensajes directamente al servicio. Cuando el cliente envíe un mensaje al servicio, se creará una instancia del mismo para responderlo. Para obtener más información sobre la implementación de un proxy de detección, vea [implementación de un proxy de detección](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

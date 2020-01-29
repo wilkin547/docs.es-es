@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Organizar controles de formularios Windows Forms en WPF'
+title: Organizar Windows Forms controles en WPF
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197843"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735286"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Tutorial: Organizar controles de formularios Windows Forms en WPF
 
@@ -31,7 +32,7 @@ Las tareas ilustradas en este tutorial incluyen:
 - Acoplar.
 - Establecer la visibilidad.
 - Hospedar un control que no se ajusta.
-- Ajustar la escala.
+- Escala.
 - Girar.
 - Establecer el relleno y los márgenes.
 - Usar contenedores de diseño dinámico.
@@ -149,7 +150,7 @@ Los elementos <xref:System.Windows.Forms.Integration.WindowsFormsHost> visibles 
 
 2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> se dibuja sobre el elemento de etiqueta.
 
-## <a name="docking"></a>Acoplamiento
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento admite el acoplamiento de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Establezca el <xref:System.Windows.Controls.DockPanel.Dock%2A> propiedad adjunta para acoplar el control hospedado en un elemento <xref:System.Windows.Controls.DockPanel>.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705293"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735650"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Excepciones y control de excepciones (Guía de programación de C#)
 
@@ -25,7 +25,7 @@ En este ejemplo, un método prueba a hacer la división entre cero y detecta el 
 
 ## <a name="exceptions-overview"></a>Información general sobre excepciones
 
-Las excepciones tienen las siguientes propiedades:  
+Las excepciones tienen las siguientes propiedades:
 
 - Las excepciones son tipos que derivan en última instancia de `System.Exception`.
 - Use un bloque `try` alrededor de las instrucciones que pueden producir excepciones.
@@ -36,7 +36,7 @@ Las excepciones tienen las siguientes propiedades:
 - Las excepciones puede generarlas explícitamente un programa con la palabra clave `throw`.
 - Los objetos de excepción contienen información detallada sobre el error, como el estado de la pila de llamadas y una descripción de texto del error.
 - El código de un bloque `finally` se ejecuta incluso si se produce una excepción. Use un bloque `finally` para liberar recursos, por ejemplo, para cerrar las secuencias o los archivos que se abrieron en el bloque `try`.
-- Las excepciones administradas de .NET Framework se implementan en el mecanismo de control de excepciones estructurado de Win32. Para más información, vea [Control de excepciones estructurado (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) y [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Curso intensivo sobre los aspectos específicos del control de excepciones estructurado de Win32).
+- Las excepciones administradas de .NET Framework se implementan en el mecanismo de control de excepciones estructurado de Win32. Para más información, vea [Control de excepciones estructurado (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) y [A Crash Course on the Depths of Win32 Structured Exception Handling](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Curso intensivo sobre los aspectos específicos del control de excepciones estructurado de Win32).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

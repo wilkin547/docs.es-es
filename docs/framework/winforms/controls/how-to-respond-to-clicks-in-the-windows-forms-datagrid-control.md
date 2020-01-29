@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para responder a clics en el control DataGrid de formularios Windows Forms
+title: Responder a clics en el control DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914994"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735752"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedimiento para responder a clics en el control DataGrid de formularios Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Cómo: Responder a clics en el control DataGrid de formularios Windows Forms
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Una vez que <xref:System.Windows.Forms.DataGrid> el Windows Forms está conectado a una base de datos, puede supervisar en qué celda hizo clic el usuario.  
+ Una vez que el <xref:System.Windows.Forms.DataGrid> de Windows Forms está conectado a una base de datos, puede supervisar en qué celda hizo clic el usuario.  
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Para detectar cuándo el usuario del control DataGrid selecciona una celda diferente  
   
-- En el <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> controlador de eventos, escriba el código para responder adecuadamente.  
+- En el controlador de eventos <xref:System.Windows.Forms.DataGrid.CurrentCellChanged>, escriba código para responder adecuadamente.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,9 +56,9 @@ ms.locfileid: "69914994"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Para determinar en qué parte del control DataGrid hizo clic el usuario  
   
-- Llame al <xref:System.Windows.Forms.DataGrid.HitTest%2A> método en un controlador de eventos adecuado, como para el <xref:System.Windows.Forms.Control.MouseDown> evento <xref:System.Windows.Forms.Control.Click> o.  
+- Llame al método <xref:System.Windows.Forms.DataGrid.HitTest%2A> en un controlador de eventos adecuado, como para el evento <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click>.  
   
-     El <xref:System.Windows.Forms.DataGrid.HitTest%2A> método devuelve un <xref:System.Windows.Forms.DataGrid.HitTestInfo> objeto que contiene la fila y la columna de un área en la que se hizo clic.  
+     El método <xref:System.Windows.Forms.DataGrid.HitTest%2A> devuelve un objeto <xref:System.Windows.Forms.DataGrid.HitTestInfo> que contiene la fila y la columna de un área en la que se hizo clic.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -143,4 +143,4 @@ ms.locfileid: "69914994"
 ## <a name="see-also"></a>Vea también
 
 - [DataGrid (control)](datagrid-control-windows-forms.md)
-- [Cómo: Cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Cómo: Cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

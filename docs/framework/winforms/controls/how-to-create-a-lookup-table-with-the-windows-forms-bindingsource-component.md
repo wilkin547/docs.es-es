@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
+title: Crear una tabla de búsqueda con el componente BindingSource
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 33b9e4e98a8a3f8c0d5dd6433ebbf15c049b608e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf2bfa6cf3f56a38b55f8c87004c42a46172891
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643059"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736812"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedimiento para crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Cómo: Crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
 Una tabla de búsqueda es una tabla de datos con una columna que muestra los datos de los registros de una tabla relacionada. En los procedimientos siguientes se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar el campo con la relación de clave externa desde la tabla primaria a la tabla secundaria.  
   
  Aquí se ofrece un ejemplo de una tabla primaria y una tabla secundaria para ayudar a visualizar estas dos tablas y su relación:  
@@ -49,7 +49,7 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
 ### <a name="to-create-the-user-interface"></a>Para crear la interfaz de usuario  
   
-1. Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.ComboBox> al formulario.  
+1. En el **cuadro de herramientas**, arrastre un control <xref:System.Windows.Forms.ComboBox> al formulario.  
   
      Este control mostrará la columna de la tabla primaria.  
   

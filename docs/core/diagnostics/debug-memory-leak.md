@@ -3,16 +3,16 @@ title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715602"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737736"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Depuración de una fuga de memoria en .NET Core
 
-**Este artículo se aplica a: ✓** SDK de .NET Core 3.0.x y versiones posteriores
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores
 
 En este tutorial se muestran las herramientas para analizar una fuga de memoria de .NET Core.
 

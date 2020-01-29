@@ -2,16 +2,16 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737696"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734594"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
-En la aplicación de microservicio de referencia [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) se usa [Ocelot](https://github.com/ThreeMammals/Ocelot), una puerta de enlace de API simple y ligera que se puede implementar en cualquier lugar junto con los microservicios y contenedores, como en cualquiera de los entornos siguientes que se usan en eShopOnContainers.
+En la aplicación de microservicio de referencia [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) se usa [Ocelot](https://github.com/ThreeMammals/Ocelot), una puerta de enlace de API simple y ligera que se puede implementar en cualquier lugar junto con los microservicios o contenedores, como en cualquiera de los entornos siguientes que se usan en eShopOnContainers:
 
 - Host de Docker, en el equipo PC de desarrollo local, en el entorno local o en la nube.
 - Clúster de Kubernetes, de forma local o en la nube administrada como Azure Kubernetes Service (AKS).
@@ -26,7 +26,7 @@ En el diagrama de arquitectura siguiente se muestra cómo se implementan las pue
 
 **Figura 6-28**. Arquitectura de eShopOnContainers con puertas de enlace de API
 
-En ese diagrama se muestra cómo se implementa toda la aplicación en un único host de Docker o PC de desarrollo con "Docker para Windows" o "Docker para Mac". Pero la implementación en cualquier orquestador sería bastante similar y cualquiera de los contenedores del diagrama se podría escalar horizontalmente en el orquestador.
+En ese diagrama se muestra cómo se implementa toda la aplicación en un único host de Docker o equipo de desarrollo con "Docker para Windows" o "Docker para Mac". Pero la implementación en cualquier orquestador sería similar, aunque cualquiera de los contenedores del diagrama se podría escalar horizontalmente en el orquestador.
 
 Además, los recursos de infraestructura como bases de datos, caché y agentes de mensajes se deberían descargar del orquestador e implementarse en sistemas de alta disponibilidad para la infraestructura, como Azure SQL Database, Azure Cosmos DB, Azure Redis, Azure Service Bus o cualquier solución de agrupación en clústeres de alta disponibilidad local.
 
@@ -34,7 +34,7 @@ Como también se puede observar en el diagrama, tener varias puertas de enlace d
 
 Si tuviera una sola puerta de enlace de API monolítica, sería un único punto para actualizar por varios equipos de desarrollo, que podrían acoplar todos los microservicios con un único elemento de la aplicación.
 
-Ampliando mucho más el diseño, en ocasiones una puerta de enlace de API específica también se puede limitar a un microservicio empresarial individual en función de la arquitectura elegida. El tener los límites de la puerta de enlace de API dictados por el negocio o el dominio le ayudará a lograr un mejor diseño.
+Ampliando mucho más el diseño, en ocasiones una puerta de enlace de API específica también se puede limitar a un microservicio empresarial individual en función de la arquitectura elegida. El tener los límites de la puerta de enlace de API dictados por el negocio o el dominio ayuda a lograr un mejor diseño.
 
 Por ejemplo, la especificidad del nivel de puerta de enlace de API puede ser especialmente útil para aplicaciones de interfaz de usuario compuesta más avanzadas que se basan en microservicios, dado que el concepto de una puerta de enlace de API específica es similar a un servicio de composición de interfaz de usuario.
 
@@ -42,7 +42,7 @@ Nos adentramos en más detalles en la sección anterior, [Creación de interfaz 
 
 Como punto clave, para muchas aplicaciones de tamaño medio y grande, el uso de una puerta de enlace de API personalizada suele ser un enfoque adecuado, pero no como un único agregador monolítico ni una única puerta de enlace de API personalizada central, a menos que esa puerta de enlace de API permita varias áreas de configuración independientes para que los diferentes equipos de desarrollo creen microservicios autónomos.
 
-### <a name="sample-microservicescontainers-to-re-route-through-the-api-gateways"></a>Microservicios y contenedores de ejemplo para redistribuir entre las puertas de enlace de API
+### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>Microservicios y contenedores de ejemplo para redistribuir entre las puertas de enlace de API
 
 Como ejemplo, eShopOnContainers tiene aproximadamente seis tipos de microservicio internos que se tienen que publicar entre las puertas de enlace de API, como se muestra en la imagen siguiente.
 
@@ -52,7 +52,7 @@ Como ejemplo, eShopOnContainers tiene aproximadamente seis tipos de microservici
 
 En cuanto al servicio Identity, en el diseño se excluye del enrutamiento de puerta de enlace de API, porque es el único interés transversal del sistema, aunque con Ocelot también es posible incluirlo como parte de las listas de reenrutamiento.
 
-Todos estos servicios se implementan actualmente como servicios de API web de ASP.NET Core, como se desprende del código. Centrémonos en uno de los microservicios, como el código del microservicio Catalog.
+Todos estos servicios se implementan actualmente como servicios de API web de ASP.NET Core, como se desprende del código. Vamos a centrarnos en uno de los microservicios, por ejemplo, el código del microservicio Catalog.
 
 ![Captura de pantalla del Explorador de soluciones que muestra el contenido del proyecto Catalog.API.](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
@@ -86,7 +86,7 @@ public async Task<IActionResult> GetItemById(int id)
 
 La solicitud HTTP terminará ejecutando ese tipo de código de C# que accede a la base de datos de microservicios además de cualquier otra acción requerida.
 
-En lo que respecta a la dirección URL del microservicio, cuando los contenedores se implementan en el equipo de desarrollo local (el host de Docker local), el contenedor de cada microservicio siempre tiene un puerto interno (normalmente el puerto 80) que se especifica en su Dockerfile, como se muestra en el Dockerfile siguiente:
+En lo que respecta a la dirección URL del microservicio, cuando los contenedores se implementan en el equipo de desarrollo local (el host de Docker local), el contenedor de cada microservicio siempre tiene un puerto interno (normalmente el puerto 80) especificado en su Dockerfile, como se muestra en el Dockerfile siguiente:
 
 ```Dockerfile
 FROM microsoft/aspnetcore:2.0.5 AS base
@@ -102,7 +102,7 @@ Esos puertos externos no se deben publicar al implementar en un entorno de produ
 
 Pero durante el desarrollo, le interesa acceder directamente al contenedor o microservicio, y ejecutarlo a través de Swagger. Por eso en eShopOnContainers se siguen especificando los puertos externos, aunque la puerta de enlace de API o las aplicaciones cliente no los vayan a usar.
 
-Este es un ejemplo del archivo `docker-compose.override.yml` para el microservicio Catalog:
+Este es un ejemplo del archivo `docker-compose.override.yml` del microservicio Catalog:
 
 ```yml
 catalog.api:
@@ -116,11 +116,11 @@ catalog.api:
                   # The API Gateway redirects and access through the internal port (80).
 ```
 
-Puede ver cómo en la configuración de docker-compose.override.yml el puerto interno del contenedor Catalog es el puerto 80, pero el puerto para el acceso externo es 5101. Pero la aplicación no debería usar este puerto cuando se utiliza una puerta de enlace de API, solo para depurar, ejecutar y probar el microservicio Catalog.
+Puede ver cómo en la configuración de docker-compose.override.yml el puerto interno del contenedor Catalog es el puerto 80, pero el puerto para el acceso externo es 5101. Pero la aplicación no debería usar este puerto si emplea una puerta de enlace de API, solo para depurar, ejecutar y probar el microservicio Catalog.
 
-Normalmente, no se puede implementar con docker-compose en un entorno de producción porque el entorno de implementación de producción correcto para los microservicios es un orquestador como Kubernetes o Service Fabric. Cuando se implementa en esos entornos, se usan otros archivos de configuración en los que no se publica directamente ningún puerto externo para los microservicios, pero siempre se usa al proxy inverso de la puerta de enlace de API.
+Normalmente no se implementa con docker-compose en un entorno de producción, ya que el entorno de implementación de producción correcto para los microservicios es un orquestador como Kubernetes o Service Fabric. Cuando se implementa en esos entornos, se usan otros archivos de configuración en los que no se publica directamente ningún puerto externo para los microservicios, pero siempre se usa el proxy inverso de la puerta de enlace de API.
 
-Ejecute el microservicio Catalog en el host de Docker local ya sea mediante la ejecución de la solución eShopOnContainers completa desde Visual Studio (ejecutará todos los servicios de los archivos docker-compose) o iniciando el microservicio con el comando docker-compose siguiente en CMD o PowerShell desde la carpeta donde están `docker-compose.yml` y docker-compose.override.yml.
+Ejecute el microservicio Catalog en el host de Docker local. Ejecute la solución eShopOnContainers completa desde Visual Studio (ejecuta todos los servicios de los archivos docker-compose) o inicie el microservicio Catalog con el comando docker-compose siguiente en CMD o PowerShell desde la carpeta donde están `docker-compose.yml` y `docker-compose.override.yml`.
 
 ```console
 docker-compose run --service-ports catalog.api
@@ -128,7 +128,7 @@ docker-compose run --service-ports catalog.api
 
 Este comando solo ejecuta el contenedor del servicio catalog.api además de las dependencias que se especifican en el archivo docker-compose.yml. En este caso, el contenedor de SQL Server y el contenedor de RabbitMQ.
 
-Después, puede acceder directamente al microservicio Catalog y ver sus métodos a través de la interfaz de usuario de Swagger, a la que se accede directamente a través de ese puerto "externo", en este caso `http://localhost:5101/swagger`:
+Después, puede acceder directamente al microservicio Catalog y ver sus métodos a través de la interfaz de usuario de Swagger, que accede directamente a través de ese puerto "externo", en este caso `http://localhost:5101/swagger`:
 
 ![Captura de pantalla de la interfaz de usuario de Swagger que muestra la API REST Catalog.API.](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
@@ -136,7 +136,7 @@ Después, puede acceder directamente al microservicio Catalog y ver sus métodos
 
 En este momento, podría establecer un punto de interrupción en el código de C# en Visual Studio, probar el microservicio con los métodos expuestos en la interfaz de usuario de Swagger y, por último, limpiar todo con el comando `docker-compose down`.
 
-Pero la comunicación de acceso directo al microservicio, en este caso a través del puerto externo 5101, es precisamente lo que se quiere evitar en la aplicación. Y se puede evitar si se establece el nivel adicional de direccionamiento indirecto de la puerta de enlace de API (en este caso, Ocelot). De ese modo, la aplicación cliente no accederá directamente al microservicio.
+Pero la comunicación de acceso directo al microservicio, en este caso a través del puerto externo 5101, es precisamente lo que se quiere evitar en la aplicación. Y se puede evitar si se establece el nivel adicional de direccionamiento indirecto de la puerta de enlace de API (en este caso, Ocelot). De ese modo, la aplicación cliente no accede directamente al microservicio.
 
 ## <a name="implementing-your-api-gateways-with-ocelot"></a>Implementación de las puertas de enlace de API con Ocelot
 
@@ -150,7 +150,7 @@ Ocelot y sus dependencias se instalan en el proyecto de ASP.NET Core con el [paq
 Install-Package Ocelot
 ```
 
-En eShopOnContainers, su implementación de puerta de enlace de API es un proyecto ASP.NET Core WebHost simple, y el software intermedio de Ocelot controla todas las características de la puerta de enlace de API, como se muestra en la imagen siguiente:
+En eShopOnContainers, su implementación de la puerta de enlace de API es un proyecto ASP.NET Core WebHost simple, y el middleware de Ocelot controla todas las características de la puerta de enlace de API, como se muestra en la imagen siguiente:
 
 ![Captura de pantalla del Explorador de soluciones que muestra el proyecto de puerta de enlace de API de Ocelot.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
@@ -195,9 +195,9 @@ Aquí, lo importante para Ocelot es el archivo `configuration.json` que se debe 
 }
 ```
 
-En la configuración hay dos secciones. Una matriz de redistribuciones y GlobalConfiguration. Las redistribuciones son los objetos que indican a Ocelot cómo procesar una solicitud de nivel superior. La configuración Global permite reemplazos de la configuración específica de redistribución. Es útil si no quiere administrar una gran cantidad de configuración específica de redistribución.
+En la configuración hay dos secciones. Una matriz de ReRoutes y un elemento GlobalConfiguration. Los objetos ReRoutes indican a Ocelot cómo tratar una solicitud ascendente. GlobalConfiguration permite invalidaciones de los valores específicos de ReRoute. Es útil si no quiere administrar una gran cantidad de valores específicos de ReRoute.
 
-Este es un ejemplo simplificado del [archivo de configuración de redistribución](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) de una de las puertas de enlace de API de eShopOnContainers.
+Este es un ejemplo simplificado del [archivo de configuración de ReRoute](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) de una de las puertas de enlace de API de eShopOnContainers.
 
 ```json
 {
@@ -239,9 +239,9 @@ Este es un ejemplo simplificado del [archivo de configuración de redistribució
   }
 ```
 
-La funcionalidad principal de una puerta de enlace de API de Ocelot consiste en aceptar solicitudes HTTP entrantes y reenviarlas a un servicio de nivel inferior, actualmente como otra solicitud HTTP. Ocelot describe el enrutamiento de una solicitud a otra como una redistribución.
+La funcionalidad principal de una puerta de enlace de API de Ocelot consiste en aceptar solicitudes HTTP entrantes y reenviarlas a un servicio de nivel inferior, actualmente como otra solicitud HTTP. Ocelot describe el enrutamiento de una solicitud a otra como un elemento ReRoute.
 
-Por ejemplo, vamos a centrarnos en una de las redistribuciones del archivo configuration.json anterior, la configuración para el microservicio Basket.
+Por ejemplo, vamos a centrarnos en uno de los elementos ReRoute del archivo configuration.json anterior, la configuración del microservicio Basket.
 
 ```json
 {
@@ -274,17 +274,17 @@ UpstreamPathTemplate es la dirección URL que Ocelot usará para identificar qu�
 
 En este momento, podría tener una única puerta de enlace de API de Ocelot (ASP.NET Core WebHost) con uno o [varios archivos configuration.json combinados](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files), o bien almacenar la [configuración en un almacén de Consul KV](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
 
-Pero como se mencionó en las secciones de arquitectura y diseño, si realmente quiere tener microservicios autónomos, podría ser mejor dividir esa única puerta de enlace de API monolítica en varias puertas de enlace de API o BFF (back-end para front-end). Para ello, vamos a ver cómo se implementa este enfoque con contenedores de Docker.
+Pero como se mencionó en las secciones de arquitectura y diseño, si realmente quiere tener microservicios autónomos, podría ser mejor dividir esa única puerta de enlace de API monolítica en varias puertas de enlace de API o BFF (back-end para front-end). Para ello, vamos a ver cómo se implementa ese enfoque con contenedores de Docker.
 
 ### <a name="using-a-single-docker-container-image-to-run-multiple-different-api-gateway--bff-container-types"></a>Uso de una sola imagen de contenedor de Docker para ejecutar varios tipos de contenedor de puerta de enlace de API y BFF
 
-En eShopOnContainers, se usa una sola imagen de contenedor de Docker con la puerta de enlace de API de Ocelot pero después, en tiempo de ejecución, se crean otros contenedores y servicios para cada tipo de puerta de enlace de API o BFF proporcionando otro archivo configuration.json, mediante un volumen de Docker para acceder a una carpeta distinta del equipo para cada servicio.
+En eShopOnContainers, se usa una sola imagen de contenedor de Docker con la puerta de enlace de API de Ocelot pero, después, en tiempo de ejecución, se crean otros contenedores o servicios para cada tipo de puerta de enlace de API o BFF al proporcionar otro archivo configuration.json mediante un volumen de Docker para acceder a una carpeta distinta del equipo para cada servicio.
 
 ![Diagrama de una sola imagen de Docker de puerta de enlace de Ocelot para todas las puertas de enlace de API.](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
 **Figura 6-33**. Volver a usar una única imagen de Docker de Ocelot entre varios tipos de puerta de enlace de API
 
-En eShopOnContainers, la "imagen de Docker de puerta de enlace de API genérica" se crea con el proyecto "OcelotApiGw" y el nombre de imagen "eshop/ocelotapigw" que se especifica en el archivo docker-compose.yml. Después, al implementar en Docker, habrá cuatro contenedores de puerta de enlace de API que se crean a partir de esa misma imagen de Docker, como se muestra en el extracto siguiente del archivo docker-compose.yml.
+En eShopOnContainers, la "imagen de Docker de puerta de enlace de API genérica" se crea con el proyecto denominado "OcelotApiGw" y el nombre de imagen "eshop/ocelotapigw" que se especifica en el archivo docker-compose.yml. Después, al implementar en Docker, habrá cuatro contenedores de puerta de enlace de API que se crean a partir de esa misma imagen de Docker, como se muestra en el extracto siguiente del archivo docker-compose.yml.
 
 ```yml
   mobileshoppingapigw:
@@ -360,7 +360,7 @@ Debido al código anterior, y como se muestra en el Explorador de Visual Studio 
 
 Al dividir la puerta de enlace de API en varias, cada equipo de desarrollo centrado en otros subconjuntos de microservicios puede administrar sus propias puertas de enlace de API mediante archivos de configuración de Ocelot independientes. Además, al mismo tiempo pueden reutilizar la misma imagen de Docker de Ocelot.
 
-Ahora, si ejecuta eShopOnContainers con las puertas de enlace de API (incluidas de forma predeterminada en Visual Studio al abrir la solución eShopOnContainers ServicesAndWebApps.sln o al ejecutar "docker-compose up"), se ejecutarán las rutas de ejemplo siguientes.
+Ahora, si ejecuta eShopOnContainers con las puertas de enlace de API (incluidas de forma predeterminada en VS al abrir la solución eShopOnContainers-ServicesAndWebApps.sln o al ejecutar "docker-compose up"), se ejecutan las rutas de ejemplo siguientes.
 
 Por ejemplo, cuando se visita la dirección URL de nivel superior `http://localhost:5202/api/v1/c/catalog/items/2/` que proporciona la puerta de enlace de API webshoppingapigw, se obtiene el mismo resultado de la dirección URL de nivel inferior interna `http://catalog.api/api/v1/2` dentro del host de Docker, como se muestra en el explorador siguiente.
 
@@ -374,7 +374,7 @@ Por motivos de pruebas o depuración, si quiere acceder directamente al contened
 
 **Figura 6-36**. Acceso directo a un microservicio con fines de prueba
 
-Pero la aplicación está configurada para que acceda a todos los microservicios a través de las puertas de enlace de API, no a través de "atajos" de puerto directos.
+Pero la aplicación está configurada para que acceda a todos los microservicios a través de las puertas de enlace de API, no a través de "accesos directos" de puerto directo.
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>El patrón de agregación de puertas de enlace en eShopOnContainers
 
@@ -396,7 +396,7 @@ Al ampliar más el área empresarial "Shopping" de la imagen siguiente, se puede
 
 Se puede observar la complejidad del diagrama cuando se muestran las posibles solicitudes procedentes de las puertas de enlace de API. Aunque se puede ver cómo se simplificarían las flechas de color azul, desde la perspectiva de las aplicaciones cliente, al usar el patrón de agregadores mediante la reducción del intercambio de mensajes y la latencia de la comunicación, en última instancia se mejora de forma significativa la experiencia del usuario, especialmente para las aplicaciones remotas (aplicaciones móviles y SPA).
 
-El caso del área empresarial "Marketing" y los microservicios es un caso de uso muy simple, por lo que no hubo necesidad de usar agregadores, pero podría ser posible, si fuera necesario.
+El caso del área empresarial "Marketing" y los microservicios es un caso de uso simple, por lo que no hay necesidad de usar agregadores, aunque se podría, si fuera necesario.
 
 ### <a name="authentication-and-authorization-in-ocelot-api-gateways"></a>Autenticación y autorización en las puertas de enlace de API de Ocelot
 
@@ -414,9 +414,9 @@ Pero Ocelot también admite que el microservicio Identity/Auth se sitúe dentro 
 
 **Figura 6-40**. Autenticación en Ocelot
 
-Tal y como se muestra en el diagrama anterior, cuando el microservicio Identity está por debajo de la puerta de enlace de API (AG): 1) La puerta de enlace de API solicita un token de autenticación del microservicio Identity; 2) el microservicio Identity devuelve las solicitudes de token a la puerta de enlace de API; 3-4) solicitudes de los microservicios a la puerta de enlace de API mediante el token de autenticación. Como en la aplicación eShopOnContainers se ha dividido la puerta de enlace de API en varios BFF (back-end para front-end) y puertas de enlace de API de áreas de negocio, otra opción habría sido crear una puerta de enlace de API adicional para los intereses transversales. Esa opción sería razonable en una arquitectura basada en microservicios más compleja con varios microservicios de intereses transversales. Como en eShopOnContainers solo hay un interés transversal, se decidió controlar solamente el servicio de seguridad fuera del territorio de la puerta de enlace de API, por motivos de simplicidad.
+Tal y como se muestra en el diagrama anterior, cuando el microservicio Identity está por debajo de la puerta de enlace de API (AG): 1) La puerta de enlace de API solicita un token de autenticación del microservicio Identity; 2) el microservicio Identity devuelve las solicitudes de token a la puerta de enlace de API; 3-4) solicitudes de los microservicios a la puerta de enlace de API mediante el token de autenticación. Como en la aplicación eShopOnContainers se ha dividido la puerta de enlace de API en varios BFF (back-end para front-end) y puertas de enlace de API de áreas de negocio, otra opción habría sido crear una puerta de enlace de API adicional para los intereses transversales. Esa opción sería razonable en una arquitectura basada en microservicios más compleja con varios microservicios de intereses transversales. Como en eShopOnContainers solo hay un interés transversal, se ha decidido controlar solamente el servicio de seguridad fuera del territorio de la puerta de enlace de API, por motivos de simplicidad.
 
-En cualquier caso, si la aplicación está protegida en el nivel de puerta de enlace de API, el módulo de autenticación de la puerta de enlace de API de Ocelot se visita en primer lugar cuando se intenta usar cualquier microservicio protegido. Eso redirige la solicitud HTTP al microservicio Identity o de autenticación para obtener el token de acceso para que los servicios protegidos se puedan visitar con el token de acceso.
+En cualquier caso, si la aplicación está protegida en el nivel de puerta de enlace de API, el módulo de autenticación de la puerta de enlace de API de Ocelot se visita en primer lugar cuando se intenta usar cualquier microservicio protegido. Eso redirige la solicitud HTTP para visitar el microservicio Identity o de autenticación a fin de obtener el token de acceso para poder visitar los servicios protegidos con el token de acceso.
 
 La forma de proteger con autenticación cualquier servicio en el nivel de la puerta de enlace de API consiste en establecer AuthenticationProviderKey en su configuración relacionada en el archivo configuration.json.
 
@@ -439,7 +439,7 @@ La forma de proteger con autenticación cualquier servicio en el nivel de la pue
     }
 ```
 
-Cuando se ejecuta Ocelot, consultará la redistribución AuthenticationOptions.AuthenticationProviderKey y comprobará que hay que un proveedor de autenticación registrado con la clave especificada. Si no lo hay, Ocelot no se iniciará. Si lo hay, la redistribución usará ese proveedor cuando se ejecute.
+Cuando se ejecuta Ocelot, consulta los elementos ReRoutes AuthenticationOptions.AuthenticationProviderKey y comprueba que hay que un proveedor de autenticación registrado con la clave especificada. Si no lo hay, Ocelot no se iniciará. Si lo hay, la redistribución usará ese proveedor cuando se ejecute.
 
 Como el WebHost de Ocelot está configurado con `authenticationProviderKey = "IdentityApiKey"`, eso requerirá la autenticación cada vez que el servicio tenga alguna solicitud sin ningún token de autenticación.
 
@@ -508,9 +508,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-Si intenta acceder a cualquier microservicio protegido (como Basket) con una dirección URL de redistribución basada en la puerta de enlace de API como `http://localhost:5202/api/v1/b/basket/1`, obtendrá un error "401 No autorizado" a menos que proporcione un token válido. Por otro lado, si una dirección URL de redistribución está autenticada, Ocelot invocará cualquier esquema de nivel inferior con el que esté asociada (la dirección URL de microservicio interna).
+Si intenta acceder a cualquier microservicio protegido, como Basket, con una dirección URL de ReRoute basada en la puerta de enlace de API como `http://localhost:5202/api/v1/b/basket/1`, obtiene un error "401 No autorizado", a menos que proporcione un token válido. Por otro lado, si una dirección URL de ReRoute está autenticada, Ocelot invoca a cualquier esquema descendente con el que esté asociada (la dirección URL de microservicio interna).
 
-**Autorización en el nivel de redistribuciones de Ocelot.**  Ocelot admite la autorización basada en notificaciones que se evalúa después de la autenticación. La autorización se establece en un nivel de ruta mediante la adición de las líneas siguientes a la configuración de redistribución.
+**Autorización en el nivel de ReRoutes de Ocelot.**  Ocelot admite la autorización basada en notificaciones que se evalúa después de la autenticación. La autorización se establece en un nivel de ruta mediante la adición de las líneas siguientes a la configuración de redistribución.
 
 ```json
 "RouteClaimsRequirement": {
@@ -518,7 +518,7 @@ Si intenta acceder a cualquier microservicio protegido (como Basket) con una dir
 }
 ```
 
-En ese ejemplo, cuando se llama al software intermedio de autorización, Ocelot comprobará si el usuario tiene el tipo de notificación "UserType" en el token y si el valor de esa notificación es "employee". En caso contrario, el usuario no tendrá autorización y la respuesta será el error "403 Prohibido".
+En ese ejemplo, cuando se llama al software intermedio de autorización, Ocelot comprobará si el usuario tiene el tipo de notificación "UserType" en el token y si el valor de esa notificación es "employee". Si no es así, el usuario no tiene autorización y la respuesta es el error "403 Prohibido".
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Uso de entrada de Kubernetes con las puertas de enlace de API de Ocelot
 
@@ -534,7 +534,7 @@ En eShopOnContainers, al desarrollar de forma local y usar solamente el equipo d
 
 Pero cuando el destino es un entorno de "producción" basado en Kubernetes, en eShopOnContainers se usa una entrada delante de las puertas de enlace de API. De este modo, los clientes pueden seguir llamando a la misma dirección URL base, pero las solicitudes se enrutan a varias puertas de enlace de API o BFF.
 
-Tenga en cuenta que las puertas de enlace de API actúan de front-end o fachadas en las que solo se exponen los servicios, pero no las aplicaciones web que suelen estar fuera de su ámbito. Además, es posible que las puertas de enlace de API oculten ciertos microservicios internos.
+Las puertas de enlace de API actúan de front-end o fachadas en las que solo se exponen los servicios, pero no las aplicaciones web que suelen estar fuera de su ámbito. Además, es posible que las puertas de enlace de API oculten ciertos microservicios internos.
 
 Pero la entrada simplemente redirige las solicitudes HTTP pero no intenta ocultar ningún microservicio ni aplicación web.
 
@@ -554,7 +554,7 @@ Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a l
 - `/mobileshoppingapigw` para el BFF para dispositivos móviles y los procesos empresariales de compra
 - `/mobilemarketingapigw` para el BFF para dispositivos móviles y los procesos empresariales de marketing
 
-Al implementar en Kubernetes, cada puerta de enlace de API Ocelot usa un archivo "configuration.json" diferente para cada _pod_ en el que se ejecutan las puertas de enlace de API. Dichos archivos "configuration.json" se proporcionan mediante el montaje (originalmente con el script deploy.ps1) de un volumen creado en función de un _mapa de configuración_ de Kubernetes denominado "ocelot". Cada contenedor monta su archivo de configuración relacionado en la carpeta `/app/configuration` del contenedor.
+Al implementar en Kubernetes, cada puerta de enlace de API de Ocelot usa un archivo "configuration.json" diferente para cada _pod_ en el que se ejecutan las puertas de enlace de API. Esos archivos "configuration.json" se proporcionan mediante el montaje (originalmente con el script deploy.ps1) de un volumen creado en función de un _mapa de configuración_ de Kubernetes denominado "ocelot". Cada contenedor monta su archivo de configuración relacionado en la carpeta denominada `/app/configuration` del contenedor.
 
 En los archivos de código fuente de eShopOnContainers, los archivos "configuration.json" originales se encuentran en la carpeta `k8s/ocelot/`. Hay un archivo para cada BFF o puerta de enlace de API.
 

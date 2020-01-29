@@ -2,18 +2,18 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117510"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734067"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet`: herramienta para administrar archivos binarios y código fuente de .NET.
 
@@ -45,7 +45,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
 
 `dotnet` es una herramienta para administrar archivos binarios y código fuente de .NET. Expone los comandos que realizan tareas específicas, como [`dotnet build`](dotnet-build.md) y [`dotnet run`](dotnet-run.md). Cada comando define sus propios argumentos. Escriba `--help` después de cada comando para acceder a una breve documentación de ayuda.
 
@@ -107,7 +107,7 @@ Define el comportamiento cuando el marco de trabajo compartido necesario no est�
 
 Ruta de acceso a un archivo *runtimeconfig.json*.
 
-Un archivo *runtimeconfig.json* es un archivo de configuración que contiene los valores de configuración en tiempo de ejecución. Para más información, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) en GitHub.
+Un archivo *runtimeconfig.json* es un archivo de configuración que contiene opciones de configuración en tiempo de ejecución. Para obtener más información, vea [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ Imprime información detallada sobre una instalación de .NET Core y el entorno 
 
 Ruta de acceso a un archivo *runtimeconfig.json*.
 
-Un archivo *runtimeconfig.json* es un archivo de configuración que contiene los valores de configuración en tiempo de ejecución. Para más detalles, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) en GitHub.
+Un archivo *runtimeconfig.json* es un archivo de configuración que contiene opciones de configuración en tiempo de ejecución. Para obtener más información, vea [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ Imprime información detallada sobre una instalación de .NET Core y el entorno 
 
 Ruta de acceso a un archivo *runtimeconfig.json*.
 
-Un archivo *runtimeconfig.json* es un archivo de configuración que contiene los valores de configuración en tiempo de ejecución. Para más detalles, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) en GitHub.
+Un archivo *runtimeconfig.json* es un archivo de configuración que contiene opciones de configuración en tiempo de ejecución. Para obtener más información, vea [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -399,3 +399,4 @@ Especifica si se recopilan datos sobre el uso de herramientas de .NET Core y se 
 ## <a name="see-also"></a>Vea también
 
 - [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md)

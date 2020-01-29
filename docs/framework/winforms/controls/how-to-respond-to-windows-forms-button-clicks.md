@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para responder a clics de botones en formularios Windows Forms
+title: para responder a clics de botón
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: ebcde2b5e749c5a3621c623a864578b2a654ce63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd6cf75a316257c86a23b44a818422336c12aa67
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638376"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735715"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedimiento para responder a clics de botones en formularios Windows Forms
-El uso más básico de un formulario Windows Forms <xref:System.Windows.Forms.Button> control consiste en ejecutar código cuando se hace clic en el botón.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Cómo: Responder a clics de botones en Windows Forms
+El uso más básico de un control de Windows Forms <xref:System.Windows.Forms.Button> es ejecutar código al hacer clic en el botón.  
   
- Al hacer clic en un <xref:System.Windows.Forms.Button> control también genera un número de otros eventos, como el <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, y <xref:System.Windows.Forms.Control.MouseUp> eventos. Si desea adjuntar controladores de eventos para estos eventos relacionados, asegúrese de que sus acciones no entren en conflicto. Por ejemplo, si hace clic en el botón se borra la información que el usuario ha escrito en un cuadro de texto, el pausando el puntero del mouse por encima del botón debe mostrar no herramientas con esa información ahora inexistente.  
+ Al hacer clic en un control de <xref:System.Windows.Forms.Button> también se generan otros eventos, como los eventos <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>y <xref:System.Windows.Forms.Control.MouseUp>. Si desea adjuntar controladores de eventos para estos eventos relacionados, asegúrese de que sus acciones no entran en conflicto. Por ejemplo, si al hacer clic en el botón se borra la información que el usuario ha escrito en un cuadro de texto, al pausar el puntero del mouse sobre el botón, no se debería mostrar una información sobre herramientas que ahora no existe.  
   
- Si el usuario intenta hacer doble clic en el <xref:System.Windows.Forms.Button> control, cada clic se procesará por separado; es decir, el control no admite el evento de doble clic.  
+ Si el usuario intenta hacer doble clic en el control <xref:System.Windows.Forms.Button>, cada clic se procesará por separado. es decir, el control no admite el evento de doble clic.  
   
 ### <a name="to-respond-to-a-button-click"></a>Para responder a un clic de botón  
   
-- En el botón `Click` <xref:System.EventHandler> escribir el código que se ejecutará. `Button1_Click` se debe enlazar al control. Para obtener más información, vea [Cómo: Crear controladores de eventos en tiempo de ejecución para Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- En el `Click` del botón <xref:System.EventHandler> escriba el código que se va a ejecutar. `Button1_Click` debe estar enlazado al control. Para obtener más información, vea [Cómo: crear controladores de eventos en tiempo de ejecución para Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

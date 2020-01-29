@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para iterar todos los nodos del control TreeView de formularios Windows Forms
+title: Recorrer en iteración todos los nodos del control TreeView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 010932fa3fdfaa907325b9934682dcbf889265c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966554"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736368"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedimiento para iterar todos los nodos del control TreeView de formularios Windows Forms
-A veces resulta útil examinar cada nodo de un control de <xref:System.Windows.Forms.TreeView> Windows Forms para realizar algún cálculo en los valores de nodo. Esta operación puede realizarse mediante un procedimiento recursivo (un método recursivo en C# y C++) que recorre en iteración los nodos de cada colección del árbol.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Cómo: Recorrer en iteración todos los nodos del control TreeView de Windows Forms
+A veces resulta útil examinar todos los nodos de un Windows Forms <xref:System.Windows.Forms.TreeView> control para realizar algún cálculo en los valores de nodo. Esta operación puede realizarse mediante un procedimiento recursivo (un método recursivo en C# y C++) que recorre en iteración los nodos de cada colección del árbol.  
   
- Cada <xref:System.Windows.Forms.TreeNode> objeto de una vista de árbol tiene propiedades que puede usar para navegar por la vista de <xref:System.Windows.Forms.TreeNode.FirstNode%2A>árbol <xref:System.Windows.Forms.TreeNode.LastNode%2A>: <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>,, <xref:System.Windows.Forms.TreeNode.Parent%2A>y. El valor de la <xref:System.Windows.Forms.TreeNode.Parent%2A> propiedad es el nodo primario del nodo actual. Los nodos secundarios del nodo actual, si hay alguno, se enumeran en su <xref:System.Windows.Forms.TreeNode.Nodes%2A> propiedad. El <xref:System.Windows.Forms.TreeView> propio control tiene la <xref:System.Windows.Forms.TreeView.TopNode%2A> propiedad, que es el nodo raíz de la vista de árbol completa.  
+ Cada <xref:System.Windows.Forms.TreeNode> objeto de una vista de árbol tiene propiedades que puede usar para navegar por la vista de árbol: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>y <xref:System.Windows.Forms.TreeNode.Parent%2A>. El valor de la propiedad <xref:System.Windows.Forms.TreeNode.Parent%2A> es el nodo primario del nodo actual. Los nodos secundarios del nodo actual, si hay alguno, se enumeran en su <xref:System.Windows.Forms.TreeNode.Nodes%2A> propiedad. El propio control <xref:System.Windows.Forms.TreeView> tiene la propiedad <xref:System.Windows.Forms.TreeView.TopNode%2A>, que es el nodo raíz de la vista de árbol completa.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Para recorrer en iteración todos los nodos del control TreeView  
   
@@ -28,7 +28,7 @@ A veces resulta útil examinar cada nodo de un control de <xref:System.Windows.F
   
 2. Llame al procedimiento.  
   
-     En el ejemplo siguiente se muestra cómo imprimir <xref:System.Windows.Forms.TreeNode> la propiedad <xref:System.Windows.Forms.TreeNode.Text%2A> de cada objeto:  
+     En el ejemplo siguiente se muestra cómo imprimir la propiedad <xref:System.Windows.Forms.TreeNode.Text%2A> de cada <xref:System.Windows.Forms.TreeNode> objeto:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
