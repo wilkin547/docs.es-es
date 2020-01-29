@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 7ff8345fd0a3ca30375cf93d22625f89d5d9a053
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567349"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76508545"
 ---
-### <a name="removed-controls"></a><span data-ttu-id="a36dd-101">Controles eliminados</span><span class="sxs-lookup"><span data-stu-id="a36dd-101">Removed controls</span></span>
+### <a name="removed-controls"></a><span data-ttu-id="97a4f-101">Controles eliminados</span><span class="sxs-lookup"><span data-stu-id="97a4f-101">Removed controls</span></span>
 
-<span data-ttu-id="a36dd-102">A partir de .NET Core 3.1, algunos controles de Windows Forms ya no están disponibles.</span><span class="sxs-lookup"><span data-stu-id="a36dd-102">Starting in .NET Core 3.1, some Windows Forms controls are no longer available.</span></span>
+<span data-ttu-id="97a4f-102">A partir de .NET Core 3.1, algunos controles de Windows Forms ya no están disponibles.</span><span class="sxs-lookup"><span data-stu-id="97a4f-102">Starting in .NET Core 3.1, some Windows Forms controls are no longer available.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="a36dd-103">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="a36dd-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="97a4f-103">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="97a4f-103">Change description</span></span>
 
-<span data-ttu-id="a36dd-104">A partir de .NET Core 3.1, varios controles de Windows Forms ya no están disponibles.</span><span class="sxs-lookup"><span data-stu-id="a36dd-104">Starting with .NET Core 3.1, various Windows Forms controls are no longer available.</span></span> <span data-ttu-id="a36dd-105">Los controles de reemplazo, con un mejor diseño y soporte técnico, se introdujeron en .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="a36dd-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="a36dd-106">Los controles en desuso se eliminaron previamente de los cuadros de herramientas del diseñador, pero todavía estaban disponibles para su uso.</span><span class="sxs-lookup"><span data-stu-id="a36dd-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span>
+<span data-ttu-id="97a4f-104">A partir de .NET Core 3.1, varios controles de Windows Forms ya no están disponibles.</span><span class="sxs-lookup"><span data-stu-id="97a4f-104">Starting with .NET Core 3.1, various Windows Forms controls are no longer available.</span></span> <span data-ttu-id="97a4f-105">Los controles de reemplazo, con un mejor diseño y soporte técnico, se introdujeron en .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="97a4f-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="97a4f-106">Los controles en desuso se eliminaron previamente de los cuadros de herramientas del diseñador, pero todavía estaban disponibles para su uso.</span><span class="sxs-lookup"><span data-stu-id="97a4f-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span>
 
-<span data-ttu-id="a36dd-107">Los siguientes tipos ya no están disponibles:</span><span class="sxs-lookup"><span data-stu-id="a36dd-107">The following types are no longer available:</span></span>
+<span data-ttu-id="97a4f-107">Los siguientes tipos ya no están disponibles:</span><span class="sxs-lookup"><span data-stu-id="97a4f-107">The following types are no longer available:</span></span>
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,29 +45,29 @@ ms.locfileid: "74567349"
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a><span data-ttu-id="a36dd-108">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="a36dd-108">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="97a4f-108">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="97a4f-108">Version introduced</span></span>
 
-<span data-ttu-id="a36dd-109">3.1</span><span class="sxs-lookup"><span data-stu-id="a36dd-109">3.1</span></span>
+<span data-ttu-id="97a4f-109">3.1</span><span class="sxs-lookup"><span data-stu-id="97a4f-109">3.1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="a36dd-110">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="a36dd-110">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="97a4f-110">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="97a4f-110">Recommended action</span></span>
 
-<span data-ttu-id="a36dd-111">Cada control eliminado tiene un control de reemplazo recomendado.</span><span class="sxs-lookup"><span data-stu-id="a36dd-111">Each removed control has a recommended replacement control.</span></span> <span data-ttu-id="a36dd-112">Consulte la tabla siguiente:</span><span class="sxs-lookup"><span data-stu-id="a36dd-112">Refer to the following table:</span></span>
+<span data-ttu-id="97a4f-111">Cada control eliminado tiene un control de reemplazo recomendado.</span><span class="sxs-lookup"><span data-stu-id="97a4f-111">Each removed control has a recommended replacement control.</span></span> <span data-ttu-id="97a4f-112">Consulte la tabla siguiente:</span><span class="sxs-lookup"><span data-stu-id="97a4f-112">Refer to the following table:</span></span>
 
-| <span data-ttu-id="a36dd-113">Control eliminado (API)</span><span class="sxs-lookup"><span data-stu-id="a36dd-113">Removed control (API)</span></span> | <span data-ttu-id="a36dd-114">Reemplazo recomendado</span><span class="sxs-lookup"><span data-stu-id="a36dd-114">Recommended replacement</span></span> | <span data-ttu-id="a36dd-115">API asociadas que se han eliminado</span><span class="sxs-lookup"><span data-stu-id="a36dd-115">Associated APIs that are removed</span></span> |
+| <span data-ttu-id="97a4f-113">Control eliminado (API)</span><span class="sxs-lookup"><span data-stu-id="97a4f-113">Removed control (API)</span></span> | <span data-ttu-id="97a4f-114">Reemplazo recomendado</span><span class="sxs-lookup"><span data-stu-id="97a4f-114">Recommended replacement</span></span> | <span data-ttu-id="97a4f-115">API asociadas que se han eliminado</span><span class="sxs-lookup"><span data-stu-id="97a4f-115">Associated APIs that are removed</span></span> |
 |-|-|-|
-| <span data-ttu-id="a36dd-116">DataGrid</span><span class="sxs-lookup"><span data-stu-id="a36dd-116">DataGrid</span></span> | <span data-ttu-id="a36dd-117">DataGridView</span><span class="sxs-lookup"><span data-stu-id="a36dd-117">DataGridView</span></span> | <span data-ttu-id="a36dd-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span><span class="sxs-lookup"><span data-stu-id="a36dd-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span></span> |
-| <span data-ttu-id="a36dd-119">ToolBar</span><span class="sxs-lookup"><span data-stu-id="a36dd-119">ToolBar</span></span> | <span data-ttu-id="a36dd-120">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="a36dd-120">ToolStrip</span></span> | <span data-ttu-id="a36dd-121">ToolBarAppearance</span><span class="sxs-lookup"><span data-stu-id="a36dd-121">ToolBarAppearance</span></span> |
-| <span data-ttu-id="a36dd-122">ToolBarButton</span><span class="sxs-lookup"><span data-stu-id="a36dd-122">ToolBarButton</span></span> | <span data-ttu-id="a36dd-123">ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="a36dd-123">ToolStripButton</span></span> | <span data-ttu-id="a36dd-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span><span class="sxs-lookup"><span data-stu-id="a36dd-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span></span>|
-| <span data-ttu-id="a36dd-125">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="a36dd-125">ContextMenu</span></span> | <span data-ttu-id="a36dd-126">ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="a36dd-126">ContextMenuStrip</span></span> | |
-| <span data-ttu-id="a36dd-127">Menú</span><span class="sxs-lookup"><span data-stu-id="a36dd-127">Menu</span></span> | <span data-ttu-id="a36dd-128">ToolStripDropDown, ToolstripDropDownMenu</span><span class="sxs-lookup"><span data-stu-id="a36dd-128">ToolStripDropDown, ToolstripDropDownMenu</span></span> | <span data-ttu-id="a36dd-129">MenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="a36dd-129">MenuItemCollection</span></span> |
-| <span data-ttu-id="a36dd-130">MainMenu</span><span class="sxs-lookup"><span data-stu-id="a36dd-130">MainMenu</span></span> | <span data-ttu-id="a36dd-131">MenuStrip</span><span class="sxs-lookup"><span data-stu-id="a36dd-131">MenuStrip</span></span> | |
-| <span data-ttu-id="a36dd-132">MenuItem</span><span class="sxs-lookup"><span data-stu-id="a36dd-132">MenuItem</span></span> | <span data-ttu-id="a36dd-133">ToolstripMenuItem</span><span class="sxs-lookup"><span data-stu-id="a36dd-133">ToolstripMenuItem</span></span> | |
+| <span data-ttu-id="97a4f-116">DataGrid</span><span class="sxs-lookup"><span data-stu-id="97a4f-116">DataGrid</span></span> | <span data-ttu-id="97a4f-117">DataGridView</span><span class="sxs-lookup"><span data-stu-id="97a4f-117">DataGridView</span></span> | <span data-ttu-id="97a4f-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span><span class="sxs-lookup"><span data-stu-id="97a4f-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span></span> |
+| <span data-ttu-id="97a4f-119">ToolBar</span><span class="sxs-lookup"><span data-stu-id="97a4f-119">ToolBar</span></span> | <span data-ttu-id="97a4f-120">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="97a4f-120">ToolStrip</span></span> | <span data-ttu-id="97a4f-121">ToolBarAppearance</span><span class="sxs-lookup"><span data-stu-id="97a4f-121">ToolBarAppearance</span></span> |
+| <span data-ttu-id="97a4f-122">ToolBarButton</span><span class="sxs-lookup"><span data-stu-id="97a4f-122">ToolBarButton</span></span> | <span data-ttu-id="97a4f-123">ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="97a4f-123">ToolStripButton</span></span> | <span data-ttu-id="97a4f-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span><span class="sxs-lookup"><span data-stu-id="97a4f-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span></span>|
+| <span data-ttu-id="97a4f-125">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="97a4f-125">ContextMenu</span></span> | <span data-ttu-id="97a4f-126">ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="97a4f-126">ContextMenuStrip</span></span> | |
+| <span data-ttu-id="97a4f-127">Menú</span><span class="sxs-lookup"><span data-stu-id="97a4f-127">Menu</span></span> | <span data-ttu-id="97a4f-128">ToolStripDropDown, ToolStripDropDownMenu</span><span class="sxs-lookup"><span data-stu-id="97a4f-128">ToolStripDropDown, ToolStripDropDownMenu</span></span> | <span data-ttu-id="97a4f-129">MenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="97a4f-129">MenuItemCollection</span></span> |
+| <span data-ttu-id="97a4f-130">MainMenu</span><span class="sxs-lookup"><span data-stu-id="97a4f-130">MainMenu</span></span> | <span data-ttu-id="97a4f-131">MenuStrip</span><span class="sxs-lookup"><span data-stu-id="97a4f-131">MenuStrip</span></span> | |
+| <span data-ttu-id="97a4f-132">MenuItem</span><span class="sxs-lookup"><span data-stu-id="97a4f-132">MenuItem</span></span> | <span data-ttu-id="97a4f-133">ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="97a4f-133">ToolStripMenuItem</span></span> | |
 
-#### <a name="category"></a><span data-ttu-id="a36dd-134">Categoría</span><span class="sxs-lookup"><span data-stu-id="a36dd-134">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="97a4f-134">Categoría</span><span class="sxs-lookup"><span data-stu-id="97a4f-134">Category</span></span>
 
-<span data-ttu-id="a36dd-135">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a36dd-135">Windows Forms</span></span>
+<span data-ttu-id="97a4f-135">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="97a4f-135">Windows Forms</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="a36dd-136">API afectadas</span><span class="sxs-lookup"><span data-stu-id="a36dd-136">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="97a4f-136">API afectadas</span><span class="sxs-lookup"><span data-stu-id="97a4f-136">Affected APIs</span></span>
 
 - <xref:System.Windows.Forms.Menu?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection?displayProperty=nameWithType>

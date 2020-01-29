@@ -1317,14 +1317,15 @@
           items:
             - name: Tipos de valor
               items:
-                - name: Características de los tipos de valor
-                  href: language-reference/keywords/value-types.md
+                - name: Información general
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: Tipos numéricos integrales
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: Tipos numéricos de punto flotante
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: Conversiones numéricas integradas
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: Tabla de tipos integrados
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Tabla de tipos de valor
-                  href: language-reference/keywords/value-types-table.md
                 - name: Tabla de formatos de presentación para resultados numéricos
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modificadores
@@ -1399,7 +1398,7 @@
               displayName: await
             - name: const
               href: language-reference/keywords/const.md
-            - name: evento
+            - name: event
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
@@ -1415,7 +1414,7 @@
               href: language-reference/keywords/readonly.md
             - name: sealed
               href: language-reference/keywords/sealed.md
-            - name: estático
+            - name: static
               href: language-reference/keywords/static.md
             - name: unsafe
               href: language-reference/keywords/unsafe.md

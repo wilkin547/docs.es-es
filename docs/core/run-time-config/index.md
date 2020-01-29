@@ -1,74 +1,120 @@
 ---
-title: Configuración del tiempo de ejecución
+title: Opciones de configuración de runtime
 description: Aprenda a configurar aplicaciones .NET Core mediante opciones de configuración de tiempo de ejecución.
-ms.date: 11/13/2019
-ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.date: 01/21/2020
+ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801918"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733440"
 ---
-# <a name="net-core-run-time-configuration-settings"></a><span data-ttu-id="7d0cb-103">Opciones de configuración en tiempo de ejecución de .NET Core</span><span class="sxs-lookup"><span data-stu-id="7d0cb-103">.NET Core run-time configuration settings</span></span>
+# <a name="net-core-run-time-configuration-settings"></a><span data-ttu-id="7b8e5-103">Opciones de configuración en tiempo de ejecución de .NET Core</span><span class="sxs-lookup"><span data-stu-id="7b8e5-103">.NET Core run-time configuration settings</span></span>
 
-<span data-ttu-id="7d0cb-104">.NET Core admite el uso de archivos de configuración y variables de entorno para configurar el comportamiento de las aplicaciones .NET Core en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-104">.NET Core supports the use of configuration files and environment variables to configure the behavior of .NET Core applications at run time.</span></span> <span data-ttu-id="7d0cb-105">La configuración en tiempo de ejecución es una opción atractiva si:</span><span class="sxs-lookup"><span data-stu-id="7d0cb-105">Run-time configuration is an attractive option if:</span></span>
+<span data-ttu-id="7b8e5-104">.NET Core admite el uso de archivos de configuración y variables de entorno para configurar el comportamiento de las aplicaciones .NET Core en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-104">.NET Core supports the use of configuration files and environment variables to configure the behavior of .NET Core applications at run time.</span></span> <span data-ttu-id="7b8e5-105">La configuración en tiempo de ejecución es una opción atractiva si:</span><span class="sxs-lookup"><span data-stu-id="7b8e5-105">Run-time configuration is an attractive option if:</span></span>
 
-- <span data-ttu-id="7d0cb-106">No se posee ni controla el código fuente de una aplicación y, por tanto, no puede configurarlo mediante programación.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-106">You don't own or control the source code for an application and therefore are unable to configure it programmatically.</span></span>
+- <span data-ttu-id="7b8e5-106">No se posee ni controla el código fuente de una aplicación y, por tanto, no puede configurarlo mediante programación.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-106">You don't own or control the source code for an application and therefore are unable to configure it programmatically.</span></span>
 
-- <span data-ttu-id="7d0cb-107">Varias instancias de la aplicación se ejecutan al mismo tiempo en un solo sistema y se quiere configurar cada una para un rendimiento óptimo.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-107">Multiple instances of your application run at the same time on a single system, and you want to configure each for optimum performance.</span></span>
+- <span data-ttu-id="7b8e5-107">Varias instancias de la aplicación se ejecutan al mismo tiempo en un solo sistema y se quiere configurar cada una para un rendimiento óptimo.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-107">Multiple instances of your application run at the same time on a single system, and you want to configure each for optimum performance.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7d0cb-108">Esta documentación está en desarrollo.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-108">This documentation is a work in progress.</span></span> <span data-ttu-id="7d0cb-109">Si observa que la información que se presenta aquí está incompleta o es inexacta, [abra una incidencia](https://github.com/dotnet/docs/issues) para informarnos sobre ella o [envíe una solicitud de incorporación de cambios](https://github.com/dotnet/docs/pulls) para solucionarla.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-109">If you notice that the information presented here is either incomplete or inaccurate, either [open an issue](https://github.com/dotnet/docs/issues) to let us know about it, or [submit a pull request](https://github.com/dotnet/docs/pulls) to address the issue.</span></span> <span data-ttu-id="7d0cb-110">Para obtener información sobre el envío de solicitudes de incorporación de cambios para el repositorio dotnet/docs, consulte la [guía del colaborador](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="7d0cb-110">For information on submitting pull requests for the dotnet/docs repository, see the [contributor's guide](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
+> <span data-ttu-id="7b8e5-108">Esta documentación está en desarrollo.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-108">This documentation is a work in progress.</span></span> <span data-ttu-id="7b8e5-109">Si observa que la información que se presenta aquí está incompleta o es inexacta, [abra una incidencia](https://github.com/dotnet/docs/issues) para informarnos sobre ella o [envíe una solicitud de incorporación de cambios](https://github.com/dotnet/docs/pulls) para solucionarla.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-109">If you notice that the information presented here is either incomplete or inaccurate, either [open an issue](https://github.com/dotnet/docs/issues) to let us know about it, or [submit a pull request](https://github.com/dotnet/docs/pulls) to address the issue.</span></span> <span data-ttu-id="7b8e5-110">Para obtener información sobre el envío de solicitudes de incorporación de cambios para el repositorio dotnet/docs, consulte la [guía del colaborador](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="7b8e5-110">For information about submitting pull requests for the dotnet/docs repository, see the [contributor's guide](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 
-<span data-ttu-id="7d0cb-111">.NET Core ofrece los siguientes mecanismos para configurar aplicaciones en tiempo de ejecución:</span><span class="sxs-lookup"><span data-stu-id="7d0cb-111">.NET Core provides the following mechanisms for configuring applications at run time:</span></span>
+<span data-ttu-id="7b8e5-111">.NET Core ofrece los siguientes mecanismos para configurar el comportamiento de aplicaciones de runtime:</span><span class="sxs-lookup"><span data-stu-id="7b8e5-111">.NET Core provides the following mechanisms for configuring run-time application behavior:</span></span>
 
-- <span data-ttu-id="7d0cb-112">El [archivo runtimeconfig.json](#runtimeconfigjson)</span><span class="sxs-lookup"><span data-stu-id="7d0cb-112">The [runtimeconfig.json file](#runtimeconfigjson)</span></span>
+- <span data-ttu-id="7b8e5-112">El [archivo runtimeconfig.json](#runtimeconfigjson)</span><span class="sxs-lookup"><span data-stu-id="7b8e5-112">The [runtimeconfig.json file](#runtimeconfigjson)</span></span>
 
-- [<span data-ttu-id="7d0cb-113">Variables de entorno</span><span class="sxs-lookup"><span data-stu-id="7d0cb-113">Environment variables</span></span>](#environment-variables)
+- [<span data-ttu-id="7b8e5-113">Propiedades de MSBuild</span><span class="sxs-lookup"><span data-stu-id="7b8e5-113">MSBuild properties</span></span>](#msbuild-properties)
 
-<span data-ttu-id="7d0cb-114">Los artículos de esta sección de la documentación incluida están organizados por categoría, como, por ejemplo, depuración y recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-114">The articles in this section of the documentation include are organized by category, for example, debugging and garbage collection.</span></span> <span data-ttu-id="7d0cb-115">Si procede, las opciones de configuración disponibles se muestran para *runtimeconfig.json* (solo .NET Core), *app.config* (solo .NET Framework) y las variables de entorno.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-115">Where applicable, configuration options are shown for *runtimeconfig.json* (.NET Core only), *app.config* (.NET Framework only), and environment variables.</span></span>
+- [<span data-ttu-id="7b8e5-114">Variables de entorno</span><span class="sxs-lookup"><span data-stu-id="7b8e5-114">Environment variables</span></span>](#environment-variables)
 
-## <a name="runtimeconfigjson"></a><span data-ttu-id="7d0cb-116">runtimeconfig.json</span><span class="sxs-lookup"><span data-stu-id="7d0cb-116">runtimeconfig.json</span></span>
+<span data-ttu-id="7b8e5-115">Algunos valores de configuración también se pueden establecer mediante programación llamando al método <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-115">Some configuration values can also be set programmatically by calling the <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="7d0cb-117">Especifique las opciones de configuración en tiempo de ejecución en la sección **configProperties** del archivo *runtimeconfig.json* de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-117">Specify run-time configuration options in the **configProperties** section of the app's *runtimeconfig.json* file.</span></span> <span data-ttu-id="7d0cb-118">Esta sección tiene el formato siguiente:</span><span class="sxs-lookup"><span data-stu-id="7d0cb-118">This section has the form:</span></span>
+<span data-ttu-id="7b8e5-116">Los artículos de esta sección de la documentación están organizados por categoría, como, por ejemplo, [depuración](debugging-profiling.md) y [recolección de elementos no utilizados](garbage-collector.md).</span><span class="sxs-lookup"><span data-stu-id="7b8e5-116">The articles in this section of the documentation are organized by category, for example, [debugging](debugging-profiling.md) and [garbage collection](garbage-collector.md).</span></span> <span data-ttu-id="7b8e5-117">En su caso, se muestran las opciones de configuración para archivos *runtimeconfig.json*, propiedades de MSBuild, variables de entorno y, para referencias cruzadas, archivos de *app.config* para proyectos de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-117">Where applicable, configuration options are shown for *runtimeconfig.json* files, MSBuild properties, environment variables, and, for cross-reference, *app.config* files for .NET Framework projects.</span></span>
+
+## <a name="runtimeconfigjson"></a><span data-ttu-id="7b8e5-118">runtimeconfig.json</span><span class="sxs-lookup"><span data-stu-id="7b8e5-118">runtimeconfig.json</span></span>
+
+<span data-ttu-id="7b8e5-119">Cuando un proyecto se [compila](../tools/dotnet-build.md), se genera un archivo *[nombre_aplicación].runtimeconfig.json* en el directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-119">When a project is [built](../tools/dotnet-build.md), an *[appname].runtimeconfig.json* file is generated in the output directory.</span></span> <span data-ttu-id="7b8e5-120">Si un archivo *runtimeconfig.template.json* existe en la misma carpeta que el archivo de proyecto, las opciones de configuración que contiene se combinan en el archivo *[nombre_aplicación].runtimeconfig.json*.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-120">If a *runtimeconfig.template.json* file exists in the same folder as the project file, any configuration options it contains are merged into the *[appname].runtimeconfig.json* file.</span></span> <span data-ttu-id="7b8e5-121">Si va a compilar la aplicación, coloque las opciones de configuración en el archivo *runtimeconfig.template.json*.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-121">If you're building the app yourself, put any configuration options in the *runtimeconfig.template.json* file.</span></span> <span data-ttu-id="7b8e5-122">Si solo va a ejecutar la aplicación, insértelas directamente en el archivo *[nombre_aplicación].runtimeconfig.json* file.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-122">If you're just running the app, insert them directly into the *[appname].runtimeconfig.json* file.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="7b8e5-123">El archivo *[nombre_aplicación].runtimeconfig.json* se sobrescribirá en las compilaciones posteriores.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-123">The *[appname].runtimeconfig.json* file will get overwritten on subsequent builds.</span></span>
+
+<span data-ttu-id="7b8e5-124">Especifique las opciones de configuración de runtime en la sección **configProperties** de los archivos *runtimeconfig.json*.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-124">Specify run-time configuration options in the **configProperties** section of the *runtimeconfig.json* files.</span></span> <span data-ttu-id="7b8e5-125">Esta sección tiene el formato siguiente:</span><span class="sxs-lookup"><span data-stu-id="7b8e5-125">This section has the form:</span></span>
 
 ```json
-{
-   "runtimeOptions": {
-      "configProperties": {
-         "config-property-name1": "config-value1",
-         "config-property-name2": "config-value2"
-      }
-   }
+"configProperties": {
+  "config-property-name1": "config-value1",
+  "config-property-name2": "config-value2"
 }
 ```
 
-<span data-ttu-id="7d0cb-119">Aquí tiene un archivo de ejemplo:</span><span class="sxs-lookup"><span data-stu-id="7d0cb-119">Here is an example file:</span></span>
+### <a name="example-appnameruntimeconfigjson-file"></a><span data-ttu-id="7b8e5-126">Archivo de ejemplo [nombre_aplicación].runtimeconfig.json</span><span class="sxs-lookup"><span data-stu-id="7b8e5-126">Example [appname].runtimeconfig.json file</span></span>
+
+<span data-ttu-id="7b8e5-127">Si va a colocar las opciones en el archivo JSON de salida, anídelas en la propiedad `runtimeOptions`.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-127">If you're placing the options in the output JSON file, nest them under the `runtimeOptions` property.</span></span>
 
 ```json
 {
-   "runtimeOptions": {
-      "configProperties": {
-         "System.GC.Concurrent": true,
-         "System.GC.RetainVM": true,
-         "System.Threading.ThreadPool.MinThreads": "4",
-         "System.Threading.ThreadPool.MaxThreads": "25"
-      }
-   }
+  "runtimeOptions": {
+    "tfm": "netcoreapp3.1",
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "3.1.0"
+    },
+    "configProperties": {
+      "System.GC.Concurrent": false,
+      "System.Threading.ThreadPool.MinThreads": 4,
+      "System.Threading.ThreadPool.MaxThreads": 25
+    }
+  }
 }
 ```
 
-<span data-ttu-id="7d0cb-120">El archivo *runtimeconfig.json* se crea automáticamente en el directorio de compilación mediante el comando [dotnet build](../tools/dotnet-build.md).</span><span class="sxs-lookup"><span data-stu-id="7d0cb-120">The *runtimeconfig.json* file is automatically created in the build directory by the [dotnet build](../tools/dotnet-build.md) command.</span></span> <span data-ttu-id="7d0cb-121">También se crea al seleccionar la opción de menú **Compilar** en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-121">It's also created when you select the **Build** menu option in Visual Studio.</span></span> <span data-ttu-id="7d0cb-122">Una vez creado, puede editar el archivo.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-122">You can then edit the file once it's created.</span></span>
+### <a name="example-runtimeconfigtemplatejson-file"></a><span data-ttu-id="7b8e5-128">Archivo de ejemplo runtimeconfig.template.json</span><span class="sxs-lookup"><span data-stu-id="7b8e5-128">Example runtimeconfig.template.json file</span></span>
 
-<span data-ttu-id="7d0cb-123">Algunos valores de configuración también se pueden establecer mediante programación llamando al método <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-123">Some configuration values can also be set programmatically by calling the <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="7b8e5-129">Si va a colocar las opciones en el archivo JSON de plantilla, omita la propiedad `runtimeOptions`.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-129">If you're placing the options in the template JSON file, omit the `runtimeOptions` property.</span></span>
 
-## <a name="environment-variables"></a><span data-ttu-id="7d0cb-124">Variables de entorno</span><span class="sxs-lookup"><span data-stu-id="7d0cb-124">Environment variables</span></span>
+```json
+{
+  "configProperties": {
+    "System.GC.Concurrent": false,
+    "System.Threading.ThreadPool.MinThreads": "4",
+    "System.Threading.ThreadPool.MaxThreads": "25"
+  }
+}
+```
 
-<span data-ttu-id="7d0cb-125">Las variables de entorno se pueden usar para proporcionar información de configuración del entorno de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-125">Environment variables can be used to supply some run-time configuration information.</span></span> <span data-ttu-id="7d0cb-126">Los botones de configuración especificados como variables de entorno generalmente tienen el prefijo **COMPlus_** .</span><span class="sxs-lookup"><span data-stu-id="7d0cb-126">Configuration knobs specified as environment variables generally have the prefix **COMPlus_**.</span></span>
+## <a name="msbuild-properties"></a><span data-ttu-id="7b8e5-130">propiedades de MSBuild</span><span class="sxs-lookup"><span data-stu-id="7b8e5-130">MSBuild properties</span></span>
 
-<span data-ttu-id="7d0cb-127">Puede definir variables de entorno desde el Panel de control de Windows, en la línea de comandos o mediante programación llamando al método <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> en sistemas basados en Windows y Unix.</span><span class="sxs-lookup"><span data-stu-id="7d0cb-127">You can define environment variables from the Windows Control Panel, at the command line, or programmatically by calling the <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> method on both Windows and Unix-based systems.</span></span>
+<span data-ttu-id="7b8e5-131">Algunas opciones de configuración de runtime se pueden establecer mediante propiedades de MSBuild en el archivo *.csproj* o *.vbproj* de proyectos de .NET Core de estilo SDK.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-131">Some run-time configuration options can be set using MSBuild properties in the *.csproj* or *.vbproj* file of SDK-style .NET Core projects.</span></span> <span data-ttu-id="7b8e5-132">Las propiedades de MSBuild tienen prioridad sobre las opciones establecidas en el archivo *runtimeconfig.template.json*.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-132">MSBuild properties take precedence over options set in the *runtimeconfig.template.json* file.</span></span> <span data-ttu-id="7b8e5-133">También sobrescriben las opciones establecidas en el archivo *[nombre_aplicación].runtimeconfig.json* en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-133">They also overwrite any options you set in the *[appname].runtimeconfig.json* file at build time.</span></span>
 
-<span data-ttu-id="7d0cb-128">En los siguientes ejemplos se muestra cómo establecer una variable de entorno en la línea de comandos:</span><span class="sxs-lookup"><span data-stu-id="7d0cb-128">The following examples show how to set an environment variable at the command line:</span></span>
+<span data-ttu-id="7b8e5-134">Este es un ejemplo de archivo de proyecto de estilo SDK con propiedades de MSBuild para configurar el comportamiento de runtime:</span><span class="sxs-lookup"><span data-stu-id="7b8e5-134">Here is an example SDK-style project file with MSBuild properties for configuring run-time behavior:</span></span>
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+    <ThreadPoolMaxThreads>25</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```
+
+<span data-ttu-id="7b8e5-135">Las propiedades de MSBuild para configurar el comportamiento de runtime se indican en los artículos individuales de cada área, por ejemplo, la [recolección de elementos no utilizados](garbage-collector.md).</span><span class="sxs-lookup"><span data-stu-id="7b8e5-135">MSBuild properties for configuring run-time behavior are noted in the individual articles for each area, for example, [garbage collection](garbage-collector.md).</span></span>
+
+## <a name="environment-variables"></a><span data-ttu-id="7b8e5-136">Variables de entorno</span><span class="sxs-lookup"><span data-stu-id="7b8e5-136">Environment variables</span></span>
+
+<span data-ttu-id="7b8e5-137">Las variables de entorno se pueden usar para proporcionar información de configuración del entorno de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-137">Environment variables can be used to supply some run-time configuration information.</span></span> <span data-ttu-id="7b8e5-138">Los botones de configuración especificados como variables de entorno generalmente tienen el prefijo **COMPlus_** .</span><span class="sxs-lookup"><span data-stu-id="7b8e5-138">Configuration knobs specified as environment variables generally have the prefix **COMPlus_**.</span></span>
+
+<span data-ttu-id="7b8e5-139">Puede definir variables de entorno desde el Panel de control de Windows, en la línea de comandos o mediante programación llamando al método <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> en sistemas basados en Windows y Unix.</span><span class="sxs-lookup"><span data-stu-id="7b8e5-139">You can define environment variables from the Windows Control Panel, at the command line, or programmatically by calling the <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> method on both Windows and Unix-based systems.</span></span>
+
+<span data-ttu-id="7b8e5-140">En los siguientes ejemplos se muestra cómo establecer una variable de entorno en la línea de comandos:</span><span class="sxs-lookup"><span data-stu-id="7b8e5-140">The following examples show how to set an environment variable at the command line:</span></span>
 
 ```shell
 # Windows
