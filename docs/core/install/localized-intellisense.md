@@ -1,15 +1,13 @@
 ---
 title: Instalación de archivos de IntelliSense localizados
 description: Obtenga información sobre cómo configurar su máquina de desarrollo con el fin de usar archivos de IntelliSense localizados para los proyectos de .NET Core en Visual Studio.
-author: mairaw
-ms.author: mairaw
-ms.date: 12/18/2019
-ms.openlocfilehash: 98d75544ab853e75c175dd2919991b250cfaa3b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/23/2020
+ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75436677"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733651"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Procedimiento para instalar archivos de IntelliSense localizados para .NET Core
 
@@ -34,9 +32,10 @@ ms.locfileid: "75436677"
 
 1. Extraiga el contenido del archivo ZIP.
 
-1. Vaya a la carpeta de instalación de .NET Core. De manera predeterminada, se encuentra en *%Archivos de programa%\dotnet\packs*.
+1. Vaya a la carpeta Intellisense de .NET Core.
 
-   - Elija para qué SDK quiere instalar el archivo de IntelliSense y vaya a la ruta de acceso correspondiente. Tiene las siguientes opciones:
+   1. Vaya a la carpeta de instalación de .NET Core. De manera predeterminada, se encuentra en *%Archivos de programa%\dotnet\packs*.
+   1. Elija para qué SDK quiere instalar el archivo de IntelliSense y vaya a la ruta de acceso correspondiente. Dispone de las siguientes opciones:
 
       | Tipo de SDK        | Ruta de acceso                               |
       | --------------- | ---------------------------------- |
@@ -44,9 +43,9 @@ ms.locfileid: "75436677"
       | Escritorio de Windows | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
    
-   - Vaya a la versión para la que quiera instalar el archivo de IntelliSense localizado. Por ejemplo, la *3.1.0*.
-   - Abra la carpeta *ref*.
-   - Abra la carpeta del moniker. Por ejemplo, *netcoreapp3.1*.
+   1. Vaya a la versión para la que quiera instalar el archivo de IntelliSense localizado. Por ejemplo, la *3.1.0*.
+   1. Abra la carpeta *ref*.
+   1. Abra la carpeta del moniker. Por ejemplo, *netcoreapp3.1*.
 
    Así pues, la ruta de acceso completa tendrá un aspecto similar al siguiente: *C:\Archivos de programa\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1*.
 
@@ -54,9 +53,9 @@ ms.locfileid: "75436677"
 
    | Lenguaje              | Nombre de carpeta |
    | --------------------- | ----------- |
-   | Portugués (brasileño)  | *pt-br*     |
-   | Chino (simplificado)  | *zh-hans*   |
-   | Chino (tradicional) | *zh-hant*   |
+   | Portugués (Brasil)  | *pt-br*     |
+   | Chino simplificado  | *zh-hans*   |
+   | Chino tradicional | *zh-hant*   |
    | Francés                | *fr*        |
    | Alemán                | *de*        |
    | Italiano               | *it*        |
@@ -76,7 +75,7 @@ Para que Visual Studio use otro idioma para IntelliSense, instale el paquete de
 Si no ha instalado el paquete de idioma deseado durante la configuración, actualice Visual Studio como se indica a continuación para instalar el paquete de idioma:
 
 > [!IMPORTANT]
-> Para instalar, actualizar o modificar Visual Studio, debe iniciar sesión con una cuenta que tenga permisos administrativos. Para obtener más información, consulte [Permisos de usuario y Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
+> Para instalar, actualizar o modificar Visual Studio, debe iniciar sesión con una cuenta que tenga permisos de administrador. Para obtener más información, consulte [Permisos de usuario y Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
 1. Busque el instalador de Visual Studio en su equipo.
 
@@ -113,9 +112,9 @@ Una vez que haya instalado los paquete de idioma deseados, modifique la configur
 
 1. En la ventana de inicio, elija **Continuar sin código**.
 
-1. En el menú principal, seleccione **Herramientas** > **Opciones**. Se abrirá el cuadro de diálogo Opciones.
+1. En la barra de menús, seleccione **Herramientas** > **Opciones**. Se abrirá el cuadro de diálogo Opciones.
 
-1. En la carpeta **Entorno**, elija **Configuración internacional**.
+1. En el nodo **Entorno**, seleccione **Configuración internacional**.
 
 1. En la lista desplegable **Idioma**, seleccione el que quiera usar. Elija **Aceptar**. 
 

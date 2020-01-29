@@ -1,21 +1,21 @@
 ---
-title: Cambiar la apariencia de formularios Windows Forms
+title: Personalización de la apariencia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-ms.openlocfilehash: 0582ad4c8e18d0f0419f0463ba260226839f7f42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c75fb1849ab9f9a07fcbbe5dd915b965f5aea05d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640427"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732363"
 ---
-# <a name="changing-the-appearance-of-windows-forms"></a>Cambiar la apariencia de formularios Windows Forms
+# <a name="changing-the-appearance-of-windows-forms"></a>Cambiar la apariencia de Windows Forms
 Puede personalizar la apariencia de las aplicaciones de Windows Forms de muchas maneras diferentes, como cambiar el borde, la opacidad, la forma, el estilo o la configuración de una imagen de fondo para la aplicación de Windows Forms.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo: Cambiar los bordes de Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
+## <a name="in-this-section"></a>Esta sección  
+ [Cambiar los bordes de Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
  Muestra cómo cambiar el estilo de borde de un formulario.  
   
 ## <a name="reference"></a>Referencia  

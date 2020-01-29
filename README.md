@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035443"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727875"
 ---
 # <a name="net-docs"></a>Documentos de .NET
 
@@ -20,9 +20,7 @@ Agradecemos la colaboración de los usuarios para mejorar y completar la documen
 
 Si quiere colaborar, vea [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para colaboradores de la comunidad de .NET) para obtener ideas. La [guía de colaboración](CONTRIBUTING.md) contiene instrucciones sobre los procedimientos que seguimos. 
 
-Si está interesado en ayudar a migrar el código existente que tiene como destino .NET Framework de la [galería de código](https://code.msdn.microsoft.com) a las aplicaciones de .NET Core almacenadas en nuestro [repositorio de ejemplos](https://github.com/dotnet/samples) y que se pueden descargar desde el [Explorador de ejemplos](https://docs.microsoft.com/samples/browse), vea el proyecto [Migración de la galería de código](https://github.com/dotnet/docs/projects/88). 
-
-Prevemos que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) y [Unity](https://docs.unity3d.com/Manual/index.html) también usarán esta documentación.
+Si está interesado en ayudar a migrar código existente que tiene como destino .NET Framework desde el sitio [Galería de código retirada](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) a las aplicaciones de .NET Core almacenadas en el [repositorio de ejemplos](https://github.com/dotnet/samples) y que se pueden descargar desde el [Explorador de ejemplos](https://docs.microsoft.com/samples/browse), vea el proyecto [Migración de la galería de código](https://github.com/dotnet/docs/projects/88). Los ejemplos de la galería de código se han migrado a la organización [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery).
 
 Este proyecto ha adoptado el Código de conducta convenido para contribuyentes con el fin de establecer el comportamiento que se espera en nuestra comunidad.
 Para obtener más información, consulte el [Código de conducta de .NET Foundation](https://dotnetfoundation.org/code-of-conduct).

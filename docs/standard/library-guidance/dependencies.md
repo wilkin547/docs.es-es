@@ -2,12 +2,12 @@
 title: Dependencias y bibliotecas de .NET
 description: Procedimientos recomendados para administrar las dependencias de NuGet en las bibliotecas de. NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706509"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731479"
 ---
 # <a name="dependencies"></a>Dependencias
 
@@ -29,7 +29,7 @@ La mayoría de las dependencias de rombo se resuelven con facilidad; sin embargo
 
 No es posible saber qué paquetes se utilizarán junto con los suyos. Una buena forma de reducir la probabilidad de que una dependencia de rombo interrumpa la biblioteca es minimizar el número de paquetes de los que usted depende.
 
-**✔️ DEBE** revisar su biblioteca de .NET en busca de dependencias innecesarias.
+✔️ REVISE la biblioteca de .NET en busca de dependencias innecesarias.
 
 ## <a name="nuget-dependency-version-ranges"></a>Intervalos de versiones de dependencia de NuGet
 
@@ -56,11 +56,11 @@ Los límites de versión superiores provocarán que NuGet genere un error si hay
 
 ![Conflicto de dependencias de rombo](./media/dependencies/diamond-dependency-conflict.png "Conflicto de dependencias de rombo")
 
-**❌ NO** tenga referencias de paquetes NuGet sin versión mínima.
+❌ NO tenga referencias de paquetes NuGet sin versión mínima.
 
-**❌EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
+❌ EVITE las referencias de paquetes NuGet que exijan una versión exacta.
 
-**❌ EVITE** las referencias de paquetes NuGet con un límite superior de versión.
+❌ EVITE las referencias de paquetes NuGet con un límite superior de versión.
 
 ## <a name="nuget-shared-source-packages"></a>Paquetes NuGet de código fuente compartido
 
@@ -78,19 +78,19 @@ Los paquetes de código fuente compartido son excelentes para incluir pequeños 
 
 Los paquetes de código fuente compartido tienen algunas limitaciones. Solo `PackageReference` puede hacer referencia a ellos, por lo que los proyectos `packages.config` más antiguos se excluyen. Asimismo, los paquetes de código fuente compartido solo resultan útiles para los proyectos con el mismo tipo de lenguaje. Debido a estas limitaciones, los paquetes de código fuente compartido son útiles para compartir la funcionalidad dentro de un proyecto de código abierto.
 
-**✔️ ES RECOMENDABLE** hacer referencia a paquetes de código fuente compartido para partes internas pequeñas de funcionalidad.
+✔️ ES RECOMENDABLE hacer referencia a paquetes de código fuente compartido para partes internas pequeñas de funcionalidad.
 
-**✔️ ES RECOMENDABLE** convertir el paquete en un paquete de código fuente compartido si proporciona partes internas pequeñas de funcionalidad.
+✔️ ES RECOMENDABLE convertir el paquete en un paquete de código fuente compartido si proporciona partes internas pequeñas de funcionalidad.
 
-**✔️ DEBE** hacer referencia a paquetes de código fuente compartido con `PrivateAssets="All"`.
+✔️ HAGA REFERENCIA a paquetes de código fuente compartido con `PrivateAssets="All"`.
 
 > Esta opción indica a NuGet que el paquete solamente se debe usar en tiempo de desarrollo y no se debe exponer como una dependencia pública.
 
-**❌ NO** tenga tipos de paquete de código fuente compartido en la API pública.
+❌ NO tenga tipos de paquete de código fuente compartido en la API pública.
 
 > Los tipos de código fuente compartido se compilan en el ensamblado de referencia y no se pueden intercambiar entre límites de ensamblado. Por ejemplo, un tipo `IRepository` de código fuente compartido en un proyecto es un tipo independiente del mismo `IRepository` de código fuente compartido en otro proyecto. Los tipos de paquetes de código fuente compartido deben tener una visibilidad `internal`.
 
-**❌ NO** publique paquetes de código fuente compartido en NuGet.org.
+❌ NO publique paquetes de código fuente compartido en NuGet.org.
 
 > Los paquetes de código fuente compartido contienen código fuente y solo los pueden usar los proyectos con el mismo tipo de lenguaje. Por ejemplo, una aplicación de F# no puede usar el paquete de código fuente compartido de C#.
 >

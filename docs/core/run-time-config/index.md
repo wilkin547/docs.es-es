@@ -1,13 +1,13 @@
 ---
-title: Configuración del tiempo de ejecución
+title: Opciones de configuración de runtime
 description: Aprenda a configurar aplicaciones .NET Core mediante opciones de configuración de tiempo de ejecución.
-ms.date: 11/13/2019
-ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.date: 01/21/2020
+ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801918"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733440"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Opciones de configuración en tiempo de ejecución de .NET Core
 
@@ -20,47 +20,93 @@ ms.locfileid: "74801918"
 > [!NOTE]
 > Esta documentación está en desarrollo. Si observa que la información que se presenta aquí está incompleta o es inexacta, [abra una incidencia](https://github.com/dotnet/docs/issues) para informarnos sobre ella o [envíe una solicitud de incorporación de cambios](https://github.com/dotnet/docs/pulls) para solucionarla. Para obtener información sobre el envío de solicitudes de incorporación de cambios para el repositorio dotnet/docs, consulte la [guía del colaborador](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
 
-.NET Core ofrece los siguientes mecanismos para configurar aplicaciones en tiempo de ejecución:
+.NET Core ofrece los siguientes mecanismos para configurar el comportamiento de aplicaciones de runtime:
 
 - El [archivo runtimeconfig.json](#runtimeconfigjson)
 
+- [Propiedades de MSBuild](#msbuild-properties)
+
 - [Variables de entorno](#environment-variables)
 
-Los artículos de esta sección de la documentación incluida están organizados por categoría, como, por ejemplo, depuración y recolección de elementos no utilizados. Si procede, las opciones de configuración disponibles se muestran para *runtimeconfig.json* (solo .NET Core), *app.config* (solo .NET Framework) y las variables de entorno.
+Algunos valores de configuración también se pueden establecer mediante programación llamando al método <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>.
+
+Los artículos de esta sección de la documentación están organizados por categoría, como, por ejemplo, [depuración](debugging-profiling.md) y [recolección de elementos no utilizados](garbage-collector.md). En su caso, se muestran las opciones de configuración para archivos *runtimeconfig.json*, propiedades de MSBuild, variables de entorno y, para referencias cruzadas, archivos de *app.config* para proyectos de .NET Framework.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-Especifique las opciones de configuración en tiempo de ejecución en la sección **configProperties** del archivo *runtimeconfig.json* de la aplicación. Esta sección tiene el formato siguiente:
+Cuando un proyecto se [compila](../tools/dotnet-build.md), se genera un archivo *[nombre_aplicación].runtimeconfig.json* en el directorio de salida. Si un archivo *runtimeconfig.template.json* existe en la misma carpeta que el archivo de proyecto, las opciones de configuración que contiene se combinan en el archivo *[nombre_aplicación].runtimeconfig.json*. Si va a compilar la aplicación, coloque las opciones de configuración en el archivo *runtimeconfig.template.json*. Si solo va a ejecutar la aplicación, insértelas directamente en el archivo *[nombre_aplicación].runtimeconfig.json* file.
+
+> [!NOTE]
+> El archivo *[nombre_aplicación].runtimeconfig.json* se sobrescribirá en las compilaciones posteriores.
+
+Especifique las opciones de configuración de runtime en la sección **configProperties** de los archivos *runtimeconfig.json*. Esta sección tiene el formato siguiente:
 
 ```json
-{
-   "runtimeOptions": {
-      "configProperties": {
-         "config-property-name1": "config-value1",
-         "config-property-name2": "config-value2"
-      }
-   }
+"configProperties": {
+  "config-property-name1": "config-value1",
+  "config-property-name2": "config-value2"
 }
 ```
 
-Aquí tiene un archivo de ejemplo:
+### <a name="example-appnameruntimeconfigjson-file"></a>Archivo de ejemplo [nombre_aplicación].runtimeconfig.json
+
+Si va a colocar las opciones en el archivo JSON de salida, anídelas en la propiedad `runtimeOptions`.
 
 ```json
 {
-   "runtimeOptions": {
-      "configProperties": {
-         "System.GC.Concurrent": true,
-         "System.GC.RetainVM": true,
-         "System.Threading.ThreadPool.MinThreads": "4",
-         "System.Threading.ThreadPool.MaxThreads": "25"
-      }
-   }
+  "runtimeOptions": {
+    "tfm": "netcoreapp3.1",
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "3.1.0"
+    },
+    "configProperties": {
+      "System.GC.Concurrent": false,
+      "System.Threading.ThreadPool.MinThreads": 4,
+      "System.Threading.ThreadPool.MaxThreads": 25
+    }
+  }
 }
 ```
 
-El archivo *runtimeconfig.json* se crea automáticamente en el directorio de compilación mediante el comando [dotnet build](../tools/dotnet-build.md). También se crea al seleccionar la opción de menú **Compilar** en Visual Studio. Una vez creado, puede editar el archivo.
+### <a name="example-runtimeconfigtemplatejson-file"></a>Archivo de ejemplo runtimeconfig.template.json
 
-Algunos valores de configuración también se pueden establecer mediante programación llamando al método <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>.
+Si va a colocar las opciones en el archivo JSON de plantilla, omita la propiedad `runtimeOptions`.
+
+```json
+{
+  "configProperties": {
+    "System.GC.Concurrent": false,
+    "System.Threading.ThreadPool.MinThreads": "4",
+    "System.Threading.ThreadPool.MaxThreads": "25"
+  }
+}
+```
+
+## <a name="msbuild-properties"></a>propiedades de MSBuild
+
+Algunas opciones de configuración de runtime se pueden establecer mediante propiedades de MSBuild en el archivo *.csproj* o *.vbproj* de proyectos de .NET Core de estilo SDK. Las propiedades de MSBuild tienen prioridad sobre las opciones establecidas en el archivo *runtimeconfig.template.json*. También sobrescriben las opciones establecidas en el archivo *[nombre_aplicación].runtimeconfig.json* en tiempo de compilación.
+
+Este es un ejemplo de archivo de proyecto de estilo SDK con propiedades de MSBuild para configurar el comportamiento de runtime:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+    <ThreadPoolMaxThreads>25</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```
+
+Las propiedades de MSBuild para configurar el comportamiento de runtime se indican en los artículos individuales de cada área, por ejemplo, la [recolección de elementos no utilizados](garbage-collector.md).
 
 ## <a name="environment-variables"></a>Variables de entorno
 

@@ -2,12 +2,12 @@
 title: Guía de la biblioteca .NET de código abierto
 description: Procedimientos recomendados para desarrolladores a la hora de crear bibliotecas .NET de alta calidad
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706457"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731426"
 ---
 # <a name="open-source-library-guidance"></a>Guía de la biblioteca de código abierto
 
@@ -32,19 +32,19 @@ Cada artículo presenta cuatro tipos de recomendaciones: **Debe**, **Es recomend
 
 Casi siempre debe seguir una recomendación **Debe**. Por ejemplo:
 
-**✔️ DEBE** distribuir las bibliotecas mediante un paquete NuGet.
+✔️ DEBE distribuir las bibliotecas mediante un paquete NuGet.
 
 Por otro lado, las recomendaciones de tipo **Es recomendable** generalmente deben seguirse, pero existen una serie de excepciones legítimas, por lo que no pasa nada si no sigue alguna de ellas:
 
-**✔️ ES RECOMENDABLE** usar [SemVer 2.0.0](https://semver.org/) para crear versiones de los paquetes NuGet.
+✔️ ES RECOMENDABLE usar [SemVer 2.0.0](https://semver.org/) para crear versiones de los paquetes NuGet.
 
 Las recomendaciones de tipo **Evite** mencionan prácticas que, en general, no son convenientes, aunque a veces tiene sentido no seguirlas:
 
-**❌EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
+❌ EVITE las referencias de paquetes NuGet que requieren una versión exacta.
 
 Y, por último, las recomendaciones de tipo **No está permitido** indican qué no se puede hacer casi nunca:
 
-**❌ NO** publique versiones de la biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
+❌ NO publique versiones de la biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Siguiente](get-started.md)

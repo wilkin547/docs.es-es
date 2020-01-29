@@ -1,34 +1,34 @@
 ---
-title: Ajuste automático de escala en formularios Windows Forms
+title: Escalado automático
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268087"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732379"
 ---
-# <a name="automatic-scaling-in-windows-forms"></a>Ajuste automático de escala en Windows Forms
+# <a name="automatic-scaling-in-windows-forms"></a>Escalado automático en Windows Forms
 
-El escalado automático permite que un formulario y sus respectivos controles, diseñados en una máquina con una determinada resolución de pantalla o fuente del sistema, se muestren correctamente en otra máquina con una resolución de pantalla o una fuente de sistema diferentes. El escalado automático garantiza que el formulario y sus controles cambien de tamaño para mantener la coherencia con las ventanas nativas y otras aplicaciones tanto en máquinas de los usuarios como en las de otros desarrolladores. La compatibilidad de .NET Framework para el escalado automático y los estilos visuales permite que las aplicaciones de .NET Framework mantener una apariencia coherente en comparación con aplicaciones Windows nativas en cada equipo de usuario.
+El escalado automático permite que un formulario y sus respectivos controles, diseñados en una máquina con una determinada resolución de pantalla o fuente del sistema, se muestren correctamente en otra máquina con una resolución de pantalla o una fuente de sistema diferentes. El escalado automático garantiza que el formulario y sus controles cambien de tamaño para mantener la coherencia con las ventanas nativas y otras aplicaciones tanto en máquinas de los usuarios como en las de otros desarrolladores. La compatibilidad del .NET Framework para el escalado automático y los estilos visuales permite que las aplicaciones .NET Framework mantengan una apariencia coherente en comparación con aplicaciones Windows nativas en el equipo de cada usuario.
 
-En su mayor parte, funciona el escalado automático como se esperaba en .NET Framework versión 2.0 y versiones posteriores. Sin embargo, los cambios en la combinación de fuentes pueden causar problemas. Para obtener un ejemplo de cómo resolver este problema, consulte [Cómo: Responder a los cambios de esquema de fuentes en una aplicación de Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+En su mayor parte, el escalado automático funciona según lo previsto en .NET Framework versión 2,0 y posteriores. Sin embargo, los cambios en la combinación de fuentes pueden causar problemas. Para obtener un ejemplo de cómo resolver este error, consulte [Cómo: responder a los cambios de la combinación de fuentes en una aplicación Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Necesidad de escalado automático
 
 Sin escalado automático, una aplicación diseñada para una fuente o una resolución de pantalla aparecerá demasiado pequeña o demasiado grande cuando se cambie la fuente o la resolución. Por ejemplo, si la aplicación está diseñada con Tahoma de 9 puntos como línea base, sin el ajuste aparecerá demasiado pequeña si se ejecuta en una máquina donde la fuente de sistema sea Tahoma de 12 puntos. Los elementos de texto, como títulos, menús, el contenido de cuadros de texto, etc. se representarán más pequeños que en otras aplicaciones. Además, el tamaño de los elementos de interfaz de usuario (UI) que contienen texto —como la barra de título, los menús y muchos controles— depende de la fuente usada. En este ejemplo, estos elementos también aparecerán relativamente más pequeños.
 
-Una situación análoga se produce cuando se diseña una aplicación para una determinada resolución de pantalla. La resolución de pantalla más común es 96 puntos por pulgada (PPP), que es igual a escala de visualización de 100%, pero las pantallas de resolución superior compatible con 125%, 150%, 200% (qué 120 respectivamente igual, 144 y 192 PPP) y versiones posteriores son cada vez más comunes. Si no se ajusta la escala de una aplicación diseñada para una resolución —especialmente si se trata de una aplicación basada en gráficos—, dicha aplicación se verá demasiado grande o demasiado pequeña cuando se ejecute a otra resolución.
+Una situación análoga se produce cuando se diseña una aplicación para una determinada resolución de pantalla. La resolución de pantalla más común es de 96 puntos por pulgada (PPP), que es igual a la escala de visualización 100%, pero la resolución más alta muestra la compatibilidad con 125%, 150%, 200% (que respectivamente son iguales a 120, 144 y 192 PPP) y versiones posteriores son más comunes. Si no se ajusta la escala de una aplicación diseñada para una resolución —especialmente si se trata de una aplicación basada en gráficos—, dicha aplicación se verá demasiado grande o demasiado pequeña cuando se ejecute a otra resolución.
 
-El escalado automático busca mejorar estos problemas con un cambio automático el tamaño del formulario y de sus controles secundarios, de acuerdo con el tamaño de fuente o la resolución de pantalla relativos. El sistema operativo Windows admite el escalado automático de cuadros de diálogo mediante una unidad relativa de medida denominada unidades de cuadro de diálogo. Una unidad de cuadro de diálogo se basa en la fuente del sistema y su relación con los píxeles se puede determinar mediante la función del SDK de Win32 `GetDialogBaseUnits`. Cuando un usuario cambia el tema usado por Windows, todos los cuadros de diálogo se ajustan automáticamente según corresponda. Además, .NET Framework admite el escalado automático según la fuente predeterminada del sistema o la resolución de pantalla. Opcionalmente, el escalado automático se puede deshabilitar en una aplicación.
+El escalado automático busca mejorar estos problemas con un cambio automático el tamaño del formulario y de sus controles secundarios, de acuerdo con el tamaño de fuente o la resolución de pantalla relativos. El sistema operativo Windows admite el escalado automático de cuadros de diálogo mediante una unidad relativa de medida denominada unidades de cuadro de diálogo. Una unidad de cuadro de diálogo se basa en la fuente del sistema y su relación con los píxeles se puede determinar mediante la función del SDK de Win32 `GetDialogBaseUnits`. Cuando un usuario cambia el tema usado por Windows, todos los cuadros de diálogo se ajustan automáticamente según corresponda. Además, el .NET Framework admite el escalado automático según la fuente predeterminada del sistema o la resolución de pantalla. Opcionalmente, el escalado automático se puede deshabilitar en una aplicación.
 
-## <a name="original-support-for-automatic-scaling"></a>Compatibilidad original con escalado automático
+## <a name="original-support-for-automatic-scaling"></a>Compatibilidad original con el escalado automático
 
-Las versiones 1.0 y 1.1 del .NET Framework admite el escalado automático de una manera sencilla que dependía de la fuente predeterminada de Windows usa para la interfaz de usuario, representada por el valor del SDK de Win32 **DEFAULT_GUI_FONT**. Por lo general, esta fuente solo se cambia cuando se modifica la resolución de pantalla. El mecanismo siguiente se usó para implementar el escalado automático:
+Las versiones 1,0 y 1,1 del .NET Framework admiten el escalado automático de una manera sencilla que dependía de la fuente predeterminada de Windows usada para la interfaz de usuario, representada por el valor del SDK de Win32 **DEFAULT_GUI_FONT**. Por lo general, esta fuente solo se cambia cuando se modifica la resolución de pantalla. El mecanismo siguiente se usó para implementar el escalado automático:
 
 1. En tiempo de diseño, la propiedad <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> (que ahora está en desuso) se estableció en el alto y ancho de la fuente predeterminada del sistema en la máquina del desarrollador.
 
@@ -40,30 +40,30 @@ Las versiones 1.0 y 1.1 del .NET Framework admite el escalado automático de una
 
 Aunque este mecanismo era suficiente para la mayoría de los propósitos, sufría las limitaciones siguientes:
 
-- Puesto que el <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> propiedad representa el tamaño de fuente básico como valores enteros, producen errores de redondeo que se hacían evidentes cuando un formulario recorría varias resoluciones.
+- Dado que la propiedad <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> representa el tamaño de fuente de línea base como valores enteros, se producen errores de redondeo que se vuelven evidentes cuando un formulario se recorre en varias resoluciones.
 
 - El escalado automático se implementó solo en la clase <xref:System.Windows.Forms.Form>, no en la clase <xref:System.Windows.Forms.ContainerControl>. Como resultado, los controles de usuario solo se escalaban correctamente si el control de usuario estaba diseñado con la misma resolución que el formulario y se colocaba en el formulario en tiempo de diseño.
 
 - Los formularios y sus controles secundarios solo podían diseñarse de manera simultánea por varios desarrolladores si las resoluciones de sus máquinas eran iguales. Igualmente, hacía que la herencia de un formulario dependiese de la resolución asociada con el formulario principal.
 
-- No es compatible con los administradores de diseño más recientes introducidos con la versión 2.0, .NET Framework, como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>.
+- No es compatible con los administradores de diseño más recientes que se introdujeron con la versión .NET Framework 2,0, como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- No se admitía el escalado automático basado directamente en la resolución de pantalla que se necesita para obtener compatibilidad con .NET Compact Framework.
+- No admitía el escalado basado directamente en la resolución de pantalla necesaria para la compatibilidad con el .NET Compact Framework.
 
-Aunque este mecanismo se conserva en la versión 2.0 de .NET Framework para mantener la compatibilidad con versiones anteriores, se ha sustituido por el mecanismo de escalado más sólido que se describe a continuación. En consecuencia, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> y determinadas sobrecargas <xref:System.Windows.Forms.Control.Scale%2A> están marcadas como obsoletas.
+Aunque este mecanismo se conserva en la .NET Framework versión 2,0 para mantener la compatibilidad con versiones anteriores, se ha sustituido por el mecanismo de escalado más sólido que se describe a continuación. En consecuencia, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> y determinadas sobrecargas <xref:System.Windows.Forms.Control.Scale%2A> están marcadas como obsoletas.
 
 > [!NOTE]
-> Puede eliminar de forma segura las referencias a estos miembros cuando se actualiza el código heredado a la versión 2.0 de .NET Framework.
+> Puede eliminar de forma segura las referencias a estos miembros cuando actualice el código heredado a la .NET Framework versión 2,0.
 
-## <a name="current-support-for-automatic-scaling"></a>Compatibilidad actual para el escalado automático
+## <a name="current-support-for-automatic-scaling"></a>Compatibilidad actual con el escalado automático
 
-.NET Framework versión 2.0 supera las limitaciones anteriores mediante la introducción de los siguientes cambios en el escalado automático de Windows Forms:
+La .NET Framework versión 2,0 supera las limitaciones anteriores introduciendo los cambios siguientes en el escalado automático de Windows Forms:
 
 - El soporte básico para el escalado se ha movido a la clase <xref:System.Windows.Forms.ContainerControl> para que los formularios, los controles compuestos nativos y los controles de usuario reciban soporte de escalado uniforme. Se han agregado los nuevos miembros <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> y <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>.
 
 - La clase <xref:System.Windows.Forms.Control> también tiene varios miembros nuevos que le permiten participar en el escalado y admitir escalado mixto en el mismo formulario. Concretamente, los miembros <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> y <xref:System.Windows.Forms.Control.GetScaledBounds%2A> admiten el escalado.
 
-- Se ha agregado soporte de escalado basado en la resolución de pantalla para complementar el soporte de fuentes del sistema, tal como se define en la enumeración <xref:System.Windows.Forms.AutoScaleMode>. Este modo es compatible con escalado automático admitido por la habilitación de la migración sea más fácil de aplicación .NET Compact Framework.
+- Se ha agregado soporte de escalado basado en la resolución de pantalla para complementar el soporte de fuentes del sistema, tal como se define en la enumeración <xref:System.Windows.Forms.AutoScaleMode>. Este modo es compatible con el escalado automático admitido por el .NET Compact Framework habilitando la migración de aplicaciones más sencilla.
 
 - Se ha agregado compatibilidad con administradores de diseño como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel> a la implementación del escalado automático.
 
@@ -105,4 +105,4 @@ Windows Forms ahora usa la lógica siguiente para escalar automáticamente los f
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Representar controles con estilos visuales](./controls/rendering-controls-with-visual-styles.md)
-- [Cómo: Mejorar el rendimiento evitando el ajuste de escala automática](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Procedimiento para mejorar el rendimiento evitando el ajuste de tamaño automático](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

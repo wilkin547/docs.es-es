@@ -2,22 +2,22 @@
 title: Comando dotnet list reference
 description: El comando dotnet list reference constituye una opción práctica para enumerar referencias entre proyectos.
 ms.date: 06/26/2019
-ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 496cbcd8fa4d921e30b363904ad0273bd5ebacd5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117675"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733221"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Este tema se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet list reference`: enumera las referencias entre proyectos.
 
@@ -25,7 +25,7 @@ ms.locfileid: "71117675"
 
 `dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
 
 El comando `dotnet list reference` constituye una opción práctica para enumerar las referencias de proyecto de un proyecto o solución concreta.
 

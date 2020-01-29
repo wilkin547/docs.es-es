@@ -2,12 +2,12 @@
 title: Destino multiplataforma para bibliotecas de .NET
 description: Procedimientos recomendados para la creación de bibliotecas de .NET multiplataforma.
 ms.date: 08/12/2019
-ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706522"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731448"
 ---
 # <a name="cross-platform-targeting"></a>Destinatarios multiplataforma
 
@@ -27,19 +27,19 @@ El destino .NET Standard, así como la compilación correcta del proyecto, no ga
 > [!TIP]
 > El equipo de .NET [ofrece un analizador Roslyn](../analyzers/api-analyzer.md) para ayudar a detectar posibles problemas.
 
-**✔️ DEBE** empezar incluyendo un destino `netstandard2.0`.
+✔️ EMPIECE por incluir un destino de `netstandard2.0`.
 
 > La mayoría de bibliotecas de uso general no deberían necesitar API fuera de .NET Standard 2.0. Todas las plataformas modernas admiten .NET Standard 2.0 y es la manera recomendada para admitir varias plataformas con un destino.
 
-**❌ EVITE** incluir un destino `netstandard1.x`.
+❌ EVITE incluir un destino de `netstandard1.x`.
 
 > .NET Standard 1.x se distribuye como un conjunto pormenorizado de paquetes NuGet, que crea un gráfico de dependencias de paquete grande y da lugar a que los desarrolladores descarguen una gran cantidad de paquetes al compilar. Las plataformas .NET modernas, incluidas .NET Framework 4.6.1, UWP y Xamarin, admiten .NET Standard 2.0. Solo debe utilizar .NET Standard 1.x como destino si necesita específicamente una plataforma anterior como destino.
 
-**✔️ DEBE** incluir un destino `netstandard2.0` si necesita un destino `netstandard1.x`.
+✔️ INCLUYA un destino de `netstandard2.0` si necesita un destino de `netstandard1.x`.
 
 > Todas las plataformas que admiten .NET Standard 2.0 usarán el destino `netstandard2.0` y se aprovecharán del hecho de tener un gráfico de paquetes más pequeño, mientras que las plataformas anteriores seguirán funcionando y pasarán a usar el destino `netstandard1.x`.
 
-**❌ NO** incluya un destino de .NET Standard si la biblioteca se basa en un modelo de aplicación específico de la plataforma.
+❌ NO incluya un destino de .NET Standard si la biblioteca se basa en un modelo de aplicación específico de la plataforma.
 
 > Por ejemplo, una biblioteca de Kit de herramientas de control UWP depende de un modelo de aplicación que solo está disponible en UWP. Las API específicas del modelo de aplicación no estarán disponibles en .NET Standard.
 
@@ -51,7 +51,7 @@ Para evitar que los consumidores tengan que crear para marcos individuales, debe
 
 ![Paquete NuGet con varios ensamblados](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "Paquete NuGet con varios ensamblados")
 
-**✔️ ES RECOMENDABLE** usar las implementaciones de .NET como destino además de .NET Standard.
+✔️ ES RECOMENDABLE usar las implementaciones de .NET como destino además de .NET Standard.
 
 > El uso de las implementaciones de .NET como destino le permite llamar a las API específicas de la plataforma que se encuentran fuera de .NET Standard.
 >
@@ -88,19 +88,19 @@ public static class GpsLocation
 }
 ```
 
-**❌ EVITE** varios destinos así como destinar a .NET Standard si el código fuente es el mismo para todos los destinos.
+❌ EVITE varios destinos, así como usar .NET Standard como destino, si el código fuente es el mismo para todos los destinos.
 
 > NuGet usará automáticamente el ensamblado de .NET Standard. El uso de las implementaciones de .NET individuales como destino aumenta el tamaño de `*.nupkg` sin obtener ventaja alguna.
 
-**✔️ ES RECOMENDABLE** agregar un destino para `net461` cuando se ofrece un destino `netstandard2.0`.
+✔️ ES RECOMENDABLE agregar un destino para `net461` cuando se ofrece un destino de `netstandard2.0`.
 
 > El uso de .NET Standard 2.0 de .NET Framework tiene algunos problemas que se han solucionado en .NET Framework 4.7.2. Puede mejorar la experiencia para los desarrolladores que siguen usando .NET Framework 4.6.1 - 4.7.1 ofreciéndoles un archivo binario que se ha creado para .NET Framework 4.6.1.
 
-**✔️ DEBE** distribuir las bibliotecas mediante un paquete NuGet.
+✔️ DISTRIBUYA la biblioteca mediante un paquete NuGet.
 
 > NuGet seleccionará el mejor destino para el desarrollador y evitará que tenga de tener que elegir la implementación apropiada.
 
-**✔️ DEBE** usar una propiedad `TargetFrameworks` del archivo de proyecto cuando haya varios destinos.
+✔️ USE una propiedad `TargetFrameworks` del archivo de proyecto cuando haya varios destinos.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -111,17 +111,17 @@ public static class GpsLocation
 </Project>
 ```
 
-**✔️ ES RECOMENDABLE** usar [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) cuando se usan varios destinos para UWP y Xamarin, ya que simplifica considerablemente el archivo de proyecto.
+✔️ ES RECOMENDABLE usar [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) cuando haya varios destinos para UWP y Xamarin, ya que simplifica considerablemente el archivo de proyecto.
 
 ## <a name="older-targets"></a>Destinos antiguos
 
 .NET admite las versiones de destino de .NET Framework que llevan mucho tiempo sin soporte técnico, así como las plataformas que ya no se suelen utilizar. Si bien es valioso hacer que la biblioteca funcione en tantos destinos como sea posible, tener que trabajar con API ausentes puede agregar una sobrecarga significativa. Creemos que ciertos marcos ya no valen la pena como destino, considerando su alcance y limitaciones.
 
-**❌ NO** incluya un destino de Biblioteca de clases portable (PCL). Por ejemplo: `portable-net45+win8+wpa81+wp8`.
+❌ NO incluya un destino de Biblioteca de clases portátil (PCL). Por ejemplo: `portable-net45+win8+wpa81+wp8`.
 
 > .NET standard es la forma moderna de admitir las bibliotecas de .NET multiplataforma y reemplaza a las PCL.
 
-**❌ NO** incluya destinos para las plataformas de .NET que ya no se admiten. Por ejemplo: `SL4`, `WP`.
+❌ NO incluya destinos para las plataformas de .NET que ya no se admitan. Por ejemplo: `SL4`, `WP`.
 
 >[!div class="step-by-step"]
 >[Anterior](get-started.md)

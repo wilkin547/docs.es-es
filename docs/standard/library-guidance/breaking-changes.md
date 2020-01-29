@@ -2,12 +2,12 @@
 title: Cambios importantes y las bibliotecas de .NET
 description: Procedimientos recomendados para explorar los cambios importantes al crear bibliotecas de .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740982"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731466"
 ---
 # <a name="breaking-changes"></a>Cambios importantes
 
@@ -25,11 +25,11 @@ El uso que la comunidad de .NET realiza de una biblioteca cambia el efecto de lo
 
   En las aplicaciones de usuario final se hace referencia directa a las bibliotecas generales. Si se producen cambios importantes, el desarrollador puede elegir si quiere actualizar a la versión más reciente o puede modificar su aplicación para que funcione con el cambio.
 
-**✔️ PIENSE** en cómo se utilizará la biblioteca. ¿Qué efectos tendrán los cambios importantes en las aplicaciones y bibliotecas que la usan?
+✔️ PIENSE en cómo se va a usar la biblioteca. ¿Qué efectos tendrán los cambios importantes en las aplicaciones y bibliotecas que la usan?
 
-**✔️ MINIMICE** los cambios importantes al desarrollar una biblioteca de .NET de bajo nivel.
+✔️ MINIMICE los cambios importantes al desarrollar una biblioteca de .NET de bajo nivel.
 
-**✔️ ES RECOMENDABLE** publicar una reescritura importante de una biblioteca como un nuevo paquete NuGet.
+✔️ ES RECOMENDABLE publicar una reescritura importante de una biblioteca como un nuevo paquete NuGet.
 
 ## <a name="types-of-breaking-changes"></a>Tipos de cambios importantes
 
@@ -56,7 +56,7 @@ La incorporación de características y la mejora de comportamientos incorrectos
 
 Por ejemplo, ASP.NET Core MVC tiene el concepto de una [versión de compatibilidad](/aspnet/core/mvc/compatibility-version) que modifica las características habilitadas y deshabilitadas en `MvcOptions`.
 
-**✔️ ES RECOMENDABLE** excluir las nuevas características de forma predeterminada, si afectan a los usuarios existentes, y permitir que los desarrolladores usen la característica con una configuración.
+✔️ ES RECOMENDABLE excluir las nuevas características de forma predeterminada si afectan a los usuarios existentes y permitir que los desarrolladores se suscriban a la característica con una opción.
 
 ### <a name="binary-breaking-change"></a>Cambios importantes de archivo binario
 
@@ -64,15 +64,15 @@ Un cambio importante de archivo binario se produce al cambiar la API pública de
 
 Un cambio importante de archivo binario también puede afectar a un **ensamblado completo**. Cambiar el nombre de un ensamblado con `AssemblyName` cambiará la identidad del ensamblado, como lo hará agregar, quitar o cambiar la clave de nomenclatura segura del ensamblado. Un cambio de identidad de un ensamblado afectará a todo el código compilado que lo usa.
 
-**❌ NO** cambie el nombre de un ensamblado.
+❌ NO cambie un nombre de ensamblado.
 
-**❌ NO** agregue, quite o cambie la clave de nombre seguro.
+❌ NO agregue, quite ni cambie la clave de nombres seguros.
 
-**✔️ ES RECOMENDABLE** usar clases base abstractas en lugar de interfaces.
+✔️ ES RECOMENDABLE usar clases base abstractas en lugar de interfaces.
 
 > La adición de algo a una interfaz hará que se produzca un error de los tipos existentes que la implementan. Una clase base abstracta permite agregar una implementación virtual predeterminada.
 
-**✔️ ES RECOMENDABLE** colocar el <xref:System.ObsoleteAttribute> en tipos y miembros que vaya a quitar. El atributo debe tener instrucciones para actualizar el código para dejar de usar la API obsoleta.
+✔️ ES RECOMENDABLE colocar <xref:System.ObsoleteAttribute> en tipos y miembros que vaya a quitar. El atributo debe tener instrucciones para actualizar el código para dejar de usar la API obsoleta.
 
 > El código que llama a tipos y métodos con el <xref:System.ObsoleteAttribute> generará una advertencia de compilación con el mensaje proporcionado al atributo. Las advertencias proporcionan tiempo suficiente a los usuarios de la API obsoleta para realizar una migración, de modo que cuando se quite la API obsoleta, la mayoría ya no la estará usando.
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
-**✔️ ES RECOMENDABLE** mantener tipos y métodos con el <xref:System.ObsoleteAttribute> indefinidamente en las bibliotecas de nivel medio y bajo.
+✔️ ES RECOMENDABLE mantener tipos y métodos con <xref:System.ObsoleteAttribute> indefinidamente en las bibliotecas de nivel medio y bajo.
 
 > Quitar API es un cambio de archivo binario. Es recomendable mantener métodos y tipos obsoletos si su mantenimiento es de bajo coste y no agrega mucha deuda técnica a la biblioteca. No quitar tipos y métodos puede ayudar a evitar los peores casos mencionados anteriormente.
 

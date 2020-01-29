@@ -1,5 +1,5 @@
 ---
-title: Integrar la Ayuda de usuario en formularios Windows Forms
+title: Integración de la ayuda del usuario
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows Forms (using designer)
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - forms. Help (using designer)
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
-ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c402615d68c75327613d21bd35f1587b10f1dbf3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942927"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731566"
 ---
-# <a name="integrating-user-help-in-windows-forms"></a>Integrar la Ayuda de usuario en formularios Windows Forms
-Un aspecto esencial de la creación de aplicaciones basadas en Windows, que a menudo se pasa por alto, es el sistema de ayuda, ya que esto es donde los usuarios activar para obtener ayuda en momentos de confusión. Windows Forms admiten dos tipos diferentes de la Ayuda, cada una proporcionada por el [componente HelpProvider](../controls/helpprovider-component-windows-forms.md). La primera implica sugerir al usuario a un archivo de Ayuda de HTML o HTML Help 1. *x* o superior. El segundo puede mostrar breve "¿Qué es esto"-escriba Help en controles individuales; Esto es especialmente útil en los cuadros de diálogo. Ambos tipos de ayuda pueden usarse en el mismo formulario.  
+# <a name="integrating-user-help-in-windows-forms"></a>Integrar la Ayuda de usuario en Windows Forms
+Un aspecto esencial, que a menudo se pasa por alto, de la creación de aplicaciones basadas en Windows es el sistema de ayuda, ya que aquí es donde los usuarios activan la asistencia en momentos de confusión. Windows Forms admiten dos tipos diferentes de ayuda, cada uno proporcionado por el [componente HelpProvider](../controls/helpprovider-component-windows-forms.md). El primero implica apuntar al usuario a un archivo de ayuda de HTML o HTML Help 1. formato *x* o superior. El segundo puede mostrar brevemente la ayuda de tipo "What is this" (Qué es esto) en controles individuales; Esto es especialmente útil en los cuadros de diálogo. Ambos tipos de ayuda se pueden usar en el mismo formulario.  
   
- Además, el [componente ToolTip](../controls/tooltip-component-windows-forms.md) puede usarse para proporcionar ayuda individual para controles de Windows Forms.  
+ Además, el [componente ToolTip](../controls/tooltip-component-windows-forms.md) se puede usar para proporcionar ayuda individual para los controles de Windows Forms.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo: Proporcionar ayuda en una aplicación de Windows](how-to-provide-help-in-a-windows-application.md)  
- Explica cómo utilizar el `HelpProvider` componente para vincular controles a archivos en un sistema de ayuda.  
+## <a name="in-this-section"></a>Esta sección  
+ [Proporcionar ayuda en una aplicación para Windows](how-to-provide-help-in-a-windows-application.md)  
+ Explica cómo utilizar el componente `HelpProvider` para vincular controles a archivos en un sistema de ayuda.  
   
- [Cómo: Mostrar ayuda emergente](how-to-display-pop-up-help.md)  
- Explica cómo utilizar el `HelpProvider` componente para mostrar Ayuda emergente en los formularios de Windows.  
+ [Mostrar ayuda emergente](how-to-display-pop-up-help.md)  
+ Explica cómo usar el componente `HelpProvider` para mostrar ayuda emergente sobre Windows Forms.  
   
  [Controlar la ayuda mediante componentes Tooltip](control-help-using-tooltips.md)  
- Describe cómo utilizar el `ToolTip` componente para mostrar la ayuda específica del control.  
+ Describe el uso del componente `ToolTip` para mostrar la ayuda específica del control.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [HelpProvider (componente)](../controls/helpprovider-component-windows-forms.md)  
- Explica los conceptos básicos de la `HelpProvider` componente.  
+ Explica los aspectos básicos del componente `HelpProvider`.  
   
  [ToolTip (componente)](../controls/tooltip-component-windows-forms.md)  
- Explica los conceptos básicos de la `ToolTip` componente.  
+ Explica los aspectos básicos del componente `ToolTip`.  
   
  [Información general sobre formularios Windows Forms](../windows-forms-overview.md)  
- Explica los conceptos básicos de Windows Forms.  
+ Explica los aspectos básicos de Windows Forms.  
   
  [Windows Forms](../index.md)  
- Proporciona información general de Windows Forms.
+ Proporciona información general sobre Windows Forms.
