@@ -2,12 +2,12 @@
 title: Nombres seguros y bibliotecas de .NET
 description: Procedimientos recomendados para nombres de seguros de las bibliotecas de .NET.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0c2dba06413bc6435e3350bf6cc48f1b5882a261
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706431"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744535"
 ---
 # <a name="strong-naming"></a>Nombres seguros
 
@@ -45,26 +45,26 @@ Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. 
 > [!NOTE]
 > Esta guía es específica de las bibliotecas de .NET distribuidas públicamente, como las bibliotecas de .NET publicadas en NuGet.org. La mayoría de las aplicaciones .NET no necesitan nombres seguros y estos no se deben utilizar de forma predeterminada.
 
-**✔️ ES RECOMENDABLE** usar nombres seguros en los ensamblados de la biblioteca.
+✔️ ES RECOMENDABLE usar nombres seguros en los ensamblados de la biblioteca.
 
-**✔️ ES RECOMENDABLE** agregar la clave de nombres seguros al sistema de control de código fuente.
+✔️ ES RECOMENDABLE agregar la clave de nombres seguros al sistema de control de código fuente.
 
 > Una clave disponible públicamente permite a los programadores modificar y volver a compilar el código fuente de la biblioteca con la misma clave.
-> 
+>
 > No debería publicar la clave de nombres seguros si se ha utilizado en el pasado para conceder permisos especiales en [escenarios de confianza parcial](../../framework/misc/using-libraries-from-partially-trusted-code.md). En caso contrario, podría poner en peligro los entornos existentes.
 
 > [!IMPORTANT]
 > Cuando se desea la identidad del publicador del código, se recomiendan [Authenticode](/windows-hardware/drivers/install/authenticode) y la [firma de paquetes NuGet](/nuget/create-packages/sign-a-package). La seguridad de acceso del código (CAS) no debe usarse como una mitigación de seguridad.
 
-**✔️ ES RECOMENDABLE** incrementar la versión de ensamblado solamente en los cambios de versión principal para ayudar a los usuarios a reducir las redirecciones de enlace y la frecuencia con la que se actualizan.
+✔️ ES RECOMENDABLE incrementar la versión de ensamblado solamente en los cambios de versión principal para ayudar a los usuarios a reducir las redirecciones de enlace y la frecuencia con la que se actualizan.
 
 > Obtenga más información sobre el [control de versiones y la versión del ensamblado](./versioning.md#assembly-version).
 
-**❌ NO** agregue, quite o cambie la clave de nombre seguro.
+❌ NO agregue, quite ni cambie la clave de nombres seguros.
 
 > La modificación de la clave de nombre seguro de un ensamblado cambia la identidad de este e interrumpe el código compilado que lo utiliza. Para más información, vea la información sobre [cambios importantes binarios](./breaking-changes.md#binary-breaking-change).
 
-**❌ NO** publique versiones de la biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
+❌ NO publique versiones de la biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
 
 > La publicación de dos paquetes bifurca el ecosistema del desarrollador. Además, si una aplicación termina dependiendo de ambos paquetes, el desarrollador puede encontrar conflictos con el nombre de tipo. En lo que respecta a .NET, son tipos distintos en diferentes ensamblados.
 

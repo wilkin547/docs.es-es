@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714074"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739129"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos
 
@@ -183,7 +183,7 @@ Hello World!
 Como se ha mencionado al comienzo de este artículo, se ha creado un archivo ejecutable específico del sistema operativo junto con `Hello.dll`. En Windows, sería `Hello.exe`; en Linux o macOS, sería `hello`. Con el ejemplo anterior, el archivo se designa con `Hello.exe` o `Hello`. Puede ejecutar este archivo ejecutable publicado directamente.
 
 ```console
-.\bin\Debug\netcoreapp3.1\Hello.exe
+.\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
 Hello World!
 ```

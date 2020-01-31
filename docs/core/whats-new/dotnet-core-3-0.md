@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115795"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742592"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -112,20 +112,20 @@ Para más información sobre la herramienta Enlazador de IL, vea la [documentaci
 
 ### <a name="tiered-compilation"></a>Compilación en niveles
 
-La [compilación en niveles](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) está activada de forma predeterminada con .NET Core 3.0. Esta característica permite que el runtime utilice el compilador Just-In-Time (JIT) de forma más flexible para generar un mejor rendimiento.
+La [compilación en niveles](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) está activada de forma predeterminada con .NET Core 3.0. Esta característica permite que el runtime use el compilador Just-In-Time (JIT) de forma más flexible para lograr un mejor rendimiento.
 
-La principal ventaja de TC es permitir la vuelta a los métodos JIT con un nivel de menor calidad, pero más rápido, o un nivel de mayor calidad, pero más lento. Esto contribuye a aumentar el rendimiento de una aplicación a medida que pasa por distintas fases de ejecución, desde el inicio hasta alcanzar el estado estable. Esto contrasta con el enfoque no TC, donde cada método se compila de una sola manera (al igual que el nivel de alta calidad), que se inclina por el estado estable sobre el rendimiento de inicio.
+La principal ventaja de la compilación en niveles es que ofrece dos maneras de aplicar JIT a los métodos: con un nivel de menor calidad, pero más rápido, o un nivel de mayor calidad, pero más lento. La calidad se refiere al grado de optimización del método. La compilación en niveles contribuye a mejorar el rendimiento de una aplicación a medida que pasa por distintas fases de ejecución, desde el inicio hasta el estado estable. Cuando la compilación en niveles está deshabilitada, todos los métodos se compilan de una manera única que prima el rendimiento de estado estable sobre el rendimiento de inicio.
 
-Al habilitar TC durante el inicio de un método al que se llama:
+Cuando la compilación en niveles está habilitada, se aplica el comportamiento siguiente a la compilación de métodos al iniciar una aplicación:
 
-- Si el método tiene código compilado por AOT (ReadyToRun), se usará el código generado previamente.
-- De lo contrario, el método se compilará mediante JIT. Normalmente, estos métodos son genéricos con respecto a los tipos de valor.
-  - La compilación mediante JIT rápida produce código de menor calidad a un ritmo superior. Este tipo de compilación está habilitado de forma predeterminada en .NET Core 3.0 para los métodos que no contienen ningún bucle y que tienen preferencia durante el inicio.
-  - La compilación mediante JIT completamente optimizada produce código de mayor calidad a un ritmo inferior. En el caso de los métodos en los que no se use la compilación mediante JIT rápida (por ejemplo, si el método tiene el atributo `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), se utilizará la compilación mediante JIT totalmente optimizada.
+- Si el método tiene código compilado mediante Ahead-Of-Time, o [ReadyToRun](#readytorun-images), se usa el código generado previamente.
+- De lo contrario, el método se compila mediante JIT. Normalmente, estos métodos son genéricos con respecto a los tipos de valor.
+  - *JIT rápido* produce código de menor calidad (o menos optimizado) más rápidamente. En .NET Core 3.0, JIT rápido está habilitado de forma predeterminada para los métodos que no contienen ningún bucle y tiene preferencia durante el inicio.
+  - JIT de optimización completa produce código de mayor calidad (o más optimizado) más lentamente. En el caso de los métodos en los que no se use la compilación mediante JIT rápida (por ejemplo, si el método tiene el atributo <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), se utilizará la compilación mediante JIT totalmente optimizada.
 
-Finalmente, después de que se llame a los métodos varias veces, se volverán a compilar mediante JIT con la compilación mediante JIT completamente optimizada en segundo plano.
+En el caso de los métodos a los que se llama con frecuencia, el compilador Just-in-Time al final crea código totalmente optimizado en segundo plano. Luego, el código optimizado reemplaza el código compilado previamente de ese método.
 
-El código generado con compilación mediante JIT rápida puede ejecutarse más lentamente, asignar más memoria o usar más espacio de pila. Si tiene algún problema, puede deshabilitar la compilación mediante JIT rápida usando este valor en el archivo del proyecto:
+El código generado con compilación mediante JIT rápida puede ejecutarse más lentamente, asignar más memoria o usar más espacio de pila. Si hay problemas, puede deshabilitar JIT rápido con esta propiedad de MSBuild en el archivo de proyecto:
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ El código generado con compilación mediante JIT rápida puede ejecutarse más 
 </PropertyGroup>
 ```
 
-Para deshabilitar completamente TC, use esta opción en el archivo de proyecto:
+Para deshabilitar completamente la compilación en niveles, use esta propiedad de MSBuild en el archivo de proyecto:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ Para deshabilitar completamente TC, use esta opción en el archivo de proyecto:
 </PropertyGroup>
 ```
 
-Cualquier cambio en la configuración anterior del archivo del proyecto puede requerir que se refleje una compilación limpia (elimine los directorios `obj` y `bin` y vuelva a realizar la compilación).
+> [!TIP]
+> Si cambia esta configuración en el archivo de proyecto, es posible que deba realizar una compilación limpia para que se refleje la nueva configuración (elimine los directorios `obj` y `bin` y vuelva a compilar).
+
+Para obtener más información sobre la configuración de la compilación en tiempo de ejecución, vea [Opciones de configuración del entorno de ejecución para compilación](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>Imágenes ReadyToRun
 
@@ -182,7 +185,7 @@ Excepciones de la compatibilidad cruzada:
 .NET Core 3.0 presenta una característica opcional que permite poner la aplicación al día con la versión principal más reciente de .NET Core. Además, se agregó una nueva configuración para controlar cómo se aplica la puesta al día a la aplicación. Esto se puede configurar de las maneras siguientes:
 
 - Propiedad de archivo del proyecto: `RollForward`
-- Propiedad de archivo de configuración del entorno de ejecución: `rollForward`
+- Propiedad de archivo de configuración en tiempo de ejecución: `rollForward`
 - Variable de entorno: `DOTNET_ROLL_FORWARD`
 - Argumento de línea de comandos: `--roll-forward`
 

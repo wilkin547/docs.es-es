@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134138"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789148"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_función GetManagedExcepStack
 Dada una dirección de objeto de excepción administrado, devuelve una versión de cadena del seguimiento de pila que contiene.  
@@ -35,7 +35,7 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `Client`  
  de Cliente que se está depurando.  
   
@@ -48,10 +48,10 @@ HRESULT _EFN_GetManagedExcepStack(
  `cbString`  
  enuncia Número de caracteres disponibles en el búfer de cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor de instalación de 0XA0 y un código de error de 0x1000.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** SOS_Stacktrace. h  
@@ -60,4 +60,4 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Funciones estáticas globales de depuración](debugging-global-static-functions.md)

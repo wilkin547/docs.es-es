@@ -1,19 +1,20 @@
 ---
-title: Implementar una aplicación de WPF
+title: Implementar una aplicación
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636307"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741950"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
-Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación WPF depende del tipo de aplicación. En este tema se proporciona una breve introducción a cada tecnología de implementación y cómo se usan junto con los requisitos de implementación de cada tipo de aplicación de WPF.  
+# <a name="deploy-a-wpf-application"></a>Implementar una aplicación de WPF
+
+Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación WPF depende del tipo de aplicación. En este tema se proporciona una breve introducción a cada tecnología de implementación y cómo se usan junto con los requisitos de implementación de cada tipo de aplicación de WPF.
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologías de implementación  

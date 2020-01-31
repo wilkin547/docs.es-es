@@ -1,24 +1,24 @@
 ---
-title: Propiedades de los controles de formularios Windows Forms
+title: Propiedades de los controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], properties overview (using code)
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82bfab15cef4946661a37d2d88fbe1b797f3d816
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012515"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741183"
 ---
-# <a name="properties-in-windows-forms-controls"></a>Propiedades de los controles de formularios Windows Forms
-Un control de Windows Forms hereda muchas formulario de propiedades de la clase base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Estos incluyen propiedades como <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>y muchos otros. Para obtener más información acerca de las propiedades heredadas, vea <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+# <a name="properties-in-windows-forms-controls"></a>Propiedades de los controles de Windows Forms
+Un control Windows Forms hereda muchas propiedades de la clase base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Entre ellas se incluyen propiedades como <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>y muchas otras. Para obtener más información acerca de las propiedades heredadas, vea <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  Se pueden reemplazar las propiedades heredadas en un control, así como definir propiedades nuevas.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Definir una propiedad](defining-a-property-in-windows-forms-controls.md)  
  Muestra cómo implementar una propiedad para un control o componente personalizado y cómo integrar la propiedad en el entorno de diseño.  
   
@@ -39,10 +39,10 @@ Un control de Windows Forms hereda muchas formulario de propiedades de la clase 
  Documenta la clase base para implementar controles compuestos.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Documenta el atributo que especifica el <xref:System.ComponentModel.TypeConverter> que se usará para un tipo de propiedad personalizada.  
+ Documenta el atributo que especifica el <xref:System.ComponentModel.TypeConverter> que se va a usar para un tipo de propiedad personalizado.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Documenta el atributo que especifica el <xref:System.Drawing.Design.UITypeEditor> que se usará para una propiedad personalizada.  
+ Documenta el atributo que especifica el <xref:System.Drawing.Design.UITypeEditor> que se va a usar para una propiedad personalizada.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)  

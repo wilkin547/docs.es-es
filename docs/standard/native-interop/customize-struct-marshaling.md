@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706353"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741532"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalización de la serialización de estructuras
 
@@ -20,11 +20,11 @@ A veces, las reglas de serialización predeterminadas para las estructuras no es
 
 .NET proporciona el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> y la enumeración <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> para poder personalizar cómo se colocan los campos en la memoria. Las siguientes instrucciones lo ayudarán a evitar problemas comunes.
 
-**✔️ PLANTÉESE**  usar `LayoutKind.Sequential` siempre que sea posible.
+✔️ considere la posibilidad de usar `LayoutKind.Sequential` siempre que sea posible.
 
-**✔️ USE**  solo `LayoutKind.Explicit` en la serialización cuando la estructura nativa tenga un diseño explícito, como una unión.
+✔️ usar solo `LayoutKind.Explicit` en el cálculo de referencias cuando la estructura nativa también tiene un diseño explícito, como una Unión.
 
-**❌ evitar** el uso de `LayoutKind.Explicit` al calcular las referencias de estructuras en plataformas que no son de Windows si necesita tener como destino los tiempos de ejecución antes de .net Core 3,0. El tiempo de ejecución de .NET Core antes 3,0 no admite pasar estructuras explícitas por valor a funciones nativas en sistemas Intel o AMD de 64 bits que no son de Windows. Sin embargo, el entorno de ejecución admite pasar estructuras explícitas por referencia en todas las plataformas.
+❌ evitar el uso de `LayoutKind.Explicit` al calcular las referencias de estructuras en plataformas que no son de Windows si necesita tener como destino los tiempos de ejecución antes de .NET Core 3,0. El tiempo de ejecución de .NET Core antes 3,0 no admite pasar estructuras explícitas por valor a funciones nativas en sistemas Intel o AMD de 64 bits que no son de Windows. Sin embargo, el entorno de ejecución admite pasar estructuras explícitas por referencia en todas las plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalización de la serialización de campos booleanos
 

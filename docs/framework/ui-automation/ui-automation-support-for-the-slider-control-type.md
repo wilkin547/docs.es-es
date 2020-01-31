@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Slider control type
 - Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-ms.openlocfilehash: 24de9d504055da788ceee46a26e493a9c6989202
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 34a093fa0be68ddab75d78c0113fe110d4332773
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741150"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786066"
 ---
 # <a name="ui-automation-support-for-the-slider-control-type"></a>Compatibilidad de la automatización de la interfaz de usuario para el tipo de control Slider
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741150"
   
  El control Slider es un control compuesto con botones que permiten que un usuario con un mouse establezca un intervalo numérico o realice una selección de un conjunto de elementos.  
   
- En las secciones siguientes se define la estructura de árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control Slider. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplican a todos los controles deslizantes, ya sea [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ En las secciones siguientes se define la estructura de árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control Slider. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplican a todos los controles deslizantes, ya sea [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  

@@ -2,12 +2,12 @@
 title: Asignación de eShopOnContainers a los servicios de Azure
 description: Asignación de eShopOnContainers a servicios de Azure como Azure Kubernetes Service, API Gateway y Azure Service Bus.
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "73841196"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781216"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Asignación de eShopOnContainers a los servicios de Azure
 
@@ -54,7 +54,7 @@ La aplicación eShopOnContainers almacena la cesta de la compra actual del usuar
 
 El microservicio de ubicaciones utiliza una base de datos de MongoDB NoSQL para su persistencia. Durante el desarrollo, la base de datos se puede implementar en su propio contenedor, mientras que en producción el servicio puede aprovechar la [API de Azure Cosmos dB para MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). Una de las ventajas de Azure Cosmos DB es su capacidad para aprovechar varios protocolos de comunicación diferentes, entre los que se incluyen una API de SQL y las API NoSQL comunes, como MongoDB, Cassandra, Gremlin y Azure Table Storage. Azure Cosmos DB ofrece una base de datos totalmente administrada y distribuida globalmente como servicio que se puede escalar para satisfacer las necesidades de los servicios que la usan.
 
-Los datos distribuidos en aplicaciones nativas en la nube se describen con más detalle en el [capítulo 5](distributed-data.md).
+Los datos distribuidos en aplicaciones nativas en la nube se describen con más detalle en el [capítulo 5](database-per-microservice.md).
 
 ## <a name="event-bus"></a>Bus de eventos
 

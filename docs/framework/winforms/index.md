@@ -1,22 +1,23 @@
 ---
 title: Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd3a71b406f1f0ae2afa1e1b3982c27f4db21a4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583424"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739184"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Como los formularios son la unidad básica de la aplicación, es esencial realizar algunas consideraciones sobre su función y diseño. En última instancia, un formulario es una pizarra en blanco que usted, como desarrollador, mejora con controles para crear una interfaz de usuario y con código para manipular los datos. Para ello, Visual Studio proporciona un entorno de desarrollo integrado (IDE) que ayuda a escribir código, así como un enriquecido conjunto de controles escrito con .NET Framework. Complementando la funcionalidad de estos controles con el código, puede desarrollar las soluciones que necesita de forma fácil y rápida.  
+Como los formularios son la unidad básica de la aplicación, es esencial realizar algunas consideraciones sobre su función y diseño. En última instancia, un formulario es una pizarra en blanco que usted, como desarrollador, mejora con controles para crear una interfaz de usuario y con código para manipular los datos. Para ello, Visual Studio proporciona un entorno de desarrollo integrado (IDE) que ayuda a escribir código, así como un conjunto de controles enriquecidos escrito con el .NET Framework. Complementando la funcionalidad de estos controles con el código, puede desarrollar las soluciones que necesita de forma fácil y rápida.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)  
  Proporciona vínculos a temas sobre cómo aprovechar la eficacia de Windows Forms para mostrar datos, controlar la entrada de datos del usuario e implementar sus aplicaciones fácilmente y con mayor seguridad.  
   
@@ -24,7 +25,7 @@ Como los formularios son la unidad básica de la aplicación, es esencial realiz
  Proporciona vínculos a temas sobre cómo mejorar los formularios de Windows Forms con diferentes características.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de Windows Forms](./controls/index.md)  
+ [Controles de formularios Windows Forms](./controls/index.md)  
  Contiene vínculos a temas que describen los controles de Windows Forms y muestran cómo implementarlos.  
   
  [Enlace de datos en Windows Forms](windows-forms-data-binding.md)  

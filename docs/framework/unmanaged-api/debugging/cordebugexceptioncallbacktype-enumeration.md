@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 977b1608539a302c6a27a1b54cfb2ad687025fe6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132238"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789408"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType (Enumeración)
-Indica el tipo de devolución de llamada que se realiza desde un evento [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) .  
+Indica el tipo de devolución de llamada que se realiza desde un evento [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,15 +44,15 @@ typedef enum CorDebugExceptionCallbackType {
 |`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|El proceso Windup de excepción encontró un bloque `catch` en el código de usuario.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|No se controló la excepción.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumeraciones de depuración](debugging-enumerations.md)

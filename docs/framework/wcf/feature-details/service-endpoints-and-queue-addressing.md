@@ -2,12 +2,12 @@
 title: Extremos de servicio y direccionamiento de la cola
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837992"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744621"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Extremos de servicio y direccionamiento de la cola
 En este tema se aborda cómo los clientes direccionan servicios que leen de las colas y cómo los puntos de conexión de servicio se asignan a las colas. Como recordatorio, en la siguiente ilustración se muestra la implementación de la aplicación en cola de Windows Communication Foundation clásico (WCF).  
@@ -21,7 +21,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Los nombres de ruta de acceso se asignan a "FormatNames" para determinar aspectos adicionales de la dirección, incluido el protocolo de enrutamiento y transferencia del administrador de cola. El Administrador de la cola admite dos protocolos de transferencia: protocolo MSMQ nativo y SOAP Reliable Messaging Protocol (SRMP).  
   
- Para obtener más información acerca de la ruta de acceso y los nombres de formato de MSMQ, vea [acerca de Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ Para obtener más información acerca de la ruta de acceso y los nombres de formato de MSMQ, vea [acerca de Message Queue Server](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding y direccionamiento del servicio  
  Al direccionar un mensaje a un servicio, el esquema en el URI se selecciona basándose en el transporte utilizado para la comunicación. Cada transporte en WCF tiene un esquema único. El esquema debe reflejar la naturaleza de transporte utilizada para la comunicación. Por ejemplo, net.tcp, net.pipe, HTTP, etc.  
@@ -96,7 +96,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
- MSMQ-Format-Name tiene el formato especificado por MSMQ en [About Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ-Format-Name tiene el formato especificado por MSMQ en [About Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Observe que solo puede utilizar los nombres de formato directos, y los nombres de formato públicos y privados (requiere la integración de Active Directory) al recibir los mensajes de una cola utilizando `MsmqIntegrationBinding`. Sin embargo, se aconseja que utilice los nombres de formato directos. Por ejemplo, en Windows Vista, el uso de cualquier otro nombre de formato produce un error porque el sistema intenta abrir una subcola, que solo se puede abrir con nombres de formato directo.  
   

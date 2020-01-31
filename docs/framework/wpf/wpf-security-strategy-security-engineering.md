@@ -1,5 +1,5 @@
 ---
-title: 'Estrategia de seguridad de WPF: Ingeniería de seguridad'
+title: Estrategia de seguridad e ingeniería
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 5dd80cff7675a7d3236c7409fd882ebf3a3cd7b1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 57ee0c8242c0bca1b2c76e7751ed25f6a889c264
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424918"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741835"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estrategia de seguridad de WPF: Ingeniería de seguridad
 Trustworthy Computing es una iniciativa de Microsoft para garantizar la producción de código seguro. Un elemento clave de la iniciativa Trustworthy Computing es el Ciclo de vida de desarrollo de seguridad (SDL) de Microsoft. SDL es una práctica de ingeniería que se usa junto con los procesos de ingeniería estándar para facilitar la entrega de código seguro. SDL consta de diez fases que combinan las prácticas recomendadas con formalización, la medición y la estructura adicional, entre las que se incluyen:  
@@ -87,7 +87,7 @@ Trustworthy Computing es una iniciativa de Microsoft para garantizar la producci
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Administración de código crítico  
- En el caso de las aplicaciones de explorador XAML (XBAP), [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] crea un espacio aislado de seguridad mediante .NET Framework compatibilidad con el marcado y el seguimiento de código crítico para la seguridad que eleva los privilegios (consulte **metodología crítica para la seguridad** en [la estrategia de seguridad de WPF). Seguridad](wpf-security-strategy-platform-security.md)de la plataforma). Dados los requisitos de calidad de alta seguridad del código crítico para la seguridad, este código recibe un nivel adicional de auditoría de seguridad y control de administración de código fuente. Aproximadamente del 5% al 10% de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] se compone de código crítico para la seguridad, que es revisado por un equipo de revisión específico. Para administrar el código fuente y el proceso de inserción en el repositorio, se realiza el seguimiento del código crítico para la seguridad y se asigna cada entidad crítica (es decir, un método que contiene código crítico) a su estado de autorización. El estado de autorización incluye los nombres de uno o varios revisores. Cada compilación diaria de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara el código crítico con el de compilaciones anteriores para comprobar si hay cambios no aprobados. Si un ingeniero modifica código crítico sin la aprobación del equipo de revisión, se identifica y se corrige inmediatamente. Este proceso permite la aplicación y el mantenimiento de un nivel especialmente alto de control sobre el código en espacio aislado de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ En el caso de las aplicaciones de explorador XAML (XBAP), [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] crea un espacio aislado de seguridad mediante .NET Framework compatibilidad con el marcado y el seguimiento de código crítico para la seguridad que eleva los privilegios (consulte **metodología crítica para la seguridad** en [la estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)). Dados los requisitos de calidad de alta seguridad del código crítico para la seguridad, este código recibe un nivel adicional de auditoría de seguridad y control de administración de código fuente. Aproximadamente del 5% al 10% de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] se compone de código crítico para la seguridad, que es revisado por un equipo de revisión específico. Para administrar el código fuente y el proceso de inserción en el repositorio, se realiza el seguimiento del código crítico para la seguridad y se asigna cada entidad crítica (es decir, un método que contiene código crítico) a su estado de autorización. El estado de autorización incluye los nombres de uno o varios revisores. Cada compilación diaria de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara el código crítico con el de compilaciones anteriores para comprobar si hay cambios no aprobados. Si un ingeniero modifica código crítico sin la aprobación del equipo de revisión, se identifica y se corrige inmediatamente. Este proceso permite la aplicación y el mantenimiento de un nivel especialmente alto de control sobre el código en espacio aislado de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Vea también
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951637"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743348"
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
@@ -19,12 +19,12 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Para obtener más información sobre los términos usados en la documentación de Windows Communication Foundation (WCF), vea [conceptos básicos de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de control de acceso (ACL)  
- Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento, o cualquier elemento que tenga un descriptor de seguridad.) Una entrada en ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  
+ Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento o cualquier otro elemento que tenga un descriptor de seguridad). Una entrada en una ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  
   
- autenticación  
+ Autenticación de  
  El proceso para comprobar que un usuario, equipo, servicio o proceso es quién o lo que dice ser.  
   
- authorization  
+ autorización  
  El acto de controlar el acceso y los derechos a un recurso. Por ejemplo, permitir a los miembros de un grupo leer un archivo, pero permitir solo a los miembros de otro grupo modificar el archivo.  
   
  certificado de la entidad de certificación (CA)  
@@ -34,7 +34,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Una jerarquía de la CA contiene varias CA. Está organizada de modo que cada CA esté certificada por otra CA en un nivel superior de la jerarquía hasta que se alcance la parte superior de la jerarquía, también conocida como *entidad de certificación raíz*.  
   
  certificado  
- Una instrucción firmada digitalmente que contiene información sobre una entidad y la clave pública de la entidad, enlazando, por tanto, estas dos partes de información. Una organización de confianza (o entidad) emite un certificado, llamada “entidad emisora de certificados”, después de que la autoridad haya comprobado que la entidad es quién dice ser.  
+ Instrucción firmada digitalmente que contiene información acerca de la entidad y la clave pública de la entidad, de modo que enlaza dos piezas de información. Una organización de confianza (o entidad) emite un certificado, llamada “entidad emisora de certificados”, después de que la autoridad haya comprobado que la entidad es quién dice ser.  
   
  Los certificados pueden contener tipos diferentes de datos. Por ejemplo, un certificado X.509 incluye el formato del certificado, el número de serie del certificado, el algoritmo utilizado para firmar el certificado, el nombre de la CA que emitió el certificado, el nombre y clave pública de la entidad que solicita el certificado, y la firma de la CA.  
   
@@ -54,7 +54,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Un tipo de contenido de datos definido por el estándar criptográfico de clave pública (PKCS) #7 que consiste de cualquier tipo de datos más un hash del mensaje (resumen) del contenido.  
   
  firma digital  
- Datos que enlazan la identidad de un remitente con la información que se está enviando. Una firma digital se puede empaquetar junto con cualquier mensaje, archivo o cualquier otra información codificada o transmitida por separado. Las firmas digitales se utilizan en entornos de claves públicas y proporcionan servicios de integridad y autenticación.  
+ Datos que enlazan la identidad del remitente con la información que se envía. Las firmas digitales pueden incluirse en cualquier mensaje, archivo u otra información codificada digitalmente, o bien transmitirse por separado. Las firmas digitales se utilizan en entornos de claves públicas y proporcionan servicios de integridad y autenticación.  
   
  encoding  
  El proceso de convertir datos en una secuencia de bits. La codificación es parte del proceso de serialización que convierte datos en una secuencia de unos y ceros.  
@@ -68,13 +68,13 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  algoritmo de hash  
  Un algoritmo utilizado para generar un valor hash de una parte de datos, como un mensaje o clave de sesión. Entre los algoritmos más comunes de hash se incluyen: MD2, MD4, MD5 y SHA-1.  
   
- Protocolo Kerberos  
+ protocolo Kerberos  
  Un protocolo que define cómo los clientes interactúan con un servicio de autenticación de red. Los clientes obtienen vales del Centro de distribución de claves Kerberos (KDC) y presentan estos vales a los servidores cuando se establecen las conexiones. Los vales de Kerberos representan las credenciales de red del cliente.  
   
  autoridad de seguridad local (LSA)  
  Un subsistema protegido que autentica e inicia sesión a los usuarios en el sistema local. LSA también guarda información sobre todos los aspectos de seguridad local de un sistema, colectivamente conocida como la directiva de seguridad local del sistema.  
   
- Negociar  
+ Negotiate  
  Un proveedor de compatibilidad de seguridad (SSP) que actúa como un nivel de aplicación entre la Interfaz del proveedor de compatibilidad de seguridad (SSPI) y el resto de SSP. Cuando una aplicación llama en SSPI para iniciar sesión en una red, puede especificar un SSP para que procese la solicitud. Si la aplicación especifica `Negotiate`, `Negotiate`, analiza la solicitud y escoge el mejor SSP para administrar la solicitud en función de la directiva de seguridad configurada por cliente.  
   
  nonce  
@@ -90,15 +90,15 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Estándar de sintaxis de mensajes criptográficos. Una sintaxis general para los datos a los que se puede aplicar la criptografía, como cifrado y firmas digitales. También proporciona la sintaxis para difundir certificados o listas de certificados revocados y otros atributos de mensaje, como marcas de tiempo, al mensaje.  
   
  texto simple  
- Un mensaje no cifrado. Los mensajes de texto no cifrado a veces se denominan mensajes de *texto* no cifrado.  
+ Un mensaje no cifrado. Los mensajes de texto no cifrado a veces se denominan mensajes de *texto no cifrado* .  
   
- privilegio  
+ privilege  
  El derecho de un usuario para realizar varias operaciones relacionadas con el sistema, como apagar el sistema, cargar los controles de dispositivos o cambiar la hora del sistema. Un token de acceso del usuario contiene una lista de los privilegios que el usuario o los grupos de usuarios tienen.  
   
  clave privada  
  La mitad secreta de un par de claves utilizada en un algoritmo de clave pública. Las claves privadas se utilizan normalmente para cifrar una clave de sesión simétrica, firmar digitalmente un mensaje o descifrar un mensaje cifrado con la clave pública correspondiente. Vea también “clave pública”.  
   
- proceso  
+ HostControl  
  El contexto de seguridad bajo el que se ejecuta una aplicación. Normalmente, el contexto de seguridad está asociado a un usuario, por lo que todas las aplicaciones que se ejecutan bajo un proceso determinado toman los permisos y privilegios del usuario propietario.  
   
  par de clave pública y privada  
@@ -120,7 +120,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  La CA que se encuentra en la parte superior de una jerarquía de la CA. La entidad emisora raíz certifica CA en el siguiente nivel de la jerarquía.  
   
  Algoritmo hash seguro (SHA)  
- Un algoritmo hash que genera una síntesis del mensaje. SHA se utiliza con el Algoritmo de firma digital (DSA) en el Estándar de firmas digitales (DSS), entre otros. Hay cuatro variedades de SHA: SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1 genera una síntesis del mensaje de 160 bits. SHA-256, SHA-384 y SHA-512 generan síntesis de mensajes de 256, 384 y 512 bits, respectivamente. SHA fue desarrollado por el National Institute of Standards and Technology (NIST, Instituto nacional de estándares y tecnología) y la National Security Agency (NSA, Agencia de seguridad nacional).  
+ Un algoritmo hash que genera una síntesis del mensaje. SHA se utiliza con el Algoritmo de firma digital (DSA) en el Estándar de firmas digitales (DSS), entre otros. Hay cuatro variedades de SHA: SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1 genera una síntesis del mensaje de 160 bits. SHA-256, SHA-384 y SHA-512 generan síntesis de mensajes de 256, 384 y 512 bits, respectivamente. SHA fue desarrollado por el National Institute of Standards and Technology (NIST, Instituto nacional de estándares y tecnología) y la National Security Agency (NSA, Agencia de seguridad nacional).  
   
  Secure Sockets Layer (SSL)  
  Un protocolo que proporciona comunicaciones de red seguras mediante una combinación de tecnología de claves públicas y secretas.  
@@ -143,7 +143,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  certificado de servidor  
  Hace referencia a un certificado utilizado para la autenticación de servidores, como la autenticación de un servidor web en un explorador web. Cuando un cliente del explorador web intenta obtener acceso a un servidor web seguro, el servidor envía su certificado al explorador para permitirle comprobar la identidad del servidor.  
   
- session  
+ del mismo nivel privada  
  Un intercambio de mensajes bajo la protección de una única parte de material para claves. Por ejemplo, las sesiones SSL utilizan una clave única para devolver varios mensajes hacia delante y hacia detrás bajo esa clave.  
   
  clave de sesión  
@@ -173,7 +173,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  El software que decide si un archivo determinado es o no de confianza. Esta decisión se basa en el certificado asociado al archivo.  
   
  nombre principal del usuario (UPN)  
- Un nombre de cuenta de usuario (a veces denominado *nombre de inicio de sesión de usuario*) y un nombre de dominio que identifica el dominio en el que se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (como para una dirección de correo electrónico).  
+ Un nombre de cuenta de usuario (a veces denominado *nombre de inicio de sesión de usuario*) y un nombre de dominio que identifica el dominio en el que se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar una sesión en un dominio de Windows. El formato es: someone@example.com (como para una dirección de correo electrónico).  
   
 > [!NOTE]
 > Además del formulario de UPN estándar, WCF acepta los UPN en formato de nivel inferior, por ejemplo, cohowinery. com\someone.  
@@ -185,4 +185,4 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
 
 - [Conceptos básicos de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Modelo de seguridad para Windows Server App fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

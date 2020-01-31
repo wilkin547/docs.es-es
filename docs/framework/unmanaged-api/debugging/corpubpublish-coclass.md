@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-ms.openlocfilehash: 89af99fab1f1265701e0dbfe74a46000cb3bfaa6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24d245bbb0f9ac86e321491e0af3b66b1e011baa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132152"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789218"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish (coclase)
 Proporciona interfaces para publicar información acerca de procesos y dominios de aplicación.  
@@ -40,16 +40,16 @@ coclass CorpubPublish {
   
 |Interfaz|Descripción|  
 |---------------|-----------------|  
-|[ICorPublish (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Proporciona métodos para publicar información sobre los procesos y los dominios de aplicación en esos procesos.|  
-|[ICorPublishAppDomain (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Representa y proporciona información sobre un dominio de aplicación en un proceso.|  
-|[ICorPublishAppDomainEnum (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Proporciona métodos que atraviesan una colección de dominios de aplicación que existen actualmente dentro de un proceso.|  
-|[ICorPublishProcess (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Representa un proceso que se está ejecutando en un equipo.|  
-|[ICorPublishProcessEnum (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Proporciona métodos que atraviesan una colección de procesos que se ejecutan en un equipo.|  
+|[ICorPublish (interfaz)](icorpublish-interface.md)|Proporciona métodos para publicar información sobre los procesos y los dominios de aplicación en esos procesos.|  
+|[ICorPublishAppDomain (interfaz)](icorpublishappdomain-interface.md)|Representa y proporciona información sobre un dominio de aplicación en un proceso.|  
+|[ICorPublishAppDomainEnum (interfaz)](icorpublishappdomainenum-interface.md)|Proporciona métodos que atraviesan una colección de dominios de aplicación que existen actualmente dentro de un proceso.|  
+|[ICorPublishProcess (interfaz)](icorpublishprocess-interface.md)|Representa un proceso que se está ejecutando en un equipo.|  
+|[ICorPublishProcessEnum (interfaz)](icorpublishprocessenum-interface.md)|Proporciona métodos que atraviesan una colección de procesos que se ejecutan en un equipo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un escenario de publicación típico implica a un desarrollador que desea depurar el código administrado que se ejecuta en un equipo dentro de un dominio de aplicación. Es posible que el entorno de hospedaje ejecute más de un dominio de aplicación dentro de un proceso. El desarrollador desea usar una interfaz gráfica de usuario u otros medios para enumerar todos los procesos que se ejecutan en el equipo y elegir un proceso específico. La lista debe incluir todos los dominios de aplicación dentro de los procesos que ejecutan código administrado. A continuación, el desarrollador puede identificar el dominio de aplicación específico y asociar un depurador a ese dominio.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl  
@@ -60,4 +60,4 @@ coclass CorpubPublish {
   
 ## <a name="see-also"></a>Vea también
 
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Depuración](index.md)

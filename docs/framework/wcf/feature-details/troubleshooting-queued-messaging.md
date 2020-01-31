@@ -2,12 +2,12 @@
 title: Solución de problemas de la mensajería en cola
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345588"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742668"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 
@@ -25,7 +25,7 @@ Esta sección contiene preguntas comunes y ayuda para el uso de colas en Windows
 
 **P:** ¿Tengo que actualizar MSMQ para usar los enlaces de <xref:System.ServiceModel.NetMsmqBinding> y `MsmqIntegration`?
 
-**A:** No. Ambos enlaces funcionan con MSMQ 3,0 en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003. Ciertas características de los enlaces están disponibles al actualizar a MSMQ 4,0 en Windows Vista.
+**R:** No. Ambos enlaces funcionan con MSMQ 3,0 en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003. Ciertas características de los enlaces están disponibles al actualizar a MSMQ 4,0 en Windows Vista.
 
 **P:** ¿Qué características de los enlaces de <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> están disponibles en MSMQ 4,0 pero no en MSMQ 3,0?
 
@@ -45,7 +45,7 @@ Para obtener más información, vea [diferencias en las características de cola
 
 **P:** Deseo integrar aplicaciones MSMQ existentes con nuevos clientes o servidores WCF. ¿Necesito actualizar ambos lados de mi infraestructura de MSMQ?
 
-**A:** No. No tiene que actualizar a MSMQ 4.0 en ningún lado.
+**R:** No. No tiene que actualizar a MSMQ 4.0 en ningún lado.
 
 ## <a name="troubleshooting"></a>Solucionar problemas
 
@@ -113,10 +113,6 @@ En el caso de problemas de host web no relacionados con la seguridad, consulte: 
 
 **R:** Establezca AutoComplete =`true` en la operación que se corresponda con el último mensaje de la sesión y establezca AutoComplete =`false` en todas las operaciones de servicio restantes.
 
-**P:** ¿Dónde puedo encontrar respuestas a preguntas comunes sobre MSMQ?
-
-**R:** Para obtener más información acerca de MSMQ, vea [Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810).
-
 **P:** ¿Por qué mi servicio inicia una `ProtocolException` al leer de una cola que contiene mensajes de sesión en cola y mensajes de datagrama en cola?
 
 **R:** Existe una diferencia fundamental en el modo en que se componen los mensajes de sesión en cola y los mensajes de datagrama en cola. Debido a esto, un servicio que está esperando leer un mensaje de la sesión en cola no puede recibir un mensaje del datagrama en cola y un servicio que espera leer un mensaje del datagrama en cola no puede recibir un mensaje de la sesión. Intentar leer ambos tipos de mensajes de la misma cola provoca la excepción siguiente:
@@ -174,7 +170,7 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 6. Después, agregue un segundo complemento certificados con los pasos anteriores, pero esta vez seleccione cuenta de **equipo** y haga clic en **siguiente**.
 
-7. Seleccione **Equipo local** y, después, haga clic en **Finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.
+7. Seleccione **equipo local** y haga clic en **Finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.
 
 **P:** Cuando el servicio Lee de una cola de otro equipo en el modo de grupo de trabajo, obtengo una excepción de "acceso denegado".
 
@@ -186,7 +182,7 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 ### <a name="remote-transacted-receives"></a>Recepciones de transacción remotas
 
-**P:** Cuando tengo una cola en el equipo A y un servicio WCF que lee los mensajes de una cola en el equipo B (el escenario de recepción de transacción remota), los mensajes no se leen de la cola. La información de seguimiento indica que se produjo un error en la recepción con el mensaje "no se puede importar la transacción". ¿Qué puedo hacer para solucionar esto?
+**P:** Cuando tengo una cola en el equipo A y un servicio WCF que lee los mensajes de una cola en el equipo B (el escenario de recepción de transacción remota), los mensajes no se leen de la cola. La información de seguimiento indica que se produjo un error en la recepción con el mensaje "no se puede importar la transacción". ¿Qué puedo hacer para solucionarlo?
 
 **R:** Existen tres razones posibles para ello:
 

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.openlocfilehash: 66a08cf60ae4ca9bb6e373d230d0819ee6f9b28c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243984"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790007"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo (método)
 
@@ -34,44 +34,51 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
-`functionId` \
-de IDENTIFICADOR de la función para la que se va a recuperar información.
+- `functionId`
 
-`moduleId` \
-de Puntero al módulo en el que se define la clase primaria de la función.
+  \[en] identificador de la función para la que se va a recuperar información.
 
-`ppvSig` \
-enuncia Puntero a la firma de la función.
+- `moduleId`
 
-`pbSig` \
-enuncia Puntero al recuento de bytes para la firma de la función.
+  \[en] un puntero al módulo en el que se define la clase primaria de la función.
 
-`cchName` \
-[in] Tamaño máximo de la matriz `wszName`.
+- `ppvSig`
 
-`pcchName` \
-enuncia Número de caracteres de la `wszName` matriz.
+  \[out] un puntero a la firma de la función.
 
-`wszName` \
-enuncia Matriz de `WCHAR` que es el nombre de la función, si existe.
+- `pbSig`
 
-## <a name="remarks"></a>Comentarios
+  \[out] un puntero al recuento de bytes para la firma de la función.
+
+- `cchName`
+
+  \[en] el tamaño máximo de la matriz de `wszName`.
+
+- `pcchName`
+
+  \[out] número de caracteres de la matriz de `wszName`.
+
+- `wszName`
+
+  \[out] una matriz de `WCHAR` que es el nombre de la función, si existe.
+
+## <a name="remarks"></a>Notas
 
 Ciertos métodos como código auxiliar de IL o LCG no tienen metadatos asociados que se pueden recuperar mediante las API [IMetaDataImport](../metadata/imetadataimport-interface.md) y [IMetaDataImport2](../metadata/imetadataimport2-interface.md) . Estos métodos pueden ser detectados por los profileres a través de punteros de instrucción o escuchando [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).
 
 Esta API se puede usar para recuperar información acerca de los métodos dinámicos, incluido un nombre descriptivo, si está disponible.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
-**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: Corprof. idl, Corprof. h
+**Encabezado:** CorProf.idl, CorProf.h
 
-**Biblioteca** CorGuids.lib
+**Biblioteca:** CorGuids.lib
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework versiones:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Vea también
 
