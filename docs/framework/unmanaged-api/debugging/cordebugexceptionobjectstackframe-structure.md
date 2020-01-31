@@ -1,5 +1,5 @@
 ---
-title: CorDebugExceptionObjectStackFrame (Estructura)
+title: CorDebugExceptionObjectStackFrame (estructura)
 ms.date: 03/30/2017
 api_name:
 - CorDebugExceptionObjectStackFrame
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2845c15d67e287d6efb0cd0a9c940b69de3a1c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132170"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789377"
 ---
-# <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame (Estructura)
+# <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame (estructura)
 Representa información del marco de pila de un objeto de excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,19 +44,19 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |`methodDef`|El token del método para el marco actual.|  
 |`isLastForeignExceptionFrame`|Valor que indica si el marco es el último fotograma en una excepción externa.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El llamador debe liberar el puntero al objeto ICorDebugModule una vez que ya no esté en uso.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

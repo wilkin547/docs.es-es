@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00c9939b25f395010f6ea5832b405c3e9928a223
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131368"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792025"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable (Método)
 Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.  
@@ -34,14 +34,14 @@ HRESULT GetRegistersAvailable (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `numChunks`  
  [in] Tamaño de la matriz `availableRegChunks`.  
   
  `availableRegChunks`  
  enuncia Matriz de bytes, cada bit de la que corresponde a un registro. Si hay un registro disponible, se establece el bit correspondiente del registro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los valores de la enumeración CorDebugRegister (especifican los registros de distintos microprocesadores. Los cinco bits superiores de cada valor son el índice de la matriz `availableRegChunks` de bytes. Los tres bits inferiores de cada valor identifican la posición de bit dentro del byte indexado. Dado un valor `CorDebugRegister` que especifica un registro determinado, la posición del registro en la máscara se determina de la manera siguiente:  
   
 1. Extraiga el índice necesario para tener acceso al byte correcto en la matriz de `availableRegChunks`:  
@@ -52,16 +52,16 @@ HRESULT GetRegistersAvailable (
   
      `CorDebugRegister` valor & 7  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugRegisterSet2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [ICorDebugRegisterSet (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 (interfaz)](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet (interfaz)](icordebugregisterset-interface.md)
