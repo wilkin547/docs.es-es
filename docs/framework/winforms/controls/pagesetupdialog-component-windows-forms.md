@@ -19,12 +19,12 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 94626ff5d0d8625433f950528d65919023c0f853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 59c5599aa5d36e61b89e1a67ac3064d2c8358206
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744329"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868075"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog (Componente, formularios Windows Forms)
 El componente <xref:System.Windows.Forms.PageSetupDialog> de Windows Forms es un cuadro de diálogo preconfigurado que se usa para establecer los detalles de la página para imprimir en aplicaciones basadas en Windows. Úselo en su aplicación basada en Windows como una solución sencilla para que los usuarios establezcan preferencias de página en lugar de configurar su propio cuadro de diálogo. Puede permitir que los usuarios establezcan ajustes de borde y margen, encabezados y pies de página y orientación vertical frente a horizontal. Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.  
@@ -45,7 +45,5 @@ El componente <xref:System.Windows.Forms.PageSetupDialog> de Windows Forms es un
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
  [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)  
- Describe un conjunto de controles y componentes que permiten a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.  
-  
- [Código esencial para los cuadros de diálogo de Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Describe los componentes y controles de cuadros de diálogo de Windows Forms y el código necesario para ejecutar sus funciones básicas. (artículo técnico de MSDN Online Library)
+ Describe un conjunto de controles y componentes que permiten a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.
+ 
