@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue (Interfaz)
+title: Interfaz ICorDebugHeapValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: 4f87065fc4a3d80a8363f3ae2fbb76c29f3d9b96
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa31b8a6cc96935319e9bef3e561790b65e33a87
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138416"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777592"
 ---
-# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue (Interfaz)
+# <a name="icordebugheapvalue-interface"></a>Interfaz ICorDebugHeapValue
 
 Subclase de "ICorDebugValue" que representa un objeto recopilado por el recolector de elementos no utilizados de Common Language Runtime (CLR).  
   
@@ -29,23 +29,23 @@ Subclase de "ICorDebugValue" que representa un objeto recopilado por el recolect
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateRelocBreakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Sin implementar.|  
-|[IsValid (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Obtiene un valor que indica si el objeto representado por este `ICorDebugHeapValue` es válido o si lo ha reclamado el recolector de elementos no utilizados. Este método está en desuso en la versión .NET Framework 2,0.|  
+|[CreateRelocBreakpoint (método)](icordebugheapvalue-createrelocbreakpoint-method.md)|Sin implementar.|  
+|[IsValid (método)](icordebugheapvalue-isvalid-method.md)|Obtiene un valor que indica si el objeto representado por este `ICorDebugHeapValue` es válido o si lo ha reclamado el recolector de elementos no utilizados. Este método está en desuso en la versión .NET Framework 2,0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

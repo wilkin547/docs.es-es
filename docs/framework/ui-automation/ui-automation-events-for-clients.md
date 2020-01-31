@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741310"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778764"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventos de UI Automation para clientes
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "75741310"
  La eficacia también mejora gracias a la capacidad para realizar escuchas de eventos que solo se encuentran dentro de un ámbito definido. Por ejemplo, un cliente puede estar a la escucha de eventos de cambio de foco en todos los elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del árbol o solo en un elemento y sus descendientes.  
   
 > [!NOTE]
-> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad hacen que los proveedores de proxy estándar generen eventos para los controles de [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] y Win32.  
+> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad hacen que los proveedores de proxy estándar generen eventos para los controles de Windows Forms y Win32.  
   
  Para obtener una vista más amplia de los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [UI Automation Events Overview](ui-automation-events-overview.md).  
   

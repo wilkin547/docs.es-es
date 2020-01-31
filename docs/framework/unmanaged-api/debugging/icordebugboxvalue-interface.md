@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue (Interfaz)
+title: Interfaz ICorDebugBoxValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1ec54f4fe36aaf38d7c0ce0586733729bd2fddea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122806"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784465"
 ---
-# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue (Interfaz)
+# <a name="icordebugboxvalue-interface"></a>Interfaz ICorDebugBoxValue
 
 Subclase de "ICorDebugHeapValue" que representa un objeto de clase de valor con conversión boxing.  
   
@@ -29,22 +29,22 @@ Subclase de "ICorDebugHeapValue" que representa un objeto de clase de valor con 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetObject (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Obtiene un puntero de interfaz a la instancia "ICorDebugObjectValue" con conversión boxing.|  
+|[GetObject (método)](icordebugboxvalue-getobject-method.md)|Obtiene un puntero de interfaz a la instancia "ICorDebugObjectValue" con conversión boxing.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

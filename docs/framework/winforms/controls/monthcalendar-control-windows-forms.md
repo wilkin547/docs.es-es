@@ -1,5 +1,5 @@
 ---
-title: MonthCalendar (Control, formularios Windows Forms)
+title: Control MonthCalendar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar controls
@@ -7,39 +7,39 @@ helpviewer_keywords:
 - dates [Windows Forms], controls
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
-ms.openlocfilehash: 589eb55e001441230da3f8a0c5652c2a3dccb829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcc7b48a8d8a51fb83edf7529cdef987f28724dd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012755"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742171"
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar (Control, formularios Windows Forms)
-Los formularios de Windows `MonthCalendar` control presenta una interfaz gráfica intuitiva para los usuarios ver y establecer información de fecha. El control muestra una cuadrícula que contiene los días numerados del mes, organizados en columnas bajo los días de la semana. Puede seleccionar un mes distinto, haga clic en los botones de flecha a cada lado del título del mes. A diferencia de similar <xref:System.Windows.Forms.DateTimePicker> control, puede seleccionar un intervalo de fechas con este control; sin embargo, el <xref:System.Windows.Forms.DateTimePicker> control le permite establecer los tiempos de, así como las fechas.  
+El control Windows Forms `MonthCalendar` presenta una interfaz gráfica intuitiva para que los usuarios puedan ver y establecer la información de fecha. El control muestra una cuadrícula que contiene los días numerados del mes, organizados en columnas debajo de los días de la semana. Puede seleccionar un mes diferente haciendo clic en los botones de flecha situados a cada lado del título del mes. A diferencia del control de <xref:System.Windows.Forms.DateTimePicker> similar, puede seleccionar un intervalo de fechas con este control; sin embargo, el control <xref:System.Windows.Forms.DateTimePicker> permite establecer horas y fechas.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Introducción al control MonthCalendar](monthcalendar-control-overview-windows-forms.md)  
- Presenta los conceptos generales de la `MonthCalendar` control, que permite a los usuarios ver y establecer información de fecha para una aplicación.  
+ Presenta los conceptos generales del control `MonthCalendar`, que permite a los usuarios ver y establecer la información de fecha de una aplicación.  
   
- [Cómo: Cambiar la apariencia de Windows Forms MonthCalendar del Control](how-to-change-monthcalendar-control-appearance.md)  
- Describe cómo personalizar la apariencia de la `MonthCalendar` control.  
+ [Cambiar la apariencia del control MonthCalendar de formularios Windows Forms](how-to-change-monthcalendar-control-appearance.md)  
+ Describe cómo personalizar la apariencia del control `MonthCalendar`.  
   
- [Cómo: Mostrar más de un mes en el Control MonthCalendar de formularios de Windows](display-more-than-one-month-wf-monthcalendar-control.md)  
- Describe cómo configurar el `MonthCalendar` control para mostrar varios meses simultáneamente.  
+ [Mostrar más de un mes en el control MonthCalendar de formularios Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)  
+ Describe cómo configurar el control `MonthCalendar` para mostrar varios meses simultáneamente.  
   
- [Cómo: Mostrar días específicos en negrita con el Windows Forms Control MonthCalendar de formularios](display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
- Explica cómo establecer determinadas fechas se muestren en negrita.  
+ [Mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ Explica cómo establecer que determinadas fechas aparezcan en negrita.  
   
- [Cómo: Seleccione un intervalo de fechas en el Control MonthCalendar de formularios de Windows](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- Explica cómo seleccionar mediante programación un intervalo de fechas desde el `MonthCalendar` control.  
+ [Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ Explica cómo seleccionar mediante programación un intervalo de fechas en el control `MonthCalendar`.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.MonthCalendar>  
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
  [Control DateTimePicker](datetimepicker-control-windows-forms.md)  
- Describe un control similar a <xref:System.Windows.Forms.MonthCalendar>, aunque el <xref:System.Windows.Forms.DateTimePicker> control también le permite seleccionar un tiempo y no permite seleccionar un intervalo de fechas.
+ Describe un control similar a <xref:System.Windows.Forms.MonthCalendar>, aunque el control <xref:System.Windows.Forms.DateTimePicker> también permite seleccionar una hora y no permite seleccionar un intervalo de fechas.

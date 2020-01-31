@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: ab3819d5c33f090fda1ca9c3dccb5d08ab8f84cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131458"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793298"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification (Método)
 Proporciona una notificación de que la ejecución del código ha encontrado un asistente para la depuración administrada (MDA) en la aplicación que se está depurando.  
@@ -35,7 +35,7 @@ HRESULT MDANotification(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pController`  
  de Puntero a una interfaz ICorDebugController que expone el proceso o dominio de aplicación en el que se produjo el MDA.  
   
@@ -49,10 +49,10 @@ HRESULT MDANotification(
  Debe obtener el identificador del subproceso del sistema operativo (SO) del propio objeto MDA.  
   
  `pMDA`  
- de Puntero a una interfaz [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) que expone la información de MDA.  
+ de Puntero a una interfaz [ICorDebugMDA](icordebugmda-interface.md) que expone la información de MDA.  
   
-## <a name="remarks"></a>Comentarios  
- Un MDA es una advertencia heurística y no requiere ninguna acción explícita del depurador, salvo llamar a [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para reanudar la ejecución de la aplicación que se está depurando.  
+## <a name="remarks"></a>Notas  
+ Un MDA es una advertencia heurística y no requiere ninguna acción explícita del depurador, salvo llamar a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para reanudar la ejecución de la aplicación que se está depurando.  
   
  El Common Language Runtime (CLR) puede determinar qué MDA se activan y qué datos se encuentran en cualquier MDA determinado en cualquier momento. Por lo tanto, los depuradores no deben compilar ninguna funcionalidad que requiera patrones específicos de MDA.  
   
@@ -60,17 +60,17 @@ HRESULT MDANotification(
   
  Un depurador debe liberar la referencia a una instancia de `ICorDebugMDA` inmediatamente después de volver de la devolución de llamada `MDANotification`, para permitir que CLR recicle la memoria consumida por un MDA. Liberar la instancia puede mejorar el rendimiento si se activan muchos MDA.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [ICorDebugManagedCallback2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Diagnóstico de errores con asistentes para la depuración administrada](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2 (interfaz)](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)

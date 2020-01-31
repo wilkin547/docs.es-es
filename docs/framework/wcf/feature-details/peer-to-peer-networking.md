@@ -2,12 +2,12 @@
 title: Conexión de redes punto a punto
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 74566d7bc7c8d817cedb0ff6f64590ba827ed4c4
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2905a429e907f7e97c482c22229a6bc928c52243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837368"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744675"
 ---
 # <a name="peer-to-peer-networking"></a>Conexión de redes punto a punto
 El canal del mismo nivel es una tecnología de comunicación punto a punto (P2P) en Windows Communication Foundation (WCF). Proporciona un canal de comunicación P2P basado en mensajes seguros y escalables para los desarrolladores de aplicaciones. Un ejemplo común de una aplicación con varias partes que se puede beneficiar del canal del mismo nivel es el caso de una aplicación de colaboración, como el chat, donde un grupo de personas conversan entre ellas de igual a igual, sin necesidad de servidores. Peer Channel habilita la colaboración P2P la distribución del contenido, el equilibrio de la carga y el procesamiento distribuido de los escenarios de consumidor y empresa.  
@@ -27,4 +27,4 @@ El canal del mismo nivel es una tecnología de comunicación punto a punto (P2P)
  [Resolución del mismo nivel personalizada del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>Blog del equipo del canal del mismo nivel  
- [Blog del equipo de canal del mismo nivel](https://go.microsoft.com/fwlink/?LinkID=114530)
+ [Blog del equipo de canal del mismo nivel](https://docs.microsoft.com/archive/blogs/peerchan/)

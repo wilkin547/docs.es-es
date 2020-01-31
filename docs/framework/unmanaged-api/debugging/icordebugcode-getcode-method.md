@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 14a72e4622aac09840e43f8bcdcf8a8c8d6e6892
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125672"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777912"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode (Método)
-Obtiene todo el código para la función especificada, con formato de desensamblado. Este método está en desuso en la versión .NET Framework 2,0. Use [ICorDebugCode2:: getcodechunks (](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) en su lugar.  
+Obtiene todo el código para la función especificada, con formato de desensamblado. Este método está en desuso en la versión .NET Framework 2,0. Use [ICorDebugCode2:: getcodechunks (](icordebugcode2-getcodechunks-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ HRESULT GetCode (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `startOffset`  
  de Desplazamiento del principio de la función.  
   
@@ -54,10 +54,10 @@ HRESULT GetCode (
  `pcBufferSize`  
  enuncia Número de bytes devueltos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el código de la función se ha dividido en varios fragmentos, se concatenan en orden de desplazamiento nativo creciente. Los límites de la instrucción no se comprueban.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -68,4 +68,4 @@ HRESULT GetCode (
   
 ## <a name="see-also"></a>Vea también
 
-- [GetCodeChunks (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [GetCodeChunks (método)](icordebugcode2-getcodechunks-method.md)

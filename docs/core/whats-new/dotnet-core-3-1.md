@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936924"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742578"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novedades de .NET Core 3.1
 
 En este artículo se describen las novedades de .NET Core 3.1. Esta versión contiene ligeras mejoras de .NET Core 3.0, y se centra en pequeñas correcciones, pero importantes. La característica más importante sobre .NET Core 3.1 es que es una versión de [soporte técnico a largo plazo (LTS)](#long-term-support).
 
-Si usa Visual Studio 2019, debe actualizar a [Visual Studio 2019, versión 16.4](https://visualstudio.microsoft.com/downloads/) para trabajar con proyectos de .NET Core 3.1. Para más información sobre las novedades de Visual Studio, consulte el [blog de Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+Si usa Visual Studio 2019, debe actualizar a [Visual Studio 2019, versión 16.4](https://visualstudio.microsoft.com/downloads/) para trabajar con proyectos de .NET Core 3.1. Para obtener más información sobre las novedades de Visual Studio, vea [Novedades de Visual Studio 2019 versión 16.4](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164).
 
-Visual Studio para Mac también admite e incluye .NET Core 3.1 en el canal de la versión preliminar de Visual Studio para Mac 8.4. Deberá participar en el canal de versión preliminar para usar .NET Core 3.1.
+Visual Studio para Mac también admite e incluye .NET Core 3.1 en Visual Studio para Mac 8.4.
 
 Para más información sobre la versión, consulte el [anuncio de .NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -64,7 +64,7 @@ Se recomienda actualizar las aplicaciones a .NET Core 3.1 y pasar a los controle
 
 Se ha agregado compatibilidad con la creación de proyectos de C++/CLI (lo que también se conoce como "C++ administrado"). Los archivos binarios generados a partir de estos proyectos son compatibles con .NET Core 3.0 y versiones posteriores.
 
-Para agregar compatibilidad con C++/CLI en Visual Studio 2019 16.4, instale la [carga de trabajo Desarrollo para el escritorio con C++](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). Esta carga de trabajo agrega dos plantillas a Visual Studio:
+Para agregar compatibilidad con C++/CLI a Visual Studio 2019 versión 16.4, instale la [carga de trabajo Desarrollo para el escritorio con C++](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). Esta carga de trabajo agrega dos plantillas a Visual Studio:
 
 - Biblioteca de clases de CLR (.NET Core)
 - Proyecto vacío de CLR (.NET Core)
@@ -72,4 +72,4 @@ Para agregar compatibilidad con C++/CLI en Visual Studio 2019 16.4, instale la 
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Revise los cambios importantes entre .NET Core 3.0 y 3.1.](../compatibility/3.0-3.1.md)
-- [Revise los cambios importantes en .NET Core 3.1 para aplicaciones de Windows Forms.](../compatibility/winforms.md#net-core-31)
+- [Revise los cambios importantes de .NET Core 3.1 para aplicaciones de Windows Forms](../compatibility/winforms.md#net-core-31).

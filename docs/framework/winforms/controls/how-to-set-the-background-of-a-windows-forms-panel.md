@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer el fondo de un Panel de formularios Windows Forms
+title: para establecer el fondo de un control Panel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2619354403793aea7ca15d43649da9637079a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013184"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744743"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Procedimiento Establecer el fondo de un Panel de formularios Windows Forms
-Un formulario Windows Forms <xref:System.Windows.Forms.Panel> control puede mostrar un color de fondo y una imagen de fondo. El <xref:System.Windows.Forms.Control.BackColor%2A> propiedad establece el color de fondo para los controles contenidos, como etiquetas y botones de radio. Si el <xref:System.Windows.Forms.Control.BackgroundImage%2A> no se establece la propiedad, el <xref:System.Windows.Forms.Control.BackColor%2A> selección rellenará todo el panel. Si el <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad está establecida, la imagen se mostrará detrás de los controles contenidos.  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Cómo: Establecer el fondo de un control Panel de formularios Windows Forms
+Un control de <xref:System.Windows.Forms.Panel> de Windows Forms puede mostrar un color de fondo y una imagen de fondo. La propiedad <xref:System.Windows.Forms.Control.BackColor%2A> establece el color de fondo de los controles contenidos, como etiquetas y botones de radio. Si no se establece la propiedad <xref:System.Windows.Forms.Control.BackgroundImage%2A>, la selección de <xref:System.Windows.Forms.Control.BackColor%2A> llenará todo el panel. Si se establece la propiedad <xref:System.Windows.Forms.Control.BackgroundImage%2A>, la imagen se mostrará detrás de los controles contenidos.  
   
 ### <a name="to-set-the-background-programmatically"></a>Para establecer el fondo mediante programación  
   
-1. Establecer el panel <xref:System.Windows.Forms.Control.BackColor%2A> propiedad con un valor de tipo <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Establezca la propiedad <xref:System.Windows.Forms.Control.BackColor%2A> del panel en un valor de tipo <xref:System.Drawing.Color?displayProperty=nameWithType>.  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Un formulario Windows Forms <xref:System.Windows.Forms.Panel> control puede most
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. Establecer el panel <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad utilizando el <xref:System.Drawing.Image.FromFile%2A> método de la <xref:System.Drawing.Image?displayProperty=nameWithType> clase.  
+2. Establezca la propiedad <xref:System.Windows.Forms.Control.BackgroundImage%2A> del panel con el método <xref:System.Drawing.Image.FromFile%2A> de la clase <xref:System.Drawing.Image?displayProperty=nameWithType>.  
   
     ```vb  
     ' You should replace the bolded image   

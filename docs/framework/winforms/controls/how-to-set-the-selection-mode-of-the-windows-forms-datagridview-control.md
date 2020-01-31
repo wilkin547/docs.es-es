@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para establecer el modo de selección del control DataGridView de formularios Windows Forms
+title: Establecer el modo de selección del control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 22db5c1438405fc830202ec7baac6b6fcd631b41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da866aac3ac5b08a06ec71744aadb4260bd0cfc4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620798"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743501"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Procedimiento para establecer el modo de selección del control DataGridView de formularios Windows Forms
-En el ejemplo de código siguiente se muestra cómo se configura un <xref:System.Windows.Forms.DataGridView> control para que al hacer clic en cualquier lugar dentro de una fila automáticamente selecciona toda la fila y, por lo que se puede seleccionar que sólo una fila a la vez.  
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Cómo: Establecer el modelo de selección del control DataGridView de formularios Windows Forms
+En el ejemplo de código siguiente se muestra cómo configurar un control de <xref:System.Windows.Forms.DataGridView> para que al hacer clic en cualquier parte de una fila se seleccione automáticamente toda la fila, de modo que solo se pueda seleccionar una fila cada vez.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]

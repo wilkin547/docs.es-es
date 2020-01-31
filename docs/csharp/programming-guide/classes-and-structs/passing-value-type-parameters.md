@@ -5,15 +5,15 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: b6999c90bbe254542419232ab719a2754018d295
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 670af18d4b2b356aa33a0a03a29c05f5ba9bf78f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705462"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744497"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Pasar parámetros de tipo de valor (Guía de programación de C#)
-Una variable [tipo de valor](../../language-reference/keywords/value-types.md) contiene sus datos directamente, en oposición a la variable [tipo de referencia](../../language-reference/keywords/reference-types.md), que contiene una referencia a sus datos. Pasar una variable tipo de valor a un método en función del valor significa pasar una copia de la variable al método. Ningún cambio realizado en el parámetro dentro del método afecta a los datos originales almacenados en la variable de argumentos. Si desea que el método al que se llama cambie el valor del argumento, debe pasarlo en función de la referencia, con la palabra clave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). También puede usar la palabra clave [in](../../language-reference/keywords/in-parameter-modifier.md) para pasar un parámetro de valor por referencia para evitar la copia, a la vez que se asegura de que el valor no se modificará. Para simplificar, en el ejemplo siguiente se usa `ref`.  
+Una variable [tipo de valor](../../language-reference/builtin-types/value-types.md) contiene sus datos directamente, en oposición a la variable [tipo de referencia](../../language-reference/keywords/reference-types.md), que contiene una referencia a sus datos. Pasar una variable tipo de valor a un método en función del valor significa pasar una copia de la variable al método. Ningún cambio realizado en el parámetro dentro del método afecta a los datos originales almacenados en la variable de argumentos. Si desea que el método al que se llama cambie el valor del argumento, debe pasarlo en función de la referencia, con la palabra clave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). También puede usar la palabra clave [in](../../language-reference/keywords/in-parameter-modifier.md) para pasar un parámetro de valor por referencia para evitar la copia, a la vez que se asegura de que el valor no se modificará. Para simplificar, en el ejemplo siguiente se usa `ref`.  
   
 ## <a name="passing-value-types-by-value"></a>Pasar tipos de valor en función del valor  
  En el ejemplo siguiente se muestra cómo pasar los parámetros de tipo de valor en función del valor. La variable `n` se pasa en función del valor al método `SquareIt`. Los cambios que tienen lugar dentro del método no tienen ningún efecto en el valor original de la variable.  

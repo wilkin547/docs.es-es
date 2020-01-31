@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms
+title: Realizar una acción personalizada basada en cambios en la celda del control DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: 23753a2c0ceab9452bde24a1c56348eabf87d655
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a809134b0a79bc9685c5b84acce58b4c61b5c526
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654434"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744280"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Procedimiento para llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms
-El <xref:System.Windows.Forms.DataGridView> control tiene un número de eventos que puede usar para detectar cambios en el estado de <xref:System.Windows.Forms.DataGridView> celdas. Dos de los más usados son el <xref:System.Windows.Forms.DataGridView.CellValueChanged> y <xref:System.Windows.Forms.DataGridView.CellStateChanged> eventos.  
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Cómo: Llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms
+El control <xref:System.Windows.Forms.DataGridView> tiene varios eventos que se pueden utilizar para detectar cambios en el estado de <xref:System.Windows.Forms.DataGridView> celdas. Dos de las más utilizadas son los eventos <xref:System.Windows.Forms.DataGridView.CellValueChanged> y <xref:System.Windows.Forms.DataGridView.CellStateChanged>.  
   
 ### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>Para detectar cambios en los valores de las celdas de DataGridView  
   
-- Escribir un controlador para el <xref:System.Windows.Forms.DataGridView.CellValueChanged> eventos.  
+- Escriba un controlador para el evento <xref:System.Windows.Forms.DataGridView.CellValueChanged>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
 ### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>Para detectar cambios en los Estados de las celdas de DataGridView  
   
-- Escribir un controlador para el <xref:System.Windows.Forms.DataGridView.CellStateChanged> eventos.  
+- Escriba un controlador para el evento <xref:System.Windows.Forms.DataGridView.CellStateChanged>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
@@ -46,4 +46,4 @@ El <xref:System.Windows.Forms.DataGridView> control tiene un número de eventos 
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
 - [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Tutorial: Validar datos en el Control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Validar datos en el control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

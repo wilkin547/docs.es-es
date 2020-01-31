@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 74e9909fda83c781b5a15727f79ff755e7682b0f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8d9a23a0813423571c894758257b284ad67a72e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963124"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744649"
 ---
 # <a name="struct-c-reference"></a>struct (Referencia de C#)
 
@@ -48,11 +48,9 @@ Para obtener ejemplos, vea [Usar estructuras](../../programming-guide/classes-an
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
 - [Tabla de tipos integrados](built-in-types-table.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
-- [Tipos de valor](value-types.md)
+- [Tipos de valor](../builtin-types/value-types.md)
 - [class](class.md)
 - [interface](interface.md)
-- [Clases y structs](../../programming-guide/classes-and-structs/index.md)
+- [Clases y estructuras](../../programming-guide/classes-and-structs/index.md)

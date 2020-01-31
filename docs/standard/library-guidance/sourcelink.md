@@ -2,12 +2,12 @@
 title: SourceLink y bibliotecas de .NET
 description: Prácticas recomendadas para el uso de SourceLink para mejorar la depuración de las bibliotecas de .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706444"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744539"
 ---
 # <a name="source-link"></a>SourceLink
 
@@ -25,7 +25,7 @@ Puede usar el [Explorador de paquetes NuGet](https://github.com/NuGetPackageExpl
 
 ![SourceLink en el explorador de paquetes NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "SourceLink en el explorador de paquetes NuGet")
 
-**✔️ ES RECOMENDABLE** usar SourceLink para agregar metadatos de control de código fuente a los ensamblados y los paquetes NuGet.
+✔️ ES RECOMENDABLE usar SourceLink para agregar metadatos de control de código fuente a los ensamblados y los paquetes NuGet.
 
 > [!TIP]
 > Puede mejorar aún más la experiencia de depuración de los desarrolladores mediante la adición de atributos del depurador a los tipos.
@@ -34,7 +34,7 @@ Puede usar el [Explorador de paquetes NuGet](https://github.com/NuGetPackageExpl
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> indica al depurador que recorra el código en lugar de ejecutarlo paso a paso.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> controla si se muestra un miembro en las ventanas de variables del depurador.
 
-**✔️ CONSIDERE LA POSIBILIDAD DE** publicar archivos de símbolos (`*.pdb`).
+✔️ ES RECOMENDABLE publicar archivos de símbolos (`*.pdb`).
 
 > Para obtener la mejor experiencia de depuración, la biblioteca debe publicar archivos de símbolos, además de usar SourceLink. Para más información sobre los archivos de símbolos y los paquetes de símbolos, consulte [Paquetes de símbolos](./nuget.md#symbol-packages).
 

@@ -1,46 +1,46 @@
 ---
-title: Información general sobre SplitContainer (Control, formularios Windows Forms)
+title: Información general sobre el control SplitContainer
 ms.date: 03/30/2017
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 76299d9bbd2b3eac4e765dfacf579c9979721fff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5cb5240ed4ebe3e27c20844681068711c222e9a9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963205"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742924"
 ---
-# <a name="splitcontainer-control-overview-windows-forms"></a>Información general sobre SplitContainer (Control, formularios Windows Forms)
+# <a name="splitcontainer-control-overview-windows-forms"></a>Información general sobre SplitContainer (Control, Windows Forms)
 El control <xref:System.Windows.Forms.SplitContainer> de Windows Forms puede considerarse como una composición de dos paneles separados por una barra móvil. Cuando el puntero del mouse está sobre la barra, el puntero cambia de forma para mostrar que se puede mover.  
   
 > [!IMPORTANT]
-> En el **cuadro**de <xref:System.Windows.Forms.SplitContainer> herramientas, el <xref:System.Windows.Forms.Splitter> control reemplaza el control que estaba en la versión anterior de Visual Studio. El control <xref:System.Windows.Forms.SplitContainer> es mucho más preferible que el control <xref:System.Windows.Forms.Splitter>. La clase <xref:System.Windows.Forms.Splitter> aún se incluye en .NET Framework por motivos de compatibilidad con aplicaciones existentes, pero es muy recomendable que use el control <xref:System.Windows.Forms.SplitContainer> en los nuevos proyectos.  
+> En el **cuadro de herramientas**, <xref:System.Windows.Forms.SplitContainer> control reemplaza el control <xref:System.Windows.Forms.Splitter> que estaba en la versión anterior de Visual Studio. El control <xref:System.Windows.Forms.SplitContainer> es mucho más preferible que el control <xref:System.Windows.Forms.Splitter>. La clase <xref:System.Windows.Forms.Splitter> aún se incluye en .NET Framework por motivos de compatibilidad con aplicaciones existentes, pero es muy recomendable que use el control <xref:System.Windows.Forms.SplitContainer> en los nuevos proyectos.  
   
- Con el <xref:System.Windows.Forms.SplitContainer> control, puede crear interfaces de usuario complejas; a menudo, una selección en un panel determina qué objetos se muestran en el otro panel. Esta organización es muy eficaz para mostrar y explorar información. Tener dos paneles le permite agregar información en áreas, y la barra, o "divisor", facilita a los usuarios cambiar el tamaño de los paneles.  
+ Con el control de <xref:System.Windows.Forms.SplitContainer>, puede crear interfaces de usuario complejas. a menudo, una selección en un panel determina qué objetos se muestran en el otro panel. Esta organización es muy eficaz para mostrar y explorar información. Tener dos paneles le permite agregar información en áreas, y la barra, o "divisor", facilita a los usuarios cambiar el tamaño de los paneles.  
   
- También se puede <xref:System.Windows.Forms.SplitContainer> anidar más de un control, con el segundo <xref:System.Windows.Forms.SplitContainer> control orientado horizontalmente, para crear paneles superiores e inferiores.  
+ También se puede anidar más de un control <xref:System.Windows.Forms.SplitContainer>, con el segundo control de <xref:System.Windows.Forms.SplitContainer> orientado horizontalmente, para crear paneles superiores e inferiores.  
   
- Tenga en cuenta que <xref:System.Windows.Forms.SplitContainer> el control es accesible desde el teclado de forma predeterminada; los usuarios pueden presionar las teclas de dirección para <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> desplace el divisor si la propiedad está establecida en `false`.  
+ Tenga en cuenta que el control <xref:System.Windows.Forms.SplitContainer> es accesible desde el teclado de forma predeterminada; los usuarios pueden presionar las teclas de dirección para desplace el divisor si la propiedad <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> está establecida en `false`.  
   
- La <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad<xref:System.Windows.Forms.SplitContainer> del control determina la dirección del divisor, no del propio control. Por lo tanto, cuando esta propiedad se <xref:System.Windows.Forms.Orientation.Vertical>establece en, el divisor se ejecuta de arriba abajo y se crean los paneles izquierdo y derecho.  
+ La propiedad <xref:System.Windows.Forms.SplitContainer.Orientation%2A> del control <xref:System.Windows.Forms.SplitContainer> determina la dirección del divisor, no del propio control. Por lo tanto, cuando esta propiedad se establece en <xref:System.Windows.Forms.Orientation.Vertical>, el divisor se ejecuta de arriba abajo y se crean los paneles izquierdo y derecho.  
   
- Además, tenga en cuenta que el valor de <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> la propiedad varía en función del valor de la <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad. Para obtener más información, <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> vea Property.  
+ Además, tenga en cuenta que el valor de la propiedad <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> varía en función del valor de la propiedad <xref:System.Windows.Forms.SplitContainer.Orientation%2A>. Para obtener más información, vea <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> propiedad.  
   
- También puede restringir el tamaño y el movimiento del <xref:System.Windows.Forms.SplitContainer> control. La <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> propiedad determina qué panel permanecerá en el mismo tamaño después <xref:System.Windows.Forms.SplitContainer> de cambiar el tamaño del control y la <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propiedad determina si el separador es movible mediante el teclado o el mouse.  
+ También puede restringir el tamaño y el movimiento del control de <xref:System.Windows.Forms.SplitContainer>. La propiedad <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> determina qué panel permanecerá en el mismo tamaño después de cambiar el tamaño del control <xref:System.Windows.Forms.SplitContainer>, y la propiedad <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> determina si el separador es movible por el teclado o el mouse.  
   
 > [!NOTE]
-> Incluso si la <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propiedad está establecida en `true`, el divisor todavía puede moverse mediante programación; por ejemplo, mediante la <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propiedad.  
+> Aunque la propiedad <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> esté establecida en `true`, el divisor todavía puede moverse mediante programación; por ejemplo, mediante el uso de la propiedad <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>.  
   
- Por último, cada panel del <xref:System.Windows.Forms.SplitContainer> control tiene propiedades para determinar su tamaño individual.  
+ Por último, cada panel del control <xref:System.Windows.Forms.SplitContainer> tiene propiedades para determinar su tamaño individual.  
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Propiedades, métodos y eventos de uso común  
   
-|NOMBRE|DESCRIPCIÓN|  
+|Name|Descripción|  
 |----------|-----------------|  
-|Propiedad<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina qué panel permanecerá en el mismo tamaño después <xref:System.Windows.Forms.SplitContainer> de cambiar el tamaño del control.|  
+|Propiedad<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina qué panel permanecerá en el mismo tamaño después de cambiar el tamaño del control <xref:System.Windows.Forms.SplitContainer>.|  
 |Propiedad<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina si el divisor se puede moverse con el teclado o el mouse.|  
 |Propiedad<xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Determina si el divisor está organizado vertical u horizontalmente.|  
 |Propiedad<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distancia en píxeles desde el borde izquierdo o superior hasta la barra divisora movible.|  

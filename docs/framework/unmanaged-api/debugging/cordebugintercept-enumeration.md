@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 144bdb1b4e479c1e75f89911ad5002e2650e405d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ce48b63a92e84ce92da0dcf35a6242744c1a8c3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098121"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778419"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept (Enumeración)
 Indica los tipos de código que se pueden interceptar, es decir, ejecutar paso a paso.  
@@ -47,21 +47,21 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_EXCEPTION_FILTER`|Se puede interceptar un filtro de excepción.|  
 |`INTERCEPT_SECURITY`|Se puede interceptar código que exija seguridad.|  
 |`INTERCEPT_CONTEXT_POLICY`|Se puede interceptar una directiva de contexto.|  
-|`INTERCEPT_INTERCEPTION`|No se utiliza.|  
+|`INTERCEPT_INTERCEPTION`|No usado.|  
 |`INTERCEPT_ALL`|Se puede interceptar todo el código.|  
   
-## <a name="remarks"></a>Comentarios  
- Use el método [ICorDebugStepper:: setinterceptmask (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) para establecer los tipos de código que se pueden interceptar.  
+## <a name="remarks"></a>Notas  
+ Use el método [ICorDebugStepper:: setinterceptmask (](icordebugstepper-setinterceptmask-method.md) para establecer los tipos de código que se pueden interceptar.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumeraciones de depuración](debugging-enumerations.md)

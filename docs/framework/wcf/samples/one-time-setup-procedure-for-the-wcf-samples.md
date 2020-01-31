@@ -2,12 +2,12 @@
 title: Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544668"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744776"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 
@@ -24,7 +24,7 @@ El directorio virtual **ServiceModelSamples** se utiliza para compilar y ejecuta
 
 2. Asegúrese de que .NET Framework 4 está instalado. Busque en el siguiente directorio v 4.0 (o posterior): **\Windows\Microsoft.NET\Framework**
 
-3. Si Visual Studio 2012 no está instalado y el sistema operativo no es Windows Server 2008 SP2 o posterior, instale la [revisión 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
+3. Asegúrese de que tiene instalado Visual Studio 2012 o posterior, o bien que el sistema operativo es Windows Server 2008 SP2 o posterior.
 
 4. Ejecute los siguientes comandos. Para obtener más información sobre por qué se deben ejecutar estos comandos, vea el [servicio hospedado de IIS produce un error](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear un borde alrededor de un control de formularios Windows Forms con relleno
+title: Crear borde alrededor de un control mediante relleno
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 114186ab5784cf892cb01e9fe2648ce22cecc4b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746898"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742187"
 ---
-# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Procedimiento para crear un borde alrededor de un control de formularios Windows Forms con relleno
-En el ejemplo de código siguiente se muestra cómo crear un borde o describir en torno a un <xref:System.Windows.Forms.RichTextBox> control. El ejemplo establece el valor de un <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Padding> propiedad en 5 y establece el <xref:System.Windows.Forms.Control.Dock%2A> propiedad de un elemento secundario <xref:System.Windows.Forms.RichTextBox> el control a <xref:System.Windows.Forms.DockStyle.Fill>. El <xref:System.Windows.Forms.Control.BackColor%2A> de la <xref:System.Windows.Forms.Panel> control está establecido en <xref:System.Drawing.Color.Blue%2A>, que crea un borde azul alrededor del <xref:System.Windows.Forms.RichTextBox> control.  
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Cómo: Crear un borde alrededor de un control de formularios Windows Forms con relleno
+En el ejemplo de código siguiente se muestra cómo crear un borde o un contorno alrededor de un control de <xref:System.Windows.Forms.RichTextBox>. En el ejemplo se establece el valor de la propiedad <xref:System.Windows.Forms.Padding> de un control <xref:System.Windows.Forms.Panel> en 5 y se establece la propiedad <xref:System.Windows.Forms.Control.Dock%2A> de un control <xref:System.Windows.Forms.RichTextBox> secundario en <xref:System.Windows.Forms.DockStyle.Fill>. El <xref:System.Windows.Forms.Control.BackColor%2A> del control <xref:System.Windows.Forms.Panel> se establece en <xref:System.Drawing.Color.Blue%2A>, que crea un borde azul alrededor del control <xref:System.Windows.Forms.RichTextBox>.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]

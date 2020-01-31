@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 46c8b3fb2c9e7c353f74ef589e21f2a61df618fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130694"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777312"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch (Método)
 Notifica al depurador que un subproceso administrado Common Language Runtime (CLR) ha llamado a un método en la clase <xref:System.Diagnostics.Switch> para crear, modificar o eliminar un modificador de depuración o traza.  
@@ -37,7 +37,7 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `PAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado que creó, modificó o eliminó un modificador de depuración/seguimiento.  
   
@@ -48,7 +48,7 @@ HRESULT LogSwitch (
  de Valor que indica el nivel de gravedad del mensaje descriptivo que se escribió en el registro de eventos.  
   
  `ulReason`  
- de Un valor de la enumeración [logswitchcallreason (](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) que indica la operación realizada en el modificador de depuración/seguimiento.  
+ de Un valor de la enumeración [logswitchcallreason (](logswitchcallreason-enumeration.md) que indica la operación realizada en el modificador de depuración/seguimiento.  
   
  `pLogSwitchName`  
  de Puntero al nombre del modificador de depuración/seguimiento.  
@@ -56,15 +56,15 @@ HRESULT LogSwitch (
  `pParentName`  
  de Puntero al nombre del elemento primario del modificador de depuración/seguimiento.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Información general sobre pinceles de WPF
+title: Información general sobre pinceles
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458625"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746208"
 ---
 # <a name="wpf-brushes-overview"></a>Información general sobre pinceles de WPF
 Todo lo que está visible en la pantalla es visible porque lo ha pintado un pincel. Por ejemplo, se usa un pincel para describir el fondo de un botón, el primer plano del texto y el relleno de una forma. En este tema se presentan los conceptos del dibujo con pinceles de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y se proporcionan ejemplos. Los pinceles permiten pintar objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con cualquier cosa, desde colores simples y sólidos hasta conjuntos complejos de patrones e imágenes.  
@@ -153,7 +153,7 @@ Rectángulo pintado mediante VisualBrush
  Dado que se <xref:System.Windows.Media.Animation.Animatable> objetos, se pueden animar <xref:System.Windows.Media.Brush> objetos. Para obtener más información, consulte [Información general sobre animaciones](animation-overview.md).  
   
 <a name="freezable_features"></a>   
-### <a name="freezable-features"></a>Características de los objetos Freezable  
+### <a name="freezable-features"></a>Características de objeto Freezable  
  Dado que hereda de la clase <xref:System.Windows.Freezable>, la clase <xref:System.Windows.Media.Brush> proporciona varias características especiales: los objetos <xref:System.Windows.Media.Brush> se pueden declarar como [recursos](../../../desktop-wpf/fundamentals/xaml-resources-define.md), compartirse entre varios objetos y clonados. Además, todos los tipos de <xref:System.Windows.Media.Brush> excepto <xref:System.Windows.Media.VisualBrush> se pueden convertir en de solo lectura para mejorar el rendimiento y hacerlos seguros para subprocesos.  
   
  Para obtener más información sobre las distintas características proporcionadas por <xref:System.Windows.Freezable> objetos, vea [información general sobre objetos Freezable](../advanced/freezable-objects-overview.md).  

@@ -3,12 +3,12 @@ title: Infraestructura de comunicación de la malla de servicio
 description: Más información sobre cómo las tecnologías de la malla de servicio simplifican la comunicación de microservicios nativa en la nube
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "73841286"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76780930"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infraestructura de comunicación de la malla de servicio
 
@@ -74,4 +74,4 @@ A continuación, nos trasladamos a los datos distribuidos en los sistemas nativo
 
 >[!div class="step-by-step"]
 >[Anterior](rest-grpc.md)
->[Siguiente](distributed-data.md)
+>[Siguiente](Database-per-microservice.md)

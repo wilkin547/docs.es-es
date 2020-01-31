@@ -1,5 +1,5 @@
 ---
-title: Información general sobre la representación de gráficos en WPF
+title: Información general sobre la representación de gráficos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004167"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744808"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Información general sobre la representación de gráficos en WPF
 En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se centra en el rol de la clase <xref:System.Windows.Media.Visual> para la compatibilidad de representación en el modelo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -38,7 +38,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
 - Control de eventos  
   
-- Diseño  
+- Presentación  
   
 - Estilos  
   
@@ -51,7 +51,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
  ![Diagrama de clases derivadas del objeto Visual](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>Clase DrawingVisual  
- El <xref:System.Windows.Media.DrawingVisual> es una clase de dibujo ligera que se utiliza para representar formas, imágenes o texto. Esta clase se considera ligera porque no proporciona control de diseño ni control de eventos, lo que mejora su rendimiento en tiempo de ejecución. Por esta razón, los dibujos son ideales para fondos e imágenes prediseñadas. El <xref:System.Windows.Media.DrawingVisual> se puede usar para crear un objeto visual personalizado. Para obtener más información, consulte [Usar objetos DrawingVisual](using-drawingvisual-objects.md).  
+ El <xref:System.Windows.Media.DrawingVisual> es una clase de dibujo ligera que se utiliza para representar formas, imágenes o texto. Esta clase se considera ligera porque no proporciona control de diseño ni control de eventos, lo que mejora su rendimiento en tiempo de ejecución. Por esta razón, los dibujos son ideales para fondos e imágenes prediseñadas. El <xref:System.Windows.Media.DrawingVisual> se puede usar para crear un objeto visual personalizado. Para más información, consulte [Usar objetos DrawingVisual](using-drawingvisual-objects.md).  
   
 ### <a name="viewport3dvisual-class"></a>Clase Viewport3DVisual  
  El <xref:System.Windows.Media.Media3D.Viewport3DVisual> proporciona un puente entre los objetos 2D <xref:System.Windows.Media.Visual> y <xref:System.Windows.Media.Media3D.Visual3D>. La clase <xref:System.Windows.Media.Media3D.Visual3D> es la clase base para todos los elementos visuales 3D. El <xref:System.Windows.Media.Media3D.Viewport3DVisual> requiere que defina un valor <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> y un valor <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>. La cámara permite ver la escena. La ventanilla establece el lugar en que se asigna la proyección a la superficie 2D. Para más información acerca de 3D en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Información general sobre gráficos 3D](3-d-graphics-overview.md).  
@@ -78,7 +78,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
  En la ilustración siguiente se muestra el orden en que se aplican las operaciones de <xref:System.Windows.Media.DrawingGroup> durante la secuencia de representación.  
   
  ![Orden de las operaciones de DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
-Orden de operaciones de DrawingGroup  
+Orden de las operaciones de DrawingGroup  
   
  Para más información, consulte [Información general sobre objetos Drawing](drawing-objects-overview.md).  
   
@@ -167,7 +167,7 @@ Diagrama de árbol lógico
   
  El árbol visual y el árbol lógico se sincronizan con el conjunto actual de elementos de la aplicación, que refleja cualquier adición, eliminación o modificación de elementos. Sin embargo, los árboles presentan distintas vistas de la aplicación. A diferencia del árbol visual, el árbol lógico no expande el elemento <xref:System.Windows.Controls.ContentPresenter> de un control. Esto significa que no hay una correspondencia uno a uno directa entre un árbol lógico y un árbol visual del mismo conjunto de objetos. De hecho, al invocar el método <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> del objeto **LogicalTreeHelper** y el método <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> del objeto **VisualTreeHelper** con el mismo elemento que un parámetro, se generan resultados diferentes.  
   
- Para obtener más información sobre el árbol lógico, consulte [Árboles en WPF](../advanced/trees-in-wpf.md).  
+ Para más información acerca del árbol lógico, consulte [Árboles en WPF](../advanced/trees-in-wpf.md).  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Visualización del árbol visual con XamlPad  
  La herramienta de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XamlPad, proporciona una opción para ver y explorar el árbol visual que corresponde al contenido XAML definido actualmente. Haga clic en el botón **Show Visual Tree** (Mostrar árbol visual) de la barra de menús para mostrar el árbol visual. A continuación se muestra la expansión de contenido XAML en nodos de árbol visual en el panel del **Explorador de árbol visual** de XamlPad:  
@@ -179,7 +179,7 @@ Diagrama de árbol lógico
 ### <a name="profiling-visual-performance"></a>Generación de perfiles de rendimiento visual  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece un conjunto de herramientas de generación de perfiles de rendimiento que le permiten analizar el comportamiento en tiempo de ejecución de la aplicación y determinar los tipos de optimizaciones de rendimiento que puede aplicar. La herramienta Generador de perfiles visuales proporciona una vista gráfica completa de los datos de rendimiento mediante la asignación al árbol visual de la aplicación. En esta captura de pantalla, la sección **Uso de CPU** del generador de perfiles visuales proporciona un desglose preciso del uso que un objeto realiza de los servicios de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como la representación y el diseño.  
   
- ![Muestra de salida de Visual Profiler](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Resultados del generador de perfiles visuales](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Resultados del generador de perfiles visuales  
   
 <a name="visual_rendering_behavior"></a>   
@@ -220,7 +220,7 @@ Resultados del generador de perfiles visuales
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite el escalado automático mediante el uso del píxel independiente del dispositivo como unidad de medida principal, en lugar de los píxeles de hardware; tanto el texto como los gráficos se escalan correctamente sin que el desarrollador de la aplicación tenga que realizar ningún trabajo adicional. La siguiente ilustración muestra un ejemplo de cómo aparecen tanto el texto como los gráficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con diferentes configuraciones de PPP.  
   
- ![Gráficos y texto con diferentes configuraciones de ppp](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![Gráficos y texto con diferentes configuraciones de PPP](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Gráficos y texto con diferentes configuraciones de PPP  
   
 <a name="visualtreehelper_class"></a>   
@@ -240,7 +240,7 @@ Gráficos y texto con diferentes configuraciones de PPP
  [!code-csharp[VisualsOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[VisualsOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- En la mayoría de los casos, el árbol lógico es una representación más útil de los elementos de una aplicación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aunque no se modifique directamente el árbol lógico, esta vista de la aplicación es útil para entender la herencia de propiedades y el enrutamiento de eventos. A diferencia del árbol visual, el árbol lógico puede representar objetos de datos no visuales, como <xref:System.Windows.Documents.ListItem>. Para obtener más información sobre el árbol lógico, consulte [Árboles en WPF](../advanced/trees-in-wpf.md).  
+ En la mayoría de los casos, el árbol lógico es una representación más útil de los elementos de una aplicación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aunque no se modifique directamente el árbol lógico, esta vista de la aplicación es útil para entender la herencia de propiedades y el enrutamiento de eventos. A diferencia del árbol visual, el árbol lógico puede representar objetos de datos no visuales, como <xref:System.Windows.Documents.ListItem>. Para más información acerca del árbol lógico, consulte [Árboles en WPF](../advanced/trees-in-wpf.md).  
   
  La clase <xref:System.Windows.Media.VisualTreeHelper> proporciona métodos para devolver el rectángulo delimitador de objetos visuales. Puede devolver el rectángulo delimitador de un objeto visual llamando a <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>. Puede devolver el rectángulo delimitador de todos los descendientes de un objeto visual, incluido el propio objeto visual, llamando a <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>. El código siguiente muestra cómo se calcularía el rectángulo delimitador de un objeto visual y todos sus descendientes.  
   

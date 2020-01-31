@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para obtener acceso a objetos enlazados a filas DataGridView de formularios Windows Forms
+title: para acceder a objetos enlazados a filas DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: 244047f27b0eb109aba599bd26881046eb538163
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b9a4becb78ae817141728467c1e9ea5b693476d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582622"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743167"
 ---
-# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Procedimiento para obtener acceso a objetos enlazados a filas DataGridView de formularios Windows Forms
+# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Cómo: Obtener acceso a objetos enlazados a filas DataGridView de formularios Windows Forms
 A veces resulta útil mostrar una tabla de información almacenada en una colección de objetos comerciales. Al enlazar un control <xref:System.Windows.Forms.DataGridView> a este tipo de colección, cada propiedad pública se muestra en su propia columna a menos que la propiedad se haya marcado como no examinable con un <xref:System.ComponentModel.BrowsableAttribute>. Por ejemplo, una colección de objetos `Customer` tendría columnas como **Nombre** y **Dirección**.  
   
  Si estos objetos contienen información adicional y código al que quiere acceder, puede llegar a él a través de los objetos de fila. En el siguiente ejemplo de código, los usuarios pueden seleccionar varias filas y hacer clic en un botón para enviar una factura a cada uno de los clientes correspondientes.  
@@ -45,4 +45,4 @@ A veces resulta útil mostrar una tabla de información almacenada en una colecc
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
 - [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Enlazar objetos a controles DataGridView de formularios Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [Cómo: Enlazar objetos a controles DataGridView de Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Hospedar un control compuesto 3 D de WPF en Windows Forms'
+title: Control compuesto de WPF en 3D de host en Windows Forms
+titleSuffix: ''
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 07222809d62b207730ddad3c87b8fb60e1602bc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976553"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744454"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Tutorial: Hospedar un control compuesto 3 D de WPF en Windows Forms
+# <a name="walkthrough-host-a-3d-wpf-composite-control-in-windows-forms"></a>Tutorial: hospedar un control compuesto de WPF en 3D en Windows Forms
 
 En este tutorial se muestra cómo se puede crear un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control compuesto y hospedarlo en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles y formularios mediante el control <xref:System.Windows.Forms.Integration.ElementHost>.
 
@@ -46,7 +47,7 @@ Necesita los componentes siguientes para completar este tutorial:
 
      [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
-     Este código define una <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> que contiene dos controles secundarios. El primer control secundario es un control de <xref:System.Windows.Controls.Label?displayProperty=nameWithType>; la segunda es un control <xref:System.Windows.Controls.Viewport3D> que muestra un cono 3D.
+     Este código define una <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> que contiene dos controles secundarios. El primer control secundario es un control de <xref:System.Windows.Controls.Label?displayProperty=nameWithType>; el segundo es un control <xref:System.Windows.Controls.Viewport3D> que muestra un cono 3D.
 
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>Crear el proyecto de host

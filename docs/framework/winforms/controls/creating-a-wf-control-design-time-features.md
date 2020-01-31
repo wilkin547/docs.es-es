@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un control de formularios Windows Forms que aproveche las características en tiempo de diseño de Visual Studio'
+title: Crear un control que aproveche las características en tiempo de diseño de Visual Studio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459522"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744076"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Tutorial: crear un control que aproveche las características de tiempo de diseño
 
@@ -120,13 +120,13 @@ Asocie el control a su diseñador mediante la clase <xref:System.ComponentModel.
 
 3. Cambie la declaración de `DemoMarqueeControl` para que hereden de la clase `MarqueeControl`.
 
-4. Compile el proyecto.
+4. Generar el proyecto.
 
 5. Abra Form1 en el Diseñador de Windows Forms.
 
 6. Busque la pestaña **componentes de MarqueeControlTest** en el cuadro de **herramientas** y ábrala. Arrastre un `DemoMarqueeControl` desde el **cuadro de herramientas** hasta el formulario.
 
-7. Compile el proyecto.
+7. Generar el proyecto.
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Configurar el proyecto para la depuración en tiempo de diseño
 

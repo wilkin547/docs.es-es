@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para enlazar un control de formularios Windows Forms a un tipo
+title: Enlazar el control a un tipo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: ab088e3f34f3f03be2073864a440006259fe5679
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc1f92ee8922990bd0e461655168f5618ba39a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591332"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744990"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Procedimiento para enlazar un control de formularios Windows Forms a un tipo
+# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Cómo: Enlazar un control de Windows Forms a un tipo
 Al crear controles que interactúan con datos, a veces necesitará enlazar un control a un tipo en lugar de a un objeto. Estas situaciones se producen especialmente en tiempo de diseño, cuando puede que los datos no estén disponibles pero los controles enlazados a datos necesitan mostrar la información de una interfaz pública del tipo. Por ejemplo, puede enlazar un control <xref:System.Windows.Forms.DataGridView> a un objeto expuesto por un servicio Web y quiere que el control <xref:System.Windows.Forms.DataGridView> etiquete sus columnas en tiempo de diseño con los nombres de miembro de un tipo personalizado.  
   
  Puede enlazar fácilmente un control a un tipo con el componente <xref:System.Windows.Forms.BindingSource>.  

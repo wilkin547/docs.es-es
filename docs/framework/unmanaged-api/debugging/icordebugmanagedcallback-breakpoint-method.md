@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac91a9c662a82c5ab870d01cb4b5d87c7af6b6ba
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122599"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782075"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint (Método)
 Notifica al depurador cuando se encuentra un punto de interrupción.  
@@ -35,7 +35,7 @@ HRESULT Breakpoint (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el punto de interrupción.  
   
@@ -45,15 +45,15 @@ HRESULT Breakpoint (
  `pBreakpoint`  
  de Un puntero a un objeto ICorDebugBreakpoint que representa el punto de interrupción.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)

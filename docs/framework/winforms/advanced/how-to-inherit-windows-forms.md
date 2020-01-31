@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para heredar formularios Windows Forms
+title: Herencia de formularios
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 402386e16687162e25e16e5c30c787f7e721fbba
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: cc3a4cc75fd13e8f193a6920ed5b4a9bc8fd5d74
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306371"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743320"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Procedimiento para heredar formularios Windows Forms
+# <a name="how-to-inherit-windows-forms"></a>Cómo: Heredar formularios Windows Forms
 
 Crear nuevos Windows Forms heredando de formularios base es una forma práctica de aprovechar el trabajo ya hecho sin tener que pasar por todo el proceso de crear un formulario cada vez que lo necesite.
 
-Para obtener más información acerca de la herencia de formularios en tiempo de diseño mediante el cuadro de diálogo **selector de herencia** y cómo distinguir visualmente los niveles de seguridad [de los controles heredados, consulte How to: Heredar formularios mediante el cuadro](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)de diálogo Selector de herencia.
+Para más información acerca de la herencia de formularios en tiempo de diseño mediante el cuadro de diálogo **Selector de herencia**, y cómo distinguir visualmente los niveles de seguridad de los controles heredados, vea [Cómo: Heredar formularios mediante el cuadro de diálogo Selector de herencia](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).
 
 > [!NOTE]
 > Para poder heredar de un formulario, el archivo o espacio de nombres que contiene ese formulario debe haberse compilado en un archivo ejecutable o DLL. Para compilar el proyecto, elija **Compilar** en el menú **Compilar**. Además, debe agregarse una referencia al espacio de nombres a la clase que hereda el formulario.

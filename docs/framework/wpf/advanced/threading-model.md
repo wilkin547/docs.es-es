@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740270"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794270"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de los desarrolladores de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no tendrán que escribir una interfaz que use más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.
@@ -177,7 +177,7 @@ ms.locfileid: "75740270"
 
  `GetWeatherAsync` usaría una de las técnicas descritas anteriormente, como la creación de un subproceso en segundo plano, para hacer el trabajo de forma asincrónica, sin bloquear el subproceso de llamada.
 
- Una de las partes más importantes de este patrón es llamar al método *methodname*`Completed` en el mismo subproceso que llamó al método *MethodName*`Async` para comenzar. Para ello, puede usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bastante fácilmente, mediante el almacenamiento de <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, pero el componente no gráfico solo se puede usar en aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], no en programas de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o ASP.NET.
+ Una de las partes más importantes de este patrón es llamar al método *methodname*`Completed` en el mismo subproceso que llamó al método *MethodName*`Async` para comenzar. Para ello, puede usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bastante fácilmente, mediante el almacenamiento de <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, pero el componente no gráfico solo se puede usar en aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], no en programas de Windows Forms o ASP.NET.
 
  La clase <xref:System.Windows.Threading.DispatcherSynchronizationContext> se redirige a esta necesidad, piense en ello como una versión simplificada de <xref:System.Windows.Threading.Dispatcher> que también funciona con otros marcos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].
 

@@ -1,17 +1,17 @@
 ---
-title: Ejemplos de WPF
+title: Los ejemplos de
 ms.date: 11/02/2017
 helpviewer_keywords:
 - WPF samples [WPF]
 - samples [WPF]
 ms.assetid: 1fc53e12-dfe5-476e-be13-fc3714aaf640
-ms.openlocfilehash: fc4eb03e0488994d9e17337e56b8fa0ecbd62b56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebc2b9b2f2b6368f7d061059f57f578df20638fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696098"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743305"
 ---
 # <a name="wpf-samples"></a>Ejemplos de WPF
 
-Para obtener ejemplos que muestran cómo Windows Presentation Foundation (WPF), consulte el [repositorio Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples) en GitHub.
+Para obtener ejemplos que muestran Windows Presentation Foundation (WPF), vea el [repositorio Microsoft/WPF-samples](https://github.com/Microsoft/WPF-Samples) en github.

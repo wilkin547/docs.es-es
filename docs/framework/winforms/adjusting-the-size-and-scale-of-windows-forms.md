@@ -1,23 +1,23 @@
 ---
-title: Ajustar el tamaño y la escala de Windows Forms
+title: Ajustar el tamaño y la escala
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms, changing size
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: 1334d87b3c911edc6a416ca004581025b0de8fb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db82e290de93fb24ccd4f3a504fe8fdfba3b2e1b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916732"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739791"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Ajustar el tamaño y la escala de Windows Forms
 Este tema proporciona vínculos a información acerca de cómo cambiar el tamaño de Windows Forms.  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo: Cambiar el tamaño de Windows Forms](how-to-resize-windows-forms.md)  
+## <a name="in-this-section"></a>Esta sección  
+ [Cambiar el tamaño de Windows Forms](how-to-resize-windows-forms.md)  
  Proporciona instrucciones para especificar el tamaño de Windows Forms.  
   
  [Ajuste automático de escala en Windows Forms](automatic-scaling-in-windows-forms.md)  
