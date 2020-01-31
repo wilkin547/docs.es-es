@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06c08499298656c8314d72667d9dac88c8d11e6a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130650"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788343"
 ---
-# <a name="icordebugmanagedcallbackunloadassembly-method"></a><span data-ttu-id="ac263-102">ICorDebugManagedCallback::UnloadAssembly (Método)</span><span class="sxs-lookup"><span data-stu-id="ac263-102">ICorDebugManagedCallback::UnloadAssembly Method</span></span>
-<span data-ttu-id="ac263-103">Notifica al depurador que se ha descargado un ensamblado de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="ac263-103">Notifies the debugger that a common language runtime assembly has been unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadassembly-method"></a><span data-ttu-id="c9406-102">ICorDebugManagedCallback::UnloadAssembly (Método)</span><span class="sxs-lookup"><span data-stu-id="c9406-102">ICorDebugManagedCallback::UnloadAssembly Method</span></span>
+<span data-ttu-id="c9406-103">Notifica al depurador que se ha descargado un ensamblado de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="c9406-103">Notifies the debugger that a common language runtime assembly has been unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac263-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ac263-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9406-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c9406-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnloadAssembly (  
@@ -34,26 +34,26 @@ HRESULT UnloadAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac263-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ac263-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9406-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="c9406-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="ac263-106">de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ac263-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the assembly.</span></span>  
+ <span data-ttu-id="c9406-106">de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c9406-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the assembly.</span></span>  
   
  `pAssembly`  
- <span data-ttu-id="ac263-107">de Un puntero a un objeto ICorDebugAssembly que representa el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ac263-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
+ <span data-ttu-id="c9406-107">de Un puntero a un objeto ICorDebugAssembly que representa el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c9406-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ac263-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ac263-108">Remarks</span></span>  
- <span data-ttu-id="ac263-109">El ensamblado no se debe utilizar después de esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="ac263-109">The assembly should not be used after this callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9406-108">Notas</span><span class="sxs-lookup"><span data-stu-id="c9406-108">Remarks</span></span>  
+ <span data-ttu-id="c9406-109">El ensamblado no se debe utilizar después de esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="c9406-109">The assembly should not be used after this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac263-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ac263-110">Requirements</span></span>  
- <span data-ttu-id="ac263-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac263-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9406-110">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="c9406-110">Requirements</span></span>  
+ <span data-ttu-id="c9406-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9406-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac263-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ac263-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9406-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9406-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ac263-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac263-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9406-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9406-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac263-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac263-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c9406-114">**.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9406-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac263-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="ac263-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9406-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9406-115">See also</span></span>
 
-- [<span data-ttu-id="ac263-116">LoadAssembly (método)</span><span class="sxs-lookup"><span data-stu-id="ac263-116">LoadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
-- [<span data-ttu-id="ac263-117">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ac263-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="c9406-116">LoadAssembly (método)</span><span class="sxs-lookup"><span data-stu-id="c9406-116">LoadAssembly Method</span></span>](icordebugmanagedcallback-loadassembly-method.md)
+- [<span data-ttu-id="c9406-117">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c9406-117">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
