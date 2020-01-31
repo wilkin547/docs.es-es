@@ -1,17 +1,18 @@
 ---
 title: Introducción a WPF
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454195"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744712"
 ---
 # <a name="wpf-overview"></a>Información general sobre WPF
 
@@ -134,7 +135,7 @@ Namespace SDKSample
 End Namespace
 ```
 
-En este ejemplo, el código subyacente implementa una clase que deriva de la clase <xref:System.Windows.Window> . El atributo `x:Class` se usa para asociar el marcado a la clase de código subyacente. Se llama a `InitializeComponent` desde el constructor de la clase de código subyacente para combinar la interfaz de usuario que se define en el marcado con la clase de código subyacente. (`InitializeComponent` se genera automáticamente cuando se crea la aplicación, por lo que no es necesario implementarla manualmente). La combinación de `x:Class` y `InitializeComponent` asegurarse de que la implementación se inicializa correctamente cada vez que se crea. La clase de código subyacente también implementa un controlador de eventos para el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> del botón. Cuando se hace clic en el botón, el controlador de eventos muestra un cuadro de mensaje mediante una llamada al método <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> .
+En este ejemplo, el código subyacente implementa una clase que deriva de la clase <xref:System.Windows.Window> . El atributo `x:Class` se usa para asociar el marcado a la clase de código subyacente. Se llama a`InitializeComponent` desde el constructor de la clase de código subyacente para combinar la interfaz de usuario que se define en el marcado con la clase de código subyacente. (`InitializeComponent` se genera automáticamente cuando se crea la aplicación, por lo que no es necesario implementarla manualmente). La combinación de `x:Class` y `InitializeComponent` asegurarse de que la implementación se inicializa correctamente cada vez que se crea. La clase de código subyacente también implementa un controlador de eventos para el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> del botón. Cuando se hace clic en el botón, el controlador de eventos muestra un cuadro de mensaje mediante una llamada al método <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> .
 
 En la siguiente ilustración se muestra el resultado cuando se hace clic en el botón:
 
@@ -182,7 +183,7 @@ Los controles casi siempre detectan las acciones del usuario y responden a ellas
 
 Las aplicaciones a menudo tienen tener requisitos de entrada complejos. WPF proporciona un [sistema de comandos](advanced/commanding-overview.md) que separa las acciones de entrada del usuario del código que responde a esas acciones.
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Presentación
 
 Al crear crear una interfaz de usuario, se organizan los controles según su ubicación y tamaño para crear un diseño. Un requisito fundamental de cualquier diseño es adaptarse a los cambios de tamaño de la ventana y de configuración de pantalla. En lugar de obligarle a escribir código que adapte el diseño en estas circunstancias, WPF le proporciona un sistema de diseño extensible de primera clase.
 
@@ -322,7 +323,7 @@ El soporte de animación de WPF permite hacer que los controles crezcan, tiemble
 
 Para obtener más información, vea [Información general sobre animaciones](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Multimedia
+## <a name="media"></a>Medios
 
 Una manera de mostrar contenido enriquecido es mediante el uso de medios audiovisuales (multimedia). WPF proporciona compatibilidad especial con imágenes, vídeo y audio.
 
@@ -616,7 +617,7 @@ Para obtener más información, consulte [Recursos](../../desktop-wpf/fundamenta
 
 ### <a name="custom-controls"></a>Controles personalizados
 
-Aunque WPF proporciona una amplísima compatibilidad con funciones de personalización, puede encontrar situaciones en que los controles existentes de WPF no satisfagan las necesidades de la aplicación o de los usuarios. Esto puede suceder si:
+Aunque WPF proporciona una amplísima compatibilidad con funciones de personalización, puede encontrar situaciones en que los controles existentes de WPF no satisfagan las necesidades de la aplicación o de los usuarios. Esto puede suceder cuando:
 
 - La UI que se necesita no puede crearse personalizando la apariencia y el funcionamiento de las implementaciones de WPF existentes.
 
@@ -649,7 +650,7 @@ Para obtener más información sobre los controles personalizados, vea [Informac
 
 ## <a name="wpf-best-practices"></a>Procedimientos recomendados en WPF
 
-Como sucede con cualquier plataforma de desarrollo, WPF se puede usar de diversas maneras para lograr el resultado deseado. Para asegurarse de que las aplicaciones de WPF proporcionen la experiencia del usuario necesaria y satisfagan las exigencias del público en general, existen procedimientos recomendados de accesibilidad, globalización y localización, y rendimiento. Para obtener más información, consulte:
+Como sucede con cualquier plataforma de desarrollo, WPF se puede usar de diversas maneras para lograr el resultado deseado. Para asegurarse de que las aplicaciones de WPF proporcionen la experiencia del usuario necesaria y satisfagan las exigencias del público en general, existen procedimientos recomendados de accesibilidad, globalización y localización, y rendimiento. Para obtener más información, vea:
 
 - [Accesibilidad](../ui-automation/accessibility-best-practices.md)
 - [Globalización y localización de WPF](advanced/wpf-globalization-and-localization-overview.md)

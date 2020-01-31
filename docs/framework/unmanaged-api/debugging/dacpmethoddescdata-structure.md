@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739136"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793845"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Estructura DacpMethodDescData
 
-Define un búfer de transporte para obtener información de tiempo de ejecución de un método.
+Define un búfer de transporte para la información de tiempo de ejecución de un método.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -54,37 +54,37 @@ struct DacpMethodDescData
 
 ## <a name="members"></a>Miembros
 
-| Member                       | DESCRIPCIÓN                                                                                     |
+| Miembro                       | Descripción                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | Indica si el tiempo de ejecución tiene disponible para la instancia especificada del método de código nativo. |
+| `bHasNativeCode`             | Indica si el tiempo de ejecución tiene código nativo disponible para la creación de instancias dada del método. |
 | `bIsDynamic`                 | Indica si el método se genera dinámicamente a través de la generación de código ligero.           |
-| `wSlotNumber`                | Número de ranura del método en la tabla de métodos.                                                   |
-| `NativeCodeAddr`             | Direcciones nativo inicial del método.                                                            |
-| `data`                       | Puntero a un búfer utilizado internamente por el tiempo de ejecución.                                             |
-| `MethodDescPtr`              | Puntero a la `MethodDesc` en el tiempo de ejecución.                                                     |
-| `nativeCodeInfo`             | Puntero a un búfer que se usa internamente el tiempo de ejecución para realizar un seguimiento de los métodos.                            |
-| `moduleInfo`                 | Puntero a un búfer utilizado internamente por el tiempo de ejecución para obtener información de módulo.                      |
-| `MDToken`                    | Token asociado con el método especificado.                                                         |
-| `payloadGC`                  | Puntero a un búfer de la colección de elementos no utilizados lo utilizado internamente el tiempo de ejecución.                          |
-| `payloadGC2`                 | Puntero a un búfer de la colección de elementos no utilizados lo utilizado internamente el tiempo de ejecución.                          |
-| `managedDynamicMethodObject` | Si el método es dinámico, el tiempo de ejecución utiliza internamente este búfer para obtener información de seguimiento.     |
-| `requestedIP`                | Se usa para rellenar la estructura por solicitud cuando se especifica una dirección de código nativo.                    |
-| `rejitDataCurrent`           | Información acerca de la última versión instrumentada del método.                                   |
-| `rejitDataRequested`         | Información de ReJIT de la dirección solicitada nativa.                                             |
-| `cJittedRejitVersions`       | Número de veces que el método ha sido rejitted a través de la instrumentación.                           |
+| `wSlotNumber`                | El número de ranura del método en la tabla de métodos.                                                   |
+| `NativeCodeAddr`             | Dirección nativa inicial del método.                                                            |
+| `data`                       | Puntero a un búfer utilizado internamente por el motor en tiempo de ejecución.                                             |
+| `MethodDescPtr`              | Puntero al `MethodDesc` en tiempo de ejecución.                                                     |
+| `nativeCodeInfo`             | Puntero a un búfer utilizado internamente por el motor en tiempo de ejecución para realizar el seguimiento de los métodos.                            |
+| `moduleInfo`                 | Puntero a un búfer utilizado internamente por el motor en tiempo de ejecución para obtener información del módulo.                      |
+| `MDToken`                    | Token asociado al método especificado.                                                         |
+| `payloadGC`                  | Puntero a un búfer de recolección de elementos no utilizados que el Runtime usa internamente.                          |
+| `payloadGC2`                 | Puntero a un búfer de recolección de elementos no utilizados que el Runtime usa internamente.                          |
+| `managedDynamicMethodObject` | Si el método es dinámico, el motor en tiempo de ejecución utiliza este búfer internamente para realizar el seguimiento de la información.     |
+| `requestedIP`                | Se usa para rellenar la estructura por solicitud cuando se proporciona una dirección de código nativo.                    |
+| `rejitDataCurrent`           | Información sobre la última versión instrumentada del método.                                   |
+| `rejitDataRequested`         | Rejit información de la dirección nativa solicitada.                                             |
+| `cJittedRejitVersions`       | Número de veces que se ha rejitted el método a través de la instrumentación.                           |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para ello, defina la estructura según lo especificado anteriormente.
+Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente.
 
-## <a name="requirements"></a>Requisitos
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a>Requisitos de
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuración](index.md)
+- [Estructuras de depuración](debugging-structures.md)
 - [Tipos de datos comunes](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

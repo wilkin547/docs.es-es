@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440817"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790257"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
 Notifica al generador de perfiles que el control se pasa a una función.  
@@ -35,11 +35,13 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
- `funcID`  
- de Identificador de la función a la que se pasa el control.  
-  
-## <a name="remarks"></a>Comentarios  
+## <a name="parameters"></a>Parameters
+
+- `funcID`
+
+  \[en] el identificador de la función a la que se pasa el control.
+
+## <a name="remarks"></a>Notas  
  La función `FunctionEnter` es una devolución de llamada; debe implementarla. La implementación debe usar el atributo de clase de almacenamiento `__declspec`(`naked`).  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
@@ -52,7 +54,7 @@ void __stdcall FunctionEnter (
   
  Además, la función `FunctionEnter` no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  

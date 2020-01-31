@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458747"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794302"
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 
@@ -64,7 +64,7 @@ A continuación se encuentra un breve resumen de los escenarios que motivaron el
 
 **Encapsulación y composición de controles:** varios controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen un modelo de contenido enriquecido. Por ejemplo, puede colocar una imagen dentro de un <xref:System.Windows.Controls.Button>, lo que extiende eficazmente el árbol visual del botón. Sin embargo, la imagen agregada no debe interrumpir el comportamiento de la prueba de posicionamiento que hace que un botón responda a un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> de su contenido, incluso si el usuario hace clic en píxeles que técnicamente forman parte de la imagen.
 
-**Puntos de unión de controladores únicos:** en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], era necesario adjuntar varias veces el mismo controlador para procesar eventos que podrían desencadenarse desde varios elementos. Los eventos enrutados le permiten asociar ese controlador una sola vez, tal como se ha mostrado en el ejemplo anterior, y usar la lógica del controlador para determinar el origen del evento si fuera necesario. Por ejemplo, este podría ser el controlador para el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mostrado anteriormente:
+**Puntos de datos adjuntos de controlador singular:** En Windows Forms, tendría que adjuntar varias veces el mismo controlador para procesar los eventos que podrían generarse desde varios elementos. Los eventos enrutados le permiten asociar ese controlador una sola vez, tal como se ha mostrado en el ejemplo anterior, y usar la lógica del controlador para determinar el origen del evento si fuera necesario. Por ejemplo, este podría ser el controlador para el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mostrado anteriormente:
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Los eventos enrutados usan una de estas tres estrategias de enrutamiento:
 
 - **Propagación:** se invocan los controladores de eventos en el origen del evento. Después, el evento enrutado va pasando por los elementos primarios sucesivos hasta alcanzar la raíz del árbol de elementos. La mayoría de los eventos enrutados usan la estrategia del enrutamiento de propagación. Los eventos con enrutamiento de propagación generalmente se usan para informar sobre cambios de entrada o de estado procedentes de controles distintos u otros elementos de la interfaz de usuario.
 
-- **Directo:** solo el propio elemento de origen tiene la oportunidad de invocar controladores como respuesta. Esto es análogo al "enrutamiento" que usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] para los eventos. Sin embargo, a diferencia de un evento CLR estándar, los eventos enrutados directos admiten el control de clases (el control de clases se explica en una próxima sección) y se pueden usar en <xref:System.Windows.EventSetter> y <xref:System.Windows.EventTrigger>.
+- **Directo:** solo el propio elemento de origen tiene la oportunidad de invocar controladores como respuesta. Es análogo al "enrutamiento" que Windows Forms usa para los eventos. Sin embargo, a diferencia de un evento CLR estándar, los eventos enrutados directos admiten el control de clases (el control de clases se explica en una próxima sección) y se pueden usar en <xref:System.Windows.EventSetter> y <xref:System.Windows.EventTrigger>.
 
 - **Tunelización:** inicialmente, se invocan los controladores de eventos en la raíz del árbol de elementos. Después, el evento enrutado viaja a través de los elementos secundarios sucesivos a lo largo de la ruta, hacia el elemento de nodo que es el origen del evento enrutado (el elemento que ha desencadenado el evento enrutado). Los eventos con enrutamiento de tunelización se suelen usar o controlar como parte de la composición de un control, de forma que los eventos de las partes compuestas se puedan suprimir o reemplazar deliberadamente por eventos que son específicos del control completo. Los eventos de entrada proporcionados en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suelen implementar como un par de tunelización-propagación. Los eventos de tunelización también se conocen a veces como eventos de vista previa, debido a una convención de nomenclatura que se usa para los pares.
 
@@ -179,7 +179,7 @@ Además del comportamiento que produce <xref:System.Windows.RoutedEventArgs.Hand
 
   - Ejecutar código en respuesta al evento. Marcar el evento como controlado en los datos de evento pasados al controlador, porque la acción realizada se ha considerado lo suficientemente sustancial como para marcarlo como controlado. El evento sigue enrutando al agente de escucha siguiente, pero con <xref:System.Windows.RoutedEventArgs.Handled%2A>=`true` en sus datos de evento, por lo que solo los agentes de escucha de `handledEventsToo` tienen la oportunidad de invocar más controladores.
 
-Este diseño conceptual se refuerza mediante el comportamiento de enrutamiento mencionado anteriormente: es más difícil (aunque aún posible en código o estilos) adjuntar controladores para eventos enrutados que se invocan incluso si ya se ha establecido un controlador anterior a lo largo de la ruta <xref:System.Windows.RoutedEventArgs.Handled%2A> `true`.
+Este diseño conceptual se refuerza mediante el comportamiento de enrutamiento mencionado anteriormente: es más difícil (aunque aún posible en código o estilos) adjuntar controladores para eventos enrutados que se invocan incluso si un controlador anterior a lo largo de la ruta ya ha establecido <xref:System.Windows.RoutedEventArgs.Handled%2A> en `true`.
 
 Para obtener más información sobre <xref:System.Windows.RoutedEventArgs.Handled%2A>, el control de clases de eventos enrutados y recomendaciones sobre Cuándo es adecuado marcar un evento enrutado como <xref:System.Windows.RoutedEventArgs.Handled%2A>, vea [marcar eventos enrutados como controlados y control de clases](marking-routed-events-as-handled-and-class-handling.md).
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 585b3d605d0df9169c12ca10198846ec0a7fe6d4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111425"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793609"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess (Método)
 Obtiene la interfaz ICorDebugProcess que corresponde a un módulo de Common Language Runtime (CLR) cargado en el proceso.  
@@ -39,12 +39,12 @@ HRESULT OpenVirtualProcess(
     [out] CLR_DEBUGGING_PROCESS_FLAGS * pdwFlags);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `moduleBaseAddress`  
  de La dirección base de un módulo en el proceso de destino. Se devolverá COR_E_NOT_CLR si el módulo especificado no es un módulo CLR.  
   
  `pDataTarget`  
- de Una abstracción de destino de datos que permite al depurador administrado inspeccionar el estado del proceso. El depurador debe implementar la interfaz [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) . Debe implementar la interfaz [ICLRDebuggingLibraryProvider (](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) para admitir escenarios en los que el CLR que se está depurando no se instala localmente en el equipo.  
+ de Una abstracción de destino de datos que permite al depurador administrado inspeccionar el estado del proceso. El depurador debe implementar la interfaz [ICorDebugDataTarget](icordebugdatatarget-interface.md) . Debe implementar la interfaz [ICLRDebuggingLibraryProvider (](iclrdebugginglibraryprovider-interface.md) para admitir escenarios en los que el CLR que se está depurando no se instala localmente en el equipo.  
   
  `pLibraryProvider`  
  de Una interfaz de devolución de llamada del proveedor de bibliotecas que permite buscar y cargar a petición bibliotecas de depuración específicas de la versión. Este parámetro solo es necesario si no se `null``ppProcess` o `pFlags`.  
@@ -59,12 +59,12 @@ HRESULT OpenVirtualProcess(
  enuncia Puntero a la interfaz COM que se identifica mediante `riidProcess`.  
   
  `pVersion`  
- [in, out] Versión de CLR. En la entrada, este valor se puede `null`. También puede apuntar a una estructura [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) , en cuyo caso el campo `wStructVersion` de la estructura se debe inicializar en 0 (cero).  
+ [in, out] Versión de CLR. En la entrada, este valor se puede `null`. También puede apuntar a una estructura de [CLR_DEBUGGING_VERSION](clr-debugging-version-structure.md) , en cuyo caso el campo `wStructVersion` de la estructura se debe inicializar en 0 (cero).  
   
  En la salida, la estructura de `CLR_DEBUGGING_VERSION` devuelta se rellenará con la información de versión de CLR.  
   
  `pdwFlags`  
- enuncia Marcas informativas sobre el tiempo de ejecución especificado. Vea el tema [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) para obtener una descripción de las marcas.  
+ enuncia Marcas informativas sobre el tiempo de ejecución especificado. Vea el tema [CLR_DEBUGGING_PROCESS_FLAGS](clr-debugging-process-flags-enumeration.md) para obtener una descripción de las marcas.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -73,7 +73,7 @@ HRESULT OpenVirtualProcess(
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|El valor de `pDataTarget` es `null`.|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|La devolución de llamada [ICLRDebuggingLibraryProvider (](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) devuelve un error o no proporciona un identificador válido.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|La devolución de llamada [ICLRDebuggingLibraryProvider (](iclrdebugginglibraryprovider-interface.md) devuelve un error o no proporciona un identificador válido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` no implementa las interfaces de destino de datos necesarias para esta versión del Runtime.|  
 |CORDBG_E_NOT_CLR|El módulo indicado no es un módulo CLR. Este valor HRESULT también se devuelve cuando no se puede detectar un módulo CLR porque la memoria está dañada, el módulo no está disponible o la versión de CLR es posterior a la versión de la corrección de compatibilidad.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Esta versión en tiempo de ejecución no admite este modelo de depuración. Actualmente, las versiones de CLR no admiten el modelo de depuración antes de la .NET Framework 4. El parámetro de salida `pwszVersion` sigue establecido en el valor correcto después de este error.|  
@@ -83,18 +83,18 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [Depuración](index.md)

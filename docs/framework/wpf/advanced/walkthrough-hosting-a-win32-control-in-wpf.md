@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Hospedar un control de Win32 en WPF'
+title: Hospedar un control de Win32 en WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040812"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744936"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Tutorial: Hospedar un control de Win32 en WPF
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>Tutorial: hospedar un control de Win32 en WPF
 Windows Presentation Foundation (WPF) proporciona un entorno completo para crear aplicaciones. Sin embargo, si tiene una inversión sustancial en código Win32, puede ser más eficaz reutilizar al menos parte de ese código en la aplicación WPF en lugar de volver a escribirlo completamente. WPF proporciona un mecanismo sencillo para hospedar una ventana de Win32, en una página de WPF.  
   
  Este tema le guía a través de una aplicación, que [hospeda un control ListBox de Win32 en el ejemplo de WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), que hospeda un control de cuadro de lista de Win32. Este procedimiento general se puede extender para hospedar cualquier ventana de Win32.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  En este tema se da por supuesto que está familiarizado con la programación de la API de Windows y WPF. Para obtener una introducción básica a la programación de WPF, vea [Introducción](../getting-started/index.md). Para obtener una introducción a la programación de la API de Windows, consulte cualquiera de los numerosos libros del asunto, en determinadas *ventanas de programación* , de Charles Petzold.  
   
  Dado que el ejemplo que acompaña a este tema se implementa C#en, hace uso de los servicios de invocación de plataforma (PInvoke) para tener acceso a la API de Windows. Algunos conocimientos de PInvoke son útiles, pero no esenciales.  
@@ -61,7 +62,7 @@ Windows Presentation Foundation (WPF) proporciona un entorno completo para crear
 ## <a name="implement-the-page-layout"></a>Implementar el diseño de página  
  El diseño de la página de WPF que hospeda el control ListBox se compone de dos regiones. En el lado izquierdo de la página se hospedan varios controles de WPF que proporcionan una [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que le permite manipular el control Win32. La esquina superior derecha de la página tiene una región cuadrada para el control ListBox.  
   
- El código para implementar este diseño es bastante sencillo. El elemento raíz es un <xref:System.Windows.Controls.DockPanel> que tiene dos elementos secundarios. El primero es un elemento <xref:System.Windows.Controls.Border> que hospeda el control ListBox. Ocupa un cuadrado de 200x200 en la esquina superior derecha de la página. El segundo es un elemento <xref:System.Windows.Controls.StackPanel> que contiene un conjunto de controles de WPF que muestran información y permiten manipular el control ListBox mediante el establecimiento de propiedades de interoperación expuestas. Para cada uno de los elementos que son elementos secundarios de la <xref:System.Windows.Controls.StackPanel>, consulte el material de referencia de los distintos elementos que se usan para obtener detalles sobre lo que son estos elementos o lo que hacen, estos se enumeran en el código de ejemplo siguiente, pero no se explicarán aquí (el el modelo de interoperación no requiere ninguno de ellos, sino que se proporciona para agregar una interactividad al ejemplo.  
+ El código para implementar este diseño es bastante sencillo. El elemento raíz es un <xref:System.Windows.Controls.DockPanel> que tiene dos elementos secundarios. El primero es un elemento <xref:System.Windows.Controls.Border> que hospeda el control ListBox. Ocupa un cuadrado de 200x200 en la esquina superior derecha de la página. El segundo es un elemento <xref:System.Windows.Controls.StackPanel> que contiene un conjunto de controles de WPF que muestran información y permiten manipular el control ListBox mediante el establecimiento de propiedades de interoperación expuestas. Para cada uno de los elementos que son elementos secundarios del <xref:System.Windows.Controls.StackPanel>, consulte el material de referencia de los distintos elementos que se usan para obtener detalles sobre lo que son estos elementos o lo que hacen, estos se muestran en el código de ejemplo siguiente, pero no se explican aquí (el modelo de interoperación básica no requiere ninguno de ellos, sino que se proporcionan para agregar interactividad al ejemplo)  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   

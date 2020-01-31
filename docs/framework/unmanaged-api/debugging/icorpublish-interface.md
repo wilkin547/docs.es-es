@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: 70cf2d76c7c5d1c3431506685f8506e44ab9ec4a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c4a24d879ebd9e8813ea0ac4597818569f4ae6fa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121766"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790721"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish (Interfaz)
 Actúa como la interfaz general para publicar información sobre procesos e información sobre los dominios de aplicación en esos procesos.  
@@ -28,19 +28,19 @@ Actúa como la interfaz general para publicar información sobre procesos e info
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumProcesses (método)](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)|Obtiene una instancia de [ICorPublishProcessEnum (](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) que contiene los procesos administrados que se ejecutan en este equipo.|  
-|[GetProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icorpublish-getprocess-method.md)|Obtiene una instancia de [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) que representa el proceso con el identificador especificado.|  
+|[EnumProcesses (método)](icorpublish-enumprocesses-method.md)|Obtiene una instancia de [ICorPublishProcessEnum (](icorpublishprocessenum-interface.md) que contiene los procesos administrados que se ejecutan en este equipo.|  
+|[GetProcess (método)](icorpublish-getprocess-method.md)|Obtiene una instancia de [ICorPublishProcess](icorpublishprocess-interface.md) que representa el proceso con el identificador especificado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish (coclase)](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [CorpubPublish (coclase)](corpubpublish-coclass.md)

@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataMethodDefinition::EnumInstance
+title: 'IXCLRDataMethodDefinition:: EnumInstance (método)'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EnumInstance Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ad1a9957e9bffd7b28aa241723dedba1d11f4cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775867"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790439"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Método IXCLRDataMethodDefinition::EnumInstance
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition:: EnumInstance (método)
 
 Enumera las instancias de esta definición de método.
 
@@ -37,28 +37,28 @@ HRESULT EnumInstance(
 );
 ```
 
-## <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
 `handle`\
-[in, out] Un identificador para enumerar las instancias.
+[in, out] Identificador para enumerar las instancias de.
 
 `instance`\
-[out] La instancia enumerada.
+enuncia Instancia enumerada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El método proporcionado forma parte de la `IXCLRDataMethodDefinition` interfaz y corresponde a la cuarta ranura de la tabla de métodos virtuales.
+El método proporcionado forma parte de la interfaz `IXCLRDataMethodDefinition` y corresponde a la cuarta ranura de la tabla del método virtual.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 
-- [Enumeración CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaz IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
-- [Interfaz IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Enumeración CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Depuración](index.md)
+- [Interfaz IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)
+- [Interfaz IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)

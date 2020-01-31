@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714766"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743908"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 
@@ -44,7 +44,7 @@ La definición del método especifica los nombres y tipos de todos los parámetr
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Pasar por referencia frente a pasar por valor
 
-De forma predeterminada, cuando un tipo de valor se pasa a un método, se pasa una copia en lugar del propio objeto. Por lo tanto, los cambios realizados en el argumento no tienen ningún efecto en la copia original del método de llamada. Puede pasar un tipo de valor por referencia mediante la palabra clave ref. Para obtener más información, vea [Pasar parámetros de tipo de valor (Guía de programación de C#)](./passing-value-type-parameters.md). Para obtener una lista de tipos de valor integrados, vea [Tabla de tipos de valor (Referencia de C#)](../../language-reference/keywords/value-types-table.md).
+De forma predeterminada, cuando se pasa una instancia de un [tipo de valor](../../language-reference/builtin-types/value-types.md) a un método, se pasa su copia en lugar de la propia instancia. Por lo tanto, los cambios realizados en el argumento no tienen ningún efecto en la instancia original del método de llamada. Para pasar una instancia de tipo de valor por referencia, use la palabra clave `ref`. Para obtener más información, vea [Pasar parámetros de tipo de valor (Guía de programación de C#)](./passing-value-type-parameters.md).
 
 Cuando se pasa un objeto de un tipo de referencia a un método, se pasa una referencia al objeto. Es decir, el método no recibe el objeto concreto, recibe un argumento que indica la ubicación del objeto. Si cambia un miembro del objeto mediante esta referencia, el cambio se refleja en el argumento del método de llamada, incluso si pasa el objeto por valor.
 

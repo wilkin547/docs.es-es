@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectValue2 (Interfaz)
+title: Interfaz ICorDebugObjectValue2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129731"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792674"
 ---
-# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 (Interfaz)
+# <a name="icordebugobjectvalue2-interface"></a>Interfaz ICorDebugObjectValue2
 
 Extiende la interfaz "ICorDebugObjectValue" para admitir la herencia y las invalidaciones.  
   
@@ -29,14 +29,14 @@ Extiende la interfaz "ICorDebugObjectValue" para admitir la herencia y las inval
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` aún no se ha implementado.|  
+|[GetVirtualMethodAndType (método)](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` aún no se ha implementado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -47,4 +47,4 @@ Extiende la interfaz "ICorDebugObjectValue" para admitir la herencia y las inval
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

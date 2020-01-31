@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4ca40c0f6e62fd413e7f305649c5c01ddc152b2a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742624"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794144"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Tutorial: Hospedar un control ActiveX en WPF
 Para habilitar la interacción mejorada con los exploradores, puede usar los controles ActiveX de Microsoft en la aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo puede hospedar el Media Player de Microsoft Windows como un control en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -83,7 +83,7 @@ Visual Studio genera automáticamente una clase contenedora <xref:System.Windows
 
 2. Agregue una referencia al ensamblado WindowsFormsIntegration, denominado WindowsFormsIntegration. dll.
 
-3. Agregue una referencia al ensamblado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], que se denomina System. Windows. Forms. dll.
+3. Agregue una referencia al ensamblado Windows Forms, que se denomina System. Windows. Forms. dll.
 
 4. Abra MainWindow. XAML en el diseñador de WPF.
 
