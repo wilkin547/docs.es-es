@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7eda9bfff6de6b386c16ad0a188931d9d3adcb93
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112324"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793660"
 ---
-# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="03e3f-102">ICLRDataTarget2::FreeVirtual (Método)</span><span class="sxs-lookup"><span data-stu-id="03e3f-102">ICLRDataTarget2::FreeVirtual Method</span></span>
-<span data-ttu-id="03e3f-103">Lo llaman los servicios de acceso a datos de Common Language Runtime (CLR) para liberar memoria que se asignó previamente en el espacio de direcciones del proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="03e3f-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
+# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="70451-102">ICLRDataTarget2::FreeVirtual (Método)</span><span class="sxs-lookup"><span data-stu-id="70451-102">ICLRDataTarget2::FreeVirtual Method</span></span>
+<span data-ttu-id="70451-103">Lo llaman los servicios de acceso a datos de Common Language Runtime (CLR) para liberar memoria que se asignó previamente en el espacio de direcciones del proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="70451-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03e3f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="03e3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70451-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="70451-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FreeVirtual(  
@@ -35,31 +35,31 @@ HRESULT FreeVirtual(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="03e3f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="03e3f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70451-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="70451-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="03e3f-106">de `CLRDATA_ADDRESS` valor que especifica la dirección inicial de la memoria que se va a liberar.</span><span class="sxs-lookup"><span data-stu-id="03e3f-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
+ <span data-ttu-id="70451-106">de `CLRDATA_ADDRESS` valor que especifica la dirección inicial de la memoria que se va a liberar.</span><span class="sxs-lookup"><span data-stu-id="70451-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
   
  `size`  
- <span data-ttu-id="03e3f-107">de Tamaño, en bytes, de la memoria que se va a liberar.</span><span class="sxs-lookup"><span data-stu-id="03e3f-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
+ <span data-ttu-id="70451-107">de Tamaño, en bytes, de la memoria que se va a liberar.</span><span class="sxs-lookup"><span data-stu-id="70451-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
   
  `typeFlags`  
- <span data-ttu-id="03e3f-108">de Marcas que controlan la liberación de memoria.</span><span class="sxs-lookup"><span data-stu-id="03e3f-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="03e3f-109">Vea la función `VirtualFree` de Win32.</span><span class="sxs-lookup"><span data-stu-id="03e3f-109">See the Win32 `VirtualFree` function.</span></span>  
+ <span data-ttu-id="70451-108">de Marcas que controlan la liberación de memoria.</span><span class="sxs-lookup"><span data-stu-id="70451-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="70451-109">Vea la función `VirtualFree` de Win32.</span><span class="sxs-lookup"><span data-stu-id="70451-109">See the Win32 `VirtualFree` function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03e3f-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="03e3f-110">Remarks</span></span>  
- <span data-ttu-id="03e3f-111">El método `FreeVirtual` actúa como contenedor lógico para la función de `VirtualFree` de Win32.</span><span class="sxs-lookup"><span data-stu-id="03e3f-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="70451-110">Notas</span><span class="sxs-lookup"><span data-stu-id="70451-110">Remarks</span></span>  
+ <span data-ttu-id="70451-111">El método `FreeVirtual` actúa como contenedor lógico para la función de `VirtualFree` de Win32.</span><span class="sxs-lookup"><span data-stu-id="70451-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
   
- <span data-ttu-id="03e3f-112">Este método lo implementa el escritor de la aplicación de depuración.</span><span class="sxs-lookup"><span data-stu-id="03e3f-112">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="70451-112">Este método lo implementa el escritor de la aplicación de depuración.</span><span class="sxs-lookup"><span data-stu-id="70451-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03e3f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="03e3f-113">Requirements</span></span>  
- <span data-ttu-id="03e3f-114">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03e3f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70451-113">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="70451-113">Requirements</span></span>  
+ <span data-ttu-id="70451-114">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70451-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03e3f-115">**Encabezado:** ClrData. idl, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="03e3f-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="70451-115">**Encabezado:** ClrData. idl, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="70451-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="03e3f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03e3f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="70451-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70451-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03e3f-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03e3f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="70451-117">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70451-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03e3f-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="03e3f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70451-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="70451-118">See also</span></span>
 
-- [<span data-ttu-id="03e3f-119">ICLRDataTarget2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="03e3f-119">ICLRDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [<span data-ttu-id="03e3f-120">AllocVirtual (método)</span><span class="sxs-lookup"><span data-stu-id="03e3f-120">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+- [<span data-ttu-id="70451-119">ICLRDataTarget2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="70451-119">ICLRDataTarget2 Interface</span></span>](iclrdatatarget2-interface.md)
+- [<span data-ttu-id="70451-120">AllocVirtual (método)</span><span class="sxs-lookup"><span data-stu-id="70451-120">AllocVirtual Method</span></span>](iclrdatatarget2-allocvirtual-method.md)
