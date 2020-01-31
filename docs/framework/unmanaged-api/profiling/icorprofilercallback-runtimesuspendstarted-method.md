@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: c8461cac-e31b-4efa-ad2c-26598173eb96
 topic_type:
 - apiref
-ms.openlocfilehash: 1777fa1f2537b6d28d771661ca463564d74d8550
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e88f6356c2e29a1d8a9e49527c5921e8155c3ce4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433513"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865888"
 ---
-# <a name="icorprofilercallbackruntimesuspendstarted-method"></a><span data-ttu-id="88d67-102">ICorProfilerCallback::RuntimeSuspendStarted (Método)</span><span class="sxs-lookup"><span data-stu-id="88d67-102">ICorProfilerCallback::RuntimeSuspendStarted Method</span></span>
-<span data-ttu-id="88d67-103">Notifica al generador de perfiles que el tiempo de ejecución está a punto de suspender todos los subprocesos en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="88d67-103">Notifies the profiler that the runtime is about to suspend all runtime threads.</span></span>  
+# <a name="icorprofilercallbackruntimesuspendstarted-method"></a><span data-ttu-id="daacc-102">ICorProfilerCallback::RuntimeSuspendStarted (Método)</span><span class="sxs-lookup"><span data-stu-id="daacc-102">ICorProfilerCallback::RuntimeSuspendStarted Method</span></span>
+<span data-ttu-id="daacc-103">Notifica al generador de perfiles que el tiempo de ejecución está a punto de suspender todos los subprocesos en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="daacc-103">Notifies the profiler that the runtime is about to suspend all runtime threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88d67-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="88d67-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="daacc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="daacc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeSuspendStarted(  
     [in] COR_PRF_SUSPEND_REASON suspendReason);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="88d67-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="88d67-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="daacc-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="daacc-105">Parameters</span></span>  
  `suspendReason`  
- <span data-ttu-id="88d67-106">de Un valor de la enumeración [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) que indica el motivo de la suspensión.</span><span class="sxs-lookup"><span data-stu-id="88d67-106">[in] A value of the [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) enumeration that indicates the reason for the suspension.</span></span>  
+ <span data-ttu-id="daacc-106">de Un valor de la enumeración [COR_PRF_SUSPEND_REASON](cor-prf-suspend-reason-enumeration.md) que indica el motivo de la suspensión.</span><span class="sxs-lookup"><span data-stu-id="daacc-106">[in] A value of the [COR_PRF_SUSPEND_REASON](cor-prf-suspend-reason-enumeration.md) enumeration that indicates the reason for the suspension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="88d67-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="88d67-107">Remarks</span></span>  
- <span data-ttu-id="88d67-108">Todos los subprocesos en tiempo de ejecución que se encuentran en código no administrado pueden continuar ejecutándose hasta que intenten volver a entrar en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="88d67-108">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span></span> <span data-ttu-id="88d67-109">En ese momento, también se suspenderán hasta que se reanude el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="88d67-109">At that point they will also be suspended until the runtime resumes.</span></span> <span data-ttu-id="88d67-110">Esto también se aplica a los nuevos subprocesos que entran en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="88d67-110">This also applies to new threads that enter the runtime.</span></span> <span data-ttu-id="88d67-111">Todos los subprocesos del tiempo de ejecución se suspenden inmediatamente si ya están en código interrumpido, o se les pide que se suspendan cuando llegan a código interrumpido.</span><span class="sxs-lookup"><span data-stu-id="88d67-111">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="daacc-107">Notas</span><span class="sxs-lookup"><span data-stu-id="daacc-107">Remarks</span></span>  
+ <span data-ttu-id="daacc-108">Todos los subprocesos en tiempo de ejecución que se encuentran en código no administrado pueden continuar ejecutándose hasta que intenten volver a entrar en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="daacc-108">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span></span> <span data-ttu-id="daacc-109">En ese momento, también se suspenderán hasta que se reanude el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="daacc-109">At that point they will also be suspended until the runtime resumes.</span></span> <span data-ttu-id="daacc-110">Esto también se aplica a los nuevos subprocesos que entran en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="daacc-110">This also applies to new threads that enter the runtime.</span></span> <span data-ttu-id="daacc-111">Todos los subprocesos del tiempo de ejecución se suspenden inmediatamente si ya están en código interrumpido, o se les pide que se suspendan cuando llegan a código interrumpido.</span><span class="sxs-lookup"><span data-stu-id="daacc-111">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88d67-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="88d67-112">Requirements</span></span>  
- <span data-ttu-id="88d67-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88d67-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="daacc-112">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="daacc-112">Requirements</span></span>  
+ <span data-ttu-id="daacc-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="daacc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88d67-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="88d67-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="daacc-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="daacc-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="88d67-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="88d67-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="daacc-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="daacc-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="88d67-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88d67-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="daacc-116">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daacc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88d67-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="88d67-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daacc-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="daacc-117">See also</span></span>
 
-- [<span data-ttu-id="88d67-118">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="88d67-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="88d67-119">RuntimeSuspendAborted (método)</span><span class="sxs-lookup"><span data-stu-id="88d67-119">RuntimeSuspendAborted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)
-- [<span data-ttu-id="88d67-120">RuntimeSuspendFinished (método)</span><span class="sxs-lookup"><span data-stu-id="88d67-120">RuntimeSuspendFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)
+- [<span data-ttu-id="daacc-118">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="daacc-118">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="daacc-119">RuntimeSuspendAborted (método)</span><span class="sxs-lookup"><span data-stu-id="daacc-119">RuntimeSuspendAborted Method</span></span>](icorprofilercallback-runtimesuspendaborted-method.md)
+- [<span data-ttu-id="daacc-120">RuntimeSuspendFinished (método)</span><span class="sxs-lookup"><span data-stu-id="daacc-120">RuntimeSuspendFinished Method</span></span>](icorprofilercallback-runtimesuspendfinished-method.md)
