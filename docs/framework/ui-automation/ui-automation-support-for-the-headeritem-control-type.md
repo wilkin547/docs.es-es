@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-ms.openlocfilehash: c67c357a0447cfa7ff3769fff2f8a67f90171635
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17b28e17690d5a05440cae6b969617de1528fb41
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741236"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778732"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>Compatibilidad de la automatización de la interfaz de usuario para el tipo de control HeaderItem
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741236"
   
  El tipo de control HeaderItem proporciona una etiqueta visual para una fila o una columna de información.  
   
- Los controles de elemento de encabezado son ejemplos de controles que implementan el tipo de control HeaderItem. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de las secciones siguientes se aplican a todos los controles de encabezado, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Los controles de elemento de encabezado son ejemplos de controles que implementan el tipo de control HeaderItem. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de las secciones siguientes se aplican a todos los controles de encabezado, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  

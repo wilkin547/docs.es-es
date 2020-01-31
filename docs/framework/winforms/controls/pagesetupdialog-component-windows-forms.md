@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog (Componente, formularios Windows Forms)
+title: Componente PageSetupDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], page setup
@@ -19,29 +19,29 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 94626ff5d0d8625433f950528d65919023c0f853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012703"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744329"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog (Componente, formularios Windows Forms)
-Los formularios de Windows <xref:System.Windows.Forms.PageSetupDialog> componente es un cuadro de diálogo preconfigurado que se usa para establecer los detalles de la página para la impresión en aplicaciones basadas en Windows. Usar dentro de la aplicación basada en Windows como una solución sencilla para los usuarios para establecer preferencias de la página en lugar de configurar su propio cuadro de diálogo. Puede habilitar a los usuarios establecer borde y los ajustes de margen, encabezados y pies de página y orientación vertical y horizontal. Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.  
+El componente <xref:System.Windows.Forms.PageSetupDialog> de Windows Forms es un cuadro de diálogo preconfigurado que se usa para establecer los detalles de la página para imprimir en aplicaciones basadas en Windows. Úselo en su aplicación basada en Windows como una solución sencilla para que los usuarios establezcan preferencias de página en lugar de configurar su propio cuadro de diálogo. Puede permitir que los usuarios establezcan ajustes de borde y margen, encabezados y pies de página y orientación vertical frente a horizontal. Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general del componente PageSetupDialog](pagesetupdialog-component-overview-windows-forms.md)  
- Presenta los conceptos generales de la <xref:System.Windows.Forms.PageSetupDialog> componente, que puede usar para mostrar un cuadro de diálogo preconfigurado que los usuarios pueden usar para manipular la configuración de la página.  
+ Presenta los conceptos generales del componente de <xref:System.Windows.Forms.PageSetupDialog>, que puede usar para mostrar un cuadro de diálogo preconfigurado que los usuarios pueden usar para manipular la configuración de la página.  
   
- [Cómo: Determinar las propiedades de página mediante el componente PageSetupDialog](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Explica cómo establecer propiedades de la página mediante el uso de una instancia de la <xref:System.Windows.Forms.PageSetupDialog> componente en tiempo de ejecución.  
+ [Determinar las propiedades de página mediante el componente PageSetupDialog](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ Explica cómo establecer las propiedades de página mediante una instancia del componente <xref:System.Windows.Forms.PageSetupDialog> en tiempo de ejecución.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.PageSetupDialog>  
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
  [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)  

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440590"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866889"
 ---
 # <a name="functionleave-function"></a>FunctionLeave (Función)
 Notifica al generador de perfiles que una función está a punto de volver al llamador.  
   
 > [!NOTE]
-> La función `FunctionLeave` está en desuso en el .NET Framework 2,0. Continuará funcionando, pero se producirá una reducción del rendimiento. En su lugar, use la función [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
+> La función `FunctionLeave` está en desuso en el .NET Framework 2,0. Continuará funcionando, pero se producirá una reducción del rendimiento. En su lugar, use la función [FunctionLeave2](functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,11 +35,13 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
- `funcID`  
- de El identificador de la función que devuelve.  
-  
-## <a name="remarks"></a>Comentarios  
+## <a name="parameters"></a>Parameters
+
+- `funcID`
+
+  \[en] el identificador de la función que devuelve.
+
+## <a name="remarks"></a>Notas  
  La función `FunctionLeave` es una devolución de llamada; debe implementarla. La implementación debe usar el atributo de clase de almacenamiento `__declspec`(`naked`).  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
@@ -52,7 +54,7 @@ void __stdcall FunctionLeave (
   
  Además, la función `FunctionLeave` no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -63,8 +65,8 @@ void __stdcall FunctionLeave (
   
 ## <a name="see-also"></a>Vea también
 
-- [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 (Función)](functionenter2-function.md)
+- [FunctionLeave2 (Función)](functionleave2-function.md)
+- [FunctionTailcall2 (Función)](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 (método)](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e5422ac-afa1-403d-a894-2d7348673e38
 topic_type:
 - apiref
-ms.openlocfilehash: 83192fd2d24e740ab470988531db823b34df4494
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 078f90387a475559067d402610ec264f4076ae01
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131438"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793264"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification (Método)
 Indica que se ha generado una notificación del depurador personalizado.  
@@ -32,7 +32,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
                            ICorDebugAppDomain * pAppDomain);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pThread`  
  de Puntero al subproceso que provocó la notificación.  
   
@@ -48,22 +48,22 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Comentarios  
- Una llamada subsiguiente al método [ICorDebugThread4:: getcurrentcustomdebuggernotification (](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) recupera el objeto de subproceso que se pasó al método <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>. El tipo del objeto de subproceso debe haberse habilitado previamente mediante una llamada al método [ICorDebugProcess3 (:: SetEnableCustomNotification (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) . El depurador puede leer parámetros específicos del tipo de los campos del objeto de subproceso y puede almacenar las respuestas en los campos.  
+## <a name="remarks"></a>Notas  
+ Una llamada subsiguiente al método [ICorDebugThread4:: getcurrentcustomdebuggernotification (](icordebugthread4-getcurrentcustomdebuggernotification-method.md) recupera el objeto de subproceso que se pasó al método <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>. El tipo del objeto de subproceso debe haberse habilitado previamente mediante una llamada al método [ICorDebugProcess3 (:: SetEnableCustomNotification (](icordebugprocess3-setenablecustomnotification-method.md) . El depurador puede leer parámetros específicos del tipo de los campos del objeto de subproceso y puede almacenar las respuestas en los campos.  
   
- La interfaz [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) no impone ninguna directiva en los tipos de notificaciones ni su contenido, y la semántica de las notificaciones es estrictamente un contrato entre los depuradores, las aplicaciones y el .NET Framework.  
+ La interfaz [ICorDebug](icordebug-interface.md) no impone ninguna directiva en los tipos de notificaciones ni su contenido, y la semántica de las notificaciones es estrictamente un contrato entre los depuradores, las aplicaciones y el .NET Framework.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugManagedCallback3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugManagedCallback3 (interfaz)](icordebugmanagedcallback3-interface.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [Depuración](index.md)

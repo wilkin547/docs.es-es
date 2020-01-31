@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110214"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791217"
 ---
 # <a name="icordebugtype2-interface"></a>Interfaz ICorDebugType2
 Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un tipo base o un tipo complejo (definido por el usuario).  
@@ -28,16 +28,16 @@ Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un
   
 |Método||  
 |------------|-|  
-|[GetTypeID (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Obtiene un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) para este tipo.|  
+|[GetTypeID (método)](icordebugtype2-gettypeid-method.md)|Obtiene un [COR_TYPEID](cor-typeid-structure.md) para este tipo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta interfaz es una extensión lógica de la interfaz ICorDebugType.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="example"></a>Ejemplo  
- En el fragmento de código siguiente se muestra el uso del método [ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) .  
+ En el fragmento de código siguiente se muestra el uso del método [ICorDebugType2:: GetTypeID](icordebugtype2-gettypeid-method.md) .  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -52,15 +52,15 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

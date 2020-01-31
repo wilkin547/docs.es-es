@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 7f6ef2c410d49e2e63b88d6f47c33c211f2a8dd8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790282"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866900"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 (Función)
 Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función y proporciona información sobre el marco de pila.  
@@ -42,16 +42,16 @@ void __stdcall FunctionTailcall2 (
 
 - `clientData`
 
-  \[in] identificador de la función reasignada, que el generador de perfiles especificó previamente a través de [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
+  \[in] identificador de la función reasignada, que el generador de perfiles especificó previamente a través de [FunctionIDMapper](functionidmapper-function.md), de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
   
 - `func`
 
   \[en] un valor `COR_PRF_FRAME_INFO` que apunta a la información sobre el marco de pila.
 
-  El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .
+  El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .
 
 ## <a name="remarks"></a>Notas  
- La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) para una función que sea el destino de una llamada de cola.  
+ La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave2](functionleave2-function.md) para una función que sea el destino de una llamada de cola.  
   
  El valor del parámetro `func` no es válido después de que la función `FunctionTailcall2` devuelva porque el valor puede cambiar o ser destruido.  
   
@@ -78,7 +78,7 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="see-also"></a>Vea también
 
-- [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 (Función)](functionenter2-function.md)
+- [FunctionLeave2 (Función)](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 (método)](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137455"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781526"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception (Método)
 Notifica al depurador que se ha iniciado una búsqueda de un controlador de excepciones.  
@@ -38,7 +38,7 @@ HRESULT Exception (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se produjo la excepción.  
   
@@ -55,9 +55,9 @@ HRESULT Exception (
  de Valor de la enumeración Cordebugexceptioncallbacktype (que especifica el tipo de esta devolución de llamada de excepción.  
   
  `dwFlags`  
- de Un valor de la enumeración [cordebugexceptionflags (](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) que especifica información adicional sobre la excepción.  
+ de Un valor de la enumeración [cordebugexceptionflags (](cordebugexceptionflags-enumeration.md) que especifica información adicional sobre la excepción.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La devolución de llamada de `Exception` se llama en varios puntos durante la fase de búsqueda del proceso de control de excepciones. Es decir, se puede llamar más de una vez al desenredar una excepción.  
   
  La excepción que se está procesando se puede recuperar desde el objeto ICorDebugThread al que hace referencia el parámetro `pThread`.  
@@ -71,16 +71,16 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Marco que contiene el controlador Catch.|Desplazamiento del lenguaje intermedio de Microsoft (MSIL) del principio del controlador Catch.|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Indefinido.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugManagedCallback2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 (interfaz)](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)

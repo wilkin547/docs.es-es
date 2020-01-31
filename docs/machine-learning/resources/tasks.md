@@ -2,12 +2,12 @@
 title: Tareas de aprendizaje automático
 description: Explore las diferentes tareas de aprendizaje automático y las tareas asociadas que se admiten en ML.NET.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739626"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745107"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tareas de aprendizaje automático en ML.NET
 
@@ -85,6 +85,7 @@ Puede entrenar un modelo de clasificación multiclase mediante los siguientes al
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Entradas y salidas de clasificación multiclase
 
@@ -219,3 +220,13 @@ Una tarea de recomendación permite generar una lista de productos o servicios r
 Puede entrenar un modelo de recomendación mediante el siguiente algoritmo:
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>Previsión
+
+La tarea de previsión usa datos de serie temporal pasados para realizar predicciones sobre el comportamiento futuro. Los escenarios aplicables a la previsión incluyen previsiones meteorológicas, predicciones de ventas estacionales y mantenimiento predictivo.
+
+### <a name="forecasting-trainers"></a>Instructores de previsión
+
+Puede entrenar un modelo de previsión con el algoritmo siguiente:
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

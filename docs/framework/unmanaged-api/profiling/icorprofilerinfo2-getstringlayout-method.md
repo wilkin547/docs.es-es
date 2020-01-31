@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-ms.openlocfilehash: 71e2bc1d60e050d817429db5bc6926b3b16c637c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 537840ac03b4136682b78cb964950ab5670a7d7e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431409"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868621"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout (Método)
-Obtiene información sobre la distribución de un objeto de cadena. Este método está en desuso en el .NET Framework 4 y se ha sustituido por el método [ICorProfilerInfo3:: GetStringLayout2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
+Obtiene información sobre la distribución de un objeto de cadena. Este método está en desuso en el .NET Framework 4 y se ha sustituido por el método [ICorProfilerInfo3:: GetStringLayout2 (](icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ HRESULT GetStringLayout(
     [out] ULONG *pBufferOffset);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pBufferLengthOffset`  
  enuncia Puntero al desplazamiento de la ubicación, en relación con el puntero de `ObjectID`, que almacena la longitud de la cadena. La longitud se almacena como `DWORD`.  
   
@@ -47,7 +47,7 @@ HRESULT GetStringLayout(
  `pBufferOffset`  
  enuncia Puntero al desplazamiento del búfer, relativo al puntero de `ObjectID`, que almacena la cadena de caracteres anchos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El método `GetStringLayout` obtiene los desplazamientos, con relación al puntero `ObjectID`, de las ubicaciones en las que se almacenan los elementos siguientes:  
   
 - Longitud del búfer de la cadena.  
@@ -58,16 +58,16 @@ HRESULT GetStringLayout(
   
  Las cadenas pueden terminar en NULL.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo (interfaz)](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 (interfaz)](icorprofilerinfo2-interface.md)

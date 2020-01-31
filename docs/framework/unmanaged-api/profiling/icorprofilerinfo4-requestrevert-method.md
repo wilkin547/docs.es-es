@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: c7ced05692e3030bace10dab9a6793a29fac6c26
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 73d122b1ffa890bfa43f8eef7e24595ac0d26ebe
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444835"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861806"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert (Método)
 Revierte todas las instancias de las funciones especificadas a sus versiones originales.  
@@ -35,7 +35,7 @@ HRESULT RequestRevert (
    [out, size_is(cFunctions)]  HRESULT status[]);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `cFunctions`  
  [in] Número de funciones que se va a revertir.  
   
@@ -54,9 +54,9 @@ HRESULT RequestRevert (
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|Se intentaron revertir todas las solicitudes; sin embargo, se debe comprobar la matriz de estados devueltos para determinar qué funciones se han revertido correctamente.|  
-|CORPROF_E_CALLBACK4_REQUIRED|El generador de perfiles debe implementar la interfaz [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) para que se admita esta llamada.|  
-|CORPROF_E_REJIT_NOT_ENABLED|No se habilitó la recompilación con JIT. Debe habilitar la recompilación JIT durante la inicialización mediante el método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para establecer la marca de `COR_PRF_ENABLE_REJIT`.|  
-|E_INVALIDARG|`cFunctions` es 0 o `moduleIds` o `methodIds` está `NULL`.|  
+|CORPROF_E_CALLBACK4_REQUIRED|El generador de perfiles debe implementar la interfaz [ICorProfilerCallback4](icorprofilercallback4-interface.md) para que se admita esta llamada.|  
+|CORPROF_E_REJIT_NOT_ENABLED|No se habilitó la recompilación con JIT. Debe habilitar la recompilación JIT durante la inicialización mediante el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer la marca de `COR_PRF_ENABLE_REJIT`.|  
+|E_INVALIDARG|`cFunctions` es 0, o `moduleIds` o `methodIds` es `NULL`.|  
 |E_OUTOFMEMORY|El CLR no pudo completar la solicitud porque se quedó sin memoria.|  
   
 ## <a name="status-hresults"></a>HRESULT de estado  
@@ -70,20 +70,20 @@ HRESULT RequestRevert (
 |CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|El CLR no pudo revertir la función especificada porque no se encontró la solicitud de recompilación activa correspondiente. La recompilación nunca se solicitó o la función ya se había revertido.|  
 |Otro|El sistema operativo devolvió un error fuera del control del CLR. Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se mostrará el error del sistema operativo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La próxima vez que se llame a cualquiera de las instancias de la función revertida, se ejecutarán las versiones originales de las funciones. Si ya se está ejecutando una función, finalizará la ejecución de la versión que se está ejecutando.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerInfo4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 (interfaz)](icorprofilerinfo4-interface.md)
+- [Interfaces para generación de perfiles](profiling-interfaces.md)
+- [Generación de perfiles](index.md)

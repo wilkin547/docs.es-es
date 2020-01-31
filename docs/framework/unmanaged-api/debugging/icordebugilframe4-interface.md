@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: 010d73309ae21f9a593f72533691bdd95fbd4132
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f1c5d7a6fdae3e4c5a66c9aa4a82911105f4597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130849"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788507"
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 (Interfaz)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -26,23 +26,23 @@ ms.locfileid: "73130849"
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateLocalVariablesEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|Devuelve una lista de las variables locales disponibles en el marco actual.|  
-|[GetCodeEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|Devuelve el código que este marco de pila está ejecutando.|  
-|[GetLocalVariableEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|Devuelve el valor de una variable local en el marco de IL.|  
+|[EnumerateLocalVariablesEx (método)](icordebugilframe4-enumeratelocalvariablesex-method.md)|Devuelve una lista de las variables locales disponibles en el marco actual.|  
+|[GetCodeEx (método)](icordebugilframe4-getcodeex-method.md)|Devuelve el código que este marco de pila está ejecutando.|  
+|[GetLocalVariableEx (método)](icordebugilframe4-getlocalvariableex-method.md)|Devuelve el valor de una variable local en el marco de IL.|  
   
-## <a name="remarks"></a>Comentarios  
- Estos métodos ofrecen funcionalidad además de la que proporcionan los métodos [enumeratelocalvariables (](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [getCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)y [getlocalvariable (](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) . Cada método incluye un parámetro `flags` que especifica si otras variables locales o código definidos por una solicitud ReJIT del generador de perfiles son visibles.  
+## <a name="remarks"></a>Notas  
+ Estos métodos ofrecen funcionalidad además de la que proporcionan los métodos [enumeratelocalvariables (](icordebugilframe-enumeratelocalvariables-method.md), [getCode](icordebugframe-getcode-method.md)y [getlocalvariable (](icordebugilframe-getlocalvariable-method.md) . Cada método incluye un parámetro `flags` que especifica si otras variables locales o código definidos por una solicitud ReJIT del generador de perfiles son visibles.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [Depuración](index.md)

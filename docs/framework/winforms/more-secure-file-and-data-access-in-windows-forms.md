@@ -1,5 +1,5 @@
 ---
-title: Acceso más seguro a archivos y datos en formularios Windows Forms
+title: Acceso más seguro a archivos y datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49ba1919f68f35e9d72b012540b785e05c307c39
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949952"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743753"
 ---
-# <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acceso más seguro a archivos y datos en formularios Windows Forms
+# <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acceso más seguro a archivos y datos en Windows Forms
 El .NET Framework usa permisos para ayudar a proteger los recursos y los datos. Los lugares donde puede leer o escribir datos la aplicación dependen de los permisos concedidos a esa aplicación. Si la aplicación se ejecuta en un entorno de confianza parcial, puede que no tenga acceso a los datos o que deba cambiar la forma de acceder a los datos.  
   
  Si se encuentra con una restricción de seguridad, tiene dos opciones: declarar el permiso (si se concedió a la aplicación) o utilizar una versión de la característica escrita para funcionar en confianza parcial. Las secciones siguientes describen cómo trabajar con el acceso a archivos, a bases de datos y al Registro desde las aplicaciones que se ejecutan en un entorno de confianza parcial.  
@@ -29,7 +29,7 @@ El .NET Framework usa permisos para ayudar a proteger los recursos y los datos. 
 > De forma predeterminada, las herramientas que generan implementaciones ClickOnce implementan estas implementaciones de forma predeterminada para solicitar plena confianza de los equipos en los que se ejecutan. Si decide que desea que las ventajas de seguridad agregadas se ejecuten en confianza parcial, debe cambiar este valor predeterminado en Visual Studio o en una de las herramientas de Windows SDK (Mage. exe o MageUI. exe). Para obtener más información sobre la seguridad de Windows Forms y sobre cómo determinar el nivel de confianza adecuado para su aplicación, consulte [seguridad en Windows Forms introducción](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Acceso a archivos  
- La <xref:System.Security.Permissions.FileIOPermission> clase controla el acceso a archivos y carpetas en el .NET Framework. De forma predeterminada, el sistema de seguridad no concede <xref:System.Security.Permissions.FileIOPermission> a los entornos de confianza parcial, como las zonas de Internet y de la intranet local. Sin embargo, una aplicación que requiera acceso a los archivos puede funcionar en estos entornos si usted modifica el diseño de la aplicación o utiliza otros métodos para acceder a los archivos. De forma predeterminada, a la zona de la intranet local se le concede el derecho a acceder a su sitio y a su directorio, para conectarse a su sitio de origen, y a leer desde su directorio de instalación. De forma predeterminada, a la zona de Internet solo se le concede el derecho a conectarse a su sitio de origen.  
+ La clase <xref:System.Security.Permissions.FileIOPermission> controla el acceso a archivos y carpetas en el .NET Framework. De forma predeterminada, el sistema de seguridad no concede <xref:System.Security.Permissions.FileIOPermission> a los entornos de confianza parcial, como las zonas de Internet y de la intranet local. Sin embargo, una aplicación que requiera acceso a los archivos puede funcionar en estos entornos si usted modifica el diseño de la aplicación o utiliza otros métodos para acceder a los archivos. De forma predeterminada, a la zona de la intranet local se le concede el derecho a acceder a su sitio y a su directorio, para conectarse a su sitio de origen, y a leer desde su directorio de instalación. De forma predeterminada, a la zona de Internet solo se le concede el derecho a conectarse a su sitio de origen.  
   
 ### <a name="user-specified-files"></a>Archivos especificados por el usuario  
  Una forma de solucionar la falta de permiso para acceder a los archivos es preguntar al usuario para que proporcione información específica sobre el archivo con las clases <xref:System.Windows.Forms.OpenFileDialog> o <xref:System.Windows.Forms.SaveFileDialog>. Esta interacción del usuario ofrece cierta seguridad de cara a que la aplicación no pueda cargar de forma malintencionada archivos privados ni sobrescribir archivos importantes. Los métodos <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> y <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> proporcionan acceso de lectura y escritura a los archivos abriendo la secuencia de archivos para el archivo especificado por el usuario. Los métodos también protegen el archivo del usuario ocultando la ruta del archivo.  
@@ -138,7 +138,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ### <a name="other-files"></a>Otros archivos  
  A veces, necesitará leer o escribir en archivos que no especifique el usuario, por ejemplo, para conservar la configuración de la aplicación. En las zonas de Internet y de la intranet local, la aplicación no tendrá permiso para almacenar datos en un archivo local. Sin embargo, la aplicación podrá almacenar datos en un almacenamiento aislado. El almacenamiento aislado es un compartimiento de datos abstracto (no una ubicación de almacenamiento concreta) que contiene uno o varios archivos de almacenamiento aislado, denominados “almacenes”, que contienen las ubicaciones reales de los directorios donde están almacenados los datos. No son necesarios los permisos de acceso de los archivos como <xref:System.Security.Permissions.FileIOPermission>, sino que la clase <xref:System.Security.Permissions.IsolatedStoragePermission> controla los permisos del almacenamiento aislado. De forma predeterminada, las aplicaciones que se ejecutan en las zonas de Internet y de la intranet local pueden almacenar datos con el almacenamiento aislado. Sin embargo, ciertas configuraciones, como la cuota de disco, pueden variar. Para obtener más información sobre el almacenamiento aislado, consulte [almacenamiento aislado](../../standard/io/isolated-storage.md).  
   
- En el ejemplo siguiente, se utiliza el almacenamiento aislado para escribir datos en un archivo que se encuentra en un almacén. El ejemplo requiere <xref:System.Security.Permissions.IsolatedStorageFilePermission> y el valor de enumeración <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. El ejemplo muestra la lectura y la escritura de valores de determinadas propiedades del control <xref:System.Windows.Forms.Button> en un archivo situado en un almacenamiento aislado. Se llama a la función `Read` después de que se inicie la aplicación, y a la función `Write` antes de que finalice la aplicación. El ejemplo requiere que las `Read` funciones `Write` y existan como miembros de <xref:System.Windows.Forms.Form> un que contiene <xref:System.Windows.Forms.Button> un control `MainButton`denominado.  
+ En el ejemplo siguiente, se utiliza el almacenamiento aislado para escribir datos en un archivo que se encuentra en un almacén. El ejemplo requiere <xref:System.Security.Permissions.IsolatedStorageFilePermission> y el valor de enumeración <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. El ejemplo muestra la lectura y la escritura de valores de determinadas propiedades del control <xref:System.Windows.Forms.Button> en un archivo situado en un almacenamiento aislado. Se llama a la función `Read` después de que se inicie la aplicación, y a la función `Write` antes de que finalice la aplicación. El ejemplo requiere que las funciones `Read` y `Write` existan como miembros de una <xref:System.Windows.Forms.Form> que contenga un control <xref:System.Windows.Forms.Button> denominado `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   

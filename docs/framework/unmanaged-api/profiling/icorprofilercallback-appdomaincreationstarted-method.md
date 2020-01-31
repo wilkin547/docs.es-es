@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 35dbed6a723f5319dc506a44198456e3794464fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 49c3ab4901537805a1ae1be79097c55cc331d29d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790230"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866720"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted (Método)
 Notifica al generador de perfiles que se está creando un dominio de aplicación.  
@@ -39,7 +39,7 @@ HRESULT AppDomainCreationStarted(
   \[en] identifica el dominio que se va a crear.
   
 ## <a name="remarks"></a>Notas  
- El identificador no es válido para ninguna solicitud de información hasta que se llama al método [ICorProfilerCallback:: AppDomainCreationFinished (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) .  
+ El identificador no es válido para ninguna solicitud de información hasta que se llama al método [ICorProfilerCallback:: AppDomainCreationFinished (](icorprofilercallback-appdomaincreationfinished-method.md) .  
   
 ## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,4 +52,4 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)

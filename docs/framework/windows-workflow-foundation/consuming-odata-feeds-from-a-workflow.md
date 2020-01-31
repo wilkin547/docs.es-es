@@ -2,12 +2,12 @@
 title: 'Consumir fuentes de OData desde un flujo de trabajo: WF'
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ceac2c2d07351fcb79e2345068f07fa22f356411
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802666"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743795"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Consumir fuentes de OData desde un flujo de trabajo
 
@@ -15,7 +15,7 @@ WCF Data Services es un componente del .NET Framework que le permite crear servi
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Usar el servicio OData de ejemplo Northwind
 
-En los ejemplos de este tema se usa el servicio de datos Northwind de ejemplo ubicado en <https://services.odata.org/Northwind/Northwind.svc/>. Este servicio se proporciona como parte del [SDK de OData](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) y proporciona acceso de solo lectura a la base de datos Northwind de ejemplo. Si se quiere acceso de escritura, o un Servicio de datos de WCF local, puede seguir los pasos del [Tutorial rápido (WCF Data Services)](../data/wcf/quickstart-wcf-data-services.md) para crear un servicio OData local que proporcione acceso a la base de datos Northwind. Si sigue el tutorial rápido, sustituya el URI local por el que se proporciona en el código de ejemplo de este tema.
+En los ejemplos de este tema se usa el servicio de datos Northwind de ejemplo ubicado en <https://services.odata.org/Northwind/Northwind.svc/>. Este servicio se proporciona como parte del [SDK de OData](https://www.odata.org/ecosystem/#sdk) y proporciona acceso de solo lectura a la base de datos Northwind de ejemplo. Si se quiere acceso de escritura, o un Servicio de datos de WCF local, puede seguir los pasos del [Tutorial rápido (WCF Data Services)](../data/wcf/quickstart-wcf-data-services.md) para crear un servicio OData local que proporcione acceso a la base de datos Northwind. Si sigue el tutorial rápido, sustituya el URI local por el que se proporciona en el código de ejemplo de este tema.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Consumir una fuente de OData mediante las bibliotecas de cliente
 

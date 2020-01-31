@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-ms.openlocfilehash: 39882a554f9d47040bef00ff320d15b56abea533
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b52a0e7f993629c1005883723c734996d75300a7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445714"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868439"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread (Método)
 Inicializa el subproceso actual antes de las llamadas posteriores a la API del generador de perfiles en el mismo subproceso, de modo que se pueda evitar el interbloqueo.  
@@ -31,23 +31,23 @@ Inicializa el subproceso actual antes de las llamadas posteriores a la API del g
 HRESULT InitializeCurrentThread ();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Se recomienda llamar a `InitializeCurrentThread` en cualquier subproceso que llame a una API del generador de perfiles mientras haya subprocesos suspendidos. Este método lo suelen usar los profileres de muestreo que crean su propio subproceso para llamar al método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) para realizar los recorridos de la pila mientras se suspende el subproceso de destino. Mediante una llamada a `InitializeCurrentThread` una vez cuando el generador de perfiles crea primero el subproceso de muestreo, los perfiles pueden asegurarse de que la inicialización diferida por subproceso que CLR llevaría a cabo en la primera llamada a `DoStackSnapshot` ahora puede producirse de forma segura cuando no se suspende ningún otro subproceso.  
+## <a name="remarks"></a>Notas  
+ Se recomienda llamar a `InitializeCurrentThread` en cualquier subproceso que llame a una API del generador de perfiles mientras haya subprocesos suspendidos. Este método lo suelen usar los profileres de muestreo que crean su propio subproceso para llamar al método [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) para realizar los recorridos de la pila mientras se suspende el subproceso de destino. Mediante una llamada a `InitializeCurrentThread` una vez cuando el generador de perfiles crea primero el subproceso de muestreo, los perfiles pueden asegurarse de que la inicialización diferida por subproceso que CLR llevaría a cabo en la primera llamada a `DoStackSnapshot` ahora puede producirse de forma segura cuando no se suspende ningún otro subproceso.  
   
 > [!NOTE]
 > `InitializeCurrentThread` realiza la inicialización de antemano para finalizar las tareas que toman bloqueos y pueden interbloquearse. Llame a `InitializeCurrentThread` solo cuando no haya subprocesos suspendidos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerInfo4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 (interfaz)](icorprofilerinfo4-interface.md)
+- [Interfaces para generación de perfiles](profiling-interfaces.md)
+- [Generación de perfiles](index.md)

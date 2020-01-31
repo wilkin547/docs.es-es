@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e010a49dabd3b44602136e70b4c5524a68bdd9e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439308"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865212"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished (Método)
 Notifica al generador de perfiles que el compilador Just-in-Time (JIT) ha terminado de volver a compilar una función.  
@@ -34,7 +34,7 @@ HRESULT ReJITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `functionId`  
  de IDENTIFICADOR de la función que se volvió a compilar.  
   
@@ -49,18 +49,18 @@ HRESULT ReJITCompilationFinished(
   
  Un valor de `true` no perjudica al tiempo de ejecución, pero puede afectar a los resultados de la generación de perfiles.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [JITCompilationStarted (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [ReJITCompilationStarted (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 (interfaz)](icorprofilercallback4-interface.md)
+- [JITCompilationStarted (método)](icorprofilercallback-jitcompilationstarted-method.md)
+- [ReJITCompilationStarted (método)](icorprofilercallback4-rejitcompilationstarted-method.md)

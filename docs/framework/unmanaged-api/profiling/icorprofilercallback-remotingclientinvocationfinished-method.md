@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea4b283b-1210-4f41-a7a2-c398b1adde4e
 topic_type:
 - apiref
-ms.openlocfilehash: c9a750b941b29047206c98410d4b4673d1101a01
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 90ddb30c3d27d5f431c355abd3a6f792564e616d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445838"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866056"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a>ICorProfilerCallback::RemotingClientInvocationFinished (Método)
 Notifica al generador de perfiles que se ha ejecutado una llamada de comunicación remota para completarse en el cliente.  
@@ -31,16 +31,16 @@ Notifica al generador de perfiles que se ha ejecutado una llamada de comunicaci�
 HRESULT RemotingClientInvocationFinished();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Si la llamada de comunicación remota fue sincrónica, también se ha ejecutado hasta completarse en el servidor. Si la llamada de comunicación remota es asincrónica, se podría esperar una respuesta cuando se controla la llamada. Si se espera una respuesta, se producirá como una llamada a [ICorProfilerCallback:: remotingclientreceivingreply (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) y una llamada adicional a `RemotingClientInvocationFinished` para indicar el procesamiento secundario necesario de una llamada asincrónica.  
+## <a name="remarks"></a>Notas  
+ Si la llamada de comunicación remota fue sincrónica, también se ha ejecutado hasta completarse en el servidor. Si la llamada de comunicación remota es asincrónica, se podría esperar una respuesta cuando se controla la llamada. Si se espera una respuesta, se producirá como una llamada a [ICorProfilerCallback:: remotingclientreceivingreply (](icorprofilercallback-remotingclientreceivingreply-method.md) y una llamada adicional a `RemotingClientInvocationFinished` para indicar el procesamiento secundario necesario de una llamada asincrónica.  
   
  Cada uno de los siguientes pares de devoluciones de llamada se producirá en el mismo subproceso:  
   
-- `RemotingClientInvocationStarted` e [ICorProfilerCallback:: remotingclientsendingmessage (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` e [ICorProfilerCallback:: remotingclientsendingmessage (](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
-- [ICorProfilerCallback:: remotingclientreceivingreply (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) e [ICorProfilerCallback:: remotingclientinvocationfinished (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)  
+- [ICorProfilerCallback:: remotingclientreceivingreply (](icorprofilercallback-remotingclientreceivingreply-method.md) e [ICorProfilerCallback:: remotingclientinvocationfinished (](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
-- [ICorProfilerCallback:: RemotingServerInvocationReturned (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) e [ICorProfilerCallback:: RemotingServerSendingReply (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)  
+- [ICorProfilerCallback:: RemotingServerInvocationReturned (](icorprofilercallback-remotingserverinvocationreturned-method.md) e [ICorProfilerCallback:: RemotingServerSendingReply (](icorprofilercallback-remotingserversendingreply-method.md)  
   
  Debe tener en cuenta los siguientes problemas con las devoluciones de llamada de comunicación remota:  
   
@@ -48,15 +48,15 @@ HRESULT RemotingClientInvocationFinished();
   
 - El generador de perfiles no recibe notificaciones precisas para eventos de comunicación remota asincrónica.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)

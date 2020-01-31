@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197818"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794119"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Tutorial: Asignar propiedades mediante el uso del control ElementHost
 
-En este tutorial se muestra cómo utilizar la propiedad <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> para asignar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedades a las propiedades correspondientes de un elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado.
+En este tutorial se muestra cómo utilizar la propiedad <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> para asignar Windows Forms propiedades a las propiedades correspondientes de un elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado.
 
 Las tareas ilustradas en este tutorial incluyen:
 
@@ -31,7 +31,7 @@ Las tareas ilustradas en este tutorial incluyen:
 
 Para obtener una lista de código completa de las tareas ilustradas en este tutorial, consulte [asignación de propiedades mediante el ejemplo de control ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-Cuando haya terminado, podrá asignar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedades a las propiedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] correspondientes en un elemento hospedado.
+Cuando haya terminado, podrá asignar Windows Forms propiedades a las propiedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] correspondientes en un elemento hospedado.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

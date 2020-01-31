@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 9f54fdfe16bc24394503ba6f5a9b906a32ec2c8b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091103"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788673"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack (Método)
 Obtiene un enumerador para la pila de llamadas incrustada en un objeto de excepción.  
@@ -33,25 +33,25 @@ HRESULT EnumerateExceptionCallStack(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  ppCallStackEnum  
- enuncia Un puntero a la dirección de un objeto de interfaz [icordebugexceptionobjectcallstackenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) que es un enumerador de seguimiento de pila para un objeto de excepción administrado.  
+ enuncia Un puntero a la dirección de un objeto de interfaz [icordebugexceptionobjectcallstackenum (](icordebugexceptionobjectcallstackenum-interface.md) que es un enumerador de seguimiento de pila para un objeto de excepción administrado.  
   
-## <a name="remarks"></a>Comentarios  
- Si no hay información disponible sobre la pila de llamadas, el método devuelve `S_OK`y [icordebugexceptionobjectcallstackenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) es un enumerador válido con una longitud de 0. Si el método no puede recuperar la información de seguimiento de la pila, el valor devuelto es `E_FAIL` y no se devuelve ningún enumerador.  
+## <a name="remarks"></a>Notas  
+ Si no hay información disponible sobre la pila de llamadas, el método devuelve `S_OK`y [icordebugexceptionobjectcallstackenum (](icordebugexceptionobjectcallstackenum-interface.md) es un enumerador válido con una longitud de 0. Si el método no puede recuperar la información de seguimiento de la pila, el valor devuelto es `E_FAIL` y no se devuelve ningún enumerador.  
   
- El objeto [icordebugexceptionobjectcallstackenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) es responsable de descodificar los datos de seguimiento de la pila del campo `_stackTrace` del objeto de excepción.  
+ El objeto [icordebugexceptionobjectcallstackenum (](icordebugexceptionobjectcallstackenum-interface.md) es responsable de descodificar los datos de seguimiento de la pila del campo `_stackTrace` del objeto de excepción.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugExceptionObjectValue (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionObjectValue (interfaz)](icordebugexceptionobjectvalue-interface.md)
+- [Interfaces de depuración](debugging-interfaces.md)
