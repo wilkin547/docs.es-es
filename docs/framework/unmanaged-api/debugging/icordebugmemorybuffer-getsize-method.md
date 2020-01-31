@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugMemoryBuffer:: (método)'
+title: ICorDebugMemoryBuffer::GetSize (método)
 ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
-ms.openlocfilehash: 1693860abe99884ee443be0666dfb6b485a219a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51c13b67951c714d1aec602ffea22891328565a0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128004"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793184"
 ---
-# <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer:: (método)
+# <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize (método)
 Obtiene el tamaño del búfer de memoria en bytes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -20,25 +20,25 @@ HRESULT GetSize(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pcbBufferLength`  
  [out] Puntero al tamaño del búfer de memoria.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugMemoryBuffer (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer (interfaz)](icordebugmemorybuffer-interface.md)
+- [Interfaces de depuración](debugging-interfaces.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735286"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794249"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Tutorial: Organizar controles de formularios Windows Forms en WPF
 
-En este tutorial se muestra cómo usar las características de diseño [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para organizar los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] en una aplicación híbrida.
+En este tutorial se muestra cómo usar las características de diseño [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para organizar los controles de Windows Forms en una aplicación híbrida.
 
 Las tareas ilustradas en este tutorial incluyen:
 
@@ -39,7 +39,7 @@ Las tareas ilustradas en este tutorial incluyen:
 
 Para obtener una lista de código completa de las tareas ilustradas en este tutorial, vea el [ejemplo de organización de controles Windows Forms en WPF](https://go.microsoft.com/fwlink/?LinkID=159971).
 
-Cuando haya terminado, tendrá conocimientos sobre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] características de diseño en aplicaciones basadas en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Cuando haya terminado, tendrá conocimientos sobre Windows Forms características de diseño en aplicaciones basadas en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -59,7 +59,7 @@ Para crear y configurar el proyecto, siga estos pasos:
 
 3. Haga doble clic en *MainWindow. Xaml* para abrirlo en la vista XAML.
 
-4. En el elemento <xref:System.Windows.Window>, agregue la siguiente asignación de espacio de nombres [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. En el elemento <xref:System.Windows.Window>, agregue la siguiente asignación de espacio de nombres Windows Forms.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -71,7 +71,7 @@ Para crear y configurar el proyecto, siga estos pasos:
 
 ## <a name="using-default-layout-settings"></a>Usar la configuración de diseño predeterminada
 
-De forma predeterminada, el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> controla el diseño del control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado.
+De forma predeterminada, el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> controla el diseño del control de Windows Forms hospedado.
 
 Para usar la configuración de diseño predeterminada, siga estos pasos:
 
@@ -79,7 +79,7 @@ Para usar la configuración de diseño predeterminada, siga estos pasos:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. Aparece el control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> en la <xref:System.Windows.Controls.Canvas>. El tamaño del control hospedado se basa en su contenido y el tamaño del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> se ajusta para alojar el control hospedado.
+2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. Aparece el control Windows Forms <xref:System.Windows.Forms.Button?displayProperty=nameWithType> en la <xref:System.Windows.Controls.Canvas>. El tamaño del control hospedado se basa en su contenido y el tamaño del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> se ajusta para alojar el control hospedado.
 
 ## <a name="sizing-to-content"></a>Ajustar el tamaño al contenido
 
@@ -115,7 +115,7 @@ Para especificar el tamaño explícitamente, siga estos pasos:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> se establece en un tamaño de 50 píxeles de ancho por 70 píxeles de alto, que es menor que la configuración de diseño predeterminada. El contenido del control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] se reorganiza en consecuencia.
+2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> se establece en un tamaño de 50 píxeles de ancho por 70 píxeles de alto, que es menor que la configuración de diseño predeterminada. El contenido del control Windows Forms se reorganiza en consecuencia.
 
 ## <a name="setting-layout-properties"></a>Establecer las propiedades de diseño
 
@@ -164,7 +164,7 @@ Para acoplar un control hospedado, siga estos pasos:
 
 ## <a name="setting-visibility"></a>Establecer la visibilidad
 
-Puede hacer que el control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sea invisible o contraerlo si establece la propiedad <xref:System.Windows.UIElement.Visibility%2A> en el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Cuando un control es invisible no se muestra, pero ocupa espacio de diseño. Cuando un control está contraído no se muestra ni ocupa espacio de diseño.
+Puede hacer que el control de Windows Forms sea invisible o contraerlo si establece la propiedad <xref:System.Windows.UIElement.Visibility%2A> en el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Cuando un control es invisible no se muestra, pero ocupa espacio de diseño. Cuando un control está contraído no se muestra ni ocupa espacio de diseño.
 
 Para establecer la visibilidad de un control hospedado, siga estos pasos:
 
@@ -181,11 +181,11 @@ Para establecer la visibilidad de un control hospedado, siga estos pasos:
 
 4. Haga clic en el botón **hacer clic para hacer invisible** para hacer que el elemento de <xref:System.Windows.Forms.Integration.WindowsFormsHost> sea invisible.
 
-5. Haga clic en el botón **haga clic para contraer** para ocultar completamente el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> del diseño. Cuando se contrae el control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], los elementos circundantes se reorganizan para ocupar su espacio.
+5. Haga clic en el botón **haga clic para contraer** para ocultar completamente el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> del diseño. Cuando se contrae el control Windows Forms, los elementos circundantes se reorganizan para ocupar su espacio.
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>Hospedar un control que no se ajusta
 
-Algunos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen un tamaño fijo y no se ajustan para rellenar el espacio disponible en el diseño. Por ejemplo, el control <xref:System.Windows.Forms.MonthCalendar> muestra un mes en un espacio fijo.
+Algunos controles Windows Forms tienen un tamaño fijo y no se ajustan para rellenar el espacio disponible en el diseño. Por ejemplo, el control <xref:System.Windows.Forms.MonthCalendar> muestra un mes en un espacio fijo.
 
 Para hospedar un control que no se ajusta, siga estos pasos:
 
@@ -223,7 +223,7 @@ Para ver el efecto de la rotación en una aplicación híbrida, siga estos pasos
 
 ## <a name="setting-padding-and-margins"></a>Establecer el relleno y márgenes
 
-El relleno y los márgenes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño son similares al relleno y los márgenes de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Simplemente establezca las propiedades <xref:System.Windows.Controls.Control.Padding%2A> y <xref:System.Windows.FrameworkElement.Margin%2A> en el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
+El relleno y los márgenes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño son similares al relleno y los márgenes de Windows Forms. Simplemente establezca las propiedades <xref:System.Windows.Controls.Control.Padding%2A> y <xref:System.Windows.FrameworkElement.Margin%2A> en el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 Para establecer el relleno y los márgenes de un control hospedado, siga estos pasos:
 
@@ -232,11 +232,11 @@ Para establecer el relleno y los márgenes de un control hospedado, siga estos p
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. Los valores de relleno y margen se aplican a los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedados de la misma manera que se aplicarían en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+2. Presione <kbd>F5</kbd> para compilar y ejecutar la aplicación. Los valores de relleno y margen se aplican a los controles de Windows Forms hospedados de la misma manera que se aplicarían en Windows Forms.
 
 ## <a name="using-dynamic-layout-containers"></a>Usar contenedores de diseño dinámico
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] proporciona dos contenedores de diseño dinámico, <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>. También puede usar estos contenedores en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseños.
+Windows Forms proporciona dos contenedores de diseño dinámico, <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>. También puede usar estos contenedores en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseños.
 
 Para usar un contenedor de diseño dinámico, siga estos pasos:
 

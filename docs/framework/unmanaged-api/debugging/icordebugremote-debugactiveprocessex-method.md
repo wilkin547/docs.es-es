@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131272"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791975"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx (Método)
 Inicia un proceso en un equipo remoto en el depurador.  
@@ -36,9 +36,9 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pRemoteTarget`  
- de Puntero a una [interfaz ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Este parámetro se usa para determinar el equipo en el que se está ejecutando el proceso.  
+ de Puntero a una [interfaz ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Este parámetro se usa para determinar el equipo en el que se está ejecutando el proceso.  
   
  `id`  
  de IDENTIFICADOR del proceso al que se va a adjuntar el depurador.  
@@ -56,10 +56,10 @@ HRESULT DebugActiveProcessEx (
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede asociar al proceso en el equipo remoto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En Silverlight no se admite la depuración en modo mixto.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -70,7 +70,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugRemote (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote (interfaz)](icordebugremote-interface.md)
+- [ICorDebug (interfaz)](icordebug-interface.md)
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

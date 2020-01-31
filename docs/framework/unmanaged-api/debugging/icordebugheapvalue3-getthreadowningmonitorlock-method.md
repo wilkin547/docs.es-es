@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127490"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788620"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock (Método)
 Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.  
@@ -34,7 +34,7 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `ppThread`  
  enuncia Subproceso administrado que posee el bloqueo de monitor en este objeto.  
   
@@ -51,7 +51,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si un subproceso administrado posee el bloqueo de monitor en este objeto:  
   
 - El método devuelve S_OK.  
@@ -64,16 +64,16 @@ HRESULT GetThreadOwningMonitorLock (
   
  Si se produce un error de modo que no se pueda determinar cuál es el propietario del subproceso, si existe, el bloqueo de monitor en este objeto, el método devuelve un valor HRESULT que indica un error.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [Depuración](index.md)

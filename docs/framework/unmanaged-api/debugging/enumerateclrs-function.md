@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122974"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789129"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs (Función)
 Proporciona un mecanismo para enumerar los CLR de un proceso.  
@@ -37,7 +37,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `debuggeePID`  
  [in] Identificador del proceso desde el que se van a enumerar los CLR cargados.  
   
@@ -63,16 +63,16 @@ HRESULT EnumerateCLRs (
  E_FAIL (u otros códigos devueltos de E_)  
  No se pueden enumerar los CLR cargados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para un proceso de destino identificado por `debuggeePID`, la función devuelve una matriz de rutas de acceso, `ppStringArrayOut`, a los CLR cargados en el proceso; una matriz de identificadores de eventos, `ppHandleArrayOut`, que puede contener un evento de inicio continuo para el CLR en el mismo índice; y el tamaño de las matrices, `pdwArrayLengthOut`, que especifica el número de CLR que hay cargados.  
   
  En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
   
- Esta función asigna la memoria para `ppHandleArrayOut` y `ppStringArrayOut`. Para liberar la memoria asignada, debe llamar a la [función closeclrenumeration (](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ Esta función asigna la memoria para `ppHandleArrayOut` y `ppStringArrayOut`. Para liberar la memoria asignada, debe llamar a la [función closeclrenumeration (](closeclrenumeration-function.md).  
   
  Se puede llamar a esta función con ambos parámetros de matriz establecidos en NULL para devolver el número de los CLR en el proceso de destino. A partir de este número, un llamador puede deducir el tamaño del búfer que se creará: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** dbgshim. h  

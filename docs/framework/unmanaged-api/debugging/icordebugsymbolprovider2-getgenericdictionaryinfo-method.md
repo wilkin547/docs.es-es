@@ -1,15 +1,15 @@
 ---
-title: 'Icordebugsymbolprovider2 (:: Getgenericdictionaryinfo ((método)'
+title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133631"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791508"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Icordebugsymbolprovider2 (:: Getgenericdictionaryinfo ((método)
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
 
 Recupera una asignación de diccionario genérico.
 
@@ -21,12 +21,12 @@ HRESULT GetGenericDictionaryInfo(
 );
 ```
 
-## <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
 `ppMemoryBuffer`\
-enuncia Un puntero a la dirección de un objeto [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) que contiene la asignación de diccionario genérico. Vea la sección Comentarios para obtener más información.
+enuncia Un puntero a la dirección de un objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contiene la asignación de diccionario genérico. Vea la sección Comentarios para obtener más información.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 > [!NOTE]
 > Este método solo está disponible con .NET Native.
@@ -75,7 +75,7 @@ El formato de cada elemento de información sobre la creación de instancias en 
 
 Incluir la longitud de cada elemento del montón permite la ordenación simple de la sección del directorio sin afectar al montón.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -83,9 +83,9 @@ Incluir la longitud de cada elemento del montón permite la ordenación simple d
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework versiones:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugSymbolProvider2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2 (interfaz)](icordebugsymbolprovider2-interface.md)
+- [Interfaces de depuración](debugging-interfaces.md)

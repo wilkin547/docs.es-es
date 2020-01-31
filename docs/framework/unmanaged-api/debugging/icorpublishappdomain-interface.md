@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c65ec69055b56b31a26ccf45e51ec43c4512a320
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140338"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790688"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain (Interfaz)
 Representa y proporciona información sobre un dominio de aplicación.  
@@ -28,19 +28,19 @@ Representa y proporciona información sobre un dominio de aplicación.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetID (método)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Obtiene el identificador único para esta `ICorPublishAppDomain`.|  
-|[GetName (método)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación al que hace referencia este `ICorPublishAppDomain`.|  
+|[GetID (método)](icorpublishappdomain-getid-method.md)|Obtiene el identificador único para esta `ICorPublishAppDomain`.|  
+|[GetName (método)](icorpublishappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación al que hace referencia este `ICorPublishAppDomain`.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish (coclase)](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [CorpubPublish (coclase)](corpubpublish-coclass.md)

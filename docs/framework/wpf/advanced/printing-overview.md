@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740308"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794292"
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
-Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con Windows Vista, algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicaciones y desarrolladores que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo XML Paper Specification (XPS) y la ruta de impresión XPS.  
+Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con Windows Vista, algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean Windows Forms aplicaciones y desarrolladores que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo XML Paper Specification (XPS) y la ruta de impresión XPS.  
   
  En este tema se incluyen las siguientes secciones.  
   

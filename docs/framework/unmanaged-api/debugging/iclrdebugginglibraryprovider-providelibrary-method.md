@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111359"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789035"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary (Método)
 
@@ -36,7 +36,7 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);
 ```
 
-## <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
 `pwszFilename` \
 de Nombre del módulo que se está solicitando.
@@ -60,9 +60,9 @@ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT 
 
 ## <a name="exceptions"></a>Excepciones
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-`ProvideLibrary` permite al depurador proporcionar los módulos necesarios para depurar archivos CLR específicos como mscordbi. dll y mscordacwks. dll. Los identificadores de módulo deben seguir siendo válidos hasta que una llamada al método [ICLRDebugging:: canunloadnow (](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) indica que se pueden liberar, momento en el que es responsabilidad del llamador liberar los identificadores.
+`ProvideLibrary` permite al depurador proporcionar los módulos necesarios para depurar archivos CLR específicos como mscordbi. dll y mscordacwks. dll. Los identificadores de módulo deben seguir siendo válidos hasta que una llamada al método [ICLRDebugging:: canunloadnow (](iclrdebugging-canunloadnow-method.md) indica que se pueden liberar, momento en el que es responsabilidad del llamador liberar los identificadores.
 
 El depurador puede utilizar cualquier medio disponible para buscar o adquirir el módulo de depuración.
 
@@ -71,7 +71,7 @@ El depurador puede utilizar cualquier medio disponible para buscar o adquirir el
 >
 > Si se detecta un problema de seguridad grave en una biblioteca ya publicada, como mscordbi. dll o mscordacwks. dll, se pueden aplicar revisiones a las correcciones de compatibilidad para reconocer las versiones incorrectas de los archivos. A continuación, la corrección de compatibilidad puede emitir solicitudes para las versiones revisadas de los archivos y rechazar las versiones incorrectas Si se proporcionan como respuesta a cualquier solicitud. Esto solo puede ocurrir si el usuario ha revisado una nueva versión de la corrección de compatibilidad (shim). Las versiones sin revisar seguirán siendo vulnerables.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -79,9 +79,9 @@ El depurador puede utilizar cualquier medio disponible para buscar o adquirir el
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [Depuración](index.md)

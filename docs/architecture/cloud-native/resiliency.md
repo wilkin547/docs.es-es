@@ -2,12 +2,12 @@
 title: Resistencia nativa en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Resistencia nativa en la nube
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841046"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781086"
 ---
 # <a name="cloud-native-resiliency"></a>Resistencia nativa en la nube
 
@@ -41,5 +41,5 @@ En un sistema distribuido a pequeña escala, el error será menos frecuente, per
 Por lo tanto, la aplicación y la infraestructura deben ser resistentes. En las secciones siguientes, exploraremos técnicas defensivas que puede Agregar a su aplicación y características integradas en la nube que puede aprovechar para ayudar a revisar la experiencia del usuario.
 
 >[!div class="step-by-step"]
->[Anterior](azure-data-storage.md)
+>[Anterior](elastic-search-in-azure.md)
 >[Siguiente](application-resiliency-patterns.md)

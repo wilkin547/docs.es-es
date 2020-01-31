@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131296"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791988"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx (Método)
 Inicia un proceso en un equipo remoto en el depurador.  
@@ -45,9 +45,9 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pRemoteTarget`  
- de Puntero a una [interfaz ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Se utiliza para determinar el equipo remoto en el que se va a iniciar el proceso.  
+ de Puntero a una [interfaz ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Se utiliza para determinar el equipo remoto en el que se va a iniciar el proceso.  
   
  `lpApplicationName`  
  de Puntero a una cadena terminada en null que especifica el módulo que va a ser ejecutado por el proceso iniciado. El módulo se ejecuta en el contexto de seguridad del proceso de llamada.  
@@ -92,10 +92,10 @@ HRESULT CreateProcessEx (
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede iniciar el proceso en el equipo remoto y devolver una "ICorDebugProcess interface" para la depuración.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En Silverlight no se admite la depuración en modo mixto.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Cordebug. idl  
@@ -106,7 +106,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugRemote (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote (interfaz)](icordebugremote-interface.md)
+- [ICorDebug (interfaz)](icordebug-interface.md)
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

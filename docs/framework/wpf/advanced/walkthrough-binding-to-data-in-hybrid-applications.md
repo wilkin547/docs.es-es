@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976577"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794220"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Tutorial: Enlazar a datos en aplicaciones híbridas
 
-Enlazar un origen de datos a un control es esencial para proporcionar a los usuarios acceso a los datos subyacentes, tanto si usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] como si utiliza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo se puede usar el enlace de datos en aplicaciones híbridas que incluyen controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Enlazar un origen de datos a un control es esencial para proporcionar a los usuarios acceso a los datos subyacentes, tanto si usa Windows Forms como si utiliza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo se puede usar el enlace de datos en aplicaciones híbridas que incluyen controles Windows Forms y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 Las tareas ilustradas en este tutorial incluyen:
 
@@ -61,7 +61,7 @@ Necesita los componentes siguientes para completar este tutorial:
 
 3. Abra MainWindow. XAML en el diseñador de WPF.
 
-4. En el elemento <xref:System.Windows.Window>, agregue la siguiente asignación de espacios de nombres de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. En el elemento <xref:System.Windows.Window>, agregue la siguiente asignación de espacios de nombres de Windows Forms.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ Los detalles de cada registro de cliente se muestran en varios controles <xref:S
 
 ## <a name="displaying-data-by-using-interoperation"></a>Mostrar los datos mediante la interoperación
 
-Los pedidos correspondientes al cliente seleccionado se muestran en un control de <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> denominado `dataGridView1`. El control `dataGridView1` está enlazado al origen de datos en el archivo de código subyacente. Un control <xref:System.Windows.Forms.Integration.WindowsFormsHost> es el elemento primario de este control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Los pedidos correspondientes al cliente seleccionado se muestran en un control de <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> denominado `dataGridView1`. El control `dataGridView1` está enlazado al origen de datos en el archivo de código subyacente. Un control <xref:System.Windows.Forms.Integration.WindowsFormsHost> es el elemento primario de este control Windows Forms.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>Para mostrar los datos en el control DataGridView
 

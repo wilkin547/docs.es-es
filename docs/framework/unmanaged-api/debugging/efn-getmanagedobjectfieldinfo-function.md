@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123012"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793772"
 ---
 # <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_función GetManagedObjectFieldInfo
 Obtiene el desplazamiento desde el inicio de un objeto hasta un campo y el valor del campo, a partir del puntero de objeto y nombre de campo especificados.  
@@ -36,7 +36,7 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `Client`  
  de Puntero al cliente de depuración.  
   
@@ -52,12 +52,12 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  `pOffset`  
  enuncia Desplazamiento desde `objAddr` al campo. Este parámetro puede ser NULL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el desplazamiento es 0, no se escribe ningún desplazamiento.  
   
  Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor de instalación de 0XA0 y un código de error de 0x1000.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** SOS_Stacktrace. h  
@@ -66,4 +66,4 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Funciones estáticas globales de depuración](debugging-global-static-functions.md)

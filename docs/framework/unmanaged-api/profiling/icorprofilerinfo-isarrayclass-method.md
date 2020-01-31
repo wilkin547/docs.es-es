@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a6e483d820d183afc8ba6a68fc4635730ffd1e51
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438709"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869343"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass (Método)
 Determina si la clase especificada es una clase de matriz.  
@@ -35,7 +35,7 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `classId`  
  de IDENTIFICADOR de la clase que se va a examinar.  
   
@@ -48,18 +48,18 @@ HRESULT IsArrayClass(
  `pcRank`  
  enuncia Un puntero a un entero que indica el rango (es decir, el número de dimensiones) de la matriz.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si la clase especificada es una clase de matriz, el método `IsArrayClass` devuelve un S_OK HRESULT y valores para cualquier parámetro de salida que no sea NULL. De lo contrario, devuelve S_FALSE.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo (interfaz)](icorprofilerinfo-interface.md)

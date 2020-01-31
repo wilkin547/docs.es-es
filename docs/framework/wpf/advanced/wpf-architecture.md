@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735068"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794033"
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
 En este tema se proporciona un paseo guiado por la jerarquía de clases de Windows Presentation Foundation (WPF). Abarca la mayoría de los subsistemas principales de WPF y describe cómo interactúan. También se detallan algunas de las opciones realizadas por los arquitectos de WPF.  
@@ -116,7 +116,7 @@ En este tema se proporciona un paseo guiado por la jerarquía de clases de Windo
   
  Las dos cosas más críticas que <xref:System.Windows.FrameworkElement> presenta son el enlace de datos y los estilos.  
   
- El subsistema de enlace de datos en WPF debe ser relativamente familiar para cualquier persona que haya usado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o ASP.NET para crear una aplicación [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. En cada uno de estos sistemas, hay una manera sencilla de expresar que quiere enlazar una o varias propiedades de un elemento determinado a un fragmento de datos. WPF es totalmente compatible con el enlace de propiedades, la transformación y el enlace de listas.  
+ El subsistema de enlace de datos en WPF debe ser relativamente familiar para cualquier persona que haya usado Windows Forms o ASP.NET para crear una aplicación [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. En cada uno de estos sistemas, hay una manera sencilla de expresar que quiere enlazar una o varias propiedades de un elemento determinado a un fragmento de datos. WPF es totalmente compatible con el enlace de propiedades, la transformación y el enlace de listas.  
   
  Una de las características más interesantes del enlace de datos en WPF es la introducción de las plantillas de datos. Las plantillas de datos le permiten especificar mediante declaración cómo se debería visualizar un fragmento de datos. En lugar de crear una interfaz de usuario personalizada que se puede enlazar a los datos, puede solucionar el problema permitiendo que los datos determinen la presentación que se va a crear.  
   
@@ -130,7 +130,7 @@ En este tema se proporciona un paseo guiado por la jerarquía de clases de Windo
   
  Esta diferencia entre el modelo de datos (propiedades), el modelo de interacción (comandos y eventos) y el modelo de presentación (plantillas) permite una total personalización de la apariencia y el comportamiento de un control.  
   
- Un aspecto común del modelo de datos de los controles es el modelo de contenido. Si observa un control como <xref:System.Windows.Controls.Button>, verá que tiene una propiedad denominada "Content" de tipo <xref:System.Object>. En [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y ASP.NET, esta propiedad normalmente sería una cadena; sin embargo, esto limita el tipo de contenido que se puede colocar en un botón. El contenido de un botón puede ser una cadena simple, un objeto de datos complejo o un árbol de elementos completo. En el caso de un objeto de datos, la plantilla de datos se usa para construir una presentación.  
+ Un aspecto común del modelo de datos de los controles es el modelo de contenido. Si observa un control como <xref:System.Windows.Controls.Button>, verá que tiene una propiedad denominada "Content" de tipo <xref:System.Object>. En Windows Forms y ASP.NET, esta propiedad normalmente sería una cadena; sin embargo, esto limita el tipo de contenido que se puede colocar en un botón. El contenido de un botón puede ser una cadena simple, un objeto de datos complejo o un árbol de elementos completo. En el caso de un objeto de datos, la plantilla de datos se usa para construir una presentación.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>Resumen  
@@ -138,7 +138,7 @@ En este tema se proporciona un paseo guiado por la jerarquía de clases de Windo
   
  Las aplicaciones tradicionales crean una presentación y, después, enlazan a algunos datos. En WPF, todo lo relacionado con el control, cada aspecto de la pantalla, se genera mediante algún tipo de enlace de datos. El texto situado dentro de un botón se muestra creando un control compuesto dentro de este y enlazando su presentación a la propiedad de contenido del botón.  
   
- Cuando empiece a desarrollar aplicaciones basadas en WPF, debe sentir muy familiar. Puede establecer propiedades, utilizar objetos y enlazar datos de la misma manera que puede usar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o ASP.NET. Con una investigación más profunda de la arquitectura de WPF, observará que existe la posibilidad de crear aplicaciones mucho más enriquecidas que traten fundamentalmente los datos como el controlador principal de la aplicación.  
+ Cuando empiece a desarrollar aplicaciones basadas en WPF, debe sentir muy familiar. Puede establecer propiedades, utilizar objetos y enlazar datos de la misma manera que puede usar Windows Forms o ASP.NET. Con una investigación más profunda de la arquitectura de WPF, observará que existe la posibilidad de crear aplicaciones mucho más enriquecidas que traten fundamentalmente los datos como el controlador principal de la aplicación.  
   
 ## <a name="see-also"></a>Vea también
 

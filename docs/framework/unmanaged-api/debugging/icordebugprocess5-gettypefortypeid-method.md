@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb25c9235e4fcded5c230d2d417b9d41bbdd9b19
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121275"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792337"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID (Método)
 Convierte un identificador de tipo en un valor de ICorDebugType.  
@@ -34,26 +34,26 @@ HRESULT GetTypeForTypeID(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `id`  
  de El identificador de tipo.  
   
  `ppType`  
  enuncia Puntero a la dirección de un objeto ICorDebugType.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En algunos casos, los métodos que devuelven un identificador de tipo pueden devolver un valor de `COR_TYPEID` null. Si este valor se pasa como el argumento `id`, se producirá un error en el método `GetTypeForTypeID` y se devolverá `E_FAIL`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugProcess5 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 (interfaz)](icordebugprocess5-interface.md)
+- [Interfaces de depuración](debugging-interfaces.md)

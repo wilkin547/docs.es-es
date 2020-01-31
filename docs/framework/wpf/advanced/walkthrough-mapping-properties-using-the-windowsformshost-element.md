@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974227"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794099"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost
 
-En este tutorial se muestra cómo usar la propiedad <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> para asignar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades a las propiedades correspondientes de un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado.
+En este tutorial se muestra cómo usar la propiedad <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> para asignar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades a las propiedades correspondientes de un control de Windows Forms hospedado.
 
 Las tareas ilustradas en este tutorial incluyen:
 
@@ -35,7 +35,7 @@ Las tareas ilustradas en este tutorial incluyen:
 
 Para obtener una lista de código completa de las tareas ilustradas en este tutorial, vea [asignar propiedades mediante el ejemplo de elemento WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-Cuando haya terminado, podrá asignar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades a las propiedades correspondientes de un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado.
+Cuando haya terminado, podrá asignar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades a las propiedades correspondientes de un control de Windows Forms hospedado.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -53,7 +53,7 @@ Necesita los componentes siguientes para completar este tutorial:
 
 ## <a name="defining-the-application-layout"></a>Definir el diseño de la aplicación
 
-La aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]utiliza el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> para hospedar un control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+La aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]utiliza el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> para hospedar un control Windows Forms.
 
 ### <a name="to-define-the-application-layout"></a>Para definir el diseño de la aplicación
 
@@ -83,7 +83,7 @@ El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> proporciona
 
      El método `AddClipMapping` agrega una nueva asignación para la propiedad <xref:System.Windows.UIElement.Clip%2A>.
 
-     El método `OnClipChange` traduce la propiedad <xref:System.Windows.UIElement.Clip%2A> a la propiedad [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>.
+     El método `OnClipChange` traduce la propiedad <xref:System.Windows.UIElement.Clip%2A> a la propiedad Windows Forms<xref:System.Windows.Forms.Control.Region%2A>.
 
      El método `Window1_SizeChanged` controla el evento de <xref:System.Windows.FrameworkElement.SizeChanged> de la ventana y ajusta el tamaño de la región de recorte para ajustarla a la ventana de la aplicación.
 
@@ -113,7 +113,7 @@ Reemplace una asignación de propiedades predeterminada quitando la asignación 
 
      El método `ReplaceFlowDirectionMapping` reemplaza la asignación predeterminada para la propiedad <xref:System.Windows.FrameworkElement.FlowDirection%2A>.
 
-     El método `OnFlowDirectionChange` traduce la propiedad <xref:System.Windows.FrameworkElement.FlowDirection%2A> a la propiedad [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>.
+     El método `OnFlowDirectionChange` traduce la propiedad <xref:System.Windows.FrameworkElement.FlowDirection%2A> a la propiedad Windows Forms<xref:System.Windows.Forms.Control.RightToLeft%2A>.
 
      El método `cb_CheckedChanged` controla el evento de <xref:System.Windows.Forms.CheckBox.CheckedChanged> en el control de <xref:System.Windows.Forms.CheckBox>. Asigna la propiedad <xref:System.Windows.FrameworkElement.FlowDirection%2A> basada en el valor de la propiedad <xref:System.Windows.Forms.CheckBox.CheckState%2A>
 
@@ -145,7 +145,7 @@ Configure las asignaciones de propiedades mediante una llamada a los métodos de
 
      El método `WindowLoaded` controla el evento <xref:System.Windows.FrameworkElement.Loaded> y realiza la inicialización siguiente.
 
-    - Crea un control de <xref:System.Windows.Forms.CheckBox> de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+    - Crea un control de<xref:System.Windows.Forms.CheckBox> de Windows Forms.
 
     - Llama a los métodos definidos anteriormente en el tutorial para configurar las asignaciones de propiedades.
 

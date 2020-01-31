@@ -1,21 +1,21 @@
 ---
-title: Mejorar las aplicaciones de Windows Forms
+title: Mejorar las aplicaciones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c9287870d0a3852cf8dda21c4bd249eca09c114
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744826"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Mejorar las aplicaciones de Windows Forms
 Windows Forms contiene muchas características que puede usar para mejorar sus aplicaciones basadas en Windows para satisfacer las necesidades específicas de los usuarios. En los temas siguientes se describen estas características y cómo usarlas.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)  
  Contiene vínculos a temas que describen y muestran cómo usar la interfaz gráfica en Windows Forms.  
   
@@ -31,10 +31,10 @@ Windows Forms contiene muchas características que puede usar para mejorar sus a
  [Funciones de red en las aplicaciones de Windows Forms](networking-in-windows-forms-applications.md)  
  Contiene vínculos a temas que describen y muestran cómo usar las funciones de red en Windows Forms.  
   
- [Globalizar aplicaciones de Windows Forms](globalizing-windows-forms.md)  
+ [Globalizar aplicaciones Windows Forms](globalizing-windows-forms.md)  
  Contiene vínculos a temas que muestran cómo globalizar aplicaciones de Windows Forms.  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Aplicaciones de Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications.md)  
  Contiene vínculos a temas que describen y muestran cómo acceder a componentes COM desde aplicaciones de Windows Forms.  
   
  [Información del sistema y Windows Forms](system-information-and-windows-forms.md)  

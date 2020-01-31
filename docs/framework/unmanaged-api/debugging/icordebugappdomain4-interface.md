@@ -1,35 +1,35 @@
 ---
-title: Interfaz de ICorDebugAppDomain4
+title: ICorDebugAppDomain4 (Interfaz)
 ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
-ms.openlocfilehash: db5c08f74795026d7c6f3b5872fb6fdabf88ee5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2965b43a25d016e9773ec3893661af4580e6007b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088821"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784717"
 ---
-# <a name="icordebugappdomain4-interface"></a>Interfaz de ICorDebugAppDomain4
-Extiende lógicamente la interfaz ICorDebugAppDomain para obtener un objeto administrado desde un contenedor COM invocable.  
+# <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4 (Interfaz)
+Extiende lógicamente la interfaz ICorDebugAppDomain para obtener un objeto administrado desde un contenedor CCW (COM callable wrapper).  
   
 ## <a name="method"></a>Método  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetObjectForCCW (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-getobjectforccw-method.md)|Obtiene un objeto administrado de un puntero de contenedor CCW (COM callable wrapper).|  
+|[GetObjectForCCW (método)](icordebugappdomain4-getobjectforccw-method.md)|Obtiene un objeto administrado de un puntero de contenedor CCW (COM callable wrapper).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaces de depuración](debugging-interfaces.md)
+- [Depuración](index.md)

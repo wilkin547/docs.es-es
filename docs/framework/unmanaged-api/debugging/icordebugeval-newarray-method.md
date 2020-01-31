@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: ca0844e4d2b1cad65266d58c6cda74de203d1758
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137658"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788720"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray (Método)
 Asigna una nueva matriz del tipo de elemento y las dimensiones especificadas.  
   
- Este método está obsoleto en la .NET Framework versión 2,0. Use [ICorDebugEval2:: NewParameterizedArray (](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) en su lugar.  
+ Este método está obsoleto en la .NET Framework versión 2,0. Use [ICorDebugEval2:: NewParameterizedArray (](icordebugeval2-newparameterizedarray-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ HRESULT NewArray (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `elementType`  
  de Un valor de la enumeración CorElementType que especifica el tipo de elemento de la matriz.  
   
@@ -55,10 +55,10 @@ HRESULT NewArray (
  `lowBounds`  
  [in] Opcional. Límite inferior de cada dimensión de la matriz. Si se omite este valor, se supone un límite inferior de cero para cada dimensión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La matriz siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly (Interfaz)
+title: Interfaz ICorDebugAssembly
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: dea3231e3bbb361b56254756c6d99b115f73e792
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ecd4ad31b8dad55e9538642a4dc652341bc84b97
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133970"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784674"
 ---
-# <a name="icordebugassembly-interface"></a>ICorDebugAssembly (Interfaz)
+# <a name="icordebugassembly-interface"></a>Interfaz ICorDebugAssembly
 
 Representa un ensamblado.  
   
@@ -29,26 +29,26 @@ Representa un ensamblado.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateModules (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|Obtiene un enumerador para los módulos incluidos en el ensamblado.|  
-|[GetAppDomain (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|Obtiene un puntero de interfaz al dominio de aplicación que contiene esta instancia de `ICorDebugAssembly`.|  
-|[GetCodeBase (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|No se implementa en la versión actual del .NET Framework.|  
-|[GetName (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|Obtiene el nombre del ensamblado.|  
-|[GetProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|Obtiene la instancia de ICorDebugProcess en la que se ejecuta el ensamblado.|  
+|[EnumerateModules (método)](icordebugassembly-enumeratemodules-method.md)|Obtiene un enumerador para los módulos incluidos en el ensamblado.|  
+|[GetAppDomain (método)](icordebugassembly-getappdomain-method.md)|Obtiene un puntero de interfaz al dominio de aplicación que contiene esta instancia de `ICorDebugAssembly`.|  
+|[GetCodeBase (método)](icordebugassembly-getcodebase-method.md)|No se implementa en la versión actual del .NET Framework.|  
+|[GetName (método)](icordebugassembly-getname-method.md)|Obtiene el nombre del ensamblado.|  
+|[GetProcess (método)](icordebugassembly-getprocess-method.md)|Obtiene la instancia de ICorDebugProcess en la que se ejecuta el ensamblado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

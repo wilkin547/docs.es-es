@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 5668e14cd0aed33a29fd43661363131879419e61
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741070"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793918"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilizar la UI Automation para pruebas automatizadas
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "75741070"
 > Con otros modelos de accesibilidad, los desarrolladores deben recopilar información directamente desde distintos botones, menús u otros controles individuales. Lamentablemente, cada tipo de control se presenta con docenas de pequeñas variaciones. Es decir, aunque diez variaciones de un pulsador pueden funcionar de la misma manera y realizar la misma función, todas deben tratarse como controles únicos. No hay ninguna manera de saber que estos controles sean funcionalmente equivalentes. Los patrones de control se desarrollaron para representar estos comportamientos de control comunes. Para obtener más información, consulta [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementación de automatización de interfaz de usuario  
- Como se ha mencionado anteriormente, sin el modelo unificado ofrecido por [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], las herramientas de prueba y los desarrolladores deben conocer la información específica del marco de trabajo para exponer propiedades y comportamientos de los controles en ese marco de trabajo. Dado que puede haber varios marcos de interfaz de usuario diferentes presentes en cualquier momento en los sistemas operativos Windows, como Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]y Windows Presentation Foundation (WPF), puede ser una tarea desalentadora para probar varias aplicaciones con controles que parezcan similares. Por ejemplo, en la siguiente tabla se describen los nombres de propiedades específicas del marco de trabajo necesarias para recuperar el nombre (o el texto) asociado a un control de botón y se muestra la única propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
+ Como se ha mencionado anteriormente, sin el modelo unificado ofrecido por [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], las herramientas de prueba y los desarrolladores deben conocer la información específica del marco de trabajo para exponer propiedades y comportamientos de los controles en ese marco de trabajo. Dado que puede haber varios marcos de trabajo de interfaz de usuario diferentes presentes en cualquier momento único dentro de los sistemas operativos Windows, como Win32, Windows Forms y Windows Presentation Foundation (WPF), puede ser una tarea desalentadora para probar varias aplicaciones con controles que parecen similares. Por ejemplo, en la siguiente tabla se describen los nombres de propiedades específicas del marco de trabajo necesarias para recuperar el nombre (o el texto) asociado a un control de botón y se muestra la única propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
   
 |Tipo de control de automatización de interfaz de usuario|Marco de interfaz de usuario|Propiedad específica de marco de trabajo|Propiedad de automatización de interfaz de usuario|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: fa9db794ae314930fcdf844efcaf91cf251bbbab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 367584a01e368dc591c2e93acfcc6574f2fa1ec0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790088"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866326"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter (Método)
 Notifica al generador de perfiles que la fase de desenredado del control de excepciones ha empezado a desenredar una función.  
@@ -54,5 +54,5 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionUnwindFunctionLeave (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ExceptionUnwindFunctionLeave (método)](icorprofilercallback-exceptionunwindfunctionleave-method.md)

@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: Getpublickeytoken ((método)'
+title: ICorDebugMergedAssemblyRecord::GetPublicKeyT (método)
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 95ed1303b33b328d1f14ecea6cc318e14991cd54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 543083703cd0cbbce9dc0660383713202fa2f0b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129785"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793101"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord:: Getpublickeytoken ((método)
+# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyT (método)
 Obtiene el token de clave pública del ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -22,7 +22,7 @@ HRESULT GetPublicKeyToken(
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `cbPublicKeyToken`  
  [in] Número máximo de bytes en la matriz `pbPublicKeyToken`.  
   
@@ -32,22 +32,22 @@ HRESULT GetPublicKeyToken(
  `pbPublicKeyToken`  
  [out] Puntero a una matriz de bytes que contiene el token de clave pública del ensamblado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El token de clave pública de un ensamblado son los últimos ocho bytes de un hash SHA1 de su clave pública.  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugMergedAssemblyRecord (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord (interfaz)](icordebugmergedassemblyrecord-interface.md)
+- [Interfaces de depuración](debugging-interfaces.md)

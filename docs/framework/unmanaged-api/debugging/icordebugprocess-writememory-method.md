@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: eaf5b9980d55b0efb473b4631a8c052b013d0796
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb3e0ccb57cf3b056bd25e643706e49b8bc75531
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137255"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792541"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory (Método)
 Escribe datos en un área de memoria de este proceso.  
@@ -35,7 +35,7 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `address`  
  de Un valor `CORDB_ADDRESS` que es la dirección base del área de memoria en la que se escriben los datos. Antes de que se produzca la transferencia de datos, el sistema comprueba que el área de memoria del tamaño especificado, a partir de la dirección base, es accesible para escritura. Si no es accesible, se produce un error en el método.  
   
@@ -48,16 +48,16 @@ HRESULT WriteMemory(
  `written`  
  enuncia Puntero a una variable que recibe el número de bytes escritos en el área de memoria de este proceso. Si `written` es NULL, se omite este parámetro.  
   
-## <a name="remarks"></a>Comentarios  
- Los datos se escriben automáticamente detrás de los puntos de interrupción. En la versión .NET Framework 2,0, los depuradores nativos no deben usar este método para insertar puntos de interrupción en la secuencia de instrucciones. Use [ICorDebugProcess2:: SetUnmanagedBreakpoint (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) en su lugar.  
+## <a name="remarks"></a>Notas  
+ Los datos se escriben automáticamente detrás de los puntos de interrupción. En la versión .NET Framework 2,0, los depuradores nativos no deben usar este método para insertar puntos de interrupción en la secuencia de instrucciones. Use [ICorDebugProcess2:: SetUnmanagedBreakpoint (](icordebugprocess2-setunmanagedbreakpoint-method.md) en su lugar.  
   
  El método `WriteMemory` debe usarse únicamente fuera del código administrado. Este método puede dañar el tiempo de ejecución si se usa de forma incorrecta.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

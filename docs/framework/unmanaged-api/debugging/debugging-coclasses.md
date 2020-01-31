@@ -6,25 +6,25 @@ helpviewer_keywords:
 - debugging coclasses [.NET Framework]
 - coclasses [.NET Framework debugging]
 ms.assetid: 94f94159-108e-436c-99e7-dff3beeb2503
-ms.openlocfilehash: fc39b087e05a7770d88dd47123cd0d7a8e781cd0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8a78062f864767e2705bfc1b4b5bab67b533f7a0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124362"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793789"
 ---
 # <a name="debugging-coclasses"></a>Coclases para la depuración
 En esta sección, se describen las coclases no administradas que utiliza la API de depuración.  
   
-## <a name="in-this-section"></a>En esta sección  
- [CorpubPublish (coclase)](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
+## <a name="in-this-section"></a>Esta sección  
+ [CorpubPublish (coclase)](corpubpublish-coclass.md)  
  Proporciona interfaces para publicar información acerca de procesos y dominios de aplicación.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Interfaces de depuración](debugging-interfaces.md)  
   
- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [Funciones estáticas globales de depuración](debugging-global-static-functions.md)  
   
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [Enumeraciones de depuración](debugging-enumerations.md)  
   
- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+ [Estructuras de depuración](debugging-structures.md)
