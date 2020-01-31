@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 63974df83462dd5959a9c6f509e1825eb8064877
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 18cbaab08d5e3a5c36bec88ca5d5e48d1367444d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448725"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866746"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling (Interfaz)
-Proporciona el método [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) , que permite a un generador de perfiles asociarse a un proceso en ejecución.  
+Proporciona el método [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) , que permite a un generador de perfiles asociarse a un proceso en ejecución.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[AttachProfiler (método)](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Asocia el generador de perfiles especificado al proceso especificado.|  
+|[AttachProfiler (método)](iclrprofiling-attachprofiler-method.md)|Asocia el generador de perfiles especificado al proceso especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interfaces para generación de perfiles](profiling-interfaces.md)
+- [ICorProfilerInfo (interfaz)](icorprofilerinfo-interface.md)

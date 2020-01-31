@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449684"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868556"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation (Método)
 Proporciona información de versión sobre el Common Language Runtime (CLR) del que se está generando el archivo.  
@@ -41,7 +41,7 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `pClrInstanceId`  
  enuncia IDENTIFICADOR representativo de una instancia de CLR en ejecución en un proceso. Esto es lo mismo que el `ClrInstanceID` que los informes de eventos de inicio de seguimiento de eventos para Windows (ETW).  
   
@@ -69,20 +69,20 @@ HRESULT GetRuntimeInformation(
  `szVersionString`  
  enuncia Cadena de versión de CLR.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede pasar null para cualquier parámetro. Sin embargo, `pcchVersionString` no puede ser null a menos que `szVersionString` también sea NULL.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerInfo3 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo3 (interfaz)](icorprofilerinfo3-interface.md)
+- [Interfaces para generación de perfiles](profiling-interfaces.md)
+- [Generación de perfiles](index.md)

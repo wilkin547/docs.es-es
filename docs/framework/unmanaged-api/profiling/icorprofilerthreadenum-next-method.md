@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-ms.openlocfilehash: e78285c915938c553a9b4012ba57257ac43492ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4e08e74a2b7e5b853f089b95328c0a55de5a87cd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447601"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860928"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next (Método)
 Obtiene el número especificado de subprocesos contiguos de una colección secuencial de subprocesos, comenzando en la posición actual del enumerador en la secuencia.  
@@ -35,7 +35,7 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `celt`  
  [in] Número de subprocesos para recuperar.  
   
@@ -50,19 +50,19 @@ HRESULT Next (    [in]  ULONG      celt,
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|se devolvieron `celt` elementos.|  
+|S_OK|Se devolvieron `celt` elementos.|  
 |S_FALSE|Se devolvieron menos de `celt` elementos, lo que indica que la enumeración está completa.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerThreadEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerThreadEnum (interfaz)](icorprofilerthreadenum-interface.md)
+- [Interfaces para generación de perfiles](profiling-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458485"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870745"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores asociados a los orígenes de eventos no se destruyan en coordinación con el objeto de agente de escucha que adjuntó el controlador al origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta un modelo de diseño que se puede usar para solucionar este problema, proporcionando una clase de administrador dedicada para eventos concretos e implementando una interfaz en agentes de escucha para ese evento. Este modelo de diseño se conoce como el *patrón de evento débil*.  
@@ -36,7 +36,7 @@ En las aplicaciones, es posible que los controladores asociados a los orígenes 
 |Usar una clase de administrador de eventos débiles existente|Si el evento al que desea suscribirse tiene un <xref:System.Windows.WeakEventManager>correspondiente, use el administrador de eventos débiles existente. Para obtener una lista de los administradores de eventos débiles que se incluyen con WPF, vea la jerarquía de herencia en la clase <xref:System.Windows.WeakEventManager>. Dado que los administradores de eventos débiles incluidos están limitados, probablemente tendrá que elegir uno de los otros enfoques.|  
 |Usar una clase genérica de administrador de eventos débiles|Usar una <xref:System.Windows.WeakEventManager%602> genérica cuando una <xref:System.Windows.WeakEventManager> existente no está disponible, desea una manera fácil de implementar y no le preocupa la eficacia. El <xref:System.Windows.WeakEventManager%602> genérico es menos eficaz que un administrador de eventos débil existente o personalizado. Por ejemplo, la clase genérica realiza más reflexión para detectar el evento dado el nombre del evento. Además, el código para registrar el evento mediante el <xref:System.Windows.WeakEventManager%602> genérico es más detallado que el uso de un <xref:System.Windows.WeakEventManager>existente o personalizado.|  
 |Creación de una clase de administrador de eventos débiles personalizada|Cree un <xref:System.Windows.WeakEventManager> personalizado cuando un <xref:System.Windows.WeakEventManager> existente no esté disponible y desee obtener la máxima eficacia. El uso de un <xref:System.Windows.WeakEventManager> personalizado para suscribirse a un evento será más eficaz, pero incurrirá en el costo de escribir más código al principio.|  
-|Usar un administrador de eventos débil de terceros|NuGet tiene [varios administradores de eventos débiles](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) y muchos marcos de WPF también admiten el patrón (por ejemplo, consulte la [documentación de Prism sobre la suscripción a eventos de acoplamiento flexible](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Usar un administrador de eventos débil de terceros|NuGet tiene [varios administradores de eventos débiles](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) y muchos marcos de WPF también admiten el patrón (por ejemplo, consulte la [documentación de Prism sobre la suscripción a eventos de acoplamiento flexible](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)).|
 
  En las secciones siguientes se describe cómo implementar el patrón de evento débil.  Para los fines de este debate, el evento al que se va a suscribir tiene las siguientes características.  
   

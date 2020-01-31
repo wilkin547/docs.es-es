@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: 94230cbad95ff0a5d4234c27aa5d1d56ac5be9bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edf5d61baae28a82aff0d0bd32d1d900085ac375
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428397"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867326"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE (Enumeración)
 Indica el tipo de cláusula de excepción en la que el código acaba de entrar o de la que acaba de salir.  
@@ -44,15 +44,15 @@ typedef enum {
 |`COR_PRF_CLAUSE_CATCH`|La cláusula Exception es una instrucción `catch`.|  
 |`COR_PRF_CLAUSE_FINALLY`|La cláusula Exception es una instrucción `finally`.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Enumeraciones para generación de perfiles](profiling-enumerations.md)

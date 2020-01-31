@@ -2,12 +2,12 @@
 title: Usar WorkflowIdentity y el control de versiones
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 97224caa24b38a00a1cbb4fa76781eea3a10faaf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142050"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787914"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Usar WorkflowIdentity y el control de versiones
 
@@ -78,7 +78,7 @@ wfApp.Load(instanceId);
 
 Cuando se ejecuta el código anterior, se produce la <xref:System.Activities.VersionMismatchException> siguiente.
 
-```
+```output
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
@@ -150,7 +150,7 @@ Se proporciona un script de base de datos SqlWorkflowInstanceStoreSchemaUpgrade.
 
 Si una aplicación de flujo de trabajo de .NET Framework 4,5 intenta cualquier operación de persistencia que use las nuevas características de control de versiones en una base de datos de persistencia que no se haya actualizado mediante el script proporcionado, se produce una <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> con un mensaje similar al siguiente mensaje.
 
-```
+```output
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 

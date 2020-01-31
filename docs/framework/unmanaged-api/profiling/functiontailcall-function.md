@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: c83a55a74542d94559b50b89ef784de0bd55d0db
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427350"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866828"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall (Función)
 Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función.  
   
 > [!NOTE]
-> La función `FunctionTailcall` está en desuso en la versión 2,0 de .NET Framework. Continuará funcionando, pero se producirá una reducción del rendimiento. En su lugar, use la función [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) .  
+> La función `FunctionTailcall` está en desuso en la versión 2,0 de .NET Framework. Continuará funcionando, pero se producirá una reducción del rendimiento. En su lugar, use la función [FunctionTailcall2](functiontailcall2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,12 +35,14 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
- `funcID`  
- de Identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.  
-  
-## <a name="remarks"></a>Comentarios  
- La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave (](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) para una función que sea el destino de una llamada de cola.  
+## <a name="parameters"></a>Parameters
+
+- `funcID`
+
+  \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
+
+## <a name="remarks"></a>Notas  
+ La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave (](functionleave-function.md) para una función que sea el destino de una llamada de cola.  
   
  La función `FunctionTailcall` es una devolución de llamada; debe implementarla. La implementación debe usar el atributo de clase de almacenamiento `__declspec`(`naked`).  
   
@@ -54,7 +56,7 @@ void __stdcall FunctionTailcall (
   
  Además, la función `FunctionTailcall` no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -65,7 +67,7 @@ void __stdcall FunctionTailcall (
   
 ## <a name="see-also"></a>Vea también
 
-- [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 (Función)](functionenter2-function.md)
+- [FunctionLeave2 (Función)](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 (método)](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)

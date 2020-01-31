@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447334"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867118"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS (Enumeración)
 Especifica las propiedades de un módulo.  
@@ -51,18 +51,18 @@ typedef enum
 |COR_PRF_MODULE_FLAT_LAYOUT|El diseño del módulo en memoria es plano, no asignado. Si un módulo tiene este bit establecido, los perfiles que leen la información directamente del encabezado del archivo portable ejecutable (PE) tendrán que tener cuidado al interpretar las direcciones virtuales relativas (RVA) en el encabezado.|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|La marca de tipo de contenido Windows Runtime se establece en los metadatos del ensamblado de este módulo. Este es el caso de todos los módulos de metadatos de Windows (. winmd).|  
   
-## <a name="remarks"></a>Comentarios  
- Los bits de COR_PRF_MODULE_FLAGS se devuelven al generador de perfiles en el parámetro de salida `pdwModuleFlags` del método [ICorProfilerInfo3:: GetModuleInfo2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) . Algunas combinaciones de dos o más marcas son posibles, pero no todas las combinaciones son posibles.  
+## <a name="remarks"></a>Notas  
+ Los bits de COR_PRF_MODULE_FLAGS se devuelven al generador de perfiles en el parámetro de salida `pdwModuleFlags` del método [ICorProfilerInfo3:: GetModuleInfo2 (](icorprofilerinfo3-getmoduleinfo2-method.md) . Algunas combinaciones de dos o más marcas son posibles, pero no todas las combinaciones son posibles.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Enumeraciones para generación de perfiles](profiling-enumerations.md)

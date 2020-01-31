@@ -1,33 +1,33 @@
 ---
-title: Propiedades de los controles de formularios Windows Forms que admiten las directrices de accesibilidad
+title: Propiedades de accesibilidad en los controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d81f5b5f656ed5ef90bdd9b6fe1b3293123f97
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640500"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743425"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Propiedades de los controles de formularios Windows Forms que admiten las directrices de accesibilidad
-Los controles en el cuadro de herramientas estándar de Windows Forms admiten muchas de las directrices de accesibilidad, incluida la exposición del foco del teclado y exponer los elementos de la pantalla.  
+Los controles del cuadro de herramientas estándar para Windows Forms admiten muchas de las instrucciones de accesibilidad, incluida la exposición del foco del teclado y la exposición de los elementos de la pantalla.  
   
-## <a name="planning-ahead-for-accessibility"></a>Planear para mejorar la accesibilidad  
- Propiedades de los controles pueden usarse para admitir otras directrices de accesibilidad, como se muestra en la tabla siguiente. Además, debe usar los menús para proporcionar acceso a las características del programa.  
+## <a name="planning-ahead-for-accessibility"></a>Planeación de accesibilidad  
+ Las propiedades de los controles se pueden usar para admitir otras directrices de accesibilidad, como se muestra en la tabla siguiente. Además, debe usar menús para proporcionar acceso a las características del programa.  
   
 |Propiedad de control|Consideraciones para la accesibilidad|  
 |----------------------|--------------------------------------|  
-|AccessibleDescription|La descripción se notifica a las ayudas de accesibilidad como lectores de pantalla. Las ayudas de accesibilidad son programas y dispositivos especializados que ayudan a las personas con discapacidades a usar los equipos de forma más eficaz.|  
-|AccessibleName|El nombre que se notificará a las ayudas de accesibilidad.|  
+|AccessibleDescription|La descripción se muestra en ayudas de accesibilidad, como lectores de pantalla. Las ayudas de accesibilidad son programas y dispositivos especializados que ayudan a las personas con discapacidades a usar los equipos de forma más eficaz.|  
+|AccessibleName|El nombre que se inscribirá en las ayudas de accesibilidad.|  
 |AccessibleRole|Describe el uso del elemento en la interfaz de usuario.|  
-|TabIndex|Crea una ruta de navegación razonable a través del formulario. Es importante para los controles sin etiquetas intrínsecas, como cuadros de texto, para que sus etiquetas asociadas preceda inmediatamente en el orden de tabulación.|  
-|Texto|Use el carácter "&" para crear teclas de acceso. Utilizando las teclas de acceso forma parte de proporcionar acceso mediante teclado documentado a las características.|  
-|Tamaño de fuente|Si el tamaño de fuente no es ajustable, a continuación, se debe establecer en 10 puntos o más. Una vez que se establece el tamaño de fuente del formulario, todos los controles que se agregan posteriormente al formulario tendrán el mismo tamaño.|  
-|Forecolor|Si esta propiedad se establece en el valor predeterminado, las preferencias del usuario color se usará en el formulario.|  
-|Backcolor|Si esta propiedad se establece en el valor predeterminado, las preferencias del usuario color se usará en el formulario.|  
+|TabIndex|Crea una ruta de navegación sensata a través del formulario. Es importante que los controles sin etiquetas intrínsecas, como los cuadros de texto, tengan su etiqueta asociada inmediatamente delante en el orden de tabulación.|  
+|Text|Use el carácter "&" para crear teclas de acceso. El uso de las teclas de acceso forma parte de proporcionar acceso de teclado documentado a las características de.|  
+|Tamaño de fuente|Si el tamaño de fuente no es ajustable, debe establecerse en 10 puntos o más. Una vez establecido el tamaño de fuente del formulario, a partir de ese momento, todos los controles agregados al formulario tendrán el mismo tamaño.|  
+|Forecolor|Si esta propiedad se establece en el valor predeterminado, se usarán las preferencias de color del usuario en el formulario.|  
+|Backcolor|Si esta propiedad se establece en el valor predeterminado, se usarán las preferencias de color del usuario en el formulario.|  
 |BackgroundImage|Deje esta propiedad en blanco para que el texto sea más legible.|  
   
 ## <a name="see-also"></a>Vea también

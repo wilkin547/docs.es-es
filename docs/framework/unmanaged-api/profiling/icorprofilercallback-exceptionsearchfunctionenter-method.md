@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: a64fe598bd9f50b822edb869fa9efca2a4ff280a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: c09d896e59a6c336fbe4923dbe85f30b039d8c36
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790128"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866408"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter (Método)
 Notifica al generador de perfiles que la fase de búsqueda del control de excepciones ha empezado a buscar una función para encontrar un controlador para la excepción actual.  
@@ -49,5 +49,5 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionSearchFunctionLeave (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ExceptionSearchFunctionLeave (método)](icorprofilercallback-exceptionsearchfunctionleave-method.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFrameEnum (Interfaz)
+title: Interfaz ICorDebugFrameEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrameEnum
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090539"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794533"
 ---
-# <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum (Interfaz)
+# <a name="icordebugframeenum-interface"></a>Interfaz ICorDebugFrameEnum
 
 Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugFrame.  
   
@@ -29,22 +29,22 @@ Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugFrame.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|Obtiene el número especificado de instancias de `ICorDebugFrame` de la enumeración, comenzando en la posición actual.|  
+|[Next (método)](icordebugframeenum-next-method.md)|Obtiene el número especificado de instancias de `ICorDebugFrame` de la enumeración, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces de depuración](debugging-interfaces.md)

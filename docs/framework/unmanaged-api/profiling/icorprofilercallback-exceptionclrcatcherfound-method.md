@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-ms.openlocfilehash: ef5122d49c428af4faa27f3827a5c60721ef0f74
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a543e5119a3ad5580fb67c31dc0e59ab62eab571
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435831"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866497"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound (Método)
 Llamado cuando se encuentra un bloque `catch` para una excepción dentro del propio Common Language Runtime (CLR). Este método está obsoleto en la .NET Framework versión 2,0.  
@@ -31,7 +31,7 @@ Llamado cuando se encuentra un bloque `catch` para una excepción dentro del pro
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -42,5 +42,5 @@ HRESULT ExceptionCLRCatcherFound();
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionCLRCatcherExecute (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ExceptionCLRCatcherExecute (método)](icorprofilercallback-exceptionclrcatcherexecute-method.md)

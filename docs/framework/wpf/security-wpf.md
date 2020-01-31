@@ -1,5 +1,5 @@
 ---
-title: Seguridad (WPF)
+title: de seguridad
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636779"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868049"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
 <a name="introduction"></a>Al desarrollar aplicaciones independientes y hospedadas en un explorador Windows Presentation Foundation (WPF), debe tener en cuenta el modelo de seguridad. Las aplicaciones independientes de WPF se ejecutan con permisos no restringidos (conjunto de permisos**FullTrust** de CAS), tanto si se implementan mediante Windows Installer (. msi), xcopy o ClickOnce. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear un <xref:System.AppDomain> de confianza parcial mediante el modelo de complemento .NET Framework. Para obtener más información, consulte [Introducción a los complementos de WPF](./app-development/wpf-add-ins-overview.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "75636779"
   
  El usuario puede navegar por los archivos de estos tipos de contenido, aunque también se pueden navegar mediante programación:  
   
-- **Navegación del usuario**. El usuario navega haciendo clic en un elemento de <xref:System.Windows.Documents.Hyperlink>.  
+- **Navegación de usuario**. El usuario navega haciendo clic en un elemento de <xref:System.Windows.Documents.Hyperlink>.  
   
 - **Navegación mediante programación**. La aplicación navega sin implicar al usuario, por ejemplo, estableciendo la propiedad <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75636779"
 ### <a name="browser-navigation-security"></a>Seguridad de navegación de explorador  
  La navegación de explorador se considera segura solo en las siguientes condiciones:  
   
-- **Navegación del usuario**. El usuario navega haciendo clic en un elemento <xref:System.Windows.Documents.Hyperlink> que se encuentra dentro del <xref:System.Windows.Navigation.NavigationWindow>principal, no en un <xref:System.Windows.Controls.Frame>anidado.  
+- **Navegación de usuario**. El usuario navega haciendo clic en un elemento <xref:System.Windows.Documents.Hyperlink> que se encuentra dentro del <xref:System.Windows.Navigation.NavigationWindow>principal, no en un <xref:System.Windows.Controls.Frame>anidado.  
   
 - **Zona**. El contenido al que se navega se encuentra en Internet o en la intranet local.  
   
@@ -97,13 +97,13 @@ ms.locfileid: "75636779"
   
 - Descargas  
   
-- Scripting  
+- Secuencias de comandos  
   
 - Autenticación de usuario  
   
  La colección de funciones que se pueden proteger de esta manera se configura en cada zona para las zonas de **Internet**, **intranet**, **sitios de confianza**y **sitios restringidos** . En los siguientes pasos se describe cómo establecer la configuración de seguridad:  
   
-1. Abra el **Panel de Control**.  
+1. Abra el **Panel de control**.  
   
 2. Haga clic en **red e Internet** y, a continuación, en **Opciones de Internet**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "75636779"
  Los controles de características se aplican mediante el proceso de creación de instancias del objeto ActiveX WebBrowser. Por lo tanto, si está creando una aplicación independiente que puede navegar a contenido que no es de confianza, debe considerar seriamente la posibilidad de habilitar controles de característica adicionales.  
   
 > [!NOTE]
-> Esta recomendación se basa en las recomendaciones generales para la seguridad de host MSHTML y SHDOCVW. Para obtener más información, consulte [preguntas más frecuentes sobre la seguridad del host de Mshtml: parte I de II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) y [preguntas más frecuentes sobre la seguridad del host MSHTML: parte II de II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
+> Esta recomendación se basa en las recomendaciones generales para la seguridad de host MSHTML y SHDOCVW. Para obtener más información, consulte [preguntas más frecuentes sobre la seguridad del host de Mshtml: parte I de II](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) y [preguntas más frecuentes sobre la seguridad del host MSHTML: parte II de II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
   
  Para el archivo ejecutable, considere la posibilidad de habilitar los siguientes controles de característica. Para ello, establezca el valor del Registro en 1.  
   

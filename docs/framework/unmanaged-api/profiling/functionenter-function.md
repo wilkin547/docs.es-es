@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790257"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867001"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
 Notifica al generador de perfiles que el control se pasa a una función.  
   
 > [!NOTE]
-> La función `FunctionEnter` está en desuso en la versión de .NET Framework 2,0 y su uso supondrá una penalización del rendimiento. En su lugar, use la función [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
+> La función `FunctionEnter` está en desuso en la versión de .NET Framework 2,0 y su uso supondrá una penalización del rendimiento. En su lugar, use la función [FunctionEnter2](functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,8 +65,8 @@ void __stdcall FunctionEnter (
   
 ## <a name="see-also"></a>Vea también
 
-- [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 (Función)](functionenter2-function.md)
+- [FunctionLeave2 (Función)](functionleave2-function.md)
+- [FunctionTailcall2 (Función)](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 (método)](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)

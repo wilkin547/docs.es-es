@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 93c042d760eab4bcb1846701ad92ac38cb473c69
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 56221c6b3ac40595e999f2a2a3739f023441c46d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449736"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862417"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule (Método)
 Obtiene los identificadores de los dominios de la aplicación en la que se cargó el módulo especificado.  
@@ -36,7 +36,7 @@ HRESULT GetAppDomainsContainingModule(
                     AppDomainID appDomainIds[]);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parameters  
  `moduleId`  
  [in] Identificador del módulo cargado.  
   
@@ -49,21 +49,21 @@ HRESULT GetAppDomainsContainingModule(
  `appDomainIds`  
  [out] Matriz de valores de identificador de dominio de aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El método usa búferes asignados al llamador.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [ICorProfilerInfo3 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerFunctionEnum (interfaz)](icorprofilerfunctionenum-interface.md)
+- [ICorProfilerInfo3 (interfaz)](icorprofilerinfo3-interface.md)
+- [Interfaces para generación de perfiles](profiling-interfaces.md)
+- [Generación de perfiles](index.md)

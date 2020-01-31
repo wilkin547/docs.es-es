@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449850"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863314"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences (método)
 
@@ -30,22 +30,25 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
-`objectId` \
-de Objeto en el que se van a enumerar las referencias.
+- `objectId`
 
-`callback` \
-de Función a la que se llamará con las referencias para el objeto.
+  \[en] el objeto en el que se van a enumerar las referencias.
 
-`clientData` \
-de Datos proporcionados por el generador de perfiles que se van a pasar a la función `callback`.
+- `callback`
 
-## <a name="remarks"></a>Comentarios
+  \[en] la función a la que se llamará con las referencias para el objeto.
 
-El método `EnumerateObjectReferences` es similar a [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), con la salvedad de que recorre las referencias a petición para el generador de perfiles en lugar de asignar previamente una matriz para almacenar las referencias.
+- `clientData`
 
-## <a name="requirements"></a>Requisitos
+  \[en] datos proporcionados por el generador de perfiles que se van a pasar a la función `callback`.
+
+## <a name="remarks"></a>Notas
+
+El método `EnumerateObjectReferences` es similar a [ObjectReferences](icorprofilercallback-objectreferences-method.md), con la salvedad de que recorre las referencias a petición para el generador de perfiles en lugar de asignar previamente una matriz para almacenar las referencias.
+
+## <a name="requirements"></a>Requisitos de
 
 **Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -57,4 +60,4 @@ El método `EnumerateObjectReferences` es similar a [ObjectReferences](../../../
 
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Interfaz ICorProfilerInfo10](icorprofilerinfo10-interface.md)

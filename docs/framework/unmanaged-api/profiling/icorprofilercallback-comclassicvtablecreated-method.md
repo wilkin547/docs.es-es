@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445052"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866551"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated (Método)
 Notifica al generador de perfiles que se ha creado una vtable de interoperabilidad COM para el IID y la clase especificados.  
@@ -35,34 +35,39 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a>Parámetros  
- `wrappedClasId`  
- de IDENTIFICADOR de la clase para la que se ha creado la tabla vtable.  
-  
- `implementedIID`  
- de IDENTIFICADOR de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.  
-  
- `pVTable`  
- de Puntero al principio de la tabla vtable.  
-  
- `cSlots`  
- de Número de ranuras que se encuentran en la tabla vtable.  
-  
-## <a name="remarks"></a>Comentarios  
+## <a name="parameters"></a>Parameters
+
+- `wrappedClasId`
+
+  \[in] identificador de la clase para la que se ha creado la tabla vtable.
+
+- `implementedIID`
+
+  \[en] identificador de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.
+
+- `pVTable`
+
+  \[en] un puntero al inicio de vtable.
+
+- `cSlots`
+
+  \[en] el número de ranuras que se encuentran en la tabla vtable.
+
+## <a name="remarks"></a>Notas  
  El generador de perfiles no debe bloquear en su implementación de este método porque la pila puede no estar en un estado que permita la recolección de elementos no utilizados y, por tanto, no se puede habilitar la recolección de elementos no utilizados preferente. Si el generador de perfiles se bloquea aquí y se intenta la recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que esta devolución de llamada vuelva.  
   
  La implementación del generador de perfiles de este método no debe llamar a código administrado ni provocar una asignación de memoria administrada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos de  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableDestroyed (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [COMClassicVTableDestroyed (método)](icorprofilercallback-comclassicvtabledestroyed-method.md)

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d4d498c1d75625b2abc37dc1f4c88d73b58ec675
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 95473a8ce8d5fd7540228ecd9767448e51b5b326
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790027"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868989"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold (método)
 
@@ -50,4 +50,4 @@ Los objetos mayores que el umbral del montón de objetos grandes se asignarán e
 
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Interfaz ICorProfilerInfo10](icorprofilerinfo10-interface.md)
