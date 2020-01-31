@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-ms.openlocfilehash: 643c9d7104c374d9141a604083f3fdcd540156c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eaab5b7faeac3dd0fb64f0a387f437af44e7bc12
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428389"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867313"
 ---
-# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="46099-102">COR_PRF_CODE_INFO (Estructura)</span><span class="sxs-lookup"><span data-stu-id="46099-102">COR_PRF_CODE_INFO Structure</span></span>
-<span data-ttu-id="46099-103">Representa un bloque contiguo de código nativo almacenado en la memoria.</span><span class="sxs-lookup"><span data-stu-id="46099-103">Represents one contiguous block of native code stored in memory.</span></span>  
+# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="80481-102">COR_PRF_CODE_INFO (Estructura)</span><span class="sxs-lookup"><span data-stu-id="80481-102">COR_PRF_CODE_INFO Structure</span></span>
+<span data-ttu-id="80481-103">Representa un bloque contiguo de código nativo almacenado en la memoria.</span><span class="sxs-lookup"><span data-stu-id="80481-103">Represents one contiguous block of native code stored in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46099-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="46099-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80481-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="80481-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
@@ -33,22 +33,22 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="46099-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="46099-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="80481-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="80481-105">Members</span></span>  
   
-|<span data-ttu-id="46099-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="46099-106">Member</span></span>|<span data-ttu-id="46099-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="46099-107">Description</span></span>|  
+|<span data-ttu-id="80481-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="80481-106">Member</span></span>|<span data-ttu-id="80481-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="80481-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddress`|<span data-ttu-id="46099-108">Dirección inicial del bloque de código contiguo.</span><span class="sxs-lookup"><span data-stu-id="46099-108">The starting address of the contiguous block of code.</span></span>|  
-|`size`|<span data-ttu-id="46099-109">Tamaño del bloque.</span><span class="sxs-lookup"><span data-stu-id="46099-109">The size of the block.</span></span>|  
+|`startAddress`|<span data-ttu-id="80481-108">Dirección inicial del bloque de código contiguo.</span><span class="sxs-lookup"><span data-stu-id="80481-108">The starting address of the contiguous block of code.</span></span>|  
+|`size`|<span data-ttu-id="80481-109">Tamaño del bloque.</span><span class="sxs-lookup"><span data-stu-id="80481-109">The size of the block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="46099-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="46099-110">Requirements</span></span>  
- <span data-ttu-id="46099-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46099-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80481-110">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="80481-110">Requirements</span></span>  
+ <span data-ttu-id="80481-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80481-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46099-112">**Encabezado:** Corprof. idl</span><span class="sxs-lookup"><span data-stu-id="46099-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="80481-112">**Encabezado:** Corprof. idl</span><span class="sxs-lookup"><span data-stu-id="80481-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="46099-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46099-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="80481-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="80481-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46099-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46099-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80481-114">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80481-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46099-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="46099-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80481-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="80481-115">See also</span></span>
 
-- [<span data-ttu-id="46099-116">Estructuras para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="46099-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="80481-116">Estructuras para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="80481-116">Profiling Structures</span></span>](profiling-structures.md)

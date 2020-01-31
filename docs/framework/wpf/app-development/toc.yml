@@ -128,11 +128,9 @@
           items:
             - name: "Configurar IIS\_5.0 e IIS\_6.0 para implementar aplicaciones de WPF"
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-            - name: Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web
+            - name: Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio Web
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: Determinar la versión actualmente instalada de WPF
-              href: how-to-determine-the-installed-version-of-wpf.md
-            - name: "Detectar si está instalado .NET Framework\_3.0"
+            - name: Detectar si .NET Framework 3.0 está instalado
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: "Detectar si está instalado .NET Framework\_3.5"
               href: how-to-detect-whether-the-net-framework-3-5-is-installed.md
