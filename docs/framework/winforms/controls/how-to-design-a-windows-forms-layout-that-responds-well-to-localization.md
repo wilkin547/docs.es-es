@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear un diseño de formularios Windows Forms que sea apropiado para la localización
+title: Diseñar un diseño fácil de localizar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,51 +10,51 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: c1aa62413e1c9cc29507b7b0ed5cbf1c5fcea26a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 36ffd532b9f539107307144d25c8d9d5f8ba634a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928567"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743283"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a><span data-ttu-id="810ee-102">Procedimiento para crear un diseño de formularios Windows Forms que sea apropiado para la localización</span><span class="sxs-lookup"><span data-stu-id="810ee-102">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>
-<span data-ttu-id="810ee-103">La creación de formularios ya listos para ser localizados acelera en gran medida el desarrollo para los mercados internacionales.</span><span class="sxs-lookup"><span data-stu-id="810ee-103">Creating forms that are ready to be localized greatly speeds development for international markets.</span></span> <span data-ttu-id="810ee-104">Puede utilizar el control <xref:System.Windows.Forms.TableLayoutPanel> para implementar diseños que respondan correctamente cuando los controles cambien de tamaño debido a los cambios en los valores de la propiedad <xref:System.Windows.Forms.Control.Text%2A>.</span><span class="sxs-lookup"><span data-stu-id="810ee-104">You can use the <xref:System.Windows.Forms.TableLayoutPanel> control to implement layouts that respond gracefully as controls resize due to changes in their <xref:System.Windows.Forms.Control.Text%2A> property values.</span></span>  
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a><span data-ttu-id="9ac7e-102">Cómo: Crear un diseño de Windows Forms que sea apropiado para la localización</span><span class="sxs-lookup"><span data-stu-id="9ac7e-102">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>
+<span data-ttu-id="9ac7e-103">La creación de formularios ya listos para ser localizados acelera en gran medida el desarrollo para los mercados internacionales.</span><span class="sxs-lookup"><span data-stu-id="9ac7e-103">Creating forms that are ready to be localized greatly speeds development for international markets.</span></span> <span data-ttu-id="9ac7e-104">Puede utilizar el control <xref:System.Windows.Forms.TableLayoutPanel> para implementar diseños que respondan correctamente cuando los controles cambien de tamaño debido a los cambios en los valores de la propiedad <xref:System.Windows.Forms.Control.Text%2A>.</span><span class="sxs-lookup"><span data-stu-id="9ac7e-104">You can use the <xref:System.Windows.Forms.TableLayoutPanel> control to implement layouts that respond gracefully as controls resize due to changes in their <xref:System.Windows.Forms.Control.Text%2A> property values.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="810ee-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="810ee-105">Example</span></span>  
- <span data-ttu-id="810ee-106">Este formulario muestra cómo crear un diseño que se ajusta proporcionalmente cuando traduce los valores de cadena mostrados a otros idiomas.</span><span class="sxs-lookup"><span data-stu-id="810ee-106">This form demonstrates how to create a layout that proportionally adjusts when you translate displayed string values into other languages.</span></span> <span data-ttu-id="810ee-107">Este proceso de traducción se denomina *localización*.</span><span class="sxs-lookup"><span data-stu-id="810ee-107">This process of translation is called *localization*.</span></span> <span data-ttu-id="810ee-108">Para más información, consulte [Localización](../../../standard/globalization-localization/localization.md).</span><span class="sxs-lookup"><span data-stu-id="810ee-108">For more information, see [Localization](../../../standard/globalization-localization/localization.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9ac7e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9ac7e-105">Example</span></span>  
+ <span data-ttu-id="9ac7e-106">Este formulario muestra cómo crear un diseño que se ajusta proporcionalmente cuando traduce los valores de cadena mostrados a otros idiomas.</span><span class="sxs-lookup"><span data-stu-id="9ac7e-106">This form demonstrates how to create a layout that proportionally adjusts when you translate displayed string values into other languages.</span></span> <span data-ttu-id="9ac7e-107">Este proceso de traducción se denomina *localización*.</span><span class="sxs-lookup"><span data-stu-id="9ac7e-107">This process of translation is called *localization*.</span></span> <span data-ttu-id="9ac7e-108">Para más información, consulte [Localización](../../../standard/globalization-localization/localization.md).</span><span class="sxs-lookup"><span data-stu-id="9ac7e-108">For more information, see [Localization](../../../standard/globalization-localization/localization.md).</span></span>  
   
- <span data-ttu-id="810ee-109">Visual Studio es altamente compatible con esta tarea.</span><span class="sxs-lookup"><span data-stu-id="810ee-109">There is extensive support for this task in Visual Studio.</span></span>  <span data-ttu-id="810ee-110">Vea también [Tutorial: Crear un diseño que ajuste la proporción de la](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))localización.</span><span class="sxs-lookup"><span data-stu-id="810ee-110">See also [Walkthrough: Creating a Layout That Adjusts Proportion for Localization](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).</span></span>  
+ <span data-ttu-id="9ac7e-109">Visual Studio es altamente compatible con esta tarea.</span><span class="sxs-lookup"><span data-stu-id="9ac7e-109">There is extensive support for this task in Visual Studio.</span></span>  <span data-ttu-id="9ac7e-110">Vea también Tutorial: [Crear un diseño que ajuste las proporciones para la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="9ac7e-110">See also [Walkthrough: Creating a Layout That Adjusts Proportion for Localization](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).</span></span>  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/CS/localizableform.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
-## <a name="additional-resources"></a><span data-ttu-id="810ee-111">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="810ee-111">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="9ac7e-111">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="9ac7e-111">Additional resources</span></span>
 
-1. [<span data-ttu-id="810ee-112">Cómo: Alinear y expandir un control en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="810ee-112">How to: Align and Stretch a Control in a TableLayoutPanel Control</span></span>](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [<span data-ttu-id="9ac7e-112">Cómo: Alinear y expandir un control en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="9ac7e-112">How to: Align and Stretch a Control in a TableLayoutPanel Control</span></span>](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [<span data-ttu-id="810ee-113">Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="810ee-113">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+2. [<span data-ttu-id="9ac7e-113">Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="9ac7e-113">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
 
-3. [<span data-ttu-id="810ee-114">Cómo: Abarcar filas y columnas en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="810ee-114">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+3. [<span data-ttu-id="9ac7e-114">Cómo: Abarcar filas y columnas en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="9ac7e-114">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-4. [<span data-ttu-id="810ee-115">Procedimientos: Editar columnas y filas en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="810ee-115">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+4. [<span data-ttu-id="9ac7e-115">Cómo: Editar columnas y filas en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="9ac7e-115">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5. [<span data-ttu-id="810ee-116">Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="810ee-116">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5. [<span data-ttu-id="9ac7e-116">Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9ac7e-116">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
-6. [<span data-ttu-id="810ee-117">Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="810ee-117">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+6. [<span data-ttu-id="9ac7e-117">Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="9ac7e-117">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7. [<span data-ttu-id="810ee-118">Tutorial: Diseñar Windows Forms controles con relleno, márgenes y la propiedad AutoSize</span><span class="sxs-lookup"><span data-stu-id="810ee-118">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](windows-forms-controls-padding-autosize.md)  
+7. [<span data-ttu-id="9ac7e-118">Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize</span><span class="sxs-lookup"><span data-stu-id="9ac7e-118">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](windows-forms-controls-padding-autosize.md)  
   
-8. <span data-ttu-id="810ee-119">[Cómo: Compatibilidad con la localización en Windows Forms mediante AutoSize y el control TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="810ee-119">[How to: Support Localization on Windows Forms Using AutoSize and the TableLayoutPanel Control](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span></span>  
+8. <span data-ttu-id="9ac7e-119">[Cómo: Admitir la localización en Windows Forms mediante AutoSize y el control TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9ac7e-119">[How to: Support Localization on Windows Forms Using AutoSize and the TableLayoutPanel Control](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span></span>  
   
-9. <span data-ttu-id="810ee-120">[Tutorial: Crear un formulario de Windows Forms de entrada de datos de tamaño variable](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="810ee-120">[Walkthrough: Creating a Resizable Windows Form for Data Entry](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span></span>  
+9. <span data-ttu-id="9ac7e-120">[Tutorial: Crear Windows Forms de entrada de datos de tamaño variable](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9ac7e-120">[Walkthrough: Creating a Resizable Windows Form for Data Entry](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="810ee-121">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="810ee-121">Compiling the Code</span></span>  
- <span data-ttu-id="810ee-122">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="810ee-122">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9ac7e-121">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="9ac7e-121">Compiling the Code</span></span>  
+ <span data-ttu-id="9ac7e-122">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="9ac7e-122">This example requires:</span></span>  
   
-- <span data-ttu-id="810ee-123">Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="810ee-123">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="9ac7e-123">Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="9ac7e-123">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="810ee-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="810ee-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ac7e-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="9ac7e-124">See also</span></span>
 
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [<span data-ttu-id="810ee-125">Localización</span><span class="sxs-lookup"><span data-stu-id="810ee-125">Localization</span></span>](../../../standard/globalization-localization/localization.md)
+- [<span data-ttu-id="9ac7e-125">Localización</span><span class="sxs-lookup"><span data-stu-id="9ac7e-125">Localization</span></span>](../../../standard/globalization-localization/localization.md)

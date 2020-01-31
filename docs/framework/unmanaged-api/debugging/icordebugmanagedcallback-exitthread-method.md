@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa649fd1983a76c71d400ad3e6965ac0794da6ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130767"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781611"
 ---
-# <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="89d3f-102">ICorDebugManagedCallback::ExitThread (Método)</span><span class="sxs-lookup"><span data-stu-id="89d3f-102">ICorDebugManagedCallback::ExitThread Method</span></span>
-<span data-ttu-id="89d3f-103">Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.</span><span class="sxs-lookup"><span data-stu-id="89d3f-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="33bdf-102">ICorDebugManagedCallback::ExitThread (Método)</span><span class="sxs-lookup"><span data-stu-id="33bdf-102">ICorDebugManagedCallback::ExitThread Method</span></span>
+<span data-ttu-id="33bdf-103">Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.</span><span class="sxs-lookup"><span data-stu-id="33bdf-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89d3f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="89d3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33bdf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="33bdf-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExitThread (  
@@ -34,25 +34,25 @@ HRESULT ExitThread (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="89d3f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="89d3f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33bdf-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="33bdf-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="89d3f-106">de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="89d3f-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread.</span></span>  
+ <span data-ttu-id="33bdf-106">de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="33bdf-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread.</span></span>  
   
  `thread`  
- <span data-ttu-id="89d3f-107">de Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="89d3f-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="33bdf-107">de Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="33bdf-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="89d3f-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="89d3f-108">Remarks</span></span>  
- <span data-ttu-id="89d3f-109">Una vez que se activa la devolución de llamada de `ExitThread`, el subproceso ya no aparecerá en las enumeraciones de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="89d3f-109">Once the `ExitThread` callback is fired, the thread will no longer appear in thread enumerations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33bdf-108">Notas</span><span class="sxs-lookup"><span data-stu-id="33bdf-108">Remarks</span></span>  
+ <span data-ttu-id="33bdf-109">Una vez que se activa la devolución de llamada de `ExitThread`, el subproceso ya no aparecerá en las enumeraciones de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="33bdf-109">Once the `ExitThread` callback is fired, the thread will no longer appear in thread enumerations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89d3f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="89d3f-110">Requirements</span></span>  
- <span data-ttu-id="89d3f-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89d3f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33bdf-110">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="33bdf-110">Requirements</span></span>  
+ <span data-ttu-id="33bdf-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33bdf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89d3f-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89d3f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="33bdf-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="33bdf-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="89d3f-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89d3f-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="33bdf-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="33bdf-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="89d3f-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89d3f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="33bdf-114">**.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33bdf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89d3f-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="89d3f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33bdf-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="33bdf-115">See also</span></span>
 
-- [<span data-ttu-id="89d3f-116">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="89d3f-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="33bdf-116">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="33bdf-116">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)

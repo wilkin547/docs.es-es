@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
+title: Agregar o quitar imágenes con el componente ImageList
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f531003377395bf219775e5ddb48ceb0822ff0ea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925122"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741499"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="e21cc-102">Procedimiento para agregar o quitar imágenes con el componente ImageList de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e21cc-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
-<span data-ttu-id="e21cc-103">El componente <xref:System.Windows.Forms.ImageList> de Windows Forms se rellena normalmente con imágenes antes de asociarse a un control.</span><span class="sxs-lookup"><span data-stu-id="e21cc-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="e21cc-104">Sin embargo, puede Agregar y quitar imágenes después de asociar la lista de imágenes con un control.</span><span class="sxs-lookup"><span data-stu-id="e21cc-104">However, you can add and remove images after associating the image list with a control.</span></span>  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="c439a-102">Cómo: Agregar o quitar imágenes con el componente ImageList de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c439a-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
+<span data-ttu-id="c439a-103">El componente de <xref:System.Windows.Forms.ImageList> de Windows Forms se rellena normalmente con imágenes antes de asociarse a un control.</span><span class="sxs-lookup"><span data-stu-id="c439a-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="c439a-104">Sin embargo, puede Agregar y quitar imágenes después de asociar la lista de imágenes con un control.</span><span class="sxs-lookup"><span data-stu-id="c439a-104">However, you can add and remove images after associating the image list with a control.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="e21cc-105">Al quitar imágenes, compruebe que la <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propiedad de los controles asociados todavía es válida.</span><span class="sxs-lookup"><span data-stu-id="e21cc-105">When you remove images, verify that the <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> property of any associated controls is still valid.</span></span>  
+> <span data-ttu-id="c439a-105">Al quitar imágenes, compruebe que la propiedad <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> de los controles asociados todavía es válida.</span><span class="sxs-lookup"><span data-stu-id="c439a-105">When you remove images, verify that the <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> property of any associated controls is still valid.</span></span>  
   
-### <a name="to-add-images-programmatically"></a><span data-ttu-id="e21cc-106">Para agregar imágenes mediante programación</span><span class="sxs-lookup"><span data-stu-id="e21cc-106">To add images programmatically</span></span>  
+### <a name="to-add-images-programmatically"></a><span data-ttu-id="c439a-106">Para agregar imágenes mediante programación</span><span class="sxs-lookup"><span data-stu-id="c439a-106">To add images programmatically</span></span>  
   
-- <span data-ttu-id="e21cc-107">Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> método de la <xref:System.Windows.Forms.ImageList.Images%2A> propiedad de la lista de imágenes.</span><span class="sxs-lookup"><span data-stu-id="e21cc-107">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
+- <span data-ttu-id="c439a-107">Use el método <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> de la propiedad <xref:System.Windows.Forms.ImageList.Images%2A> de la lista de imágenes.</span><span class="sxs-lookup"><span data-stu-id="c439a-107">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
   
-     <span data-ttu-id="e21cc-108">En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta **Mis documentos** .</span><span class="sxs-lookup"><span data-stu-id="e21cc-108">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="e21cc-109">Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta.</span><span class="sxs-lookup"><span data-stu-id="e21cc-109">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="e21cc-110">La elección de esta ubicación también permite a los usuarios con niveles de acceso del sistema mínimos ejecutar la aplicación de forma más segura.</span><span class="sxs-lookup"><span data-stu-id="e21cc-110">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="e21cc-111">El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya agregado.</span><span class="sxs-lookup"><span data-stu-id="e21cc-111">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
+     <span data-ttu-id="c439a-108">En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta **Mis documentos** .</span><span class="sxs-lookup"><span data-stu-id="c439a-108">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="c439a-109">Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta.</span><span class="sxs-lookup"><span data-stu-id="c439a-109">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="c439a-110">La elección de esta ubicación también permite a los usuarios con niveles de acceso del sistema mínimos ejecutar la aplicación de forma más segura.</span><span class="sxs-lookup"><span data-stu-id="c439a-110">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="c439a-111">El siguiente ejemplo de código requiere que tenga un formulario con un control <xref:System.Windows.Forms.ImageList> ya agregado.</span><span class="sxs-lookup"><span data-stu-id="c439a-111">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ ms.locfileid: "69925122"
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a><span data-ttu-id="e21cc-112">Para agregar imágenes con un valor de clave.</span><span class="sxs-lookup"><span data-stu-id="e21cc-112">To add images with a key value.</span></span>  
+### <a name="to-add-images-with-a-key-value"></a><span data-ttu-id="c439a-112">Para agregar imágenes con un valor de clave.</span><span class="sxs-lookup"><span data-stu-id="c439a-112">To add images with a key value.</span></span>  
   
-- <span data-ttu-id="e21cc-113">Use uno de los <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> métodos de la <xref:System.Windows.Forms.ImageList.Images%2A> propiedad de la lista de imágenes que toma un valor de clave.</span><span class="sxs-lookup"><span data-stu-id="e21cc-113">Use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property that takes a key value.</span></span>  
+- <span data-ttu-id="c439a-113">Use uno de los métodos <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> de la propiedad <xref:System.Windows.Forms.ImageList.Images%2A> de la lista de imágenes que toma un valor de clave.</span><span class="sxs-lookup"><span data-stu-id="c439a-113">Use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property that takes a key value.</span></span>  
   
-     <span data-ttu-id="e21cc-114">En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta **Mis documentos** .</span><span class="sxs-lookup"><span data-stu-id="e21cc-114">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="e21cc-115">Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta.</span><span class="sxs-lookup"><span data-stu-id="e21cc-115">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="e21cc-116">La elección de esta ubicación también permite a los usuarios con niveles de acceso del sistema mínimos ejecutar la aplicación de forma más segura.</span><span class="sxs-lookup"><span data-stu-id="e21cc-116">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="e21cc-117">El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya agregado.</span><span class="sxs-lookup"><span data-stu-id="e21cc-117">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
+     <span data-ttu-id="c439a-114">En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta **Mis documentos** .</span><span class="sxs-lookup"><span data-stu-id="c439a-114">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="c439a-115">Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta.</span><span class="sxs-lookup"><span data-stu-id="c439a-115">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="c439a-116">La elección de esta ubicación también permite a los usuarios con niveles de acceso del sistema mínimos ejecutar la aplicación de forma más segura.</span><span class="sxs-lookup"><span data-stu-id="c439a-116">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="c439a-117">El siguiente ejemplo de código requiere que tenga un formulario con un control <xref:System.Windows.Forms.ImageList> ya agregado.</span><span class="sxs-lookup"><span data-stu-id="c439a-117">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,13 +105,13 @@ public void addImage()
 }  
 ```  
   
-### <a name="to-remove-all-images-programmatically"></a><span data-ttu-id="e21cc-118">Para quitar todas las imágenes mediante programación</span><span class="sxs-lookup"><span data-stu-id="e21cc-118">To remove all images programmatically</span></span>  
+### <a name="to-remove-all-images-programmatically"></a><span data-ttu-id="c439a-118">Para quitar todas las imágenes mediante programación</span><span class="sxs-lookup"><span data-stu-id="c439a-118">To remove all images programmatically</span></span>  
   
-- <span data-ttu-id="e21cc-119">Usar el <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> método para quitar una sola imagen</span><span class="sxs-lookup"><span data-stu-id="e21cc-119">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> method to remove a single image</span></span>  
+- <span data-ttu-id="c439a-119">Usar el método <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> para quitar una sola imagen</span><span class="sxs-lookup"><span data-stu-id="c439a-119">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> method to remove a single image</span></span>  
   
-     <span data-ttu-id="e21cc-120">, o bien</span><span class="sxs-lookup"><span data-stu-id="e21cc-120">,-or-</span></span>  
+     <span data-ttu-id="c439a-120">, o bien</span><span class="sxs-lookup"><span data-stu-id="c439a-120">,-or-</span></span>  
   
-     <span data-ttu-id="e21cc-121">Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> método para borrar todas las imágenes de la lista de imágenes.</span><span class="sxs-lookup"><span data-stu-id="e21cc-121">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> method to clear all images in the image list.</span></span>  
+     <span data-ttu-id="c439a-121">Use el método <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> para borrar todas las imágenes de la lista de imágenes.</span><span class="sxs-lookup"><span data-stu-id="c439a-121">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> method to clear all images in the image list.</span></span>  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -127,9 +127,9 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a><span data-ttu-id="e21cc-122">Para quitar imágenes por clave</span><span class="sxs-lookup"><span data-stu-id="e21cc-122">To remove images by key</span></span>  
+### <a name="to-remove-images-by-key"></a><span data-ttu-id="c439a-122">Para quitar imágenes por clave</span><span class="sxs-lookup"><span data-stu-id="c439a-122">To remove images by key</span></span>  
   
-- <span data-ttu-id="e21cc-123">Use el <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> método para quitar una sola imagen por su clave.</span><span class="sxs-lookup"><span data-stu-id="e21cc-123">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> method to remove a single image by its key.</span></span>  
+- <span data-ttu-id="c439a-123">Use el método <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> para quitar una sola imagen por su clave.</span><span class="sxs-lookup"><span data-stu-id="c439a-123">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> method to remove a single image by its key.</span></span>  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -141,8 +141,8 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e21cc-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="e21cc-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c439a-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="c439a-124">See also</span></span>
 
-- [<span data-ttu-id="e21cc-125">ImageList (componente)</span><span class="sxs-lookup"><span data-stu-id="e21cc-125">ImageList Component</span></span>](imagelist-component-windows-forms.md)
-- [<span data-ttu-id="e21cc-126">Información general sobre el componente ImageList</span><span class="sxs-lookup"><span data-stu-id="e21cc-126">ImageList Component Overview</span></span>](imagelist-component-overview-windows-forms.md)
-- [<span data-ttu-id="e21cc-127">Imágenes, mapas de bits y metarchivos</span><span class="sxs-lookup"><span data-stu-id="e21cc-127">Images, Bitmaps, and Metafiles</span></span>](../advanced/images-bitmaps-and-metafiles.md)
+- [<span data-ttu-id="c439a-125">ImageList (componente)</span><span class="sxs-lookup"><span data-stu-id="c439a-125">ImageList Component</span></span>](imagelist-component-windows-forms.md)
+- [<span data-ttu-id="c439a-126">Información general sobre el componente ImageList</span><span class="sxs-lookup"><span data-stu-id="c439a-126">ImageList Component Overview</span></span>](imagelist-component-overview-windows-forms.md)
+- [<span data-ttu-id="c439a-127">Imágenes, mapas de bits y metarchivos</span><span class="sxs-lookup"><span data-stu-id="c439a-127">Images, Bitmaps, and Metafiles</span></span>](../advanced/images-bitmaps-and-metafiles.md)

@@ -14,41 +14,41 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: 4201fe23bf54388510088e21471edce91809e94c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a147aee1ebba57b86dbbf8a7648456b8d7494936
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129801"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793199"
 ---
-# <a name="icordebugmda-interface"></a><span data-ttu-id="cebcf-102">ICorDebugMDA (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="cebcf-102">ICorDebugMDA Interface</span></span>
-<span data-ttu-id="cebcf-103">Representa un mensaje del asistente para la depuración administrada (MDA).</span><span class="sxs-lookup"><span data-stu-id="cebcf-103">Represents a managed debugging assistant (MDA) message.</span></span>  
+# <a name="icordebugmda-interface"></a><span data-ttu-id="3f6e0-102">ICorDebugMDA (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="3f6e0-102">ICorDebugMDA Interface</span></span>
+<span data-ttu-id="3f6e0-103">Representa un mensaje del asistente para la depuración administrada (MDA).</span><span class="sxs-lookup"><span data-stu-id="3f6e0-103">Represents a managed debugging assistant (MDA) message.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cebcf-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="cebcf-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3f6e0-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="3f6e0-104">Methods</span></span>  
   
-|<span data-ttu-id="cebcf-105">Método</span><span class="sxs-lookup"><span data-stu-id="cebcf-105">Method</span></span>|<span data-ttu-id="cebcf-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="cebcf-106">Description</span></span>|  
+|<span data-ttu-id="3f6e0-105">Método</span><span class="sxs-lookup"><span data-stu-id="3f6e0-105">Method</span></span>|<span data-ttu-id="3f6e0-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="3f6e0-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cebcf-107">GetDescription (método)</span><span class="sxs-lookup"><span data-stu-id="cebcf-107">GetDescription Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|<span data-ttu-id="cebcf-108">Obtiene una cadena que contiene una descripción de este MDA.</span><span class="sxs-lookup"><span data-stu-id="cebcf-108">Gets a string containing a description of this MDA.</span></span>|  
-|[<span data-ttu-id="cebcf-109">GetFlags (método)</span><span class="sxs-lookup"><span data-stu-id="cebcf-109">GetFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|<span data-ttu-id="cebcf-110">Obtiene las marcas asociadas a este MDA.</span><span class="sxs-lookup"><span data-stu-id="cebcf-110">Gets the flags associated with this MDA.</span></span>|  
-|[<span data-ttu-id="cebcf-111">GetName (método)</span><span class="sxs-lookup"><span data-stu-id="cebcf-111">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|<span data-ttu-id="cebcf-112">Obtiene una cadena que contiene el nombre de este MDA.</span><span class="sxs-lookup"><span data-stu-id="cebcf-112">Gets a string containing the name of this MDA.</span></span>|  
-|[<span data-ttu-id="cebcf-113">GetOSThreadId (método)</span><span class="sxs-lookup"><span data-stu-id="cebcf-113">GetOSThreadId Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|<span data-ttu-id="cebcf-114">Obtiene el identificador del subproceso del sistema operativo en el que se ejecuta este MDA.</span><span class="sxs-lookup"><span data-stu-id="cebcf-114">Gets the operating system thread identifier upon which this MDA is executing.</span></span>|  
-|[<span data-ttu-id="cebcf-115">GetXML (método)</span><span class="sxs-lookup"><span data-stu-id="cebcf-115">GetXML Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|<span data-ttu-id="cebcf-116">Obtiene la secuencia XML completa asociada a este MDA.</span><span class="sxs-lookup"><span data-stu-id="cebcf-116">Gets the full XML stream associated with this MDA.</span></span>|  
+|[<span data-ttu-id="3f6e0-107">GetDescription (método)</span><span class="sxs-lookup"><span data-stu-id="3f6e0-107">GetDescription Method</span></span>](icordebugmda-getdescription-method.md)|<span data-ttu-id="3f6e0-108">Obtiene una cadena que contiene una descripción de este MDA.</span><span class="sxs-lookup"><span data-stu-id="3f6e0-108">Gets a string containing a description of this MDA.</span></span>|  
+|[<span data-ttu-id="3f6e0-109">GetFlags (método)</span><span class="sxs-lookup"><span data-stu-id="3f6e0-109">GetFlags Method</span></span>](icordebugmda-getflags-method.md)|<span data-ttu-id="3f6e0-110">Obtiene las marcas asociadas a este MDA.</span><span class="sxs-lookup"><span data-stu-id="3f6e0-110">Gets the flags associated with this MDA.</span></span>|  
+|[<span data-ttu-id="3f6e0-111">GetName (método)</span><span class="sxs-lookup"><span data-stu-id="3f6e0-111">GetName Method</span></span>](icordebugmda-getname-method.md)|<span data-ttu-id="3f6e0-112">Obtiene una cadena que contiene el nombre de este MDA.</span><span class="sxs-lookup"><span data-stu-id="3f6e0-112">Gets a string containing the name of this MDA.</span></span>|  
+|[<span data-ttu-id="3f6e0-113">GetOSThreadId (método)</span><span class="sxs-lookup"><span data-stu-id="3f6e0-113">GetOSThreadId Method</span></span>](icordebugmda-getosthreadid-method.md)|<span data-ttu-id="3f6e0-114">Obtiene el identificador del subproceso del sistema operativo en el que se ejecuta este MDA.</span><span class="sxs-lookup"><span data-stu-id="3f6e0-114">Gets the operating system thread identifier upon which this MDA is executing.</span></span>|  
+|[<span data-ttu-id="3f6e0-115">GetXML (método)</span><span class="sxs-lookup"><span data-stu-id="3f6e0-115">GetXML Method</span></span>](icordebugmda-getxml-method.md)|<span data-ttu-id="3f6e0-116">Obtiene la secuencia XML completa asociada a este MDA.</span><span class="sxs-lookup"><span data-stu-id="3f6e0-116">Gets the full XML stream associated with this MDA.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cebcf-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cebcf-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f6e0-117">Notas</span><span class="sxs-lookup"><span data-stu-id="3f6e0-117">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="cebcf-118">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="cebcf-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="3f6e0-118">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="3f6e0-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cebcf-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cebcf-119">Requirements</span></span>  
- <span data-ttu-id="cebcf-120">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cebcf-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f6e0-119">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="3f6e0-119">Requirements</span></span>  
+ <span data-ttu-id="3f6e0-120">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f6e0-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cebcf-121">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cebcf-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f6e0-121">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f6e0-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cebcf-122">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cebcf-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f6e0-122">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f6e0-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cebcf-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cebcf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3f6e0-123">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f6e0-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cebcf-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="cebcf-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f6e0-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="3f6e0-124">See also</span></span>
 
-- [<span data-ttu-id="cebcf-125">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="cebcf-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="cebcf-126">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="cebcf-126">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="3f6e0-125">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="3f6e0-125">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="3f6e0-126">Diagnóstico de errores con asistentes para la depuración administrada</span><span class="sxs-lookup"><span data-stu-id="3f6e0-126">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
