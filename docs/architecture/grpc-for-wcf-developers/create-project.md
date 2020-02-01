@@ -2,12 +2,12 @@
 title: Creación de un nuevo ASP.NET Core proyecto de gRPC-gRPC para desarrolladores de WCF
 description: Obtenga información sobre cómo crear un proyecto de gRPC con Visual Studio o la línea de comandos.
 ms.date: 09/02/2019
-ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fbcc598cf503a5baeca941803ff8fa0d5fc99671
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711448"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919413"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Creación de un nuevo proyecto gRPC de ASP.NET Core
 
@@ -16,13 +16,13 @@ La SDK de .NET Core incluye una eficaz herramienta de la CLI, `dotnet`, que perm
 ## <a name="create-the-project-by-using-visual-studio"></a>Crear el proyecto mediante Visual Studio
 
 > [!IMPORTANT]
-> Para desarrollar cualquier aplicación ASP.NET Core 3,0, necesita Visual Studio 2019 16,3 o posterior, con la carga de trabajo de **desarrollo web y ASP.net** instalada.
+> Para desarrollar cualquier aplicación ASP.NET Core 3,0, necesita la versión 16,3 de Visual Studio 2019 o posterior, con la carga de trabajo de **desarrollo web y ASP.net** instalada.
 
 Cree una solución vacía denominada **Traders** a partir de la plantilla de *solución en blanco* . Agregue una carpeta de soluciones llamada `src`. A continuación, haga clic con el botón derecho en la carpeta y elija **agregar** > **nuevo proyecto**. Escriba `grpc` en el cuadro de búsqueda de plantillas y debería ver una plantilla de proyecto denominada `gRPC Service`.
 
 ![Captura de pantalla del cuadro de diálogo Agregar un nuevo proyecto](media/create-project/new-grpc-project.png)
 
-Seleccione **siguiente** para continuar en el cuadro de diálogo **configurar el nuevo proyecto** . Asigne al proyecto el nombre `TraderSys.Portfolios`y agregue un subdirectorio `src` a la **Ubicación**.
+Seleccione **siguiente** para continuar en el cuadro de diálogo **configurar el nuevo proyecto** . Asigne al proyecto el nombre `TraderSys.Portfolios` y agregue un subdirectorio `src` a la **Ubicación**.
 
 ![Captura de pantalla del cuadro de diálogo Configurar el nuevo proyecto](media/create-project/configure-project.png)
 
