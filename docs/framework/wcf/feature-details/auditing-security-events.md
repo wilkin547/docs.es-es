@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964714"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921409"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden registrar eventos de seguridad (correcto, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
@@ -32,7 +32,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
   
  Para escribir en el registro de seguridad es necesario el `SeAuditPrivilege`. De forma predeterminada, solo las cuentas de Sistema local y Servicio de red tienen este privilegio. Para administrar las funciones del registro de seguridad `read` y `delete` es necesario `SeSecurityPrivilege`. De forma predeterminada, solo los administradores tienen este privilegio.  
   
- En cambio, los usuarios autenticados pueden leer y escribir en el registro de aplicaciones. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] escribe de forma predeterminada los eventos de auditoría en el registro de aplicaciones. El registro también puede contener datos personales que son visibles para todos los usuarios autenticados.  
+ En cambio, los usuarios autenticados pueden leer y escribir en el registro de aplicaciones. Windows XP escribe los eventos de auditoría en el registro de la aplicación de forma predeterminada. El registro también puede contener datos personales que son visibles para todos los usuarios autenticados.  
   
 ## <a name="suppressing-audit-failures"></a>Suprimir los errores de la auditoría  
  Otra opción durante la auditoría es la de suprimir los errores de la auditoría. De forma predeterminada, un error de la auditoría no afecta a una aplicación. Si fuese necesario, sin embargo, puede establecer la opción en `false`, que hace que se produzca una excepción.  
@@ -78,7 +78,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
  Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y de este modo hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla. Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría.  
   
- Los eventos de auditoría que se escriben en el registro de aplicaciones en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] puede verlos cualquier usuario autenticado.  
+ Los eventos de auditoría que se escriben en el registro de aplicaciones en Windows XP son visibles para cualquier usuario autenticado.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>Elegir entre registros de eventos de seguridad o aplicación  
  Las siguientes tablas proporcionan información para ayudarle a decidir si registrar en el registro de eventos de aplicación o de seguridad.  
@@ -87,7 +87,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
   
 |System|Registro de aplicaciones|Registro de seguridad|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] o posterior|admitido|No compatibles|  
+|Windows XP SP2 o posterior|admitido|No compatibles|  
 |Windows Server 2003 SP1 y Windows Vista|admitido|El contexto del subproceso debe poseer `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Otros factores  

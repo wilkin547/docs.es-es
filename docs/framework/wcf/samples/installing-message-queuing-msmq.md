@@ -2,18 +2,18 @@
 title: Instalar Message Queuing (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344745"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921100"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalar Message Queuing (MSMQ)
 Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
   
 > [!NOTE]
-> Message Queue Server 4,0 no está disponible en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003.  
+> Message Queue Server 4,0 no está disponible en Windows XP y Windows Server 2003.  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Para instalar Message Queuing 4.0 en Windows Server 2008 o Windows Server 2008 R2  
   
@@ -31,7 +31,7 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Para instalar Message Queuing 4.0 en Windows 7 o Windows Vista  
   
-1. Abra el **Panel de Control**.  
+1. Abra el **Panel de control**.  
   
 2. Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
   
@@ -47,7 +47,7 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Para instalar Message Queuing 3.0 en Windows XP y Windows Server 2003  
   
-1. Abra el **Panel de Control**.  
+1. Abra el **Panel de control**.  
   
 2. Haga clic en **Agregar o quitar programas** y, a continuación, haga clic en **agregar componentes de Windows**.  
   

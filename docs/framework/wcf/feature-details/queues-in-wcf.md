@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92bd3a6809386764251c4a69c6bc583ed745205d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348348"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921359"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Colas en Windows Communication Foundation
 En los temas de esta sección se describe la compatibilidad de Windows Communication Foundation (WCF) con las colas de. WCF proporciona compatibilidad para la puesta en cola aprovechando Microsoft Message Queuing (conocido anteriormente como MSMQ) como transporte y habilita los siguientes escenarios:  
@@ -50,7 +50,7 @@ En los temas de esta sección se describe la compatibilidad de Windows Communica
  Explica cómo administrar los mensajes dudosos (mensajes que han superado el número máximo de intentos de entrega a la aplicación receptora).  
   
  [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Resume las diferencias en la característica de colas de WCF entre Windows Vista, Windows Server 2003 y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Resume las diferencias en la característica de colas de WCF entre Windows Vista, Windows Server 2003 y Windows XP.  
   
  [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Describe cómo utilizar la seguridad de transporte para proteger los mensajes en cola.  

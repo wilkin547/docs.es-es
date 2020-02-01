@@ -2,12 +2,12 @@
 title: Complementos MMC de configuración de WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900727"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921342"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Complemento MMC de configuración de WS-AtomicTransaction
 
@@ -15,11 +15,11 @@ El complemento MMC de configuración de WS-AtomicTransaction se usa para configu
 
 ## <a name="remarks"></a>Notas
 
-Si está ejecutando [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003, el complemento MMC se puede encontrar en **Panel de control/herramientas administrativas/servicios de componentes/** , haciendo clic con el botón secundario en **mi PC**y seleccionando **propiedades**. Ésta es la misma ubicación donde puede configurar MSDTC. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
+Si está ejecutando Windows XP o Windows Server 2003, el complemento MMC se puede encontrar en **Panel de control/herramientas administrativas/servicios de componentes/** , haciendo clic con el botón derecho en **mi PC**y seleccionando **propiedades**. Ésta es la misma ubicación donde puede configurar MSDTC. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
  Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
- Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Panel de control/herramientas administrativas/servicios de componentes/** y realizar pasos similares si ejecuta [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003. Si está ejecutando Windows Vista o Windows Server 2008, siga los pasos anteriores para vista y Windows Server 2008, pero use el nodo **DTC (Coordinator\Local de transacciones distribuidas** ) en el nodo del equipo remoto.
+ Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Panel de control/herramientas administrativas/servicios de componentes/** y realizar pasos similares si está ejecutando Windows XP o windows Server 2003. Si está ejecutando Windows Vista o Windows Server 2008, siga los pasos anteriores para vista y Windows Server 2008, pero use el nodo **DTC (Coordinator\Local de transacciones distribuidas** ) en el nodo del equipo remoto.
 
  Para utilizar la interfaz de usuario proporcionada por la herramienta, tiene que registrar el archivo WsatUI.dll, que se encuentra en la ruta de acceso siguiente
 

@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337502"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919395"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
 Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este ejemplo se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este
 
  Según la versión de MSMQ, NetMsmqBinding admite la detección limitada para detectar los mensajes dudosos. Una vez detectado el mensaje como dudoso, podrá administrarse de varias maneras. De nuevo, según la versión de MSMQ, NetMsmqBinding admite desde el manejo limitado hasta un manejo completo de mensajes dudosos.
 
- En este ejemplo se muestran las instalaciones limitadas de envenenamiento que se proporcionan en Windows Server 2003 y en la plataforma [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y las instalaciones de envenenamiento completo que se proporcionan en Windows Vista. En ambos casos, el objetivo es mover el mensaje dudoso de una cola a otra para que pueda ser reparado por un servicio de mensajes dudosos.
+ En este ejemplo se muestran las instalaciones limitadas de envenenamiento proporcionadas en la plataforma Windows Server 2003 y Windows XP, así como las funciones de envenenamiento completo que se proporcionan en Windows Vista. En ambos casos, el objetivo es mover el mensaje dudoso de una cola a otra para que pueda ser reparado por un servicio de mensajes dudosos.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Ejemplo de Manejo de Mensajes Dudosos
  En Windows Vista, MSMQ proporciona una utilidad de subcola dudoso que se puede usar para almacenar mensajes dudosos. Este ejemplo muestra el procedimiento recomendado para tratar los mensajes dudosos mediante Windows Vista.

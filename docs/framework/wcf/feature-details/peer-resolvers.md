@@ -2,12 +2,12 @@
 title: Resoluciones del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 33afffcbf11d757dfd003d1fd2bc9a17a3047a69
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bcdeffac3673c1c464a35d8b6e089efd7394907
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837381"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919238"
 ---
 # <a name="peer-resolvers"></a>Resoluciones del mismo nivel
 Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP de otros nodos. Las direcciones IP se obtienen al establecer contacto con un servicio de resolución, que toma el identificador de la malla y devuelve una lista de direcciones que corresponden a los nodos registrados con ese identificador de malla concreto. La resolución mantiene una lista de direcciones registradas, que crea mediante el registro de cada nodo de la malla en el servicio.  
@@ -20,7 +20,7 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
  De forma predeterminada, el canal del mismo nivel usa el servicio de resolución del mismo nivel PNRP para la detección de iguales y vecinos en la malla. En situaciones o plataformas en las que PNRP no está disponible o es viable, Windows Communication Foundation (WCF) proporciona un servicio de detección alternativo basado en servidor, el <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. También puede definir explícitamente un servicio de resolución personalizado escribiendo una clase que implemente la interfaz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Protocolo de resolución de nombres del mismo nivel (PNRP)  
- PNRP, el solucionador predeterminado para Windows Vista, es un servicio de resolución de nombres distribuido y sin servidor. PNRP también se puede utilizar en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] instalando el paquete de conexión de red avanzada. Cualquiera de los dos clientes que ejecuten la misma versión de PNRP pueden localizarse mediante este protocolo, siempre y cuando cumplan ciertas condiciones (como la falta de un firewall corporativo intermedio). Tenga en cuenta que la versión de PNRP que se incluye con Windows Vista es más reciente que la versión incluida en el paquete de redes avanzadas. Compruebe en el Centro de descarga de Microsoft si hay actualizaciones de PNRP para [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
+ PNRP, el solucionador predeterminado para Windows Vista, es un servicio de resolución de nombres distribuido y sin servidor. PNRP también se puede usar en Windows XP SP2 mediante la instalación del paquete de red avanzada. Cualquiera de los dos clientes que ejecuten la misma versión de PNRP pueden localizarse mediante este protocolo, siempre y cuando cumplan ciertas condiciones (como la falta de un firewall corporativo intermedio). Tenga en cuenta que la versión de PNRP que se incluye con Windows Vista es más reciente que la versión incluida en el paquete de redes avanzadas. Consulte el centro de descarga de Microsoft para obtener las actualizaciones de PNRP para Windows XP SP2.  
   
 ### <a name="custom-resolver-services"></a>Servicios de resolución personalizados  
  Cuando el servicio PNRP no está disponible o cuando se desea el control absoluto de la forma de la malla, se puede usar un servicio de resolución personalizado basado en servidor. Este servicio se puede definir explícitamente escribiendo una clase de resolución que implemente la interfaz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> o utilizando la implementación predeterminada de la bandeja de entrada, <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  

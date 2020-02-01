@@ -2,12 +2,12 @@
 title: Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744776"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921180"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 
@@ -63,7 +63,7 @@ El directorio virtual **ServiceModelSamples** se utiliza para compilar y ejecuta
     > [!NOTE]
     > Si no se completa este paso, todos los ejemplos hospedados en IIS generarán errores al compilarse. Asegúrese de que ha establecido los permisos correctamente o ejecute el símbolo del sistema de SDK y Visual Studio (2012) como administrador.
 
-11. Cree un directorio C:\logs en el equipo; en algunos ejemplos podría esperarse que exista. Asegúrese de que la cuenta adecuada tiene concedido acceso de escritura en esta carpeta. En Windows 7, Windows Vista y Windows Server 2008 R2, esta cuenta es **servicio de red**. En Windows Server 2008, la cuenta es NT Authority\Network Service. Para [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y Windows Server 2003, la cuenta es ASPNET.
+11. Cree un directorio C:\logs en el equipo; en algunos ejemplos podría esperarse que exista. Asegúrese de que la cuenta adecuada tiene concedido acceso de escritura en esta carpeta. En Windows 7, Windows Vista y Windows Server 2008 R2, esta cuenta es **servicio de red**. En Windows Server 2008, la cuenta es NT Authority\Network Service. En Windows XP y Windows Server 2003, la cuenta es ASPNET.
 
 12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la \<carpeta InstallPath > \WF_WCF_Samples\WCF\Setup  Este script realizará las siguientes tareas:
 

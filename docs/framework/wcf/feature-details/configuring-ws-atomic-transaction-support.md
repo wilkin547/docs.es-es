@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964582"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919345"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Configuración de la compatibilidad con transacciones WS-Atomic
 
@@ -25,7 +25,7 @@ Se puede tener acceso a la ventana de línea de comandos en la ubicación de ins
 
 Para obtener más información acerca de la herramienta de línea de comandos, consulte [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
-Si ejecuta [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o Windows Server 2003, puede tener acceso al complemento MMC; para ello, vaya a panel de **control/herramientas administrativas/servicios de componentes**, haga clic con el botón secundario en **mi PC**y seleccione **propiedades**. Ésta es la misma ubicación donde puede configurar Microsoft DTC (Coordinador de transacciones distribuidas). Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** . Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
+Si ejecuta Windows XP o Windows Server 2003, puede tener acceso al complemento MMC; para ello, vaya a panel de **control/herramientas administrativas/servicios de componentes**, haga clic con el botón derecho en **mi PC**y seleccione **propiedades**. Ésta es la misma ubicación donde puede configurar Microsoft DTC (Coordinador de transacciones distribuidas). Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** . Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
 Para obtener más información sobre el complemento, vea el [complemento MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).
 

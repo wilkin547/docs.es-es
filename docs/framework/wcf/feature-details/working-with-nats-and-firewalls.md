@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743875"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921073"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
@@ -25,7 +25,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Algunas NAT admiten la configuración de reglas de reenvío para permitir a los equipos externos que se conecten a un equipo interno determinado. Las instrucciones para configurar las reglas de reenvío varían entre NAT diferentes y no se recomienda para la mayoría de las aplicaciones el pedir a los usuarios finales que cambien su configuración NAT. Muchos usuarios finales no pueden o no quieren cambiar su configuración de NAT para una aplicación determinada.  
   
 ## <a name="how-firewalls-affect-communication"></a>Cómo afectan los firewalls a la comunicación  
- Un *firewall* es un software o dispositivo de hardware que aplica reglas al tráfico que pasa a través de para decidir si permitir o denegar el paso. Puede configurar los firewalls para examinar secuencias de tráfico entrantes o salientes. El firewall proporciona un límite de seguridad para la red en el borde de la red o en el host del extremo. Los usuarios de empresas han mantenido tradicionalmente sus servidores tras un firewall para evitar ataques malintencionados. Desde la introducción del firewall personal en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], el número de usuarios domésticos tras un firewall también ha aumentado en gran medida. Esto hace probable que uno o ambos extremos de una conexión tengan un firewall que examine los paquetes.  
+ Un *firewall* es un software o dispositivo de hardware que aplica reglas al tráfico que pasa a través de para decidir si permitir o denegar el paso. Puede configurar los firewalls para examinar secuencias de tráfico entrantes o salientes. El firewall proporciona un límite de seguridad para la red en el borde de la red o en el host del extremo. Los usuarios de empresas han mantenido tradicionalmente sus servidores tras un firewall para evitar ataques malintencionados. Desde la introducción de Personal Firewall en Windows XP SP2, el número de usuarios domésticos detrás de un firewall ha aumentado enormemente. Esto hace probable que uno o ambos extremos de una conexión tengan un firewall que examine los paquetes.  
   
  Los firewalls varían en gran medida en cuanto a su complejidad y capacidad para examinar los paquetes. Los firewalls simples aplican reglas basadas en las direcciones de origen y destino y los puertos en los paquetes. Los firewalls inteligentes también pueden examinar el contenido de paquetes para tomar decisiones. Estos firewalls vienen en muchas configuraciones diferentes y se utilizan a menudo para aplicaciones especializadas.  
   
@@ -33,7 +33,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
   
 ## <a name="using-teredo"></a>Uso de Teredo  
 
- Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en WCF requiere la habilitación de la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. Los sistemas operativos Windows Vista y versiones posteriores admiten IPv6 de forma predeterminada y solo requieren que el usuario habilite Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y Windows Server 2003 requieren que el usuario habilite IPv6 y Teredo. Para obtener más información, vea [información general sobre Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en WCF requiere la habilitación de la compatibilidad con IPv6 y Teredo en el sistema operativo. Los sistemas operativos Windows XP y versiones posteriores admiten Teredo. Los sistemas operativos Windows Vista y versiones posteriores admiten IPv6 de forma predeterminada y solo requieren que el usuario habilite Teredo. Windows XP SP2 y Windows Server 2003 requieren que el usuario habilite IPv6 y Teredo. Para obtener más información, vea [información general sobre Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
  La selección de un transporte y MEP es un proceso de tres pasos:  

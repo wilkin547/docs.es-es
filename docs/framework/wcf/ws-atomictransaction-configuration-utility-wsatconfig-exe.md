@@ -2,12 +2,12 @@
 title: Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: c57d0266102c5ad79657e875cb0107a2c11cabca
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337611"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921334"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 La utilidad de configuración de WS-AtomicTransaction se utiliza para configurar valores básicos de compatibilidad de WS-AtomicTransaction.  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Si ejecuta [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003, debe descargar una actualización antes de ejecutar WsatConfig. exe. Para obtener más información acerca de esta actualización, consulte [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
+ Si ejecuta Windows XP o Windows Server 2003, debe descargar una actualización antes de ejecutar WsatConfig. exe. Para obtener más información acerca de esta actualización, consulte [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
   
  La tabla siguiente muestra las opciones que se pueden utilizar con la utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe).  
   

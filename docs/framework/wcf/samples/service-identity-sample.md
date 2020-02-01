@@ -2,12 +2,12 @@
 title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347921"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919375"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Vea los ejemplos de [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1. En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o Windows Vista, importe el archivo de certificado Identity. pfx en la carpeta identidad de la solución en el almacén de certificados LocalMachine/My (personal) mediante la herramienta de complemento MMC. Este archivo está protegido con contraseña. Durante la importación se pide una contraseña. Escriba `xyz` en el cuadro contraseña. Para obtener más información, consulte el tema [Cómo: ver certificados con el complemento MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Una vez hecho esto, ejecute setup. bat en un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador, que copia este certificado en el almacén CurrentUser/Trusted People para su uso en el cliente.
+1. En Windows XP o Windows Vista, importe el archivo de certificado Identity. pfx en la carpeta identidad de la solución en el almacén de certificados LocalMachine/My (personal) mediante la herramienta de complemento MMC. Este archivo está protegido con contraseña. Durante la importación se pide una contraseña. Escriba `xyz` en el cuadro contraseña. Para obtener más información, consulte el tema [Cómo: ver certificados con el complemento MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Una vez hecho esto, ejecute setup. bat en un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador, que copia este certificado en el almacén CurrentUser/Trusted People para su uso en el cliente.
 
 2. En Windows Server 2003, ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
