@@ -4,14 +4,14 @@ description: En este artículo se describe cómo habilitar la finalización con 
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739313"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920531"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
 
 A partir del SDK de .NET Core 2.0, la CLI de .NET Core admite la finalización con tabulación. En este artículo se describe cómo configurar la finalización con tabulación para tres shells: PowerShell, Bash y zsh. Otros shells pueden tener compatibilidad con la finalización automática. Consulte su documentación sobre cómo configurar la finalización automática, los pasos deben ser similares a los que se describen en este artículo.
 

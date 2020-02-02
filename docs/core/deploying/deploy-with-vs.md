@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740842"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920889"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -28,7 +28,7 @@ Para obtener información sobre el uso de Visual Studio para desarrollar aplicac
 
 ## <a name="framework-dependent-deployment"></a>Implementación dependiente de marco de trabajo
 
-La implementación de una implementación dependiente del marco sin dependencias de terceros implica simplemente la compilación, la prueba y la publicación de la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso.  
+La implementación de una implementación dependiente del marco sin dependencias de terceros implica simplemente la compilación, la prueba y la publicación de la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso.
 
 1. Crear el proyecto.
 
@@ -189,7 +189,7 @@ Haga lo siguiente para cada plataforma que sea destino de la aplicación:
    Si ya ha creado un perfil, haga clic con el botón derecho en el proyecto para abrir el cuadro de diálogo **Publicar**, si aún no está abierto. Luego seleccione **Nuevo perfil**.
 
    Se abre el cuadro de diálogo **Elegir un destino de publicación**.
-  
+
 1. Seleccione la ubicación en la que Visual Studio publica la aplicación.
 
    Si solo se va a publicar en una plataforma, se puede aceptar el valor predeterminado del cuadro de texto **Elegir una carpeta**; así, se publica la implementación dependiente del marco de la aplicación en el directorio *\<directorio-del-proyecto>\bin\Release\netcoreapp2.1\publish*.
@@ -244,7 +244,7 @@ Además, Visual Studio crea un perfil de publicación independiente (\*.pubxml) 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

@@ -1,15 +1,15 @@
 ---
 title: Implementación de una aplicación de .NET para Apache Spark en Databricks
 description: Sepa cómo implementar una aplicación de .NET para Apache Spark en Databricks.
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a117d85ab911b380598c93417f6ff95661ab864c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960466"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868036"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -190,10 +190,10 @@ La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecu
 3. Pegue los parámetros siguientes en la configuración del trabajo. Después, seleccione **Confirmar**.
 
    ```
-   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
-## <a name="create-a-cluster"></a>Creación de un clúster
+## <a name="create-a-cluster"></a>Crear un clúster
 
 1. Vaya a su trabajo y seleccione **Editar** para configurar el clúster del trabajo.
 
