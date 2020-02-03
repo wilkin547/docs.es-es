@@ -16,27 +16,27 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731839"
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="c3bdc-102">Propiedades (WPF)</span><span class="sxs-lookup"><span data-stu-id="c3bdc-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="c3bdc-103">proporciona un conjunto de servicios que se pueden utilizar para ampliar la funcionalidad de una propiedad de Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="c3bdc-103">provides a set of services that can be used to extend the functionality of a common language runtime (CLR) property.</span></span> <span data-ttu-id="c3bdc-104">Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF.</span><span class="sxs-lookup"><span data-stu-id="c3bdc-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="c3bdc-105">Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia.</span><span class="sxs-lookup"><span data-stu-id="c3bdc-105">A property that is backed by the WPF property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="4ec04-102">Propiedades (WPF)</span><span class="sxs-lookup"><span data-stu-id="4ec04-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="4ec04-103">proporciona un conjunto de servicios que se pueden utilizar para ampliar la funcionalidad de una propiedad de Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="4ec04-103">provides a set of services that can be used to extend the functionality of a common language runtime (CLR) property.</span></span> <span data-ttu-id="4ec04-104">Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF.</span><span class="sxs-lookup"><span data-stu-id="4ec04-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="4ec04-105">Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia.</span><span class="sxs-lookup"><span data-stu-id="4ec04-105">A property that is backed by the WPF property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c3bdc-106">Esta sección</span><span class="sxs-lookup"><span data-stu-id="c3bdc-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4ec04-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="4ec04-106">In This Section</span></span>  
 
-- [<span data-ttu-id="c3bdc-107">Información general sobre las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
-- [<span data-ttu-id="c3bdc-108">Información general sobre propiedades asociadas</span><span class="sxs-lookup"><span data-stu-id="c3bdc-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
-- [<span data-ttu-id="c3bdc-109">Propiedades de dependencia personalizadas</span><span class="sxs-lookup"><span data-stu-id="c3bdc-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
-- [<span data-ttu-id="c3bdc-110">Metadatos de las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
-- [<span data-ttu-id="c3bdc-111">Devoluciones de llamada y validación de las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
-- [<span data-ttu-id="c3bdc-112">Metadatos de las propiedades de marco de trabajo</span><span class="sxs-lookup"><span data-stu-id="c3bdc-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
-- [<span data-ttu-id="c3bdc-113">Prioridad de los valores de propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
-- [<span data-ttu-id="c3bdc-114">Propiedades de dependencia de solo lectura</span><span class="sxs-lookup"><span data-stu-id="c3bdc-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
-- [<span data-ttu-id="c3bdc-115">Herencia de valores de propiedad</span><span class="sxs-lookup"><span data-stu-id="c3bdc-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
-- [<span data-ttu-id="c3bdc-116">Seguridad de las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-116">Dependency Property Security</span></span>](dependency-property-security.md)
-- [<span data-ttu-id="c3bdc-117">Modelos de constructores seguros para objetos DependencyObject</span><span class="sxs-lookup"><span data-stu-id="c3bdc-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
-- [<span data-ttu-id="c3bdc-118">Propiedades de dependencia de tipo de colección</span><span class="sxs-lookup"><span data-stu-id="c3bdc-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
-- [<span data-ttu-id="c3bdc-119">Carga de XAML y propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
-- [<span data-ttu-id="c3bdc-120">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="c3bdc-120">How-to Topics</span></span>](properties-how-to-topics.md)
+- [<span data-ttu-id="4ec04-107">Información general sobre las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
+- [<span data-ttu-id="4ec04-108">Información general sobre propiedades asociadas</span><span class="sxs-lookup"><span data-stu-id="4ec04-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
+- [<span data-ttu-id="4ec04-109">Propiedades de dependencia personalizadas</span><span class="sxs-lookup"><span data-stu-id="4ec04-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
+- [<span data-ttu-id="4ec04-110">Metadatos de las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
+- [<span data-ttu-id="4ec04-111">Devoluciones de llamada y validación de las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
+- [<span data-ttu-id="4ec04-112">Metadatos de las propiedades de marco de trabajo</span><span class="sxs-lookup"><span data-stu-id="4ec04-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
+- [<span data-ttu-id="4ec04-113">Prioridad de los valores de propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
+- [<span data-ttu-id="4ec04-114">Propiedades de dependencia de solo lectura</span><span class="sxs-lookup"><span data-stu-id="4ec04-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
+- [<span data-ttu-id="4ec04-115">Herencia de valores de propiedad</span><span class="sxs-lookup"><span data-stu-id="4ec04-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
+- [<span data-ttu-id="4ec04-116">Seguridad de las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-116">Dependency Property Security</span></span>](dependency-property-security.md)
+- [<span data-ttu-id="4ec04-117">Modelos de constructores seguros para objetos DependencyObject</span><span class="sxs-lookup"><span data-stu-id="4ec04-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
+- [<span data-ttu-id="4ec04-118">Propiedades de dependencia de tipo de colección</span><span class="sxs-lookup"><span data-stu-id="4ec04-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
+- [<span data-ttu-id="4ec04-119">Carga de XAML y propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
+- [<span data-ttu-id="4ec04-120">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="4ec04-120">How-to Topics</span></span>](properties-how-to-topics.md)
   
-## <a name="reference"></a><span data-ttu-id="c3bdc-121">Referencia</span><span class="sxs-lookup"><span data-stu-id="c3bdc-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4ec04-121">Referencia</span><span class="sxs-lookup"><span data-stu-id="4ec04-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -45,13 +45,13 @@ ms.locfileid: "76731839"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="c3bdc-122">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c3bdc-122">Related Sections</span></span>  
- [<span data-ttu-id="c3bdc-123">Arquitectura de WPF</span><span class="sxs-lookup"><span data-stu-id="c3bdc-123">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="c3bdc-124">XAML en WPF</span><span class="sxs-lookup"><span data-stu-id="c3bdc-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="c3bdc-125">Elementos base</span><span class="sxs-lookup"><span data-stu-id="c3bdc-125">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="c3bdc-126">Árbol de elementos y serialización</span><span class="sxs-lookup"><span data-stu-id="c3bdc-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="c3bdc-127">Eventos</span><span class="sxs-lookup"><span data-stu-id="c3bdc-127">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="c3bdc-128">Entrada</span><span class="sxs-lookup"><span data-stu-id="c3bdc-128">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="c3bdc-129">Recursos</span><span class="sxs-lookup"><span data-stu-id="c3bdc-129">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="c3bdc-130">Modelo de contenido de WPF</span><span class="sxs-lookup"><span data-stu-id="c3bdc-130">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
-  [<span data-ttu-id="c3bdc-131">Modelo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="c3bdc-131">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="4ec04-122">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="4ec04-122">Related Sections</span></span>  
+ [<span data-ttu-id="4ec04-123">Arquitectura de WPF</span><span class="sxs-lookup"><span data-stu-id="4ec04-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="4ec04-124">XAML en WPF</span><span class="sxs-lookup"><span data-stu-id="4ec04-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="4ec04-125">Elementos base</span><span class="sxs-lookup"><span data-stu-id="4ec04-125">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="4ec04-126">Árbol de elementos y serialización</span><span class="sxs-lookup"><span data-stu-id="4ec04-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="4ec04-127">Eventos</span><span class="sxs-lookup"><span data-stu-id="4ec04-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="4ec04-128">Entrada</span><span class="sxs-lookup"><span data-stu-id="4ec04-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="4ec04-129">Recursos</span><span class="sxs-lookup"><span data-stu-id="4ec04-129">Resources</span></span>](resources-wpf.md)  
+  <span data-ttu-id="4ec04-130">[WPF Content Model](../controls/wpf-content-model.md) (Modelo de contenido de WPF)</span><span class="sxs-lookup"><span data-stu-id="4ec04-130">[WPF Content Model](../controls/wpf-content-model.md)</span></span>  
+  [<span data-ttu-id="4ec04-131">Modelo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="4ec04-131">Threading Model</span></span>](threading-model.md)
