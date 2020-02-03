@@ -1195,9 +1195,9 @@
         - name: Información general
           displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
-        - name: Etiquetas recomendadas para los comentarios de documentación
+        - name: Etiquetas recomendadas para los comentarios de la documentación
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
-        - name: Procesar el archivo XML
+        - name: Procesamiento del archivo XML
           href: programming-guide/xmldoc/processing-the-xml-file.md
         - name: Delimitadores para etiquetas de documentación
           href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
@@ -1209,7 +1209,7 @@
               href: programming-guide/xmldoc/code-inline.md
             - name: <code>
               href: programming-guide/xmldoc/code.md
-            - name: 'cref, Atributo'
+            - name: Atributo cref
               href: programming-guide/xmldoc/cref-attribute.md
             - name: <example>
               href: programming-guide/xmldoc/example.md

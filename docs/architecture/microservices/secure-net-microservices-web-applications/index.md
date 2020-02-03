@@ -4,12 +4,12 @@ description: 'Seguridad en microservicios y aplicaciones web .NET: familiaríces
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736965"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777212"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Protección de microservicios y aplicaciones web .NET
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-Si elige la opción de autenticación **Cuenta de usuario individual** al crear el proyecto de aplicación web ASP.NET Core en Visual Studio, todo el código necesario para iniciar sesión con un proveedor externo ya está en el proyecto, como se muestra en la figura 9-3.
+Si elige la opción de autenticación **Cuenta de usuario individual** al crear el proyecto de aplicación web ASP.NET Core en Visual Studio, todo el código necesario para iniciar sesión con un proveedor externo ya estará en el proyecto, como se muestra en la figura 9-3.
 
 ![Captura de pantalla del cuadro de diálogo Nueva aplicación web ASP.NET Core.](./media/index/select-external-authentication-option.png)
 

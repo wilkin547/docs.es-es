@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860964"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966015"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -46,9 +46,9 @@ Este artículo no proporciona información completa sobre cada una de las caract
 
 Puede descargar .NET Framework 4.8 de las ubicaciones siguientes:
 
-- [Instalador web de .NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [Instalador web de .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [Instalador sin conexión de .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [Instalador sin conexión de .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4.8 se puede instalar en Windows 10, Windows 8.1, Windows 7 SP1 y las plataformas de servidor correspondientes a partir de Windows Server 2008 R2 SP1. Puede instalar .NET Framework 4.8 mediante el instalador web o el instalador sin conexión. La manera recomendada para la mayoría de los usuarios es usar el programa de instalación web.
 
@@ -685,7 +685,7 @@ Para ver una lista de las nuevas API agregadas a .NET Framework 4.7, consulte 
 
 .NET Framework 4.7 mejora la serialización con <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Funcionalidad mejorada con criptografía de curva elíptica (ECC)** *
+**Funcionalidad mejorada con criptografía de curva elíptica (ECC)***
 
 En .NET Framework 4.7, los métodos `ImportParameters(ECParameters)` se han agregado a las clases <xref:System.Security.Cryptography.ECDsa> y <xref:System.Security.Cryptography.ECDiffieHellman> para permitir que un objeto represente una clave establecida previamente. También se agregó un método `ExportParameters(Boolean)` para exportar la clave mediante parámetros de curva explícitos.
 
@@ -2132,3 +2132,4 @@ El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones 
 - [Novedades de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Novedades de C++ en Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 
