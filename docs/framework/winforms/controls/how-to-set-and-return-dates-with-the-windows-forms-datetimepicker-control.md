@@ -72,7 +72,7 @@ La fecha u hora seleccionadas actualmente en el control <xref:System.Windows.For
        dateTimePicker1->Value.Millisecond.ToString()));  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Control DateTimePicker](datetimepicker-control-windows-forms.md)
+- [DateTimePicker (control)](datetimepicker-control-windows-forms.md)
 - [Mostrar una fecha en un formato personalizado con el control DateTimePicker de formularios Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

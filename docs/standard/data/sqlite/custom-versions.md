@@ -21,9 +21,9 @@ El paquete principal de Microsoft. Data. SQLite se pone en SQLitePCLRaw. bundle_
 
 Para usar un paquete diferente, instale en su lugar el paquete de `Microsoft.Data.Sqlite.Core` junto con el paquete de agrupación que desea utilizar. Microsoft. Data. SQLite inicializa automáticamente las agrupaciones.
 
-| Lotes | Descripción |
+| Agrupación | Descripción |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Proporciona una versión coherente de SQLite en todas las plataformas. Incluye las extensiones de árbol FTS4, FTS5, JSON1 y R *. Esta es la opción predeterminada. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Proporciona una versión coherente de SQLite en todas las plataformas. Incluye las extensiones de árbol FTS4, FTS5, JSON1 y R *. Este es el valor predeterminado. |
 | SQLitePCLRaw. bundle_green | Igual que bundle_e_sqlite3, excepto en iOS donde usa la biblioteca de SQLite del sistema. |
 | SQLitePCLRaw. bundle_zetetic | Usa las compilaciones oficiales de SQLCipher de Zetetic (no se incluye). |
 | SQLitePCLRaw. bundle_winsqlite3 | Usa winsqlite3. dll, la biblioteca SQLite del sistema en Windows 10. |

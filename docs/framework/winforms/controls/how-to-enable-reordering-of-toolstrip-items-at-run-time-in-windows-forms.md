@@ -34,7 +34,7 @@ Puede permitir que el usuario reorganice <xref:System.Windows.Forms.ToolStripIte
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

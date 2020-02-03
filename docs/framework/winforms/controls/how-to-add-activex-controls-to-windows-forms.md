@@ -31,11 +31,11 @@ Visual Studio agrega todas las referencias al control en el proyecto. Para obten
 > [!NOTE]
 > El Windows Forms importador de controles ActiveX (AxImp. exe) crea argumentos de evento de un tipo diferente del esperado al importar las bibliotecas de vínculos dinámicos de ActiveX. Los argumentos creados por AxImp. exe son similares a los siguientes: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, cuando se espera `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`. Tenga en cuenta que esta irregularidad no impide que el código funcione con normalidad. Para obtener más información, vea [Windows Forms el importador de controles ActiveX (Aximp. exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

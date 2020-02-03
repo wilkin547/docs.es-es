@@ -26,8 +26,8 @@ El componente de <xref:System.Windows.Forms.FolderBrowserDialog> se muestra en t
 
 Cuando se agrega a un formulario, el componente de <xref:System.Windows.Forms.FolderBrowserDialog> aparece en la bandeja en la parte inferior del Diseñador de Windows Forms en Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [Elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
-- [FolderBrowserDialog (componente)](folderbrowserdialog-component-windows-forms.md)
+- [FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

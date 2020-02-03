@@ -34,7 +34,7 @@ Con el control <xref:System.Windows.Forms.WebBrowser>, puede agregar funcionalid
   
 - Referencias a los ensamblados `System`, `System.Drawing` y `System.Windows.Forms`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser (control)](webbrowser-control-windows-forms.md)

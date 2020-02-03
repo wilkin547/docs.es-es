@@ -1,5 +1,5 @@
 ---
-title: Control FlowLayoutPanel
+title: FlowLayoutPanel (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms]
@@ -13,12 +13,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745739"
 ---
-# <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel (Control, Windows Forms)
+# <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel (Control, formularios Windows Forms)
 El control `FlowLayoutPanel` organiza su contenido en una dirección de flujo horizontal o vertical. Su contenido puede ajustarse desde una fila a la siguiente o desde una columna a la siguiente. Además, el contenido puede recortarse en lugar de ajustarse.  
   
  Los temas de esta sección describen los conceptos y técnicas que le permiten crear características `FlowLayoutPanel` en sus aplicaciones.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control FlowLayoutPanel](flowlayoutpanel-control-overview.md)  
  Presenta los conceptos generales del control `FlowLayoutPanel`, que permite crear un diseño con una dirección de flujo horizontal o vertical.  
   

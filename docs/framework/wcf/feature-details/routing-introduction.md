@@ -15,7 +15,7 @@ El servicio de enrutamiento proporciona un intermediario de SOAP conectable gen�
 
 Este tema está dirigido a aquellos usuarios que se están iniciando en el servicio de enrutamiento, y cubre la configuración básica y el hospedaje del servicio de enrutamiento.
 
-## <a name="configuration"></a>Configuración de
+## <a name="configuration"></a>Configuración
 
 El servicio de enrutamiento se implementa como un servicio de WCF que expone uno o varios puntos de conexión de servicio. Estos puntos de conexión reciben mensajes de aplicaciones cliente y los enrutan a uno o más puntos de conexión de destino. El servicio proporciona <xref:System.ServiceModel.Routing.RoutingBehavior>, que se aplica a los puntos de conexión de servicio que expone el servicio. Este comportamiento se utiliza para configurar varios aspectos del funcionamiento del servicio. Para facilitar la configuración cuando se usa un archivo de configuración, los parámetros se especifican en **RoutingBehavior**. En escenarios basados en código, estos parámetros se especifican como parte de un objeto <xref:System.ServiceModel.Routing.RoutingConfiguration>, que se puede pasar a continuación a un **RoutingBehavior**.
 
@@ -156,7 +156,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 > De forma predeterminada, el servicio de enrutamiento solo evalúa los encabezados del mensaje. Para permitir a los filtros tener acceso al cuerpo del mensaje, debe establecer <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> en `false`.
 
-**Multicast**
+**Multidifusión**
 
 Aunque muchas configuraciones del servicio de enrutamiento utilizan una lógica de filtros exclusiva que enruta los mensajes solo a un punto de conexión específico, puede que tenga que enrutar un mensaje determinado a varios puntos de conexión de destino. Para difundir un mensaje a varios destinos, deben cumplirse las siguientes condiciones:
 
@@ -285,7 +285,7 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 > [!NOTE]
 > Todas las sesiones que se abrieron con la configuración anterior seguirán utilizándola. Sólo las nuevas sesiones usarán la configuración nueva.
 
-## <a name="error-handling"></a>Control de errores
+## <a name="error-handling"></a>Tratamiento de errores
 
 Si se encuentra algún valor <xref:System.ServiceModel.CommunicationException> al intentar enviar un mensaje, tiene lugar el control de errores. Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>. El código de control de errores también detectará e intentará volver a realizar el envío cuando se produzca una <xref:System.TimeoutException>, que es otra excepción común que no se deriva de **CommunicationException**.
 
@@ -364,7 +364,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 
 En la siguiente tabla, se describen los patrones que son compatibles con el uso de listas de puntos de conexión de reserva, junto con notas en las que se describen los detalles del control de errores de patrones específicos.
 
-|Modelo|Sesión|Transacción|Contexto de recepción|Lista de reserva admitida|Notas|
+|Patrón|Sesión|Transacción|Contexto de recepción|Lista de reserva admitida|Notas|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |Unidireccional||||Sí|Intenta reenviar el mensaje a un punto de conexión de reserva. Si este mensaje se envía por multidifusión, solo el mensaje del canal fallido se mueve a su destino de reserva.|
 |Unidireccional||✔️||No|Se lanza una excepción y se deshace la transacción.|
@@ -413,7 +413,7 @@ Para usar la suplantación de ASP.NET con el servicio de enrutamiento, habilite 
 
 Para usar la suplantación de la credencial de Windows con el servicio de enrutamiento, necesita configurar las credenciales y el servicio. El objeto de credenciales de cliente (<xref:System.ServiceModel.Security.WindowsClientCredential>, accesible desde <xref:System.ServiceModel.ChannelFactory>) define una propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> que se debe establecer para permitir la suplantación. Finalmente, en el servicio se debe configurar el comportamiento <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> para establecer `ImpersonateCallerForAllOperations` en `true`. El servicio de enrutamiento usa esta marca para decidir si crear los clientes para reenviar mensajes con la suplantación habilitada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Filtros de mensajes](message-filters.md)
 - [Enrutamiento de contratos](routing-contracts.md)

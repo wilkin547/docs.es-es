@@ -46,7 +46,7 @@ El control Windows Forms <xref:System.Windows.Forms.DataGridView> proporciona a 
   
 - Ordena automáticamente las filas basándose en los datos subyacentes cuando el usuario hace clic en un encabezado de columna.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView (control)](datagridview-control-windows-forms.md)

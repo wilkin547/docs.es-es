@@ -23,11 +23,11 @@ ms.locfileid: "76746803"
 
 En este artículo se muestra cómo seleccionar los tipos de control de Windows Presentation Foundation (WPF) que desea mostrar en el formulario. Puede seleccionar los tipos de control de WPF que se incluyen en el proyecto.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Necesita Visual Studio para completar este tutorial.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 Abra Visual Studio y cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic C# o visual denominado `SelectingWpfContent`.
 
@@ -55,7 +55,7 @@ Después de agregar los tipos de control WPF al proyecto, puede hospedarlos en d
    > [!NOTE]
    > Por lo general, debería hospedar contenido WPF más sofisticado. El control <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> se usa aquí únicamente con fines ilustrativos.
 
-8. Generar el proyecto.
+8. Compile el proyecto.
 
 ## <a name="select-wpf-controls"></a>Seleccionar controles WPF
 
@@ -85,7 +85,7 @@ Puede asignar contenido de WPF diferente a un control <xref:System.Windows.Forms
 
 9. El control `elementHost2` ahora hospeda una instancia del tipo `UserControl1`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

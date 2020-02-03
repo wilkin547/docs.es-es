@@ -19,7 +19,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
 
 ## <a name="wpf-designer-walkthroughs"></a>Tutoriales de WPF Designer
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Tutorial: compilar una aplicación WPF sencilla con WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Muestra cómo compilar una aplicación WPF sencilla con WPF Designer.|
 |[Tutorial: crear un diseño dinámico](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Muestra cómo crear un diseño dinámico mediante el uso de un control panel de <xref:System.Windows.Controls.Grid>.|
@@ -29,7 +29,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
 
 ## <a name="wpf-walkthroughs"></a>Tutoriales de WPF
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Tutorial: Mi primera aplicación de escritorio WPF](walkthrough-my-first-wpf-desktop-application.md)|Muestra cómo crear una aplicación WPF usando muchas de las características comunes de WPF, incluidos los controles, el diseño y el enlace de datos.|
 |[Crear un botón mediante el uso de XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Muestra cómo crear un botón animado.|
@@ -38,7 +38,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
 
 ## <a name="migration-and-interoperability-in-wpf"></a>Migración e interoperabilidad en WPF
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Tutorial: Hospedar un control de Windows Forms en WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Muestra cómo hospedar un control de <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> de Windows Forms en una aplicación WPF.|
 |[Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Muestra cómo hospedar un Windows Forms control compuesto de entrada de datos en una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|
@@ -48,6 +48,6 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Tutoriales de Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Proporciona una lista relacionada de tutoriales para todas las áreas de programación en Visual Studio.|

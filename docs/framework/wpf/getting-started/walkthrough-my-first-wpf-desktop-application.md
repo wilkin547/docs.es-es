@@ -24,7 +24,7 @@ ms.locfileid: "76746974"
 
 En este artículo se muestra cómo desarrollar una aplicación de escritorio Windows Presentation Foundation (WPF) que incluya los elementos que son comunes a la mayoría de las aplicaciones de WPF: marcado de lenguaje XAML (XAML), código subyacente, definiciones de aplicación, controles, diseño, enlace de datos y estilos. Para desarrollar la aplicación, usará Visual Studio. 
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 > [!div class="checklist"]
 >
 > - Cree un proyecto de WPF.
@@ -42,7 +42,7 @@ Al final del tutorial, habrá creado una aplicación de Windows independiente qu
 >
 > Puede alternar el lenguaje de código del código de ejemplo entre C# y Visual Basic mediante el selector de idioma situado en la parte superior de esta página.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo de **desarrollo de escritorio de .net** instalada.
 
@@ -215,7 +215,7 @@ En esta sección, agregará dos páginas y una imagen a la aplicación.
 
     2. En el cuadro de diálogo **Agregar elemento existente** , establezca el filtro de archivos en **todos los archivos** o **archivos de imagen**, busque el archivo de imagen que desea usar y, después, seleccione **Agregar**.
 
-## <a name="build-and-run-the-application"></a>Compilar y ejecutar la aplicación
+## <a name="build-and-run-the-application"></a>Compilación y ejecución de la aplicación
 
 1. Para compilar y ejecutar la aplicación, presione **F5** o seleccione **iniciar depuración** en el menú **depurar** .
 
@@ -495,7 +495,7 @@ Para más información sobre la creación de aplicaciones, vea los temas siguien
 - [Gráficos y multimedia](../graphics-multimedia/index.md)
 - [Documentos en WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre paneles](../controls/panels-overview.md)
 - [Información general sobre plantillas de datos](../data/data-templating-overview.md)

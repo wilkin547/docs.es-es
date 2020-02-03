@@ -82,9 +82,9 @@ Puede usar el control <xref:System.Windows.Forms.PrintPreviewDialog> para permit
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [PrintDocument (Componente, Windows Forms)](printdocument-component-windows-forms.md)
+- [PrintDocument (componente)](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog (control)](printpreviewdialog-control-windows-forms.md)
 - [Windows Forms Print Support](../advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
 - [Windows Forms](../index.md)

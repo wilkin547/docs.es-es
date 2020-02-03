@@ -66,7 +66,7 @@ Al presentar los datos en un control <xref:System.Windows.Forms.CheckedListBox> 
     }  
     ```  
   
-     - O  
+     - O bien  
   
 2. Recorra paso a paso la colección de <xref:System.Windows.Forms.CheckedListBox.Items%2A>, empezando por 0 porque la colección es de base cero y llama al método <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> para cada elemento. Tenga en cuenta que este método le proporcionará el número de elemento en la lista general, por lo que si el primer elemento de la lista no está activado y el segundo elemento está activado, se mostrará algo parecido a "Item 2 = MyListItem2".  
   
@@ -111,6 +111,6 @@ Al presentar los datos en un control <xref:System.Windows.Forms.CheckedListBox> 
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)

@@ -21,7 +21,7 @@ El control <xref:System.Windows.Forms.Button> de Windows Forms permite al usuari
   
  El control <xref:System.Windows.Forms.Button> también puede mostrar imágenes mediante las propiedades <xref:System.Windows.Forms.ButtonBase.Image%2A> y <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Para obtener más información, vea [Cómo: establecer la imagen mostrada por un Control Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Button>
 - [Responder a clics de botones en Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

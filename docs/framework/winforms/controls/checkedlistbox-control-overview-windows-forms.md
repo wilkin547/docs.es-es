@@ -20,7 +20,7 @@ El control Windows Forms <xref:System.Windows.Forms.CheckedListBox> extiende el 
   
  Los cuadros de lista marcados pueden tener elementos agregados en tiempo de diseño mediante el editor de la **colección de cadenas** o sus elementos se pueden agregar dinámicamente desde una colección en tiempo de ejecución, utilizando la propiedad <xref:System.Windows.Forms.CheckedListBox.Items%2A>. Para obtener más información, vea [Cómo: agregar y quitar elementos de un control ComboBox, ListBox o CheckedListBox Windows Forms](add-and-remove-items-from-a-wf-combobox.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

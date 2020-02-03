@@ -22,9 +22,9 @@ De forma predeterminada, el control Windows Forms <xref:System.Windows.Forms.Ric
   
 2. Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> en un valor adecuado de la enumeración <xref:System.Windows.Forms.RichTextBoxScrollBars>.  
   
-    |{2&gt;Value&lt;2}|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (predeterminado)|Muestra barras de desplazamiento horizontal o vertical, o ambas, solo cuando el texto supera el ancho o la longitud del control.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (valor predeterminado)|Muestra barras de desplazamiento horizontal o vertical, o ambas, solo cuando el texto supera el ancho o la longitud del control.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Nunca muestra ningún tipo de barra de desplazamiento.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Muestra una barra de desplazamiento horizontal solo cuando el texto supera el ancho del control. (Para que esto suceda, la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> debe establecerse en `false`).|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Muestra una barra de desplazamiento vertical solo cuando el texto supera el alto del control.|  
@@ -34,14 +34,14 @@ De forma predeterminada, el control Windows Forms <xref:System.Windows.Forms.Ric
   
 3. Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
   
-    |{2&gt;Value&lt;2}|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
     |`false`|El texto del control no se ajusta automáticamente para ajustarse al ancho del control, por lo que se desplazará hacia la derecha hasta que se alcance un salto de línea. Use este valor si ha elegido barras de desplazamiento horizontal o ambas, arriba.|  
-    |`true` (predeterminado)|El texto del control se ajusta automáticamente para ajustarse al ancho del control. No aparecerá la barra de desplazamiento horizontal. Use este valor si ha elegido barras de desplazamiento verticales o ninguna, arriba, para mostrar uno o más párrafos.|  
+    |`true` (valor predeterminado)|El texto del control se ajusta automáticamente para ajustarse al ancho del control. No aparecerá la barra de desplazamiento horizontal. Use este valor si ha elegido barras de desplazamiento verticales o ninguna, arriba, para mostrar uno o más párrafos.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox (control)](richtextbox-control-windows-forms.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

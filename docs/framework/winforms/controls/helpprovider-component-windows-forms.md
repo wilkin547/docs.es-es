@@ -1,5 +1,5 @@
 ---
-title: Componente HelpProvider
+title: HelpProvider
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], Help
@@ -16,7 +16,7 @@ ms.locfileid: "76745599"
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider (Componente, formularios Windows Forms)
 El componente `HelpProvider` de Windows Forms se utiliza para asociar un archivo de Ayuda HTML Help 1.x (ya sea un archivo .chm generado con HTML Help Workshop o un archivo .htm) con una aplicación basada en Windows.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el componente HelpProvider](helpprovider-component-overview-windows-forms.md)  
  Presenta los conceptos generales del componente `HelpProvider`, que permite asociar un archivo de Ayuda HTML a una aplicación basada en Windows.  
   
@@ -30,7 +30,7 @@ El componente `HelpProvider` de Windows Forms se utiliza para asociar un archivo
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
  Vea también [sistemas de ayuda en aplicaciones de Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).

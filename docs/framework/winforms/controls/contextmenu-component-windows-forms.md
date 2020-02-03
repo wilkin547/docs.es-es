@@ -1,5 +1,5 @@
 ---
-title: Componente ContextMenu
+title: ContextMenu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menus [Windows Forms], shortcut menus
@@ -23,7 +23,7 @@ ms.locfileid: "76746166"
   
  El componente de `ContextMenu` de Windows Forms se utiliza para proporcionar a los usuarios un menú contextual fácilmente accesible de los comandos usados con frecuencia que están asociados al objeto seleccionado. Los elementos de un menú contextual suelen ser un subconjunto de los elementos de los menús principales que aparecen en otro lugar de la aplicación. Los menús contextuales suelen estar disponibles al hacer clic con el botón secundario del mouse. En Windows Forms están asociados a otros controles.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre ContextMenu](contextmenu-component-overview-windows-forms.md)  
  Presenta los conceptos generales del componente de `ContextMenu`, que permite a los usuarios crear menús de comandos de uso frecuente asociados a un objeto seleccionado.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "76746166"
  Proporciona información de referencia acerca de la clase <xref:System.Windows.Forms.ContextMenu> y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

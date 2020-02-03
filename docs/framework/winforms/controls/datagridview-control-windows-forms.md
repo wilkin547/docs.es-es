@@ -27,7 +27,7 @@ El control `DataGridView` proporciona una forma eficaz y flexible de mostrar dat
   
  Los temas de esta sección describen los conceptos y técnicas que puede usar para crear características `DataGridView` en sus aplicaciones.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)  
  Proporciona temas que describen los arquitectura y los conceptos fundamentales del control `DataGridView` de Windows Forms.  
   
@@ -82,6 +82,6 @@ El control `DataGridView` proporciona una forma eficaz y flexible de mostrar dat
  <xref:System.Windows.Forms.BindingSource>  
  Proporciona documentación de referencia para el componente <xref:System.Windows.Forms.BindingSource>. El control <xref:System.Windows.Forms.DataGridView> y el componente <xref:System.Windows.Forms.BindingSource> están diseñados para funcionar en estrecha colaboración.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

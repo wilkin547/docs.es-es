@@ -12,7 +12,7 @@ ms.locfileid: "76744444"
 # <a name="wpf-unmanaged-api-reference"></a>Referencia de API no administrada de WPF
 Las bibliotecas de Windows Presentation Foundation (WPF) exponen varias funciones no administradas que solo están destinadas al uso interno. No deben llamarse desde el código de usuario.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Activate (función)](activate-function-wpf-unmanaged-api-reference.md)  
  [CreateIDispatchSTAForwarder (función)](createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
  [Deactivate (función)](deactivate-function-wpf-unmanaged-api-reference.md)  
@@ -22,6 +22,6 @@ Las bibliotecas de Windows Presentation Foundation (WPF) exponen varias funcione
  [SaveToHistory (función)](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [SetFakeActiveWindow (función)](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Avanzadas](index.md)

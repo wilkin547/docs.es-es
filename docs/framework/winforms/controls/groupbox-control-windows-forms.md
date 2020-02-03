@@ -16,7 +16,7 @@ ms.locfileid: "76745619"
 # <a name="groupbox-control-windows-forms"></a>Control GroupBox (formularios Windows Forms)
 Windows Forms controles de <xref:System.Windows.Forms.GroupBox> se utilizan para proporcionar una agrupación identificable para otros controles. Normalmente, los cuadros de grupo se usan para subdividir un formulario por función. Por ejemplo, puede tener un formulario de pedido que especifique opciones de envío de correo electrónico, como la portadora de la noche que se va a usar. Al agrupar todas las opciones de un cuadro de grupo, el usuario obtiene una indicación visual lógica. El control <xref:System.Windows.Forms.GroupBox> es similar al control <xref:System.Windows.Forms.Panel>; sin embargo, solo el control <xref:System.Windows.Forms.GroupBox> muestra un título y solo el control <xref:System.Windows.Forms.Panel> puede tener barras de desplazamiento.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control GroupBox](groupbox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -31,5 +31,5 @@ Windows Forms controles de <xref:System.Windows.Forms.GroupBox> se utilizan para
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

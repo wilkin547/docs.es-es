@@ -65,7 +65,7 @@ Puede cambiar la apariencia de las pestañas en Windows Forms mediante las propi
   
 - Establezca la propiedad <xref:System.Windows.Forms.TabControl.Appearance%2A> de la <xref:System.Windows.Forms.TabControl> en <xref:System.Windows.Forms.TabAppearance.Buttons> o <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [TabControl (control)](tabcontrol-control-windows-forms.md)
 - [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)

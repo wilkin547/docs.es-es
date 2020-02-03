@@ -28,7 +28,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 3. Use el botón **Agregar** para agregar nuevas columnas. Después, puede seleccionar el encabezado de columna y establecer su texto (el título de la columna), la alineación del texto y el ancho.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control ListView](listview-control-overview-windows-forms.md)
 - [Agregar y quitar elementos con el control ListView de Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

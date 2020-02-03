@@ -16,7 +16,7 @@ ms.locfileid: "76743123"
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox (Control, formularios Windows Forms)
 El control de `RichTextBox` de Windows Forms se usa para mostrar, escribir y manipular texto con formato. El control `RichTextBox` hace todo lo que hace el control <xref:System.Windows.Forms.TextBox>, pero también puede mostrar fuentes, colores y vínculos. cargar texto e imágenes incrustadas desde un archivo; deshacer y rehacer operaciones de edición; y buscar los caracteres especificados. El control `RichTextBox` se usa normalmente para proporcionar funciones de manipulación y visualización de texto similares a las aplicaciones de procesamiento de texto como Microsoft Word. Al igual que el control <xref:System.Windows.Forms.TextBox>, el control `RichTextBox` puede mostrar barras de desplazamiento; pero, a diferencia del control de <xref:System.Windows.Forms.TextBox>, muestra las barras de desplazamiento horizontales y verticales de forma predeterminada y tiene una configuración adicional de la barra de desplazamiento.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control RichTextBox](richtextbox-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `RichTextBox`, que permite a los usuarios escribir, mostrar y manipular texto con opciones de formato.  
   
@@ -49,8 +49,8 @@ El control de `RichTextBox` de Windows Forms se usa para mostrar, escribir y man
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [Control TextBox](textbox-control-windows-forms.md)  
+ [TextBox (control)](textbox-control-windows-forms.md)  
  Presenta los conceptos generales del control <xref:System.Windows.Forms.TextBox>, que permite la entrada de varias líneas editable del usuario.

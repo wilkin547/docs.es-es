@@ -237,6 +237,6 @@ Las aplicaciones de Microsoft Windows suelen depender de archivos que contienen 
 ## <a name="rebuilding-after-changing-build-type"></a>Nueva compilación después de cambiar el tipo de compilación  
  Después de cambiar el tipo de compilación de un archivo de datos de aplicación, es preciso volver a compilar toda la aplicación para asegurarse de que se aplican los cambios. Si solo compila la aplicación, no se aplican los cambios.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)

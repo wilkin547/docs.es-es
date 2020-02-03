@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control ListView
+title: Información general del control ListView
 ms.date: 03/30/2017
 f1_keywords:
 - ListView
@@ -27,19 +27,19 @@ El control <xref:System.Windows.Forms.ListView> de Windows Forms muestra una lis
   
  En la tabla siguiente se enumeran algunos de los miembros de <xref:System.Windows.Forms.ListView> y las vistas en las que son válidos.  
   
-|Miembro de ListView|Vista|  
+|Miembro de ListView|Ver|  
 |---------------------|----------|  
-|Propiedad<xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
-|Propiedad<xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
-|Método <xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
-|Propiedad<xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
+|Propiedad <xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
+|Propiedad <xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
+|Método<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
+|Propiedad <xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
 |Evento<xref:System.Windows.Forms.ListView.DrawSubItem>|<xref:System.Windows.Forms.View.Details>|  
-|Método <xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>o <xref:System.Windows.Forms.View.Tile>|  
-|Método <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
-|Método <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
-|Propiedad<xref:System.Windows.Forms.ListView.Groups%2A>|Todas las vistas excepto <xref:System.Windows.Forms.View.List>|  
-|Propiedad<xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
-|Propiedad<xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>o <xref:System.Windows.Forms.View.Tile>|  
+|Método<xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> o <xref:System.Windows.Forms.View.Tile>|  
+|Método<xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
+|Método<xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
+|Propiedad <xref:System.Windows.Forms.ListView.Groups%2A>|Todas las vistas excepto <xref:System.Windows.Forms.View.List>|  
+|Propiedad <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
+|Propiedad <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.Tile>|  
   
  La propiedad clave del control <xref:System.Windows.Forms.ListView> es <xref:System.Windows.Forms.ListView.Items%2A>, que contiene los elementos mostrados por el control. La propiedad <xref:System.Windows.Forms.ListView.SelectedItems%2A> contiene una colección de los elementos seleccionados actualmente en el control. El usuario puede seleccionar varios elementos, por ejemplo, para arrastrar y colocar varios elementos a la vez en otro control, si la propiedad <xref:System.Windows.Forms.ListView.MultiSelect%2A> está establecida en `true`. El control <xref:System.Windows.Forms.ListView> puede mostrar las casillas junto a los elementos, si la propiedad <xref:System.Windows.Forms.ListView.CheckBoxes%2A> está establecida en `true`.  
   
@@ -47,10 +47,10 @@ El control <xref:System.Windows.Forms.ListView> de Windows Forms muestra una lis
   
  El control <xref:System.Windows.Forms.ListView> también admite los estilos visuales y otras características disponibles en la plataforma Windows XP, incluida la agrupación, la vista de mosaico y las marcas de inserción.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView (control)](listview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
 - [Agregar y quitar elementos con el control ListView de Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
 - [Agregar columnas al control ListView de formularios Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
 - [Mostrar iconos del control ListView de Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
