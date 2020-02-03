@@ -23,15 +23,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733692"
 ---
-# <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="1f1b0-102">Introducción a WPF en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1f1b0-102">Introduction to WPF in Visual Studio</span></span>
-<span data-ttu-id="1f1b0-103">Windows Presentation Foundation (WPF) en Visual Studio proporciona a los desarrolladores un modelo de programación unificado para crear aplicaciones de escritorio de línea de negocio en Windows.</span><span class="sxs-lookup"><span data-stu-id="1f1b0-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="fded1-102">Introducción a WPF en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fded1-102">Introduction to WPF in Visual Studio</span></span>
+<span data-ttu-id="fded1-103">Windows Presentation Foundation (WPF) en Visual Studio proporciona a los desarrolladores un modelo de programación unificado para crear aplicaciones de escritorio de línea de negocio en Windows.</span><span class="sxs-lookup"><span data-stu-id="fded1-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="1f1b0-104">Crear aplicaciones de escritorio con Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="1f1b0-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="fded1-104">Crear aplicaciones de escritorio con Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="fded1-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="1f1b0-105">Diseño de XAML en Visual Studio y Blend para Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1f1b0-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="fded1-105">Diseño de XAML en Visual Studio y Blend para Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fded1-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="1f1b0-106">Introducción a WPF</span><span class="sxs-lookup"><span data-stu-id="1f1b0-106">Introduction to WPF</span></span>](../introduction-to-wpf.md)  
+ [<span data-ttu-id="fded1-106">Introducción a WPF</span><span class="sxs-lookup"><span data-stu-id="fded1-106">Introduction to WPF</span></span>](../introduction-to-wpf.md)  
   
- [<span data-ttu-id="1f1b0-107">WPF en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1f1b0-107">WPF in the .NET Framework</span></span>](../index.md)  
+ [<span data-ttu-id="fded1-107">WPF en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fded1-107">WPF in the .NET Framework</span></span>](../index.md)  
   
- [<span data-ttu-id="1f1b0-108">Obtener Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1f1b0-108">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="fded1-108">Obtener Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fded1-108">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
