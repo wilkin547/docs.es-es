@@ -1,5 +1,5 @@
 ---
-title: Componente ErrorProvider
+title: ErrorProvider
 ms.date: 03/30/2017
 helpviewer_keywords:
 - error messages [Windows Forms], displaying
@@ -16,7 +16,7 @@ ms.locfileid: "76745771"
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider (Componente, Formularios Windows Forms)
 El componente de `ErrorProvider` de Windows Forms se usa para mostrar al usuario de forma no intrusiva que algo es incorrecto. Normalmente se utiliza junto con la validación de la entrada del usuario en un formulario o la visualización de errores dentro de un conjunto de datos.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del componente ErrorProvider](errorprovider-component-overview-windows-forms.md)  
  Explica qué es este componente y sus características y propiedades clave.  
   
@@ -31,5 +31,5 @@ El componente de `ErrorProvider` de Windows Forms se usa para mostrar al usuario
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

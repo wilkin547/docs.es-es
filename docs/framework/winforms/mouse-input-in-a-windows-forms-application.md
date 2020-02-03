@@ -14,7 +14,7 @@ ms.locfileid: "76727899"
 # <a name="mouse-input-in-a-windows-forms-application"></a>Entradas mediante el mouse en una aplicación de Windows Forms
 Windows Forms incluye una variedad de eventos del mouse y compatibilidad adicional con cursores personalizados del mouse, captura del mouse y comportamiento de arrastrar y soltar.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Funcionamiento de la entrada del mouse en Windows Forms](how-mouse-input-works-in-windows-forms.md)  
  Proporciona información sobre los eventos del mouse y cómo obtener la información actual y los ajustes del sistema para el mouse.  
   

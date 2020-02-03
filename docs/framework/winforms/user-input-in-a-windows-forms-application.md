@@ -31,7 +31,7 @@ En Windows Forms, los datos proporcionados por el usuario se envían a las aplic
   
  Los mensajes del teclado y del mouse también se procesan mediante un conjunto adicional de métodos reemplazables que son específicos de esos tipos de mensajes. Para obtener más información, vea [Cómo funciona la entrada mediante teclado](how-keyboard-input-works.md) y [Cómo funciona la entrada del mouse en Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)
 - [Entradas mediante teclado en una aplicación de Windows Forms](keyboard-input-in-a-windows-forms-application.md)

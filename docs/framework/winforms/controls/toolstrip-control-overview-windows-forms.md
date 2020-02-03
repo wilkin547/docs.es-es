@@ -46,7 +46,7 @@ El control <xref:System.Windows.Forms.ToolStrip> de Windows Forms y sus clases a
   
 ### <a name="important-toolstrip-members"></a>Miembros importantes de ToolStrip  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Obtiene o establece a qué borde del contenedor primario se acopla un <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Obtiene o establece un valor que indica si la clase <xref:System.Windows.Forms.ToolStrip> controla la organización de elementos y las operaciones de arrastrar y colocar de forma privada|  
@@ -56,22 +56,22 @@ El control <xref:System.Windows.Forms.ToolStrip> de Windows Forms y sus clases a
 |<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Obtiene el <xref:System.Windows.Forms.ToolStripItem> que es el botón de desbordamiento para un <xref:System.Windows.Forms.ToolStrip> con desbordamiento habilitado.|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|Obtiene o establece un <xref:System.Windows.Forms.ToolStripRenderer> utilizado para personalizar la apariencia y el comportamiento (apariencia y funcionamiento) de un <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Obtiene o establece los estilos de dibujo que van a aplicarse al <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Se genera cuando cambia la propiedad <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.|  
+|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Se produce cuando cambia la propiedad <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.|  
   
  La flexibilidad del control <xref:System.Windows.Forms.ToolStrip> se logra mediante el uso de varias clases complementarias. A continuación se muestran algunas de las más destacadas:  
   
 ### <a name="important-toolstrip-companion-classes"></a>Clases auxiliares de ToolStrip importantes  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Reemplaza y agrega funcionalidad a la clase <xref:System.Windows.Forms.MainMenu>.|  
 |<xref:System.Windows.Forms.StatusStrip>|Reemplaza y agrega funcionalidad a la clase <xref:System.Windows.Forms.StatusBar>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Reemplaza y agrega funcionalidad a la clase <xref:System.Windows.Forms.ContextMenu>.|  
 |<xref:System.Windows.Forms.ToolStripItem>|Clase base abstracta que administra los eventos y el diseño de todos los elementos que puede contener un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripControlHost>o <xref:System.Windows.Forms.ToolStripDropDown>.|  
 |<xref:System.Windows.Forms.ToolStripContainer>|Proporciona un contenedor con un panel en cada lado del formulario en el que los controles se pueden organizar de varias maneras.|  
-|<xref:System.Windows.Forms.ToolStripRenderer>|Controla la funcionalidad de dibujo de <xref:System.Windows.Forms.ToolStrip> objetos.|  
+|<xref:System.Windows.Forms.ToolStripRenderer>|Controla la funcionalidad de dibujo de los objetos <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|Proporciona una apariencia de estilo Microsoft Office.|  
-|<xref:System.Windows.Forms.ToolStripManager>|Controla <xref:System.Windows.Forms.ToolStrip> la representación y el espacio compartido, y la combinación de objetos <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>y <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripManager>|Controla la representación y el espacio compartido de <xref:System.Windows.Forms.ToolStrip>, y la combinación de objetos <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu> y <xref:System.Windows.Forms.ToolStripMenuItem>.|  
 |<xref:System.Windows.Forms.ToolStripManagerRenderMode>|Especifica el estilo de dibujo (personalizado, Windows XP o Microsoft Office Professional) aplicado a varios objetos <xref:System.Windows.Forms.ToolStrip> contenidos en un formulario.|  
 |<xref:System.Windows.Forms.ToolStripRenderMode>|Especifica el estilo de dibujo (personalizado, Windows XP o Microsoft Office Professional) aplicado a un <xref:System.Windows.Forms.ToolStrip> objeto contenido en un formulario.|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|Hospeda otros controles que no son específicamente <xref:System.Windows.Forms.ToolStrip> controles pero para los que desea <xref:System.Windows.Forms.ToolStrip> funcionalidad.|  
@@ -79,7 +79,7 @@ El control <xref:System.Windows.Forms.ToolStrip> de Windows Forms y sus clases a
   
  Para obtener más información, vea Resumen de la [tecnología ToolStrip](toolstrip-technology-summary.md) y [arquitectura del control ToolStrip](toolstrip-control-architecture.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

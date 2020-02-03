@@ -23,7 +23,7 @@ El control <xref:System.Windows.Forms.DataGridView> puede mostrar datos en tres 
   
  Para obtener un ejemplo en el que se usa un <xref:System.Windows.Forms.DataGridView>sin enlazar de solo lectura, vea [Cómo: crear un control DataGridView de Windows Forms independiente](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## <a name="bound"></a>Enlazado  
+## <a name="bound"></a>Bound  
  El modo de enlace es adecuado para administrar datos mediante la interacción automática con el almacén de datos. Puede adjuntar el control <xref:System.Windows.Forms.DataGridView> directamente a su origen de datos estableciendo la propiedad <xref:System.Windows.Forms.DataGridView.DataSource%2A>. Cuando el control está enlazado a datos, las filas de datos se insertan y extraen sin necesidad de una administración explícita por su parte. Cuando se `true`la propiedad <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>, cada columna del origen de datos hará que se cree una columna correspondiente en el control. Si prefiere crear sus propias columnas, puede establecer esta propiedad en `false` y usar la propiedad <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> para enlazar cada columna al configurarla. Esto resulta útil cuando se desea usar un tipo de columna distinto de los tipos que se generan de forma predeterminada. Para obtener más información, vea [tipos de columna en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md).  
   
  Para obtener un ejemplo en el que se usa un control de <xref:System.Windows.Forms.DataGridView> enlazado, vea [Tutorial: validar datos en el control DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
@@ -41,7 +41,7 @@ El control <xref:System.Windows.Forms.DataGridView> puede mostrar datos en tres 
   
  Para obtener más información sobre el modo virtual, vea [modo virtual en el control DataGridView de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Para obtener un ejemplo en el que se muestra cómo usar los eventos de modo virtual, vea [Tutorial: implementar el modo virtual en el control DataGridView de Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

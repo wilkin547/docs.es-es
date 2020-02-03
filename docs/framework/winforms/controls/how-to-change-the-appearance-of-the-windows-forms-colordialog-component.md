@@ -49,7 +49,7 @@ Puede configurar la apariencia del componente de <xref:System.Windows.Forms.Colo
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog (componente)](colordialog-component-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el componente MainMenu
+title: Información general sobre MainMenu
 ms.date: 03/30/2017
 f1_keywords:
 - MenuItem
@@ -24,7 +24,7 @@ ms.locfileid: "76745117"
 ## <a name="key-properties"></a>Propiedades clave  
  Un elemento de menú se puede designar como elemento predeterminado estableciendo la propiedad <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> en `true`. El elemento predeterminado aparece en negrita al hacer clic en el menú. La propiedad <xref:System.Windows.Forms.MenuItem.Checked%2A> del elemento de menú es `true` o `false`y indica si el elemento de menú está seleccionado. La propiedad <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> del elemento de menú personaliza la apariencia del elemento seleccionado: si <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> está establecido en `true`, aparece un botón de radio junto al elemento; Si <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> se establece en `false`, aparecerá una marca de verificación junto al elemento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

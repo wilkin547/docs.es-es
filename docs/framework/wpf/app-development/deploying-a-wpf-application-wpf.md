@@ -1,5 +1,5 @@
 ---
-title: Implementar una aplicación
+title: Implementación de una aplicación
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
@@ -24,7 +24,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 - Windows Installer la implementación.  
   
-- Implementación ClickOnce  
+- Implementación ClickOnce.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Implementación de XCopy  
@@ -99,7 +99,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 > [!NOTE]
 > Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
   
- Estos archivos se generan cuando se compila una aplicación XBAP. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Al igual que las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado, las XBAP se publican normalmente en un servidor Web y se ven con Internet Explorer.  
+ Estos archivos se generan cuando se compila una aplicación XBAP. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Al igual que las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado, las XBAP se publican normalmente en un servidor Web y se ven con Internet Explorer.  
   
  Las XBAP se pueden implementar en los clientes mediante cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
   
@@ -121,7 +121,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
  Para obtener más información, vea [Implementar .NET Framework y aplicaciones](../../deployment/index.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Compilar una aplicación de WPF](building-a-wpf-application-wpf.md)
 - [Seguridad](../security-wpf.md)

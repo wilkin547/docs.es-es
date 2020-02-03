@@ -80,7 +80,7 @@ Con frecuencia, los procesadores de texto y otras aplicaciones que impliquen imp
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)

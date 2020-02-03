@@ -68,7 +68,7 @@ El control <xref:System.Windows.Forms.TreeView> de Windows Forms puede mostrar i
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control TreeView](treeview-control-overview-windows-forms.md)
 - [Agregar y quitar nodos con el control TreeView de formularios Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)

@@ -15,9 +15,9 @@ La serialización es el proceso de convertir un objeto en un formato que se pued
 
  El .NET Framework ofrece tres tecnologías de serialización principales optimizadas para varios escenarios de serialización. En la siguiente tabla se enumeran estas tecnologías y los principales tipos de Framework relacionados con estas tecnologías.
 
-|**Nombre de la tecnología**|**Tipos principales**|**Situación**|
+|**Nombre de la tecnología**|**Tipos principales**|**Escenarios**|
 |-------------------------|--------------------|-------------------|
-|**Serialización de contrato de datos**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Persistencia general<br />Servicios Web de<br />JSON|
+|**Serialización de contrato de datos**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Persistencia general<br />Servicios Web<br />JSON|
 |**Serialización XML**|<xref:System.Xml.Serialization.XmlSerializer>|Formato XML con control total sobre la forma del XML|
 |**Serialización en tiempo de ejecución (binario y SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Comunicación remota de .NET|
 
@@ -102,7 +102,7 @@ public class Person : ISerializable
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

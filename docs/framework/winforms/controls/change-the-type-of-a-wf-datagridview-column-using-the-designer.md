@@ -30,7 +30,7 @@ A veces, querrá cambiar el tipo de una columna que ya se ha agregado a un Windo
     > [!NOTE]
     > La propiedad `ColumnType` es una propiedad de solo tiempo de diseño que indica la clase que representa el tipo de columna. No es una propiedad real definida en una clase de columna.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

@@ -1,5 +1,5 @@
 ---
-title: Información de sistema
+title: Información del sistema
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732579"
 ---
-# <a name="system-information-and-windows-forms"></a>Información del sistema y Windows Forms
+# <a name="system-information-and-windows-forms"></a>Información del sistema y formularios Windows Forms
 A veces es necesario recopilar información sobre el equipo en el que se ejecuta la aplicación para tomar decisiones en el código. Por ejemplo, puede tener una función que solo es aplicable cuando se conecta a un dominio de red determinado. en este caso, necesitaría una manera de determinar el dominio y deshabilitar la función si el dominio no está presente.  
   
  Windows Forms aplicaciones pueden utilizar la clase <xref:System.Windows.Forms.SystemInformation> para determinar una serie de cosas sobre un equipo en tiempo de ejecución. En el ejemplo siguiente se muestra cómo usar la clase <xref:System.Windows.Forms.SystemInformation> para recuperar los <xref:System.Windows.Forms.SystemInformation.UserName%2A> y <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:  
@@ -42,7 +42,7 @@ MessageBox.Show("Good morning " + User + ". You are connected to "
   
  Algunos de los miembros más útiles de la clase <xref:System.Windows.Forms.SystemInformation> incluyen <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>y <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.SystemInformation>
 - [Administración de energía en Windows Forms](power-management-in-windows-forms.md)

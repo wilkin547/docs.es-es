@@ -32,7 +32,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 4. Para eliminar nodos, seleccione el nodo que desea eliminar y, a continuación, haga clic en el botón **eliminar** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [TreeView (control)](treeview-control-windows-forms.md)
 - [Información general del control TreeView](treeview-control-overview-windows-forms.md)

@@ -24,7 +24,7 @@ Puede transformar un cuadro de texto Windows Forms editable en un control de sol
     > [!NOTE]
     > La propiedad <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> solo afecta a la interacción del usuario en tiempo de ejecución. Todavía puede cambiar el contenido del cuadro de texto mediante programación en tiempo de ejecución si cambia la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> del cuadro de texto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TextBox>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
@@ -33,4 +33,4 @@ Puede transformar un cuadro de texto Windows Forms editable en un control de sol
 - [Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [Seleccionar texto en el control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [Ver múltiples líneas en el control TextBox de Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [Control TextBox](textbox-control-windows-forms.md)
+- [TextBox (control)](textbox-control-windows-forms.md)

@@ -19,7 +19,7 @@ ms.locfileid: "76745166"
 # <a name="listbox-control-windows-forms"></a>ListBox (Control, formularios Windows Forms)
 Un control Windows Forms `ListBox` muestra una lista de los elementos de los que el usuario puede seleccionar uno o varios.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   

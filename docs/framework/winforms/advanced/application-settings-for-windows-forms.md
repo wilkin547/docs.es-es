@@ -1,5 +1,5 @@
 ---
-title: Application Settings
+title: Configuración de la aplicación
 ms.date: 04/07/2017
 f1_keywords:
 - ClientApplicationSettings
@@ -17,7 +17,7 @@ ms.locfileid: "76739722"
 # <a name="application-settings-for-windows-forms"></a>Configuración de la aplicación en formularios Windows Forms
 La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de preferencias de usuarios y aplicaciones personalizadas en el cliente. Con la Configuración de aplicación de Windows Forms, no solo se pueden almacenar datos de las aplicaciones (por ejemplo, cadenas de conexión a bases de datos), sino también datos específicos de los usuarios (por ejemplo, posiciones de la barra de herramientas y listas de archivos usados recientemente).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Introducción a la configuración de la aplicación](application-settings-overview.md)  
  Describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y sus usuarios.  
   
@@ -41,6 +41,6 @@ La característica Configuración de la aplicación de Windows Forms facilita la
 [Windows Forms sección de configuración](../../configure-apps/file-schema/winforms/index.md)    
 Documente la configuración para habilitar la compatibilidad con valores altos de PPP en Windows Forms aplicación a partir del .NET Framework 4,7.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Windows Forms](../index.md)

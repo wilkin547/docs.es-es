@@ -55,7 +55,7 @@ Una característica importante del control de <xref:System.Windows.Forms.MonthCa
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     -O bien-  
+     O bien  
   
      Establezca las propiedades <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> y <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
   
@@ -74,7 +74,7 @@ Una característica importante del control de <xref:System.Windows.Forms.MonthCa
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
 - [Cambiar la apariencia del control MonthCalendar de formularios Windows Forms](how-to-change-monthcalendar-control-appearance.md)

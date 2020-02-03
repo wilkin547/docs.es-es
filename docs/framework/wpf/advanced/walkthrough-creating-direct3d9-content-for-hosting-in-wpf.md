@@ -25,8 +25,8 @@ En este tutorial se muestra cómo crear contenido de Direct3D9 que es adecuado p
 
  Cuando haya terminado, tendrá un archivo DLL que contiene el contenido de Direct3D9 para usarlo en una aplicación de WPF.
 
-## <a name="prerequisites"></a>Requisitos previos
- Necesita los componentes siguientes para completar este tutorial:
+## <a name="prerequisites"></a>Prerequisites
+ Necesitará los componentes siguientes para completar este tutorial:
 
 - Visual Studio 2010.
 
@@ -41,13 +41,13 @@ En este tutorial se muestra cómo crear contenido de Direct3D9 que es adecuado p
 
      Se abre el Asistente para aplicaciones Win32 y se muestra la pantalla de bienvenida.
 
-2. Haga clic en **Siguiente**.
+2. Haga clic en **Next**.
 
      Aparece la pantalla Configuración de la aplicación.
 
 3. En la sección **tipo de aplicación:** , seleccione la opción **dll** .
 
-4. Haga clic en **Finalizar**.
+4. Haga clic en **Finalizar**
 
      Se genera el proyecto D3DContent.
 
@@ -133,13 +133,13 @@ En este tutorial se muestra cómo crear contenido de Direct3D9 que es adecuado p
     Destroy
     ```
 
-12. Generar el proyecto.
+12. Compile el proyecto.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 - Hospede el contenido de Direct3D9 en una aplicación WPF. Para obtener más información, consulte [Tutorial: hospedar contenido de Direct3D9 en WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Consideraciones de rendimiento para la interoperabilidad entre Direct3D9 y WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

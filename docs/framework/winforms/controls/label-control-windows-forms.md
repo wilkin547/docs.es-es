@@ -19,7 +19,7 @@ ms.locfileid: "76745270"
   
  Los controles de <xref:System.Windows.Forms.Label> de Windows Forms se usan para mostrar texto o imágenes que el usuario no puede editar. Se usan para identificar objetos en un formulario, para proporcionar una descripción de lo que hará un determinado control si se hace clic en él, por ejemplo, o para mostrar información en respuesta a un evento o proceso en tiempo de ejecución de la aplicación. Dado que el control de <xref:System.Windows.Forms.Label> no puede recibir el foco, también se puede usar para crear teclas de acceso para otros controles.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control Label](label-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -34,5 +34,5 @@ ms.locfileid: "76745270"
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

@@ -20,7 +20,7 @@ Esta sección está pensada como una referencia para [!INCLUDE[TLA#tla_winclient
 > [!NOTE]
 > Los datos de rendimiento que se proporcionan en esta sección se basan en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones que se ejecutan en un equipo 2,8 GHz con 512 de RAM y una tarjeta gráfica ATI Radeon 9700.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)  
   
  [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -31,9 +31,9 @@ Esta sección está pensada como una referencia para [!INCLUDE[TLA#tla_winclient
   
  [Comportamiento de objetos](optimizing-performance-object-behavior.md)  
   
- [Recursos de la aplicación](optimizing-performance-application-resources.md)  
+ [Recursos de aplicación](optimizing-performance-application-resources.md)  
   
- [Text](optimizing-performance-text.md)  
+ [Texto](optimizing-performance-text.md)  
   
  [Enlace de datos](optimizing-performance-data-binding.md)  
   
@@ -43,7 +43,7 @@ Esta sección está pensada como una referencia para [!INCLUDE[TLA#tla_winclient
   
  [Tiempo de inicio de una aplicación](application-startup-time.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
@@ -62,4 +62,4 @@ Esta sección está pensada como una referencia para [!INCLUDE[TLA#tla_winclient
 - [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Información general sobre navegación](../app-development/navigation-overview.md)
 - [Sugerencias y trucos para animaciones](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

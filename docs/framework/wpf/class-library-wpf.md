@@ -15,7 +15,7 @@ ms.locfileid: "76742300"
 # <a name="class-library-wpf"></a>Biblioteca de clases (WPF)
 Los vínculos siguientes hacen referencia a los espacios de nombres que contienen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 ## <a name="reference"></a>Referencia  
   

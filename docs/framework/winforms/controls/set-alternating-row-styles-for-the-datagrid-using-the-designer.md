@@ -36,7 +36,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
     > [!NOTE]
     > Las celdas se muestran mediante estilos heredados de varias propiedades. Para obtener más información sobre la herencia de estilos, vea [estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)

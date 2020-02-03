@@ -23,7 +23,7 @@ En algunos casos, querrá impedir que los usuarios incluyan nuevas filas de dato
     > [!NOTE]
     > Para que el control sea completamente de solo lectura, desactive también la casilla **Habilitar edición** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>

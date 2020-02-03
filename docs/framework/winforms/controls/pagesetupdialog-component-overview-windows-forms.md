@@ -24,7 +24,7 @@ Use el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para mostr
 
 Cuando se agrega a un formulario, el componente de <xref:System.Windows.Forms.PageSetupDialog> aparece en la bandeja en la parte inferior del Diseñador de Windows Forms en Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog (componente)](pagesetupdialog-component-windows-forms.md)

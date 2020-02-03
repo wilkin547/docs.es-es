@@ -28,7 +28,7 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
 
 1. En el menú **Proyecto** , elija **Agregar nuevo elemento**.
 
-    Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.
+    Aparecerá el cuadro de diálogo **Agregar nuevo elemento** .
 
 1. En el cuadro de diálogo **Agregar nuevo elemento**, haga doble clic en **Control personalizado**.
 
@@ -85,11 +85,11 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
 
 1. Guarde y pruebe el control.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
-- [Cómo: Heredar de una clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Cómo: Crear controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Cómo: Heredar de una clase de control](how-to-inherit-from-the-control-class.md)
+- [cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Tutorial: heredar de un control Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

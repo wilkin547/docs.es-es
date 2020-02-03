@@ -77,7 +77,7 @@ ms.locfileid: "76746919"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>Validación sincrónica y asincrónica de datos  
- La interfaz <xref:System.ComponentModel.INotifyDataErrorInfo> permite a las clases de entidad de datos implementar reglas de validación personalizadas y exponer los resultados de la validación de forma asincrónica. Además, esta interfaz admite objetos de error personalizados, varios errores por propiedad, errores entre propiedades y errores de nivel de entidad.  Para obtener más información, vea <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+ La interfaz <xref:System.ComponentModel.INotifyDataErrorInfo> permite a las clases de entidad de datos implementar reglas de validación personalizadas y exponer los resultados de la validación de forma asincrónica. Además, esta interfaz admite objetos de error personalizados, varios errores por propiedad, errores entre propiedades y errores de nivel de entidad.  Para más información, consulte <xref:System.ComponentModel.INotifyDataErrorInfo>.  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>Actualización automática del origen de un enlace de datos  
@@ -126,6 +126,6 @@ ms.locfileid: "76746919"
 ## <a name="markup-extensions-for-events"></a>Extensiones de marcado para eventos  
  WPF 4.5 admite extensiones de marcado para eventos.  Aunque WPF no define ninguna extensión de marcado que se use para eventos, los terceros pueden crear una extensión de marcado que se puede utilizar con eventos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Novedades de .NET Framework](../../whats-new/index.md)

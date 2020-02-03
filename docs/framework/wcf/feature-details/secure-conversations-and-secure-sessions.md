@@ -16,7 +16,7 @@ Una característica de Windows Communication Foundation (WCF) es la capacidad de
   
  Para obtener más información acerca de las sesiones, vea [usar sesiones](../../../../docs/framework/wcf/using-sessions.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [Creación de un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

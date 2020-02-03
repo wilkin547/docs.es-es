@@ -26,7 +26,7 @@ El componente Windows Forms [ErrorProvider](errorprovider-component-windows-form
 > [!NOTE]
 > El componente <xref:System.Windows.Forms.ErrorProvider> no proporciona compatibilidad integrada para los clientes de accesibilidad. Para que la aplicación sea accesible al usar este componente, debe proporcionar un mecanismo de comentarios adicional y accesible.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

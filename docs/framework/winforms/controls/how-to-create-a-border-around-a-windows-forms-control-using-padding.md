@@ -28,7 +28,7 @@ En el ejemplo de código siguiente se muestra cómo crear un borde o un contorno
  [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Padding>
 - [Márgenes y relleno en controles de formularios Windows Forms](margin-and-padding-in-windows-forms-controls.md)

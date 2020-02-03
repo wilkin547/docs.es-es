@@ -53,10 +53,10 @@ Si tiene una aplicación de interfaz de múltiples documentos (MDI), puede combi
   
  Puede desencadenar la combinación automática activando el <xref:System.Windows.Forms.MenuStrip> en el origen MDI. Tras la activación, el <xref:System.Windows.Forms.MenuStrip> de origen se combina en el destino MDI. Cuando se activa un formulario nuevo, la combinación se revierte en el último formulario y se desencadena en el nuevo formulario. Puede controlar este comportamiento estableciendo la propiedad <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> según sea necesario en cada <xref:System.Windows.Forms.ToolStripItem>y estableciendo la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> en cada <xref:System.Windows.Forms.MenuStrip>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [Control MenuStrip](menustrip-control-windows-forms.md)
+- [MenuStrip (control)](menustrip-control-windows-forms.md)
 - [Crear una lista de ventanas MDI con MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
 - [Configurar la combinación automática de menús para aplicaciones MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

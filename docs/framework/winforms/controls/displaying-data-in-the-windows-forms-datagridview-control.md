@@ -21,7 +21,7 @@ El control `DataGridView` se utiliza para mostrar los datos de diversos orígene
   
  Además, puede mostrar los datos mediante formatos estándar (como el formato de moneda), o puede personalizar el formato de presentación para presentar los datos, sin embargo, es necesario (por ejemplo, cambiar el color de fondo de los números negativos o reemplazar los valores de cadena). con las imágenes correspondientes).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Modos de presentación de datos en el control DataGridView de Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Describe las opciones para rellenar el control con datos.  
   
@@ -72,7 +72,7 @@ El control `DataGridView` se utiliza para mostrar los datos de diversos orígene
  [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo cambiar la forma en que los usuarios agregan y modifican datos en el control.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

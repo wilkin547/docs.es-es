@@ -186,9 +186,9 @@ Las situaciones de recompilación posibles son las siguientes:
 
 - No se vuelve a compilar nada (si no ha cambiado nada en el proyecto).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Implementar una aplicación de WPF](deploying-a-wpf-application-wpf.md)
+- [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)
 - [Referencia de MSBuild para WPF](/visualstudio/msbuild/wpf-msbuild-reference)
 - [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)
 - [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md)

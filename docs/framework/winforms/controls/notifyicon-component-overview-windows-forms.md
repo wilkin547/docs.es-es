@@ -29,7 +29,7 @@ Puede asociar globos de sugerencias, menús contextuales e información sobre he
 
 Para mostrar globos de sugerencias para un <xref:System.Windows.Forms.NotifyIcon>, llame al método <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> y especifique el intervalo de tiempo que quiere que el globo de sugerencias se muestre. También puede especificar el texto, el icono y el título del globo de sugerencias con <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> y <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, respectivamente. Los componentes <xref:System.Windows.Forms.NotifyIcon> también pueden tener asociada información sobre herramientas y menús contextuales. Para obtener más información, vea información general sobre los [componentes ToolTip](tooltip-component-overview-windows-forms.md) e [información general sobre el componente ContextMenu](contextmenu-component-overview-windows-forms.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - [NotifyIcon (componente)](notifyicon-component-windows-forms.md)

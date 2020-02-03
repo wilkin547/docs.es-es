@@ -224,7 +224,7 @@ En primer lugar, se recomienda leer las [instrucciones de diseño de excepciones
 
 Las construcciones principales disponibles en F# para la generación de excepciones se deben tener en cuenta en el siguiente orden de preferencia:
 
-| Función | Sintaxis | Finalidad |
+| Función | Sintaxis | Propósito |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | Genera una `System.ArgumentNullException` con el nombre de argumento especificado. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | Genera una `System.ArgumentException` con un nombre y un mensaje de argumento especificados. |
@@ -429,7 +429,7 @@ La inferencia de tipos puede ahorrarle escribir una gran cantidad de texto reuti
 
 * Considere la posibilidad de etiquetar nombres de argumento con tipos explícitos en las API públicas y no confíe en la inferencia de tipos para este.
 
-    La razón de ello es que **debe tener** el control de la forma de la API, no el compilador. Aunque el compilador puede realizar un trabajo adecuado en la inferencia de tipos automáticamente, es posible que la forma de la API cambie si el interno en el que se basa ha cambiado de tipo. Esto puede ser lo que desea, pero es muy probable que se produzca un cambio de API importante que los consumidores de nivel inferior tendrán que tratar. En su lugar, si controla explícitamente la forma de la API pública, puede controlar estos cambios importantes. En términos de DDD, esto puede considerarse como una capa contra daños.
+    El **motivo es que debería tener** el control de la forma de la API, no del compilador. Aunque el compilador puede realizar un trabajo adecuado en la inferencia de tipos automáticamente, es posible que la forma de la API cambie si el interno en el que se basa ha cambiado de tipo. Esto puede ser lo que desea, pero es muy probable que se produzca un cambio de API importante que los consumidores de nivel inferior tendrán que tratar. En su lugar, si controla explícitamente la forma de la API pública, puede controlar estos cambios importantes. En términos de DDD, esto puede considerarse como una capa contra daños.
 
 * Considere la posibilidad de asignar un nombre descriptivo a los argumentos genéricos.
 
@@ -672,8 +672,8 @@ F#tiene compatibilidad total con objetos y conceptos orientados a objetos (OO). 
 * Propiedades automáticas
 * Implementar `IDisposable` y `IEnumerable`
 * Extensiones de tipo
-* eventos
-* Structs
+* Eventos
+* Estructuras
 * Delegados
 * Enumeraciones
 

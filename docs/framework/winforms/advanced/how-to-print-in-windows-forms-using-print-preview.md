@@ -62,7 +62,7 @@ Es muy habitual en la programación de Windows Forms ofrecer una vista previa de
   
 - Referencias a los ensamblados System, System.Windows.Forms, System.Drawing.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Cómo: Imprimir un archivo de texto de varias páginas en formularios Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)

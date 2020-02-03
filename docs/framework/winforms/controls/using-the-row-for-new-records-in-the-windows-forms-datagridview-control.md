@@ -36,7 +36,7 @@ Cuando se usa un <xref:System.Windows.Forms.DataGridView> para editar datos en l
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Personalización visual de la fila para los nuevos registros  
  Cuando se crea la fila para los nuevos registros, se basa en la fila especificada por la propiedad <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>. Los estilos de celda no especificados para esta fila se heredan de otras propiedades. Para obtener más información sobre la herencia del estilo de celda, vea [estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
- Los valores iniciales que se muestran en las celdas de la fila para los nuevos registros se recuperan de la propiedad <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> de cada celda. En el caso de las celdas de tipo <xref:System.Windows.Forms.DataGridViewImageCell>, esta propiedad devuelve una imagen de marcador de posición. De lo contrario, esta propiedad devuelve `null`. Puede invalidar esta propiedad para devolver un valor personalizado. Sin embargo, estos valores iniciales se pueden reemplazar por un controlador de eventos <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> cuando el foco entra en la fila de nuevos registros.  
+ Los valores iniciales que se muestran en las celdas de la fila para los nuevos registros se recuperan de la propiedad <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> de cada celda. En el caso de las celdas de tipo <xref:System.Windows.Forms.DataGridViewImageCell>, esta propiedad devuelve una imagen de marcador de posición. En caso contrario, esta propiedad devuelve `null`. Puede invalidar esta propiedad para devolver un valor personalizado. Sin embargo, estos valores iniciales se pueden reemplazar por un controlador de eventos <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> cuando el foco entra en la fila de nuevos registros.  
   
  Los iconos estándar del encabezado de esta fila, que son una flecha o un asterisco, no se exponen públicamente. Si desea personalizar los iconos, tendrá que crear una clase de <xref:System.Windows.Forms.DataGridViewRowHeaderCell> personalizada.  
   
@@ -44,7 +44,7 @@ Cuando se usa un <xref:System.Windows.Forms.DataGridView> para editar datos en l
   
  Si la celda del encabezado de fila tiene establecido un valor de cadena y no hay suficiente espacio para el texto y el icono, el icono se quita primero.  
   
-## <a name="sorting"></a>Ordenar  
+## <a name="sorting"></a>Ordenación  
  En el modo sin enlazar, los nuevos registros siempre se agregarán al final de la <xref:System.Windows.Forms.DataGridView> incluso si el usuario ha ordenado el contenido de la <xref:System.Windows.Forms.DataGridView>. El usuario deberá volver a aplicar la ordenación para ordenar la fila a la posición correcta; Este comportamiento es similar al del control <xref:System.Windows.Forms.ListView>.  
   
  En los modos de enlace de datos y virtuales, el comportamiento de inserción cuando se aplica una ordenación dependerá de la implementación del modelo de datos. En el caso de ADO.NET, la fila se ordena inmediatamente en la posición correcta.  
@@ -57,7 +57,7 @@ Cuando se usa un <xref:System.Windows.Forms.DataGridView> para editar datos en l
 ## <a name="virtual-mode"></a>Modo virtual  
  Si está implementando el modo virtual, deberá realizar un seguimiento de Cuándo se necesita una fila para los nuevos registros en el modelo de datos y cuándo revertir la adición de la fila. La implementación exacta de esta funcionalidad depende de la implementación del modelo de datos y de su semántica de transacción, por ejemplo, si el ámbito de confirmación está en el nivel de celda o de fila. Para obtener más información, vea [modo virtual en el control DataGridView de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

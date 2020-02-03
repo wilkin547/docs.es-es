@@ -34,7 +34,7 @@ Use la interfaz de múltiples documentos (MDI) para crear aplicaciones que pueda
   
 6. Agregue un formulario al proyecto y agregue el control que desee, como otro <xref:System.Windows.Forms.MenuStrip>.  
   
-7. Cree un controlador para el evento <xref:System.Windows.Forms.Control.Click> del <xref:System.Windows.Forms.ToolStripMenuItem>`&New`.  
+7. Cree un controlador para el evento <xref:System.Windows.Forms.Control.Click> del `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 8. En el controlador de eventos, inserte código similar al siguiente para crear y mostrar nuevas instancias de `Form2` como elementos secundarios MDI de `Form1`.  
   
@@ -81,8 +81,8 @@ Use la interfaz de múltiples documentos (MDI) para crear aplicaciones que pueda
   
 - Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear formularios principales MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Crear formularios MDI secundarios](../advanced/how-to-create-mdi-child-forms.md)
-- [Control MenuStrip](menustrip-control-windows-forms.md)
+- [MenuStrip (control)](menustrip-control-windows-forms.md)

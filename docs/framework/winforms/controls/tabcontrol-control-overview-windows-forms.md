@@ -16,13 +16,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742828"
 ---
-# <a name="tabcontrol-control-overview-windows-forms"></a>Información general del control TabControl (Windows Forms)
+# <a name="tabcontrol-control-overview-windows-forms"></a>Información general del control TabControl (Formularios Windows Forms)
 El control <xref:System.Windows.Forms.TabControl> de Windows Forms muestra múltiples fichas, similares a los divisores de un cuaderno o a las etiquetas de un conjunto de carpetas de un archivador. Las fichas pueden contener imágenes y otros controles. Puede utilizar el control de pestaña para generar el tipo de cuadro de diálogo de varias páginas que aparece en muchos lugares del sistema operativo Windows, como las propiedades de presentación del panel de control. Además, el <xref:System.Windows.Forms.TabControl> se puede usar para crear páginas de propiedades, que se utilizan para establecer un grupo de propiedades relacionadas.  
   
 ## <a name="working-with-tabcontrol"></a>Trabajar con TabControl  
  La propiedad más importante del <xref:System.Windows.Forms.TabControl> es <xref:System.Windows.Forms.TabControl.TabPages%2A>, que contiene las pestañas individuales. Cada pestaña individual es un objeto <xref:System.Windows.Forms.TabPage>. Cuando se hace clic en una pestaña, se genera el evento <xref:System.Windows.Forms.Control.Click> para ese objeto <xref:System.Windows.Forms.TabPage>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl (control)](tabcontrol-control-windows-forms.md)

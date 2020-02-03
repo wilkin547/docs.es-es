@@ -72,7 +72,7 @@ El componente <xref:System.Windows.Forms.NotifyIcon> de Windows Forms muestra un
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

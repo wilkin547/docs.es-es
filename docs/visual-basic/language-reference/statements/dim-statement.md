@@ -47,7 +47,7 @@ Declara y asigna espacio de almacenamiento para una o más variables.
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>Componentes de
+## <a name="parts"></a>Partes
 
 - `attributelist`
 
@@ -57,13 +57,13 @@ Dim [ WithEvents ] variablelist
 
   Opcional. Puede ser uno de los siguientes:
 
-  - [Public](../modifiers/public.md)
+  - [Pública](../modifiers/public.md)
 
   - [Protected](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [Private](../modifiers/private.md)
+  - [Privada](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -93,7 +93,7 @@ Dim [ WithEvents ] variablelist
 
 - `variablelist`
 
-  Obligatoria. Lista de variables que se declaran en esta instrucción.
+  Necesario. Lista de variables que se declaran en esta instrucción.
 
   `variable [ , variable ... ]`
 
@@ -101,9 +101,9 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |Componente|Descripción|
+  |Parte|Descripción|
   |---|---|
-  |`variablename`|Obligatoria. Nombre de la variable. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`variablename`|Necesario. nombre de la variable. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
   |`boundslist`|Opcional. Lista de los límites de cada dimensión de una variable de matriz.|
   |`New`|Opcional. Crea una nueva instancia de la clase cuando se ejecuta la instrucción `Dim`.|
   |`datatype`|Opcional. Tipo de datos de la variable.|
@@ -112,7 +112,7 @@ Dim [ WithEvents ] variablelist
   |`propinitializer`|Obligatorio después de `propertyname` =. Expresión que se evalúa y asigna al nombre de la propiedad.|
   |`initializer`|Opcional si no se especifica `New`. Expresión que se evalúa y se asigna a la variable cuando se crea.|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El compilador Visual Basic usa la instrucción `Dim` para determinar el tipo de datos de la variable y otra información, como el código que puede tener acceso a la variable. En el ejemplo siguiente se declara una variable que contiene un valor `Integer`.
 
@@ -325,7 +325,7 @@ En el ejemplo siguiente, la variable `speedValue` se declara en el nivel de clas
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Const (instrucción)](const-statement.md)
 - [ReDim (instrucción)](redim-statement.md)

@@ -20,7 +20,7 @@ El control `DataGridView` proporciona numerosas opciones para personalizar el co
   
  El control `DataGridView` proporciona propiedades, métodos y eventos que le permiten personalizar o deshabilitar todos estos comportamientos dirigidos por el usuario. Además, puede cambiar mediante programación el tamaño de filas, columnas y encabezados para ajustar su contenido, o puede configurarlos para que cambien de tamaño automáticamente cada vez que cambie su contenido. También puede configurar columnas para dividir automáticamente el ancho disponible del control en las proporciones que especifique.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)  
  Describe las opciones para ajustar el tamaño de filas, columnas y encabezados. También se proporcionan detalles sobre las propiedades y los métodos relacionados con el ajuste de tamaño, y se describen los escenarios de uso comunes.  
   
@@ -40,6 +40,6 @@ El control `DataGridView` proporciona numerosas opciones para personalizar el co
  <xref:System.Windows.Forms.DataGridView>  
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.DataGridView>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)

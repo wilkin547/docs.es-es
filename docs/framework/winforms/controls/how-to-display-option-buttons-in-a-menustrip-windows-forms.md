@@ -83,7 +83,7 @@ Para este ejemplo se necesita:
 
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
@@ -93,5 +93,5 @@ Para este ejemplo se necesita:
 - <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RadioButtonRenderer>
-- [Control MenuStrip](menustrip-control-windows-forms.md)
+- [MenuStrip (control)](menustrip-control-windows-forms.md)
 - [Implementar un control ToolStripRenderer personalizado](how-to-implement-a-custom-toolstriprenderer.md)

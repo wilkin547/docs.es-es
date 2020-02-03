@@ -103,7 +103,7 @@ El control Windows Forms <xref:System.Windows.Forms.MonthCalendar> permite perso
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
 - [Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

@@ -44,9 +44,9 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
     |Elemento de menú Form2|Valor MergeAction|Valor MergeIndex|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
+    |Archivo|MatchOnly|-1|  
     |Importar desde|MatchOnly|-1|  
-    |Word|Quitar|-1|  
+    |Word|Remove|-1|  
   
 10. En `Form1`, cree un controlador de eventos para el evento <xref:System.Windows.Forms.Control.Click> de la `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
@@ -94,7 +94,7 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
 - Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear formularios principales MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Crear formularios MDI secundarios](../advanced/how-to-create-mdi-child-forms.md)

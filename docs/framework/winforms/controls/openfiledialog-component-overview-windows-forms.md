@@ -26,7 +26,7 @@ Use el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para mostr
 
 Cuando se agrega a un formulario, el componente de <xref:System.Windows.Forms.OpenFileDialog> aparece en la bandeja en la parte inferior del Diseñador de Windows Forms en Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [Componente OpenFileDialog](openfiledialog-component-windows-forms.md)
+- [OpenFileDialog (componente)](openfiledialog-component-windows-forms.md)

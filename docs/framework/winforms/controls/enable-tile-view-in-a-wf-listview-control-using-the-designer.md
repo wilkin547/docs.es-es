@@ -30,7 +30,7 @@ La característica de vista en mosaico del control <xref:System.Windows.Forms.Li
 
 2. En la ventana **propiedades** , seleccione la propiedad <xref:System.Windows.Forms.ListView.View%2A> y elija **mosaico**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Información general del control ListView](listview-control-overview-windows-forms.md)

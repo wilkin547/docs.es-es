@@ -43,7 +43,7 @@ En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <
   
  En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. Para obtener más información sobre los diferentes almacenes, vea [almacenes de certificados](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
-### <a name="windows"></a>Portal  
+### <a name="windows"></a>Windows  
  El tipo de credencial de mensaje de Windows utiliza el protocolo Kerberos.  
   
  El protocolo Kerberos es un mecanismo de seguridad que autentica a los usuarios en un dominio y permite a los usuarios autenticados establecer contextos seguros con otras entidades en un dominio.  
@@ -63,9 +63,9 @@ En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <
 ## <a name="using-transport-and-message-security"></a>Utilizar la seguridad de transporte y de mensajes  
  Al utilizar la seguridad de transporte y la seguridad de mensajes, el certificado utilizado para proteger el mensaje tanto en el nivel de transporte como en el nivel de mensaje SOAP debe ser el mismo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

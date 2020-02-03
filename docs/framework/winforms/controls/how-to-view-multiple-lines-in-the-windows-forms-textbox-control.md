@@ -33,7 +33,7 @@ De forma predeterminada, el control Windows Forms <xref:System.Windows.Forms.Tex
   
 2. Establezca la propiedad <xref:System.Windows.Forms.TextBox.ScrollBars%2A> en un valor apropiado.  
   
-    |{2&gt;Value&lt;2}|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|Use este valor si el texto va a ser un párrafo que casi siempre se ajusta al control. El usuario puede usar el puntero del mouse para desplazarse por el control si el texto es demasiado largo para mostrarlo todos a la vez.|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Use este valor si desea que se muestre una lista de líneas, algunas de las cuales pueden ser mayores que el ancho del control <xref:System.Windows.Forms.TextBox>.|  
@@ -41,12 +41,12 @@ De forma predeterminada, el control Windows Forms <xref:System.Windows.Forms.Tex
   
 3. Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
   
-    |{2&gt;Value&lt;2}|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
     |`false`|El texto del control no se ajustará automáticamente, por lo que se desplazará hacia la derecha hasta que se alcance un salto de línea. Use este valor si eligió <xref:System.Windows.Forms.ScrollBars.Horizontal> barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.Both>, arriba.|  
-    |`true` (predeterminado)|No aparecerá la barra de desplazamiento horizontal. Use este valor si eligió <xref:System.Windows.Forms.ScrollBars.Vertical> barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.None>, arriba, para mostrar uno o más párrafos.|  
+    |`true` (valor predeterminado)|No aparecerá la barra de desplazamiento horizontal. Use este valor si eligió <xref:System.Windows.Forms.ScrollBars.Vertical> barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.None>, arriba, para mostrar uno o más párrafos.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TextBox>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
@@ -55,4 +55,4 @@ De forma predeterminada, el control Windows Forms <xref:System.Windows.Forms.Tex
 - [Crear un cuadro de texto de sólo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [Seleccionar texto en el control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Control TextBox](textbox-control-windows-forms.md)
+- [TextBox (control)](textbox-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Información general sobre seguridad
+title: Introducción a la seguridad
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -81,11 +81,11 @@ De forma predeterminada, las aplicaciones ClickOnce implementadas mediante Visua
 
 Para obtener más información sobre los aspectos de seguridad de ClickOnce y la elevación de permisos, vea [proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).
 
-### <a name="testing-the-application"></a>Probar la aplicación
+### <a name="testing-the-application"></a>Prueba de la aplicación
 
 Si ha implementado la aplicación de Windows Forms mediante Visual Studio, puede habilitar la depuración en confianza parcial o un conjunto de permisos restringido desde el entorno de desarrollo.  Consulte también [Cómo: depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Windows Forms Security](windows-forms-security.md)
 - [Code Access Security Basics](../misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)

@@ -25,7 +25,7 @@ ms.locfileid: "76738941"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Es necesario estar familiarizado con el modelo de complemento de .NET Framework. Para más información, consulte [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
@@ -308,7 +308,7 @@ Además de las ventajas que WPF agrega a los comportamientos predeterminados pro
 
 De forma predeterminada, cuando se usan varios dominios de aplicación, se cargan todos los ensamblados .NET Framework necesarios para cada aplicación en el dominio de esa aplicación. Como consecuencia, el tiempo requerido para crear nuevos dominios de aplicación e iniciar aplicaciones en ellas puede afectar al rendimiento. Sin embargo, el .NET Framework proporciona una manera de reducir las horas de inicio, ya que indica a las aplicaciones que compartan los ensamblados entre los dominios de aplicación si ya se han cargado. Para ello, se usa el atributo <xref:System.LoaderOptimizationAttribute>, que se debe aplicar al método de punto de entrada (`Main`). En este caso, solo debe usar el código para implementar la definición de aplicación (consulte [Información general sobre la administración de aplicaciones](application-management-overview.md)).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.LoaderOptimizationAttribute>
 - [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))

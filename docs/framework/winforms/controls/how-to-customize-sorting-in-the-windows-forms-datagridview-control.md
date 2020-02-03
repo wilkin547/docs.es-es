@@ -40,11 +40,11 @@ El control <xref:System.Windows.Forms.DataGridView> proporciona ordenación auto
  [!code-vb[System.Windows.Forms.DataGridViewIComparerSort#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/VB/form1.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Para estos ejemplos se necesita:  
+ Estos ejemplos requieren:  
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Ordenar datos en el control DataGridView de Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)

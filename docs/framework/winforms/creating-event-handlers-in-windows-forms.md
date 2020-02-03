@@ -19,7 +19,7 @@ ms.locfileid: "76742336"
 
 Un controlador de eventos es un procedimiento en el código que determina qué acciones se realizan cuando se produce un evento, por ejemplo, cuando el usuario hace clic en un botón o una cola de mensajes recibe un mensaje. Cuando se genera un evento, se ejecutan los controladores de evento que reciben el evento. Los eventos se pueden asignar a varios controladores y los métodos que controlan eventos determinados se pueden cambiar dinámicamente. También puede usar el Diseñador de Windows Forms de Visual Studio para crear controladores de eventos.
 
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
 
  [Información general sobre eventos](events-overview-windows-forms.md)\
  Explica el modelo de eventos y el rol de los delegados.

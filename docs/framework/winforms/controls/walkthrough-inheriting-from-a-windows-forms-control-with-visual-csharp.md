@@ -22,7 +22,7 @@ ms.locfileid: "76740137"
 
 Con C#, puede crear controles personalizados eficaces a través de la *herencia*. A través de la herencia puede crear controles que conserven toda la funcionalidad inherente de controles de Windows Forms estándar y además incorporen funcionalidad personalizada. En este tutorial, creará un control heredado simple denominado `ValueButton`. Este botón heredará la funcionalidad del control de <xref:System.Windows.Forms.Button> de Windows Forms estándar y expondrá una propiedad personalizada denominada `ButtonValue`.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 Cuando cree un proyecto, especifique su nombre para establecer el espacio de nombres raíz, el nombre de ensamblado y el nombre del proyecto, y para asegurarse de que el componente predeterminado estará en el espacio de nombres correcto.
 
@@ -30,7 +30,7 @@ Cuando cree un proyecto, especifique su nombre para establecer el espacio de nom
 
 1. En Visual Studio, cree un nuevo proyecto de **biblioteca de controles Windows Forms** y asígnele el nombre **ValueButtonLib**.
 
-     El nombre del proyecto, `ValueButtonLib`, también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ValueButton`, puede especificar su componente `ValueButton` mediante `ValueButtonLib.ValueButton`. Para más información, consulte [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md).
+     El nombre del proyecto, `ValueButtonLib` también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ValueButton`, puede especificar su componente `ValueButton` mediante `ValueButtonLib.ValueButton`. Para más información, consulte [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md).
 
 2. En el **Explorador de soluciones**, haga clic con el botón derecho en **UserControl1.cs** y elija **Cambiar nombre** en el menú contextual. Cambie el nombre del archivo a **ValueButton.CS**. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "`UserControl1`".
 
@@ -87,7 +87,7 @@ Los controles no son proyectos independientes; deben hospedarse en un contenedor
 
 ### <a name="to-build-your-control"></a>Para compilar el control
 
-En el menú **Compilar** , haga clic en **Compilar solución**. La compilación debería completarse correctamente sin advertencias ni errores del compilador.
+En el menú **Compilar**, haga clic en **Compilar solución**. La compilación debería completarse correctamente sin advertencias ni errores del compilador.
 
 ### <a name="to-create-a-test-project"></a>Para crear un proyecto de prueba
 
@@ -141,7 +141,7 @@ En el menú **Compilar** , haga clic en **Compilar solución**. La compilación 
 
      Se muestra el número "5" en `label1`, lo que demuestra que la propiedad `ButtonValue` del control heredado se ha pasado a `label1` a través del método `valueButton1_Click`. Por lo tanto, su control `ValueButton` hereda toda la funcionalidad del botón estándar de Windows Forms, pero expone una propiedad personalizada adicional.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Tutorial: Crear un control compuesto con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

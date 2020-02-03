@@ -18,7 +18,7 @@ En muchas aplicaciones, puede hacer que la interfaz de usuario (UI) tenga mayor 
 > [!NOTE]
 > El componente `BackgroundWorker` reemplaza y agrega funcionalidad al espacio de nombres <xref:System.Threading> y al método <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>; sin embargo, se conservan por compatibilidad con versiones anteriores y uso futuro, si así lo decide. Para obtener más información, vea [información general sobre el componente BackgroundWorker](backgroundworker-component-overview.md).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Realizar llamadas seguras para subprocesos en controles de formularios Windows Forms](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  Muestra cómo realizar llamadas seguras para subprocesos a controles Windows Forms.  
   

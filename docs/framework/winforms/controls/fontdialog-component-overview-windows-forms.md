@@ -23,7 +23,7 @@ El componente <xref:System.Windows.Forms.FontDialog> de Windows Forms es un cuad
 ## <a name="key-properties"></a>Propiedades clave  
  El componente tiene varias propiedades que configuran su apariencia. Las propiedades que establecen las selecciones de cuadro de diálogo son <xref:System.Windows.Forms.FontDialog.Font%2A> y <xref:System.Windows.Forms.FontDialog.Color%2A>. La propiedad <xref:System.Windows.Forms.FontDialog.Font%2A> establece la fuente, el estilo, el tamaño, el script y los efectos; por ejemplo, `Arial, 10pt, style=Italic, Strikeout`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog (componente)](fontdialog-component-windows-forms.md)

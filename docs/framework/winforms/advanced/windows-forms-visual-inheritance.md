@@ -22,7 +22,7 @@ En ocasiones, puede decidir que un proyecto llame a un formulario similar al que
   
  Puede crear formularios de clase derivada mediante programación o mediante el selector de herencia de objetos visuales.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Cómo: Heredar formularios Windows Forms](how-to-inherit-windows-forms.md)  
  Proporciona instrucciones para crear formularios heredados en el código.  
   
@@ -42,7 +42,7 @@ En ocasiones, puede decidir que un proyecto llame a un formulario similar al que
  [Fundamentos de la herencia (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Describe cómo definir clases de Visual Basic que sirvan como base para otras clases.  
   
- [clase](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  Describe el enfoque de clases de C#, en el que se permite la herencia simple.  
   
  [Solucionar problemas de controladores de eventos heredados en Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

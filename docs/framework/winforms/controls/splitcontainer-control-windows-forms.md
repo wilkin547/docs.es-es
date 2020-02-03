@@ -1,5 +1,5 @@
 ---
-title: Control SplitContainer
+title: SplitContainer (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - splitter windows
@@ -20,7 +20,7 @@ El control `SplitContainer` de Windows Forms puede considerarse como una composi
   
  El control `SplitContainer` le permite crear interfaces de usuario complejas; a menudo, una selección en un panel determina qué objetos se muestran en el otro panel. Esta organización es muy eficaz para mostrar y explorar información. Tener dos paneles permite agregar información en las áreas y la barra o "divisor" permite que los usuarios puedan cambiar el tamaño de los paneles fácilmente.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre SplitContainer (Control)](splitcontainer-control-overview-windows-forms.md)  
  Presenta el control `SplitContainer` y describe las propiedades, los métodos y los eventos que se usan con frecuencia.  
   
@@ -40,8 +40,8 @@ El control `SplitContainer` de Windows Forms puede considerarse como una composi
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de formularios Windows Forms](index.md)  
+ [Controles de Windows Forms](index.md)  
  Proporciona vínculos a temas acerca de los controles diseñados específicamente para trabajar con Windows Forms.  
   
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

@@ -12,12 +12,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745754"
 ---
-# <a name="events-in-windows-forms-controls"></a>Eventos de los controles de Windows Forms
+# <a name="events-in-windows-forms-controls"></a>Eventos de los controles de formularios Windows Forms
 Un control Windows Forms hereda más de 60 eventos de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Incluyen el evento <xref:System.Windows.Forms.Control.Paint>, que hace que se dibuje un control, eventos relacionados con la presentación de una ventana, como los eventos <xref:System.Windows.Forms.Control.Resize> y <xref:System.Windows.Forms.Control.Layout> y eventos de teclado y mouse de bajo nivel. Algunos eventos de bajo nivel se sintetizan mediante <xref:System.Windows.Forms.Control> en eventos semánticos como <xref:System.Windows.Forms.Control.Click> y <xref:System.Windows.Forms.Control.DoubleClick>. Para obtener más información sobre los eventos heredados, vea <xref:System.Windows.Forms.Control>.  
   
  Si el control personalizado tiene que reemplazar funcionalidad del evento heredado, reemplace el método `On`*EventName* heredado en lugar de asociar un delegado. Si no está familiarizado con el modelo de eventos de .NET Framework, vea [Provocar eventos de un componente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Reemplazar el método OnPaint](overriding-the-onpaint-method.md)
 - [Controlar la introducción de datos por el usuario](handling-user-input.md)

@@ -127,7 +127,7 @@ ms.locfileid: "76742983"
 ## <a name="content-based-sizing-options"></a>Opciones de ajuste de tamaño basado en contenido  
  Las enumeraciones usadas por las propiedades y los métodos de ajuste de tamaño tienen valores similares para el ajuste de tamaño basado en contenido. Con estos valores, puede limitar qué celdas se usan para calcular los tamaños preferidos. En todas las enumeraciones de tamaño, los valores cuyos nombres hacen referencia a las celdas mostradas limitan sus cálculos a las celdas de las filas mostradas. Excluir filas resulta útil para evitar una reducción del rendimiento cuando se trabaja con una gran cantidad de filas. También puede restringir los cálculos a los valores de celda en las celdas de encabezado o de no encabezado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>

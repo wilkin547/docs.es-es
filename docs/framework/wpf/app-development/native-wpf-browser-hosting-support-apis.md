@@ -31,6 +31,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO indica a PresentationHost que cambie el foco al primer o último elemento enfocable en su contenido, en función del estado de la tecla Mayús.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
  [IWpfHostSupport](iwpfhostsupport.md)

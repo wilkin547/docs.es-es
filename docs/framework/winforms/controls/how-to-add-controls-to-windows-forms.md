@@ -87,9 +87,9 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
     > [!IMPORTANT]
     > Puede exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia a un `UserControl`malintencionado. Esto solo suponer un problema en el caso de que una persona malintencionada cree un control personalizado perjudicial y, después, lo agregue por error a su proyecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

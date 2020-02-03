@@ -40,8 +40,8 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 - Supervisar la ruta de acceso del archivo en caché y notificar a la instancia de caché los cambios en el elemento supervisado.
 
-## <a name="prerequisites"></a>Requisitos previos
- Para poder completar este tutorial, necesitará:
+## <a name="prerequisites"></a>Prerequisites
+ Para completar esta visita guiada, necesitará:
 
 - Visual Studio 2010.
 
@@ -60,7 +60,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 2. En el menú **archivo** , haga clic en **nuevo**y, a continuación, haga clic en **nuevo proyecto**.
 
-     Aparecerá el cuadro de diálogo **Nuevo proyecto**.
+     Se muestra el cuadro de diálogo **Nuevo proyecto**.
 
 3. En **plantillas instaladas**, seleccione el lenguaje de programación que desea usar (**Visual Basic** o **Visual C#** ).
 
@@ -73,7 +73,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 6. Active la casilla **Crear directorio para la solución**.
 
-7. Haga clic en **Aceptar**.
+7. Haga clic en **OK**.
 
      WPF Designer se abre en la vista de **diseño** y muestra el archivo MainWindow. Xaml. Visual Studio crea la carpeta **mi proyecto** , el archivo Application. XAML y el archivo MainWindow. Xaml.
 
@@ -99,7 +99,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 4. En la lista versión de **.NET Framework de destino (todas las configuraciones)** , seleccione .NET Framework 4. (No seleccione .NET Framework 4 Client Profile).
 
-5. Haga clic en **Aceptar**.
+5. Haga clic en **OK**.
 
      Aparecerá el cuadro de diálogo **Cambio de plataforma de destino**.
 
@@ -325,7 +325,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

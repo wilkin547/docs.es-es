@@ -25,9 +25,9 @@ La implementación de un formulario principal/detalle es fácil mediante la inte
 
 Para copiar el código de este tema como una sola lista, vea [Cómo: crear un formulario principal-detalle mediante dos controles DataGridView Windows Forms](create-a-master-detail-form-using-two-datagridviews.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Para poder completar este tutorial, necesitará:
+Para completar esta visita guiada, necesitará:
 
 - Acceso a un servidor que tenga la base de datos de ejemplo Northwind SQL Server.
 
@@ -55,7 +55,7 @@ Para poder completar este tutorial, necesitará:
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]
 
-## <a name="testing-the-application"></a>Probar la aplicación
+## <a name="testing-the-application"></a>Prueba de la aplicación
 
 Puede comprobar el formulario para asegurarse de que se comporta de la forma prevista.
 
@@ -79,7 +79,7 @@ Esta aplicación ofrece una descripción básica de las capacidades del control 
 
 - Personalizar la apariencia de las celdas. Para obtener más información, vea [Cómo: personalizar la apariencia de las celdas en el control datagridview Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: establecer estilos de celda predeterminados para el control DataGridView Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

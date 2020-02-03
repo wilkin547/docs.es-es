@@ -29,7 +29,7 @@ Cuando se establece la propiedad <xref:System.Windows.Forms.ToolStrip.Stretch%2A
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>

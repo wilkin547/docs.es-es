@@ -153,14 +153,14 @@ Rectángulo pintado mediante VisualBrush
  Dado que se <xref:System.Windows.Media.Animation.Animatable> objetos, se pueden animar <xref:System.Windows.Media.Brush> objetos. Para obtener más información, consulte [Información general sobre animaciones](animation-overview.md).  
   
 <a name="freezable_features"></a>   
-### <a name="freezable-features"></a>Características de objeto Freezable  
+### <a name="freezable-features"></a>Características de los objetos Freezable  
  Dado que hereda de la clase <xref:System.Windows.Freezable>, la clase <xref:System.Windows.Media.Brush> proporciona varias características especiales: los objetos <xref:System.Windows.Media.Brush> se pueden declarar como [recursos](../../../desktop-wpf/fundamentals/xaml-resources-define.md), compartirse entre varios objetos y clonados. Además, todos los tipos de <xref:System.Windows.Media.Brush> excepto <xref:System.Windows.Media.VisualBrush> se pueden convertir en de solo lectura para mejorar el rendimiento y hacerlos seguros para subprocesos.  
   
  Para obtener más información sobre las distintas características proporcionadas por <xref:System.Windows.Freezable> objetos, vea [información general sobre objetos Freezable](../advanced/freezable-objects-overview.md).  
   
  Para obtener más información sobre por qué no se pueden inmovilizar <xref:System.Windows.Media.VisualBrush> objetos, vea la página tipo de <xref:System.Windows.Media.VisualBrush>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>

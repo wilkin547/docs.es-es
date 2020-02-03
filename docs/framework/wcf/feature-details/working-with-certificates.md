@@ -26,7 +26,7 @@ Los certificados los debe emitir una entidad de certificación, que suele ser un
 
 ## <a name="viewing-certificates"></a>Visualización de certificados
 
-Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). Para más información, consulte [Visualización de certificados con el complemento MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Almacenes de certificados
 
@@ -72,7 +72,7 @@ Los certificados digitales se usan para autenticar una entidad confiando en esta
 
 Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.
 
-|Clase|La propiedad|
+|Clase|Propiedad|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -121,7 +121,7 @@ También tenga en cuenta que el valor del campo **Propósitos planteados** del c
 
 ### <a name="client-certificates"></a>Certificados de cliente
 
-Los certificados de cliente no son emitidos, por regla general, por una autoridad de certificación de otro fabricante. En su lugar, el almacén Personal de la ubicación del usuario actual contiene normalmente certificados colocados ahí por una entidad emisora raíz, con un propósito planteado de "Autenticación de cliente." El cliente puede utilizar un certificado de este tipo cuando se requiera una autenticación mutua.
+Los certificados de cliente no son emitidos, por regla general, por una autoridad de certificación de otro fabricante. En su lugar, el almacén Personal de la ubicación del usuario actual contiene normalmente certificados colocados ahí por una entidad emisora raíz, con un propósito planteado de "Autenticación de cliente." El cliente puede usar este tipo de certificado cuando se requiere autenticación mutua.
 
 ## <a name="online-revocation-and-offline-revocation"></a>Revocación en línea y sin conexión
 
@@ -188,10 +188,10 @@ Cuando se usa .NET Framework 3,5 o versiones posteriores, WCF garantiza que el c
 
 En la primera versión de WCF, la asignación se realiza sin consultar la directiva de dominio. Por consiguiente, es posible que las aplicaciones anteriores que solían funcionar al ejecutarse bajo la primera publicación, provoquen un error si se habilita la asignación y el certificado X.509 no cumple la directiva de dominio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

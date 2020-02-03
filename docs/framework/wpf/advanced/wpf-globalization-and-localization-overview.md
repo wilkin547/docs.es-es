@@ -144,7 +144,7 @@ Las dos primeras columnas en las que se colocan la etiqueta **Open:** y <xref:Sy
 
 Tenga en cuenta que en el ejemplo se usa la característica de ajuste de tamaño compartido de <xref:System.Windows.Controls.Grid>. Las tres últimas columnas se aprovechan de esto colocando en el mismo <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Como cabe esperar del nombre de la propiedad, esto permite que las columnas compartan el mismo tamaño. Por tanto, cuando la "examinar..." se localiza a la cadena más larga "Durchsuchen...", todos los botones aumentan de ancho en lugar de tener un pequeño botón "Aceptar" y un "Durchsuchen..." de gran tamaño. botón.
 
-**xml:lang**
+**XML: lang**
 
 `xml:lang="en-US"`
 
@@ -178,29 +178,29 @@ Después de compilar la aplicación, el primer paso para localizarla es analizar
 
 Use su editor favorito de archivos .CSV compatible con Unicode para modificar este archivo. Filtre todas las entradas que tengan la categoría de localización "None". Debería ver las entradas siguientes:
 
-|Clave de recurso|Categoría de localización|{2&gt;Value&lt;2}|
+|Clave de recurso|Categoría de localización|Value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botón|Aceptar|
-|Button_2:System.Windows.Controls.Button.$Content|Botón|Cancel|
+|Button_2:System.Windows.Controls.Button.$Content|Botón|Cancelar|
 |Button_3:System.Windows.Controls.Button.$Content|Botón|Examinar...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Escriba el nombre del programa, carpeta, documento o recurso de Internet que desea abrir con Windows.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Abrir:|
-|Window_1:System.Windows.Window.Title|Title|Ejecute|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Escriba el nombre del programa, carpeta, documento o recurso de Internet que desea abrir con Windows.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abierta:|
+|Window_1:System.Windows.Window.Title|Título|Ejecute|
 
 Localizar la aplicación a alemán requerirá las traducciones siguientes:
 
-|Clave de recurso|Categoría de localización|{2&gt;Value&lt;2}|
+|Clave de recurso|Categoría de localización|Value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botón|Aceptar|
 |Button_2:System.Windows.Controls.Button.$Content|Botón|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Botón|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Abrir:|
-|Window_1:System.Windows.Window.Title|Title|Ejecute|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
+|Window_1:System.Windows.Window.Title|Título|Ejecute|
 
-**Generar**
+**Generate**
 
 El último paso de localización implica la creación del nuevo ensamblado satélite localizado. Esto se puede hacer con el siguiente comando de LocBaml:
 
@@ -267,9 +267,9 @@ En muchos casos, el contenido puede ser ambiguo y difícil de traducir. El desar
 
 Este comentario se asocia con el contenido de TextBlock_1 y, en el caso de la herramienta LocBaml, (vea [localizar una aplicación](how-to-localize-an-application.md)), se puede ver en la sexta columna de la fila de TextBlock_1 en el archivo. csv de salida:
 
-|Clave de recurso|Categoría|Legible|Modificable|Comentario|{2&gt;Value&lt;2}|
+|Clave de recurso|Category|Legible|Modificable|Comentario|Value|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|Este carácter se usa como una regla decorativa.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|TRUE|TRUE|Este carácter se usa como una regla decorativa.|&#124;|
 
 Se pueden colocar comentarios en el contenido o en las propiedades de cualquier elemento usando la sintaxis siguiente:
 
@@ -277,7 +277,7 @@ Se pueden colocar comentarios en el contenido o en las propiedades de cualquier 
 
 **Atributos de localización**
 
-A menudo, el desarrollador o el administrador de la localización necesita controlar lo que pueden leer y modificar los localizadores. Por ejemplo, quizá no quiera que el localizador traduzca el nombre de su compañía o la redacción legal. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona atributos que permiten establecer la legibilidad, modificabilidad y categoría del contenido o las propiedades de un elemento que la herramienta de localización puede usar para bloquear, ocultar u ordenar elementos. Para obtener más información, vea <xref:System.Windows.Localization.Attributes%2A>. Para este ejemplo, la herramienta LocBaml genera solamente los valores de estos atributos. Todos los controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen valores predeterminados para estos atributos, pero es posible invalidarlos. Por ejemplo, en el ejemplo siguiente se reemplazan los atributos de localización predeterminados para `TextBlock_1` y se establece que el contenido sea legible pero no modificable para los localizadores.
+A menudo, el desarrollador o el administrador de la localización necesita controlar lo que pueden leer y modificar los localizadores. Por ejemplo, quizá no quiera que el localizador traduzca el nombre de su compañía o la redacción legal. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona atributos que permiten establecer la legibilidad, modificabilidad y categoría del contenido o las propiedades de un elemento que la herramienta de localización puede usar para bloquear, ocultar u ordenar elementos. Para más información, consulte <xref:System.Windows.Localization.Attributes%2A>. Para este ejemplo, la herramienta LocBaml genera solamente los valores de estos atributos. Todos los controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen valores predeterminados para estos atributos, pero es posible invalidarlos. Por ejemplo, en el ejemplo siguiente se reemplazan los atributos de localización predeterminados para `TextBlock_1` y se establece que el contenido sea legible pero no modificable para los localizadores.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 

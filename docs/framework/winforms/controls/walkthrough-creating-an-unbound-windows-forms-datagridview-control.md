@@ -70,7 +70,7 @@ Con frecuencia, es posible que desee Mostrar datos tabulares que no se originen 
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## <a name="testing-the-application"></a>Probar la aplicación  
+## <a name="testing-the-application"></a>Prueba de la aplicación  
  Puede comprobar el formulario para asegurarse de que se comporta de la forma prevista.  
   
 #### <a name="to-test-the-form"></a>Para comprobar el formulario  
@@ -92,7 +92,7 @@ Con frecuencia, es posible que desee Mostrar datos tabulares que no se originen 
   
 - Personalizar la apariencia de las celdas. Para obtener más información, vea [Cómo: personalizar la apariencia de las celdas en el control datagridview Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: establecer estilos de celda predeterminados para el control DataGridView Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

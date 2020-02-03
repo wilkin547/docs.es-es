@@ -43,7 +43,7 @@ Cuando los usuarios escriben datos en la aplicación, puede que desee comprobar 
  Cuando se usa el enlace de datos, los datos del control se sincronizan con el origen de datos durante la ejecución del evento <xref:System.Windows.Forms.Control.Validating>. Si cancela el evento <xref:System.Windows.Forms.Control.Validating>, los datos no se sincronizarán con el origen de datos.  
   
 > [!IMPORTANT]
-> Si tiene validación personalizada que tiene lugar después del evento <xref:System.Windows.Forms.Control.Validating>, no afectará al enlace de datos. Por ejemplo, si tiene código en un evento de <xref:System.Windows.Forms.Control.Validated> que intenta cancelar el enlace de datos, se seguirá produciendo el enlace de datos. En este caso, para realizar la validación en el evento <xref:System.Windows.Forms.Control.Validated>, cambie la propiedad **del modo de actualización del origen de datos** del control (**en (DataBindings)** \\ **(avanzado)** **) de la** validación a **nunca**y agregue`.DataBindings["`de *control* *\<sucampo >* a su código de validación.  
+> Si tiene validación personalizada que tiene lugar después del evento <xref:System.Windows.Forms.Control.Validating>, no afectará al enlace de datos. Por ejemplo, si tiene código en un evento de <xref:System.Windows.Forms.Control.Validated> que intenta cancelar el enlace de datos, se seguirá produciendo el enlace de datos. En este caso, para realizar la validación en el evento <xref:System.Windows.Forms.Control.Validated>, cambie la propiedad **del modo de actualización del origen de datos** del control (**en (DataBindings)** \\ **(avanzado)** **) de la** validación a **nunca**y agregue`.DataBindings["`de *control* *\<sucampo >* a su código de validación.`"].WriteValue()`  
   
 ### <a name="implicit-and-explicit-validation"></a>Validación implícita y explícita  
  ¿Cuándo se validan los datos de un control? Este es el desarrollador. Puede usar la validación implícita o explícita, en función de las necesidades de la aplicación.  
@@ -90,7 +90,7 @@ Cuando los usuarios escriben datos en la aplicación, puede que desee comprobar 
 > [!NOTE]
 > Si fuerza al formulario a cerrarse de esta manera, se perderán los datos de los controles del formulario que no se hayan guardado todavía. Además, los formularios modales no validan el contenido de los controles cuando están cerrados. Todavía puede usar la validación de controles para bloquear el foco a un control, pero no tiene que preocuparse del comportamiento asociado al cierre del formulario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

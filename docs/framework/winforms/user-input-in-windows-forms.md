@@ -17,7 +17,7 @@ ms.locfileid: "76734725"
 # <a name="user-input-in-windows-forms"></a>Datos proporcionados por el usuario en Windows Forms
 Windows Forms incluye un modelo de entrada de usuario basado en eventos que se producen al procesar mensajes de Windows relacionados. Los temas de esta sección proporcionan información sobre datos de mouse y teclado introducidos por el usuario, incluidos ejemplos de código que muestran cómo realizar tareas específicas.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Datos introducidos por el usuario en una aplicación de Windows Forms](user-input-in-a-windows-forms-application.md)  
  Proporciona información general sobre eventos de datos introducidos por el usuario y los métodos que procesan los mensajes de Windows.  
   

@@ -21,7 +21,7 @@ ms.locfileid: "76728300"
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Cómo: Validar los datos introducidos con el control DataGrid de formularios Windows Forms
 
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
 
 Hay dos tipos de validación de entrada disponibles para el control Windows Forms <xref:System.Windows.Forms.DataGrid>. Si el usuario intenta especificar un valor que es de un tipo de datos inaceptable para la celda, por ejemplo una cadena en un entero, el nuevo valor no válido se reemplaza por el valor anterior. Este tipo de validación de entrada se realiza automáticamente y no se puede personalizar.
 
@@ -84,7 +84,7 @@ El otro tipo de validación de entrada se puede usar para rechazar cualquier dat
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

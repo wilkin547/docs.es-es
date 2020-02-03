@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control Panel
+title: Información general del control Panel
 ms.date: 03/30/2017
 f1_keywords:
 - Panel
@@ -23,7 +23,7 @@ Windows Forms controles de <xref:System.Windows.Forms.Panel> se utilizan para pr
 ## <a name="key-properties"></a>Propiedades clave  
  Para mostrar las barras de desplazamiento, establezca la propiedad <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> en `true`. También puede personalizar la apariencia del panel si establece las propiedades <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>y <xref:System.Windows.Forms.Panel.BorderStyle%2A>. Para obtener más información sobre las propiedades <xref:System.Windows.Forms.Control.BackColor%2A> y <xref:System.Windows.Forms.Control.BackgroundImage%2A>, vea [Cómo: establecer el fondo de un panel](how-to-set-the-background-of-a-windows-forms-panel.md). La propiedad <xref:System.Windows.Forms.Panel.BorderStyle%2A> determina si el panel se describe sin borde visible (<xref:System.Windows.Forms.BorderStyle.None>), una línea simple (<xref:System.Windows.Forms.BorderStyle.FixedSingle>) o una línea sombreada (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox (control)](groupbox-control-windows-forms.md)

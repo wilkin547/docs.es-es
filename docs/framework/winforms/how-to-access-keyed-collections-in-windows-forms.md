@@ -52,7 +52,7 @@ ms.locfileid: "76739615"
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)
 - [Agregar o quitar imágenes con el componente ImageList de Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

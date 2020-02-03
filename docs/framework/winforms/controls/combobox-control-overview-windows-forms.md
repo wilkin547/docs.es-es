@@ -23,7 +23,7 @@ El control <xref:System.Windows.Forms.ComboBox> de Windows Forms se usa para mos
   
  Para agregar o eliminar elementos en un control de <xref:System.Windows.Forms.ComboBox>, utilice el método <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A>. Como alternativa, puede agregar elementos a la lista utilizando la propiedad <xref:System.Windows.Forms.ComboBox.Items%2A> en el diseñador.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ComboBox>
 - [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)

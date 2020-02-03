@@ -94,7 +94,7 @@ Los ámbitos de nombres XAML son un concepto que identifica objetos que se defin
   
 - <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Espacios de nombres y asignación de espacios de nombres XAML para WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name (Directiva)](../../../desktop-wpf/xaml-services/xname-directive.md)

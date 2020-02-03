@@ -41,7 +41,7 @@ De forma predeterminada, la información sobre herramientas se usa para mostrar 
 ## <a name="robust-programming"></a>Programación sólida  
  Al enlazar el control de <xref:System.Windows.Forms.DataGridView> a un origen de datos externo o proporcionar su propio origen de datos mediante la implementación del modo virtual, pueden producirse problemas de rendimiento. Para evitar una reducción del rendimiento al trabajar con grandes cantidades de datos, controle el evento <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> en lugar de establecer la propiedad <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> de varias celdas. Al controlar este evento, al obtener el valor de una celda <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> propiedad, se genera el evento y se devuelve el valor de la propiedad <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> tal y como se especifica en el controlador de eventos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

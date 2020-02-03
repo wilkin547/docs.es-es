@@ -23,9 +23,9 @@ El control <xref:System.Windows.Forms.NumericUpDown> es similar a una combinaci�
 ## <a name="key-properties-and-methods"></a>Propiedades y métodos clave  
  Los números mostrados en el cuadro de texto del control pueden estar en una variedad de formatos, incluido el formato hexadecimal. Para obtener más información, vea [Cómo: establecer el formato del control NumericUpDown Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md). Las propiedades clave del control son <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (valor predeterminado 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (valor predeterminado 0) y <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (valor predeterminado: 1). La propiedad <xref:System.Windows.Forms.NumericUpDown.Value%2A> establece el número actual seleccionado en el control. La propiedad <xref:System.Windows.Forms.NumericUpDown.Increment%2A> establece la cantidad por la que ajusta el número cuando el usuario hace clic en una flecha arriba o abajo. Cuando el foco se desplaza fuera del control, cualquier entrada con tipo se valida con los valores numéricos mínimo y máximo. Puede aumentar la velocidad con que el control se desplaza por los números, cuando el usuario presiona continuamente la flecha arriba o abajo, con la propiedad <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>. Los métodos clave del control son <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> y <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown (control)](numericupdown-control-windows-forms.md)
 - [Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)
-- [Control TextBox](textbox-control-windows-forms.md)
+- [TextBox (control)](textbox-control-windows-forms.md)

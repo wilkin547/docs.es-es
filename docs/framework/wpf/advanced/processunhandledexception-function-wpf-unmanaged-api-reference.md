@@ -29,11 +29,11 @@ void __stdcall ProcessUnhandledException(
 )  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  errorMsg  
- Mensaje de error.  
+ El mensaje de error.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [.NET Framework requisitos del sistema](../../get-started/system-requirements.md).  
   
  **DLL**  
@@ -44,6 +44,6 @@ void __stdcall ProcessUnhandledException(
   
  **Versión de .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de API no administrada de WPF](wpf-unmanaged-api-reference.md)

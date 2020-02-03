@@ -18,7 +18,7 @@ El control `BindingNavigator` es la interfaz de usuario de navegación y manipul
   
  Los temas de esta sección proporcionan una visión general del control `BindingNavigator` y ofrecen instrucciones paso a paso acerca de cómo usar el control para explorar datos y desplazarse por un <xref:System.Data.DataSet>.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control BindingNavigator](bindingnavigator-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `BindingNavigator`, que permite a los usuarios desplazarse por los elementos de un origen de datos.  
   

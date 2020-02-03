@@ -48,7 +48,7 @@ Cada celda del control <xref:System.Windows.Forms.DataGridView> puede tener su p
   
  En la tabla siguiente se enumeran las propiedades principales que obtienen o establecen objetos <xref:System.Windows.Forms.DataGridViewCellStyle>.  
   
-|La propiedad|Clases|Descripción|  
+|Propiedad|Clases|Descripción|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>y clases derivadas|Obtiene o establece los estilos predeterminados utilizados por todas las celdas de todo el control (incluidas las celdas de encabezado), en una columna o en una fila.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Obtiene o establece los estilos de celda predeterminados utilizados por todas las filas del control. Esto no incluye las celdas de encabezado.|  
@@ -144,7 +144,7 @@ Cada celda del control <xref:System.Windows.Forms.DataGridView> puede tener su p
 > [!NOTE]
 > Almacenar en caché los valores almacenados en la propiedad <xref:System.Windows.Forms.DataGridViewCell.Style%2A> de la celda es importante independientemente de si se ha establecido un valor de estilo determinado. Si reemplaza temporalmente una configuración de estilo, restaurarla a su estado original "sin establecer" garantiza que la celda volverá a heredar la configuración de estilo de un nivel superior. Si necesita determinar el estilo real en vigor para una celda, independientemente de si el estilo es heredado, utilice la propiedad <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> de la celda.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control PictureBox
+title: Información general del control PictureBox
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox
@@ -21,7 +21,7 @@ El control de <xref:System.Windows.Forms.PictureBox> de Windows Forms se usa par
 ## <a name="key-properties-and-methods"></a>Propiedades y métodos clave  
  La imagen que se muestra viene determinada por la propiedad <xref:System.Windows.Forms.PictureBox.Image%2A>, que se puede establecer en tiempo de ejecución o en tiempo de diseño. También puede especificar la imagen estableciendo la propiedad <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> y, a continuación, cargar la imagen sincrónicamente con el método <xref:System.Windows.Forms.PictureBox.Load%2A> o de forma asincrónica con el método <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>. La propiedad <xref:System.Windows.Forms.PictureBox.SizeMode%2A> controla el modo en que la imagen y el control se ajustan entre sí. Para obtener más información, vea [Cómo: modificar el tamaño o la posición de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Cargar una imagen mediante el Diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)

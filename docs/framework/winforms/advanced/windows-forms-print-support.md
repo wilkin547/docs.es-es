@@ -22,7 +22,7 @@ La impresión en Windows Forms consiste principalmente en el uso del componente 
   
  Durante el transcurso de la impresión desde una aplicación basada en Windows, el componente de <xref:System.Drawing.Printing.PrintDocument> mostrará un cuadro de diálogo anular impresión para avisar a los usuarios del hecho de que se está produciendo la impresión y permitir que se cancele el trabajo de impresión.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Crear trabajos de impresión estándar de formularios Windows Forms](how-to-create-standard-windows-forms-print-jobs.md)  
  Explica cómo utilizar el componente de <xref:System.Drawing.Printing.PrintDocument> para imprimir desde un Windows Form.  
   
@@ -48,7 +48,7 @@ La impresión en Windows Forms consiste principalmente en el uso del componente 
  Muestra cómo utilizar un <xref:System.Windows.Forms.PrintPreviewDialog> para imprimir un documento.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [PrintDocument (Componente, Windows Forms)](../controls/printdocument-component-windows-forms.md)  
+ [PrintDocument (componente)](../controls/printdocument-component-windows-forms.md)  
  Explica el uso del componente <xref:System.Drawing.Printing.PrintDocument>.  
   
  [PrintDialog (componente)](../controls/printdialog-component-windows-forms.md)  
@@ -57,7 +57,7 @@ La impresión en Windows Forms consiste principalmente en el uso del componente 
  [PrintPreviewDialog (control)](../controls/printpreviewdialog-control-windows-forms.md)  
  Explica el uso del control <xref:System.Windows.Forms.PrintPreviewDialog>.  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog (componente)](../controls/pagesetupdialog-component-windows-forms.md)  
  Explica el uso del componente <xref:System.Windows.Forms.PageSetupDialog>.  
   
  <xref:System.Drawing.Printing>  

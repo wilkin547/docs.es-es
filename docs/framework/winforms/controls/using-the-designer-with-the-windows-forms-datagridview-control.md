@@ -16,7 +16,7 @@ ms.locfileid: "76728357"
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Utilizar el Diseñador con el control DataGridView de formularios Windows Forms
 Visual Studio proporciona compatibilidad con el diseñador para el control `DataGridView` que permite realizar muchas tareas de configuración sin escribir código. Estas tareas incluyen enlazar el control a un origen de datos, modificar las columnas que se usan para mostrar los datos y ajustar la apariencia y el comportamiento básico del control.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Agregar y quitar columnas en el control DataGridView de Windows Forms mediante el Diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  Describe cómo usar los cuadros de diálogo **Agregar columnas** y **Editar columnas** para rellenar y modificar la colección de columnas.  
   
@@ -54,6 +54,6 @@ Visual Studio proporciona compatibilidad con el diseñador para el control `Data
  <xref:System.Windows.Forms.DataGridView>  
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.DataGridView>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)

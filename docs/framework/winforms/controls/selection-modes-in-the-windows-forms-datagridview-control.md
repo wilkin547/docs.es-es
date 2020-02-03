@@ -46,7 +46,7 @@ Puede recuperar una colección de las celdas, filas o columnas seleccionadas act
 > [!TIP]
 > En la información general de la clase <xref:System.Windows.Forms.DataGridView> se puede encontrar código de ejemplo que muestra el uso mediante programación de las celdas seleccionadas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>

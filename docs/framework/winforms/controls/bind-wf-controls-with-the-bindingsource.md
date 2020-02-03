@@ -50,13 +50,13 @@ Después de haber agregado controles al formulario y determinado la interfaz de 
 
 9. Reemplace el nombre del conjunto de datos predeterminado, si lo desea.
 
-10. Haga clic en **Finalizar**.
+10. Haga clic en **Finalizar**
 
 11. En la ventana **propiedades** , haga clic de nuevo en la flecha situada junto a la propiedad <xref:System.Windows.Forms.TextBox.Text%2A>. En el editor de tipos de interfaz de usuario de **DataSource** , seleccione el nombre del campo al que se va a enlazar el <xref:System.Windows.Forms.TextBox>.
 
      El editor de tipos de interfaz de usuario del **origen** de datos se cierra y el conjunto de datos, <xref:System.Windows.Forms.BindingSource> y el adaptador de tabla específicos de esa conexión de datos se agregan al formulario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

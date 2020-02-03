@@ -72,7 +72,7 @@ Un cuadro de contraseña es un Windows Forms cuadro de texto que muestra los car
        }
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TextBox>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
@@ -81,4 +81,4 @@ Un cuadro de contraseña es un Windows Forms cuadro de texto que muestra los car
 - [Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [Seleccionar texto en el control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [Ver múltiples líneas en el control TextBox de Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [Control TextBox](textbox-control-windows-forms.md)
+- [TextBox (control)](textbox-control-windows-forms.md)

@@ -34,7 +34,7 @@ En el ejemplo de código siguiente se muestra un control personalizado denominad
   
  En la tabla siguiente se muestran las propiedades personalizadas definidas por `FlashTrackBar`.  
   
-|La propiedad|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |`AllowUserEdit`|Indica si el usuario puede cambiar el valor de la barra de seguimiento flash haciendo clic y arrastrando.|  
 |`EndColor`|Especifica el color final de la barra de seguimiento.|  
@@ -49,7 +49,7 @@ En el ejemplo de código siguiente se muestra un control personalizado denominad
   
  La siguiente tabla muestra los miembros adicionales definidos por el evento de cambio de propiedad `FlashTrackBar:` y el método que genera el evento.  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |`ValueChanged`|El evento que se genera cuando la propiedad `Value` la barra de seguimiento cambia.|  
 |`OnValueChanged`|El método que genera el evento `ValueChanged`.|  
@@ -92,7 +92,7 @@ En el ejemplo de código siguiente se muestra un control personalizado denominad
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ampliar compatibilidad en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Fundamentos de desarrollo de controles de Windows Forms](windows-forms-control-development-basics.md)

@@ -38,7 +38,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
 - Control de eventos  
   
-- Presentación  
+- Diseño  
   
 - Estilos  
   
@@ -51,7 +51,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
  ![Diagrama de clases derivadas del objeto Visual](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>Clase DrawingVisual  
- El <xref:System.Windows.Media.DrawingVisual> es una clase de dibujo ligera que se utiliza para representar formas, imágenes o texto. Esta clase se considera ligera porque no proporciona control de diseño ni control de eventos, lo que mejora su rendimiento en tiempo de ejecución. Por esta razón, los dibujos son ideales para fondos e imágenes prediseñadas. El <xref:System.Windows.Media.DrawingVisual> se puede usar para crear un objeto visual personalizado. Para más información, consulte [Usar objetos DrawingVisual](using-drawingvisual-objects.md).  
+ El <xref:System.Windows.Media.DrawingVisual> es una clase de dibujo ligera que se utiliza para representar formas, imágenes o texto. Esta clase se considera ligera porque no proporciona control de diseño ni control de eventos, lo que mejora su rendimiento en tiempo de ejecución. Por esta razón, los dibujos son ideales para fondos e imágenes prediseñadas. El <xref:System.Windows.Media.DrawingVisual> se puede usar para crear un objeto visual personalizado. Para obtener más información, consulte [Usar objetos DrawingVisual](using-drawingvisual-objects.md).  
   
 ### <a name="viewport3dvisual-class"></a>Clase Viewport3DVisual  
  El <xref:System.Windows.Media.Media3D.Viewport3DVisual> proporciona un puente entre los objetos 2D <xref:System.Windows.Media.Visual> y <xref:System.Windows.Media.Media3D.Visual3D>. La clase <xref:System.Windows.Media.Media3D.Visual3D> es la clase base para todos los elementos visuales 3D. El <xref:System.Windows.Media.Media3D.Viewport3DVisual> requiere que defina un valor <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> y un valor <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>. La cámara permite ver la escena. La ventanilla establece el lugar en que se asigna la proyección a la superficie 2D. Para más información acerca de 3D en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Información general sobre gráficos 3D](3-d-graphics-overview.md).  
@@ -77,8 +77,8 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
  En la ilustración siguiente se muestra el orden en que se aplican las operaciones de <xref:System.Windows.Media.DrawingGroup> durante la secuencia de representación.  
   
- ![Orden de las operaciones de DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
-Orden de las operaciones de DrawingGroup  
+ ![Orden de operaciones de DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+Orden de operaciones de DrawingGroup  
   
  Para más información, consulte [Información general sobre objetos Drawing](drawing-objects-overview.md).  
   
@@ -247,7 +247,7 @@ Gráficos y texto con diferentes configuraciones de PPP
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
@@ -256,4 +256,4 @@ Gráficos y texto con diferentes configuraciones de PPP
 - [Realizar pruebas de posicionamiento en la capa visual](hit-testing-in-the-visual-layer.md)
 - [Usar objetos DrawingVisual](using-drawingvisual-objects.md)
 - [Tutorial: Hospedar objetos visuales en una aplicación Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
-- [Optimizar WPF: Rendimiento de aplicaciones](../advanced/optimizing-wpf-application-performance.md)
+- [Optimizar el rendimiento de la aplicación WPF](../advanced/optimizing-wpf-application-performance.md)

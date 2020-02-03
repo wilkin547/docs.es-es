@@ -23,11 +23,11 @@ ms.locfileid: "76746392"
 
 En este artículo se muestra cómo crear un control de Windows Presentation Foundation (WPF) para su uso en las aplicaciones basadas en Windows Forms.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Necesita Visual Studio para completar este tutorial.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 Abra Visual Studio y cree un nuevo proyecto de **Windows Forms App (.NET Framework)** en Visual Basic o C# en Visual denominado `HostingWpf`.
 
@@ -66,7 +66,7 @@ Para crear un control de WPF nuevo:
    > [!NOTE]
    > Por lo general, debería hospedar contenido WPF más sofisticado. El control <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> se usa aquí únicamente con fines ilustrativos.
 
-6. Generar el proyecto.
+6. Compile el proyecto.
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Agregar un control WPF a Windows Forms
 
@@ -102,7 +102,7 @@ Windows Forms y WPF son tecnologías diferentes, pero están diseñadas para int
 
 - Cambie el estilo de su contenido de WPF. Para obtener más información, vea [Tutorial: aplicar estilos al contenido de WPF](walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -313,7 +313,7 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Message Queue Server](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

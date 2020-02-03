@@ -17,7 +17,7 @@ ms.locfileid: "76747139"
   
  El componente `MainMenu` de Windows Forms muestra un menú en tiempo de ejecución.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre MainMenu](mainmenu-component-overview-windows-forms.md)  
  Explica qué es este componente y sus características y propiedades clave.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "76747139"
  <xref:System.Windows.Forms.MainMenu>  
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

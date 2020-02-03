@@ -18,7 +18,7 @@ Un control Windows Forms hereda muchas propiedades de la clase base <xref:System
   
  Se pueden reemplazar las propiedades heredadas en un control, así como definir propiedades nuevas.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Definir una propiedad](defining-a-property-in-windows-forms-controls.md)  
  Muestra cómo implementar una propiedad para un control o componente personalizado y cómo integrar la propiedad en el entorno de diseño.  
   

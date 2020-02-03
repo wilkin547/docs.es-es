@@ -57,7 +57,7 @@ Los procedimientos siguientes requieren un proyecto de **aplicación Windows** c
 
 4. Si enlaza el control de <xref:System.Windows.Forms.DataGridView> a un origen de datos que probablemente contenga valores NULL, rellene el cuadro de texto **valor nulo** . Este valor se muestra cuando el valor de la celda es igual a una referencia nula (`Nothing` en Visual Basic) o <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

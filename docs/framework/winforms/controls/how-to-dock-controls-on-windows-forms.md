@@ -40,11 +40,11 @@ La propiedad <xref:System.Windows.Forms.Control.Dock%2A> interactúa con la prop
    > [!NOTE]
    > Los controles heredados deben estar `Protected` para poder acoplarse. Para cambiar el nivel de acceso de un control, establezca su propiedad **modificador** en la ventana **propiedades** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
 - [Delimitar y acoplar controles secundarios en un control FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Delimitar y acoplar controles secundarios en un control TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

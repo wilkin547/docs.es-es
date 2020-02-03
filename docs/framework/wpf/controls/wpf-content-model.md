@@ -137,9 +137,9 @@ ms.locfileid: "76738283"
   
 - Una cadena.  
   
-- Un objeto <xref:System.DateTime>.  
+- Objeto <xref:System.DateTime> .  
   
-- Objeto <xref:System.Windows.UIElement>.  
+- <xref:System.Windows.UIElement>.  
   
 - <xref:System.Windows.Controls.Panel> que contiene un <xref:System.Windows.Shapes.Ellipse> y un <xref:System.Windows.Controls.TextBlock>.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "76738283"
   
 - <xref:System.Windows.Controls.WrapPanel>  
   
- Para más información, consulte [Información general sobre elementos Panel](panels-overview.md).  
+ Para obtener más información, consulte [Información general sobre elementos Panel](panels-overview.md).  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>Clases que afectan a la apariencia de un objeto UIElement  
@@ -247,6 +247,6 @@ TextBlock con borde
 ## <a name="classes-that-format-your-text"></a>Clases que dan formato al texto  
  <xref:System.Windows.Documents.TextElement> y sus clases relacionadas le permiten dar formato al texto. <xref:System.Windows.Documents.TextElement> objetos contienen y dan formato al texto de los objetos <xref:System.Windows.Controls.TextBlock> y <xref:System.Windows.Documents.FlowDocument>. Los dos tipos principales de objetos <xref:System.Windows.Documents.TextElement> son <xref:System.Windows.Documents.Block> elementos y <xref:System.Windows.Documents.Inline> elementos. Un elemento <xref:System.Windows.Documents.Block> representa un bloque de texto, como un párrafo o una lista. Un elemento <xref:System.Windows.Documents.Inline> representa una parte del texto de un bloque. Muchas clases de <xref:System.Windows.Documents.Inline> especifican el formato del texto al que se aplican. Cada <xref:System.Windows.Documents.TextElement> tiene su propio modelo de contenido. Para más información, consulte [Información general sobre el modelo de contenido de TextElement](../advanced/textelement-content-model-overview.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Avanzadas](../advanced/index.md)

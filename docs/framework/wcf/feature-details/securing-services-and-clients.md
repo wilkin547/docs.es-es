@@ -14,7 +14,7 @@ ms.locfileid: "76746414"
 # <a name="securing-services-and-clients"></a>Protección de servicios y clientes
 La información de esta sección se centra en la programación de la seguridad en Windows Communication Foundation (WCF). Generalmente, esto incluye la selección de un enlace proporcionado por el sistema adecuado, el establecimiento de las propiedades del elemento de seguridad y, a continuación, el establecimiento de las propiedades de los comportamientos del servicio que rigen la recuperación de las credenciales utilizadas por el servicio o el cliente. Estas técnicas cubren los requisitos de seguridad de la mayoría de los usuarios para la mayoría de los escenarios, tal como se muestra en [escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Si su escenario requiere más capacidades, consulte en primer lugar las [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md). Si una solución no es aparente, vea [ampliar la seguridad](../../../../docs/framework/wcf/extending/extending-security.md). Si va a crear (o interoperar con) un sistema que utiliza notificaciones enriquecidas, consulte los temas de [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Información general del modelo de programación utilizado para proteger los mensajes.  
   
@@ -52,7 +52,7 @@ La información de esta sección se centra en la programación de la seguridad e
   
  [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

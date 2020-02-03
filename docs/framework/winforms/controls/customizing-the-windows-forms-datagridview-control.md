@@ -12,12 +12,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744027"
 ---
-# <a name="customizing-the-windows-forms-datagridview-control"></a>Personalizar el control DataGridView de Windows Forms
+# <a name="customizing-the-windows-forms-datagridview-control"></a>Personalizar el control DataGridView de formularios Windows Forms
 El control `DataGridView` proporciona varias propiedades que puede usar para ajustar la apariencia y el comportamiento básico (apariencia y funcionamiento) de sus celdas, filas y columnas. Sin embargo, si tiene necesidades especiales que van más allá de las capacidades de la clase <xref:System.Windows.Forms.DataGridViewCellStyle>, también puede implementar el dibujo del propietario para el control o ampliar sus capacidades creando celdas, columnas y filas personalizadas.  
   
  Para pintar las celdas y las filas usted mismo, puede controlar diversos eventos de dibujo de `DataGridView`. Para modificar la funcionalidad existente o proporcionar una nueva funcionalidad, puede crear sus propios tipos derivados de los tipos de `DataGridViewCell`, `DataGridViewColumn`y `DataGridViewRow` existentes. También puede proporcionar nuevas capacidades de edición creando tipos derivados que muestren un control de su elección cuando una celda está en modo de edición.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Procedimiento para personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
  Describe cómo controlar el evento <xref:System.Windows.Forms.DataGridView.CellPainting> para pintar celdas manualmente.  
   
@@ -53,7 +53,7 @@ El control `DataGridView` proporciona varias propiedades que puede usar para aju
  [Estilo y formato básicos del control DataGridView en formularios Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo modificar la apariencia básica del control y el formato de presentación de los datos de celda.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

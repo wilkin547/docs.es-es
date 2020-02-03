@@ -21,7 +21,7 @@ ms.locfileid: "76743803"
   
  El .NET Framework proporciona varias maneras de mostrar un valor determinado dentro del control <xref:System.Windows.Forms.ProgressBar>. El método que elija dependerá de la tarea que esté disponible o del problema que esté resolviendo. En la tabla siguiente se muestran los enfoques que puede elegir.  
   
-|Método|Descripción|  
+|Enfoque|Descripción|  
 |--------------|-----------------|  
 |Establezca el valor del control <xref:System.Windows.Forms.ProgressBar> directamente.|Este enfoque es útil para las tareas en las que se conoce el total del elemento medido que va a ser implicado, como la lectura de registros de un origen de datos. Además, si solo necesita establecer el valor una o dos veces, se trata de una manera fácil de hacerlo. Por último, use este proceso si necesita reducir el valor mostrado por la barra de progreso.|  
 |Aumentar el <xref:System.Windows.Forms.ProgressBar> Mostrar en un valor fijo.|Este enfoque es útil cuando se muestra un recuento simple entre el mínimo y el máximo, como el tiempo transcurrido o el número de archivos que se han procesado fuera de un total conocido.|  
@@ -224,7 +224,7 @@ ms.locfileid: "76743803"
     }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>

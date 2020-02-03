@@ -79,7 +79,7 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
     7. Reemplace el nombre del conjunto de datos predeterminado, si lo desea.  
   
-    8. Haga clic en **Finalizar**.  
+    8. Haga clic en **Finalizar**  
   
 4. En el cuadro desplegable **Mostrar miembro**, seleccione el nombre de la columna (por ejemplo, ContactName) que se mostrará en el cuadro combinado.  
   
@@ -91,7 +91,7 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
 8. Enlace otros controles, aparte de <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.BindingNavigator>, a los campos de detalles del <xref:System.Windows.Forms.BindingSource> de la tabla secundaria (por ejemplo, `OrdersBindingSource`) que quiera mostrar.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)

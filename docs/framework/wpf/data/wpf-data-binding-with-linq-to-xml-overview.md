@@ -34,7 +34,7 @@ El enlace de datos en WPF permite a un elemento de interfaz de usuario asociar u
 |Destino de enlace|El elemento de IU debe estar asociado con el origen de datos. Los elementos visuales de WPF se derivan de la clase <xref:System.Windows.UIElement>.|
 |Propiedad de destino|*Propiedad de dependencia* del destino de enlace que refleja el valor del origen de enlace de datos. Las propiedades de dependencia son compatibles directamente con la clase <xref:System.Windows.DependencyObject>, de la que se deriva <xref:System.Windows.UIElement>.|
 |Origen de enlace|Objeto de origen para uno o más valores que se proporcionan al elemento de la IU para la presentación. WPF admite automáticamente los siguientes tipos como orígenes de enlace: objetos CLR, objetos de datos ADO.NET, datos XML (de consultas XPath o LINQ to XML) u otro <xref:System.Windows.DependencyObject>.|
-|Ruta de acceso de origen|Propiedad del origen de enlace que se resuelve en valor o conjunto de valores que debe enlazar.|
+|Ruta de origen|Propiedad del origen de enlace que se resuelve en valor o conjunto de valores que debe enlazar.|
 
 Una propiedad de dependencia es un concepto específico de WPF que representa una propiedad calculada dinámicamente de un elemento de IU. Por ejemplo, las propiedades de dependencia suelen presentar valores predeterminados o valores proporcionados por un elemento primario. Estas propiedades especiales están asistidas por instancias de la clase <xref:System.Windows.DependencyProperty> (y no campos como en las propiedades estándar). Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md).
 
@@ -85,7 +85,7 @@ Para obtener más información, consulte [Propiedades dinámicas de LINQ to XML]
 
 Para implementar el enlace dinámico en WPF, se usarán las propiedades dinámicas con soluciones proporcionadas por el espacio de nombres <xref:System.Windows.Data>, especialmente la clase <xref:System.Windows.Data.Binding>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enlace de datos WPF con LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Propiedades dinámicas de LINQ to XML](linq-to-xml-dynamic-properties.md)

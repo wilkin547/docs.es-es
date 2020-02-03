@@ -394,7 +394,7 @@ struct ObjectVariant
 
 En la tabla siguiente se describen los diferentes tipos en tiempo de ejecución del campo `obj` se asignan a los distintos tipos que se almacenan en `VARIANT`:
 
-| Tipo de .NET | Tipo de VARIANTE | | Tipo de .NET | Tipo de VARIANTE |
+| Tipo .NET | Tipo de VARIANTE | | Tipo .NET | Tipo de VARIANTE |
 |------------|--------------|-|----------|--------------|
 |  `byte`  | `VT_UI1` |     | `System.Runtime.InteropServices.BStrWrapper` | `VT_BSTR` |
 | `sbyte`  | `VT_I1`  |     | `object`  | `VT_DISPATCH` |

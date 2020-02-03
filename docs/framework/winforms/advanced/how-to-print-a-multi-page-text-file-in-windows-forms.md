@@ -60,7 +60,7 @@ Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <
   
 - Para obtener información sobre cómo compilar este ejemplo desde la línea de C#comandos para Visual Basic o visual, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [compilar desde la línea de comandos con CSC. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

@@ -92,7 +92,7 @@ Puede usar un componente de <xref:System.Windows.Forms.ErrorProvider> de Windows
   
 4. Ejecute el proyecto. Escriba los datos no válidos (en este ejemplo, no numéricos) en el primer control y, a continuación, presione la tecla TAB hasta el segundo. Cuando se muestre el icono de error, apunte con el puntero del mouse para ver el texto del error.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [Información general del componente ErrorProvider](errorprovider-component-overview-windows-forms.md)

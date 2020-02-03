@@ -28,7 +28,7 @@ El ejemplo de código siguiente muestra cómo enlazar una colección de objetos 
   
 - Referencias a los ensamblados System y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

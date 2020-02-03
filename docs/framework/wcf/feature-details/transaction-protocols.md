@@ -12,10 +12,10 @@ ms.locfileid: "76742731"
 # <a name="transaction-protocols"></a>Protocolos de transacción
 Windows Communication Foundation (WCF) implementa los protocolos WS-Atomic Transaction y WS-Coordination.  
   
-|Especificación/documento|Version|Link|  
+|Especificación/documento|Versión|Vínculo|  
 |-----------------------------|-------------|----------|  
 |WS-Coordination|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
-|Transacción WS-Atomic|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
+|WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
   
  La interoperabilidad en estas especificaciones de protocolo se requiere en dos niveles: entre las aplicaciones y entre los administradores de transacciones (véase la siguiente figura). Las especificaciones describen en gran detalle los formatos de mensajes y el intercambio de mensajes para ambos niveles de interoperabilidad. Cierta seguridad, fiabilidad y codificaciones para el intercambio de aplicación a aplicación se aplican tal y como lo hacen para el intercambio normal de aplicaciones. Sin embargo, para una interoperabilidad correcta entre los administradores de transacciones es necesario el acuerdo en el enlace determinado, porque el usuario no lo configura por regla general.  
   
@@ -57,13 +57,13 @@ Windows Communication Foundation (WCF) implementa los protocolos WS-Atomic Trans
   
  Los siguientes espacios de nombres XML y prefijos asociados se utilizan a lo largo de este documento.  
   
-|Prefijo|Version|Espacio de nombres URI|  
+|Prefijo|Versión|URI de espacio de nombres|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
 |wsa|Anterior a 1,0<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
 |wscoor|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
 |wsat|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
-|m|Pre-1.3<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
+|t|Pre-1.3<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
 |o||<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd>|  
 |xsd||<https://www.w3.org/2001/XMLSchema>|  
   

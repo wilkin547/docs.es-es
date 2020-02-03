@@ -34,7 +34,7 @@ Los menús exponen la funcionalidad a los usuarios manteniendo los comandos agru
   
  En la tabla siguiente se muestran algunas propiedades especialmente importantes de <xref:System.Windows.Forms.MenuStrip> y las clases asociadas.  
   
-|La propiedad|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Obtiene o establece el <xref:System.Windows.Forms.ToolStripMenuItem> que se usa para mostrar una lista de formularios MDI secundarios.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Obtiene o establece cómo se combinan los menús secundarios con los menús primarios en las aplicaciones MDI.|  
@@ -54,7 +54,7 @@ Los menús exponen la funcionalidad a los usuarios manteniendo los comandos agru
 |<xref:System.Windows.Forms.ToolStripDropDown>|Representa un control que permite al usuario seleccionar un solo elemento de una lista que se muestra cuando el usuario hace clic en un <xref:System.Windows.Forms.ToolStripDropDownButton> o en un elemento de menú de nivel superior.|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|Proporciona la funcionalidad básica para los controles derivados de <xref:System.Windows.Forms.ToolStripItem> que muestran los elementos desplegables cuando se hace clic en ellos.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

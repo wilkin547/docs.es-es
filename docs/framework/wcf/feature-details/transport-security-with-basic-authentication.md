@@ -19,16 +19,16 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Transport|  
+|Modo de seguridad|Transporte|  
 |Interoperabilidad|Con clientes de servicios Web existentes y servicios|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (utilizar HTTPS)<br /><br /> Sí (a través del nombre de usuario/Contraseña)|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
-|Transport|HTTPS|  
+|Transporte|HTTPS|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -40,7 +40,7 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>Configuración de  
+## <a name="configuration"></a>Configuración  
  Lo siguiente configura un servicio para utilizar la autenticación básica con seguridad de nivel de transporte:  
   
 ```xml  
@@ -69,7 +69,7 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>Remoto  
   
 ### <a name="code"></a>Código  
  El código siguiente muestra el código de cliente que incluye el nombre de usuario y contraseña. Tenga en cuenta que el usuario debe proporcionar un nombre de usuario de Windows válido y contraseña. El código para devolver el nombre de usuario y la contraseña no se muestra aquí. Utilice un cuadro de diálogo u otra interfaz para solicitar la información al usuario.  
@@ -80,7 +80,7 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configuración de  
+### <a name="configuration"></a>Configuración  
  El código siguiente muestra la configuración del cliente.  
   
 > [!NOTE]
@@ -110,12 +110,12 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Configuración de un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

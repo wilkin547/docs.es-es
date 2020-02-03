@@ -15,7 +15,7 @@ ms.locfileid: "76742350"
 # <a name="windows-forms-controls-used-to-list-options"></a>Controles de formularios Windows Forms usados para mostrar opciones
 Puede Agregar diversos controles a Windows Forms si desea proporcionar a los usuarios una lista de opciones entre las que elegir. Dependiendo de cuánto desee restringir la entrada de los usuarios, puede Agregar un control de <xref:System.Windows.Forms.ListBox>, un control de <xref:System.Windows.Forms.ComboBox> o un control de <xref:System.Windows.Forms.CheckedListBox>. Use los vínculos siguientes para determinar qué control se adapta mejor a sus necesidades.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  Recomienda un control basado en lista adecuado en función de las necesidades y restricciones de Windows Forms.  
   
@@ -54,5 +54,5 @@ Puede Agregar diversos controles a Windows Forms si desea proporcionar a los usu
  [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

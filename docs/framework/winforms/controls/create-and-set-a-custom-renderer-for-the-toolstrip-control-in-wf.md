@@ -29,7 +29,7 @@ los controles de <xref:System.Windows.Forms.ToolStrip> proporcionan una compatib
   
 1. Extienda la clase <xref:System.Windows.Forms.ToolStripRenderer>.  
   
-2. Implemente la representación personalizada deseada invalidando adecuado *en...* Miembros de  
+2. Implemente la representación personalizada deseada invalidando adecuado *en...* members  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -81,7 +81,7 @@ los controles de <xref:System.Windows.Forms.ToolStrip> proporcionan una compatib
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>

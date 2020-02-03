@@ -53,7 +53,7 @@ El núcleo de Windows proporciona varias características de seguridad que forma
 ### <a name="windows-vista"></a>Windows Vista  
 Los usuarios de WPF en Windows Vista se beneficiarán de las mejoras de seguridad adicionales del sistema operativo, como "acceso de usuario con privilegios mínimos", comprobaciones de integridad de código y aislamiento de privilegios.  
   
-#### <a name="user-account-control-uac"></a>Control de cuentas de usuario [UAC]  
+#### <a name="user-account-control-uac"></a>Control de cuentas de usuario (UAC)  
  Hoy en día, los usuarios de Windows tienden a ejecutarse con privilegios de administrador porque muchas aplicaciones los requieren para la instalación o la ejecución, o para ambos. Ser capaz de escribir la configuración predeterminada de una aplicación en el Registro es un ejemplo.  
   
  La ejecución con privilegios de administrador en realidad significa que las aplicaciones se ejecutan a partir de procesos que tienen concedidos privilegios de administrador. El efecto de esto en la seguridad es que cualquier código malintencionado que secuestre un proceso que se ejecuta con privilegios de administrador heredará automáticamente esos privilegios, incluido el acceso a recursos críticos del sistema.  
@@ -109,7 +109,7 @@ Los usuarios de WPF en Windows Vista se beneficiarán de las mejoras de segurida
   
 - **Sitios que no son de confianza**. Aplicaciones identificadas por un usuario como no confiables (no confiables).  
   
- Para cada una de estas zonas, CAS proporciona un conjunto de permisos predefinidos que incluye los permisos que coinciden con el nivel de confianza asociado a cada uno de ellos. Se incluyen los siguientes:  
+ Para cada una de estas zonas, CAS proporciona un conjunto de permisos predefinidos que incluye los permisos que coinciden con el nivel de confianza asociado a cada uno de ellos. Entre ellas se incluyen las siguientes:  
   
 - **FullTrust**. Para las aplicaciones iniciadas desde la zona **mi PC** . Se conceden todos los permisos posibles.  
   
@@ -186,7 +186,7 @@ Los usuarios de WPF en Windows Vista se beneficiarán de las mejoras de segurida
   
  Internet Explorer 7 incorpora y amplía las capacidades de seguridad de IE6 SP2 como parte de un compromiso continuo con la seguridad.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad de acceso del código](../misc/code-access-security.md)
 - [Seguridad](security-wpf.md)

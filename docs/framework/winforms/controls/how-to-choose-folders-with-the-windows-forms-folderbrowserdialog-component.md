@@ -67,8 +67,8 @@ A menudo, en las aplicaciones para Windows que cree, tendrá que pedir a los usu
 
 Para obtener información sobre cómo guardar archivos, consulte [Cómo: Guardar archivos mediante el componente SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [Información general del componente FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
-- [FolderBrowserDialog (componente)](folderbrowserdialog-component-windows-forms.md)
+- [FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

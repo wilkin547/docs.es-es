@@ -51,8 +51,8 @@ La incorporación del control <xref:System.Windows.Forms.BindingNavigator> de Wi
   
 - Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.Xml.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip (control)](toolstrip-control-windows-forms.md)

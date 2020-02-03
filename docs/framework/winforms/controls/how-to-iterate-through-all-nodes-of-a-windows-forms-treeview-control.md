@@ -123,7 +123,7 @@ A veces resulta útil examinar todos los nodos de un Windows Forms <xref:System.
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [TreeView (control)](treeview-control-windows-forms.md)
 - [Procedimientos recursivos](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

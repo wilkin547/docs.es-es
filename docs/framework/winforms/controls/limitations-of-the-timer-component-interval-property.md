@@ -28,7 +28,7 @@ El componente <xref:System.Windows.Forms.Timer> de Windows Forms tiene una propi
   
 - La precisión de la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> se encuentra en milisegundos. Algunos equipos proporcionan un contador de alta resolución que tiene una resolución superior a milisegundos. La disponibilidad de este contador depende del hardware del procesador del equipo.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer (componente)](timer-component-windows-forms.md)

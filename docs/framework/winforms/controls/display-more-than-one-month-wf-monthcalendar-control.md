@@ -37,7 +37,7 @@ El control <xref:System.Windows.Forms.MonthCalendar> de Windows Forms puede most
     monthCalendar1->CalendarDimensions = System::Drawing::Size (3,2);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
 - [Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

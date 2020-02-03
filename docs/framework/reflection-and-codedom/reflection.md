@@ -71,9 +71,9 @@ Estas clases en tiempo de ejecución son `internal` (`Friend` en Visual Basic). 
 
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Descripción|  
 |-----------|-----------------|  
-|[Viewing Type Information](viewing-type-information.md) (Ver información tipos)|Describe la clase <xref:System.Type> y proporciona ejemplos de código que muestran cómo usar <xref:System.Type> con diversas clases de reflexión para obtener información sobre constructores, métodos, campos, propiedades y eventos.|  
+|[Ver información tipos](viewing-type-information.md)|Describe la clase <xref:System.Type> y proporciona ejemplos de código que muestran cómo usar <xref:System.Type> con diversas clases de reflexión para obtener información sobre constructores, métodos, campos, propiedades y eventos.|  
 |[Reflection and Generic Types](reflection-and-generic-types.md) (Reflexión y tipos genéricos)|Explica cómo la reflexión controla los parámetros de tipo y los argumentos de tipo de tipos genéricos y métodos genéricos.|  
 |[Consideraciones de seguridad sobre la reflexión](security-considerations-for-reflection.md)|Describe las reglas que determinan hasta qué punto se puede usar la reflexión para detectar la información sobre tipos y acceder a los tipos.|  
 |[Cargar y usar tipos dinámicamente](dynamically-loading-and-using-types.md)|Describe la interfaz de enlace personalizado de reflexión que admite enlace de tiempo de ejecución.|  

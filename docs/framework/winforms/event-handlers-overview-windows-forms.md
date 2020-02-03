@@ -48,7 +48,7 @@ private:
   
  También puede usar el mismo controlador de eventos para controlar el mismo evento para los diferentes controles. Por ejemplo, si tiene un grupo de <xref:System.Windows.Forms.RadioButton> controles en un formulario, puede crear un único controlador de eventos para el evento <xref:System.Windows.Forms.Control.Click> y hacer que el evento <xref:System.Windows.Forms.Control.Click> de cada control esté enlazado al controlador de eventos único. Para obtener más información, consulte [Cómo: conectar varios eventos a un solo controlador de eventos en Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre eventos](events-overview-windows-forms.md)

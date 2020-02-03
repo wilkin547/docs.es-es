@@ -13,10 +13,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739150"
 ---
-# <a name="keyboard-input-in-a-windows-forms-application"></a>Datos introducidos mediante el teclado en una aplicación de Windows Forms
+# <a name="keyboard-input-in-a-windows-forms-application"></a>Entradas mediante teclado en una aplicación de Windows Forms
 Windows Forms incluye eventos de teclado estándar que le permiten responder a pulsaciones de teclas específicas y también proporciona maneras de interceptar, modificar y consumir las pulsaciones de teclas en el nivel de aplicación, formulario y control.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Funcionamiento de las entradas mediante teclado](how-keyboard-input-works.md)  
  Describe cómo se procesan y transforman los mensajes del teclado en eventos de teclado.  
   

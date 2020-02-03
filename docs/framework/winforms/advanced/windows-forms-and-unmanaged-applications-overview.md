@@ -15,7 +15,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732539"
 ---
-# <a name="windows-forms-and-unmanaged-applications-overview"></a>Información general sobre Windows Forms y aplicaciones no administradas
+# <a name="windows-forms-and-unmanaged-applications-overview"></a>Información general sobre formularios Windows Forms y aplicaciones no administradas
 Los controles y aplicaciones de Windows Forms pueden interoperar con aplicaciones no administradas, con algunas advertencias. En las secciones siguientes se describen los escenarios y las configuraciones que las aplicaciones y los controles de Windows Forms admiten y no admiten.  
   
 ## <a name="windows-forms-controls-and-activex-applications"></a>Aplicaciones ActiveX y controles de Windows Forms  
@@ -27,7 +27,7 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
   
  En la siguiente tabla se muestra que hosts ActiveX admiten controles de Windows Forms.  
   
-|Versión de Windows Forms|Compatibilidad con|  
+|Versión de Windows Forms|Soporte técnico|  
 |---------------------------|-------------|  
 |.NET Framework versión 1.0|Internet Explorer 5.01 y versiones posteriores|  
 |.NET framework versión 1.1 y versiones posteriores|Internet Explorer 5.01 y versiones posteriores<br /><br /> Microsoft Foundation Classes (MFC) 7.0 y versiones posteriores|  
@@ -51,13 +51,13 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
   
  Para que un Windows Form funcione correctamente con una aplicación cliente COM, debe ejecutarlo en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
   
-- Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el Windows Form. Para más información, consulte [Cómo admitir la interoperabilidad COM mostrando un Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el Windows Form. Para obtener más información, consulta [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Muestre cada Windows Form en un nuevo subproceso. Para más información, consulte [Cómo admitir la interoperabilidad COM mostrando cada Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Muestre cada Windows Form en un nuevo subproceso. Para obtener más información, consulta [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Aplicaciones de Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Ejemplos de interoperabilidad COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))

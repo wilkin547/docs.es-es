@@ -21,7 +21,7 @@ Un aspecto esencial, que a menudo se pasa por alto, de la creación de aplicacio
   
  Además, el [componente ToolTip](../controls/tooltip-component-windows-forms.md) se puede usar para proporcionar ayuda individual para los controles de Windows Forms.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Proporcionar ayuda en una aplicación para Windows](how-to-provide-help-in-a-windows-application.md)  
  Explica cómo utilizar el componente `HelpProvider` para vincular controles a archivos en un sistema de ayuda.  
   

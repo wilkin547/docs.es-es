@@ -18,7 +18,7 @@ ms.locfileid: "76745253"
 
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> ofrece muchas herramientas de diseño para lograr esto.
 
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
 
 [Información general sobre la propiedad AutoSize](autosize-property-overview.md)\
 Describe la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> y su función en el diseño.
@@ -43,7 +43,7 @@ Proporciona documentación de referencia para el control <xref:System.Windows.Fo
 <xref:System.Windows.Forms.FlowLayoutPanel>\
 Proporciona documentación de referencia para el control <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Delimitar y acoplar controles secundarios en un control FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Delimitar y acoplar controles secundarios en un control TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

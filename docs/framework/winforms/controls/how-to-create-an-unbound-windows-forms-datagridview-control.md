@@ -30,7 +30,7 @@ En el ejemplo de código siguiente se muestra cómo rellenar un control <xref:Sy
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Tutorial: Crear un control DataGridView sin enlazar en Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)

@@ -28,7 +28,7 @@ ms.locfileid: "76738094"
 - [Limitaciones de código en línea](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  En este tema se da por supuesto que ha leído la [información general de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) y tiene conocimientos básicos de CLR y la programación orientada a objetos.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -58,7 +58,7 @@ ms.locfileid: "76738094"
 ## <a name="inline-code-limitations"></a>Limitaciones de código en línea  
  Considere la posibilidad de evitar o limitar el uso de código en línea. En lo que se refiere a la arquitectura y la filosofía de codificación, mantener una separación entre el marcado y el código subyacente mantiene el diseñador y los roles de desarrollador mucho más distintos. En un nivel más técnico, el código que se escribe para el código en línea puede resultar complicado de escribir, porque siempre se escribe en la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] clase parcial generada y solo puede usar las asignaciones de espacio de nombres XML predeterminadas. Dado que no puede Agregar `using` instrucciones, debe calificar por completo muchas de las llamadas API que realice. Las asignaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predeterminadas incluyen la mayoría de los espacios de nombres CLR que se encuentran en los ensamblados de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], pero no todos. tendrá que calificar totalmente las llamadas a los tipos y miembros incluidos en los otros espacios de nombres CLR. Tampoco se puede definir nada más allá de la clase parcial en el código insertado y todas las entidades de código de usuario a las que se hace referencia deben existir como miembro o variable dentro de la clase parcial generada. Otras características de programación específicas del lenguaje, como macros o `#ifdef` de variables globales o variables de compilación, tampoco están disponibles. Para obtener más información, vea [tipo XAML intrínseco de x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [x:Code (Tipo XAML intrínseco)](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)

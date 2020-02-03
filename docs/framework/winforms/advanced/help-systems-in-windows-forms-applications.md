@@ -23,7 +23,7 @@ Uno de los courtesies más importantes, como desarrollador de aplicaciones, pued
   
  Puede generar archivos HTML de ayuda 1. x con el taller de ayuda HTML. Para obtener más información sobre la ayuda HTML, vea el tema "HTML Help Workshop" u otros temas de "ayuda HTML" en MSDN.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Integrar la Ayuda de usuario en Windows Forms](integrating-user-help-in-windows-forms.md)
 - [HelpProvider (componente)](../controls/helpprovider-component-windows-forms.md)

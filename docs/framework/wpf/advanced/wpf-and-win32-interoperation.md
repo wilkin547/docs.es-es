@@ -169,7 +169,7 @@ Las clases <xref:System.Windows.Interop.HwndHost> y <xref:System.Windows.Interop
 
 Las interfaces solo proporcionan compatibilidad con lo que ocurre en la transición entre las regiones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y Win32. Dentro de la región de Win32, el comportamiento de tabulación se controla por completo mediante la lógica implementada por Win32 para la tabulación, si existe.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>

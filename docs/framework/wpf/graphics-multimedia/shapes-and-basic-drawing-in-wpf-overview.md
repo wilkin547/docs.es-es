@@ -213,7 +213,7 @@ myPolygon.StrokeThickness = 2;
   
  En los ejemplos anteriores, se aplicó una única transformación a cada objeto de forma. Para aplicar varias transformaciones a una forma (o cualquier otro elemento de la interfaz de usuario), use una <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Imágenes y gráficos 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md)

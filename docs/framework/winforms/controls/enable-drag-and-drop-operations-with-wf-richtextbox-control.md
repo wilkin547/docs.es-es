@@ -164,9 +164,9 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
   
      Al soltar el botón del mouse, se quita el texto seleccionado (es decir, se genera el evento <xref:System.Windows.Forms.RichTextBox.DragDrop> ) y se inserta en el control <xref:System.Windows.Forms.RichTextBox> .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Llevar a cabo operaciones de arrastrar y colocar entre aplicaciones](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox (control)](richtextbox-control-windows-forms.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

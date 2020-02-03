@@ -17,13 +17,13 @@ ms.locfileid: "76742519"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid (Control, formularios Windows Forms)
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control `DataGrid`; sin embargo, el control `DataGrid` se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control `DataGrid`; sin embargo, el control `DataGrid` se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  El control Windows Forms `DataGrid` proporciona una interfaz de usuario para ADO.NET conjuntos de datos, que muestra los datos tabulares y habilita las actualizaciones en el origen de datos.  
   
  Cuando el control `DataGrid` se establece en un origen de datos válido, se rellena automáticamente, y se crean columnas y filas basadas en la forma de los datos. El control `DataGrid` se puede usar para mostrar una única tabla o las relaciones jerárquicas entre un conjunto de tablas.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)  
  Describe las características básicas del control `DataGrid`.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "76742519"
  [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)  
  Proporciona vínculos a temas sobre el enlace de datos en Windows Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

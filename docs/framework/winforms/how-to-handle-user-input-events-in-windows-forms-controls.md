@@ -29,6 +29,6 @@ En este ejemplo, se muestra cómo controlar la mayoría de los eventos de teclad
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)

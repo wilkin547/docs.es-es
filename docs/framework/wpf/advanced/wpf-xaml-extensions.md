@@ -16,11 +16,11 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744399"
 ---
 # <a name="wpf-xaml-extensions"></a>Extensiones XAML de WPF
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Binding (extensión de marcado)](binding-markup-extension.md)  
   [ColorConvertedBitmap (extensión de marcado)](colorconvertedbitmap-markup-extension.md)  
   [ComponentResourceKey (extensión de marcado)](componentresourcekey-markup-extension.md)  
-  [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md)  
+  [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)  
   [RelativeSource (extensión de marcado)](relativesource-markupextension.md)  
   [StaticResource (extensión de marcado)](staticresource-markup-extension.md)  
   [TemplateBinding (extensión de marcado)](templatebinding-markup-extension.md)  

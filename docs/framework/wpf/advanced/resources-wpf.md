@@ -18,7 +18,7 @@ ms.locfileid: "76731780"
 # <a name="resources-wpf"></a>Recursos (WPF)
 Un recurso es un objeto que se puede volver a usar en diferentes sitios de la aplicación. WPF admite distintos tipos de recursos. Estos recursos son principalmente dos tipos de recursos: recursos XAML y archivos de datos de recursos. Entre los ejemplos de recursos XAML se incluyen los pinceles y los estilos. Los archivos de datos de recursos son archivos de datos no ejecutables que necesita una aplicación.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [Archivos de recursos, contenido y datos de aplicaciones de WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
  [Identificadores URI de paquete en WPF](../app-development/pack-uris-in-wpf.md)  
@@ -28,7 +28,7 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
   
  [StaticResource (extensión de marcado)](staticresource-markup-extension.md)  
   
- [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md)  
+ [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)  
   
  [x:Key (Directiva)](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   

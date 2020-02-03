@@ -36,7 +36,7 @@ Al usar un componente <xref:System.Windows.Forms.BindingSource> para enlazar un 
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>

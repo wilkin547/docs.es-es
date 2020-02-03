@@ -47,17 +47,17 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 
  En la tabla siguiente se describen las reglas de mayúsculas y minúsculas para los distintos tipos de identificadores.
 
-|Identificador|Mayúsculas y minúsculas|Ejemplo|
+|Identificador|Uso de mayúsculas y minúsculas|Ejemplo|
 |----------------|------------|-------------|
 |Espacio de nombres|Nomenclatura|`namespace System.Security { ... }`|
-|Tipo de|Nomenclatura|`public class StreamReader { ... }`|
+|Tipo|Nomenclatura|`public class StreamReader { ... }`|
 |Interfaz|Nomenclatura|`public interface IEnumerable { ... }`|
 |Método|Nomenclatura|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|La propiedad|Nomenclatura|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Nomenclatura|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Propiedad|Nomenclatura|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|Evento|Nomenclatura|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Campo|Nomenclatura|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Valor de enumeración|Nomenclatura|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|Parámetro|Grafía|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|Parámetro|camelcase|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Poner en mayúsculas palabras compuestas y términos comunes
  La mayoría de los términos compuestos se tratan como palabras únicas para el uso de mayúsculas.
@@ -66,7 +66,7 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 
  Se trata de palabras compuestas escritas como una sola palabra, como el punto de conexión. En lo que respecta a las directrices de mayúsculas y minúsculas, trate una palabra compuesta de formato cerrado como una sola palabra. Use un diccionario actual para determinar si una palabra compuesta está escrita en formato cerrado.
 
-|Nomenclatura|Grafía|not|
+|Nomenclatura|camelcase|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -94,7 +94,7 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|
 |`Writable`|`writable`|`Writeable`|
 
-## <a name="case-sensitivity"></a>Distinción de mayúsculas y minúsculas
+## <a name="case-sensitivity"></a>Distinción entre mayúsculas y minúsculas
  No es necesario que los lenguajes que se pueden ejecutar en CLR admitan la distinción de mayúsculas y minúsculas, aunque algunos sí lo hacen. Aunque su lenguaje lo admita, otros lenguajes que puedan tener acceso a su marco de trabajo no lo admiten. Por lo tanto, las API a las que se puede tener acceso externamente no pueden basarse solo en mayúsculas y minúsculas para distinguir entre dos nombres en el mismo contexto.
 
  ❌ no suponen que todos los lenguajes de programación distinguen mayúsculas de minúsculas. pero no lo son. Los nombres no pueden diferir solo en mayúsculas y minúsculas.
@@ -103,7 +103,7 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -15,10 +15,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743469"
 ---
-# <a name="getting-started-with-windows-forms"></a>Introducción a los formularios Windows Forms
+# <a name="getting-started-with-windows-forms"></a>Introducción a Windows Forms
 Con Windows Forms, puede crear eficaces aplicaciones basadas en Windows. En los temas siguientes se describe detalladamente cómo aprovechar la eficacia de Windows Forms para Mostrar datos, controlar la entrada del usuario e implementar sus aplicaciones fácilmente y con seguridad mejorada.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre formularios Windows Forms](windows-forms-overview.md)  
  Contiene información general sobre Windows Forms y aplicaciones cliente inteligentes.  
   
@@ -34,7 +34,7 @@ Con Windows Forms, puede crear eficaces aplicaciones basadas en Windows. En los 
  [Cambiar la apariencia de Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Contiene vínculos a temas que muestran cómo cambiar la apariencia de las aplicaciones de Windows Forms.  
   
- [Controles de formularios Windows Forms](./controls/index.md)  
+ [Controles de Windows Forms](./controls/index.md)  
  Contiene vínculos a temas que describen y muestran cómo usar los controles y componentes de Windows Forms.  
   
  [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)  

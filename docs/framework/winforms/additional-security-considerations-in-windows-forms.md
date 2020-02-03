@@ -74,7 +74,7 @@ ms.locfileid: "76739808"
   
  Algunos miembros de Windows Forms proporcionan acceso no administrado que requiere el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>. En la tabla siguiente se enumeran los miembros del espacio de nombres <xref:System.Windows.Forms> que requieren el permiso. Para más información sobre los permisos necesarios para un miembro, consulte la documentación de la biblioteca de clases de .NET Framework.  
   
-|Componente|Miembro|  
+|Componente|Member|  
 |---------------|------------|  
 |<xref:System.Windows.Forms.Application>|Método -   <xref:System.Windows.Forms.Application.AddMessageFilter%2A><br />-   propiedad <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A><br />Método -   `Exit`<br />Método -   <xref:System.Windows.Forms.Application.ExitThread%2A><br />-   <xref:System.Windows.Forms.Application.ThreadException> evento|  
 |<xref:System.Windows.Forms.CommonDialog>|Método -   <xref:System.Windows.Forms.CommonDialog.HookProc%2A><br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>método)<br />Método -   <xref:System.Windows.Forms.CommonDialog.Reset%2A><br />Método -   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>|  
@@ -88,7 +88,7 @@ ms.locfileid: "76739808"
   
  El permiso para llamar a código no administrado permite a una aplicación realizar casi todo. Por ello, este permiso para llamar a código no administrado únicamente se debe conceder a aplicaciones que procedan de un origen de confianza. De forma alternativa, dependiendo de la aplicación, la función que realiza la llamada al código no administrado podría ser opcional, o solo habilitarse en el entorno de plena confianza. Para más información sobre los permisos arriesgados, vea [Dangerous Permissions and Policy Administration](../misc/dangerous-permissions-and-policy-administration.md) (Permisos peligrosos y administración de directivas). Para más información sobre la elevación de permisos, vea [Administración general de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Acceso más seguro a archivos y datos en Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md)

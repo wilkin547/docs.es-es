@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) proporciona un entorno completo para crear
  Este tema le guía a través de una aplicación, que [hospeda un control ListBox de Win32 en el ejemplo de WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), que hospeda un control de cuadro de lista de Win32. Este procedimiento general se puede extender para hospedar cualquier ventana de Win32.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  En este tema se da por supuesto que está familiarizado con la programación de la API de Windows y WPF. Para obtener una introducción básica a la programación de WPF, vea [Introducción](../getting-started/index.md). Para obtener una introducción a la programación de la API de Windows, consulte cualquiera de los numerosos libros del asunto, en determinadas *ventanas de programación* , de Charles Petzold.  
   
  Dado que el ejemplo que acompaña a este tema se implementa C#en, hace uso de los servicios de invocación de plataforma (PInvoke) para tener acceso a la API de Windows. Algunos conocimientos de PInvoke son útiles, pero no esenciales.  
@@ -46,7 +46,7 @@ Windows Presentation Foundation (WPF) proporciona un entorno completo para crear
   
 5. Una vez que haya creado la ventana host, devuelva el HWND de la ventana hospedada. Si desea hospedar uno o varios controles Win32, normalmente crea una ventana host como elemento secundario del HWND y hace que los controles sean secundarios de dicha ventana host. El ajuste de los controles en una ventana host proporciona una manera sencilla de que la página de WPF reciba notificaciones de los controles, lo que aborda algunos problemas específicos de Win32 con las notificaciones en el límite del HWND.  
   
-6. Controle los mensajes seleccionados que se envían a la ventana host, como las notificaciones de los controles secundarios. Existen dos formas de lograr esto.  
+6. Controle los mensajes seleccionados que se envían a la ventana host, como las notificaciones de los controles secundarios. Existen dos formas de hacerlo.  
   
     - Si prefiere controlar los mensajes en la clase de hospedaje, invalide el método <xref:System.Windows.Interop.HwndHost.WndProc%2A> de la clase <xref:System.Windows.Interop.HwndHost>.  
   
@@ -153,7 +153,7 @@ Windows Presentation Foundation (WPF) proporciona un entorno completo para crear
   
  Por último, establezca `handled` en `true` para indicar que se ha controlado el mensaje.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.HwndHost>
 - [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)

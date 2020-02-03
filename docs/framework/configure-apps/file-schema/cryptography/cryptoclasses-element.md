@@ -35,13 +35,13 @@ Contiene una lista de las clases de criptografía que tienen una asignación a u
  En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
- Ninguna.  
+ Ninguno.  
   
-### <a name="child-elements"></a>Elemento secundario  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento **\<nameEntry>** .|  
+|[\<cryptoClass >](cryptoclass-element.md)|Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento **\<nameEntry>** .|  
   
 ### <a name="parent-elements"></a>Elemento principal  
   
@@ -76,11 +76,11 @@ Contiene una lista de las clases de criptografía que tienen una asignación a u
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.Cryptography>
 - [Esquema de los archivos de configuración](../index.md)
 - [Esquema de la configuración de criptografía](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
+- [System. Security. Cryptography. CryptoConfig. CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)

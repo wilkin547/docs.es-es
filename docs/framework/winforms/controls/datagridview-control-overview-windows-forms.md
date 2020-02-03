@@ -28,7 +28,7 @@ ms.locfileid: "76742493"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Información general del control DataGridView (Windows Forms)
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  Con el control de <xref:System.Windows.Forms.DataGridView>, puede mostrar y editar los datos tabulares de muchos tipos diferentes de orígenes de datos.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "76742493"
   
  El control <xref:System.Windows.Forms.DataGridView> es muy configurable y extensible, y proporciona muchas propiedades, métodos y eventos para personalizar su apariencia y comportamiento. Si desea que la aplicación Windows Forms muestre datos tabulares, considere la posibilidad de usar el control <xref:System.Windows.Forms.DataGridView> antes que otros (por ejemplo, <xref:System.Windows.Forms.DataGrid>). Si va a mostrar una cuadrícula pequeña de valores de solo lectura, o si está habilitando a un usuario para que edite una tabla con millones de registros, el control <xref:System.Windows.Forms.DataGridView> le proporcionará una solución eficaz y programable en memoria.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Resumen de tecnologías para el control DataGridView](datagridview-control-technology-summary-windows-forms.md)  
  Resume <xref:System.Windows.Forms.DataGridView> conceptos de control y el uso de clases relacionadas.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "76742493"
  [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo usar eficazmente el control para evitar problemas de rendimiento cuando se trabaja con grandes cantidades de datos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

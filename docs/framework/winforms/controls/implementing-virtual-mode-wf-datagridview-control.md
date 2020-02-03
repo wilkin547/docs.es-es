@@ -107,7 +107,7 @@ Si desea mostrar grandes cantidades de datos tabulares en un control <xref:Syste
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#200)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#200)]  
   
-## <a name="testing-the-application"></a>Probar la aplicación  
+## <a name="testing-the-application"></a>Prueba de la aplicación  
  Puede comprobar el formulario para asegurarse de que se comporta de la forma prevista.  
   
 #### <a name="to-test-the-form"></a>Para comprobar el formulario  
@@ -125,7 +125,7 @@ Si desea mostrar grandes cantidades de datos tabulares en un control <xref:Syste
   
  Para obtener más información acerca de los valores de almacenamiento en caché de una base de datos externa, consulte [Cómo: implementar el modo virtual con la carga de datos Just-in-Time en el control DataGridView Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

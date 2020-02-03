@@ -28,7 +28,7 @@ Se puede seleccionar un botón Windows Forms de las siguientes maneras:
   
 - Llame al método <xref:System.Windows.Forms.Button.PerformClick%2A> para seleccionar el botón mediante programación.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre el control Button](button-control-overview-windows-forms.md)
 - [Responder a clics de botones en Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

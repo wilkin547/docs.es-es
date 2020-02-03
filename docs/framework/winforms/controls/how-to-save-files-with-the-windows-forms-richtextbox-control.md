@@ -36,7 +36,7 @@ El control <xref:System.Windows.Forms.RichTextBox> de Windows Forms puede escrib
 
 - Texto sin formato con una representación textual de objetos OLE
 
-Para guardar un archivo, llame al método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. También puede utilizar el método **SaveFile** para guardar los datos en una secuencia. Para obtener más información, vea <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Para guardar un archivo, llame al método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. También puede utilizar el método **SaveFile** para guardar los datos en una secuencia. Para más información, consulte <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Para guardar el contenido del control en un archivo
 
@@ -88,9 +88,9 @@ Para guardar un archivo, llame al método <xref:System.Windows.Forms.RichTextBox
     > [!IMPORTANT]
     > En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación necesita crear un archivo, la aplicación necesita acceso de creación para la carpeta. Los permisos se establecen usando listas de control de acceso. Si el archivo ya existe, la aplicación solo necesita acceso de escritura, un privilegio menor. Siempre que sea posible, es más seguro crear el archivo durante la implementación y conceder solo acceso de lectura a un solo archivo, en lugar de crear acceso para una carpeta. Además, es más seguro escribir datos en carpetas de usuario que en la carpeta raíz o en la carpeta Archivos de programa.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox (control)](richtextbox-control-windows-forms.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

@@ -26,7 +26,7 @@ Puede usar el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> par
 
 Cuando se agrega a un formulario, el componente de <xref:System.Windows.Forms.SaveFileDialog> aparece en la bandeja en la parte inferior del Diseñador de Windows Forms en Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog (componente)](savefiledialog-component-windows-forms.md)

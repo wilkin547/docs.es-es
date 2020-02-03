@@ -24,7 +24,7 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a>Configuración del servicio  
+## <a name="service-configuration"></a>Configuración de servicio  
  El archivo de configuración de este ejemplo muestra dos características:  
   
 - Hacer que el servicio se pueda detectar a través de un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar.  

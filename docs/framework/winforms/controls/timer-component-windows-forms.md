@@ -16,7 +16,7 @@ ms.locfileid: "76735498"
 # <a name="timer-component-windows-forms"></a>Timer (Componente, formularios Windows Forms)
 El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un evento a intervalos regulares. Este componente está diseñado para un entorno de Windows Forms.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el componente Timer](timer-component-overview-windows-forms.md)  
  Presenta los conceptos generales del componente <xref:System.Windows.Forms.Timer>, que le permite configurar la aplicación para responder a eventos periódicos.  
   
@@ -34,5 +34,5 @@ El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un even
  Proporciona información de referencia acerca de la clase <xref:System.Timers.Timer?displayProperty=nameWithType> utilizada por los temporizadores basados en servidor.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  

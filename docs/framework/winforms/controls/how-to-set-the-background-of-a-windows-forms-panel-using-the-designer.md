@@ -34,7 +34,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 6. En el cuadro de diálogo **abrir** , seleccione el archivo que desea mostrar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

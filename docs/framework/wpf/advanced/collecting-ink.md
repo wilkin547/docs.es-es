@@ -24,7 +24,7 @@ ms.locfileid: "76747028"
 
 La plataforma [Windows Presentation Foundation](../index.md) recopila entradas de lápiz digitales como parte esencial de su funcionalidad. En este tema se describen los métodos para la recopilación de entradas manuscritas en Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para usar los ejemplos siguientes, primero debe instalar Visual Studio y el Windows SDK. También debe saber cómo escribir aplicaciones para WPF. Para obtener más información sobre cómo empezar a usar WPF, vea [Tutorial: mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
@@ -52,7 +52,7 @@ El <xref:System.Windows.Controls.InkCanvas> proporciona compatibilidad con vario
 
 El <xref:System.Windows.Controls.InkCanvas> proporciona compatibilidad con muchas operaciones de edición de tinta. Por ejemplo, <xref:System.Windows.Controls.InkCanvas> admite el borrado de la parte trasera del lápiz y no se necesita ningún código adicional para agregar la funcionalidad al elemento.
 
-#### <a name="selection"></a>Selección
+#### <a name="selection"></a>Número de selección
 
 Establecer el modo de selección es tan sencillo como establecer la propiedad <xref:System.Windows.Controls.InkCanvasEditingMode> en **Select**.
 
@@ -88,7 +88,7 @@ Después de copiar este código, presione **F5** en Visual Studio para ejecutar 
 
 Observe cómo el <xref:System.Windows.Controls.StackPanel> coloca los botones encima de la <xref:System.Windows.Controls.InkCanvas>. Si intenta realizar una entrada manuscrita sobre la parte superior de los botones, el <xref:System.Windows.Controls.InkCanvas> recopila y representa la tinta detrás de los botones. Esto se debe a que los botones son del mismo nivel que el <xref:System.Windows.Controls.InkCanvas> en lugar de secundarios. Además, los botones son superiores en el orden de z, por lo que la entrada de lápiz se representa detrás de ellos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

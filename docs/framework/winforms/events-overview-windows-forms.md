@@ -43,7 +43,7 @@ Los delegados se pueden enlazar a un único método o a varios métodos, lo que 
 
  El mecanismo de enlace que se usa con los delegados es dinámico: un delegado se puede enlazar en tiempo de ejecución a cualquier método cuya firma coincida con la del controlador de eventos. Con esta característica, puede configurar o cambiar el método de enlace según una condición, y asociar dinámicamente un controlador de evento a un control.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)

@@ -36,10 +36,10 @@ En Visual Studio, seleccione el control cuyo tamaño se va a cambiar y arrastre 
 
 2. En el menú **formato** , elija **igualar tamaño**y seleccione una de las cuatro opciones. Los tres primeros comandos cambian las dimensiones de los controles para que coincidan con el primer control seleccionado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
 - [Cómo: cambiar el tamaño de Windows Forms mediante el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

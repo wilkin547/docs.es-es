@@ -130,7 +130,7 @@ Puede crear un nodo derivado en un control de Windows Forms <xref:System.Windows
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [TreeView (control)](treeview-control-windows-forms.md)
-- [ListView (control)](listview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)

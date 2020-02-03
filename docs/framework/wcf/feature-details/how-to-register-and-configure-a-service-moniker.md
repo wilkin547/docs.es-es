@@ -26,7 +26,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
     [assembly: ComVisible(true)]
     ```
 
-3. Compile el cliente WCF administrado como un ensamblado con nombre seguro. Para ello se es necesario firmar con un par de claves criptográficas. Para obtener más información, vea [Signing an Assembly with a Strong Name](../../../standard/assembly/sign-strong-name.md) (Firmar un ensamblado con un nombre seguro).
+3. Compile el cliente WCF administrado como un ensamblado con nombre seguro. Para ello se es necesario firmar con un par de claves criptográficas. Para obtener más información, vea [Procedimiento para firmar un ensamblado con un nombre seguro](../../../standard/assembly/sign-strong-name.md).
 
 4. Utilice la herramienta de registro de ensamblados (Regasm.exe) con la opción `-tlb` para registrar los tipos del ensamblado en COM.
 
@@ -60,7 +60,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1
     ```
 
-     o
+     or
 
     ```
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}
@@ -96,6 +96,6 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
 
      De este modo se modifican las definiciones de la interfaz importada para que todos los métodos devuelvan `HResult`. Cualquier otro valor devuelto se convierte en parámetros de salida. La ejecución global de los métodos sigue siendo la misma. Esto permite determinar la causa de una excepción al llamar a un método en el proxy. Esta funcionalidad sólo está disponible en el código de C++.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

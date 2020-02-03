@@ -17,10 +17,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742817"
 ---
-# <a name="tabcontrol-control-windows-forms"></a>TabControl (Control, Windows Forms)
+# <a name="tabcontrol-control-windows-forms"></a>TabControl (Control, formularios Windows Forms)
 El control `TabControl` de Windows Forms muestra múltiples fichas, similares a los divisores de un cuaderno o a las etiquetas de un conjunto de carpetas de un archivador. Las fichas pueden contener imágenes y otros controles. Use `TabControl` para crear páginas de propiedades.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -46,5 +46,5 @@ El control `TabControl` de Windows Forms muestra múltiples fichas, similares a 
  [Cuadros de diálogo en Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Proporciona una lista de tareas para cuadros de diálogo que a menudo muestran fichas.  
   
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

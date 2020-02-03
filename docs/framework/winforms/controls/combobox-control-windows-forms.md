@@ -20,7 +20,7 @@ ms.locfileid: "76746181"
 # <a name="combobox-control-windows-forms"></a>ComboBox (Control, formularios Windows Forms)
 El control `ComboBox` de Windows Forms se usa para mostrar los datos en un cuadro combinado desplegable. De forma predeterminada, el control `ComboBox` aparece en dos partes: la parte superior es un cuadro de texto que permite al usuario escribir un elemento de lista. La segunda parte es un cuadro de lista que muestra una lista de los elementos de los que el usuario puede seleccionar uno.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control ComboBox](combobox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -35,6 +35,6 @@ El control `ComboBox` de Windows Forms se usa para mostrar los datos en un cuadr
  [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)  
  Proporciona una lista de las acciones que puede realizar con cuadros de lista, cuadros combinados y cuadros de lista marcados.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

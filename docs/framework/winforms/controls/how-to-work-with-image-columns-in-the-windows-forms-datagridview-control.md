@@ -30,7 +30,7 @@ El ejemplo de código siguiente muestra cómo utilizar las columnas de imagen <x
   
 - Referencias a los ensamblados System y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>

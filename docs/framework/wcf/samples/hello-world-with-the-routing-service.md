@@ -27,7 +27,7 @@ Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundatio
 
 3. Presione Entrar para iniciar el cliente.
 
-     Verá lo siguiente:
+     Debería ver la siguiente salida:
 
     ```console
      Add(100,15.99) = 115.99
@@ -57,6 +57,6 @@ Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de hospedaje y persistencia de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

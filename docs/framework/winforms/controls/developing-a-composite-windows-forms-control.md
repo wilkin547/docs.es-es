@@ -20,7 +20,7 @@ Puede desarrollar un control de Windows Forms compuesto mediante la combinación
 
 El diseñador de Windows Forms de Visual Studio proporciona una compatibilidad enriquecida en tiempo de diseño para la creación de controles de usuario.
 
-- [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 
 - [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
 
@@ -32,15 +32,15 @@ El diseñador de Windows Forms de Visual Studio proporciona una compatibilidad e
 
 - [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 
-- [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
+- [Cómo: Heredar de una clase de control](how-to-inherit-from-the-control-class.md)
 
-- [Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 
 - [Cómo: Alinear un control con los bordes de los formularios en tiempo de diseño](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 
-- [Cómo: Heredar de una clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
 
-- [Cómo: Crear controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
 
 - [Cómo: Crear controles compuestos](how-to-author-composite-controls.md)
 
@@ -48,9 +48,9 @@ El diseñador de Windows Forms de Visual Studio proporciona una compatibilidad e
 
 - [Tutorial: Crear un control de Windows Forms que aproveche las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)
 
-- [Cómo: Crear un control de Windows Forms que aproveche las características en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Cómo: Crear un control de Windows Forms que aproveche las características de tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Aplicar atributos en controles de Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)

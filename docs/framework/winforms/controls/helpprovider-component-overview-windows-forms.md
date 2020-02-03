@@ -36,6 +36,6 @@ El componente Windows Forms [HelpProvider](helpprovider-component-windows-forms.
 > [!NOTE]
 > Puede encontrar problemas al usar la ruta de acceso relativa al especificar la ruta de acceso al archivo de ayuda en el método <xref:System.Windows.Forms.Help.ShowHelp%2A> o <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propiedad del control <xref:System.Windows.Forms.HelpProvider>. Como tal, asegúrese de usar la ruta de acceso absoluta del archivo para especificar el archivo de ayuda.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Sistemas de ayuda en aplicaciones de Windows Forms](../advanced/help-systems-in-windows-forms-applications.md)

@@ -23,7 +23,7 @@ ms.locfileid: "76732961"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Cómo: Dar formato al control DataGrid de formularios Windows Forms
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  Aplicar distintos colores a varias partes de un control de <xref:System.Windows.Forms.DataGrid> puede ayudar a facilitar la lectura y la interpretación de la información. El color se puede aplicar a filas y columnas. Las filas y columnas también se pueden ocultar o mostrar a su discreción.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76732961"
   
 1. Establezca las siguientes propiedades según corresponda:  
   
-    |La propiedad|Descripción|  
+    |Propiedad|Descripción|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La propiedad <xref:System.Windows.Forms.DataGrid.BackColor%2A> define el color de las filas pares de la cuadrícula. Al establecer la propiedad <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> en un color diferente, todas las demás filas se establecen en este nuevo color (filas 1, 3, 5, etc.).|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Color de fondo de las filas pares de la cuadrícula (filas 0, 2, 4, 6, etc.).|  
@@ -153,7 +153,7 @@ ms.locfileid: "76732961"
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

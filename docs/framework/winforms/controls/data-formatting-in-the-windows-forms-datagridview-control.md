@@ -31,7 +31,7 @@ El control <xref:System.Windows.Forms.DataGridView> proporciona la conversión a
   
  Si el análisis predeterminado de los valores especificados por el usuario no satisface sus necesidades, puede controlar el evento <xref:System.Windows.Forms.DataGridView.CellParsing> del control <xref:System.Windows.Forms.DataGridView> para proporcionar el análisis personalizado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

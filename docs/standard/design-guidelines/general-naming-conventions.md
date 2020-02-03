@@ -57,22 +57,22 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 
  Por ejemplo, un método que se convierte en <xref:System.Int64> debe denominarse `ToInt64`, no `ToLong` (porque <xref:System.Int64> es un nombre CLR C#para el alias específico de `long`). En la tabla siguiente se presentan varios tipos de datos base mediante los nombres de tipo de CLR (así como los C#nombres de tipo correspondientes C++para, Visual Basic y).
 
-|C#|de Visual Basic|C++|CLR|
+|C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
 |**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**Integer**|**int**|**Int32**|
+|**int**|**Entero**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
-|**float**|**Single**|**float**|**Single**|
-|**double**|**Double**|**double**|**Double**|
+|**float**|**Único**|**float**|**Único**|
+|**double**|**Doble**|**double**|**Doble**|
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**String**|**String**|**String**|
-|**object**|**Objeto**|**Objeto**|**Objeto**|
+|**object**|**Object**|**Object**|**Object**|
 
  ✔️ usar un nombre común, como `value` o `item`, en lugar de repetir el nombre de tipo, en los casos excepcionales en los que un identificador no tiene ningún significado semántico y el tipo del parámetro no es importante.
 
@@ -97,7 +97,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

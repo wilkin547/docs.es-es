@@ -1,5 +1,5 @@
 ---
-title: Control StatusBar
+title: StatusBar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
@@ -18,7 +18,7 @@ ms.locfileid: "76742849"
   
  El control <xref:System.Windows.Forms.StatusBar> de Windows Forms se utiliza en los formularios como un área, que habitualmente se muestra en la parte inferior de una ventana, en la que una aplicación puede mostrar información de estado de diferentes tipos. <xref:System.Windows.Forms.StatusBar> controles pueden tener paneles de barra de estado en ellos que muestran iconos para indicar el estado o una serie de iconos en una animación que indican que un proceso está funcionando; por ejemplo, Microsoft Word indica que el documento se está guardando.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre StatusBar (Control)](statusbar-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control <xref:System.Windows.Forms.StatusBar>, que permite a los usuarios ver información relevante para el control que tiene el foco.  
   
@@ -42,5 +42,5 @@ ms.locfileid: "76742849"
  Reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.StatusBar>.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

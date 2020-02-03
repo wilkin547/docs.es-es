@@ -14,7 +14,7 @@ ms.locfileid: "76732363"
 # <a name="changing-the-appearance-of-windows-forms"></a>Cambiar la apariencia de Windows Forms
 Puede personalizar la apariencia de las aplicaciones de Windows Forms de muchas maneras diferentes, como cambiar el borde, la opacidad, la forma, el estilo o la configuración de una imagen de fondo para la aplicación de Windows Forms.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Cambiar los bordes de Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
  Muestra cómo cambiar el estilo de borde de un formulario.  
   

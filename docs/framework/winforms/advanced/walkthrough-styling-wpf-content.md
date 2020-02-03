@@ -20,11 +20,11 @@ ms.locfileid: "76732546"
 
 En este artículo se muestra cómo aplicar el estilo a un control de Windows Presentation Foundation (WPF) hospedado en Windows Forms.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Necesita Visual Studio para completar este tutorial.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 Abra Visual Studio y cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic C# o visual denominado `StylingWpfContent`.
 
@@ -45,7 +45,7 @@ Después de agregar un tipo de control WPF al proyecto, puede hospedarlo en un c
 
 5. Agregue un segundo control <xref:System.Windows.Controls.Button?displayProperty=nameWithType> al <xref:System.Windows.Controls.UserControl> y establezca el valor de la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> en **OK**.
 
-6. Generar el proyecto.
+6. Compile el proyecto.
 
 ## <a name="apply-a-style-to-a-wpf-control"></a>Aplicar un estilo a un control WPF
 
@@ -124,7 +124,7 @@ Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y c
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-1. Generar el proyecto.
+1. Compile el proyecto.
 
 1. Abra `Form1` en el Diseñador de Windows Forms.
 
@@ -134,7 +134,7 @@ Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y c
 
 1. Haga clic en los botones **Aceptar** y **Cancelar** y vea las diferencias.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

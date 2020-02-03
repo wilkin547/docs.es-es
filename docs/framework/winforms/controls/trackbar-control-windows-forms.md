@@ -16,7 +16,7 @@ ms.locfileid: "76747240"
 # <a name="trackbar-control-windows-forms"></a>TrackBar (Control, formularios Windows Forms)
 El control de `TrackBar` de Windows Forms (también conocido como control de "control deslizante") se utiliza para desplazarse por una gran cantidad de información o para ajustar visualmente una configuración numérica. El control `TrackBar` tiene dos partes: el control de posición, también conocido como control deslizante y las marcas de graduación. El control Thumb es la parte que se puede ajustar. Su posición corresponde a la propiedad <xref:System.Windows.Forms.TrackBar.Value%2A>. Las marcas de graduación son indicadores visuales que se espacian a intervalos regulares. La barra de seguimiento se mueve en incrementos que se especifican y se pueden alinear horizontal o verticalmente. Un ejemplo de uso de una barra de seguimiento sería para establecer la velocidad de intermitencia del cursor o la velocidad del mouse.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control TrackBar](trackbar-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `TrackBar`, que permite a los usuarios navegar por la información ajustando visualmente una configuración numérica.  
   
@@ -25,5 +25,5 @@ El control de `TrackBar` de Windows Forms (también conocido como control de "co
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

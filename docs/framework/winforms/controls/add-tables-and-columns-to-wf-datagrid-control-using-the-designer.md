@@ -16,7 +16,7 @@ ms.locfileid: "76746266"
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Cómo: Agregar tablas y columnas al control DataGrid de formularios Windows Forms mediante el Diseñador
 
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
 
 Puede mostrar los datos en el control Windows Forms <xref:System.Windows.Forms.DataGrid> en tablas y columnas creando objetos <xref:System.Windows.Forms.DataGridTableStyle> y agregándolos al objeto <xref:System.Windows.Forms.GridTableStylesCollection>, al que se tiene acceso a través de la propiedad <xref:System.Windows.Forms.DataGrid> del control <xref:System.Windows.Forms.DataGrid.TableStyles%2A>. Cada estilo de tabla muestra el contenido de la tabla de datos especificada en la propiedad <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de la <xref:System.Windows.Forms.DataGridTableStyle>. De forma predeterminada, un estilo de tabla sin estilos de columna especificados mostrará todas las columnas de esa tabla de datos. Puede restringir Qué columnas de la tabla aparecen agregando <xref:System.Windows.Forms.DataGridColumnStyle> objetos a la <xref:System.Windows.Forms.GridColumnStylesCollection>, a la que se tiene acceso a través de la propiedad <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> de cada <xref:System.Windows.Forms.DataGridTableStyle>.
 
@@ -54,7 +54,7 @@ Los procedimientos siguientes requieren un proyecto de **aplicación Windows** c
 
 5. En el cuadro **propiedades** del editor de la colección, seleccione el valor <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> de la columna que desea mostrar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGrid (control)](datagrid-control-windows-forms.md)
 - [Cómo: Eliminar u ocultar columnas del control DataGrid de formularios Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

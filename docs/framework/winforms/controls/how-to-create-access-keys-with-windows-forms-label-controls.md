@@ -31,7 +31,7 @@ Windows Forms controles de <xref:System.Windows.Forms.Label> se pueden usar para
   
 1. Dibuje primero la etiqueta y, a continuación, dibuje el otro control.  
   
-     O bien,  
+     O bien  
   
      Dibuje los controles en cualquier orden y establezca la propiedad <xref:System.Windows.Forms.Control.TabIndex%2A> de la etiqueta en una menos que el otro control.  
   
@@ -63,7 +63,7 @@ Windows Forms controles de <xref:System.Windows.Forms.Label> se pueden usar para
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Información general sobre el control Label](label-control-overview-windows-forms.md)

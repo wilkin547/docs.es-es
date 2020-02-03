@@ -22,7 +22,7 @@ El control de <xref:System.Windows.Forms.DomainUpDown> de Windows Forms es simil
   
  Este control solo muestra cadenas de texto. Si desea un control que muestre valores numéricos, utilice el control <xref:System.Windows.Forms.NumericUpDown>. Para obtener más información, vea [NumericUpDown (control](numericupdown-control-windows-forms.md) ).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control DomainUpDown](domainupdown-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control <xref:System.Windows.Forms.DomainUpDown>, que permite a los usuarios examinar y seleccionar en una lista de cadenas de texto.  
   

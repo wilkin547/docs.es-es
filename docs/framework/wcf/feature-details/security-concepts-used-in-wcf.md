@@ -20,7 +20,7 @@ El grupo Microsoft Patterns and Practices escribió una nota del producto detall
   
 ## <a name="industry-wide-security-specifications"></a>Especificaciones de seguridad utilizadas por la industria  
   
-### <a name="public-key-infrastructure"></a>Infraestructura de clave pública (PKI)  
+### <a name="public-key-infrastructure"></a>Infraestructura de clave pública  
 
 La infraestructura de clave pública (PKI) es un sistema de certificados digitales, entidades de certificación y otras autoridades de registro que comprueban y autentican cada parte implicada en una transacción electrónica mediante el uso de criptografía de clave pública.
   
@@ -48,7 +48,7 @@ La infraestructura de clave pública (PKI) es un sistema de certificados digital
   
  Para obtener más información sobre estos temas, vea [mecanismos de Access Control](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

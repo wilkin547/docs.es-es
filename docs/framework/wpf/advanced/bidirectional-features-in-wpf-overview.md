@@ -134,7 +134,7 @@ En el ejemplo siguiente se dibuja un <xref:System.Windows.Controls.ToolBar>de <x
 
 Hay algunos casos en los que <xref:System.Windows.FlowDirection> no se comporta de la manera esperada. En esta sección se describen dos de estas excepciones.
 
-**Image**
+**Imagen**
 
 Un <xref:System.Windows.Controls.Image> representa un control que muestra una imagen. En XAML, se puede usar con una propiedad <xref:System.Windows.Controls.Image.Source%2A> que define el identificador uniforme de recursos (URI) del <xref:System.Windows.Controls.Image> que se va a mostrar.
 
@@ -154,7 +154,7 @@ En el ejemplo siguiente se muestra que el <xref:System.Windows.Controls.Image> n
 > [!NOTE]
 > En los archivos de descarga se incluye un archivo **ms_logo. jpg** . En el código, se supone que el archivo .jpg no está dentro del proyecto, sino en alguna ubicación de la unidad C:\. Debe copiar el archivo .jpg de los archivos del proyecto en la unidad C:\ o cambiar el código para buscar el archivo dentro del proyecto. Para realizar este cambio `Source="file://c:/ms_logo.jpg"` a `Source="ms_logo.jpg"`.
 
-**Rutas de acceso**
+**Paths**
 
 Además de un <xref:System.Windows.Controls.Image>, se <xref:System.Windows.Shapes.Path>otro elemento interesante. Patch es un objeto que puede dibujar una serie de líneas y curvas conectadas. Se comporta de forma similar a un <xref:System.Windows.Controls.Image> con respecto a su <xref:System.Windows.FlowDirection>; por ejemplo, su <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection.RightToLeft>es un reflejo horizontal de su <xref:System.Windows.FlowDirection.LeftToRight> uno. Sin embargo, a diferencia de un <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> hereda su <xref:System.Windows.FlowDirection> del contenedor y no es necesario especificarlo explícitamente.
 
@@ -198,7 +198,7 @@ La propiedad <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> s
 
 Esta propiedad especifica el tipo de sustitución de números que se va a realizar. Toma uno de los siguientes valores de enumeración de <xref:System.Windows.Media.NumberSubstitutionMethod>:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: el método de sustitución se determina en función de la propiedad <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> de la referencia cultural del número. Esta es la opción predeterminada.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: el método de sustitución se determina en función de la propiedad <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> de la referencia cultural del número. Este es el valor predeterminado.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Si la referencia cultural de número es una referencia cultural árabe o persa, especifica que los dígitos dependen del contexto.
 

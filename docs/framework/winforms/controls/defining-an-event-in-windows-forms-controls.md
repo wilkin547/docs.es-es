@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Eventos de los controles de Windows Forms](events-in-windows-forms-controls.md)
 - [Eventos](../../../standard/events/index.md)

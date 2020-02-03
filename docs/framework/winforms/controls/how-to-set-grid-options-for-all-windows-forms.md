@@ -30,6 +30,6 @@ A medida que se usa para trabajar en el entorno de desarrollo de Visual Studio, 
 
    En el panel derecho, en el encabezado **configuración de diseño** , puede establecer la configuración predeterminada de cuadrícula para todos los formularios nuevos que cree. Esta configuración incluye el tamaño de la cuadrícula, si los controles se ajustan a ella y si está activada de forma predeterminada. Además, puede seleccionar entre los modos de diseño **SnapToGrid** y las **guías de alineación** . Para obtener más información sobre las líneas de ajuste, vea [Tutorial: organizar controles en Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Opciones: Diseñador de Windows Forms](/visualstudio/ide/reference/options-windows-forms-designer)

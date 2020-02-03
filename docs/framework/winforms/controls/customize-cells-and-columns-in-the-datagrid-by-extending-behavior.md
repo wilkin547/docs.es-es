@@ -68,7 +68,7 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
   
 - Referencias a los ensamblados System, System.Windows.Forms y System.Drawing.  
  
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>

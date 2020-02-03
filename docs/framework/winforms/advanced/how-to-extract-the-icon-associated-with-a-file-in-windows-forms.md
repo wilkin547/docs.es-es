@@ -32,7 +32,7 @@ Muchos archivos tienen iconos incrustados que proporcionan una representación v
   
      Tendrá que asegurarse de que el formulario importa el espacio de nombres <xref:System.IO>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
-- [ListView (control)](../controls/listview-control-windows-forms.md)
+- [ListView (Control)](../controls/listview-control-windows-forms.md)

@@ -51,7 +51,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
 ### <a name="multiple-contracts-in-a-queue"></a>Varios contratos en una cola  
  Los mensajes en una cola pueden implementar diferentes contratos. En este caso, es esencial que una de las condiciones siguientes sea verdadera para leer correctamente y procesar todos los mensajes:  
   
-- Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el enfoque recomendado.  
+- Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el método recomendado.  
   
 - Especifique varios puntos de conexión con contratos diferentes, pero asegúrese de que todos los puntos de conexión utilicen el mismo objeto `NetMsmqBinding`. La lógica de distribución en ServiceModel utiliza una bomba de mensaje que lee los mensajes del canal de transporte para su distribución, lo que eventualmente desmultiplexa mensajes basados en el contrato a extremos diferentes. Una bomba de mensaje se crea para un par de escucha URI/enlace. La dirección de la cola es utilizada como URI de escucha por el agente de escucha puesto en cola. Si todos los extremos utilizan el mismo objeto de enlace, ello garantiza que se utiliza una única bomba de mensaje para leer el mensaje y desmultiplexarlo a los extremos pertinentes basados en el contrato.  
   
@@ -63,7 +63,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
  Especificar la propiedad `QueueTransferProtocol` es una característica de solo envío. Es una indicación por parte del cliente sobre qué tipo de protocolo de transferencia de la cola debe utilizarse.  
   
 ### <a name="using-active-directory"></a>Utilizar Active Directory  
- MSMQ se entrega con soporte para la integración de Active Directory. Cuando MSMQ se instala con integración de Active Directory, el equipo debe formar parte de un dominio de Windows. Active Directory se utiliza para publicar colas para la detección; dichas colas se denominan *colas públicas*. Al direccionar una cola, la cola se puede resolver utilizando Active Directory. Esto es similar a cómo Domain Name System (DNS) se utiliza para resolver la dirección IP de un nombre de red. La propiedad `UseActiveDirectory` en `NetMsmqBinding` es un valor booleano que indica si el canal en cola debe utilizar Active Directory para resolver el URI de la cola. De manera predeterminada, tiene el valor `false`. Si la propiedad `UseActiveDirectory` está establecida en `true`,el canal en cola utiliza Active Directory para convertir el URI net.msmq:// en nombre de formato.  
+ MSMQ se entrega con soporte para la integración de Active Directory. Cuando MSMQ se instala con integración de Active Directory, el equipo debe formar parte de un dominio de Windows. Active Directory se utiliza para publicar colas para la detección; dichas colas se denominan *colas públicas*. Al direccionar una cola, la cola se puede resolver utilizando Active Directory. Esto es similar a cómo Domain Name System (DNS) se utiliza para resolver la dirección IP de un nombre de red. La propiedad `UseActiveDirectory` en `NetMsmqBinding` es un valor booleano que indica si el canal en cola debe utilizar Active Directory para resolver el URI de la cola. De forma predeterminada, se establece en `false`. Si la propiedad `UseActiveDirectory` está establecida en `true`,el canal en cola utiliza Active Directory para convertir el URI net.msmq:// en nombre de formato.  
   
  La propiedad `UseActiveDirectory` solo es significativa para el cliente que está enviando el mensaje porque se utiliza para resolver la dirección de la cola al enviar mensajes.  
   
@@ -72,9 +72,9 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
 |Dirección de cola basada en URI WCF|Utilizar la propiedad de Active Directory|Propiedad del protocolo de transferencia de la cola|Nombres de formato de MSMQ resultantes|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net. MSMQ://\<nombre del equipo >/Private/ABC|False (predeterminado)|Native (valor predeterminado)|DIRECT=OS:machine-name\private$\abc|  
-|Net. MSMQ://\<nombre del equipo >/Private/ABC|Falso|SRMP|DIRECT =http://machine/msmq/private $/ABC|  
-|Net. MSMQ://\<nombre del equipo >/Private/ABC|Verdadero|Nativo|PUBLIC=some-guid (el GUID de la cola)|  
+|Net. MSMQ://\<nombre del equipo >/Private/ABC|False (valor predeterminado)|Native (valor predeterminado)|DIRECT=OS:machine-name\private$\abc|  
+|Net. MSMQ://\<nombre del equipo >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
+|Net. MSMQ://\<nombre del equipo >/Private/ABC|True|Nativa|PUBLIC=some-guid (el GUID de la cola)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Leer los mensajes de la cola de mensajes no enviados o la cola de mensajes dudosos  
  Para leer los mensajes de una cola de mensajes dudosos que es una subcola de la cola de destino, abra `ServiceHost` con la dirección de la subcola.  
@@ -87,23 +87,23 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Al utilizar una cola de mensajes no enviados personalizada, observe que la cola de mensajes no enviados debe estar situada en el equipo local. Como tal, el URI para la cola de mensajes no enviados está restringido a la forma:  
   
- net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
+ net. MSMQ://localhost/[Private/] \<> *de nombre de cola de mensajes no enviados personalizado*.  
   
  Un servicio WCF comprueba que todos los mensajes que recibe se dirigieron a la cola concreta en la que escucha. Si la cola de destino del mensaje no coincide con la cola donde se encuentra, el servicio no procesa el mensaje. Se trata de una cuestión que los servicios que escuchan a una cola de mensajes no enviados deben abordar porque cualquier mensaje en la cola de mensajes no enviados debía ser entregado a otra parte. Para leer los mensajes de una cola de mensajes no enviados o de una cola de mensajes dudosos, debe utilizarse `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any>. Para obtener un ejemplo, vea [colas de mensajes con problemas de entrega](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding y direccionamiento del servicio  
  `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, WCF solo admite el direccionamiento de nombres de formato. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ. FormatName:\<*nombre de formato de msmq*>>  
   
  MSMQ-Format-Name tiene el formato especificado por MSMQ en [About Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Observe que solo puede utilizar los nombres de formato directos, y los nombres de formato públicos y privados (requiere la integración de Active Directory) al recibir los mensajes de una cola utilizando `MsmqIntegrationBinding`. Sin embargo, se aconseja que utilice los nombres de formato directos. Por ejemplo, en Windows Vista, el uso de cualquier otro nombre de formato produce un error porque el sistema intenta abrir una subcola, que solo se puede abrir con nombres de formato directo.  
   
- Al direccionar SRMP utilizando `MsmqIntegrationBinding`, no hay ningún requisito para agregar /msmq/ en el nombre de formato directo para ayudar a Internet Information Services (IIS) con la distribución. Por ejemplo: al direccionar una cola ABC mediante el protocolo SRMP, en lugar de DIRECT =http://adatum.com/msmq/private $/ABC, debe usar DIRECT =http://adatum.com/private $/ABC.  
+ Al direccionar SRMP utilizando `MsmqIntegrationBinding`, no hay ningún requisito para agregar /msmq/ en el nombre de formato directo para ayudar a Internet Information Services (IIS) con la distribución. Por ejemplo: al direccionar una cola ABC mediante el protocolo SRMP, en lugar de DIRECT =http://adatum.com/msmq/private$/ABC, debe usar DIRECT =http://adatum.com/private$/ABC.  
   
  Observe que no puede utilizar net.msmq:// direccionando con `MsmqIntegrationBinding`. Dado que `MsmqIntegrationBinding` admite el direccionamiento de nombres de formato de MSMQ de forma libre, puede utilizar un servicio WCF que use este enlace para utilizar las características de multidifusión y lista de distribución en MSMQ. Una excepción es especificar `CustomDeadLetterQueue` al utilizar `MsmqIntegrationBinding`. Debe tener la forma net.msmq://, similar a cómo se especifica utilizando `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Alojamiento web de una aplicación en cola](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

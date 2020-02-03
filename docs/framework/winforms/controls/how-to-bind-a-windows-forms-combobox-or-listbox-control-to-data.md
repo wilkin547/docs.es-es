@@ -31,7 +31,7 @@ Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.For
   
 2. Si va a enlazar a una tabla, establezca la propiedad `DisplayMember` en el nombre de una columna del origen de datos.  
   
-     \- o -  
+     \- O bien  
   
      Si va a enlazar a un <xref:System.Collections.IList>, establezca el miembro display en una propiedad pública del tipo en la lista.  
   
@@ -53,7 +53,7 @@ Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.For
     > [!NOTE]
     > Si está enlazado a un origen de datos que no implementa la interfaz <xref:System.ComponentModel.IBindingList>, como una <xref:System.Collections.ArrayList>, los datos del control enlazado no se actualizarán cuando se actualice el origen de datos. Por ejemplo, si tiene un cuadro combinado enlazado a una <xref:System.Collections.ArrayList> y se agregan datos al <xref:System.Collections.ArrayList>, estos nuevos elementos no aparecerán en el cuadro combinado. Sin embargo, puede forzar que el cuadro combinado se actualice llamando a los métodos <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> y <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> en la instancia de la clase <xref:System.Windows.Forms.BindingContext> a la que está enlazado el control.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

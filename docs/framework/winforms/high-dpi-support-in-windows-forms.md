@@ -16,7 +16,7 @@ ms.locfileid: "76741888"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Compatibilidad con PPP alta en Windows Forms
 
-A partir de la .NET Framework 4,7, Windows Forms incluye mejoras en los escenarios comunes de PPP alto y dinámicos. Se incluyen los siguientes:
+A partir de la .NET Framework 4,7, Windows Forms incluye mejoras en los escenarios comunes de PPP alto y dinámicos. Entre ellas se incluyen las siguientes:
 
 - Mejoras en el ajuste de escala y diseño de varios controles Windows Forms, como el control <xref:System.Windows.Forms.MonthCalendar> y el control <xref:System.Windows.Forms.CheckedListBox>.
 
@@ -94,7 +94,7 @@ A partir de la .NET Framework 4,7, tres nuevos eventos le permiten controlar med
 
 ## <a name="new-helper-methods-and-properties"></a>Nuevas propiedades y métodos auxiliares
 
-El .NET Framework 4,7 también agrega una serie de nuevas propiedades y métodos auxiliares que proporcionan información sobre el ajuste de escala de PPP y permiten realizar el ajuste de escala de PPP. Se incluyen los siguientes:
+El .NET Framework 4,7 también agrega una serie de nuevas propiedades y métodos auxiliares que proporcionan información sobre el ajuste de escala de PPP y permiten realizar el ajuste de escala de PPP. Entre ellas se incluyen las siguientes:
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, que convierte un valor de los píxeles lógicos a los de dispositivo.
 
@@ -128,7 +128,7 @@ También puede comprobar la versión de la .NET Framework en la que se compiló 
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Windows Forms Agregar elemento de configuración](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Ajustar el tamaño y la escala de Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

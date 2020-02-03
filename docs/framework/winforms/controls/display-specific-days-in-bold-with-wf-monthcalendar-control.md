@@ -59,7 +59,7 @@ El control <xref:System.Windows.Forms.MonthCalendar> de Windows Forms puede most
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     -O bien-  
+     O bien  
   
      Cree un conjunto de fechas en negrita de una vez creando una matriz de <xref:System.DateTime> objetos y asignándoles una de las propiedades.  
   
@@ -97,7 +97,7 @@ El control <xref:System.Windows.Forms.MonthCalendar> de Windows Forms puede most
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     -O bien-  
+     O bien  
   
      Quite todas las fechas en negrita de una de las tres listas llamando al método <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>.  
   
@@ -127,7 +127,7 @@ El control <xref:System.Windows.Forms.MonthCalendar> de Windows Forms puede most
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
 - [Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

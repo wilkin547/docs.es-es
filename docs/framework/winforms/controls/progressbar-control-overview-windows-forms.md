@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control ProgressBar
+title: Información general sobre ProgressBar (Control)
 ms.date: 03/30/2017
 f1_keywords:
 - ProgressBar
@@ -35,7 +35,7 @@ ms.locfileid: "76741282"
 > [!IMPORTANT]
 > Los controles <xref:System.Windows.Forms.StatusStrip> y <xref:System.Windows.Forms.ToolStripStatusLabel> reemplazan y agregan funcionalidad a los controles <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel>; sin embargo, los controles <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> se conservan por compatibilidad con versiones anteriores y uso futuro, si así lo decide.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ProgressBar>
 - [ProgressBar (control)](progressbar-control-windows-forms.md)

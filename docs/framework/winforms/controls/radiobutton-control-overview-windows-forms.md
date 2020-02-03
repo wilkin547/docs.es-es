@@ -24,7 +24,7 @@ Windows Forms los controles de <xref:System.Windows.Forms.RadioButton> presentan
   
  El control <xref:System.Windows.Forms.RadioButton> puede aparecer como un botón de comando, que parece que se ha presionado si se selecciona, si la propiedad <xref:System.Windows.Forms.RadioButton.Appearance%2A> está establecida en <xref:System.Windows.Forms.Appearance.Button>. Los botones de radio también pueden mostrar imágenes mediante las propiedades <xref:System.Windows.Forms.ButtonBase.Image%2A> y <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Para obtener más información, vea [Cómo: establecer la imagen mostrada por un Control Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Información general del control Panel](panel-control-overview-windows-forms.md)

@@ -15,7 +15,7 @@ ms.locfileid: "76747013"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hospedar contenido de Win32 en WPF
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Consulte [interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md).
 
@@ -368,6 +368,6 @@ Lo que le proporciona:
 
 ![Captura de pantalla de la aplicación WPF en ejecución.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)

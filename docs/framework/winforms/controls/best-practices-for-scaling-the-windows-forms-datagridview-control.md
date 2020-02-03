@@ -70,7 +70,7 @@ Para obtener más información, consulte [Opciones de ajuste de tamaño en el co
 
 La colección de <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> no funciona de forma eficaz con selecciones grandes. Las colecciones <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> y <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> también pueden ser ineficaces, aunque a un menor grado, ya que hay muchas menos filas que las celdas de un control <xref:System.Windows.Forms.DataGridView> típico y muchas menos columnas que filas. Para evitar las penalizaciones de rendimiento al trabajar con estas colecciones, use las siguientes directrices:
 
-- Para determinar si se han seleccionado todas las celdas de la <xref:System.Windows.Forms.DataGridView> antes de tener acceso al contenido de la colección <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, compruebe el valor devuelto del método <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>. Sin embargo, tenga en cuenta que este método puede hacer que las filas dejen de estar compartidas. Para obtener más información, vea la siguiente sección.
+- Para determinar si se han seleccionado todas las celdas de la <xref:System.Windows.Forms.DataGridView> antes de tener acceso al contenido de la colección <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, compruebe el valor devuelto del método <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>. Sin embargo, tenga en cuenta que este método puede hacer que las filas dejen de estar compartidas. Para obtener más información, vea la próxima sección.
 
 - Evite utilizar la propiedad <xref:System.Collections.ICollection.Count%2A> del <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=nameWithType> para determinar el número de celdas seleccionadas. En su lugar, use el método <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=nameWithType> y pase el valor <xref:System.Windows.Forms.DataGridViewElementStates.Selected?displayProperty=nameWithType>. Del mismo modo, use los métodos <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=nameWithType> para determinar el número de elementos seleccionados, en lugar de tener acceso a las colecciones de filas y columnas seleccionadas.
 
@@ -142,7 +142,7 @@ Para evitar que las filas deje de estar compartidas, utilice las siguientes dire
 
 - No llame a la sobrecarga `Sort(IComparer)` del método <xref:System.Windows.Forms.DataGridView.Sort%2A>. La ordenación con un comparador personalizado hace que todas las filas dejen de estar compartidas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)

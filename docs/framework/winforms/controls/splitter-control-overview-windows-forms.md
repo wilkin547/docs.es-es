@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control Splitter
+title: Información general sobre Splitter (Control)
 ms.date: 03/30/2017
 f1_keywords:
 - Splitter
@@ -22,8 +22,8 @@ ms.locfileid: "76742890"
 ## <a name="working-with-the-splitter-control"></a>Trabajar con el control divisor  
  Cuando el usuario apunta el puntero del mouse en el borde desacoplado de un control cuyo tamaño se puede cambiar por un control divisor, el puntero cambia su apariencia para indicar que se puede cambiar el tamaño del control. Con el control divisor, el usuario puede cambiar el tamaño del control acoplado inmediatamente antes. Por lo tanto, para permitir al usuario cambiar el tamaño de un control acoplado en tiempo de ejecución, acople el control cuyo tamaño se va a cambiar a un borde de un contenedor y, a continuación, acople un control divisor al mismo lado de dicho contenedor.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Procedimiento para acoplar controles en formularios Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

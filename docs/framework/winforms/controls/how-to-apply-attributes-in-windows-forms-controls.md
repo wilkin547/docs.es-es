@@ -77,7 +77,7 @@ Para desarrollar componentes y controles que interactúen correctamente con el e
   
 - El formulario que hospeda el `AttributesDemoControl` requiere una referencia al ensamblado `AttributesDemoControl` para compilar.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>

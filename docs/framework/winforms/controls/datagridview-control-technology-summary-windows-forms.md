@@ -20,7 +20,7 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
 ## <a name="keywords"></a>Palabras clave  
  DataGridView, BindingSource, tabla, celda, enlace de datos, modo virtual  
   
-## <a name="namespaces"></a>Espacios de nombres de  
+## <a name="namespaces"></a>Espacios de nombres  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
  <xref:System.Data?displayProperty=nameWithType>  
@@ -28,7 +28,7 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
 ## <a name="related-technologies"></a>Tecnologías relacionadas  
  `BindingSource`  
   
-## <a name="background"></a>Información previa de  
+## <a name="background"></a>Información previa  
  Los diseñadores de la interfaz de usuario (UI) suelen encontrar que es necesario mostrar los datos tabulares a los usuarios. El .NET Framework proporciona varias maneras de mostrar los datos en una tabla o cuadrícula. El control de `DataGridView` representa la evolución más reciente de esta tecnología para las aplicaciones de Windows Forms.  
   
  El control `DataGridView` puede mostrar filas de datos de un almacén de datos. Se admiten muchos tipos de almacenes de datos. El almacén de datos puede contener datos simples sin tipo, como una matriz unidimensional, o puede contener datos con tipo, como un <xref:System.Data.DataSet>. Para obtener más información, vea [Cómo: enlazar datos al control DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
@@ -55,12 +55,12 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
 |Presentación de datos|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> y clases derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> y clases derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> y clases derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
 |extensibilidad de <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridViewCell> y clases derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> y clases derivadas<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## <a name="whats-new"></a>Novedades  
- El control de <xref:System.Windows.Forms.DataGridView> está diseñado para ser una solución completa para Mostrar datos tabulares con Windows Forms. Debe considerar la posibilidad de usar el control de <xref:System.Windows.Forms.DataGridView> antes que otras soluciones, como <xref:System.Windows.Forms.DataGrid>, cuando se crea una nueva aplicación. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+## <a name="whats-new"></a>What's New  
+ El control de <xref:System.Windows.Forms.DataGridView> está diseñado para ser una solución completa para Mostrar datos tabulares con Windows Forms. Debe considerar la posibilidad de usar el control de <xref:System.Windows.Forms.DataGridView> antes que otras soluciones, como <xref:System.Windows.Forms.DataGrid>, cuando se crea una nueva aplicación. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  El control <xref:System.Windows.Forms.DataGridView> puede funcionar en estrecha colaboración con el componente <xref:System.Windows.Forms.BindingSource>. Este componente está diseñado para ser el origen de datos principal de un formulario. Puede administrar la interacción entre un control de <xref:System.Windows.Forms.DataGridView> y su origen de datos, independientemente del tipo de origen de datos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)
 - [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)

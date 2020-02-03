@@ -77,12 +77,12 @@ Además, los componentes se pueden agregar a un formulario en tiempo de ejecuci�
     > [!IMPORTANT]
     > Puede exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia a un UserControl malintencionado. Esto solo suponer un problema en el caso de que una persona malintencionada cree un control personalizado perjudicial y, después, lo agregue por error a su proyecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Procedimiento para agregar controles ActiveX a formularios Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Insertar controles en Windows Forms](putting-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

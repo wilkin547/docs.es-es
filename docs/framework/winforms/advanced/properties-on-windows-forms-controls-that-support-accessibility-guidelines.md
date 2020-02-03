@@ -24,12 +24,12 @@ Los controles del cuadro de herramientas estándar para Windows Forms admiten mu
 |AccessibleName|El nombre que se inscribirá en las ayudas de accesibilidad.|  
 |AccessibleRole|Describe el uso del elemento en la interfaz de usuario.|  
 |TabIndex|Crea una ruta de navegación sensata a través del formulario. Es importante que los controles sin etiquetas intrínsecas, como los cuadros de texto, tengan su etiqueta asociada inmediatamente delante en el orden de tabulación.|  
-|Text|Use el carácter "&" para crear teclas de acceso. El uso de las teclas de acceso forma parte de proporcionar acceso de teclado documentado a las características de.|  
+|Texto|Use el carácter "&" para crear teclas de acceso. El uso de las teclas de acceso forma parte de proporcionar acceso de teclado documentado a las características de.|  
 |Tamaño de fuente|Si el tamaño de fuente no es ajustable, debe establecerse en 10 puntos o más. Una vez establecido el tamaño de fuente del formulario, a partir de ese momento, todos los controles agregados al formulario tendrán el mismo tamaño.|  
 |Forecolor|Si esta propiedad se establece en el valor predeterminado, se usarán las preferencias de color del usuario en el formulario.|  
 |Backcolor|Si esta propiedad se establece en el valor predeterminado, se usarán las preferencias de color del usuario en el formulario.|  
 |BackgroundImage|Deje esta propiedad en blanco para que el texto sea más legible.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tutorial: Crear una aplicación accesible basada en Windows](walkthrough-creating-an-accessible-windows-based-application.md)

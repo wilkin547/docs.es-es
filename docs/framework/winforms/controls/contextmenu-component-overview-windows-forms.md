@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el componente ContextMenu
+title: Información general sobre ContextMenu
 ms.date: 03/30/2017
 f1_keywords:
 - ContextMenu
@@ -26,7 +26,7 @@ ms.locfileid: "76746201"
   
  La propiedad clave del componente <xref:System.Windows.Forms.ContextMenu> es la propiedad <xref:System.Windows.Forms.Menu.MenuItems%2A>. Puede agregar elementos de menú mediante programación creando <xref:System.Windows.Forms.MenuItem> objetos y agregándolos al <xref:System.Windows.Forms.Menu.MenuItemCollection> del menú contextual. Dado que los elementos de un menú contextual normalmente se dibujan desde otros menús, los elementos se agregan a menudo a un menú contextual copiándolos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

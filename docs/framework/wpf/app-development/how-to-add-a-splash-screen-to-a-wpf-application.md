@@ -44,7 +44,7 @@ En este tema se muestra cómo agregar una ventana de inicio o una *pantalla de p
 
 En **Explorador de soluciones**, elimine la imagen de la pantalla de presentación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.SplashScreen>
 - [Cómo: agregar elementos existentes a un proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

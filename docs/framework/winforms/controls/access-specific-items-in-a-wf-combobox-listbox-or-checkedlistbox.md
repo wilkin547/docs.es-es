@@ -51,7 +51,7 @@ El acceso a elementos específicos de un Windows Forms cuadro combinado, un cuad
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

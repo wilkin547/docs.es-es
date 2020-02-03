@@ -28,8 +28,8 @@ En la vista de detalles, el control <xref:System.Windows.Forms.ListView> puede m
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView (control)](listview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
 - [Información general del control ListView](listview-control-overview-windows-forms.md)

@@ -31,7 +31,7 @@ Al crear un control personalizado, a menudo es necesario depurar su comportamien
 
 Puede depurar los controles personalizados mediante Visual Studio, tal y como lo haría con cualquier otra clase de .NET Framework. La diferencia es que se depurará una instancia independiente de Visual Studio que ejecute el código del control personalizado.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 El primer paso es crear el proyecto de la aplicación. Usará este proyecto para compilar la aplicación que hospeda el control personalizado.
 
@@ -113,7 +113,7 @@ Para depurar el comportamiento en tiempo de diseño del control personalizado, d
 
      En la sección **acción de inicio** , seleccione **programa externo de inicio**. Va a depurar una instancia independiente de Visual Studio, por lo que debe hacer clic en los puntos suspensivos (![el botón de puntos suspensivos (...) en el botón ventana Propiedades de Visual Studio](./media/visual-studio-ellipsis-button.png)) para buscar el IDE de Visual Studio. El nombre del archivo ejecutable es **devenv. exe**y, si lo instaló en la ubicación predeterminada, su ruta de acceso es *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
 
-3. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
+3. Seleccione **Aceptar** para cerrar el cuadro de diálogo.
 
 4. Haga clic con el botón derecho en el proyecto **DebugControlLibrary** y seleccione **establecer como proyecto de inicio** para habilitar esta configuración de depuración.
 
@@ -143,12 +143,12 @@ Ahora está listo para depurar el control personalizado mientras se ejecuta en m
 
 Ahora que puede depurar los controles personalizados en tiempo de diseño, hay muchas posibilidades de expandir la interacción del control con el IDE de Visual Studio.
 
-- Puede usar la propiedad <xref:System.ComponentModel.Component.DesignMode%2A> de la clase <xref:System.ComponentModel.Component> para escribir código que solo se ejecutará en tiempo de diseño. Para obtener información detallada, vea <xref:System.ComponentModel.Component.DesignMode%2A>.
+- Puede usar la propiedad <xref:System.ComponentModel.Component.DesignMode%2A> de la clase <xref:System.ComponentModel.Component> para escribir código que solo se ejecutará en tiempo de diseño. Para obtener información detallada, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.
 
 - Hay varios atributos que se pueden aplicar a las propiedades del control para manipular la interacción del control personalizado con el diseñador. Puede encontrar estos atributos en el espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>.
 
 - Puede escribir un diseñador personalizado para el control personalizado. Esto le proporciona un control completo sobre la experiencia de diseño mediante la infraestructura de diseñador extensible expuesta por Visual Studio. Para obtener más información, vea [Tutorial: crear un control de Windows Forms que aprovecha las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tutorial: Crear un control de Windows Forms que aproveche las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)

@@ -1,5 +1,5 @@
 ---
-title: Componente FontDialog
+title: FontDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], dialog box
@@ -16,7 +16,7 @@ ms.locfileid: "76745689"
 # <a name="fontdialog-component-windows-forms"></a>FontDialog (Componente, formularios Windows Forms)
 El componente <xref:System.Windows.Forms.FontDialog> de Windows Forms es un cuadro de diálogo preconfigurado. Es el mismo cuadro de diálogo de **fuente** que expone el sistema operativo Windows. El componente hereda de la clase <xref:System.Windows.Forms.CommonDialog>.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del componente FontDialog](fontdialog-component-overview-windows-forms.md)  
  Presenta los conceptos generales del componente de <xref:System.Windows.Forms.FontDialog>, que se usa para mostrar un cuadro de diálogo preconfigurado. Los usuarios pueden utilizar el cuadro de diálogo para manipular las fuentes y su configuración.  
   
@@ -31,5 +31,5 @@ El componente <xref:System.Windows.Forms.FontDialog> de Windows Forms es un cuad
  [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)  
  Describe un conjunto de controles y componentes que permiten a los usuarios realizar interacciones estándar con la aplicación o el sistema.  
   
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

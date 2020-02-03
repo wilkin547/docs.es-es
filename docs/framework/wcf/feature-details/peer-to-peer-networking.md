@@ -16,7 +16,7 @@ El canal del mismo nivel es una tecnología de comunicación punto a punto (P2P)
   
  En las secciones siguientes se ofrece información sobre la conexión de red punto a punto y el uso de las clases de canal del mismo nivel para crear aplicaciones de red habilitadas para el mismo nivel.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Escenarios de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md): describe los escenarios de desarrollo admitidos por las API de canal del mismo nivel, como la mensajería de publicación/suscripción, la colaboración, el procesamiento distribuido y los juegos.  
   
  [Conceptos de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md): describe las mallas del mismo nivel, los nodos del mismo nivel, la seguridad del canal del mismo nivel y las resoluciones del mismo nivel.  

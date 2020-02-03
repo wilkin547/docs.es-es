@@ -37,7 +37,7 @@ El valor numérico de la Windows Forms control de <xref:System.Windows.Forms.Num
     numericUpDown1->Value = 55;  
     ```  
   
-     O bien,  
+     O bien  
   
 2. Llame al método <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> o <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> para aumentar o disminuir el valor en la cantidad especificada en la propiedad <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.  
   
@@ -89,7 +89,7 @@ El valor numérico de la Windows Forms control de <xref:System.Windows.Forms.Num
     }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>

@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> controles se usan para agrupar o
 
 3. Opta Si desea agregar un borde a un panel, establezca su propiedad <xref:System.Windows.Forms.BorderStyle>. Hay tres opciones: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>y <xref:System.Windows.Forms.BorderStyle.None>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Panel (control)](panel-control-windows-forms.md)
 - [Información general del control Panel](panel-control-overview-windows-forms.md)

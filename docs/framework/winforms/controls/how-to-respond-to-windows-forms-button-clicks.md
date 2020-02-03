@@ -22,7 +22,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735715"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Cómo: Responder a clics de botones en Windows Forms
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Cómo: Responder a clics de botones en formularios Windows Forms
 El uso más básico de un control de Windows Forms <xref:System.Windows.Forms.Button> es ejecutar código al hacer clic en el botón.  
   
  Al hacer clic en un control de <xref:System.Windows.Forms.Button> también se generan otros eventos, como los eventos <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>y <xref:System.Windows.Forms.Control.MouseUp>. Si desea adjuntar controladores de eventos para estos eventos relacionados, asegúrese de que sus acciones no entran en conflicto. Por ejemplo, si al hacer clic en el botón se borra la información que el usuario ha escrito en un cuadro de texto, al pausar el puntero del mouse sobre el botón, no se debería mostrar una información sobre herramientas que ahora no existe.  
@@ -55,7 +55,7 @@ El uso más básico de un control de Windows Forms <xref:System.Windows.Forms.Bu
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre el control Button](button-control-overview-windows-forms.md)
 - [Maneras de seleccionar un control Button de formularios Windows Forms](ways-to-select-a-windows-forms-button-control.md)

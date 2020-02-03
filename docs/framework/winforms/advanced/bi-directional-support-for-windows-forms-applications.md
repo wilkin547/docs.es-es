@@ -27,54 +27,54 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan 
 
 |Control/componente|Efecto de la propiedad RightToLeft|Efecto de la propiedad RightToLeftLayout|¿Requiere la creación de reflejos?|
 |------------------------|------------------------------------|------------------------------------------|-------------------------|
-|<xref:System.Windows.Forms.Button>|Establece el orden de lectura de derecha a izquierda. Invierte <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> y <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Ningún efecto|No|
-|<xref:System.Windows.Forms.CheckBox>|La casilla se muestra en el lado derecho del texto|Ningún efecto|No|
-|<xref:System.Windows.Forms.CheckedListBox>|Todas las casillas se muestran en el lado derecho del texto|Ningún efecto|No|
-|<xref:System.Windows.Forms.ColorDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|
-|<xref:System.Windows.Forms.ComboBox>|Los elementos del control de cuadro combinado se alinean a la derecha|Ningún efecto|No|
-|<xref:System.Windows.Forms.ContextMenu>|Aparece alineado a la derecha con el orden de lectura de derecha a izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.DataGrid>|Aparece alineado a la derecha con el orden de lectura de derecha a izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.DataGridView>|Afecta al orden de lectura de derecha a izquierda y al diseño de los controles|Ningún efecto|No|
+|<xref:System.Windows.Forms.Button>|Establece el orden de lectura de derecha a izquierda. Invierte <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> y <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Sin efecto|No|
+|<xref:System.Windows.Forms.CheckBox>|La casilla se muestra en el lado derecho del texto|Sin efecto|No|
+|<xref:System.Windows.Forms.CheckedListBox>|Todas las casillas se muestran en el lado derecho del texto|Sin efecto|No|
+|<xref:System.Windows.Forms.ColorDialog>|No se ve afectada, depende del idioma del sistema operativo|Sin efecto|No|
+|<xref:System.Windows.Forms.ComboBox>|Los elementos del control de cuadro combinado se alinean a la derecha|Sin efecto|No|
+|<xref:System.Windows.Forms.ContextMenu>|Aparece alineado a la derecha con el orden de lectura de derecha a izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.DataGrid>|Aparece alineado a la derecha con el orden de lectura de derecha a izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.DataGridView>|Afecta al orden de lectura de derecha a izquierda y al diseño de los controles|Sin efecto|No|
 |<xref:System.Windows.Forms.DateTimePicker>|No se ve afectada, depende del idioma del sistema operativo|Refleja el control|Sí|
-|<xref:System.Windows.Forms.DomainUpDown>|Alinea a la izquierda los botones de arriba y abajo|Ningún efecto|No|
-|<xref:System.Windows.Forms.ErrorProvider>|No compatibles|Ningún efecto|No|
-|<xref:System.Windows.Forms.FontDialog>|Depende del idioma del sistema operativo|Ningún efecto|No|
+|<xref:System.Windows.Forms.DomainUpDown>|Alinea a la izquierda los botones de arriba y abajo|Sin efecto|No|
+|<xref:System.Windows.Forms.ErrorProvider>|No compatible|Sin efecto|No|
+|<xref:System.Windows.Forms.FontDialog>|Depende del idioma del sistema operativo|Sin efecto|No|
 |<xref:System.Windows.Forms.Form>|Establece el orden de lectura de derecha a izquierda e invierte las barras de desplazamiento|Refleja el formulario|Sí|
 |<xref:System.Windows.Forms.GroupBox>|El título se muestra alineado a la derecha. Los controles secundarios pueden heredar esta propiedad.|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro del control para admitir la creación de reflejos de derecha a izquierda|No|
-|<xref:System.Windows.Forms.HScrollBar>|Comienza con el cuadro de desplazamiento (el control) alineado a la derecha|Ningún efecto|No|
-|<xref:System.Windows.Forms.ImageList>|No obligatorio|Ningún efecto|No|
-|<xref:System.Windows.Forms.Label>|Se muestra alineado a la derecha. Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Ningún efecto|No|
-|<xref:System.Windows.Forms.LinkLabel>|Se muestra alineado a la derecha. Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Ningún efecto|No|
-|<xref:System.Windows.Forms.ListBox>|Los elementos se alinean a la derecha|Ningún efecto|No|
+|<xref:System.Windows.Forms.HScrollBar>|Comienza con el cuadro de desplazamiento (el control) alineado a la derecha|Sin efecto|No|
+|<xref:System.Windows.Forms.ImageList>|No se requiere|Sin efecto|No|
+|<xref:System.Windows.Forms.Label>|Se muestra alineado a la derecha. Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Sin efecto|No|
+|<xref:System.Windows.Forms.LinkLabel>|Se muestra alineado a la derecha. Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Sin efecto|No|
+|<xref:System.Windows.Forms.ListBox>|Los elementos se alinean a la derecha|Sin efecto|No|
 |<xref:System.Windows.Forms.ListView>|Establece el orden de lectura de derecha a izquierda y los elementos permanecen alineados a la izquierda|Refleja el control|Sí|
-|<xref:System.Windows.Forms.MainMenu>|Se muestra alineado a la derecha con el orden de lectura de derecha a izquierda en tiempo de ejecución (no en tiempo de diseño)|Ningún efecto|No|
-|<xref:System.Windows.Forms.MaskedTextBox>|Muestra el texto de derecha a izquierda.|Ningún efecto|No|
+|<xref:System.Windows.Forms.MainMenu>|Se muestra alineado a la derecha con el orden de lectura de derecha a izquierda en tiempo de ejecución (no en tiempo de diseño)|Sin efecto|No|
+|<xref:System.Windows.Forms.MaskedTextBox>|Muestra el texto de derecha a izquierda.|Sin efecto|No|
 |<xref:System.Windows.Forms.MonthCalendar>|No se ve afectada, depende del idioma del sistema operativo|Refleja el control|Sí|
-|<xref:System.Windows.Forms.NotifyIcon>|No compatibles|No compatibles|No|
-|<xref:System.Windows.Forms.NumericUpDown>|Los botones de arriba y abajo se alinean a la izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.OpenFileDialog>|En los sistemas operativos de derecha a izquierda, al establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft> del formulario contenedor en <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> se localiza el cuadro de diálogo |Ningún efecto|No|
-|<xref:System.Windows.Forms.PageSetupDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|
+|<xref:System.Windows.Forms.NotifyIcon>|No compatible|No compatible|No|
+|<xref:System.Windows.Forms.NumericUpDown>|Los botones de arriba y abajo se alinean a la izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.OpenFileDialog>|En los sistemas operativos de derecha a izquierda, al establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft> del formulario contenedor en <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> se localiza el cuadro de diálogo |Sin efecto|No|
+|<xref:System.Windows.Forms.PageSetupDialog>|No se ve afectada, depende del idioma del sistema operativo|Sin efecto|No|
 |<xref:System.Windows.Forms.Panel>|Los controles secundarios pueden heredar esta propiedad|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro del control para admitir la disposición de derecha a izquierda|Sí|
-|<xref:System.Windows.Forms.PictureBox>|No compatibles|Ningún efecto|No|
-|<xref:System.Windows.Forms.PrintDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|
-|<xref:System.Drawing.Printing.PrintDocument>|La barra de desplazamiento vertical se alinea a la izquierda y la barra de desplazamiento horizontal comienza a la izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.PrintPreviewDialog>|No compatibles|No compatibles|No|
+|<xref:System.Windows.Forms.PictureBox>|No compatible|Sin efecto|No|
+|<xref:System.Windows.Forms.PrintDialog>|No se ve afectada, depende del idioma del sistema operativo|Sin efecto|No|
+|<xref:System.Drawing.Printing.PrintDocument>|La barra de desplazamiento vertical se alinea a la izquierda y la barra de desplazamiento horizontal comienza a la izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.PrintPreviewDialog>|No compatible|No compatible|No|
 |<xref:System.Windows.Forms.ProgressBar>|No le afecta esta propiedad|Refleja el control|Sí|
-|<xref:System.Windows.Forms.RadioButton>|El botón de radio se muestra en el lado derecho del texto|Ningún efecto|No|
-|<xref:System.Windows.Forms.RichTextBox>|Los elementos de control que incluyen texto se muestran de derecha a izquierda con el orden de lectura de derecha a izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.SaveFileDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|
+|<xref:System.Windows.Forms.RadioButton>|El botón de radio se muestra en el lado derecho del texto|Sin efecto|No|
+|<xref:System.Windows.Forms.RichTextBox>|Los elementos de control que incluyen texto se muestran de derecha a izquierda con el orden de lectura de derecha a izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.SaveFileDialog>|No se ve afectada, depende del idioma del sistema operativo|Sin efecto|No|
 |<xref:System.Windows.Forms.SplitContainer>|Se invierte el diseño del panel, la barra de desplazamiento vertical aparece a la izquierda y la barra de desplazamiento horizontal comienza desde la derecha|Use <xref:System.Windows.Forms.TableLayoutPanel> para reflejar el orden de los controles secundarios|No|
-|<xref:System.Windows.Forms.Splitter>|No compatibles|Ningún efecto|No|
+|<xref:System.Windows.Forms.Splitter>|No compatible|Sin efecto|No|
 |<xref:System.Windows.Forms.StatusBar>|No se admite: utilice <xref:System.Windows.Forms.StatusStrip> en su lugar|Ningún efecto: utilice <xref:System.Windows.Forms.StatusStrip> en su lugar|No|
 |<xref:System.Windows.Forms.TabControl>|No le afecta esta propiedad|Refleja el control|Sí|
-|<xref:System.Windows.Forms.TextBox>|Muestra el texto de derecha a izquierda con el orden de lectura de derecha a izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.Timer>|No obligatorio|No obligatorio|No|
+|<xref:System.Windows.Forms.TextBox>|Muestra el texto de derecha a izquierda con el orden de lectura de derecha a izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.Timer>|No se requiere|No se requiere|No|
 |<xref:System.Windows.Forms.ToolBar>|No le afecta esta propiedad: use <xref:System.Windows.Forms.ToolStrip> en su lugar|Ningún efecto: utilice <xref:System.Windows.Forms.ToolStrip> en su lugar|Sí|
-|<xref:System.Windows.Forms.ToolTip>|Establece el orden de lectura de derecha a izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.TrackBar>|El desplazamiento o el seguimiento comienza a la derecha. Cuando <xref:System.Windows.Forms.TrackBar.Orientation%2A> es vertical, los tics se producen desde la derecha|Ningún efecto|No|
+|<xref:System.Windows.Forms.ToolTip>|Establece el orden de lectura de derecha a izquierda|Sin efecto|No|
+|<xref:System.Windows.Forms.TrackBar>|El desplazamiento o el seguimiento comienza a la derecha. Cuando <xref:System.Windows.Forms.TrackBar.Orientation%2A> es vertical, los tics se producen desde la derecha|Sin efecto|No|
 |<xref:System.Windows.Forms.TreeView>|Establece el orden de lectura de derecha a izquierda solamente|Refleja el control|Sí|
 |<xref:System.Windows.Forms.UserControl>|La barra de desplazamiento vertical aparece a la izquierda y la barra de desplazamiento horizontal tiene el control a la derecha|Sin compatibilidad directa: use <xref:System.Windows.Forms.TableLayoutPanel>|No|
-|<xref:System.Windows.Forms.VScrollBar>|Se muestra en el lado izquierdo, en lugar del derecho, de los controles desplazables|Ningún efecto|No|
+|<xref:System.Windows.Forms.VScrollBar>|Se muestra en el lado izquierdo, en lugar del derecho, de los controles desplazables|Sin efecto|No|
 
 ## <a name="encoding"></a>Encoding
  Los formularios Windows Forms admiten Unicode, por lo que puede incluir cualquier juego de caracteres al crear aplicaciones bidireccionales. Sin embargo, no todos los controles de formularios Windows Forms admiten Unicode en todas las plataformas.
@@ -92,7 +92,7 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan 
 
  Actualmente, la única solución es anidar <xref:System.Windows.Forms.ScrollableControl> dentro de otro <xref:System.Windows.Forms.ScrollableControl>. Por ejemplo, si necesita que <xref:System.Windows.Forms.TableLayoutPanel> funcione en esta situación, puede colocarlo dentro de un control <xref:System.Windows.Forms.Panel> y establecer <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> en el <xref:System.Windows.Forms.Panel> como <xref:System.Windows.Forms.RightToLeft.Yes>.
 
-## <a name="mirroring"></a>Creación de reflejos
+## <a name="mirroring"></a>Creación de reflejo
  La *creación de reflejos* consiste en invertir el diseño de los elementos de la interfaz de usuario para que fluyan de derecha a izquierda. En un formulario Windows Forms reflejado, por ejemplo, los botones Minimizar, Maximizar y Cerrar aparecen en el extremo izquierdo de la barra de título, en lugar del extremo derecho.
 
  Al configurar la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> de un formulario o un control como `true`, se invierte el orden de lectura de los elementos de un formulario, pero esta configuración no invierte el diseño de manera que quede de derecha a izquierda, es decir, no provoca la creación de un reflejo. Por ejemplo, al establecer esta propiedad, los botones **Minimizar**, **Maximizar** y **Cerrar** de la barra de título del formulario no se mueven a la izquierda del formulario. Del mismo modo, algunos controles, como el control <xref:System.Windows.Forms.TreeView>, deben reflejarse para cambiar su apariencia y ser adecuados para el árabe o el hebreo. Puede reflejar estos controles configurando la propiedad <xref:System.Windows.Forms.Form.RightToLeftLayout%2A>.
@@ -115,6 +115,6 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan 
 
  Algunos controles están sellados, de modo que no puede derivar un nuevo control de ellos: por ejemplo, los controles <xref:System.Windows.Forms.ImageList> y <xref:System.Windows.Forms.ProgressBar>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Compatibilidad bidireccional para aplicaciones web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))

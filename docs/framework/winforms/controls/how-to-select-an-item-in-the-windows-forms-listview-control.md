@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743230"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Cómo: Seleccionar un elemento del control ListView de Windows Forms
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Cómo: Seleccionar un elemento del control ListView de formularios Windows Forms
 En este ejemplo se muestra cómo seleccionar un elemento de un control de Windows Forms <xref:System.Windows.Forms.ListView> mediante programación. Al seleccionar un elemento mediante programación, no se cambia automáticamente el foco al control <xref:System.Windows.Forms.ListView>. Por esta razón, normalmente también querrá establecer el elemento como enfocado al seleccionar un elemento.  
   
 ## <a name="example"></a>Ejemplo  
@@ -31,7 +31,7 @@ En este ejemplo se muestra cómo seleccionar un elemento de un control de Window
   
 - Referencias a los espacios de nombres <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

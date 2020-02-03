@@ -39,11 +39,11 @@ La siguiente ilustración muestra las propiedades <xref:System.Windows.Forms.Con
 
 La propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> indica a un control que se ajuste automáticamente a su contenido. No cambiará de tamaño para que sea menor que el valor de su propiedad <xref:System.Windows.Forms.Control.Size%2A> original, y tendrá en cuenta el valor de su propiedad <xref:System.Windows.Forms.Control.Padding%2A>.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Necesitará Visual Studio para completar este tutorial.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 1. En Visual Studio, cree un proyecto de **aplicación para Windows** denominado `LayoutExample`.
 
@@ -174,7 +174,7 @@ Hay muchas otras características de diseño para organizar los controles en las
 
 - Experimente con el acoplamiento de controles secundarios en un control de <xref:System.Windows.Forms.Panel>. La propiedad <xref:System.Windows.Forms.Control.Padding%2A> es una realización más general de la propiedad <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>, y se puede solucionar por sí mismo que este es el caso colocando un control secundario en un control <xref:System.Windows.Forms.Panel> y estableciendo la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del control secundario en <xref:System.Windows.Forms.DockStyle.Fill>. Establezca la propiedad <xref:System.Windows.Forms.Control.Padding%2A> del control <xref:System.Windows.Forms.Panel> en varios valores y observe el efecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

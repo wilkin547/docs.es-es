@@ -25,7 +25,7 @@ Las guías de alineación muestran exactamente dónde alinear los controles con 
 
 Las guías de alineación facilitan la alineación de los controles, para una apariencia y un comportamiento más nítidos y profesionales (aspecto y funcionamiento).
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 1. En Visual Studio, cree un proyecto de aplicación basado en Windows denominado "SnaplineExample".
 
@@ -100,7 +100,7 @@ Puede usar las líneas de ajuste para alinear los controles agrupados, así como
 
 5. Arrastre el puntero hasta que se alinee con otro control del formulario. Observe que aparece una guía de alineación para indicar la alineación.
 
-6. Suelte el botón del mouse. El control se crea en la posición y el tamaño indicados por el esquema.
+6. Suelte el botón del mouse (ratón). El control se crea en la posición y el tamaño indicados por el esquema.
 
 ## <a name="use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Usar líneas de ajuste al arrastrar un control desde el cuadro de herramientas
 
@@ -110,7 +110,7 @@ Puede usar las líneas de ajuste para alinear los controles agrupados, así como
 
 3. Arrastre el puntero del mouse alrededor del formulario. Observe las líneas de ajuste que aparecen para sugerir las posiciones alineadas del control <xref:System.Windows.Forms.Button>. Buscar una posición que está alineada con otros controles.
 
-4. Suelte el botón del mouse. El control se crea en la posición indicada por las líneas de ajuste.
+4. Suelte el botón del mouse (ratón). El control se crea en la posición indicada por las líneas de ajuste.
 
 ## <a name="resize-a-control-using-snaplines"></a>Cambiar el tamaño de un control mediante las guías de alineación
 
@@ -182,15 +182,15 @@ No aparecen las líneas de ajuste y el control no se ajusta a ninguna de las pos
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Las guías de alineación ofrecen un medio intuitivo de alinear los controles en el formulario. Estas son otras sugerencias para seguir con la exploración:
+Las guías de alineación ofrecen un medio intuitivo de alinear los controles en el formulario. Algunas sugerencias de investigación adicional son:
 
 - Intente anidar un control <xref:System.Windows.Forms.GroupBox> dentro de otro control <xref:System.Windows.Forms.GroupBox>. Coloque un control <xref:System.Windows.Forms.Button> dentro del control secundario <xref:System.Windows.Forms.GroupBox> y otro dentro del control <xref:System.Windows.Forms.GroupBox> primario. Mueva los controles del <xref:System.Windows.Forms.Button> para ver cómo las guías de alineación cruzan los límites del contenedor.
 
 - Cree una columna de controles de <xref:System.Windows.Forms.TextBox> y una columna correspondiente de controles de <xref:System.Windows.Forms.Label>. Establezca el valor de la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> de los controles <xref:System.Windows.Forms.Label> en `true`. Use las líneas de ajuste para desplazar los controles de <xref:System.Windows.Forms.Label> de modo que el texto que se muestra se alinee con el texto de los controles de <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

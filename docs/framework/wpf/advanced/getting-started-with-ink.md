@@ -20,11 +20,11 @@ ms.locfileid: "76737887"
 
 Windows Presentation Foundation (WPF) tiene una característica de entrada manuscrita que facilita la incorporación de tinta digital a la aplicación.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para usar los ejemplos siguientes, primero instale [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). También ayuda a saber cómo escribir aplicaciones WPF básicas. Para obtener ayuda para empezar a trabajar con WPF, vea [Tutorial: mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Inicio rápido en
+## <a name="quick-start"></a>Inicio rápido
 
 Esta sección le ayuda a escribir una aplicación WPF sencilla que recopila entradas manuscritas.
 
@@ -108,7 +108,7 @@ Puede tener acceso a todas las características de WPF desde código de procedim
 
 1. Para compilar la aplicación, presione **F5**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Entrada de lápiz digital](digital-ink.md)
 - [Recopilación de entradas de lápiz](collecting-ink.md)

@@ -32,7 +32,7 @@ Uno de los conceptos más importantes de Windows Forms enlace de datos es la *no
 ## <a name="change-notification-for-custom-controls"></a>Notificación de cambios para controles personalizados  
  Finalmente, en el lado del control debe exponer un evento *PropertyName*Changed para cada propiedad diseñada para enlazarse a los datos. Los cambios que se realicen en la propiedad del control se propagan al origen de datos enlazado. Para obtener más información, consulte [Cómo: aplicar el patrón PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>

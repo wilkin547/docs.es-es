@@ -60,7 +60,7 @@ En el diseño de la aplicación, es posible que sea necesario usar un solo contr
   
      Se agregará código al formulario para enlazar el evento al controlador de eventos existente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)

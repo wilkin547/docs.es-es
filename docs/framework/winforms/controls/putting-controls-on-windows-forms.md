@@ -16,7 +16,7 @@ ms.locfileid: "76741165"
 # <a name="putting-controls-on-windows-forms"></a>Insertar controles en formularios Windows Forms
 Hay una amplia variedad de controles que puede colocar en Windows Forms, en función de las necesidades de la aplicación.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)  
  Proporciona instrucciones para adjuntar controles al formulario.  
   
@@ -36,7 +36,7 @@ Hay una amplia variedad de controles que puede colocar en Windows Forms, en func
  Describe los aspectos que se deben tener en cuenta al planear una aplicación que utiliza controles ActiveX.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de formularios Windows Forms](index.md)  
+ [Controles de Windows Forms](index.md)  
  Proporciona vínculos a temas de introducción sobre los controles y lo que puede hacer con ellos.  
   
  [Validación de los datos proporcionados por el usuario Windows Forms](../user-input-validation-in-windows-forms.md)  

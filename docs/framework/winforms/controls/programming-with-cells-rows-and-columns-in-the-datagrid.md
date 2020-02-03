@@ -18,7 +18,7 @@ ms.locfileid: "76741349"
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programar con celdas, filas y columnas en el control DataGridView de Windows Forms
 En esta sección se proporcionan temas que muestran diversas tareas de programación relacionadas con objetos de celda, fila y columna.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Describe cómo controlar el evento <xref:System.Windows.Forms.DataGridView.CellFormatting> para proporcionar información sobre herramientas para celdas individuales.  
   
@@ -54,7 +54,7 @@ En esta sección se proporcionan temas que muestran diversas tareas de programac
  [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Proporciona temas que describen las propiedades de celda, fila y columna que se usan habitualmente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

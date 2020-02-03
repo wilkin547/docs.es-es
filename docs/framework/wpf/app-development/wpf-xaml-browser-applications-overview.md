@@ -34,7 +34,7 @@ ms.locfileid: "76742283"
 
 <a name="creating_a_new_xaml_browser_application_xbap"></a>
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Creación de una aplicación de explorador XAML (XBAP)
- La manera más sencilla de crear un nuevo proyecto de XBAP es con Visual Studio. Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).
+ La manera más sencilla de crear un nuevo proyecto de XBAP es con Visual Studio. Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).
 
  Cuando se ejecuta el proyecto de XBAP, se abre en una ventana del explorador en lugar de en una independiente. Al depurar la aplicación XBAP desde Visual Studio, la aplicación se ejecuta con el permiso de zona de Internet y, por tanto, producirá excepciones de seguridad si se superan esos permisos. Para más información, consulte [Seguridad](../security-wpf.md) y [Seguridad de confianza parcial de WPF](../wpf-partial-trust-security.md).
 
@@ -45,7 +45,7 @@ ms.locfileid: "76742283"
 ## <a name="deploying-an-xbap"></a>Implementación de una aplicación XBAP
  Cuando se compila una aplicación XBAP, en la salida se incluyen los tres archivos siguientes:
 
-|File|Descripción|
+|Archivo|Descripción|
 |----------|-----------------|
 |Ejecutable (.exe)|Contiene el código compilado y tiene la extensión .exe.|
 |Manifiesto de aplicación (.manifest)|Contiene metadatos asociados con la aplicación y tiene la extensión .manifest.|
@@ -117,7 +117,7 @@ ms.locfileid: "76742283"
 
 7. En la lista **Configuración**, bajo **Seguridad**, active la casilla **Permitir que el contenido activo se ejecute en los archivos de mi equipo**.
 
-8. Haga clic en **Aceptar**.
+8. Haga clic en **OK**.
 
      Los cambios surtirán efecto una vez que reinicie Internet Explorer.
 
@@ -126,11 +126,11 @@ ms.locfileid: "76742283"
 
 <a name="xbap_security_considerations"></a>
 ## <a name="xbap-security-considerations"></a>Consideraciones de seguridad para XBAP
- Las aplicaciones XBAP suelen ejecutarse en un espacio aislado con seguridad de confianza parcial que se restringe al conjunto de permisos de zona de Internet. Por consiguiente, la implementación de debe admitir el subconjunto de elementos de WPF que se admiten en la zona de Internet o debe elevar los permisos de la aplicación. Para más información, consulte [Seguridad](../security-wpf.md).
+ Las aplicaciones XBAP suelen ejecutarse en un espacio aislado con seguridad de confianza parcial que se restringe al conjunto de permisos de zona de Internet. Por consiguiente, la implementación de debe admitir el subconjunto de elementos de WPF que se admiten en la zona de Internet o debe elevar los permisos de la aplicación. Para obtener más información, consulte [Seguridad](../security-wpf.md).
 
  Cuando se usa un control de <xref:System.Windows.Controls.WebBrowser> en la aplicación, WPF crea internamente instancias del control ActiveX WebBrowser nativo. Cuando se trata de una aplicación XBAP de confianza parcial que se ejecuta en Internet Explorer, el control ActiveX se ejecuta en un subproceso dedicado del proceso de Internet Explorer. Por tanto, se aplican las siguientes limitaciones:
 
-- El control de <xref:System.Windows.Controls.WebBrowser> debe proporcionar un comportamiento similar al del explorador host, incluidas las restricciones de seguridad. Algunas de estas restricciones de seguridad se pueden controlar mediante la configuración de seguridad de Internet Explorer. Para más información, consulte [Seguridad](../security-wpf.md).
+- El control de <xref:System.Windows.Controls.WebBrowser> debe proporcionar un comportamiento similar al del explorador host, incluidas las restricciones de seguridad. Algunas de estas restricciones de seguridad se pueden controlar mediante la configuración de seguridad de Internet Explorer. Para obtener más información, consulte [Seguridad](../security-wpf.md).
 
 - Se genera una excepción cuando se carga una aplicación XBAP entre dominios en una página HTML.
 
@@ -164,13 +164,13 @@ ms.locfileid: "76742283"
     ```
 
 ### <a name="deploying-a-full-trust-xbap"></a>Implementación de una aplicación XBAP de plena confianza
- Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarlo. El usuario puede elegir continuar con la instalación o cancelarla. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.
+ Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.
 
 |Zona de seguridad|Comportamiento|Obtener plena confianza|
 |-------------------|--------------|------------------------|
-|Equipo local|Plena confianza automática|No se necesita realizar ninguna acción.|
+|Equipo local|Plena confianza automática|No se requiere ninguna acción.|
 |Intranet y sitios de confianza|Pedir plena confianza|Firme la aplicación XBAP con un certificado para que el usuario vea el origen en la petición.|
-|Internet|Error: "Confianza no concedida"|Firme la aplicación XBAP con un certificado.|
+|Internet|Error: "Confianza no concedida"|Firme XBAP con un certificado.|
 
 > [!NOTE]
 > El comportamiento descrito en la tabla anterior es para las aplicaciones XBAP de plena confianza que no sigan el modelo de implementación de confianza de ClickOnce.
@@ -185,7 +185,7 @@ ms.locfileid: "76742283"
 
  Además, la simultaneidad mejorada de la secuencia de descarga de ClickOnce mejora el tiempo de inicio hasta un diez por ciento. Una vez que ClickOnce descarga y valida los manifiestos, se inicia la descarga de la aplicación y la barra de progreso comienza a actualizarse.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Implementar una aplicación de WPF](deploying-a-wpf-application-wpf.md)
+- [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)

@@ -16,7 +16,7 @@ ms.locfileid: "76744272"
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Ajuste del rendimiento del control DataGridView en Windows Forms
 Cuando se trabaja con grandes cantidades de datos, el control de `DataGridView` puede consumir una gran cantidad de memoria en exceso, a menos que se use con cuidado. En los clientes con memoria limitada, puede evitar esta sobrecarga evitando las características que tienen un alto costo de memoria. También puede administrar algunas o todas las tareas de mantenimiento y recuperación de datos mediante el modo virtual con el fin de personalizar el uso de memoria para su escenario.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
  Describe cómo usar el control `DataGridView` de forma que se evite el uso de memoria y las penalizaciones de rendimiento innecesarias al trabajar con grandes cantidades de datos.  
   
@@ -36,7 +36,7 @@ Cuando se trabaja con grandes cantidades de datos, el control de `DataGridView` 
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  Proporciona documentación de referencia para la propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Modos de presentación de datos en el control DataGridView de Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

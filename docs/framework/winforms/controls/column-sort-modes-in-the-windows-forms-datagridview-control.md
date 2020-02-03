@@ -58,7 +58,7 @@ ms.locfileid: "76744195"
 > [!NOTE]
 > El evento <xref:System.Windows.Forms.DataGridView.SortCompare> no se produce cuando se establece la propiedad <xref:System.Windows.Forms.DataGridView.DataSource%2A> o cuando se `true`el valor de la propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>

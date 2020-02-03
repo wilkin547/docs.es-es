@@ -60,7 +60,7 @@ Puede hospedar contenido de Direct3D9 mediante la clase <xref:System.Windows.Int
 |D3DFMT_A8R8G8B8 (no bloqueable)|**Actualización de hardware**|Actualización de software|Actualización de software|Actualización de software|  
 |D3DFMT_A8R8G8B8 (bloqueable)|**Actualización de hardware**|Actualización de software|**Actualización de hardware**|Actualización de software|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interoperabilidad entre WPF y Direct3D9](wpf-and-direct3d9-interoperation.md)

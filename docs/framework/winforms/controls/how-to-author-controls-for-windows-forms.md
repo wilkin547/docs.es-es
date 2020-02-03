@@ -40,7 +40,7 @@ Un control representa un vínculo gráfico entre el usuario y el programa. Un co
 
 5. Si necesita que el control utilice una representación personalizada, agregue el código necesario. Para información detallada, vea [Dibujo y representación personalizados de controles](custom-control-painting-and-rendering.md).
 
-6. Si el control hereda de <xref:System.Windows.Forms.UserControl>, puede probar su comportamiento en tiempo de ejecución compilando el proyecto de control y ejecutando en el **contenedor de pruebas de UserControl**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
+6. Si el control hereda de <xref:System.Windows.Forms.UserControl>, puede probar su comportamiento en tiempo de ejecución compilando el proyecto de control y ejecutando en el **contenedor de pruebas de UserControl**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 7. También puede probar y depurar el control creando un nuevo proyecto, como una Aplicación Windows, y colocándola en un contenedor. Este proceso se muestra como parte del [Tutorial: crear un control compuesto](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
@@ -50,10 +50,10 @@ Un control representa un vínculo gráfico entre el usuario y el programa. Un co
 
 10. Empaquete e implemente el control. Para obtener más información, vea [primer vistazo a la implementación en Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Cómo: Heredar de una clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
+- [cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Cómo: Heredar de una clase de control](how-to-inherit-from-the-control-class.md)
 - [Cómo: Heredar de controles de Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

@@ -44,7 +44,7 @@ ms.locfileid: "76743332"
 |Área de características|Característica|  
 |------------------|-------------|  
 |General|Ventana del explorador<br /><br /> Acceso al sitio de origen<br /><br /> IsolatedStorage (límite de 512 KB)<br /><br /> Proveedores de UIAutomation<br /><br /> Comandos<br /><br /> Editores de métodos de entrada (IMEs)<br /><br /> Lápiz y entrada de lápiz de tableta<br /><br /> Movimiento simulado de arrastrar y colocar con los eventos de captura y movimiento del mouse<br /><br /> OpenFileDialog<br /><br /> Deserialización XAML (mediante XamlReader.Load)|  
-|Integración en Internet|Cuadro de diálogo de descarga del explorador<br /><br /> Navegación iniciada por el usuario de nivel superior<br /><br /> mailto:links<br /><br /> Parámetros de identificador de recursos uniforme<br /><br /> HTTPWebRequest<br /><br /> Contenido de WPF hospedado en un IFRAME<br /><br /> Hospedaje de páginas HTML del mismo sitio con marco<br /><br /> Hospedaje de páginas HTML del mismo sitio con WebBrowser<br /><br /> Servicios web (ASMX)<br /><br /> Servicios Web (con Windows Communication Foundation)<br /><br /> Secuencias de comandos<br /><br /> Modelo de objetos de documento|  
+|Integración en Internet|Cuadro de diálogo de descarga del explorador<br /><br /> Navegación iniciada por el usuario de nivel superior<br /><br /> mailto:links<br /><br /> Parámetros de identificador de recursos uniforme<br /><br /> HTTPWebRequest<br /><br /> Contenido de WPF hospedado en un IFRAME<br /><br /> Hospedaje de páginas HTML del mismo sitio con marco<br /><br /> Hospedaje de páginas HTML del mismo sitio con WebBrowser<br /><br /> Servicios web (ASMX)<br /><br /> Servicios Web (con Windows Communication Foundation)<br /><br /> Scripting<br /><br /> Modelo de objetos de documento|  
 |Objetos visuales|2D y 3D<br /><br /> Animación<br /><br /> Multimedia (sitio de origen y entre dominios)<br /><br /> Creación de imágenes, audio y vídeo|  
 |Lectura|FlowDocuments<br /><br /> Documentos XPS<br /><br /> Fuentes insertadas y del sistema<br /><br /> Fuentes CFF y TrueType|  
 |Editar|Revisión ortográfica<br /><br /> RichTextBox<br /><br /> Compatibilidad con texto sin formato y portapapeles de entrada de lápiz<br /><br /> Pegado iniciado por el usuario<br /><br /> Copiar contenido seleccionado|  
@@ -78,13 +78,13 @@ ms.locfileid: "76743332"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programación de confianza parcial  
- En el caso de las aplicaciones XBAP, el código que supera el conjunto de permisos predeterminado tendrá un comportamiento diferente en función de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarlo. El usuario puede elegir continuar con la instalación o cancelarla. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.  
+ En el caso de las aplicaciones XBAP, el código que supera el conjunto de permisos predeterminado tendrá un comportamiento diferente en función de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.  
   
 |Zona de seguridad|Comportamiento|Obtener plena confianza|  
 |-------------------|--------------|------------------------|  
-|Equipo local|Plena confianza automática|No se necesita realizar ninguna acción.|  
+|Equipo local|Plena confianza automática|No se requiere ninguna acción.|  
 |Intranet y sitios de confianza|Pedir plena confianza|Firme la aplicación XBAP con un certificado para que el usuario vea el origen en la petición.|  
-|Internet|Error: "Confianza no concedida"|Firme la aplicación XBAP con un certificado.|  
+|Internet|Error: "Confianza no concedida"|Firme XBAP con un certificado.|  
   
 > [!NOTE]
 > El comportamiento descrito en la tabla anterior es para XBAP de plena confianza que no siguen el modelo de implementación de confianza ClickOnce.  
@@ -123,27 +123,27 @@ ms.locfileid: "76743332"
 > <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> solo distingue si una aplicación se ejecuta en un explorador, no el conjunto de permisos con el que se ejecuta una aplicación.  
   
 <a name="Managing_Permissions"></a>   
-## <a name="managing-permissions"></a>Managing Permissions  
+## <a name="managing-permissions"></a>Administrar permisos  
  De forma predeterminada, las XBAP se ejecutan con confianza parcial (conjunto de permisos predeterminados de la zona Internet). Sin embargo, según los requisitos de la aplicación, es posible cambiar el conjunto de permisos predeterminado. Por ejemplo, si se inicia una XBAP desde una Intranet local, puede aprovechar un conjunto de permisos aumentado, que se muestra en la tabla siguiente.  
   
  Tabla 3: Permisos de LocalIntranet e Internet  
   
-|Permiso|Attribute|LocalIntranet|Internet|  
+|Permiso|Atributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Servidores DNS de acceso|Sí|No|  
 |Variables de entorno|Lectura|Sí|No|  
 |Cuadros de diálogo de archivo|Abrir|Sí|Sí|  
-|Cuadros de diálogo de archivo|Unrestricted|Sí|No|  
+|Cuadros de diálogo de archivo|Sin restricciones|Sí|No|  
 |Almacenamiento aislado|Aislamiento de ensamblados por el usuario|Sí|No|  
 |Almacenamiento aislado|Aislamiento desconocido|Sí|Sí|  
 |Almacenamiento aislado|Cuota de usuario ilimitada|Sí|No|  
-|Medios|Imágenes, vídeo y audio seguros|Sí|Sí|  
+|Multimedia|Imágenes, vídeo y audio seguros|Sí|Sí|  
 |Impresión|Impresión predeterminada|Sí|No|  
 |Impresión|Impresión segura|Sí|Sí|  
 |Reflexión|Emitir|Sí|No|  
-|de seguridad|Ejecución de código administrado|Sí|Sí|  
-|de seguridad|Permisos de aserción concedidos|Sí|No|  
-|Interfaz de usuario|Unrestricted|Sí|No|  
+|Seguridad|Ejecución de código administrado|Sí|Sí|  
+|Seguridad|Permisos de aserción concedidos|Sí|No|  
+|Interfaz de usuario|Sin restricciones|Sí|No|  
 |Interfaz de usuario|Ventanas seguras de nivel superior|Sí|Sí|  
 |Interfaz de usuario|Portapapeles propio|Sí|Sí|  
 |Explorador web|Navegación de marcos segura a HTML|Sí|Sí|  
@@ -159,11 +159,11 @@ ms.locfileid: "76743332"
   
 - [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
- Si su aplicación XBAP requiere plena confianza, puede usar las mismas herramientas para aumentar los permisos solicitados. Aunque una aplicación XBAP solo recibirá plena confianza si se instala y se inicia desde el equipo local, la intranet o desde una dirección URL que se muestra en sitios de confianza o permitidos del explorador. Si la aplicación se instala desde la intranet o un sitio de confianza, el usuario recibirá el mensaje estándar de ClickOnce, que le notificará los permisos elevados. El usuario puede elegir continuar con la instalación o cancelarla.  
+ Si su aplicación XBAP requiere plena confianza, puede usar las mismas herramientas para aumentar los permisos solicitados. Aunque una aplicación XBAP solo recibirá plena confianza si se instala y se inicia desde el equipo local, la intranet o desde una dirección URL que se muestra en sitios de confianza o permitidos del explorador. Si la aplicación se instala desde la intranet o un sitio de confianza, el usuario recibirá el mensaje estándar de ClickOnce, que le notificará los permisos elevados. El usuario puede elegir continuar o cancelar la instalación.  
   
  Como alternativa, puede usar el modelo de implementación de confianza de ClickOnce para realizar una implementación de plena confianza desde cualquier zona de seguridad. Para obtener más información, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview) y [seguridad](security-wpf.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad](security-wpf.md)
 - [Estrategia de seguridad de WPF: Seguridad de plataforma](wpf-security-strategy-platform-security.md)

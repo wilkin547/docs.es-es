@@ -15,7 +15,7 @@ ms.locfileid: "76746374"
 # <a name="windows-forms-accessibility"></a>Accesibilidad de Windows Forms
 La funcionalidad de accesibilidad de formularios Windows Forms le permite hacer que su aplicación esté disponible para una amplia variedad de usuarios.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Tutorial: Crear una aplicación accesible basada en Windows](walkthrough-creating-an-accessible-windows-based-application.md)  
  Describe todas las características que se deben admitir para aumentar la accesibilidad.  
   

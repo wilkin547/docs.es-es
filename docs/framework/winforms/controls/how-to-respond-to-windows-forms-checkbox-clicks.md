@@ -135,7 +135,7 @@ Cada vez que un usuario hace clic en un control de <xref:System.Windows.Forms.Ch
     > [!NOTE]
     > Cuando la propiedad <xref:System.Windows.Forms.CheckBox.ThreeState%2A> está establecida en `true`, la propiedad <xref:System.Windows.Forms.CheckBox.Checked%2A> devuelve `true` para <xref:System.Windows.Forms.CheckState.Checked> y <xref:System.Windows.Forms.CheckState.Indeterminate>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Información general sobre el control CheckBox](checkbox-control-overview-windows-forms.md)

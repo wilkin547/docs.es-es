@@ -63,7 +63,7 @@ El control Windows Forms <xref:System.Windows.Forms.DateTimePicker> le proporcio
   
      En función de la configuración de la referencia cultural, se pueden cambiar los caracteres no incluidos entre comillas simples. Por ejemplo, la cadena de formato anterior muestra la fecha actual con el formato "hoy es: 05:30:31 Friday marzo 02, 2012" en la referencia cultural inglés (Estados Unidos). Tenga en cuenta que los primeros dos puntos están entre comillas simples, ya que no pretende ser un carácter delimitador, como en "HH: mm: SS". En otra referencia cultural, el formato puede aparecer como "hoy es: 05.30.31 Friday marzo 02, 2012".  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Control DateTimePicker](datetimepicker-control-windows-forms.md)
+- [DateTimePicker (control)](datetimepicker-control-windows-forms.md)
 - [Establecer y devolver fechas con el control DateTimePicker de formularios Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

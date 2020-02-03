@@ -96,11 +96,11 @@ El modelo de programación WEB HTTP de WCF permite a los desarrolladores exponer
 ## <a name="compatibility"></a>Compatibilidad  
  El modelo de programación WEB HTTP de WCF no utiliza mensajes basados en SOAP y, por lo tanto, no admite los protocolos WS-*. No obstante, puede exponer el mismo contrato en dos extremos diferentes, uno que use SOAP y otro que no lo haga. Vea [Cómo: exponer un contrato a SOAP y clientes Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obtener un ejemplo.  
   
-## <a name="security"></a>de seguridad  
+## <a name="security"></a>Seguridad  
 
 Dado que el modelo de programación WEB HTTP de WCF no admite los protocolos WS-*, la única manera de proteger un servicio Web basado en el modelo de programación WEB HTTP de WCF es exponer el servicio mediante SSL. Para obtener más información acerca de cómo configurar SSL con IIS 7,0, consulte [How to implement SSL in IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

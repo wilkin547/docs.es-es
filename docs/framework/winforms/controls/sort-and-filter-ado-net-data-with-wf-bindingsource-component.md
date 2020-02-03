@@ -20,7 +20,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742978"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Cómo: Ordenar y filtrar datos ADO.NET con el componente BindingSource de Windows Forms
 Puede exponer la funcionalidad de ordenación y filtrado de <xref:System.Windows.Forms.BindingSource> control a través de las propiedades <xref:System.Windows.Forms.BindingSource.Sort%2A> y <xref:System.Windows.Forms.BindingSource.Filter%2A>. Puede aplicar una ordenación simple cuando el origen de datos subyacente es un <xref:System.ComponentModel.IBindingList>y puede aplicar filtrado y ordenación avanzada cuando el origen de datos es un <xref:System.ComponentModel.IBindingListView>. La propiedad <xref:System.Windows.Forms.BindingSource.Sort%2A> requiere la sintaxis estándar de ADO.NET: una cadena que representa el nombre de una columna de datos en el origen de datos seguida de `ASC` o `DESC` para indicar si la lista debe ordenarse en orden ascendente o descendente. Puede establecer la ordenación avanzada o la ordenación de varias columnas separando cada columna con un separador de coma. La propiedad <xref:System.Windows.Forms.BindingSource.Filter%2A> toma una expresión de cadena.  
   
 > [!NOTE]
@@ -53,7 +53,7 @@ Puede exponer la funcionalidad de ordenación y filtrado de <xref:System.Windows
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para ejecutar este ejemplo, pegue el código en un formulario que contenga una <xref:System.Windows.Forms.BindingSource> denominada `BindingSource1` y una <xref:System.Windows.Forms.DataGridView> denominada `dataGridView1`. Controle el evento <xref:System.Windows.Forms.Form.Load> del formulario y llame a `InitializeSortedFilteredBindingSource` en el método de control de eventos Load.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

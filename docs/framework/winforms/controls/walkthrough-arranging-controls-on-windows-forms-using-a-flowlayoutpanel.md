@@ -44,7 +44,7 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en 
 
 Cuando haya terminado, tendrá conocimientos sobre el rol que desempeñan estas características de diseño importantes.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 1. En Visual Studio, cree un proyecto de aplicación basada en Windows llamado "FlowLayoutPanelExample" **(archivo** > **nuevo** **proyecto** de >  > **Visual C#**  o **Visual Basic** > **aplicación**de **escritorio clásico** > Windows Forms.
 
@@ -169,10 +169,10 @@ Cuando haya terminado, tendrá conocimientos sobre el rol que desempeñan estas 
 
 5. Arrastre el puntero del mouse para dibujar el contorno del control <xref:System.Windows.Forms.FlowLayoutPanel> . Dibuje el contorno alrededor de los tres controles <xref:System.Windows.Forms.Button> .
 
-6. Suelte el botón del mouse. Observe que los tres controles <xref:System.Windows.Forms.Button> se insertan en el control <xref:System.Windows.Forms.FlowLayoutPanel> .
+6. Suelte el botón del mouse (ratón). Observe que los tres controles <xref:System.Windows.Forms.Button> se insertan en el control <xref:System.Windows.Forms.FlowLayoutPanel> .
 
 ## <a name="next-steps"></a>Pasos siguientes
- Puede lograr un diseño complejo mediante una combinación de controles y paneles de diseño. Estas son otras sugerencias para seguir con la exploración:
+ Puede lograr un diseño complejo mediante una combinación de controles y paneles de diseño. Algunas sugerencias de investigación adicional son:
 
 - Cambie el tamaño de uno de los controles <xref:System.Windows.Forms.Button> para aumentarlo y observe el efecto en el diseño.
 
@@ -182,7 +182,7 @@ Cuando haya terminado, tendrá conocimientos sobre el rol que desempeñan estas 
 
 - Establezca la propiedad <xref:System.Windows.Forms.Control.Visible%2A> de uno de los controles en `false` y observe cómo se distribuye <xref:System.Windows.Forms.FlowLayoutPanel> en respuesta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
@@ -191,4 +191,4 @@ Cuando haya terminado, tendrá conocimientos sobre el rol que desempeñan estas 
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
 - [Procedimiento para acoplar controles en formularios Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Procedimiento para delimitar controles en formularios Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

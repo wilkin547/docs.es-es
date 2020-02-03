@@ -1,5 +1,5 @@
 ---
-title: Control MaskedTextBox
+title: MaskedTextBox (Control)
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -19,7 +19,7 @@ ms.locfileid: "76744961"
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox (Control, formularios Windows Forms)
 En este tema se vincula a otros usuarios sobre el control de `MaskedTextBox`.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Tutorial: Trabajar con el control MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
  Muestra las características clave del control `MaskedTextBox`.  
   
@@ -31,5 +31,5 @@ En este tema se vincula a otros usuarios sobre el control de `MaskedTextBox`.
  Clase principal de la implementación del control de cuadro de texto enmascarado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

@@ -148,7 +148,7 @@ Puede incluir contenido de Direct3D9 en una aplicación Windows Presentation Fou
 > [!NOTE]
 > Si WPF se representa completamente en el software, <xref:System.Windows.Interop.D3DImage> no se muestra porque WPF no tiene un búfer frontal.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Consideraciones de rendimiento para la interoperabilidad entre Direct3D9 y WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

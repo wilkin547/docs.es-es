@@ -30,10 +30,10 @@ El host de Windows Presentation Foundation (WPF) (PresentationHost. exe) es la a
   
  Este tema describe los parámetros de la línea de comandos que se pueden utilizar con PresentationHost.exe.  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Uso  
  `PresentationHost.exe [parameters] uri|filename`  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
@@ -58,6 +58,6 @@ El host de Windows Presentation Foundation (WPF) (PresentationHost. exe) es la a
 ### <a name="visual-studio-debugging-in-zone"></a>Depuración de Visual Studio en Zone  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad](../security-wpf.md)

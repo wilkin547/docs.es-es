@@ -19,7 +19,7 @@ Windows Forms controles de `Splitter` se utilizan para cambiar el tamaño de los
 > [!NOTE]
 > Aunque el control <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad al control `Splitter` de las versiones anteriores, `Splitter` se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre Splitter (Control)](splitter-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -28,5 +28,5 @@ Windows Forms controles de `Splitter` se utilizan para cambiar el tamaño de los
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

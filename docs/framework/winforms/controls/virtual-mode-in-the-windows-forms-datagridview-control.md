@@ -40,7 +40,7 @@ Con el modo virtual, puede administrar la interacción entre el control <xref:Sy
   
  Los eventos siguientes solo se producen cuando la propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> está establecida en `true`.  
   
-|Event|Descripción|  
+|Evento|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Lo utiliza el control para recuperar un valor de celda de la memoria caché de datos para su presentación. Este evento solo se produce para las celdas de columnas sin enlazar.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Lo utiliza el control para confirmar la entrada del usuario para una celda en la memoria caché de datos. Este evento solo se produce para las celdas de columnas sin enlazar.<br /><br /> Llame al método <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> cuando cambie un valor almacenado en memoria caché fuera de un controlador de eventos <xref:System.Windows.Forms.DataGridView.CellValuePushed> para asegurarse de que el valor actual se muestra en el control y para aplicar los modos de ajuste automático de tamaño actualmente en vigor.|  
@@ -50,7 +50,7 @@ Con el modo virtual, puede administrar la interacción entre el control <xref:Sy
   
  Los eventos siguientes son útiles en el modo virtual, pero se pueden usar independientemente del valor de la propiedad <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-|eventos|Descripción|  
+|Eventos|Descripción|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Lo utiliza el control para indicar cuándo se eliminan o se agregan filas, lo que le permite actualizar la memoria caché de datos según corresponda.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Lo utiliza el control para dar formato a los valores de celda para su presentación y para analizar y validar los datos proporcionados por el usuario.|  
@@ -62,7 +62,7 @@ Con el modo virtual, puede administrar la interacción entre el control <xref:Sy
 ## <a name="best-practices-in-virtual-mode"></a>Prácticas recomendadas en el modo virtual  
  Si va a implementar el modo virtual para trabajar de forma eficaz con grandes cantidades de datos, también querrá asegurarse de que está trabajando de forma eficaz con el <xref:System.Windows.Forms.DataGridView> control. Para obtener más información sobre el uso eficaz de los estilos de celda, el ajuste automático de tamaño, las selecciones y el uso compartido de filas, vea [prácticas recomendadas para escalar el control DataGridView Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

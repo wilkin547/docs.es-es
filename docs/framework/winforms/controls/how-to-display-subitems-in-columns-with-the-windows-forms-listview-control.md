@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745546"
 ---
-# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Cómo: Mostrar subelementos en columnas con el control ListView de Windows Forms
+# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Cómo: Mostrar subelementos en columnas con el control ListView de formularios Windows Forms
 El control Windows Forms <xref:System.Windows.Forms.ListView> puede mostrar texto adicional, o subelementos, para cada elemento en la vista de detalles. La primera columna muestra el texto del elemento, por ejemplo un número de empleado. Las columnas segunda, tercera y subsiguientes muestran el primer, segundo y subelementos asociados posteriores.  
   
 ### <a name="to-add-subitems-to-a-list-item"></a>Para agregar subelementos a un elemento de lista  
@@ -29,7 +29,7 @@ El control Windows Forms <xref:System.Windows.Forms.ListView> puede mostrar text
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#61)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#61)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control ListView](listview-control-overview-windows-forms.md)
 - [Agregar y quitar elementos con el control ListView de Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

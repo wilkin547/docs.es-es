@@ -38,7 +38,7 @@ Puede configurar cómo se muestran los valores en el control Windows Forms <xref
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     O bien,  
+     O bien  
   
 - Para mostrar un valor hexadecimal, establezca la propiedad <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> en `true`.  
   
@@ -57,7 +57,7 @@ Puede configurar cómo se muestran los valores en el control Windows Forms <xref
     > [!NOTE]
     > Incluso si el valor se muestra en el formulario como hexadecimal, las pruebas que realice en la propiedad <xref:System.Windows.Forms.NumericUpDown.Value%2A> comprobarán su valor decimal.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown (control)](numericupdown-control-windows-forms.md)

@@ -13,10 +13,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739993"
 ---
-# <a name="webbrowser-control-windows-forms"></a>WebBrowser (Control, Windows Forms)
+# <a name="webbrowser-control-windows-forms"></a>WebBrowser (control de Windows Forms)
 El control `WebBrowser` de Windows Forms hospeda páginas web y proporciona funciones de exploración Web a la aplicación.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control WebBrowser](webbrowser-control-overview.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -78,6 +78,6 @@ El control `WebBrowser` de Windows Forms hospeda páginas web y proporciona func
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Describe esta enumeración y todos sus valores.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

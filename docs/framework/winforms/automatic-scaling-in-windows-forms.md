@@ -98,7 +98,7 @@ Windows Forms ahora usa la lógica siguiente para escalar automáticamente los f
 
     - El método <xref:System.Windows.Forms.Control.ScaleControl%2A> se puede invalidar para cambiar la lógica de escalado del control actual.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>

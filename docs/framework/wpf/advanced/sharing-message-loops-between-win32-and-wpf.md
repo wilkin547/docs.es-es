@@ -62,7 +62,7 @@ En este tema se describe cómo implementar un bucle de mensajes para la interope
   
  Es posible que un mensaje que pase al receptor de teclado no se envíe al HWND si agregó enlaces para ese mensaje mediante el método <xref:System.Windows.Interop.HwndSource.AddHook%2A>. Es posible que el mensaje se haya controlado directamente en el nivel de bombeo de mensajes y no se haya enviado a la función `DispatchMessage`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>

@@ -43,7 +43,7 @@ En el procedimiento siguiente, creará una interfaz de usuario de varios paneles
 
 En este punto del desarrollo de aplicaciones, ha creado una interfaz de usuario sofisticada. El paso siguiente es continuar con la programación de la propia aplicación, quizás conectando el control <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ListView> controles a algún tipo de origen de datos. Para obtener más información sobre la conexión de controles a datos, consulte [enlace de datos y Windows Forms](../data-binding-and-windows-forms.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer (control)](splitcontainer-control-windows-forms.md)
