@@ -19,11 +19,11 @@ Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación d
 > [!NOTE]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<InstallDrive >: \ WF_WCF_Samples
 >
 > Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de WCF y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 Windows Process Activation Service (WAS), el nuevo mecanismo de activación de procesos para Windows Server 2008, proporciona características similares a las de IIS que anteriormente solo estaban disponibles para aplicaciones basadas en HTTP a aplicaciones que usan protocolos que no son HTTP. Windows Communication Foundation (WCF) usa la interfaz del adaptador del agente de escucha para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y MSMQ. La funcionalidad para recibir solicitudes a través de protocolos no http está hospedada por servicios de Windows administrados que se ejecutan en SMSvcHost.exe.
 
@@ -269,9 +269,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Este comando permite tener acceso a la aplicación/servicemodelsamples mediante `http://localhost/servicemodelsamples` y `net.msmq://localhost/servicemodelsamples`.
 
-7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón derecho y seleccione **propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
+7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **ejecutar**y escriba `Services.msc`. Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón derecho y seleccione **Propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
 
-8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:
+8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Use el código siguiente:
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -347,6 +347,6 @@ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguri
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de hospedaje y persistencia de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

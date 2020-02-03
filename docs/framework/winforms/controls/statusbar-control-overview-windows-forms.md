@@ -25,7 +25,7 @@ ms.locfileid: "76742868"
   
  Puede mostrar un solo mensaje en la barra de estado si establece la propiedad <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> en `false` (valor predeterminado) y establece la propiedad <xref:System.Windows.Forms.StatusBar.Text%2A> de la barra de estado en el texto que desea que aparezca en la barra de estado. Puede dividir la barra de estado en paneles para mostrar más de un tipo de información estableciendo la propiedad <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> en `true` y usando el método <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> de <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

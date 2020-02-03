@@ -150,7 +150,7 @@ En la imagen siguiente se muestra el marco Glass extendido en una aplicación WP
 
 ![Captura de pantalla que muestra un marco de cristal ampliado en una aplicación WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general de Administrador de ventanas de escritorio](/windows/desktop/dwm/dwm-overview)
 - [Información general sobre desenfoque Administrador de ventanas de escritorio](/windows/desktop/dwm/blur-ovw)

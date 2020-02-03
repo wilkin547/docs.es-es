@@ -16,13 +16,13 @@ ms.locfileid: "76737909"
 # <a name="fonts-wpf"></a>Fuentes (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye compatibilidad con la presentación enriquecida de texto con fuentes OpenType. En el Windows SDK se incluye un ejemplo de un paquete de fuentes OpenType.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Características de las fuentes OpenType](opentype-font-features.md)  
  [Empaquetar fuentes con aplicaciones](packaging-fonts-with-applications.md)  
  [Paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md)  
  [Temas "Cómo..."](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

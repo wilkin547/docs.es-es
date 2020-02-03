@@ -26,7 +26,7 @@ ms.locfileid: "76737973"
   
  Los documentos fijos están diseñados para aplicaciones que requieren una presentación precisa de lo que se ve es lo que se obtiene (WYSIWYG), independientemente de la pantalla o el hardware de la impresora utilizado. Entre los usos típicos de los documentos fijos se incluyen la publicación de escritorio, el procesamiento de textos y el diseño de formularios, donde es fundamental no apartarse del diseño de página original. Como parte de su diseño, un documento fijo mantiene la colocación posicional precisa de los elementos de contenido, independientemente de la pantalla o el dispositivo de impresión en uso. Por ejemplo, una página de un documento fijo que se vea en una pantalla de 96 ppp, aparecerá exactamente igual cuando se imprima en una impresora láser de 600 ppp o en un fotocomponedor de 4800 ppp. El diseño de página sigue siendo el mismo en todos los casos, mientras que la calidad del documento se maximiza según las capacidades de cada dispositivo.  
   
- En comparación, los documentos dinámicos están diseñados para optimizar su presentación y legibilidad, y son óptimos para su uso cuando la facilidad de lectura es el escenario de consumo principal del documento. En lugar de establecer un diseño predefinido, los documentos dinámicos ajustan y redistribuyen dinámicamente su contenido basándose en variables en tiempo de ejecución, como el tamaño de la ventana, la resolución del dispositivo y las preferencias opcionales del usuario. Una página web es un ejemplo sencillo de un documento dinámico donde se da formato al contenido de la página de manera dinámica para ajustarse a la ventana actual. Los documentos dinámicos optimizan la experiencia de visualización y lectura para el usuario, según el entorno en tiempo de ejecución. Por ejemplo, el mismo documento dinámico cambiará de formato de manera dinámica para mejorar la legibilidad óptima en una pantalla de 19 pulgadas de alta resolución o en una pantalla de PDA pequeña de 2×3 pulgadas. Además, los documentos dinámicos tienen varias características integradas, como la búsqueda, los modos de visualización que optimizan la legibilidad, y la capacidad de cambiar el tamaño y el aspecto de las fuentes.  Consulte [Información general sobre documentos dinámicos](flow-document-overview.md) para ver ilustraciones, ejemplos e información detallada sobre los documentos dinámicos.  
+ En comparación, los documentos dinámicos están diseñados para optimizar su presentación y legibilidad, y son óptimos para su uso cuando la facilidad de lectura es el escenario de consumo principal del documento. En lugar de establecer un diseño predefinido, los documentos dinámicos ajustan y redistribuyen dinámicamente su contenido basándose en variables en tiempo de ejecución, como el tamaño de la ventana, la resolución del dispositivo y las preferencias opcionales del usuario. Una página web es un ejemplo sencillo de un documento dinámico donde se da formato al contenido de la página de manera dinámica para ajustarse a la ventana actual. Los documentos dinámicos optimizan la experiencia de visualización y lectura para el usuario, según el entorno en tiempo de ejecución. Por ejemplo, el mismo documento dinámico cambiará de formato de manera dinámica para mejorar la legibilidad óptima en una pantalla de 19 pulgadas de alta resolución o en una pantalla de PDA pequeña de 2×3 pulgadas. Además, los documentos dinámicos tienen un número de características integradas, incluida búsqueda, modos de visualización que optimizan la legibilidad y la capacidad de cambiar el tamaño y el aspecto de las fuentes.  Consulte [Información general sobre documentos dinámicos](flow-document-overview.md) para ver ilustraciones, ejemplos e información detallada sobre los documentos dinámicos.  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Controles de documentos y diseño del texto  
@@ -135,7 +135,7 @@ ms.locfileid: "76737973"
   
 - Enrutar documentos directamente a una impresora compatible con XPS.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
@@ -144,7 +144,7 @@ ms.locfileid: "76737973"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](optimizing-performance-text.md)
+- [Texto](optimizing-performance-text.md)
 - [Información general sobre documentos dinámicos](flow-document-overview.md)
 - [Información general sobre impresión](printing-overview.md)
 - [Almacenamiento y serialización de documentos](document-serialization-and-storage.md)

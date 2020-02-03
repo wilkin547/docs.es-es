@@ -183,7 +183,7 @@ Los controles casi siempre detectan las acciones del usuario y responden a ellas
 
 Las aplicaciones a menudo tienen tener requisitos de entrada complejos. WPF proporciona un [sistema de comandos](advanced/commanding-overview.md) que separa las acciones de entrada del usuario del código que responde a esas acciones.
 
-## <a name="layout"></a>Presentación
+## <a name="layout"></a>Diseño
 
 Al crear crear una interfaz de usuario, se organizan los controles según su ubicación y tamaño para crear un diseño. Un requisito fundamental de cualquier diseño es adaptarse a los cambios de tamaño de la ventana y de configuración de pantalla. En lugar de obligarle a escribir código que adapte el diseño en estas circunstancias, WPF le proporciona un sistema de diseño extensible de primera clase.
 
@@ -323,7 +323,7 @@ El soporte de animación de WPF permite hacer que los controles crezcan, tiemble
 
 Para obtener más información, vea [Información general sobre animaciones](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Medios
+## <a name="media"></a>Multimedia
 
 Una manera de mostrar contenido enriquecido es mediante el uso de medios audiovisuales (multimedia). WPF proporciona compatibilidad especial con imágenes, vídeo y audio.
 
@@ -394,7 +394,7 @@ En la ilustración siguiente se muestra el resultado:
 
 ![Control TextBox que contiene texto](media/introduction-to-wpf/wpfintrofigure21.png)
 
-Otros controles, sin embargo, pueden contener varios elementos de diferentes tipos de contenido. El contenido de un control <xref:System.Windows.Controls.Button>, especificado por la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A>, puede contener diversos elementos, incluidos los controles de diseño, texto, imágenes y formas. En el ejemplo siguiente se muestra un <xref:System.Windows.Controls.Button> con contenido que incluye un <xref:System.Windows.Controls.DockPanel>, un <xref:System.Windows.Controls.Label>, un <xref:System.Windows.Controls.Border>y un <xref:System.Windows.Controls.MediaElement>:
+Otros controles, sin embargo, pueden contener varios elementos de diferentes tipos de contenido. El contenido de un control <xref:System.Windows.Controls.Button>, especificado por la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> , puede contener diversos elementos, incluidos los controles de diseño, texto, imágenes y formas. En el ejemplo siguiente se muestra un <xref:System.Windows.Controls.Button> con contenido que incluye un <xref:System.Windows.Controls.DockPanel>, un <xref:System.Windows.Controls.Label>, un <xref:System.Windows.Controls.Border>y un <xref:System.Windows.Controls.MediaElement>:
 
 ```xaml
 <Window
@@ -650,7 +650,7 @@ Para obtener más información sobre los controles personalizados, vea [Informac
 
 ## <a name="wpf-best-practices"></a>Procedimientos recomendados en WPF
 
-Como sucede con cualquier plataforma de desarrollo, WPF se puede usar de diversas maneras para lograr el resultado deseado. Para asegurarse de que las aplicaciones de WPF proporcionen la experiencia del usuario necesaria y satisfagan las exigencias del público en general, existen procedimientos recomendados de accesibilidad, globalización y localización, y rendimiento. Para obtener más información, vea:
+Como sucede con cualquier plataforma de desarrollo, WPF se puede usar de diversas maneras para lograr el resultado deseado. Para asegurarse de que las aplicaciones de WPF proporcionen la experiencia del usuario necesaria y satisfagan las exigencias del público en general, existen procedimientos recomendados de accesibilidad, globalización y localización, y rendimiento. Para más información, consulte:
 
 - [Accesibilidad](../ui-automation/accessibility-best-practices.md)
 - [Globalización y localización de WPF](advanced/wpf-globalization-and-localization-overview.md)
@@ -664,7 +664,7 @@ Hemos analizado las principales características de WPF. Ahora es el momento de 
 > [!div class="nextstepaction"]
 > [Tutorial: Mi primera aplicación de escritorio WPF](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a WPF](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

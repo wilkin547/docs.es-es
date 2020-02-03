@@ -58,7 +58,7 @@ Explica cómo agregar y quitar elementos de menú contextual en Windows Forms.
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     O bien,  
+     O bien  
   
 2. Utilice el método `Clear` de la colección `MenuItems` del componente <xref:System.Windows.Forms.ContextMenu> para quitar todos los elementos del menú.  
   
@@ -74,7 +74,7 @@ Explica cómo agregar y quitar elementos de menú contextual en Windows Forms.
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu (componente)](contextmenu-component-windows-forms.md)

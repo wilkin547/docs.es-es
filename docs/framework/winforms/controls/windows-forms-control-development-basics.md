@@ -30,7 +30,7 @@ Un control Windows Forms es una clase que deriva directa o indirectamente de <xr
   
  La clase base para los controles de Windows Forms, <xref:System.Windows.Forms.Control>, proporciona la infraestructura necesaria para la presentación visual en aplicaciones basadas en Windows del cliente. <xref:System.Windows.Forms.Control> proporciona un identificador de ventana, controla el enrutamiento de mensajes y proporciona eventos del mouse y del teclado, así como muchos otros eventos de la interfaz de usuario. Proporciona un diseño avanzado y tiene propiedades específicas para la presentación visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>y muchas otras. Además, proporciona compatibilidad con la seguridad, los subprocesos y la interoperabilidad con los controles ActiveX. Dado que la clase base proporciona gran parte de la infraestructura, es relativamente fácil desarrollar sus propios controles de Windows Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Desarrollar un control de formularios Windows Forms sencillo](how-to-develop-a-simple-windows-forms-control.md)
 - [Desarrollar un control de formularios Windows Forms compuesto](developing-a-composite-windows-forms-control.md)

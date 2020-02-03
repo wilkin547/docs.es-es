@@ -53,6 +53,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interceptar entradas del lápiz óptico](intercepting-input-from-the-stylus.md)

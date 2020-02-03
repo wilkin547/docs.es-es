@@ -32,7 +32,7 @@ Puede personalizar la apariencia de cualquier celda controlando el evento de <xr
   
 - Referencias a los ensamblados System, System.Windows.Forms y System.Drawing.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellPainting>

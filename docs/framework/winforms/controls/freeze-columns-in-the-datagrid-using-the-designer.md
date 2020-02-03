@@ -32,7 +32,7 @@ Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.F
     > [!NOTE]
     > También puede inmovilizar una columna al agregarla seleccionando el cuadro **inmovilizado** en el cuadro de diálogo **Agregar columna** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>

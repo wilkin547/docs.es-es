@@ -23,7 +23,7 @@ Los controles de <xref:System.Windows.Forms.Label> de Windows Forms se usan para
   
  El título que se muestra en la etiqueta está contenido en la propiedad <xref:System.Windows.Forms.Label.Text%2A>. La propiedad <xref:System.Windows.Forms.Label.TextAlign%2A> permite establecer la alineación del texto dentro de la etiqueta. Para obtener más información, vea [Cómo: establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Label>
 - [Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

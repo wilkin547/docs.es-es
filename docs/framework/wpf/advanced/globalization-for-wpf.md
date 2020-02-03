@@ -99,9 +99,9 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 
 - Odia
 
-- Siríaco
+- Sirio
 
-- Tamul
+- Tamil
 
 - Telugu
 
@@ -115,11 +115,11 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 
  Actualmente no se admiten los siguientes scripts:
 
-- Jemer
+- Khmer
 
 - Hangul coreano antiguo
 
-- Birmano
+- Myanmar
 
 - Cingalés
 
@@ -156,7 +156,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Compilar aplicaciones localizables
- La localización significa adaptar una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a distintas referencias culturales. Para que una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localizable, los desarrolladores deben compilar todos los recursos localizables en un ensamblado de recursos. El ensamblado de recursos se localiza en idiomas diferentes y el código subyacente usa la API de administración de recursos para cargar. Uno de los archivos necesarios para una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es un archivo de proyecto (. proj). Todos los recursos que se utilizan en la aplicación deben incluirse en el archivo de proyecto. En el ejemplo siguiente de un archivo .csproj se muestra cómo hacerlo.
+ La localización significa adaptar una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a distintas referencias culturales. Para que una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localizable, los desarrolladores deben compilar todos los recursos localizables en un ensamblado de recursos. El ensamblado de recursos se localiza en idiomas diferentes y el código subyacente usa la API de administración de recursos para cargar. Uno de los archivos necesarios para una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es un archivo de proyecto (. proj). Todos los recursos que se usan en la aplicación deben incluirse en el archivo de proyecto. En el ejemplo siguiente de un archivo .csproj se muestra cómo hacerlo.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>
@@ -178,6 +178,6 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre la globalización y la localización de WPF](wpf-globalization-and-localization-overview.md)

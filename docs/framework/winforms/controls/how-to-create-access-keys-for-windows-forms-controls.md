@@ -33,7 +33,7 @@ Una *tecla de acceso* es un carácter subrayado en el texto de un menú, un elem
 
 Los controles que no pueden recibir el foco no pueden tener claves de acceso.
 
-## <a name="programmatic"></a>Programas
+## <a name="programmatic"></a>Programático
 
 Establezca la propiedad `Text` en una cadena que incluya una y comercial (&) delante de la letra que será el método abreviado.
 
@@ -55,11 +55,11 @@ button1->Text = "&Print";
 > [!NOTE]
 > Para usar una y comercial en un título sin crear una tecla de acceso, incluya dos símbolos de y comercial (& &). Se muestra un carácter de y comercial único en el título y no hay ningún carácter subrayado.
 
-## <a name="designer"></a>Diseñador de
+## <a name="designer"></a>Diseñador
 
 En la ventana **propiedades** de Visual Studio, establezca la propiedad **texto** en una cadena que incluya una y comercial (' & ') delante de la letra que será la tecla de acceso. Por ejemplo, para establecer la letra "P" como tecla de acceso, escriba **& imprimir**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Button>
 - [Responder a clics de botones en Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

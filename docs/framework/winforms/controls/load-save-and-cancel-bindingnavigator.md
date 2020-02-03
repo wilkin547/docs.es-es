@@ -110,7 +110,7 @@ En el procedimiento siguiente, se enlaza un control <xref:System.Windows.Forms.T
     > [!NOTE]
     > El ámbito del método <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> es la fila de datos. Guarde los cambios que realice mientras ve ese registro individual antes de ir al siguiente registro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

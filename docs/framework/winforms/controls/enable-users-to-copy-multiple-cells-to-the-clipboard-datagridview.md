@@ -42,7 +42,7 @@ Cuando se habilita la copia de celdas, los datos de su control <xref:System.Wind
   
 - Referencias a los ensamblados N:System y N:System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>

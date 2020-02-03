@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el componente PrintDocument
+title: '{1}'
 ms.date: 03/30/2017
 f1_keywords:
 - PrintDocument
@@ -28,9 +28,9 @@ Dos de los principales escenarios que implican el componente <xref:System.Drawin
 
 Cuando se agrega a un formulario, el componente de <xref:System.Drawing.Printing.PrintDocument> aparece en la bandeja en la parte inferior del Diseñador de Windows Forms en Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms Print Support](../advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
-- [PrintDocument (Componente, Windows Forms)](printdocument-component-windows-forms.md)
+- [PrintDocument (componente)](printdocument-component-windows-forms.md)

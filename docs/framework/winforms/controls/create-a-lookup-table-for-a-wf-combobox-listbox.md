@@ -33,7 +33,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID.|Name|  
+|id|Nombre|  
 |--------|----------|  
 |12|Patata|  
 |13|Pollo|  
@@ -54,7 +54,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
   
 4. Establezca las siguientes propiedades. Puede establecerse en código o en el diseñador.  
   
-    |La propiedad|Configuración de|  
+    |Propiedad|Configuración|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|La tabla que contiene la información sobre qué número de identificador equivale a qué elemento. En el escenario anterior, esto se `ItemTable`.|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|La columna de la tabla de origen de datos que desea mostrar en el control. En el escenario anterior, esto es `"Name"` (para establecer en el código, use comillas).|  
@@ -70,7 +70,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enlace de datos y Windows Forms](../data-binding-and-windows-forms.md)
 - [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)

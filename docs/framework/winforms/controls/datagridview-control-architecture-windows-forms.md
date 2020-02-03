@@ -120,11 +120,11 @@ El control <xref:System.Windows.Forms.DataGridView> y sus clases relacionadas es
   
 |Tipo de celda|Control hospedado|Tipo de columna|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|no disponible|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|no disponible|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|N/D|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|N/D|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|no disponible|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|no disponible|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|N/D|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|N/D|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
@@ -136,7 +136,7 @@ El control <xref:System.Windows.Forms.DataGridView> y sus clases relacionadas es
   
  Si habilita la propiedad <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> del control <xref:System.Windows.Forms.DataGridView>, aparece una fila especial para agregar nuevas filas como última fila. Esta fila forma parte de la colección de <xref:System.Windows.Forms.DataGridView.Rows%2A>, pero tiene una funcionalidad especial que puede requerir su atención. Para obtener más información, vea [usar la fila para nuevos registros en el control DataGridView de Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)
 - [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)

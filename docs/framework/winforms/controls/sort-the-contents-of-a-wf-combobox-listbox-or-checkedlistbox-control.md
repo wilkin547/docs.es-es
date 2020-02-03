@@ -26,7 +26,7 @@ Windows Forms controles no ordenan cuando están enlazados a datos. Para mostrar
   
      Esta configuración cambia la posición de todos los elementos de lista existentes en orden.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

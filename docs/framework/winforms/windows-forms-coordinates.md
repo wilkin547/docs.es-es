@@ -1,5 +1,5 @@
 ---
-title: Unas
+title: Coordenadas
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -28,7 +28,7 @@ El sistema de coordenadas de un Windows Forms se basa en las coordenadas del dis
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Asignación de un tipo de coordenada a otro  
  En ocasiones, puede que necesite asignar las coordenadas de pantalla a las coordenadas de cliente. Puede hacerlo fácilmente con los métodos <xref:System.Windows.Forms.Control.PointToClient%2A> y <xref:System.Windows.Forms.Control.PointToScreen%2A> disponibles en la clase <xref:System.Windows.Forms.Control>. Por ejemplo, la propiedad <xref:System.Windows.Forms.Control.MousePosition%2A> de <xref:System.Windows.Forms.Control> se registra en coordenadas de pantalla, pero puede que desee convertirlos en coordenadas de cliente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

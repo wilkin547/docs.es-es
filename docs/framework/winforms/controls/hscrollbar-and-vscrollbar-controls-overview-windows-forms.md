@@ -1,5 +1,5 @@
 ---
-title: Información general sobre los controles HScrollBar y VScrollBar
+title: Introducción a los controles HScrollBar y VScrollBar
 ms.date: 03/30/2017
 f1_keywords:
 - HScrollBar
@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> controles se usan para facil
   
  Cuando el usuario presiona una de las teclas de dirección o hace clic en uno de los botones de la barra de desplazamiento, la propiedad <xref:System.Windows.Forms.ScrollBar.Value%2A> cambia según el valor establecido en la propiedad <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

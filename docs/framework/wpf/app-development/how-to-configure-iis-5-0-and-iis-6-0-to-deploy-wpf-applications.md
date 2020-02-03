@@ -52,7 +52,7 @@ Debe ajustar el valor de la expiración del contenido a 1 minuto. En el procedim
 
 Debe registrar varios tipos MIME y extensiones de archivo para que el explorador del sistema del cliente pueda cargar el controlador correcto. Debe agregar los tipos siguientes:
 
-|Comprobación de actualización|Tipo MIME|
+|Extensión|Tipo MIME|
 |---------------|---------------|
 |.manifest|application/manifest|
 |.xaml|application/xaml+xml|

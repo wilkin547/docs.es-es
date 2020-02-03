@@ -118,7 +118,7 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
   
  ![Captura de pantalla que muestra las fuentes OpenType.](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
- Para obtener más información, vea [Documentos en WPF](documents-in-wpf.md).  
+ Para obtener más información, consulte [Documentos en WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Dibujo de texto ligero  
  Puede dibujar texto directamente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos mediante el método <xref:System.Windows.Media.DrawingContext.DrawText%2A> del objeto <xref:System.Windows.Media.DrawingContext>. Para usar este método, se crea un objeto <xref:System.Windows.Media.FormattedText>. Este objeto permite dibujar texto de varias líneas, en el que se puede dar formato individual a cada carácter del texto. La funcionalidad del objeto <xref:System.Windows.Media.FormattedText> contiene gran parte de la funcionalidad de las marcas DrawText en la API de Windows. Además, el objeto <xref:System.Windows.Media.FormattedText> contiene funcionalidad como la compatibilidad con puntos suspensivos, en la que se muestra un botón de puntos suspensivos cuando el texto supera sus límites. En el ejemplo siguiente se muestra texto al que se han aplicado varios formatos diferentes, incluido un degradado lineal en la segunda y tercera palabra.  
@@ -148,7 +148,7 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
   
  Para obtener más información sobre la creación de un diseño de texto personalizado, vea [Formato de texto avanzado](advanced-text-formatting.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
 - [Características de las fuentes OpenType](opentype-font-features.md)
 - [Dibujar texto con formato](drawing-formatted-text.md)
 - [Formato de texto avanzado](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [Texto](optimizing-performance-text.md)
 - [Tipografía de Microsoft](https://docs.microsoft.com/typography/)

@@ -24,11 +24,11 @@ ms.locfileid: "76746821"
 
 En este artículo se muestra cómo usar las características de diseño Windows Forms, como la delimitación y las guías de alineación, para organizar controles de Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Necesita Visual Studio para completar este tutorial.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 Abra Visual Studio y cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic C# o visual denominado `ArrangeElementHost`.
 
@@ -47,7 +47,7 @@ Después de agregar un control WPF al proyecto, puede organizarlo en el formular
 
 4. Establezca el valor de la propiedad <xref:System.Windows.Controls.Control.Background%2A> en **Blue**.
 
-5. Generar el proyecto.
+5. Compile el proyecto.
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>Hospedar controles WPF en un panel de diseño
 
@@ -129,7 +129,7 @@ La delimitación y el acoplamiento de un control WPF hospedado en un formulario 
 
     Para obtener más información, vea [Cómo: delimitar y acoplar controles secundarios en un control TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

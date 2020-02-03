@@ -348,7 +348,7 @@ public void Write()
 }  
 ```  
   
-## <a name="database-access"></a>Acceso entre bases de datos  
+## <a name="database-access"></a>Acceso a la base de datos  
  Los permisos necesarios para acceder a una base de datos varían según el proveedor de la base de datos. Sin embargo, solo las aplicaciones que se ejecutan con los permisos adecuados pueden acceder a una base de datos a través de una conexión de datos. Para obtener más información sobre los permisos necesarios para tener acceso a una base de datos, vea [seguridad de acceso del código y ADO.net](../data/adonet/code-access-security.md).  
   
  Si no puede acceder directamente a una base de datos porque quiere que la aplicación se ejecute en confianza parcial, puede utilizar un servicio Web como un medio alternativo para acceder a los datos. Un servicio Web es un componente de software al que se puede acceder mediante programación a través de una red. Con los servicios Web, las aplicaciones pueden compartir datos entre las zonas del grupo de código. De forma predeterminada, a las aplicaciones de las zonas de Internet y de la intranet local se les concede el derecho de acceso a sus sitios de origen, lo que les permite llamar a un servicio Web hospedado en el mismo servidor. Para obtener más información, consulte [servicios web en ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) o [Windows Communication Foundation](../wcf/index.md).  
@@ -358,7 +358,7 @@ public void Write()
   
  Dado que no puede acceder al Registro con confianza parcial, puede que tenga que dar con otros métodos para almacenar los datos. Al almacenar la configuración de la aplicación, utilice almacenamiento aislado en lugar del Registro. El almacenamiento aislado también puede utilizarse para almacenar otros archivos específicos de la aplicación. También puede almacenar información global de la aplicación sobre el servidor o el sitio de origen porque, de forma predeterminada, a las aplicaciones se les concede el derecho a acceder a su sitio de origen.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Consideraciones de seguridad adicionales en Windows Forms](additional-security-considerations-in-windows-forms.md)

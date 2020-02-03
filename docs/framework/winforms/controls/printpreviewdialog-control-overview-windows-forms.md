@@ -53,7 +53,7 @@ Si el modificador no está presente o se establece en cualquier otro valor, no s
 
 Si usa el evento <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> para modificar la configuración de la impresora, el rendimiento del control <xref:System.Windows.Forms.PrintPreviewDialog> no mejorará incluso si se ha establecido un modificador de configuración de optimización.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Información general sobre el control PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)

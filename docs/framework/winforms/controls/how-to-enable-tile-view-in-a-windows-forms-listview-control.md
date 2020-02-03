@@ -53,9 +53,9 @@ Con la característica de vista de mosaico del control <xref:System.Windows.Form
   
 - Un archivo de icono llamado book.ico en el mismo directorio que el archivo ejecutable.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView (control)](listview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
 - [Información general del control ListView](listview-control-overview-windows-forms.md)

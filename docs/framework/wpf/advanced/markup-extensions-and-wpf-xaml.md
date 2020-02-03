@@ -116,12 +116,12 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
   
  La mayoría de extensiones de marcado, cuando se usan en sintaxis de elementos de objeto para rellenar un elemento de propiedad, no contienen sintaxis de elementos de contenido o de cualquier otra propiedad. De este modo, cerraría la etiqueta de elemento de objeto y no proporcionaría ningún elemento secundario. Siempre que un procesador XAML encuentra cualquier elemento de objeto, se llama al constructor de esa clase, que crea una instancia del objeto creado a partir del elemento analizado. Una clase de extensión de marcado no es diferente: Si desea que la extensión de marcado se pueda usar en la sintaxis de elementos de objeto, debe proporcionar un constructor sin parámetros. Algunas extensiones de marcado existentes tienen al menos un valor de propiedad obligatorio que se debe especificar para obtener una inicialización eficaz. Si es así, ese valor de propiedad se proporciona normalmente como un atributo de propiedad en el elemento de objeto. En las páginas de referencia [Características de lenguaje (x:) de espacios de nombres XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md) y [Extensiones XAML de WPF](wpf-xaml-extensions.md), se indican las extensiones de marcado que tienen propiedades obligatorias (y los nombres de dichas propiedades). En las páginas de referencia también se indica si la sintaxis de elementos de objeto o de atributos no se permite para extensiones de marcado concretas. Un caso destacado e es [x:Array (Extensión de marcado)](../../../desktop-wpf/xaml-services/xarray-markup-extension.md), que no admite la sintaxis de atributos porque el contenido de la matriz debe especificarse en el etiquetado como contenido. El contenido de la matriz se controla como objetos generales y, por lo tanto, no es posible usar ningún convertidor de tipos predeterminado para el atributo. Además, [x:Array (Extensión de marcado)](../../../desktop-wpf/xaml-services/xarray-markup-extension.md) necesita un parámetro `type`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Características de lenguaje (x:) de espacios de nombres XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Extensiones XAML de WPF](wpf-xaml-extensions.md)
 - [StaticResource (extensión de marcado)](staticresource-markup-extension.md)
 - [Binding (extensión de marcado)](binding-markup-extension.md)
-- [Extensión de marcado DynamicResource](dynamicresource-markup-extension.md)
+- [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)
 - [x:Type (extensión de marcado)](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

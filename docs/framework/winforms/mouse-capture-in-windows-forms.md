@@ -21,6 +21,6 @@ La *captura del mouse* se refiere a cuando un control toma el comando de toda la
   
  Solo la ventana de primer plano puede capturar el mouse. Cuando una ventana en segundo plano intenta capturar el mouse, la ventana recibe mensajes solo de los eventos del mouse que se producen cuando el puntero del mouse está dentro de la parte visible de la ventana. Además, incluso si la ventana de primer plano ha capturado el mouse, el usuario todavía puede hacer clic en otra ventana y colocarla en primer plano. Cuando se captura el mouse, las teclas de método abreviado no funcionan.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

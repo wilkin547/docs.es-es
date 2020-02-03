@@ -25,7 +25,7 @@ Los controles <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.
   
  Además, los cuadros combinados ahorran espacio en un formulario. Dado que la lista completa no se muestra hasta que el usuario hace clic en la flecha hacia abajo, un cuadro combinado puede caber fácilmente en un espacio pequeño en el que no quepa un cuadro de lista. Una excepción es cuando la propiedad <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> está establecida en <xref:System.Windows.Forms.ComboBoxStyle.Simple>: se muestra la lista completa y el cuadro combinado ocupa más espacio que el cuadro de lista.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

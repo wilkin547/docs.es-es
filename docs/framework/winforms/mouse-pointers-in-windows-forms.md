@@ -30,7 +30,7 @@ El *puntero*del mouse, que a veces se conoce como cursor, es un mapa de bits que
   
  La forma principal de cambiar el puntero del mouse es establecer la propiedad <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.Control.DefaultCursor%2A> de un control en una nueva <xref:System.Windows.Forms.Cursor>. Para obtener ejemplos de cómo cambiar el puntero del mouse, vea el ejemplo de código de la clase <xref:System.Windows.Forms.Cursor>. Además, la clase <xref:System.Windows.Forms.Cursors> expone un conjunto de objetos <xref:System.Windows.Forms.Cursor> para muchos tipos diferentes de punteros, como un puntero que se parece a una mano. Para mostrar el puntero de espera, que es similar a un reloj de arena, siempre que el puntero del mouse esté en el control, use la propiedad <xref:System.Windows.Forms.Control.UseWaitCursor%2A> de la clase <xref:System.Windows.Forms.Control>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Cursor>
 - [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Asignar espacios de nombres CLR a espacios de nombres XML en un ensamblado  
  WPF define un atributo CLR que usan los procesadores XAML para asignar varios espacios de nombres CLR a un mismo espacio de nombres XAML. Este atributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, se coloca en el nivel de ensamblado en el código fuente que genera el ensamblado. El código fuente del ensamblado de WPF usa este atributo para asignar los distintos espacios de nombres comunes, como <xref:System.Windows> y <xref:System.Windows.Controls>, al espacio de nombres `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
- El <xref:System.Windows.Markup.XmlnsDefinitionAttribute> toma dos parámetros: el nombre del espacio de nombres XML/XAML y el nombre del espacio de nombres CLR. Puede haber más de un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para asignar varios espacios de nombres CLR al mismo espacio de nombres XML. Una vez asignados, si se quiere se puede hacer referencia también a los miembros de esos espacios de nombres aunque no estén completos, proporcionando la instrucción `using` adecuada en la página de código subyacente de la clase parcial. Para obtener más detalles, vea <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ El <xref:System.Windows.Markup.XmlnsDefinitionAttribute> toma dos parámetros: el nombre del espacio de nombres XML/XAML y el nombre del espacio de nombres CLR. Puede haber más de un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para asignar varios espacios de nombres CLR al mismo espacio de nombres XML. Una vez asignados, si se quiere se puede hacer referencia también a los miembros de esos espacios de nombres aunque no estén completos, proporcionando la instrucción `using` adecuada en la página de código subyacente de la clase parcial. Para obtener más información, vea <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Espacios de nombres de diseñador y otros prefijos de las plantillas XAML  
  Si trabaja con entornos de desarrollo o herramientas de diseño para XAML de WPF, tal vez observe que hay otros espacios de nombres XAML / prefijos definidos dentro del marcado XAML.  
@@ -135,7 +135,7 @@ End Namespace
   
  El BAML compilado (generado mediante PresentationBuildTask) usa todos los pasos, aunque el BAML tampoco debe contener nombres de ensamblado incompletos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Descripción de los espacios de nombres XML](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

@@ -32,7 +32,7 @@ Al crear controles que interactúan con datos, a veces necesitará enlazar un co
   
 - Referencias a los ensamblados System y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>

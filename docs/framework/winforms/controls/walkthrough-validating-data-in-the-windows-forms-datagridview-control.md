@@ -27,9 +27,9 @@ En este tutorial, recuperará filas de la tabla `Customers` en la base de datos 
 
 Para copiar el código de este tema como una sola lista, vea [Cómo: validar datos en el control DataGridView Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Para poder completar este tutorial, necesitará:
+Para completar esta visita guiada, necesitará:
 
 - Acceso a un servidor que tenga la base de datos de ejemplo Northwind SQL Server.
 
@@ -68,7 +68,7 @@ Para poder completar este tutorial, necesitará:
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#20)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#20)]
 
-## <a name="testing-the-application"></a>Probar la aplicación
+## <a name="testing-the-application"></a>Prueba de la aplicación
 
 Puede comprobar el formulario para asegurarse de que se comporta de la forma prevista.
 
@@ -92,7 +92,7 @@ Esta aplicación ofrece una descripción básica de las capacidades del control 
 
 - Personalizar la apariencia de las celdas. Para obtener más información, vea [Cómo: personalizar la apariencia de las celdas en el control datagridview Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: establecer estilos de colores y fuentes en el control DataGridView Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

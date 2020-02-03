@@ -42,7 +42,7 @@ Proporciona documentación de referencia para la propiedad <xref:System.Windows.
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
 Proporciona documentación de referencia para la enumeración <xref:System.Windows.Forms.DataGridViewColumnSortMode>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

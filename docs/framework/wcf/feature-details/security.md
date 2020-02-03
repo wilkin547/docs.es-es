@@ -18,7 +18,7 @@ En los temas de esta sección se describen las características de seguridad de 
   
  Para obtener más información acerca de Windows Server AppFabric y la seguridad, vea [modelo de seguridad para Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Describe las características de seguridad de WCF.  
   
@@ -34,7 +34,7 @@ En los temas de esta sección se describen las características de seguridad de 
  [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Una vista orientada a seguridad de los enlaces, incluidos los temas que muestran cómo crear los enlaces de seguridad personalizados.  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Describe cómo proteger los mensajes mediante las características de seguridad de WCF.  
   
  [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -65,10 +65,10 @@ En los temas de esta sección se describen las características de seguridad de 
   
  [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Información conceptual](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de su aplicación](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

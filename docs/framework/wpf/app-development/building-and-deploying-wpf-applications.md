@@ -24,9 +24,9 @@ El modelo de compilación e implementación proporciona la capacidad de compilar
   
 - Implementación ClickOnce: el sistema de implementación y publicación de .NET.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Compilar una aplicación de WPF](building-a-wpf-application-wpf.md)  
- [Implementar una aplicación de WPF](deploying-a-wpf-application-wpf.md)  
+ [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)  
  [Temas "Cómo..."](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  

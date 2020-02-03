@@ -152,7 +152,7 @@ Para ver una implementación de ejemplo, [C#](https://github.com/dotnet/samples/
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre la Automatización de la interfaz de usuario](../../ui-automation/ui-automation-overview.md)
 - [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../ui-automation/server-side-ui-automation-provider-implementation.md)

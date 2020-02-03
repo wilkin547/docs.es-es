@@ -24,7 +24,7 @@ El concepto que se encuentra detrás de la implementación del Agente de escucha
 
 Este agente de escucha se deriva del `XmlWriteTraceListener` y permite ver los registros con la herramienta de [visor de seguimiento de servicio (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Al intentar ver los registros, los dos archivos de registro se pueden recombinar con facilidad abriendo al mismo tiempo ambos archivos de registro en la herramienta Visor de seguimiento de servicio. La herramienta Visor de seguimiento de servicio trata automáticamente de ordenar los seguimientos de manera que aparezcan en el orden correcto.
 
-## <a name="configuration"></a>Configuración de
+## <a name="configuration"></a>Configuración
 
 Se puede configurar un servicio para usar el Agente de escucha de seguimiento del búfer circular agregando el código siguiente para unos elementos de agente de escucha y origen. El tamaño máximo de archivo se especifica estableciendo el atributo `maxFileSizeKB` en la configuración del agente de escucha de seguimiento circular. Esto último se muestra en el código siguiente.
 
@@ -62,6 +62,6 @@ Se puede configurar un servicio para usar el Agente de escucha de seguimiento de
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

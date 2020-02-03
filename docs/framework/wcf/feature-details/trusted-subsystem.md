@@ -31,13 +31,13 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Mensaje|  
+|Modo de seguridad|Message|  
 |Interoperabilidad|Solo Windows Communication Foundation (WCF).|  
 |Autenticación (servicio)|El servicio de token de seguridad autentica y autoriza clientes.|  
 |Autenticación (cliente)|El subsistema de confianza autentica al cliente y el recurso autentica al servicio del subsistema de confianza.|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
-|Transport|HTTP entre el cliente y el servicio del subsistema de confianza.<br /><br /> NET.TCP entre el servicio del subsistema de confianza y el recurso (servicio back-end).|  
+|Transporte|HTTP entre el cliente y el servicio del subsistema de confianza.<br /><br /> NET.TCP entre el servicio del subsistema de confianza y el recurso (servicio back-end).|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Recurso (servicio back-end)  
@@ -48,7 +48,7 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a>Configuración de  
+### <a name="configuration"></a>Configuración  
  La siguiente configuración define el mismo punto de conexión mediante configuración.  
   
 ```xml  
@@ -100,7 +100,7 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configuración de  
+### <a name="configuration"></a>Configuración  
  La siguiente configuración define el mismo punto de conexión mediante configuración. Tenga en cuenta los dos enlaces: uno protege el servicio que se hospeda en el subsistema de confianza y el otro comunica entre el subsistema de confianza y el servicio back-end.  
   
 ```xml  
@@ -163,7 +163,7 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>Remoto  
   
 ### <a name="code"></a>Código  
  El siguiente código muestra cómo crear el cliente que comunica con el subsistema de confianza utilizando la seguridad de mensaje sobre el protocolo HTTP y un nombre de usuario y contraseña para la autenticación.  
@@ -171,7 +171,7 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a>Configuración de  
+### <a name="configuration"></a>Configuración  
  El siguiente código configura el cliente para utilizar la seguridad de mensaje sobre el protocolo HTTP y un nombre de usuario y contraseña para la autenticación. El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable).  
   
 ```xml  
@@ -210,7 +210,7 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

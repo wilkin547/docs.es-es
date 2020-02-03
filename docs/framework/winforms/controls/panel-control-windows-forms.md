@@ -16,7 +16,7 @@ ms.locfileid: "76744300"
 # <a name="panel-control-windows-forms"></a>Control Panel (Windows Forms)
 Windows Forms controles de `Panel` se utilizan para proporcionar una agrupación identificable para otros controles. Normalmente, los paneles se usan para subdividir un formulario por función. El control `Panel` es similar al control <xref:System.Windows.Forms.GroupBox>; sin embargo, solo el control `Panel` puede tener barras de desplazamiento y solo el control <xref:System.Windows.Forms.GroupBox> muestra un título.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control Panel](panel-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -34,7 +34,7 @@ Windows Forms controles de `Panel` se utilizan para proporcionar una agrupación
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
  [Agregar o quitar controles de una colección en tiempo de ejecución](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  

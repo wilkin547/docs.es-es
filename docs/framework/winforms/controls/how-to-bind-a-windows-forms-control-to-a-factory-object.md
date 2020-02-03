@@ -35,7 +35,7 @@ Al crear controles que interactúan con datos, a veces considerará necesario en
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>

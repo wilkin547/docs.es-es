@@ -20,7 +20,7 @@ ms.locfileid: "76732134"
 ## <a name="attributes-for-control-and-component-properties"></a>Atributos para las propiedades de controles y componentes  
  En la tabla siguiente se muestran los atributos que se pueden aplicar a las propiedades o a otros miembros de los controles y componentes personalizados. Para obtener un ejemplo que utiliza muchos de estos atributos, vea [Cómo: Aplicar atributos en controles de Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Especifica el valor para pasar a una propiedad que hace que esta obtenga su valor de otro origen. Esto se conoce como *ambiente*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Especifica si una propiedad o un evento se debería mostrar en una ventana **Propiedades**.|  
@@ -40,7 +40,7 @@ ms.locfileid: "76732134"
 ## <a name="attributes-for-data-binding-properties"></a>Atributos para las propiedades de enlaces de datos  
  En la tabla siguiente se muestran los atributos que se pueden aplicar para especificar cómo los controles y componentes personalizados interactúan con enlace de datos.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|Especifica si una propiedad se utiliza normalmente para enlace.|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Especifica las propiedades del origen de datos y del miembro de datos para un componente.|  
@@ -51,7 +51,7 @@ ms.locfileid: "76732134"
 ## <a name="attributes-for-classes"></a>Atributos para las clases  
  En la tabla siguiente se muestran los atributos que se pueden aplicar para especificar en tiempo de diseño el comportamiento de los controles y componentes personalizados.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|Especifica el evento predeterminado para un componente.|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|Especifica la propiedad predeterminada para un componente.|  
@@ -60,7 +60,7 @@ ms.locfileid: "76732134"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Representa un atributo de un elemento del cuadro de herramientas.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Especifica la cadena del filtro y el tipo de filtro que se va a utilizar para un elemento del cuadro de herramientas.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Attribute>
 - [Aplicar atributos en controles de Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)

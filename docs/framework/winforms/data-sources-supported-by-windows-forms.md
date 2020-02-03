@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos admitidos
+title: Orígenes de datos compatibles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - collections [Windows Forms], binding to
@@ -57,7 +57,7 @@ Tradicionalmente, el enlace de datos se ha usado en las aplicaciones para aprove
   
 - <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> es una vista personalizada de toda la <xref:System.Data.DataSet>, análoga a un <xref:System.Data.DataView>, pero con relaciones incluidas. Con una colección de <xref:System.Data.DataViewManager.DataViewSettings%2A>, puede establecer filtros predeterminados y las opciones de ordenación de las vistas que el <xref:System.Data.DataViewManager> tenga para una tabla determinada.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)

@@ -70,7 +70,7 @@ Una razón para implementar el modo virtual en el control <xref:System.Windows.F
   
  Para mejorar el rendimiento del desplazamiento de la aplicación, puede aumentar la cantidad de datos almacenados localmente. Sin embargo, para mejorar el tiempo de inicio, debe evitar cargar inicialmente demasiados datos. Puede que desee modificar la clase `Cache` para aumentar el número de páginas de datos que puede almacenar. El uso de más páginas de datos puede mejorar la eficacia del desplazamiento, pero tendrá que determinar el número ideal de filas en una página de datos, en función del ancho de banda disponible y de la latencia del servidor. Con páginas más pequeñas, se tiene acceso al servidor con mayor frecuencia, pero se tardará menos tiempo en devolver los datos solicitados. Si la latencia es mayor que un problema que el ancho de banda, puede que desee usar páginas de datos más grandes.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

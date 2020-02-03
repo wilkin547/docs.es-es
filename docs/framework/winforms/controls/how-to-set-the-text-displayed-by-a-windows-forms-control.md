@@ -34,7 +34,7 @@ Windows Forms controles suelen mostrar algún texto relacionado con la función 
 
 También puede establecer el texto mediante el [Diseñador](#designer).
 
-## <a name="programmatic"></a>Programas
+## <a name="programmatic"></a>Programático
 
 1. Establezca la propiedad <xref:System.Windows.Forms.Control.Text%2A> en una cadena.
 
@@ -72,7 +72,7 @@ También puede establecer el texto mediante el [Diseñador](#designer).
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>Diseñador de
+## <a name="designer"></a>Diseñador
 
 1. En la ventana **propiedades** de Visual Studio, establezca la propiedad **texto** del control en una cadena adecuada.
 
@@ -82,7 +82,7 @@ También puede establecer el texto mediante el [Diseñador](#designer).
 
    En el cuadro de diálogo fuente estándar, seleccione la fuente, el estilo de fuente, el tamaño, los efectos (como tachado o subrayado) y el script que desee.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [Crear teclas de acceso para controles de Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)

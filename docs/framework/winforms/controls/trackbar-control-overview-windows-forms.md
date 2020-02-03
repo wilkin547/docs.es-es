@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control TrackBar
+title: Información general del control TrackBar
 ms.date: 03/30/2017
 f1_keywords:
 - TrackBar
@@ -23,7 +23,7 @@ El control de <xref:System.Windows.Forms.TrackBar> de Windows Forms (también co
   
  Otras dos propiedades importantes son <xref:System.Windows.Forms.TrackBar.SmallChange%2A> y <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. El valor de la propiedad <xref:System.Windows.Forms.TrackBar.SmallChange%2A> es el número de posiciones que el control de posición se mueve en respuesta a la tecla de flecha izquierda o derecha presionada. El valor de la propiedad <xref:System.Windows.Forms.TrackBar.LargeChange%2A> es el número de posiciones que el control de posición se mueve en respuesta a la pulsación de la tecla RE PÁG o Av Pág, o en respuesta a los clics del mouse en la barra de seguimiento en cualquier lado del control.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar (control)](trackbar-control-windows-forms.md)

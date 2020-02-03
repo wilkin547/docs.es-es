@@ -97,7 +97,7 @@ Puede establecer mediante programación la imagen mostrada por un Windows Forms 
   
      Este código borrará la imagen incluso si un gráfico se cargó en el control en tiempo de diseño.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

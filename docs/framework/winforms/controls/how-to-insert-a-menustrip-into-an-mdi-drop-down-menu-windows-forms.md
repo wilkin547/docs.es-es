@@ -43,13 +43,13 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
     |Elemento de menú Form2|Valor MergeAction|Valor MergeIndex|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
+    |Archivo|MatchOnly|-1|  
     |Separador|Insertar|2|  
-    |Guardar|Insertar|3|  
+    |Save|Insertar|3|  
     |Guardar y cerrar|Insertar|4|  
     |Separador|Insertar|5|  
   
-10. Cree un controlador para el evento <xref:System.Windows.Forms.Control.Click> del <xref:System.Windows.Forms.ToolStripMenuItem>`&Open`.  
+10. Cree un controlador para el evento <xref:System.Windows.Forms.Control.Click> del `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. En el controlador de eventos, inserte código similar al ejemplo de código siguiente para crear y mostrar nuevas instancias de `Form2` como elementos secundarios MDI de `Form1`.  
   
@@ -95,7 +95,7 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
 - Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear formularios principales MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Crear formularios MDI secundarios](../advanced/how-to-create-mdi-child-forms.md)

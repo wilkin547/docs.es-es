@@ -22,7 +22,7 @@ ms.locfileid: "76744090"
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Cómo: Enlazar el control DataGrid de formularios Windows Forms a un origen de datos mediante el Diseñador
 
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
 
  El control <xref:System.Windows.Forms.DataGrid> de Windows Forms está diseñado específicamente para mostrar información de un origen de datos. Para enlazar el control en tiempo de diseño, establezca las propiedades <xref:System.Windows.Forms.DataGrid.DataSource%2A> y <xref:System.Windows.Forms.DataGrid.DataMember%2A>, o en tiempo de ejecución mediante una llamada al método <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>. Aunque puede mostrar los datos de diversos orígenes de datos, los orígenes más habituales son los conjuntos de datos y las vistas de datos.
 
@@ -66,7 +66,7 @@ ms.locfileid: "76744090"
 
 3. Escriba código para rellenar el conjunto de DataSet.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)
 - [Cómo: Agregar tablas y columnas al control DataGrid de Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

@@ -1,5 +1,5 @@
 ---
-title: Control DateTimePicker
+title: DateTimePicker (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [Windows Forms], choosing from a list
@@ -17,7 +17,7 @@ ms.locfileid: "76731974"
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker (control, Windows Forms)
 El control Windows Forms `DateTimePicker` permite al usuario seleccionar un único elemento de una lista de fechas u horas. Cuando se usa para representar una fecha, aparece en dos partes: una lista desplegable con una fecha representada en el texto y una cuadrícula que aparece al hacer clic en la flecha hacia abajo situada junto a la lista.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control DateTimePicker](datetimepicker-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `DateTimePicker`, que permite a los usuarios seleccionar un solo elemento de una lista de fechas u horas.  
   
@@ -38,7 +38,7 @@ El control Windows Forms `DateTimePicker` permite al usuario seleccionar un úni
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
  [MonthCalendar (control)](monthcalendar-control-windows-forms.md)  

@@ -35,7 +35,7 @@ Puede quitar elementos del control de <xref:System.Windows.Forms.DomainUpDown> d
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     O bien,  
+     O bien  
   
 - Use el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> para quitar un elemento por su posición.  
   
@@ -54,10 +54,10 @@ Puede quitar elementos del control de <xref:System.Windows.Forms.DomainUpDown> d
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
-- [DomainUpDown (Control)](domainupdown-control-windows-forms.md)
+- [DomainUpDown (control)](domainupdown-control-windows-forms.md)
 - [Información general sobre el control DomainUpDown](domainupdown-control-overview-windows-forms.md)

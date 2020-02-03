@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> controles están diseñado
   
 2. Dibuje controles <xref:System.Windows.Forms.RadioButton> en el control <xref:System.Windows.Forms.GroupBox> o <xref:System.Windows.Forms.Panel>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Información general sobre el control RadioButton](radiobutton-control-overview-windows-forms.md)

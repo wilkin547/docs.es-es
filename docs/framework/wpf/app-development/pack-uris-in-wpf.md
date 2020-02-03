@@ -305,7 +305,7 @@ En la tabla 1 se muestran los distintos identificadores URI absolutos que puede 
 
 Tabla 1: Pack URI absolutos en el marcado
 
-|File|URI de paquete absoluto|
+|Archivo|URI de paquete absoluto|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Archivo de recursos: ensamblado local|`"pack://application:,,,/ResourceFile.xaml"`|
 |Archivo de recursos en subcarpeta: ensamblado local|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ En la tabla 2 se muestran los diversos identificadores URI relativos que se pued
 
 Tabla 2: Pack URI relativos en el marcado
 
-|File|URI de paquete relativo|
+|Archivo|URI de paquete relativo|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Archivo de recursos en el ensamblado local|`"/ResourceFile.xaml"`|
 |Archivo de recursos en subcarpeta del ensamblado local|`"/Subfolder/ResourceFile.xaml"`|
@@ -334,7 +334,7 @@ Tabla 2: Pack URI relativos en el marcado
 
 ### <a name="using-pack-uris-in-code"></a>Uso de los Pack URI en el código
 
-Para especificar un Pack URI en el código, cree una instancia de la clase <xref:System.Uri> y pase el URI del paquete como parámetro al constructor. Esto último se muestra en el ejemplo siguiente.
+Para especificar un Pack URI en el código, cree una instancia de la clase <xref:System.Uri> y pase el URI del paquete como parámetro al constructor. Esto se muestra en el ejemplo siguiente.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
@@ -368,7 +368,7 @@ En la tabla 3 se muestran los diversos Pack URI relativos que se pueden especifi
 
 Tabla 3: Pack URI absolutos en el código
 
-|File|URI de paquete absoluto|
+|Archivo|URI de paquete absoluto|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Archivo de recursos: ensamblado local|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |Archivo de recursos en subcarpeta: ensamblado local|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ En la tabla 4 se muestran los diversos Pack URI relativos que se pueden especifi
 
 Tabla 4: Pack URI relativos en el código
 
-|File|URI de paquete relativo|
+|Archivo|URI de paquete relativo|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Archivo de recursos: ensamblado local|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |Archivo de recursos en subcarpeta: ensamblado local|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -433,7 +433,7 @@ En el ejemplo siguiente se muestra cómo usar un identificador URI para especifi
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-Para obtener más información, vea <xref:System.Windows.Window.Icon%2A>.
+Para más información, consulte <xref:System.Windows.Window.Icon%2A>.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
@@ -459,6 +459,6 @@ Los diccionarios de recursos (<xref:System.Windows.ResourceDictionary>) se puede
 
 Para obtener información general sobre los temas de WPF, consulte [aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md)

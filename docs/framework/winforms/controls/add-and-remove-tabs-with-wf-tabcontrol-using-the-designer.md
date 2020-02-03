@@ -24,11 +24,11 @@ Al colocar un control de <xref:System.Windows.Forms.TabControl> en el formulario
 
 - En la etiqueta inteligente del control, haga clic en **Agregar pestaña** o **quitar pestaña** .
 
-     O bien,
+     O bien
 
      En la ventana **propiedades** , haga clic en el botón de **puntos suspensivos** (![el botón de puntos suspensivos (...) en el ventana Propiedades de Visual Studio.](./media/visual-studio-ellipsis-button.png)) junto a la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A> para abrir el editor de la **colección TabPage**. Haga clic en el botón **Agregar** o **quitar** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [TabControl (control)](tabcontrol-control-windows-forms.md)
 - [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: de seguridad
+title: Seguridad
 ms.date: 03/30/2017
 helpviewer_keywords:
 - designer access security [Windows Forms]
@@ -19,7 +19,7 @@ ms.locfileid: "76734490"
 # <a name="windows-forms-security"></a>Seguridad en los formularios Windows Forms
 Windows Forms incluye un modelo de seguridad basado en código (los niveles de seguridad se establecen para el código, independientemente del usuario que ejecute el código). Esto se suma a cualquier esquema de seguridad que ya exista en el sistema del equipo. Pueden incluirse en el explorador (como la seguridad basada en zonas disponible en Internet Explorer) o en el sistema operativo (por ejemplo, la seguridad basada en credenciales de Windows NT).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre la seguridad en Windows Forms](security-in-windows-forms-overview.md)  
  Explica brevemente el modelo de seguridad de .NET Framework y los pasos básicos necesarios para asegurarse de que los Windows Forms de la aplicación sean seguros.  
   

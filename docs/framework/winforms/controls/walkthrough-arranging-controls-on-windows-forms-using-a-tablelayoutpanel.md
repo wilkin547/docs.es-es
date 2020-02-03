@@ -177,7 +177,7 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> permite intercambiar los
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Puede lograr un diseño complejo mediante una combinación de controles y paneles de diseño. Estas son otras sugerencias para seguir con la exploración:
+Puede lograr un diseño complejo mediante una combinación de controles y paneles de diseño. Algunas sugerencias de investigación adicional son:
 
 - Intente cambiar el tamaño de uno de los controles <xref:System.Windows.Forms.Button> a un tamaño mayor y observe el efecto en el diseño.
 
@@ -187,7 +187,7 @@ Puede lograr un diseño complejo mediante una combinación de controles y panele
 
 - Acople el control <xref:System.Windows.Forms.TableLayoutPanel> al formulario primario. Cambie el tamaño del formulario y observe el efecto en el diseño.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
@@ -199,4 +199,4 @@ Puede lograr un diseño complejo mediante una combinación de controles y panele
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
 - [Procedimiento para acoplar controles en formularios Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Procedimiento para delimitar controles en formularios Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

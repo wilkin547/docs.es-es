@@ -19,13 +19,13 @@ En los artículos de esta sección se presentan instrucciones y elementos que se
  [Procedimientos recomendados de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  Recomendaciones para la protección de sus aplicaciones.  
   
- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Consideraciones sobre la seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  Elementos que se deben tener en cuenta al crear una aplicación WCF.  
   
- [Consideraciones sobre el rendimiento](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ [Consideraciones de rendimiento](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  Contiene entradas relacionadas con el rendimiento y la seguridad.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

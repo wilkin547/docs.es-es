@@ -67,7 +67,7 @@ Un control de <xref:System.Windows.Forms.Panel> de Windows Forms puede mostrar u
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

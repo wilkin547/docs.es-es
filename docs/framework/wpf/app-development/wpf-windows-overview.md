@@ -167,7 +167,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - Minimizarse, maximizarse y restaurarse sin que afecte a las demás.  
   
- Algunas ventanas requieren una relación con la ventana que las abre. Por ejemplo, una aplicación de entorno de desarrollo integrado (IDE) puede abrir ventanas de propiedades y ventanas de herramientas cuyo comportamiento típico es cubrir la ventana que las crea. Además, dichas ventanas se deben siempre cerrar, minimizar, maximizar y restaurar de acuerdo con la ventana que las creó. Este tipo de relación se puede establecer mediante la creación de una ventana *propia* , y se consigue estableciendo la propiedad <xref:System.Windows.Window.Owner%2A> de la *ventana de propiedad* con una referencia a la *ventana propietaria*. Esta implementación se muestra en el ejemplo siguiente.  
+ Algunas ventanas requieren una relación con la ventana que las abre. Por ejemplo, una aplicación de entorno de desarrollo integrado (IDE) puede abrir ventanas de propiedades y ventanas de herramientas cuyo comportamiento típico es cubrir la ventana que las crea. Además, dichas ventanas se deben siempre cerrar, minimizar, maximizar y restaurar de acuerdo con la ventana que las creó. Este tipo de relación se puede establecer mediante la creación de una ventana *propia* , y se consigue estableciendo la propiedad <xref:System.Windows.Window.Owner%2A> de la *ventana de propiedad* con una referencia a la *ventana propietaria*. Esto se muestra en el ejemplo siguiente.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -190,7 +190,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - La ventana actualmente activada permanece activada.  
   
- Sin embargo, la ventana se activará tan pronto como el usuario la active haciendo clic en el área de cliente o en el área distinta del cliente. En ese caso:  
+ Sin embargo, la ventana se activará tan pronto como el usuario la active haciendo clic en el área de cliente o en el área distinta del cliente. En este caso:  
   
 - La ventana se activa.  
   
@@ -262,7 +262,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  Si <xref:System.Windows.Window.Closing> no está controlado, o si se controla pero no se cancela, la ventana se cerrará. Justo antes de que una ventana se cierre realmente, se genera <xref:System.Windows.Window.Closed>. En este momento, ya no se puede impedir el cierre de la ventana.  
   
 > [!NOTE]
-> Se puede configurar una aplicación para que se cierre automáticamente cuando se cierre la ventana principal de la aplicación (vea <xref:System.Windows.Application.MainWindow%2A>) o se cierre la última ventana. Para obtener información detallada, vea <xref:System.Windows.Application.ShutdownMode%2A>.  
+> Se puede configurar una aplicación para que se cierre automáticamente cuando se cierre la ventana principal de la aplicación (vea <xref:System.Windows.Application.MainWindow%2A>) o se cierre la última ventana. Para obtener información detallada, consulte <xref:System.Windows.Application.ShutdownMode%2A>.  
   
  Aunque una ventana se puede cerrar explícitamente a través de los mecanismos proporcionados en las áreas cliente y no cliente, una ventana también se puede cerrar implícitamente como resultado de un comportamiento en otras partes de la aplicación o Windows, incluidas las siguientes:  
   
@@ -293,7 +293,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  También puede especificar la ubicación inicial de un <xref:System.Windows.Window> cuando aparece por primera vez estableciendo la propiedad <xref:System.Windows.Window.WindowStartupLocation%2A> con uno de los siguientes valores de enumeración <xref:System.Windows.WindowStartupLocation>:  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner> (predeterminado)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (valor predeterminado)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -381,7 +381,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  El estado de una ventana se puede configurar estableciendo su propiedad <xref:System.Windows.Window.WindowState%2A>, que puede tener uno de los siguientes valores de enumeración <xref:System.Windows.WindowState>:  
   
-- <xref:System.Windows.WindowState.Normal> (predeterminado)  
+- <xref:System.Windows.WindowState.Normal> (valor predeterminado)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize> (predeterminado)  
+- <xref:System.Windows.ResizeMode.CanResize> (valor predeterminado)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow> (predeterminado)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (valor predeterminado)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -466,7 +466,7 @@ La apariencia predeterminada de una ventana incluye un botón de la barra de tar
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
  <xref:System.Windows.Window> requiere la creación de instancias de `UnmanagedCode` permiso de seguridad. Para aquellas aplicaciones instaladas e iniciadas desde la máquina local, esto pertenece al conjunto de permisos que se conceden a la aplicación.  
   
  Sin embargo, esto está fuera del conjunto de permisos concedidos a las aplicaciones que se inician desde la zona de Internet o Intranet local mediante ClickOnce. Por lo tanto, los usuarios recibirán una advertencia de seguridad de ClickOnce y deberán elevar el conjunto de permisos para que la aplicación sea de plena confianza.  
@@ -479,7 +479,7 @@ La apariencia predeterminada de una ventana incluye un botón de la barra de tar
   
  Los cuadros de diálogo son ventanas que se suelen utilizar para recopilar información de un usuario para completar una función. Por ejemplo, cuando un usuario desea abrir un archivo, la aplicación suele mostrar el cuadro de diálogo **Abrir archivo** para obtener el nombre de archivo del usuario. Para obtener más información, vea [Información general sobre cuadros de diálogo](dialog-boxes-overview.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

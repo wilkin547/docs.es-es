@@ -19,7 +19,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732718"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Cómo: Agregar y quitar fichas con el control TabControl de Windows Forms
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Cómo: Agregar y quitar fichas con el control TabControl de formularios Windows Forms
 De forma predeterminada, un control <xref:System.Windows.Forms.TabControl> contiene dos controles <xref:System.Windows.Forms.TabPage>. Puede tener acceso a estas pestañas a través de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Para agregar una pestaña mediante programación  
@@ -49,7 +49,7 @@ De forma predeterminada, un control <xref:System.Windows.Forms.TabControl> conti
   
 - Para quitar las pestañas seleccionadas, use el método <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
-     O bien,  
+     O bien  
   
 - Para quitar todas las pestañas, utilice el método <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
@@ -74,7 +74,7 @@ De forma predeterminada, un control <xref:System.Windows.Forms.TabControl> conti
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Agregar un control a una página de fichas](how-to-add-a-control-to-a-tab-page.md)

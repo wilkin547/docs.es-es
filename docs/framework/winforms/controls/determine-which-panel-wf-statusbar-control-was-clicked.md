@@ -93,7 +93,7 @@ ms.locfileid: "76746015"
        (this, &Form1::statusBar1_PanelClick);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

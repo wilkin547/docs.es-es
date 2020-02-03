@@ -17,7 +17,7 @@ ms.locfileid: "76739184"
 # <a name="windows-forms"></a>Windows Forms
 Como los formularios son la unidad básica de la aplicación, es esencial realizar algunas consideraciones sobre su función y diseño. En última instancia, un formulario es una pizarra en blanco que usted, como desarrollador, mejora con controles para crear una interfaz de usuario y con código para manipular los datos. Para ello, Visual Studio proporciona un entorno de desarrollo integrado (IDE) que ayuda a escribir código, así como un conjunto de controles enriquecidos escrito con el .NET Framework. Complementando la funcionalidad de estos controles con el código, puede desarrollar las soluciones que necesita de forma fácil y rápida.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)  
  Proporciona vínculos a temas sobre cómo aprovechar la eficacia de Windows Forms para mostrar datos, controlar la entrada de datos del usuario e implementar sus aplicaciones fácilmente y con mayor seguridad.  
   
@@ -25,13 +25,13 @@ Como los formularios son la unidad básica de la aplicación, es esencial realiz
  Proporciona vínculos a temas sobre cómo mejorar los formularios de Windows Forms con diferentes características.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de formularios Windows Forms](./controls/index.md)  
+ [Controles de Windows Forms](./controls/index.md)  
  Contiene vínculos a temas que describen los controles de Windows Forms y muestran cómo implementarlos.  
   
  [Enlace de datos en Windows Forms](windows-forms-data-binding.md)  
  Contiene vínculos a temas que describen la arquitectura de enlace de datos de Windows Forms.  
   
- [Información general de gráficos](./advanced/graphics-overview-windows-forms.md)  
+ [Graphics Overview](./advanced/graphics-overview-windows-forms.md) (Información general sobre gráficos [Windows Forms])  
  Describe cómo crear gráficos, dibujar texto y manipular imágenes gráficas como objetos mediante la implementación avanzada de la interfaz de diseño de gráficos de Windows.  
   
  [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  

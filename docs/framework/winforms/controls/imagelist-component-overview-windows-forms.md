@@ -15,7 +15,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76728102"
 ---
-# <a name="imagelist-component-overview-windows-forms"></a>Información general sobre el componente ImageList (Windows Forms)
+# <a name="imagelist-component-overview-windows-forms"></a>Información general sobre el componente ImageList (formularios Windows Forms)
 
 El componente <xref:System.Windows.Forms.ImageList> de Windows Forms se usa para almacenar imágenes que posteriormente se pueden mostrar en los controles. Una lista de imágenes permite escribir código para un catálogo único y coherente de imágenes. Por ejemplo, puede girar las imágenes mostradas por un control <xref:System.Windows.Forms.Button> cambiando la propiedad <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> o <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> del botón. También puede asociar la misma lista de imágenes con varios controles. Por ejemplo, si está usando un control <xref:System.Windows.Forms.ListView> y un control <xref:System.Windows.Forms.TreeView> para mostrar la misma lista de archivos, al cambiar el icono de un archivo en la lista de imágenes hará que el nuevo icono aparezca en ambas vistas.
 
@@ -27,7 +27,7 @@ Puede usar una lista de imágenes con cualquier control que tenga una propiedad 
 
 La propiedad de clave del componente <xref:System.Windows.Forms.ImageList> es <xref:System.Windows.Forms.ImageList.Images%2A>, que contiene las imágenes que usará el control asociado. Puede acceder a cada imagen individual por su valor de índice o por su clave. La propiedad <xref:System.Windows.Forms.ImageList.ColorDepth%2A> determina el número de colores con los que se pueden representar las imágenes. Las imágenes se mostrarán con el mismo tamaño, establecido por la propiedad <xref:System.Windows.Forms.ImageList.ImageSize%2A>. El tamaño de las imágenes más grandes se ajustará.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ImageList>
 - [Agregar o quitar imágenes con el componente ImageList de Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

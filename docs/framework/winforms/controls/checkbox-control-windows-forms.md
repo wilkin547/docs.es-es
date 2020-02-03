@@ -1,5 +1,5 @@
 ---
-title: Control CheckBox
+title: CheckBox (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
@@ -19,7 +19,7 @@ ms.locfileid: "76737067"
 # <a name="checkbox-control-windows-forms"></a>CheckBox (Control, formularios Windows Forms)
 El control de Windows Forms `CheckBox` indica si una condición determinada está activada o desactivada. Normalmente se utiliza para presentar una selección Sí/No o Verdadero/Falso al usuario. Puede utilizar de controles de casilla en grupos para mostrar múltiples opciones de entre las que el usuario puede seleccionar una o más. Es similar al control <xref:System.Windows.Forms.RadioButton>, pero se puede seleccionar cualquier número de controles `CheckBox` agrupados.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control CheckBox](checkbox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -34,5 +34,5 @@ El control de Windows Forms `CheckBox` indica si una condición determinada est�
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

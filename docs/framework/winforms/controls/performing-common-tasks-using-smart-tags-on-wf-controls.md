@@ -30,7 +30,7 @@ Para agilizar el desarrollo, muchos controles ofrecen etiquetas inteligentes, qu
 
 Las etiquetas inteligentes permanecen adjuntas a una instancia de control para su duración en el diseñador y siempre están disponibles.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 El primer paso es crear el proyecto y configurar el formulario.
 
@@ -54,7 +54,7 @@ Las etiquetas inteligentes siempre están disponibles en tiempo de diseño en lo
 
 6. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece junto al glifo, seleccione el elemento de **orientación divisor horizontal** . Observe que la barra divisora del control <xref:System.Windows.Forms.SplitContainer> ahora está orientada horizontalmente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

@@ -96,13 +96,13 @@ button1->Left += 200;
 > [!NOTE]
 > Use la propiedad <xref:System.Windows.Forms.Control.Location%2A> para establecer simultáneamente las posiciones X e y de un control. Para establecer una posición individualmente, use la subpropiedad <xref:System.Windows.Forms.Control.Left%2A> (**X**) o <xref:System.Windows.Forms.Control.Top%2A> (**Y**) del control. No intente establecer implícitamente las coordenadas X e y de la estructura <xref:System.Drawing.Point> que representa la ubicación del botón, porque esta estructura contiene una copia de las coordenadas del botón.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
 - [Cómo: establecer la ubicación de la pantalla de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

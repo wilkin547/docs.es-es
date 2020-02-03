@@ -1,5 +1,5 @@
 ---
-title: Control TableLayoutPanel
+title: TableLayoutPanel (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms]
@@ -16,10 +16,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735506"
 ---
-# <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel (Control, Windows Forms)
+# <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel (Control, formularios Windows Forms)
 El control <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en una cuadrícula. Como el diseño se realiza en tiempo de diseño y en tiempo de ejecución, puede cambiar dinámicamente cuando cambie el entorno de la aplicación. Esto proporciona a los controles del panel la capacidad de ajustar el tamaño proporcionalmente para poder responder a cambios como el ajuste de tamaño del control primario o el cambio de longitud del texto debido a la localización.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control TableLayoutPanel](tablelayoutpanel-control-overview.md)  
  Presenta los conceptos generales del control <xref:System.Windows.Forms.TableLayoutPanel>, que permite crear un diseño de filas y columnas.  
   

@@ -80,7 +80,7 @@ El control <xref:System.Windows.Forms.DataGridView> utiliza varios tipos de colu
   
  La clase <xref:System.Windows.Forms.DataGridViewLinkColumn> proporciona varias propiedades para modificar la apariencia de los vínculos antes, durante y después de que se haga clic en ellos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

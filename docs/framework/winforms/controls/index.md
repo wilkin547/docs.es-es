@@ -31,10 +31,10 @@ Describe los usos de métodos abreviados de teclado, etiquetas de texto en los c
 [Controles que se van a usar en Windows Forms](controls-to-use-on-windows-forms.md)\
 Muestra los controles que funcionan con Windows Forms y las tareas básicas que puede realizar con cada control.
 
-[Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)\
+[Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)\
 Brinda información general y ejemplos que ayudarán a los usuarios a desarrollar controles de Windows Forms personalizados.
 
-[Desarrollar controles de Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)\
+[Desarrollar controles de formularios Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)\
 Describe técnicas para crear controles personalizados mediante el diseño y la herencia.
 
 ## <a name="related-sections"></a>Secciones relacionadas

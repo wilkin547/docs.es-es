@@ -19,9 +19,9 @@ ms.locfileid: "76735452"
  El control `ToolBar` de Windows Forms se usa en los formularios como una barra de controles que muestra una fila de menús desplegables y botones de mapa de bits que activan comandos. Por lo tanto, hacer clic en un botón de barra de herramientas equivale a elegir un comando de menú. Los botones pueden configurarse para que aparezcan y se comporten como botones de comando, menús desplegables o separadores. Normalmente, una barra de herramientas contiene botones y menús que se corresponden con los elementos de la estructura de menús de una aplicación y proporciona acceso rápido a las funciones y los comandos de una aplicación que se usan con más frecuencia.  
   
 > [!NOTE]
-> La propiedad <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> del control `ToolBar` propiedad toma una instancia de la clase <xref:System.Windows.Forms.ContextMenu> como referencia. Tenga en cuenta la referencia que pasa al implementar esta clase de botón en las barras de herramientas de su aplicación, porque la propiedad aceptará cualquier objeto que herede de la clase <xref:System.Windows.Forms.Menu>.  
+> La propiedad `ToolBar` del control <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> propiedad toma una instancia de la clase <xref:System.Windows.Forms.ContextMenu> como referencia. Tenga en cuenta la referencia que pasa al implementar esta clase de botón en las barras de herramientas de su aplicación, porque la propiedad aceptará cualquier objeto que herede de la clase <xref:System.Windows.Forms.Menu>.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `ToolBar`, que permite diseñar barras de herramientas personalizadas con las que los usuarios pueden trabajar.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "76735452"
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [Control ToolStrip](toolstrip-control-windows-forms.md)  
+ [ToolStrip (control)](toolstrip-control-windows-forms.md)  
  Describe las barras de herramientas que pueden hospedar menús, controles y controles de usuario en aplicaciones de Windows Forms.

@@ -1,5 +1,5 @@
 ---
-title: Información general del
+title: Información general
 ms.date: 03/30/2017
 helpviewer_keywords:
 - smart clients
@@ -48,7 +48,7 @@ Para obtener información detallada sobre cómo usar estas características, vea
 |Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
 |Usar el control <xref:System.Windows.Forms.ToolStrip>|[Cómo: Crear un control ToolStrip básico con elementos estándar mediante el Diseñador](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](./advanced/getting-started-with-graphics-programming.md)|
-|Crear controles personalizados|[Cómo: Heredar de una clase UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Creación de controles personalizados|[cómo: Heredar de la clase UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Mostrar y manipular datos
  Muchas aplicaciones deben mostrar datos procedentes de una base de datos, archivo XML, servicio web XML u otro origen de datos. Windows Forms proporciona un control flexible denominado control <xref:System.Windows.Forms.DataGridView> para mostrar esa información tabulada en un formato tradicional de filas y columnas, de modo que cada dato ocupe su propia celda. Al usar <xref:System.Windows.Forms.DataGridView>, puede personalizar la apariencia de celdas individuales, bloquear en su posición filas y columnas arbitrarias y mostrar controles complejos dentro de las celdas, entre otras características.
@@ -66,9 +66,9 @@ Para obtener información detallada sobre cómo usar estas características, vea
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
 |Usar el componente <xref:System.Windows.Forms.BindingSource>|[Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el Diseñador](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabajar con orígenes de datos de ADO.NET|[Cómo: Ordenar y filtrar datos ADO.NET con el componente BindingSource de Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Trabajar con orígenes de datos de ADO.NET|[Cómo: Ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Usar la ventana Orígenes de datos|[Enlazar controles de Windows Forms a datos en Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Usar la configuración de la aplicación|[Cómo: Crear la configuración de la aplicación](./advanced/how-to-create-application-settings.md)|
+|Uso de la configuración de la aplicación|[Cómo: Crear la configuración de la aplicación](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Implementar aplicaciones en equipos cliente
 
@@ -101,7 +101,7 @@ Para obtener información detallada sobre cómo usar estas características, vea
 |Imprimir el contenido de un formulario|[Cómo: Imprimir gráficos en Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Cómo: Imprimir un archivo de texto de varias páginas en formularios Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Más información sobre la seguridad de Windows Forms|[Información general sobre la seguridad en Windows Forms](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)
 - [Crear un nuevo formulario Windows Forms](creating-a-new-windows-form.md)

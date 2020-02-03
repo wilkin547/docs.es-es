@@ -38,7 +38,7 @@ Recibir y controlar la entrada del mouse es una parte importante de cada aplicac
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>Cambiar la entrada del mouse y detectar la configuración del sistema  
  Puede detectar y cambiar la manera en que un control controla la entrada del mouse derivando del control y usando los métodos <xref:System.Windows.Forms.Control.GetStyle%2A> y <xref:System.Windows.Forms.Control.SetStyle%2A>. El método <xref:System.Windows.Forms.Control.SetStyle%2A> toma una combinación bit a bit de los valores de <xref:System.Windows.Forms.ControlStyles> para determinar si el control tendrá un comportamiento de clic o doble clic estándar, o si el control controlará su propio procesamiento del mouse. Además, la clase <xref:System.Windows.Forms.SystemInformation> incluye propiedades que describen las capacidades del mouse y especifican cómo interactúa el mouse con el sistema operativo. En la tabla siguiente se resumen estas propiedades.  
   
-|La propiedad|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Obtiene las dimensiones, en píxeles, del área en la que el usuario debe hacer clic dos veces para que el sistema operativo considere los dos clics como un doble clic.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Obtiene el número máximo de milisegundos que pueden transcurrir entre un primer clic y un segundo clic para que el sistema operativo considere que la acción del mouse es un doble clic.|  
@@ -52,7 +52,7 @@ Recibir y controlar la entrada del mouse es una parte importante de cada aplicac
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|Obtiene la cantidad del valor Delta del incremento de un único giro de la rueda del mouse.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Obtiene el número de líneas de desplazamiento al girar la rueda del mouse.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
 - [Captura del mouse en Windows Forms](mouse-capture-in-windows-forms.md)

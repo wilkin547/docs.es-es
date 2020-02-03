@@ -47,9 +47,9 @@ End Sub
 - Una conexión a Internet activa.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- La llamada al método <xref:System.Diagnostics.Process.Start%2A> requiere plena confianza. Para obtener más información, vea <xref:System.Security.SecurityException>.  
+ La llamada al método <xref:System.Diagnostics.Process.Start%2A> requiere plena confianza. Para más información, consulte <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel (control)](linklabel-control-windows-forms.md)

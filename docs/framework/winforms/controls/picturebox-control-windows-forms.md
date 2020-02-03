@@ -16,7 +16,7 @@ ms.locfileid: "76744230"
 # <a name="picturebox-control-windows-forms"></a>PictureBox (Control, formularios Windows Forms)
 El control de `PictureBox` de Windows Forms se usa para mostrar gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -34,5 +34,5 @@ El control de `PictureBox` de Windows Forms se usa para mostrar gráficos en for
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

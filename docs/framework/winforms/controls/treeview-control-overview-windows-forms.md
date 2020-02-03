@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el control TreeView
+title: Información general del control TreeView
 ms.date: 03/30/2017
 f1_keywords:
 - TreeView
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743224"
 ---
-# <a name="treeview-control-overview-windows-forms"></a>Información general del control TreeView (Windows Forms)
+# <a name="treeview-control-overview-windows-forms"></a>Información general del control TreeView (Formularios Windows Forms)
 
 Con el control <xref:System.Windows.Forms.TreeView> de Windows Forms puede mostrar una jerarquía de nodos a los usuarios, por ejemplo, la forma en que los archivos y las carpetas se muestran en el panel izquierdo de la característica Explorador de Windows del sistema operativo Windows. Cada nodo de la vista de árbol puede contener otros nodos, denominados *nodos secundarios*. Los nodos primarios, o nodos que contienen nodos secundarios, se pueden mostrar expandidos o contraídos. También puede mostrar una vista de árbol con casillas junto a los nodos estableciendo la propiedad <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> de la vista de árbol en `true`. Después, puede activar o desactivar nodos configurando mediante programación la propiedad <xref:System.Windows.Forms.TreeNode.Checked%2A> del nodo en `true` o `false`.
 
@@ -21,7 +21,7 @@ Con el control <xref:System.Windows.Forms.TreeView> de Windows Forms puede mostr
 
 Las propiedades clave del control <xref:System.Windows.Forms.TreeView> son <xref:System.Windows.Forms.TreeView.Nodes%2A> y <xref:System.Windows.Forms.TreeView.SelectedNode%2A>. La propiedad <xref:System.Windows.Forms.TreeView.Nodes%2A> contiene la lista de nodos de nivel superior de la vista de árbol. La propiedad <xref:System.Windows.Forms.TreeView.SelectedNode%2A> establece el nodo actualmente seleccionado. Puede mostrar iconos junto a los nodos. El control usa las imágenes de la <xref:System.Windows.Forms.ImageList> con nombre en la propiedad <xref:System.Windows.Forms.TreeView.ImageList%2A> de la vista de árbol. La propiedad <xref:System.Windows.Forms.TreeView.ImageIndex%2A> establece la imagen predeterminada de los nodos en la vista de árbol. Para obtener más información sobre cómo mostrar imágenes, vea [Cómo: establecer iconos para el control TreeView Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md). Si usa Visual Studio 2005, tiene acceso a una gran biblioteca de imágenes estándar que puede usar con el control de <xref:System.Windows.Forms.TreeView>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TreeView>
 - [TreeView (control)](treeview-control-windows-forms.md)

@@ -97,13 +97,13 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
 ### <a name="auditing"></a>Auditoría  
  La *Auditoría* es el registro de eventos de seguridad en el registro de eventos de Windows. Pueden registrarse eventos relacionados con la seguridad, como autenticaciones con errores (o correctas). Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obtener información sobre la programación, consulte [Cómo: auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)
 - [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

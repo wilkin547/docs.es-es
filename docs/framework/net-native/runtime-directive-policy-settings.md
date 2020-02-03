@@ -32,7 +32,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
 
   En la siguiente tabla se recogen los tipos de directivas de reflexión y los elementos de programa con los que se pueden usar.
 
-  |Elemento|Activar|Explorar|Dinámico|
+  |Elemento|Activar|Examinar|Dinámica|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -128,7 +128,7 @@ Cada tipo de directiva se puede establecer en uno de los valores incluidos en la
 |`Required PublicAndInternal`|Habilita la directiva para miembros o tipos públicos e internos y garantiza que siempre va a haber metadatos disponibles para los miembros y tipos públicos e internos. Este parámetro difiere de `PublicAndInternal`, lo que hace que solo haya metadatos disponibles para miembros y tipos públicos e internos cuando la cadena de herramientas determine que son necesarios.|✔️||
 |`Required All`|Requiere que la cadena de herramientas conserve todos los tipos y miembros (se usen o no) y habilita la directiva para estos.|✔️||
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

@@ -1,5 +1,5 @@
 ---
-title: Control RadioButton
+title: RadioButton (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
@@ -18,7 +18,7 @@ ms.locfileid: "76741101"
 # <a name="radiobutton-control-windows-forms"></a>RadioButton (Control, formularios Windows Forms)
 Windows Forms los controles de `RadioButton` presentan un conjunto de dos o más opciones mutuamente excluyentes para el usuario. Aunque puede parecer que los botones de radio y las casillas funcionan de forma similar, hay una diferencia importante: cuando un usuario selecciona un botón de radio, los demás botones de radio del mismo grupo no se pueden seleccionar también.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control RadioButton](radiobutton-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -30,5 +30,5 @@ Windows Forms los controles de `RadioButton` presentan un conjunto de dos o más
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

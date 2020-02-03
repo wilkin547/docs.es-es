@@ -19,7 +19,7 @@ ms.locfileid: "76731839"
 # <a name="properties-wpf"></a>Propiedades (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un conjunto de servicios que se pueden utilizar para ampliar la funcionalidad de una propiedad de Common Language Runtime (CLR). Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
 
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Información general sobre propiedades asociadas](attached-properties-overview.md)
@@ -53,5 +53,5 @@ ms.locfileid: "76731839"
   [Eventos](events-wpf.md)  
   [Entrada](input-wpf.md)  
   [Recursos](resources-wpf.md)  
-  [Modelo de contenido de WPF](../controls/wpf-content-model.md)  
+  [WPF Content Model](../controls/wpf-content-model.md) (Modelo de contenido de WPF)  
   [Modelo de subprocesos](threading-model.md)

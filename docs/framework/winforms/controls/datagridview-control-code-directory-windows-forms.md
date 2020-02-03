@@ -152,7 +152,7 @@ En este tema se proporcionan vínculos a ejemplos de código relacionados con <x
   
 - [Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)

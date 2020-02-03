@@ -453,7 +453,7 @@ Estas directivas no tienen efecto sobre los campos o métodos.
 
 Para más información, vea la sección "Diferencias en los serializadores" en [Migrar la aplicación de la Tienda Windows a .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)
+- [Reflexión y .NET Native](reflection-and-net-native.md)

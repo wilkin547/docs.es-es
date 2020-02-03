@@ -17,7 +17,7 @@ ms.locfileid: "76746220"
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms
 Muchos comportamientos básicos de `DataGridView` celdas, filas y columnas se pueden modificar mediante el establecimiento de propiedades únicas. En los temas de esta sección se describen algunas de las siguientes características que se usan con más frecuencia.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Ocultar columnas en el control DataGridView de formularios Windows Forms](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  Describe cómo evitar que aparezcan columnas específicas en el control.  
   
@@ -53,7 +53,7 @@ Muchos comportamientos básicos de `DataGridView` celdas, filas y columnas se pu
  [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Proporciona temas que describen cómo programar con objetos de columna, fila y celda.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

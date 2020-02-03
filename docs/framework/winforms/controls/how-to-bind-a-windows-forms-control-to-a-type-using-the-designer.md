@@ -40,7 +40,7 @@ Al crear controles que interactúan con datos, a veces necesita enlazar un contr
       > [!NOTE]
       > Si desea enlazar a un tipo de un marco o un ensamblado de Microsoft, desactive la casilla **Ocultar los ensamblados que empiecen por Microsoft o sistema**.
 
-7. Haga clic en **Siguiente** y después haga clic en **Finalizar**.
+7. Haga clic en **Siguiente**y, a continuación, en **Finalizar**.
 
 ### <a name="to-bind-the-control-to-the-bindingsource"></a>Para enlazar el control a BindingSource
 
@@ -52,7 +52,7 @@ Al crear controles que interactúan con datos, a veces necesita enlazar un contr
 
 4. En el **Editor de tipos de interfaz de usuario de DataSource**, expanda el nodo del <xref:System.Windows.Forms.BindingSource> agregado anteriormente y seleccione la propiedad del tipo enlazado que desea enlazar a la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> de la <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Componente BindingSource](bindingsource-component.md)
 - [Cómo: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

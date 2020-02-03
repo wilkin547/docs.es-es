@@ -19,12 +19,12 @@ ms.locfileid: "76736329"
 
 Con el control Windows Forms <xref:System.Windows.Forms.PictureBox>, puede cargar y mostrar una imagen en un formulario en tiempo de diseño si establece la propiedad <xref:System.Windows.Forms.PictureBox.Image%2A> en una imagen válida. En la tabla siguiente se muestran los tipos de archivo aceptables.
 
-|Tipo de|Extensión de nombre de archivo|
+|Tipo|Extensión de nombre de archivo|
 |---|---|
-|Mapa de bits|.bmp|
-|Iconos|.ico|
+|Bitmap|.bmp|
+|Icono|.ico|
 |GIF|.gif|
-|Metarchivo de|.wmf|
+|CGM|.wmf|
 |JPEG|.jpg|
 
 ## <a name="to-display-a-picture-at-design-time"></a>Para mostrar una imagen en tiempo de diseño
@@ -41,7 +41,7 @@ Con el control Windows Forms <xref:System.Windows.Forms.PictureBox>, puede carga
 
 1. En la ventana **propiedades** , seleccione la propiedad <xref:System.Windows.Forms.PictureBox.Image%2A>. Haga clic con el botón secundario en la pequeña imagen en miniatura que aparece a la izquierda del nombre del objeto de imagen y, a continuación, elija **restablecer**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)

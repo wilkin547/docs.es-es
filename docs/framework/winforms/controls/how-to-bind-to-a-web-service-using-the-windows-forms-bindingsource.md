@@ -70,7 +70,7 @@ Si quiere enlazar un control de Windows Forms a los resultados obtenidos de la l
   
 - Referencias a los ensamblados System, System.Drawing, System.Web.Services, System.Windows.Forms y System.Xml.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Componente BindingSource](bindingsource-component.md)
 - [Cómo: Enlazar un control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

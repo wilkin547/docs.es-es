@@ -73,7 +73,7 @@ Además de crear eventos mediante el Diseñador de Windows Forms en Visual Studi
 
      El método <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> mostrado en el código de Visual Basic anterior establece un controlador de eventos click para el botón.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)

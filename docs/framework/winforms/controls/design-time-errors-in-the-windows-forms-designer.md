@@ -186,7 +186,7 @@ Este error se produce porque una variable miembro se ha declarado dos veces (por
 
 Este error puede producirse si hay un archivo. resx incorrecto en el proyecto.
 
-Para corregir este error:
+Para corregir dicho error:
 
 1. Haga clic en el botón **Mostrar todos los archivos** de explorador de soluciones para ver los archivos. resx asociados a la solución.
 2. Cargue el archivo. resx en el editor XML; para ello, haga clic con el botón secundario en el archivo. resx y elija **abrir**.
@@ -196,7 +196,7 @@ Para corregir este error:
 
 Este error puede producirse si hay un archivo. resx incorrecto en el proyecto para la referencia cultural predeterminada.
 
-Para corregir este error:
+Para corregir dicho error:
 
 1. Haga clic en el botón **Mostrar todos los archivos** de explorador de soluciones para ver los archivos. resx asociados a la solución.
 2. Cargue el archivo. resx en el editor XML; para ello, haga clic con el botón secundario en el archivo. resx y elija **abrir**.
@@ -406,7 +406,7 @@ Este error indica que el idioma del proyecto no es compatible con un diseñador 
 
 Visual Studio cargó la clase, pero la clase no se puede diseñar. En su lugar, edite la clase en la vista Código; para ello, haga clic con el botón secundario en la clase y elija **Ver código**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Desarrollo de Windows Forms controles mediante el diseñador](developing-windows-forms-controls-at-design-time.md)
 - [Foro de Diseñador de Windows Forms](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)

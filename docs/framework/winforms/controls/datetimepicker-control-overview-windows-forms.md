@@ -24,7 +24,7 @@ El control Windows Forms <xref:System.Windows.Forms.DateTimePicker> permite al u
   
  Las propiedades <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> y <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> del control determinan el intervalo de fechas y horas. La propiedad <xref:System.Windows.Forms.DateTimePicker.Value%2A> contiene la fecha y la hora actuales en que se establece el control. Para obtener más información, vea [Cómo: establecer y devolver fechas con el Control Windows Forms DateTimePicker](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Los valores se pueden mostrar en cuatro formatos, que se establecen mediante la propiedad <xref:System.Windows.Forms.DateTimePicker.Format%2A>: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>o <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Si se selecciona un formato personalizado, debe establecer la propiedad <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> en una cadena adecuada. Para obtener más información, vea [Cómo: mostrar una fecha en un formato personalizado con el Control Windows Forms DateTimePicker](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Mostrar una fecha en un formato personalizado con el control DateTimePicker de formularios Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
 - [Establecer y devolver fechas con el control DateTimePicker de formularios Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

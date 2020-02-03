@@ -20,7 +20,7 @@ El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un even
 ## <a name="key-properties-methods-and-events"></a>Propiedades, métodos y eventos clave  
  La longitud de los intervalos se define mediante la propiedad <xref:System.Windows.Forms.Timer.Interval%2A>, cuyo valor se encuentra en milisegundos. Cuando el componente está habilitado, el evento de <xref:System.Windows.Forms.Timer.Tick> se genera cada intervalo. Aquí es donde agregaría el código que se va a ejecutar. Para obtener más información, consulte [Cómo: ejecutar procedimientos a intervalos establecidos con el componente Timer de Windows Forms](run-procedures-at-set-intervals-with-wf-timer-component.md). Los métodos clave del componente <xref:System.Windows.Forms.Timer> son <xref:System.Windows.Forms.Timer.Start%2A> y <xref:System.Windows.Forms.Timer.Stop%2A>, lo que activa y desactiva el temporizador. Cuando el temporizador se desactiva, se restablece; no hay ninguna manera de pausar un componente de <xref:System.Windows.Forms.Timer>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer (componente)](timer-component-windows-forms.md)

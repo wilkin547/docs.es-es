@@ -40,7 +40,7 @@ Los elementos se pueden agregar a un Windows Forms cuadro combinado, un cuadro d
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - O  
+     - O bien  
   
 2. Inserte la cadena o el objeto en el punto deseado de la lista con el método `Insert`:  
   
@@ -56,7 +56,7 @@ Los elementos se pueden agregar a un Windows Forms cuadro combinado, un cuadro d
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - O  
+     - O bien  
   
 3. Asigne una matriz completa a la colección de `Items`:  
   
@@ -136,7 +136,7 @@ Los elementos se pueden agregar a un Windows Forms cuadro combinado, un cuadro d
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -14,7 +14,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737379"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Creación de un control ToolStrip básico de Windows Forms con elementos estándar mediante el Diseñador
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Cómo: Crear un control ToolStrip básico de formularios Windows Forms con elementos estándar mediante el Diseñador
 En el siguiente procedimiento se muestra cómo crear un <xref:System.Windows.Forms.ToolStrip> y agregar siete controles <xref:System.Windows.Forms.ToolStripButton> que representan tareas típicas.
 
 ## <a name="to-add-standard-items-in-the-designer"></a>Para agregar elementos estándar en el diseñador
@@ -25,10 +25,10 @@ En el siguiente procedimiento se muestra cómo crear un <xref:System.Windows.For
 
 3. En el panel **tareas de ToolStrip** , elija **insertar elementos estándar**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip (control)](toolstrip-control-windows-forms.md)
 - [Arquitectura del control ToolStrip](toolstrip-control-architecture.md)
 - [Resumen de la tecnología ToolStrip](toolstrip-technology-summary.md)

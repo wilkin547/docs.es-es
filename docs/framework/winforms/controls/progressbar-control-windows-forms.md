@@ -1,5 +1,5 @@
 ---
-title: Control ProgressBar
+title: ProgressBar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - progress controls
@@ -18,7 +18,7 @@ ms.locfileid: "76741213"
   
  El control Windows Forms <xref:System.Windows.Forms.ProgressBar> indica el progreso de una acción mostrando un número adecuado de rectángulos organizados en una barra horizontal. Una vez completada la acción, se rellena la barra. Las barras de progreso se utilizan normalmente para proporcionar al usuario una indicación de cuánto tiempo hay que esperar a que se complete una acción retardada, por ejemplo, cuando se carga un archivo grande.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre ProgressBar (Control)](progressbar-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control <xref:System.Windows.Forms.ProgressBar>, que permite mostrar gráficamente el progreso de una operación.  
   
@@ -30,5 +30,5 @@ ms.locfileid: "76741213"
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

@@ -21,8 +21,8 @@ En el Common Language Runtime se usa una implementación avanzada de Windows Int
   
  Si quiere incorporarse y empezar a trabajar inmediatamente, vea [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md). Encontrará temas sobre cómo usar código para dibujar líneas, formas, texto y mucho más en Windows Forms.  
   
-## <a name="in-this-section"></a>Esta sección  
- [Información general de gráficos](graphics-overview-windows-forms.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Graphics Overview](graphics-overview-windows-forms.md) (Información general sobre gráficos [Windows Forms])  
  Proporciona una introducción a las clases administradas relacionadas con gráficos.  
   
  [About GDI+ Managed Code](about-gdi-managed-code.md) (Acerca del código administrado de GDI+)  

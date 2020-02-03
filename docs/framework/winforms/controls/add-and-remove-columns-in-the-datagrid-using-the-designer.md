@@ -38,7 +38,7 @@ El control <xref:System.Windows.Forms.DataGridView> de Windows Forms debe conten
 
 3. Haga clic en el botón **quitar** para eliminar la columna, lo que hará que desaparezca del diseñador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Cómo: crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)

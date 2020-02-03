@@ -16,7 +16,7 @@ ms.locfileid: "76744002"
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Entrada de datos en el control DataGridView de Windows Forms
 El control `DataGridView` proporciona varias características que permiten cambiar el modo en que los usuarios agregan o modifican datos en el control. Por ejemplo, puede hacer que la entrada de datos sea más eficaz proporcionando valores predeterminados para las nuevas filas y alertar a los usuarios cuando se produzcan errores.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Especificar el modo de edición del control DataGridView de formularios Windows Forms](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  Describe cómo cambiar la forma en que los usuarios inician la edición de celdas.  
   
@@ -52,7 +52,7 @@ El control `DataGridView` proporciona varias características que permiten cambi
  [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo rellenar el control con datos de forma manual o desde un origen de datos externo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGridView (control)](datagridview-control-windows-forms.md)
 - [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

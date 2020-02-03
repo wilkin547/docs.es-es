@@ -33,7 +33,7 @@ El control <xref:System.Windows.Forms.DataGridView> incluye la clase <xref:Syste
   
 - Referencias a los ensamblados System, System.Drawing, System.Windows.Forms y System.Windows.Forms.VisualStyles.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
 - [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)

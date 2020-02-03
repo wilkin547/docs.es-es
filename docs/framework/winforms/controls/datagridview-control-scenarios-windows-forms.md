@@ -86,7 +86,7 @@ Con el control <xref:System.Windows.Forms.DataGridView>, puede mostrar datos tab
   
 - Puede implementar sus propias clases de celda y columna para hospedar controles distintos de los proporcionados por los tipos de columna integrados. Para obtener más información, vea [Cómo: hospedar controles en Windows Forms celdas de DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)

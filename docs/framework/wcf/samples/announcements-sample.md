@@ -38,7 +38,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>Remoto
 
 En este proyecto, observe que el cliente hospeda un <xref:System.ServiceModel.Discovery.AnnouncementService>. Además, se registran dos delegados con eventos. Estos eventos dictan lo que el cliente hace cuando se reciben anuncios en línea y sin conexión.
 

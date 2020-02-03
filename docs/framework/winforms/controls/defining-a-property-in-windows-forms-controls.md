@@ -120,7 +120,7 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
 - [Definir valores predeterminados con los métodos ShouldSerialize y Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)

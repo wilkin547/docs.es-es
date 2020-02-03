@@ -22,7 +22,7 @@ El componente <xref:System.Windows.Forms.ToolTip> de Windows Forms muestra texto
   
  Los métodos clave del componente <xref:System.Windows.Forms.ToolTip> son <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> y <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>. Puede usar el método <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> para establecer la información sobre herramientas que se muestra para los controles. Para obtener más información, vea [Cómo: establecer información sobre herramientas para controles de Windows Forms en tiempo de diseño](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Las propiedades clave son <xref:System.Windows.Forms.ToolTip.Active%2A>, que se deben establecer en `true` para que aparezca la información sobre herramientas y <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, que establece el período de tiempo durante el que se muestra la cadena de información sobre herramientas, cuánto tiempo debe apuntar el usuario al control para que aparezca la información sobre herramientas y cuánto tiempo tardan en aparecer las ventanas de información sobre herramientas posteriores. Para obtener más información, consulte [Cómo: cambiar el retardo del componente de información sobre herramientas de Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolTip>
 - [Establecer información sobre herramientas en controles de Windows Forms en tiempo de diseño](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

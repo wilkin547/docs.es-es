@@ -44,7 +44,7 @@ En cualquier Windows Form, puede designar un control <xref:System.Windows.Forms.
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Información general sobre el control Button](button-control-overview-windows-forms.md)

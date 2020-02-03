@@ -70,7 +70,7 @@ El control <xref:System.Windows.Forms.TreeView> de Windows Forms almacena los no
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [TreeView (control)](treeview-control-windows-forms.md)
 - [Información general del control TreeView](treeview-control-overview-windows-forms.md)

@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744350"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a>Información general sobre cómo usar controles en Windows Forms
+# <a name="overview-of-using-controls-in-windows-forms"></a>Información general sobre cómo utilizar controles en los formularios Windows Forms
 En este tema se describen los elementos esenciales de una aplicación Windows Forms y se proporciona un ejemplo sencillo que usa controles y controla eventos en una aplicación Windows Forms.  
   
 ## <a name="simple-windows-forms-applications"></a>Aplicaciones Windows Forms simples  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
 - [Fundamentos de desarrollo de controles de Windows Forms](windows-forms-control-development-basics.md)

@@ -104,7 +104,7 @@ Los errores pueden pertenecer a las herramientas utilizadas para desarrollar y c
   - MSBuild
   - Diseñador gráfico de expresiones
   - Diseñador interactivo de expresiones
-  - Programa para la mejora
+  - Visual Studio
 - La configuración de soluciones, como:
   - Una solución
   - Un solo proyecto
@@ -118,6 +118,6 @@ Proporcione información sobre el escenario que manifiesta el error y su impacto
 
 Normalmente, los escenarios de pérdida de datos y bloqueo son de alto impacto y, por lo tanto, los más fáciles para establecer prioridades. Sin embargo, algunos errores solo aparecen en escenarios poco comunes, que también pueden ser los escenarios principales en algunos casos. Proporcionar el contexto alrededor del escenario y el impacto ayuda al equipo de WPF a tomar la decisión adecuada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Cómo notificar un problema con Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

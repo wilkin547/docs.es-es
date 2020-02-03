@@ -82,7 +82,7 @@ Si usa el control Windows Forms <xref:System.Windows.Forms.PictureBox> en un for
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Cargar una imagen mediante el Diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)

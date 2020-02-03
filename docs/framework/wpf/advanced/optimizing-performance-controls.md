@@ -66,19 +66,19 @@ En la tabla siguiente, se enumeran los controles comunes para mostrar datos y su
 |<xref:System.Windows.Controls.ComboBox>|Se puede habilitar.|Se puede habilitar.|Se puede habilitar.|
 |<xref:System.Windows.Controls.ContextMenu>|Se puede habilitar.|Se puede habilitar.|Se puede habilitar.|
 |<xref:System.Windows.Controls.DocumentViewer>|No disponible|No disponible|Se puede habilitar.|
-|<xref:System.Windows.Controls.ListBox>|Predeterminado|Se puede habilitar.|Se puede habilitar.|
-|<xref:System.Windows.Controls.ListView>|Predeterminado|Se puede habilitar.|Se puede habilitar.|
+|<xref:System.Windows.Controls.ListBox>|Valor predeterminado|Se puede habilitar.|Se puede habilitar.|
+|<xref:System.Windows.Controls.ListView>|Valor predeterminado|Se puede habilitar.|Se puede habilitar.|
 |<xref:System.Windows.Controls.TreeView>|Se puede habilitar.|Se puede habilitar.|Se puede habilitar.|
 |<xref:System.Windows.Controls.ToolBar>|No disponible|No disponible|Se puede habilitar.|
 
 > [!NOTE]
 > Para obtener un ejemplo de cómo habilitar la virtualización y el reciclaje de contenedores en un <xref:System.Windows.Controls.TreeView>, vea [mejorar el rendimiento de una vista de árbol](../controls/how-to-improve-the-performance-of-a-treeview.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diseño](layout.md)
 - [Presentación y diseño](optimizing-performance-layout-and-design.md)
 - [Enlace de datos](optimizing-performance-data-binding.md)
 - [Controles](../controls/index.md)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

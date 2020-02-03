@@ -21,7 +21,7 @@ ms.locfileid: "76745148"
 # <a name="listview-control-windows-forms"></a>ListView (Control, formularios Windows Forms)
 El control `ListView` de Windows Forms muestra una lista de elementos con iconos. Puede usar una vista de lista para crear una interfaz de usuario similar al panel derecho del Explorador de Windows.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control ListView](listview-control-overview-windows-forms.md)  
  Describe este control y sus características clave y propiedades.  
   
@@ -76,6 +76,6 @@ El control `ListView` de Windows Forms muestra una lista de elementos con iconos
  [Crear una interfaz de usuario de varios paneles con Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Proporciona instrucciones para diseñar un Windows Form con varios paneles.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

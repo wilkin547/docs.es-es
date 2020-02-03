@@ -1,5 +1,5 @@
 ---
-title: Control MonthCalendar
+title: MonthCalendar (Control)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar controls
@@ -17,7 +17,7 @@ ms.locfileid: "76742171"
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar (Control, formularios Windows Forms)
 El control Windows Forms `MonthCalendar` presenta una interfaz gráfica intuitiva para que los usuarios puedan ver y establecer la información de fecha. El control muestra una cuadrícula que contiene los días numerados del mes, organizados en columnas debajo de los días de la semana. Puede seleccionar un mes diferente haciendo clic en los botones de flecha situados a cada lado del título del mes. A diferencia del control de <xref:System.Windows.Forms.DateTimePicker> similar, puede seleccionar un intervalo de fechas con este control; sin embargo, el control <xref:System.Windows.Forms.DateTimePicker> permite establecer horas y fechas.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Introducción al control MonthCalendar](monthcalendar-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `MonthCalendar`, que permite a los usuarios ver y establecer la información de fecha de una aplicación.  
   
@@ -38,8 +38,8 @@ El control Windows Forms `MonthCalendar` presenta una interfaz gráfica intuitiv
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [Control DateTimePicker](datetimepicker-control-windows-forms.md)  
+ [DateTimePicker (control)](datetimepicker-control-windows-forms.md)  
  Describe un control similar a <xref:System.Windows.Forms.MonthCalendar>, aunque el control <xref:System.Windows.Forms.DateTimePicker> también permite seleccionar una hora y no permite seleccionar un intervalo de fechas.

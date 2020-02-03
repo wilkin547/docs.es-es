@@ -22,7 +22,7 @@ De forma predeterminada, los usuarios pueden modificar el contenido de la celda 
   
 - El control de <xref:System.Windows.Forms.DataGridView> está habilitado.  
   
-- No se <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>el valor de la propiedad <xref:System.Windows.Forms.DataGridView.EditMode%2A>.  
+- El valor de propiedad <xref:System.Windows.Forms.DataGridView.EditMode%2A> no es <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
 - El `ReadOnly` las propiedades de la celda, la fila, la columna y el control se establecen en `false`.  
   
@@ -44,7 +44,7 @@ De forma predeterminada, los usuarios pueden modificar el contenido de la celda 
   
 - Referencias a los ensamblados <xref:System> y <xref:System.Windows.Forms>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

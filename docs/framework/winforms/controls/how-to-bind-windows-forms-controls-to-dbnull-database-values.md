@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746666"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Cómo: Enlazar controles de Windows Forms a valores de base de datos DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Cómo: Enlazar controles de formularios Windows Forms a valores de base de datos DBNull
 Cuando enlaza los controles de Windows Forms a un origen de datos y ese origen devuelve un valor <xref:System.DBNull>, puede sustituir un valor adecuado sin controlar, dar formato o analizar eventos. La propiedad <xref:System.Windows.Forms.Binding.NullValue%2A> convertirá <xref:System.DBNull> en un objeto especificado al dar formato o analizar los valores de origen de datos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,7 +32,7 @@ Cuando enlaza los controles de Windows Forms a un origen de datos y ese origen d
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Componente BindingSource](bindingsource-component.md)
 - [Cómo: Controlar errores y excepciones que se producen con el enlace de datos](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

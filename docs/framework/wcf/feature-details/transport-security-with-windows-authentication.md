@@ -21,16 +21,16 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Transport|  
+|Modo de seguridad|Transporte|  
 |Interoperabilidad|Solo WCF|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (al utilizar la autenticación integrada de Windows)<br /><br /> Sí (al utilizar la autenticación integrada de Windows)|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
-|Transport|NET.TCP|  
+|Transporte|NET.TCP|  
 |Enlace|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -42,7 +42,7 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Configuración de  
+### <a name="configuration"></a>Configuración  
  Se puede usar la configuración siguiente en lugar del código para configurar el punto de conexión de servicio:  
   
 ```xml  
@@ -73,8 +73,8 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:  
+## <a name="client"></a>Remoto  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -89,7 +89,7 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Configuración de  
+### <a name="configuration"></a>Configuración  
  La configuración siguiente se puede utilizar en lugar del código para crear el cliente.  
   
 ```xml  
@@ -117,7 +117,7 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Cómo proteger un servicio con credenciales de Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)

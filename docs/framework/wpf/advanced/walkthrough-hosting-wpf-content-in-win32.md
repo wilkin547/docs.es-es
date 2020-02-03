@@ -20,7 +20,7 @@ ms.locfileid: "76735312"
  En este tutorial se describe cómo escribir una aplicación de ejemplo, [hospedar contenido de WPF en un ejemplo de ventana de Win32](https://go.microsoft.com/fwlink/?LinkID=160004), que hospeda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido en una ventana de Win32. Puede extender este ejemplo para hospedar cualquier ventana de Win32. Dado que implica combinar código administrado y no administrado, la aplicación se escribe en C++/CLI.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  En este tutorial se da por supuesto que está familiarizado con la programación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y Win32. Para obtener una introducción básica a la programación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vea [Introducción](../getting-started/index.md). Para obtener una introducción a la programación de Win32, debe hacer referencia a cualquiera de los numerosos libros del asunto, en determinadas *ventanas de programación* , de Charles Petzold.  
   
  Dado que el ejemplo que acompaña a este tutorial se implementa C++en/CLI, en este tutorial se da por supuesto que C++ está familiarizado con el uso de para programar la API de Windows y comprender la programación de código administrado. La familiaridad C++con/CLI es útil, pero no esencial.  
@@ -176,7 +176,7 @@ ms.locfileid: "76735312"
 - [Establecimiento de propiedades WPF](#set_page_properties)
 
 <a name="page_layout"></a>
-### <a name="layout"></a>Presentación
+### <a name="layout"></a>Diseño
  Los elementos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del contenido del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] constan de cinco controles de <xref:System.Windows.Controls.TextBox>, con controles de <xref:System.Windows.Controls.Label> asociados: nombre, dirección, ciudad, estado y código postal. También hay dos controles <xref:System.Windows.Controls.Button>, **Aceptar** y **Cancelar** .
 
  El contenido [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementa en la clase `WPFPage`. El diseño se controla con un elemento de diseño <xref:System.Windows.Controls.Grid>. La clase hereda de <xref:System.Windows.Controls.Grid>, lo que lo convierte en el elemento raíz del contenido [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -225,7 +225,7 @@ ms.locfileid: "76735312"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)

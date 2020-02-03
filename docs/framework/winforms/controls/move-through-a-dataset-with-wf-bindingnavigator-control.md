@@ -33,7 +33,7 @@ Al crear aplicaciones controladas por datos, a menudo necesitará mostrar colecc
   
 - Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.Xml.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>

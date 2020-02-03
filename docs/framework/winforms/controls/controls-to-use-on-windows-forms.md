@@ -18,14 +18,14 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
 > [!NOTE]
 > Visual Basic controles se basan en las clases proporcionadas por el .NET Framework.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)  
  Muestra y describe Windows Forms controles basados en el .NET Framework.  
   
  [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)  
  Describe cómo modificar aspectos de la apariencia de un control que no están disponibles en las propiedades.  
   
- [Componente BackgroundWorker](backgroundworker-component.md)  
+ [BackgroundWorker (componente)](backgroundworker-component.md)  
  Permite que una forma o control ejecuten una operación de forma asincrónica.  
   
  [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)  
@@ -52,7 +52,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [ContextMenu (componente)](contextmenu-component-windows-forms.md)  
  Proporciona a los usuarios un menú de fácil acceso a los comandos usados con frecuencia que están asociados con el objeto seleccionado. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ContextMenu> de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva para ofrecer compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
   
- [ContextMenuStrip (control)](contextmenustrip-control.md)  
+ [ContextMenuStrip (Control)](contextmenustrip-control.md)  
  Representa un menú contextual. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ContextMenu> de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva para ofrecer compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
   
  [DataGrid (control)](datagrid-control-windows-forms.md)  
@@ -61,13 +61,13 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [DataGridView (control)](datagridview-control-windows-forms.md)  
  Proporciona un sistema flexible y extensible para mostrar y editar datos tabulares.  
   
- [Control DateTimePicker](datetimepicker-control-windows-forms.md)  
+ [DateTimePicker (control)](datetimepicker-control-windows-forms.md)  
  Permite al usuario seleccionar un solo elemento de una lista de fechas y horas.  
   
  [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)  
  Describe un conjunto de controles que permiten a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.  
   
- [DomainUpDown (Control)](domainupdown-control-windows-forms.md)  
+ [DomainUpDown (control)](domainupdown-control-windows-forms.md)  
  Muestra cadenas de texto que un usuario puede examinar y seleccionar.  
   
  [ErrorProvider (componente)](errorprovider-component-windows-forms.md)  
@@ -78,7 +78,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [FlowLayoutPanel (control)](flowlayoutpanel-control-windows-forms.md)  
  Representa un panel que dispone dinámicamente su contenido horizontal o verticalmente.  
   
- [FolderBrowserDialog (componente)](folderbrowserdialog-component-windows-forms.md)  
+ [FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)  
  Muestra una interfaz con la que los usuarios pueden examinar y seleccionar un directorio o crear uno nuevo.  
   
  [FontDialog (componente)](fontdialog-component-windows-forms.md)  
@@ -105,7 +105,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [ListBox (control)](listbox-control-windows-forms.md)  
  Permite al usuario seleccionar uno o más elementos de una lista predefinida.  
   
- [ListView (control)](listview-control-windows-forms.md)  
+ [ListView (Control)](listview-control-windows-forms.md)  
  Muestra una lista de elementos con iconos, al estilo del Explorador de Windows.  
   
  [MainMenu (componente)](mainmenu-component-windows-forms.md)  
@@ -114,7 +114,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [MaskedTextBox (control)](maskedtextbox-control-windows-forms.md)  
  Restringe el formato de entrada del usuario en un formulario.  
   
- [Control MenuStrip](menustrip-control-windows-forms.md)  
+ [MenuStrip (control)](menustrip-control-windows-forms.md)  
  Proporciona un sistema de menús para formularios. Aunque el control <xref:System.Windows.Forms.MenuStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.MainMenu> de las versiones anteriores, <xref:System.Windows.Forms.MainMenu> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
  [MonthCalendar (control)](monthcalendar-control-windows-forms.md)  
@@ -126,10 +126,10 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [NumericUpDown (control)](numericupdown-control-windows-forms.md)  
  Muestra numerales que un usuario puede examinar y seleccionar.  
   
- [Componente OpenFileDialog](openfiledialog-component-windows-forms.md)  
+ [OpenFileDialog (componente)](openfiledialog-component-windows-forms.md)  
  Permite a los usuarios abrir archivos mediante un cuadro de diálogo preconfigurado.  
   
- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog (componente)](pagesetupdialog-component-windows-forms.md)  
  Establece la página de detalles de impresión mediante un cuadro de diálogo preconfigurado.  
   
  [Panel (control)](panel-control-windows-forms.md)  
@@ -141,7 +141,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [PrintDialog (componente)](printdialog-component-windows-forms.md)  
  Selecciona una impresora, elige las páginas que se van a imprimir y determina otros valores de configuración relacionados con la impresión.  
   
- [PrintDocument (Componente, Windows Forms)](printdocument-component-windows-forms.md)  
+ [PrintDocument (componente)](printdocument-component-windows-forms.md)  
  Establece las propiedades que describen qué imprimir e imprime el documento en aplicaciones basadas en Windows.  
   
  [PrintPreviewControl (control)](printpreviewcontrol-control-windows-forms.md)  
@@ -179,19 +179,19 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [TabControl (control)](tabcontrol-control-windows-forms.md)  
  Muestra múltiples pestañas que pueden contener imágenes u otros controles.  
   
- [TableLayoutPanel (control)](tablelayoutpanel-control-windows-forms.md)  
+ [Control TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)  
  Representa un panel que dispone dinámicamente su contenido en una cuadrícula que se compone de filas y columnas.  
   
- [Control TextBox](textbox-control-windows-forms.md)  
+ [TextBox (control)](textbox-control-windows-forms.md)  
  Permite al usuario la introducción multilínea y editable.  
   
  [Timer (componente)](timer-component-windows-forms.md)  
  Genere un evento a intervalos regulares.  
   
- [Control ToolBar](toolbar-control-windows-forms.md)  
+ [ToolBar (control)](toolbar-control-windows-forms.md)  
  Muestra los menús y botones de mapa de bits que activan comandos. Puede extender la funcionalidad del control y modificar su apariencia y comportamiento. Aunque el control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar> de las versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
- [Control ToolStrip](toolstrip-control-windows-forms.md)  
+ [ToolStrip (control)](toolstrip-control-windows-forms.md)  
  Crea menús y barras de herramientas personalizadas en las aplicaciones de formularios Windows Forms. Aunque el control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar> de las versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
  [ToolStripContainer (control)](toolstripcontainer-control.md)  
@@ -222,10 +222,10 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  Describe un conjunto de controles que se utiliza para proporcionar a los usuarios una lista de opciones de entre las que puede elegir.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de formularios Windows Forms](index.md)  
+ [Controles de Windows Forms](index.md)  
  Explica el uso de controles de formularios Windows Forms y describe conceptos importantes para trabajar con ellos.  
   
- [Desarrollar controles de Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)  
+ [Desarrollar controles de formularios Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)  
  Proporciona vínculos a temas detallados, recomendaciones del tipo de control que crear y otra información acerca de cómo crear su propio control.  
   
  [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  

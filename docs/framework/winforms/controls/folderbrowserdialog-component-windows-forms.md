@@ -1,5 +1,5 @@
 ---
-title: Componente FolderBrowserDialog
+title: FolderBrowserDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - folders [Windows Forms], browsing
@@ -17,7 +17,7 @@ ms.locfileid: "76745712"
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog (Componente, Formularios Windows Forms)
 El componente `FolderBrowserDialog` de Windows Forms muestra una interfaz con la que los usuarios pueden examinar y seleccionar una carpeta o crear una nueva. Es un complemento del componente de [componente OpenFileDialog](openfiledialog-component-windows-forms.md) , que se usa para examinar y seleccionar archivos.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del componente FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -32,5 +32,5 @@ El componente `FolderBrowserDialog` de Windows Forms muestra una interfaz con la
  [Cuadros de diálogo en Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Proporciona una lista de tareas para cuadros de diálogo que a menudo muestran fichas.  
   
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

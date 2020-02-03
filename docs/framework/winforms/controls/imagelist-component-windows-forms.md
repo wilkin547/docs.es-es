@@ -15,7 +15,7 @@ ms.locfileid: "76728051"
 # <a name="imagelist-component-windows-forms"></a>ImageList (Componente, Windows Forms)
 El componente `ImageList` de Windows Forms se usa para almacenar imágenes que posteriormente se pueden mostrar en los controles. Una lista de imágenes permite escribir código para un catálogo único y coherente de imágenes.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el componente ImageList](imagelist-component-overview-windows-forms.md)  
  Explica qué es este componente y sus propiedades y características clave.  
   
@@ -29,5 +29,5 @@ El componente `ImageList` de Windows Forms se usa para almacenar imágenes que p
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

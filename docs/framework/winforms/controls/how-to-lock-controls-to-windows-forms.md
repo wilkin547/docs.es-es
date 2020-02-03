@@ -47,9 +47,9 @@ Todos los controles previamente bloqueados en el formulario están ahora desbloq
 
 En la ventana **propiedades** , seleccione la propiedad **bloqueado** y, a continuación, seleccione **false**. (Si hace doble clic en el nombre, se alterna el valor de la propiedad).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

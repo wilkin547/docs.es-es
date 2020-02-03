@@ -65,7 +65,7 @@ En los sistemas operativos de Windows, un usuario puede cambiar la configuració
   
  El constructor de este ejemplo de código contiene una llamada a `InitializeComponent`, que se define al crear un nuevo proyecto de Windows Forms en Visual Studio. Quite esta línea de código si va a compilar la aplicación en la línea de comandos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Ajuste automático de escala en Windows Forms](automatic-scaling-in-windows-forms.md)

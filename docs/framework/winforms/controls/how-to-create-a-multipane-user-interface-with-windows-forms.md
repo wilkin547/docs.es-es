@@ -176,7 +176,7 @@ En el procedimiento siguiente, creará una interfaz de usuario de varios paneles
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer (control)](splitcontainer-control-windows-forms.md)

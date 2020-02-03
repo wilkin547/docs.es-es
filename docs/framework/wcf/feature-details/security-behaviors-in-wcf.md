@@ -18,7 +18,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
   
 - [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 - [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), que también le permite especificar un extremo seguro al que los clientes pueden tener acceso para los metadatos.  
   
@@ -82,7 +82,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
   
 - Especifique el conjunto de identificadores URI válidos, agregando los URI a esta colección. Para ello, inserte un [\<agregar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) para cada URI  
   
- Para obtener más información, vea <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Para más información, consulte <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  Para obtener más información sobre el uso de este elemento de configuración, consulte [Cómo: configurar credenciales en un servicio de Federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
@@ -117,17 +117,17 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
 #### <a name="clientcertificate-element"></a>\<elemento > clientCertificate  
  Establezca el certificado utilizado para autenticar al cliente con este elemento. Para obtener más información, vea [Cómo: especificar valores de credencial de cliente](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-#### <a name="httpdigest"></a>\<httpDigest>  
+#### <a name="httpdigest"></a>\<httpDigest >  
  Esta característica se debe habilitar con Active Directory en Windows e Internet Information Services (IIS). Para obtener más información, vea [autenticación implícita en IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 #### <a name="issuedtoken-element"></a>\<elemento > issuedToken  
  El [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contiene los elementos utilizados para configurar un emisor local de tokens, o los comportamientos utilizados con un servicio de token de seguridad. Para obtener instrucciones sobre cómo configurar un cliente para utilizar un emisor local, consulte [How to: Configure a local issuer](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<localIssuerAddress >  
  Especifica una dirección de servicio de token de seguridad predeterminada. Se utiliza cuando el <xref:System.ServiceModel.WSFederationHttpBinding> no proporciona una dirección URL para el servicio de token de seguridad, o cuando la dirección del emisor de un enlace federado es `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o `null`. En casos como éste, las <xref:System.ServiceModel.Description.ClientCredentials> deben configurarse con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
- Use el [\<issuerChannelBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar comportamientos de cliente WCF utilizados al comunicarse con un servicio de token de seguridad. Defina los comportamientos de cliente en la sección [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) . Para usar un comportamiento definido, agregue un <`add`> elemento al elemento `<issuerChannelBehaviors>` con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del punto de conexión definido, tal y como se muestra en el ejemplo siguiente.  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+ Use el [>\<issuerChannelBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar comportamientos de cliente WCF utilizados al comunicarse con un servicio de token de seguridad. Defina los comportamientos de cliente en la sección [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) . Para usar un comportamiento definido, agregue un <`add`> elemento al elemento `<issuerChannelBehaviors>` con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del punto de conexión definido, tal y como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <clientCredentials>  
@@ -142,7 +142,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
   
  El elemento [\<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) puede almacenar un solo certificado que se utiliza cuando el servicio no especifica ningún certificado.  
   
- Use el [\<scopedCertificates](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) y [\<agregar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) para establecer certificados de servicio asociados a servicios específicos. El elemento `<add>` incluye un atributo `targetUri` que se utilice para asociar el certificado al servicio.  
+ Use el [>\<scopedCertificates](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) y [\<agregar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) para establecer certificados de servicio asociados a servicios específicos. El elemento `<add>` incluye un atributo `targetUri` que se utilice para asociar el certificado al servicio.  
   
  El elemento [\<authentication >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) especifica el nivel de confianza utilizado para autenticar los certificados. De forma predeterminada, el nivel está establecido en "ChainTrust", que especifica que cada certificado debe encontrarse en una jerarquía de certificados que finalizan en una entidad emisora de certificados de confianza en la parte superior de la cadena. Este es el modo más seguro. También puede establecer el valor en “PeerOrChainTrust”, que especifica que los certificados autoemitidos (confianza de mismo nivel) se aceptan, así como los certificados que están en una cadena de confianza. Se utiliza este valor cuando se desarrollan y depuran clientes y servicios porque los certificados autoemitidos no necesitan adquirirse desde una autoridad de confianza. Al implementar un cliente, utilice en su lugar el valor “ChainTrust”. También puede establecer el valor en “Custom” o “None”. Para usar el valor "Custom", también debe establecer el atributo `CustomCertificateValidatorType` en un ensamblado y tipo utilizados para validar el certificado. Para crear su propio validador personalizado, debe heredar a partir de la clase <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstracta. Para obtener más información, consulte [Cómo: crear un servicio que emplee un validador de certificado personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
@@ -188,7 +188,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
 ```  
   
 ## <a name="configuring-security-audits"></a>Configuración de auditorías de seguridad  
- Use el [\<serviceSecurityAudit](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) para especificar el registro en el que se escribe y los tipos de eventos que se van a registrar. Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Use el [>\<serviceSecurityAudit](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) para especificar el registro en el que se escribe y los tipos de eventos que se van a registrar. Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -217,7 +217,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

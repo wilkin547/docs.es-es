@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743283"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Cómo: Crear un diseño de Windows Forms que sea apropiado para la localización
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Cómo: Crear un diseño de formularios Windows Forms que sea apropiado para la localización
 La creación de formularios ya listos para ser localizados acelera en gran medida el desarrollo para los mercados internacionales. Puede utilizar el control <xref:System.Windows.Forms.TableLayoutPanel> para implementar diseños que respondan correctamente cuando los controles cambien de tamaño debido a los cambios en los valores de la propiedad <xref:System.Windows.Forms.Control.Text%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -42,7 +42,7 @@ La creación de formularios ya listos para ser localizados acelera en gran medid
   
 6. [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7. [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)  
+7. [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)  
   
 8. [Cómo: Admitir la localización en Windows Forms mediante AutoSize y el control TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
@@ -53,7 +53,7 @@ La creación de formularios ya listos para ser localizados acelera en gran medid
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

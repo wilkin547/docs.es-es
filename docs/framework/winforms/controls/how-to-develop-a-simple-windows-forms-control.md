@@ -104,7 +104,7 @@ En el ejemplo siguiente se muestra un formulario simple que usa `FirstControl`. 
 [!code-csharp[System.Windows.Forms.FirstControl#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
 [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
 - [Eventos de los controles de Windows Forms](events-in-windows-forms-controls.md)

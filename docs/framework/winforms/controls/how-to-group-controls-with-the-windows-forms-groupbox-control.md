@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> controles se usan para agrupa
   
 3. Establezca la propiedad <xref:System.Windows.Forms.GroupBox.Text%2A> del cuadro de grupo en un título adecuado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox (control)](groupbox-control-windows-forms.md)

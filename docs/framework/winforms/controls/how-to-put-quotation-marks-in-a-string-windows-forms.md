@@ -48,7 +48,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
        }  
     ```  
   
-     O bien,  
+     O bien  
   
 2. Inserte el carácter ASCII o Unicode de una comilla. En Visual Basic, use el carácter ASCII (34). En Visual C#, use el carácter Unicode (\u0022).  
   
@@ -67,7 +67,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
     > [!NOTE]
     > En este ejemplo, no puede utilizar \u0022 porque no puede utilizar un nombre de carácter universal que designe un carácter en el juego de caracteres básico. De lo contrario, se produce el error C3851. Para más información, consulte [Error del compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     O bien,  
+     O bien  
   
 3. También puede definir una constante para el carácter y utilizarla donde sea necesario.  
   
@@ -88,7 +88,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
@@ -98,4 +98,4 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
 - [Crear un cuadro de texto de sólo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Seleccionar texto en el control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [Ver múltiples líneas en el control TextBox de Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [Control TextBox](textbox-control-windows-forms.md)
+- [TextBox (control)](textbox-control-windows-forms.md)

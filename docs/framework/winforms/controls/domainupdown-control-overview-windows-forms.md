@@ -27,7 +27,7 @@ El control Windows Forms <xref:System.Windows.Forms.DomainUpDown> es esencialmen
   
  Este control solo muestra cadenas de texto. Si desea un control que muestre valores numéricos, utilice el control <xref:System.Windows.Forms.NumericUpDown>. Para más información, consulte [información general sobre el control NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DomainUpDown>
-- [DomainUpDown (Control)](domainupdown-control-windows-forms.md)
+- [DomainUpDown (control)](domainupdown-control-windows-forms.md)

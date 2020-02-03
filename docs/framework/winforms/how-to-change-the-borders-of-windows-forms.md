@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739563"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Cómo: Cambiar los bordes de Windows Forms
-Puede elegir varios estilos de borde para determinar la apariencia y el comportamiento de sus Windows Forms. Puede cambiar la propiedad <xref:System.Windows.Forms.Form.FormBorderStyle%2A> para controlar el comportamiento de cambio de tamaño del formulario. Además, establecer el <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afecta a cómo se muestra la barra de título y qué botones pueden aparecer en ella. Para obtener más información, vea <xref:System.Windows.Forms.FormBorderStyle>.  
+Puede elegir varios estilos de borde para determinar la apariencia y el comportamiento de sus Windows Forms. Puede cambiar la propiedad <xref:System.Windows.Forms.Form.FormBorderStyle%2A> para controlar el comportamiento de cambio de tamaño del formulario. Además, establecer el <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afecta a cómo se muestra la barra de título y qué botones pueden aparecer en ella. Para más información, consulte <xref:System.Windows.Forms.FormBorderStyle>.  
   
  Visual Studio es altamente compatible con esta tarea.  
   
@@ -43,7 +43,7 @@ Puede elegir varios estilos de borde para determinar la apariencia y el comporta
   
      Además, si ha elegido un estilo de borde para el formulario que proporciona botones opcionales para **minimizar** y **maximizar** , puede especificar si desea que uno o ambos botones sean funcionales. Estos botones son útiles si desea controlar estrechamente la experiencia del usuario. Los botones **minimizar** y **maximizar** están habilitados de forma predeterminada y su funcionalidad se manipula a través de la ventana **propiedades** .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>

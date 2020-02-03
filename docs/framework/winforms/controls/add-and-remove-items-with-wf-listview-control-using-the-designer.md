@@ -30,7 +30,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 4. Para quitar un elemento, selecciónelo y haga clic en el botón **quitar** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general del control ListView](listview-control-overview-windows-forms.md)
 - [Agregar columnas al control ListView de formularios Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

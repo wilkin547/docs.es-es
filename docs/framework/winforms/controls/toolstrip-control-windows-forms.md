@@ -12,10 +12,10 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733867"
 ---
-# <a name="toolstrip-control-windows-forms"></a>ToolStrip (control de Windows Forms)
+# <a name="toolstrip-control-windows-forms"></a>ToolStrip (Control, Windows Forms)
 Los controles <xref:System.Windows.Forms.ToolStrip> son barras de herramientas que pueden contener menús, controles y controles de usuario en aplicaciones de Windows Forms.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
@@ -92,5 +92,5 @@ Los controles <xref:System.Windows.Forms.ToolStrip> son barras de herramientas q
  Describe la clase <xref:System.Windows.Forms.ToolStripItem> y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

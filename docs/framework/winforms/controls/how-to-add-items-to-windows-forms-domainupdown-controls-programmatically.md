@@ -35,7 +35,7 @@ Puede agregar elementos al control Windows Forms <xref:System.Windows.Forms.Doma
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     O bien,  
+     O bien  
   
 2. Use el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> para insertar un elemento en la lista en una posición especificada.  
   
@@ -54,10 +54,10 @@ Puede agregar elementos al control Windows Forms <xref:System.Windows.Forms.Doma
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>
 - <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>
-- [DomainUpDown (Control)](domainupdown-control-windows-forms.md)
+- [DomainUpDown (control)](domainupdown-control-windows-forms.md)
 - [Información general sobre el control DomainUpDown](domainupdown-control-overview-windows-forms.md)

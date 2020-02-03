@@ -66,13 +66,13 @@ Proporciona información general sobre la creación de un control extendido.
 [Cómo: alinear un control con los bordes de los formularios en tiempo de diseño](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
 Muestra cómo usar la propiedad <xref:System.Windows.Forms.Control.Dock%2A> para alinear el control con el borde del formulario que ocupa.
 
-[Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
+[Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
 Muestra el procedimiento para instalar el control de modo que aparezca en el cuadro de diálogo **Customize Toolbox** (Personalizar cuadro de herramientas).
 
 [Cómo: proporcionar un mapa de bits del cuadro de herramientas para un Control](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
 Muestra cómo utilizar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el cuadro de **herramientas**.
 
-[Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
+[Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
 Muestra cómo utilizar **UserControl Test Container** para probar el comportamiento de un control compuesto.
 
 [Errores en tiempo de diseño en el Diseñador de Windows Forms](design-time-errors-in-the-windows-forms-designer.md)\
@@ -89,10 +89,10 @@ Muestra cómo diagnosticar y corregir los problemas comunes que pueden producirs
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)\
+[Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)\
 Describe cómo crear sus propios controles personalizados con .NET Framework.
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[Independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md)\
 Presenta Common Language Runtime, que está diseñado para simplificar la creación y el uso de componentes. Un aspecto importante de esta simplificación es la interoperabilidad mejorada entre los componentes escritos con diferentes lenguajes de programación. Common Language Specification (CLS) hace posible crear herramientas y componentes que funcionen con varios lenguajes de programación.
 
 [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\

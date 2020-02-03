@@ -32,7 +32,7 @@ El control <xref:System.Windows.Forms.DataGridView> es un nuevo control que reem
   
  Dado que el control de <xref:System.Windows.Forms.DataGridView> tiene una arquitectura completamente nueva, no hay ninguna ruta de conversión sencilla que le permita usar las personalizaciones de <xref:System.Windows.Forms.DataGrid> con el control de <xref:System.Windows.Forms.DataGridView>. Sin embargo, muchas de las personalizaciones de <xref:System.Windows.Forms.DataGrid> no son necesarias con el control <xref:System.Windows.Forms.DataGridView>, debido a las características integradas disponibles en el nuevo control. Si ha creado tipos de columna personalizados para el control <xref:System.Windows.Forms.DataGrid> que desea utilizar con el control <xref:System.Windows.Forms.DataGridView>, tendrá que implementarlos de nuevo con la nueva arquitectura. Para obtener más información, vea [personalizar el control DataGridView Windows Forms](customizing-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>

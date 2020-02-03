@@ -53,9 +53,9 @@ txtFirstName->BringToFront();
 > [!NOTE]
 > Windows Forms admite la *contención de controles*. La contención de controles implica la colocación de varios controles dentro de un control contenedor, como varios controles <xref:System.Windows.Forms.RadioButton> dentro de un control <xref:System.Windows.Forms.GroupBox>. A continuación, puede disponer los controles en el control contenedor. Al mover el cuadro de grupo también se mueven los controles, ya que están incluidos en él.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Controles de formularios Windows Forms](index.md)
+- [Controles de Windows Forms](index.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

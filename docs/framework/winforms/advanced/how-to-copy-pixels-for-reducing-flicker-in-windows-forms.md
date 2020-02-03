@@ -62,7 +62,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>Compilar el código  
  El código anterior se ejecuta en el controlador de eventos <xref:System.Windows.Forms.Control.Paint> del formulario para que los gráficos se conserven cuando se vuelva a dibujar el formulario. Como tal, no llame a los métodos relacionados con gráficos en el controlador de eventos <xref:System.Windows.Forms.Form.Load>, porque el contenido dibujado no se volverá a dibujar si el formulario cambia de tamaño o está oculto por otro formulario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

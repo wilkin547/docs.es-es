@@ -23,12 +23,12 @@ En este artículo se describe el uso de certificados X. 509 para la autenticaci�
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Transport|  
+|Modo de seguridad|Transporte|  
 |Interoperabilidad|Con clientes y servicios de servicios Web existentes|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (mediante un certificado SSL)<br /><br /> Sí (mediante un certificado X.509)|  
 |Integridad de los datos|Sí|  
 |Confidencialidad de los datos|Sí|  
-|Transport|HTTPS|  
+|Transporte|HTTPS|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurar el servicio  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

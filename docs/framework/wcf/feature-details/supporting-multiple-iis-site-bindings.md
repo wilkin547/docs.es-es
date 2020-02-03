@@ -10,7 +10,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743442"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Soportar múltiples enlaces de sitios de IIS
-Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) 7,0, puede que desee proporcionar varias direcciones base que usen el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto resulta útil si desea hospedar un servicio que escucha en `http://www.contoso.com` y `http://contoso.com`. También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo: `http://internal.contoso.com` y `http://www.contoso.com`.  
+Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) 7,0, puede que desee proporcionar varias direcciones base que usen el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto resulta útil si desea hospedar un servicio que escucha en `http://www.contoso.com` y `http://contoso.com`. También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo, `http://internal.contoso.com` y `http://www.contoso.com`.  
   
 > [!NOTE]
 > Esta funcionalidad solo está disponible mediante el protocolo HTTP.  

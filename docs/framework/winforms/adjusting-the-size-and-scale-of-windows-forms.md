@@ -16,7 +16,7 @@ ms.locfileid: "76739791"
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Ajustar el tamaño y la escala de Windows Forms
 Este tema proporciona vínculos a información acerca de cómo cambiar el tamaño de Windows Forms.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Cambiar el tamaño de Windows Forms](how-to-resize-windows-forms.md)  
  Proporciona instrucciones para especificar el tamaño de Windows Forms.  
   

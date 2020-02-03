@@ -36,11 +36,11 @@ Cuando haya terminado con este tutorial, el control personalizado tendrá un asp
 
 Para obtener la lista de código completa, vea [Cómo: crear un control de Windows Forms que aprovecha las características en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar este tutorial, necesitará Visual Studio.
 
-## <a name="create-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Creación del proyecto
 
 El primer paso es crear el proyecto de la aplicación. Usará este proyecto para compilar la aplicación que hospeda el control personalizado.
 
@@ -120,13 +120,13 @@ Asocie el control a su diseñador mediante la clase <xref:System.ComponentModel.
 
 3. Cambie la declaración de `DemoMarqueeControl` para que hereden de la clase `MarqueeControl`.
 
-4. Generar el proyecto.
+4. Compile el proyecto.
 
 5. Abra Form1 en el Diseñador de Windows Forms.
 
 6. Busque la pestaña **componentes de MarqueeControlTest** en el cuadro de **herramientas** y ábrala. Arrastre un `DemoMarqueeControl` desde el **cuadro de herramientas** hasta el formulario.
 
-7. Generar el proyecto.
+7. Compile el proyecto.
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Configurar el proyecto para la depuración en tiempo de diseño
 
@@ -138,7 +138,7 @@ Al desarrollar una experiencia personalizada en tiempo de diseño, será necesar
 
 3. En la sección **acción de inicio** , seleccione **programa externo de inicio**. Va a depurar una instancia independiente de Visual Studio, por lo que debe hacer clic en los puntos suspensivos (![el botón de puntos suspensivos (...) en el botón ventana Propiedades de Visual Studio](./media/visual-studio-ellipsis-button.png)) para buscar el IDE de Visual Studio. El nombre del archivo ejecutable es devenv. exe y, si lo instaló en la ubicación predeterminada, su ruta de acceso es *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*.
 
-4. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
+4. Seleccione **Aceptar** para cerrar el cuadro de diálogo.
 
 5. Haga clic con el botón derecho en el proyecto MarqueeControlLibrary y seleccione **establecer como proyecto de inicio** para habilitar esta configuración de depuración.
 
@@ -233,7 +233,7 @@ Para implementar la característica de animación periódica, usará <xref:Syste
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]
 
-10. Implementar la interfaz `IMarqueeWidget`.
+10. Implemente la interfaz `IMarqueeWidget`.
 
     Los métodos `StartMarquee` y `StopMarquee` invocan los métodos <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> y <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> del componente <xref:System.ComponentModel.BackgroundWorker> para iniciar y detener la animación.
 
@@ -299,7 +299,7 @@ Dado que el control de `MarqueeBorder` puede tener controles secundarios, debe t
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]
 
-9. Implementar la interfaz `IMarqueeWidget`.
+9. Implemente la interfaz `IMarqueeWidget`.
 
     Los métodos `StartMarquee` y `StopMarquee` invocan los métodos <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> y <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> del componente <xref:System.ComponentModel.BackgroundWorker> para iniciar y detener la animación.
 
@@ -430,7 +430,7 @@ En el caso de la clase `MarqueeControlRootDesigner`, llamará al método <xref:S
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>Agregar verbos de diseñador al diseñador personalizado
 
-Un verbo de diseñador es un comando de menú vinculado a un controlador de eventos. Los verbos de diseñador se agregan al menú contextual de un componente en tiempo de diseño. Para obtener más información, vea <xref:System.ComponentModel.Design.DesignerVerb>.
+Un verbo de diseñador es un comando de menú vinculado a un controlador de eventos. Los verbos de diseñador se agregan al menú contextual de un componente en tiempo de diseño. Para más información, consulte <xref:System.ComponentModel.Design.DesignerVerb>.
 
 Agregará dos verbos de diseñador a los diseñadores: **Ejecutar prueba** y **detener prueba**. Estos verbos le permitirán ver el comportamiento de tiempo de ejecución del `MarqueeControl` en tiempo de diseño. Estos verbos se agregarán a `MarqueeControlRootDesigner`.
 
@@ -608,7 +608,7 @@ En el `MarqueeControlLibrary` se muestra una implementación simple de controles
 
 - Controlar cómo se serializan los controles y cómo se genera el código para ellos. Para obtener más información, vea [generación y compilación de código fuente dinámico](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

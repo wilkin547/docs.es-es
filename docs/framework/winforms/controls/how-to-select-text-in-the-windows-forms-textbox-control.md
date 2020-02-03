@@ -67,7 +67,7 @@ Puede seleccionar texto mediante programación en el control Windows Forms <xref
     }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.TextBox>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
@@ -76,4 +76,4 @@ Puede seleccionar texto mediante programación en el control Windows Forms <xref
 - [Crear un cuadro de texto de sólo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [Ver múltiples líneas en el control TextBox de Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [Control TextBox](textbox-control-windows-forms.md)
+- [TextBox (control)](textbox-control-windows-forms.md)

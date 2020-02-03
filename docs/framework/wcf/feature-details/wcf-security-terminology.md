@@ -21,10 +21,10 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  lista de control de acceso (ACL)  
  Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento o cualquier otro elemento que tenga un descriptor de seguridad). Una entrada en una ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  
   
- Autenticación de  
+ autenticación  
  El proceso para comprobar que un usuario, equipo, servicio o proceso es quién o lo que dice ser.  
   
- autorización  
+ authorization  
  El acto de controlar el acceso y los derechos a un recurso. Por ejemplo, permitir a los miembros de un grupo leer un archivo, pero permitir solo a los miembros de otro grupo modificar el archivo.  
   
  certificado de la entidad de certificación (CA)  
@@ -56,7 +56,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  firma digital  
  Datos que enlazan la identidad del remitente con la información que se envía. Las firmas digitales pueden incluirse en cualquier mensaje, archivo u otra información codificada digitalmente, o bien transmitirse por separado. Las firmas digitales se utilizan en entornos de claves públicas y proporcionan servicios de integridad y autenticación.  
   
- encoding  
+ codificación  
  El proceso de convertir datos en una secuencia de bits. La codificación es parte del proceso de serialización que convierte datos en una secuencia de unos y ceros.  
   
  par de la clave de intercambio  
@@ -77,7 +77,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Negotiate  
  Un proveedor de compatibilidad de seguridad (SSP) que actúa como un nivel de aplicación entre la Interfaz del proveedor de compatibilidad de seguridad (SSPI) y el resto de SSP. Cuando una aplicación llama en SSPI para iniciar sesión en una red, puede especificar un SSP para que procese la solicitud. Si la aplicación especifica `Negotiate`, `Negotiate`, analiza la solicitud y escoge el mejor SSP para administrar la solicitud en función de la directiva de seguridad configurada por cliente.  
   
- nonce  
+ valor de seguridad  
  Un valor generado de forma aleatoria y que se utiliza para acabar con los ataques basados en “repeticiones”.  
   
  no rechazo  
@@ -89,7 +89,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  PKCS #7  
  Estándar de sintaxis de mensajes criptográficos. Una sintaxis general para los datos a los que se puede aplicar la criptografía, como cifrado y firmas digitales. También proporciona la sintaxis para difundir certificados o listas de certificados revocados y otros atributos de mensaje, como marcas de tiempo, al mensaje.  
   
- texto simple  
+ plaintext  
  Un mensaje no cifrado. Los mensajes de texto no cifrado a veces se denominan mensajes de *texto no cifrado* .  
   
  privilege  
@@ -122,7 +122,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Algoritmo hash seguro (SHA)  
  Un algoritmo hash que genera una síntesis del mensaje. SHA se utiliza con el Algoritmo de firma digital (DSA) en el Estándar de firmas digitales (DSS), entre otros. Hay cuatro variedades de SHA: SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1 genera una síntesis del mensaje de 160 bits. SHA-256, SHA-384 y SHA-512 generan síntesis de mensajes de 256, 384 y 512 bits, respectivamente. SHA fue desarrollado por el National Institute of Standards and Technology (NIST, Instituto nacional de estándares y tecnología) y la National Security Agency (NSA, Agencia de seguridad nacional).  
   
- Secure Sockets Layer (SSL)  
+ Capa de sockets seguros (SSL)  
  Un protocolo que proporciona comunicaciones de red seguras mediante una combinación de tecnología de claves públicas y secretas.  
   
  contexto de seguridad  
@@ -143,7 +143,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  certificado de servidor  
  Hace referencia a un certificado utilizado para la autenticación de servidores, como la autenticación de un servidor web en un explorador web. Cuando un cliente del explorador web intenta obtener acceso a un servidor web seguro, el servidor envía su certificado al explorador para permitirle comprobar la identidad del servidor.  
   
- del mismo nivel privada  
+ hora de sesión  
  Un intercambio de mensajes bajo la protección de una única parte de material para claves. Por ejemplo, las sesiones SSL utilizan una clave única para devolver varios mensajes hacia delante y hacia detrás bajo esa clave.  
   
  clave de sesión  
@@ -181,7 +181,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  X.509  
  Un estándar reconocido internacionalmente para los certificados que define sus partes necesarias.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos básicos de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)

@@ -24,7 +24,7 @@ El control <xref:System.Windows.Forms.Label> de Windows Forms puede tener una so
   
  Si <xref:System.Windows.Forms.Label.AutoSize%2A> se establece en `false`, las palabras especificadas en la propiedad <xref:System.Windows.Forms.Label.Text%2A> se ajustarán a la línea siguiente, si es posible, pero el control no aumentará.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear teclas de acceso con controles Label de formularios Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Información general sobre el control Label](label-control-overview-windows-forms.md)

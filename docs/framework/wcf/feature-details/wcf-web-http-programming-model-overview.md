@@ -20,7 +20,7 @@ El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) pr
   
  El modelo de programación WEB HTTP de WCF amplía el alcance de WCF para abarcar escenarios de tipo Web que incluyen servicios WEB HTTP, AJAX y servicios JSON y fuentes de distribución (ATOM/RSS). Para obtener más información sobre los servicios AJAX y JSON, vea [integración de Ajax y compatibilidad con JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Para obtener más información sobre la distribución, consulte [información general sobre la redifusión de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- No existen restricciones adicionales en los tipos de datos que puedan devolverse desde un servicio WEB HTTP. Cualquier tipo serializable se puede devolver a partir de una operación de servicio WEB HTTP de WCF. Puesto que estas operaciones de servicio WEB HTTP las puede invocar un explorador web existe un límite en los tipos de datos que se pueden especificar en una dirección URL. Para obtener más información sobre los tipos que se admiten de forma predeterminada, consulte la sección **parámetros y direcciones URL** de la cadena de consulta de UriTemplate más adelante. El comportamiento predeterminado se puede cambiar proporcionando su propia implementación de la clase T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica cómo convertir los parámetros especificados de una dirección URL en el tipo de parámetro real. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ No existen restricciones adicionales en los tipos de datos que puedan devolverse desde un servicio WEB HTTP. Cualquier tipo serializable se puede devolver a partir de una operación de servicio WEB HTTP de WCF. Puesto que estas operaciones de servicio WEB HTTP las puede invocar un explorador web existe un límite en los tipos de datos que se pueden especificar en una dirección URL. Para obtener más información sobre los tipos que se admiten de forma predeterminada, consulte la sección **parámetros y direcciones URL** de la cadena de consulta de UriTemplate más adelante. El comportamiento predeterminado se puede cambiar proporcionando su propia implementación de la clase T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica cómo convertir los parámetros especificados de una dirección URL en el tipo de parámetro real. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
   
 > [!CAUTION]
 > Los servicios escritos con el modelo de programación WEB HTTP de WCF no utilizan mensajes SOAP. Dado que no se utiliza SOAP, no se pueden usar las características de seguridad proporcionadas por WCF. Sin embargo, puede usar la seguridad basada en el transporte hospedando el servicio con HTTPS. Para obtener más información acerca de la seguridad de WCF, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -39,7 +39,7 @@ El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) pr
   
 - a/z/c  
   
-- etc.  
+- etcétera.  
   
  En esta plantilla, la notación de la llave (" {segmento}") indica un segmento variable en lugar de un valor literal.  
   
@@ -101,9 +101,9 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>Parámetros de cadena de consulta y direcciones URL de UriTemplate  
  Se puede llamar a los servicios de tipo web desde un explorador web escribiendo una URL que está asociada a una operación del servicio. Estas operaciones del servicio pueden tomar parámetros de cadena de consulta que se deben especificar en forma de cadena dentro de la dirección URL. La siguiente tabla muestra los tipos que se pueden pasar dentro de una dirección URL y el formato utilizado.  
   
-|Tipo de|Formato|  
+|Tipo|Formato|  
 |----------|------------|  
-|<xref:System.Byte>|0 - 255|  
+|<xref:System.Byte>|De 0 a 255|  
 |<xref:System.SByte>|-128 - 127|  
 |<xref:System.Int16>|-32768 - 32767|  
 |<xref:System.Int32>|-2,147,483,648 - 2,147,483,647|  
@@ -113,7 +113,7 @@ interface ICustomer
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
 |<xref:System.Single>|-3.402823e38 - 3.402823e38 (no se requiere la notación exponencial)|  
 |<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308 (no se requiere la notación exponencial)|  
-|<xref:System.Char>|Cualquier carácter individual|  
+|<xref:System.Char>|Un carácter cualquiera|  
 |<xref:System.Decimal>|Cualquier decimal en notación estándar (sin exponente)|  
 |<xref:System.Boolean>|True o False (sin distinción entre mayúsculas y minúsculas)|  
 |<xref:System.String>|Cualquier cadena (no se admite la cadena nula y no se utilizan caracteres de escape)|  
@@ -144,7 +144,7 @@ Dado que el modelo de programación WEB HTTP de WCF no admite los protocolos WS-
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Solución de problemas relacionados con el modelo de programación WEB HTTP de WCF  
  Al llamar a los servicios WEB HTTP de WCF mediante un objeto <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para crear un canal, <xref:System.ServiceModel.Description.WebHttpBehavior> usa la clase <xref:System.ServiceModel.EndpointAddress> establecida en el archivo de configuración, aunque se pase una <xref:System.ServiceModel.EndpointAddress> diferente al <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

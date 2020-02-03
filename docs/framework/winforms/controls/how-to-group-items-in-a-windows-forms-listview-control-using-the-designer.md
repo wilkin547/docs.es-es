@@ -41,11 +41,11 @@ Para habilitar la agrupación, primero debe crear uno o más objetos <xref:Syste
 
 3. Seleccione la propiedad <xref:System.Windows.Forms.ListViewItem.Group%2A> y elija un grupo de la lista desplegable.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
-- [ListView (control)](listview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
 - [Información general del control ListView](listview-control-overview-windows-forms.md)
 - [Agregar y quitar elementos con el control ListView de Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

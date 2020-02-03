@@ -23,23 +23,23 @@ Las *credenciales* son el Windows Communication Foundation de datos (WCF) que us
 ## <a name="transport-credential-types"></a>Tipos de credencial de transporte  
  La tabla siguiente muestra los posibles tipos de credenciales de cliente que pueden ser utilizadas por un enlace en modo de seguridad de transporte. Cuando se crea un servicio, establezca la propiedad `ClientCredentialType` en uno de estos valores para especificar el tipo de credencial que el cliente debe proporcionar con el fin de comunicarse con su servicio. Puede establecer los tipos en código o archivos de configuración.  
   
-|Configuración de|Descripción|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
-|Ninguno|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
-|Basic|Especifica la autenticación básica para el cliente. Para obtener más información, vea RFC2617:[autenticación http: autenticación básica e implícita](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
-|Digest|Especifica la autenticación implícita para el cliente. Para obtener más información, vea RFC2617:[autenticación http: autenticación básica e implícita](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|None|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
+|Básica|Especifica la autenticación básica para el cliente. Para obtener más información, vea RFC2617:[autenticación http: autenticación básica e implícita](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|Resumen|Especifica la autenticación implícita para el cliente. Para obtener más información, vea RFC2617:[autenticación http: autenticación básica e implícita](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
 |Ntlm|Especifica protocolo de autenticación de Windows NT LAN Manager (NTLM). Se utiliza esto cuando, por algún motivo, no puede utilizar la autenticación Kerberos. También puede deshabilitar su uso como reserva estableciendo la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> en `false`, lo que hace que WCF realice el mejor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
-|Portal|Especifica la autenticación de Windows. Para especificar solo el protocolo Kerberos en un dominio de Windows, establezca la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> en `false` (el valor predeterminado es `true`).|  
+|Windows|Especifica la autenticación de Windows. Para especificar solo el protocolo Kerberos en un dominio de Windows, establezca la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> en `false` (el valor predeterminado es `true`).|  
 |Certificado|Realiza la autenticación del cliente mediante un certificado X.509.|  
-|Password|El usuario debe proporcionar un nombre de usuario y una contraseña. Valide el par nombre de usuario/contraseña mediante autenticación de Windows u otra solución personalizada.|  
+|Contraseña|El usuario debe proporcionar un nombre de usuario y una contraseña. Valide el par nombre de usuario/contraseña mediante autenticación de Windows u otra solución personalizada.|  
   
 ### <a name="message-client-credential-types"></a>Tipos de credencial de cliente de mensaje  
  La tabla siguiente muestra los posibles tipos de credencial que puede utilizar al crear una aplicación que utiliza el modo de seguridad de mensaje. Puede utilizar estos valores en código o archivos de configuración.  
   
-|Configuración de|Descripción|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
-|Ninguno|Especifica que el cliente no necesita presentar una credencial. Realiza una conversión a un cliente anónimo.|  
-|Portal|Permite que se produzcan los intercambios del mensaje SOAP bajo el contexto de seguridad establecido con una credencial de Windows.|  
+|None|Especifica que el cliente no necesita presentar una credencial. Realiza una conversión a un cliente anónimo.|  
+|Windows|Permite que se produzcan los intercambios del mensaje SOAP bajo el contexto de seguridad establecido con una credencial de Windows.|  
 |Nombre de usuario|Permite al servicio requerir que el cliente se autentique con una credencial de nombre de usuario. Tenga en cuenta que WCF no permite ninguna operación criptográfica con nombres de usuario, como generar una firma o cifrar datos. WCF garantiza que el transporte está protegido cuando se usan credenciales de nombre de usuario.|  
 |Certificado|Permite que el servicio exija la autenticación del cliente mediante un certificado X.509.|  
 |Token emitido|Un tipo de token personalizado configurado según una directiva de seguridad. El tipo de token predeterminado es Lenguaje de marcado de aserción de seguridad (SAML). Un servicio de token seguro emite el token. Para obtener más información, vea [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
@@ -97,7 +97,7 @@ Las *credenciales* son el Windows Communication Foundation de datos (WCF) que us
   
  Para obtener más información sobre las credenciales y las sesiones seguras, vea [consideraciones de seguridad para las sesiones seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
@@ -111,6 +111,6 @@ Las *credenciales* son el Windows Communication Foundation de datos (WCF) que us
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

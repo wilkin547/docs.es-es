@@ -43,6 +43,6 @@ Windows Forms incluye un conjunto de métodos, eventos y clases que implementan 
   
  La clase <xref:System.Windows.Forms.QueryContinueDragEventArgs> proporciona el estado actual de los botones del mouse y las teclas modificadoras del teclado, un valor que especifica si se presionó la tecla ESC y un valor <xref:System.Windows.Forms.DragAction> que se puede establecer para especificar si la operación de arrastrar y colocar debe continuar.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

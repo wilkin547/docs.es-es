@@ -1,5 +1,5 @@
 ---
-title: Métodos de extensión.
+title: Métodos de extensión
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
@@ -10,7 +10,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741622"
 ---
-# <a name="extension-methods"></a>Métodos de extensión.
+# <a name="extension-methods"></a>Métodos de extensión
 Los métodos de extensión son una característica de lenguaje que permite llamar a métodos estáticos mediante la sintaxis de llamada al método de instancia. Estos métodos deben tomar al menos un parámetro, que representa la instancia en la que se va a operar el método.
 
  La clase que define estos métodos de extensión se conoce como la clase "patrocinador" y se debe declarar como estática. Para usar métodos de extensión, debe importar el espacio de nombres que define la clase de patrocinador.
@@ -45,7 +45,7 @@ Los métodos de extensión son una característica de lenguaje que permite llama
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

@@ -12,7 +12,7 @@ ms.locfileid: "76730834"
 # <a name="security-concepts"></a>Conceptos de seguridad
 En esta sección se explican brevemente los conceptos asociados a la seguridad de Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Conceptos de seguridad empleados en WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Una información general de conceptos de alto nivel utilizada en implementaciones de seguridad.  
   
@@ -36,7 +36,7 @@ En esta sección se explican brevemente los conceptos asociados a la seguridad d
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Extensión de la seguridad](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)

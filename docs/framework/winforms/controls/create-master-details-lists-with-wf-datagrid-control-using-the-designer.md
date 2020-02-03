@@ -16,7 +16,7 @@ ms.locfileid: "76743388"
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Cómo: Crear listas Principal-Detalle con el control DataGrid de Windows Forms mediante el Diseñador
 
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
 
  Si el <xref:System.Data.DataSet> contiene una serie de tablas relacionadas, puede usar dos controles <xref:System.Windows.Forms.DataGrid> para mostrar los datos en un formato maestro-detalle. Una <xref:System.Windows.Forms.DataGrid> se designa como cuadrícula maestra y la segunda se designa como cuadrícula de detalles. Al seleccionar una entrada en la lista maestra, todas las entradas secundarias relacionadas se muestran en la lista de detalles. Por ejemplo, si el <xref:System.Data.DataSet> contiene una tabla Customers y una tabla Orders relacionada, debe especificar la tabla Customers como cuadrícula maestra y la tabla Orders como cuadrícula de detalles. Cuando se selecciona un cliente en la cuadrícula maestra, todos los pedidos asociados a ese cliente en la tabla Orders se mostrarán en la cuadrícula detalles.
 
@@ -49,7 +49,7 @@ ms.locfileid: "76743388"
 
     2. Seleccione la relación (por ejemplo, "customers. CustOrd") entre las tablas maestra y de detalles de la lista desplegable de la propiedad <xref:System.Windows.Forms.DataGrid.DataMember%2A>. Para ver la relación, expanda el nodo haciendo clic en el signo más ( **+** ) situado junto a la tabla maestra en la lista desplegable.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [DataGrid (control)](datagrid-control-windows-forms.md)
 - [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)

@@ -23,7 +23,7 @@ ms.locfileid: "76746873"
 
 Varios controles Windows Forms pueden mostrar imágenes. Estas imágenes pueden ser iconos que clarifican el propósito del control, como un icono de disquete en un botón que denota el comando Save. Como alternativa, los iconos pueden ser imágenes de fondo para dar al control la apariencia y el comportamiento que desea.
 
-## <a name="programmatic"></a>Programas
+## <a name="programmatic"></a>Programático
 
 Establezca la propiedad `Image` o `BackgroundImage` del control en un objeto de tipo <xref:System.Drawing.Image>. Por lo general, se cargará la imagen desde un archivo mediante el método <xref:System.Drawing.Image.FromFile%2A>.
 
@@ -54,13 +54,13 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>Diseñador de
+## <a name="designer"></a>Diseñador
 
 1. En la ventana **propiedades** de Visual Studio, seleccione la propiedad **Image** o **BackgroundImage** del control y, a continuación, seleccione el botón de puntos suspensivos (![puntos suspensivos en Visual Studio](./media/visual-studio-ellipsis-button.png)) para mostrar el cuadro de diálogo **seleccionar recurso** .
 
 2. Seleccione la imagen que desea mostrar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
