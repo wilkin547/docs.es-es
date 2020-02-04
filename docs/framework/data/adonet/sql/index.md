@@ -1,13 +1,14 @@
 ---
 title: SQL Server y ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6e88c35936de72f0d426c23493bbe5a08e707ee1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782331"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979981"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server y ADO.NET
 En esta sección se describen características y comportamientos específicos del proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -17,7 +18,7 @@ En esta sección se describen características y comportamientos específicos de
 > [!NOTE]
 > Para utilizar el proveedor de datos .NET Framework para SQL Server, la aplicación debe hacer referencia al espacio de nombres <xref:System.Data.SqlClient>.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Seguridad de SQL Server](sql-server-security.md)  
  Proporciona una introducción general a las características de seguridad de SQL Server y casos de creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.  
   

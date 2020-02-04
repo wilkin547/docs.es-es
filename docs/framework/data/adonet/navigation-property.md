@@ -1,13 +1,13 @@
 ---
-title: 'Propiedad de navegación: ADO.NET'
+title: Propiedad de navegación
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: afb2043abf70fa92ea7cdf8d1e8246d5cdfdba74
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b6c286e63322a66be0407c864295a20685df2b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738386"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980163"
 ---
 # <a name="navigation-property"></a>Propiedad de navegación
 
@@ -15,11 +15,11 @@ Una *propiedad de navegación* es una propiedad opcional en [un tipo de entidad]
 
 Una definición de propiedad de desplazamiento incluye lo siguiente:
 
-- Un nombre. (Necesario)
+- Un nombre. (Obligatorio)
 
-- La asociación que navega. (Necesario)
+- La asociación que navega. (Obligatorio)
 
-- Los extremos de la asociación que navega. (Necesario)
+- Los extremos de la asociación que navega. (Obligatorio)
 
 Las propiedades de navegación son opcionales en los dos tipos de entidad de los extremos de una asociación. Si define una propiedad de navegación en un tipo de entidad del extremo de una asociación, no tiene que definir una propiedad de navegación en el tipo de entidad del otro extremo de la asociación.
 

@@ -1,13 +1,14 @@
 ---
 title: Características de SQL Server y ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: f2f0d0327e2b66f97f9cf5ffe797ee153d4fb9ca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a4420799a94b5fa5f37b1e25cf6eb37c130de471
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791644"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979799"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 En los temas de esta sección se describen las características de SQL Server orientadas al desarrollo de aplicaciones de base de datos con ADO.NET.  
@@ -18,7 +19,7 @@ En los temas de esta sección se describen las características de SQL Server or
   
 1. [Desarrollo (Motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Enumeración de instancias de SQL Server (ADO.NET)](enumerating-instances-of-sql-server.md)  
  Describe cómo enumerar instancias activas de SQL Server.  
   

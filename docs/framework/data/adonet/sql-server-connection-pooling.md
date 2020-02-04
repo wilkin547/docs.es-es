@@ -1,16 +1,16 @@
 ---
-title: Agrupación de conexiones de SQL Server (ADO.NET)
+title: Agrupación de conexiones de SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bf0ce98b9b16b8d698a814f3bf2c4f442f3bf06
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794320"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980046"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
 La conexión a un servidor de bases de datos suele constar de varios pasos que requieren mucho tiempo. Se debe establecer un canal físico, como un socket o una canalización con nombre, debe tener lugar el protocolo de enlace con el servidor, se debe analizar la información de la cadena de conexión, el servidor debe autenticar la conexión, se deben ejecutar comprobaciones para la inscripción en la transacción actual, etc.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  El agrupador de conexiones satisface las solicitudes de conexión al reasignar las conexiones conforme se liberan de nuevo en el grupo. Si se ha alcanzado el tamaño máximo del grupo y no hay disponible ninguna conexión que se pueda utilizar, la solicitud se pone en la cola. A continuación, el concentrador intenta reclamar las conexiones hasta que se agota el tiempo de espera (el valor predeterminado es 15 segundos). Si no puede satisfacer la solicitud antes de que se agote el tiempo de espera de la conexión, se inicia una excepción.  
   
 > [!CAUTION]
-> Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Para ello, puede usar los `Close` métodos o `Dispose` del `Connection` objeto o abrir todas las conexiones dentro de una `using` instrucción de C#, o una `Using` instrucción de Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, vea Using [instrucción](../../../csharp/language-reference/keywords/using-statement.md)o [cómo: Desechar un recurso](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) del sistema para Visual Basic.  
+> Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Para ello, puede usar los métodos `Close` o `Dispose` del objeto `Connection`, o bien abrir todas las conexiones dentro de una instrucción `using` en C#, o una instrucción `Using` en Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, vea [using (instrucción](../../../csharp/language-reference/keywords/using-statement.md) ) o [Cómo: desechar un recurso del sistema](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para Visual Basic.  
   
 > [!NOTE]
 > No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
@@ -80,7 +80,7 @@ Para obtener más información sobre los eventos asociados a la apertura y el ci
  Si existe una conexión en un servidor que ha desaparecido, se puede extraer del grupo aunque el agrupador de conexiones no haya detectado la conexión rota y la haya marcado como no válida. El motivo es que la sobrecarga de comprobar que la conexión es aún válida eliminaría los beneficios de tener un concentrador y ocasionaría que se produjera otro viaje de ida y vuelta (round trip) al servidor. Cuando esto ocurre, el primer intento para usar la conexión detectará que ésta se ha roto y se iniciará una excepción.  
   
 ## <a name="clearing-the-pool"></a>Borrado del grupo  
- ADO.net 2,0 presentó dos nuevos métodos para borrar el Grupo: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> y <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` borra los grupos de conexión de un proveedor dado, y `ClearPool` borra el grupo de conexión que está asociado a una conexión concreta. Si en el momento de la llamada se están usando conexiones, se marcan de forma adecuada. Cuando se cierran, se descartan en lugar de devolverse al grupo.  
+ ADO.NET 2,0 presentó dos nuevos métodos para borrar el Grupo: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> y <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` borra los grupos de conexión de un proveedor dado, y `ClearPool` borra el grupo de conexión que está asociado a una conexión concreta. Si en el momento de la llamada se están usando conexiones, se marcan de forma adecuada. Cuando se cierran, se descartan en lugar de devolverse al grupo.  
   
 ## <a name="transaction-support"></a>Compatibilidad con transacciones  
  Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. A menos que se especifique `Enlist=false` en la cadena de conexión, el grupo de conexión garantiza que la conexión está dada de alta en el contexto de <xref:System.Transactions.Transaction.Current%2A>. Cuando se cierra una conexión y se devuelve al grupo con una transacción `System.Transactions` dada de alta, se reserva de forma que la siguiente solicitud de ese grupo de conexiones con la misma transacción `System.Transactions` devolverá la misma conexión, si está disponible. Si se emite dicha solicitud y no hay conexiones agrupadas disponibles, se extrae una conexión de la parte sin transacción del grupo y se le da de alta. Si no hay conexiones disponibles en cualquier área del grupo, se crea y da de alta una nueva conexión.  
@@ -88,7 +88,7 @@ Para obtener más información sobre los eventos asociados a la apertura y el ci
  Cuando se cierra una conexión, se libera de nuevo en el grupo y en la subdivisión adecuada en función de su contexto de transacción. Por lo tanto, puede cerrar la conexión sin generar un error, incluso aunque aún haya pendiente una transacción distribuida. Esto permite confirmar o anular la transacción distribuida más adelante.  
   
 ## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Control de la agrupación de conexiones con palabras clave de cadena de conexión  
- La propiedad `ConnectionString` del objeto <xref:System.Data.SqlClient.SqlConnection> admite pares clave-valor de cadena de conexión que se pueden utilizar para ajustar el comportamiento de la lógica de agrupación de conexiones. Para obtener más información, consulta <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ La propiedad `ConnectionString` del objeto <xref:System.Data.SqlClient.SqlConnection> admite pares clave-valor de cadena de conexión que se pueden utilizar para ajustar el comportamiento de la lógica de agrupación de conexiones. Para obtener más información, vea <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 ## <a name="pool-fragmentation"></a>Fragmentación de grupos  
  La fragmentación de grupos es un problema común en muchas aplicaciones web en las que la aplicación puede crear gran cantidad de grupos que no se liberan hasta que finaliza el proceso. El resultado es un gran número de conexiones abiertas que consumen memoria, lo que da lugar a un bajo rendimiento.  
@@ -133,5 +133,5 @@ using (SqlConnection connection = new SqlConnection(
 
 - [Agrupación de conexiones](connection-pooling.md)
 - [SQL Server y ADO.NET](./sql/index.md)
-- [Contadores de rendimiento](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [Información general sobre ADO.NET](ado-net-overview.md)

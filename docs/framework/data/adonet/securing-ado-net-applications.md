@@ -1,13 +1,13 @@
 ---
-title: Proteger aplicaciones de ADO.NET
+title: Proteger aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c1bdf4329665e4d29a47c26fb7dba8eb41c1cc3a
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196720"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980033"
 ---
 # <a name="securing-adonet-applications"></a>Proteger aplicaciones de ADO.NET
 Para escribir una aplicación de ADO.NET segura es necesario algo más que evitar los errores de codificación más comunes, como no validar los datos proporcionados por el usuario. Una aplicación que tiene acceso a datos tiene muchos puntos débiles potenciales que un agresor puede aprovechar para obtener, manipular o destruir datos confidenciales. Por eso es importante comprender todos los aspectos de la seguridad, desde el proceso de modelo de amenazas durante la fase de diseño de su aplicación hasta la implementación y el posterior mantenimiento.  
@@ -16,7 +16,7 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
   
  El código seguro no protege de la vulnerabilidad de seguridad que provoca el propio usuario cuando trabaja con recursos no administrados como bases de datos. La mayoría de las bases de datos, como SQL Server, tienen sus propios sistemas de seguridad, que contribuyen a mejorarla cuando se implementan correctamente. Sin embargo, incluso un origen de datos con un robusto sistema de seguridad puede sufrir un ataque si no se ha configurado correctamente.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Información general sobre seguridad](security-overview.md)  
  Proporciona recomendaciones para diseñar aplicaciones seguras de ADO.NET.  
   

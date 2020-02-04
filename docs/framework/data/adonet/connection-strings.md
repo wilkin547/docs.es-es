@@ -1,13 +1,13 @@
 ---
-title: Cadenas de conexión de ADO.NET
+title: Cadenas de conexión
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040136"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980241"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadenas de conexión de ADO.NET
 
@@ -59,7 +59,7 @@ Los errores tipográficos pueden producir errores. Por ejemplo, `Integrated Secu
 
 Las cadenas de conexión construidas manualmente en tiempo de ejecución desde la entrada de usuario no validada son vulnerables a ataques de inyección de cadenas y ponen en peligro la seguridad en el origen de datos. Para solucionar estos problemas, *ADO.NET* 2,0 presentó [generadores de cadenas de conexión](connection-string-builders.md) para cada proveedor de datos *.NET Framework* . Estos generadores de cadenas de conexión exponen parámetros como propiedades fuertemente tipadas y permiten validar la cadena de conexión antes de enviarla al origen de datos.
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
 [Generadores de cadenas de conexión](connection-string-builders.md)\
 Muestra cómo usar las clases `ConnectionStringBuilder` para construir cadenas de conexión válidas en tiempo de ejecución.

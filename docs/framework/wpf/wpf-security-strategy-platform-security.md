@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741856"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979877"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estrategia de seguridad de WPF: Seguridad de plataforma
 Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de servicios de seguridad, también aprovecha las características de seguridad de la plataforma subyacente, que incluye el sistema operativo, CLR e Internet Explorer. Estas capas se combinan para proporcionar a WPF un modelo de seguridad sólido y de defensa en profundidad que intenta evitar cualquier punto único de error, como se muestra en la ilustración siguiente:  
@@ -35,14 +35,14 @@ Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de se
 El núcleo de Windows proporciona varias características de seguridad que forman la base de seguridad para todas las aplicaciones de Windows, incluidas las creadas con WPF. En este tema se describe el alcance de estas características de seguridad que son importantes para WPF, así como la forma en que WPF se integra con ellas para proporcionar una mayor defensa en profundidad.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Además de una revisión general y el fortalecimiento de Windows, hay tres características clave de [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] que se tratarán en este tema:  
+ Además de una revisión general y el fortalecimiento de Windows, hay tres características clave de Windows XP SP2 que se tratarán en este tema:  
   
 - Compilación /GS  
   
 - Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>Compilación /GS  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] proporciona protección al volver a compilar muchas bibliotecas de sistema principales, incluidas todas las dependencias de WPF, como CLR, para ayudar a mitigar las saturaciones del búfer. Esto se logra usando el parámetro /GS con el compilador de línea de comandos de C o C++. Aunque las saturaciones del búfer se deben evitar de manera explícita, la compilación /GS proporciona un ejemplo de una defensa en profundidad contra posibles vulnerabilidades creadas por dichas saturaciones de forma accidental o malintencionada.  
+ Windows XP SP2 proporciona protección al volver a compilar muchas bibliotecas de sistema principales, incluidas todas las dependencias de WPF, como CLR, para ayudar a mitigar las saturaciones del búfer. Esto se logra usando el parámetro /GS con el compilador de línea de comandos de C o C++. Aunque las saturaciones del búfer se deben evitar de manera explícita, la compilación /GS proporciona un ejemplo de una defensa en profundidad contra posibles vulnerabilidades creadas por dichas saturaciones de forma accidental o malintencionada.  
   
  Históricamente, las saturaciones del búfer han sido la causa de muchas vulnerabilidades de seguridad de gran impacto. Una saturación del búfer se produce cuando un atacante aprovecha una vulnerabilidad de código que permite la inserción de código malintencionado que escribe más allá de los límites de un búfer. Esto permite a un atacante secuestrar el proceso en el que se ejecuta el código; para ello, se sobrescribe la dirección de retorno de una función para que se ejecute el código del atacante. El resultado es un código malintencionado que ejecuta código arbitrario con los mismos privilegios que el proceso atacado.  
   
@@ -53,7 +53,7 @@ El núcleo de Windows proporciona varias características de seguridad que forma
 ### <a name="windows-vista"></a>Windows Vista  
 Los usuarios de WPF en Windows Vista se beneficiarán de las mejoras de seguridad adicionales del sistema operativo, como "acceso de usuario con privilegios mínimos", comprobaciones de integridad de código y aislamiento de privilegios.  
   
-#### <a name="user-account-control-uac"></a>Control de cuentas de usuario (UAC)  
+#### <a name="user-account-control-uac"></a>Control de cuentas de usuario [UAC]  
  Hoy en día, los usuarios de Windows tienden a ejecutarse con privilegios de administrador porque muchas aplicaciones los requieren para la instalación o la ejecución, o para ambos. Ser capaz de escribir la configuración predeterminada de una aplicación en el Registro es un ejemplo.  
   
  La ejecución con privilegios de administrador en realidad significa que las aplicaciones se ejecutan a partir de procesos que tienen concedidos privilegios de administrador. El efecto de esto en la seguridad es que cualquier código malintencionado que secuestre un proceso que se ejecuta con privilegios de administrador heredará automáticamente esos privilegios, incluido el acceso a recursos críticos del sistema.  
@@ -109,7 +109,7 @@ Los usuarios de WPF en Windows Vista se beneficiarán de las mejoras de segurida
   
 - **Sitios que no son de confianza**. Aplicaciones identificadas por un usuario como no confiables (no confiables).  
   
- Para cada una de estas zonas, CAS proporciona un conjunto de permisos predefinidos que incluye los permisos que coinciden con el nivel de confianza asociado a cada uno de ellos. Entre ellas se incluyen las siguientes:  
+ Para cada una de estas zonas, CAS proporciona un conjunto de permisos predefinidos que incluye los permisos que coinciden con el nivel de confianza asociado a cada uno de ellos. Se incluyen los siguientes:  
   
 - **FullTrust**. Para las aplicaciones iniciadas desde la zona **mi PC** . Se conceden todos los permisos posibles.  
   
@@ -186,7 +186,7 @@ Los usuarios de WPF en Windows Vista se beneficiarán de las mejoras de segurida
   
  Internet Explorer 7 incorpora y amplía las capacidades de seguridad de IE6 SP2 como parte de un compromiso continuo con la seguridad.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Seguridad de acceso del código](../misc/code-access-security.md)
 - [Seguridad](security-wpf.md)

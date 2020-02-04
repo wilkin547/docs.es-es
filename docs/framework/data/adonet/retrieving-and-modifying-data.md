@@ -1,18 +1,18 @@
 ---
-title: Recuperar y modificar datos en ADO.NET
+title: Recuperar y modificar datos
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 78012a6a5ecdfac0e4cd7c4939ae3ab0036ab716
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782849"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980059"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar y modificar datos en ADO.NET
-La principal función de cualquier aplicación de base de datos es conectarse a un origen de datos y recuperar los datos que contiene. Los .NET Framework proveedores de datos de ADO.NET sirven como puente entre una aplicación y un origen de datos, lo que le permite ejecutar comandos, así como recuperar datos mediante un **DataReader** o un **DataAdapter**. Una función clave de cualquier aplicación de base de datos es la capacidad de actualizar los datos almacenados en la misma. En ADO.net, la actualización de datos implica el uso <xref:System.Data.DataSet>de los objetos de **comandos** **DataAdapter** y, y, y también puede implicar el uso de transacciones.  
+La principal función de cualquier aplicación de base de datos es conectarse a un origen de datos y recuperar los datos que contiene. Los .NET Framework proveedores de datos de ADO.NET sirven como puente entre una aplicación y un origen de datos, lo que le permite ejecutar comandos, así como recuperar datos mediante un **DataReader** o un **DataAdapter**. Una función clave de cualquier aplicación de base de datos es la capacidad de actualizar los datos almacenados en la misma. En ADO.NET, la actualización de datos implica el uso de los objetos **DataAdapter** y <xref:System.Data.DataSet>, y de los objetos de **comando** . también puede implicar el uso de transacciones.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Conexión a un origen de datos](connecting-to-a-data-source.md)  
  Describe cómo se establece una conexión con un origen de datos y cómo trabajar con eventos de conexión.  
   
@@ -35,7 +35,7 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  Proporciona un ejemplo de asignación de los valores generados para una columna de **identidad** en una tabla de SQL Server o para un campo **Autonumber** de una tabla de Microsoft Access, a una columna de una fila insertada en una tabla. Describe la combinación de valores de identidad en una `DataTable`.  
   
  [Recuperación de datos binarios](retrieving-binary-data.md)  
- Describe cómo recuperar datos binarios o estructuras de datos de `CommandBehavior`gran tamaño mediante.`SequentialAccess` para modificar el comportamiento predeterminado de un `DataReader`.  
+ Describe cómo recuperar datos binarios o estructuras de datos de gran tamaño mediante `CommandBehavior`.`SequentialAccess` para modificar el comportamiento predeterminado de un `DataReader`.  
   
  [Modificación de datos con procedimientos almacenados](modifying-data-with-stored-procedures.md)  
  Describe cómo utilizar parámetros de entrada y parámetros de salida de procedimientos almacenados para insertar una fila en una base de datos y devolver un nuevo valor de identidad.  
@@ -49,7 +49,7 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  [Traza de datos en ADO.NET](data-tracing.md)  
  Describe cómo ADO.NET proporciona funcionalidad integrada de traza de datos.  
   
- [Contadores de rendimiento](performance-counters.md)  
+ [Performance Counters](performance-counters.md)  
  Describe los contadores de rendimiento disponibles para `SqlClient` y `OracleClient`.  
   
  [Programación asincrónica](asynchronous-programming.md)  

@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio Code
 description: Aprenda a usar F# con Visual Studio Code y el conjunto de complementos de Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559669"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980358"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introducción a F# en Visual Studio Code
 
@@ -42,7 +42,7 @@ En primer lugar, asegúrese de que el scripting de .NET Core es el entorno de sc
 
 Esto es necesario actualmente debido a algunos comportamientos heredados en scripting basado en .NET Framework que no funcionan con el scripting de .NET Core y Ionide está intentando actualmente la compatibilidad con versiones anteriores. En el futuro, el scripting de .NET Core se convertirá en el valor predeterminado.
 
-### <a name="write-your-first-script"></a>escritura del primer script
+### <a name="write-your-first-script"></a>Escribir el primer script
 
 Una vez que haya configurado Visual Studio Code para usar el scripting de .NET Core, vaya a la vista del explorador en Visual Studio Code y cree un archivo nuevo. Asígnele el nombre *MyFirstScript. FSX*.
 
@@ -121,7 +121,7 @@ El flujo de `toPigLatin` es así:
 
 Comprueba si el primer carácter de la palabra de entrada es una vocal. Si es así, adjunte "Yay" al final de la palabra. En caso contrario, mueva el primer carácter al final de la palabra y agréguele "Ay".
 
-Hay un aspecto final que se debe tener en cuenta: no hay ninguna instrucción explícita para devolver de la función, a diferencia de muchos otros lenguajes. Esto se debe F# a que se basa en expresiones y la última expresión del cuerpo de una función es el valor devuelto. Dado que `if..then..else` es en sí misma una expresión, se devolverá el cuerpo del bloque de `then` o el cuerpo del bloque `else` en función del valor de entrada.
+Hay un aspecto final que se debe tener en cuenta: F#en, no hay ninguna instrucción explícita que devolver desde la función. Esto se debe F# a que se basa en expresiones y la última expresión evaluada en el cuerpo de una función determina el valor devuelto de esa función. Dado que `if..then..else` es en sí misma una expresión, la evaluación del cuerpo del bloque de `then` o el cuerpo del bloque de `else` determina el valor devuelto por la función de `toPigLatin`.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Convertir la aplicación de consola en un generador de Pig Latin
 

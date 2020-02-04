@@ -1,24 +1,25 @@
 ---
 title: ADO.NET y LINQ to SQL
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4d2376a2e32ff099497a5dbcd6cb68d8ed526884
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248119"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980007"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET y LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]forma parte de la familia de tecnologías de ADO.NET. Se basa en los servicios proporcionados por el modelo de proveedor ADO.NET. Por tanto, puede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mezclar código con las aplicaciones de ADO.net existentes y migrar las [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]soluciones de ADO.net actuales a. La ilustración siguiente proporciona una visión de alto nivel de la relación.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] forma parte de la familia de tecnologías ADO.NET. Se basa en los servicios proporcionados por el modelo de proveedor ADO.NET. Por lo tanto, puede mezclar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código con las aplicaciones existentes de ADO.NET y migrar las soluciones ADO.NET actuales a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La ilustración siguiente proporciona una visión de alto nivel de la relación.  
   
- ![LINQ to SQL y ADO.net](./media/dlinq-3.png "DLinq_3")  
+ ![LINQ to SQL y ADO.NET](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Conexiones  
- Puede proporcionar una conexión ADO.NET existente al crear un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. <xref:System.Data.Linq.DataContext> Todas las operaciones realizadas <xref:System.Data.Linq.DataContext> en (incluidas las consultas) utilizan esta conexión proporcionada. Si la conexión ya está abierta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la deja tal cual cuando haya terminado.  
+ Puede proporcionar una conexión ADO.NET existente al crear una <xref:System.Data.Linq.DataContext>de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Todas las operaciones realizadas en el <xref:System.Data.Linq.DataContext> (incluidas las consultas) utilizan esta conexión proporcionada. Si la conexión ya está abierta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la deja tal cual cuando haya terminado.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
@@ -31,7 +32,7 @@ ms.locfileid: "70248119"
 ## <a name="transactions"></a>Transacciones  
  Puede proporcionar <xref:System.Data.Linq.DataContext> con su propia transacción de base de datos si la aplicación ya ha iniciado la transacción y desea incluir en ella su <xref:System.Data.Linq.DataContext>.  
   
- El método preferido para realizar transacciones con la .NET Framework es usar el <xref:System.Transactions.TransactionScope> objeto. Con este enfoque, puede realizar transacciones distribuidas que funcionan entre bases de datos y otros administradores de recursos residentes en memoria. Los ámbitos de transacción requieren pocos recursos para iniciarse. Se promueven a sí mismos a transacciones distribuidas solo cuando hay varias conexiones en el ámbito de la transacción.  
+ El método preferido para realizar transacciones con la .NET Framework es usar el objeto <xref:System.Transactions.TransactionScope>. Con este enfoque, puede realizar transacciones distribuidas que funcionan entre bases de datos y otros administradores de recursos residentes en memoria. Los ámbitos de transacción requieren pocos recursos para iniciarse. Se promueven a sí mismos a transacciones distribuidas solo cuando hay varias conexiones en el ámbito de la transacción.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
@@ -46,9 +47,9 @@ ms.locfileid: "70248119"
  [!code-csharp[DLinqAdoNet#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#3)]
  [!code-vb[DLinqAdoNet#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#3)]  
   
- Siempre que los nombres de columna de los resultados tabulares coincidan con las propiedades de columna [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de la clase de entidad, crea los objetos fuera de cualquier consulta SQL.  
+ Siempre que los nombres de columna de los resultados tabulares coincidan con las propiedades de columna de la clase de entidad, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea los objetos fuera de cualquier consulta SQL.  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  El método <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> acepta parámetros: El código siguiente ejecuta una consulta parametrizada:  
   
  [!code-csharp[DlinqAdoNet#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#4)]
@@ -60,4 +61,4 @@ ms.locfileid: "70248119"
 ## <a name="see-also"></a>Vea también
 
 - [Información general](background-information.md)
-- [Cómo: Reutilizar una conexión entre un comando ADO.NET y un DataContext](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Reutilización de una conexión entre un comando de ADO.NET y un objeto DataContext](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

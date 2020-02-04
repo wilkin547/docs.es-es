@@ -1,16 +1,17 @@
 ---
 title: Oracle y ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a49634f712e32f873df8e47fbcb0c91dbe33fa94
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039822"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980085"
 ---
 # <a name="oracle-and-adonet"></a>Oracle y ADO.NET
 > [!NOTE]
@@ -36,7 +37,7 @@ using System.Data.OracleClient;
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Requisitos del sistema](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Describe los requisitos para usar el proveedor de datos de .NET Framework para Oracle y describe una serie de problemas que se deben tener en cuenta al utilizarlos.  
   

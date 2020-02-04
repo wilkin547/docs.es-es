@@ -1,13 +1,13 @@
 ---
-title: Objetos DataSet de ADO.NET
+title: Conjuntos de datos
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634942"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980306"
 ---
 # <a name="adonet-datasets"></a>Objetos DataSet de ADO.NET
 El objeto <xref:System.Data.DataSet> es fundamental para admitir escenarios de datos distribuidos y desconectados con ADO.NET. El **DataSet** es una representación residente en memoria de los datos que proporciona un modelo de programación relacional coherente independientemente del origen de datos. Se puede utilizar con muchos y distintos orígenes de datos, con datos XML o para administrar datos locales de la aplicación. El **DataSet** representa un conjunto completo de datos, incluidas las tablas relacionadas, las restricciones y las relaciones entre las tablas. En la ilustración siguiente se muestra el modelo de objetos **DataSet** .  

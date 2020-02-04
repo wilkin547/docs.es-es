@@ -1,16 +1,16 @@
 ---
-title: Seguridad de acceso del código y ADO.NET
+title: Seguridad de acceso del código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040166"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980267"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -49,7 +49,7 @@ ms.locfileid: "73040166"
   
  En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, consulte [SQL Server Security](./sql/sql-server-security.md).  
   
-## <a name="assemblies"></a>Ensamblados  
+## <a name="assemblies"></a>Assemblies  
  Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre la creación e implementación de ensamblados, vea [programar con ensamblados](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Ensamblados con nombre seguro  
@@ -136,7 +136,7 @@ ms.locfileid: "73040166"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Habilitar confianza parcial con un conjunto de permisos personalizados  
- Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene un <xref:System.Security.Policy.Zone> de `LocalIntranet`, un administrador del sistema puede copiar el conjunto de permisos para `LocalIntranet`, cambiarle el nombre a "CustomLocalIntranet", agregar los permisos de <xref:System.Data.SqlClient>, importar CustomLocalIntranet conjunto de permisos mediante la [herramienta Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../tools/caspol-exe-code-access-security-policy-tool.md)y establezca el conjunto de permisos de `LocalIntranet_Zone` en CustomLocalIntranet.  
+ Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene un <xref:System.Security.Policy.Zone> de `LocalIntranet`, un administrador del sistema puede copiar el conjunto de permisos para `LocalIntranet`, cambiarle el nombre a "CustomLocalIntranet", agregar los permisos <xref:System.Data.SqlClient>, importar el conjunto de permisos CustomLocalIntranet mediante la [herramienta Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../tools/caspol-exe-code-access-security-policy-tool.md)y establecer el conjunto de permisos de `LocalIntranet_Zone` en CustomLocalIntranet  
   
 ### <a name="sample-permission-set"></a>Conjunto de permisos de ejemplo  
  A continuación se muestra un ejemplo de un conjunto de permisos para el proveedor de datos .NET Framework para SQL Server en un escenario que no es de plena confianza. Para obtener información sobre cómo crear conjuntos de permisos personalizados, vea [configurar conjuntos de permisos mediante Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  

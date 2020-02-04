@@ -1,25 +1,25 @@
 ---
-title: Asignaciones de tipos de datos en ADO.NET
+title: Asignaciones de tipos de datos
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 9c0d19f724c1876f7dac86055bed2ef77ac76a77
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 610cdc1a679b0c51125075076120e12db97da421
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785588"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980202"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Asignaciones de tipos de datos en ADO.NET
-.NET Framework se basa en el sistema de tipos común, que define cómo se declaran, usan y administran los tipos en tiempo de ejecución. Consta de tipos de valor y de tipos de referencia, que derivan todos del tipo base <xref:System.Object>. Al trabajar con un origen de datos, el tipo de datos se deduce del proveedor de datos si no se especifica explícitamente. Por ejemplo, un objeto <xref:System.Data.DataSet> es independiente de cualquier origen de datos específico. Los datos de `DataSet` se recuperan desde un origen de datos y los cambios que se realizan en ellos se reflejan en el origen de datos mediante el uso de `DataAdapter`. Esto significa que cuando un `DataAdapter` rellena <xref:System.Data.DataTable> un en un `DataSet` con valores de un origen de datos, los tipos de datos `DataTable` resultantes de las columnas de son .NET Framework tipos, en lugar de tipos específicos del .NET Framework proveedor de datos que se utiliza para conectarse al origen de datos.  
+.NET Framework se basa en el sistema de tipos común, que define cómo se declaran, usan y administran los tipos en tiempo de ejecución. Consta de tipos de valor y de tipos de referencia, que derivan todos del tipo base <xref:System.Object>. Al trabajar con un origen de datos, el tipo de datos se deduce del proveedor de datos si no se especifica explícitamente. Por ejemplo, un objeto <xref:System.Data.DataSet> es independiente de cualquier origen de datos específico. Los datos de `DataSet` se recuperan desde un origen de datos y los cambios que se realizan en ellos se reflejan en el origen de datos mediante el uso de `DataAdapter`. Esto significa que cuando un `DataAdapter` rellena un <xref:System.Data.DataTable> en un `DataSet` con valores de un origen de datos, los tipos de datos resultantes de las columnas del `DataTable` son .NET Framework tipos, en lugar de tipos específicos del proveedor de datos .NET Framework que se utiliza para conectarse al origen de datos.  
   
- Del mismo modo, `DataReader` cuando un devuelve un valor de un origen de datos, el valor resultante se almacena en una variable local que tiene un tipo de .NET Framework. En el caso de las `DataAdapter` `Get` `DataReader`operaciones de y los métodos de, el tipo de .NET Framework se deduce del valor devuelto del proveedor de datos de .NET Framework. `Fill`  
+ Del mismo modo, cuando un `DataReader` devuelve un valor de un origen de datos, el valor resultante se almacena en una variable local que tiene un tipo .NET Framework. En el caso de las operaciones `Fill` del `DataAdapter` y de los métodos `Get` del `DataReader`, el tipo de .NET Framework se deduce del valor devuelto del proveedor de datos .NET Framework.  
   
  En lugar de confiar en el tipo de datos deducido, puede utilizar los métodos de descriptor de acceso con tipo de `DataReader` cuando conoce el tipo específico del valor que se va a devolver. Los métodos de descriptor de acceso con tipo proporcionan un mejor rendimiento al devolver un valor como un tipo de .NET Framework específico, lo que elimina la necesidad de conversión de tipos adicional.  
   
 > [!NOTE]
-> Los valores NULL de los tipos de datos del proveedor de `DBNull.Value`datos de .NET Framework se representan mediante.  
+> Los valores NULL de los tipos de datos del proveedor de datos de .NET Framework se representan mediante `DBNull.Value`.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
  [Asignaciones de tipos de datos de SQL Server](sql-server-data-type-mappings.md)  
  Enumera las asignaciones de tipos de datos deducidas y los métodos de descriptor de acceso a datos de <xref:System.Data.SqlClient>.  
   
