@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7dff42d612d740fa9d05f303721cef45e1a03c32
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901017"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965872"
 ---
 # <a name="microsoft-ui-automation"></a>Automatización de la interfaz de usuario de Microsoft
 
@@ -31,7 +31,6 @@ ms.locfileid: "75901017"
 - [Patrones de control de Automatización de la interfaz de usuario](ui-automation-control-patterns.md)
 - [Patrón de texto de Automatización de la interfaz de usuario](ui-automation-text-pattern.md)
 - [UI Automation Control Types](ui-automation-control-types.md)
-- [Especificación de Automatización de la interfaz de usuario y Promesa de la comunidad](ui-automation-specification-and-community-promise.md)
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
