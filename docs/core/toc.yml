@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: "Compilación de una solución completa de .NET\_Core en macOS"
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Introducción a .NET Core con las herramientas de la CLI
+    - name: Introducción a .NET Core con la CLI
       href: tutorials/cli-create-console-app.md
     - name: "Organización y prueba de proyectos con la CLI de .NET\_Core"
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: Implementación de la aplicación
   href: deploying/index.md
   items:
-    - name: Implementación de aplicaciones con herramientas CLI
+    - name: Publicación de aplicaciones con la CLI
       href: deploying/deploy-with-cli.md
     - name: "Implementación de aplicaciones con Visual\_Studio"
       href: deploying/deploy-with-vs.md
-    - name: Creación de un paquete NuGet con herramientas multiplataforma
+    - name: Creación de un paquete NuGet con la CLI
       href: deploying/creating-nuget-packages.md
     - name: Puesta al día del runtime de implementación autocontenida
       href: deploying/runtime-patch-selection.md

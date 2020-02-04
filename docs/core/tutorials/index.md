@@ -4,12 +4,12 @@ description: Siga los tutoriales para aprender a compilar aplicaciones y bibliot
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714041"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920425"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
 
@@ -35,10 +35,10 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Introducción a .NET Core en macOS con Visual Studio para Mac](using-on-mac-vs.md)
 - [Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>Creación de aplicaciones con las herramientas de la CLI de .NET Core
+## <a name="build-applications-with-the-net-core-cli"></a>Compilación de aplicaciones con la CLI de .NET Core
 
-- [Introducción a .NET Core en Windows, Linux y macOS con las herramientas de CLI de .NET Core](cli-create-console-app.md)
-- [Organización y prueba de proyectos con las herramientas de la CLI de .NET Core](testing-with-cli.md)
+- [Introducción a .NET Core en Windows/Linux/macOS con la CLI de .NET Core](cli-create-console-app.md)
+- [Organización y prueba de proyectos con la CLI de .NET Core](testing-with-cli.md)
 - [Introducción a F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Otros

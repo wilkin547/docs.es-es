@@ -32,11 +32,11 @@ Desde la perspectiva de CLR, solo hay dos categorías de tipos: tipos de referen
 
  ✔️ asegurarse de que cada tipo es un conjunto bien definido de miembros relacionados, no solo una colección aleatoria de funcionalidad no relacionada.
 
-## <a name="in-this-section"></a>Esta sección
- [Elección entre clase y struct clase](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [abstracta diseño](../../../docs/standard/design-guidelines/abstract-class.md) de clases [estáticas](../../../docs/standard/design-guidelines/static-class.md) [diseño](../../../docs/standard/design-guidelines/interface.md) de clases [estructura](../../../docs/standard/design-guidelines/struct.md) [de diseño de clase](../../../docs/standard/design-guidelines/enum.md)  [tipo anidado](../../../docs/standard/design-guidelines/nested-types.md) *partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
+## <a name="in-this-section"></a>En esta sección
+ [Elección entre clase y struct clase](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [abstracta diseño](../../../docs/standard/design-guidelines/abstract-class.md) de clases [estáticas](../../../docs/standard/design-guidelines/static-class.md) [diseño](../../../docs/standard/design-guidelines/interface.md) de clases [estructura](../../../docs/standard/design-guidelines/struct.md) [Enum Design](../../../docs/standard/design-guidelines/enum.md) de diseño de clase [tipo anidado](../../../docs/standard/design-guidelines/nested-types.md) *partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

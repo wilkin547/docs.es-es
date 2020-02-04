@@ -256,6 +256,8 @@
       href: language-reference/caller-information.md
     - name: Sintaxis detallada
       href: language-reference/verbose-syntax.md
+    - name: Errores y advertencias del compilador
+      href: language-reference/compiler-messages/index.md
 - name: 'Guía de estilo de F#'
   href: style-guide/index.md
   items:

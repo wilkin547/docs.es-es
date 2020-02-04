@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones .NET Core
 description: Conozca las formas de implementar una aplicación .NET Core.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740809"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920873"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
@@ -27,7 +27,7 @@ En una implementación dependiente del marco de trabajo, solo se implementa la a
 
 La implementación de FDD tienen varias ventajas:
 
-- No es necesario definir por adelantado los sistemas operativos de destino en los que se ejecutará la aplicación .NET Core. Como .NET Core usa un formato de archivo PE común para archivos ejecutables y bibliotecas independientemente del sistema operativo, .NET Core puede ejecutar la aplicación con independencia del sistema operativo subyacente. Para más información sobre el formato de archivo PE, consulte [Formato de archivo de ensamblado .NET](../../standard/assembly/file-format.md).
+- No es necesario definir por adelantado los sistemas operativos de destino en los que se ejecutará la aplicación .NET Core. Como .NET Core usa un formato de archivo PE común para archivos ejecutables y bibliotecas independientemente del sistema operativo, .NET Core puede ejecutar la aplicación con independencia del sistema operativo subyacente. Para más información sobre el formato de archivo PE, consulte [.NET Assembly File Format](../../standard/assembly/file-format.md) (Formato de archivo de ensamblado .NET).
 
 - El tamaño de su paquete de implementación es pequeño. Solo tendrá que implementar la aplicación y sus dependencias, .NET Core propiamente dicho.
 
@@ -91,11 +91,11 @@ Hay también algunas desventajas:
 
 ## <a name="step-by-step-examples"></a>Ejemplos paso a paso
 
-Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Publicación de aplicaciones .NET Core con la CLI](deploy-with-cli.md). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Implementación de aplicaciones de .NET Core con Visual Studio](deploy-with-vs.md). 
+Para ejemplos paso a paso de la implementación de aplicaciones de .NET Core con la CLI de .NET Core, consulte [Publicación de aplicaciones .NET Core con la CLI de .NET Core](deploy-with-cli.md). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Implementación de aplicaciones de .NET Core con Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Vea también
 
-- [Implementación de aplicaciones .NET Core con herramientas de la CLI](deploy-with-cli.md)
+- [Publicación de aplicaciones .NET Core con la CLI de .NET Core](deploy-with-cli.md)
 - [Implementación de aplicaciones de .NET Core con Visual Studio](deploy-with-vs.md)
 - [Paquetes, metapaquetes y marcos de trabajo](../packages.md)
 - [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

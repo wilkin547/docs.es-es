@@ -1491,7 +1491,7 @@
           items:
             - name: namespace
               href: language-reference/keywords/namespace.md
-            - name: utilizar
+            - name: using
               items:
                 - name: Contextos de uso
                   href: language-reference/keywords/using.md
@@ -1511,7 +1511,7 @@
           items:
             - name: Restricción new
               href: language-reference/keywords/new-constraint.md
-            - name: donde
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Palabras clave de acceso
           items:
@@ -1521,7 +1521,7 @@
               href: language-reference/keywords/this.md
         - name: Palabras clave de literales
           items:
-            - name: nulo
+            - name: 'null'
               href: language-reference/keywords/null.md
             - name: true y false
               href: language-reference/builtin-types/bool.md
@@ -1532,7 +1532,7 @@
             - name: Referencia rápida
               displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
-            - name: agregar
+            - name: add
               href: language-reference/keywords/add.md
             - name: get
               href: language-reference/keywords/get.md
@@ -1542,7 +1542,7 @@
               href: language-reference/keywords/partial-method.md
             - name: remove
               href: language-reference/keywords/remove.md
-            - name: establecer
+            - name: set
               href: language-reference/keywords/set.md
             - name: when (condición de filtro)
               href: language-reference/keywords/when.md
@@ -1645,7 +1645,7 @@
         - name: operador default
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
-        - name: delegar operador
+        - name: operador delegate
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
         - name: operador nameof

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900595"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921369"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -63,7 +63,7 @@ Los ensamblados pueden ser estáticos o dinámicos. Los ensamblados estáticos s
 
 Existen varias formas de crear ensamblados. Puede usar herramientas de desarrollo, como Visual Studio, que permite crear archivos *.dll* o *.exe*. Puede usar las herramientas de Windows SDK para crear ensamblados con módulos de otros entornos de programación. También puede utilizar las API de Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, para crear ensamblados dinámicos.
 
-Para compilar ensamblados puede hacerlo en Visual Studio, con las herramientas de la interfaz de la línea de comandos de .NET Core o, para los ensamblados de .NET Framework, con un compilador de línea de comandos. Para obtener más información sobre la compilación de ensamblados mediante herramientas de la interfaz de la línea de comandos de .NET, vea [Herramientas de la interfaz de la línea de comandos de .NET Core](../../core/tools/index.md). Para compilar ensamblados con los compiladores de línea de comandos, vea [Compilar la línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) para C#, o bien [Compilar desde la línea de comandos (Visual Basic)](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) para Visual Basic.
+Para compilar ensamblados puede hacerlo en Visual Studio, con las herramientas de la interfaz de la línea de comandos de .NET Core o, para los ensamblados de .NET Framework, con un compilador de línea de comandos. Para más información sobre cómo compilar los ensamblados con la CLI de .NET Core, consulte [Información general sobre la CLI de .NET Core](../../core/tools/index.md). Para compilar ensamblados con los compiladores de línea de comandos, vea [Compilar la línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) para C#, o bien [Compilar desde la línea de comandos (Visual Basic)](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) para Visual Basic.
 
 > [!NOTE]
 > Para compilar un ensamblado en Visual Studio, seleccione **Compilar** en el menú **Compilar**.

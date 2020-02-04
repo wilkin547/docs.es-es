@@ -13,7 +13,7 @@ ms.locfileid: "76742750"
 
 .NET ofrece diversas formas de personalizar el código de interoperabilidad nativa. En este artículo se incluye la guía que siguen los equipos de .NET de Microsoft para realizar la interoperabilidad nativa.
 
-## <a name="general-guidance"></a>Orientación general
+## <a name="general-guidance"></a>Instrucciones generales
 
 La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 
@@ -27,7 +27,7 @@ La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 
 ## <a name="dllimport-attribute-settings"></a>Configuración del atributo DllImport
 
-| Configuración de | Predeterminado | Recomendación | Detalles |
+| Configuración | Valor predeterminado | Recomendación | Detalles |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantener el valor predeterminado  | Cuando se establece explícitamente en false, los valores devueltos de HRESULT con errores se convierten en excepciones (y el valor devuelto en la definición se convierte en NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Depende de la API  | Establezca este valor en true si la API utiliza GetLastError y use Marshal.GetLastWin32Error para obtener el valor. Si la API establece una condición que indica que tiene un error, obtenga el error antes de realizar otras llamadas para evitar que accidentalmente se sobrescriba.|
@@ -49,7 +49,7 @@ Recuerde marcar `[DllImport]` como `Charset.Unicode`, a menos que explícitament
    1. Asigna un búfer nativo **{2}** .
    2. Copia el contenido si `[In]` _(el valor predeterminado de un parámetro `StringBuilder`)_ .
    3. Copia el búfer nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado para `StringBuilder`)_
-3. `ToString()` asigna otra matriz administrada **{4}** .
+3. `ToString()` asigna otra matriz administrada **** ** .
 
 Es decir, asignaciones *{4}* para obtener una cadena del código nativo. Lo mejor que puede hacer para limitar esto consiste en reutilizar `StringBuilder` en otra llamada, pero esta todavía solo guarda la asignación *1*. Es mucho mejor usar y almacenar en caché un búfer de caracteres de `ArrayPool`; después, puede llegar a la asignación de `ToString()` en las llamadas posteriores.
 
@@ -120,7 +120,7 @@ Puede ver si un tipo puede transferirse en bloque de bits al intentar crear un c
 
 ✔️ hacer que las estructuras sean representables en bytes siempre que sea posible.
 
-Para obtener más información, vea:
+Para más información, consulte:
 
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](../../framework/interop/blittable-and-non-blittable-types.md)
 - [Serialización de tipos](type-marshaling.md)
@@ -161,7 +161,7 @@ Esta es una lista de los tipos de datos que se usan frecuentemente en las API de
 
 Los siguientes tipos tienen el mismo tamaño en Windows 32 bits y 64 bits, a pesar de sus nombres.
 
-| Ancho | Portal          | C (Windows)          | C#       | Alternativa                          |
+| Ancho | Windows          | C (Windows)          | C#       | Alternativa                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -203,7 +203,7 @@ Un tipo `PVOID` de Windows que es un tipo `void*` de C se pueden serializar como
 
 [Intervalos de tipo de datos](/cpp/cpp/data-type-ranges)
 
-## <a name="structs"></a>Structs
+## <a name="structs"></a>Estructuras
 
 Las estructuras administradas se crean en la pila y no se quitan hasta que el método se devuelve. Por definición, se anclan (la recolección de elementos no utilizados no las mueve). Puede simplemente tomar la dirección en bloques de código no seguros si el código nativo no utilizará el puntero más allá del final del método actual.
 

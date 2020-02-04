@@ -2,16 +2,16 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901273"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921161"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 
-Por diversas razones, Windows Communication Foundation (WCF) no admite algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como el nombre de usuario y la contraseña, y la autenticación integrada HTTP/HTTPS al ejecutar WCF en Windows XP Home Edition.
+Por diversas razones, Windows Communication Foundation (WCF) no admite algunos escenarios de seguridad específicos. Por ejemplo, Windows XP Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como el nombre de usuario y la contraseña, y la autenticación integrada HTTP/HTTPS al ejecutar WCF en Windows XP Home Edition.
 
 ## <a name="impersonation-scenarios"></a>Escenarios de suplantación
 
@@ -22,7 +22,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
 
 WCF no admite la suplantación y se produce una <xref:System.InvalidOperationException> cuando existen las condiciones siguientes:
 
-- El sistema operativo es [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+- El sistema operativo es Windows XP.
 
 - El modo de autenticación resulta en una identidad de Windows.
 
@@ -35,7 +35,7 @@ WCF no admite la suplantación y se produce una <xref:System.InvalidOperationExc
  Como alternativa, en la configuración, el token se habilita mediante la creación de una <`customBinding`>, la adición de un <`security`> elemento y el establecimiento del atributo `authenticationMode` en SecureConversation y el atributo `requireSecurityContextCancellation` en `true`.
 
 > [!NOTE]
-> Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por consiguiente, puede utilizarlo con la opción `Required` en [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por lo tanto, puede utilizarla con la opción `Required` en Windows XP.
 
 ### <a name="possible-aspnet-conflict"></a>Posible conflicto de ASP.NET
 
