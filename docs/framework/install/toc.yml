@@ -1,27 +1,27 @@
 - name: Guía de instalación
   href: index.md
   items:
-    - name: Instalación de .NET Framework en Windows 10 o Windows Server 2016
-      href: on-windows-10.md
-    - name: Instalación de .NET Framework en Windows 8.1 y Windows Server 2012 R2
-      href: on-windows-8-1.md
-    - name: Instalación de .NET Framework en Windows 8 y Windows Server 2012
-      href: on-windows-8.md
-    - name: Instalación de .NET Framework en Windows 7 SP1 y Windows Server 2008 R2
-      href: on-windows-7.md
-    - name: Instalación de .NET Framework en Windows Vista y Windows Server 2008
-      href: on-windows-vista.md
-    - name: Instalación de .NET Framework en Windows XP y Windows Server 2003
-      href: on-windows-xp.md
     - name: Guía de instalación para desarrolladores
       href: guide-for-developers.md
+    - name: "Windows\_10 y Windows\_Server\_2016"
+      href: on-windows-10.md
+    - name: "Windows\_8.1 y Windows\_Server\_2012\_R2"
+      href: on-windows-8-1.md
+    - name: Windows 8 y Windows Server 2012
+      href: on-windows-8.md
+    - name: "Windows\_7\_SP1 y Windows\_Server\_2008\_R2"
+      href: on-windows-7.md
+    - name: "Windows\_Vista y Windows\_Server\_2008"
+      href: on-windows-vista.md
+    - name: "Windows\_XP y Windows\_Server\_2003"
+      href: on-windows-xp.md
     - name: Reparar .NET Framework
       href: repair.md
-    - name: Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
+    - name: Solución de problemas de instalación y desinstalación
       href: troubleshoot-blocked-installations-and-uninstallations.md
     - name: Solución del mensaje "No se pudo iniciar esta aplicación"
       href: application-not-started.md
-    - name: 'Instalación de .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8'
+    - name: ".NET\_Framework\_3.5 en Windows 8 a Windows\_10"
       href: dotnet-35-windows-10.md
-    - name: 'Ejecución de aplicaciones de .NET Framework 1.1 en Windows 8, Windows 8.1 o Windows 10'
+    - name: "Aplicaciones .NET\_Framework\_1.1 en Windows\_8 a Windows\_10"
       href: run-net-framework-1-1-apps.md
