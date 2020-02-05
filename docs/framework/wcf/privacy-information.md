@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347781"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919330"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3,0, la aplicación puede afectar a la privacidad de los usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final decida enviarla.  
@@ -44,7 +44,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  La autenticación puede producir una sesión segura establecida entre los extremos en comunicación. Un GUID, cuya duración es igual a la sesión de seguridad, identifica la sesión. La tabla siguiente muestra lo que se guarda y dónde.  
   
-|data|Almacenamiento|  
+|Datos|Almacenamiento de|  
 |----------|-------------|  
 |Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
 |Información de pertenencia del usuario, como nombres de usuario y contraseñas.|Proveedores de pertenencia a ASP.NET.|  
@@ -54,7 +54,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ## <a name="auditing"></a>Auditoría  
  La auditoría registra si se ha completado o se ha producido un error en la autenticación y eventos de autorización. Los registros de la auditoría contienen los datos siguientes: servicio URI, acción URI y la identificación del agente de llamada.  
   
- La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos. Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación. En Windows Vista y Windows Server 2003, se registra un registro en el registro de eventos de seguridad.  
+ La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos. En Windows XP, se registra un registro en el registro de eventos de la aplicación. En Windows Vista y Windows Server 2003, se registra un registro en el registro de eventos de seguridad.  
   
 ## <a name="transactions"></a>Transacciones  
  La característica de transacciones proporciona servicios transaccionales a una aplicación WCF.  
@@ -95,7 +95,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ### <a name="tracing"></a>Traza  
  La característica de diagnóstico de la infraestructura de WCF registra los mensajes que pasan a través de las capas del modelo de transporte y servicio, así como las actividades y eventos asociados a estos mensajes. Esta característica está desactivada de forma predeterminada. Se habilita mediante el archivo de configuración de la aplicación y el comportamiento del seguimiento se puede modificar con el proveedor de WMI de WCF en tiempo de ejecución. Cuando se habilita, la infraestructura de la traza emite una traza de diagnóstico que contiene mensajes, actividades y eventos de procesamiento a los agentes de escucha configurados. Las opciones de configuración del agente de escucha del administrador determinan el formato y ubicación del resultado, pero es normalmente un archivo con formato XML. El administrador es responsable de establecer la lista de control de acceso (ACL) en los archivos de seguimiento. En particular, cuando está hospedado por el Sistema de Activación de Windows (WAS), el administrador debería asegurarse de que los archivos no provienen del directorio raíz virtual público si no se desea.  
   
- Hay dos tipos de seguimiento: Seguimiento de diagnóstico del modelo de servicio y registro de mensajes, que se describe en la sección siguiente. Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>. Estos orígenes de traza de registro capturan locales a la aplicación.  
+ Hay dos tipos de traza: registro de mensajes y traza de diagnóstico de modelo de servicio, descritos en la sección siguiente. Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>. Estos orígenes de traza de registro capturan locales a la aplicación.  
   
 ### <a name="message-logging"></a>Registro de mensajes  
  El origen de traza del registro de mensajes (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite a un administrador registrar los mensajes que fluyen a través del sistema. A través de la configuración, el usuario puede decidir si quiere registrar mensajes completos o solamente encabezados de mensaje, registrar en el transporte y/o niveles de modelo de servicio y si quiere incluir mensajes incorrectos. Además, el usuario puede configurar el filtro para restringir qué mensajes están registrados.  
@@ -127,13 +127,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Claves que se quitan:  
   
- \- para xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- para xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,13 +141,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Datos personales posibles que se quitan:  
   
- \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \- para xmlns: SAML = "urn: oasis: names: TC: SAML: 1.0: Assertion", se quitan los elementos en negrita (a continuación):  
+ \- se quitan los elementos en negrita (a continuación):  
   
  Aserción de \<  
   
@@ -304,7 +304,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Para los siguientes espacios de nombres:  
   
- xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (por ejemplo, si no hay ninguna acción disponible)  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (por ejemplo, si no hay ninguna acción disponible)  
   
  La información se quita de estos elementos del cuerpo, lo cual implica intercambio de claves:  
   
