@@ -8,33 +8,38 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 2391a8ee0bb55402ff5183c837e36d04a39e6555
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e37dac9cb9fed1df6ca027f09f2c95dbbc8ea66d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711706"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793371"
 ---
-# <a name="remarks-c-programming-guide"></a><span data-ttu-id="c7725-102">\<remarks> (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="c7725-102">\<remarks> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="c7725-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c7725-103">Syntax</span></span>  
-  
-```xml  
-<remarks>description</remarks>  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="c7725-104">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c7725-104">Parameters</span></span>  
- `Description`  
- <span data-ttu-id="c7725-105">Descripción del miembro.</span><span class="sxs-lookup"><span data-stu-id="c7725-105">A description of the member.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="c7725-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c7725-106">Remarks</span></span>  
- <span data-ttu-id="c7725-107">La etiqueta \<remarks> se usa para agregar información sobre un tipo y complementa la información especificada con [\<summary>](./summary.md).</span><span class="sxs-lookup"><span data-stu-id="c7725-107">The \<remarks> tag is used to add information about a type, supplementing the information specified with [\<summary>](./summary.md).</span></span> <span data-ttu-id="c7725-108">Esta información se muestra en la ventana Examinador de objetos.</span><span class="sxs-lookup"><span data-stu-id="c7725-108">This information is displayed in the Object Browser window.</span></span>  
-  
- <span data-ttu-id="c7725-109">Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.</span><span class="sxs-lookup"><span data-stu-id="c7725-109">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="c7725-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c7725-110">Example</span></span>  
- [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
-  
-## <a name="see-also"></a><span data-ttu-id="c7725-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="c7725-111">See also</span></span>
+# <a name="remarks-c-programming-guide"></a><span data-ttu-id="367bf-102">\<remarks> (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="367bf-102">\<remarks> (C# programming guide)</span></span>
 
-- [<span data-ttu-id="c7725-112">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="c7725-112">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="c7725-113">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="c7725-113">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
+## <a name="syntax"></a><span data-ttu-id="367bf-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="367bf-103">Syntax</span></span>
+
+```xml
+<remarks>description</remarks>
+```
+
+## <a name="parameters"></a><span data-ttu-id="367bf-104">Parámetros</span><span class="sxs-lookup"><span data-stu-id="367bf-104">Parameters</span></span>
+
+- `Description`
+
+  <span data-ttu-id="367bf-105">Descripción del miembro.</span><span class="sxs-lookup"><span data-stu-id="367bf-105">A description of the member.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="367bf-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="367bf-106">Remarks</span></span>
+
+<span data-ttu-id="367bf-107">La etiqueta \<remarks> se usa para agregar información sobre un tipo y complementa la información especificada con [\<summary>](./summary.md).</span><span class="sxs-lookup"><span data-stu-id="367bf-107">The \<remarks> tag is used to add information about a type, supplementing the information specified with [\<summary>](./summary.md).</span></span> <span data-ttu-id="367bf-108">Esta información se muestra en la ventana Examinador de objetos.</span><span class="sxs-lookup"><span data-stu-id="367bf-108">This information is displayed in the Object Browser window.</span></span>
+
+<span data-ttu-id="367bf-109">Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.</span><span class="sxs-lookup"><span data-stu-id="367bf-109">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>
+
+## <a name="example"></a><span data-ttu-id="367bf-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="367bf-110">Example</span></span>
+
+[!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]
+
+## <a name="see-also"></a><span data-ttu-id="367bf-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="367bf-111">See also</span></span>
+
+- [<span data-ttu-id="367bf-112">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="367bf-112">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="367bf-113">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="367bf-113">Recommended tags for documentation comments</span></span>](./recommended-tags-for-documentation-comments.md)
