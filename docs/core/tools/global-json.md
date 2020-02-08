@@ -3,18 +3,18 @@ title: Información general de global.json
 description: Obtenga información sobre cómo usar el archivo global.json para establecer la versión del SDK de .NET Core al ejecutar comandos de la CLI de .NET Core.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733972"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920507"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.0 y versiones posteriores
 
-El archivo *global.json* permite definir qué versión del SDK de .NET Core se usa al ejecutar comandos de la CLI de .NET Core. La selección del SDK de .NET Core es independiente de especificar el runtime al que está destinado el proyecto. La versión del SDK de .NET Core indica qué versiones de las herramientas de la CLI de .NET Core se usan.
+El archivo *global.json* permite definir qué versión del SDK de .NET Core se usa al ejecutar comandos de la CLI de .NET Core. La selección del SDK de .NET Core es independiente de especificar el runtime al que está destinado el proyecto. La versión del SDK de .NET Core indica qué versiones de la CLI de .NET Core se usan.
 
 En general, se quiere usar la versión más reciente de las herramientas del SDK, por lo que no es necesario ningún archivo *global.json*. En algunos escenarios avanzados, es posible que quiera controlar la versión de las herramientas del SDK, así que en este artículo se explica cómo.
 

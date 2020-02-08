@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tec
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926500"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965755"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -38,7 +38,7 @@ Se recomienda mantener los estilos en sus propios archivos de hoja de estilos in
 
 Las hojas de estilo CSS carecen de compatibilidad con la lógica condicional, las variables y otras características de los lenguajes de programación. Por tanto, las hojas de estilo grandes suelen incluir una gran cantidad de repetición, ya que el mismo color, fuente u otra configuración se aplica a distintas variaciones de elementos HTML y clases CSS. Los preprocesadores CSS pueden ayudar a que las hojas de estilo sigan el [Principio DRY](https://deviq.com/don-t-repeat-yourself/) agregando compatibilidad para las variables y la lógica.
 
-Los preprocesadores CSS más populares son Sass y LESS. Ambos amplían CSS y son compatibles con las versiones anteriores, lo que significa que un archivo CSS sin formato es un archivo Sass o LESS válido. Sass está basado en Ruby y LESS en JavaScript, y normalmente ambos se ejecutan como parte del proceso de desarrollo local. Los dos tienen herramientas de línea de comandos y compatibilidad integrada en Visual Studio para ejecutarlos con tareas Gulp o Grunt.
+Los preprocesadores CSS más populares son Sass y LESS. Ambos amplían CSS y son compatibles con las versiones anteriores, lo que significa que un archivo CSS sin formato es un archivo Sass o LESS válido. Sass está basado en Ruby y LESS en JavaScript, y normalmente ambos se ejecutan como parte del proceso de desarrollo local. Los dos tienen herramientas de línea de comandos y compatibilidad integrada en Visual Studio para ejecutarlos con tareas Gulp o Grunt.
 
 ## <a name="javascript"></a>JavaScript
 
@@ -73,7 +73,7 @@ Por ejemplo, imagine que, si el valor de un cuadro de texto es superior a 10, se
 | Plantillas | **No** | **Sí** |
 | Enrutamiento de vínculo profundo | **No** | **Sí** |
 
-La mayoría de las características de las que jQuery carece intrínsecamente se pueden agregar con la adición de otras bibliotecas. Pero un marco de SPA como Angular proporciona estas características de forma más integrada, ya que se ha diseñado con todas esas funciones en mente desde el principio. Además, jQuery es una biblioteca muy imperativa, lo que significa que se debe llamar a funciones de jQuery para realizar cualquier operación con jQuery. Gran parte del trabajo y la funcionalidad que proporcionan los marcos de SPA se puede realizar mediante declaración, lo que no requiere escribir ningún código.
+La mayoría de las características de las que jQuery carece intrínsecamente se pueden agregar con la adición de otras bibliotecas. Pero un marco de SPA como Angular proporciona estas características de forma más integrada, ya que se ha diseñado con todas esas funciones en mente desde el principio. Además, jQuery es una biblioteca imperativa, lo que significa que se debe llamar a funciones de jQuery para realizar cualquier operación con jQuery. Gran parte del trabajo y la funcionalidad que proporcionan los marcos de SPA se puede realizar mediante declaración, lo que no requiere escribir ningún código.
 
 El enlace de datos es un buen ejemplo de esto. En jQuery, normalmente basta con una línea de código para obtener el valor de un elemento DOM, o bien para establecer el valor de un elemento. Pero tendrá que escribir este código siempre que necesite cambiar el valor del elemento y, a veces, esto ocurrirá en varias funciones de una página. Otro ejemplo común es la visibilidad de los elementos. En jQuery, es posible que haya muchos lugares diferentes en los que tendría que escribir código para controlar si determinados elementos son visibles. En cada uno de estos casos, cuando se usa el enlace de datos, no sería necesario escribir código. Simplemente se podría enlazar el valor o la visibilidad de los elementos en cuestión a un *modelo de vista* en la página y los cambios en ese modelo de vista se reflejarán automáticamente en los elementos enlazados.
 
@@ -94,11 +94,11 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Los componentes se definen mediante la función decorador @Component, que acepta metadatos sobre el componente. La propiedad selector identifica el id. del elemento en la página donde se va a mostrar este componente. La propiedad template es una plantilla HTML sencilla que incluye un marcador de posición que corresponde a la propiedad name del componente, definida en la última línea.
+Los componentes se definen mediante la función decorador @Component, que acepta metadatos sobre el componente. La propiedad selector identifica el identificador del elemento en la página donde se va a mostrar este componente. La propiedad template es una plantilla HTML sencilla que incluye un marcador de posición que corresponde a la propiedad name del componente, definida en la última línea.
 
 Al trabajar con componentes y plantillas, en lugar de elementos DOM, las aplicaciones de Angular pueden funcionar en un nivel de abstracción más alto y con menos código general que las aplicaciones escritas solo con JavaScript (también denominadas "vanilla JS") o con jQuery. Angular también impone un orden sobre cómo organizar los archivos de script del lado cliente. Por convención, las aplicaciones de Angular usan una estructura de carpetas común, con los archivos de script de módulos y componentes ubicados en una carpeta de la aplicación. Los scripts de Angular relacionados con la compilación, implementación y pruebas de la aplicación normalmente se encuentran en una carpeta de nivel superior.
 
-Angular también usa muchas herramientas de interfaz de la línea de comandos (CLI). La introducción al desarrollo local de Angular (suponiendo que ya se haya instalado npm y git) consiste en clonar simplemente un repositorio de GitHub y ejecutar `npm install` y `npm start`. Aparte de esto, Angular suministra su propia herramienta CLI que puede crear proyectos, agregar archivos y ayudar con las tareas de pruebas, agrupación e implementación. Esta facilidad de uso de las herramientas CLI hace que Angular sea especialmente compatible con ASP.NET Core, que también incluye una excelente compatibilidad con la CLI.
+Puede desarrollar aplicaciones de Angular mediante una CLI. La introducción al desarrollo local de Angular (suponiendo que ya se haya instalado npm y git) consiste en clonar simplemente un repositorio de GitHub y ejecutar `npm install` y `npm start`. Aparte de esto, Angular suministra su propia CLI que puede crear proyectos, agregar archivos y ayudar con las tareas de pruebas, agrupación e implementación. Esta facilidad de uso de la CLI hace que Angular sea especialmente compatible con ASP.NET Core, que también incluye una excelente compatibilidad con la CLI.
 
 Microsoft ha desarrollado una aplicación de referencia, [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), que incluye una implementación de SPA de Angular. Esta aplicación incluye módulos de Angular para administrar la cesta de la compra de la tienda en línea, cargar y presentar los artículos del catálogo y controlar la creación de pedidos. Puede ver y descargar la aplicación de ejemplo en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 

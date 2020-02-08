@@ -3,12 +3,12 @@ title: Herramientas globales de .NET Core
 description: Información general sobre las herramientas globales de .NET Core y los comandos de CLI de .NET Core que hay disponibles para ellas.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899866"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920491"
 ---
 # <a name="net-core-global-tools-overview"></a>Información general sobre las herramientas globales de .NET Core
 
@@ -30,7 +30,7 @@ Si quiere usar una herramienta global de .NET Core:
 
 ## <a name="find-a-net-core-global-tool"></a>Buscar una herramienta global de .NET Core
 
-Actualmente, no hay una característica que permita buscar herramientas globales en la interfaz de línea de comandos (CLI) de .NET Core. A continuación se muestran algunas recomendaciones sobre cómo buscar herramientas:
+Actualmente, no hay una característica que permita buscar herramientas globales en la CLI de .NET Core. A continuación se muestran algunas recomendaciones sobre cómo buscar herramientas:
 
 * Aunque estas herramientas se pueden encontrar en [NuGet](https://www.nuget.org), NuGet todavía no permite buscar de manera específica herramientas globales de .NET Core.
 * Es posible que encuentre recomendaciones sobre herramientas en entradas de blog o en el repositorio de GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).

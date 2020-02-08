@@ -4,16 +4,16 @@ description: ML.NET ofrece la posibilidad de agregar aprendizaje automático en 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740084"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794572"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
-ML.NET ofrece la posibilidad de agregar aprendizaje automático en aplicaciones de .NET, ya sea en escenarios en línea o sin conexión. Con esta funcionalidad, puede realizar predicciones automáticas con los datos disponibles para su aplicación.
+ML.NET ofrece la posibilidad de agregar aprendizaje automático en aplicaciones de .NET, ya sea en escenarios en línea o sin conexión. Con esta funcionalidad, puede realizar predicciones automáticas con los datos disponibles para su aplicación. Las aplicaciones de aprendizaje automático usan los patrones en los datos para realizar predicciones en lugar de tener que programarse de manera explícita.
 
 La base de ML.NET es un **modelo** de aprendizaje automático. El modelo especifica los pasos necesarios para transformar los datos de entrada en una predicción. Con ML.NET, puede entrenar un modelo personalizado mediante la especificación de un algoritmo, o bien puede importar modelos TensorFlow y ONNX previamente entrenados.
 

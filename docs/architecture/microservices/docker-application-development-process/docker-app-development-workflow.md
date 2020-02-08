@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740361"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965794"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -409,7 +409,7 @@ Se volverá a hablar del archivo docker-compose.yml en una sección posterior, c
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Trabajo con docker-compose.yml en Visual Studio 2017
 
-Además de agregar un Dockerfile a un proyecto, como se ha mencionado antes, Visual Studio 2017 (a partir de 15.8 en adelante) puede agregar compatibilidad de orquestador con Docker Compose a una solución.
+Además de agregar un Dockerfile a un proyecto, como se ha mencionado antes, Visual Studio 2017 (a partir de la versión 15.8 en adelante) puede agregar compatibilidad de orquestador con Docker Compose a una solución.
 
 Cuando se agrega compatibilidad de orquestador de contenedores, como se muestra en la figura 5-7, por primera vez, Visual Studio crea el Dockerfile para el proyecto y un nuevo proyecto (sección servicio) en la solución con varios archivos `docker-compose*.yml` globales y, luego, agrega el proyecto a esos archivos. Luego puede abrir los archivos docker-compose.yml y actualizarlos con otras características.
 
@@ -442,7 +442,7 @@ Si la aplicación solo tiene un contenedor, puede ejecutarla mediante su impleme
 Puede ejecutar un contenedor de Docker mediante el comando `docker run`, como se muestra en la figura 5-9:
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
 El comando anterior crea una nueva instancia de contenedor a partir de la imagen especificada cada vez que se ejecuta. Puede usar el parámetro `--name` para asignar un nombre al contenedor y, luego, usar `docker start {name}` (o el identificador del contenedor o el nombre automático) para ejecutar una instancia de contenedor existente.

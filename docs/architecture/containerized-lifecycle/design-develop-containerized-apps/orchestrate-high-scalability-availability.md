@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Las aplicaciones de producción real deben implementarse y administrarse con orquestadores que controlen el mantenimiento, la carga de trabajo y los ciclos de vida de todos los contenedores.
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771087"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919538"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -21,7 +21,7 @@ La figura 4-6 ilustra la implementación en un clúster de una aplicación form
 
 Parece un enfoque lógico. Pero ¿cómo se está administrando el equilibrio de carga, el enrutamiento y la orquestación de estas aplicaciones compuestas?
 
-La interfaz de la línea de comandos (CLI) de Docker satisface las necesidades de administración de un contenedor en un host, pero se queda corta a la hora de administrar varios contenedores implementados en varios hosts para aplicaciones distribuidas más complejas. En la mayoría de los casos, se necesita una plataforma de administración que automáticamente inicie los contenedores, escale horizontalmente los contenedores con varias instancias por imagen, los suspenda o los cierre cuando sea necesario y, a ser posible, también controle su acceso a recursos como la red y el almacenamiento de datos.
+La CLI de Docker satisface las necesidades de administración de un contenedor en un host, pero se queda corta a la hora de administrar varios contenedores implementados en varios hosts para aplicaciones distribuidas más complejas. En la mayoría de los casos, se necesita una plataforma de administración que automáticamente inicie los contenedores, escale horizontalmente los contenedores con varias instancias por imagen, los suspenda o los cierre cuando sea necesario y, a ser posible, también controle su acceso a recursos como la red y el almacenamiento de datos.
 
 Para ir más allá de la administración de contenedores individuales o aplicaciones compuestas simples y pasar a aplicaciones empresariales más grandes con microservicios, debe cambiar a orquestación y plataformas de agrupación en clústeres.
 
@@ -90,7 +90,7 @@ Para obtener más información sobre la implementación de gráficos de Helm y K
 
 ## <a name="use-azure-dev-spaces-for-you-kubernetes-application-lifecycle"></a>Uso de Azure Dev Spaces para el ciclo de vida de la aplicación de Kubernetes
 
-[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) proporciona una experiencia de desarrollo de Kubernetes rápida e iterativa para los equipos. Con una instalación mínima en el equipo de desarrollo, es posible ejecutar y depurar contenedores de forma iterativa directamente en Azure Kubernetes Service (AKS). Puede desarrollar en Windows, Mac o Linux mediante herramientas familiares como Visual Studio, Visual Studio Code o la línea de comandos.
+[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) proporciona una experiencia de desarrollo de Kubernetes rápida e iterativa para los equipos. Con una configuración de máquina de desarrollo mínima, puede ejecutar y depurar contenedores de forma iterativa directamente en Azure Kubernetes Service (AKS). Puede desarrollar en Windows, Mac o Linux mediante herramientas familiares como Visual Studio, Visual Studio Code o la línea de comandos.
 
 Como ya se ha mencionado, Azure Dev Spaces usa gráficos de Helm al implementar aplicaciones basadas en contenedores.
 
@@ -102,7 +102,7 @@ Como se muestra en la figura 4-9, la característica distintiva de Azure Dev Sp
 
 **Figura 4-9**. Uso de varios espacios en Azure Dev Spaces
 
-Azure Dev Spaces puede mezclar y combinar de forma transparente los microservicios de producción con la instancia de contenedor de desarrollo para facilitar las pruebas de nuevas versiones. Básicamente, puede configurar un espacio de desarrollo compartido en Azure. Así, cada programador se puede centrar exclusivamente en su parte de la aplicación y desarrollar de forma iterativa código previo a la confirmación en un espacio de desarrollo que ya contenga todos los demás servicios y recursos en la nube de los que sus escenarios dependen. Las dependencias siempre están actualizadas y los desarrolladores trabajan de una manera que refleja el entorno de producción.
+Azure Dev Spaces puede mezclar y combinar de forma transparente los microservicios de producción con la instancia de contenedor de desarrollo para facilitar las pruebas de nuevas versiones. Básicamente, puede configurar un espacio de desarrollo compartido en Azure. Así, cada programador se puede centrar exclusivamente en su parte de la aplicación y desarrollar de forma iterativa código previo a la confirmación en un espacio de desarrollo que ya contenga todos los demás servicios y recursos en la nube de los que sus escenarios dependen. Las dependencias siempre estarán actualizadas y los desarrolladores trabajarán de una manera que se asemeja bastante a un entorno de producción.
 
 En Azure Dev Spaces existe el concepto de espacio, que permite trabajar de manera aislada y sin riesgo de romper el código de los miembros del equipo. Esta característica se basa en prefijos de dirección URL. Si usa un prefijo de espacio de desarrollo en la dirección URL para la solicitud de un contenedor, Azure Dev Spaces ejecutará una versión especial del contenedor que se implementa para ese espacio, si existe. En caso contrario, se ejecutará la versión global o consolidada.
 
@@ -123,7 +123,7 @@ Para obtener más información, vea el artículo [Desarrollo en equipo con Azure
 
 ## <a name="using-azure-service-fabric"></a>Uso de Azure Service Fabric
 
-Azure Service Fabric surgió de la transición que Microsoft realizó al dejar de ofrecer productos empaquetados, que normalmente tenían un estilo monolítico, para ofrecer servicios. La experiencia de crear y usar servicios de gran tamaño a escala, como Azure SQL Database, Azure Cosmos DB, Azure Service Bus o Backend de Cortana, definió el formato de Service Fabric. La plataforma evolucionó con el tiempo a medida que la fueron adoptando cada vez más servicios. Cabe destacar que Service Fabric tuvo que ejecutarse no solo en Azure sino también en implementaciones independientes de Windows Server.
+Azure Service Fabric surgió de la transición que Microsoft realizó al dejar de ofrecer productos empaquetados, que normalmente tenían un estilo monolítico, para ofrecer servicios. La experiencia de crear y usar servicios de gran tamaño a escala, como Azure SQL Database, Azure Cosmos DB, Azure Service Bus o Backend de Cortana, definió el formato de Service Fabric. La plataforma evolucionó con el tiempo, a medida que la adoptaron cada vez más servicios. Cabe destacar que Service Fabric tuvo que ejecutarse no solo en Azure sino también en implementaciones independientes de Windows Server.
 
 El objetivo de Service Fabric es solucionar los arduos problemas de compilar y ejecutar un servicio y usar recursos de infraestructura de forma eficaz, de manera que los equipos puedan resolver problemas empresariales con un enfoque de microservicios.
 
@@ -131,7 +131,7 @@ Service Fabric proporciona dos áreas generales para ayudarlo a crear aplicacion
 
 - Una plataforma que proporciona servicios de sistema para implementar, escalar, actualizar, detectar y reiniciar servicios erróneos, detectar la ubicación del servicio, administrar el estado y supervisar el mantenimiento. Estos servicios de sistema efectivamente habilitan muchas de las características de microservicios descritas anteriormente.
 
-- API de programación, o marcos, que le ayudan a crear aplicaciones como microservicios: [Reliable Actors y Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Puede elegir cualquier código para generar el microservicio, pero estas API facilitan el trabajo y se integran con la plataforma a un nivel más profundo. De este modo, puede obtener información de mantenimiento y diagnóstico o puede sacar partido de la administración de estado confiable.
+- Programar API, o marcos, para ayudarlo a crear aplicaciones como microservicios: [actores fiables y servicios de confianza](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Puede elegir cualquier código para generar el microservicio, pero estas API facilitan el trabajo y se integran con la plataforma a un nivel más profundo. De este modo, puede obtener información de mantenimiento y diagnóstico o puede sacar partido de la administración de estado confiable.
 
 Para crear su servicio puede usar cualquier tecnología ya que Service Fabric no interviene en el proceso. Sin embargo, proporciona API de programación integradas que facilitan la creación de microservicios.
 
@@ -199,7 +199,7 @@ Recuerde que los contenedores de Docker son sin estado. Si quiere implementar un
 
 ## <a name="using-azure-service-fabric-mesh"></a>Uso de Azure Service Fabric Mesh
 
-Azure Service Fabric Mesh es un servicio totalmente administrado que permite a los desarrolladores compilar e implementar aplicaciones críticas sin tener que administrar ninguna infraestructura. Use Service Fabric Mesh para compilar y ejecutar aplicaciones de microservicios seguras y distribuidas que se escalen a petición.
+Azure Service Fabric Mesh es un servicio totalmente administrado que permite a los desarrolladores compilar e implementar aplicaciones críticas sin tener que administrar ninguna infraestructura. Utilice Service Fabric Mesh para compilar y ejecutar aplicaciones de microservicios seguras y distribuidas que se escalan a petición.
 
 Como se muestra en la figura 4-15, las aplicaciones hospedadas en Service Fabric Mesh se ejecutan y escalan sin preocuparse por la infraestructura de la que dependen.
 
@@ -207,7 +207,7 @@ Como se muestra en la figura 4-15, las aplicaciones hospedadas en Service Fabri
 
 **Figura 4-15**. Implementación de una aplicación de microservicios/contenedores en Service Fabric Mesh
 
-En segundo plano, Service Fabric Mesh consta de clústeres de miles de máquinas. Todas las operaciones de clúster se ocultan a los desarrolladores. Basta con cargar los contenedores y especificar los recursos necesarios, los requisitos de disponibilidad y los límites de recursos. Service Fabric Mesh asigna automáticamente la infraestructura solicitada por la implementación de la aplicación y también controla los errores de infraestructura, asegurándose de que las aplicaciones tienen una alta disponibilidad. Solo es necesario preocuparse por el mantenimiento y la capacidad de respuesta de la aplicación, no de la infraestructura.
+En segundo plano, Service Fabric Mesh consta de clústeres de miles de máquinas. Todas las operaciones de clúster se ocultan a los desarrolladores. Basta con cargar los contenedores y especificar los recursos necesarios, los requisitos de disponibilidad y los límites de recursos. Service Fabric Mesh asigna automáticamente la infraestructura solicitada por la implementación de la aplicación y también controla los errores de infraestructura, asegurándose de que las aplicaciones tienen una alta disponibilidad. Solo necesita preocuparse del estado y de la capacidad de respuesta de la aplicación, nunca de la infraestructura.
 
 Para obtener más información, vea la [documentación de Service Fabric Mesh](https://docs.microsoft.com/azure/service-fabric-mesh/).
 

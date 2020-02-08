@@ -12,34 +12,39 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 600affdfd8cb524a7fba479d3a68ad8b3e40098c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694925"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789678"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (Guía de programación de C#)
-## <a name="syntax"></a>Sintaxis  
-  
-```xml  
-<seealso cref="member"/>  
-```  
-  
-## <a name="parameters"></a>Parámetros  
- cref = "`member`"  
- Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member` debe aparecer entre comillas dobles (" ").  
-  
- Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](./see.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca en una sección Vea también. Use [\<see>](./see.md) para especificar un vínculo desde dentro del texto.  
-  
- Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
-  
-## <a name="example"></a>Ejemplo  
- Vea [\<summary>](./summary.md) para obtener un ejemplo del uso de \<seealso>.  
-  
+
+## <a name="syntax"></a>Sintaxis
+
+```xml
+<seealso cref="member"/>
+```
+
+## <a name="parameters"></a>Parámetros
+
+- cref = "`member`"
+
+  Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member` debe aparecer entre comillas dobles (" ").
+
+  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](./see.md).
+
+## <a name="remarks"></a>Comentarios
+
+La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca en una sección Vea también. Use [\<see>](./see.md) para especificar un vínculo desde dentro del texto.
+
+Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+
+## <a name="example"></a>Ejemplo
+
+Vea [\<summary>](./summary.md) para obtener un ejemplo del uso de \<seealso>.
+
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)

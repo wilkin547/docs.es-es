@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tra
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738361"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777114"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-El DbContext debe tener un constructor que acepte DbContextOptions y pase este argumento al constructor DbContext base. Tenga en cuenta que, si solo tiene un DbContext en la aplicación, puede pasar una instancia de DbContextOptions. Sin embargo, si tiene más, tendrá que usar el tipo DbContextOptions\<T> genérico y pasar el tipo de DbContext como el parámetro genérico.
+El DbContext debe tener un constructor que acepte DbContextOptions y pase este argumento al constructor DbContext base. Si solo tiene un DbContext en la aplicación, puede pasar una instancia de DbContextOptions. Sin embargo, si tiene más, tendrá que usar el tipo DbContextOptions\<T> genérico y pasar el tipo de DbContext como el parámetro genérico.
 
 ### <a name="configuring-ef-core"></a>Configuración de EF Core
 
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-Tenga en cuenta que este tipo de entidad no expone ninguna propiedad `List` o `ICollection` pública, sino que expone un tipo `IReadOnlyCollection` que contiene el tipo de lista subyacente. Al usar este patrón, puede indicar a Entity Framework Core que use el campo de respaldo de esta manera:
+Este tipo de entidad no expone ninguna propiedad `List` o `ICollection` pública, sino que expone un tipo `IReadOnlyCollection` que contiene el tipo de lista subyacente. Al usar este patrón, puede indicar a Entity Framework Core que use el campo de respaldo de esta manera:
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -271,11 +271,11 @@ El primer DbContext es \_catalogContext y el segundo DbContext está dentro del 
 
 > ### <a name="references--entity-framework-core"></a>Referencias: Entity Framework Core
 >
-> - **Documentación de EF Core**  
+> - **Documentación de EF Core**
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: Datos relacionados**  
+> - **EF Core: datos relacionados**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **Avoid Lazy Loading Entities in ASPNET Applications** (Evitar la carga diferida de entidades en aplicaciones ASP.NET)  
+> - **Evitar la carga diferida de entidades en aplicaciones ASP.NET**
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>¿EF Core o micro-ORM?
@@ -332,7 +332,7 @@ Para la mayoría de las aplicaciones y la mayoría de los elementos de casi toda
 
 ## <a name="sql-or-nosql"></a>SQL o NoSQL
 
-Tradicionalmente, las bases de datos relacionales como SQL Server han dominado el mercado del almacenamiento de datos persistentes, pero no son la única solución disponible. Las bases de datos NoSQL como [MongoDB](https://www.mongodb.com/what-is-mongodb) ofrecen un enfoque diferente para el almacenamiento de objetos. En lugar de asignar objetos a tablas y filas, otra opción consiste en serializar el gráfico de objetos completo y almacenar el resultado. Las ventajas de este enfoque, al menos inicialmente, son la simplicidad y el rendimiento. Sin duda es más simple almacenar un único objeto serializado con una clave que descomponerlo en muchas tablas con relaciones, actualizaciones y filas que pueden haber cambiado desde la última vez que se recuperó el objeto de la base de datos. Del mismo modo, la recuperación y deserialización de un único objeto de un almacén basado en claves suele ser mucho más rápida y sencilla que combinaciones complejas o varias consultas de base de datos necesarias para crear completamente el mismo objeto de una base de datos relacional. La falta de bloqueos o transacciones, o de un esquema fijo, también hace que las bases de datos NoSQL sean muy sensibles al escalado entre varios equipos, admitiendo grandes conjuntos de datos.
+Tradicionalmente, las bases de datos relacionales como SQL Server han dominado el mercado del almacenamiento de datos persistentes, pero no son la única solución disponible. Las bases de datos NoSQL como [MongoDB](https://www.mongodb.com/what-is-mongodb) ofrecen un enfoque diferente para el almacenamiento de objetos. En lugar de asignar objetos a tablas y filas, otra opción consiste en serializar el gráfico de objetos completo y almacenar el resultado. Las ventajas de este enfoque, al menos inicialmente, son la simplicidad y el rendimiento. Es más simple almacenar un único objeto serializado con una clave que descomponerlo en muchas tablas con relaciones, actualizaciones y filas que pueden haber cambiado desde la última vez que se recuperó el objeto de la base de datos. Del mismo modo, la recuperación y deserialización de un único objeto de un almacén basado en claves suele ser mucho más rápida y sencilla que combinaciones complejas o varias consultas de base de datos necesarias para crear completamente el mismo objeto de una base de datos relacional. La falta de bloqueos o transacciones, o de un esquema fijo, también hace que las bases de datos NoSQL sean sensibles al escalado entre varios equipos, admitiendo grandes conjuntos de datos.
 
 Por otro lado, las bases de datos NoSQL (como normalmente se denominan) tienen sus desventajas. Las bases de datos relacionales usan la normalización para aplicar la coherencia y evitar la duplicación de datos. Esto reduce el tamaño total de la base de datos y garantiza que las actualizaciones de los datos compartidos estén disponibles inmediatamente en toda la base de datos. En una base de datos relacional, es posible que una tabla de direcciones haga referencia a una tabla de país por el id., de forma que, si se cambiara el nombre de un país o región, los registros de direcciones se beneficiarían de la actualización sin tener que actualizarlos. Pero en una base de datos NoSQL, es posible que la dirección y su país asociado se serialicen como parte de muchos objetos almacenados. Una actualización en un nombre de país o región requeriría actualizar todos esos objetos, en lugar de una sola fila. Las bases de datos relacionales también pueden asegurar la integridad relacional mediante la aplicación de reglas como claves externas. Normalmente, las bases de datos NoSQL no ofrecen estas restricciones en sus datos.
 
@@ -354,8 +354,7 @@ El lenguaje de consulta de Azure Cosmos DB es una interfaz sencilla, pero eficaz
 
 **Referencias: Azure Cosmos DB**
 
-- Introducción a Azure Cosmos DB  
-  <https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Introducción a Azure Cosmos DB<https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Otras opciones de persistencia
 
@@ -371,8 +370,7 @@ Además de las opciones de almacenamiento relacionales y NoSQL, en las aplicacio
 
 **Referencias: Azure Storage**
 
-- Introducción a Azure Storage  
-  <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Introducción a Azure Storage<https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Almacenamiento en memoria caché
 
@@ -484,7 +482,7 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-Después de agregarlo, las llamadas de base de datos para recuperar los datos del catálogo solo se realizarán una vez por minuto, en lugar de en cada solicitud. Según el tráfico al sitio, esto puede tener un impacto muy significativo en el número de consultas realizadas a la base de datos y el tiempo medio de carga de la página principal que depende actualmente de las tres consultas expuestas por este servicio.
+Después de agregarlo, las llamadas de base de datos para recuperar los datos del catálogo solo se realizarán una vez por minuto, en lugar de en cada solicitud. Según el tráfico al sitio, esto puede tener un impacto significativo en el número de consultas realizadas a la base de datos y el tiempo medio de carga de la página principal que depende actualmente de las tres consultas expuestas por este servicio.
 
 Un problema que surge cuando se implementa el almacenamiento en caché es el de los _datos obsoletos_, es decir, datos que han cambiado en el origen, pero de los que permanece en caché una versión obsoleta. Una manera sencilla de mitigar este problema consiste en usar duraciones de caché pequeñas, ya que para una aplicación ocupada la ventaja adicional de extender la longitud de los datos en caché es limitada. Por ejemplo, considere una página que realiza una única consulta de base de datos y se solicita 10 veces por segundo. Si esta página se almacena en caché durante un minuto, el número de consultas de base de datos realizadas por minuto descenderá 600 a 1, una reducción del 99,8 %. Si en su lugar, la duración de la caché fuera de una hora, la reducción general sería de 99,997 %, pero ahora la probabilidad y la antigüedad posible de los datos obsoletos aumentan considerablemente.
 

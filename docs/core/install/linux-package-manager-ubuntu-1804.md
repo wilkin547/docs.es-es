@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e36116d357b8fcd5ced328a574e12c558dd9e2f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740624"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920692"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Administrador de paquetes de Ubuntu 18.04: instalación de .NET Core
 
@@ -21,7 +21,7 @@ En este artículo se describe cómo usar un administrador de paquetes para insta
 
 Antes de instalar .NET, deberá realizar lo siguiente:
 
-- Registrar clave de Microsoft.
+- Registrar la clave de Microsoft.
 - Registrar el repositorio del producto.
 - Instalar las dependencias necesarias.
 
@@ -85,6 +85,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>Solución de problemas del administrador de paquetes
 
+En esta sección se proporciona información sobre los errores comunes que puede obtener al usar el administrador de paquetes para instalar .NET Core.
+
+### <a name="unable-to-locate"></a>No se encuentra el elemento
+
 Si recibe un mensaje de error similar a **No se puede encontrar el paquete (el paquete .NET Core)** , ejecute los comandos siguientes.
 
 ```bash
@@ -107,3 +111,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>No se pudo capturar el elemento
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

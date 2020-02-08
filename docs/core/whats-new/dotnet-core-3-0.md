@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742592"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920379"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -180,7 +180,7 @@ Excepciones de la compatibilidad cruzada:
 
 ## <a name="runtimesdk"></a>Runtime y SDK
 
-### <a name="major-version-roll-forward"></a>Puesta al día de versiones principales
+### <a name="major-version-runtime-roll-forward"></a>Puesta al día del runtime de versiones principales
 
 .NET Core 3.0 presenta una característica opcional que permite poner la aplicación al día con la versión principal más reciente de .NET Core. Además, se agregó una nueva configuración para controlar cómo se aplica la puesta al día a la aplicación. Esto se puede configurar de las maneras siguientes:
 
@@ -226,6 +226,15 @@ Hay algunas operaciones, como la publicación de páginas Razor y la vinculació
 Las herramientas locales se basan en un nombre de archivo de manifiesto `dotnet-tools.json` del directorio actual. Este archivo de manifiesto define las herramientas que estarán disponibles en esa carpeta y a continuación. Puede distribuir el archivo de manifiesto con su código para asegurarse de que todo aquel que trabaje con su código pueda restaurar y utilizar las mismas herramientas.
 
 Para las herramientas locales y globales, se requiere una versión compatible del entorno de ejecución. Actualmente, muchas herramientas de NuGet.org tienen como destino el entorno de ejecución de .NET Core 2.1. Para instalar estas herramientas local o globalmente, aún tendría que instalar [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+
+### <a name="new-globaljson-options"></a>Opciones nuevas de global.json
+
+El archivo *global.json* tiene opciones nuevas que proporcionan más flexibilidad cuando se intenta definir qué versión de la SDK de .NET Core se usa. Las opciones nuevas son:
+
+- `allowPrerelease`: Indica si la resolución del SDK debe tener en cuenta las versiones preliminares a la hora de seleccionar la versión del SDK que se va a usar.
+- `rollForward`: indica la directiva de puesta al día que se va a usar al seleccionar una versión del SDK, ya sea como reserva si falta una versión específica del SDK o como una directiva para usar una versión superior.
+
+Para más información sobre los cambios, incluidos los valores predeterminados, los valores admitidos y reglas de coincidencia nuevas, consulte la [información general de global.json](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Tamaños del montón de recolección de elementos no utilizados más pequeños
 
@@ -458,7 +467,7 @@ Corresponde a la operación IEEE `scaleB` que toma un valor integral, devuelve e
 Corresponde a la operación IEEE `log2`. Devuelve el logaritmo de base 2. Minimiza el error de redondeo.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-Corresponde a la operación IEEE `fma`. Realiza una multiplicación y suma fusionadas. Es decir, realiza `(x * y) + z` como operación única, de forma que se minimiza el error de redondeo. Un ejemplo sería `FusedMultiplyAdd(1e308, 2.0, -1e308)`, que devuelve `1e308`. La operación `(1e308 * 2.0) - 1e308` regular devuelve `double.PositiveInfinity`.
+Corresponde a la operación IEEE `fma`. Realiza una multiplicación y suma fusionadas. Es decir, realiza `(x * y) + z` como operación única, de forma que se minimiza el error de redondeo. Un ejemplo es `FusedMultiplyAdd(1e308, 2.0, -1e308)`, que devuelve `1e308`. La operación `(1e308 * 2.0) - 1e308` regular devuelve `double.PositiveInfinity`.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 Corresponde a la operación IEEE `copySign`. Devuelve el valor de `x`, pero con el signo de `y`.

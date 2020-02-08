@@ -1,20 +1,20 @@
 ---
-title: Publicación de aplicaciones .NET Core con la CLI
-description: Obtenga información sobre cómo publicar una aplicación .NET Core con las herramientas de la interfaz de la línea de comandos (CLI) del SDK de .NET Core.
+title: Publicación de aplicaciones con la CLI de .NET Core
+description: Aprenda a publicar una aplicación .NET Core con los comandos de la CLI de .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740856"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920907"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>Publicación de aplicaciones .NET Core con la CLI de .NET Core
 
 En este artículo se muestra cómo se puede publicar la aplicación .NET Core desde la línea de comandos. .NET core proporciona tres maneras de publicar las aplicaciones. La implementación dependiente del marco de trabajo genera un archivo .dll multiplataforma que usa el runtime de .NET Core instalado localmente. La implementación dependiente del marco de trabajo genera un archivo ejecutable específico de la plataforma que usa el runtime de .NET Core instalado localmente. El archivo ejecutable independiente genera un archivo ejecutable específico de la plataforma e incluye una copia local del runtime de .NET Core.
 

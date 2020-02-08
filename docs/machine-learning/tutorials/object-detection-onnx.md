@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345047"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794629"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -213,7 +213,7 @@ La salida de datos del modelo contiene las coordenadas y las dimensiones de los 
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` tiene los siguientes campos `float`:
+    `DimensionsBase` tiene las siguientes propiedades `float`:
 
     - `X` contiene la posición del objeto en el eje x.
     - `Y` contiene la posición del objeto en el eje y.
@@ -237,7 +237,7 @@ A continuación, cree una clase para los rectángulos delimitadores.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` tiene los siguientes campos:
+    `YoloBoundingBox` tiene las siguientes propiedades:
 
     - `Dimensions` contiene las dimensiones del rectángulo delimitador.
     - `Label` contiene la clase de objeto detectado en el rectángulo delimitador.

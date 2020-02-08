@@ -1,16 +1,16 @@
 ---
-title: 'Procedimiento para usar las características de documentación XML: Guía de programación de C#'
+title: 'Procedimiento para usar las características de documentación XML: guía de programación de C#'
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696719"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789771"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Procedimiento para usar las características de la documentación XML
 
@@ -20,7 +20,7 @@ En el ejemplo siguiente se proporciona una introducción básica de un tipo que 
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-El ejemplo genera un archivo .xml con el siguiente contenido:
+En el ejemplo se genera un archivo *.xml* con el contenido siguiente.
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ La documentación XML empieza con ///. Cuando se crea un proyecto, el asistente 
 
 - La documentación debe ser XML con formato correcto. Si el XML no tiene el formato correcto, se generará una advertencia y el archivo de documentación incluirá un comentario en el que se indica que se detectó un error.
 
-- Los desarrolladores pueden crear su propio conjunto de etiquetas, Hay un conjunto de etiquetas recomendado (consulte [Etiquetas recomendadas para los comentarios de documentación](recommended-tags-for-documentation-comments.md)). Algunas de las etiquetas recomendadas tienen significados especiales:
+- Los desarrolladores pueden crear su propio conjunto de etiquetas, Hay un [conjunto recomendado de etiquetas](recommended-tags-for-documentation-comments.md). Algunas de las etiquetas recomendadas tienen significados especiales:
 
   - La etiqueta \<param> se usa para describir parámetros. Si se usa, el compilador comprueba que el parámetro existe y que todos los parámetros se describen en la documentación. Si se produce un error en la comprobación, el compilador emite una advertencia.
 
@@ -134,7 +134,7 @@ La documentación XML empieza con ///. Cuando se crea un proyecto, el asistente 
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [-doc (Opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Comentarios de documentación XML](./index.md)
 - [Procesador de documentación de DocFX](https://dotnet.github.io/docfx/)
 - [Procesador de documentación de Sandcastle](https://github.com/EWSoftware/SHFB)

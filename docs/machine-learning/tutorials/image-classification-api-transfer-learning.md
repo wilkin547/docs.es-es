@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348148"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920094"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Inspección visual automatizada mediante el aprendizaje de transferencia con la API Image Classification de ML.NET
 
@@ -28,7 +28,7 @@ En este tutorial aprenderá a:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+- [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>Información general del ejemplo de transferencia de aprendizaje de clasificación de imágenes
 
@@ -140,10 +140,10 @@ En este tutorial, solo se usan imágenes de tableros de puente.
 
         `ModelInput` contiene las propiedades siguientes:
 
-        - `ImagePath` es la ruta de acceso completa donde se almacena la imagen.
-        - `Label` es la categoría a la que pertenece la imagen. Este es el valor que se va a predecir.
         - `Image` es la representación `byte[]` de la imagen. El modelo espera que los datos de la imagen sean de este tipo para el entrenamiento.
         - `LabelAsKey` es la representación numérica de `Label`.
+        - `ImagePath` es la ruta de acceso completa donde se almacena la imagen.
+        - `Label` es la categoría a la que pertenece la imagen. Este es el valor que se va a predecir.
 
         Solo se usan `Image` y `LabelAsKey` para entrenar el modelo y hacer predicciones. Las propiedades `ImagePath` y `Label` se conservan por comodidad para tener acceso al nombre y categoría del archivo de imagen original.
 
@@ -171,7 +171,7 @@ Cuando los datos de entrenamiento y validación no cambian a menudo, se recomien
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Luego, inicialice la variable `mlContext` con una instancia nueva de [MLContext](xref:Microsoft.ML.MLContext).
+1. Inicialice la variable `mlContext` con una instancia nueva de [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 El entrenamiento del modelo consta de un par de pasos. En primer lugar, se usa la API Image Classification para entrenar el modelo. Luego, las etiquetas codificadas de la columna `PredictedLabel` se convierten de nuevo a su valor de categoría original mediante la transformación `MapKeyToValue`.
 
-1. Cree una variable para almacenar un conjunto de parámetros obligatorios y opcionales para un `ImageClassificationTrainer`. 
+1. Cree una variable para almacenar un conjunto de parámetros obligatorios y opcionales para un `ImageClassificationTrainer`.
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

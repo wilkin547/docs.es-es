@@ -1,21 +1,21 @@
 ---
 title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713936"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965937"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentación del código con comentarios XML
 
 Los comentarios de documentación XML son un tipo especial de comentarios que se agregan encima de la definición de un tipo o un miembro definido por el usuario.
 Son especiales porque los puede procesar el compilador para generar un archivo de documentación XML en tiempo de compilación.
-El archivo XML generado por el compilador se puede distribuir junto con el ensamblado .NET de modo que Visual Studio y otros IDE puedan usar IntelliSense para mostrar información rápida sobre los tipos o los miembros. Además, el archivo XML se puede ejecutar mediante herramientas como [DocFX](https://dotnet.github.io/docfx/) y [Sandcastle](https://github.com/EWSoftware/SHFB) para generar sitios web de referencia de API.
+El archivo XML generado por el compilador se puede distribuir junto con el ensamblado .NET de modo que Visual Studio y otros IDE puedan usar IntelliSense para mostrar información rápida sobre los tipos o los miembros. Además, el archivo XML se puede ejecutar mediante herramientas como [DocFX](https://dotnet.github.io/docfx/) y [Sandcastle](https://github.com/EWSoftware/SHFB) para generar sitios web de referencia de API.
 
 El compilador omite los comentarios de documentación XML, igual que los demás comentarios.
 
@@ -61,7 +61,7 @@ Vamos a demostrar su uso agregándola a la definición de clase `Math` y al prim
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-La etiqueta `<summary>` es muy importante y se recomienda incluirla, dado que su contenido es la principal fuente de información sobre el tipo o el miembro en IntelliSense o en un documento de referencia de API.
+La etiqueta `<summary>` es importante y se recomienda incluirla, dado que su contenido es la principal fuente de información sobre el tipo o el miembro en IntelliSense o en un documento de referencia de API.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -163,12 +163,17 @@ Puede usar el mismo método genérico que ha creado previamente.
 
 ## <a name="list"></a>\<list>
 
-La etiqueta `<list>` se usa para dar formato a la información de la documentación en una lista ordenada, una lista sin ordenar o una tabla.
-Cree una lista sin ordenar con todas las operaciones matemáticas que admita su biblioteca `Math`.
+La etiqueta `<list>` se usa para dar formato a la información de la documentación en una lista ordenada, una lista sin ordenar o una tabla. Cree una lista sin ordenar con todas las operaciones matemáticas que admita su biblioteca `Math`.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 Para crear una lista ordenada o una tabla, cambie el atributo `type` a `number` o `table`, respectivamente.
+
+## <a name="inheritdoc"></a>\<inheritdoc>
+
+Puede usar la etiqueta `<inheritdoc>` para heredar comentarios XML de clases base, interfaces y métodos similares. Esto elimina la acción de copiar y pegar no deseada de comentarios XML duplicados y mantiene los comentarios XML sincronizados automáticamente.
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>En resumen
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739699"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787851"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -250,13 +250,16 @@ Entre las etiquetas `<Project>`, agregue los elementos siguientes:
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
 El elemento `<Private>false</Private>` es importante. Indica a MSBuild que no copie *PluginBase.dll* en el directorio de salida para HelloPlugin. Si el ensamblado *PluginBase.dll* está presente en el directorio de salida, `PluginLoadContext` encontrará el ensamblado y lo cargará cuando cargue el ensamblado *HelloPlugin.dll*. En este momento, el tipo `HelloPlugin.HelloCommand` implementará la interfaz `ICommand` de *PluginBase.dll* en el directorio de salida del proyecto `HelloPlugin`, no la interfaz `ICommand` que se carga en el contexto de carga predeterminado. Como el runtime considera que estos dos tipos son tipos diferentes de ensamblados distintos, el método `AppWithPlugin.Program.CreateCommands` no encontrará los comandos. Como resultado, los metadatos `<Private>false</Private>` son necesarios para la referencia al ensamblado que contiene las interfaces de complemento.
+
+Del mismo modo, el elemento `<ExcludeAssets>runtime</ExcludeAssets>` también es importante si `PluginBase` hace referencia a otros paquetes. Esta configuración tiene el mismo efecto que `<Private>false</Private>` pero funciona en las referencias de paquete que pueden incluir el proyecto `PluginBase` o una de sus dependencias.
 
 Ahora que se ha completado el proyecto `HelloPlugin`, se debe actualizar el proyecto `AppWithPlugin` para saber dónde se puede encontrar el complemento `HelloPlugin`. Después del comentario `// Paths to plugins to load`, agregue `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` como un elemento de la matriz `pluginPaths`.
 
@@ -268,7 +271,7 @@ Casi todos los complementos son más complejos que un simple ejemplo "Hola mundo
 
 Puede encontrar el código fuente completo para este tutorial en el [repositorio dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). El ejemplo completo incluye algunos otros ejemplos de comportamiento `AssemblyDependencyResolver`. Por ejemplo, el objeto `AssemblyDependencyResolver` también puede resolver las bibliotecas nativas, así como los ensamblados satélite localizados en paquetes NuGet. `UVPlugin` y `FrenchPlugin` en el repositorio de ejemplos demuestran estos escenarios.
 
-## <a name="reference-a-plugin-from-a-nuget-package"></a>Referencia a un complemento desde un paquete NuGet
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Referencia a una interfaz de complemento desde un paquete NuGet
 
 Supongamos que hay una aplicación A que tiene una interfaz de complemento definida en el paquete NuGet denominado `A.PluginBase`. ¿Cómo se hace referencia correctamente al paquete en el proyecto de complemento? Para las referencias de proyecto, el uso de los metadatos `<Private>false</Private>` en el elemento `ProjectReference` del archivo de proyecto ha impedido que el archivo DLL se copiara en la salida.
 

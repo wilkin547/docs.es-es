@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 01/23/2020
-ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734206"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920577"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -35,7 +35,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 ## <a name="description"></a>Descripción
 
-Los scripts `dotnet-install` se usan para realizar una instalación sin derechos administrativos del SDK de .NET Core, que incluye las herramientas de la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
+Los scripts `dotnet-install` se usan para realizar una instalación sin derechos administrativos del SDK de .NET Core, que incluye la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 
 Se recomienda usar la versión estable de los scripts:
 
@@ -108,7 +108,7 @@ Puede instalar una versión específica mediante el argumento `-Version|--versio
 
 - **`-NoPath|--no-path`**
 
-  Si se establece, la carpeta de instalación no se exporta a la ruta de acceso para la sesión actual. De manera predeterminada, el script modifica la ruta de acceso, que hace que las herramientas de la CLI estén disponibles inmediatamente después de la instalación.
+  Si se establece, la carpeta de instalación no se exporta a la ruta de acceso para la sesión actual. De manera predeterminada, el script modifica la variable de entorno PATH, que hace que la CLI esté disponible inmediatamente después de la instalación.
 
 - **`-Verbose|--verbose`**
 

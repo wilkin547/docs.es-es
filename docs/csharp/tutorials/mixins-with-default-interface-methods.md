@@ -3,12 +3,12 @@ title: Creación de tipos mixin mediante métodos de interfaz predeterminados
 description: Con el uso de los miembros de interfaz predeterminados, puede extender las interfaces con implementaciones predeterminadas opcionales para los implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140849"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921442"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Funcionalidad de combinación al crear clases mediante interfaces con métodos de interfaz predeterminados
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8.0 está disponible a partir de [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) o posterior.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8.0 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) o versiones posteriores.
 
 ## <a name="limitations-of-extension-methods"></a>Limitaciones de los métodos de extensión
 
@@ -45,7 +45,7 @@ Considere una aplicación de automatización de dispositivos del hogar. Probable
 
 Algunas de estas funcionalidades extendidas se pueden emular en los dispositivos que admiten el conjunto mínimo. Lo que indica que se proporciona una implementación predeterminada. En el caso de los dispositivos que tienen más funcionalidades integradas, el software del dispositivo usaría las funcionalidades nativas. Para otras luces, podrían optar por implementar la interfaz y usar la implementación predeterminada.
 
-Los miembros de interfaz predeterminados son una solución mejor para este escenario que los métodos de extensión. Los autores de clases pueden controlar qué interfaces deciden implementar. Las interfaces que elijan están disponibles como métodos. Además, dado que los métodos de interfaz predeterminados son virtuales de forma predeterminada, el envío del método siempre elige la implementación en la clase. 
+Los miembros de interfaz predeterminados son una solución mejor para este escenario que los métodos de extensión. Los autores de clases pueden controlar qué interfaces deciden implementar. Las interfaces que elijan están disponibles como métodos. Además, dado que los métodos de interfaz predeterminados son virtuales de forma predeterminada, el envío del método siempre elige la implementación en la clase.
 
 Vamos a crear el código para mostrar estas diferencias.
 
@@ -79,7 +79,7 @@ Un tipo de luz diferente puede admitir un protocolo más sofisticado. Puede prop
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-A diferencia de los métodos de clase virtual de invalidación, la declaración de `TurnOnFor` en la clase `HalogenLight` no utiliza la palabra clave `override`. 
+A diferencia de los métodos de clase virtual de invalidación, la declaración de `TurnOnFor` en la clase `HalogenLight` no utiliza la palabra clave `override`.
 
 ## <a name="mix-and-match-capabilities"></a>Funcionalidades de combinación
 

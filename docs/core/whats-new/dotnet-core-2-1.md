@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100748"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920392"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -112,7 +112,7 @@ Esta configuración se puede modificar de estas tres maneras:
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Cuando se usan [herramientas de la CLI de .NET Core](../tools/index.md), si se agrega la opción siguiente con el valor deseado a un comando de .NET Core como `run`:
+- Cuando se usa la [CLI de .NET Core](../tools/index.md), si se agrega la opción siguiente con el valor deseado a un comando de .NET Core como `run`:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0

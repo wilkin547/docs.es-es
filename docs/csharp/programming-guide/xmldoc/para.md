@@ -8,32 +8,37 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 3ebadf43f0627cea98b456de8b4c9a0e2bf84af9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711745"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793421"
 ---
 # <a name="para-c-programming-guide"></a>\<para> (Guía de programación de C#)
-## <a name="syntax"></a>Sintaxis  
-  
-```xml  
-<para>content</para>  
-```  
-  
-## <a name="parameters"></a>Parámetros  
- `content`  
- El texto del párrafo.  
-  
-## <a name="remarks"></a>Comentarios  
- La etiqueta \<para> se usa dentro de otra etiqueta, como [\<summary>](./summary.md), [\<remarks>](./remarks.md) o [\<returns>](./returns.md), y permite dar una estructura al texto.  
-  
- Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
-  
-## <a name="example"></a>Ejemplo  
- Vea [\<summary>](./summary.md) para obtener un ejemplo del uso de \<para>.  
-  
+
+## <a name="syntax"></a>Sintaxis
+
+```xml
+<para>content</para>
+```
+
+## <a name="parameters"></a>Parámetros
+
+- `content`
+
+  El texto del párrafo.
+
+## <a name="remarks"></a>Comentarios
+
+La etiqueta \<para> se usa dentro de otra etiqueta, como [\<summary>](./summary.md), [\<remarks>](./remarks.md) o [\<returns>](./returns.md), y permite dar una estructura al texto.
+
+Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+
+## <a name="example"></a>Ejemplo
+
+Vea [\<summary>](./summary.md) para obtener un ejemplo del uso de \<para>.
+
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)

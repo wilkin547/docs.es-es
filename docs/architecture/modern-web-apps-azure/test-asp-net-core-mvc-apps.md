@@ -4,19 +4,19 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738387"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965781"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
 > *"Si no le gusta realizar pruebas unitarias de su producto, lo más probable es que a los clientes tampoco les guste probarlo".*
  > \_- Anónimo-
 
-En el software de cualquier complejidad se pueden producir errores inesperados en respuesta a los cambios. Por tanto, es necesario realizar pruebas después de realizar cambios en todas las aplicaciones menos en las más triviales (o las menos críticas). Las pruebas manuales son la forma más lenta, menos confiable y más costosa de probar software. Desafortunadamente, si las aplicaciones no están diseñadas para que se puedan probar, puede ser el único medio disponible. Las aplicaciones escritas de acuerdo con los principios arquitectónicos descritos en el [capítulo 4](architectural-principles.md) deben poder someterse a pruebas unitarias, y las aplicaciones ASP.NET Core también deben admitir pruebas de integración y funcionales automatizadas.
+En el software de cualquier complejidad se pueden producir errores inesperados en respuesta a los cambios. Por tanto, es necesario realizar pruebas después de realizar cambios en todas las aplicaciones menos en las más triviales (o las menos críticas). Las pruebas manuales son la forma más lenta, menos confiable y más costosa de probar software. Desafortunadamente, si las aplicaciones no están diseñadas para que se puedan probar, puede ser el único medio disponible. Las aplicaciones escritas para seguir los principios de arquitecturas que se indican en el [capítulo 4](architectural-principles.md) deben poder someterse a pruebas unitarias. Las aplicaciones ASP.NET Core deben admitir pruebas de integración y funcionales automatizadas.
 
 ## <a name="kinds-of-automated-tests"></a>Tipos de pruebas automatizadas
 
@@ -58,7 +58,7 @@ Los diferentes niveles de la pirámide y sus tamaños relativos representan dist
 
 ### <a name="what-to-test"></a>Qué se va a probar
 
-Un problema común para los desarrolladores sin experiencia con la escritura de pruebas automatizadas es determinar lo que se debe probar. Un buen punto de partida es probar la lógica condicional. Siempre que haya un método con un comportamiento que cambia en función de una instrucción condicional (if-else, switch, etc.), debería poder dar idear al menos un par de pruebas que confirmen el comportamiento correcto para determinadas condiciones. Si el código tiene condiciones de error, es conveniente escribir al menos una prueba para la "ruta feliz" a través del código (sin errores) y al menos una prueba para la "ruta triste" (con errores o resultados pocos frecuentes) para confirmar que la aplicación se comporta según lo previsto ante los errores. Por último, intente centrarse en probar cosas en las que se pueda producir un error, en lugar de centrarse en métricas como la cobertura de código. Por lo general, es mejor tener más cobertura de código que menos. Pero escribir algunas pruebas más de un método muy complejo y esencial para la empresa suele ser un mejor uso del tiempo que escribir pruebas para propiedades automáticas solo para mejorar la métrica de cobertura del código de prueba.
+Un problema común para los desarrolladores sin experiencia con la escritura de pruebas automatizadas es determinar lo que se debe probar. Un buen punto de partida es probar la lógica condicional. Siempre que haya un método con un comportamiento que cambia en función de una instrucción condicional (if-else, switch, etc.), debería poder dar idear al menos un par de pruebas que confirmen el comportamiento correcto para determinadas condiciones. Si el código tiene condiciones de error, es conveniente escribir al menos una prueba para la "ruta feliz" a través del código (sin errores) y al menos una prueba para la "ruta triste" (con errores o resultados pocos frecuentes) para confirmar que la aplicación se comporta según lo previsto ante los errores. Por último, intente centrarse en probar cosas en las que se pueda producir un error, en lugar de centrarse en métricas como la cobertura de código. Por lo general, es mejor tener más cobertura de código que menos. Pero escribir algunas pruebas más de un método complejo y esencial para la empresa suele ser un mejor uso del tiempo que escribir pruebas para propiedades automáticas solo para mejorar la métrica de cobertura del código de prueba.
 
 ## <a name="organizing-test-projects"></a>Organización de los proyectos de prueba
 
@@ -78,7 +78,7 @@ Puede usar el marco de pruebas que prefiera. El marco de trabajo xUnit funciona 
 
 ### <a name="test-naming"></a>Nombres de pruebas
 
-Debe asignar nombres a las pruebas de forma coherente, con un nombre que indique lo que hace cada prueba. Un enfoque con el que he tenido buenos resultados consiste en asignar nombres a las clases de prueba en función de la clase y el método que estén probando. Esto da como resultado muchas clases de prueba pequeñas, pero deja muy claro la responsabilidad de cada una. Con el nombre de la clase de prueba configurado para identificar la clase y el método que se van a probar, se puede usar el nombre del método de prueba para especificar el comportamiento que se está probando. Esto debe incluir el comportamiento esperado y las entradas o suposiciones que deban producir este comportamiento. Algunos nombres de prueba de ejemplo:
+Asigne nombres a las pruebas de forma coherente, con un nombre que indique lo que hace cada prueba. Un enfoque con el que he tenido buenos resultados consiste en asignar nombres a las clases de prueba en función de la clase y el método que estén probando. Esto da como resultado muchas clases de prueba pequeñas, pero deja muy claro la responsabilidad de cada una. Con el nombre de la clase de prueba configurado para identificar la clase y el método que se van a probar, se puede usar el nombre del método de prueba para especificar el comportamiento que se está probando. Esto debe incluir el comportamiento esperado y las entradas o suposiciones que deban producir este comportamiento. Algunos nombres de prueba de ejemplo:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -102,7 +102,7 @@ Si sigue una convención de nomenclatura como la anterior que genera muchas clas
 
 **Figura 9-4.** Organización de las clases de prueba por carpeta en función de la clase que se está probando.
 
-Evidentemente, si una clase de aplicación determinada tiene muchos métodos para probar (y, por tanto, muchas clases de prueba), tiene sentido colocarlos en una carpeta correspondiente a la clase de aplicación. Esta organización es similar a cómo se podrían organizar los archivos en carpetas en otra parte. Si tiene más de tres o cuatro archivos relacionados en una carpeta que contiene otros muchos archivos, suele resultar útil moverlos a su propia subcarpeta.
+Si una clase de aplicación determinada tiene muchos métodos para probar (y, por tanto, muchas clases de prueba), tiene sentido colocarlos en una carpeta correspondiente a la clase de aplicación. Esta organización es similar a cómo se podrían organizar los archivos en carpetas en otra parte. Si tiene más de tres o cuatro archivos relacionados en una carpeta que contiene otros muchos archivos, suele resultar útil moverlos a su propia subcarpeta.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Pruebas unitarias de aplicaciones ASP.NET Core
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-\_logger e \_imageService se insertan como dependencias. Ahora se puede probar que el mismo identificador que se pasa al método de acción se pasa a \_imageService, y que los bytes resultantes se devuelven como parte de FileResult. También se puede probar que el registro de errores se está realizando de la forma esperada y que se devuelve un resultado de NotFound si la imagen no se encuentra, suponiendo que se trate de un comportamiento importante de la aplicación (es decir, no solo código temporal que el desarrollador agregó para diagnosticar un problema). La lógica real del archivo se ha trasladado a un servicio de implementación independiente y se ha ampliado para devolver una excepción específica de la aplicación en el caso de un archivo que falta. Puede probar esta implementación de forma independiente, con una prueba de integración.
+`_logger` y `_imageService` se insertan como dependencias. Ahora se puede probar que el mismo identificador que se pasa al método de acción se pasa a `_imageService` y que los bytes resultantes se devuelven como parte de FileResult. También se puede probar que el registro de errores se está realizando de la forma esperada y que se devuelve un resultado de `NotFound` si la imagen no se encuentra, suponiendo que se trate de un comportamiento importante de la aplicación (es decir, no solo código temporal que el desarrollador agregó para diagnosticar un problema). La lógica real del archivo se ha trasladado a un servicio de implementación independiente y se ha ampliado para devolver una excepción específica de la aplicación en el caso de un archivo que falta. Puede probar esta implementación de forma independiente, con una prueba de integración.
 
 En la mayoría de los casos, es recomendable que use controladores de excepciones globales en los controladores, por lo que la cantidad de lógica que contengan debería ser mínima y probablemente no valga la pena realizar pruebas unitarias. Debería realizar la mayoría de las pruebas de acciones de controlador usando pruebas funcionales y la clase `TestServer`, que se describe a continuación.
 
@@ -153,7 +153,7 @@ La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core debe
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Pruebas funcionales en aplicaciones ASP.NET Core
 
-Para las aplicaciones ASP.NET Core, la clase `TestServer` facilita considerablemente la escritura de pruebas funcionales. Para configurar un elemento `TestServer`, use directamente un elemento `WebHostBuilder` (como lo haría para su aplicación), o bien el tipo `WebApplicationFactory` (disponible a partir de la versión 2.1). Debe intentar que el host de prueba coincida lo máximo posible con el host de producción para que las pruebas ejecuten un comportamiento similar al que tendrá la aplicación en la fase de producción. La clase `WebApplicationFactory` es útil para configurar ContentRoot de TestServer, que ASP.NET Core usa para localizar recursos estáticos como las vistas.
+Para las aplicaciones ASP.NET Core, la clase `TestServer` facilita considerablemente la escritura de pruebas funcionales. Para configurar un elemento `TestServer`, use directamente un elemento `WebHostBuilder` (como lo haría para su aplicación), o bien el tipo `WebApplicationFactory` (disponible a partir de la versión 2.1). Intente que el host de prueba coincida lo máximo posible con el host de producción para que las pruebas ejecuten un comportamiento similar al que tendrá la aplicación en la fase de producción. La clase `WebApplicationFactory` es útil para configurar ContentRoot de TestServer, que ASP.NET Core usa para localizar recursos estáticos como las vistas.
 
 Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente IClassFixture\<WebApplicationFactory\<TEntry>> donde TEntry es la clase de inicio de la aplicación web. Después de agregar esto, el accesorio de prueba puede crear un cliente con el método CreateClient de la fábrica:
 

@@ -1,23 +1,23 @@
 ---
 title: Depuración de una aplicación de .NET para Apache Spark en Windows
 description: Sepa cómo depurar una aplicación de .NET para Apache Spark en Windows.
-ms.date: 08/15/2019
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281530"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919923"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Depuración de una aplicación de .NET para Apache Spark
 
-En este procedimiento encontrará los comandos que hay que ejecutar para depurar la aplicación de .NET para Apache Spark y el código de Scala en Windows.
+En este procedimiento se proporcionan los pasos para depurar una aplicación de .NET para Apache Spark en Windows.
 
 ## <a name="debug-your-application"></a>Depuración de la aplicación
 
-Abra una nueva ventana del símbolo del sistema y ejecute lo siguiente:
+Abra una ventana nueva del símbolo del sistema y ejecute este comando:
 
 ```shell
 spark-submit \
@@ -35,13 +35,40 @@ Al ejecutar el comando, verá la siguiente salida:
 ***********************************************************************
 ```
 
-En este modo de depuración, `DotnetRunner` no inicia la aplicación .NET, sino que espera a que se conecte. Deje abierta esta ventana del símbolo del sistema.
+En el modo de depuración, DotnetRunner no inicia la aplicación de .NET, sino que espera a que el usuario inicie la aplicación de .NET. Deje abierta esta ventana del símbolo del sistema e inicie la aplicación de .NET a través del depurador de C# para depurar la aplicación. Inicie la depuración de .NET con un depurador de C# (el [depurador de Visual Studio para Windows/macOS](https://visualstudio.microsoft.com/vs/) o la [extensión del depurador de C# en Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) para depurar la aplicación.
 
-Ahora puede ejecutar la aplicación .NET con cualquier depurador para depurarla.
+## <a name="debug-a-user-defined-function-udf"></a>Depuración de una función definida por el usuario (UDF)
+
+> [!NOTE]
+> Las funciones definidas por el usuario solo se admiten en Windows con el depurador de Visual Studio.
+
+Antes de ejecutar `spark-submit`, establezca esta variable de entorno:
+
+```bat
+set DOTNET_WORKER_DEBUG=1
+```
+
+Al ejecutar la aplicación de Spark, aparecerá una ventana de `Choose Just-In-Time Debugger`. Elija un depurador de Visual Studio.
+
+El depurador se interrumpirá en esta ubicación en [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):
+
+```csharp
+if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
+{
+    Debugger.Launch(); // <-- The debugger will break here.
+}
+```
+
+Vaya al archivo *.cs* que contiene la UDF que va a depurar y [establezca un punto de interrupción](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019). El punto de interrupción indicará `The breakpoint will not currently be hit`, porque el trabajo todavía no ha cargado el ensamblado que contiene la UDF.
+
+Presione `F5` para continuar la aplicación y, a la larga, se alcanzará el punto de interrupción.
+
+> [!NOTE] 
+> La ventana Choose Just-In-Time Debugger (Elegir el depurador Just-In-Time) aparece para cada tarea. Para evitar un exceso de elementos emergentes, establezca el número de ejecutores en un número bajo. Por ejemplo, puede usar la opción **--master local[1]** para spark-submit para establecer el número de tareas en 1, lo que inicia una instancia de depurador única.
 
 ## <a name="debug-scala-code"></a>Depuración de código de Scala
 
-Si necesita depurar el código de Scala, como `DotnetRunner` o `DotnetBackendHandler`, ejecute el siguiente comando:
+Si tiene que depurar el código de Scala (`DotnetRunner`, `DotnetBackendHandler`, etc.), puede usar el comando siguiente y adjuntar un depurador al proceso en ejecución mediante [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):
 
 ```shell
 spark-submit \

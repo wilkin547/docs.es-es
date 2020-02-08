@@ -4,12 +4,12 @@ description: Azure Functions proporciona funcionalidades sin servidor mediante v
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522867"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920975"
 ---
 # <a name="azure-functions"></a>Comprobación de
 
@@ -61,7 +61,7 @@ Para más información, consulte [Planes de App Service](https://docs.microsoft.
 Existen tres formas comunes de crear aplicaciones de funciones.
 
 - Hacer scripting de funciones en el portal.
-- Crear los recursos necesarios mediante la interfaz de la línea de comandos (CLI) de Azure.
+- Cree los recursos necesarios con la CLI de Azure.
 - Crear las funciones localmente mediante su entorno de desarrollo integrado favorito y publicarlas en Azure.
 
 Para más información sobre la creación de una función con scripts en el portal, consulte [Creación de su primera función en Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).

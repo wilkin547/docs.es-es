@@ -2,14 +2,14 @@
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739545"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965768"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
+# <a name="design-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
 Esta sección se centra en desarrollar una hipotética aplicación empresarial del lado servidor.
 
@@ -83,7 +83,7 @@ La aplicación se implementa como un conjunto de microservicios en forma de cont
 
 ### <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 
-En la aplicación de ejemplo, cada microservicio posee su propia base de datos u origen de datos, aunque todas las bases de datos de SQL Server se implementan como un contenedor único. Esta decisión de diseño se tomó solo para facilitar a los desarrolladores la obtención del código desde GitHub, clonarlo y abrirlo en Visual Studio o Visual Studio Code. O bien, como alternativa, facilita la compilación de las imágenes de Docker personalizadas mediante la CLI de .NET Core y la de Docker, y después su implementación y ejecución en un entorno de desarrollo de Docker. En cualquier caso, el uso de contenedores para orígenes de datos permite a los desarrolladores compilar e implementar en cuestión de minutos sin tener que aprovisionar una base de datos externa o cualquier otro origen de datos con dependencias en la infraestructura (en la nube o locales).
+En la aplicación de ejemplo, cada microservicio posee su propia base de datos u origen de datos, aunque todas las bases de datos de SQL Server se implementan como un contenedor único. Esta decisión de diseño se tomó solo para facilitar a los desarrolladores la obtención del código desde GitHub, clonarlo y abrirlo en Visual Studio o Visual Studio Code. O bien, como alternativa, facilita la compilación de las imágenes de Docker personalizadas mediante la CLI de .NET Core y la de Docker, y después su implementación y ejecución en un entorno de desarrollo de Docker. En cualquier caso, el uso de contenedores para orígenes de datos permite a los desarrolladores compilar e implementar en cuestión de minutos sin tener que aprovisionar una base de datos externa o cualquier otro origen de datos con dependencias en la infraestructura (en la nube o locales).
 
 En un entorno de producción real, para alta disponibilidad y escalabilidad, las bases de datos deberían basarse en servidores de base de datos en la nube o locales, pero no en contenedores.
 

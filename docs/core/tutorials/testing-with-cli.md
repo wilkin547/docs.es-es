@@ -1,16 +1,16 @@
 ---
-title: Organización y prueba de proyectos con la línea de comandos de .NET Core
+title: Organización y prueba de proyectos con la CLI de .NET Core
 description: En este tutorial se explica cómo organizar y probar proyectos .NET Core desde la línea de comandos.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715339"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920414"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organización y prueba de proyectos con la línea de comandos de .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organización y prueba de proyectos con la CLI de .NET Core
 
 Este tutorial sigue al tutorial [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos](cli-create-console-app.md) dirigiéndole más allá de la creación de una aplicación de consola sencilla para desarrollar aplicaciones más avanzadas y bien organizadas. Después de mostrarle cómo usar carpetas para organizar su código, este tutorial le muestra cómo ampliar una aplicación de consola con el marco de pruebas de [xUnit](https://xunit.github.io/).
 

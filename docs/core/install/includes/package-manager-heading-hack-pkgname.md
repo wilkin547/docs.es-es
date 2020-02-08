@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: ef3e4f9f8145677732b9d2e66d416be277697f55
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116155"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920665"
 ---
 
 Los paquetes agregados a las fuentes del administrador de paquetes se denominan con un formato susceptible de intrusiones: `{product}-{type}-{version}`.
@@ -34,6 +34,6 @@ Versión del SDK o del entorno de ejecución que se va a instalar. En este artí
 - Instalación del runtime de ASP.NET Core 3.1: `aspnetcore-runtime-3.1`
 - Instalación del entorno de ejecución de ASP.NET Core 2.1: `dotnet-runtime-2.1`
 
-### <a name="troubleshoot"></a>Solucionar problemas
+### <a name="package-missing"></a>Falta el paquete
 
-Si la combinación de paquetes no funciona, no está disponible. Por ejemplo, no hay un SDK de ASP.NET Core; los componentes del SDK se incluyen en el SDK de .NET Core. El valor `aspnetcore-sdk-2.2` es no es correcto y debe ser `dotnet-sdk-2.2`.
+Si la combinación de paquete y versión no funciona, no está disponible. Por ejemplo, no hay un SDK de ASP.NET Core; los componentes del SDK se incluyen en el SDK de .NET Core. El valor `aspnetcore-sdk-2.2` es no es correcto y debe ser `dotnet-sdk-2.2`.

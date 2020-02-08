@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714064"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920459"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Consumo de una biblioteca de .NET Standard en Visual Studio
 
@@ -86,4 +86,4 @@ Puede hacer que la biblioteca de clases tenga una disponibilidad amplia si la pu
    > [!TIP]
    > Si el directorio que contiene *dotnet.exe* no está en la ruta de acceso, puede encontrar su ubicación escribiendo `where dotnet.exe` en la ventana de consola.
 
-Para más información sobre la creación de paquetes NuGet, consulte [Cómo crear un paquete NuGet con herramientas multiplataforma ](../deploying/creating-nuget-packages.md).
+Para más información sobre la creación de paquetes NuGet, consulte [Creación de un paquete NuGet con la CLI de .NET Core](../deploying/creating-nuget-packages.md).

@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116172"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920765"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>Administrador de paquetes de openSUSE 15: instalación de .NET Core
 
@@ -21,7 +21,7 @@ En este artículo se describe cómo usar un administrador de paquetes para insta
 
 Antes de instalar .NET, deberá realizar lo siguiente:
 
-- Registrar clave de Microsoft.
+- Registrar la clave de Microsoft.
 - Registrar el repositorio del producto.
 - Instalar las dependencias necesarias.
 
@@ -64,3 +64,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Solución de problemas del administrador de paquetes
+
+En esta sección se proporciona información sobre los errores comunes que puede obtener al usar el administrador de paquetes para instalar .NET Core.
+
+### <a name="failed-to-fetch"></a>No se pudo capturar el elemento
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

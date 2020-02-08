@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340169"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787836"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Creación de un paquete de plantillas
 
@@ -49,7 +49,7 @@ En el terminal, vaya a la carpeta _working_. Cree un proyecto nuevo y establezca
 dotnet new console -n templatepack -o .
 ```
 
-El parámetro `-n` establece el nombre del proyecto _.csproj_ en _templatepack.csproj_ y el parámetro `-o` crea los archivos en el directorio actual. Verá un resultado similar a la salida siguiente.
+El parámetro `-n` establece el nombre de archivo _.csproj_ en _templatepack.csproj_. El parámetro `-o` crea los archivos en el directorio actual. Verá un resultado similar a la salida siguiente.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ A continuación, abra el archivo _templatepack.csproj_ en su editor favorito y r
 </Project>
 ```
 
-El valor `<PropertyGroup>` del XML anterior se divide en tres grupos. El primer grupo trata con las propiedades requeridas para un paquete de NuGet. Los tres valores `<Package` están relacionados con las propiedades del paquete de NuGet para identificar el paquete en una fuente NuGet. En concreto, el valor `<PacakgeId>` se usa para desinstalar el paquete de plantillas con un solo nombre en lugar de una ruta de acceso a un directorio. También se puede usar para instalar el paquete de plantillas desde una fuente NuGet. Los valores restantes, como `<Title>` y `<Tags>`, están relacionados con los metadatos que aparecen en la fuente NuGet. Para más información sobre la configuración de NuGet, consulte el artículo sobre [propiedades de NuGet y MSBuild](/nuget/reference/msbuild-targets).
+El valor `<PropertyGroup>` del XML anterior se divide en tres grupos. El primer grupo trata con las propiedades requeridas para un paquete de NuGet. Los tres valores `<Package` están relacionados con las propiedades del paquete de NuGet para identificar el paquete en una fuente NuGet. En concreto, el valor `<PackageId>` se usa para desinstalar el paquete de plantillas con un solo nombre en lugar de una ruta de acceso a un directorio. También se puede usar para instalar el paquete de plantillas desde una fuente NuGet. Los valores restantes, como `<Title>` y `<PackageTags>`, están relacionados con los metadatos que aparecen en la fuente NuGet. Para más información sobre la configuración de NuGet, consulte el artículo sobre [propiedades de NuGet y MSBuild](/nuget/reference/msbuild-targets).
 
 La configuración `<TargetFramework>` se debe establecer de manera que MSBuild se ejecute correctamente al ejecutar el comando pack para compilar y empaquetar el proyecto.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 Ejecute `dotnet new -u AdatumCorporation.Utility.Templates` para desinstalar la plantilla. El comando `dotnet new` generará información de ayuda sobre que debe omitir las plantillas que instaló previamente.
 
-¡Enhorabuena! Ya instaló y desinstaló un paquete de plantillas. 
+¡Enhorabuena! Ya instaló y desinstaló un paquete de plantillas.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

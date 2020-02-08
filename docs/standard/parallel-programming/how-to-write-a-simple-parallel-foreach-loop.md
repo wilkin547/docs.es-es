@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134175"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921209"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedimiento Escribir un bucle Parallel.ForEach sencillo
 
@@ -47,7 +47,7 @@ Puede compilar el código como una aplicación de consola de .NET Framework o co
 
 En Visual Studio, hay plantillas de aplicación de consola de Visual Basic y C# para Windows Desktop y .NET Core.
 
-Desde la línea de comandos, puede usar .NET Core y sus herramientas CLI (por ejemplo, `dotnet new console` o `dotnet new console -lang vb`). También puede crear el archivo y usar el compilador de línea de comandos para una aplicación de .NET Framework.
+Desde la línea de comandos, puede usar la CLI de .NET Core y sus comandos (por ejemplo, `dotnet new console` o `dotnet new console -lang vb`). También puede crear el archivo y usar el compilador de línea de comandos para una aplicación de .NET Framework.
 
 Para un proyecto de .NET Core, debe hacer referencia al paquete NuGet **System.Drawing.Common**. En Visual Studio, use el Administrador de paquetes de NuGet para instalar el paquete. Si lo prefiere, puede agregar una referencia al paquete en su archivo \*.csproj o \*.vbproj:
  

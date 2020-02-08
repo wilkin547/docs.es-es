@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340436"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920559"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -45,7 +45,7 @@ El comando `dotnet restore` usa NuGet para restaurar las dependencias, así como
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instalan las herramientas de la CLI, se proporciona un archivo de configuración predeterminado. Puede especificar más fuentes creando su propio archivo *nuget.config* en el directorio del proyecto. Puede invalidar las fuentes *nuget.config* con la opción `-s`.
+Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instala el SDK de .NET Core, se proporciona un archivo de configuración predeterminado. Puede especificar más fuentes creando su propio archivo *nuget.config* en el directorio del proyecto. Puede invalidar las fuentes *nuget.config* con la opción `-s`.
 
 Para las dependencias, puede especificar dónde se colocan los paquetes restaurados durante la operación de restauración mediante el argumento `--packages`. Si no se especifica, se usa la caché de paquetes NuGet predeterminada, que se encuentra en el directorio `.nuget/packages` del directorio de inicio del usuario en todos los sistemas operativos. Por ejemplo, */home/usuario1* en Linux o *C:\Usuarios\usuario1* en Windows.
 

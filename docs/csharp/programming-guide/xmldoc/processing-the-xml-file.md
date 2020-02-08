@@ -1,18 +1,18 @@
 ---
-title: 'Procesar el archivo XML: Guía de programación de C#'
+title: 'Procesamiento del archivo XML: guía de programación de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696524"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793390"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Procesamiento del archivo XML (guía de programación de C#)
 
 El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](./recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.
 
@@ -27,11 +27,11 @@ El compilador cumple las siguientes reglas cuando genera las cadenas de identifi
     |Carácter|Descripción|
     |---------------|-----------------|
     |N|namespace<br /><br /> No puede agregar comentarios de documentación a un espacio de nombres, pero sí puede hacer referencias cruzadas a ellos, en caso de que se admitan.|
-    |T|tipo: clase, interfaz, estructura, enumeración y delegado|
+    |T|tipo: clase, interfaz, estructura, enumeración o delegado|
     |F|campo|
     |P|propiedad (incluidos indizadores u otras propiedades indizadas)|
     |M|método (incluidos métodos especiales como constructores, operadores, etc.)|
-    |E|evento|
+    |E|event|
     |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de C# genera información de error para vínculos que no se puede resolver.|
 
 - La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres. El nombre del elemento, sus tipos envolventes y el espacio de nombres están separados por puntos. Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#"). Se supone que ningún elemento tiene un signo hash directamente en su nombre. Por ejemplo, el nombre completo del constructor de String sería "System.String.#ctor".
@@ -85,5 +85,5 @@ En los ejemplos siguientes se muestra cómo se generarían las cadenas de identi
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [-doc (Opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Comentarios de documentación XML](./index.md)

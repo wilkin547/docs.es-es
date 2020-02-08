@@ -1,19 +1,19 @@
 ---
 title: Instalación del redistribuible o el paquete para desarrolladores de .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/18/2019
+ms.date: 01/17/2020
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
 - .NET Framework, installing
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 407c9a3fd5057a8e1d68707c9e475d76b3f266e2
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960044"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965924"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -33,18 +33,18 @@ Para más información sobre las versiones de .NET Framework y cómo saber las v
 
 Utilice la tabla siguiente para obtener vínculos rápidos o siga leyendo para obtener información adicional. Para ver los requisitos del sistema de .NET Framework antes de la instalación, consulte [Requisitos de sistema de .NET Framework](../get-started/system-requirements.md). Para obtener ayuda para solucionar problemas, consulte [Solución de problemas](troubleshoot-blocked-installations-and-uninstallations.md).
 
-|Versión de .NET Framework|Instalación para desarrolladores|Instalación de paquete redistribuible|Compatibilidad con la plataforma|
-|----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[Paquete de desarrollador de .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088517)|[Instalador web de la versión 4.8 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Instalador sin conexión de la versión 4.8 del Centro de descarga](https://go.microsoft.com/fwlink/?linkid=2088631)|**Incluido en:**<br/><br/>Actualización del 10 de mayo de 2019 de Windows 2019<br /><br /> **Se puede instalar en:**<br/><br/>Actualización de octubre de 2018 de Windows 10<br/>Actualización de abril de 2018 de Windows 10<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2019<br/>Windows Server, versión 1809<br/>Windows Server, versión 1803<br /><br/> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
-|**4.7.2**|[Paquete de desarrollador de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalador web de la versión 4.7.2 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Instalador sin conexión de la versión 4.7.2 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=863265)|**Incluido en:** <br/><br/>Actualización de octubre de 2018 de Windows 10<br/>Actualización de abril de 2018 de Windows 10<br/>Windows Server 2019<br/>Windows Server, versión 1809<br/>Windows Server, versión 1803<br /><br /> **Se puede instalar en:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server, versión 1709 y anteriores<br /><br/> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
-|**4.7.1**|[Paquete de desarrollador de .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852105)|[Página de descarga del instalador web de la versión 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|**Incluido en:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, versión 1709<br /><br /> **Se puede instalar en:**<br/><br/> Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2016 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
-|**4.7**|[Paquete de desarrollador de .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825319)|[Página de descarga del instalador web de la versión 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Incluido en:** <br/><br/>Windows 10 Creators Update<br /><br /> **Se puede instalar en:**<br /><br/> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2016 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
-|**4.6.2**|[Paquete de desarrollador de .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780617)|[Página de descarga del instalador web de la versión 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780601)|**Incluido en:** <br/><br /> Actualización de aniversario de Windows 10<br /><br /> **Se puede instalar en:**<br /><br/> Actualización de noviembre de Windows 10 <br/> Windows 10 <br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
-|**4.6.1**|[Paquete de desarrollador de .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=690706)|[Página de descarga del instalador web de la versión 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671744)|**Se puede instalar en:**<br /><br/> Windows 10 <br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
-|**4.6**|Incluido en Visual Studio 2015.<br /><br /> [Paquete de destino de Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Página de descarga del instalador web de la versión 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Incluido en:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **También se puede instalar en:**<br /><br/> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
-|**4.5.2**|[Paquete de desarrollador de Microsoft .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Para uso con Visual Studio 2013, Visual Studio 2012 u otros IDE|[Página de descarga del instalador web de la versión 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Se puede instalar en:**<br /><br/> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
-|**4.5.1**|[Paquete de desarrollador de Microsoft .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Para uso con Visual Studio 2013, Visual Studio 2012 u otros IDE|[Página de descarga del instalador web de la versión 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Incluido en:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **También se puede instalar en:**<br /><br/> Windows 8 y versiones anteriores<br /> Windows Server 2012 y versiones anteriores<br />(para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
-|**4.5**|Incluido en Visual Studio 2012<br /><br /> También está disponible como parte de Windows 8 SDK|[Página de descarga del instalador web de la versión 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Incluido en:** <br/><br /> Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **También se puede instalar en:**<br/><br /> Windows 7 y versiones anteriores<br /> Windows Server 2008 SP2 y versiones anteriores<br />(para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
+| Versión de .NET Framework | Instalador (Paquete de desarrollador y Runtime) | Compatibilidad con la plataforma |
+| ---------------------- | -------------------------------------- | ---------------- |
+|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Incluido en:**<br/><br/>Actualización del 10 de mayo de 2019 de Windows 2019<br/>[Visual Studio 2019 (actualización 16.3)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Se puede instalar en:**<br/><br/>Actualización de octubre de 2018 de Windows 10<br/>Actualización de abril de 2018 de Windows 10<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2019<br/>Windows Server, versión 1809<br/>Windows Server, versión 1803<br /><br/> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
+|**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **Incluido en:** <br/><br/>Actualización de octubre de 2018 de Windows 10<br/>Actualización de abril de 2018 de Windows 10<br/>Windows Server 2019<br/>Windows Server, versión 1809<br/>Windows Server, versión 1803<br/>[Visual Studio 2017 (actualización 15.8)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Se puede instalar en:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server, versión 1709 y anteriores<br /><br/> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
+|**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **Incluido en:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, versión 1709<br/>[Visual Studio 2017 (actualización 15.5)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Se puede instalar en:**<br/><br/> Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2016 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
+|**4.7**   | [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **Incluido en:** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (actualización 15.3)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Se puede instalar en:**<br /><br/> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2016 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))||
+|**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **Incluido en:** <br/><br/>Actualización de aniversario de Windows 10<br /><br /> **Se puede instalar en:**<br /><br/> Actualización de noviembre de Windows 10 <br/> Windows 10 <br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
+|**4.6.1** | [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461) | **Incluido en:** <br/><br/>[Visual Studio 2015 Update 2](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br/><br/>**Se puede instalar en:**<br /><br/> Windows 10 <br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
+|**4.6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **Incluido en:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Se puede instalar en:**<br /><br/> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
+|**4.5.2** | [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) | **Se puede instalar en:**<br/><br/> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
+|**4.5.1** | [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) | **Incluido en:**<br/><br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Se puede instalar en:**<br /><br/> Windows 8 y versiones anteriores<br /> Windows Server 2012 y versiones anteriores<br />(para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
+|**4.5**   | [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)    | **Incluido en:** <br/><br/>Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Se puede instalar en:**<br/><br /> Windows 7 y versiones anteriores<br /> Windows Server 2008 SP2 y versiones anteriores<br />(para obtener una lista completa, vea los [requisitos del sistema](../get-started/system-requirements.md))|
 
 Puede instalar el **paquete de desarrollador** para una versión específica de .NET Framework, si está disponible, en todas las plataformas compatibles.
 
@@ -68,23 +68,15 @@ Un *paquete de compatibilidad* permite que la aplicación apunte a una versión 
 
 El Paquete de desarrollador de .NET Framework 4.5.1 o 4.5.2, el Paquete de compatibilidad de .NET Framework 4.6 y el Paquete de desarrollador de .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8 proporcionan a una versión concreta de .NET Framework los ensamblados de referencia, los paquetes de idioma y los archivos de IntelliSense que se usan en un entorno de desarrollo integrado como Visual Studio.  Si usa Visual Studio, el paquete para desarrolladores o el paquete de compatibilidad también agregará la versión instalada de .NET Framework a las opciones de destino al crear un nuevo proyecto.  Elija una de las siguientes opciones:
 
-- [Paquete de desarrollador de Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088517)
-
-- [Paquete de desarrollador de Microsoft .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=874338)
-
-- [Paquete de desarrollador de Microsoft .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852105)
-
-- [Paquete de desarrollador de Microsoft .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825319)
-
-- [Paquete de desarrollador de Microsoft .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780617)
-
-- [Paquete de desarrollador de Microsoft .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=690706)
-
-- [Paquete de destino de Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)
-
-- [Paquete de desarrollador de .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397702) para instalar la versión 4.5.2 en Windows 8.1 o versiones anteriores, Visual Studio 2013, Visual Studio 2012 o en otros IDE.
-
-- [Paquete de desarrollador de .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=324213) para instalar la versión 4.5.1 en Visual Studio 2012 o en otros IDE.
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) para instalar la versión 4.5.2 en Windows 8.1 o versiones anteriores, Visual Studio 2013, Visual Studio 2012 o en otros IDE.
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) para instalar la versión 4.5.1 en Visual Studio 2012 o en otros IDE.
 
 En la página de descarga del paquete para desarrolladores, seleccione **Descargar**. Después, seleccione **Ejecutar** o **Guardar** y siga las instrucciones. También puede instalar el paquete de desarrollador o el paquete de compatibilidad para una versión específica de .NET Framework. Para ello, selecciónelo en los componentes opcionales en la carga de trabajo de **desarrollo de escritorio de .NET** en el Instalador de Visual Studio, como se muestra en esta imagen.
 
@@ -110,25 +102,16 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 
 1. Abra la página de descarga de la versión de .NET Framework que desee instalar:
 
-   - .NET Framework 4.8 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=2085155) o [instalador sin conexión](https://go.microsoft.com/fwlink/?linkid=2088631))
-
-   - .NET Framework 4.7.2 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=863262) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=863265))
-
-   - .NET Framework 4.7.1 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=852095) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=852107))
-
-   - .NET Framework 4.7 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=825299) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=825303))
-
-   - .NET Framework 4.6.2 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=780597) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=780601))
-
-   - .NET Framework 4.6.1 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=671729) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=671744))
-
-   - .NET Framework 4.6 ([instalador web](https://go.microsoft.com/fwlink/?LinkId=528259) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=528233))
-
-   - .NET Framework 4.5.2 ([instalador web](https://go.microsoft.com/fwlink/p/?LinkId=397703) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=397706))
-
-   - .NET Framework 4.5.1 ([instalador web](https://go.microsoft.com/fwlink/p/?LinkId=310158) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=310159))
-
-   - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+   - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+   - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+   - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+   - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+   - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+   - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+   - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+   - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+   - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 1. Seleccione el idioma de la página de descarga. Esta opción no descarga los recursos localizados de .NET Framework; solo afecta al texto que aparece en la página de descarga.
 
@@ -149,15 +132,13 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 
 **Notas sobre la instalación**:
 
-- .NET Framework 4.5.1 y 4.5.2, así como .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 y 4.8 son actualizaciones locales de .NET Framework 4.5.
+- .NET Framework 4.5 y versiones posteriores reemplazan .NET Framework 4.0. Si instala estas versiones en un sistema que tenga instalado .NET Framework 4, se reemplazarán los ensamblados.
 
-- .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias y .NET Framework 4.8 sustituyen .NET Framework 4. Si instala estas versiones en un sistema que tenga instalado .NET Framework 4, se reemplazarán los ensamblados.
+- La desinstalación de .NET Framework 4.5 o versiones posteriores también quita los archivos de .NET Framework 4 ya existentes. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
 
-- Al desinstalar .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias o .NET Framework 4.8 también se eliminan los archivos existentes previamente de .NET Framework 4. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
+- Debe tener credenciales administrativas para instalar .NET Framework 4.5 o versiones posteriores.
 
-- Debe tener credenciales administrativas para instalar .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias y .NET Framework 4.8.
-
-- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible del [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) y el [Artículo 2770445 de Knowledge Base](https://support.microsoft.com/kb/2770445).
+- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible de la [página de descarga de .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) y el [Artículo 2770445 de Knowledge Base](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Para instalar paquetes de idioma
 
@@ -168,25 +149,16 @@ Los paquetes de idioma son archivos ejecutables que contienen recursos localizad
 
 1. Abra la página de descarga de paquetes de idioma que se corresponda con la versión de .NET Framework instalada:
 
-    - [Paquetes de idioma de .NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2053984)
-
-    - [Paquetes de idioma de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
-
-    - [Paquetes de idioma de .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkID=852090)
-
-    - [Paquetes de idioma de .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkID=825306)
-
-    - [Paquetes de idioma de .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
-
-    - [Paquetes de idioma de .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=671747)
-
-    - [Paquetes de idioma de .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkID=528314)
-
-    - [Paquetes de idioma de .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397701)
-
-    - [Paquetes de idioma de .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=322101)
-
-    - [Paquetes de idioma de .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+   - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+   - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+   - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+   - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+   - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+   - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+   - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+   - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+   - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 2. En la lista de idiomas, elija el idioma que desea descargar y espere unos segundos hasta que se recargue la página en ese idioma.
 
@@ -231,7 +203,7 @@ En la siguiente tabla se indican los idiomas compatibles.
 
 - Para obtener información acerca de los cambios que afectan a la implementación de .NET Framework en su aplicación, consulte [Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](../deployment/reducing-system-restarts.md).
 
-- Para obtener más información sobre cómo migrar una aplicación desde .NET Framework 4 hasta .NET Framework 4.5 y una de sus versiones secundarias, consulte la [guía de migración](../migration-guide/index.md).
+- Para más información sobre cómo migrar una aplicación desde .NET Framework 4 hasta .NET Framework 4.5 o versiones posteriores, consulte la [guía de migración](../migration-guide/index.md).
 
 - Consulte el [código fuente de referencia de .NET Framework](https://referencesource.microsoft.com/) para ver este código en línea. El origen de referencia también está disponible en [GitHub](https://github.com/Microsoft/referencesource). Puede [descargar el origen de referencia](https://referencesource.microsoft.com/download.html) para visualizar y examinar el código fuente (incluidas revisiones y actualizaciones) sin conexión durante la depuración. Para obtener más información, vea la entrada de blog [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/) (Un nuevo aspecto para el origen de referencia de .NET).
 
