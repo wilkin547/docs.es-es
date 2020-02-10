@@ -2,33 +2,33 @@
 title: Actividad personalizada SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715580"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094610"
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
 En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar correo electrónico de forma asincrónica y enviar correo con autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de colocación para dejar la prueba.  
   
  En la siguiente tabla se detallan los argumentos de la actividad `SendMail`.  
   
-|Name|Tipo de|Descripción|  
+|Nombre|Tipo|Descripción|  
 |-|-|-|  
-|administrador de flujos de trabajo|String|Dirección del host del servidor SMTP.|  
+|Host|String|Dirección del host del servidor SMTP.|  
 |Port|String|El puerto del servicio SMTP en el host.|  
 |EnableSsl|bool|Especifica si el objeto <xref:System.Net.Mail.SmtpClient> utiliza SSL (Secure Sockets Layer) para cifrar la conexión.|  
 |UserName|String|Nombre de usuario para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
-|Password|String|Contraseña para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
-|Subject|<xref:System.Activities.InArgument%601>cadena de \<|Asunto del mensaje.|  
-|Cuerpo|<xref:System.Activities.InArgument%601>cadena de \<|Cuerpo del mensaje.|  
-|Datos adjuntos|<xref:System.Activities.InArgument%601>cadena de \<|Colección de datos adjuntos usada para almacenar datos adjuntos a este mensaje de correo electrónico.|  
-|Desde un|<xref:System.Net.Mail.MailAddress>|Dirección de este mensaje de correo electrónico.|  
-|En|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios de este mensaje de correo electrónico.|  
+|Contraseña|String|Contraseña para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
+|Asunto|<xref:System.Activities.InArgument%601>cadena de \<>|Asunto del mensaje.|  
+|Body|<xref:System.Activities.InArgument%601>cadena de \<>|Cuerpo del mensaje.|  
+|Datos adjuntos|<xref:System.Activities.InArgument%601>cadena de \<>|Colección de datos adjuntos usada para almacenar datos adjuntos a este mensaje de correo electrónico.|  
+|De|<xref:System.Net.Mail.MailAddress>|Dirección de este mensaje de correo electrónico.|  
+|A|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios de este mensaje de correo electrónico.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios de copia carbón (CC) de este mensaje de correo electrónico.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios de copia carbón oculta (CCO) de este mensaje de correo electrónico.|  
-|tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadena, > de cadena >|Tokens para reemplazar en el cuerpo. Esta característica les permite a los usuarios especificar algunos valores del cuerpo que pueden ser reemplazados después por los tokens que proporcionó utilizando esta propiedad.|  
+|Tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadena, > de cadena >|Tokens para reemplazar en el cuerpo. Esta característica les permite a los usuarios especificar algunos valores del cuerpo que pueden ser reemplazados después por los tokens que proporcionó utilizando esta propiedad.|  
 |BodyTemplateFilePath|String|Ruta de acceso de una plantilla para el cuerpo. La actividad `SendMail` copia el contenido de este archivo en su propiedad de cuerpo.<br /><br /> La plantilla puede contener tokens que son reemplazados por el contenido de la propiedad de tokens.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Cuando se establece esta propiedad, todos los correos electrónicos se envían a la dirección especificada en él.<br /><br /> Se pretende que esta propiedad sea utilizada al probar los flujos de trabajo. Por ejemplo, si desea asegurarse de que todos los mensajes de correo electrónico se envían sin enviarlos a los destinatarios reales.|  
 |TestDropPath|String|Cuando se establece esta propiedad, todos los correos electrónicos también se guardan en el archivo especificado.<br /><br /> Esta propiedad está pensada para usarse al probar o Depurar flujos de trabajo, para asegurarse de que el formato y el contenido de los mensajes de correo electrónico salientes es adecuado.|  
@@ -36,7 +36,7 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
 ## <a name="solution-contents"></a>Contenido de la solución  
  La solución contiene dos proyectos.  
   
-|Proyecto de|Descripción|Archivos importantes|  
+|proyecto|Descripción|Archivos importantes|  
 |-------------|-----------------|---------------------|  
 |SendMail|La actividad SendMail|1. SendMail.cs: implementación para la actividad principal<br />2. SendMailDesigner. XAML y SendMailDesigner.xaml.cs: diseñador para la actividad SendMail<br />3. MailTemplateBody. htm: plantilla para el correo electrónico que se va a enviar.|  
 |SendMailTestClient|Cliente para probar la actividad SendMail.  Este proyecto muestra dos maneras de invocar la actividad SendMail: mediante declaración y mediante programación.|1. Sequence1. XAML: flujo de trabajo que invoca la actividad SendMail.<br />2. Program.cs: invoca Sequence1 y también crea un flujo de trabajo mediante programación que usa SendMail.|  
@@ -107,17 +107,15 @@ new SendMail
   
  Para obtener más información acerca de cómo configurar un servidor SMTP, consulte los siguientes vínculos.  
   
-- [Microsoft TechNet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Configurar el servicio SMTP (IIS 6,0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [Configurar el servicio SMTP (IIS 6,0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7,0: configurar el correo electrónico SMTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7,0: configurar el correo electrónico SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [Cómo instalar el servicio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Cómo instalar el servicio SMTP](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  Hay disponibles para descarga emuladores de SMTP proporcionados por terceros.  
   
-##### <a name="to-run-this-sample"></a>Para ejecutar este ejemplo  
+##### <a name="to-run-this-sample"></a>Para ejecutar el ejemplo  
   
 1. Con Visual Studio 2010, abra el archivo de solución SendMail. sln.  
   

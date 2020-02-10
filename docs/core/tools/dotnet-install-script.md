@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 01/23/2020
-ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920577"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092868"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -213,7 +213,7 @@ Puede instalar una versión específica mediante el argumento `-Version|--versio
   macOS y Linux:
 
   ```bash
-  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>Vea también

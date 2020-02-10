@@ -2,16 +2,16 @@
 title: Actividades de acceso a bases de datos
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710858"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094649"
 ---
 # <a name="database-access-activities"></a>Actividades de acceso a bases de datos
 
-Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.net](https://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.
+Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.net](../../data/adonet/index.md) para tener acceso a la base de datos.
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
@@ -72,14 +72,14 @@ Public class DbUpdate: AsyncCodeActivity
 }
 ```
 
-|Argument|Descripción|
+|Argumento|Descripción|
 |-|-|
 |ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|
 |ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|
 |ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|
-|Sql|El comando SQL que se va a ejecutar.|
-|Parameters|Colección de los parámetros de la consulta SQL.|
+|Sql|Comando SQL que se va a ejecutar.|
+|Parámetros|Colección de los parámetros de la consulta SQL.|
 |AffectedRecords|Número de registros afectado por la última operación.|
 
 ## <a name="dbqueryscalar"></a>DbQueryScalar
@@ -126,14 +126,14 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }
 ```
 
-|Argument|Descripción|
+|Argumento|Descripción|
 |-|-|
 |ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|
 |ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|
 |ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|
-|Sql|El comando SQL que se va a ejecutar.|
-|Parameters|Colección de los parámetros de la consulta SQL.|
+|Sql|Comando SQL que se va a ejecutar.|
+|Parámetros|Colección de los parámetros de la consulta SQL.|
 |Resultado|Valor escalar que se obtiene una vez ejecutada la consulta. Este argumento es de tipo `TResult`.|
 
 ## <a name="dbquery"></a>DbQuery
@@ -186,14 +186,14 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }
 ```
 
-|Argument|Descripción|
+|Argumento|Descripción|
 |-|-|
 |ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|
 |ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|
 |ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|
-|Sql|El comando SQL que se va a ejecutar.|
-|Parameters|Colección de los parámetros de la consulta SQL.|
+|Sql|Comando SQL que se va a ejecutar.|
+|Parámetros|Colección de los parámetros de la consulta SQL.|
 |Mapper|Función de asignación (<xref:System.Func%601><`DbDataReader`, `TResult`>) que toma un registro en el `DataReader` obtenido como resultado de la ejecución de la consulta y devuelve una instancia de un objeto de tipo `TResult` que se va a agregar a la colección de `Result`.<br /><br /> En este caso, la asignación se realiza mediante un único pulso de ejecución, pero no se puede crear mediante declaración utilizando el diseñador.|
 |MapperFunc|Función de asignación (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) que toma un registro en el `DataReader` obtenido como resultado de la ejecución de la consulta y devuelve una instancia de un objeto de tipo `TResult` que se va a agregar a la colección de `Result`.<br /><br /> En este caso, la asignación se realiza en varios pulsos de ejecución. Esta función se puede serializar en XAML y crear mediante declaración (cualquier actividad existente puede participar en la asignación).|
 |Resultado|Lista de objetos obtenidos como resultado de ejecutar la consulta y ejecutar la función de asignación para cada registro de `DataReader`.|
@@ -240,14 +240,14 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }
 ```
 
-|Argument|Descripción|
+|Argumento|Descripción|
 |-|-|
 |ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|
 |ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|
 |ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|
-|Sql|El comando SQL que se va a ejecutar.|
-|Parameters|Colección de los parámetros de la consulta SQL.|
+|Sql|Comando SQL que se va a ejecutar.|
+|Parámetros|Colección de los parámetros de la consulta SQL.|
 |Resultado|<xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.|
 
 ## <a name="configuring-connection-information"></a>Configurar información de conexión

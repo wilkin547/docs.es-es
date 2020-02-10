@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6703825d4453b2e0e65036fa2d9c856139ee473c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974660"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094571"
 ---
 # <a name="document-serialization-and-storage"></a>Almacenamiento y serialización de documentos
 
@@ -81,11 +81,11 @@ Tanto los serializadores de complemento como los serializadores vinculados utili
 
 3. Después de crear el serializador del complemento, se implementa un script de instalación para distribuir e instalar (y desinstalar) el complemento (véase más arriba, "[Instalar serializadores de complemento](#InstallingPluginSerializers)").
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Documentos en WPF](documents-in-wpf.md)
 - [Información general sobre impresión](printing-overview.md)
-- [XML Paper Specification (XPS): Overview](https://go.microsoft.com/fwlink?LinkID=106246) (XML Paper Specification (XPS): Información general)
+- [Especificación de papel XML](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

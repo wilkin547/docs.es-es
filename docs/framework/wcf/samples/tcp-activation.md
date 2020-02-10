@@ -1,15 +1,15 @@
 ---
-title: Activación TCP
+title: Activación de TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: c1a2c0de5fbb666ec3b68ec3da31cc27f8234cbd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3487d84a63b2838dc1b55fdf3f41b410fcfc2e63
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716608"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094883"
 ---
-# <a name="tcp-activation"></a>Activación TCP
+# <a name="tcp-activation"></a>Activación de TCP
 
 Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows (WAS) para activar un servicio que comunica a través del protocolo de net.tcp. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).
 
@@ -206,6 +206,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Este comando se debe escribir en una sola línea de texto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Ejemplos de hospedaje y persistencia de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Ejemplos de hospedaje y persistencia de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

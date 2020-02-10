@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787904"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095156"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Consideraciones sobre el diseño del elemento WindowsFormsHost
 En este tema se describe cómo interactúa el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> con el sistema de diseño de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -31,7 +31,7 @@ En este tema se describe cómo interactúa el elemento <xref:System.Windows.Form
 |Característica de diseño|Descripción|  
 |--------------------|-----------------|  
 |Cambiar automáticamente|Algunos controles de Windows Forms cambian de tamaño para mostrar su contenido correctamente. Para obtener más información, vea [información general sobre la propiedad AutoSize](../../winforms/controls/autosize-property-overview.md).|  
-|Delimitar y acoplar|Windows Forms controles admiten la colocación y el ajuste de tamaño según el contenedor primario. Para obtener más información, vea <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Delimitar y acoplar|Windows Forms controles admiten la colocación y el ajuste de tamaño según el contenedor primario. Para más información, vea <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
 |Escalado automático|Los controles de contenedor cambian de tamaño y sus elementos secundarios en función de la resolución del dispositivo de salida o el tamaño, en píxeles, de la fuente del contenedor predeterminado. Para obtener más información, vea [escalado automático en Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Contenedores de diseño|Los controles <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel> organizan sus controles secundarios y su propio tamaño según su contenido.|  
   
@@ -69,7 +69,7 @@ En este tema se describe cómo interactúa el elemento <xref:System.Windows.Form
   
 |Problema de conversión|Descripción|  
 |----------------------|-----------------|  
-|Rounding|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dimensiones de píxeles independientes del dispositivo se especifican como `double`y Windows Forms dimensiones de píxeles de hardware se especifican como `int`. En los casos en los que las dimensiones basadas en `double`se convierten en dimensiones basadas en `int`, el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> utiliza el redondeo estándar, de modo que los valores fraccionarios inferiores a 0,5 se redondean a 0.|  
+|Redondeo|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dimensiones de píxeles independientes del dispositivo se especifican como `double`y Windows Forms dimensiones de píxeles de hardware se especifican como `int`. En los casos en los que las dimensiones basadas en `double`se convierten en dimensiones basadas en `int`, el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> utiliza el redondeo estándar, de modo que los valores fraccionarios inferiores a 0,5 se redondean a 0.|  
 |Desbordamiento|Cuando el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> convierte de `double` valores a `int` valores, es posible que se produzca un desbordamiento. Los valores mayores que <xref:System.Int32.MaxValue> se establecen en <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Propiedades relacionadas con el diseño  
@@ -98,11 +98,11 @@ En este tema se describe cómo interactúa el elemento <xref:System.Windows.Form
   
 - Si la propiedad <xref:System.Windows.Forms.Control.Size%2A> devuelve un tamaño menor que la restricción especificada, <xref:System.Windows.Forms.Integration.WindowsFormsHost> acepta este valor de tamaño y devuelve el valor al sistema de diseño de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Tutorial: Organizar controles de formularios Windows Forms en WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [Ejemplo de cómo organizar controles Windows Forms en WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Ejemplo de cómo organizar controles Windows Forms en WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migración e interoperabilidad](migration-and-interoperability.md)

@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921203"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095000"
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
@@ -17,7 +17,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
  En raras ocasiones, se puede producir un error en la distribución a la aplicación. La capa Windows Communication Foundation (WCF) puede encontrar un problema con el mensaje, por ejemplo, si el mensaje tiene un marco incorrecto, credenciales de mensaje no válidas adjuntas a él o un encabezado de acción no válido. En estos casos, la aplicación nunca recibe el mensaje; sin embargo, el mensaje todavía se puede convertir en un mensaje dudoso y procesar manualmente.  
   
 ## <a name="handling-poison-messages"></a>Controlar mensajes dudosos  
- En WCF, el control de mensajes dudosos proporciona un mecanismo para que una aplicación receptora trate los mensajes que no se pueden enviar a la aplicación o los mensajes que se envían a la aplicación, pero que no se pueden procesar debido a que son específicos de la aplicación. principales. El control de mensajes dudosos se configura mediante las siguientes propiedades en cada uno de los enlaces en cola disponibles:  
+ En WCF, el control de mensajes dudosos proporciona un mecanismo para que una aplicación receptora trate los mensajes que no se pueden enviar a la aplicación o los mensajes que se envían a la aplicación, pero que no se pueden procesar debido a que son específicos de la aplicación. principales. Configure el control de mensajes dudosos con las propiedades siguientes en cada uno de los enlaces en cola disponibles:  
   
 - `ReceiveRetryCount`. Un valor entero que indica el número máximo de horas para reintentar la entrega de un mensaje de la cola de la aplicación a la aplicación. El valor predeterminado es 5. Esto es suficiente en casos donde un reintento inmediato corrige el problema, como ocurre con un interbloqueo temporal en una base de datos.  
   
@@ -31,11 +31,11 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 - Drop. Esta opción quita el mensaje dudoso y el mensaje nunca llega a la aplicación. Si la propiedad `TimeToLive` del mensaje ha expirado en este punto, el mensaje puede aparecer en la cola de mensajes no enviados del remitente. Si no, el mensaje no aparece en ningún sitio. Esta opción indica que el usuario no ha especificado qué hacer si se pierde el mensaje.  
   
-- Reject. Esta opción solo está disponible en Windows Vista. Indica a Message Queuing (MSMQ) que devuelva una confirmación de que no se pudo realizar la acción al administrador de la cola emisora para indicar que la aplicación no puede recibir el mensaje. El mensaje se coloca en la cola de mensajes no enviados del administrador de la cola emisora.  
+- Reject. Esta opción solo está disponible en Windows Vista. Esto indica a Message Queuing (MSMQ) que envíe una confirmación negativa de vuelta al administrador de la cola emisora que la aplicación no puede recibir el mensaje. El mensaje se coloca en la cola de mensajes no enviados del administrador de la cola emisora.  
   
 - Move. Esta opción solo está disponible en Windows Vista. Mueve el mensaje dudoso a una cola de mensajes dudosos para ser procesado posteriormente por una aplicación de control de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola de la aplicación. Una aplicación de control de mensajes dudosos puede ser un servicio WCF que lee los mensajes de la cola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola de la aplicación y se puede direccionar como net. MSMQ://\<*nombre del equipo*>/*applicationQueue*;p Oison, donde *nombre-equipo* es el nombre del equipo en el que reside la cola y *applicationQueue* es el nombre de la cola específica de la aplicación.  
   
- A continuación, se muestra el número máximo de intentos de entrega realizados para un mensaje:  
+A continuación, se muestra el número máximo de intentos de entrega realizados para un mensaje:  
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) en Windows Vista.  
   
@@ -68,7 +68,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 1. Asegúrese de que la configuración de mensajes dudosos refleja los requisitos de la aplicación. Al trabajar con la configuración, asegúrese de que comprende las diferencias entre las capacidades de Message Queue Server en Windows Vista, Windows Server 2003 y Windows XP.  
   
-2. Si se requiere, implemente `IErrorHandler` para controlar los errores de los mensajes dudosos. Dado que al establecer `ReceiveErrorHandling` en `Fault` se requiere un mecanismo manual para quitar el mensaje dudoso de la cola o corregir un problema derivado externo, lo normal es implementar `IErrorHandler` cuando `ReceiveErrorHandling` se establece en `Fault`, como se muestra en el código siguiente.  
+2. Si es necesario, implemente la `IErrorHandler` para controlar los errores de mensajes dudosos. Dado que al establecer `ReceiveErrorHandling` en `Fault` se requiere un mecanismo manual para quitar el mensaje dudoso de la cola o corregir un problema derivado externo, lo normal es implementar `IErrorHandler` cuando `ReceiveErrorHandling` se establece en `Fault`, como se muestra en el código siguiente.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
@@ -103,7 +103,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 - Message Queue Server en Windows Vista admite una propiedad de mensaje que mantiene el recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en Windows Server 2003 y Windows XP. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)

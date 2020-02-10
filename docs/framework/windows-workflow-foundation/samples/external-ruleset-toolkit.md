@@ -2,12 +2,12 @@
 title: Kit de herramientas de RuleSet externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710898"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094675"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de herramientas de RuleSet externo
 
@@ -16,7 +16,7 @@ Normalmente cuando las reglas se utilizan dentro de una aplicación de flujo de 
 El ejemplo de kit de herramientas de RuleSet Kit externo contiene una herramienta basada en Windows Forms que puede utilizar para administrar y editar las versiones de RuleSet en una base de datos. También incluye una actividad y un servicio de host para ejecutar esas reglas.
 
 > [!NOTE]
-> Este ejemplo requiere [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).
+> Este ejemplo requiere [Microsoft SQL Server](/sql).
 
 Visual Studio proporciona un editor RuleSet como parte del Windows Workflow Foundation (WF). Puede iniciar este editor haciendo doble clic en la actividad `Policy` en un flujo de trabajo; serializa el objeto RuleSet definido al archivo .rules asociado al flujo de trabajo (una actividad `Policy` ejecuta una instancia de RuleSet contra el flujo de trabajo). El archivo .rules está compilado en el ensamblado como un recurso al generar el proyecto de flujo de trabajo.
 

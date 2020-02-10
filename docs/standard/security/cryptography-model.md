@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965963"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095273"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de criptografía de .NET Framework
 
@@ -41,7 +41,7 @@ Como ejemplo de las distintas implementaciones disponibles de un algoritmo, cons
 
 Dos clases heredan <xref:System.Security.Cryptography.Aes>: <xref:System.Security.Cryptography.AesCryptoServiceProvider> y <xref:System.Security.Cryptography.AesManaged>. La clase <xref:System.Security.Cryptography.AesCryptoServiceProvider> es un contenedor que envuelve la implementación de Aes de la API de criptografía de Windows (CAPI), mientras que la clase <xref:System.Security.Cryptography.AesManaged> está escrita completamente en código administrado. También hay un tercer tipo de implementación, Cryptography Next Generation (CNG), además de las implementaciones administradas y de CAPI. Un ejemplo de un algoritmo CNG es <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Los algoritmos CNG se encuentran disponibles en Windows Vista y versiones posteriores.
 
-Puede elegir qué implementación es mejor para usted.  Las implementaciones administradas están disponibles en todas las plataformas compatibles con .NET Framework.  Las implementaciones de CAPI están disponibles en sistemas operativos anteriores y ya no se desarrollan. CNG es la última implementación, donde se lleva cabo el nuevo desarrollo. Sin embargo, las implementaciones administradas no disponen del certificado de Estándares de procesamiento de información federal (FIPS) y pueden ser más lentas que las clases contenedoras.
+Puede elegir qué implementación es mejor para usted. Las implementaciones administradas están disponibles en todas las plataformas que admiten .NET Framework. Las implementaciones de CAPI están disponibles en sistemas operativos anteriores y ya no se desarrollan. CNG es la implementación más reciente en la que se llevará a cabo el nuevo desarrollo. Sin embargo, las implementaciones administradas no disponen del certificado de Estándares de procesamiento de información federal (FIPS) y pueden ser más lentas que las clases contenedoras.
 
 ## <a name="stream-design"></a>Diseño de secuencias
 
@@ -51,7 +51,7 @@ El Common Language Runtime usa un diseño orientado a secuencias para implementa
 
 La configuración criptográfica le permite resolver una implementación específica de un algoritmo a un nombre de algoritmo, lo que permite la extensibilidad de las clases de criptografía de .NET Framework. Puede agregar su propia implementación de hardware o software de un algoritmo y asignar la implementación al nombre del algoritmo que quiera. Si un algoritmo no se especifica en el archivo de configuración, se usa la configuración predeterminada. Para obtener más información sobre la configuración criptográfica, vea [configurar las clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
 
-## <a name="choosing-an-algorithm"></a>Elección de un algoritmo
+## <a name="choosing-an-algorithm"></a>Elegir un algoritmo
 
 Puede seleccionar un algoritmo por diferentes motivos: por ejemplo, para proteger la integridad de los datos, para proteger la privacidad de los datos o para generar una clave. Los algoritmos simétricos y hash están diseñados para proteger los datos por motivos de integridad (impedir los cambios) o por motivos de privacidad (impedir la visualización). Los algoritmos hash se usan principalmente para proteger la integridad de los datos.
 
@@ -73,7 +73,7 @@ Esta es una lista de los algoritmos recomendados en función de la aplicación:
 - Generar una clave a partir de una contraseña:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)
 - [Protocolos de criptografía, algoritmos y código fuente aplicados en C, de Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

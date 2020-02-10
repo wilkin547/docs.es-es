@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712980"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093154"
 ---
 # <a name="using-directive-c-reference"></a>using (Directiva, Referencia de C# Reference)
 
@@ -68,7 +68,7 @@ Cree una directiva de alias `using` para facilitar la calificación de un identi
 
 ```csharp
 using s = System.Text;
-using s.RegularExpressions;
+using s.RegularExpressions; // Generates a compiler error.
 ```
 
 Cree una directiva `using` para usar los tipos de un espacio de nombres sin tener que especificarlo. Una directiva `using` no proporciona acceso a los espacios de nombres que están anidados en el espacio de nombres especificado.

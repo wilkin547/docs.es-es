@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919330"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094987"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
-Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3,0, la aplicación puede afectar a la privacidad de los usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final decida enviarla.  
+Microsoft se compromete a proteger la privacidad de los usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3,0, la aplicación puede afectar a la privacidad de los usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final decida enviarla.  
   
 ## <a name="wcf-in-brief"></a>WCF en breve  
  WCF es un marco de mensajería distribuida que usa el marco de Microsoft .NET que permite a los desarrolladores crear aplicaciones distribuidas. Los mensajes comunicados entre dos aplicaciones contienen encabezado e información del cuerpo.  
@@ -44,7 +44,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  La autenticación puede producir una sesión segura establecida entre los extremos en comunicación. Un GUID, cuya duración es igual a la sesión de seguridad, identifica la sesión. La tabla siguiente muestra lo que se guarda y dónde.  
   
-|Datos|Almacenamiento de|  
+|data|Storage|  
 |----------|-------------|  
 |Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
 |Información de pertenencia del usuario, como nombres de usuario y contraseñas.|Proveedores de pertenencia a ASP.NET.|  
@@ -70,17 +70,17 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Las sesiones de confianza se implementan utilizando el protocolo WS-ReliableMessaging (WS-RM). Agregan los encabezados WS-RM que contienen información de la sesión, la cual se utiliza para identificar todos los mensajes asociados a una sesión de confianza determinada. Cada sesión de WS-RM tiene un identificador, que es un GUID.  
   
- No se retiene información personal en el equipo de usuario final.  
+ No se conserva información personal en el equipo del usuario final.  
   
 ## <a name="queued-channels"></a>Canals en la cola  
  Las colas almacenan mensajes de una aplicación emisora en nombre de una aplicación receptora y, a continuación, reenvían estos mensajes a la aplicación receptora. Ayudan a garantizar la transferencia de mensajes desde aplicaciones de envío a aplicaciones de recepción cuando, por ejemplo, la aplicación receptora es transitoria. WCF proporciona compatibilidad para la puesta en cola mediante Microsoft Message Queuing (MSMQ) como transporte.  
   
  La característica de los canales en cola no agrega encabezados a un mensaje. En su lugar, crea un mensaje de Message Queuing con propiedades de mensaje de Message Queuing adecuadas establecidas e invoca los métodos Message Queuing para colocar el mensaje en la cola de Message Queuing. Message Queuing es un componente opcional distribuido con Windows.  
   
- No se retiene información en el equipo del usuario final mediante la característica de canal en cola, porque utiliza la infraestructura Message Queuing.  
+ La característica de canales en cola no conserva ninguna información en el equipo del usuario final, ya que utiliza Message Queue Server como infraestructura de cola.  
   
 ## <a name="com-integration"></a>Integración de COM+  
- Esta característica ajusta la funcionalidad existente de COM y COM+ para crear servicios que sean compatibles con los servicios WCF. Esta característica no utiliza los encabezados específicos y no retiene los datos en el equipo del usuario final.  
+ Esta característica ajusta la funcionalidad existente de COM y COM+ para crear servicios que sean compatibles con los servicios WCF. Esta característica no utiliza encabezados específicos y no conserva los datos en el equipo del usuario final.  
   
 ## <a name="com-service-moniker"></a>Moniker de servicio COM  
  Esto proporciona un contenedor no administrado a un cliente de WCF estándar. Esta característica no tiene encabezados específicos en la conexión ni conserva datos en el equipo.  
@@ -88,11 +88,11 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ## <a name="peer-channel"></a>Canal del mismo nivel  
  Un canal del mismo nivel permite el desarrollo de aplicaciones multiparte con WCF. La mensajería multipartidaria se produce en el contexto de una malla. Un nombre al cual se pueden unir los nodos identifica las mallas. Cada nodo del canal del mismo nivel crea un agente de escucha de TCP en un puerto especificado por el usuario y establece las conexiones con otros nodos en la malla para garantizar la resiliencia. Para conectar a otros nodos en la malla, los nodos también intercambian algunos datos, incluso la dirección del agente de escucha y las direcciones IP del equipo, con otros nodos de la malla. Los mensajes enviados en la malla pueden contener información de seguridad que pertenece al remitente para evitar que se suplante y se manipule el mensaje.  
   
- No se almacena información personal en el equipo de usuario final.  
+ No se almacena información personal en el equipo del usuario final.  
   
 ## <a name="it-professional-experience"></a>Experiencia profesional de TI  
   
-### <a name="tracing"></a>Traza  
+### <a name="tracing"></a>Seguimiento  
  La característica de diagnóstico de la infraestructura de WCF registra los mensajes que pasan a través de las capas del modelo de transporte y servicio, así como las actividades y eventos asociados a estos mensajes. Esta característica está desactivada de forma predeterminada. Se habilita mediante el archivo de configuración de la aplicación y el comportamiento del seguimiento se puede modificar con el proveedor de WMI de WCF en tiempo de ejecución. Cuando se habilita, la infraestructura de la traza emite una traza de diagnóstico que contiene mensajes, actividades y eventos de procesamiento a los agentes de escucha configurados. Las opciones de configuración del agente de escucha del administrador determinan el formato y ubicación del resultado, pero es normalmente un archivo con formato XML. El administrador es responsable de establecer la lista de control de acceso (ACL) en los archivos de seguimiento. En particular, cuando está hospedado por el Sistema de Activación de Windows (WAS), el administrador debería asegurarse de que los archivos no provienen del directorio raíz virtual público si no se desea.  
   
  Hay dos tipos de traza: registro de mensajes y traza de diagnóstico de modelo de servicio, descritos en la sección siguiente. Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>. Estos orígenes de traza de registro capturan locales a la aplicación.  
@@ -127,13 +127,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Claves que se quitan:  
   
- \- para xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- para xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,13 +141,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Datos personales posibles que se quitan:  
   
- \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \- se quitan los elementos en negrita (a continuación):  
+ \- para xmlns: SAML = "urn: oasis: names: TC: SAML: 1.0: Assertion", se quitan los elementos en negrita (a continuación):  
   
  Aserción de \<  
   
@@ -165,11 +165,11 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<condiciones NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
  \<audiencia > [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
  \<DoNotCacheCondition/> *  
   
@@ -183,7 +183,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<consejos >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
  \<aserción > [Assertion]\</Assertion > *  
   
@@ -195,7 +195,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<instrucción/> *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<asunto >  
   
@@ -217,13 +217,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS: KeyInfo >...\</DS: KeyInfo >?  
   
  \<>/SubjectConfirmation?  
   
- \</Subject>  
+ \</Subject >  
   
- \</SubjectStatement>*  
+ \</SubjectStatement > *  
   
  -->  
   
@@ -255,9 +255,9 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Subject]  
   
@@ -271,9 +271,9 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</Attribute > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -289,13 +289,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<Evidence >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
  \<aserción > [Assertion]\</Assertion > +  
   
  \<>/Evidence?  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
  \</Assertion >  
   
@@ -304,7 +304,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Para los siguientes espacios de nombres:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (por ejemplo, si no hay ninguna acción disponible)  
+ xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: elemento WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (por ejemplo, si no hay ninguna acción disponible)  
   
  La información se quita de estos elementos del cuerpo, lo cual implica intercambio de claves:  
   
@@ -359,17 +359,17 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>No se quita información de los encabezados y datos del cuerpo específicos de la aplicación  
  WCF no realiza un seguimiento de la información personal en encabezados específicos de la aplicación (por ejemplo, cadenas de consulta) o datos del cuerpo (por ejemplo, el número de la tarjeta de crédito).  
   
- Cuando el registro de mensajes está activado, los datos personales en encabezados específicos de la aplicación e información del cuerpo pueden estar visibles en los registros. De nuevo, el implementador de la aplicación es el responsable de establecer las ACL en los archivos de registro y configuración. También puede desactivar el registro si no desea que esta información esté visible, o puede filtrar fuera esta información de los archivos de registro una vez registrado.  
+ Cuando el registro de mensajes está activado, los datos personales en encabezados específicos de la aplicación e información del cuerpo pueden estar visibles en los registros. De nuevo, el implementador de la aplicación es el responsable de establecer las ACL en los archivos de registro y configuración. También pueden desactivar el registro si no quieren que esta información esté visible, o bien filtrar esta información de los archivos de registro una vez que se ha registrado.  
   
 ### <a name="service-model-tracing"></a>Traza de modelo de servicio  
  El origen de la traza de modelo de servicio (<xref:System.ServiceModel>) habilita la traza de las actividades y el segumiento de eventos relacionados con el procesamiento de mensajes. Esta característica utiliza la funcionalidad de diagnóstico del marco .NET de <xref:System.Diagnostics>. Como con la propiedad <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, el usuario puede configurar la ubicación y su ACL mediante los archivos de configuración de la aplicación del marco .NET. Como con el registro de mensajes, la ubicación del archivo se configura siempre cuando el administrador habilita la traza; de este modo, el administrador controla el ACL.  
   
- Las trazas contienen los encabezados del mensaje cuando un mensaje está en ámbito. Se aplican las mismas reglas para ocultar los posibles datos personales en encabezados del mensaje de la sección anterior: los datos personales previamente identificados se quitan de forma predeterminada de los encabezados en trazas. El administrador del equipo y el implementador de la aplicación deben modificar la configuración para registrar potencialmente datos personales. Sin embargo, los datos personales contenidos en encabezados específicos de la aplicación están registrados en trazas. El implementador de la aplicación es el responsable de establecer las ACL en los archivos de seguimiento y configuración. También puede desactivar la traza si no desea que esta información esté visible, o puede filtrar fuera esta información de los archivos de seguimiento una vez registrado.  
+ Las trazas contienen los encabezados del mensaje cuando un mensaje está en ámbito. Se aplican las mismas reglas para ocultar los posibles datos personales en encabezados del mensaje de la sección anterior: los datos personales previamente identificados se quitan de forma predeterminada de los encabezados en trazas. El administrador del equipo y el implementador de la aplicación deben modificar la configuración para registrar potencialmente datos personales. Sin embargo, los datos personales contenidos en encabezados específicos de la aplicación están registrados en trazas. El implementador de la aplicación es el responsable de establecer las ACL en los archivos de seguimiento y configuración. También pueden desactivar el seguimiento para ocultar esta información o filtrar esta información de los archivos de seguimiento después de registrarla.  
   
  Como parte de la traza de ServiceModel, los id. únicos (llamados id. de actividad y normalmente un GUID) vinculan actividades diferentes juntas como un mensaje fluye a través de diferentes partes de la infraestructura.  
   
 #### <a name="custom-trace-listeners"></a>Agentes de escucha de traza personalizados  
- Para el registro y la traza de mensajes, se puede configurar un agente de escucha de traza personalizado que puede enviar rastros y mensajes en la conexión (por ejemplo, a una base de datos remota). El implementador de la aplicación es el responsable de configurar agentes de escucha personalizados o habilitar los usuarios para ello. También es responsable de obtener los datos personales expuestos en la ubicación remota y de aplicar correctamente ACL a esta ubicación.  
+ Para el registro y la traza de mensajes, se puede configurar un agente de escucha de traza personalizado que puede enviar rastros y mensajes en la conexión (por ejemplo, a una base de datos remota). El implementador de la aplicación es el responsable de configurar agentes de escucha personalizados o habilitar los usuarios para ello. También son responsables de cualquier información personal expuesta en la ubicación remota y de aplicar correctamente las ACL a esta ubicación.  
   
 ### <a name="other-features-for-it-professionals"></a>Otras características para profesionales de TI  
  WCF tiene un proveedor de WMI que expone la información de configuración de la infraestructura de WCF a través de WMI (incluido con Windows). De forma predeterminada, la interfaz WMI está disponible para los administradores.  
@@ -401,7 +401,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  El Lenguaje de descripción de servicios Web (WSDL) contiene una definición del puerto. Cada puerto tiene una dirección del extremo y un enlace que representa los servicios utilizados por la aplicación. Exponer WSDL se puede desactivar utilizando la configuración. No se retiene información en el equipo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Windows Communication Foundation](index.md)
 - [Seguridad](./feature-details/security.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714584"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094753"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para mostrar el uso de la `TransactionFlowAttribute` con la enumeración **TransactionFlowOption** para determinar en qué grado se habilita el flujo de transacciones. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF. Consulte [configuración de la compatibilidad con transacciones WS-Atomic](https://go.microsoft.com/fwlink/?LinkId=190370) para obtener información sobre cómo configurar WsatConfig. exe.  
+    > Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF. Para obtener información sobre cómo configurar WsatConfig. exe, consulte [configuración de la compatibilidad con transacciones WS-Atomic](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
  Tanto si ejecuta el ejemplo en el mismo equipo como en equipos diferentes, debe configurar Microsoft Coordinador de transacciones distribuidas (MSDTC) para habilitar el flujo de transacciones de red y usar la herramienta WsatConfig. exe para habilitar la compatibilidad de red de las transacciones de WCF.  
   

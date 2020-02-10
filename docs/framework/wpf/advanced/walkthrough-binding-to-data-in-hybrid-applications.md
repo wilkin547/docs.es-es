@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794220"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095078"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Tutorial: Enlazar a datos en aplicaciones híbridas
 
@@ -35,13 +35,13 @@ Las tareas ilustradas en este tutorial incluyen:
 
 - Enlazar al origen de datos.
 
-Para obtener una lista de código completa de las tareas ilustradas en este tutorial, consulte [Data Binding in Hybrid Applications Sample](https://go.microsoft.com/fwlink/?LinkID=159983).
+Para obtener una lista de código completa de las tareas ilustradas en este tutorial, consulte [Data Binding in Hybrid Applications Sample](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding).
 
 Cuando acabe, entenderá mejor las características de enlace de datos en aplicaciones híbridas.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Necesita los componentes siguientes para completar este tutorial:
+Necesitará los componentes siguientes para completar este tutorial:
 
 - Visual Studio.
 
@@ -181,11 +181,11 @@ El componente <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithT
 
 10. Presione F5 para compilar y ejecutar la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Diseño de XAML en Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Ejemplo de enlace de datos en aplicaciones híbridas](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Ejemplo de enlace de datos en aplicaciones híbridas](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

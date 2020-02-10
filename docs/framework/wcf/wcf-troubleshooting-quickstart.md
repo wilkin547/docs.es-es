@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d1cae7ad2ac0fdf963d11911484b1bd534cbc129
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919939"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094740"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Inicio rápido de solución de problemas de WCF
 En este tema se enumeran muchos problemas conocidos que los clientes han detectado al desarrollar clientes y servicios de WCF. Si el problema que tiene no aparece en esta lista, se recomienda que configure la traza del servicio. De esta forma, se genera un archivo de seguimiento que puede ver con el visor de archivos de seguimiento y obtiene información detallada sobre las excepciones que se pueden producir en el servicio. Para obtener más información sobre la configuración del seguimiento, consulte [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md). Para obtener más información sobre cómo usar el visor de archivos de seguimiento, consulte [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -47,19 +47,19 @@ En este tema se enumeran muchos problemas conocidos que los clientes han detecta
   
  Error HTTP 404.3 – No encontrada. La página que solicita no puede presentarse debido a la configuración de la extensión. Si la página es un script, agregue un controlador. Si se descarga el archivo, agregue un mapa MIME. Error detallado InformationModule StaticFileModule.  
   
- Este mensaje de error se produce cuando "Windows Communication Foundation activación HTTP" no se establece explícitamente en el panel de control. Para establecer esto vaya al Panel de control, programas de la esquina inferior izquierda de la ventana. Haga clic en Activar o desactivar las características de Windows. Expanda el elemento con la etiqueta Microsoft .NET Framework 3.5.1, seleccione Activación HTTP de Windows Communication Foundation .  
+ Este mensaje de error se produce cuando "Windows Communication Foundation activación HTTP" no se establece explícitamente en el panel de control. Para establecer esta configuración, vaya al panel de control y haga clic en programas en la esquina inferior izquierda de la ventana. Haga clic en Activar o desactivar las características de Windows. Expanda el elemento con la etiqueta Microsoft .NET Framework 3.5.1, seleccione Activación HTTP de Windows Communication Foundation .  
   
 <a name="BKMK_q1"></a>   
-## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>A veces recibo una excepción MessageSecurityException en la segunda solicitud si mi cliente está inactivo durante algún tiempo después de la primera solicitud. ¿Qué sucede?  
+## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>A veces recibo una excepción MessageSecurityException en la segunda solicitud si mi cliente está inactivo durante algún tiempo después de la primera solicitud. ¿Qué pasa?  
  Se puede producir un error en la segunda solicitud principalmente por dos razones: (1) se ha agotado de tiempo de espera de la sesión o (2) se recicla el servidor web que está hospedando el servicio. En el primer caso, la sesión es válida hasta que se agota el tiempo de espera del servicio. Cuando el servicio no recibe una solicitud del cliente dentro del período de tiempo especificado en el enlace del servicio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), el servicio finaliza la sesión de seguridad. Los siguientes mensajes del cliente producen <xref:System.ServiceModel.Security.MessageSecurityException>. El cliente debe restablecer una sesión segura con el servicio para enviar los futuros mensajes o utilizar un token de contexto de seguridad con estado. Los tokens de contexto de seguridad con estado también permiten que una sesión segura sobreviva a un servidor web que se recicla. Para obtener más información sobre el uso de tokens de contexto seguro con estado en una sesión segura, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). También puede deshabilitar las sesiones seguras. Al usar el enlace [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) , puede establecer la propiedad `establishSecurityContext` en `false` para deshabilitar las sesiones seguras. Para deshabilitar las sesiones seguras para otros enlaces, debe crear un enlace personalizado. Para obtener más información sobre cómo crear un enlace personalizado, consulte [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Antes de aplicar cualquiera de estas opciones, debe entender los requisitos de seguridad de su aplicación.  
   
 <a name="BKMK_q2"></a>   
-## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Mi servicio empieza a rechazar nuevos clientes cuando interactúa con unos 10 clientes. ¿Qué sucede?  
+## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Mi servicio empieza a rechazar nuevos clientes cuando interactúa con unos 10 clientes. ¿Qué pasa?  
  De forma predeterminada, los servicios pueden tener solo 10 sesiones simultáneas. Por tanto, si los enlaces del servicio utilizan sesiones, el servicio acepta nuevas conexiones de cliente hasta que alcance ese numero, después del cual rechaza nuevas conexiones de cliente hasta que finaliza una de las sesiones actuales. Puede admitir más clientes de varias maneras. Si su servicio no requiere sesiones, no utilice un enlace con sesión. (Para obtener más información, consulte [uso de sesiones](using-sessions.md)). Otra opción es aumentar el límite de sesión cambiando el valor de la propiedad <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> al número adecuado para su circunstancia.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>¿Puedo cargar mi configuración de servicio desde otra parte que no sea el archivo de configuración de la aplicación WCF?  
- Sí, sin embargo, tiene que crear una clase <xref:System.ServiceModel.ServiceHost> personalizada que invalide el método <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> . Dentro de ese método, puede llamar a la base para cargar primero la configuración (si desea también cargar la información de configuración estándar), pero también puede reemplazar completamente el sistema de carga de configuración. Tenga en cuenta que si desea cargar la configuración desde un archivo de configuración que es diferente del archivo de configuración de la aplicación, debe analizar usted mismo el archivo de configuración y cargar la configuración.  
+ Sí, sin embargo, tiene que crear una clase <xref:System.ServiceModel.ServiceHost> personalizada que invalide el método <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> . Dentro de ese método, puede llamar a la base para cargar primero la configuración (si desea también cargar la información de configuración estándar), pero también puede reemplazar completamente el sistema de carga de configuración. Si desea cargar la configuración desde un archivo de configuración diferente del archivo de configuración de la aplicación, debe analizar el archivo de configuración y cargar la configuración.  
   
  El siguiente ejemplo de código muestra cómo invalidar el método <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> y configurar directamente un extremo.  
   
@@ -130,7 +130,7 @@ public class MyServiceHost : ServiceHost
   
     3. Hospede el servicio bajo IIS (Servicios de Internet Information Services) (IIS) que, de forma predeterminada, utiliza la cuenta del nombre de entidad de seguridad de servicio (SPN).  
   
-    4. Registre un nuevo SPN con el dominio utilizando SetSPN. Tenga en cuenta que, para ello, necesitará ser un administrador de dominio.  
+    4. Registre un nuevo SPN con el dominio utilizando SetSPN. Para ello, debe ser un administrador de dominio.  
   
  Para obtener más información acerca del protocolo Kerberos, vea [conceptos de seguridad usados en WCF](./feature-details/security-concepts-used-in-wcf.md) y:  
   
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>He cambiado el primer parámetro de una operación de mayúsculas a minúsculas; ahora mi cliente produce una excepción. ¿Qué sucede?  
- El valor de los nombres de parámetro en la firma de la operación forma parte del contrato y distingue entre mayúsculas y minúsculas. Utilice el atributo <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> cuando necesite distinguir entre el nombre de parámetro local y los metadatos que describen la operación para las aplicaciones cliente.  
+ Los valores de los nombres de parámetro en la firma de la operación forman parte del contrato y distinguen mayúsculas de minúsculas. Utilice el atributo <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> cuando necesite distinguir entre el nombre de parámetro local y los metadatos que describen la operación para las aplicaciones cliente.  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Estoy utilizando una de mis herramientas de traza y obtengo la excepción EndpointNotFoundException. ¿Qué sucede?  
@@ -193,7 +193,7 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q10"></a>   
-## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>¿Cuál es la dirección base? ¿Cómo se relaciona con una dirección de punto de conexión?  
+## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>¿Cuál es la dirección base? ¿Cómo se relaciona con una dirección de extremo?  
  Una dirección base es la dirección de raíz para una clase <xref:System.ServiceModel.ServiceHost> . De forma predeterminada, si agrega una clase <xref:System.ServiceModel.Description.ServiceMetadataBehavior> en su configuración de servicio, el lenguaje de descripción de servicios Web (WSDL) para todos los extremos que publica el host se recupera de la dirección base de HTTP, más cualquier dirección relativa proporcionada al comportamiento de los metadatos, más "? wsdl". Si está familiarizado con ASP.NET e IIS, la dirección base es equivalente al directorio virtual.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Compartir un puerto entre un extremo de servicio y un extremo mex mediante NetTcpBinding  
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Verá un error como el siguiente: Excepción no controlada: System.ServiceModel.AddressAlreadyInUseException: Ya hay una escucha en el extremo IP0.0.0.0:9000. Para solucionar este error, especifique una dirección URL completa con un puerto diferente para el extremo MEX, como se muestra en el siguiente fragmento de código de configuración:  
+ Verá un error como el siguiente: Excepción no controlada: System.ServiceModel.AddressAlreadyInUseException: Ya hay una escucha en el punto de conexión IP0.0.0.0:9000. Para solucionar este error, especifique una dirección URL completa con un puerto diferente para el punto de conexión MEX, como se muestra en el siguiente fragmento de código de configuración:  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Al llamar a una aplicación web HTTP de WCF desde una aplicación SOAP de WCF, el servicio devuelve el siguiente error: 405 Método no permitido  
- Llamar a una aplicación Web HTTP de WCF (un servicio que utiliza el <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior>) de un servicio WCF puede generar la siguiente excepción: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: el servidor remoto devolvió una respuesta inesperada: (405) no se permite el método. ' esta excepción se produce porque WCF sobrescribe el <xref:System.ServiceModel.OperationContext> saliente con el <xref:System.ServiceModel.OperationContext>entrante. Para resolver este problema cree un <xref:System.ServiceModel.OperationContextScope> dentro de la operación del servicio web HTTP de WCF. Por ejemplo:  
+ La llamada a una aplicación Web HTTP de WCF (un servicio que utiliza el <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior>) de un servicio WCF puede generar la siguiente excepción: ``Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The remote server returned an unexpected response: (405) Method Not Allowed.`` esta excepción se produce porque WCF sobrescribe el <xref:System.ServiceModel.OperationContext> saliente con el <xref:System.ServiceModel.OperationContext>entrante. Para solucionar este problema, cree una <xref:System.ServiceModel.OperationContextScope> dentro de la operación del servicio Web HTTP de WCF. Por ejemplo:  
   
 ```csharp
 public string Echo(string input)  
@@ -249,6 +249,6 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Depuración de errores de autenticación de Windows](./feature-details/debugging-windows-authentication-errors.md)

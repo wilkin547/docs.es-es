@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: f6f2fd0bbbc191d466ac600bd9639c8955d5b7fe
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 448eef6ea147b725600b774026155acc1fca6d36
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715675"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094870"
 ---
 # <a name="tracing-and-message-logging"></a>Seguimiento y registro de mensajes
 Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los seguimientos y registros de mensajes resultantes se ven mediante la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
-## <a name="tracing"></a>Traza  
+## <a name="tracing"></a>Seguimiento  
  Windows Communication Foundation (WCF) utiliza el mecanismo de seguimiento definido en el espacio de nombres <xref:System.Diagnostics>. Los orígenes de seguimiento que las aplicaciones implementan generan la información de seguimiento en este modelo de seguimiento. Un nombre identifica cada origen. Los consumidores de seguimiento crean los agentes de escucha de seguimiento para los orígenes de seguimiento para los que desean recuperar información. Debe crear un agente de escucha para que el origen de seguimiento reciba la información de seguimiento. En WCF, esto se puede hacer agregando el código siguiente al archivo de configuración del cliente o del servicio mediante la configuración del origen de seguimiento del modelo de servicio `switchValue`:  
   
 ```xml  
@@ -132,7 +132,7 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Traza](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

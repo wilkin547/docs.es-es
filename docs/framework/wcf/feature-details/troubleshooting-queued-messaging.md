@@ -2,18 +2,18 @@
 title: Solución de problemas de la mensajería en cola
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921266"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095013"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 
 Esta sección contiene preguntas comunes y ayuda para el uso de colas en Windows Communication Foundation (WCF).
 
-## <a name="common-questions"></a>Preguntas comunes
+## <a name="common-questions"></a>Preguntas frecuentes
 
 **P:** He usado WCF beta 1 e he instalado la revisión de MSMQ. ¿Debo quitar la revisión?
 
@@ -47,13 +47,13 @@ Para obtener más información, vea [diferencias en las características de cola
 
 **R:** No. No tiene que actualizar a MSMQ 4.0 en ningún lado.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Esta sección contiene las respuestas a la mayoría de problemas más comunes. Algunos problemas que son limitaciones conocidas también se describen en las notas de la versión.
 
 **P:** Estoy intentando usar una cola privada y obtengo la siguiente excepción: `System.InvalidOperationException`: la dirección URL no es válida. La dirección URL para la cola no puede contener el carácter '$'. Utilice la sintaxis en net.msmq://machine/private/queueName para direccionar una cola privada.
 
-**R:** Compruebe el identificador uniforme de recursos (URI) de la cola en la configuración y el código. No utilice el carácter "$" en el URI. Por ejemplo, para direccionar una cola privada denominada OrdersQueue, especifique el URI como net.msmq://localhost/private/ordersQueue.
+**R:** Compruebe el identificador uniforme de recursos (URI) de la cola en la configuración y el código. No utilice el carácter "$" en el URI. Por ejemplo, para direccionar una cola privada denominada OrdersQueue, especifique el URI como `net.msmq://localhost/private/ordersQueue`.
 
 **P:** La llamada a `ServiceHost.Open()` en la aplicación en cola produce la siguiente excepción: `System.ArgumentException`: una dirección base no puede contener una cadena de consulta de URI. ¿Por qué?
 
@@ -77,7 +77,7 @@ Esta sección contiene las respuestas a la mayoría de problemas más comunes. A
 
 - Compruebe la conectividad o los problemas de direccionamiento de las colas de salida.
 
-**P:** He especificado una cola de mensajes no enviados personalizada, pero cuando se inicia la aplicación remitente, obtengo una excepción que indica que no se encuentra la cola de mensajes no enviados o que la aplicación emisora no tiene permiso para la cola de mensajes no enviados. ¿Por qué está sucediendo esto?
+**P:** He especificado una cola de mensajes no enviados personalizada, pero cuando se inicia la aplicación remitente, obtengo una excepción que indica que no se encuentra la cola de mensajes no enviados o que la aplicación emisora no tiene permiso para la cola de mensajes no enviados. ¿Por qué ocurre esto?
 
 **R:** El URI de la cola de mensajes no enviados personalizada debe incluir un "localhost" o el nombre del equipo en el primer segmento, por ejemplo, net. MSMQ://localhost/private/myAppdead-letter Queue.
 
@@ -89,7 +89,7 @@ Si los seguros son ninguno (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnc
 
 **P:** El servicio se inicia en SvcHost. Open con un mensaje que indica que el Endpointlistener no puede cumplir los requisitos de EndpointListener. ¿Por qué?
 
-Un archivo . Compruebe su contrato de servicios. Es posible que haya olvidado poner "IsOneWay =`true`" en todas las operaciones de servicio. Las colas solo admiten las operaciones de servicio unidireccionales.
+A. Compruebe su contrato de servicios. Es posible que haya olvidado poner "IsOneWay =`true`" en todas las operaciones de servicio. Las colas solo admiten las operaciones de servicio unidireccionales.
 
 **P:** Hay mensajes en la cola, pero no se invoca ninguna operación de servicio. ¿Cuál es el problema?
 
@@ -132,7 +132,7 @@ La cola de mensajes no enviados del sistema, así como cualquier cola de mensaje
 
 **P:** Cuando utilizo un nombre de formato público o privado y abro el host de servicio en Windows Vista, obtengo un error. ¿Por qué?
 
-**R:** El canal de integración de WCF en Windows Vista comprueba si se puede abrir una subcola para la cola de la aplicación principal para administrar los mensajes dudosos. El nombre de la subcola se deriva de un URI de msmq.formatname pasado a la escucha. El nombre de la subcola en MSMQ solo puede ser un nombre de formato directo. Aquí radica el error. Cambie el URI de la cola a un nombre de formato directo.
+**R:** El canal de integración de WCF en Windows Vista comprueba si se puede abrir una subcola para la cola de la aplicación principal para administrar los mensajes dudosos. El nombre de la subcola se deriva de un URI de MSMQ. FormatName pasado al agente de escucha. El nombre de la subcola en MSMQ solo puede ser un nombre de formato directo. Aquí radica el error. Cambie el URI de la cola a un nombre de formato directo.
 
 **P:** Al recibir un mensaje de una aplicación MSMQ, el mensaje se coloca en la cola y la aplicación WCF receptora no lo lee. ¿Por qué?
 
@@ -150,11 +150,11 @@ Otra solución alternativa es recibir <xref:System.ServiceModel.MsmqTransportSec
 
 Todavía otra solución alternativa es instalar MSMQ con integración de Active Directory.
 
-**P:** Cuando se envía un mensaje con el enlace predeterminado (seguridad de transporte activada) en Active Directory a una cola, aparece el mensaje "no se encontró el certificado interno". ¿Cómo se puede solucionar?
+**P:** Cuando se envía un mensaje con el enlace predeterminado (seguridad de transporte activada) en Active Directory a una cola, aparece el mensaje "no se encontró el certificado interno". ¿Cómo puedo corregirlo?
 
 **R:** Esto significa que el certificado en Active Directory para el remitente debe renovarse. Para ello, abra el **Panel de control**, **herramientas administrativas**, **Administración de equipos**, haga clic con el botón secundario en **MSMQ**y seleccione **propiedades**. Seleccione la pestaña **certificado de usuario** y haga clic en el botón **renovar** .
 
-**P:** Cuando se envía un mensaje mediante <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> y se especifica el certificado que se va a utilizar, aparece un mensaje que indica que el certificado no es válido. ¿Cómo se puede solucionar?
+**P:** Cuando se envía un mensaje mediante <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> y se especifica el certificado que se va a utilizar, aparece un mensaje que indica que el certificado no es válido. ¿Cómo puedo corregirlo?
 
 **R:** No se puede usar un almacén de certificados del equipo local con el modo de certificado. Tiene que copiar el certificado del almacén de certificados del equipo al almacén del usuario actual utilizando el complemento del certificado. Para obtener el complemento del certificado:
 
@@ -170,19 +170,19 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 6. Después, agregue un segundo complemento certificados con los pasos anteriores, pero esta vez seleccione cuenta de **equipo** y haga clic en **siguiente**.
 
-7. Seleccione **equipo local** y haga clic en **Finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.
+7. Seleccione **Equipo local** y, después, haga clic en **Finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.
 
 **P:** Cuando el servicio Lee de una cola de otro equipo en el modo de grupo de trabajo, obtengo una excepción de "acceso denegado".
 
 **R:** En el modo de grupo de trabajo, para que una aplicación remota obtenga acceso a la cola, la aplicación debe tener permiso de acceso a la cola. Agregue "Inicio de sesión anónimo" a la lista de control de acceso (ACL) de la cola y concédale el permiso de lectura.
 
-**P:** Cuando un cliente de servicio de red (o cualquier cliente que no tiene una cuenta de dominio) envía un mensaje en cola, se produce un error de envío con un certificado no válido. ¿Cómo se puede solucionar?
+**P:** Cuando un cliente de servicio de red (o cualquier cliente que no tiene una cuenta de dominio) envía un mensaje en cola, se produce un error de envío con un certificado no válido. ¿Cómo puedo corregirlo?
 
 **R:** Compruebe la configuración de enlace. El enlace predeterminado tiene la seguridad de transporte de MSMQ activada para firmar el mensaje. Desactívela.
 
 ### <a name="remote-transacted-receives"></a>Recepciones de transacción remotas
 
-**P:** Cuando tengo una cola en el equipo A y un servicio WCF que lee los mensajes de una cola en el equipo B (el escenario de recepción de transacción remota), los mensajes no se leen de la cola. La información de seguimiento indica que se produjo un error en la recepción con el mensaje "no se puede importar la transacción". ¿Qué puedo hacer para solucionarlo?
+**P:** Cuando tengo una cola en el equipo A y un servicio WCF que lee los mensajes de una cola en el equipo B (el escenario de recepción de transacción remota), los mensajes no se leen de la cola. La información de seguimiento indica que se produjo un error en la recepción con el mensaje "no se puede importar la transacción". ¿Qué puedo hacer para solucionar esto?
 
 **R:** Existen tres razones posibles para ello:
 
@@ -208,4 +208,4 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Utilizar los enlaces personalizados de MSMQ con ReceiveContext habilitado
 
-Al utilizar un enlace personalizado de MSMQ con <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, al procesar un mensaje entrante se utilizará un subproceso del grupo de subprocesos porque MSMQ nativo no admite la realización de E/S para recepciones <xref:System.ServiceModel.Channels.ReceiveContext> asincrónicas. Esto se debe a que, al procesar este tipo de mensaje, se utilizan transacciones internas para <xref:System.ServiceModel.Channels.ReceiveContext> y MSMQ no admite el procesamiento asincrónico. Para evitar este problema, puede agregar <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> al punto de conexión para forzar el procesamiento sincrónico, o establecer <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> en 1.
+Cuando se usa un enlace MSMQ personalizado con <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, el procesamiento de un mensaje entrante usa un subproceso del grupo de subprocesos porque MSMQ nativo no admite la finalización de e/s para las recepciones de <xref:System.ServiceModel.Channels.ReceiveContext> asincrónicas. Esto se debe a que el procesamiento de este tipo de mensaje usa transacciones internas para <xref:System.ServiceModel.Channels.ReceiveContext> y MSMQ no admite el procesamiento asincrónico. Para solucionar este problema, puede Agregar un <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> al punto de conexión para forzar el procesamiento sincrónico o establecer <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> en 1.

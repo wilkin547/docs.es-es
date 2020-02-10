@@ -2,12 +2,12 @@
 title: Seguimiento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715564"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094597"
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
 Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona seguimiento de flujo de trabajo para obtener visibilidad de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información sobre el seguimiento del flujo de trabajo, vea [seguimiento y](../workflow-tracking-and-tracing.md)seguimiento del flujo de trabajo.
@@ -23,7 +23,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
 
 3. Abra SqlTrackingSample. sln en Visual Studio 2010.
 
-4. Presione Ctrl+MAYÚS+B para compilar la solución.
+4. Presione CTRL+MAYÚS+B para compilar la solución.
 
 5. Presione F5 para ejecutar la aplicación.
 
@@ -41,7 +41,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
 
 10. En el cliente de prueba WCF, haga doble clic en **GetStockPrice**. Se abrirá la `GetStockPrice` operación que toma un parámetro, se escribe en el valor `Contoso` y se hace clic en **invocar**.
 
-11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. Para obtener más información acerca de SQL Server Management Studio, consulte [introducing SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express se puede descargar [aquí](https://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.
+11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. Para obtener más información acerca de SQL Server Management Studio, consulte [introducing SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms). SQL Server 2008 Management Studio Express se puede descargar [aquí](https://www.microsoft.com/download/details.aspx?id=7593). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.
 
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar el ejemplo
 
@@ -59,6 +59,6 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

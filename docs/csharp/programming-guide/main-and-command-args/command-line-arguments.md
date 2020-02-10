@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75700645"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093515"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 
@@ -78,6 +78,6 @@ Para compilar y ejecutar la aplicación desde un símbolo del sistema, siga esto
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Guía de programación de C#](../index.md)
 - [Main() y argumentos de la línea de comandos](index.md)
-- [Procedimiento Mostrar argumentos de la línea de comandos](how-to-display-command-line-arguments.md)
+- [Procedimiento para mostrar argumentos de la línea de comandos](how-to-display-command-line-arguments.md)
 - [Valores devueltos de Main()](main-return-values.md)
 - [Clases](../classes-and-structs/classes.md)

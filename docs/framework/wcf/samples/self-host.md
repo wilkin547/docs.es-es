@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 9077f2b00c97ae2a2106a50780cfd2cd9596c1ec
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5a94eff021074a24df5b8891fe7b418b1fcf3c35
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716318"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094922"
 ---
 # <a name="self-host"></a>Probar internamente
 Este ejemplo muestra cómo implementar un servicio autohospedado en una aplicación de la consola. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). Se ha cambiado el nombre al archivo de configuración de servicio de Web.config a App.config y se ha modificado para configurar una dirección base, que el host utiliza. El código fuente del servicio se ha modificado para implementar una función `Main` estática que crea y abre un host de servicio que proporciona la dirección base configurada. La implementación del servicio se ha modificado para escribir la salida en la consola para cada operación. No se ha modificado el cliente, salvo para configurar la dirección del extremo correcta del servicio.  
@@ -41,7 +41,7 @@ public static void Main()
 }  
 ```  
   
- Cuando un servicio se hospeda en Internet Information Services (IIS) o el Servicio de activación de procesos de Windows (WAS), el entorno de hospedaje proporciona la dirección base del servicio. En el caso de que sea autohospedado, deberá especificar la dirección base. Esto se hace mediante el elemento `add`, el elemento secundario de [\<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), el elemento secundario de [\<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), el elemento secundario del [servicio\<](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) como se muestra en la configuración del ejemplo siguiente.  
+ Cuando un servicio se hospeda en Internet Information Services (IIS) o el Servicio de activación de procesos de Windows (WAS), el entorno de hospedaje proporciona la dirección base del servicio. En el caso de que sea autohospedado, deberá especificar la dirección base. Esto se hace mediante el elemento `add`, el elemento secundario de [\<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), el elemento secundario de [\<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), el elemento secundario del [servicio\<>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <service   
@@ -75,6 +75,6 @@ public static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Ejemplos de hospedaje y persistencia de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Ejemplos de hospedaje y persistencia de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

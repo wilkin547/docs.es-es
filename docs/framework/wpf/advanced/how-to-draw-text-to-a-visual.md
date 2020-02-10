@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Dibujar texto en un elemento visual
+title: 'Cómo: Dibujar texto en un elemento visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - text [WPF], drawing to visuals
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
-ms.openlocfilehash: bd760a06150098d0fff17dbdce95b55a0e5fe713
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 654bfadb42f053b6dcf353d4423bddf281d69478
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963841"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094558"
 ---
-# <a name="how-to-draw-text-to-a-visual"></a>Procedimiento Dibujar texto en un elemento visual
-En el ejemplo siguiente se muestra cómo dibujar texto en <xref:System.Windows.Media.DrawingVisual> mediante un <xref:System.Windows.Media.DrawingContext> objeto. Un contexto de dibujo se devuelve mediante una <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> llamada al método <xref:System.Windows.Media.DrawingVisual> de un objeto. Puede dibujar gráficos y texto en un contexto de dibujo.  
+# <a name="how-to-draw-text-to-a-visual"></a>Cómo: Dibujar texto en un elemento visual
+En el ejemplo siguiente se muestra cómo dibujar texto en un <xref:System.Windows.Media.DrawingVisual> mediante un objeto <xref:System.Windows.Media.DrawingContext>. Un contexto de dibujo se devuelve mediante una llamada al método <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> de un objeto <xref:System.Windows.Media.DrawingVisual>. Puede dibujar gráficos y texto en un contexto de dibujo.  
   
- Para dibujar texto en el contexto del dibujo, use <xref:System.Windows.Media.DrawingContext.DrawText%2A> el método de <xref:System.Windows.Media.DrawingContext> un objeto. Cuando haya terminado de dibujar el contenido en el contexto del dibujo, <xref:System.Windows.Media.DrawingContext.Close%2A> llame al método para cerrar el contexto del dibujo y conservar el contenido.  
+ Para dibujar texto en el contexto del dibujo, use el método <xref:System.Windows.Media.DrawingContext.DrawText%2A> de un objeto <xref:System.Windows.Media.DrawingContext>. Cuando haya terminado de dibujar el contenido en el contexto del dibujo, llame al método <xref:System.Windows.Media.DrawingContext.Close%2A> para cerrar el contexto del dibujo y conservar el contenido.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[DrawingVisualSample#110](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#110)]
  [!code-vb[DrawingVisualSample#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#110)]  
   
 > [!NOTE]
-> Para obtener el código completo del que se ha extraído el ejemplo de código anterior, vea [Ejemplo Hit Test Using DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994).
+> Para obtener el código completo del que se ha extraído el ejemplo de código anterior, vea [Ejemplo Hit Test Using DrawingVisuals](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual).

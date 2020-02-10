@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794270"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094506"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de los desarrolladores de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no tendrán que escribir una interfaz que use más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.
@@ -99,7 +99,7 @@ ms.locfileid: "76794270"
 
  Este método comprueba si el siguiente número impar es primo. Si es primo, el método actualiza directamente el <xref:System.Windows.Controls.TextBlock> `bigPrime`para reflejar su detección. Se puede hacer porque el cálculo se está produciendo en el mismo subproceso que se ha usado para crear el componente. Si hubiéramos elegido usar un subproceso independiente para el cálculo, tendríamos que usar un mecanismo de sincronización más complicado y ejecutar la actualización en el subproceso de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. A continuación se mostrará esta situación.
 
- Para obtener el código fuente completo de este ejemplo, consulte el [ejemplo de aplicación de un único subproceso con un cálculo de ejecución prolongada](https://go.microsoft.com/fwlink/?LinkID=160038) .
+ Para obtener el código fuente completo de este ejemplo, consulte el [ejemplo de aplicación de un único subproceso con un cálculo de ejecución prolongada](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication) .
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Control de una operación de bloqueo con un subproceso en segundo plano
@@ -215,6 +215,6 @@ ms.locfileid: "76794270"
 
  La tarea para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es evitar la reentrada inesperada sin volver a introducir la fuga de memoria, motivo por el que no se bloquea la reentrada en todas partes.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Single-Threaded Application with Long-Running Calculation Sample](https://go.microsoft.com/fwlink/?LinkID=160038) (Ejemplo de aplicación de un único subproceso con un cálculo de ejecución prolongada)
+- [Single-Threaded Application with Long-Running Calculation Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication) (Ejemplo de aplicación de un único subproceso con un cálculo de ejecución prolongada)

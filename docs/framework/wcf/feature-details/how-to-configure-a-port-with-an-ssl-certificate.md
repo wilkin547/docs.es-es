@@ -9,37 +9,27 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 412aa2bb2a56fbe654b0d9ce5f4b9b5176fc5549
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 99a08c9714e8f8cef0c1c96ac7f890d163324b44
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921303"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095026"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Cómo: Configurar un puerto con un certificado SSL
+
 Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con la clase <xref:System.ServiceModel.WSHttpBinding> que usa la seguridad de transporte, también debe configurar un puerto con un certificado X. 509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, vea [seguridad de transporte http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
   
- Si está ejecutando Windows Server 2003 o Windows XP, use la herramienta HttpCfg. exe. Con Windows Server 2003, esta herramienta está instalada. Con Windows XP, puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [información general de Httpcfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). La [documentación](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) de las herramientas de soporte de Windows explica la sintaxis de la herramienta Httpcfg. exe.  
+ Si está ejecutando Windows Server 2003, use la herramienta HttpCfg. exe. En Windows Server 2003, esta herramienta está instalada. Para obtener más información, consulte [información general de Httpcfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). La [documentación](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) de las herramientas de soporte de Windows explica la sintaxis de la herramienta Httpcfg. exe.  
   
- Si está ejecutando Windows Vista, use la herramienta netsh. exe que ya está instalada.  
+ Si está ejecutando Windows Vista, use la herramienta netsh. exe que ya está instalada. 
   
- En este tema se describe cómo se realizan varios procedimientos:  
+> [!NOTE]
+> La modificación de los certificados almacenados en el equipo requiere privilegios administrativos.  
   
-- Determinar la configuración de puerto actual de un equipo.  
-  
-- Obtener la huella digital de un certificado (necesario para los dos procedimientos siguientes).  
-  
-- Enlazar un certificado SSL a una configuración de puerto.  
-  
-- Enlazar un certificado SSL a una configuración del puerto y admitir los certificados de cliente.  
-  
-- Eliminar un certificado SSL de un número de puerto.  
-  
- Tenga en cuenta que para modificar los certificados almacenados en el equipo se requieren privilegios de administrador.  
-  
-### <a name="to-determine-how-ports-are-configured"></a>Determinar cómo se configuran los puertos  
+## <a name="determine-how-ports-are-configured"></a>Determinar cómo se configuran los puertos  
   
 1. En Windows Server 2003 o Windows XP, use la herramienta HttpCfg. exe para ver la configuración de puerto actual, mediante los modificadores de **consulta** y **SSL** , tal y como se muestra en el ejemplo siguiente.  
   
@@ -53,17 +43,17 @@ Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con
     netsh http show sslcert  
     ```  
   
-### <a name="to-get-a-certificates-thumbprint"></a>Para obtener una huella digital de un certificado  
+## <a name="get-a-certificates-thumbprint"></a>Obtener la huella digital de un certificado  
   
-1. Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1. Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para más información, consulte [Visualización de certificados con el complemento MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2. Obtenga acceso a la huella digital del certificado. Para obtener más información, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Obtenga acceso a la huella digital del certificado. Para más información, consulte [Cómo recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Copie la huella digital del certificado en un editor de texto, como por ejemplo Bloc de notas.  
   
 4. Quite todos los espacios entre los caracteres hexadecimales. Una manera de llevarlo a cabo es utilizar la característica del editor de texto buscar y reemplazar y reemplazar todos los espacios con un carácter nulo.  
   
-### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Enlazar un Certificado SSL a un número de puerto  
+## <a name="bind-an-ssl-certificate-to-a-port-number"></a>Enlazar un certificado SSL a un número de Puerto  
   
 1. En Windows Server 2003 o Windows XP, use la herramienta HttpCfg. exe en el modo "SET" en el almacén de Capa de sockets seguros (SSL) para enlazar el certificado a un número de puerto. La herramienta utiliza la huella digital para identificar el certificado, tal y como se muestra en el ejemplo siguiente.  
   
@@ -87,7 +77,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con
   
     - El parámetro **AppID** es un GUID que se puede usar para identificar la aplicación propietaria.  
   
-### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Para enlazar un Certificado SSL a un número de puerto y a certificados de cliente de compatibilidad  
+## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Enlazar un certificado SSL a un número de puerto y certificados de cliente de soporte  
   
 1. En Windows Server 2003 o Windows XP, para admitir clientes que se autentican con certificados X. 509 en el nivel de transporte, siga el procedimiento anterior pero pase un parámetro de línea de comandos adicional a HttpCfg. exe, como se muestra en el ejemplo siguiente.  
   
@@ -103,7 +93,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
     ```  
   
-### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Eliminar un Certificado SSL desde un número de puerto  
+## <a name="delete-an-ssl-certificate-from-a-port-number"></a>Eliminar un certificado SSL de un número de Puerto  
   
 1. Use la herramienta HttpCfg.exe o Netsh.exe para ver los puertos y huellas digitales de todos los enlaces del equipo. Para imprimir la información en el disco, use el carácter de redireccionamiento ">", como se muestra en el ejemplo siguiente.  
   
@@ -124,11 +114,12 @@ Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente muestra cómo crear un servicio autohospedado utilizando la clase <xref:System.ServiceModel.WSHttpBinding> establezca para seguridad de transporte. Cuando cree una aplicación, especifique el número de puerto en la dirección.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

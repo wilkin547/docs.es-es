@@ -2,12 +2,12 @@
 title: Windows Communication Foundation a Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 2e37a6efac6b979645b2dbb338b64f698b3b97e0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: beb4382d61804e9b9ea12e1d191f3e96a637f871
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344614"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094805"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation a Message Queuing
 
@@ -131,7 +131,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Por ejemplo, podría ejecutar el cliente, cerrarlo e iniciar el servicio y seguiría recibiendo sus mensajes.
 
 > [!NOTE]
-> Este ejemplo requiere la instalación de Message Queuing. Vea las instrucciones de instalación en [Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94968).
+> Este ejemplo requiere la instalación de Message Queuing. Vea las instrucciones de instalación en [Message Queue Server](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)).
 
 ## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
@@ -174,7 +174,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [Message Queue Server](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

@@ -2,12 +2,12 @@
 title: Byrefs
 description: Obtenga información sobre los tipos byref y tipo ByRef F#en, que se usan para la programación de bajo nivel.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965820"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092793"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -114,17 +114,17 @@ C#admite las palabras clave `in ref` y `out ref`, además de `ref` devuelve. En 
 |------------|---------|
 |`ref` valor devuelto|`outref<'T>`|
 |`ref readonly` valor devuelto|`inref<'T>`|
-|`in ref` parámetro|`inref<'T>`|
-|`out ref` parámetro|`outref<'T>`|
+|Parámetro `in ref`|`inref<'T>`|
+|Parámetro `out ref`|`outref<'T>`|
 
 En la tabla siguiente se F# muestra lo que emite:
 
 |F#construir|Construcción emitida|
 |------------|-----------------|
-|`inref<'T>` argumento|`[In]` atributo en el argumento|
+|Argumento `inref<'T>`|`[In]` atributo en el argumento|
 |`inref<'T>` devolver|`modreq` atributo en el valor|
 |`inref<'T>` en la ranura o la implementación abstracta|`modreq` argumento on o Return|
-|`outref<'T>` argumento|`[Out]` atributo en el argumento|
+|Argumento `outref<'T>`|`[Out]` atributo en el argumento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferencia de tipos y reglas de sobrecarga
 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 Para devolver un valor ByRef, la variable que contiene el valor debe ser más larga que el ámbito actual.
-Además, para devolver ByRef, use & valor (donde valor es una variable que vive más tiempo que el ámbito actual).
+Además, para devolver ByRef, use `&value` (donde valor es una variable que vive más tiempo que el ámbito actual).
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Esto evita que se obtengan resultados diferentes en función de si se compila con las optimizaciones activadas o desactivadas.
+Esto evita que se obtengan resultados diferentes en función de si se compila con optimizaciones o no.

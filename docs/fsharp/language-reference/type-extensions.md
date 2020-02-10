@@ -1,13 +1,13 @@
 ---
 title: Extensiones de tipo
 description: Obtenga información F# sobre cómo las extensiones de tipo permiten agregar nuevos miembros a un tipo de objeto definido previamente.
-ms.date: 11/04/2019
-ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 02/05/2020
+ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341567"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092686"
 ---
 # <a name="type-extensions"></a>Extensiones de tipo
 
@@ -33,7 +33,8 @@ open System.Runtime.CompilerServices
 
 [<Extension>]
 type Extensions() =
-    [static] member self-identifier.extension-name (ty: typename, [args]) =
+    [<Extension>]
+    static member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -136,12 +137,21 @@ namespace Extensions
 open System.Runtime.CompilerServices
 
 [<Extension>]
-type IEnumerableExtensions() =
+type IEnumerableExtensions =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
 Cuando se usa, este código aparecerá como si `Sum` se define en <xref:System.Collections.Generic.IEnumerable%601>, siempre y cuando `Extensions` se haya abierto o esté en el ámbito.
+
+Para que la extensión esté disponible para el código VB.NET, se requiere un `ExtensionAttribute` adicional en el nivel de ensamblado:
+
+```fsharp
+module AssemblyInfo
+open System.Runtime.CompilerServices
+[<assembly:Extension>]
+do ()
+```
 
 ## <a name="other-remarks"></a>Otros comentarios
 
@@ -166,7 +176,7 @@ También existen las siguientes limitaciones para las extensiones de tipo:
 
 Por último, si existen varias extensiones de tipo intrínsecas para un tipo, todos los miembros deben ser únicos. En el caso de las extensiones de tipo opcionales, los miembros de diferentes extensiones de tipo al mismo tipo pueden tener los mismos nombres. Los errores de ambigüedad solo se producen si el código de cliente abre dos ámbitos diferentes que definen los mismos nombres de miembro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia del lenguaje F#](index.md)
 - [Miembros](./members/index.md)

@@ -2,12 +2,12 @@
 title: Seguimiento de eventos en Seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715928"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094584"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
 
@@ -57,7 +57,7 @@ El participante de seguimiento se suscribe un subconjunto de los registros de se
 
 5. En el cliente de prueba de WCF, seleccione **Agregar servicio** en el menú **archivo** .
 
-    Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es `http://localhost:53797/SampleWorkflowService.xamlx`.
+    Agregue la dirección del punto de conexión en el cuadro de entrada. El valor predeterminado es `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Abra la aplicación Visor de eventos.
 
@@ -138,7 +138,7 @@ El perfil de seguimiento de supervisión de estado emite registros de instancia 
 > [!NOTE]
 > Existe un problema conocido en el Visor de eventos en virtud del cual el visor no puede descodificar eventos de ETW. Es posible que vea un mensaje de error similar el siguiente.
 >
-> No se encuentra la descripción del ID. de evento \<ID > desde el origen Microsoft-Windows-servidor de aplicaciones-aplicaciones. El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada. Puede instalar o reparar el componente en el equipo local.
+> No se encuentra la descripción del ID. de evento \<ID > desde el origen Microsoft-Windows-servidor de aplicaciones-aplicaciones. El componente que provoca este evento no está instalado en el equipo local o la instalación está dañada. Puede instalar o reparar el componente en el equipo local.
 >
 > Si encuentra este error, haga clic en actualizar en el panel de acciones. El evento debería descodificarse ahora correctamente.
 
@@ -151,6 +151,6 @@ El perfil de seguimiento de supervisión de estado emite registros de instancia 
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

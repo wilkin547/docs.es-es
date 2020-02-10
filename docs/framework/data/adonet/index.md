@@ -3,17 +3,18 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980111"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094402"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para programadores de .NET Framework. ADO.NET ofrece abundancia de componentes para la creación de aplicaciones de uso compartido de datos distribuidas. Constituye una parte integral de .NET Framework y proporciona acceso a datos relacionales, XML y de aplicaciones. ADO.NET satisface diversas necesidades de desarrollo, como la creación de clientes de base de datos front-end y objetos empresariales de nivel medio que utilizan aplicaciones, herramientas, lenguajes o exploradores de Internet.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Novedades de ADO.NET](whats-new.md)  
  Presenta características nuevas en ADO.NET.  
   
@@ -36,7 +37,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  Proporciona información sobre LINQ to DataSet, incluidos ejemplos de programación.  
   
  [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)  
- Describe cómo conectarse a un origen de datos y cómo recuperar y modificar datos mediante `Commands`, `DataReaders` y `DataAdapters`.  
+ Describe cómo conectarse a un origen de datos y cómo recuperar y modificar datos mediante `Commands`, `DataReaders`y `DataAdapters`.  
   
  [SQL Server y ADO.NET](./sql/index.md)  
  Describe cómo trabajar con las características y la funcionalidad específicas de SQL Server.  
@@ -60,7 +61,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  [Ejemplos y tutoriales](../../../samples-and-tutorials/index.md)  
  Proporciona una lista de ejemplos y tutoriales de .NET.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Información general sobre ADO.NET](ado-net-overview.md)

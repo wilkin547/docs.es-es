@@ -2,14 +2,15 @@
 title: Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 009be8d4c25fd9db5b2f2df6e75fb046e92f389a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921334"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094727"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
+
 La utilidad de configuración de WS-AtomicTransaction se utiliza para configurar valores básicos de compatibilidad de WS-AtomicTransaction.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -18,10 +19,10 @@ La utilidad de configuración de WS-AtomicTransaction se utiliza para configurar
 wsatConfig [Options]  
 ```  
   
-## <a name="remarks"></a>Notas  
- Esta herramienta de línea de comandos se puede utilizar para configurar sólo los valores WS-AT básicos en un equipo local. Si tiene que configurar los valores en los equipos locales y remotos, debe usar el complemento MMC como se describe en configuración de la [compatibilidad con transacciones WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
+## <a name="remarks"></a>Observaciones  
+ Esta herramienta de línea de comandos se puede usar para configurar los valores básicos de WS-AT solo en un equipo local. Si tiene que configurar los valores en los equipos locales y remotos, debe usar el complemento MMC como se describe en configuración de la [compatibilidad con transacciones WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
   
- Puede encontrar la herramienta de línea de comandos en la ubicación de instalación de Windows SDK, específicamente  
+ La herramienta de línea de comandos se puede encontrar en la ubicación de instalación de Windows SDK, en concreto,  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
@@ -37,7 +38,7 @@ wsatConfig [Options]
 |-accounts:\<cuenta, >|Especifica una lista separada por comas de cuentas que pueden participar en WS-AtomicTransaction. No se comprueba la validez de estas cuentas.|  
 |-accountsCerts:\<Thumb >&#124;"issuer\subjectname." >|Especifica una lista separada por comas de certificados que pueden participar en WS-AtomicTransaction. Los certificados se indican por huella digital o por el par de Issuer\SubjectName. Utilice {EMPTY} como nombre de sujeto si está vacío.|  
 |-endpointCert: < máquina&#124;\<Thumb >&#124;"issuer\subjectname." >|Utiliza el certificado de equipo u otro certificado del extremo local especificado por huella digital o par de Issuer\SubjectName. Utiliza {EMPTY} como nombre de sujeto si está vacío.|  
-|-maxTimeout:\<sec>|Especifica el tiempo de espera máximo en segundos. Los valores válidos son de 0 a 3600.|  
+|-maxTimeout:\<sec >|Especifica el tiempo de espera máximo en segundos. Los valores válidos son de 0 a 3600.|  
 |-Network:\<habilitar&#124;deshabilitar >|Habilita o deshabilita la compatibilidad para red de WS-AtomicTransaction.|  
 |-Port:\<portNum >|Establece los puertos HTTPS para WS-AtomicTransaction.<br /><br /> Si ya ha habilitado el firewall antes de ejecutar esta herramienta, el puerto se registra automáticamente en la lista de excepciones. Si el firewall está deshabilitado antes de ejecutar esta herramienta, no se configura nada adicional con respecto al firewall.<br /><br /> Si habilita el firewall después de configurar WS-AT, tiene que ejecutar de nuevo esta herramienta y proporcionar el número de puerto mediante este parámetro. Si deshabilita el firewall después de configurar, WS-AT continúa funcionando sin entrada adicional.|  
 |-timeout:\<seg >|Especifica el tiempo de espera predeterminado en segundos. Los valores válidos están comprendidos entre 1 y 3600.|  
@@ -49,7 +50,7 @@ wsatConfig [Options]
 |-show|Muestra los valores de protocolo actuales de WS-AtomicTransaction.|  
 |-servidorVirtual:\<el > de virtualización|Especifica el nombre del clúster de recursos de DTC.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Utilización de WS-AtomicTransaction](./feature-details/using-ws-atomictransaction.md)
 - [Configuración de la compatibilidad con WS-Atomic Transaction](./feature-details/configuring-ws-atomic-transaction-support.md)

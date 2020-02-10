@@ -2,17 +2,17 @@
 title: Ejemplo de detección de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: b503e6231741fb049dbd8e9fdaae73c127ceaa51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eafe031b71836eae8de5ce15cd669459c866e89f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714993"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094766"
 ---
 # <a name="workflow-discovery-sample"></a>Ejemplo de detección de flujo de trabajo
 En este ejemplo se muestra cómo hacer que un servicio de flujo de trabajo se pueda detectar y cómo crear una actividad de código personalizada que busque un servicio determinado.  
   
-## <a name="demonstrates"></a>Demostraciones  
+## <a name="demonstrates"></a>Muestra  
  Actividad de búsqueda de detección y uso del flujo de trabajo  
   
 ## <a name="discussion"></a>Discusión  
@@ -20,9 +20,9 @@ En este ejemplo se muestra cómo hacer que un servicio de flujo de trabajo se pu
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Este ejemplo utiliza puntos de conexión HTTP, que deben tener las ACL de dirección URL apropiadas para ejecutarse (consulte [configuración de http y https](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener detalles). Al ejecutar el siguiente comando en un símbolo del sistema con permisos elevados, se deberían agregar las ACL adecuadas. Sustituya su dominio y nombre de usuario para los siguientes argumentos si su shell no entiende el formato de variable.  
+1. Este ejemplo utiliza puntos de conexión HTTP, que deben tener las ACL de dirección URL apropiadas para ejecutarse (consulte [configuración de http y https](../feature-details/configuring-http-and-https.md) para obtener detalles). Al ejecutar el siguiente comando en un símbolo del sistema con permisos elevados, se deberían agregar las ACL adecuadas. Si el shell no entiende el formato de variable, sustituya el dominio y el nombre de usuario por los argumentos siguientes.  
   
-     **netsh http Add urlacl URL =http://+:8000/ usuario =% dominio%\\ % nombredeusuario%**  
+     **netsh http Add urlacl URL =http://+:8000/ usuario =% dominio%\\% nombredeusuario%**  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

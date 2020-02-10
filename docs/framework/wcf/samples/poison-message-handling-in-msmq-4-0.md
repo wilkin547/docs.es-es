@@ -2,28 +2,28 @@
 title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919395"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094961"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
 Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este ejemplo se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
 
  En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.
 
- Un mensaje dudoso es aquel que se lee repetidamente desde una cola cuando el servicio que lo lee no puede procesarlo y, por consiguiente, termina la transacción en la que se lee el mensaje. En tales casos, se intenta de nuevo leer el mensaje. En teoría, esta acción puede continuar indefinidamente si hay un problema con el mensaje. Observe que esto solo puede ocurrir cuando se usan transacciones para leer desde la cola e invocar la operación del servicio.
+ Un mensaje dudoso es aquel que se lee repetidamente desde una cola cuando el servicio que lo lee no puede procesarlo y, por consiguiente, termina la transacción en la que se lee el mensaje. En tales casos, se intenta de nuevo leer el mensaje. En teoría, esta acción puede continuar indefinidamente si hay un problema con el mensaje. Esto solo puede ocurrir cuando se usan transacciones para leer de la cola e invocar la operación de servicio.
 
  Según la versión de MSMQ, NetMsmqBinding admite la detección limitada para detectar los mensajes dudosos. Una vez detectado el mensaje como dudoso, podrá administrarse de varias maneras. De nuevo, según la versión de MSMQ, NetMsmqBinding admite desde el manejo limitado hasta un manejo completo de mensajes dudosos.
 
- En este ejemplo se muestran las instalaciones limitadas de envenenamiento proporcionadas en la plataforma Windows Server 2003 y Windows XP, así como las funciones de envenenamiento completo que se proporcionan en Windows Vista. En ambos casos, el objetivo es mover el mensaje dudoso de una cola a otra para que pueda ser reparado por un servicio de mensajes dudosos.
+ En este ejemplo se muestran las instalaciones limitadas de envenenamiento proporcionadas en la plataforma Windows Server 2003 y Windows XP, así como las funciones de envenenamiento completo que se proporcionan en Windows Vista. En ambos ejemplos, el objetivo es trasladar el mensaje dudoso fuera de la cola a otra cola. Después, un servicio de mensajes dudosos puede atender a esa cola.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Ejemplo de Manejo de Mensajes Dudosos
  En Windows Vista, MSMQ proporciona una utilidad de subcola dudoso que se puede usar para almacenar mensajes dudosos. Este ejemplo muestra el procedimiento recomendado para tratar los mensajes dudosos mediante Windows Vista.
 
- La detección de mensajes dudosos en Windows Vista es bastante sofisticada. Hay 3 propiedades que ayudan con la detección. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> es el número de veces que un mensaje determinado se relee de la cola y se envía a la aplicación para ser procesado. Un mensaje se relee de la cola cuando se pone de nuevo en la cola porque el mensaje no se puede enviar a la aplicación o la aplicación revierte la transacción en la operación del servicio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> es el número de veces que el mensaje se mueve a la cola de reintento. Cuando se localiza <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, el mensaje se mueve a la cola de reintento. La propiedad <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> es el retraso tras el que el mensaje se devuelve de la cola de reintento a la cola principal. La propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> se restablece en 0. El mensaje se vuelve a intentar. Si se ha producir un error en todos los intentos para leer el mensaje, entonces el mensaje se marca como dudoso.
+ La detección de mensajes dudosos en Windows Vista es sofisticada. Hay 3 propiedades que ayudan con la detección. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> es el número de veces que un mensaje determinado se relee de la cola y se envía a la aplicación para ser procesado. Un mensaje se relee de la cola cuando se pone de nuevo en la cola porque el mensaje no se puede enviar a la aplicación o la aplicación revierte la transacción en la operación del servicio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> es el número de veces que el mensaje se mueve a la cola de reintento. Cuando se localiza <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, el mensaje se mueve a la cola de reintento. La propiedad <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> es el retraso tras el que el mensaje se devuelve de la cola de reintento a la cola principal. La propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> se restablece en 0. El mensaje se vuelve a intentar. Si se ha producir un error en todos los intentos para leer el mensaje, entonces el mensaje se marca como dudoso.
 
  Una vez marcado como dudoso, el mensaje se trata según los valores en la enumeración <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Para reiterar los valores posibles:
 
@@ -31,11 +31,11 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este
 
 - Drop: para quitar el mensaje.
 
-- Move: para mover el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en Windows Vista.
+- Move: para pasar el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en Windows Vista.
 
 - Reject: para rechazar el mensaje, devolviéndolo a la cola de mensajes con problemas de entrega del remitente. Este valor solo está disponible en Windows Vista.
 
- El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` mueve el mensaje a la subcola de mensajes dudosos.
+ El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` hace que el mensaje se mueva a la subcola de mensajes dudosos.
 
  El contrato de servicio es `IOrderProcessor`, que define un servicio unidireccional que es adecuado para usarse con colas.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- La operación de servicio muestra un mensaje que indica que está procesando la orden. Para mostrar la funcionalidad del mensaje dudoso, la operación de servicio `SubmitPurchaseOrder` inicia una excepción para revertir la transacción en una invocación aleatoria del servicio. Esto provoca que el mensaje se vuelva a poner en la cola. Finalmente, el mensaje se marca como dudoso. La configuración se establece para mover el mensaje dudoso a la subcola de mensajes dudosos.
+ La operación de servicio muestra un mensaje que indica que está procesando la orden. Para mostrar la funcionalidad del mensaje dudoso, la operación de servicio `SubmitPurchaseOrder` produce una excepción para revertir la transacción en una invocación aleatoria del servicio. Esto provoca que el mensaje se vuelva a poner en la cola. Finalmente, el mensaje se marca como dudoso. La configuración se establece para trasladar el mensaje dudoso a la subcola de mensajes dudosos.
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- A diferencia del servicio de procesamiento de pedidos que lee los mensajes desde la cola de pedidos, el servicio de mensajes dudosos lee los mensajes desde la subcola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola principal, se denomina "poison" y MSMQ la genera automáticamente. Para tener acceso a ella, proporcione el nombre de la cola principal seguido de un punto y coma (";") y el nombre de la subcola, en este caso "poison", tal y como se muestra en la configuración del ejemplo siguiente.
+ A diferencia del servicio de procesamiento de pedidos que lee los mensajes de la cola de pedidos, el servicio de mensajes dudosos Lee los mensajes de la subcola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola principal, se denomina "dudoso" y MSMQ la genera automáticamente. Para obtener acceso a él, proporcione el nombre de la cola principal seguido de un ";" y el nombre de la subcola, en este caso, "dudoso", como se muestra en la configuración del ejemplo siguiente.
 
 > [!NOTE]
 > En el ejemplo para MSMQ v3.0, el nombre de la cola de mensajes dudosos no es ninguna subcola, sino la cola a la que movimos el mensaje.
@@ -309,7 +309,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      Asegúrese de que el extremo está asociado al enlace definiendo el atributo bindingConfiguration del extremo.
 
-2. Asegúrese de que cambia la configuración en PoisonMessageServer, el servidor y el cliente antes de ejecutar el ejemplo.
+2. Asegúrese de cambiar la configuración en PoisonMessageServer, el servidor y el cliente antes de ejecutar el ejemplo.
 
     > [!NOTE]
     > Establecer `security mode` en `None` es equivalente a definir la seguridad de `MsmqAuthenticationMode`, `MsmqProtectionLevel` y `Message` en `None`.  

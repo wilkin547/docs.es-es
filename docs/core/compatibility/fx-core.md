@@ -1,13 +1,14 @@
 ---
 title: Cambios importantes de .NET Framework a .NET Core
+titleSuffix: ''
 description: Enumera los cambios importantes de .NET Framework a .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116489"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093063"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Cambios importantes para la migración desde .NET Framework a .NET Core
 
@@ -31,20 +32,20 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 Se ha agregado compatibilidad con Windows Forms a .NET Core, versión 3.0. Si va a realizar la migración de una aplicación de Windows Forms desde .NET Framework a .NET Core, los cambios más importantes que se enumeran aquí pueden afectar a los usuarios de la aplicación.
 
 - [Controles eliminados](#removed-controls)
-- [El evento CellFormatting no se produce si se muestra información en pantalla.](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [Se ha cambiado Control.DefaultFont a Segoe UI 9 pt.](#default-control-font-changed-to-segoe-ui-9-pt)
-- [Se ha modernizado FolderBrowserDialog.](#modernization-of-the-folderbrowserdialog)
-- [Se ha quitado el atributo SerializableAttribute de algunos tipos de Windows Forms.](#serializableattribute-removed-from-some-windows-forms-types)
-- [No se admite el modificador de compatibilidad AllowUpdateChildControlIndexForTabControls.](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad DomainUpDown.UseLegacyScrolling.](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad DoNotLoadLatestRichEditControl.](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad DoNotSupportSelectAllShortcutInMultilineTextBox.](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad DontSupportReentrantFilterMessage.](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad EnableVisualStyleValidation.](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad UseLegacyContextMenuStripSourceControlValue.](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [No se admite el modificador de compatibilidad UseLegacyImages.](#uselegacyimages-compatibility-switch-not-supported)
-- [Se ha cambiado el acceso para AccessibleObject.RuntimeIDFirstItem.](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Se han quitado las API duplicadas de Windows Forms.](#duplicated-apis-removed-from-windows-forms)
+- [El evento CellFormatting no se produce si se muestra información en pantalla](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [Se ha cambiado Control.DefaultFont a Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
+- [Se ha modernizado FolderBrowserDialog](#modernization-of-the-folderbrowserdialog)
+- [Se ha quitado SerializableAttribute de algunos tipos de Windows Forms](#serializableattribute-removed-from-some-windows-forms-types)
+- [No se admite el modificador de compatibilidad AllowUpdateChildControlIndexForTabControls](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad DomainUpDown.UseLegacyScrolling](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad DoNotLoadLatestRichEditControl](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad DoNotSupportSelectAllShortcutInMultilineTextBox](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad DontSupportReentrantFilterMessage](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad EnableVisualStyleValidation](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [No se admite el modificador de compatibilidad UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported)
+- [Se ha cambiado el acceso para AccessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Se han quitado las API duplicadas de Windows Forms](#duplicated-apis-removed-from-windows-forms)
 
 ### <a name="net-core-31"></a>.NET Core 3.1
 

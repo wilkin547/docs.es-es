@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enumerar un subconjunto de colas de impresión
+title: 'Cómo: Enumerar un subconjunto de colas de impresión'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae41931f012f6d34fc057fdd6ee9fc9baab6e7b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776069"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094545"
 ---
-# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Procedimiento Enumerar un subconjunto de colas de impresión
-Es una situación común que se enfrentan los profesionales de tecnologías (TI) de información que administra un conjunto de toda la compañía de impresoras generar una lista de impresoras que tienen ciertas características. Esta funcionalidad se proporciona mediante el <xref:System.Printing.PrintServer.GetPrintQueues%2A> método de un <xref:System.Printing.PrintServer> objeto y el <xref:System.Printing.EnumeratedPrintQueueTypes> enumeración.  
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Cómo: Enumerar un subconjunto de colas de impresión
+Una situación común que se enfrenta a los profesionales de tecnologías de la información (TI) que administran un conjunto de impresoras de toda la compañía es generar una lista de impresoras que tienen ciertas características. Esta funcionalidad se proporciona mediante el método <xref:System.Printing.PrintServer.GetPrintQueues%2A> de un objeto <xref:System.Printing.PrintServer> y la enumeración <xref:System.Printing.EnumeratedPrintQueueTypes>.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, el código comienza creando una matriz de marcas que especifican las características de las colas de impresión que desea enumerar. En este ejemplo, examinamos las colas de impresión que se instalan localmente en el servidor de impresión y se comparten. El <xref:System.Printing.EnumeratedPrintQueueTypes> enumeración proporciona muchas otras posibilidades.  
+ En el ejemplo siguiente, el código comienza creando una matriz de marcas que especifican las características de las colas de impresión que deseamos Mostrar. En este ejemplo, estamos buscando colas de impresión que se instalan localmente en el servidor de impresión y que se comparten. La enumeración <xref:System.Printing.EnumeratedPrintQueueTypes> proporciona muchas otras posibilidades.  
   
- El código, a continuación, crea un <xref:System.Printing.LocalPrintServer> objeto, una clase derivada de <xref:System.Printing.PrintServer>. El servidor de impresión local es el equipo donde se ejecuta la aplicación.  
+ A continuación, el código crea un objeto <xref:System.Printing.LocalPrintServer>, una clase derivada de <xref:System.Printing.PrintServer>. El servidor de impresión local es el equipo en el que se ejecuta la aplicación.  
   
- Es el último paso significativo pasar la matriz a la <xref:System.Printing.PrintServer.GetPrintQueues%2A> método.  
+ El último paso significativo es pasar la matriz al método <xref:System.Printing.PrintServer.GetPrintQueues%2A>.  
   
  Por último, los resultados se presentan al usuario.  
   
@@ -32,9 +32,9 @@ Es una situación común que se enfrentan los profesionales de tecnologías (TI)
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- Puede extender este ejemplo haciendo que el `foreach` bucle que recorre cada cola de impresión se realizan más de filtrado. Por ejemplo, podría dejar fuera las impresoras que no admiten la impresión a dos caras haciendo que la llamada de bucle cada cola de impresión <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> método y prueba el valor devuelto para la presencia de dúplex.  
+ Puede ampliar este ejemplo si tiene el bucle `foreach` que recorre cada cola de impresión para realizar un filtrado adicional. Por ejemplo, puede filtrar las impresoras que no admiten la impresión a dos caras al hacer que el bucle llame a cada método <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> de una cola de impresión y probar el valor devuelto para la presencia de dúplex.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
@@ -44,4 +44,4 @@ Es una situación común que se enfrentan los profesionales de tecnologías (TI)
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Documentos en WPF](documents-in-wpf.md)
 - [Información general sobre impresión](printing-overview.md)
-- [Escritor de documentos XPS de Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Escritor de documentos XPS de Microsoft](/windows/win32/printdocs/microsoft-xps-document-writer)
