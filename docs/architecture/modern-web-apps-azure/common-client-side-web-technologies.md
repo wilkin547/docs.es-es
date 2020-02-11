@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tec
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965755"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093128"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965755"
 
 Las aplicaciones ASP.NET Core son aplicaciones web y normalmente se basan en tecnologías web del lado cliente como HTML, CSS y JavaScript. Al separar el contenido de la página (HTML) de su diseño y estilos (CSS), y su comportamiento (a través de JavaScript), las aplicaciones web complejas pueden aprovechar el principio de separación de intereses. Los cambios futuros en la estructura, el diseño o el comportamiento de la aplicación se pueden realizar más fácilmente cuando estos intereses no están entrelazados.
 
-Mientras que HTML y CSS son relativamente estables, JavaScript, por medio de los marcos de aplicaciones y los desarrolladores de utilidades con los que trabajan para crear aplicaciones basadas en web, ha evolucionado a velocidad vértigo. En este capítulo se examinan algunas maneras en las que los desarrolladores web usan JavaScript como parte del desarrollo de aplicaciones, y se proporciona una descripción general de las bibliotecas del lado cliente Angular y React.
+Mientras que HTML y CSS son relativamente estables, JavaScript, por medio de los marcos de aplicaciones y los desarrolladores de utilidades con los que trabajan para crear aplicaciones basadas en web, ha evolucionado a velocidad vértigo. En este capítulo se examinan algunas maneras en las que los desarrolladores web usan JavaScript y se proporciona una descripción general de las bibliotecas del lado cliente Angular y React.
 
 ## <a name="html"></a>HTML
 

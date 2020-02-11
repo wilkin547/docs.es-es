@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457862"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094480"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: compatibilidad del lápiz y la entrada táctil basados en el puntero
 
-Las aplicaciones de WPF que se destinan a .NET Framework 4.7 y que se ejecutan en sistemas Windows a partir de Windows 10 Creators Update pueden habilitar la pila de lápiz/entada táctil de WPF basado en `WM_POINTER`.
+Las aplicaciones de WPF que se destinan a .NET Framework 4.7 y que se ejecutan en Windows a partir de Windows 10 Creators Update pueden habilitar la pila de lápiz/entada táctil de WPF basada en `WM_POINTER`.
 
 ## <a name="impact"></a>Impacto
 
@@ -40,7 +40,7 @@ A continuación se muestran problemas conocidos actuales con la pila de lápiz o
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Inclusión de la compatibilidad del lápiz o la entrada táctil basados en WM_POINTER
 
-Los desarrolladores que deseen habilitar esta pila pueden agregar lo siguiente al archivo app.config de la aplicación:
+Los desarrolladores que quieran habilitar esta pila pueden agregar lo siguiente al archivo *app.config* de la aplicación.
 
 ```xml
 <configuration>
