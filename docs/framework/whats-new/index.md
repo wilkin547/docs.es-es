@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 00026fee12e447b7fba56b42cd86699aba38cc52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76966015"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094688"
 ---
-# <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
+# <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
 En este artículo se resumen las nuevas características y mejoras en las siguientes versiones de .NET Framework:
 
@@ -519,7 +519,7 @@ El método devuelve un enumerable vacío a menos que se habilite  <xref:System.
 
 A partir de .NET Framework 4.7.2, un asistente de diagnóstico puede localizar los propietarios de un objeto <xref:Windows.UI.Xaml.ResourceDictionary> determinado. (La característica está pensada para que la usen los asistentes de diagnóstico, no las aplicaciones de producción). Siempre que se realice un cambio en un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF busca automáticamente todas las referencias [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que es posible que se vean afectadas por el cambio.
 
-Un asistente de diagnóstico como la opción "Editar y continuar" de Visual Studio puede extender esta opción para controlar las referencias [StaticResource](../wpf/advanced/staticresource-markup-extension.md). El primer paso de este proceso consiste en encontrar los propietarios del diccionario; es decir, buscar todos los objetos cuya propiedad `Resources` hace referencia al diccionario (ya sea directa o indirectamente a través de la propiedad <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Tres métodos estáticos nuevos implementadas en la clase <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, uno para cada uno de los tipos base que tengan una propiedad `Resources`, admiten este paso:
+Un asistente de diagnóstico como la opción "Editar y continuar" de Visual Studio puede ampliar esta opción para controlar las referencias [StaticResource](../wpf/advanced/staticresource-markup-extension.md). El primer paso de este proceso consiste en encontrar los propietarios del diccionario; es decir, buscar todos los objetos cuya propiedad `Resources` hace referencia al diccionario (ya sea directa o indirectamente a través de la propiedad <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Tres métodos estáticos nuevos implementadas en la clase <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, uno para cada uno de los tipos base que tengan una propiedad `Resources`, admiten este paso:
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -677,7 +677,7 @@ En .NET Framework 4.7 y versiones anteriores, ASP.NET permitía a los desarrol
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Para ver una lista de las nuevas API agregadas a .NET Framework 4.7, consulte [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Cambios de API de .NET Framework 4.7) en GitHub. Para ver una lista de las mejoras de características y correcciones de errores en .NET Framework 4.7, consulte [.NET Framework 4.7 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Lista de cambios de .NET Framework 4.7) en GitHub.  Para más información, vea [Announcing .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) (Anuncio de .NET Framework 4.7) en el blog de .NET.
+Para ver una lista de las nuevas API agregadas a .NET Framework 4.7, consulte [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Cambios de API de .NET Framework 4.7) en GitHub. Para ver una lista de las mejoras de características y correcciones de errores en .NET Framework 4.7, consulte [.NET Framework 4.7 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Lista de cambios de .NET Framework 4.7) en GitHub. Para obtener más información, vea [Announcing the .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) (Anuncio de .NET Framework 4.7) en el blog de .NET.
 
 <a name="Core47" />
 
@@ -685,7 +685,7 @@ Para ver una lista de las nuevas API agregadas a .NET Framework 4.7, consulte 
 
 .NET Framework 4.7 mejora la serialización con <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Funcionalidad mejorada con criptografía de curva elíptica (ECC)***
+**Funcionalidad mejorada con criptografía de curva elíptica (ECC)** *
 
 En .NET Framework 4.7, los métodos `ImportParameters(ECParameters)` se han agregado a las clases <xref:System.Security.Cryptography.ECDsa> y <xref:System.Security.Cryptography.ECDiffieHellman> para permitir que un objeto represente una clave establecida previamente. También se agregó un método `ExportParameters(Boolean)` para exportar la clave mediante parámetros de curva explícitos.
 
@@ -800,7 +800,7 @@ Las API de impresión de WPF de la clase <xref:System.Printing.PrintQueue?displa
 
 - [Mejoras en la depuración](#Debug462)
 
-Para ver una lista de las nuevas API agregadas a .NET Framework 4.6.2, consulte [.NET Framework 4.6.2 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) (Cambios de API de .NET Framework 4.6.2) en GitHub. Para ver una lista de las mejoras de características y correcciones de errores en .NET Framework 4.6.2, consulte [.NET Framework 4.6.2 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) (Lista de cambios de .NET Framework 4.6.2) en GitHub. Para obtener más información, vea [Announcing .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) (Anuncio de .NET Framework 4.6.2) en el blog de .NET.
+Para ver una lista de las nuevas API agregadas a .NET Framework 4.6.2, consulte [.NET Framework 4.6.2 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) (Cambios de API de .NET Framework 4.6.2) en GitHub. Para ver una lista de las mejoras de características y correcciones de errores en .NET Framework 4.6.2, consulte [.NET Framework 4.6.2 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) (Lista de cambios de .NET Framework 4.6.2) en GitHub. Para obtener más información, vea [Announcing the .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) (Anuncio de .NET Framework 4.6.2) en el blog de .NET.
 
 <a name="ASPNET462" />
 
@@ -1029,11 +1029,11 @@ El proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlCli
 
 **Agrupación de conexiones y tiempos de espera con bases de datos SQL de Azure**
 
-Cuando se habilita la agrupación de conexiones y se produce un error de tiempo de espera u otro tipo de error de inicio de sesión, se almacena en caché una excepción que se produce en todos los intentos de conexión posteriores que se realicen en un plazo de entre 5 segundos y 1 minuto.  Para obtener más información, vea [Agrupación de conexiones en SQL Server (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
+Cuando se habilita la agrupación de conexiones y se produce un error de tiempo de expiración u otro tipo de error de inicio de sesión, se almacena en caché una excepción que se produce en todos los intentos de conexión posteriores que se realicen en un plazo de entre 5 segundos y 1 minuto. Para obtener más información, vea [Agrupación de conexiones de SQL Server (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
 
 Este comportamiento no es el deseable al conectarse a bases de datos SQL de Azure, ya que en los intentos de conexión se pueden producir errores transitorios que normalmente se recuperan rápidamente. Para optimizar la experiencia de reintento de conexión, se elimina el comportamiento del período de bloqueo del grupo de conexiones cuando se produce un error en las conexiones a bases de datos SQL de Azure.
 
-La adición de la nueva palabra clave `PoolBlockingPeriod` permite seleccionar el período de bloqueo más adecuado para la aplicación. Estos valores incluyen:
+La adición de la nueva palabra clave `PoolBlockingPeriod` permite seleccionar el periodo de bloqueo más adecuado para la aplicación. Estos valores incluyen:
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
@@ -1168,11 +1168,11 @@ Por ejemplo, el siguiente código XAML agrupa los datos por edad, ordena los gru
 </SortDescriptions>
 ```
 
-**Compatibilidad con teclado en pantalla**
+**Compatibilidad con teclado táctil**
 
-La compatibilidad con teclado en pantalla permite el seguimiento del foco en aplicaciones WPF, ya que invoca y descarta automáticamente el nuevo teclado en pantalla de Windows 10 cuando un control que acepta entrada de texto recibe la entrada táctil.
+La compatibilidad con teclado táctil permite el seguimiento del foco en aplicaciones WPF, ya que invoca y descarta automáticamente el teclado táctil de Windows 10 cuando un control que acepta entrada de texto recibe la entrada táctil.
 
-En versiones anteriores de .NET Framework, las aplicaciones WPF no pueden optar por el seguimiento del foco sin deshabilitar la compatibilidad con lápiz o movimiento táctil en WPF.  Como resultado, las aplicaciones WPF deben elegir entre compatibilidad táctil completa en WPF o basarse en la promoción del mouse de Windows.
+En versiones anteriores de .NET Framework, las aplicaciones WPF no pueden optar por el seguimiento del foco sin deshabilitar la compatibilidad con lápiz o movimiento táctil en WPF. Como resultado, las aplicaciones WPF deben elegir entre compatibilidad táctil completa en WPF o basarse en la promoción del mouse de Windows.
 
 **PPP por monitor**
 
@@ -1196,9 +1196,9 @@ En .NET Framework 4.6.2, Windows Workflow Foundation se ha mejorado en las área
 
 **Compatibilidad con expresiones de C# e IntelliSense en el Diseñador de WF rehospedado**
 
-A partir de .NET Framework 4.5, WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
+A partir de .NET Framework 4.5, WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` En las versiones de .NET Framework anteriores a .NET Framework 4.6.2, IntelliSense del Diseñador de WF se interrumpe cuando un cliente vuelve a compilar un proyecto de flujo de trabajo desde Visual Studio. Aunque la compilación del proyecto es correcta, los tipos de flujo de trabajo no se encuentran en el diseñador y en la ventana **Lista de errores** aparecen advertencias de IntelliSense que indican los tipos de flujo de trabajo que faltan. .NET Framework 4.6.2 soluciona este problema y hace que IntelliSense esté disponible.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` En las versiones de .NET Framework anteriores a 4.6.2, IntelliSense del Diseñador de WF se interrumpe cuando un cliente vuelve a compilar un proyecto de flujo de trabajo desde Visual Studio. Aunque la compilación del proyecto es correcta, los tipos de flujo de trabajo no se encuentran en el diseñador y en la ventana **Lista de errores** aparecen advertencias de IntelliSense que indican los tipos de flujo de trabajo que faltan. .NET Framework 4.6.2 soluciona esta incidencia y hace que IntelliSense esté disponible.
 
 **Las aplicaciones V1 de flujo de trabajo con seguimiento del flujo de trabajo ahora se ejecutan en modo FIPS**
 
@@ -1442,7 +1442,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
   - **Compatibilidad con el Protocolo de enlace de tokens**
 
-    Google y Microsoft colaboraron en un nuevo sistema de autenticación llamado [Protocolo de enlace de tokens](https://github.com/TokenBinding/Internet-Drafts). La premisa es que los tokens de autenticación (en la memoria caché del navegador) pueden ser robados y usados por delincuentes para acceder a recursos seguros (por ejemplo, su cuenta bancaria) sin necesidad de contraseña ni de otra información privilegiada. El nuevo protocolo tiene como objetivo mitigar este problema.
+    Google y Microsoft colaboraron en un nuevo sistema de autenticación llamado [Protocolo de enlace de tokens](https://github.com/TokenBinding/Internet-Drafts). La premisa es que los delincuentes pueden robar y usar los tokens de autenticación (en la memoria caché del navegador) para acceder a recursos seguros (por ejemplo, su cuenta bancaria) sin necesidad de contraseña ni de otra información privilegiada. El nuevo protocolo tiene como objetivo mitigar este problema.
 
     El Protocolo de enlace de tokens se implementará en Windows 10 como una característica del explorador. Las aplicaciones de ASP.NET participarán en el protocolo para validar la legitimidad de los tokens de autenticación. Las implementaciones de cliente y de servidor establecen la protección de extremo a extremo especificada por el protocolo.
 
@@ -1462,7 +1462,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Compilador JIT de 64 bits para código administrado**
 
-  .NET Framework 4.6 incluye una nueva versión del compilador JIT de 64 bits (llamado originalmente RyuJIT). El nuevo compilador de 64 bits proporciona importantes mejoras de rendimiento con respecto al antiguo compilador JIT de 64 bits. El nuevo compilador de 64 bits está habilitado para los procesos de 64 bits que se ejecutan en .NET Framework 4.6. La aplicación se ejecutará en un proceso de 64 bits si se ha compilado como aplicación de 64 bits o AnyCPU y se está ejecutando en un sistema operativo de 64 bits. Aunque se hayan tomado precauciones para efectuar la transición al nuevo compilador de la manera más transparente posible, es posible que se produzcan cambios en el comportamiento. Nos gustaría que se pusiera en contacto con nosotros si encuentra algún problema al usar el nuevo compilador JIT. Póngase en contacto con nosotros a través de [Microsoft Connect](https://connect.microsoft.com/) si detecta algún problema que pueda estar relacionado con el nuevo compilador JIT de 64 bits.
+  .NET Framework 4.6 incluye una nueva versión del compilador JIT de 64 bits (llamado originalmente RyuJIT). El nuevo compilador de 64 bits proporciona importantes mejoras de rendimiento con respecto al antiguo compilador JIT de 64 bits. El nuevo compilador de 64 bits está habilitado para los procesos de 64 bits que se ejecutan en .NET Framework 4.6. La aplicación se ejecutará en un proceso de 64 bits si se ha compilado como aplicación de 64 bits o AnyCPU y se está ejecutando en un sistema operativo de 64 bits. Aunque se hayan tomado precauciones para efectuar la transición al nuevo compilador de la manera más transparente posible, es posible que se produzcan cambios en el comportamiento.
 
   El nuevo compilador JIT de 64 bits también incluye características de aceleración SIMD de hardware al acoplarse con tipos SIMD habilitados para SIMD en el espacio de nombres <xref:System.Numerics>, que puede producir notables mejoras en el rendimiento.
 
@@ -1528,7 +1528,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
   - **Modificadores de compatibilidad**
 
-    La nueva clase <xref:System.AppContext> agrega una nueva característica de compatibilidad que permite a los autores de bibliotecas proporcionar a sus usuarios un mecanismo uniforme para cancelar la participación de la nueva funcionalidad. Establece un contrato flexible entre los componentes para poder comunicar una solicitud de cancelación de la participación. Esta capacidad normalmente es importante cuando se realiza un cambio en la funcionalidad existente. Por el contrario, la nueva funcionalidad participa de forma implícita.
+    La clase <xref:System.AppContext> agrega una nueva característica de compatibilidad que permite a los autores de bibliotecas proporcionar a sus usuarios un mecanismo uniforme para cancelar la participación de la nueva funcionalidad. Establece un contrato flexible entre los componentes para poder comunicar una solicitud de cancelación de la participación. Esta capacidad normalmente es importante cuando se realiza un cambio en la funcionalidad existente. Por el contrario, la nueva funcionalidad participa de forma implícita.
 
     Con <xref:System.AppContext>, las bibliotecas definen y exponen modificadores de compatibilidad, mientras que el código que depende de ellas puede configurar dichos modificadores para que afecten al comportamiento de la biblioteca. De forma predeterminada, las bibliotecas proporcionan la nueva funcionalidad y solo la modifican (es decir, ofrecen la funcionalidad anterior) si el modificador está establecido.
 
@@ -1715,7 +1715,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     Windows 10 incluye un nuevo algoritmo de red de alta escalabilidad que optimiza los recursos del equipo con la reutilización de los puertos locales para las conexiones TCP salientes. .NET Framework 4.6 admite este algoritmo, lo que permite que las aplicaciones .NET aprovechen el nuevo comportamiento. En versiones anteriores de Windows había un límite de conexiones simultáneas artificial (normalmente de 16.384, el tamaño predeterminado del intervalo de puertos dinámicos) y esto podía limitar la escalabilidad de un servicio provocando el agotamiento de puertos durante la carga.
 
-    Se agregaron dos API nuevas a .NET Framework 4.6 para permitir la reutilización de puertos, lo que elimina de forma eficaz el límite de 64 K de las conexiones simultáneas:
+    Se han agregado dos API a .NET Framework 4.6 para permitir la reutilización de puertos, lo que elimina de forma eficaz el límite de 64 KB de las conexiones simultáneas:
 
     - El valor de enumeración <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType>.
 
@@ -2132,4 +2132,3 @@ El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones 
 - [Novedades de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Novedades de C++ en Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
- 
