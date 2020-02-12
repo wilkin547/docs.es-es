@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 14abb5bd181f401a4e6834d110e20fa920566580
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789733"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093479"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (Guía de programación de C#)
 
@@ -29,7 +29,7 @@ ms.locfileid: "76789733"
 
   Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y traduce `member` al nombre de elemento canónico en la salida XML. *member* debe aparecer entre comillas dobles (" ").
 
-  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](./see.md).
+  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [Atributo cref](./cref-attribute.md).
 
 - `description`
 

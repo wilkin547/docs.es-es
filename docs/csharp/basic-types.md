@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos principales (valores numérico
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339285"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093297"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -54,7 +54,7 @@ Para obtener más información, consulte [Conversiones de tipos](programming-gui
 
 ## <a name="built-in-types"></a>Tipos integrados
 
-C# proporciona un conjunto estándar de tipos numéricos integrados para representar números enteros, valores de punto flotante, expresiones booleanas, caracteres de texto, valores decimales y otros tipos de datos. También hay tipos **string** y **object** integrados. Están disponibles para su uso en cualquier programa de C#. Para obtener más información sobre los tipos integrados, consulte [Tablas de referencia para tipo integrados](language-reference/keywords/built-in-types-table.md).  
+C# proporciona un conjunto estándar de tipos numéricos integrados para representar números enteros, valores de punto flotante, expresiones booleanas, caracteres de texto, valores decimales y otros tipos de datos. También hay tipos **string** y **object** integrados. Están disponibles para su uso en cualquier programa de C#. Para obtener una lista completa de los tipos integrados, vea [Tipos integrados](language-reference/builtin-types/built-in-types.md).
   
 ## <a name="custom-types"></a>Tipos personalizados
 

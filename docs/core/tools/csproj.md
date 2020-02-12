@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787879"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965612"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -145,7 +145,7 @@ Elemento `<PackageReference>` que especifica una [dependencia de NuGet en el pro
 
 #### <a name="version"></a>Versión
 
-El atributo `Version` necesario especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). El comportamiento predeterminado es una coincidencia de versión exacta. Por ejemplo, si se especifica `Version="1.2.3"`, es equivalente a la notación de NuGet `[1.2.3]` para la versión exacta 1.2.3 del paquete.
+El atributo `Version` necesario especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). El comportamiento predeterminado es una versión mínima, incluida una coincidencia. Por ejemplo, la especificación de `Version="1.2.3"` es equivalente a la notación de NuGet `[1.2.3, )` y significa que el paquete resuelto tendrá la versión 1.2.3 si está disponible o, de lo contrario, una superior.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets y PrivateAssets
 
@@ -184,7 +184,7 @@ Tenga en cuenta que `DotNetCliToolReference` está [ahora en desuso](https://git
 
 #### <a name="version"></a>Versión
 
-`Version` especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/create-packages/dependency-versions#version-ranges). El comportamiento predeterminado es una coincidencia de versión exacta. Por ejemplo, si se especifica `Version="1.2.3"`, es equivalente a la notación de NuGet `[1.2.3]` para la versión exacta 1.2.3 del paquete.
+`Version` especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/create-packages/dependency-versions#version-ranges). El comportamiento predeterminado es una versión mínima, incluida una coincidencia. Por ejemplo, la especificación de `Version="1.2.3"` es equivalente a la notación de NuGet `[1.2.3, )` y significa que el paquete resuelto tendrá la versión 1.2.3 si está disponible o, de lo contrario, una superior.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 

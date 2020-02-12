@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036358"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093206"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
-Los **tipos numéricos enteros** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#integer-literals). Todos los tipos enteros también son tipos de valor. Todos los tipos numéricos enteros admiten operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos bit a bit](../operators/bitwise-and-shift-operators.md), de [comparación](../operators/comparison-operators.md) y de [igualdad](../operators/equality-operators.md).
+Los *tipos numéricos integrales* representan números enteros. Todos los tipos numéricos integrales son [tipos de valor](value-types.md). También son [tipos simples](value-types.md#built-in-value-types) y se pueden inicializar con [literales](#integer-literals). Todos los tipos numéricos enteros admiten operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos bit a bit](../operators/bitwise-and-shift-operators.md), de [comparación](../operators/comparison-operators.md) y de [igualdad](../operators/equality-operators.md).
 
 ## <a name="characteristics-of-the-integral-types"></a>Características de los tipos enteros
 
@@ -130,7 +130,7 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Tabla de tipos integrados](../keywords/built-in-types-table.md)
+- [Tipos de valor](value-types.md)
 - [Tipos de punto flotante](floating-point-numeric-types.md)
-- [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
+- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Valores numéricos en .NET](../../../standard/numerics.md)

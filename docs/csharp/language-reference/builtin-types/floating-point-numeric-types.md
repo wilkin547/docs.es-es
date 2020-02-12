@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552277"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093219"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de punto flotante (referencia de C#)
 
-Los **tipos de punto flotante** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#real-literals). Todos los tipos de punto flotante también son tipos de valor. Todos los tipos de punto flotante numéricos admiten operadores [aritméticos](../operators/arithmetic-operators.md), [de comparación](../operators/comparison-operators.md) y de [igualdad](../operators/equality-operators.md).
+Los *tipos numéricos de punto flotante* representan números reales. Todos los tipos numéricos de punto flotante son [tipos de valor](value-types.md). También son [tipos simples](value-types.md#built-in-value-types) y se pueden inicializar con [literales](#real-literals). Todos los tipos de punto flotante numéricos admiten operadores [aritméticos](../operators/arithmetic-operators.md), [de comparación](../operators/comparison-operators.md) y de [igualdad](../operators/equality-operators.md).
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Características de los tipos de punto flotante
 
@@ -118,9 +118,8 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Tabla de tipos integrados](../keywords/built-in-types-table.md)
+- [Tipos de valor](value-types.md)
 - [Tipos enteros](integral-numeric-types.md)
-- [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
 - [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Valores numéricos en .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ description: En este tutorial avanzado se muestra cómo migrar código existente
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740466"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093310"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -40,7 +40,7 @@ El objetivo al migrar un proyecto debe ser aprovechar las nuevas característica
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Actualización de proyectos a C# 8
 
-Un buen primer paso es determinar el ámbito de la tarea de migración. Empiece por actualizar el proyecto a C# 8.0 (o posterior). Agregue el elemento `LangVersion` a ambos archivos csproj para el proyecto web y el proyecto de prueba unitaria:
+Un buen primer paso es determinar el ámbito de la tarea de migración. Empiece por actualizar el proyecto a C# 8.0 (o posterior). Agregue el elemento `LangVersion` a PropertyGroup en ambos archivos csproj para el proyecto web y el proyecto de prueba unitaria:
 
 ```xml
 <LangVersion>8.0</LangVersion>

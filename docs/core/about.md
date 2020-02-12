@@ -2,12 +2,12 @@
 title: Sobre .NET Core
 description: Obtenga información sobre .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920959"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965846"
 ---
 # <a name="about-net-core"></a>Sobre .NET Core
 
@@ -73,7 +73,7 @@ Estos componentes se distribuyen de las formas siguientes:
 
 ### <a name="designed-for-adaptability"></a>Diseñado para adaptabilidad
 
-.NET Core se ha creado como un producto muy similar, pero único, en comparación con otros productos .NET. Se ha diseñado para permitir una amplia adaptabilidad a nuevas plataformas y cargas de trabajo, y tiene varios puertos de CPU y sistemas operativos disponibles (y se puede portar a muchos más).
+.NET Core se ha creado como un producto similar, pero único, en comparación con otros productos .NET. Se ha diseñado para permitir una amplia adaptabilidad a nuevas plataformas y cargas de trabajo, y tiene varios puertos de CPU y sistemas operativos disponibles (y se puede portar a muchos más).
 
 El producto se divide en varias partes, lo que permite que las distintas partes se adapten a nuevas plataformas en horas diferentes. El entorno de tiempo de ejecución y las bibliotecas fundamentales específicas de la plataforma se deben portar como una unidad. Las bibliotecas independientes de la plataforma deben funcionar, por diseño, en todas las plataformas, tal y como están. Hay una tendencia del proyecto a reducir las implementaciones específicas de la plataforma con el fin de aumentar la eficiencia del desarrollador, donde se prefiere el código C# independiente de la plataforma siempre que se pueda implementar completa o parcialmente un algoritmo o una API de esa forma.
 
@@ -128,7 +128,7 @@ Las principales diferencias entre .NET Core y Mono:
 Se anunció que .NET 5 será la próxima versión de .NET Core y representa una unificación de la plataforma. El proyecto pretende mejorar .NET de varias maneras clave:
 
 - Producir un único runtime y un marco de .NET que se pueda usar en todas partes y que tenga comportamientos de runtime y experiencias de desarrollador uniformes.
-- Ampliar las funcionalidades de .NET con las mejores características de .NET Core, .NET Framework, Xamarin y Mono.
+- Ampliar las capacidades de .NET con las mejores características de .NET Core, .NET Framework, Xamarin y Mono.
 - Desarrollar el producto a partir de un solo código base que mejore todos los escenarios, que los desarrolladores (Microsoft y la comunidad) puedan expandir y en el que puedan trabajar juntos.
 
 Para obtener más información sobre lo que está planeado para .NET 5, vea [Presentación de .NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/).

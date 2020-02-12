@@ -4,16 +4,16 @@ description: Información sobre los tipos de valor de C# que admiten un valor NU
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740947"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093193"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor que admiten valores NULL (referencia de C#)
 
-Un tipo de valor `T?` que admite valores NULL representa todos los valores de su [tipo de valor](value-types.md) `T` subyacente y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
+Un *tipo de valor que admite un valor NULL* `T?` representa todos los valores de su [tipo de valor](value-types.md) subyacente `T` y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
 
 > [!NOTE]
 > C# 8.0 presenta la característica de tipos de referencia que admiten un valor NULL. Para más información, consulte [Tipos de referencia que admiten un valor NULL](../../nullable-references.md). Los tipos de valor que admiten valores NULL están disponibles a partir de C# 2.
@@ -68,7 +68,7 @@ Un tipo de valor que no admite valores NULL `T` se convierte implícitamente al 
 
 ## <a name="lifted-operators"></a>Operadores de elevación
 
-Los operadores unarios y binarios predefinidos o los operadores sobrecargados que admite un tipo de valor `T` también se admiten en el tipo de valor que acepta valores NULL `T?` correspondiente. Estos operadores, también conocidos como *operadores de elevación*, generan un valor `null` si uno o los dos operandos son `null`; de lo contrario, el operador usa los valores contenidos de sus operandos para calcular el resultado. Por ejemplo:
+Los [operadores](../operators/index.md) unarios y binarios predefinidos o los operadores sobrecargados que admite un tipo de valor `T` también se admiten en el tipo de valor que admite un valor NULL `T?` correspondiente. Estos operadores, también conocidos como *operadores de elevación*, generan un valor `null` si uno o los dos operandos son `null`; de lo contrario, el operador usa los valores contenidos de sus operandos para calcular el resultado. Por ejemplo:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ En el caso de los [operadores de comparación](../operators/comparison-operators
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-En el ejemplo anterior también se muestra que una comparación de igualdad entre dos instancias de tipos de valor que aceptan valores NULL donde ambos son `null` se evalúa como `true`.
+En el caso de los [operadores de igualdad](../operators/equality-operators.md#equality-operator-) `==`, si ambos operandos son `null`, el resultado es `true`; si solo uno de los operandos es `null`, el resultado es `false`; de lo contrario, se comparan los valores contenidos de los operandos.
+
+En el caso de los [operadores de desigualdad](../operators/equality-operators.md#inequality-operator-) `!=`, si ambos operandos son `null`, el resultado es `false`; si solo uno de los operandos es `null`, el resultado es `true`; de lo contrario, se comparan los valores contenidos de los operandos.
 
 Si existe una [conversión definida por el usuario](../operators/user-defined-conversion-operators.md) entre dos tipos de valor, esa misma conversión también se puede usar entre los correspondientes tipos que aceptan valores NULL.
 

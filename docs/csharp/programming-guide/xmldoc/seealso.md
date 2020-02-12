@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789678"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093466"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (Guía de programación de C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "76789678"
 
   Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member` debe aparecer entre comillas dobles (" ").
 
-  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](./see.md).
+  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [Atributo cref](./cref-attribute.md).
 
 ## <a name="remarks"></a>Comentarios
 

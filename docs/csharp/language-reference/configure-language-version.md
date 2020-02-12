@@ -2,18 +2,18 @@
 title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo la versión del lenguaje C# se determina en función del proyecto y los distintos valores a los que puede ajustarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713873"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980137"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
 El compilador de C# más actualizado determina una versión de lenguaje predeterminada basada en los marcos o las plataformas de destino del proyecto. Esto se debe a que el lenguaje C# puede tener características que se basan en tipos o componentes en tiempo de ejecución que no están disponibles en cada implementación de. NET. Esto también garantiza que, para cualquier destino para el cual se compiló el proyecto, obtendrá la última versión de lenguaje compatible de forma predeterminada.
 
-Las reglas de este artículo se aplican al compilador ofrecido con Visual Studio 2019 o al SDK de .NET Core 3.0. Los compiladores de C# que forman parte de la instalación de Visual Studio 2017 o versiones anteriores del SDK de .NET Core tienen como destino C# 7.0 de forma predeterminada. 
+Las reglas de este artículo se aplican al compilador ofrecido con Visual Studio 2019 o al SDK de .NET Core 3.0. Los compiladores de C# que forman parte de la instalación de Visual Studio 2017 o versiones anteriores del SDK de .NET Core tienen como destino C# 7.0 de forma predeterminada. 
 
 ## <a name="defaults"></a>Valores predeterminados
 
@@ -54,7 +54,7 @@ El valor `preview` usa la versión preliminar más reciente disponible del lengu
 
 ### <a name="configure-multiple-projects"></a>Configurar varios proyectos
 
-Puede crear un archivo **Directory.Build.props** que contenga el elemento `<LangVersion>` para configurar varios directorios. Por lo general, esto se hace en el directorio de la solución. Agregue lo siguiente a un archivo **Directory.Build.props** en el directorio de la solución:
+Para configurar varios proyectos, se puede crear un archivo **Directory.Build.props** que contenga el elemento `<LangVersion>`. Por lo general, esto se hace en el directorio de la solución. Agregue lo siguiente a un archivo **Directory.Build.props** en el directorio de la solución:
 
 ```xml
 <Project>
@@ -84,5 +84,5 @@ En la siguiente tabla se muestran las versiones actuales del lenguaje C#. El com
 |5|El compilador acepta solo la sintaxis que se incluye en C# 5.0 o versiones anteriores.|
 |4|El compilador acepta solo la sintaxis que se incluye en C# 4.0 o versiones anteriores.|
 |3|El compilador acepta solo la sintaxis que se incluye en C# 3.0 o versiones anteriores.|
-|ISO-2|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2006 C# (2.0) |
-|ISO-1|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2003 C# (1.0/1.2) |
+|ISO-2|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2006 C# (2.0). |
+|ISO-1|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2003 C# (1.0/1.2). |
