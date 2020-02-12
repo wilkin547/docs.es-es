@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460412"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124408"
 ---
 # <a name="control-styles-and-templates"></a>Estilos y plantillas de controles
 Los controles de Windows Presentation Foundation (WPF) tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Puede cambiar la estructura y la apariencia de un control modificando el <xref:System.Windows.Controls.ControlTemplate> de ese control. No hay ninguna manera de reemplazar solo parte del árbol visual de un control; para cambiar el árbol visual de un control, debe establecer la propiedad <xref:System.Windows.Controls.Control.Template%2A> del control en el <xref:System.Windows.Controls.ControlTemplate>nuevo y completo.  
   
- Los temas de escritorio determinan qué diccionario de recursos se usa. Para obtener los diccionarios de recursos de los temas de escritorio, consulte [Default WPF Themes ](https://go.microsoft.com/fwlink/?LinkID=158252) (Temas de WPF predeterminados).  
+ Los temas de escritorio determinan qué diccionario de recursos se usa. Para obtener los diccionarios de recursos de los temas de escritorio, consulte [Default WPF Themes ](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms) (Temas de WPF predeterminados).  
   
  En la tabla siguiente se describen los nombres de archivo del diccionario de recursos y sus correspondientes temas de escritorio.  
   

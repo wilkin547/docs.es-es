@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291449"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124434"
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
 <xref:System.Windows.Controls.Panel> elementos son componentes que controlan la representación de los elementos, su tamaño y dimensiones, su posición y la disposición de su contenido secundario. En el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se proporciona una serie de elementos <xref:System.Windows.Controls.Panel> predefinidos, así como la capacidad de construir elementos <xref:System.Windows.Controls.Panel> personalizados.  
@@ -62,7 +62,7 @@ ms.locfileid: "72291449"
   
  Cada elemento de panel encapsula su propia funcionalidad especial, como se muestra en la tabla siguiente.  
   
-|Nombre de elemento|¿Es un panel de interfaz de usuario?|Descripción|  
+|Nombre del elemento|¿Es un panel de interfaz de usuario?|Descripción|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Sí|Define un área en la que se pueden colocar explícitamente los elementos secundarios por coordenadas relativas al área de <xref:System.Windows.Controls.Canvas>.|  
 |<xref:System.Windows.Controls.DockPanel>|Sí|Define un área en la que se pueden organizar elementos secundarios de forma horizontal o vertical, relacionados entre sí.|  
@@ -93,15 +93,15 @@ ms.locfileid: "72291449"
  A continuación se ofrecen descripciones más detalladas y ejemplos del uso de cada uno de estos elementos.  
   
 <a name="Panels_overview_Canvas_subsection"></a>   
-### <a name="canvas"></a>Canvas  
- El elemento <xref:System.Windows.Controls.Canvas> permite colocar el contenido de acuerdo con las coordenadas x *e y*absolutas. Los elementos se pueden dibujar en una ubicación única o bien, si ocupan las mismas coordenadas, el orden en que aparecen en el marcado determina el orden en que se dibujan.  
+### <a name="canvas"></a>Lienzo  
+ El elemento <xref:System.Windows.Controls.Canvas> permite colocar el contenido de acuerdo con las coordenadas x *e y* absolutas. Los elementos se pueden dibujar en una ubicación única o bien, si ocupan las mismas coordenadas, el orden en que aparecen en el marcado determina el orden en que se dibujan.  
   
  <xref:System.Windows.Controls.Canvas> proporciona la compatibilidad de diseño más flexible con cualquier <xref:System.Windows.Controls.Panel>. Las propiedades Height y Width se usan para definir el área del lienzo, y los elementos dentro de se asignan a coordenadas absolutas relativas al área del <xref:System.Windows.Controls.Canvas>primario. Cuatro propiedades adjuntas, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, permiten un control preciso de la ubicación de los objetos dentro de un <xref:System.Windows.Controls.Canvas>, lo que permite al desarrollador colocar y organizar los elementos de forma precisa en la pantalla.  
   
 #### <a name="cliptobounds-within-a-canvas"></a>ClipToBounds dentro de un lienzo  
  <xref:System.Windows.Controls.Canvas> puede colocar los elementos secundarios en cualquier posición de la pantalla, incluso en las coordenadas que están fuera de su propia <xref:System.Windows.FrameworkElement.Height%2A> y <xref:System.Windows.FrameworkElement.Width%2A>definidas. Además, <xref:System.Windows.Controls.Canvas> no se ve afectado por el tamaño de sus elementos secundarios. Como resultado, es posible que un elemento secundario sobredibuje otros elementos fuera del rectángulo delimitador del <xref:System.Windows.Controls.Canvas>primario. El comportamiento predeterminado de un <xref:System.Windows.Controls.Canvas> es permitir que los elementos secundarios se dibujen fuera de los límites del <xref:System.Windows.Controls.Canvas>primario. Si no desea este comportamiento, la propiedad <xref:System.Windows.UIElement.ClipToBounds%2A> se puede establecer en `true`. Esto hace que <xref:System.Windows.Controls.Canvas> se recorte a su propio tamaño. <xref:System.Windows.Controls.Canvas> es el único elemento de diseño que permite dibujar los elementos secundarios fuera de sus límites.  
   
- Este comportamiento se muestra gráficamente en el [ejemplo de comparación de las propiedades Width](https://go.microsoft.com/fwlink/?LinkID=160050).  
+ Este comportamiento se muestra gráficamente en el [ejemplo de comparación de las propiedades Width](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties).  
   
 #### <a name="defining-and-using-a-canvas"></a>Definición y uso de un lienzo  
  Solo se pueden crear instancias de un <xref:System.Windows.Controls.Canvas> mediante el uso de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] o el código. En el ejemplo siguiente se muestra cómo usar <xref:System.Windows.Controls.Canvas> para colocar el contenido de forma absoluta. Este código genera tres cuadrados de 100 píxeles. El primer cuadrado es rojo y su posición superior izquierda (*x, y*) se especifica como (0, 0). El segundo cuadrado es verde y su posición superior izquierda es (100, 100), justo debajo y a la derecha del primer cuadrado. El tercer cuadrado es azul y su posición superior izquierda es (50, 50), por lo que abarca el cuadrante inferior derecho del primer cuadrado y el cuadrante superior izquierdo del segundo. Como el tercer cuadrado se coloca en último lugar, pareciera que está encima de los otros dos cuadrados; es decir, las partes que se superponen toman el color del tercer cuadro.  
@@ -112,7 +112,7 @@ ms.locfileid: "72291449"
   
  La aplicación compilada genera una nueva [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con esta apariencia.  
   
- ![Un elemento Canvas típico.](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![Elemento canvas típico.](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -139,7 +139,7 @@ ms.locfileid: "72291449"
  ![Escenario DockPanel típico.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
-### <a name="grid"></a>Grid  
+### <a name="grid"></a>Cuadrícula  
  El elemento <xref:System.Windows.Controls.Grid> combina la funcionalidad de una posición absoluta y un control de datos tabulares. Una <xref:System.Windows.Controls.Grid> le permite colocar y aplicar estilo fácilmente a los elementos. <xref:System.Windows.Controls.Grid> permite definir agrupaciones flexibles de filas y de columnas, e incluso proporciona un mecanismo para compartir información de tamaño entre varios elementos <xref:System.Windows.Controls.Grid>.  
   
 #### <a name="how-is-grid-different-from-table"></a>¿En qué se diferencian Grid y Table?  
@@ -156,7 +156,7 @@ ms.locfileid: "72291449"
   
  La aplicación compilada genera una nueva [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con esta apariencia.  
   
- ![Elemento Grid típico.](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![Un elemento de cuadrícula típico.](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -184,7 +184,7 @@ ms.locfileid: "72291449"
   
  La aplicación compilada genera una nueva [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con esta apariencia.  
   
- ![Elemento StackPanel típico.](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![Un elemento StackPanel típico.](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
@@ -224,7 +224,7 @@ ms.locfileid: "72291449"
   
  La aplicación compilada genera una nueva [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con esta apariencia.  
   
- ![UI que aprovecha los paneles anidados.](./media/nested-panels.PNG "nested_panels")  
+ ![Interfaz de usuario que aprovecha los paneles anidados.](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>Elementos Panel personalizados  
@@ -232,7 +232,7 @@ ms.locfileid: "72291449"
   
  Del mismo modo, los comportamientos de diseño personalizados basados en clases derivadas (como <xref:System.Windows.Controls.Canvas> o <xref:System.Windows.Controls.Grid>) se pueden definir invalidando sus métodos <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> y <xref:System.Windows.FrameworkElement.MeasureOverride%2A>.  
   
- En el marcado siguiente se muestra cómo crear un elemento de <xref:System.Windows.Controls.Panel> personalizado. Esta nueva <xref:System.Windows.Controls.Panel>, definida como `PlotPanel`, admite la posición de los elementos secundarios mediante el uso de las coordenadas *x* *e y*codificadas de forma rígida. En este ejemplo, un elemento <xref:System.Windows.Shapes.Rectangle> (no se muestra) se coloca en el punto de trazado 50 (*x*) y 50 (*y*).  
+ En el marcado siguiente se muestra cómo crear un elemento de <xref:System.Windows.Controls.Panel> personalizado. Esta nueva <xref:System.Windows.Controls.Panel>, definida como `PlotPanel`, admite la posición de los elementos secundarios mediante el uso de las coordenadas *x* *e y* codificadas de forma rígida. En este ejemplo, un elemento <xref:System.Windows.Shapes.Rectangle> (no se muestra) se coloca en el punto de trazado 50 (*x*) y 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -244,7 +244,7 @@ ms.locfileid: "72291449"
 ## <a name="localizationglobalization-support"></a>Compatibilidad para la localización y globalización  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite diversas características que facilitan la creación de una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] localizable.  
   
- Todos los elementos del panel admiten de forma nativa la propiedad <xref:System.Windows.FrameworkElement.FlowDirection%2A>, que se puede usar para cambiar dinámicamente el flujo del contenido en función de la configuración regional o de idioma de un usuario. Para obtener más información, consulta <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
+ Todos los elementos del panel admiten de forma nativa la propiedad <xref:System.Windows.FrameworkElement.FlowDirection%2A>, que se puede usar para cambiar dinámicamente el flujo del contenido en función de la configuración regional o de idioma de un usuario. Para más información, consulte <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
  La propiedad <xref:System.Windows.Window.SizeToContent%2A> proporciona un mecanismo que permite a los desarrolladores de aplicaciones anticiparse a las necesidades de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]localizadas. Mediante el valor <xref:System.Windows.SizeToContent.WidthAndHeight> de esta propiedad, un elemento primario <xref:System.Windows.Window> siempre dimensiona dinámicamente para ajustarse al contenido y no está restringido por las restricciones de alto o ancho artificial.  
   
@@ -252,12 +252,12 @@ ms.locfileid: "72291449"
   
  Para obtener información adicional sobre la creación de aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con interfaces de usuario localizables (IUS), consulte la [información general sobre el uso del diseño automático](../advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Ejemplo WPF Layout Gallery](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Diseño](../advanced/layout.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
+- [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout) (Ejemplo de galería de controles de WPF)
 - [Información general sobre alineación, márgenes y relleno](../advanced/alignment-margins-and-padding-overview.md)
 - [Crear un ejemplo de panel de ajuste de contenido personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Información general sobre propiedades asociadas](../advanced/attached-properties-overview.md)

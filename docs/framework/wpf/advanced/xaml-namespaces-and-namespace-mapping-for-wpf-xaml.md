@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac9e028d8804c4fdadf4e6be8d7650afa1406969
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741823"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124473"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espacios de nombres y asignación de espacios de nombres XAML para WPF
 En este tema se explica con mayor detalle la presencia y el propósito de las dos asignaciones de espacio de nombres XAML que se encuentran a menudo en la etiqueta raíz de cada archivo XAML de WPF. También se describe cómo generar asignaciones similares para usar elementos definidos en su propio código y/o dentro de ensamblados independientes.  
@@ -137,5 +137,5 @@ End Namespace
   
 ## <a name="see-also"></a>Consulte también
 
-- [Descripción de los espacios de nombres XML](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [Descripción de los espacios de nombres XML](https://docs.microsoft.com/previous-versions/aa468565(v=msdn.10))
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

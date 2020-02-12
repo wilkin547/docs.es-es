@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424643"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123719"
 ---
 # <a name="dialog-boxes-overview"></a>Información general sobre cuadros de diálogo
 Las aplicaciones independientes suelen tener una ventana principal que muestra los datos principales a través de los cuales funciona la aplicación y expone la funcionalidad para procesar los datos a través de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos como barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
@@ -32,7 +32,7 @@ Las aplicaciones independientes suelen tener una ventana principal que muestra l
   
  Por otro lado, un cuadro de diálogo no *modal* no impide que un usuario Active otras ventanas mientras está abierto. Por ejemplo, si un usuario quiere buscar las repeticiones de una palabra determinada en un documento, a menudo una ventana principal abrirá un cuadro de diálogo para solicitar al usuario la palabra que está buscando. En cambio, como buscar una palabra no impide que un usuario edite el documento, el cuadro de diálogo no necesita ser modal. Un cuadro de diálogo no modal proporciona al menos un botón **cerrar** para cerrar el cuadro de diálogo y puede proporcionar botones adicionales para ejecutar funciones específicas, como un botón **Buscar siguiente** para buscar la palabra siguiente que coincida con los criterios de búsqueda de una búsqueda de palabras.  
   
- Windows Presentation Foundation (WPF) le permite crear varios tipos de cuadros de diálogo, incluidos cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. En este tema se describe cada uno de ellos y el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos coincidentes.  
+ Windows Presentation Foundation (WPF) le permite crear varios tipos de cuadros de diálogo, incluidos cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. En este tema se describe cada uno de ellos y el [ejemplo de cuadro de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) proporciona ejemplos coincidentes.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Cuadros de mensaje  
@@ -55,9 +55,9 @@ Las aplicaciones independientes suelen tener una ventana principal que muestra l
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Para obtener más información sobre el uso de cuadros de mensaje, vea <xref:System.Windows.MessageBox>, el [ejemplo MessageBox](https://go.microsoft.com/fwlink/?LinkID=160023)y el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Para obtener más información sobre el uso de cuadros de mensaje, vea <xref:System.Windows.MessageBox>, el [ejemplo MessageBox](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)y el [ejemplo de cuadro de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox).  
   
- Aunque <xref:System.Windows.MessageBox> puede ofrecer una experiencia de usuario de cuadro de diálogo simple, la ventaja de usar <xref:System.Windows.MessageBox> es que es el único tipo de ventana que pueden mostrar las aplicaciones que se ejecutan en un recinto de seguridad de confianza parcial (vea [seguridad](../security-wpf.md)), como el explorador XAML. aplicaciones (XBAP).  
+ Aunque <xref:System.Windows.MessageBox> puede ofrecer una experiencia de usuario de cuadro de diálogo simple, la ventaja de usar <xref:System.Windows.MessageBox> es que es el único tipo de ventana que pueden mostrar las aplicaciones que se ejecutan en un recinto de seguridad de confianza parcial (vea [seguridad](../security-wpf.md)), como las aplicaciones de explorador XAML (XBAP).  
   
  La mayoría de los cuadros de diálogo muestran y recopilan datos más complejos que el resultado de un cuadro de mensaje, incluidos texto, selección (casillas), selección mutuamente exclusiva (botón de selección) y selección de listas (cuadros de lista, cuadros combinados, cuadros de lista desplegable). Para ello, Windows Presentation Foundation (WPF) proporciona varios cuadros de diálogo comunes y permite crear sus propios cuadros de diálogo, aunque el uso de cualquiera de ellos se limita a las aplicaciones que se ejecutan con plena confianza.  
   
@@ -118,7 +118,7 @@ Aunque los cuadros de diálogo comunes son útiles, y deben usarse cuando sea po
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Crear un cuadro de diálogo personalizado modal
 
-En este tema se muestra cómo usar <xref:System.Windows.Window> para crear una implementación de cuadro de diálogo modal típica, mediante el cuadro de diálogo `Margins` como ejemplo (vea el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)). En la ilustración siguiente se muestra el cuadro de diálogo `Margins`.  
+En este tema se muestra cómo usar <xref:System.Windows.Window> para crear una implementación de cuadro de diálogo modal típica, mediante el cuadro de diálogo `Margins` como ejemplo (vea el [ejemplo de cuadro de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)). En la ilustración siguiente se muestra el cuadro de diálogo `Margins`.  
   
  ![Un cuadro de diálogo márgenes con campos para definir el margen izquierdo, el margen superior, el margen derecho y el margen inferior.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -304,7 +304,7 @@ Como alternativa, el código puede llamar a <xref:System.Windows.Window.Close%2A
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre el control Popup](../controls/popup-overview.md)
-- [Ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Ejemplo de cuadro de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

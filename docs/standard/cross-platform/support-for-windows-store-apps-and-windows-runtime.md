@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802757"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123706"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución
 
@@ -30,7 +28,7 @@ El .NET Framework 4,5 admite varios escenarios de desarrollo de software con la 
 
 En este tema se describe la compatibilidad que proporciona el .NET Framework para las tres categorías y se describen los escenarios para los componentes de Windows Runtime. La primera sección incluye información básica acerca de la relación entre el .NET Framework y el Windows Runtime, y explica algunos singularidades que puede encontrar en el sistema de ayuda y el IDE. En la [segunda sección](#WindowsRuntimeComponents) se describen los escenarios para desarrollar componentes de Windows Runtime.
 
-## <a name="the-basics"></a>Aspectos básicos
+## <a name="the-basics"></a>Conceptos básicos
 
 El .NET Framework admite los tres escenarios de desarrollo enumerados anteriormente proporcionando .NET para aplicaciones de la tienda Windows 8. x y admitiendo el Windows Runtime mismo.
 
@@ -98,9 +96,9 @@ Para habilitar el uso natural del Windows Runtime en código administrado, apare
 
 - En el caso de los Windows Runtime primitivas `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (una colección inmutable de caracteres Unicode), `Enum`, `UInt32`, `UInt64`y `Guid`, use el tipo del mismo nombre en el espacio de nombres `System`.
 
-- Para `UInt8`, use `System.Byte`.
+- Para `UInt8`, utilice `System.Byte`.
 
-- Para `Char16`, use `System.Char`.
+- Para `Char16`, utilice `System.Char`.
 
 - Para la interfaz `IInspectable`, use `System.Object`.
 
@@ -112,7 +110,7 @@ Otros tipos de Windows Runtime básicos, usados comúnmente que aparecen en cód
 
 ### <a name="other-differences"></a>Otras diferencias
 
-En algunos casos, el hecho de que .NET Framework tipos aparezcan en el código en lugar de Windows Runtime tipos requiere una acción por su parte. Por ejemplo, la clase <xref:Windows.Foundation.Uri?displayProperty=nameWithType> aparece como <xref:System.Uri?displayProperty=nameWithType> en .NET Framework código. <xref:System.Uri?displayProperty=nameWithType> permite un URI relativo, pero <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requiere un URI absoluto. Por consiguiente, al pasar un URI a un método Windows Runtime, debe asegurarse de que es absoluto. Consulta [Pasar un URI a Windows en tiempo de ejecución](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+En algunos casos, el hecho de que .NET Framework tipos aparezcan en el código en lugar de Windows Runtime tipos requiere una acción por su parte. Por ejemplo, la clase <xref:Windows.Foundation.Uri?displayProperty=nameWithType> aparece como <xref:System.Uri?displayProperty=nameWithType> en .NET Framework código. <xref:System.Uri?displayProperty=nameWithType> permite un URI relativo, pero <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requiere un URI absoluto. Por consiguiente, al pasar un URI a un método Windows Runtime, debe asegurarse de que es absoluto. Vea [pasar un URI a la Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,7 +155,7 @@ Puede empaquetar el código administrado desde las aplicaciones de escritorio ex
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Información general de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Describe los tipos de .NET Framework y miembros que se pueden usar para crear aplicaciones de la tienda Windows 8. x y Windows RuntimeComponents. (En el Centro de desarrollo de Windows).|
 |[Guía básica para aplicaciones de la C# tienda Windows mediante o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Proporciona recursos clave para ayudarle a empezar a desarrollar aplicaciones de la tienda Windows 8. C# x mediante o Visual Basic, incluidos muchos temas de inicio rápido, instrucciones y procedimientos recomendados. (En el Centro de desarrollo de Windows).|

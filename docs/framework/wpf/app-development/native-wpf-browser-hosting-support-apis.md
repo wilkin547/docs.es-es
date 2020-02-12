@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 7e285b916b076fdf0fc0d6477fba47d946b95726
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68981f30918b5fff346daa2fce94bbf4601ea2e9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744221"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124512"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API para el hospedaje nativo de WPF en explorador
 El hospedaje de aplicaciones WPF en exploradores Web se facilita mediante un servidor de documentos activo (también conocido como DocObject) registrado fuera del host de WPF. Internet Explorer puede activarse e integrarse directamente con un documento activo. Para el hospedaje de XBAP y documentos XAML sueltos en los exploradores de Mozilla, WPF proporciona un complemento de NPAPI, que proporciona un entorno de hospedaje similar al servidor de documentos activos de WPF como lo hace Internet Explorer. Sin embargo, la manera más sencilla de hospedar los documentos de XBAP y XAML en otros exploradores y aplicaciones independientes se realiza a través del control de explorador Web de Internet Explorer. El control de explorador Web proporciona el entorno de host de servidor de documentos activos complejo, pero permite a su propio host personalizar y ampliar ese entorno y comunicarse directamente con el objeto de documento activo actual.  
   
- El servidor de documentos activos de WPF implementa varias interfaces de hospedaje comunes, como [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control de explorador Web, estas interfaces pueden ser consultas del objeto devuelto por la propiedad [IWebBrowser2::D bilitar](https://go.microsoft.com/fwlink/?LinkId=162048) .  
+ El servidor de documentos activos de WPF implementa varias interfaces de hospedaje comunes, como [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject), [IOleDocument](/windows/win32/api/docobj/nn-docobj-ioledocument), [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject), [IPersistMoniker](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775042(v=vs.85)), [IOLECommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget). Cuando se hospeda en el control de explorador Web, estas interfaces pueden ser consultas del objeto devuelto por la propiedad [IWebBrowser2::D bilitar](https://docs.microsoft.com/previous-versions/aa752116(v=vs.85)) .  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- La implementación de [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) del servidor de documentos activos de WPF admite numerosos comandos relacionados con la navegación y específicos del explorador del grupo de comandos OLE estándar (con un GUID de grupo de comandos null). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, solo hay un comando definido dentro de este grupo.  
+ La implementación de [IOLECommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) del servidor de documentos activos de WPF admite numerosos comandos relacionados con la navegación y específicos del explorador del grupo de comandos OLE estándar (con un GUID de grupo de comandos null). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, solo hay un comando definido dentro de este grupo.  
   
 ```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

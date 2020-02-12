@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 5e994f65c0665a5726c4c8c19141da5ea3f5e6f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2ed4e153a2513dc99d22a1538399156c138eb9e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794183"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123836"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Tutorial: Hospedar un control de Windows Forms en WPF
 
@@ -21,9 +21,9 @@ ms.locfileid: "76794183"
 
 En este tutorial se muestra cómo hospedar un control de Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mediante el uso de código.
 
-Para obtener una lista de código completa de las tareas que se muestran en este tutorial, vea [hospedar un control de Windows Forms en el ejemplo de WPF](https://go.microsoft.com/fwlink/?LinkID=160057).
+Para obtener una lista de código completa de las tareas que se muestran en este tutorial, vea [hospedar un control de Windows Forms en el ejemplo de WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWPF).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Necesita Visual Studio para completar este tutorial.
 
@@ -63,7 +63,7 @@ Necesita Visual Studio para completar este tutorial.
 
 10. Presione **F5** para compilar y ejecutar la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
@@ -72,4 +72,4 @@ Necesita Visual Studio para completar este tutorial.
 - [Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Controles de Windows Forms y controles equivalentes de WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
-- [Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057) (Ejemplo de cómo hospedar un control de Windows Forms en WPF)
+- [Hosting a Windows Forms Control in WPF Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWPF) (Ejemplo de cómo hospedar un control de Windows Forms en WPF)

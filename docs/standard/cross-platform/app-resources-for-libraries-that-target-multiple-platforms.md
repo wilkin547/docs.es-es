@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204738"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123667"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos de aplicación para bibliotecas destinadas a varias plataformas
 Puede usar el tipo de proyecto .NET Framework [biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para asegurarse de que se puede tener acceso a los recursos de las bibliotecas de clases desde varias plataformas. Este tipo de proyecto está disponible en Visual Studio 2012 y tiene como destino el subconjunto portable de la biblioteca de clases de .NET Framework. El uso de una biblioteca de clases portable garantiza que se puede tener acceso a la biblioteca desde aplicaciones de escritorio, aplicaciones de Silverlight, aplicaciones Windows Phone y aplicaciones de la tienda Windows 8. x.
@@ -61,9 +59,9 @@ Puede usar el tipo de proyecto .NET Framework [biblioteca de clases portable](..
 |BornLength|12|
 |Hired|Fecha de contratación|
 |HiredLength|12|
-|ID.|ID.|
+|id|id|
 |ID.Length|12|
-|Name|Name|
+|Nombre|Nombre|
 |NameLength|25|
 |Título|Base de datos de empleados|
 
@@ -90,8 +88,8 @@ Puede usar el tipo de proyecto .NET Framework [biblioteca de clases portable](..
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|ID.|ID.|
-|Name|Nom|
+|id|id|
+|Nombre|Nom|
 |Título|Base de données des employés|
 
  El código siguiente muestra cómo obtener acceso a la clase `UILibrary` y a sus recursos desde una aplicación de modo de consola. Requiere que se agregue una referencia a UILibrary. dll al proyecto de aplicación de consola.
@@ -104,7 +102,7 @@ Puede usar el tipo de proyecto .NET Framework [biblioteca de clases portable](..
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Resources.ResourceManager>
 - [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)

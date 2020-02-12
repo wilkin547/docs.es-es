@@ -7,44 +7,42 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd5e5612de15a499c0dce34dc30faa6fd5731c17
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590336"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124538"
 ---
-# <a name="cross-platform-development-with-the-portable-class-library"></a>Desarrollo multiplataforma con la biblioteca de clases Portable
+# <a name="cross-platform-development-with-the-portable-class-library"></a>Desarrollo multiplataforma con la biblioteca de clases portable
 
-El tipo de proyecto de biblioteca de clases Portable en Visual Studio le ayuda a crear aplicaciones multiplataforma y bibliotecas para las plataformas de Microsoft de forma rápida y fácilmente.
+El tipo de proyecto de biblioteca de clases portable en Visual Studio le ayuda a compilar aplicaciones y bibliotecas multiplataforma para plataformas de Microsoft de forma rápida y sencilla.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
-Las bibliotecas de clases portables reducen el tiempo y el coste empleados en desarrollar y probar código. Use este tipo de proyecto para escribir y compilar ensamblados portables de .NET Framework y, a continuación, hacer referencia a esos ensamblados desde aplicaciones que tienen como destino varias plataformas como .NET Framework, iOS o Mac.
+Las bibliotecas de clases portables reducen el tiempo y el coste empleados en desarrollar y probar código. Use este tipo de proyecto para escribir y compilar ensamblados de .NET Framework portátiles y luego hacer referencia a esos ensamblados desde aplicaciones destinadas a varias plataformas, como .NET Framework, iOS o Mac.
 
-Puede cambiar de plataforma incluso después de haber creado un proyecto de Biblioteca de clases portable en Visual Studio y de haber empezado a desarrollarlo. Visual Studio compila la biblioteca con los nuevos ensamblados, lo que ayuda a identificar los cambios que debe realizar en el código.
+Puede cambiar de plataforma incluso después de haber creado un proyecto de Biblioteca de clases portable en Visual Studio y de haber empezado a desarrollarlo. Visual Studio compila la biblioteca con los nuevos ensamblados, lo que le ayuda a identificar los cambios que debe realizar en el código.
 
-## <a name="create-a-portable-class-library-project"></a>Crear un proyecto de biblioteca de clases Portable
+## <a name="create-a-portable-class-library-project"></a>Crear un proyecto de biblioteca de clases portable
 
-Para crear una biblioteca de clases Portable, use la plantilla proporcionada en Visual Studio. Cree un nuevo proyecto (**archivo** > **nuevo proyecto**) y en el **nuevo proyecto** cuadro de diálogo, seleccione el lenguaje de programación (Visual C# o Visual Basic). A continuación, seleccione el **biblioteca de clases (portátil heredada)** plantilla. Escriba un nombre para el proyecto y elija **Aceptar**.
+Para crear una biblioteca de clases portable, use la plantilla que se proporciona en Visual Studio. Cree un nuevo proyecto (**archivo** > **nuevo proyecto**) y, en el cuadro de diálogo **nuevo proyecto** , seleccione el lenguaje de programación C# (visual o Visual Basic). A continuación, seleccione la plantilla **biblioteca de clases (Legacy portable)** . Escriba un nombre para el proyecto y elija **Aceptar**.
 
-El **Agregar biblioteca de clases Portable** aparece el cuadro de diálogo. Elija dos o más destinos y, a continuación, elija **Aceptar**.
+Aparece el cuadro de diálogo **Agregar biblioteca de clases portable** . Elija dos o más destinos y, después, elija **Aceptar**.
 
 ![Agregar destinos de biblioteca de clases portable en Visual Studio](media/add-portable-class-library.png)
 
-## <a name="change-targets"></a>Cambiar los destinos
+## <a name="change-targets"></a>Cambiar destinos
 
-Puede cambiar las plataformas de destino de un proyecto de biblioteca de clases portable al crearlo o después de haber iniciado el desarrollo. Si desea cambiar los destinos después de crear el proyecto, en **el Explorador de soluciones**, abra el menú contextual para el proyecto de biblioteca de clases Portable (no la solución) y, a continuación, elija **propiedades** . En la página de propiedades del proyecto, el **biblioteca** pestaña muestra las plataformas que actualmente dirige el proyecto.
+Puede cambiar las plataformas de destino de un proyecto de biblioteca de clases portable cuando se crea o cuando se inicia el desarrollo. Si desea cambiar los destinos una vez creado el proyecto, en **Explorador de soluciones**, abra el menú contextual del proyecto de biblioteca de clases portable (no de la solución) y, a continuación, elija **propiedades**. En la página de propiedades del proyecto, la pestaña **biblioteca** muestra las plataformas a las que el proyecto está destinado actualmente.
 
-![Propiedades del proyecto de biblioteca de clases Portable en Visual Studio](media/pcl-project-properties.png)
+![Propiedades del proyecto para la biblioteca de clases portable en Visual Studio](media/pcl-project-properties.png)
 
-Para agregar o quitar destinos, elija el **cambio** botón y, a continuación, active y desactive las casillas correspondientes.
+Para agregar o quitar destinos, elija el botón **cambiar** y, a continuación, Active y desactive las casillas correspondientes.
 
 Al modificar los destinos, las API que tiene a su disposición para desarrollar el proyecto cambiarán para corresponderse con las opciones seleccionadas. Visual Studio notifica los errores y las advertencias que pueden producirse como resultado del cambio de destinos.
 
-Si desea evaluar la portabilidad de los ensamblados antes de realizar cambios en Visual Studio, puede usar el [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
+Si desea evaluar la portabilidad de los ensamblados antes de realizar cambios en Visual Studio, puede usar el analizador de [portabilidad de .net](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
 
 ## <a name="supported-types-and-members"></a>Tipos y miembros compatibles
 
@@ -64,27 +62,27 @@ Si un miembro es compatible con la Biblioteca de clases portable y con los desti
 
 Para que los ensamblados de la Biblioteca de clases portable sean compatibles en todas las plataformas admitidas, algunos miembros se han modificado ligeramente en la Biblioteca de clases portable.
 
-## <a name="use-the-portable-class-library"></a>Uso de la biblioteca de clases Portable
+## <a name="use-the-portable-class-library"></a>Usar la biblioteca de clases portable
 
 Después de compilar el proyecto de Biblioteca de clases portable, haga referencia a él desde otros proyectos. Puede hacer referencia al proyecto o a ensamblados específicos que contengan las clases a las que desea obtener acceso.
 
 Para ejecutar una aplicación que haga referencia a un ensamblado de Biblioteca de clases portable, debe estar instalada en el equipo la versión requerida (o una versión posterior) de las plataformas de destino. Visual Studio contiene todos los marcos necesarios para poder ejecutar la aplicación sin modificaciones adicionales en el equipo que utilizó para desarrollar la aplicación.
 
-### <a name="deploy-a-universal-windows-app"></a>Implementar una aplicación Windows Universal
+### <a name="deploy-a-universal-windows-app"></a>Implementar una aplicación universal de Windows
 
-Cuando se crea una aplicación Windows Universal que hace referencia a un ensamblado de biblioteca de clases Portable, todo lo que necesita para implementar la aplicación se incluye en el paquete de aplicación y se requiere ningún paso adicional.
+Al crear una aplicación universal de Windows que hace referencia a un ensamblado de biblioteca de clases portable, todo lo que necesita para implementar la aplicación se incluye en el paquete de la aplicación y no es necesario realizar más pasos.
 
-### <a name="deploy-a-net-framework-app"></a>Implementar .NET Framework app
+### <a name="deploy-a-net-framework-app"></a>Implementación de una aplicación .NET Framework
 
 Cuando implemente una aplicación de .NET Framework que haga referencia a un ensamblado de Biblioteca de clases portable, especifique una dependencia en la versión correcta de .NET Framework. Al especificar esta dependencia, se asegura de que la versión requerida se instala con la aplicación.
 
-- Para crear una dependencia con implementación ClickOnce: En **el Explorador de soluciones**, elija el nodo del proyecto para el proyecto que desea publicar. (Este es el proyecto que hace referencia al proyecto de Biblioteca de clases portable). En la barra de menús, elija **proyecto** > **propiedades**y, a continuación, elija el **publicar** ficha. En el **publicar** página, elija **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
+- Para crear una dependencia con la implementación ClickOnce: en **Explorador de soluciones**, elija el nodo del proyecto que desea publicar. (Este es el proyecto que hace referencia al proyecto de biblioteca de clases portable). En la barra de menús, elija **proyecto** > **propiedades**y, a continuación, elija la pestaña **publicar** . En la página **publicar** , elija **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
 
-- Para crear una dependencia con un proyecto de instalación: En **el Explorador de soluciones**, elija el proyecto de instalación. En la barra de menús, elija **proyecto** > **propiedades** > **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
+- Para crear una dependencia con un proyecto de instalación: en **Explorador de soluciones**, elija el proyecto de instalación. En la barra de menús, elija **proyecto** > **propiedades** > **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.
 
-Para obtener más información sobre cómo implementar aplicaciones de .NET Framework, vea [Deployment Guide for Developers](../../../docs/framework/deployment/deployment-guide-for-developers.md).
+Para obtener más información sobre la implementación de .NET Framework aplicaciones, consulte la [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Uso de la Biblioteca de clases portable con MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)
 - [Recursos de aplicación para bibliotecas destinadas a varias plataformas](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)

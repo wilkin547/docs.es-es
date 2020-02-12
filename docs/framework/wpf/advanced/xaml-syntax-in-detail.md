@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559838"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124499"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 En este tema se definen los términos que se usan para describir los elementos de la sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente como para los otros marcos de trabajo que usan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel System. Xaml. En este tema se amplía la terminología básica introducida en el tema [información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -43,7 +43,7 @@ En este tema se definen los términos que se usan para describir los elementos d
 ## <a name="the-xaml-language-specification"></a>Especificación del lenguaje XAML  
  También se define o se hace referencia a la terminología de sintaxis XAML definida aquí en la especificación del lenguaje XAML. XAML es un lenguaje basado en XML y sigue o amplía las reglas estructurales de XML. Parte de la terminología se comparte desde o se basa en la terminología que se usa normalmente al describir el lenguaje XML o el modelo de objetos de documento XML.  
   
- Para obtener más información sobre la especificación del lenguaje XAML, descargue [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525) desde el centro de descarga de Microsoft.  
+ Para obtener más información sobre la especificación del lenguaje XAML, descargue [\[MS-XAML\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) desde el centro de descarga de Microsoft.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML y CLR  
@@ -259,7 +259,7 @@ En este tema se definen los términos que se usan para describir los elementos d
  Para más información sobre las extensiones de marcado, consulte [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md). Para obtener una referencia de las extensiones de marcado y otras características de programación XAML habilitadas en la implementación de XAML de .NET general, vea [espacio de nombres XAML (x:). Características del lenguaje](../../../desktop-wpf/xaml-services/namespace-language-features.md). Para las extensiones de marcado específicas de WPF, vea [extensiones XAML de WPF](wpf-xaml-extensions.md).  
   
 <a name="attached_properties"></a>   
-## <a name="attached-properties"></a>Propiedades adjuntas  
+## <a name="attached-properties"></a>Propiedades asociadas  
  Las propiedades adjuntas son un concepto de programación introducido en XAML, en el que las propiedades pueden ser propiedad y definidas por un tipo determinado, pero se establecen como atributos o elementos de propiedad en cualquier elemento. El escenario principal para el que se pretenden las propiedades adjuntas es permitir que los elementos secundarios de una estructura de marcado informen sobre la información a un elemento primario sin necesidad de un modelo de objetos compartidos exhaustivamente en todos los elementos. Por el contrario, los elementos primarios pueden usar las propiedades adjuntas para notificar información a los elementos secundarios. Para obtener más información sobre el propósito de las propiedades adjuntas y cómo crear sus propias propiedades adjuntas, vea [información general sobre las propiedades adjuntas](attached-properties-overview.md).  
   
  Las propiedades adjuntas usan una sintaxis que se parece superficialmente a la sintaxis de los elementos de propiedad, en que también se especifica un *TypeName*. combinación *PropertyName* . Hay dos diferencias importantes:  
@@ -269,7 +269,7 @@ En este tema se definen los términos que se usan para describir los elementos d
 - También puede usar la sintaxis de elementos de propiedad para las propiedades adjuntas. Sin embargo, para la sintaxis de elementos de propiedad típica, el *TypeName* que especifique es el elemento de objeto que contiene el elemento de propiedad. Si hace referencia a una propiedad adjunta, *TypeName* es la clase que define la propiedad adjunta, no el elemento de objeto contenedor.  
   
 <a name="attached_events"></a>   
-## <a name="attached-events"></a>Eventos adjuntos  
+## <a name="attached-events"></a>Eventos asociados  
  Los eventos adjuntos son otro concepto de programación incluido en XAML donde los eventos se pueden definir mediante un tipo específico, pero los controladores se pueden adjuntar en cualquier elemento de objeto. En la implementación de WOF, a menudo el tipo que define un evento adjunto es un tipo estático que define un servicio y, a veces, los eventos adjuntos se exponen mediante un alias de evento enrutado en los tipos que exponen el servicio. Los controladores de eventos adjuntos se especifican a través de la sintaxis de atributo. Al igual que con los eventos adjuntos, la sintaxis de atributo se expande para los eventos adjuntos para permitir un *TypeName*. *eventName* Usage, donde *TypeName* es la clase que proporciona `Add` y `Remove` los descriptores de acceso del controlador de eventos para la infraestructura de eventos adjuntos y *eventName* es el nombre del evento.  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
@@ -313,7 +313,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
  Pero igual que *TypeName*. formulario *memberName* para atributos, *nombredetipobase*. *memberName* es un estilo pobre en el marcado y debe evitarlo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Características de lenguaje (x:) de espacios de nombres XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)

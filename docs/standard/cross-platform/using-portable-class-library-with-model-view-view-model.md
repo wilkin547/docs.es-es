@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716751"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123680"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usar la Biblioteca de clases portable con Model-View-View Model
 Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar el patrón Model-View-View Model (MVVM) y compartir ensamblados en varias plataformas.
@@ -59,7 +57,7 @@ Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/stand
 
  Después de compilar los proyectos de modelo y vista de modelo, se hace referencia a esos ensamblados en la aplicación que contiene la vista. Si la vista interactúa solo con el modelo de vista, solo tiene que hacer referencia al ensamblado que contiene el modelo de vista.
 
-### <a name="model"></a>Model
+### <a name="model"></a>Modelo
  En el ejemplo siguiente se muestra una clase de modelo simplificada que puede residir en un proyecto de biblioteca de clases portable.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -86,11 +84,11 @@ Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/stand
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>Vista  
+### <a name="view"></a>Ver  
  Desde una aplicación .NET Framework 4,5, una aplicación de la tienda Windows 8. x, una aplicación basada en Silverlight o la aplicación Windows Phone 7,5, puede hacer referencia al ensamblado que contiene los proyectos modelo y vista modelo.  A continuación, cree una vista que interactúe con el modelo de vista. En el ejemplo siguiente se muestra una aplicación simplificada de Windows Presentation Foundation (WPF) que recupera y actualiza los datos del modelo de vista. Puede crear vistas similares en las aplicaciones de la tienda Silverlight, Windows Phone o Windows 8. x.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744475"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124564"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 
-Cuando se limita la disponibilidad de un producto a un solo idioma, se limita la base de clientes potenciales a una fracción de los 6,5 mil millones de habitantes del mundo. Si quiere que las aplicaciones alcancen una audiencia global, la localización rentable del producto es una de las formas mejores y más económicas de llegar a más clientes.
+Al limitar la disponibilidad de un producto a un solo idioma, limitará la base de clientes potencial a una fracción de la población 7,5 mil millones de nuestro mundo. Si quiere que las aplicaciones alcancen una audiencia global, la localización rentable del producto es una de las formas mejores y más económicas de llegar a más clientes.
 
 Esta información general presenta la globalización y la localización en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La globalización es el diseño y desarrollo de aplicaciones que funcionan en diversas ubicaciones. Por ejemplo, la globalización permite el uso de interfaces de usuario localizadas y datos regionales para usuarios de diferentes referencias culturales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona características de diseño globalizadas, incluidos el diseño automático, los ensamblados satélite y los atributos y los comentarios localizados.
 
-La localización es la traducción de los recursos de una aplicación en versiones localizadas para las referencias culturales específicas que admite la aplicación. Cuando se localiza en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], se usan las API del espacio de nombres <xref:System.Windows.Markup.Localizer>. Estas API potencian la herramienta de línea de comandos de ejemplo de la [herramienta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) . Para obtener información sobre cómo compilar y usar LocBaml, vea [localizar una aplicación](how-to-localize-an-application.md).
+La localización es la traducción de los recursos de una aplicación en versiones localizadas para las referencias culturales específicas que admite la aplicación. Cuando se localiza en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], se usan las API del espacio de nombres <xref:System.Windows.Markup.Localizer>. Estas API potencian la herramienta de línea de comandos de ejemplo de la [herramienta LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml) . Para obtener información sobre cómo compilar y usar LocBaml, vea [localizar una aplicación](how-to-localize-an-application.md).
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Procedimientos recomendados para la globalización y localización en WPF
 
@@ -48,7 +48,7 @@ Al diseñar un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md
 
 - Cuando cree aplicaciones de navegación que se puedan localizar en una referencia cultural que presente texto en un formato de derecha a izquierda, establezca explícitamente el <xref:System.Windows.FlowDirection> de cada página para asegurarse de que la página no hereda <xref:System.Windows.FlowDirection> de la <xref:System.Windows.Navigation.NavigationWindow>.
 
-- Al crear aplicaciones de navegación independientes que se hospedan fuera de un explorador, establezca el <xref:System.Windows.Application.StartupUri%2A> de la aplicación inicial en un <xref:System.Windows.Navigation.NavigationWindow> en lugar de en una página (por ejemplo, `<Application StartupUri="NavigationWindow.xaml">`). Este diseño permite cambiar el <xref:System.Windows.FlowDirection> de la ventana y la barra de navegación. Para obtener más información y un ejemplo, vea ejemplo de la [Página principal de globalización](https://go.microsoft.com/fwlink/?LinkID=159990).
+- Al crear aplicaciones de navegación independientes que se hospedan fuera de un explorador, establezca el <xref:System.Windows.Application.StartupUri%2A> de la aplicación inicial en un <xref:System.Windows.Navigation.NavigationWindow> en lugar de en una página (por ejemplo, `<Application StartupUri="NavigationWindow.xaml">`). Este diseño permite cambiar el <xref:System.Windows.FlowDirection> de la ventana y la barra de navegación. Para obtener más información y un ejemplo, vea ejemplo de la [Página principal de globalización](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
 
 ### <a name="best-practices-for-wpf-localization"></a>Procedimientos recomendados para la localización de WPF
 
@@ -64,7 +64,7 @@ Al localizar aplicaciones basadas en [!INCLUDE[TLA2#tla_winclient](../../../../i
 
   - No use propiedades de <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> duplicadas (recuerde esta sugerencia al usar el comando de copiar y pegar).
 
-  - Establezca la ubicación `UltimateResourceFallback` en AssemblyInfo. * para especificar el idioma adecuado para la reserva (por ejemplo, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
+  - Establezca la ubicación `UltimateResourceFallback` en AssemblyInfo.\* para especificar el idioma adecuado para la reserva (por ejemplo, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
 
     Si decide incluir el idioma de origen en el ensamblado principal omitiendo la `<UICulture>` etiqueta en el archivo de proyecto, establezca la ubicación de `UltimateResourceFallback` como el ensamblado principal en lugar del satélite (por ejemplo, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
 
@@ -102,7 +102,7 @@ En el gráfico siguiente se muestra un flujo de trabajo de localización típico
 
 Esta sección contiene ejemplos de aplicaciones localizadas que le ayudarán a entender cómo compilar y localizar aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-#### <a name="run-dialog-box-example"></a>Ejemplo de cuadro de diálogo Ejecutar
+### <a name="run-dialog-box-example"></a>Ejemplo de cuadro de diálogo Ejecutar
 
 En los gráficos siguientes se muestra el resultado del ejemplo de cuadro de diálogo **Ejecutar** .
 
@@ -172,7 +172,7 @@ No es necesario localizar el `RunIcon.JPG` porque debe aparecer igual para todas
 
 **Analizar**
 
-Después de compilar la aplicación, el primer paso para localizarla es analizar los recursos localizables del ensamblado satélite. Para los fines de este tema, use la herramienta LocBaml de ejemplo que encontrará en el [ejemplo de la herramienta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Tenga en cuenta que LocBaml es solamente una herramienta de ejemplo, cuyo propósito es ayudarle a iniciarse en la compilación de una herramienta de localización adecuada para el proceso de localización. Con LocBaml, ejecute lo siguiente para analizar: **LocBaml/Parse runDialog. Resources. dll/out:** para generar un archivo "runDialog. Resources. dll. csv".
+Después de compilar la aplicación, el primer paso para localizarla es analizar los recursos localizables del ensamblado satélite. Para los fines de este tema, use la herramienta LocBaml de ejemplo que encontrará en el [ejemplo de la herramienta LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml). Tenga en cuenta que LocBaml es solamente una herramienta de ejemplo, cuyo propósito es ayudarle a iniciarse en la compilación de una herramienta de localización adecuada para el proceso de localización. Con LocBaml, ejecute lo siguiente para analizar: **LocBaml/Parse runDialog. Resources. dll/out:** para generar un archivo "runDialog. Resources. dll. csv".
 
 **Localizar**
 
@@ -215,7 +215,7 @@ En las ventanas alemanas, si este archivo resources. dll se coloca en una carpet
 |Código|BAML en inglés original|BAML localizado|
 |Recursos culturalmente neutrales|Otros recursos en inglés|Otros recursos localizados al alemán|
 
-.NET Framework elige automáticamente el ensamblado de recursos satélite que se va a cargar en función del `Thread.CurrentThread.CurrentUICulture`de la aplicación. El valor predeterminado es la referencia cultural de su sistema operativo Windows. Por lo tanto, si usa ventanas alemanas, el de-DE\MyDialog.resources.dll se carga, si usa ventanas en inglés, el en-US\MyDialog.resources.dll se carga. Puede establecer el recurso de reserva último para la aplicación especificando NeutralResourcesLanguage en AssemblyInfo.* del proyecto. Por ejemplo, si especifica:
+.NET Framework elige automáticamente el ensamblado de recursos satélite que se va a cargar en función del `Thread.CurrentThread.CurrentUICulture`de la aplicación. El valor predeterminado es la referencia cultural de su sistema operativo Windows. Por lo tanto, si usa ventanas alemanas, el de-DE\MyDialog.resources.dll se carga, si usa ventanas en inglés, el en-US\MyDialog.resources.dll se carga. Puede establecer el recurso de reserva final de la aplicación especificando el NeutralResourcesLanguage en el AssemblyInfo del proyecto.\*. Por ejemplo, si especifica:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,7 +223,7 @@ se usará en-US\MyDialog.resources.dll con la versión alemana de Windows si no 
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Página principal de Microsoft Arabia Saudí
 
-En los gráficos siguientes se muestra una página principal en inglés y en árabe. Para obtener el ejemplo completo que genera estos gráficos, vea ejemplo de la [Página principal de globalización](https://go.microsoft.com/fwlink/?LinkID=159990).
+En los gráficos siguientes se muestra una página principal en inglés y en árabe. Para obtener el ejemplo completo que genera estos gráficos, vea ejemplo de la [Página principal de globalización](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
 
 **Inglés:**
 
@@ -261,7 +261,7 @@ Eche un vistazo a homepage. XAML, tenga en cuenta que, aparte del ancho y el alt
 
 **Comentarios de localización**
 
-En muchos casos, el contenido puede ser ambiguo y difícil de traducir. El desarrollador o el diseñador tiene la capacidad de proporcionar contexto y comentarios adicionales a los localizadores mediante comentarios de localización. El ejemplo de Localization.Comments que aparece a continuación clarifica el uso del carácter "&#124;".
+En muchos casos, el contenido puede ser ambiguo y difícil de traducir. El desarrollador o el diseñador tiene la capacidad de proporcionar contexto y comentarios adicionales a los localizadores mediante comentarios de localización. Por ejemplo, la localización. los comentarios siguientes aclaran el uso del carácter&#124;' '.
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
@@ -277,7 +277,7 @@ Se pueden colocar comentarios en el contenido o en las propiedades de cualquier 
 
 **Atributos de localización**
 
-A menudo, el desarrollador o el administrador de la localización necesita controlar lo que pueden leer y modificar los localizadores. Por ejemplo, quizá no quiera que el localizador traduzca el nombre de su compañía o la redacción legal. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona atributos que permiten establecer la legibilidad, modificabilidad y categoría del contenido o las propiedades de un elemento que la herramienta de localización puede usar para bloquear, ocultar u ordenar elementos. Para más información, consulte <xref:System.Windows.Localization.Attributes%2A>. Para este ejemplo, la herramienta LocBaml genera solamente los valores de estos atributos. Todos los controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen valores predeterminados para estos atributos, pero es posible invalidarlos. Por ejemplo, en el ejemplo siguiente se reemplazan los atributos de localización predeterminados para `TextBlock_1` y se establece que el contenido sea legible pero no modificable para los localizadores.
+A menudo, el desarrollador o el administrador de la localización necesita controlar lo que pueden leer y modificar los localizadores. Por ejemplo, quizá no quiera que el localizador traduzca el nombre de su compañía o la redacción legal. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona atributos que permiten establecer la legibilidad, la modificabilidad y la categoría del contenido o la propiedad de un elemento que la herramienta de localización puede usar para bloquear, ocultar u ordenar elementos. Para más información, consulte <xref:System.Windows.Localization.Attributes%2A>. Para este ejemplo, la herramienta LocBaml genera solamente los valores de estos atributos. Todos los controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen valores predeterminados para estos atributos, pero es posible invalidarlos. Por ejemplo, en el ejemplo siguiente se reemplazan los atributos de localización predeterminados para `TextBlock_1` y se establece que el contenido sea legible pero no modificable para los localizadores.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -305,4 +305,4 @@ Para obtener más información sobre las fuentes compuestas, vea <xref:System.Wi
 
 **Localizar la página principal de Microsoft**
 
-Puede seguir los mismos pasos que en el ejemplo del cuadro de diálogo Ejecutar para localizar esta aplicación. El archivo. csv localizado para árabe está disponible en el [ejemplo de página principal de globalización](https://go.microsoft.com/fwlink/?LinkID=159990).
+Puede seguir los mismos pasos que en el ejemplo del cuadro de diálogo Ejecutar para localizar esta aplicación. El archivo. csv localizado para árabe está disponible en el [ejemplo de página principal de globalización](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
