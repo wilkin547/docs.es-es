@@ -11,34 +11,32 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e3e64a720d12426fb066619b46c73402d1113e0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052627"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217380"
 ---
-# <a name="invalidfunctionpointerindelegate-mda"></a><span data-ttu-id="f46ab-102">MDA de invalidFunctionPointerInDelegate</span><span class="sxs-lookup"><span data-stu-id="f46ab-102">invalidFunctionPointerInDelegate MDA</span></span>
-<span data-ttu-id="f46ab-103">El asistente para la depuración administrada (MDA, por sus siglas en inglés) `invalidFunctionPointerInDelegate` se activa cuando un puntero de función no válido se pasa para construir un delegado sobre un puntero de función nativo.</span><span class="sxs-lookup"><span data-stu-id="f46ab-103">The `invalidFunctionPointerInDelegate` managed debugging assistant (MDA) is activated when an invalid function pointer is passed in to construct a delegate over a native function pointer.</span></span>  
+# <a name="invalidfunctionpointerindelegate-mda"></a><span data-ttu-id="6be63-102">MDA de invalidFunctionPointerInDelegate</span><span class="sxs-lookup"><span data-stu-id="6be63-102">invalidFunctionPointerInDelegate MDA</span></span>
+<span data-ttu-id="6be63-103">El asistente para la depuración administrada (MDA, por sus siglas en inglés) `invalidFunctionPointerInDelegate` se activa cuando un puntero de función no válido se pasa para construir un delegado sobre un puntero de función nativo.</span><span class="sxs-lookup"><span data-stu-id="6be63-103">The `invalidFunctionPointerInDelegate` managed debugging assistant (MDA) is activated when an invalid function pointer is passed in to construct a delegate over a native function pointer.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="f46ab-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="f46ab-104">Symptoms</span></span>  
- <span data-ttu-id="f46ab-105">Infracciones de acceso o deterioro inesperado de la memoria al usar un delegado sobre un puntero de función.</span><span class="sxs-lookup"><span data-stu-id="f46ab-105">Access violations or unexpected memory corruption when using a delegate over a function pointer.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="6be63-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="6be63-104">Symptoms</span></span>  
+ <span data-ttu-id="6be63-105">Infracciones de acceso o deterioro inesperado de la memoria al usar un delegado sobre un puntero de función.</span><span class="sxs-lookup"><span data-stu-id="6be63-105">Access violations or unexpected memory corruption when using a delegate over a function pointer.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="f46ab-106">Causa</span><span class="sxs-lookup"><span data-stu-id="f46ab-106">Cause</span></span>  
- <span data-ttu-id="f46ab-107">El puntero de función que se especificó no es válido.</span><span class="sxs-lookup"><span data-stu-id="f46ab-107">An invalid function pointer was specified.</span></span>  
+## <a name="cause"></a><span data-ttu-id="6be63-106">Causa</span><span class="sxs-lookup"><span data-stu-id="6be63-106">Cause</span></span>  
+ <span data-ttu-id="6be63-107">El puntero de función que se especificó no es válido.</span><span class="sxs-lookup"><span data-stu-id="6be63-107">An invalid function pointer was specified.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="f46ab-108">Resolución</span><span class="sxs-lookup"><span data-stu-id="f46ab-108">Resolution</span></span>  
- <span data-ttu-id="f46ab-109">Especifique un puntero de función válido.</span><span class="sxs-lookup"><span data-stu-id="f46ab-109">Specify a valid function pointer</span></span>  
+## <a name="resolution"></a><span data-ttu-id="6be63-108">Solución</span><span class="sxs-lookup"><span data-stu-id="6be63-108">Resolution</span></span>  
+ <span data-ttu-id="6be63-109">Especifique un puntero de función válido.</span><span class="sxs-lookup"><span data-stu-id="6be63-109">Specify a valid function pointer</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="f46ab-110">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="f46ab-110">Effect on the Runtime</span></span>  
- <span data-ttu-id="f46ab-111">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="f46ab-111">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="6be63-110">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="6be63-110">Effect on the Runtime</span></span>  
+ <span data-ttu-id="6be63-111">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="6be63-111">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="f46ab-112">Resultados</span><span class="sxs-lookup"><span data-stu-id="f46ab-112">Output</span></span>  
- <span data-ttu-id="f46ab-113">El puntero de función no válido.</span><span class="sxs-lookup"><span data-stu-id="f46ab-113">The invalid function pointer.</span></span>  
+## <a name="output"></a><span data-ttu-id="6be63-112">Output</span><span class="sxs-lookup"><span data-stu-id="6be63-112">Output</span></span>  
+ <span data-ttu-id="6be63-113">El puntero de función no válido.</span><span class="sxs-lookup"><span data-stu-id="6be63-113">The invalid function pointer.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="f46ab-114">Configuración</span><span class="sxs-lookup"><span data-stu-id="f46ab-114">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="6be63-114">Configuración</span><span class="sxs-lookup"><span data-stu-id="6be63-114">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -48,8 +46,8 @@ ms.locfileid: "71052627"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f46ab-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="f46ab-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6be63-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="6be63-115">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="f46ab-116">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="f46ab-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="f46ab-117">Serialización de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="f46ab-117">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="6be63-116">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="6be63-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="6be63-117">Serialización para interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="6be63-117">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
