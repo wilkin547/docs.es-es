@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0fcdb75aa733a9d7634ec1c3b31dcbbb87e090e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088726"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215493"
 ---
 # <a name="remove-element-for-appsettings"></a>\<quitar > elemento para \<appSettings >
 
@@ -46,7 +44,7 @@ Quita la configuración de la aplicación personalizada.
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
 ## <a name="example"></a>Ejemplo
 
@@ -58,6 +56,6 @@ En el ejemplo siguiente se muestra cómo quitar un valor de configuración perso
 </appSettings>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](../index.md)

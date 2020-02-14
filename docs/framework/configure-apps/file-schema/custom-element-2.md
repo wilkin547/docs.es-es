@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118541"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215475"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizado para NameValueSectionHandler y DictionarySectionHandler
 
@@ -24,7 +22,7 @@ Define la configuración de las secciones de configuración personalizadas que u
 
 ## <a name="attributes"></a>Atributos
 
-Ninguno
+None
 
 ## <a name="parent-element"></a>Elemento primario
 
@@ -40,13 +38,13 @@ Ninguno
 | [ **\<quitar >** ](remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> | Quita un valor definido previamente. |
 | [ **\<borrar >** ](clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> | Borra todos los valores de configuración definidos previamente en una sección. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El elemento **\<sectionName >** es un elemento personalizado definido por una **sección de\<** etiqueta del elemento\<**configSections >** .
+El elemento **\<sectionName >** es un elemento personalizado definido por una **sección de\<>** etiqueta del elemento\<**configSections >** .
 
 En la tabla siguiente se muestra el tipo de objeto que devuelve el método ConfigurationSettings. GetConfig para cada controlador de sección de configuración:
 
-| Controlador de la sección de configuración                        | Tipo devuelto                                                |
+| Controlador de la sección de configuración                        | Tipo de valor devuelto                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
 | <xref:System.Configuration.NameValueSectionHandler>  | <xref:System.Collections.Specialized.NameValueCollection>  |
 | <xref:System.Configuration.DictionarySectionHandler> | <xref:System.Collections.IDictionary>                      |
@@ -80,6 +78,6 @@ El primer elemento personalizado es **\<dictionarySample >** , que contiene los 
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

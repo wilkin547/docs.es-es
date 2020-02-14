@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ejecutar código de confianza parcial en un espacio aislado
+title: 'Cómo: Ejecutar código de confianza parcial en un recinto'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894564"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215857"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedimiento Ejecutar código de confianza parcial en un espacio aislado
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Cómo: Ejecutar código de confianza parcial en un recinto
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  El uso de espacios aislados consiste en ejecutar código en un entorno de seguridad restringido que limita los permisos de acceso concedidos al código. Por ejemplo, si tiene una biblioteca administrada procedente de un origen en el que no confía plenamente, no la ejecute como si fuese de plena confianza. En su lugar, coloque el código en un espacio aislado que limite los permisos a los que considere necesarios (por ejemplo, el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -106,7 +104,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. Cargar el código en el espacio aislado <xref:System.AppDomain> que creó. Esto se puede hacer de dos maneras:  
+5. Cargar el código en el espacio aislado <xref:System.AppDomain> que creó. Esto puede hacerse de dos maneras:  
   
     - Llame al método <xref:System.AppDomain.ExecuteAssembly%2A> para el ensamblado.  
   
@@ -116,7 +114,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - Puede usar una base de código que apunte a una ubicación que no contenga su ensamblado.  
   
-    - Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto ocurre siempre que el ensamblado no tiene ninguna marca de transparencia y se carga como de plena confianza). Por lo tanto, hay que tener cuidado y crear solamente código de confianza con esta función. Le recomendamos que cree solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
+    - Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto sucede cuando el ensamblado no tiene marcas de transparencia y se carga como de plena confianza). Por lo tanto, debe tener cuidado de crear solo código en el que confíe con esta función y se recomienda crear solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -273,6 +271,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

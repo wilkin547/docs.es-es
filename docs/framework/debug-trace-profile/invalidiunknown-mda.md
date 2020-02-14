@@ -8,14 +8,12 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052594"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217364"
 ---
 # <a name="invalidiunknown-mda"></a>MDA de invalidIUnknownPointer
 El asistente para la depuración administrada (MDA) de `invalidIUnknown` se activa cuando un puntero `IUnknown` no válido se pasa a código administrado de código nativo. Se produce un error en `IUnknown` a la hora de devolver un resultado correctamente cuando se solicita la interfaz `IUnknown`.  
@@ -26,13 +24,13 @@ El asistente para la depuración administrada (MDA) de `invalidIUnknown` se acti
 ## <a name="cause"></a>Causa  
  Implementación de `QueryInterface` incorrecta en la interfaz COM pasada al CLR.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Corrija la implementación de `QueryInterface`.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Descripción del error.  
   
 ## <a name="configuration"></a>Configuración  
@@ -45,8 +43,8 @@ El asistente para la depuración administrada (MDA) de `invalidIUnknown` se acti
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

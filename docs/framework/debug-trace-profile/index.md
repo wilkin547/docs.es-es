@@ -13,14 +13,12 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 43e9438ed2c1cd82bb4d89ff082545021b2d543e
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195345"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217401"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Depurar, trazar y generar perfiles
 Para depurar una aplicación de .NET Framework, el compilador y el entorno de CLR deben configurarse para poder asociar un depurador a la aplicación y para poder producir símbolos y mapas de líneas, si es posible, para la aplicación y su Lenguaje Intermedio de Microsoft (MSIL) correspondiente. Una vez depurada una aplicación administrada, se puede generar un perfil para mejorar el rendimiento. La generación de perfiles evalúa y describe las líneas de código fuente que generan el código que se ejecuta con más frecuencia, y cuánto tiempo se necesita para ejecutarlas.  
@@ -34,7 +32,7 @@ Para depurar una aplicación de .NET Framework, el compilador y el entorno de CL
  [Facilitar la depuración de una imagen](making-an-image-easier-to-debug.md)  
  Muestra cómo activar el seguimiento de JIT y desactivar la optimización para facilitar la depuración de un ensamblado.  
   
- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)  
+ [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)  
  Describe cómo supervisar la ejecución de la aplicación mientras se está ejecutando y cómo instrumentarla para mostrar si se ha ejecutado correctamente o si tiene errores.  
   
  [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)  

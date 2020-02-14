@@ -10,14 +10,12 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052456"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216178"
 ---
 # <a name="moduloobjecthashcode-mda"></a>MDA de moduloObjectHashcode
 El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambia el comportamiento de la clase <xref:System.Object> para realizar una operación de módulo en el código hash devuelto por el método <xref:System.Object.GetHashCode%2A>. El módulo predeterminado para este MDA es 1, lo que hace que <xref:System.Object.GetHashCode%2A> devuelva 0 para todos los objetos.  
@@ -38,7 +36,7 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
   
  El orden de enumeración de una <xref:System.Collections.Hashtable> puede cambiar de una versión del tiempo de ejecución a otra si cambia el algoritmo que se usa para calcular los códigos hash para la clave. Para comprobar si el programa ha tomado una dependencia en el orden de enumeración de claves o valores fuera de una tabla hash, puede habilitar este MDA.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Nunca use códigos hash como sustitutos de la identidad de objetos. Implemente la invalidación del método <xref:System.Object.Equals%2A?displayProperty=nameWithType> para no comparar códigos hash.  
   
  No cree dependencias en el orden de las enumeraciones de claves o valores en tablas hash.  
@@ -46,7 +44,7 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Las aplicaciones se ejecutan más despacio cuando se habilita este MDA. Este MDA simplemente toma el código hash que se habría devuelto y, en su lugar, devuelve el resto cuando se divide por un módulo.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  No hay ningún resultado para este MDA.  
   
 ## <a name="configuration"></a>Configuración  
@@ -60,7 +58,7 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

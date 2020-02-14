@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be619f8e84b176872361fdd43faa9c704832c8e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7adf1316a36d781439d364746fa11795a7fe165a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975596"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217532"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitar la depuración de adjuntos JIT
 La depuración de adjuntos JIT es la frase usada para describir el hecho de adjuntar un depurador a un proceso cuando se detectan errores, o se puede desencadenar mediante métodos o funciones concretos.  
@@ -35,7 +33,7 @@ La depuración de adjuntos JIT es la frase usada para describir el hecho de adju
   
  Antes del .NET Framework 4, el .NET Framework proporcionó claves de registro independientes para controlar el comportamiento de los depuradores administrados y nativos. A partir de la .NET Framework 4, el control se consolida en una única clave del registro: HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Los valores que puede establecer para esa clave determinan si se invoca un depurador y, de ser así, si se invoca con un cuadro de diálogo que necesita interacción del usuario. Para obtener información acerca de cómo establecer esta clave del registro, vea configuración de la [depuración automática](/windows/win32/debug/configuring-automatic-debugging).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Depurar, trazar y generar perfiles](index.md)
 - [Facilitar la depuración de una imagen](making-an-image-easier-to-debug.md)

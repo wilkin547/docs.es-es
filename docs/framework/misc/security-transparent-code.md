@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975523"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215829"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 
@@ -96,7 +94,7 @@ El modelo de transparencia de nivel 1 tiene las siguientes limitaciones:
 
 Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En el .NET Framework 4, el cálculo de transparencia de nivel de ensamblado se produce antes que en el .NET Framework 2,0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Código transparente en seguridad, nivel 1](security-transparent-code-level-1.md)
 - [Código transparente en seguridad, nivel 2](security-transparent-code-level-2.md)

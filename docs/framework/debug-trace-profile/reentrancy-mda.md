@@ -13,14 +13,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d14ba8724659172711da44e7bb249e9d20768dbc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1621090079c030e3c055a417ed9bcad882bf78
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052335"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217236"
 ---
 # <a name="reentrancy-mda"></a>MDA de reentrada
 El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.  
@@ -35,7 +33,7 @@ El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuand
   
  Este problema siempre está causado por código de aplicación.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Examine el seguimiento de la pila para el subproceso que ha activado este MDA.  El subproceso está intentando llamar de forma no autorizada al código administrado.  El seguimiento de la pila debe mostrar el código de aplicación que usa este punto de extensibilidad, el código del sistema operativo que proporciona este punto de extensibilidad y el código administrado que el punto de extensibilidad ha interrumpido.  
   
  Por ejemplo, verá que el MDA se activa en un intento de llamar a código administrado desde dentro de un controlador de excepciones orientado.  En la pila verá el código de control de excepciones del sistema operativo y algún código administrado que desencadena una excepción como <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
@@ -45,7 +43,7 @@ El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuand
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El MDA informa de que se ha intentado una reentrada ilegal.  Examine la pila del subproceso para determinar por qué sucede esto y cómo corregir el problema. A continuación se incluye la salida del ejemplo.  
   
 ```output
@@ -104,6 +102,6 @@ public class Reenter
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

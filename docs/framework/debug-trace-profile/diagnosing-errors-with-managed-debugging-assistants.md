@@ -1,5 +1,5 @@
 ---
-title: Diagnóstico de errores con asistentes de depuraciones administradas
+title: Diagnóstico de errores con asistentes para la depuración administrada
 ms.date: 08/14/2018
 f1_keywords:
 - EHMDA
@@ -29,14 +29,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052901"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216555"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Diagnóstico de errores con asistentes para la depuración administrada
 
@@ -70,7 +68,7 @@ En la tabla siguiente se enumeran los MDA que se incluyen con el .NET Framework:
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-De forma predeterminada, .NET Framework activa un subconjunto de MDA para todos los depuradores administrados. Para ver el conjunto predeterminado en Visual Studio, elija**configuración de excepciones** de **Windows** > en el menú **depurar** y, a continuación, expanda la lista **asistentes para la depuración administrada** .
+De forma predeterminada, .NET Framework activa un subconjunto de MDA para todos los depuradores administrados. Para ver el conjunto predeterminado en Visual Studio, elija **configuración de excepciones** de **Windows** > en el menú **depurar** y, a continuación, expanda la lista **asistentes para la depuración administrada** .
 
 ![Ventana Configuración de excepciones en Visual Studio](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -79,11 +77,11 @@ De forma predeterminada, .NET Framework activa un subconjunto de MDA para todos 
 Puede habilitar y deshabilitar los MDA mediante una clave del Registro, una variable de entorno o valores de configuración de la aplicación. La clave del Registro o la variable de entorno tienen que estar habilitadas para utilizar los valores de configuración de la aplicación.
 
 > [!TIP]
-> En lugar de deshabilitar los MDA, puede impedir que Visual Studio muestre el cuadro de diálogo MDA cada vez que se reciba una notificación de MDA. Para ello, elija**configuración de excepciones** de **Windows** > en el menú **depurar** , expanda la lista asistentes para la **depuración administrada** y, a continuación, Active o desactive la casilla **interrumpir cuando se produzca** la activación del MDA individual.
+> En lugar de deshabilitar los MDA, puede impedir que Visual Studio muestre el cuadro de diálogo MDA cada vez que se reciba una notificación de MDA. Para ello, elija **configuración de excepciones** de **Windows** > en el menú **depurar** , expanda la lista asistentes para la **depuración administrada** y, a continuación, Active o desactive la casilla **interrumpir cuando se produzca** la activación del MDA individual.
 
 ### <a name="registry-key"></a>Clave del Registro
 
-Para habilitar los MDA, agregue **HKEY_LOCAL_MACHINE\Software\Microsoft\\.** Subclave NETFramework\MDA (tipo REG_SZ, valor 1) en el registro de Windows. Copie el ejemplo siguiente en un archivo de texto denominado *MDAEnable. reg*. Abra el editor del registro de Windows (regedit. exe) y, en el menú **archivo** , elija **importar**. Seleccione el archivo *MDAEnable. reg* para habilitar los MDA en ese equipo. Si se establece la subclave en **un** valor de cadena de 1 (no el valor DWORD de **1**), se habilita la lectura de la configuración de MDA del archivo *applicationName. Suffix*. MDA. config. Por ejemplo, el archivo de configuración de MDA para el Bloc de notas se denominará Notepad. exe. MDA. config.
+Para habilitar los MDA, agregue el **HKEY_LOCAL_MACHINE \software\microsoft\\.** Subclave NETFramework\MDA (de tipo REG_SZ, valor 1) en el registro de Windows. Copie el ejemplo siguiente en un archivo de texto denominado *MDAEnable. reg*. Abra el editor del registro de Windows (regedit. exe) y, en el menú **archivo** , elija **importar**. Seleccione el archivo *MDAEnable. reg* para habilitar los MDA en ese equipo. Si se establece la subclave en **un** valor de cadena de 1 (no el valor DWORD de **1**), se habilita la lectura de la configuración de MDA del archivo *applicationName. Suffix*. MDA. config. Por ejemplo, el archivo de configuración de MDA para el Bloc de notas se denominará Notepad. exe. MDA. config.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -129,7 +127,7 @@ Si hay ajustes contradictorios, los más recientes reemplazan los ajustes anteri
 
 ### <a name="application-specific-configuration-settings"></a>Opciones de configuración específicas de la aplicación
 
-Puede habilitar, deshabilitar y configurar individualmente algunos asistentes en el archivo de configuración de MDA para la aplicación. Para habilitar el uso de un archivo de configuración de la aplicación para configurar los MDA, es necesario establecer la clave del Registro MDA o la variable de entorno COMPLUS_MDA. El archivo de configuración de la aplicación se encuentra normalmente en el mismo directorio que el archivo ejecutable (.exe) de la aplicación. El nombre de archivo toma el formato *NombreAplicación*.mda.config; por ejemplo, notepad.exe.mda.config. Los asistentes que están habilitados en el archivo de configuración de la aplicación pueden tener atributos o elementos diseñados específicamente para controlar el comportamiento de los citados asistentes.
+Puede habilitar, deshabilitar y configurar individualmente algunos asistentes en el archivo de configuración de MDA para la aplicación. Para habilitar el uso de un archivo de configuración de la aplicación para configurar los MDA, es necesario establecer la clave del Registro MDA o la variable de entorno COMPLUS_MDA. El archivo de configuración de la aplicación se encuentra normalmente en el mismo directorio que el archivo ejecutable (.exe) de la aplicación. El nombre de archivo toma el formato *applicationName*. MDA. config; por ejemplo, Notepad. exe. MDA. config. Los asistentes que están habilitados en el archivo de configuración de la aplicación pueden tener atributos o elementos específicamente diseñados para controlar el comportamiento del asistente.
 
 En el ejemplo siguiente se muestra cómo habilitar y configurar el [cálculo de referencias](marshaling-mda.md):
 
@@ -148,7 +146,7 @@ En el ejemplo siguiente se muestra cómo habilitar y configurar el [cálculo de 
 </mdaConfig>
 ```
 
-El MDA de `Marshaling` emite información sobre el tipo administrado cuyas referencias se calculan a un tipo no administrado para cada transición de administrado a no administrado en la aplicación. El `Marshaling` MDA también puede filtrar los nombres de los campos de método y estructura proporcionados en los elementos secundarios **methodFilter** y **fieldFilter** , respectivamente.
+El MDA de `Marshaling` emite información sobre el tipo administrado cuyas referencias se calculan a un tipo no administrado para cada transición de administrado a no administrado en la aplicación. El MDA de `Marshaling` también puede filtrar los nombres de los campos de método y estructura proporcionados en los elementos secundarios **methodFilter** y **fieldFilter** , respectivamente.
 
 En el ejemplo siguiente se muestra cómo habilitar varios MDA mediante su configuración predeterminada:
 
@@ -170,14 +168,14 @@ En el ejemplo siguiente se muestra cómo habilitar varios MDA mediante su config
 
 Cuando se habilita un MDA, está activo incluso cuando el código no se está ejecutando en un depurador. Si se genera un evento MDA cuando un depurador no está presente, el mensaje del evento se presenta en un cuadro de diálogo de excepción no controlada, aunque no se trata de una excepción no controlada. Para evitar el cuadro de diálogo, quite las opciones que habilitan MDA cuando el código no se está ejecutando en un entorno de depuración.
 
-Cuando el código se ejecuta en el entorno de desarrollo integrado (IDE) de Visual Studio, puede evitar el cuadro de diálogo de excepción que aparece para determinados eventos de MDA. Para ello, en el menú **depurar** , elija**configuración de excepciones**de **Windows** > . En la ventana **configuración de excepciones** , expanda la lista asistentes para la **depuración administrada** y, a continuación, desactive la casilla **interrumpir cuando se produzca** el MDA individual. También puede utilizar este cuadro de diálogo para *Habilitar* la presentación de los cuadros de diálogo de excepción de MDA.
+Cuando el código se ejecuta en el entorno de desarrollo integrado (IDE) de Visual Studio, puede evitar el cuadro de diálogo de excepción que aparece para determinados eventos de MDA. Para ello, en el menú **depurar** , elija **configuración de excepciones**de > de **Windows** . En la ventana **configuración de excepciones** , expanda la lista asistentes para la **depuración administrada** y, a continuación, desactive la casilla **interrumpir cuando se produzca** el MDA individual. También puede utilizar este cuadro de diálogo para *Habilitar* la presentación de los cuadros de diálogo de excepción de MDA.
 
 ## <a name="mda-output"></a>Salida del MDA
 
-La salida del MDA es similar al ejemplo siguiente, que muestra la salida del `PInvokeStackImbalance` MDA:
+La salida del MDA es similar al ejemplo siguiente, que muestra la salida del MDA `PInvokeStackImbalance`:
 
 **Una llamada a la función PInvoke ' MDATest! MDATest. Program:: StdCall ' ha desequilibrado la pila. Probablemente, esto se debe a que la firma de PInvoke administrada no coincide con la firma de destino no administrada. Compruebe que la Convención de llamada y los parámetros de la firma PInvoke coinciden con la firma no administrada de destino.**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Depurar, trazar y generar perfiles](index.md)

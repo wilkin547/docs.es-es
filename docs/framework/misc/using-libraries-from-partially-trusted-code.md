@@ -9,14 +9,12 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6836d6c7f67afba316125b57b2c3e64a59ac648f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206033"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216986"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizar bibliotecas de código que no es de plena confianza
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,6 +49,6 @@ ms.locfileid: "70206033"
 > [!NOTE]
 > Algunas clases de la biblioteca de clases de .NET Framework no tienen el atributo **AllowPartiallyTrustedCallersAttribute** y el código de confianza parcial no puede llamarlas.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad de acceso del código](code-access-security.md)

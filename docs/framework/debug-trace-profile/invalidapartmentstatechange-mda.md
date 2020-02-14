@@ -11,14 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052662"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217414"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA de invalidApartmentStateChange
 El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange` se activa por cualquiera de estos dos problemas:  
@@ -39,7 +37,7 @@ El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange
   
 - El método `CoUninitialize` (o el método `CoInitializeEx`) con un modelo de simultaneidad diferente se llama en el subproceso.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Establecer el estado de contenedor del subproceso antes de que empiece a ejecutarse, o aplicar el atributo <xref:System.STAThreadAttribute> o <xref:System.MTAThreadAttribute> al método principal de la aplicación.  
   
  Para la segunda causa, idealmente el código que llama al método `CoUninitialize` debe modificarse para retrasar la llamada hasta que el subproceso esté a punto de terminar y no haya ningún RCW, y sus componentes COM subyacentes sigan en uso en el subproceso. Pero si no es posible modificar el código que llama al método `CoUninitialize`, entonces no deben usarse contenedores RCW desde los subprocesos sin inicializar de esta manera.  
@@ -47,7 +45,7 @@ El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El estado de contenedor COM del subproceso actual y el estado que el código intentaba aplicar.  
   
 ## <a name="configuration"></a>Configuración  
@@ -77,8 +75,8 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

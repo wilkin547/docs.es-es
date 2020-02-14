@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear e inicializar agentes de escucha de seguimiento
+title: 'Cómo: Crear e inicializar agentes de escucha de seguimiento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052725"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217443"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Procedimiento para crear e inicializar agentes de escucha de seguimiento
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Cómo: Crear e inicializar agentes de escucha de seguimiento
 
 Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envían mensajes a objetos denominados agentes de escucha que reciben y procesan estos mensajes. Un agente de escucha de este tipo, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, se crea y se inicializa automáticamente si la traza o la depuración está habilitada. Si desea que los resultados de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.
 
@@ -77,7 +75,7 @@ Puede crear agentes de escucha de seguimiento en un [archivo de configuración d
     Trace.Flush();
     ```
 
-    \- o -
+    \- O bien
 
 - Si no desea que el agente de escucha reciba el resultado de la traza, no lo agregue a la colección <xref:System.Diagnostics.Trace.Listeners%2A>. Puede emitir la salida a través de un agente de escucha independientemente de la colección <xref:System.Diagnostics.Trace.Listeners%2A>, llamando a los propios métodos de salida del agente de escucha. El siguiente ejemplo muestra cómo escribir una línea a un agente de escucha que no se encuentra en la colección <xref:System.Diagnostics.Trace.Listeners%2A>:
 
@@ -95,9 +93,9 @@ Puede crear agentes de escucha de seguimiento en un [archivo de configuración d
     myListener.Flush();
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Agentes de escucha de seguimiento](trace-listeners.md)
 - [Modificadores de seguimiento](trace-switches.md)
-- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
-- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
+- [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)

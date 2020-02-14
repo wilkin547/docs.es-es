@@ -1,7 +1,5 @@
 ---
 title: Método Message. BodyToString (System. ServiceModel. Channels)
-author: mairaw
-ms.author: mairaw
 ms.date: 11/01/2019
 topic_type:
 - apiref
@@ -11,12 +9,12 @@ api_location:
 - system.servicemodel.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7b0b56bfda1c0c37f43f95e9684d3b4042c1b97c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9f1f852c0bd82299fd40afe66a5f90cd7c0335cf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451315"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215506"
 ---
 # <a name="messagebodytostring-method"></a>Message. BodyToString (método)
 
@@ -31,7 +29,7 @@ internal void BodyToString(XmlDictionaryWriter writer);
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
   Escritor que se utiliza para convertir el cuerpo del mensaje en una cadena.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
 > El método `Message.BodyToString` es interno y no está diseñado para usarse directamente en el código.

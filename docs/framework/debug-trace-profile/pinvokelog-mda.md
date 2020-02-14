@@ -9,14 +9,12 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052377"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216129"
 ---
 # <a name="pinvokelog-mda"></a>MDA de pInvokeLog
 El Asistente para la depuración administrada (MDA) `pInvokeLog` se activa para cada firma de invocación de plataforma única que se usa durante la ejecución.  
@@ -24,7 +22,7 @@ El Asistente para la depuración administrada (MDA) `pInvokeLog` se activa para 
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Un mensaje que indica la firma de invocación de plataforma que se usa durante la ejecución.  
   
 ## <a name="configuration"></a>Configuración  
@@ -43,7 +41,7 @@ El Asistente para la depuración administrada (MDA) `pInvokeLog` se activa para 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Consumir funciones DLL no administradas](../interop/consuming-unmanaged-dll-functions.md)

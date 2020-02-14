@@ -12,14 +12,12 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052926"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217555"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA de contextSwitchDeadlock
 
@@ -50,7 +48,7 @@ Para determinar si el MDA se activa equivocadamente, deshabilite todos los punto
 > [!NOTE]
 > Este MDA está en el conjunto predeterminado de Visual Studio. Para obtener información sobre cómo deshabilitar los MDA, vea [diagnosticar errores con asistentes para la depuración administrada](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
 
-## <a name="resolution"></a>Resolución
+## <a name="resolution"></a>Solución
 
 Siga las reglas COM respecto al suministro de mensajes de STA.
 
@@ -58,7 +56,7 @@ Siga las reglas COM respecto al suministro de mensajes de STA.
 
 Este MDA no tiene ningún efecto en el CLR. Solo recoge datos sobre contextos COM.
 
-## <a name="output"></a>Resultados
+## <a name="output"></a>Output
 
 Mensaje que describe el contexto actual y el de destino.
 
@@ -72,8 +70,8 @@ Mensaje que describe el contexto actual y el de destino.
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

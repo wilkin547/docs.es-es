@@ -10,14 +10,12 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e0b1f8979929dbb6872bbd53e1840b2d0520a31d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb0ba120eeb57788c0525d45b714ad8edd2c39ed
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910670"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216978"
 ---
 # <a name="security-and-serialization"></a>Seguridad y serialización
 Como la serialización puede permitir que otro código vea o modifique datos de instancias de objeto que de otra forma podrían estar inaccesibles, se requiere un permiso especial del código que realiza la serialización: <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> especificada. De acuerdo con la directiva predeterminada, no se concede este permiso al código descargado de Internet o de la intranet; únicamente el código del equipo local tiene garantizado este permiso.  
@@ -47,6 +45,6 @@ Como la serialización puede permitir que otro código vea o modifique datos de 
   
 - El constructor especial que se usa para la serialización también debe realizar una validación de entrada exhaustiva y debe ser de tipo protegido o privado para ayudar a la protección contra el uso indebido por parte de código malintencionado. Debe imponer las mismas comprobaciones de seguridad y los mismos permisos que se requieren para obtener una instancia de esta clase por otros medios, como la creación explícita de la clase o la creación indirecta a través de algún tipo de generador.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

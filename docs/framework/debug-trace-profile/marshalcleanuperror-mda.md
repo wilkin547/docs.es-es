@@ -10,14 +10,12 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ab3690cac28ef572b19cadb632662590d1ea04c7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a14c548ce960d53f47934595171189db28edfbb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052482"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216152"
 ---
 # <a name="marshalcleanuperror-mda"></a>MDA de marshalCleanupError
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `marshalCleanupError` se activa cuando Common Language Runtime (CLR) detecta un error al intentar limpiar la memoria y las estructuras temporales que se usan para serializar tipos de datos entre los límites del código nativo y administrado.  
@@ -28,13 +26,13 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="cause"></a>Causa  
  Se produjo un error inesperado al limpiar las estructuras temporales.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Revise todas las implementaciones de destructor, finalizador y cálculo de referencias de <xref:System.Runtime.InteropServices.SafeHandle> para comprobar si hay errores.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Un mensaje que indica que se produjo un error en la operación durante la limpieza.  
   
 ## <a name="configuration"></a>Configuración  
@@ -47,8 +45,8 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

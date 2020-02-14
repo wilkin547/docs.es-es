@@ -9,14 +9,12 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052632"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217395"
 ---
 # <a name="invalidcercall-mda"></a>MDA de invalidCERCall
 El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa cuando hay una llamada desde el gráfico de región de ejecución restringida (CER) a un método que no tiene ningún contrato de confiabilidad o un contrato excesivamente débil. Un contrato débil es el que declara que el peor caso de daño de estado tiene un ámbito mayor que la instancia que se pasa a la llamada, es decir, el estado de <xref:System.AppDomain> o del proceso puede resultar dañado o su resultado no siempre se puede calcular de forma determinista cuando se llama desde dentro de una CER.  
@@ -33,13 +31,13 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
   
  Dado que cualquier método con un contrato débil o inexistente puede producir errores de muchas maneras impredecibles, el tiempo de ejecución no intenta eliminar del método ninguno de sus propios errores impredecibles que se introducen mediante la compilación JIT lenta, la especificación de diccionarios genéricos o la anulación de subprocesos, por ejemplo. Es decir, cuando se activa este MDA, indica que el tiempo de ejecución no incluyó el método llamado en la CER que se está definiendo; el gráfico de llamadas se terminó en este nodo porque continuar la preparación de este subárbol ayudaría a ocultar el posible error.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Agregar un contrato de confiabilidad válido a la función o evitar usar esa llamada de función.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  El efecto de llamar a un contrato débil desde una CER podría ser que la CER no pueda completar sus operaciones. Esto podría provocar daños en el estado de proceso del <xref:System.AppDomain>.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  A continuación puede ver un resultado de ejemplo de este MDA.  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
@@ -54,7 +52,7 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

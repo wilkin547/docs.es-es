@@ -16,14 +16,12 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2bc46714a508990c5ae31b50e7d19a287da2c5c0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206037"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215819"
 ---
 # <a name="using-the-assert-method"></a>Utilizar el método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -41,7 +39,7 @@ ms.locfileid: "70206037"
   
  Para realizar aserciones, el código debe disponer del permiso que usted está validando y el <xref:System.Security.Permissions.SecurityPermission> que representa el derecho a realizar aserciones. Aunque podría validar un permiso que no se haya concedido al código, la aserción no tendría sentido, ya que la comprobación de seguridad no se podría realizar correctamente antes de que la aserción pudiese lograr que se procesase debidamente.  
   
- En la ilustración siguiente se muestra lo que sucedecuando se usa Assert. Supongamos que son ciertas las siguientes declaraciones sobre los ensamblados A, B, C, E y F y los permisos P1 y P1A:  
+ En la ilustración siguiente se muestra lo que sucede cuando se usa **Assert**. Supongamos que son ciertas las siguientes declaraciones sobre los ensamblados A, B, C, E y F y los permisos P1 y P1A:  
   
 - P1A representa el derecho a leer archivos .txt de la unidad C.  
   
@@ -61,16 +59,16 @@ ms.locfileid: "70206037"
   
  En este escenario, el método A llama a B, B llama a C, C llama a E y E llama a F. el método C valida el permiso para leer archivos en la unidad C (permiso P1) y el método E solicita permiso para leer archivos. txt en la unidad C (permiso P1A). Cuando se encuentra la petición en F en tiempo de ejecución, se realiza un recorrido de pila para comprobar los permisos de todos los llamadores de F, a partir de E. E, se le ha concedido el permiso P1A, por lo que el recorrido de la pila continúa para examinar los permisos de C, donde se detecta la aserción de C. Dado que el permiso solicitado (P1A) es un subconjunto del permiso validado (P1), el recorrido de pila se detiene y se supera automáticamente la comprobación de seguridad. No importa que los ensamblados A y B no dispongan del permiso P1A. Al validar el permiso P1, el método C garantiza que sus llamadores puedan acceder al recurso protegido por P1, aunque los llamadores no tengan permiso para acceder a ese recurso.  
   
- Si diseña una biblioteca de clases y una clase obtiene acceso a un recurso protegido, debería, en la mayoría de los casos, realizar una petición de seguridad que requiera que los llamadores de la clase dispongan del permiso adecuado. Si la clase realiza una operación para la que sabe que la mayoría de los llamadores no tiene permiso, y si está dispuesto a asumir la responsabilidad de permitir que estos llamadores llamen al código, puede validar el permiso llamando al método **Assert** en un objeto de permiso que representa la operación que el código está realizando. El uso de Assert de esta manera permite a los llamadores que normalmente no podrían llamar a su código. Por tanto, si valida un permiso, debe asegurarse de realizar previamente las comprobaciones de seguridad adecuadas para impedir que el componente se utilice incorrectamente.  
+ Si diseña una biblioteca de clases y una clase obtiene acceso a un recurso protegido, debería, en la mayoría de los casos, realizar una petición de seguridad que requiera que los llamadores de la clase dispongan del permiso adecuado. Si la clase realiza una operación para la que sabe que la mayoría de los llamadores no tiene permiso, y si está dispuesto a asumir la responsabilidad de permitir que estos llamadores llamen al código, puede validar el permiso llamando al método **Assert** en un objeto de permiso que representa la operación que el código está realizando. El uso de **Assert** de esta manera permite a los llamadores que normalmente no podrían llamar a su código. Por tanto, si valida un permiso, debe asegurarse de realizar previamente las comprobaciones de seguridad adecuadas para impedir que el componente se utilice incorrectamente.  
   
- Por ejemplo, suponga que su clase de biblioteca de mucha confianza tiene un método que elimina los archivos. Accede al archivo llamando a una función Win32 no administrada. Un llamador invoca el método **Delete** del código, pasando el nombre del archivo que se va a eliminar, C:\Test.txt. Dentro del método **Delete** , el código crea un <xref:System.Security.Permissions.FileIOPermission> objeto que representa el acceso de escritura a C:\Test.txt. (Se requiere acceso de escritura para eliminar un archivo). A continuación, el código invoca una comprobación de seguridad imperativa llamando al método **Demand** del objeto **FileIOPermission** . Si uno de los llamadores de la pila de llamadas no tiene este permiso, se genera una <xref:System.Security.SecurityException>. Si no se genera ninguna excepción, sabe que todos los llamadores tienen derecho a acceder a C:\Test.txt. Dado que cree que la mayoría de los llamadores no tendrán permiso de acceso a código no administrado, el código crea un <xref:System.Security.Permissions.SecurityPermission> objeto que representa el derecho a llamar a código no administrado y llama al método Assert del objeto. Por último, llama a la función de Win32 no administrada para eliminar C:\Text.txt y devuelve el control al llamador.  
+ Por ejemplo, suponga que su clase de biblioteca de mucha confianza tiene un método que elimina los archivos. Accede al archivo llamando a una función Win32 no administrada. Un llamador invoca el método **Delete** del código, pasando el nombre del archivo que se va a eliminar, C:\Test.txt. Dentro del método **Delete** , el código crea un objeto <xref:System.Security.Permissions.FileIOPermission> que representa el acceso de escritura a C:\Test.txt. (Se requiere acceso de escritura para eliminar un archivo). A continuación, el código invoca una comprobación de seguridad imperativa llamando al método **Demand** del objeto **FileIOPermission** . Si uno de los llamadores de la pila de llamadas no tiene este permiso, se genera una <xref:System.Security.SecurityException>. Si no se genera ninguna excepción, sabe que todos los llamadores tienen derecho a acceder a C:\Test.txt. Como cree que la mayoría de los llamadores no tendrán permiso de acceso a código no administrado, el código crea un objeto <xref:System.Security.Permissions.SecurityPermission> que representa el derecho a llamar a código no administrado y llama al método **Assert** del objeto. Por último, llama a la función de Win32 no administrada para eliminar C:\Text.txt y devuelve el control al llamador.  
   
 > [!CAUTION]
 > Asegúrese de que su código no utilice aserciones en situaciones en las que su código pueda ser utilizado por otro código para acceder a un recurso que está protegido por el permiso que está validando. Por ejemplo, en el código que escribe en un archivo cuyo nombre se especifica mediante el autor de la llamada como un parámetro, no imponer el **FileIOPermission** para escribir en los archivos porque el código sería abierto para que un tercero no pueda utilizarlo.  
   
- Cuando se usa la sintaxis de seguridad imperativa, al llamar al método Assert en varios permisos en el mismo método, se produce una excepción de seguridad. En su lugar, debe crear un objeto **PermissionSet** , pasarle los permisos individuales que desea invocar y, a continuación, llamar al método Assert en el objeto **PermissionSet** . Puede llamar al método **Assert** más de una vez al utilizar la sintaxis de seguridad declarativa.  
+ Cuando se usa la sintaxis de seguridad imperativa, al llamar al método **Assert** en varios permisos en el mismo método, se produce una excepción de seguridad. En su lugar, debe crear un objeto **PermissionSet** , pasarle los permisos individuales que desea invocar y, a continuación, llamar al método **Assert** en el objeto **PermissionSet** . Puede llamar al método **Assert** más de una vez al utilizar la sintaxis de seguridad declarativa.  
   
- En el ejemplo siguiente se muestra la sintaxis declarativa para invalidar las comprobaciones de seguridad mediante el método Assert. Observe que la sintaxis de **FileIOPermissionAttribute** toma dos valores: <xref:System.Security.Permissions.SecurityAction> una enumeración y la ubicación del archivo o directorio al que se va a conceder el permiso. La llamada a **Assert** hace que las peticiones `C:\Log.txt` de acceso a se realicen correctamente, aunque no se comprueba que los llamadores tengan permiso para obtener acceso al archivo.  
+ En el ejemplo siguiente se muestra la sintaxis declarativa para invalidar las comprobaciones de seguridad mediante el método **Assert** . Observe que la sintaxis de **FileIOPermissionAttribute** toma dos valores: una enumeración <xref:System.Security.Permissions.SecurityAction> y la ubicación del archivo o directorio al que se va a conceder el permiso. La llamada a **Assert** hace que las peticiones de acceso a `C:\Log.txt` se realicen correctamente, aunque no se comprueba que los llamadores tengan permiso para obtener acceso al archivo.  
   
 ```vb  
 Option Explicit  
@@ -119,7 +117,7 @@ namespace LogUtil
 }   
 ```  
   
- Los fragmentos de código siguientes muestran la sintaxis imperativa para invalidar las comprobaciones de seguridad mediante el método **Assert** . En este ejemplo, se declara una instancia del objeto **FileIOPermission** . Se pasa el constructor **FileIOPermissionAccess. AllAccess** para definir el tipo de acceso permitido, seguido de una cadena que describe la ubicación del archivo. Una vez definido el objeto **FileIOPermission** , solo tiene que llamar a su método Assert para invalidar la comprobación de seguridad.  
+ Los fragmentos de código siguientes muestran la sintaxis imperativa para invalidar las comprobaciones de seguridad mediante el método **Assert** . En este ejemplo, se declara una instancia del objeto **FileIOPermission** . Se pasa el constructor **FileIOPermissionAccess. AllAccess** para definir el tipo de acceso permitido, seguido de una cadena que describe la ubicación del archivo. Una vez definido el objeto **FileIOPermission** , solo tiene que llamar a su método **Assert** para invalidar la comprobación de seguridad.  
   
 ```vb  
 Option Explicit  
@@ -167,7 +165,7 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>

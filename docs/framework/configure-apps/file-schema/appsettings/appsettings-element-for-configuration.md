@@ -7,21 +7,19 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119266"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214735"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<elemento > appSettings para la configuración de \<>
 
 Contiene la configuración de la aplicación personalizada. Se trata de una sección de configuración predefinida proporcionada por el .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,7 +49,7 @@ Contiene la configuración de la aplicación personalizada. Se trata de una secc
 | [ **\<clear>** ](clear-element-for-appsettings.md) | Borra todos los valores de configuración de la aplicación definidos previamente. |
 | [ **\<remove>** ](remove-element-for-appsettings.md) | Quita una configuración de aplicación definida previamente. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El elemento **\<appSettings >** almacena información de configuración de la aplicación personalizada, como cadenas de conexión de base de datos, rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. Se tiene acceso a los pares clave-valor especificados en el elemento **\<appSettings >** en el código mediante la clase <xref:System.Configuration.ConfigurationSettings>.
 
@@ -84,6 +82,6 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](../index.md)

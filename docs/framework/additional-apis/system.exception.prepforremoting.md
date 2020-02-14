@@ -1,7 +1,5 @@
 ---
 title: Exception. PrepForRemoting (método) (System)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 057390d64f70d3cb8eba7d4b29b94570fdca77e3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72405901"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214896"
 ---
-# <a name="exceptionprepforremoting-method"></a>Exception. PrepForRemoting (método)
+# <a name="exceptionprepforremoting-method"></a>Método Exception.PrepForRemoting
 
 Conserva el seguimiento de la pila del servidor al anexarlo al mensaje antes de que se vuelva a producir la excepción en el sitio de llamada de cliente.
 
@@ -26,12 +24,12 @@ Conserva el seguimiento de la pila del servidor al anexarlo al mensaje antes de 
 internal Exception PrepForRemoting();
 ```
 
-## <a name="returns"></a>Valores devueltos
+## <a name="returns"></a>Devuelve
 
 <xref:System.Exception>  
 Esta instancia de <xref:System.Exception>.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
 > El método `Exception.PrepForRemoting` es interno y no está diseñado para usarse directamente en el código.

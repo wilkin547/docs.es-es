@@ -7,14 +7,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3d38a4d4fd33798cf5987f5ce67305725ad9daec
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206106"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215845"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,13 +74,13 @@ ms.locfileid: "70206106"
 - [LinkDemand](link-demands.md) se produce en el momento de la compilación Just-in-Time (JIT) y comprueba solo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pase la prueba y puede hacer referencia a su código podría interrumpir la seguridad permitiendo que el código malintencionado llame a mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que todos los puntos débiles posibles se puedan evitar con detalle.  
   
     > [!NOTE]
-    > En el .NET Framework 4, las peticiones de vínculo se han reemplazado por <xref:System.Security.SecurityRuleSet.Level2> el <xref:System.Security.SecurityCriticalAttribute> atributo de los ensamblados. <xref:System.Security.SecurityCriticalAttribute> Es equivalente a una petición de vínculo para la plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, vea [código transparente en seguridad, nivel 2](security-transparent-code-level-2.md).  
+    > En el .NET Framework 4, las peticiones de vínculo se han sustituido por el atributo <xref:System.Security.SecurityCriticalAttribute> de <xref:System.Security.SecurityRuleSet.Level2> ensamblados. El <xref:System.Security.SecurityCriticalAttribute> es equivalente a una petición de vínculo para plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, vea [código transparente en seguridad, nivel 2](security-transparent-code-level-2.md).  
   
  Las precauciones adicionales necesarias cuando se usa **LinkDemand** deben programarse individualmente. el sistema de seguridad puede ayudar en la aplicación. Cualquier error abre una vulnerabilidad en la seguridad. Todo código autorizado que use su código debe hacerse responsable de implementar seguridad adicional mediante lo siguiente:  
   
 - Restringir el acceso del código de llamada a la clase o al ensamblado.  
   
-- Colocar en el código de llamada las mismas comprobaciones de seguridad que aparecen en el código al que se llama y obligar a sus llamadores a hacer lo mismo. Por ejemplo, si escribe código que llama a un método que está protegido con una **LinkDemand** para el <xref:System.Security.Permissions.SecurityPermission> con la <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> marca especificada, el método debe realizar también una **LinkDemand** (o **Demand**, que es más fuerte) para este. permiso. La excepción es si el código usa el método protegido con **LinkDemand**de una forma limitada que decida que es seguro, dados otros mecanismos de protección de seguridad (como las demandas) en el código. En este caso excepcional, el llamador es el responsable de debilitar la protección de seguridad en el código subyacente.  
+- Colocar en el código de llamada las mismas comprobaciones de seguridad que aparecen en el código al que se llama y obligar a sus llamadores a hacer lo mismo. Por ejemplo, si escribe código que llama a un método que está protegido con una **LinkDemand** para el <xref:System.Security.Permissions.SecurityPermission> con la marca de <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificada, el método también debe hacer una **LinkDemand** (o **Demand**, que es más seguro) para este permiso. La excepción es si el código usa el método protegido con **LinkDemand**de una forma limitada que decida que es seguro, dados otros mecanismos de protección de seguridad (como las demandas) en el código. En este caso excepcional, el llamador es el responsable de debilitar la protección de seguridad en el código subyacente.  
   
 - Garantizar que los llamadores de su código no pueden engañar al código para que llame al código protegido en su nombre. En otras palabras, los llamadores no pueden forzar al código autorizado para pasar parámetros específicos al código protegido o para obtener resultados de él.  
   
@@ -101,6 +99,6 @@ ms.locfileid: "70206106"
   
 - Tipos y las interfaces que implementan. Deben usar las peticiones de vínculo de manera coherente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

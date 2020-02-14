@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088743"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214803"
 ---
 # <a name="add-element-for-appsettings"></a>\<agregar > elemento para \<appSettings >
 
@@ -37,7 +35,7 @@ Agrega una configuración de aplicación personalizada.
 |           | Descripción |
 | --------- | ----------- |
 | **key**   | Atributo necesario.<br><br>Especifica el nombre de la clave que se va a agregar. |
-| **valor** | Atributo necesario.<br><br>Especifica el valor de la clave que se va a agregar. |
+| **value** | Atributo necesario.<br><br>Especifica el valor de la clave que se va a agregar. |
 
 ## <a name="parent-element"></a>Elemento primario
 
@@ -47,7 +45,7 @@ Agrega una configuración de aplicación personalizada.
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
 ## <a name="example"></a>Ejemplo
 
@@ -68,6 +66,6 @@ En el ejemplo siguiente se usa el elemento `<add>` para definir dos valores de c
 </appSettings>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](../index.md)

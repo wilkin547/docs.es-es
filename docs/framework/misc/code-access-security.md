@@ -15,14 +15,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205647"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215895"
 ---
 # <a name="code-access-security"></a>Seguridad de acceso del código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -36,7 +34,7 @@ ms.locfileid: "70205647"
 > [!NOTE]
 > Se han realizado cambios importantes en la seguridad de acceso del código en el .NET Framework 4. El cambio más notable ha sido la [transparencia de seguridad](security-transparent-code.md), pero también hay otros cambios importantes que afectan a la seguridad de acceso del código. Para obtener información acerca de estos cambios, consulte [cambios de seguridad](../security/security-changes.md).  
   
- La seguridad de acceso del código afecta, principalmente, al código de las bibliotecas y a las aplicaciones de confianza parcial. Los desarrolladores de bibliotecas deben proteger sus códigos del acceso no autorizado desde las aplicaciones de confianza parcial. Las aplicaciones de confianza parcial son aplicaciones que se cargan desde orígenes externos, como Internet. Las aplicaciones que se instalan en el escritorio o en la intranet local se ejecutan con plena confianza. Las aplicaciones de plena confianza no se ven afectadas por la seguridad de acceso del código, a menos que estén marcadas como transparentes en seguridad, ya que son [de](security-transparent-code.md)plena confianza. La única limitación de las aplicaciones de plena confianza es que las aplicaciones marcadas con el atributo <xref:System.Security.SecurityTransparentAttribute> no pueden llamar al código marcado con el atributo <xref:System.Security.SecurityCriticalAttribute>. Las aplicaciones de confianza parcial se deben ejecutar en un espacio aislado (por ejemplo, en Internet Explorer) para que se pueda aplicar la seguridad de acceso del código. Si descarga una aplicación desde Internet e intenta ejecutarla desde el escritorio, recibirá una <xref:System.NotSupportedException> con el mensaje: "Se intentó cargar un ensamblado desde una ubicación de red que habría provocado que el ensamblado estuviera en un espacio aislado en versiones anteriores del .NET Framework. Esta versión de .NET Framework no habilita la directiva CAS de forma predeterminada, por lo que esta carga puede ser peligrosa”. Si está seguro de que la aplicación puede ser de confianza, puede habilitarla para que se ejecute como de plena confianza mediante el [ \<elemento > de loadFromRemoteSources](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obtener información sobre la ejecución de una aplicación en un [espacio aislado, consulte Cómo: Ejecutar código de confianza parcial en un espacio aislado](how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ La seguridad de acceso del código afecta, principalmente, al código de las bibliotecas y a las aplicaciones de confianza parcial. Los desarrolladores de bibliotecas deben proteger sus códigos del acceso no autorizado desde las aplicaciones de confianza parcial. Las aplicaciones de confianza parcial son aplicaciones que se cargan desde orígenes externos, como Internet. Las aplicaciones que se instalan en el escritorio o en la intranet local se ejecutan con plena confianza. Las aplicaciones de plena confianza no se ven afectadas por la seguridad de acceso del código, a menos que estén marcadas como [transparentes en seguridad](security-transparent-code.md), ya que son de plena confianza. La única limitación de las aplicaciones de plena confianza es que las aplicaciones marcadas con el atributo <xref:System.Security.SecurityTransparentAttribute> no pueden llamar al código marcado con el atributo <xref:System.Security.SecurityCriticalAttribute>. Las aplicaciones de confianza parcial se deben ejecutar en un espacio aislado (por ejemplo, en Internet Explorer) para que se pueda aplicar la seguridad de acceso del código. Si descarga una aplicación de Internet y trata de ejecutarla desde el escritorio, obtendrá un <xref:System.NotSupportedException> con el mensaje: “Se intentó cargar un ensamblado desde una ubicación de red, por lo que el ensamblado habría sido incluido en un espacio aislado de versiones anteriores de .NET Framework. Esta versión de .NET Framework no habilita la directiva CAS de forma predeterminada, por lo que esta carga puede ser peligrosa”. Si está seguro de que la aplicación puede ser de confianza, puede habilitarla para que se ejecute como de plena confianza mediante el [elemento\<loadFromRemoteSources >](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obtener información sobre la ejecución de una aplicación en un espacio aislado, consulte [Cómo: ejecutar código de confianza parcial en un espacio aislado](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
  Todo el código administrado que tiene como destino el Common Language Runtime se beneficia de la seguridad de acceso del código, aunque ese código no haga ni una sola llamada de seguridad de acceso del código. Para obtener más información, vea [Code Access Security Basics](code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
@@ -64,11 +62,11 @@ Recorrido de la pila de seguridad
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|DESCRIPCIÓN|  
+|Título|Descripción|  
 |-----------|-----------------|  
 |[Code Access Security Basics](code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)|Describe la seguridad de acceso del código y sus usos más comunes.|  
 |[Código transparente en seguridad, nivel 2](security-transparent-code-level-2.md)|Describe el modelo de transparencia de seguridad en el .NET Framework 4.|  
 |[Utilizar bibliotecas de código que no es de plena confianza](using-libraries-from-partially-trusted-code.md)|Describe cómo habilitar bibliotecas para usarlas con código no administrado y cómo usar las bibliotecas desde el código no administrado.|  
 |[Conceptos clave de seguridad](../../standard/security/key-security-concepts.md)|Proporciona información general sobre muchos de los términos y conceptos clave que se usan en el sistema de seguridad de .NET Framework.|  
 |[Seguridad basada en roles](../../standard/security/role-based-security.md)|Describe cómo incorporar la seguridad basada en roles.|  
-|[Cryptographic Services](../../standard/security/cryptographic-services.md)|Describe cómo incorporar la criptografía en las aplicaciones.|
+|[Servicios criptográficos](../../standard/security/cryptographic-services.md)|Describe cómo incorporar la criptografía en las aplicaciones.|

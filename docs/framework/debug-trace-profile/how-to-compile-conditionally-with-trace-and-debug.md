@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975580"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217451"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Cómo: Realizar compilación condicional con Trace y Debug
 Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de depuración aparecen en la ventana Salida de Visual Studio. Pero para incluir características de seguimiento en una aplicación implementada, tendrá que compilar las aplicaciones instrumentadas con la directiva de compilador **TRACE** habilitada. Esto permite que el código de seguimiento se compile en la versión de lanzamiento de la aplicación. Si no habilita la directiva **TRACE**, se ignorará todo el código de seguimiento durante la compilación y no se incluirá en el código ejecutable que se va a implementar.  
@@ -30,7 +28,7 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 - Las páginas de propiedades  
   
-- La línea de comandos  
+- Línea de comandos  
   
 - **#CONST** (para Visual Basic) y **#define** (para C#)  
   
@@ -73,7 +71,7 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 1. Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.  
   
-    |Lenguaje|Instrucción|Resultado|  
+    |Idioma|.|Resultado|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Habilita el seguimiento|  
     ||**#CONST TRACE = false**|Deshabilita el seguimiento|  
@@ -88,19 +86,19 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 Elimine la directiva de compilador del código fuente.  
   
-\- o -  
+\- O bien  
   
 Convierta en comentario la directiva de compilador.  
   
 > [!NOTE]
 > Cuando esté preparado para compilar, puede elegir **Compilar** en el menú **Compilar**, o bien usar el método de línea de comandos, pero sin escribir **d:** para definir símbolos de compilación condicional.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
+- [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
 - [Creación, inicialización y configuración de modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md)
 - [Modificadores de seguimiento](trace-switches.md)
 - [Agentes de escucha de seguimiento](trace-listeners.md)
 - [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
-- [Cómo establecer variables de entorno para la línea de comandos de Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Establecimiento de variables de entorno para la línea de comandos de Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Invocar al compilador de la línea de comandos](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

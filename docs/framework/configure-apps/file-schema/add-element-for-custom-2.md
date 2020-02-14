@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088761"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215437"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<agregar > elemento para NameValueSectionHandler y DictionarySectionHandler
 
@@ -35,7 +33,7 @@ Agrega la configuración de la aplicación personalizada. Cada **\<agregar >** e
 | Atributo | Descripción |
 | --------- | ----------- |
 | **key**   | Atributo necesario.<br><br>Especifica el nombre de la configuración. |
-| **valor** | Atributo necesario.<br><br>Especifica el valor de la configuración. |
+| **value** | Atributo necesario.<br><br>Especifica el valor de la configuración. |
 
 ## <a name="parent-element"></a>Elemento primario
 
@@ -45,7 +43,7 @@ Agrega la configuración de la aplicación personalizada. Cada **\<agregar >** e
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
 ## <a name="example"></a>Ejemplo
 
@@ -66,6 +64,6 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

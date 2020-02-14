@@ -6,21 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118832"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214789"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizado para SingleTagSectionHandler
 
 Define la configuración de una sección de configuración personalizada que se define mediante una \<sección > elemento y utiliza la clase <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,9 +38,9 @@ Los atributos y los valores de atributo son definidos por el usuario.
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El elemento **\<sectionName >** es un elemento personalizado definido por una [**sección de\<>** ](section-element.md) etiqueta del elemento\<[**configSections >** ](configsections-element-for-configuration.md) . El sistema de configuración devuelve un objeto <xref:System.Collections.IDictionary> cuando se llama a <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
@@ -66,6 +64,6 @@ En el ejemplo siguiente se declara un elemento personalizado denominado **\<> sa
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fd58ae8f73fd932df641ea96a44ff618dd139e2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052808"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217489"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA de fatalExecutionError
 El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngineError` se activa cuando se detecta un error grave en Common Language Runtime (CLR). Esto finaliza el proceso.  
@@ -30,7 +28,7 @@ El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngineError
 ## <a name="cause"></a>Causa  
  CLR ha sufrido un daño grave. En la mayoría de los casos, esto se debe a los daños en los datos, lo que puede deberse a distintos problemas como, por ejemplo, llamar a funciones de invocación de plataforma incorrectas o pasar datos no válidos a CLR.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Si se habilitan Ayudantes para la depuración administrada adicionales, se podría ayudar a identificar el problema. Los siguientes Ayudantes para la depuración administrada pueden resultar especialmente útiles a la hora de diagnosticar el problema:  
   
 - [invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)  
@@ -60,7 +58,7 @@ El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngineError
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el comportamiento del tiempo de ejecución.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  La dirección de la función de CLR que ha producido el error grave, el identificador del subproceso donde se ha producido el error y el código de error.  
   
 ## <a name="configuration"></a>Configuración  
@@ -73,7 +71,7 @@ El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngineError
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>

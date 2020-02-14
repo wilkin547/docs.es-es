@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429336"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215538"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de clases y API adicionales
 
@@ -25,7 +23,7 @@ Además, algunas bibliotecas se orientan a plataformas o implementaciones espec�
   
 ## <a name="oob-projects"></a>Proyectos OOB
   
-| Proyecto | Descripción |  
+| proyecto | Descripción |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Ofrece colecciones que son seguras para subprocesos en las que se garantiza que no cambiará nunca su contenido. |
 | <xref:System.Net.Http.WinHttpHandler> | Ofrece un controlador de mensajes para <xref:System.Net.Http.HttpClient> basados en la interfaz de WinHTTP de Windows. |
@@ -34,7 +32,7 @@ Además, algunas bibliotecas se orientan a plataformas o implementaciones espec�
 
 ## <a name="platform-specific-libraries"></a>Bibliotecas específicas de plataforma
   
-| Proyecto | Descripción |  
+| proyecto | Descripción |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Extiende la clase <xref:System.Text.EncodingProvider> para que las codificaciones de páginas de códigos estén disponibles para las aplicaciones destinadas a la Plataforma universal de Windows. |  
   
@@ -92,6 +90,6 @@ Estas API admiten la infraestructura del producto y no están previstas ni se ad
 * [dicha. StdFont (interfaz)](stdole.stdfont.md)
 * [dicha. StdPicture (interfaz)](stdole.stdpicture.md)
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [.NET Framework y versiones fuera de banda](../get-started/the-net-framework-and-out-of-band-releases.md)

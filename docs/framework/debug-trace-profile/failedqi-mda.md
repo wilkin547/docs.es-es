@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052794"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217507"
 ---
 # <a name="failedqi-mda"></a>MDA de failedQI
 El asistente para la depuración administrada (MDA) `failedQI` se activa cuando Runtime llama a `QueryInterface` en un puntero de interfaz COM en nombre de un contenedor al que se puede llamar en tiempo de ejecución (RCW) y la llamada `QueryInterface` falla.  
@@ -31,13 +29,13 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
   
 - Un servidor proxy propiedad de OLE devolvió un valor HRESULT de error.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Consulte la documentación sobre reglas COM recogida en el sitio de MSDN.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Si no se puede realizar la llamada `QueryInterface`, el contexto cambia y es necesario volver a intentar realizar la llamada `QueryInterface` para ver si el motivo del error era un contexto incorrecto.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El nombre administrado de la interfaz, el GUID de la interfaz y el valor HRESULT del error.  
   
 ## <a name="configuration"></a>Configuración  
@@ -50,8 +48,8 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

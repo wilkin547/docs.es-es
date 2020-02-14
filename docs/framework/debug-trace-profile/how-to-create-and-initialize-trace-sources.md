@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear e inicializar orígenes de seguimiento
+title: 'Cómo: Crear e inicializar orígenes de seguimiento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cab9cc33bd5a4697cac5de85de8aa72e7eb4d6c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052698"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217423"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Procedimiento para crear e inicializar orígenes de seguimiento
+# <a name="how-to-create-and-initialize-trace-sources"></a>Cómo: Crear e inicializar orígenes de seguimiento
 Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para generar seguimientos que pueden asociarse con la aplicación. <xref:System.Diagnostics.TraceSource> proporciona métodos de traza que permiten rastrear fácilmente eventos y datos, así como emitir seguimientos de información. El resultado del seguimiento de <xref:System.Diagnostics.TraceSource> se puede crear e inicializar con o sin archivos de configuración. En este tema se proporcionan instrucciones para ambas opciones. Sin embargo, se recomienda usar archivos de configuración para facilitar la reconfiguración de las trazas generadas por los orígenes de traza en tiempo de ejecución.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Para crear e inicializar un origen de traza mediante un archivo de configuración  
@@ -78,10 +76,10 @@ Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para ge
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
+- [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)

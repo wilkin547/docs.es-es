@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088082"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215426"
 ---
 # <a name="app-settings-schema"></a>Esquema de configuración de aplicaciones
 
@@ -70,7 +68,7 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a la configuración de la aplicación](../../../winforms/advanced/application-settings-overview.md)
 - [Arquitectura de configuración de la aplicación](../../../winforms/advanced/application-settings-architecture.md)

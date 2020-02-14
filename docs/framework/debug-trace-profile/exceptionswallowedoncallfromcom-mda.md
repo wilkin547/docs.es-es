@@ -9,14 +9,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3a49bdce78c1445cd25de8755ded0f27a4902937
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ccb03c9a8a473c10f15b00e64810b04f21504c9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052815"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217522"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>MDA de exceptionSwallowedOnCallFromCom
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `exceptionSwallowedOnCallFromCOM` se activa cuando se produce una excepción del código de Common Language Runtime (CLR) llamado desde COM a través de un método que no tiene un tipo de resultado HRESULT sin administrar.  
@@ -27,13 +25,13 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="cause"></a>Causa  
  Se produjo una excepción, pero no hay ningún modo válido de notificarla.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Solo tiene carácter informativo, no es necesariamente indicativo de un error.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR. Solo recoge los datos sobre excepciones detectadas de forma silenciosa.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Mensaje informativo que contiene el nombre del método, el nombre del tipo y el mensaje de la excepción.  
   
 ## <a name="configuration"></a>Configuración  
@@ -46,8 +44,8 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

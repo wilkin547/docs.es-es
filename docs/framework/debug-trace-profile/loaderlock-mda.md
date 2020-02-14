@@ -10,14 +10,12 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052543"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217350"
 ---
 # <a name="loaderlock-mda"></a>loaderLock (MDA)
 El Asistente para la depuración administrada (MDA) `loaderLock` detecta los intentos de ejecutar código administrado en un subproceso que contiene el bloqueo del cargador del sistema operativo Microsoft Windows.  Cualquier ejecución de este tipo no es válida porque puede causar interbloqueos y el uso de archivos DLL antes de que se hayan inicializado por el cargador del sistema operativo.  
@@ -34,7 +32,7 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
   
  Los ensamblados de C++ administrados y no administrados mixtos compilados para versión 2.0 de .NET Framework son menos susceptibles a estos problemas, y tienen el mismo riesgo reducido que las aplicaciones que usan archivos DLL no administrados que infringen las reglas del sistema operativo.  Por ejemplo, si el punto de entrada `DllMain` de un archivo DLL no administrado llama a `CoCreateInstance` para obtener un objeto administrado que se haya expuesto a COM, el resultado es un intento de ejecutar código administrado dentro del bloqueo del cargador. Para más información sobre problemas de bloqueo del cargador en la versión 2.0 y posteriores de .NET Framework, vea [Inicialización de ensamblados mixtos](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  En Visual C++ .NET 2002 y Visual C++ .NET 2003, los archivos DLL compilados con la opción del compilador `/clr` podían interbloquearse de forma no determinante al cargarse; esto se denominó el problema de carga de archivos DLL mixtos o bloqueo del cargador. En Visual C++ 2005 y versiones posteriores se ha quitado prácticamente toda la falta de determinación del proceso de carga de archivos DLL mixtos. En cambio, todavía hay algunos casos en los que podría producirse el bloqueo del cargador (de manera determinante). Para obtener información detallada de las causas y soluciones para el resto de los problemas de bloqueo del cargador, vea [Inicialización de ensamblados mixtos](/cpp/dotnet/initialization-of-mixed-assemblies). Si en ese tema no se identifica el problema de bloqueo del cargador, tendrá que examinar la pila del subproceso para determinar por qué se está produciendo el bloqueo del cargador y cómo corregir el problema. Examine el seguimiento de la pila para el subproceso que ha activado este MDA.  El subproceso está intentando llamar de forma no autorizada al código administrado mientras mantiene el bloqueo del cargador del sistema operativo.  Probablemente verá un punto de entrada `DllMain` o equivalente del archivo DLL en la pila.  Las reglas del sistema operativo sobre lo que se permite hacer desde dentro de este tipo de punto de entrada son bastante limitadas.  Estas reglas excluyen cualquier ejecución administrada.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
@@ -42,7 +40,7 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
   
  En algunos casos poco frecuentes, también es posible que se desencadenen infracciones de acceso o problemas similares en los archivos DLL que se llaman antes de que se hayan inicializado.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Este MDA informa de que se está intentado una ejecución administrada no válida.  Tendrá que examinar la pila del subproceso para determinar por qué se está produciendo el bloqueo del cargador y cómo corregir el problema.  
   
 ## <a name="configuration"></a>Configuración  
@@ -55,6 +53,6 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

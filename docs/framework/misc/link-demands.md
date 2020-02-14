@@ -14,14 +14,12 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 31fbd938acb457a4ea803375d18cb1be11d8b287
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206011"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217170"
 ---
 # <a name="link-demands"></a>Peticiones de vínculos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,12 +30,12 @@ ms.locfileid: "70206011"
   
  Los modificadores de recorrido de pila <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> y <xref:System.Security.CodeAccessPermission.PermitOnly%2A> no afectan a la evaluación de las peticiones de vínculo.  Dado que las peticiones de vínculo no efectúan ningún recorrido de pila, los modificadores de recorrido de pila no tienen ningún efecto sobre las peticiones de vínculo.  
   
- Si se tiene acceso a un método protegido por una petición de vínculo a través de la [reflexión](../reflection-and-codedom/reflection.md), una petición de vínculo comprueba el llamador inmediato del código al que se tiene acceso mediante reflexión. Esto es válido tanto para la detección de métodos como para la invocación de métodos efectuados por reflexión. Por ejemplo, supongamos que el código usa <xref:System.Reflection.MethodInfo> la reflexión para devolver un objeto que representa un método protegido por una petición de vínculo y, a continuación, pasa ese objeto **MethodInfo** a otro código que usa el objeto para invocar el método original. En este caso, la comprobación de la petición de vínculo se produce dos veces: una vez para el código que devuelve el objeto **MethodInfo** y otra para el código que lo invoca.  
+ Si se tiene acceso a un método protegido por una petición de vínculo a través de la [reflexión](../reflection-and-codedom/reflection.md), una petición de vínculo comprueba el llamador inmediato del código al que se tiene acceso mediante reflexión. Esto es válido tanto para la detección de métodos como para la invocación de métodos efectuados por reflexión. Por ejemplo, supongamos que el código usa la reflexión para devolver un objeto <xref:System.Reflection.MethodInfo> que representa un método protegido por una petición de vínculo y, a continuación, pasa ese objeto **MethodInfo** a otro código que usa el objeto para invocar el método original. En este caso, la comprobación de la petición de vínculo se produce dos veces: una vez para el código que devuelve el objeto **MethodInfo** y otra para el código que lo invoca.  
   
 > [!NOTE]
 > Una petición de vínculo efectuada en un constructor de clases estáticas no protege el constructor, puesto que el sistema llama a los constructores estáticos, fuera de la ruta de acceso de ejecución del código de la aplicación. Como resultado, al aplicar una petición de vínculo a toda una clase, no puede proteger el acceso a un constructor estático, aunque proteja el resto de la clase.  
   
- El siguiente fragmento de código especifica de manera declarativa que cualquier código vinculado al método `ReadData` debe tener el permiso `CustomPermission`. Este permiso es un permiso personalizado hipotético y no existe en .NET Framework. La petición se realiza pasando una marca **SecurityAction. LinkDemand** a `CustomPermissionAttribute`.  
+ El siguiente fragmento de código especifica de manera declarativa que cualquier código vinculado al método `ReadData` debe tener el permiso `CustomPermission`. Este permiso es un permiso personalizado hipotético y no existe en .NET Framework. La petición se realiza pasando una marca **SecurityAction. LinkDemand** al `CustomPermissionAttribute`.  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
@@ -54,7 +52,7 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Atributos](../../standard/attributes/index.md)
 - [Seguridad de acceso del código](code-access-security.md)

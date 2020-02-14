@@ -7,14 +7,12 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052518"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216173"
 ---
 # <a name="loadfromcontext-mda"></a>MDA de loadFromContext
 El asistente para la depuración administrada (MDA) `loadFromContext` se activa si se carga un ensamblado en el contexto de `LoadFrom`. Esta situación puede producirse como resultado de llamar a <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> u otros métodos similares.  
@@ -25,7 +23,7 @@ El asistente para la depuración administrada (MDA) `loadFromContext` se activa 
 ## <a name="cause"></a>Causa  
  Por lo general, un ensamblado se carga en el contexto de `LoadFrom` si se cargó desde una ruta de acceso fuera del contexto de `Load`, como la caché global de ensamblados o la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Configure las aplicaciones para que las llamadas a <xref:System.Reflection.Assembly.LoadFrom%2A> ya no sean necesarias. Puede usar las técnicas siguientes para hacerlo:  
   
 - Instalar ensamblados en la caché global de ensamblados.  
@@ -39,7 +37,7 @@ El asistente para la depuración administrada (MDA) `loadFromContext` se activa 
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  El MDA no tiene ningún efecto en el CLR. Informa del contexto que se usó como resultado de una solicitud de carga.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El MDA informa de que el ensamblado se cargó en el contexto de `LoadFrom`. Especifica el nombre simple del ensamblado y la ruta de acceso. También sugiere mitigaciones para evitar el uso del contexto de `LoadFrom`.  
   
 ## <a name="configuration"></a>Configuración  
@@ -72,6 +70,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

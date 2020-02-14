@@ -14,14 +14,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052928"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217567"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA de callbackOnCollectedDelegate
 El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate` se activa si se serializa un delegado desde código administrado a no administrado como un puntero de función y se coloca una devolución de llamada en dicho puntero después de que el delegado haya sido recolectado como elemento no utilizado.  
@@ -38,13 +36,13 @@ El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate
   
  La probabilidad del error depende del tiempo entre la serialización del delegado y la devolución de llamada en el puntero de función, así como de la frecuencia de las recolecciones de elementos no utilizados. El error será esporádico si el tiempo entre la serialización del delegado y la devolución de llamada posterior es breve. Este suele ser el caso cuando el método no administrado que recibe el puntero de función no guarda el puntero de función para su uso posterior y, en su lugar, realiza una devolución de llamada al puntero de función inmediatamente para completar la operación antes de la devolución. De forma similar, se producen más recolecciones de elementos no utilizados cuando un sistema tiene mucha carga, lo que aumenta las probabilidades de que se produzca una recolección de elementos no utilizados antes de la devolución de llamada.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Una vez calculadas las referencias de un delegado como un puntero de función no administrada, el recolector de elementos no utilizados no puede controlar su vigencia. En su lugar, el código debe mantener una referencia al delegado durante la vigencia del puntero de función no administrado. Pero para poder hacerlo, primero debe identificar qué delegado se ha recolectado. Cuando el MDA se activa, proporciona el nombre del tipo del delegado. Use este nombre para buscar en el código la invocación de plataforma o las firmas COM que pasan el delegado al código no administrado. El delegado que produce el error pasa por uno de estos sitios de llamada. También puede habilitar el MDA `gcUnmanagedToManaged` para aplicar una recolección de elementos no utilizados antes de cada devolución de llamada a CLR. Esto eliminará la incertidumbre provocada por la recolección de elementos no utilizados porque garantiza que siempre se producirá una recolección de elementos no utilizados antes de la devolución de llamada. Una vez que sepa qué delegado se ha recolectado, cambie el código para mantener una referencia a dicho delegado en la parte administrada durante la vigencia del puntero de función no administrado cuyas referencias se han calculado.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Cuando las referencias de los delegados se calculan como punteros de función, CLR asigna un código thunk que realiza la transición de no administrado a administrado. El código no administrado llama a este código thunk antes de invocar en última instancia al delegado administrado. Si el MDA `callbackOnCollectedDelegate` no está habilitado, el código no administrado de cálculo de referencias se elimina al recopilar el delegado. Si el MDA `callbackOnCollectedDelegate` está habilitado, el código no administrado de serialización no se elimina inmediatamente al recopilar el delegado. En su lugar, se mantienen activas las últimas 1.000 instancias de forma predeterminada y se cambian para activar el MDA cuando se le llama. El código thunk se borra después de recopilar 1.001 delegados con referencias calculadas.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El MDA notifica el nombre de tipo del delegado que se recopiló antes de intentar una devolución de llamada en su puntero de función no administrado.  
   
 ## <a name="configuration"></a>Configuración  
@@ -111,9 +109,9 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
 - [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

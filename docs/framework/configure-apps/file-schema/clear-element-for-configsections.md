@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119083"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214837"
 ---
 # <a name="clear-element-for-configsections"></a>\<borrar > elemento para \<configSections >
 
 Borra todas las secciones y grupos de sección definidos previamente.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,9 +42,9 @@ Borra todas las secciones y grupos de sección definidos previamente.
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El elemento **\<clear >** quita todas las secciones y grupos de secciones de la aplicación que se definieron anteriormente en el archivo de configuración actual o en un nivel superior en la jerarquía del archivo de configuración.
 
@@ -91,6 +89,6 @@ El siguiente código de archivo de configuración de la aplicación borra todas 
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

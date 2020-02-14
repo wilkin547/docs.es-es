@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088713"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214742"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<borrar > elemento para NameValueSectionHandler y DictionarySectionHandler
 
@@ -32,7 +30,7 @@ Borra todos los valores de configuración definidos previamente en una sección.
 
 ## <a name="attributes"></a>Atributos
 
-Ninguno
+None
 
 ## <a name="parent-element"></a>Elemento primario
 
@@ -42,9 +40,9 @@ Ninguno
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Puede usar el elemento **\<clear >** para quitar toda la configuración de la aplicación que se definió en un nivel superior en la jerarquía del archivo de configuración.
 
@@ -67,7 +65,7 @@ El siguiente código de archivo de configuración de máquina declara la secció
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación quita todos los valores de\<de la **sección >** . La aplicación no puede recuperar ninguno de los valores de configuración que se declararon en la sección **\<** sección del archivo de configuración del equipo.
+El siguiente código de archivo de configuración de la aplicación quita todos los valores de\<de la **sección >** . La aplicación no puede recuperar ninguno de los valores de configuración que se declararon en la sección **\<>** sección del archivo de configuración del equipo.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,6 +80,6 @@ El siguiente código de archivo de configuración de la aplicación quita todos 
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

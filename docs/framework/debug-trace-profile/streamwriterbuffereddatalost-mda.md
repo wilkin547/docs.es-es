@@ -10,14 +10,12 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3dcdd329318d48efa203d2b9dcbfe3501d94b3e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 82940b40b302f4a928547f2e6a0c285727e13934
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052267"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216098"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>MDA de streamWriterBufferedDataLost
 El Asistente para la depuración administrada (MDA) `streamWriterBufferedDataLost` se activa cuando se escribe un <xref:System.IO.StreamWriter>, pero después no se llama al método <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> antes de que se destruya la instancia del <xref:System.IO.StreamWriter>. Cuando este MDA está habilitado, el tiempo de ejecución determina si los datos almacenados en búfer todavía existen en <xref:System.IO.StreamWriter>. Si existen datos almacenados en búfer, se activa el MDA. Llamar a los métodos <xref:System.GC.Collect%2A> y <xref:System.GC.WaitForPendingFinalizers%2A> puede forzar la ejecución de los finalizadores. En caso contrario, los finalizadores se ejecutarán en momentos aparentemente arbitrarios y posiblemente no lo hagan en la salida del proceso. La ejecución explícita de los finalizadores con este MDA habilitado ayudará a reproducir este tipo de problema de forma más confiable.  
@@ -47,7 +45,7 @@ GC.Collect();
 GC.WaitForPendingFinalizers();  
 ```  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Asegúrese de que se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> en <xref:System.IO.StreamWriter> antes de cerrar una aplicación o cualquier bloque de código que tenga una instancia de <xref:System.IO.StreamWriter>. Uno de los mejores mecanismos para conseguirlo es crear la instancia con un bloque `using` de C# (`Using` en Visual Basic), que se asegurará de que se invoca el método <xref:System.IO.StreamWriter.Dispose%2A> para el escritor y, como resultado, la instancia se cerrará correctamente.  
   
 ```csharp
@@ -91,7 +89,7 @@ static WriteToFile()
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el tiempo de ejecución.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Un mensaje que indica que se produjo esta infracción.  
   
 ## <a name="configuration"></a>Configuración  
@@ -104,7 +102,7 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.IO.StreamWriter>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d3b65ecc226c1caf7b53d746f0583e1f57c7d8c1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052465"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217312"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA de memberInfoCacheCreation
 El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se activa cuando se crea una caché de <xref:System.Reflection.MemberInfo>. Esto es una indicación clara de un programa que está usando características de reflexión que consumen muchos recursos.  
@@ -28,7 +26,7 @@ El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se
 ## <a name="cause"></a>Causa  
  Las operaciones de reflexión que implican dos objetos <xref:System.Reflection.MemberInfo> se consideran que consumen muchos recursos porque deben leer metadatos que se almacenan en páginas frías y en general indican que el programa usa algún tipo de escenario enlazado en tiempo de ejecución.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Puede determinar dónde se usa la reflexión en su programa si habilita este MDA y, después, ejecuta el código en un depurador o lo adjunta con un depurador cuando se activa el MDA. Bajo un depurador obtendrá un seguimiento de pila en el que se muestra dónde se creó la caché de <xref:System.Reflection.MemberInfo> y desde allí puede determinar dónde usa la reflexión el programa.  
   
  La resolución depende de los objetivos del código. Este MDA le avisa de que el programa tiene un escenario enlazado en tiempo de ejecución. Es posible que quiera determinar si puede sustituir un escenario enlazado en tiempo de compilación o considerar el rendimiento del escenario enlazado en tiempo de ejecución.  
@@ -36,7 +34,7 @@ El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA se activa para cada caché de <xref:System.Reflection.MemberInfo> que se crea. El rendimiento se ve afectado de forma insignificante.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El MDA genera un mensaje que indica que se creó la caché de <xref:System.Reflection.MemberInfo>. Use un depurador para realizar un seguimiento de pila en el que se muestre dónde usa la reflexión el programa.  
   
 ## <a name="configuration"></a>Configuración  
@@ -64,7 +62,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Reflection.MemberInfo>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

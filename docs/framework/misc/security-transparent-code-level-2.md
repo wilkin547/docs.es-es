@@ -7,14 +7,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974941"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216997"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
 
@@ -72,12 +70,12 @@ Las reglas siguientes se aplican al uso de atributos en el nivel de ensamblado:
 
 En la tabla siguiente se compara el comportamiento de nivel de ensamblado para el nivel 2 con el nivel 1.
 
-|Assembly (atributo)|Nivel 2|nivel 1|
+|Atributo de ensamblado|Nivel 2|Nivel 1|
 |------------------------|-------------|-------------|
 |Ningún atributo en un ensamblado de confianza parcial|Los tipos y los miembros son transparentes de forma predeterminada, pero pueden ser críticos para la seguridad o bien críticos para la seguridad y disponibles desde código transparente.|Todos los tipos y los miembros son transparentes.|
 |Ningún atributo|Si no se especifica ningún atributo, Common Language Runtime determina las reglas de transparencia automáticamente. Todos los tipos y los miembros son críticos para la seguridad, excepto cuando el hecho de ser críticos para la seguridad infringe una regla de herencia.|En un ensamblado de plena confianza (en la caché global de ensamblados, o identificado como de plena confianza en `AppDomain`), todos los tipos son transparentes y todos los miembros son críticos para la seguridad y disponibles desde código transparente.|
 |`SecurityTransparent`|Todos los tipos y los miembros son transparentes.|Todos los tipos y los miembros son transparentes.|
-|`SecurityCritical(SecurityCriticalScope.Everything)`|No disponible.|Todos los tipos y los miembros son críticos para la seguridad.|
+|`SecurityCritical(SecurityCriticalScope.Everything)`|No aplicable.|Todos los tipos y los miembros son críticos para la seguridad.|
 |`SecurityCritical`|Todo el código introducido por tipos en este ensamblado es crítico; el código restante es transparente. Si invalida un método virtual o abstracto o si implementa un método de interfaz, debe anotar explícitamente ese método como `SecurityCritical` o `SecuritySafeCritical`.|El valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.|
 
 ### <a name="type-and-member-annotation"></a>Anotación de tipos y de miembros
@@ -179,7 +177,7 @@ Puede omitir la comprobación para ensamblados transparentes de plena confianza 
 
 La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente del ensamblado se puede comprobar mediante la opción `transparent` de la [herramienta peverify](../tools/peverify-exe-peverify-tool.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Código transparente en seguridad, nivel 1](security-transparent-code-level-1.md)
 - [Cambios de seguridad](../security/security-changes.md)

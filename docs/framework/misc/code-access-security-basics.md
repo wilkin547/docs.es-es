@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205621"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215907"
 ---
 # <a name="code-access-security-basics"></a>Conceptos básicos sobre la seguridad de acceso del código
 
@@ -26,13 +24,13 @@ El host predeterminado para las aplicaciones de escritorio permite que el códig
 
 Debe estar familiarizado con los siguientes conceptos de seguridad de acceso del código para escribir aplicaciones eficaces que tengan como destino Common Language Runtime:
 
-- **Código con seguridad de tipos**: El código con seguridad de tipos es código que solo tiene acceso a los tipos de maneras permitidas y bien definidas. Por ejemplo, dada una referencia de objeto válido, el código con seguridad de tipos puede tener acceso a la memoria en desplazamientos fijos que se corresponden con miembros de campo reales. El código no tiene seguridad de tipos si tiene acceso a la memoria en desplazamientos arbitrarios fuera del intervalo de memoria que pertenece a esos campos del objeto expuestos públicamente. Para que el código pueda beneficiarse de la seguridad de acceso del código, use un compilador que genere código con seguridad de tipos comprobable. Para obtener más información, vea la sección [escribir código con seguridad de tipos comprobable](#typesafe_code) más adelante en este tema.
+- **Código con seguridad de tipos**: el código con seguridad de tipos es código que solo tiene acceso a los tipos de maneras permitidas y bien definidas. Por ejemplo, dada una referencia de objeto válido, el código con seguridad de tipos puede tener acceso a la memoria en desplazamientos fijos que se corresponden con miembros de campo reales. El código no tiene seguridad de tipos si tiene acceso a la memoria en desplazamientos arbitrarios fuera del intervalo de memoria que pertenece a esos campos del objeto expuestos públicamente. Para que el código pueda beneficiarse de la seguridad de acceso del código, use un compilador que genere código con seguridad de tipos comprobable. Para obtener más información, vea la sección [escribir código con seguridad de tipos comprobable](#typesafe_code) más adelante en este tema.
 
-- **Sintaxis imperativa y declarativa**: El código que tiene como destino el Common Language Runtime puede interactuar con el sistema de seguridad solicitando permisos, exigiendo que los llamadores tengan los permisos especificados e invalidando ciertas opciones de configuración de seguridad (con privilegios suficientes). Para interactuar mediante programación con el sistema de seguridad de .NET Framework se usan dos formas de sintaxis: sintaxis declarativa y la sintaxis imperativa. Las llamadas declarativas se realizan mediante atributos y las llamadas imperativas se realizan con nuevas instancias de clases dentro del código. Hay llamadas que solo se pueden realizar de manera imperativa, otras solo de forma declarativa y algunas se pueden realizar de ambas maneras.
+- **Sintaxis imperativa y declarativa**: el código que tiene como destino el Common Language Runtime puede interactuar con el sistema de seguridad solicitando permisos, lo que exige que los llamadores tengan los permisos especificados e invalide ciertas opciones de configuración de seguridad (con privilegios suficientes). Para interactuar mediante programación con el sistema de seguridad de .NET Framework se usan dos formas de sintaxis: sintaxis declarativa y la sintaxis imperativa. Las llamadas declarativas se realizan mediante atributos y las llamadas imperativas se realizan con nuevas instancias de clases dentro del código. Hay llamadas que solo se pueden realizar de manera imperativa, otras solo de forma declarativa y algunas se pueden realizar de ambas maneras.
 
-- **Bibliotecas de clases seguras**: Una biblioteca de clases segura utiliza peticiones de seguridad para asegurarse de que los llamadores de la biblioteca tienen permiso de acceso a los recursos que expone la biblioteca. Por ejemplo, una biblioteca de clases segura podría tener un método para crear archivos que requiera que los llamadores tengan permisos para crear archivos. .NET Framework consta de bibliotecas de clases seguras. Debe tener en cuenta los permisos necesarios para el acceso a cualquier biblioteca que use el código. Para obtener más información, vea la sección [usar bibliotecas de clases seguras](#secure_library) más adelante en este tema.
+- **Bibliotecas de clases seguras**: una biblioteca de clases segura utiliza peticiones de seguridad para asegurarse de que los llamadores de la biblioteca tienen permiso de acceso a los recursos que expone la biblioteca. Por ejemplo, una biblioteca de clases segura podría tener un método para crear archivos que requiera que los llamadores tengan permisos para crear archivos. .NET Framework consta de bibliotecas de clases seguras. Debe tener en cuenta los permisos necesarios para el acceso a cualquier biblioteca que use el código. Para obtener más información, vea la sección [usar bibliotecas de clases seguras](#secure_library) más adelante en este tema.
 
-- **Código transparente**: A partir del .NET Framework 4, además de identificar permisos específicos, también debe determinar si el código debe ejecutarse como transparente en seguridad. El código transparente en seguridad no puede llamar a tipos o miembros que se identifican como críticos para la seguridad. Esta regla se aplica a las aplicaciones de plena confianza y a las de confianza parcial. Para obtener más información, vea [código transparente en seguridad](security-transparent-code.md).
+- **Código transparente**: a partir de la .NET Framework 4, además de identificar permisos específicos, también debe determinar si el código debe ejecutarse como transparente en seguridad. El código transparente en seguridad no puede llamar a tipos o miembros que se identifican como críticos para la seguridad. Esta regla se aplica a las aplicaciones de plena confianza y a las de confianza parcial. Para obtener más información, vea [código transparente en seguridad](security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -103,7 +101,7 @@ public class MyClass
 
 La sintaxis de seguridad imperativa emite una llamada de seguridad mediante la creación de una nueva instancia del objeto de permiso que se desea invocar. La sintaxis imperativa se puede usar para realizar peticiones e invalidaciones, pero no solicitudes.
 
-Antes de realizar la llamada de seguridad, debe inicializar los datos de estado del objeto de permiso para que represente la forma concreta del permiso necesario. Por ejemplo, al crear un <xref:System.Security.Permissions.FileIOPermission> objeto, puede usar el constructor para inicializar el objeto **FileIOPermission** de modo que represente acceso sin restricciones a todos los archivos o sin acceso a los archivos. O bien, puede usar un objeto **FileIOPermission** diferente, pasando los parámetros que indican el tipo de acceso que desea que represente el objeto (es decir, lectura, anexar o escritura) y los archivos que desea proteger con el objeto.
+Antes de realizar la llamada de seguridad, debe inicializar los datos de estado del objeto de permiso para que represente la forma concreta del permiso necesario. Por ejemplo, al crear un objeto de <xref:System.Security.Permissions.FileIOPermission>, puede usar el constructor para inicializar el objeto **FileIOPermission** de modo que represente acceso sin restricciones a todos los archivos o sin acceso a los archivos. O bien, puede usar un objeto **FileIOPermission** diferente, pasando los parámetros que indican el tipo de acceso que desea que represente el objeto (es decir, lectura, anexar o escritura) y los archivos que desea proteger con el objeto.
 
 Además de usar la sintaxis de seguridad imperativa para invocar un solo objeto de seguridad, puede usarlo para inicializar un grupo de permisos de un conjunto de permisos. Por ejemplo, esta técnica es la única manera de realizar de forma confiable llamadas [Assert](using-the-assert-method.md) en varios permisos en un método. Use las clases <xref:System.Security.PermissionSet> y <xref:System.Security.NamedPermissionSet> para crear un grupo de permisos y, a continuación, llame al método apropiado para invocar la llamada de seguridad deseada.
 
@@ -154,11 +152,11 @@ public class MyClass {
 
 La mayoría de las aplicaciones y los componentes (excepto las bibliotecas seguras) no deben llamar directamente a código no administrado. Hay varias razones para ello. Si el código llama directamente a código no administrado, no podrá ejecutarse en muchas circunstancias porque el código debe disponer de un alto nivel de confianza para llamar a código nativo. Si se modifica la directiva para permitir que esa aplicación se ejecute, ello podrá debilitar significativamente la seguridad del sistema, dando libertad a la aplicación para que realice prácticamente cualquier operación.
 
-Además, el código que tiene permiso de acceso a código no administrado probablemente puede realizar casi cualquier operación mediante una llamada a una API no administrada. Por ejemplo, el código que tiene permiso para llamar a código no administrado no necesita <xref:System.Security.Permissions.FileIOPermission> tener acceso a un archivo; solo puede llamar a una API de archivos no administrados (Win32) directamente, omitiendo la API de archivos administrados que requiere **FileIOPermission**. Si el código administrado tiene permiso para llamar a código no administrado y llama directamente al código no administrado, el sistema de seguridad no podrá imponer restricciones de seguridad de manera confiable, ya que el runtime no puede aplicar dichas restricciones al código no administrado.
+Además, el código que tiene permiso de acceso a código no administrado probablemente puede realizar casi cualquier operación mediante una llamada a una API no administrada. Por ejemplo, el código que tiene permiso para llamar a código no administrado no necesita <xref:System.Security.Permissions.FileIOPermission> para tener acceso a un archivo. solo puede llamar a una API de archivos no administrados (Win32) directamente, omitiendo la API de archivos administrados que requiere **FileIOPermission**. Si el código administrado tiene permiso para llamar a código no administrado y llama directamente al código no administrado, el sistema de seguridad no podrá imponer restricciones de seguridad de manera confiable, ya que el runtime no puede aplicar dichas restricciones al código no administrado.
 
 Si desea que la aplicación realice una operación que requiere el acceso a código no administrado, deberá hacerlo a través de una clase administrada de confianza que encapsule la funcionalidad necesaria (si esta clase existe). No cree una clase contenedora usted mismo si ya existe una en la biblioteca de clases seguras. La clase contenedora, que debe tener un alto grado de confianza que le permita realizar la llamada a código no administrado, es responsable de exigir que sus llamadores tengan los permisos adecuados. Si usa la clase contenedora, el código solo necesita solicitar y recibir los permisos que requiere la clase contenedora.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.FileIOPermission>

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052960"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217589"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA de asynchronousThreadAbort
 El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se activa cuando un subproceso intenta incorporar una anulación asincrónica a otro subproceso. Las anulaciones de subproceso sincrónicas no activan el MDA `asynchronousThreadAbort`.
@@ -36,13 +34,13 @@ El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se
 
  La causa puede ser difícil de determinar debido a la aleatoriedad inherente al problema.
 
-## <a name="resolution"></a>Resolución
+## <a name="resolution"></a>Solución
  Evite el diseño de código que necesite anulaciones de subproceso asincrónicas. Existen varios enfoques más adecuados para la interrupción de un subproceso de destino que no requieren una llamada a <xref:System.Threading.Thread.Abort%2A>. El más seguro consiste en incorporar un mecanismo, como una propiedad común, que indique al subproceso de destino que solicite una interrupción. El subproceso de destino comprueba la señal en determinados puntos de control seguros. Si observa que se ha solicitado una interrupción, puede cerrar correctamente.
 
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime
  Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre las anulaciones de subproceso asincrónicas.
 
-## <a name="output"></a>Resultados
+## <a name="output"></a>Output
  El MDA notifica el identificador del subproceso que realiza la anulación y el identificador del subproceso que es el destino de ella. Nunca serán iguales, porque eso está limitado a las interrupciones asincrónicas.
 
 ## <a name="configuration"></a>Configuración
@@ -70,7 +68,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.Thread>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

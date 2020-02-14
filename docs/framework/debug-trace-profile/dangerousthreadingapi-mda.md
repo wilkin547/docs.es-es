@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052908"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216668"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA de dangerousThreadingAPI
 El Asistente para la depuración administrada (MDA) de `dangerousThreadingAPI` se activa cuando se llama al método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> en un subproceso diferente al subproceso actual.  
@@ -32,13 +30,13 @@ El Asistente para la depuración administrada (MDA) de `dangerousThreadingAPI` s
   
  Si los tipos primitivos de sincronización se incluyen en el subproceso de destino, permanecen así durante la suspensión. Esto puede provocar interbloqueos si otro subproceso, por ejemplo el subproceso que realiza <xref:System.Threading.Thread.Suspend%2A>, intenta adquirir un bloqueo en el tipo primitivo. En esta situación, el problema se manifiesta como un interbloqueo.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  Evite diseños que necesiten el uso de <xref:System.Threading.Thread.Suspend%2A> y <xref:System.Threading.Thread.Resume%2A>. Para obtener una cooperación entre subprocesos, use los tipos primitivos de sincronización como <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> o la instrucción `lock` de C#. Si debe usar estos métodos, reduzca el período de tiempo y minimice la cantidad de código que ejecuta mientras el subproceso está en un estado suspendido.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre operaciones de subproceso peligrosas.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  El MDA identifica el método de subproceso peligroso que ha provocado que se active.  
   
 ## <a name="configuration"></a>Configuración  
@@ -67,7 +65,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.Thread>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear, inicializar y configurar modificadores de seguimiento
+title: 'Cómo: Crear, inicializar y configurar modificadores de seguimiento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 358e34b2ce5d896ba02b343ce060604f2d42eeeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052715"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216475"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedimiento para crear, inicializar y configurar modificadores de seguimiento
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Cómo: Crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
   
 <a name="create"></a>   
@@ -54,7 +52,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
 ## <a name="configuring-trace-switches"></a>Configuración de modificadores de seguimiento  
  Después de que se distribuya la aplicación, puede habilitar o deshabilitar el resultado del seguimiento configurando los modificadores de seguimiento de la aplicación. Configurar un modificador consiste en cambiar su valor desde un origen externo después de que se inicialice. Puede cambiar los valores de los objetos modificadores con el archivo de configuración. Puede configurar un modificador de seguimiento para activarlo y desactivarlo, o para establecer su nivel y determinar la cantidad y el tipo de mensajes que pasa a los agentes de escucha.  
   
- Los modificadores se configuran con el archivo .config. En una aplicación web, es el archivo Web.config asociado al proyecto. En una aplicación de Windows, este archivo se denomina (nombre de la aplicación).exe.config. En una aplicación implementada, este archivo debe residir en la misma carpeta que el ejecutable.  
+ Los modificadores se configuran con el archivo .config. En una aplicación web, es el archivo Web.config asociado al proyecto. En una aplicación de Windows, este archivo se denomina (nombre de la aplicación). exe. config. En una aplicación implementada, este archivo debe residir en la misma carpeta que el ejecutable.  
   
  Cuando la aplicación ejecuta el código que crea una instancia de un modificador por primera vez, la aplicación comprueba el archivo de configuración para obtener información de nivel de seguimiento sobre el modificador con nombre. El sistema de seguimiento examina el archivo de configuración una sola vez con cada modificador, la primera vez que la aplicación crea el modificador.  
   
@@ -75,11 +73,11 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 2. Si el proyecto no contiene un archivo de configuración (app.config o Web.config), en el menú **Proyecto** seleccione **Agregar nuevo elemento**.  
   
-    - **Visual Basic:** En el cuadro de diálogo **Agregar nuevo elemento** , elija **archivo de configuración**de la aplicación.  
+    - **Visual Basic:** en el cuadro de diálogo **Agregar nuevo elemento**, elija **Archivo de configuración de aplicaciones**.  
   
          El archivo de configuración de la aplicación se creará y se abrirá. Se trata de un documento XML cuyo elemento raíz es `<configuration>.`  
   
-    - **Objetos C#visuales:** En el cuadro de diálogo **Agregar nuevo elemento** , elija **archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
+    - **Visual C#:** en el cuadro de diálogo **Agregar nuevo elemento** elija **Archivo XML**. Asigne un nombre a este archivo **app. config**. En el editor XML, después de la declaración XML, agregue el siguiente código XML:  
   
         ```xml  
         <configuration>  
@@ -125,9 +123,9 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
-- [Procedimientos: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
+- [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
 - [Modificadores de seguimiento](trace-switches.md)
 - [Esquema de la configuración de seguimiento y depuración](../configure-apps/file-schema/trace-debug/index.md)

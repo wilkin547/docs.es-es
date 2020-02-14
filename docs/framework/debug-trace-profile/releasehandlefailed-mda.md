@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052311"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216128"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA de releaseHandleFailed
 El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se activa para notificar a los desarrolladores cuando el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> devuelve `false`.  
@@ -34,7 +32,7 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
   
 - Todos los errores que se producen durante la ejecución de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> y que impiden que se libere el recurso, son errores en la implementación del propio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Es responsabilidad del programador asegurarse de que se cumpla el contrato, aunque ese código, para realizar su función, llame a un código creado por otra persona.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
  El código que utiliza el tipo específico <xref:System.Runtime.InteropServices.SafeHandle> (o <xref:System.Runtime.InteropServices.CriticalHandle>) que generó la notificación del MDA se debe revisar, para buscar los lugares donde se extrae el valor de identificador sin formato de <xref:System.Runtime.InteropServices.SafeHandle> y se copia a otro lugar. Esta es la causa habitual de errores dentro de las implementaciones de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, porque el tiempo de ejecución deja de realizar un seguimiento del uso del valor de identificador sin formato. Si más tarde se cierra la copia del identificador sin formato, es posible que se produzca un error en una llamada a <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> posterior, porque se trate de realizar el cierre en el mismo identificador, que ahora no es válido.  
   
  Hay varias maneras en que puede producirse la duplicación incorrecta del identificador:  
@@ -52,7 +50,7 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Output  
  Un mensaje que indica que un <xref:System.Runtime.InteropServices.SafeHandle> o un <xref:System.Runtime.InteropServices.CriticalHandle> no pudieron liberar correctamente el identificador. Por ejemplo:  
   
 ```output
@@ -90,8 +88,8 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [Serialización para interoperabilidad](../interop/interop-marshaling.md)

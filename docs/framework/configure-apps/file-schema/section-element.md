@@ -8,14 +8,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089018"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215727"
 ---
 # <a name="section-element"></a>\<sección > elemento
 
@@ -39,7 +37,7 @@ Contiene una declaración de sección de configuración.
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a>Atributos requeridos
+## <a name="required-attributes"></a>Atributos necesarios
 
 |           | Descripción |
 | --------- | ----------- |
@@ -52,8 +50,8 @@ Los atributos siguientes solo son aplicables a las aplicaciones ASP.NET. El sist
 
 |                     | Descripción |
 | ------------------- | ----------- |
-| **allowDefinition** | Especifica el archivo de configuración en el que se puede usar la sección. Utilice uno de los siguientes valores:<br><br>**Todas**<br>Permite que la sección se use en cualquier archivo de configuración. Este es el valor predeterminado.<br>**MachineOnly**<br>Permite que la sección se use solo en el archivo de configuración del equipo (*Machine. config*).<br>**MachineToApplication**<br>Permite usar la sección en el archivo de configuración del equipo o en el archivo de configuración de la aplicación. |
-| **allowLocation**   | Determina si la sección se puede usar dentro del elemento de **> de ubicación\<** . Utilice uno de los siguientes valores:<br><br>**true**<br>Permite que la sección se use dentro del elemento **\<location >** . Este es el valor predeterminado.<br>**false**<br>No permite el uso de la sección dentro del elemento **\<location >** . |
+| **allowDefinition** | Especifica el archivo de configuración en el que se puede usar la sección. Utilice uno de los valores siguientes:<br><br>**Todas**<br>Permite que la sección se use en cualquier archivo de configuración. Este es el valor predeterminado.<br>**MachineOnly**<br>Permite que la sección se use solo en el archivo de configuración del equipo (*Machine. config*).<br>**MachineToApplication**<br>Permite usar la sección en el archivo de configuración del equipo o en el archivo de configuración de la aplicación. |
+| **allowLocation**   | Determina si la sección se puede usar dentro del elemento de **> de ubicación\<** . Utilice uno de los valores siguientes:<br><br>**true**<br>Permite que la sección se use dentro del elemento **\<location >** . Este es el valor predeterminado.<br>**false**<br>No permite el uso de la sección dentro del elemento **\<location >** . |
 
 ## <a name="parent-elements"></a>Elementos primarios
 
@@ -67,9 +65,9 @@ Los atributos siguientes solo son aplicables a las aplicaciones ASP.NET. El sist
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Al declarar una sección de configuración, básicamente se define un nuevo elemento para el archivo de configuración. El nuevo elemento contiene valores que lee un controlador de sección de configuración (es decir, una clase que implementa la interfaz <xref:System.Configuration.IConfigurationSectionHandler>). Los atributos y elementos secundarios de una sección que se define dependen del controlador de la sección que se usa para leer la configuración.
 
@@ -96,6 +94,6 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

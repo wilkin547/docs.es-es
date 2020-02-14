@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089044"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215387"
 ---
 # <a name="remove-element-for-configsections"></a>\<quitar > elemento de \<configSections >
 
@@ -44,9 +42,9 @@ Quita una sección o grupo de sección predefinido.
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Puede usar el elemento **\<remove >** para quitar secciones y grupos de secciones de la aplicación que se definieron en un nivel superior en la jerarquía del archivo de configuración.
 
@@ -84,6 +82,6 @@ El siguiente código de archivo de configuración de la aplicación quita la sec
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

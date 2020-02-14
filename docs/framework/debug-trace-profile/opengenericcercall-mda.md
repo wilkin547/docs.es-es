@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b6ee3e4f74a523c1e902a4eb48a64b11eb3937
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960902"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217276"
 ---
 # <a name="opengenericcercall-mda"></a>MDA de openGenericCERCall
 
@@ -27,7 +25,7 @@ El asistente para la depuración administrada `openGenericCERCall` se activa par
 
 El código de la CER no se ejecuta cuando se anula un subproceso o se descarga un dominio de aplicación.
 
-## <a name="cause"></a>Motivo
+## <a name="cause"></a>Causa
 
 En tiempo de compilación JIT, una instancia que contiene un tipo de referencia de objeto solo es representativa porque el código resultante es compartido, y cada una de las variables de tipo de referencia de objeto puede ser cualquier tipo de referencia de objeto. Esto puede impedir la preparación de algunos recursos de tiempo de ejecución antes de tiempo.
 
@@ -37,7 +35,7 @@ Solo se debería activar este MDA en tiempo de compilación JIT, no cuando hay u
 
 Cuando se activa este MDA, los posibles síntomas son que las CER no están habilitadas para la creación de instancias incorrectas. De hecho, el tiempo de ejecución no ha intentado implementar una CER en las circunstancias que provocaron que se activara el MDA. Por tanto, si el desarrollador usa una instancia compartida de la CER, no se detectan los errores de compilación de JIT, los errores de carga de tipos genéricos o las anulaciones de subprocesos dentro de la CER deseada.
 
-## <a name="resolution"></a>Resolución
+## <a name="resolution"></a>Solución
 
 No use variables de tipo genérico que son del tipo de referencia de objeto para los métodos que puede contener una CER.
 
@@ -45,7 +43,7 @@ No use variables de tipo genérico que son del tipo de referencia de objeto para
 
 Este MDA no tiene ningún efecto en el CLR.
 
-## <a name="output"></a>Resultados
+## <a name="output"></a>Output
 
 A continuación se muestra un ejemplo de la salida de este MDA:
   
@@ -112,7 +110,7 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

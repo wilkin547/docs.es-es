@@ -9,14 +9,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052949"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216925"
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
 
@@ -40,7 +38,7 @@ Si el tiempo de ejecución no puede cargar un ensamblado, se produce un error de
 
 - Las credenciales de usuario no proporcionan los permisos necesarios para leer el archivo.
 
-## <a name="resolution"></a>Resolución
+## <a name="resolution"></a>Solución
 
 El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado solicitado. Hay muchas razones por las que el tiempo de ejecución puede no haber encontrado o cargado el ensamblado solicitado, como los escenarios de la sección Causa. Para eliminar la causa del error de enlace, se recomiendan las siguientes acciones:
 
@@ -64,7 +62,7 @@ El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado
 
 Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre errores de enlace.
 
-## <a name="output"></a>Resultados
+## <a name="output"></a>Output
 
 El MDA notifica qué ensamblado no se ha podido cargar, incluida la ruta de acceso solicitada o el nombre para mostrar, el contexto de enlace, el dominio de aplicación en el que se ha solicitado la carga y el motivo del error.
 
@@ -105,6 +103,6 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
