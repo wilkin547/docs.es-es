@@ -16,7 +16,7 @@ ms.locfileid: "76741213"
 > [!IMPORTANT]
 > El control <xref:System.Windows.Forms.ToolStripProgressBar> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ProgressBar>; sin embargo, el control <xref:System.Windows.Forms.ProgressBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
- El control Windows Forms <xref:System.Windows.Forms.ProgressBar> indica el progreso de una acción mostrando un número adecuado de rectángulos organizados en una barra horizontal. Una vez completada la acción, se rellena la barra. Las barras de progreso se utilizan normalmente para proporcionar al usuario una indicación de cuánto tiempo hay que esperar a que se complete una acción retardada, por ejemplo, cuando se carga un archivo grande.  
+ El control Windows Forms <xref:System.Windows.Forms.ProgressBar> indica el progreso de una acción mostrando un número adecuado de rectángulos organizados en una barra horizontal. Una vez completada la acción, se rellena la barra. Las barras de progreso se utilizan normalmente para proporcionar al usuario una indicación de cuánto tiempo hay que esperar a que se complete una acción retrasada, por ejemplo, cuando se carga un archivo grande.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre ProgressBar (Control)](progressbar-control-overview-windows-forms.md)  
