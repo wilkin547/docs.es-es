@@ -2,14 +2,13 @@
 title: Herramientas para la portabilidad a .NET Core
 description: Más información sobre algunas de las herramientas que puede usar para realizar la portabilidad a .NET Core
 author: cartermp
-ms.author: mairaw
 ms.date: 12/07/2018
-ms.openlocfilehash: 101a110dec643d307e1c7cd807d9ed9fcfa7d845
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3b71c31b4f26b278b2bd1088adc8e9f64d28ab7b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714319"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215195"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>Herramientas útiles para la portabilidad a .NET Core
 

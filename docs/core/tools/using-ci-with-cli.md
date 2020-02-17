@@ -1,14 +1,13 @@
 ---
 title: Integración continua (CI) con el SDK de .NET Core y herramientas
 description: Aprenda a usar el SDK de .NET Core y sus herramientas en el servidor de compilación con la integración continua.
-author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714119"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215233"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
