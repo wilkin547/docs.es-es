@@ -1,18 +1,16 @@
 ---
 title: .NET Standard
 description: Obtenga información sobre .NET Standard, sus versiones y las implementaciones de .NET que lo admiten.
-author: mairaw
-ms.author: mairaw
 ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738661"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124642"
 ---
 # <a name="net-standard"></a>.NET Standard
 
