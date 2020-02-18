@@ -2,15 +2,14 @@
 title: Analizador de API en .NET
 description: Obtenga información sobre cómo el analizador de API de .NET puede ayudar a detectar problemas de compatibilidad de plataforma y de API en desuso.
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929360"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124252"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -45,7 +44,7 @@ Cuando una API en desuso, como <xref:System.Net.WebClient>, se utiliza en un có
 
 La ventana **Lista de errores** contiene advertencias con un identificador exclusivo por cada API en desuso, como se muestra en el ejemplo siguiente (`DE004`): 
 
-!["Captura de pantalla de la ventana Lista de errores en que se muestra el identificador de la advertencia y su descripción"](media/api-analyzer/warnings-id-and-descriptions.jpg "Ventana de Lista de errores que incluye advertencias.")
+!["Captura de pantalla de la ventana Lista de errores en la que se muestra el identificador de la advertencia y su descripción"](media/api-analyzer/warnings-id-and-descriptions.jpg "Ventana Lista de errores con advertencias.")
 
 Al hacer clic en el identificador, se le remite a una página web que contiene información detallada sobre la API en desuso y sugerencias sobre las API alternativas que pueden usarse.
 

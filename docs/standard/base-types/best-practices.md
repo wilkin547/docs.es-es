@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937998"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124427"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -176,7 +176,7 @@ A menudo, las aplicaciones sufren una reducción del rendimiento por usar el ret
 
 Puesto que un límite de palabra no es igual, o un subconjunto de, que un carácter alfabético, no hay ninguna posibilidad de que el motor de expresiones regulares cruce un límite de palabra cuando busca coincidencias con caracteres alfabéticos. Esto significa que para esta expresión regular, el retroceso nunca puede contribuir al éxito global de cualquier coincidencia; solo puede degradar el rendimiento, ya que se fuerza que el motor de expresiones regulares guarde su estado para cada coincidencia preliminar correcta de un carácter alfabético.
 
-Si determina que el retroceso no es necesario, puede deshabilitarlo mediante el elemento de lenguaje `(?>subexpression)`. En el ejemplo siguiente se analiza una cadena de entrada usando dos expresiones regulares. La primera, `\b\p{Lu}\w*\b`, se basa en el retroceso. La segunda, `\b\p{Lu}(?>\w*)\b`, deshabilita el retroceso. Como muestra el resultado del ejemplo, ambas producen el mismo resultado.
+Si determina que la vuelta atrás (backtracking) no es necesaria, puede deshabilitarla mediante el elemento de lenguaje `(?>subexpression)`, conocido como grupo atómico. En el ejemplo siguiente se analiza una cadena de entrada usando dos expresiones regulares. La primera, `\b\p{Lu}\w*\b`, se basa en el retroceso. La segunda, `\b\p{Lu}(?>\w*)\b`, deshabilita el retroceso. Como muestra el resultado del ejemplo, ambas producen el mismo resultado.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]

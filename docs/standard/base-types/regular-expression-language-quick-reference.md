@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: fb84e746e1dffedebfbe289c8e7599bc50097f07
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128076"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124317"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 
@@ -101,7 +101,7 @@ Las construcciones de agrupamiento definen subexpresiones de una expresión regu
 |`(?!` *subexpresión* `)`|Aserción de búsqueda anticipada negativa de ancho cero.|`\b(?!un)\w+\b`|`"sure"`, `"used"` en `"unsure sure unity used"`|
 |`(?<=` *subexpresión* `)`|Aserción de búsqueda tardía positiva de ancho cero.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` en `"1851 1999 1950 1905 2003"`|
 |`(?<!` *subexpresión* `)`|Aserción de búsqueda tardía negativa de ancho cero.|`(?<!19)\d{2}\b`|`"51"`, `"03"` en `"1851 1999 1950 1905 2003"`|
-|`(?>` *subexpresión* `)`|Subexpresión sin retroceso (o "expansiva").|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` y `"5AB"` en `"1ABB 3ABBC 5AB 5AC"`|
+|`(?>` *subexpresión* `)`|Grupo atómico.|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` y `"5AB"` en `"1ABB 3ABBC 5AB 5AC"`|
 
 ## <a name="quantifiers"></a>Cuantificadores
 

@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos de punto flotante - referencia de C#
-description: Información general de los tipos de punto flotante integrados de C#
-ms.date: 10/22/2019
+description: 'Información sobre los tipos de punto flotante de C# integrados: float, double y decimal'
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093219"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215250"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de punto flotante (referencia de C#)
 
@@ -50,19 +50,21 @@ El valor predeterminado de cada tipo de punto flotante es cero, `0`. Cada uno de
 
 Como el tipo `decimal` tiene más precisión y un intervalo más reducido que `float` y `double`, es adecuado para los cálculos financieros y monetarios.
 
-Puede combinar tipos [enteros](integral-numeric-types.md) y tipos de punto flotante en una expresión. En este caso, los tipos enteros se convierten a tipos de punto flotante. La evaluación de la expresión se realiza según las reglas siguientes:
+En una expresión, puede combinar tipos [enteros](integral-numeric-types.md) y tipos `float` y `double`. En este caso, los tipos enteros se convierten implícitamente en uno de los tipos de punto flotante y, si es necesario, el tipo `float` se convierte implícitamente en `double`. La expresión se evalúa de la siguiente forma:
 
-- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double` o [bool](bool.md) en comparaciones relacionales y de igualdad.
-- Si no hay ningún tipo `double` en la expresión, esta se evalúa como `float` o [bool](bool.md) en comparaciones relacionales o de igualdad.
+- Si hay un tipo `double` en la expresión, esta se evalúa como `double`, o bien como [`bool`](bool.md) en comparaciones relacionales o de igualdad.
+- Si no hay un tipo `double` en la expresión, esta se evalúa como `float`, o bien como `bool` en comparaciones relacionales o de igualdad.
 
-Una expresión de punto flotante puede contener los siguientes conjuntos de valores:
+También es posible combinar en una expresión tipos enteros y el tipo `decimal`. En este caso, los tipos enteros se convierten implícitamente en el tipo `decimal` y la expresión se evalúa como `decimal`, o bien como `bool` en comparaciones relacionales y de igualdad.
 
-- Cero positivo y negativo
-- Infinito positivo y negativo
-- Valor no numérico (NaN)
-- El conjunto finito de valores distintos de cero
+En una expresión, no se puede mezclar el tipo `decimal` con los tipos `float` y `double`. En este caso, si quiere realizar operaciones aritméticas, de comparación o de igualdad, debe convertir explícitamente los operandos del tipo `decimal` o a este mismo tipo, como se muestra en el ejemplo siguiente:
 
-Para obtener más información sobre estos valores, vea el estándar IEEE para aritmética binaria de punto flotante, disponible en el sitio web de [IEEE](https://www.ieee.org).
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 Puede usar [cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md) o [cadenas con formato numérico personalizado](../../../standard/base-types/custom-numeric-format-strings.md) para dar formato a un valor de punto flotante.
 

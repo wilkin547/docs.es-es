@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348282"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124356"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 
@@ -106,7 +106,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
 
 - Definiciones de grupos de equilibrio: `(?<`*nombre1*`-`*nombre2*`>`*subexpresión*`)`. Esta característica permite al motor de expresiones regulares realizar un seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre. Para ver un ejemplo, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Subexpresiones sin retroceso (denominadas también subexpresiones expansivas): `(?>`*subexpresión*`)`. Esta característica permite al motor de retroceso garantizar que una subexpresión coincida solo con la primera coincidencia encontrada para dicha subexpresión, como si la expresión se ejecutara independientemente de la expresión que la contiene. Si no usa esta construcción, el retroceso en las búsquedas en la expresión más grande puede cambiar el comportamiento de una subexpresión. Por ejemplo, la expresión regular `(a+)\w` coincide con uno o más caracteres "a", junto con un carácter de palabra que sigue a la secuencia de caracteres "a", y asigna la secuencia de caracteres "a" al primer grupo de capturas. Pero si el último carácter de la cadena de entrada es también una "a", coincide con el elemento del lenguaje `\w` y no se incluye en el grupo capturado.
+- Grupos atómicos: `(?>`*subexpresión*`)`. Esta característica permite al motor de retroceso garantizar que una subexpresión coincida solo con la primera coincidencia encontrada para dicha subexpresión, como si la expresión se ejecutara independientemente de la expresión que la contiene. Si no usa esta construcción, el retroceso en las búsquedas en la expresión más grande puede cambiar el comportamiento de una subexpresión. Por ejemplo, la expresión regular `(a+)\w` coincide con uno o varios caracteres "a", junto con un carácter de palabra que sigue a la secuencia de caracteres "a", y asigna la secuencia de caracteres "a" al primer grupo de captura. Sin embargo, si el carácter final de la cadena de entrada es también una "a", coincide con el elemento de lenguaje `\w` y no se incluye en el grupo capturado.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     Para obtener más información sobre las subexpresiones sin retroceso, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+     Para más información sobre los grupos atómicos, vea [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 - La búsqueda de coincidencias de derecha a izquierda se especifica al proporcionar la opción <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> a un constructor de clase <xref:System.Text.RegularExpressions.Regex> o a un método coincidente de instancia estática. Esta característica es útil al realizar búsquedas de derecha a izquierda en lugar de izquierda a derecha, o en los casos en los que es más eficaz iniciar una búsqueda de coincidencias en la parte derecha del patrón, en lugar de la izquierda. Como se muestra en el ejemplo siguiente, el uso de la búsqueda de coincidencias de derecha a izquierda puede cambiar el comportamiento de los cuantificadores expansivos. En el ejemplo se realizan dos búsquedas de una oración que termina con un número. La búsqueda de izquierda a derecha que usa el cuantificador expansivo `+` coincide con uno de los seis dígitos de la oración, mientras que la búsqueda de derecha a izquierda coincide con los seis dígitos. Para ver una descripción del patrón de expresión regular, consulte el ejemplo que ilustra los cuantificadores diferidos anteriormente en esta sección.
 

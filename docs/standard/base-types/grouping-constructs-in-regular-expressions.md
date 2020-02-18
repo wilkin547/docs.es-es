@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140115"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124330"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -44,7 +44,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |[Aserciones de búsqueda anticipada negativa de ancho cero](#zerowidth_negative_lookahead_assertion)|Sin captura|  
 |[Aserciones de búsqueda tardía positiva de ancho cero](#zerowidth_positive_lookbehind_assertion)|Sin captura|  
 |[Aserciones de búsqueda tardía negativa de ancho cero](#zerowidth_negative_lookbehind_assertion)|Sin captura|  
-|[Subexpresiones sin retroceso](#nonbacktracking_subexpression)|Sin captura|  
+|[Grupos atómicos](#atomic_groups)|Sin captura|  
   
  Para obtener información sobre los grupos y el modelo de objetos de expresiones regulares, vea [Construcciones de agrupamiento y objetos de las expresiones regulares](#Objects).  
   
@@ -118,7 +118,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  Un patrón de expresión regular simple muestra cómo se puede hacer referencia a los grupos numerados (sin nombre) y con nombre mediante programación o utilizando la sintaxis del lenguaje de expresiones regulares. La expresión regular `((?<One>abc)\d+)?(?<Two>xyz)(.*)` produce los siguientes grupos de captura por número y por nombre. El primer grupo de captura (el número 0) siempre hace referencia al patrón completo.  
   
-|número|nombre|Modelo|  
+|número|NOMBRE|Modelo|  
 |------------|----------|-------------|  
 |0|0 (nombre predeterminado)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (nombre predeterminado)|`((?<One>abc)\d+)`|  
@@ -154,7 +154,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La tabla siguiente muestra cómo se interpreta la expresión regular.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\D+`|Coincide con uno o más caracteres de dígito no decimal.|  
 |`(?<digit>\d+)`|Coincide con uno o más caracteres de dígito decimal. Asigna la coincidencia al grupo llamado `digit`.|  
@@ -189,7 +189,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular se interpreta como sigue:  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Comienza al principio de la cadena.|  
 |`[^<>]*`|Coincide con cero o más caracteres que no son corchetes angulares de apertura o cierre.|  
@@ -362,7 +362,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular `(?<=\b20)\d{2}\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\d{2}`|Coincide con dos dígitos decimales.|  
 |`(?<=\b20)`|Continúa la búsqueda si los dos dígitos decimales van precedidos de los dos dígitos decimales "20" en un límite de palabra.|  
@@ -395,9 +395,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`\d{4}\b`|Coincide con cuatro dígitos decimales seguidos de un límite de palabras.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Si la coincidencia va precedida por algo distinto de las cadenas "Saturday" o "Sunday" seguidas de un espacio, la coincidencia es correcta.|  
   
-<a name="nonbacktracking_subexpression"></a>   
-## <a name="nonbacktracking-subexpressions"></a>Subexpresiones sin retroceso  
- La construcción de agrupamiento siguiente representa una subexpresión sin retroceso (también conocida como subexpresión "expansiva"):  
+<a name="atomic_groups"></a>   
+## <a name="atomic-groups"></a>Grupos atómicos  
+ La construcción de agrupamiento siguiente representa un grupo atómico (conocido en otros motores de expresiones regulares como subexpresión sin retroceso, subexpresión atómica o subexpresión de una sola vez):
   
  `(?>` *subexpresión* `)`  
   
@@ -409,14 +409,14 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  Se recomienda usar esta opción si se sabe que el retroceso no tendrá éxito. Si se evita que el motor de expresiones regulares realice búsquedas innecesarias, se mejora el rendimiento.  
   
- En el ejemplo siguiente se muestra cómo una subexpresión sin retroceso modifica los resultados de una coincidencia de patrones. La expresión regular con retroceso coincide correctamente con una serie de caracteres repetidos seguidos de una o varias apariciones del mismo carácter en un límite de palabras, pero la expresión regular sin retroceso no lo hace.  
+ En el ejemplo siguiente se muestra cómo un grupo atómico modifica los resultados de una coincidencia de patrones. La expresión regular con retroceso coincide correctamente con una serie de caracteres repetidos seguidos de una o varias apariciones del mismo carácter en un límite de palabras, pero la expresión regular sin retroceso no lo hace.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
   
  La expresión regular sin retroceso `(?>(\w)\1+).\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(\w)`|Coincide con un único carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|  
 |`\1+`|Coincide con el valor de la primera subcadena capturada una o varias veces.|  
