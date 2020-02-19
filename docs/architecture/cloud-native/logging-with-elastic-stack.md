@@ -1,20 +1,37 @@
 ---
 title: Registro con pila elástica
 description: Registro con la pila elástica, Logstash y Kibana
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841742"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448932"
 ---
 # <a name="logging-with-elastic-stack"></a>Registro con pila elástica
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Existen muchas herramientas de registro centralizadas y varían en lo que se refiere a las herramientas gratuitas de código abierto y a opciones más costosas. En muchos casos, las herramientas gratuitas son tan buenas como o mejores que las ofertas de pago. Una de estas herramientas es una combinación de tres componentes de código abierto: búsqueda elástica, Logstash y Kibana.
+
 Colectivamente, estas herramientas se conocen como la pila elástica o la pila de ELK.
+
+## <a name="elastic-stack"></a>Pila elástica
+
+La pila elástica es una opción eficaz para recopilar información de un clúster de Kubernetes. Kubernetes admite el envío de registros a un punto de conexión de Elasticsearch y, en su [mayor parte](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), todo lo que necesita para empezar es establecer las variables de entorno como se muestra en la figura 7-5:
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**Figura 7-5**. Variables de configuración para Kubernetes
+
+Con esto se instalará Elasticsearch en el clúster y se le enviarán todos los registros de clúster.
+
+![un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros ingeridos de Kubernetes](./media/kibana-dashboard.png)
+**figura 7-6**. Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros que se introducen en Kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>¿Cuáles son las ventajas de la pila elástica?
 
@@ -24,7 +41,7 @@ La pila elástica proporciona un registro centralizado en una manera de bajo cos
 
 El primer componente es [Logstash](https://www.elastic.co/products/logstash). Esta herramienta se usa para recopilar información de registro de una gran variedad de orígenes diferentes. Por ejemplo, Logstash puede leer registros del disco y recibir también mensajes de bibliotecas de registro como [Serilog](https://serilog.net/). Logstash puede realizar algunas tareas de filtrado y expansión básicas en los registros a medida que llegan. Por ejemplo, si los registros contienen direcciones IP, Logstash puede configurarse para realizar una búsqueda geográfica y obtener un país o incluso una ciudad de origen para ese mensaje.
 
-Serilog es una biblioteca de registro para los lenguajes .NET, que permite el registro con parámetros. En lugar de generar un mensaje de registro de texto que incrusta campos, los parámetros se mantienen separados. Esto permite realizar búsquedas y filtrados más inteligentes. En la figura 7-2 se muestra una configuración de Serilog de ejemplo para escribir en Logstash.
+Serilog es una biblioteca de registro para los lenguajes .NET, que permite el registro con parámetros. En lugar de generar un mensaje de registro de texto que incrusta campos, los parámetros se mantienen separados. Esto permite realizar búsquedas y filtrados más inteligentes. En la figura 7-7 se muestra una configuración de Serilog de ejemplo para escribir en Logstash.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**Figura 7-2** Configuración de Serilog para escribir información de registro directamente en logstash a través de HTTP
+**Figura 7-7**. Configuración de Serilog para escribir información de registro directamente en logstash a través de HTTP
 
-Logstash usaría una configuración como la que se muestra en la figura 7-3.
+Logstash usaría una configuración como la que se muestra en la figura 7-8.
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**Figura 7-3** : configuración de Logstash para consumir registros de Serilog
+**Figura 7-8.** Una configuración de Logstash para consumir registros de Serilog
 
 En escenarios en los que no se necesita una manipulación de registros extensa, hay una alternativa a Logstash conocidas como [latidos](https://www.elastic.co/products/beats). Laters es una familia de herramientas que puede recopilar una gran variedad de datos de registros a datos de red e información de tiempo de actividad. Muchas aplicaciones usarán Logstash y las pulsaciones.
 
@@ -64,7 +81,7 @@ La búsqueda elástica es un eficaz motor de búsqueda que puede indexar los reg
 
 Los mensajes de registro que se han diseñado para contener parámetros o que han tenido parámetros divididos de ellos a través del procesamiento de Logstash, se pueden consultar directamente, ya que Elasticsearch conserva esta información.
 
-En la figura 7-4 se muestra una consulta que busca las 10 páginas principales visitadas por `jill@example.com`.
+En la figura 7-9 se muestra una consulta que busca las 10 páginas principales visitadas por `jill@example.com`.
 
 ```
 "query": {
@@ -82,7 +99,7 @@ En la figura 7-4 se muestra una consulta que busca las 10 páginas principales v
   }
 ```
 
-**Figura 7-4** : consulta de Elasticsearch para buscar las 10 páginas principales visitadas por un usuario
+**Figura 7-9**. Una consulta de Elasticsearch para buscar las 10 páginas principales visitadas por un usuario
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Visualización de información con los paneles Web de Kibana
 

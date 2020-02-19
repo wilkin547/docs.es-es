@@ -2,12 +2,12 @@
 title: Migración de .NET Core desde project.json
 description: Aprenda a migrar un proyecto anterior de .NET Core con project.json.
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714350"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450692"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migración de proyectos de .NET Core desde project.json
 
@@ -65,7 +65,7 @@ Obtendrá este error si tiene un archivo *global.json* en el directorio actual o
 Si aún usa DNX para el desarrollo de .NET Core, el proceso de migración debe realizarse en dos fases:
 
 1. Use la [guía de migración de DNX existente](from-dnx.md) para migrar desde DNX a la CLI compatible con project.json.
-2. Siga los pasos de la sección anterior para migrar desde *project.json* a *.csproj*.  
+2. Siga los pasos de la sección anterior para migrar desde *project.json* a *.csproj*.
 
 > [!NOTE]
 > DNX quedó oficialmente en desuso durante la versión Preview 1 de la CLI de .NET Core.
@@ -80,7 +80,7 @@ El formato de csproj de .NET Core ha cambiado y evolucionado con cada nueva vers
 - Quite las instrucciones `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` de la parte superior e inferior del proyecto. Estas instrucciones de importación están implícitas en el SDK, por lo que no es necesario que estén en el proyecto.
 - Si tiene elementos `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` en el proyecto, debe quitarlos. Estas referencias de paquete son [implícitas para el SDK ](https://aka.ms/sdkimplicitrefs).
 - Quite el elemento `Microsoft.NET.Sdk` `<PackageReference>`, si existe. La referencia del SDK procede del atributo `Sdk` del elemento `<Project>`.
-- Quite los [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que están [implícitos en el SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación.
+- Quite los [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que están [implícitos en el SDK](../project-sdk/overview.md#default-compilation-includes). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación.
 
 Tras seguir estos pasos, el proyecto debe ser totalmente compatible con el formato csproj RTM de .NET Core.
 
