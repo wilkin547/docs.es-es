@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un LineSegment en una clase PathGeometry
+title: 'Cómo: Crear un segmento de línea en una clase PathGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: a50c98ccc3f6d517e0917cb774af4d49d2bfa7a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc7fbad1e534988a36d85c55c1b6a8249692ad67
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054554"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452089"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a><span data-ttu-id="d3d88-102">Procedimiento Crear un LineSegment en una clase PathGeometry</span><span class="sxs-lookup"><span data-stu-id="d3d88-102">How to: Create a LineSegment in a PathGeometry</span></span>
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a><span data-ttu-id="09623-102">Cómo: Crear un segmento de línea en una clase PathGeometry</span><span class="sxs-lookup"><span data-stu-id="09623-102">How to: Create a LineSegment in a PathGeometry</span></span>
 
-<span data-ttu-id="d3d88-103">En este ejemplo se muestra cómo crear un segmento de línea.</span><span class="sxs-lookup"><span data-stu-id="d3d88-103">This example shows how to create a line segment.</span></span> <span data-ttu-id="d3d88-104">Para crear un segmento de línea, use el <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, y <xref:System.Windows.Media.LineSegment> clases.</span><span class="sxs-lookup"><span data-stu-id="d3d88-104">To create a line segment, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.LineSegment> classes.</span></span>
+<span data-ttu-id="09623-103">En este ejemplo se muestra cómo crear un segmento de línea.</span><span class="sxs-lookup"><span data-stu-id="09623-103">This example shows how to create a line segment.</span></span> <span data-ttu-id="09623-104">Para crear un segmento de línea, use las clases <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>y <xref:System.Windows.Media.LineSegment>.</span><span class="sxs-lookup"><span data-stu-id="09623-104">To create a line segment, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.LineSegment> classes.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d3d88-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d3d88-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="09623-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="09623-105">Example</span></span>
 
-<span data-ttu-id="d3d88-106">Los ejemplos siguientes se dibuja un <xref:System.Windows.Media.LineSegment> desde (10, 50) a (200, 70).</span><span class="sxs-lookup"><span data-stu-id="d3d88-106">The following examples draw a <xref:System.Windows.Media.LineSegment> from (10, 50) to (200, 70).</span></span> <span data-ttu-id="d3d88-107">La siguiente ilustración muestra resultante <xref:System.Windows.Media.LineSegment>; se ha agregado un fondo de cuadrícula para mostrar el sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="d3d88-107">The following illustration shows the resulting <xref:System.Windows.Media.LineSegment>; a grid background was added to show the coordinate system.</span></span>
+<span data-ttu-id="09623-106">En los ejemplos siguientes se dibuja una <xref:System.Windows.Media.LineSegment> de (10, 50) a (200, 70).</span><span class="sxs-lookup"><span data-stu-id="09623-106">The following examples draw a <xref:System.Windows.Media.LineSegment> from (10, 50) to (200, 70).</span></span> <span data-ttu-id="09623-107">En la ilustración siguiente se muestra el <xref:System.Windows.Media.LineSegment>resultante; se ha agregado un fondo de cuadrícula para mostrar el sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="09623-107">The following illustration shows the resulting <xref:System.Windows.Media.LineSegment>; a grid background was added to show the coordinate system.</span></span>
 
-<span data-ttu-id="d3d88-108">![LineSegment en PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment") LineSegment A dibujado desde (10,50) hasta (200,70)</span><span class="sxs-lookup"><span data-stu-id="d3d88-108">![A LineSegment in a PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment") A LineSegment drawn from (10,50) to (200,70)</span></span>
+<span data-ttu-id="09623-108">![LineSegment en PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment") Un LineSegment dibujado de (10, 50) a (200, 70)</span><span class="sxs-lookup"><span data-stu-id="09623-108">![A LineSegment in a PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment") A LineSegment drawn from (10,50) to (200,70)</span></span>
 
-<span data-ttu-id="d3d88-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="d3d88-109">[xaml]</span></span>
+<span data-ttu-id="09623-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="09623-109">[xaml]</span></span>
 
-<span data-ttu-id="d3d88-110">En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], puede utilizar la sintaxis de atributo para describir un trazado.</span><span class="sxs-lookup"><span data-stu-id="d3d88-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use attribute syntax to describe a path.</span></span>
+<span data-ttu-id="09623-110">En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], puede utilizar la sintaxis de atributo para describir un trazado.</span><span class="sxs-lookup"><span data-stu-id="09623-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use attribute syntax to describe a path.</span></span>
 
 ```xaml
 <Path Stroke="Black" StrokeThickness="1"
   Data="M 10,50 L 200,70" />
 ```
 
-<span data-ttu-id="d3d88-111">[xaml]</span><span class="sxs-lookup"><span data-stu-id="d3d88-111">[xaml]</span></span>
+<span data-ttu-id="09623-111">[xaml]</span><span class="sxs-lookup"><span data-stu-id="09623-111">[xaml]</span></span>
 
-<span data-ttu-id="d3d88-112">(Tenga en cuenta que esta sintaxis de atributo se crea en realidad un <xref:System.Windows.Media.StreamGeometry>, una versión ligera de un <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="d3d88-112">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="d3d88-113">Para más información, consulte la página [Sintaxis de marcado de trazados](path-markup-syntax.md)).</span><span class="sxs-lookup"><span data-stu-id="d3d88-113">For more information, see the [Path Markup Syntax](path-markup-syntax.md) page.)</span></span>
+<span data-ttu-id="09623-112">(Tenga en cuenta que esta sintaxis de atributo crea realmente un <xref:System.Windows.Media.StreamGeometry>, una versión más ligera de un <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="09623-112">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="09623-113">Para más información, consulte la página [Sintaxis de marcado de trazados](path-markup-syntax.md)).</span><span class="sxs-lookup"><span data-stu-id="09623-113">For more information, see the [Path Markup Syntax](path-markup-syntax.md) page.)</span></span>
 
-<span data-ttu-id="d3d88-114">En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede dibujar un segmento de línea con la sintaxis de elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="d3d88-114">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a line segment by using object element syntax.</span></span> <span data-ttu-id="d3d88-115">El siguiente ejemplo es equivalente al ejemplo anterior de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3d88-115">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>
+<span data-ttu-id="09623-114">En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede dibujar un segmento de línea con la sintaxis de elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="09623-114">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a line segment by using object element syntax.</span></span> <span data-ttu-id="09623-115">El siguiente ejemplo es equivalente al ejemplo anterior de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="09623-115">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>
 
 ```xaml
 <Path Stroke="Black" StrokeThickness="1">
@@ -100,12 +100,12 @@ myPath.StrokeThickness = 1
 myPath.Data = myPathGeometry
 ```
 
-<span data-ttu-id="d3d88-116">Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="d3d88-116">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>
+<span data-ttu-id="09623-116">Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Ejemplo de geometrías](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).</span><span class="sxs-lookup"><span data-stu-id="09623-116">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d3d88-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="d3d88-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09623-117">Consulte también</span><span class="sxs-lookup"><span data-stu-id="09623-117">See also</span></span>
 
 - <xref:System.Windows.Media.PathFigure>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.GeometryDrawing>
 - <xref:System.Windows.Shapes.Path>
-- [<span data-ttu-id="d3d88-118">Información general sobre geometría</span><span class="sxs-lookup"><span data-stu-id="d3d88-118">Geometry Overview</span></span>](geometry-overview.md)
+- [<span data-ttu-id="09623-118">Información general sobre geometría</span><span class="sxs-lookup"><span data-stu-id="09623-118">Geometry Overview</span></span>](geometry-overview.md)
