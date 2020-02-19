@@ -2,15 +2,15 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968416"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452492"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
-En este tema se describen las consideraciones de seguridad específicas para el desarrollo, la implementación y la ejecución de aplicaciones Entity Framework. También debe seguir las recomendaciones para crear aplicaciones de .NET Framework seguras. Para obtener más información, vea [información general sobre seguridad](../security-overview.md).  
+En este tema se describen las consideraciones de seguridad específicas para el desarrollo, la implementación y la ejecución de aplicaciones Entity Framework. También debe seguir las recomendaciones para crear aplicaciones de .NET Framework seguras. Para más información, consulte [Introducción a la seguridad](../security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Consideraciones generales de seguridad  
  Las siguientes consideraciones de seguridad se aplican a todas las aplicaciones que utilizan el Entity Framework.  
@@ -27,7 +27,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
  Durante la operación de inicio de sesión, la información que se basa en la contraseña del usuario se pasa al servidor a través de las bibliotecas de red del origen de datos subyacente. Un proveedor malintencionado puede robar las credenciales del usuario, generar consultas malintencionadas o alterar el conjunto de resultados.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Cifrar la conexión para proteger los datos confidenciales.  
- El Entity Framework no controla directamente el cifrado de datos. Si los usuarios tienen acceso a los datos a través de una red pública, la aplicación debería establecer una conexión cifrada al origen de datos para aumentar la seguridad. Para obtener más información, consulte la documentación relacionada con la seguridad correspondiente al origen de datos. Para obtener una SQL Server origen de datos, vea [cifrar conexiones a SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ El Entity Framework no controla directamente el cifrado de datos. Si los usuarios tienen acceso a los datos a través de una red pública, la aplicación debería establecer una conexión cifrada al origen de datos para aumentar la seguridad. Para obtener más información, consulte la documentación relacionada con la seguridad correspondiente al origen de datos. Para obtener una SQL Server origen de datos, vea [cifrar conexiones a SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Proteger la cadena de conexión.  
  La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Una cadena de conexión presenta una vulnerabilidad potencial si no se protege o si se construye incorrectamente. Al almacenar la información de conexión en texto sin formato o conservarla en la memoria, se pone en riesgo todo el sistema. A continuación se enumeran métodos recomendados para proteger las cadenas de conexión:  
@@ -81,7 +81,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
  El Entity Framework no aplica ningún permiso de seguridad e invocará cualquier código de objeto de datos proporcionado por el usuario en proceso, independientemente de si es de confianza o no. Asegúrese de que la autenticación y la autorización del cliente se llevan a cabo en el almacén de datos y en la aplicación.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Restrinja el acceso a todos los archivos de configuración.  
- Un administrador debe restringir el acceso de escritura a todos los archivos que especifican la configuración de una aplicación, incluidos enterprisesec. config, Security. config, Machine. conf y el archivo de configuración de la aplicación \<> de la *aplicación*. exe. config.  
+ Un administrador debe restringir el acceso de escritura a todos los archivos que especifican la configuración de una aplicación, incluidos enterprisesec. config, Security. config, Machine. conf y el archivo de configuración de la *aplicación \<>* . exe. config.  
   
  El nombre invariable del proveedor es modificable en el archivo app. config. La aplicación cliente debe asumir la responsabilidad de tener acceso al proveedor subyacente a través del modelo de generador de proveedores estándar mediante un nombre seguro.  
   
@@ -137,7 +137,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
 #### <a name="prevent-type-safety-violations"></a>Evite las infracciones de seguridad de los tipos.  
  Si se infringe la seguridad de tipos, el Entity Framework no puede garantizar la integridad de los datos de los objetos. Se podrían producir infracciones de seguridad de tipos si permite que las aplicaciones que no son de confianza se ejecuten con seguridad de acceso del código de plena confianza.  
   
-#### <a name="handle-exceptions"></a>Control de excepciones.  
+#### <a name="handle-exceptions"></a>Controle las excepciones.  
  Obtenga acceso a los métodos y propiedades de un <xref:System.Data.Objects.ObjectContext> dentro de un bloque try-catch. La detección de excepciones evita que las excepciones no controladas expongan las entradas del <xref:System.Data.Objects.ObjectStateManager> o la información del modelo (tal como nombres de las tablas) a los usuarios de la aplicación.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Consideraciones de seguridad para las aplicaciones ASP.NET  
@@ -162,7 +162,7 @@ Los componentes del servicio de metadatos de ADO.NET no registran información p
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>No acepte objetos MetadataWorkspace de orígenes que no sean de confianza.  
  Las aplicaciones no deberían aceptar instancias de la clase <xref:System.Data.Metadata.Edm.MetadataWorkspace> de orígenes que no sean de confianza. En su lugar, debería construir y rellenar explícitamente un área de trabajo de este tipo de origen.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Consideraciones de implementación](deployment-considerations.md)

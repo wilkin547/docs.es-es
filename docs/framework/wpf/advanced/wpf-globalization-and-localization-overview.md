@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124564"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452674"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 
@@ -215,11 +215,11 @@ En las ventanas alemanas, si este archivo resources. dll se coloca en una carpet
 |Código|BAML en inglés original|BAML localizado|
 |Recursos culturalmente neutrales|Otros recursos en inglés|Otros recursos localizados al alemán|
 
-.NET Framework elige automáticamente el ensamblado de recursos satélite que se va a cargar en función del `Thread.CurrentThread.CurrentUICulture`de la aplicación. El valor predeterminado es la referencia cultural de su sistema operativo Windows. Por lo tanto, si usa ventanas alemanas, el de-DE\MyDialog.resources.dll se carga, si usa ventanas en inglés, el en-US\MyDialog.resources.dll se carga. Puede establecer el recurso de reserva final de la aplicación especificando el NeutralResourcesLanguage en el AssemblyInfo del proyecto.\*. Por ejemplo, si especifica:
+.NET elige automáticamente el ensamblado de recursos satélite que se va a cargar en función del <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>de la aplicación. El valor predeterminado es la referencia cultural de su sistema operativo Windows. Si utiliza ventanas alemanas, se carga el archivo *de-de\MyDialog.Resources.dll* . Si utiliza ventanas en inglés, se carga el archivo *en-US\MyDialog.Resources.dll* . Puede establecer el recurso de reserva final de la aplicación especificando el `NeutralResourcesLanguage` atributo en el archivo *AssemblyInfo* del proyecto. Por ejemplo, si especifica:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-se usará en-US\MyDialog.resources.dll con la versión alemana de Windows si no están disponibles de-DE\MyDialog.resources.dll ni de\MyDialog.resources.dll.
+a continuación, el archivo *en-US\MyDialog.Resources.dll* se usa con ventanas alemanas si ninguno de los archivos siguientes está disponible: *de-de\MyDialog.Resources.dll* o *de\MyDialog.Resources.dll*.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Página principal de Microsoft Arabia Saudí
 

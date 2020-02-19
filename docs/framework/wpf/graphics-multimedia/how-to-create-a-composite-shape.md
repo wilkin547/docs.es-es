@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear una forma compuesta
+title: 'Cómo: Crear una forma compuesta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-ms.openlocfilehash: de9f7972c7a51ea623c3630fe62bb48f6109317e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c56053f2b07d6055deac5097a68fd7b80ad704ba
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052903"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452102"
 ---
-# <a name="how-to-create-a-composite-shape"></a>Procedimiento Crear una forma compuesta
-En este ejemplo se muestra cómo crear formas compuestas mediante <xref:System.Windows.Media.Geometry> objetos y mostrarlas con un <xref:System.Windows.Shapes.Path> elemento. En el ejemplo siguiente, un <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>y un <xref:System.Windows.Media.RectangleGeometry> se usan con un <xref:System.Windows.Media.GeometryGroup> para crear una forma compuesta. A continuación, se dibujan las geometrías utilizando un <xref:System.Windows.Shapes.Path> elemento.  
+# <a name="how-to-create-a-composite-shape"></a>Cómo: Crear una forma compuesta
+En este ejemplo se muestra cómo crear formas compuestas mediante <xref:System.Windows.Media.Geometry> objetos y cómo mostrarlas mediante un elemento <xref:System.Windows.Shapes.Path>. En el ejemplo siguiente, se usa un <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>y un <xref:System.Windows.Media.RectangleGeometry> con un <xref:System.Windows.Media.GeometryGroup> para crear una forma compuesta. A continuación, las geometrías se dibujan utilizando un elemento <xref:System.Windows.Shapes.Path>.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-xaml[GeometrySample#19](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#19)]  
@@ -27,9 +27,9 @@ En este ejemplo se muestra cómo crear formas compuestas mediante <xref:System.W
   
  La siguiente ilustración muestra la forma creada en el ejemplo anterior.  
   
- ![Geometría compuesta creada mediante GeometryGroup](./media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
+ ![Geometría compuesta creada con GeometryGroup](./media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
 Geometría compuesta  
   
- Las formas más complejas, tales como polígonos y formas con segmentos curvados, pueden crearse mediante un <xref:System.Windows.Media.PathGeometry>. Para obtener un ejemplo que muestra cómo crear una forma mediante una <xref:System.Windows.Media.PathGeometry>, consulte [crear una forma mediante una clase PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md).  Aunque este ejemplo representa una forma en la pantalla mediante una <xref:System.Windows.Shapes.Path> elemento, <xref:System.Windows.Media.Geometry> objetos también pueden utilizarse para describir el contenido de un <xref:System.Windows.Media.GeometryDrawing> o <xref:System.Windows.Media.DrawingContext>. También puede usarse para el recorte y la prueba de posicionamiento.  
+ Las formas más complejas, como polígonos y formas con segmentos curvos, se pueden crear con un <xref:System.Windows.Media.PathGeometry>. Para ver un ejemplo en el que se muestra cómo crear una forma mediante un <xref:System.Windows.Media.PathGeometry>, vea [crear una forma mediante una PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md).  Aunque en este ejemplo se representa una forma en la pantalla mediante un elemento <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Media.Geometry> objetos también se pueden usar para describir el contenido de un <xref:System.Windows.Media.GeometryDrawing> o de un <xref:System.Windows.Media.DrawingContext>. También se pueden usar para el recorte y la prueba de posicionamiento.  
   
- Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).
+ Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Ejemplo de geometrías](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).

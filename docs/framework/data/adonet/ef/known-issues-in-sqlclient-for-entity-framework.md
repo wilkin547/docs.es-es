@@ -2,12 +2,12 @@
 title: Problemas conocidos en SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 32a1dd22111498ab5b3b75940f5485b2957367e8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039968"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452505"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Cuál es la versión correcta de SQL Server  
- La Entity Framework tiene como destino la consulta Transact-SQL basada en la versión SQL Server que se especifica en el atributo `ProviderManifestToken` del elemento Schema en el archivo de modelo de almacenamiento (. SSDL). Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si utiliza SQL Server 2005, pero el atributo `ProviderManifestToken` está establecido en 2008, la consulta Transact-SQL generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si utiliza SQL Server 2005, pero el atributo `ProviderManifestToken` está establecido en 2000, la consulta Transact-SQL generada podría estar menos optimizada, o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
+ La Entity Framework tiene como destino la consulta Transact-SQL basada en la versión SQL Server que se especifica en el atributo `ProviderManifestToken` del elemento Schema en el archivo de modelo de almacenamiento (. SSDL). Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si usa SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2008, la consulta Transact-SQL generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si usa SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2000, la consulta Transact-SQL generada podría estar menos optimizada, o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
   
- Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si el atributo `ProviderManifestToken` se establece en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos se establece en "80" (SQL Server 2000), el valor de Transact-SQL generado será SQL Server 2005, pero es posible que no se ejecute según lo esperado debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
+ Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si el `ProviderManifestToken` atributo está establecido en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos se establece en "80" (SQL Server 2000), el valor de Transact-SQL generado será SQL Server 2005, pero es posible que no se ejecute según lo esperado debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas anidadas en proyección  
  Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. En algunos servidores back-end, incluido SQL Server, esto puede hacer que la tabla TempDB sea bastante grande. Esto puede hacer que disminuya el rendimiento del servidor.  
@@ -57,9 +57,9 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Valores de identidad de GUID generados por el servidor  
- El Entity Framework admite valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir que se devuelva el valor de identidad generado por el servidor después de insertar una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos SQL Server mediante la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
+ El Entity Framework admite valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir que se devuelva el valor de identidad generado por el servidor después de insertar una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos SQL Server mediante la [cláusula OUTPUT](/sql/t-sql/queries/output-clause-transact-sql).
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [SqlClient para Entity Framework](sqlclient-for-the-entity-framework.md)
 - [Problemas conocidos y consideraciones en LINQ to Entities](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)

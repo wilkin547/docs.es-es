@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: cf2ddc93a7c46ee6956d2731a786289f64086360
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c528515124898c7deb6114e620ce21766123ab3c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976420"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453057"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Cómo: Obtener el objeto de enlace a partir de una propiedad de destino enlazada
 En este ejemplo se muestra cómo obtener el objeto de enlace desde una propiedad de destino enlazada a datos.
@@ -25,12 +25,12 @@ En este ejemplo se muestra cómo obtener el objeto de enlace desde una propiedad
 
  Como alternativa, puede obtener el <xref:System.Windows.Data.BindingExpression> y, a continuación, obtener el valor de la propiedad <xref:System.Windows.Data.BindingExpression.ParentBinding%2A>.
 
- Para obtener el ejemplo completo, vea [Enlace de ejemplo de validación](https://go.microsoft.com/fwlink/?LinkID=159972).
+ Para obtener el ejemplo completo, vea [Enlace de ejemplo de validación](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
 
 > [!NOTE]
 > Si el enlace es un <xref:System.Windows.Data.MultiBinding>, utilice <xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A?displayProperty=nameWithType>. Si es un <xref:System.Windows.Data.PriorityBinding>, utilice <xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A?displayProperty=nameWithType>. Si no está seguro de si la propiedad de destino está enlazada mediante un <xref:System.Windows.Data.Binding>, un <xref:System.Windows.Data.MultiBinding>o un <xref:System.Windows.Data.PriorityBinding>, puede utilizar <xref:System.Windows.Data.BindingOperations.GetBindingBase%2A?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear un enlace mediante código](how-to-create-a-binding-in-code.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

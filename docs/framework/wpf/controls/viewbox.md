@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bf4cc4ff6288501279730a47c2e9e57662fdd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761200"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452141"
 ---
 # <a name="viewbox"></a>Viewbox
-El <xref:System.Windows.Controls.Viewbox> control se utiliza para ajustar o escalar un elemento secundario.  
+El control <xref:System.Windows.Controls.Viewbox> se usa para expandir o escalar un elemento secundario.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Aplicar propiedades de expansión al contenido de un Viewbox](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
@@ -27,6 +27,6 @@ El <xref:System.Windows.Controls.Viewbox> control se utiliza para ajustar o esca
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
+- [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout) (Ejemplo de galería de controles de WPF)

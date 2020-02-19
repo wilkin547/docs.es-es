@@ -2,12 +2,12 @@
 title: Consideraciones sobre el rendimiento (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 2b116a22c0f422377246d8cc0b2d647fd78a289b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 6cd0adb7963b3cfc05fcd6f30d8a7039a50f9485
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039855"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452466"
 ---
 # <a name="performance-considerations-entity-framework"></a>Consideraciones sobre el rendimiento (Entity Framework)
 En este tema se describen las características de rendimiento de ADO.NET Entity Framework y se facilitan algunas consideraciones para ayudar a mejorar el rendimiento de las aplicaciones de Entity Framework.  
@@ -32,7 +32,7 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
   
  <sup>3</sup> el costo total aumenta proporcionalmente al número de objetos devueltos por la consulta.  
   
- <sup>4</sup> esta sobrecarga no es necesaria para las consultas de EntityClient porque las consultas de EntityClient devuelven un <xref:System.Data.EntityClient.EntityDataReader> en lugar de los objetos. Para obtener más información, consulte [proveedor de EntityClient para el Entity Framework](entityclient-provider-for-the-entity-framework.md).  
+ <sup>4</sup> esta sobrecarga no es necesaria para las consultas de EntityClient porque las consultas de EntityClient devuelven un <xref:System.Data.EntityClient.EntityDataReader> en lugar de los objetos. Para obtener más información, consulte [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="additional-considerations"></a>Consideraciones adicionales  
  A continuación se muestran otras consideraciones que pueden afectar al rendimiento de las aplicaciones de Entity Framework.  
@@ -128,7 +128,7 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
   
  Al trabajar con modelos muy grandes, se aplica la siguiente consideración:  
   
- El formato de metadatos de .NET limita a 16,777.215 (0xFFFFFF) el número de caracteres de cadena de usuario en un binario dado. Si va a generar vistas para un modelo muy grande y el archivo de vista alcanza este límite de tamaño, obtendrá el "no queda espacio lógico para crear más cadenas de usuario". error de compilación. Esta limitación de tamaño se aplica a todos los binarios administrados. Para obtener más información, consulte el [blog](https://go.microsoft.com/fwlink/?LinkId=201476) que muestra cómo evitar el error al trabajar con modelos grandes y complejos.  
+ El formato de metadatos de .NET limita a 16,777.215 (0xFFFFFF) el número de caracteres de cadena de usuario en un binario dado. Si va a generar vistas para un modelo muy grande y el archivo de vista alcanza este límite de tamaño, obtendrá el "no queda espacio lógico para crear más cadenas de usuario". error de compilación. Esta limitación de tamaño se aplica a todos los binarios administrados. Para obtener más información, consulte el [blog](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework) que muestra cómo evitar el error al trabajar con modelos grandes y complejos.  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>Considerar la posibilidad de usar la opción de fusión mediante combinación NoTracking en las consultas  
  El seguimiento de los objetos devueltos en el contexto del objeto tiene un costo implícito. Para detectar cambios en los objetos y garantizar que varias solicitudes para la misma entidad lógica devuelvan la misma instancia del objeto, es necesario que los objetos se adjunten a una instancia de <xref:System.Data.Objects.ObjectContext>. Si no tiene previsto realizar actualizaciones o eliminaciones en los objetos y no requiere la administración de identidades, considere la posibilidad de usar las opciones de combinación de <xref:System.Data.Objects.MergeOption.NoTracking> al ejecutar las consultas.  
@@ -145,14 +145,14 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
  Cuando la aplicación ejecuta una serie de consultas de objeto o llama con frecuencia <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> para conservar las operaciones de creación, actualización y eliminación en el origen de datos, el Entity Framework debe abrir y cerrar continuamente la conexión al origen de datos. En estos casos, considere la posibilidad de abrir manualmente la conexión al comienzo de estas operaciones y cerrarla o eliminarla una vez finalizadas dichas operaciones. Para obtener más información, consulte [Administración de conexiones y transacciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 ## <a name="performance-data"></a>Datos de rendimiento  
- Algunos datos de rendimiento del Entity Framework se publican en las siguientes publicaciones en el [blog del equipo de ADO.net](https://go.microsoft.com/fwlink/?LinkId=91905):  
+ Algunos datos de rendimiento del Entity Framework se publican en las siguientes publicaciones en el [blog del equipo de ADO.net](https://docs.microsoft.com/archive/blogs/adonet/):  
   
-- [Exploración del rendimiento del Entity Framework ADO.NET-parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [Exploración del rendimiento del Entity Framework ADO.NET-parte 1](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-1)  
   
-- [Exploración del rendimiento del Entity Framework ADO.NET, parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [Exploración del rendimiento del Entity Framework ADO.NET, parte 2](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-2)  
   
-- [Comparación de rendimiento de ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [Comparación de rendimiento de ADO.NET Entity Framework](https://docs.microsoft.com/archive/blogs/adonet/ado-net-entity-framework-performance-comparison)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Consideraciones de desarrollo e implementación](development-and-deployment-considerations.md)

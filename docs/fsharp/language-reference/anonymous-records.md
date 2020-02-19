@@ -2,12 +2,12 @@
 title: Registros anónimos
 description: Aprenda a usar los registros anónimos de construcción y uso, una característica de lenguaje que ayuda a la manipulación de datos.
 ms.date: 06/12/2019
-ms.openlocfilehash: 0a7a819cc471c6579feacd621ed15aa89a6423ba
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 061fd3279c84b9a3161c687d9392947ee7ce9c83
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569469"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453031"
 ---
 # <a name="anonymous-records"></a>Registros anónimos
 
@@ -229,10 +229,10 @@ Puede serializar los registros anónimos del mismo modo que con los registros co
 ```fsharp
 open Newtonsoft.Json
 
-let phillip = {| name="Phillip"; age=28 |}
-JsonConvert.SerializeObject(phillip)
+let phillip' = {| name="Phillip"; age=28 |}
+let philStr = JsonConvert.SerializeObject(phillip') 
 
-let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(str)
+let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 

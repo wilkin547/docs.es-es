@@ -2,27 +2,27 @@
 title: Introducción a la integración con CLR de SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 76c6fb4cb37807f286f1f1f2aeedbdea6c74fe38
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002147"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452414"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introducción a la integración con CLR de SQL Server
-Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. El código que se ejecuta en CLR se conoce como código administrado. El CLR proporciona diversas funciones y servicios necesarios para la ejecución de los programas, como compilación just-in-time (JIT), asignación y administración de memoria, aplicación de la seguridad de tipos, control de excepciones, administración de subprocesos y seguridad.  
+Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. Se hace referencia al código que se ejecuta en CLR como código administrado. CLR proporciona varias funciones y servicios necesarios para la ejecución de programas, que incluyen la compilación Just-In-Time (JIT), la asignación y administración de memoria, el forzado de la seguridad de tipos, el control de excepciones, la administración de subprocesos y la seguridad.  
   
- Con el CLR hospedado en Microsoft SQL Server (lo que se denomina integración con CLR), puede crear procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado. Como el código administrado se compila a código nativo antes de su ejecución, en algunas situaciones puede conseguir aumentos significativos del rendimiento.  
+ Con CLR hospedado en Microsoft SQL Server (denominado integración CLR), puede crear procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado. Dado que el código administrado se compila a código nativo antes de la ejecución, puede lograr un aumento importante del rendimiento en algunas situaciones.  
   
  El código administrado utiliza seguridad de acceso del código (CAS), vínculos a código y dominios de aplicación para impedir que los ensamblados realicen determinadas operaciones. SQL Server usa CAS para ayudar a proteger el código administrado e impedir que el sistema operativo o el servidor de bases de datos se pongan en peligro.  
   
  El objetivo de esta sección es proporcionar suficiente información para iniciarse en la programación con la integración CLR de SQL Server; no pretende tratar el tema en toda su extensión. Para obtener información más detallada, busque la versión de SQL Server que utiliza en los Libros en pantalla de SQL Server.  
   
- **Libros en pantalla de SQL Server**  
+ **Documentación de SQL Server**  
   
-- [Información general sobre la integración de Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Información general sobre integración de Common Language Runtime (CLR)](/sql/relational-databases/clr-integration/common-language-runtime-integration-overview)  
   
-## <a name="enabling-clr-integration"></a>Habilitación de la integración con CLR  
+## <a name="enabling-clr-integration"></a>Habilitar la integración con CLR  
  La característica de integración con Common Language Runtime (CLR) está desactivada de forma predeterminada en Microsoft SQL Server y se debe habilitar para utilizar los objetos que se implementan mediante la integración con CLR. Para habilitar la integración con CLR mediante Transact-SQL, utilice la opción `clr enabled` del procedimiento almacenado `sp_configure` como se muestra:  
   
 ```sql  
@@ -36,36 +36,36 @@ GO
   
  Para obtener información más detallada, busque la versión de SQL Server que utiliza en los Libros en pantalla de SQL Server.  
   
- **Libros en pantalla de SQL Server**  
+ **Documentación de SQL Server**  
   
-- [Habilitar la integración con CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [Habilitar la integración con CLR](/sql/relational-databases/clr-integration/clr-integration-enabling)  
   
 ## <a name="deploying-a-clr-assembly"></a>Implementar un ensamblado CLR  
- Una vez probados y comprobados los métodos CLR en el servidor de prueba, se pueden distribuir a los servidores de producción mediante un script de implementación, que se puede generar manualmente o con SQL Server Management Studio. Para obtener información más detallada, busque la versión de SQL Server que utiliza en los Libros en pantalla de SQL Server.  
+ Una vez que los métodos CLR se han probado y comprobado en el servidor de prueba, pueden distribuirse a los servidores de producción a través de un script de implementación. que se puede generar manualmente o con SQL Server Management Studio. Para obtener información más detallada, consulte la versión de SQL Server documentación de la versión de SQL Server que esté usando.  
   
- **Libros en pantalla de SQL Server**  
+ **Documentación de SQL Server**  
   
-1. [Implementar objetos de base de datos CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [Implementar objetos de base de datos CLR](/sql/relational-databases/clr-integration/deploying-clr-database-objects)  
   
 ## <a name="clr-integration-security"></a>Seguridad de la integración CLR  
  El modelo de seguridad de la integración de Microsoft SQL Server con Common Language Runtime (CLR) de Microsoft .NET Framework administra y protege el acceso entre diferentes tipos de objetos CLR y objetos que no son CLR que se ejecutan en SQL Server. Para llamar a estos objetos se puede utilizar una instrucción Transact-SQL u otro objeto CLR que se ejecute en el servidor.  
   
  Para obtener información más detallada, busque la versión de SQL Server que utiliza en los Libros en pantalla de SQL Server.  
   
- **Libros en pantalla de SQL Server**  
+ **Documentación de SQL Server**  
   
-- [Seguridad de la integración CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [Seguridad de la integración CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)  
   
 ## <a name="debugging-a-clr-assembly"></a>Depuración de un ensamblado CLR  
  Microsoft SQL Server ofrece compatibilidad con la depuración de objetos Transact-SQL y Common Language Runtime (CLR) de la base de datos. La depuración funciona entre lenguajes: los usuarios pueden entrar sin problemas en los objetos CLR desde Transact-SQL y viceversa.  
   
  Para obtener información más detallada, busque la versión de SQL Server que utiliza en los Libros en pantalla de SQL Server.  
   
- **Libros en pantalla de SQL Server**  
+ **Documentación de SQL Server**  
   
-- [Depurar objetos de base de datos CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [Depurar objetos de base de datos CLR](/sql/relational-databases/clr-integration/debugging-clr-database-objects)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad de acceso del código y ADO.NET](../code-access-security.md)
 - [Información general sobre ADO.NET](../ado-net-overview.md)

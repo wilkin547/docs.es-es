@@ -2,15 +2,16 @@
 title: Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320850"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449483"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
-Los proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y un sistema de compilación, al mismo tiempo que se admiten varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y XBOX). Los proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portables de .net que son un ensamblado de .NET Framework que se puede usar en cualquier implementación de .NET.  
+
+Los proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y un sistema de compilación, al mismo tiempo que se admiten varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y Xbox). Los proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portables que son ensamblados .NET que se pueden usar en cualquier implementación de .NET.
   
 ## <a name="add-service-reference-details"></a>Detalles de Agregar referencia de servicio  
  Al agregar una referencia de servicio a un proyecto de subconjunto portátil se aplican las restricciones siguientes:  
@@ -43,7 +44,7 @@ Los proyectos de subconjuntos portátiles permiten a los programadores de ensamb
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> no se admite en proyectos de subconjuntos portátiles.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Acceso a los servicios mediante un cliente WCF](accessing-services-using-a-wcf-client.md)
 - [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

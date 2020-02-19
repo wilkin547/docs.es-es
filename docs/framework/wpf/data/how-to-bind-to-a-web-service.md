@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454452"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449977"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Cómo: Enlazar a un servicio web
 En este ejemplo se muestra cómo enlazar a objetos devueltos por llamadas al método de servicio Web.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa el [servicio de contenido de MSDN/TechNet Publishing System (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) para recuperar la lista de idiomas admitidos por un documento especificado.  
+ En este ejemplo se usa el servicio de contenido de MSDN/TechNet Publishing System (MTPS) para recuperar la lista de idiomas admitidos por un documento especificado.  
   
  Antes de llamar a un servicio Web, debe crear una referencia a él. Para crear una referencia Web al servicio MTPS mediante Visual Studio, siga estos pasos:  
   
@@ -45,7 +45,7 @@ En este ejemplo se muestra cómo enlazar a objetos devueltos por llamadas al mé
   
  Para obtener información sobre la estructura de `getContentResponse`, consulte la [documentación del servicio de contenido](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Información general sobre orígenes de enlaces](binding-sources-overview.md)

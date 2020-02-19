@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Animación de un objeto a lo largo de un trazado (animación en punto)
+title: 'Cómo: Animar un objeto a lo largo de un trazado (animación en punto)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff0c24a9369ffaa0cfca1cc46af4eff39f58a38
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651459"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452901"
 ---
-# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Procedimiento Animación de un objeto a lo largo de un trazado (animación en punto)
-En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> objeto para animar un <xref:System.Windows.Point> a lo largo de un trazado curvo.  
+# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Cómo: Animar un objeto a lo largo de un trazado (animación en punto)
+En este ejemplo se muestra cómo utilizar un objeto <xref:System.Windows.Media.Animation.PointAnimationUsingPath> para animar un <xref:System.Windows.Point> a lo largo de un trazado curvo.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se mueve una <xref:System.Windows.Media.EllipseGeometry> a lo largo de un trazado definido por un <xref:System.Windows.Media.PathGeometry>. La geometría de elipse <xref:System.Windows.Media.EllipseGeometry.Center%2A> propiedad, que toma un <xref:System.Windows.Point> valor, especifica su posición; para mover la geometría de elipse, puede animar su <xref:System.Windows.Media.EllipseGeometry.Center%2A> propiedad. El ejemplo se usa un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> para animar la <xref:System.Windows.Media.EllipseGeometry> del objeto <xref:System.Windows.Media.EllipseGeometry.Center%2A> propiedad.  
+ En el ejemplo siguiente se mueve una <xref:System.Windows.Media.EllipseGeometry> a lo largo de un trazado definido por un <xref:System.Windows.Media.PathGeometry>. La propiedad <xref:System.Windows.Media.EllipseGeometry.Center%2A> de la geometría de elipse, que toma un valor <xref:System.Windows.Point>, especifica su posición; para desplace la geometría de la elipse, anime su propiedad <xref:System.Windows.Media.EllipseGeometry.Center%2A>. En el ejemplo se usa un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> para animar la propiedad <xref:System.Windows.Media.EllipseGeometry.Center%2A> del objeto <xref:System.Windows.Media.EllipseGeometry>.  
   
  [!code-xaml[PathAnimationGallery_snippet#PointAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/pointanimationusingpathexample.xaml#pointanimationusingpathwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#PointAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/PointAnimationUsingPathExample.cs#pointanimationusingpathwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#PointAnimationUsingPathWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/PointAnimationUsingPathExample.vb#pointanimationusingpathwholepage)]  
   
- Para obtener un ejemplo completo, vea [ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ Para obtener el ejemplo completo, consulte [ejemplo de animación de trazado](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations).  
   
- La versión del código del ejemplo anterior utiliza un <xref:System.Windows.Media.Animation.Storyboard> para animar el <xref:System.Windows.Media.EllipseGeometry>, aunque se aplique solo a una animación. Un <xref:System.Windows.Media.Animation.Storyboard> suele ser la manera más fácil de aplicar varias animaciones, porque estas animaciones pueden controlarse con el mismo <xref:System.Windows.Media.Animation.Storyboard>. Sin embargo, una manera más fácil de aplicar una animación única a una propiedad cuando se usa el código es usar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
+ La versión de código del ejemplo anterior usaba un <xref:System.Windows.Media.Animation.Storyboard> para animar el <xref:System.Windows.Media.EllipseGeometry>, aunque solo se aplicó una animación. Una <xref:System.Windows.Media.Animation.Storyboard> suele ser la manera más fácil de aplicar varias animaciones porque estas animaciones pueden controlarse mediante el mismo <xref:System.Windows.Media.Animation.Storyboard>. Sin embargo, una manera más fácil de aplicar una animación única a una propiedad cuando se usa código es usar el método <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Ejemplo de animación de trazado](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)
 - [Información general sobre animaciones](animation-overview.md)
 - [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)

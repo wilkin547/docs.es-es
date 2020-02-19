@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 04bf2d2ec78a02e8fd3d71200c64a807b874bc97
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559656"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452609"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,13 +24,13 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>¿Qué son XPDM y WDDM?  
- Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM es el modelo de controladores de pantalla de Microsoft Windows XP y WDDM es el modelo de controladores de pantalla de Windows. WDDM está disponible en equipos que ejecutan Windows Vista y Windows 7. XPDM está disponible en equipos que ejecutan Windows Vista, Microsoft Windows XP y Microsoft Windows Server 2003. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
+ Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM es el modelo de controladores de pantalla de Microsoft Windows XP y WDDM es el modelo de controladores de pantalla de Windows. WDDM está disponible en equipos que ejecutan Windows Vista y Windows 7. XPDM está disponible en equipos que ejecutan Windows Vista, Microsoft Windows XP y Microsoft Windows Server 2003. Para obtener más información acerca de WDDM, vea [Guía de diseño de Windows Display Driver Model (WDDM)](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide).  
   
 <a name="registry_settings"></a>   
-## <a name="registry-settings"></a>Configuración del Registro  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+## <a name="registry-settings"></a>Configuración de registro  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro parámetros de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Configuración de|Descripción|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**Opción de deshabilitación de aceleración de hardware**|Especifica si se debe habilitar la aceleración de hardware.|  
 |**Valor máximo de muestreo múltiple**|Especifica el grado de muestreo múltiple para el suavizado de contorno de contenido 3D.|  
@@ -68,7 +68,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 |Clave del Registro|Tipo de valor|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadena|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
  En noviembre de 2004, Microsoft publicó una nueva versión de las directrices de pruebas de controladores; los controladores escritos después de esta fecha ofrecen una mayor estabilidad. De forma predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará la canalización de aceleración de hardware para estos controladores y recurrirá a la representación de software para los controladores XPDM publicados antes de esta fecha.  
   
@@ -95,7 +95,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
  La **opción de uso del rasterizador de referencia** adopta un valor DWORD. Un valor de 0 indica que no se usa el rasterizador de referencia. Cualquier otro valor distinto de cero fuerza a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a usar el rasterizador de referencia.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Niveles de representación de gráficos](../advanced/graphics-rendering-tiers.md)
 - [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

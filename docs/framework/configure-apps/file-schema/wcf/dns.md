@@ -2,24 +2,24 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: c68cabd03eca71b41a0d0acce26897fa2653f4d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e49a564c9793b371425b2b787586bb9d3cbed58b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855366"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452232"
 ---
-# <a name="dns"></a>\<dns>
+# <a name="dns"></a>\<> DNS
 Especifica la identidad esperada del servidor. Esta identidad es válida para el modo de autenticación de certificado X509 si el certificado del servidor contiene un DNS con el mismo valor. También es válido para el modo de autenticación de Windows si el SPN tiene el mismo valor.  
   
 Para obtener más información sobre cómo establecer el valor del elemento, vea [identidad del servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de cliente**](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de extremo**](endpoint-of-client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de identidad**](identity.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> DNS**  
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**cliente**](client.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**extremo**](endpoint-of-client.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**identity >** ](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**DNS** >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,18 +32,18 @@ Para obtener más información sobre cómo establecer el valor del elemento, vea
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|valor|DNS del certificado. DNS es un protocolo de estándar de la industria usado para buscar equipos en una red basada en IP. Los usuarios pueden recordar nombres para mostrar, <https://go.microsoft.com/fwlink/?prd=10929> como [https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165)o, más sencillos que las direcciones basadas en números, como 207.46.131.137.|  
+|value|DNS del certificado. DNS es un protocolo de estándar de la industria usado para buscar equipos en una red basada en IP. Los usuarios pueden recordar nombres para mostrar, como `https://go.microsoft.com/fwlink/?prd=10929` o `https://go.microsoft.com/fwlink/?LinkID=96165`, más fáciles que las direcciones basadas en números, como 207.46.131.137.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<identity>](identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
+|[\<Identity >](identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
 ## <a name="example"></a>Ejemplo  
  El código de configuración siguiente especifica el DNS de un certificado X.509 que se usa para autenticar un servidor.  
@@ -54,11 +54,11 @@ Para obtener más información sobre cómo establecer el valor del elemento, vea
 </identity>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.DnsEndpointIdentity>
 - [Identidad del servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](identity.md)
+- [\<Identity >](identity.md)

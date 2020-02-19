@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559721"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453122"
 ---
 # <a name="animation-overview"></a>Información general sobre animaciones
 
@@ -231,10 +231,10 @@ En la tabla siguiente se muestran varios tipos de animación comunes y algunas p
 
 |Tipo de propiedad|Animación básica correspondiente (From/To/By)|Animación de fotogramas clave correspondiente|Animación de trazado correspondiente|Ejemplo de uso|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Ninguno|Animar el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> o un <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animar el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> o un <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animar el <xref:System.Windows.FrameworkElement.Width%2A> de un <xref:System.Windows.Controls.DockPanel> o <xref:System.Windows.FrameworkElement.Height%2A> de un <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animar la posición <xref:System.Windows.Media.EllipseGeometry.Center%2A> de un <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Ninguno|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Ninguno|Animar el <xref:System.Windows.Controls.TextBlock.Text%2A> de un <xref:System.Windows.Controls.TextBlock> o <xref:System.Windows.Controls.ContentControl.Content%2A> de un <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animar el <xref:System.Windows.Controls.TextBlock.Text%2A> de un <xref:System.Windows.Controls.TextBlock> o <xref:System.Windows.Controls.ContentControl.Content%2A> de un <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -248,7 +248,7 @@ Tres propiedades de temporización usadas con frecuencia son <xref:System.Window
 
 #### <a name="the-duration-property"></a>Propiedad Duration
 
-Como se ha mencionado previamente, un objeto Timeline representa un segmento de tiempo. La longitud de ese segmento viene determinada por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la escala de tiempo, que normalmente se especifica mediante un valor de <xref:System.Windows.Duration.TimeSpan%2A>. Cuando una escala de tiempo llega al final de su duración, ha completado una iteración.
+Como se ha mencionado previamente, una escala de tiempo representa un segmento de tiempo. La longitud de ese segmento viene determinada por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la escala de tiempo, que normalmente se especifica mediante un valor de <xref:System.Windows.Duration.TimeSpan%2A>. Cuando una escala de tiempo llega al final de su duración, ha completado una iteración.
 
 Una animación utiliza su propiedad <xref:System.Windows.Media.Animation.Timeline.Duration%2A> para determinar su valor actual. Si no se especifica un valor de <xref:System.Windows.Media.Animation.Timeline.Duration%2A> para una animación, se usa 1 segundo, que es el valor predeterminado.
 
@@ -258,7 +258,7 @@ La sintaxis siguiente muestra una versión simplificada de la sintaxis de atribu
 
 En la tabla siguiente se muestran varias configuraciones de <xref:System.Windows.Duration> y sus valores resultantes.
 
-|Configuración de|Valor resultante|
+|Configuración|Valor resultante|
 |-------------|---------------------|
 |0:0:5.5|5,5 segundos.|
 |0:30:5.5|30 minutos y 5,5 segundos.|
@@ -341,7 +341,7 @@ Aunque también se crea un reloj para el <xref:System.Windows.Media.Animation.St
 
 Para que una animación refleje cambios de enlace de datos o de animación, su reloj se debe regenerar. Los relojes no se regeneran automáticamente. Para que una animación refleje los cambios, vuelva a aplicar su guion gráfico mediante una <xref:System.Windows.Media.Animation.BeginStoryboard> o el método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. Al usar cualquiera de estos métodos, la animación se reinicia. En el código, puede utilizar el método <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> para volver a desplazar el guion gráfico a su posición anterior.
 
-Para ver un ejemplo de una animación enlazada a datos, vea [ejemplo de animación de curva spline clave](https://go.microsoft.com/fwlink/?LinkID=160011). Para obtener más información sobre cómo funciona la animación y el sistema de control de tiempo, vea [información general sobre el sistema de control de tiempo y animación](animation-and-timing-system-overview.md).
+Para ver un ejemplo de una animación enlazada a datos, vea [ejemplo de animación de curva spline clave](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Para obtener más información sobre cómo funciona la animación y el sistema de control de tiempo, vea [información general sobre el sistema de control de tiempo y animación](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ Los ejemplos de este tema muestran cómo aplicar animaciones mediante guiones gr
 
 Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar animaciones a sus aplicaciones.
 
-- [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Ejemplo de valores de destino de animación From, To y By](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Muestra distintas configuraciones From/To/By.
 
-- [Ejemplo del comportamiento del control de tiempo de la animación](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Ejemplo del comportamiento del control de tiempo de la animación](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Muestra las distintas maneras de controlar el comportamiento de control de tiempo de una animación. Este ejemplo también muestra cómo enlazar a datos el valor de destino de una animación.
 
@@ -367,7 +367,7 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)|Describe cómo el sistema de control de tiempo utiliza las clases <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock>, que permiten crear animaciones.|
 |[Sugerencias y trucos para animaciones](animation-tips-and-tricks.md)|Enumera las sugerencias útiles para solucionar problemas con animaciones, como el rendimiento.|
@@ -377,7 +377,7 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 |[Funciones de aceleración ](easing-functions.md)|Explica cómo aplicar fórmulas matemáticas a las animaciones para obtener un comportamiento realista, como el rebote.|
 |[Información general sobre animaciones en trazados ](path-animations-overview.md)|Describe cómo mover o girar un objeto a lo largo de un trazado complejo.|
 |[Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)|Describe las animaciones de propiedades mediante guiones gráficos, animaciones locales, relojes y animaciones por fotograma.|
-|[Información general sobre objetos Storyboard ](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|
+|[Información general sobre objetos Storyboard](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|
 |[Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)|Describe los tipos de <xref:System.Windows.Media.Animation.Timeline> y las propiedades que se usan en las animaciones.|
 |[Información general sobre eventos de control de tiempo](timing-events-overview.md)|Describe los eventos disponibles en los objetos <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> para ejecutar el código en los puntos de la escala de tiempo, como iniciar, pausar, reanudar, omitir o detener.|
 |[Temas "Cómo..."](animation-and-timing-how-to-topics.md)|Contiene ejemplos de código para usar animaciones y escalas de tiempo en una aplicación.|
