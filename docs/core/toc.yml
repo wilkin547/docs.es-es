@@ -111,6 +111,18 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - Crear un paquete de plantillas
           href: tutorials/cli-templates-create-template-pack.md
+- name: SDK de proyecto
+  items:
+    - name: Información general
+      href: project-sdk/overview.md
+    - name: Referencia
+      items:
+        - name: Microsoft.NET.Sdk
+          href: project-sdk/msbuild-props.md
+        - name: Microsoft.NET.Sdk.Web
+          href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: Microsoft.NET.Sdk.Razor
+          href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
 - name: Configuración del entorno en tiempo de ejecución
   items:
     - name: Configuración
