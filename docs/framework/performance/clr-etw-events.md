@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716211"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504127"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW de CLR
 Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW). Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md). CLR tiene dos proveedores para los eventos:  
@@ -22,7 +22,7 @@ Los temas de esta sección describen los eventos de seguimiento de eventos para 
   
  Para más información, vea [Proveedores ETW de CLR](clr-etw-providers.md).  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Eventos de información en tiempo de ejecución](runtime-information-etw-events.md)  
  Capturan información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante.  
   
@@ -59,10 +59,9 @@ Los temas de esta sección describen los eventos de seguimiento de eventos para 
  [Evento de pila](stack-etw-event.md)  
  Captura información usada con otros eventos para generar seguimientos de pilas después de que se haya generado un evento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Mejorar la depuración y el ajuste del rendimiento con ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Blog de rendimiento de Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Controlar el registro de .NET Framework](controlling-logging.md)
 - [Proveedores ETW de CLR](clr-etw-providers.md)
 - [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md)

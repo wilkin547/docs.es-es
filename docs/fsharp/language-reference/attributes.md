@@ -2,12 +2,12 @@
 title: Atributos
 description: Obtenga información F# sobre cómo los atributos permiten aplicar metadatos a una construcción de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424798"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504122"
 ---
 # <a name="attributes"></a>Atributos
 
@@ -19,7 +19,7 @@ Los atributos permiten aplicar metadatos a una construcción de programación.
 [<target:attribute-name(arguments)>]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En la sintaxis anterior, el *destino* es opcional y, si está presente, especifica el tipo de entidad de programa a la que se aplica el atributo. Los valores válidos para el *destino* se muestran en la tabla que aparece más adelante en este documento.
 
@@ -81,7 +81,7 @@ Aunque normalmente no es necesario especificar explícitamente el destino de atr
     <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td>
   </tr>
   <tr>
-    <td>Propiedad</td>
+    <td>propiedad</td>
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
@@ -89,19 +89,19 @@ Aunque normalmente no es necesario especificar explícitamente el destino de atr
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>tipo</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;]
+[&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
-struct
-x : byte
-y : int
-end</code></pre>
+  struct
+    val x : byte
+    val y : int
+  end</code></pre>
     </td>
   </tr>
 </table>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia del lenguaje F#](index.md)
