@@ -2,16 +2,16 @@
 title: Comparación de WCF con gRPC-gRPC para desarrolladores de WCF
 description: Comparación de los marcos WCF y gRPC para compilar aplicaciones distribuidas.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966953"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503336"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Comparar WCF con gRPC
 
-En el capítulo anterior debería haber proporcionado un buen vistazo a protobuf y la forma en que gRPC controla los mensajes. Antes de trabajar a través de una conversión detallada de WCF a gRPC, es importante ver cómo se administra el intervalo de características actualmente disponible en WCF en gRPC y qué soluciones alternativas puede usar cuando no parece ser un equivalente de gRPC. En particular, en este capítulo se tratarán los siguientes temas:
+En el capítulo anterior se ha dado una buena mirada a protobuf y cómo gRPC controla los mensajes. Antes de trabajar en una conversión detallada de Windows Communication Foundation (WCF) a gRPC, es importante saber cómo se controlan las características disponibles en WCF en gRPC y qué soluciones puede usar cuando no hay ningún equivalente de gRPC. En particular, en este capítulo se tratarán los siguientes temas:
 
 - Operaciones y métodos
 - Enlaces y transportes
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
@@ -74,7 +74,7 @@ namespace HelloGrpc
 }
 ```
 
-En este capítulo se hará referencia a este código de ejemplo al explicar varios conceptos y características de gRPC.
+En este capítulo se hará referencia a este código de ejemplo al explicar los distintos conceptos y características de gRPC.
 
 >[!div class="step-by-step"]
 >[Anterior](protobuf-maps.md)
