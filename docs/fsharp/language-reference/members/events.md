@@ -2,12 +2,12 @@
 title: Eventos
 description: Obtenga información F# sobre cómo los eventos le permiten asociar las llamadas de función a las acciones del usuario, que son importantes en la programación de la GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ad60aff318832ab3ba5e9f7c43928898e171cea8
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216463"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543630"
 ---
 # <a name="events"></a>Eventos
 
@@ -28,7 +28,7 @@ El tipo del método `Add` es `('a -> unit) -> unit`. Por consiguiente, el métod
 
 ## <a name="creating-custom-events"></a>Crear eventos personalizados
 
-F#los eventos se representan mediante F# la clase de [eventos](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) , que implementa la interfaz [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) . `IEvent`es en sí misma una interfaz que combina la funcionalidad de otras dos `System.IObservable<'T>` interfaces e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Por consiguiente, la clase `Event` tiene una funcionalidad de delegados equivalente a la de otros lenguajes, además de la funcionalidad de `IObservable`, lo que significa que los eventos de F# admiten el filtrado así como el uso de expresiones lambda y funciones de primera clase de F# como controladores de eventos. Esta funcionalidad se proporciona en el [módulo de eventos](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F#los eventos se representan mediante F# la clase de [eventos](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) , que implementa la interfaz [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) . `IEvent` es en sí misma una interfaz que combina la funcionalidad de otras dos interfaces, `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Por consiguiente, la clase `Event` tiene una funcionalidad de delegados equivalente a la de otros lenguajes, además de la funcionalidad de `IObservable`, lo que significa que los eventos de F# admiten el filtrado así como el uso de expresiones lambda y funciones de primera clase de F# como controladores de eventos. Esta funcionalidad se proporciona en el [módulo de eventos](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Para crear en una clase un evento que actúe como cualquier otro evento de .NET Framework, agregue a la clase un enlace `let` que defina un objeto `Event` como un campo de una clase. Puede especificar el tipo de argumento de evento que desee como tipo de argumento o puede dejarlo en blanco y dejar que el compilador infiera el tipo adecuando. Además, debe definir un miembro de evento que exponga el evento como un evento de CLI. Este miembro debe tener el atributo [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) . Se declara como una propiedad y su implementación es simplemente una llamada a la propiedad [Publish](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) del evento. Los usuarios de la clase pueden usar el método `Add` del evento publicado para agregar un controlador. El argumento del método `Add` puede ser una expresión lambda. Puede usar la propiedad `Trigger` del evento para generar el evento pasando los argumentos a la función del controlador. En el siguiente ejemplo código se muestra cómo hacerlo. En este ejemplo, el argumento de tipo inferido para el evento es una tupla, que representa los argumentos de la expresión lambda.
 
@@ -53,7 +53,7 @@ Given a value: Event occurred.
 
 ## <a name="processing-event-streams"></a>Procesar secuencias de eventos
 
-En lugar de agregar simplemente un controlador de eventos para un evento mediante la función [Event. Add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) , puede usar las funciones `Event` del módulo para procesar flujos de eventos de maneras muy personalizadas. Para ello, se utiliza la canalización hacia delante (`|>`) junto con el evento como primer valor en una serie de llamadas de función, y las funciones del módulo `Event` como llamadas de función subsiguientes.
+En lugar de agregar simplemente un controlador de eventos para un evento mediante la función [Event. Add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) , puede usar las funciones del módulo `Event` para procesar secuencias de eventos de maneras muy personalizadas. Para ello, se utiliza la canalización hacia delante (`|>`) junto con el evento como primer valor en una serie de llamadas de función, y las funciones del módulo `Event` como llamadas de función subsiguientes.
 
 En el siguiente ejemplo de código, se muestra cómo configurar un evento cuyo controlador se invoca únicamente en determinadas condiciones.
 
@@ -80,8 +80,9 @@ type AppForm() as this =
 
     // Set up a click event to change the properties.
     do
-        this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
-        this.Property2 <- "text3")
+        this.Click |> Event.add(fun evArgs ->
+            this.Property1 <- "text2"
+            this.Property2 <- "text3")
 
     // This property does not have the property-changed event set.
     member val Property1 : string = "text" with get, set
@@ -134,8 +135,9 @@ type AppForm private (dummy) as this =
 
     // Set up a click event to change the properties.
     do
-        this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
-        this.Property2 <- "text3")
+        this.Click |> Event.add(fun evArgs ->
+            this.Property1 <- "text2"
+            this.Property2 <- "text3")
 
     // This property does not have the property changed event set.
     member val Property1 : string = "text" with get, set
@@ -172,11 +174,11 @@ let appForm = new AppForm()
 Application.Run(appForm)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Miembros](index.md)
 - [Control y generación de eventos](../../../standard/events/index.md)
-- [Expresiones lambda: `fun`Palabra clave](../functions/lambda-expressions-the-fun-keyword.md)
+- [Expresiones lambda: palabra clave `fun`](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control. event (módulo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control. event&#60;(&#62; clase)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control. event&#60;' Delegate, '&#62; args (clase)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
