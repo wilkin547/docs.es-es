@@ -13,10 +13,10 @@ ms.lasthandoff: 09/14/2019
 ms.locfileid: "70989810"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedimiento para crear un flujo de trabajo de máquina de estados
-Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas <xref:System.Activities.Statements.StateMachine> , como la actividad, y las actividades personalizadas [de los procedimientos anteriores: Cree un tema](how-to-create-an-activity.md) de la actividad. El flujo de trabajo modela un juego de adivinanzas de números.  
+Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas, como la actividad <xref:System.Activities.Statements.StateMachine>, y las actividades personalizadas del [anterior cómo: Cree una actividad](how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
-> Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [el procedimiento: Cree una actividad](how-to-create-an-activity.md).  
+> Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [cómo: Cree una](how-to-create-an-activity.md)de actividad.  
   
 > [!NOTE]
 > Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -52,7 +52,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 9. Haga clic en **crear variable**.  
   
     > [!TIP]
-    > Si no se muestra ningún cuadro **crear variable** , haga <xref:System.Activities.Statements.StateMachine> clic en la actividad en la superficie del diseñador de flujo de trabajo para seleccionarla.  
+    > Si no se muestra ningún cuadro **crear variable** , haga clic en la actividad <xref:System.Activities.Statements.StateMachine> en la superficie del diseñador de flujo de trabajo para seleccionarla.  
   
 10. Escriba `Guess` en el cuadro **nombre** , seleccione **Int32** en la lista desplegable **tipo de variable** y presione Entrar para guardar la variable.  
   
@@ -88,7 +88,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 5. Arrastre una actividad **State** desde la sección **máquina de Estados** del **cuadro de herramientas** hasta el diseñador de flujo de trabajo y mantenga el mouse sobre el estado de **inicialización de destino** . Tenga en cuenta que se mostrarán cuatro triángulos alrededor del estado de **destino de inicialización** cuando el nuevo estado se sitúa sobre él. Quite el nuevo estado del triángulo que está inmediatamente por debajo del estado de **inicialización de destino** . Esto coloca el nuevo estado en el flujo de trabajo y crea una transición desde el estado de **destino Initialize** al nuevo estado.  
   
-6. Haga clic en **State1** para seleccionarlo, cambie DisplayName `Enter Guess`a y, a continuación, haga doble clic en el estado en el diseñador de flujo de trabajo para expandirlo.  
+6. Haga clic en **State1** para seleccionarlo, cambie **displayName** a `Enter Guess`y, a continuación, haga doble clic en el estado en el diseñador de flujo de trabajo para expandirlo.  
   
 7. Arrastre una actividad **WriteLine** de la sección **primitivas** del **cuadro de herramientas** y colóquela en la sección **entrada** del estado.  
   
@@ -108,7 +108,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 11. Vuelva a la vista de equipo de estado general en el diseñador de flujo de trabajo haciendo clic en **StateMachine** en la pantalla de la ruta de navegación en la parte superior del diseñador de flujo de trabajo.  
   
-12. Arrastre una actividad **FinalState** desde la sección **máquina de Estados** del **cuadro de herramientas**, mantenga el mouse sobre el estado **Enter Guess** y colóquela en el triángulo que aparece a la derecha del estado **Enter Guess** para que una transición sea creado entre **Enter Guess** y **FinalState**.  
+12. Arrastre una actividad **FinalState** desde la sección **máquina de Estados** del **cuadro de herramientas**, mantenga el mouse sobre el estado **Enter Guess** y colóquela en el triángulo que aparece a la derecha del estado **Enter Guess** para que se cree una transición entre **Enter Guess** y **FinalState**.  
   
 13. El nombre predeterminado de la transición es **T2**. Haga clic en la transición en el diseñador de flujo de trabajo para seleccionarla y establezca su **displayName** en **Guess correct**. Después, haga clic en el **FinalState**y selecciónelo y arrástrelo hacia la derecha para que haya espacio para que se muestre el nombre completo de la transición sin superposición de ninguno de los dos Estados. Así resultará más fácil completar los pasos restantes del tutorial.  
   
@@ -116,7 +116,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 15. Arrastre una actividad **ReadInt** desde la sección **NumberGuessWorkflowActivities** del **cuadro de herramientas** y colóquela en la sección **desencadenador** de la transición.  
   
-16. En la **ventana Propiedades** de la actividad **ReadInt** , escriba `"EnterGuess"` entre comillas en el cuadro de valor de la propiedad **BookmarkName** y escriba `Guess` en el cuadro de valor de la propiedad **resultado** .  
+16. En la **ventana Propiedades** de la actividad **ReadInt** , escriba `"EnterGuess"` incluidas las comillas en el cuadro de valor de la propiedad **BookmarkName** y escriba `Guess` en el cuadro de valor de la propiedad **resultado** .  
   
 17. Escriba la siguiente expresión en el cuadro de valor de la propiedad de **condición** **adivinar** la transición correcta.  
   
@@ -131,12 +131,12 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 18. Vuelva a la vista de equipo de estado general en el diseñador de flujo de trabajo haciendo clic en **StateMachine** en la pantalla de la ruta de navegación en la parte superior del diseñador de flujo de trabajo.  
   
     > [!NOTE]
-    > Una transición se produce cuando se recibe el evento desencadenador y <xref:System.Activities.Statements.Transition.Condition%2A>, si está presente, se evalúa como `True`. En esta transición, si el usuario `Guess` coincide con el generado `Target`aleatoriamente, el control pasa a **FinalState** y el flujo de trabajo se completa.  
+    > Una transición se produce cuando se recibe el evento desencadenador y <xref:System.Activities.Statements.Transition.Condition%2A>, si está presente, se evalúa como `True`. En esta transición, si el `Guess` del usuario coincide con la `Target`generada de forma aleatoria, el control pasa a **FinalState** y el flujo de trabajo se completa.  
   
 19. Dependiendo de si la estimación es correcta, el flujo de trabajo debe realizar la transición a **FinalState** o al estado **Enter Guess** para otro intento. Ambas transiciones comparten el mismo desencadenador de espera para que la estimación del usuario se reciba a través de la actividad **ReadInt** . Esto se denomina una transición compartida. Para crear una transición compartida, haga clic en el círculo que indica el inicio de la transición **Guess correct** y arrástrela hasta el estado deseado. En este caso, la transición es una transición automática, por lo que debe arrastrar el punto inicial de la transición **Guess correct** y colocarla de nuevo en la parte inferior del estado **Enter Guess** . Después de crear la transición, selecciónela en el diseñador de flujo de trabajo y establezca su propiedad **displayName** en **Guess Incorrect**.  
   
     > [!NOTE]
-    > Las transiciones compartidas también se pueden crear desde el diseñador de transición haciendo clic en **Agregar transición de desencadenador compartido** en la parte inferior del diseñador de transición y, a continuación, seleccionando el estado de destino deseado en los **Estados disponibles para conectarse** . lista desplegable.  
+    > Las transiciones compartidas también se pueden crear desde el diseñador de transición haciendo clic en **Agregar transición de desencadenador compartido** en la parte inferior del diseñador de transición y, a continuación, seleccionando el estado de destino deseado en la lista desplegable **Estados disponibles para conectar** .  
   
     > [!NOTE]
     > Tenga en cuenta que si la condición <xref:System.Activities.Statements.Transition.Condition%2A> de una transición se evalúa en `false` (o todas las condiciones de una transición de desencadenador compartido se evalúan en `false`), la transición no se producirá y se reprogramarán todos los desencadenadores para todas las transiciones desde el estado. En este tutorial, no puede suceder esta situación debido a la forma en que están configuradas las condiciones (tenemos acciones específicas para determinar si el supuesto es correcto o incorrecto).  
@@ -183,9 +183,9 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 ### <a name="to-build-the-workflow"></a>Para compilar el flujo de trabajo  
   
-1. Presione CTRL+MAYÚS+B para compilar la solución.  
+1. Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-     Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, consulte el tema siguiente [, How to: Ejecutar un flujo](how-to-run-a-workflow.md)de trabajo. Si ya ha completado el [procedimiento: Ejecutar un paso](how-to-run-a-workflow.md) de flujo de trabajo con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de equipo de estado desde este paso, vaya a la sección [ [para compilar y ejecutar la aplicación](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de cómo: Ejecutar un flujo](how-to-run-a-workflow.md)de trabajo.  
+     Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, vea el tema siguiente, [cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md). Si ya ha completado el [cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md) paso con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de equipo de estado desde este paso, vaya a la sección [para compilar y ejecutar la aplicación](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -195,4 +195,4 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
 - [Cómo: Crear una actividad](how-to-create-an-activity.md)
-- [Procedimientos: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
