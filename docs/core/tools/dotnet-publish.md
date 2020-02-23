@@ -2,18 +2,18 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto de .NET Core en un directorio.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117614"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451297"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet publish`: empaqueta la aplicación y sus dependencias en una carpeta para su implementación en un sistema de hospedaje.
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117614"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -47,7 +47,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
 
 `dotnet publish`: compila la aplicación, lee sus dependencias especificadas en el archivo de proyecto y publica el conjunto resultante de archivos en un directorio. La salida incluye los recursos siguientes:
 
@@ -68,7 +68,7 @@ El proyecto que se va a publicar. Es la ruta de acceso y el nombre de archivo de
 
 ## <a name="options"></a>Opciones
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -113,7 +113,7 @@ Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea 
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#publish-self-contained). Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#publish-runtime-dependent).
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,7 +123,7 @@ Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`,
 
 Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
@@ -164,7 +164,7 @@ Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea 
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#publish-self-contained). Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#publish-runtime-dependent).
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,7 +174,7 @@ Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`,
 
 Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -199,7 +199,7 @@ Si la ruta de acceso es relativa, el directorio de salida generado es relativo a
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#publish-self-contained). Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#publish-runtime-dependent).
 
 `-v|--verbosity <LEVEL>`
 

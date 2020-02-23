@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f09a593160b21a9a22a8e7c7faeffdaaab41db85
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344877"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449571"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Campos privados agregados a tipos struct integrados
 
@@ -413,7 +413,7 @@ CoreFX
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.ConsoleKeyInfo`
 - `T:System.Memory{T}`

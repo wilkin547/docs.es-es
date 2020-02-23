@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920379"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450985"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -54,7 +54,7 @@ Si usa Visual Studio, necesita [Visual Studio 2019](https://visualstudio.micr
 
 ### <a name="default-executables"></a>Archivos ejecutables predeterminados
 
-.NET Core compila ahora [archivos ejecutables dependientes del marco](../deploying/index.md#framework-dependent-executables-fde) de forma predeterminada. Este comportamiento es nuevo en las aplicaciones que usan una versión de .NET Core instalada globalmente. Anteriormente, solo las [implementaciones independientes](../deploying/index.md#self-contained-deployments-scd) generarían un archivo ejecutable.
+.NET Core compila ahora [archivos ejecutables dependientes del marco](../deploying/index.md#publish-runtime-dependent) de forma predeterminada. Este comportamiento es nuevo en las aplicaciones que usan una versión de .NET Core instalada globalmente. Anteriormente, solo las [implementaciones independientes](../deploying/index.md#publish-self-contained) generarían un archivo ejecutable.
 
 Durante `dotnet build` o `dotnet publish`, se crea un archivo ejecutable que coincide con el entorno y la plataforma del SDK que se usa. Estos ejecutables funcionan de la misma forma que los ejecutables nativos:
 
@@ -301,7 +301,7 @@ Windows ofrece una API nativa enriquecida en forma de API de C sin formato, COM 
 
 [MSIX](https://docs.microsoft.com/windows/msix/) es un nuevo formato de paquete de aplicación de Windows. Se puede usar para implementar aplicaciones de escritorio de .NET Core 3.0 en Windows 10.
 
-El [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible en Visual Studio 2019, le permite crear paquetes de MSIX con aplicaciones de .NET Core [independientes](../deploying/index.md#self-contained-deployments-scd).
+El [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible en Visual Studio 2019, le permite crear paquetes de MSIX con aplicaciones de .NET Core [independientes](../deploying/index.md#publish-self-contained).
 
 El archivo del proyecto de .NET Core debe especificar los tiempos de ejecución admitidos en la propiedad `<RuntimeIdentifiers>`:
 

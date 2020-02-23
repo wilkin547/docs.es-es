@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo .NET Core busca y elige las versio
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713973"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451004"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selección de la versión de .NET Core que se va a usar
 
@@ -78,7 +78,7 @@ Las plataformas de destino de .NET Standard también se limitan a la plataforma 
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Puesta al día de las aplicaciones dependientes de la plataforma
 
-Cuando una aplicación se ejecuta desde el origen con [`dotnet run`](../tools/dotnet-run.md), desde una [**implementación dependiente del marco**](../deploying/index.md#framework-dependent-deployments-fdd) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o desde un [**ejecutable dependiente del marco**](../deploying/index.md#framework-dependent-executables-fde) con `myapp.exe`, el ejecutable `dotnet` es el **host** de la aplicación.
+Cuando una aplicación se ejecuta desde el origen con [`dotnet run`](../tools/dotnet-run.md), desde una [**implementación dependiente del marco**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o desde un [**ejecutable dependiente del marco**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, el ejecutable `dotnet` es el **host** de la aplicación.
 
 El host elige la versión de revisión más reciente instalada en el equipo. Por ejemplo, si se especifica `netcoreapp2.0` en el archivo de proyecto, y `2.0.4` es el runtime de .NET instalado más reciente, se usa el runtime `2.0.4`.
 
@@ -101,7 +101,7 @@ Es posible que las versiones 2.0.5 y 2.2.2 se comporten de forma diferente, espe
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Las implementaciones autocontenidas incluyen el runtime seleccionado.
 
-Puede publicar una aplicación como una [**distribución autocontenida**](../deploying/index.md#self-contained-deployments-scd). Este enfoque empaqueta el runtime y las bibliotecas de .NET Core con la aplicación. Las implementaciones autocontenidas no tienen una dependencia de los entornos de runtime. La selección de la versión del runtime se produce en el momento de la publicación, no en el tiempo de ejecución.
+Puede publicar una aplicación como una [**distribución autocontenida**](../deploying/index.md#publish-self-contained). Este enfoque empaqueta el runtime y las bibliotecas de .NET Core con la aplicación. Las implementaciones autocontenidas no tienen una dependencia de los entornos de runtime. La selección de la versión del runtime se produce en el momento de la publicación, no en el tiempo de ejecución.
 
 El proceso de publicación selecciona la versión de revisión más reciente de la familia de runtime indicada. Por ejemplo, `dotnet publish` seleccionará .NET Core 2.0.4 si es la versión de revisión más reciente de la familia de runtime de .NET Core 2.0. La plataforma de destino (incluidas las revisiones de seguridad instaladas más recientes) se empaqueta con la aplicación.
 

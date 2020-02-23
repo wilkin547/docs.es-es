@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920889"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449028"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -24,7 +24,7 @@ En las secciones siguientes se muestra cómo usar Microsoft Visual Studio para c
 - Implementación autocontenida
 - Implementación autocontenida con dependencias de terceros
 
-Para obtener información sobre el uso de Visual Studio para desarrollar aplicaciones de .NET Core, vea [Dependencias y requisitos de .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows) .
+Para obtener información sobre el uso de Visual Studio para desarrollar aplicaciones de .NET Core, vea [Dependencias y requisitos de .NET Core](../install/dependencies.md?pivots=os-windows) .
 
 ## <a name="framework-dependent-deployment"></a>Implementación dependiente de marco de trabajo
 
@@ -110,7 +110,7 @@ Una vez que haya terminado de depurar, puede publicar la implementación indepen
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 y anterior](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 y anterior](#tab/vs156)
 
 Después de depurar y probar el programa, cree los archivos que se implementarán con la aplicación para cada una de las plataformas de destino.
 
@@ -176,7 +176,7 @@ A continuación se muestra el archivo *csproj* completo para este proyecto.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 y posterior](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 y posterior](#tab/vs157)
 
 Después de depurar y probar el programa, cree los archivos que se implementarán con la aplicación para cada una de las plataformas de destino. Esto implica la creación de un perfil independiente para cada plataforma de destino.
 
@@ -274,7 +274,7 @@ Implementar una implementación independiente con una o varias dependencias de t
 
 A continuación se muestra el archivo *csproj* completo de este proyecto:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 y anterior](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 y anterior](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ A continuación se muestra el archivo *csproj* completo de este proyecto:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 y posterior](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 y posterior](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

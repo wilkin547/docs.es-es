@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787836"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503490"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Creación de un paquete de plantillas
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 El parámetro `-n` establece el nombre de archivo _.csproj_ en _templatepack.csproj_. El parámetro `-o` crea los archivos en el directorio actual. Verá un resultado similar a la salida siguiente.
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 Este comando compilará el proyecto y creará un paquete NuGet en la carpeta _working\bin\Debug_.
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -146,8 +152,11 @@ Si cargó el paquete de NuGet en una fuente NuGet, puede usar el comando `dotnet
 
 Independientemente de cómo instaló el paquete de plantillas, ya sea directamente con el archivo _.nupkg_ o mediante la fuente NuGet, el proceso de quitar un paquete de plantillas es el mismo. Use el `<PackageId>` de la plantilla que quiere desinstalar. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas que están instaladas.
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:

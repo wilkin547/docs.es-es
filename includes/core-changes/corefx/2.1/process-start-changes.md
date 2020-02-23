@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7c0930f6606aa96d2863dc740aef8e9cab724b37
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344866"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449414"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>Cambio del valor predeterminado de UseShellExecute
 
@@ -38,7 +38,7 @@ CoreFX
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Diagnostics.Process.Start`
 - `M:System.Diagnostics.ProcessStartInfo`

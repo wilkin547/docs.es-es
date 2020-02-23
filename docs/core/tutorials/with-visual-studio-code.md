@@ -3,12 +3,12 @@ title: Introducción a C# y Visual Studio Code
 description: Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715317"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503523"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -129,8 +129,13 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 5. Guarde los cambios y vuelva a ejecutar el programa. El nuevo mensaje debe aparecer con la cadena anexada.
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Obtendrá la siguiente salida:
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 

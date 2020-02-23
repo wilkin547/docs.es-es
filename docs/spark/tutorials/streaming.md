@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802862"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504044"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming con .NET para Apache Spark 
 
@@ -32,7 +32,7 @@ Si esta es su primera aplicación de .NET para Apache Spark, comience con el [tu
 
 1. En el símbolo del sistema, ejecute los comandos siguientes para crear una aplicación de consola:
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ Si esta es su primera aplicación de .NET para Apache Spark, comience con el [tu
 
 1. Para usar .NET para Apache Spark en una aplicación, instale el paquete Microsoft.Spark. En la consola, ejecute el siguiente comando:
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 

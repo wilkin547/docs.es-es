@@ -2,12 +2,12 @@
 title: Integración continua (CI) con el SDK de .NET Core y herramientas
 description: Aprenda a usar el SDK de .NET Core y sus herramientas en el servidor de compilación con la integración continua.
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215233"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451043"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
@@ -32,7 +32,7 @@ El script del instalador se puede automatizar para que se ejecute al principio d
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Cuando se utiliza el script del instalador, las dependencias nativas no se instalan automáticamente. Debe instalarlas en caso de el sistema operativo no las incluya. Para obtener más información, vea [Dependencias y requisitos de .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> Cuando se utiliza el script del instalador, las dependencias nativas no se instalan automáticamente. Debe instalarlas en caso de el sistema operativo no las incluya. Para obtener más información, vea [Dependencias y requisitos de .NET Core](../install/dependencies.md).
 
 ## <a name="ci-setup-examples"></a>Ejemplos de configuración de CI
 

@@ -3,12 +3,12 @@ title: Desarrollo de bibliotecas con la CLI de .NET Core
 description: Aprenda a crear bibliotecas de .NET Core con la CLI de .NET Core. Creará una biblioteca que admite varios marcos de trabajo.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920445"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503509"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Desarrollo de bibliotecas con la CLI de .NET Core
 
@@ -220,7 +220,7 @@ Es importante poder probar las plataformas. Puede usar [xUnit](https://xunit.git
 
 1. Configure la solución. Puede hacerlo con los siguientes comandos:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ Es importante poder probar las plataformas. Puede usar [xUnit](https://xunit.git
 
 1. Vaya al directorio del proyecto de prueba y agregue una referencia a `MyProject.Test` desde `MyProject`.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -300,7 +300,7 @@ Escenarios de consumo similares a este significan que las API a las que se tiene
 
 Puede ejecutar los siguientes comandos en su terminal para generar la misma estructura de esta guía:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

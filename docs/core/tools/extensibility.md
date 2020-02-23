@@ -2,12 +2,12 @@
 title: Modelo de extensibilidad de la CLI de .NET Core
 description: Descubra cómo puede extender la CLI de .NET Core.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920527"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451160"
 ---
 # <a name="net-core-cli-extensibility-model"></a>Modelo de extensibilidad de la CLI de .NET Core
 
@@ -32,7 +32,7 @@ La CLI se puede extender de tres maneras principales:
 Los tres mecanismos de extensibilidad descritos anteriormente no son exclusivos. Puede usar uno, o todos, o una combinación de ellos. La selección de uno u otro depende en gran medida del objetivo que intenta alcanzar con su extensión.
 
 ## <a name="per-project-based-extensibility"></a>Extensibilidad por proyecto
-Las herramientas por proyecto son [implementaciones dependientes del marco](../deploying/index.md#framework-dependent-deployments-fdd) que se distribuyen como paquetes NuGet. Las herramientas solo están disponibles en el contexto del proyecto que les hace referencia y para el que se restauran. La invocación fuera del contexto del proyecto (por ejemplo, fuera del directorio que contiene el proyecto) producirá un error porque el comando no puede encontrarse.
+Las herramientas por proyecto son [implementaciones dependientes del marco](../deploying/index.md#publish-runtime-dependent) que se distribuyen como paquetes NuGet. Las herramientas solo están disponibles en el contexto del proyecto que les hace referencia y para el que se restauran. La invocación fuera del contexto del proyecto (por ejemplo, fuera del directorio que contiene el proyecto) producirá un error porque el comando no puede encontrarse.
 
 Estas herramientas son perfectas para servidores de compilación, dado que no se necesita nada fuera del archivo de proyecto. El proceso de compilación ejecuta la restauración para el proyecto que se compila y hay herramientas disponibles. Los proyectos de lenguajes, como F#, también están en esta categoría ya que cada proyecto solo se puede escribir en un lenguaje específico.
 
