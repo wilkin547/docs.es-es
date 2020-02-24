@@ -12,7 +12,7 @@
           href: interface-definition-language.md
         - name: Protocolos de red
           href: network-protocols.md
-        - name: Por qué se recomienda gRPC para desarrolladores de WCF
+        - name: ¿Por qué se recomienda gRPC para los desarrolladores de WCF?
           href: Why-grpc.md
     - name: Búferes de protocolo
       href: protocol-buffers.md
@@ -27,7 +27,7 @@
           href: protobuf-repeated.md
         - name: Campos reservados de Protobuf
           href: protobuf-reserved.md
-        - name: Campos Any y OneOf de Protobuf para tipos Variant
+        - name: Campos Protobuf Any y Oneof para tipos de variantes
           href: protobuf-any-oneof.md
         - name: Enumeraciones de Protobuf
           href: protobuf-enums.md
@@ -79,7 +79,7 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC y malla de servicio
+        - name: Mallas de servicio
           href: service-mesh.md
         - name: Equilibrio de carga
           href: load-balancing.md
