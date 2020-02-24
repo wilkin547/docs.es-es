@@ -1,19 +1,19 @@
 ---
 title: Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Los microservicios son servicios modulares que se pueden implementar de forma independiente. Los contenedores de Docker (para Linux y Windows) simplifican la implementación y las pruebas mediante la unión de un servicio y sus dependencias en una sola unidad que, después, se ejecuta en un entorno aislado.
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089909"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502622"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor
 
 ![Portada del libro](./media/cover-small.png)
 
-**EDICIÓN v2.2**: actualizada a ASP.NET Core 2.2
+**EDICIÓN v3.1**: actualizada a ASP.NET Core 3.1
 
 Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker.
 
@@ -47,7 +47,7 @@ Una vez que haya estudiado esta guía, el siguiente paso que debería dar es obt
 
 ## <a name="version"></a>Versión
 
-Esta guía se ha revisado para tratar la versión **.NET Core 2.2**, además de muchas actualizaciones adicionales relacionadas con la misma “oleada” de tecnologías (es decir, tecnologías de Azure y tecnologías adicionales de terceros) que coincidan en el tiempo con .NET Core 2.2. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **2.2**.
+Esta guía se ha revisado para abarcar la versión **.NET Core 3.1** junto con muchas actualizaciones adicionales relacionadas con la misma "ola" de tecnologías (es decir, Azure y otras tecnologías de terceros) que coincidan en el tiempo con la versión de .NET Core 3.1. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **3.1**.
 
 ## <a name="what-this-guide-does-not-cover"></a>Aspectos no tratados en esta guía
 
@@ -146,7 +146,7 @@ Participantes y revisores:
 >
 > **Charles Lowell**, ingeniero de software del equipo de CAT de VS, Microsoft
 >
-> **Miguel Veloso**, consultor sénior en Turing Challenge
+> **Miguel Veloso**, ingeniero de desarrollo de software en Plain Concepts
 
 ## <a name="copyright"></a>Copyright
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 de Microsoft Corporation
+Copyright © 2020 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
