@@ -4,12 +4,12 @@ description: Obtenga información sobre el tipo struct y cómo se crea.
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346903"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503990"
 ---
 # <a name="structs"></a>Estructuras
 
@@ -46,9 +46,6 @@ Los structs comparten la mayoría de la sintaxis con las clases, aunque están m
 - Los structs son tipos de valor y las clases son tipos de referencia.
 
 - A diferencia de las clases, se pueden crear instancias de structs sin usar un operador `new`.
-
-   > [!NOTE]
-   > En .NET Core 2.1 y versiones posteriores, se debe crear una instancia de un tipo de struct mediante el [operador new](language-reference/operators/new-operator.md) o un [literal predeterminado](language-reference/operators/default.md#default-literal), o también inicializando cada uno de sus campos privados. Para más información, consulte [Cambios importantes para la migración de la versión 2.0 a la 2.1](../core/compatibility/2.0-2.1.md#corefx).
 
 - Los structs pueden declarar constructores que tengan parámetros.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705410"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452024"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizar propiedades (Guía de programación de C#)
 
@@ -53,7 +53,7 @@ En el segmento de código anterior, si no asigna un valor a la propiedad `Name`,
 
 ## <a name="the-set-accessor"></a>El descriptor de acceso set
 
-El descriptor de acceso `set` es similar a un método cuyo tipo de valor devuelto es [void](../../language-reference/keywords/void.md). Usa un parámetro implícito denominado `value`, cuyo tipo es el tipo de la propiedad. En el siguiente ejemplo, se agrega un descriptor de acceso `set` a la propiedad `Name`:
+El descriptor de acceso `set` es similar a un método cuyo tipo de valor devuelto es [void](../../language-reference/builtin-types/void.md). Usa un parámetro implícito denominado `value`, cuyo tipo es el tipo de la propiedad. En el siguiente ejemplo, se agrega un descriptor de acceso `set` a la propiedad `Name`:
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 

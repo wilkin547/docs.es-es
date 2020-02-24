@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738758"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504152"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Análisis de opiniones mediante la CLI de ML.NET
 
@@ -83,7 +83,7 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
 1. Ejecute el siguiente comando de la CLI de ML.NET:
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     Este comando ejecuta el **comando `mlnet auto-train`** :
@@ -97,11 +97,11 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
 
     <!-- markdownlint-disable MD023 MD025 -->
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     ![Comando de entrenamiento automático de la CLI de ML.NET en PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bashtabmacosbash"></a>[Bash de macOS](#tab/macosbash)
+    # <a name="macos-bash"></a>[Bash de macOS](#tab/macosbash)
 
     ![Comando de entrenamiento automático de la CLI de ML.NET en PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
@@ -174,42 +174,42 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
     }
     ```
 
-- La primera línea de código crea simplemente un objeto `MLContext` necesario cada vez que se ejecuta el código de ML.NET.
+    - La primera línea de código crea simplemente un objeto `MLContext` necesario cada vez que se ejecuta el código de ML.NET.
 
-- La segunda línea de código está comentada porque no es necesario entrenar el modelo debido a que la herramienta de la CLI ya lo ha entrenado y guardado en el archivo ZIP serializado del modelo. Pero si desea ver *"cómo la CLI entrenó el modelo"* , puede quitar la marca del comentario en esa línea y ejecutar o depurar el código de aprendizaje para ese modelo particular de ML.
+    - La segunda línea de código está comentada porque no es necesario entrenar el modelo debido a que la herramienta de la CLI ya lo ha entrenado y guardado en el archivo ZIP serializado del modelo. Pero si desea ver *"cómo la CLI entrenó el modelo"* , puede quitar la marca del comentario en esa línea y ejecutar o depurar el código de aprendizaje para ese modelo particular de ML.
 
-- En la tercera línea de código, cargue el modelo desde el archivo ZIP del modelo serializado con la API `mlContext.Model.Load()` proporcionando la ruta de acceso al archivo ZIP de ese modelo.
+    - En la tercera línea de código, cargue el modelo desde el archivo ZIP del modelo serializado con la API `mlContext.Model.Load()` proporcionando la ruta de acceso al archivo ZIP de ese modelo.
 
-- En la cuarta línea de código, cree el objeto `PredictionEngine` con la API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. Necesitará el objeto `PredictionEngine` cada vez que desee realizar una predicción dirigida a una única muestra de datos (en este caso, un fragmento único de texto para su opinión).
+    - En la cuarta línea de código, cree el objeto `PredictionEngine` con la API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. Necesitará el objeto `PredictionEngine` cada vez que desee realizar una predicción dirigida a una única muestra de datos (en este caso, un fragmento único de texto para su opinión).
 
-- La quinta línea de código es donde creará esos *datos de ejemplo únicos* que se usarán para la predicción mediante una llamada a la función `CreateSingleDataSample()`. Dado que la herramienta de la CLI no sabe qué tipo de datos de ejemplo se usarán, dentro de esa función se carga la primera fila del conjunto de datos. Sin embargo, en este caso también puede crear sus propios datos "codificados de forma rígida", en lugar de la implementación actual de la función `CreateSingleDataSample()` mediante la actualización de este código más sencillo implementando esa función:
+    - La quinta línea de código es donde creará esos *datos de ejemplo únicos* que se usarán para la predicción mediante una llamada a la función `CreateSingleDataSample()`. Dado que la herramienta de la CLI no sabe qué tipo de datos de ejemplo se usarán, dentro de esa función se carga la primera fila del conjunto de datos. Sin embargo, en este caso también puede crear sus propios datos "codificados de forma rígida", en lugar de la implementación actual de la función `CreateSingleDataSample()` mediante la actualización de este código más sencillo implementando esa función:
 
-    ```csharp
-    private static ModelInput CreateSingleDataSample()
-    {
-        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-        return sampleForPrediction;
-    }
-    ```
+        ```csharp
+        private static ModelInput CreateSingleDataSample()
+        {
+            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+            return sampleForPrediction;
+        }
+        ```
 
 1. Ejecute el proyecto, ya sea mediante los datos de ejemplo originales cargados desde la primera fila del conjunto de datos o proporcionando sus propios datos de ejemplo codificados de forma rígida y personalizados. Debería obtener una predicción comparable a esta:
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     Ejecute la aplicación de consola desde Visual Studio presionando F5 (botón de reproducción):
 
     ![Comando de entrenamiento automático de la CLI de ML.NET en PowerShell](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bashtabmacosbash"></a>[Bash de macOS](#tab/macosbash)
+    # <a name="macos-bash"></a>[Bash de macOS](#tab/macosbash)
 
     Ejecute la aplicación de consola desde el símbolo del sistema escribiendo los siguientes comandos:
 
-     ```bash
-     cd SampleBinaryClassification
-     cd SampleBinaryClassification.ConsoleApp
+    ```dotnetcli
+    cd SampleBinaryClassification
+    cd SampleBinaryClassification.ConsoleApp
 
-     dotnet run
-     ```
+    dotnet run
+    ```
 
     ![Comando de entrenamiento automático de la CLI de ML.NET en PowerShell](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 
