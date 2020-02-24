@@ -2,15 +2,17 @@
 title: CLI de .NET Core
 titleSuffix: ''
 description: Información general de la CLI de .NET Core y sus características.
-ms.date: 08/14/2017
-ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920479"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543319"
 ---
 # <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
+
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
 La interfaz de la línea de comandos (CLI) de .NET Core es una cadena de herramientas multiplataforma para desarrollar, compilar, ejecutar y publicar aplicaciones .NET Core.
 
@@ -20,11 +22,7 @@ La CLI de .NET Core se incluye con el [SDK de .NET Core](../sdk.md). Para más
 
 De forma predeterminada, se instalan los siguientes comandos:
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-**Comandos básicos**
+### <a name="basic-commands"></a>Comandos básicos
 
 - [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
@@ -40,7 +38,7 @@ De forma predeterminada, se instalan los siguientes comandos:
 - [help](dotnet-help.md)
 - [store](dotnet-store.md)
 
-**Comandos de modificación del proyecto**
+### <a name="project-modification-commands"></a>Comandos de modificación del proyecto
 
 - [add package](dotnet-add-package.md)
 - [add reference](dotnet-add-reference.md)
@@ -48,7 +46,7 @@ De forma predeterminada, se instalan los siguientes comandos:
 - [remove reference](dotnet-remove-reference.md)
 - [list reference](dotnet-list-reference.md)
 
-**Comandos avanzados**
+### <a name="advanced-commands"></a>Comandos avanzados
 
 - [nuget delete](dotnet-nuget-delete.md)
 - [nuget locals](dotnet-nuget-locals.md)
@@ -56,64 +54,26 @@ De forma predeterminada, se instalan los siguientes comandos:
 - [msbuild](dotnet-msbuild.md)
 - [dotnet install script](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+### <a name="tool-management-commands"></a>Comandos de administración de herramientas
 
-**Comandos básicos**
+- [tool install](dotnet-tool-install.md)
+- [tool list](dotnet-tool-list.md)
+- [tool update](dotnet-tool-update.md)
+- [tool restore](global-tools.md#install-a-local-tool) **Disponible a partir del SDK de .NET Core 3.0**
+- [tool run](global-tools.md#invoke-a-local-tool) **Disponible a partir del SDK de .NET Core 3.0**
+- [tool uninstall](dotnet-tool-uninstall.md)
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-
-**Comandos de modificación del proyecto**
-
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
-
-**Comandos avanzados**
-
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
-
----
-
-La CLI adopta un modelo de extensibilidad que le permite especificar herramientas adicionales para sus proyectos. Para más información, consulte el tema [Modelo de extensibilidad de la CLI de .NET Core](extensibility.md).
+Las herramientas son aplicaciones de consola que se instalan mediante paquetes de NuGet y se invocan desde el símbolo del sistema. Puede escribir herramientas usted mismo o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Estructura de comandos
 
 La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando](#command) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app* :
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet new console
-dotnet restore
-dotnet build --output /build_output
-dotnet /build_output/my_app.dll
-```
-
----
 
 ### <a name="driver"></a>Controlador
 
@@ -141,11 +101,7 @@ Los argumentos que se pasan en la línea de comandos son los argumentos para el 
 
 Las opciones que se pasan en la línea de comandos son las opciones para el comando que se invoca. Por ejemplo, cuando ejecuta `dotnet publish --output /build_output`, la opción `--output` y su valor se pasan al comando `publish`.
 
-## <a name="migration-from-projectjson"></a>Migración desde project.json
-
-Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/ *.csproj*  para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de la versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y, luego, use `dotnet migrate` o actualice directamente los proyectos.
-
 ## <a name="see-also"></a>Vea también
 
 - [Repositorio de GitHub dotnet/sdk](https://github.com/dotnet/sdk/)
-- [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guía de instalación de .NET Core)
+- [.NET Core installation guide](../install/sdk.md) (Guía de instalación de .NET Core)
