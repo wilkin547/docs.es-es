@@ -2,18 +2,18 @@
 title: Protobuf any y de Fields for Variant Types-gRPC for WCF Developers
 description: Aprenda a usar el tipo any y la palabra clave de para representar los tipos de objeto Variant en los mensajes.
 ms.date: 09/09/2019
-ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6fe7acbd1ec35289f7ad6f3acee8509ab934619d
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971613"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543201"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf todos los campos y de para los tipos Variant
 
-El control de los tipos de propiedades dinámicas (es decir, las propiedades de tipo `object`) en WCF es complicado. Se deben especificar los serializadores, se deben proporcionar los atributos [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) , etc.
+Controlar los tipos de propiedades dinámicas (es decir, las propiedades de tipo `object`) en Windows Communication Foundation (WCF) es complicado. Por ejemplo, debe especificar los serializadores y proporcionar los atributos [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) .
 
-Protobuf proporciona dos opciones más sencillas para tratar con valores que pueden ser de más de un tipo. El tipo de `Any` puede representar cualquier tipo de mensaje conocido de protobuf, mientras que la palabra clave `oneof` permite especificar que solo se puede establecer un intervalo de campos en un mensaje determinado.
+El búfer de protocolo (protobuf) proporciona dos opciones más sencillas para tratar con valores que pueden ser de más de un tipo. El tipo de `Any` puede representar cualquier tipo de mensaje protobuf conocido. Y puede utilizar la palabra clave `oneof` para especificar que solo se puede establecer un intervalo de campos en cualquier mensaje.
 
 ## <a name="any"></a>Cualquiera
 
@@ -58,7 +58,7 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-El código de reflexión interno de protobuf usa el campo estático `Descriptor` en cada tipo generado para resolver `Any` tipos de campo. También hay un método `TryUnpack<T>`, pero que crea una instancia no inicializada de `T` incluso cuando se produce un error, por lo que es mejor usar el método `Is` tal y como se mostró anteriormente.
+El código de reflexión interno de protobuf usa el `Descriptor` campo estático en cada tipo generado para resolver `Any` tipos de campo. También hay un método `TryUnpack<T>`, pero que crea una instancia no inicializada de `T` incluso cuando se produce un error. Es mejor usar el método `Is` tal y como se mostró anteriormente.
 
 ## <a name="oneof"></a>De
 
@@ -82,7 +82,7 @@ message ChangeNotification {
 }
 ```
 
-Los campos del conjunto de `oneof` deben tener números de campo únicos dentro de la declaración de mensaje global.
+Los campos del conjunto de `oneof` deben tener números de campo únicos en la declaración de mensaje global.
 
 Cuando se usa `oneof`, el código C# generado incluye una enumeración que especifica cuál de los campos se ha establecido. Puede probar la enumeración para buscar el campo que se establece. Los campos que no se establecen devuelven `null` o el valor predeterminado, en lugar de producir una excepción.
 

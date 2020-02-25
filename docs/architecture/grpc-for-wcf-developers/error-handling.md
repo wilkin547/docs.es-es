@@ -1,17 +1,17 @@
 ---
 title: 'Control de errores: gRPC para desarrolladores de WCF'
-description: PENDIENTE DE REDACTAR
+description: Temas relacionados con el control de errores en gRPC. Incluye una tabla de los códigos de estado usados con más frecuencia.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c380c651f854adc97e8b2ead36d30c3b83662aac
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967790"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542798"
 ---
 # <a name="error-handling"></a>Control de errores
 
-WCF usa `FaultException<T>` y `FaultContract` para proporcionar información de error detallada, incluida la compatibilidad con el estándar de error de SOAP.
+Windows Communication Foundation (WCF) usa <xref:System.ServiceModel.FaultException%601> y [FaultContract](xref:System.ServiceModel.FaultContractAttribute) para proporcionar información de error detallada, incluida la compatibilidad con el estándar de error de SOAP.
 
 Desafortunadamente, la versión actual de gRPC carece de la sofisticación que se encuentra en WCF y solo tiene un control de errores integrado limitado basado en códigos de estado y metadatos simples. La tabla siguiente es una guía rápida de los códigos de estado usados más comúnmente:
 
@@ -25,9 +25,9 @@ Desafortunadamente, la versión actual de gRPC carece de la sofisticación que s
 | `GRPC_STATUS_PERMISSION_DENIED` | Error de autorización. |
 | `GRPC_STATUS_CANCELLED` | Se canceló la llamada, normalmente por el autor de la llamada. |
 
-## <a name="raising-errors-in-aspnet-core-grpc"></a>Generar errores en ASP.NET Core gRPC
+## <a name="raise-errors-in-aspnet-core-grpc"></a>Generar errores en ASP.NET Core gRPC
 
-Un servicio ASP.NET Core gRPC puede enviar una respuesta de error iniciando una `RpcException`, que puede ser detectada por el cliente como si estuviera en el mismo proceso. El `RpcException` debe incluir un código de estado y una descripción, y puede incluir opcionalmente metadatos y un mensaje de excepción más largo. Los metadatos se pueden usar para enviar datos compatibles, de forma similar a cómo `FaultContract` objetos podrían contener datos adicionales para errores de WCF.
+Un servicio ASP.NET Core gRPC puede enviar una respuesta de error iniciando una `RpcException`, que puede ser detectada por el cliente como si estuviera en el mismo proceso. El `RpcException` debe incluir un código de estado y una descripción, y puede incluir opcionalmente metadatos y un mensaje de excepción más largo. Los metadatos se pueden usar para enviar datos compatibles, de forma similar a cómo `FaultContract` objetos pueden contener datos adicionales para errores de WCF.
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -44,9 +44,9 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-## <a name="catching-errors-in-grpc-clients"></a>Detección de errores en clientes de gRPC
+## <a name="catch-errors-in-grpc-clients"></a>Detección de errores en clientes de gRPC
 
-Al igual que los clientes de WCF pueden detectar errores de <xref:System.ServiceModel.FaultException%601>, un cliente de gRPC puede detectar un `RpcException` para controlar los errores. Dado que `RpcException` no es un tipo genérico, no puede detectar distintos tipos de error en bloques diferentes, pero C#puede usar la característica de *filtros de excepciones* de para declarar bloques de `catch` independientes para códigos de estado diferentes, como se muestra en el ejemplo siguiente:
+Al igual que los clientes de WCF pueden detectar errores de <xref:System.ServiceModel.FaultException%601>, un cliente de gRPC puede detectar un `RpcException` para controlar los errores. Dado que `RpcException` no es un tipo genérico, no se pueden detectar distintos tipos de error en bloques diferentes. Pero puede usar C#la característica de *filtros de excepciones* de para declarar bloques de `catch` independientes para diferentes códigos de estado, como se muestra en el ejemplo siguiente:
 
 ```csharp
 try
@@ -67,9 +67,9 @@ catch (RpcException)
 > [!IMPORTANT]
 > Cuando proporcione metadatos adicionales para los errores, asegúrese de documentar las claves y los valores relevantes en la documentación de la API, o en los comentarios del archivo de `.proto`.
 
-## <a name="grpc-richer-error-model"></a>Modelo de error más completo de gRPC
+## <a name="grpc-richer-error-model"></a>modelo de error más completo de gRPC
 
-En el futuro, Google ha desarrollado un [modelo de errores más completo](https://cloud.google.com/apis/design/errors#error_model) que es más parecido a [FaultContract](xref:System.ServiceModel.FaultContractAttribute)de WCF, pero C# todavía no se admite en. Actualmente, solo está disponible para Go, Java, Python y C++, pero se espera que C# el soporte técnico de sea el próximo año.
+Google ha desarrollado un [modelo de errores más completo](https://cloud.google.com/apis/design/errors#error_model) , como [FaultContract](xref:System.ServiceModel.FaultContractAttribute)de WCF, pero C# aún no se admite este modelo. Actualmente, solo está disponible para Go, Java, Python y C++.
 
 >[!div class="step-by-step"]
 >[Anterior](metadata.md)
