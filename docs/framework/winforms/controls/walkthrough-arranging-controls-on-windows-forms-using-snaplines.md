@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740222"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628805"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Tutorial: organizar controles en Windows Forms mediante líneas de ajuste
 
@@ -124,7 +124,7 @@ Puede usar las líneas de ajuste para alinear los controles agrupados, así como
 
 ## <a name="align-a-label-to-a-controls-text"></a>Alinear una etiqueta con el texto de un control
 
-1. Arrastre un control <xref:System.Windows.Forms.TextBox> del **cuadro de herramientas** al formulario. Cuando coloque el control <xref:System.Windows.Forms.TextBox> en el formulario, haga clic en el glifo de etiqueta inteligente y seleccione la opción **establecer texto en TextBox1** . Para obtener más información, vea [Tutorial: realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md).
+1. Arrastre un control <xref:System.Windows.Forms.TextBox> del **cuadro de herramientas** al formulario. Cuando coloque el control <xref:System.Windows.Forms.TextBox> en el formulario, haga clic en el glifo de etiqueta inteligente y seleccione la opción **establecer texto en TextBox1** . Para obtener más información, vea [Tutorial: realizar tareas comunes con las acciones del diseñador](perform-common-tasks-design-actions.md).
 
 2. Arrastre un control <xref:System.Windows.Forms.Label> del **cuadro de herramientas** al formulario.
 

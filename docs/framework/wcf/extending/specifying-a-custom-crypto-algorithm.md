@@ -2,12 +2,12 @@
 title: Especificar un algoritmo criptográfico personalizado
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849108"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628688"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificar un algoritmo criptográfico personalizado
 WCF permite especificar un algoritmo criptográfico personalizado para usarlo cuando se cifren datos o se calculen firmas digitales. Para ello, se siguen estos pasos:  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La sección del elemento <`cryptoClasses`> crea la asignación entre SHA256CryptoServiceProvider y el alias "SHA256CSP". El elemento`nameEntry`< > crea la asignación entre el alias "SHA256CSP" y la dirección URL especificada http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ().  
+ La sección bajo el <`cryptoClasses`elemento > crea la asignación entre SHA256CryptoServiceProvider y el alias "SHA256CSP". El elemento <`nameEntry`> crea la asignación entre el alias "SHA256CSP" y la dirección URL especificada `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`.  
   
  Use el método <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> para registrar el algoritmo personalizado en código. Este método crea ambas asignaciones. En el ejemplo siguiente se muestra cómo llamar a este método:  
   
@@ -125,7 +125,7 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Para obtener un ejemplo de código completo, vea el ejemplo de [agilidad criptográfica en la seguridad de WCF](../samples/cryptographic-agility-in-wcf-security.md) .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Protección de servicios y clientes](../feature-details/securing-services-and-clients.md)
 - [Seguridad de servicios](../securing-services.md)

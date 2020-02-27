@@ -2,16 +2,18 @@
 title: Opciones del compilador
 description: Use F# las opciones de línea de comandos del compilador para F# controlar la compilación de las aplicaciones y bibliotecas.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424755"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628883"
 ---
 # <a name="compiler-options"></a>Opciones del compilador
 
-En este tema se describen las opciones de línea de F# comandos del compilador, FSC. exe. El entorno de compilación también se puede controlar estableciendo las propiedades del proyecto.
+En este tema se describen las opciones de línea de F# comandos del compilador, FSC. exe.
+
+El entorno de compilación también se puede controlar estableciendo las propiedades del proyecto. En el caso de los proyectos que tienen como destino .NET Core, la propiedad "otras marcas", `<OtherFlags>...</OtherFlags>` en `.fsproj`, se usa para especificar opciones de línea de comandos adicionales.
 
 ## <a name="compiler-options-listed-alphabetically"></a>Opciones del compilador por orden alfabético
 
@@ -57,7 +59,7 @@ En la tabla siguiente se muestran las opciones del compilador ordenadas alfabét
 |`--standalone`|Especifica que se genere un ensamblado que contenga todas sus dependencias para que se ejecute por sí solo sin necesidad de ensamblados adicionales, F# como la biblioteca.|
 |`--staticlink:assembly-name`|Vincula estáticamente el ensamblado especificado y todos los archivos DLL a los que se hace referencia que dependen de este ensamblado. Use el nombre de ensamblado, no el nombre del archivo DLL.|
 |`--subsystemversion`|Especifica la versión del subsistema del sistema operativo que va a usar el ejecutable generado. Use 6,02 para Windows 8.1, 6,01 para Windows 7, 6,00 para Windows Vista. Esta opción solo se aplica a los ejecutables, no a las dll y solo se debe usar si la aplicación depende de características de seguridad específicas disponibles solo en determinadas versiones del sistema operativo. Si se usa esta opción y un usuario intenta ejecutar la aplicación en una versión anterior del sistema operativo, se producirá un mensaje de error.|
-|<code>--tailcalls[+&#124;-]</code>|Habilita o deshabilita el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de forma predeterminada.|
+|<code>--tailcalls[+&#124;-]</code>|Habilita o deshabilita el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de manera predeterminada.|
 |<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Especifica el tipo y el nombre de archivo del código compilado generado.<ul><li>`exe` hace referencia a una aplicación de consola.<br /></li><li>`winexe` significa una aplicación Windows, que difiere de la aplicación de consola en que no tiene definidos flujos de entrada/salida estándar (stdin, stdout y stderr).<br /></li><li>`library` es un ensamblado sin un punto de entrada.<br /></li><li>`module` es un módulo de .NET Framework (. netmodule) que se puede combinar posteriormente con otros módulos en un ensamblado.<br /></li><ul/>Esta opción del compilador es C# equivalente a la opción del compilador con el mismo nombre. Para obtener más información, [ &#47;vea &#40;opciones&#35; &#41;del compilador de C de destino](https://msdn.microsoft.com/library/6h25dztx.aspx).|
 |`--times`|Muestra información de tiempo para la compilación.|
 |`--utf8output`|Habilita la impresión del resultado del compilador en la codificación UTF-8.|
@@ -69,7 +71,7 @@ En la tabla siguiente se muestran las opciones del compilador ordenadas alfabét
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----|-----------|
 |[Opciones de F# Interactive](fsharp-interactive-options.md)|Describe las opciones de línea de comandos admitidas por el F# intérprete, FSI. exe.|
 |[Referencia de propiedades del proyecto](/visualstudio/ide/reference/project-properties-reference)|Describe la interfaz de usuario para los proyectos, incluidas las páginas de propiedades de proyecto que proporcionan opciones de compilación.|

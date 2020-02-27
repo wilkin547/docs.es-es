@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745983"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628714"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Desarrollar controles Windows Forms en tiempo de diseño
 
@@ -36,7 +36,7 @@ Muestra cómo crear un control compuesto simple en C#.
 [Tutorial: heredar de un Control Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Muestra cómo crear un control de Windows Forms simple utilizando la herencia en C#.
 
-[Tutorial: realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Tutorial: realizar tareas comunes con las acciones del diseñador](perform-common-tasks-design-actions.md)\
 Muestra cómo usar la característica de etiquetas inteligentes en controles de Windows Forms.
 
 [Tutorial: serializar colecciones de tipos estándar con la\ DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)

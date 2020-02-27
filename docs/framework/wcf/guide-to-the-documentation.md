@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319819"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628766"
 ---
 # <a name="guide-to-the-documentation"></a>Guía de la documentación
 Aquí se proporcionan instrucciones sobre la documentación de Windows Communication Foundation (WCF). Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  
-  
- Para instalar una versión independiente de la documentación y un visor de ayuda, descargue el [Microsoft Windows SDK v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Principiante en cuanto a la programación de Windows Communication Foundation  
   
@@ -61,7 +59,7 @@ Aquí se proporcionan instrucciones sobre la documentación de Windows Communica
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Protocolos WS-* admitidos en Windows Communication Foundation  
  Para ver una lista de protocolos admitidos en los enlaces proporcionados por el sistema, consulte [protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Para ver la lista de enlaces proporcionados por el sistema, consulte [enlaces proporcionados por el sistema](system-provided-bindings.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de Windows Communication Foundation](./samples/index.md)
 - [Información conceptual](conceptual-overview.md)
