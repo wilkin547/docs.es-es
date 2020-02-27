@@ -1,19 +1,19 @@
 ---
 title: Suscripción a eventos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937147"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501808"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
 El primer paso para usar el bus de eventos es suscribir los microservicios a los eventos que quieren recibir. Eso debe realizarse en los microservicios de receptor.
 
-En el siguiente código simple se muestra lo que cada microservicio de receptor debe implementar al iniciar el servicio (es decir, en la clase `Startup`) para que se suscriba a los eventos que necesita. En este caso, el microservicio `basket.api` necesita suscribirse a los mensajes `ProductPriceChangedIntegrationEvent` y `OrderStartedIntegrationEvent`.
+En el siguiente código simple se muestra lo que cada microservicio de receptor debe implementar al iniciar el servicio (es decir, en la clase `Startup`) para que se suscriba a los eventos que necesita. En este caso, el microservicio `basket-api` necesita suscribirse a los mensajes `ProductPriceChangedIntegrationEvent` y `OrderStartedIntegrationEvent`.
 
 Por ejemplo, la suscripción al evento `ProductPriceChangedIntegrationEvent` hace que el microservicio de cesta sea consciente de los cambios en el precio del producto y le permite advertir al usuario sobre el cambio si ese producto está en la cesta de la compra del usuario.
 
@@ -301,7 +301,7 @@ Algún procesamiento de mensajes es idempotente de forma inherente. Por ejemplo,
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Honoring message idempotency** (Respeto de la idempotencia de los mensajes)  
+- **Respeto de la idempotencia de los mensajes** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Desduplicación de mensajes de eventos de integración
@@ -338,7 +338,7 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Coherencia de los eventos** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip Brown. Estrategias para la integración de contextos delimitados** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Teorema CAP** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **¿Qué es el teorema CAP?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Guía de confiabilidad**[documentación de RabbitMQ] \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [Anterior](rabbitmq-event-bus-development-test-environment.md)

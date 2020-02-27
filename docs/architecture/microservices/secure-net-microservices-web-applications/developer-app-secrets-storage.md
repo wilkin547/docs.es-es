@@ -2,14 +2,13 @@
 title: Almacenar secretos de aplicación de forma segura durante el desarrollo
 description: 'Seguridad en microservicios y aplicaciones web de .NET: no almacene sus secretos de aplicación (contraseñas, cadenas de conexión o claves de API) en el control de código fuente y aprenda las opciones que puede usar en ASP.NET Core (en particular, debe aprender a controlar los "secretos de usuario").'
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675702"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501798"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Almacenar secretos de aplicación de forma segura durante el desarrollo
 
@@ -39,7 +38,7 @@ Tenga en cuenta que las variables de entorno suelen almacenarse como texto sin f
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Almacenamiento de secretos mediante ASP.NET Core Secret Manager
 
-La herramienta [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) de ASP.NET Core proporciona otro método para mantener secretos fuera del código fuente. Para usar la herramienta Secret Manager, instale el paquete **Microsoft.Extensions.Configuration.SecretManager** en su archivo del proyecto. Una vez que esa dependencia está presente y se ha restaurado, se puede usar el comando `dotnet user-secrets` para establecer el valor de los secretos desde la línea de comandos. Estos secretos se almacenarán en un archivo JSON en el directorio del perfil del usuario (los detalles varían según el sistema operativo), lejos del código fuente.
+La herramienta [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) de ASP.NET Core proporciona otro método para mantener los secretos fuera del código fuente **durante el desarrollo**. Para usar la herramienta Secret Manager, instale el paquete **Microsoft.Extensions.Configuration.SecretManager** en su archivo del proyecto. Una vez que esa dependencia está presente y se ha restaurado, se puede usar el comando `dotnet user-secrets` para establecer el valor de los secretos desde la línea de comandos. Estos secretos se almacenarán en un archivo JSON en el directorio del perfil del usuario (los detalles varían según el sistema operativo), lejos del código fuente.
 
 La propiedad `UserSecretsId` del proyecto que está usando los secretos organiza los secretos que establece la herramienta Secret Manager. Por tanto, debe asegurarse de establecer la propiedad UserSecretsId en el archivo del proyecto, como se muestra en el siguiente fragmento. El valor predeterminado es un GUID asignado por Visual Studio, pero la cadena real no es importante mientras sea única en su equipo.
 

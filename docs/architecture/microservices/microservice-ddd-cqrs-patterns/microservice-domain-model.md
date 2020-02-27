@@ -1,13 +1,13 @@
 ---
 title: Diseño de un modelo de dominio de microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los conceptos clave para diseñar un modelo de dominio orientado a un DDD
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737387"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502332"
 ---
 # <a name="design-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -74,9 +74,9 @@ Es posible que algo que sea una entidad en un microservicio no lo sea en otro, p
 
 Una persona con un nombre y apellido normalmente es una entidad debido a que una persona tiene identidad, incluso si el nombre y apellido coinciden con otro conjunto de valores, por ejemplo si también hacen referencia a otra persona.
 
-Los objetos de valor son difíciles de administrar en bases de datos relacionales y ORM como EF, mientras que en las bases de datos orientadas a documentos son más fáciles de implementar y usar.
+Los objetos de valor son difíciles de administrar en bases de datos relacionales y ORM como Entity Framework (EF), mientras que en las bases de datos orientadas a documentos son más fáciles de implementar y usar.
 
-EF Core 2.0 incluye la característica [Entidades poseídas](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que facilita administrar los objetos de valor, como veremos en detalle más adelante.
+EF Core 2.0 y las versiones posteriores incluyen la característica [Entidades poseídas](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), que facilita la administración de los objetos de valor, como veremos en detalle más adelante.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
