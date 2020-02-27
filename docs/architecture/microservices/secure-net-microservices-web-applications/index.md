@@ -3,12 +3,12 @@ title: Proteger microservicios y aplicaciones web de .NET
 description: 'Seguridad en microservicios y aplicaciones web .NET: familiarícese con las opciones de autenticación en las aplicaciones web ASP.NET Core.'
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501650"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628337"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Protección de microservicios y aplicaciones web .NET
 
@@ -18,13 +18,13 @@ Hay tantos aspectos sobre la seguridad en los microservicios y las aplicaciones 
 
 A menudo es necesario que los recursos y las API publicados por un servicio se limiten a determinados usuarios o clientes de confianza. El primer paso para tomar este tipo de decisiones de confianza en el nivel de API es la autenticación. La autenticación es el proceso de comprobar de forma fiable la identidad de un usuario.
 
-Cuando hay microservicios, la autenticación normalmente se controla de forma centralizada. Si usa una puerta de enlace de API, esa puerta es un buen lugar para realizar la autenticación, como se muestra en la figura 9-1. Si emplea este método, asegúrese de que no es posible ponerse en contacto directamente con los microservicios individuales (sin la puerta de enlace de API), a menos que haya aplicado seguridad adicional para autenticar si los mensajes provienen de la puerta de enlace.
+En escenarios de microservicios, la autenticación suele controlarse de manera centralizada. Si usa una puerta de enlace de API, esa puerta es un buen lugar para realizar la autenticación, como se muestra en la figura 9-1. Si emplea este método, asegúrese de que no es posible ponerse en contacto directamente con los microservicios individuales (sin la puerta de enlace de API), a menos que haya aplicado seguridad adicional para autenticar si los mensajes provienen de la puerta de enlace.
 
 ![Diagrama en el que se muestra cómo interactúa la aplicación móvil cliente con el back-end.](./media/index/api-gateway-centralized-authentication.png)
 
 **Figura 9-1**. Autenticación centralizada con una puerta de enlace de API.
 
-Cuando la puerta de enlace de API centraliza la autenticación, agrega información de usuario al reenviar las solicitudes a los microservicios. Si se puede tener acceso directamente a los servicios, es posible emplear un servicio de autenticación como Azure Active Directory o un microservicio de autenticación dedicado que actúe como servicio de token de seguridad (STS) puede utilizarse para autenticar a los usuarios. Las decisiones de confianza se comparten entre los servicios con tokens de seguridad o cookies. (Si es necesario, estos tokens se pueden compartir entre aplicaciones de ASP.NET Core mediante el [uso compartido de cookies](/aspnet/core/security/cookie-sharing)). Este patrón se ilustra en la figura 9-2.
+Cuando la puerta de enlace de API centraliza la autenticación, agrega información de usuario al reenviar las solicitudes a los microservicios. Si se puede tener acceso directamente a los servicios, entonces para la autenticación de los usuarios se puede usar un servicio de autenticación como Azure Active Directory o un microservicio de autenticación dedicado que actúe como un servicio de token de seguridad (STS). Las decisiones de confianza se comparten entre los servicios con tokens de seguridad o cookies. (Si es necesario, estos tokens se pueden compartir entre aplicaciones de ASP.NET Core mediante el [uso compartido de cookies](/aspnet/core/security/cookie-sharing)). Este patrón se ilustra en la figura 9-2.
 
 ![Diagrama en el que se muestra la autenticación a través de microservicios de back-end.](./media/index/identity-microservice-authentication.png)
 
@@ -34,7 +34,7 @@ Cuando se accede directamente a los microservicios, la confianza (que incluye la
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Autenticación con ASP.NET Core Identity
 
-El principal mecanismo de ASP.NET Core para identificar a los usuarios de una aplicación es el sistema de pertenencia [ASP.NET Core Identity](/aspnet/core/security/authentication/identity). Identity de ASP.NET Core almacena información de usuario (incluida la información de inicio de sesión, roles y notificaciones) en un almacén de datos configurado por el desarrollador. Normalmente, el almacén de datos de ASP.NET Core Identity es un almacén de Entity Framework incluido en el paquete `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Pero se pueden usar almacenes personalizados u otros paquetes de terceros para almacenar información de identidad en Table Storage de Azure, Cosmos DB u otras ubicaciones.
+El principal mecanismo de ASP.NET Core para identificar a los usuarios de una aplicación es el sistema de pertenencia [ASP.NET Core Identity](/aspnet/core/security/authentication/identity). ASP.NET Core Identity almacena la información del usuario (incluida la información de inicio de sesión, los roles y las notificaciones) en un almacén de datos configurado por el desarrollador. Normalmente, el almacén de datos de ASP.NET Core Identity es un almacén de Entity Framework incluido en el paquete `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Pero se pueden usar almacenes personalizados u otros paquetes de terceros para almacenar información de identidad en Table Storage de Azure, Cosmos DB u otras ubicaciones.
 
 > [!TIP]
 > ASP.NET Core 2.1 y versiones posteriores proporcionan [ASP.NET Core Identity](/aspnet/core/security/authentication/identity) como una [biblioteca de clases de Razor](/aspnet/core/razor-pages/ui-class), así que gran parte del código necesario en el proyecto no se verá, como era el caso de las versiones anteriores. Para más información sobre cómo personalizar el código de Identity para satisfacer sus necesidades, consulte [Identidad de scaffolding en proyectos de ASP.NET Core](/aspnet/core/security/authentication/scaffold-identity).
@@ -119,7 +119,7 @@ public void ConfigureServices(IServiceCollection services)
 
 En la tabla siguiente se muestran proveedores de autenticación externos populares y sus paquetes NuGet asociados:
 
-| **Proveedor**  | **Package**                                          |
+| **Proveedor**  | **Paquete**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
 | **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
@@ -135,8 +135,8 @@ En todos los casos, debe completar un procedimiento de registro de aplicaciones 
 
 Para más información sobre la configuración de la aplicación para un proveedor externo, consulte la [autenticación de proveedores externos en la documentación de ASP.NET Core](/aspnet/core/security/authentication/social/)).
 
-> [!TIP]
-El middleware de autorización y los servicios mencionados anteriormente administran todos los detalles. Por lo tanto, solo tiene que elegir la opción de autenticación **Cuenta de usuario individual** al crear el proyecto de aplicación web de ASP.NET Code en Visual Studio, como se muestra en la figura 9-3, además de registrar los proveedores de autenticación mencionados anteriormente.
+>[!TIP]
+>El middleware de autorización y los servicios mencionados anteriormente administran todos los detalles. Por lo tanto, solo tiene que elegir la opción de autenticación **Cuenta de usuario individual** al crear el proyecto de aplicación web de ASP.NET Code en Visual Studio, como se muestra en la figura 9-3, además de registrar los proveedores de autenticación mencionados anteriormente.
 
 ![Captura de pantalla del cuadro de diálogo Nueva aplicación web ASP.NET Core.](./media/index/select-individual-user-account-authentication-option.png)
 

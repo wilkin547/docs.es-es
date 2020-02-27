@@ -2,12 +2,12 @@
 title: Tipos de cambios importantes
 description: Obtenga más información sobre los esfuerzos de .NET Core por mantener la compatibilidad entre versiones de .NET para los desarrolladores, así como sobre los tipos de cambios que se consideran importantes.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092985"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628597"
 ---
 # <a name="changes-that-affect-compatibility"></a>Cambios que afectan a la compatibilidad
 
@@ -49,7 +49,7 @@ Los cambios en esta categoría modifican el área expuesta pública de un tipo. 
 
   El ensamblado *anterior* debe estar marcado con el <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> que apunta al nuevo ensamblado.
 
-- ✔️ **PERMITIDO: Cambio de un tipo [struct](../../csharp/language-reference/keywords/struct.md) a un tipo `readonly struct`**
+- ✔️ **PERMITIDO: Cambio de un tipo [struct](../../csharp/language-reference/builtin-types/struct.md) a un tipo `readonly struct`**
 
   No se permite cambiar un tipo `readonly struct` a un tipo `struct`.
 
@@ -77,11 +77,11 @@ Los cambios en esta categoría modifican el área expuesta pública de un tipo. 
 
   Hay una excepción a la regla para la eliminación de interfaces: puede agregar la implementación de una interfaz que se derive de la interfaz eliminada. Por ejemplo, puede quitar <xref:System.IDisposable> si el tipo o interfaz ahora implementa <xref:System.ComponentModel.IComponent>, que implementa <xref:System.IDisposable>.
 
-- ❌ **NO PERMITIDO: Cambio de un tipo `readonly struct` a un tipo [struct](../../csharp/language-reference/keywords/struct.md)**
+- ❌ **NO PERMITIDO: Cambio de un tipo `readonly struct` a un tipo [struct](../../csharp/language-reference/builtin-types/struct.md)**
 
   No obstante, se permite el cambio de un tipo `struct` a un tipo `readonly struct`.
 
-- ❌ **NO PERMITIDO: Cambio de un tipo [struct](../../csharp/language-reference/keywords/struct.md) a un tipo `ref struct` y viceversa**
+- ❌ **NO PERMITIDO: Cambio de un tipo [struct](../../csharp/language-reference/builtin-types/struct.md) a un tipo `ref struct` y viceversa**
 
 - ❌ **NO PERMITIDO: Reducción de la visibilidad de un tipo**
 
@@ -300,7 +300,7 @@ Los cambios en esta categoría modifican el área expuesta pública de un tipo. 
 
 - ✔️ **PERMITIDO: Adición de [params](../../csharp/language-reference/keywords/params.md) a un parámetro**
 
-- ❌ **NO PERMITIDO: Cambio de un tipo [struct](../../csharp/language-reference/keywords/struct.md) a un tipo [class](../../csharp/language-reference/keywords/class.md) y viceversa**
+- ❌ **NO PERMITIDO: Cambio de un tipo [struct](../../csharp/language-reference/builtin-types/struct.md) a un tipo [class](../../csharp/language-reference/keywords/class.md) y viceversa**
 
 - ❌ **NO PERMITIDO: Adición de la palabra clave [checked](../../csharp/language-reference/keywords/virtual.md) a un bloque de código**
 
