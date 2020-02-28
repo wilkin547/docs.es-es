@@ -2,12 +2,12 @@
 title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711667"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673295"
 ---
 # <a name="a-tour-of-the-c-language"></a>Paseo por el lenguaje C#
 
@@ -64,8 +64,6 @@ Hay mucha más información sobre C#. Los temas siguientes proporcionan introduc
   - Use ***instrucciones*** para expresar las acciones de un programa.
 - [Clases y objetos](classes-and-objects.md)
   - Las ***clases*** son los tipos más fundamentales de C#. Los ***objetos*** son instancias de una clase. Las clases se generan mediante ***miembros***, que también se tratan en este tema.
-- [Structs](structs.md)
-  - Las ***estructuras*** son estructuras de datos que, a diferencia de las clases, son tipos de valor.
 - [Matrices](arrays.md)
   - Una ***matriz*** es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados.
 - [Interfaces](interfaces.md)

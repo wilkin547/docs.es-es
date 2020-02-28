@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340364"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503534"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Creación de una plantilla de proyecto
 
@@ -47,7 +47,7 @@ working
 
 ## <a name="modify-programcs"></a>Modificación de Program.cs
 
-Abra el archivo _program.cs_. El proyecto de la consola no usa un punto de entrada asincrónico, por lo que vamos a agregarlo. Cambie el código por lo siguiente y guarde el archivo:
+Abra el archivo _program.cs_. El proyecto de la consola no usa un punto de entrada asincrónico, por lo que vamos a agregarlo. Cambie el código por lo siguiente y guarde el archivo.
 
 ```csharp
 using System;
@@ -85,10 +85,17 @@ Actualicemos la versión del lenguaje C# que usa el proyecto a la versión 8.0. 
 
 ## <a name="build-the-project"></a>Compilar el proyecto
 
-Antes de completar una plantilla de proyecto, debe probarla para asegurarse de que se compila y ejecuta correctamente. En el terminal, ejecute el comando `dotnet run` y debería ver la salida siguiente:
+Antes de completar una plantilla de proyecto, debe probarla para asegurarse de que se compila y ejecuta correctamente.
+
+En el terminal, ejecute el comando siguiente.
+
+```dotnetcli
+dotnet run
+```
+
+Obtendrá la siguiente salida.
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
@@ -102,7 +109,7 @@ En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo
 
 Cuando se crea una plantilla, todos los archivos y las carpetas de la carpeta de la plantilla se incluyen como parte de la plantilla, a excepción de la carpeta de configuración especial. Esta carpeta de configuración se denomina _.template.config_.
 
-En primer lugar, cree una subcarpeta con el nombre _.template.config_ y entre en ella. Luego, cree un archivo denominado _template.json_. La estructura de la carpeta debe verse así:
+En primer lugar, cree una subcarpeta con el nombre _.template.config_ y entre en ella. Luego, cree un archivo denominado _template.json_. La estructura de carpetas debe tener este aspecto.
 
 ```console
 working
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON siguiente y guárdelo:
+Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON siguiente y guárdelo.
 
 ```json
 {
@@ -133,12 +140,17 @@ Este archivo de configuración contiene todos los valores de la plantilla. Puede
 
 El elemento `classifications` representa la columna **tags** que ve cuando ejecuta `dotnet new` y obtiene una lista de plantillas. Los usuarios también pueden hacer una búsqueda según las etiquetas de clasificación. No confunda la propiedad `tags` del archivo .json con la lista de etiquetas `classifications`. Lamentablemente, son dos elementos que tienen nombres similares. El esquema completo del archivo *template.json* puede encontrarse en el [Almacenamiento del esquema JSON](http://json.schemastore.org/template). Para más información sobre el archivo *template.json*, consulte la [wiki de plantillas dotnet](https://github.com/dotnet/templating/wiki).
 
-Ahora que tiene un archivo _.template.config/template.json_ válido, la plantilla está lista para instalarla. Antes de instalar la plantilla, asegúrese de eliminar cualquier archivo o carpeta de archivos adicional que no quiere que se incluya en la plantilla, como las carpetas _bin_ o _obj_. En el terminal, vaya a la carpeta _consoleasync_ y ejecute `dotnet new -i .\` para instalar la plantilla ubicada en la carpeta actual. Si usa un sistema operativo Linux o MacOS, use una barra diagonal: `dotnet new -i ./`.
+Ahora que tiene un archivo _.template.config/template.json_ válido, la plantilla está lista para instalarla. Antes de instalar la plantilla, asegúrese de eliminar cualquier archivo o carpeta de archivos adicional que no quiere que se incluya en la plantilla, como las carpetas _bin_ o _obj_. En el terminal, vaya a la carpeta _consoleasync_ y ejecute `dotnet new -i .\` para instalar la plantilla ubicada en la carpeta actual. Si usa un sistema operativo Linux o macOS, use una barra diagonal: `dotnet new -i ./`.
 
 Este comando genera la lista de las plantillas instaladas, que debería incluir la suya.
 
+```dotnetcli
+dotnet new -i .\
+```
+
+Verá un resultado similar al siguiente.
+
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -159,17 +171,33 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>Prueba de la plantilla de proyecto
 
-Ahora que tiene instalada una plantilla de elemento, pruébela. Vaya a la carpeta _test/_ y cree una aplicación de consola con `dotnet new consoleasync`. Esto genera un proyecto de trabajo que puede probar fácilmente con el comando `dotnet run`.
+Ahora que tiene instalada una plantilla de elemento, pruébela.
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
-```
+1. Vaya a la carpeta _test_.
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
+1. Cree una aplicación de consola con el siguiente comando que genera un proyecto de trabajo que puede probar fácilmente con el comando `dotnet run`.
+
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    Obtendrá la siguiente salida.
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. Ejecute el proyecto con el comando siguiente.
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Obtendrá la siguiente salida.
+
+    ```console
+    Hello World with C# 8.0!
+    ```
 
 ¡Enhorabuena! Ha creado e implementado una plantilla de proyecto con .NET Core. Como preparación para la próxima parte de esta serie de tutoriales, debe desinstalar la plantilla que creó. Asegúrese de eliminar también todos los archivos de la carpeta _test_. Esto le permitirá volver a un estado limpio listo para la próxima sección importante de este tutorial.
 
@@ -177,8 +205,13 @@ Hello World with C# 8.0!
 
 Como instaló la plantilla a través de una ruta de acceso de archivo, debe desinstalarla con la ruta de acceso de archivo **absoluta**. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas instaladas. Su plantilla debe aparecer en último lugar. Use la ruta de acceso mostrada para desinstalar la plantilla con el comando `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
 
+```dotnetcli
+dotnet new -u
+```
+
+Verá un resultado similar al siguiente.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,8 +239,10 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+Para desinstalar una plantilla, ejecute el siguiente comando.
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes

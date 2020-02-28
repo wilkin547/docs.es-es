@@ -1,21 +1,17 @@
 ---
 title: Comando dotnet
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734125"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503642"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -63,13 +59,13 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 ## <a name="options"></a>Opciones
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  Define la configuración de compilación. El valor predeterminado es `Debug`.
+  Define la configuración de compilación. El valor predeterminado para la mayoría de los proyectos es `Debug`, pero puede invalidar los valores de configuración de compilación en el proyecto.
 
 - **`--force`**
 
-  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*. Opción disponible desde el SDK de .NET Core 2.0.
+  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 - **`--no-dependencies`**
 
-  Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz. Opción disponible desde el SDK de .NET Core 2.0.
+  Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.
 
 - **`--no-restore`**
 
-  No ejecuta una restauración implícita al ejecutar el comando. Opción disponible desde el SDK de .NET Core 2.0.
+  No ejecuta una restauración implícita al ejecutar el comando.
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). Opción disponible desde el SDK de .NET Core 2.0.
+  Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Empaquete el proyecto y use un tiempo de ejecución específico (Windows 10) para la operación de restauración (SDK de .NET Core 2.0 y versiones superiores):
+- Empaquete el proyecto y use un entorno de ejecución específico (Windows 10) para la operación de restauración:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

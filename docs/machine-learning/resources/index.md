@@ -2,24 +2,21 @@
 title: Recursos de ML.NET
 description: Más información sobre el aprendizaje automático y ML.NET
 ms.topic: reference
-ms.date: 11/07/2019
-ms.openlocfilehash: 1bd35c2de807417cd81f2734191f06ccae413b74
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.date: 02/25/2020
+ms.openlocfilehash: 2ec58352a310130d6611ed351ea563aeca558f01
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739869"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628701"
 ---
 # <a name="mlnet-resources"></a>Recursos de ML.NET
 
 Para obtener más información sobre ML.NET, vea los siguientes recursos:
 
 - [Glosario](glossary.md) de terminología relacionada con el aprendizaje automático y ML.NET
+- [Recursos de aprendizaje de Azure sobre el generador de modelos](azure-training-concepts-model-builder.md)
 - [Telemetría de la CLI de ML.NET](ml-net-cli-telemetry.md)
-- [Mejora de la precisión del modelo de ML.NET](improve-machine-learning-model-ml-net.md)
-- [Métricas de evaluación de modelos en ML.NET](metrics.md)
-- [Tareas de aprendizaje automático en ML.NET](tasks.md)
-- [Transformaciones de datos](transforms.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340380"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503558"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Creación de una plantilla de elemento
 
@@ -41,7 +41,7 @@ Esta serie usa una "carpeta de trabajo", donde se encuentra el origen de la plan
 
 En primer lugar, cree la carpeta principal, no importa con qué nombre. Luego, cree una subcarpeta denominada _working_ (trabajo). Dentro de la carpeta _working_, cree una subcarpeta con el nombre _templates_ (plantillas).
 
-A continuación, cree una carpeta dentro de la carpeta principal con el nombre _test_ (prueba). La estructura de carpetas debe tener el siguiente aspecto:
+A continuación, cree una carpeta dentro de la carpeta principal con el nombre _test_ (prueba). La estructura de carpetas debe tener el siguiente aspecto.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON siguiente y guárdelo:
+Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON siguiente y guárdelo.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Ahora que tiene instalada una plantilla de elemento, pruébela. Vaya a la carpeta _test/_ y cree una aplicación de consola con `dotnet new console`. Esto genera un proyecto de trabajo que puede probar fácilmente con el comando `dotnet run`.
 
+```dotnetcli
+dotnet new console
+```
+
+Verá un resultado similar al siguiente.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Ejecute el proyecto.
+
+```dotnetcli
+dotnet run
+```
+
+Obtendrá la siguiente salida.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Luego, ejecute `dotnet new stringext` para generar _CommonExtensions.cs_ desde la plantilla.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Obtendrá la siguiente salida.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 Vuelva a ejecutar el programa y verá que el resultado se invirtió.
 
+```dotnetcli
+dotnet run
+```
+
+Obtendrá la siguiente salida.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ C:\test> dotnet run
 
 Como instaló la plantilla a través de la ruta de acceso de archivo, debe desinstalarla con la ruta de acceso de archivo **absoluta**. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas instaladas. Su plantilla debe aparecer en último lugar. Use la ruta de acceso mostrada para desinstalar la plantilla con el comando `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
 
+```dotnetcli
+dotnet new -u
+```
+
+Verá un resultado similar al siguiente.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Para desinstalar una plantilla, ejecute el siguiente comando.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes

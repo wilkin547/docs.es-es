@@ -2,21 +2,17 @@
 title: Comando dotnet nuget locals
 description: El comando dotnet nuget locals borra o muestra los recursos de NuGet locales, como la caché de solicitudes http, la caché temporal o la carpeta de paquetes global de toda la máquina.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734079"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503685"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -35,7 +31,7 @@ El comando `dotnet nuget locals` borra o enumera los recursos locales de NuGet e
 
 ## <a name="arguments"></a>Argumentos
 
-* **`CACHE_LOCATION`**
+- **`CACHE_LOCATION`**
 
   La ubicación de caché que se va a mostrar o borrar. Acepta uno de los valores siguientes:
 
@@ -46,49 +42,49 @@ El comando `dotnet nuget locals` borra o enumera los recursos locales de NuGet e
 
 ## <a name="options"></a>Opciones
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   Fuerza la ejecución de la aplicación mediante una referencia cultural en inglés invariable.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Imprime una corta ayuda para el comando.
 
-* **`-c|--clear`**
+- **`-c|--clear`**
 
   La opción de borrado ejecuta una operación de borrado sobre el tipo de caché especificado. El contenido de los directorios de caché se elimina de forma recursiva. El usuario o grupo de ejecución deben tener permiso para los archivos en los directorios de la caché. En caso contrario, se muestra un error para indicar los archivos o las carpetas que no se han borrado.
 
-* **`-l|--list`**
+- **`-l|--list`**
 
   La opción de lista se usa para mostrar la ubicación del tipo de caché especificado.
 
 ## <a name="examples"></a>Ejemplos
 
-* Muestra las rutas de acceso de todos los directorios de caché locales (el directorio de caché http, el directorio de caché de paquetes globales y el directorio de caché temporal):
+- Muestra las rutas de acceso de todos los directorios de caché locales (el directorio de caché http, el directorio de caché de paquetes globales y el directorio de caché temporal):
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-* Muestra la ruta de acceso del directorio de la caché de solicitudes http:
+- Muestra la ruta de acceso del directorio de la caché de solicitudes http:
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-* Borra todos los archivos de todos los directorios de caché locales (directorio de caché http, directorio de caché de paquetes globales y directorio de caché temporal):
+- Borra todos los archivos de todos los directorios de caché locales (directorio de caché http, directorio de caché de paquetes globales y directorio de caché temporal):
 
   ```dotnetcli
   dotnet nuget locals all --clear
   ```
 
-* Borra todos los archivos del directorio local de la caché de paquetes globales:
+- Borra todos los archivos del directorio local de la caché de paquetes globales:
 
   ```dotnetcli
   dotnet nuget locals global-packages -c
   ```
 
-* Borra todos los archivos del directorio local de la caché temporal:
+- Borra todos los archivos del directorio local de la caché temporal:
 
   ```dotnetcli
   dotnet nuget locals temp -c

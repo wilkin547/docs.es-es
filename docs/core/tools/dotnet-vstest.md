@@ -2,12 +2,12 @@
 title: Comando dotnet vstest
 description: El comando dotnet vstest compila un proyecto y todas sus dependencias.
 ms.date: 05/30/2018
-ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 3fdb5443d6d0cfbe1e7e88bc824cbb930f211260
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215309"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451186"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -21,7 +21,7 @@ ms.locfileid: "77215309"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -30,7 +30,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
@@ -38,7 +38,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -60,7 +60,7 @@ Ejecutar pruebas desde los ensamblados especificados. Separar varios nombres de 
 
 ## <a name="options"></a>Opciones
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -88,7 +88,7 @@ Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos dispon
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`. El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar expresiones secundarias.
+Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`. El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar subexpresiones.
 
 `-?|--Help|/?|/Help`
 
@@ -148,7 +148,7 @@ Lee el archivo de respuesta para ver más opciones.
 
 Especifica argumentos adicionales para pasar al adaptador. Los argumentos se especifican como pares de nombre-valor en el formato `<n>=<v>`, donde `<n>` es el nombre del argumento y `<v>` es el valor del argumento. Use un espacio para separar varios argumentos.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -176,7 +176,7 @@ Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos dispon
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`. El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar expresiones secundarias.
+Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`. El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar subexpresiones.
 
 `-?|--Help|/?|/Help`
 
@@ -224,7 +224,7 @@ Permite registros detallados para la plataforma de prueba. Los registros se escr
 
 Especifica argumentos adicionales para pasar al adaptador. Los argumentos se especifican como pares de nombre-valor en el formato `<n>=<v>`, donde `<n>` es el nombre del argumento y `<v>` es el valor del argumento. Use un espacio para separar varios argumentos.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -252,7 +252,7 @@ Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos dispon
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`. El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar expresiones secundarias.
+Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`. El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar subexpresiones.
 
 `-?|--Help|/?|/Help`
 

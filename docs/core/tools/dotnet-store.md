@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet store
 description: El comando “dotnet store” almacena los ensamblados especificados en el almacenamiento de paquetes en tiempo de ejecución.
-ms.date: 05/29/2018
-ms.openlocfilehash: cc5b4b6160ba296e1529f006c15e238746d9e08a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733053"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503585"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -19,7 +19,9 @@ ms.locfileid: "76733053"
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
+```dotnetcli
+dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+```
 
 ## <a name="description"></a>Descripción
 
@@ -27,57 +29,61 @@ ms.locfileid: "76733053"
 
 ## <a name="required-options"></a>Opciones necesarias
 
-`-f|--framework <FRAMEWORK>`
+- **`-f|--framework <FRAMEWORK>`**
 
-Especifica la [plataforma de destino](../../standard/frameworks.md).
+  Especifica la [plataforma de destino](../../standard/frameworks.md). La plataforma de destino tiene que especificarse en el archivo del proyecto.
 
-`-m|--manifest <PATH_TO_MANIFEST_FILE>`
+- **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-El *archivo de manifiesto de almacenamiento de paquetes* es un archivo XML que contiene la lista de paquetes que se va a almacenar. El formato del archivo de manifiesto es compatible con el formato de proyecto de estilo de SDK. Por tanto, se puede usar un archivo de proyecto que haga referencia a los paquetes deseados con la opción `-m|--manifest` para almacenar los ensamblados en el almacenamiento de paquetes en tiempo de ejecución. Para especificar varios archivos de manifiesto, repita la opción y la ruta de acceso para cada archivo. Por ejemplo: `--manifest packages1.csproj --manifest packages2.csproj`.
+  El *archivo de manifiesto de almacenamiento de paquetes* es un archivo XML que contiene la lista de paquetes que se va a almacenar. El formato del archivo de manifiesto es compatible con el formato de proyecto de estilo de SDK. Por tanto, se puede usar un archivo de proyecto que haga referencia a los paquetes deseados con la opción `-m|--manifest` para almacenar los ensamblados en el almacenamiento de paquetes en tiempo de ejecución. Para especificar varios archivos de manifiesto, repita la opción y la ruta de acceso para cada archivo. Por ejemplo: `--manifest packages1.csproj --manifest packages2.csproj`.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-El [identificador en tiempo de ejecución](../rid-catalog.md) de destino.
+  El [identificador en tiempo de ejecución](../rid-catalog.md) de destino.
 
 ## <a name="optional-options"></a>Opciones no necesarias
 
-`--framework-version <FRAMEWORK_VERSION>`
+- **`--framework-version <FRAMEWORK_VERSION>`**
 
-Especifica la versión del SDK de .NET Core. Esta opción le permite seleccionar una versión de un marco concreto más allá del marco de trabajo especificado en la opción `-f|--framework`.
+  Especifica la versión del SDK de .NET Core. Esta opción le permite seleccionar una versión de un marco concreto más allá del marco de trabajo especificado en la opción `-f|--framework`.
 
-`-h|--help`
+- **`-h|--help`**
 
-Muestra información de ayuda.
+  Muestra información de ayuda.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Especifica la ruta de acceso al almacenamiento de paquetes en tiempo de ejecución. Si no se especifica, el valor predeterminado es el subdirectorio *store* del directorio de instalación de .NET Core de perfil de usuario.
+  Especifica la ruta de acceso al almacenamiento de paquetes en tiempo de ejecución. Si no se especifica, el valor predeterminado es el subdirectorio *store* del directorio de instalación de .NET Core de perfil de usuario.
 
-`--skip-optimization`
+- **`--skip-optimization`**
 
-Omite la fase de optimización.
+  Omite la fase de optimización.
 
-`--skip-symbols`
+- **`--skip-symbols`**
 
-Omite la generación de símbolos. Actualmente, solo se pueden generar símbolos en Windows y Linux.
+  Omite la generación de símbolos. Actualmente, solo se pueden generar símbolos en Windows y Linux.
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
-`-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
+- **`-w|--working-dir <WORKING_DIRECTORY>`**
 
-El directorio de trabajo que usa el comando. Si no se especifica, usa el subdirectorio *obj* del directorio actual.
+  El directorio de trabajo que usa el comando. Si no se especifica, usa el subdirectorio *obj* del directorio actual.
 
 ## <a name="examples"></a>Ejemplos
 
-Almacenamiento de los paquetes especificados en el archivo de proyecto *packages.csproj* para .NET Core 2.0.0:
+- Almacenamiento de los paquetes especificados en el archivo de proyecto *packages.csproj* para .NET Core 2.0.0:
 
-`dotnet store --manifest packages.csproj --framework-version 2.0.0`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --framework-version 2.0.0
+  ```
 
-Almacenamiento de los paquetes especificados en *packages.csproj* sin optimización:
+- Almacenamiento de los paquetes especificados en *packages.csproj* sin optimización:
 
-`dotnet store --manifest packages.csproj --skip-optimization`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --skip-optimization
+  ```
 
 ## <a name="see-also"></a>Vea también
 

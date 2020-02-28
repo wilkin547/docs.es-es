@@ -1,21 +1,17 @@
 ---
 title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734312"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503762"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -75,7 +71,7 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
 ## <a name="options"></a>Opciones
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Define la configuración de compilación. El valor predeterminado para la mayoría de los proyectos es `Debug`, pero puede invalidar los valores de configuración de compilación en el proyecto.
 
@@ -85,7 +81,7 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
 - **`--force`**
 
-  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*. Disponible a partir del SDK de .NET Core 2.0.
+  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
 - **`--no-restore`**
 
-  No ejecuta una restauración implícita durante la compilación. Disponible a partir del SDK de .NET Core 2.0.
+  No ejecuta una restauración implícita durante la compilación.
 
 - **`--nologo`**
 

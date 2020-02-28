@@ -2,21 +2,17 @@
 title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
-ms.date: 12/04/2019
-ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 02/14/2020
+ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789880"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503661"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -36,69 +32,69 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
 
 ## <a name="arguments"></a>Argumentos
 
-* **`ROOT`**
+- **`ROOT`**
 
   Especifica la ruta de acceso al archivo en la que se debe insertar el paquete.
 
 ## <a name="options"></a>Opciones
 
-* **`-d|--disable-buffering`**
+- **`-d|--disable-buffering`**
 
   Deshabilita el almacenamiento en búfer al realizar inserciones en un servidor HTTP(S) para reducir el uso de memoria.
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   Fuerza la ejecución de la aplicación mediante una referencia cultural en inglés invariable.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Imprime una corta ayuda para el comando.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Permite que el comando se bloquee y requiere una acción manual para operaciones tales como la autenticación. Opción disponible a partir del SDK de .NET Core 2.2.
 
-* **`-k|--api-key <API_KEY>`**
+- **`-k|--api-key <API_KEY>`**
 
   La clave de API para el servidor.
 
-* **`-n|--no-symbols`**
+- **`-n|--no-symbols`**
 
   No inserta símbolos (incluso si está presente).
 
-* **`--no-service-endpoint`**
+- **`--no-service-endpoint`**
 
   No agrega "api/v2/paquete" a la dirección URL de origen. Opción disponible desde el SDK de .NET Core 2.1.
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   Especifica la dirección URL del servidor. Esta opción es necesaria a menos que el valor de configuración `DefaultPushSource` esté establecido en el archivo de configuración de NuGet.
 
-* **`--skip-duplicate`**
+- **`--skip-duplicate`**
 
   Al insertar varios paquetes en un servidor HTTP(S), trata cualquier respuesta de conflicto 409 como una advertencia para que la inserción pueda continuar. Disponible a partir del SDK de .NET Core 3.1.
 
-* **`-sk|--symbol-api-key <API_KEY>`**
+- **`-sk|--symbol-api-key <API_KEY>`**
 
   La clave de API para el servidor de símbolos.
 
-* **`-ss|--symbol-source <SOURCE>`**
+- **`-ss|--symbol-source <SOURCE>`**
 
   Especifica la dirección URL del servidor de símbolos.
 
-* **`-t|--timeout <TIMEOUT>`**
+- **`-t|--timeout <TIMEOUT>`**
 
   Especifica el tiempo de espera para la inserción en un servidor en segundos. El valor predeterminado es 300 segundos (5 minutos). Si se especifica 0 (cero segundos), se aplica el valor predeterminado.
 
 ## <a name="examples"></a>Ejemplos
 
-* Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica una clave de API:
+- Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica una clave de API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* Inserte *foo.nupkg* en el servidor de NuGet oficial y especifique una clave de API:
+- Inserte *foo.nupkg* en el servidor de NuGet oficial y especifique una clave de API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +106,25 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* Inserta *foo.nupkg* en el origen de inserción predeterminado:
+- Inserta *foo.nupkg* en el origen de inserción predeterminado:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-* Inserta *foo.symbols.nupkp* en el origen de símbolos predeterminado:
+- Inserta *foo.symbols.nupkp* en el origen de símbolos predeterminado:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica un tiempo de espera de 360 segundos:
+- Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica un tiempo de espera de 360 segundos:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* Inserta todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
+- Inserta todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,7 +134,7 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
   > Si este comando no funciona, es posible que se deba a un error presente en versiones anteriores del SDK (SDK de .NET Core 2.1 y versiones anteriores).
   > Para solucionar este problema, actualice la versión de su SDK o ejecute el siguiente comando en su lugar: `dotnet nuget push **/*.nupkg`
 
-* Envía todos los archivos *.nupkg* aunque un servidor HTTP(S) devuelva una respuesta de conflicto 409:
+- Envía todos los archivos *.nupkg* aunque un servidor HTTP(S) devuelva una respuesta de conflicto 409:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

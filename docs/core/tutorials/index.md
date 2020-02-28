@@ -4,12 +4,12 @@ description: Siga los tutoriales para aprender a compilar aplicaciones y bibliot
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215180"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625939"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
 
@@ -48,5 +48,6 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Desarrollo de bibliotecas con herramientas multiplataforma](libraries.md)
 - [Hospedaje de .NET Core desde código nativo](netcore-hosting.md)
 - [Creación de plantillas para la CLI](cli-templates-create-item-template.md)
+- [Creación y uso de herramientas para la CLI](../tools/global-tools-how-to-create.md)
 
 Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).

@@ -3,12 +3,12 @@ title: CLI de .NET Core
 titleSuffix: ''
 description: Información general de la CLI de .NET Core y sus características.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543319"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625987"
 ---
 # <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
 
@@ -87,7 +87,7 @@ Cuando se proporciona un comando para el controlador, `dotnet.exe` inicia el pro
 dotnet build
 ```
 
-En primer lugar, el controlador determina la versión de SDK que se debe usar. Si no hay ningún elemento ["global.json"](global-json.md), se usa la última versión del SDK disponible. Podría tratarse de una versión preliminar o de una versión estable, en función de lo último que esté disponible en el equipo.  Una vez determinada la versión del SDK, se ejecutará el comando.
+En primer lugar, el controlador determina la versión de SDK que se debe usar. Si no hay ningún archivo [global.json](global-json.md), se usa la última versión del SDK disponible. Podría tratarse de una versión preliminar o de una versión estable, en función de lo último que esté disponible en el equipo.  Una vez determinada la versión del SDK, se ejecutará el comando.
 
 ### <a name="command"></a>Comando
 

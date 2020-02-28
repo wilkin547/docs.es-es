@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet msbuild
 description: El comando dotnet msbuild proporciona acceso a la línea de comandos de MSBuild.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733202"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503672"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -31,25 +31,25 @@ El comando [dotnet build](dotnet-build.md) es equivalente al comando `dotnet msb
 
 ## <a name="examples"></a>Ejemplos
 
-* Creación de un proyecto y sus dependencias:
+- Creación de un proyecto y sus dependencias:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Creación de un proyecto y sus dependencias mediante la configuración de lanzamiento:
+- Creación de un proyecto y sus dependencias mediante la configuración de lanzamiento:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Ejecuta el destino de publicación y publica para el RID `osx.10.11-x64`:
+- Ejecuta el destino de publicación y publica para el RID `osx.10.11-x64`:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* Visualización del proyecto completo con todos los destinos incluidos en el SDK:
+- Visualización del proyecto completo con todos los destinos incluidos en el SDK:
 
   ```dotnetcli
   dotnet msbuild -preprocess

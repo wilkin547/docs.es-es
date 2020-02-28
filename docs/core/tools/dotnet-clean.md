@@ -1,21 +1,17 @@
 ---
 title: Comando dotnet clean
 description: El comando dotnet clean limpia el directorio actual.
-ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734251"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503754"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Este artículo se aplica a:** ✔️ SDK de .NET Core 1.x y versiones posteriores
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -41,9 +37,9 @@ Proyecto o solución de MSBuild que se va a limpiar. Si no se especifica un arch
 
 ## <a name="options"></a>Opciones
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Define la configuración de compilación. El valor predeterminado es `Debug`. Esta opción solo es necesaria al realizar la limpieza si la especificó durante el tiempo de compilación.
+  Define la configuración de compilación. El valor predeterminado para la mayoría de los proyectos es `Debug`, pero puede invalidar los valores de configuración de compilación en el proyecto. Esta opción solo es necesaria al realizar la limpieza si la especificó durante el tiempo de compilación.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ Proyecto o solución de MSBuild que se va a limpiar. Si no se especifica un arch
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Limpia la carpeta de salida del tiempo de ejecución especificado. Esto se usa si se ha creado una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd). Opción disponible desde el SDK de .NET Core 2.0.
+  Limpia la carpeta de salida del tiempo de ejecución especificado. Esto se usa si se ha creado una [implementación autocontenida](../deploying/index.md#publish-self-contained).
 
 * **`-v|--verbosity <LEVEL>`**
 

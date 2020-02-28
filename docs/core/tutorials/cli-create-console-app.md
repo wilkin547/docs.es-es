@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920467"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503545"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Introducción a .NET Core mediante la CLI de .NET Core
 
@@ -28,7 +28,7 @@ Si no está familiarizado con la CLI de .NET Core, consulte la [información ge
 
 Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) del repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Abra un símbolo del sistema y cree una carpeta denominada *Hello*. Vaya a la carpeta que ha creado y escriba lo siguiente:
+Abra un símbolo del sistema y cree una carpeta denominada *Hello*. Vaya a la carpeta que ha creado y escriba lo siguiente.
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ Veamos un tutorial rápido:
 
     [dotnet run](../tools/dotnet-run.md) llama a [dotnet build](../tools/dotnet-build.md) para garantizar que se han creado los destinos de compilación y, luego, llama a `dotnet <assembly.dll>` para ejecutar la aplicación de destino.
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    Obtendrá la siguiente salida.
+
+    ```console
     Hello World!
     ```
     
     También puede ejecutar `dotnet build` para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada, como un archivo DLL, basada en el nombre del proyecto. En este caso, el archivo creado se llama *Hello.dll*. Esta aplicación se puede ejecutar con `dotnet bin\Debug\netcoreapp3.1\Hello.dll` en Windows (use `/` con sistemas que no son Windows).
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    Obtendrá la siguiente salida.
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ Cambiemos un poco el programa. Los números Fibonacci son divertidos, así que v
 
 03. Para ejecutar el programa, pase un parámetro a la aplicación. Cuando use el comando `dotnet` para ejecutar una aplicación, agregue `--` al final. Todo lo que quede a la derecha de `--` se pasará como un parámetro a la aplicación. En el ejemplo siguiente, el valor `John` se pasa a la aplicación.
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    Obtendrá la siguiente salida.
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -135,10 +148,15 @@ Los archivos únicos son adecuados para programas sencillos de uso único, pero,
 
 03. Ejecute [dotnet build](../tools/dotnet-build.md) para compilar los cambios.
 
-04. Ejecute su aplicación mediante la ejecución de [dotnet run](../tools/dotnet-run.md). A continuación se muestra el resultado del programa:
+04. Ejecute su aplicación mediante la ejecución de [dotnet run](../tools/dotnet-run.md).
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Obtendrá la siguiente salida.
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ Los archivos únicos son adecuados para programas sencillos de uso único, pero,
 
 Cuando esté listo para distribuir la aplicación, use el comando [dotnet publish](../tools/dotnet-publish.md)_para generar la carpeta_publish _en \\bin\\debug\\netcoreapp3.1\\publish_`/` (para sistemas que no son Windows). Puede distribuir el contenido de la carpeta _publish_ en otras plataformas siempre y cuando ya haya instalado el entorno de ejecución de dotnet.
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+Verá un resultado similar al siguiente.
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Puede que la salida anterior no sea igual por la carpeta y el sistema operativo 
 
 Puede ejecutar la aplicación publicada con el comando [dotnet](../tools/dotnet.md):
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+Obtendrá la siguiente salida.
+
+```console
 Hello World!
 ```
 

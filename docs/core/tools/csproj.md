@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2fb00e830380c5c4cbf7b6dcd2c8a585e1617b4b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965612"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451374"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -35,7 +35,7 @@ Como se hace referencia implícitamente a los metapaquetes `Microsoft.NETCore.Ap
 
 - Si el destino es .NET Core o .NET Standard, nunca incluya una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NETStandard.Library` mediante un elemento `<PackageReference>` en el archivo de proyecto.
 - Si necesita una versión concreta del runtime cuando el destino es .NET Core, debe usar la propiedad `<RuntimeFrameworkVersion>` del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete.
-  - Esto puede ocurrir si está usando [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) y necesita una versión de revisión específica del tiempo de ejecución de LTS 1.0.0, por ejemplo.
+  - Esto puede ocurrir si está usando [implementaciones autocontenidas](../deploying/index.md#publish-self-contained) y necesita una versión de revisión específica del tiempo de ejecución de LTS 1.0.0, por ejemplo.
 - Si necesita una versión concreta del metapaquete `NETStandard.Library` cuando el destino es .NET Standard, puede usar la propiedad `<NetStandardImplicitPackageVersion>` y establecer la versión necesaria.
 - No agregue referencias a los metapaquetes `Microsoft.NETCore.App` y `NETStandard.Library` ni las actualice explícitamente en proyectos de .NET Framework. Si se necesita alguna versión de `NETStandard.Library` al usar un paquete NuGet basado en .NET Standard, NuGet instala automáticamente esa versión.
 
@@ -55,12 +55,12 @@ Cuando haga referencia al paquete `Microsoft.AspNetCore.App` o al paquete `Micro
 
 > Problema conocido: el SDK de .NET Core 2.1 solo admite esta sintaxis cuando el proyecto también usa Microsoft.NET.Sdk.Web. Esto se resuelve en el SDK de .NET Core 2.2.
 
-Estas referencias a los metapaquetes de ASP.NET Core tienen un comportamiento ligeramente distinto de los paquetes más habituales de NuGet. Las [implementaciones dependientes del marco](../deploying/index.md#framework-dependent-deployments-fdd) de las aplicaciones que usan estos metapaquetes aprovechan automáticamente el marco de uso compartido de ASP.NET Core. Al usar los metapaquetes, **no** se implementa ningún recurso de los paquetes NuGet de ASP.NET Core a los que se hace referencia con la aplicación, porque el marco de uso compartido de ASP.NET Core ya contiene estos recursos. Los recursos del marco de uso compartido están optimizados para que la plataforma de destino mejore el tiempo de inicio de la aplicación. Para más información sobre el marco de uso compartido, consulte [Empaquetado de distribución de .NET Core](../distribution-packaging.md).
+Estas referencias a los metapaquetes de ASP.NET Core tienen un comportamiento ligeramente distinto de los paquetes más habituales de NuGet. Las [implementaciones dependientes del marco](../deploying/index.md#publish-runtime-dependent) de las aplicaciones que usan estos metapaquetes aprovechan automáticamente el marco de uso compartido de ASP.NET Core. Al usar los metapaquetes, **no** se implementa ningún recurso de los paquetes NuGet de ASP.NET Core a los que se hace referencia con la aplicación, porque el marco de uso compartido de ASP.NET Core ya contiene estos recursos. Los recursos del marco de uso compartido están optimizados para que la plataforma de destino mejore el tiempo de inicio de la aplicación. Para más información sobre el marco de uso compartido, consulte [Empaquetado de distribución de .NET Core](../distribution-packaging.md).
 
 Si *se especifica* una versión, se trata como la versión *mínima* del marco de uso compartido de ASP.NET Core para las implementaciones dependientes del marco y como una versión *exacta* de las implementaciones autocontenidas. Esto puede deberse a las siguientes consecuencias:
 
 - Si la versión de ASP.NET Core instalada en el servidor es anterior a la versión especificada en PackageReference, no se iniciará el proceso de .NET Core. Por lo general, las actualizaciones del metapaquete están disponibles en NuGet.org antes de que se aparezcan en entornos de hospedaje como Azure. Actualizar la versión de PackageReference a ASP.NET Core podría provocar un error en una aplicación implementada.
-- Si la aplicación se implementa como una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd), es posible que no contenga las actualizaciones de seguridad más recientes a .NET Core. Cuando no se especifica una versión, el SDK puede incluir automáticamente la versión más reciente de ASP.NET Core en la implementación autocontenida.
+- Si la aplicación se implementa como una [implementación autocontenida](../deploying/index.md#publish-self-contained), es posible que no contenga las actualizaciones de seguridad más recientes a .NET Core. Cuando no se especifica una versión, el SDK puede incluir automáticamente la versión más reciente de ASP.NET Core en la implementación autocontenida.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusiones de compilación predeterminadas en proyectos .NET Core
 
@@ -289,6 +289,10 @@ Detalles de copyright del paquete.
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
 Un valor booleano que especifica si el cliente debe pedir al consumidor que acepte la licencia del paquete antes de instalarlo. De manera predeterminada, es `false`.
+
+### <a name="developmentdependency"></a>DevelopmentDependency
+
+Valor booleano que especifica si el paquete se debe marcar como una dependencia de solo desarrollo, que impide que el paquete se incluya como una dependencia en otros paquetes. Con PackageReference (NuGet 4.8 y versiones posteriores), esta marca también significa que se excluirán los recursos en tiempo de compilación de la compilación. Para más información, consulte [Compatibilidad de DevelopmentDependency para PackageReference](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference).
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
