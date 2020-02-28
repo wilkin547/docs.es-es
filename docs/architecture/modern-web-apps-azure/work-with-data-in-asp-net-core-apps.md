@@ -3,13 +3,13 @@ title: Trabajar con datos en aplicaciones ASP.NET Core
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Trabajar con datos en aplicaciones ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777114"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449353"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-En este ejemplo, la propiedad `ShipToAddress` es del tipo `Address`. `Address` es un objeto de valor con varias propiedades, como `Street` y `City`. EF Core asigna el objeto `Order` a su tabla con una columna por propiedad `Address` y agrega el nombre de la propiedad como prefijo a cada nombre de columna. En este ejemplo, la tabla `Order` incluye columnas como `ShipToAddress_Street` y `ShipToAddress_City`.
+En este ejemplo, la propiedad `ShipToAddress` es del tipo `Address`. `Address` es un objeto de valor con varias propiedades, como `Street` y `City`. EF Core asigna el objeto `Order` a su tabla con una columna por propiedad `Address` y agrega el nombre de la propiedad como prefijo a cada nombre de columna. En este ejemplo, la tabla `Order` incluye columnas como `ShipToAddress_Street` y `ShipToAddress_City`. También es posible almacenar los tipos de propiedad en tablas independientes, si es lo que se busca hacer.
 
-[EF Core 2.2 agrega compatibilidad para las colecciones de entidades en propiedad](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+Obtenga más información sobre la [compatibilidad con entidades en EF Core](/ef/core/modeling/owned-entities).
 
 ### <a name="resilient-connections"></a>Conexiones resistentes
 

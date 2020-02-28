@@ -1,141 +1,275 @@
 ---
-title: Herramientas globales de .NET Core
-description: Información general sobre las herramientas globales de .NET Core y los comandos de CLI de .NET Core que hay disponibles para ellas.
+title: Herramientas de .NET Core
+description: Cómo instalar, usar, actualizar y quitar las herramientas de .NET Core. Abarca las herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales.
 author: KathleenDollard
-ms.date: 05/29/2018
-ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/12/2020
+ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920491"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543396"
 ---
-# <a name="net-core-global-tools-overview"></a>Información general sobre las herramientas globales de .NET Core
+# <a name="how-to-manage-net-core-tools"></a>Cómo administrar las herramientas de .NET Core
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
-Una herramienta global de .NET Core es un paquete especial de NuGet que contiene una aplicación de consola. Las herramientas globales se pueden instalar en una ubicación predeterminada del equipo incluida en la variable de entorno PATH, o bien en una ubicación personalizada.
+Una herramienta de .NET Core es un paquete especial de NuGet que contiene una aplicación de consola. Una herramienta se puede instalar en el equipo de las siguientes maneras:
 
-Si quiere usar una herramienta global de .NET Core:
+* Como herramienta global.
 
-* Busque información sobre la herramienta (normalmente un sitio web o página de GitHub).
-* Compruebe el autor y las estadísticas en la página principal de la fuente (normalmente NuGet.org).
-* Instale la herramienta.
-* Llame a la herramienta.
-* Actualice la herramienta.
-* Desinstale la herramienta.
+  Los archivos binarios de la herramienta se instalan en un directorio predeterminado que se agrega a la variable de entorno PATH. Puede invocar la herramienta desde cualquier directorio del equipo sin especificar su ubicación. Una versión de una herramienta se usa para todos los directorios del equipo.
+
+* Como herramienta global en una ubicación personalizada (también conocida como herramienta de ruta de acceso de herramientas).
+
+  Los archivos binarios de la herramienta se instalan en la ubicación especificada. Puede invocar la herramienta desde el directorio de instalación o proporcionando el directorio con el nombre del comando o agregando el directorio a la variable de entorno PATH. Una versión de una herramienta se usa para todos los directorios del equipo.
+
+* Como herramienta local (se aplica al SDK de .NET Core 3.0 y versiones posteriores).
+
+  Los archivos binarios de la herramienta se instalan en un directorio predeterminado. Puede invocar la herramienta desde el directorio de instalación o con cualquiera de sus subdirectorios. Distintos directorios pueden usar versiones diferentes de la misma herramienta.
+  
+  La CLI de .NET usa archivos de manifiesto para realizar un seguimiento de las herramientas que se instalan como locales en un directorio. Cuando el archivo de manifiesto se guarda en el directorio raíz de un repositorio de código fuente, un colaborador puede clonar el repositorio e invocar un solo comando de CLI de .NET Core que instale todas las herramientas enumeradas en los archivos de manifiesto.
 
 > [!IMPORTANT]
-> Las herramientas globales de .NET Core aparecen en su ruta de acceso y se ejecutan con plena confianza. No instale herramientas globales de .NET Core a menos que confíe en el autor.
+> Las herramientas de .NET Core se ejecutan con plena confianza. No instale una herramienta de .NET Core a menos que confíe en el autor.
 
-## <a name="find-a-net-core-global-tool"></a>Buscar una herramienta global de .NET Core
+## <a name="find-a-tool"></a>Búsqueda de una herramienta
 
-Actualmente, no hay una característica que permita buscar herramientas globales en la CLI de .NET Core. A continuación se muestran algunas recomendaciones sobre cómo buscar herramientas:
+Actualmente, .NET Core no tiene una característica de búsqueda de herramientas. Estas son algunas formas de encontrar herramientas:
 
-* Aunque estas herramientas se pueden encontrar en [NuGet](https://www.nuget.org), NuGet todavía no permite buscar de manera específica herramientas globales de .NET Core.
-* Es posible que encuentre recomendaciones sobre herramientas en entradas de blog o en el repositorio de GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
-* Puede ver el código fuente de las herramientas globales creado por el equipo de ASP.NET en el repositorio de GitHub [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).
-* Puede obtener información sobre las herramientas de diagnóstico en [herramientas globales de diagnóstico de dotnet de .NET Core ](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
+* Consulte la lista de herramientas del repositorio GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
+* Use [ToolGet](https://www.toolget.net/) para buscar herramientas de .NET.
+* Puede ver el código fuente de las herramientas creado por el equipo de ASP.NET Core en el [directorio de herramientas del repositorio de GitHub dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).
+* Obtenga más información sobre las herramientas de diagnóstico en [herramientas de diagnóstico de dotnet de .NET Core ](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
+* Busque en el sitio web de [NuGet](https://www.nuget.org). Sin embargo, el sitio de NuGet todavía no tiene una característica que le permita buscar solo paquetes de herramientas.
 
 ## <a name="check-the-author-and-statistics"></a>Comprobar el autor y las estadísticas
 
-Dado que herramientas globales de .NET Core se ejecutan con plena confianza y generalmente se instalan en su ruta de acceso, pueden ser muy eficaces. No descargue herramientas de personas en las que no confíe.
+Dado que las herramientas de .NET Core se ejecutan con plena confianza y las herramientas globales se agregan a la variable de entorno PATH, pueden ser muy eficaces. No descargue herramientas de personas en las que no confíe.
 
 Si la herramienta está hospedada en NuGet, busque la herramienta para comprobar el autor y las estadísticas.
 
-## <a name="install-a-global-tool"></a>Instalar una herramienta global
+## <a name="install-a-global-tool"></a>Instalación de una herramienta global
 
-Para instalar una herramienta global, use el comando de CLI de .NET Core [dotnet tool install](dotnet-tool-install.md). En el ejemplo siguiente se muestra cómo instalar una herramienta global en la ubicación predeterminada:
+Para instalar una herramienta como una herramienta global, use la opción `-g` o `--global` del comando [dotnet tool install](dotnet-tool-install.md), tal como se muestra en el ejemplo siguiente:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-Si no se puede instalar la herramienta, se muestran mensajes de error. Verifique que se comprueban las fuentes que esperaba.
-
-Si está intentando instalar una versión preliminar o una versión específica de la herramienta, puede especificar el número de versión con el formato siguiente:
-
-```dotnetcli
-dotnet tool install -g <package-name> --version <version-number>
-```
-
-Si la instalación es correcta, se muestra un mensaje similar al siguiente con el comando que se usa para llamar a la herramienta y la versión instalada:
+La salida muestra el comando que se usa para invocar la herramienta y la versión instalada, de forma similar al ejemplo siguiente:
 
 ```output
 You can invoke the tool using the following command: dotnetsay
-Tool 'dotnetsay' (version '2.0.0') was successfully installed.
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 ```
 
-Las herramientas globales pueden instalarse en el directorio predeterminado o en una ubicación específica. Los directorios predeterminados son:
+La ubicación predeterminada de los archivos binarios de una herramienta depende del sistema operativo:
 
 | SO          | Ruta de acceso                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-Estas ubicaciones se agregan a la ruta de acceso del usuario cuando se ejecuta el SDK por primera vez, permitiendo así llamar directamente a las herramientas globales allí instaladas.
+Esta ubicación se agrega a la ruta de acceso del usuario cuando se ejecuta el SDK por primera vez, por lo que las herramientas globales se pueden invocar desde cualquier directorio sin especificar la ubicación de la herramienta.
 
-Tenga en cuenta que las herramientas globales son específicas del usuario, no de la máquina. Específica del usuario significa que no se puede instalar una herramienta global que está disponible para todos los usuarios de la máquina. La herramienta solo está disponible para cada perfil de usuario en el que se instaló la herramienta.
+El acceso a las herramientas es específico del usuario, no de la máquina global. Una herramienta global solo está disponible para el usuario que ha instalado la herramienta.
 
-Las herramientas globales también pueden instalarse en un directorio específico. Cuando se instalan en un directorio específico, el usuario debe incluir el directorio en la ruta de acceso a fin de asegurarse de que el comando está disponible. Hay dos maneras de hacerlo: llamar al comando con el directorio especificado, o llamar a la herramienta desde el directorio especificado.
-En este caso, la CLI de .NET Core no agrega esta ubicación automáticamente a la variable de entorno PATH.
+### <a name="install-a-global-tool-in-a-custom-location"></a>Instalación de una herramienta global en una ubicación personalizada
 
-## <a name="use-the-tool"></a>Usar la herramienta
+Para instalar una herramienta como una herramienta global, use la opción `--tool-path` del comando [dotnet tool install](dotnet-tool-install.md), tal como se muestra en los ejemplos siguientes.
 
-Una vez que la herramienta se ha instalado, puede llamarla mediante su comando. Tenga en cuenta que el comando podría no ser el mismo que el nombre del paquete.
+En Windows:
 
-Si el comando es `dotnetsay`, llame a la herramienta con:
+```dotnetcli
+dotnet tool install dotnetsay --tool-path c:\dotnet-tools
+```
+
+En Linux o macOS:
+
+```dotnetcli
+dotnet tool install dotnetsay --tool-path ~/bin
+```
+
+El SDK de .NET Core no agrega esta ubicación automáticamente a la variable de entorno PATH. Para [invocar una herramienta de ruta de acceso de herramientas](#invoke-a-tool-path-tool), tiene que asegurarse de que el comando está disponible mediante uno de los métodos siguientes:
+
+* Agregue el directorio de instalación a la variable de entorno PATH.
+* Especifique la ruta de acceso completa a la herramienta al invocarla.
+* Invoque la herramienta desde el directorio de instalación.
+
+## <a name="install-a-local-tool"></a>Instalación de una herramienta local
+
+**Se aplica al SDK de .NET Core 3.0 y versiones posteriores.**
+
+Para instalar una herramienta solo para el acceso local (del directorio y los subdirectorios actuales), debe agregarse a un archivo de manifiesto de la herramienta. Para crear un archivo de manifiesto de herramienta, ejecute el comando `dotnet new tool-manifest`:
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+Este comando crea un archivo de manifiesto denominado *dotnet-tools.json* en el directorio *.config*. Para agregar una herramienta local al archivo de manifiesto, use el comando [dotnet tool install](dotnet-tool-install.md) y **omita** las opciones `--global` y `--tool-path`, tal como se muestra en el ejemplo siguiente:
+
+```dotnetcli
+dotnet tool install dotnetsay
+```
+
+En la salida del comando se muestra el archivo de manifiesto en el que se encuentra la herramienta que acaba de instalar, de manera similar al siguiente ejemplo:
+
+```console
+You can invoke the tool from this directory using the following command:
+dotnet tool run dotnetsay
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
+Entry is added to the manifest file /home/name/botsay/.config/dotnet-tools.json.
+```
+
+En el ejemplo siguiente se muestra un archivo de manifiesto con dos herramientas locales instaladas:
+
+```json
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "botsay": {
+      "version": "1.0.0",
+      "commands": [
+        "botsay"
+      ]
+    },
+    "dotnetsay": {
+      "version": "2.1.3",
+      "commands": [
+        "dotnetsay"
+      ]
+    }
+  }
+}
+```
+
+Normalmente, una herramienta local se agrega al directorio raíz del repositorio. Después de insertar el archivo de manifiesto en el repositorio, los desarrolladores que extraen código del repositorio obtienen el archivo de manifiesto más reciente. Para instalar todas las herramientas enumeradas en el archivo de manifiesto, ejecutan el comando `dotnet tool restore`:
+
+```dotnetcli
+dotnet tool restore
+```
+
+La salida indica qué herramientas se han restaurado:
+
+```console
+Tool 'botsay' (version '1.0.0') was restored. Available commands: botsay
+Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
+Restore was successful.
+```
+
+## <a name="install-a-specific-tool-version"></a>Instalación de una versión específica de la herramienta
+
+Para instalar una versión preliminar o una versión específica de la herramienta, especifique el número de versión con la opción `--version`, tal como se muestra en el ejemplo siguiente:
+
+```dotnetcli
+dotnet tool install dotnetsay --version 2.1.3
+```
+
+## <a name="use-a-tool"></a>Uso de una herramienta
+
+El comando que se usa para invocar una herramienta puede ser diferente del nombre del paquete que se instala. Para mostrar todas las herramientas instaladas actualmente en el equipo para el usuario actual, use el comando [dotnet tool list](dotnet-tool-list.md):
+
+```dotnetcli
+dotnet tool list
+```
+
+La salida muestra la versión y el comando de cada herramienta, de forma similar al ejemplo siguiente:
+
+```console
+Package Id      Version      Commands       Manifest
+-------------------------------------------------------------------------------------------
+botsay          1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+```
+
+Tal como se muestra en este ejemplo, la lista muestra las herramientas locales. Para ver las herramientas globales, use la opción `--global` y, para ver herramientas de ruta de acceso de herramientas, use la opción `--tool-path`.
+
+### <a name="invoke-a-global-tool"></a>Invocación de una herramienta global
+
+En el caso de las herramientas globales, use el comando de la herramienta por sí solo. Por ejemplo, si el comando es `dotnetsay` o `dotnet-doc`, eso es lo que se usa para invocar el comando:
 
 ```console
 dotnetsay
+dotnet-doc
 ```
 
-Si la intención del autor era mostrar la herramienta ante una petición de `dotnet`, puede haberla escrito de manera que se llame como `dotnet <command>`, por ejemplo:
+Si el comando comienza con el prefijo `dotnet-`, una manera alternativa de invocar la herramienta es usar el comando `dotnet` y omitir el prefijo del comando de la herramienta. Por ejemplo, si el comando es `dotnet-doc`, el siguiente comando invoca la herramienta:
 
 ```dotnetcli
 dotnet doc
 ```
 
-Para ver las herramientas que están incluidas en un paquete de herramienta global instalado, enumere los paquetes instalados con el comando [dotnet tool list](dotnet-tool-list.md).
+Sin embargo, en el siguiente escenario no se puede usar el comando `dotnet` para invocar una herramienta global:
 
-También puede buscar las instrucciones de uso en el sitio web de la herramienta o escribir uno de los siguientes comandos:
+* Una herramienta global y una herramienta local tienen el mismo comando con el prefijo `dotnet-`.
+* Quiere invocar la herramienta global desde un directorio que está en el ámbito de la herramienta local.
 
-```console
-<command> --help
-dotnet <command> --help
+En este escenario, `dotnet doc` y `dotnet dotnet-doc` invocan a la herramienta local. Para invocar la herramienta global, use el comando por sí solo:
+
+```dotnetcli
+dotnet-doc
 ```
 
-## <a name="other-cli-commands"></a>Otros comandos de la CLI
+### <a name="invoke-a-tool-path-tool"></a>Invocación de una herramienta de ruta de acceso de herramientas
 
-El SDK de .NET Core contiene otros comandos que pueden usarse con las herramientas globales de .NET Core. Utilice cualquiera de los comandos de `dotnet tool` combinado con las opciones siguientes:
+Para invocar una herramienta global que se instala mediante la opción `tool-path`, asegúrese de que el comando está disponible, tal como se explicó [anteriormente en este artículo](#install-a-global-tool-in-a-custom-location).
 
-* `--global` o `-g` especifica que el comando es aplicable a las herramientas globales de todos los usuarios.
-* `--tool-path` especifica una ubicación personalizada para las herramientas globales.
+### <a name="invoke-a-local-tool"></a>Invocación de una herramienta local
 
-Para saber qué comandos están disponibles con las herramientas globales:
+Para invocar una herramienta local, tiene que usar el comando `dotnet` desde el directorio de instalación. Puede usar el formato largo (`dotnet tool run <COMMAND_NAME>`) o el formato abreviado (`dotnet <COMMAND_NAME>`), tal como se muestra en los ejemplos siguientes:
+
+```dotnetcli
+dotnet tool run dotnetsay
+dotnet dotnetsay
+```
+
+Si el comando tiene el prefijo `dotnet-`, puede incluir u omitir el prefijo al invocar la herramienta. Por ejemplo, si el comando es `dotnet-doc`, cualquiera de los siguientes ejemplos invoca la herramienta local:
+
+```dotnetcli
+dotnet tool run dotnet-doc
+dotnet dotnet-doc
+dotnet doc
+```
+
+## <a name="update-a-tool"></a>Actualización de una herramienta
+
+La actualización de una herramienta implica desinstalarla y reinstalarla con la versión estable más reciente. Para actualizar una herramienta, use el comando [dotnet tool update](dotnet-tool-update.md) con la misma opción que usó para instalar la herramienta:
+
+```dotnetcli
+dotnet tool update --global <packagename>
+dotnet tool update --tool-path <packagename>
+dotnet tool update <packagename>
+```
+
+En el caso de una herramienta local, el SDK encuentra el primer archivo de manifiesto que contiene el identificador de paquete mediante la búsqueda en el directorio actual y en los directorios principales. Si no hay ningún identificador del paquete en ningún archivo de manifiesto, el SDK agrega una nueva entrada al archivo de manifiesto más cercano.
+
+## <a name="uninstall-a-tool"></a>Desinstalación de una herramienta
+
+Quite una herramienta mediante el comando [dotnet tool uninstall](dotnet-tool-uninstall.md) con la misma opción que usó para instalar la herramienta:
+
+```dotnetcli
+dotnet tool uninstall --global <packagename>
+dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall <packagename>
+```
+
+En el caso de una herramienta local, el SDK encuentra el primer archivo de manifiesto que contiene el identificador de paquete mediante la búsqueda en el directorio actual y en los directorios principales.
+
+## <a name="get-help-and-troubleshoot"></a>Ayuda y solución de problemas
+
+Para obtener una lista de los comandos de `dotnet tool` disponibles, escriba el siguiente comando:
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-La actualización de una herramienta global implica desinstalarla y reinstalarla con la versión estable más reciente. Para actualizar una herramienta global, utilice el comando [dotnet tool update](dotnet-tool-update.md):
+Para obtener instrucciones sobre el uso de la herramienta, escriba uno de los siguientes comandos o vea el sitio web de la herramienta:
 
 ```dotnetcli
-dotnet tool update -g <packagename>
+<command> --help
+dotnet <command> --help
 ```
 
-Para quitar una herramienta global con [dotnet tool uninstall](dotnet-tool-uninstall.md):
-
-```dotnetcli
-dotnet tool uninstall -g <packagename>
-```
-
-Para mostrar todas las herramientas globales instaladas actualmente en el equipo, junto con su versión y los comandos, use el comando [dotnet tool list](dotnet-tool-list.md):
-
-```dotnetcli
-dotnet tool list -g
-```
-
-## <a name="see-also"></a>Vea también
-
-* [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md)
+Si una herramienta no se puede instalar o ejecutar, consulte [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).

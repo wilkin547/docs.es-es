@@ -2,12 +2,12 @@
 title: ¿Qué son las aplicaciones nativas para la nube?
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | ¿Qué ocurre con las aplicaciones nativas de la nube?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318439"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543552"
 ---
 # <a name="what-about-cloud-native-applications"></a>¿Qué son las aplicaciones nativas para la nube?
 
@@ -19,7 +19,7 @@ La figura 4-3 coloca las aplicaciones nativas de la nube en los niveles de madur
 
 **Figura 4-3.** Posicionamiento de las aplicaciones nativas de la nube
 
-Normalmente, el nivel de madurez de modernización "nativo de la nube" requiere nuevas inversiones de desarrollo. El paso al nivel nativo de la nube se basa normalmente en la necesidad empresarial de modernizar las aplicaciones tanto como sea posible para mejorar drásticamente la escala de las aplicaciones de gran tamaño, mediante la creación de subsistemas autónomos (microservicios) que se pueden implementar y escalar de forma independiente desde otras áreas de la aplicación, a la vez que se reducen los costos a largo plazo y aumenta la agilidad de la evolución de esas partes de la aplicación autónoma que proporcionan importantes ventajas competitivas.
+Normalmente, el nivel de madurez de modernización "nativo de la nube" requiere nuevas inversiones de desarrollo. El traslado al nivel nativo de la nube normalmente se basa en la necesidad empresarial de modernizar las aplicaciones tanto como sea posible para mejorar notablemente la escala de las aplicaciones de gran tamaño mediante la creación de subsistemas autónomos (microservicios) que se pueden implementar y escalar de forma independiente de otras áreas de la aplicación, a la vez que se reducen los costos a largo plazo y se aumenta la agilidad de la evolución de esas partes de la aplicación autónoma que proporcionan importantes ventajas en términos de competitividad.
 
 Los principales pilares de las aplicaciones nativas de la nube se basan en enfoques de arquitectura de microservicios, que pueden evolucionar con agilidad y escalar a límites que serían difíciles de lograr con una arquitectura monolítica, implementada en el entorno local o en la nube.
 
@@ -41,7 +41,10 @@ La [aplicación de doce factores](https://12factor.net/) (una colección de patr
 
 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) es un importante promotor de principios del modelo nativo de la nube. Microsoft es [miembro de CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Para ver una definición de ejemplo y más información sobre las características de las aplicaciones nativas de la nube, consulte el artículo de Gartner [Arquitectura y diseño de aplicaciones nativas de la nube](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Para obtener instrucciones específicas de Microsoft sobre cómo implementar una aplicación nativa de la nube, consulte [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
+Para obtener instrucciones detalladas sobre cómo diseñar y desarrollar aplicaciones nativas en la nube, lea los siguientes libros electrónicos gratuitos:
+
+* [Diseño de aplicaciones de .NET nativas en la nube para Azure](../../cloud-native/introduction.md)
+* [Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor](../../microservices/index.md).
 
 El factor más importante que hay que tener en cuenta si migra una aplicación completa al modelo nativo de la nube es que debe rediseñar una arquitectura basada en microservicios. Esto requiere claramente una inversión significativa en desarrollo debido al gran proceso de refactorización que implica. Esta opción se elige normalmente para las aplicaciones críticas que necesitan nuevos niveles de escalabilidad y agilidad a largo plazo. Sin embargo, puede empezar el traslado al modelo nativo de la nube agregando microservicios para unos pocos escenarios nuevos y, finalmente, refactorizar la aplicación por completo como microservicios. Este es un enfoque incremental que es la mejor opción para algunos escenarios.
 

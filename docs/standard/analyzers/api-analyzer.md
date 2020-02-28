@@ -2,14 +2,14 @@
 title: Analizador de API en .NET
 description: Obtenga información sobre cómo el analizador de API de .NET puede ayudar a detectar problemas de compatibilidad de plataforma y de API en desuso.
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124252"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542629"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -24,7 +24,7 @@ El analizador de API está disponible como un paquete NuGet [Microsoft.DotNet.An
 
 - Visual Studio 2017 o Visual Studio para Mac (todas las versiones).
 
-## <a name="discovering-deprecated-apis"></a>Detección de API en desuso
+## <a name="discover-deprecated-apis"></a>Detección de API en desuso
 
 ### <a name="what-are-deprecated-apis"></a>¿Qué son las API en desuso?
 
@@ -36,7 +36,21 @@ La familia de .NET es un conjunto de productos de gran tamaño que se actualizan
 
 El analizador de API usa códigos de error específicos de API que empiezan por DE (que significa error de degradación), que permite controlar la visualización de advertencias individuales. Las API en desuso identificadas por el analizador se definen en el repositorio [dotnet/platform-compat](https://github.com/dotnet/platform-compat).
 
-### <a name="using-the-api-analyzer"></a>Uso del analizador de API
+### <a name="add-the-api-analyzer-to-your-project"></a>Adición del analizador de API al proyecto
+
+1. Abra Visual Studio.
+2. Abra el proyecto en el que quiera ejecutar el analizador.
+3. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Administrar paquetes NuGet**. (Esta opción también está disponible en el menú **Proyecto**).
+4. En la pestaña Administrador de paquetes NuGet:
+   1. Elija "nuget.org" como origen del paquete.
+   2. Vaya a la pestaña **Examinar**.
+   3. Seleccione **Incluir versión preliminar**.
+   4. Busque **Microsoft.DotNet.Analyzers.Compatibility**.
+   5. Seleccione ese paquete de la lista.
+   6. Seleccione el botón **Instalar**. 
+   7. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
+
+### <a name="use-the-api-analyzer"></a>Uso del analizador de API
 
 Cuando una API en desuso, como <xref:System.Net.WebClient>, se utiliza en un código, el analizador de API la destaca con una línea ondulada de color verde. Si mantiene el puntero sobre la llamada API, se muestra una bombilla con información sobre la degradación de la API, como en el ejemplo siguiente:
 
@@ -50,14 +64,14 @@ Al hacer clic en el identificador, se le remite a una página web que contiene i
 
 Las advertencias pueden suprimirse si se hace clic con el botón derecho del ratón en el miembro resaltado y se selecciona **Suprimir \<Id. de diagnóstico>** . Hay dos maneras de suprimir las advertencias: 
 
-- [localmente (en el origen)](#suppressing-warnings-locally)
-- [globalmente (en un archivo de supresión)](#suppressing-warnings-globally); se trata de la opción recomendada
+- [localmente (en el origen)](#suppress-warnings-locally)
+- [globalmente (en un archivo de supresión)](#suppress-warnings-globally); se trata de la opción recomendada
 
-### <a name="suppressing-warnings-locally"></a>Supresión local de advertencias
+### <a name="suppress-warnings-locally"></a>Supresión de advertencias localmente
 
 Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>**  > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: !["Captura de pantalla encuadrada con la advertencia #pragma deshabilitada".](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>Supresión global de advertencias
+### <a name="suppress-warnings-globally"></a>Supresión de advertencias globalmente
 
 Para suprimir advertencias globalmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>**  > **en archivo de supresión**.
 
@@ -69,7 +83,7 @@ Se agrega un archivo *GlobalSuppressions.cs* al proyecto después de su primera 
 
 La supresión global es el método recomendado para garantizar la coherencia del uso de API en los proyectos.
 
-## <a name="discovering-cross-platform-issues"></a>Detección de problemas multiplataforma
+## <a name="discover-cross-platform-issues"></a>Detección de problemas multiplataforma
 
 De forma similar a las API en desuso, el analizador identifica todas las API que no son multiplataforma. Por ejemplo, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funciona en Windows, pero no en Linux y macOS. El Id. de diagnóstico se muestra en la ventana **Lista de errores**. Puede suprimir dicha advertencia si hace clic con el botón derecho y selecciona **Acciones rápidas y refactorizaciones**. A diferencia de los casos de degradación donde tiene dos opciones (seguir usando el miembro en desuso y suprimir advertencias o no utilizarlo en absoluto), en este caso, si va a desarrollar el código solo para algunas plataformas, puede suprimir todas las advertencias para todas las demás plataformas en las que no pretende ejecutar el código. Para ello, solo tiene que editar el archivo de proyecto y agregar la propiedad `PlatformCompatIgnore` que enumera todas las plataformas que se deben ignorar. Los valores permitidos son: `Linux`, `macOS` y `Windows`.
 

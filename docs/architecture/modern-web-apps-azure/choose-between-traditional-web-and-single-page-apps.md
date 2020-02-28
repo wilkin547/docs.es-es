@@ -3,13 +3,13 @@ title: Elección entre aplicaciones web tradicionales y aplicaciones de página 
 description: Obtenga información sobre cómo elegir entre aplicaciones web tradicionales y aplicaciones de página única (SPA) al crear aplicaciones web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 12/04/2019
+ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739458"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450113"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -18,7 +18,7 @@ ms.locfileid: "73739458"
 
 En la actualidad hay dos enfoques generales para crear aplicaciones web: aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web, y se comunican con el servidor web principalmente mediante las API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
 
-Las aplicaciones web tradicionales se deberían usar cuando:
+Use las aplicaciones web tradicionales en los casos siguientes:
 
 - Los requisitos del lado cliente de la aplicación son sencillos o incluso de solo lectura.
 
@@ -26,7 +26,7 @@ Las aplicaciones web tradicionales se deberían usar cuando:
 
 - El equipo no está familiarizado con las técnicas de desarrollo de JavaScript o TypeScript.
 
-Una SPA se debería usar cuando:
+Use una SPA en los casos siguientes:
 
 - La aplicación tenga que exponer una interfaz de usuario enriquecida con muchas características.
 
@@ -34,13 +34,23 @@ Una SPA se debería usar cuando:
 
 - La aplicación ya tiene que exponer una API para otros clientes (internos o públicos).
 
-Además, los marcos de SPA requieren mayores conocimientos de arquitectura y seguridad. Experimentan una renovación mayor que las aplicaciones web tradicionales debido a las actualizaciones frecuentes y los marcos de trabajo nuevos. La configuración de procesos de compilación e implementación automatizados y el uso de opciones de implementación como contenedores son más difíciles con las SPA que con las aplicaciones web tradicionales.
+Además, los marcos de SPA requieren mayores conocimientos de arquitectura y seguridad. Experimentan una renovación mayor que las aplicaciones web tradicionales debido a las actualizaciones frecuentes y los marcos de trabajo nuevos. La configuración de procesos de compilación e implementación automatizados y el uso de opciones de implementación como contenedores pueden ser más difíciles con las SPA que con las aplicaciones web tradicionales.
 
-Las mejoras en la experiencia del usuario que posibilita el modelo de SPA deben ponderarse con estas consideraciones.
+Las mejoras en la experiencia del usuario que posibilita el enfoque de SPA deben ponderarse con estas consideraciones.
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor Blazor permite a los desarrolladores crear interfaces de usuario con Razor en el servidor y, además, entregar el código al navegador y ejecutarlo en el lado cliente mediante [WebAssembly](https://webassembly.org/). ASP.NET Core 3.0 aún está en desarrollo, pero en la actualización 3.0 de este libro electrónico se incluirá más información sobre dicha tecnología. Para más información sobre Blazor, consulte el artículo de [introducción a Blazor](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor Blazor permite a los desarrolladores crear interfaces de usuario con Razor en el servidor y, además, entregar el código al navegador y ejecutarlo en el lado cliente mediante [WebAssembly](https://webassembly.org/). El lado servidor de Blazor está disponible ahora con ASP.NET Core 3.0 o versiones posteriores. El lado cliente de Blazor debería estar disponible en 2020.
+
+Blazor es una tercera opción nueva que se debe tener en cuenta a la hora de evaluar si se debe compilar una aplicación web puramente representada por el servidor o una SPA. Puede compilar comportamientos de cliente enriquecidos similares a los de SPA mediante Blazor, sin necesidad de un desarrollo significativo en JavaScript. Las aplicaciones de Blazor pueden llamar a las API para solicitar datos o realizar operaciones del lado servidor.
+
+Considere la posibilidad de compilar la aplicación web con Blazor en los casos siguientes:
+
+- La aplicación tiene que exponer una interfaz de usuario enriquecida.
+
+- Su equipo está más familiarizado con el desarrollo de .NET que con el desarrollo de JavaScript o TypeScript.
+
+Para más información sobre Blazor, consulte el artículo de [introducción a Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Casos en los que elegir aplicaciones web tradicionales
 
@@ -64,9 +74,9 @@ A continuación, se ofrece una explicación más detallada de cuándo se debe el
 
 **La aplicación tiene que exponer una interfaz de usuario enriquecida con muchas características**
 
-Las SPA pueden admitir funciones enriquecidas del lado cliente que no requieran volver a cargar la página cuando los usuarios realicen acciones o naveguen entre las áreas de la aplicación. Las SPA se pueden cargar más rápidamente, recuperar datos en segundo plano y las acciones individuales de los usuarios tienen más capacidad de respuesta ya que las recargas de página completas son poco frecuentes. Las SPA pueden admitir actualizaciones incrementales y guardar formularios o documentos completados parcialmente sin que el usuario tenga que hacer clic en un botón para enviar un formulario. Las SPA pueden admitir comportamientos enriquecidos del lado cliente, como arrastrar y colocar, mucho más fácilmente que las aplicaciones tradicionales. Las SPA se pueden diseñar para ejecutarse en un modo sin conexión y realizar actualizaciones en un modelo del lado cliente que se sincronizan finalmente al servidor una vez que se restablece la conexión. Debe elegir una aplicación de estilo SPA si los requisitos de la aplicación incluyen funcionalidad enriquecida que va más allá de la que ofrecen los formularios HTML típicos.
+Las SPA pueden admitir funciones enriquecidas del lado cliente que no requieran volver a cargar la página cuando los usuarios realicen acciones o naveguen entre las áreas de la aplicación. Las SPA se pueden cargar más rápidamente, recuperar datos en segundo plano y las acciones individuales de los usuarios tienen más capacidad de respuesta ya que las recargas de página completas son poco frecuentes. Las SPA pueden admitir actualizaciones incrementales y guardar formularios o documentos completados parcialmente sin que el usuario tenga que hacer clic en un botón para enviar un formulario. Las SPA pueden admitir comportamientos enriquecidos del lado cliente, como arrastrar y colocar, mucho más fácilmente que las aplicaciones tradicionales. Las SPA se pueden diseñar para ejecutarse en un modo sin conexión y realizar actualizaciones en un modelo del lado cliente que se sincronizan finalmente al servidor una vez que se restablece la conexión. Elija una aplicación de estilo SPA si los requisitos de la aplicación incluyen funcionalidad enriquecida que va más allá de la que ofrecen los formularios HTML habituales.
 
-Tenga en cuenta que, habitualmente, las SPA tienen que implementar características integradas en las aplicaciones web tradicionales, como mostrar una dirección URL significativa en la barra de direcciones que refleje la operación actual (y que permita a los usuarios guardarla como marcador o vínculo profundo para volver a ella). Las SPA también deben permitir a los usuarios hacer clic en los botones Atrás y Adelante del explorador con resultados que no les sorprendan.
+Con frecuencia, las SPA tienen que implementar características integradas en las aplicaciones web tradicionales, como mostrar una dirección URL significativa en la barra de direcciones que refleje la operación actual (y que permita a los usuarios guardarla como marcador o vínculo profundo para volver a ella). Las SPA también deben permitir a los usuarios hacer clic en los botones Atrás y Adelante del explorador con resultados que no les sorprendan.
 
 **El equipo está familiarizado con el desarrollo de JavaScript o TypeScript**
 
@@ -76,6 +86,8 @@ Para escribir SPA es necesario estar familiarizado con JavaScript o TypeScript y
 >
 > - **Angular**  
 >   <https://angular.io>
+> - **React**
+>   <https://reactjs.org/>
 > - **Comparison of JavaScript Frameworks** (Comparación de marcos de JavaScript)  
 >   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
@@ -83,16 +95,28 @@ Para escribir SPA es necesario estar familiarizado con JavaScript o TypeScript y
 
 Si ya admite una API web para su uso por otros clientes, crear una implementación de SPA que aproveche estas API puede requerir menos trabajo que reproducir la lógica en el lado de servidor. Las SPA realizan un amplio uso de las API web para consultar y actualizar datos cuando los usuarios interactúan con la aplicación.
 
-## <a name="decision-table--traditional-web-or-spa"></a>Tabla de decisiones: aplicaciones web tradicionales o SPA
+## <a name="when-to-choose-blazor"></a>Casos en los que elegir Blazor
 
-En la tabla de decisiones siguiente se resumen algunos de los factores básicos que tener en cuenta al elegir entre una aplicación web tradicional y una SPA.
+A continuación, le ofrecemos una explicación más detallada sobre por qué elegir Blazor para su aplicación web.
 
-| **Factor**                                           | **Aplicación web tradicional** | **Aplicación de una sola página** |
-| ---------------------------------------------------- | ----------------------- | --------------------------- |
-| Familiaridad del equipo necesaria con JavaScript o TypeScript | **Mínima**             | **Obligatoria**                |
-| Compatibilidad con exploradores sin scripting                   | **Compatible**           | **No compatible**           |
-| Comportamiento mínimo del lado cliente de la aplicación             | **Adecuado**         | **Excesivo**                |
-| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuados**             |
+**La aplicación tiene que exponer una interfaz de usuario enriquecida**
+
+Al igual que las SPA basadas en JavaScript, las aplicaciones de Blazor pueden admitir el comportamiento de cliente enriquecido sin recargas de página. Estas aplicaciones tienen más capacidad de respuesta a los usuarios y solo capturan los datos (o HTML) necesarios para responder a una interacción determinada del usuario. Diseñadas correctamente, las aplicaciones del lado servidor de Blazor se pueden configurar para que se ejecuten como aplicaciones del lado cliente de Blazor con cambios mínimos cuando se admita esta característica.
+
+**Su equipo está más familiarizado con el desarrollo de .NET que con el desarrollo de JavaScript o TypeScript**
+
+Muchos desarrolladores son más productivos con .NET y Razor que con los lenguajes del lado cliente, como JavaScript o TypeScript. Dado que el lado servidor de la aplicación ya se está desarrollando con .NET, el uso de Blazor garantiza que todos los desarrolladores de .NET del equipo puedan entender y crear potencialmente el comportamiento del front-end de la aplicación.
+
+## <a name="decision-table"></a>Tabla de decisiones
+
+En siguiente la tabla de decisiones se resumen algunos de los factores básicos que tener en cuenta al elegir entre una aplicación web tradicional, una SPA y una aplicación de Blazor.
+
+| **Factor**                                           | **Aplicación web tradicional** | **Aplicación de una sola página** | **Aplicación de Blazor**  |
+| ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
+| Familiaridad del equipo necesaria con JavaScript o TypeScript | **Mínima**             | **Obligatoria**                | **Mínima**     |
+| Compatibilidad con exploradores sin scripting                   | **Compatible**           | **No compatible**           | **Compatible**   |
+| Comportamiento mínimo del lado cliente de la aplicación             | **Adecuado**         | **Excesivo**                | **Viable**      |
+| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuados**             | **Adecuados** |
 
 >[!div class="step-by-step"]
 >[Anterior](modern-web-applications-characteristics.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713123"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451946"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referencia de C#)
 
@@ -70,7 +70,7 @@ p2.y = 66;        // Error
 
 se obtendrá el siguiente mensaje de error del compilador:
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**No se puede asignar un campo de solo lectura (excepto en un constructor o inicializador de variable)** .
 
 ## <a name="readonly-struct-example"></a>Ejemplo de estructura de solo lectura
 

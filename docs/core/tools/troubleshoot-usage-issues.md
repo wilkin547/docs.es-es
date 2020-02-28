@@ -2,13 +2,13 @@
 title: Solución de problemas de uso de herramientas de .NET Core
 description: Descubra los problemas comunes que se producen al ejecutar herramientas de .NET Core y sus posibles soluciones.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282498"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543279"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solución de problemas de uso de herramientas de .NET Core
 
@@ -59,7 +59,7 @@ El nombre del archivo ejecutable determina cómo se invoca la herramienta. En la
   * Si ha instalado el SDK de .NET Core 3.0 y ha establecido la variable de entorno `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` en `false`.
   * Si ha instalado el SDK de .NET Core 2.2 o versiones anteriores y ha establecido la variable de entorno `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` en `true`.
 
-  Para obtener más información sobre las herramientas globales, vea [Información general sobre las herramientas globales de .NET Core](global-tools.md).
+  Para obtener más información, vea [Herramientas de .NET Core](global-tools.md).
 
 * Herramientas locales
 
@@ -73,7 +73,7 @@ El nombre del archivo ejecutable determina cómo se invoca la herramienta. En la
 
 ### <a name="runtime-not-found"></a>No se encontró el runtime
 
-Las herramientas de .NET Core son [aplicaciones dependientes del marco](../deploying/index.md#framework-dependent-deployments-fdd), lo que significa que se basan en un runtime de .NET Core instalado en el equipo. Si no se encuentra el runtime esperado, se siguen las reglas normales de puesta al día de runtime de .NET Core:
+Las herramientas de .NET Core son [aplicaciones dependientes del marco](../deploying/index.md#publish-runtime-dependent), lo que significa que se basan en un runtime de .NET Core instalado en el equipo. Si no se encuentra el runtime esperado, se siguen las reglas normales de puesta al día de runtime de .NET Core:
 
 * Una aplicación avanza a la versión de revisión más alta de las versiones principal y secundaria especificadas.
 * Si no hay ningún runtime que coincida con un número de versión principal y secundaria, se usa la siguiente versión secundaria más alta.
@@ -137,9 +137,6 @@ Las herramientas de .NET Core que se encuentran en versión preliminar deben esp
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> El equipo de la CLI de .NET Core está planeando agregar un modificador `--preview` en una versión futura para facilitar esta tarea.
-
 ### <a name="package-isnt-a-net-core-tool"></a>El paquete no es una herramienta de .NET Core
 
 * Se encontró un paquete NuGet con este nombre, pero no era una herramienta .NET Core.
@@ -162,4 +159,4 @@ Un motivo habitual de error es que el nombre de la herramienta no es correcto. E
 
 ## <a name="see-also"></a>Vea también
 
-* [Información general sobre las herramientas globales de .NET Core](global-tools.md)
+* [Herramientas de .NET Core](global-tools.md)

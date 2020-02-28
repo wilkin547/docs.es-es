@@ -1,13 +1,13 @@
 ---
 title: Seguimiento de estado
 description: Explore una forma de implementar la supervisión de estado.
-ms.date: 01/07/2019
-ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732895"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502686"
 ---
 # <a name="health-monitoring"></a>Seguimiento de estado
 
@@ -19,7 +19,7 @@ En el modelo típico, los servicios envían informes sobre su estado. Esa inform
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Implementación de comprobaciones de estado en servicios de ASP.NET Core
 
-Al desarrollar una aplicación web o microservicio de ASP.NET Core, puede usar la característica de comprobaciones de estado integrada que se lanzó en ASP.NET Core 2.2. Al igual que muchas características de ASP.NET Core, las comprobaciones de estado incluyen un conjunto de servicios y un middleware.
+Al desarrollar una aplicación web o microservicio de ASP.NET Core, puede usar la característica de comprobaciones de estado integrada que se lanzó en ASP.NET Core 3.1 ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Al igual que muchas características de ASP.NET Core, las comprobaciones de estado incluyen un conjunto de servicios y un middleware.
 
 Los servicios de comprobación de estado y middleware son fáciles de usar y proporcionan características que permiten validar el funcionamiento correcto de cualquier recurso externo necesario para la aplicación (por ejemplo, una base de datos de SQL Server o API remota). Cuando se utiliza esta característica, también se puede decidir lo que significa que el estado del recurso sea correcto, tal y como se explica más adelante.
 
@@ -27,20 +27,23 @@ Para usar esta característica con eficacia, primero debe configurar servicios e
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Uso de la característica HealthChecks en los microservicios ASP.NET de back-end
 
-En esta sección, aprenderá a usar la característica HealthChecks en una aplicación de la ASP.NET Core 2.2 Web API de ejemplo. La implementación de esta característica en un microservicio a gran escala como eShopOnContainers se explica en la sección posterior. Para empezar, debe definir qué constituye un estado correcto en cada microservicio. En la aplicación de ejemplo, el estado de los microservicios es correcto si se puede acceder a la API del microservicio a través de HTTP y si su base de datos de SQL Server relacionada también está disponible.
+En esta sección, aprenderá a usar la característica HealthChecks, como se implementó en [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), en una aplicación de la API web de ASP.NET Core 3.1 de ejemplo. La implementación de esta característica en un microservicio a gran escala como eShopOnContainers se explica en la sección posterior. Para empezar, debe definir qué constituye un estado correcto en cada microservicio. En la aplicación de ejemplo, el estado de los microservicios es correcto si se puede acceder a la API del microservicio a través de HTTP y si su base de datos de SQL Server relacionada también está disponible.
 
-En .NET Core 2.2, con las API integradas, puede configurar los servicios, añadir una comprobación de estado para el microservicio y su base de datos de SQL Server dependiente de esta forma:
+En .NET Core 3.1, con las API integradas, puede configurar los servicios, añadir una comprobación de estado para el microservicio y su base de datos de SQL Server dependiente de esta forma:
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
     //...
     // Registers required services for health checks
     services.AddHealthChecks()
-    // Add a health check for a SQL database
-    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+        // Add a health check for a SQL Server database
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "OrderingDB-check",
+            tags: new string[] { "orderingdb" });
 }
 ```
 
@@ -98,17 +101,26 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-Tenga en cuenta que en el código anterior, `Select 1` es la consulta usada para comprobar el estado de la base de datos. Para supervisar la disponibilidad de los microservicios, orquestadores como Kubernetes y Service Fabric realizan periódicamente comprobaciones de estado mediante el envío de solicitudes para probar los microservicios. Es importante mantener la eficacia de sus consultas de base de datos para que estas operaciones sean rápidas y no den lugar a una mayor utilización de recursos.
+Tenga en cuenta que en el código anterior, `Select 1` es la consulta usada para comprobar el estado de la base de datos. Para supervisar la disponibilidad de los microservicios, orquestadores como Kubernetes realizan periódicamente comprobaciones de estado mediante el envío de solicitudes para probar los microservicios. Es importante mantener la eficacia de sus consultas de base de datos para que estas operaciones sean rápidas y no den lugar a una mayor utilización de recursos.
 
-Por último, cree un middleware que responda a la dirección URL “/hc”:
+Por último, agregue un middleware que responda a la dirección URL `/hc`:
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecks("/hc");
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
+        {
+            Predicate = _ => true,
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+        //...
+    });
     //…
 }
 ```
@@ -119,7 +131,7 @@ Cuando se invoca, el punto de conexión `<yourmicroservice>/hc` ejecuta todas la
 
 Los microservicios de eShopOnContainers se basan en varios servicios para realizar su tarea. Por ejemplo, el microservicio `Catalog.API` de eShopOnContainers depende de muchos servicios, como Azure Blob Storage, SQL Server y RabbitMQ. Por lo tanto, tiene varias comprobaciones de estado agregadas mediante el método `AddCheck()`. Para todos los servicios dependientes, debe agregarse una implementación `IHealthCheck` que defina su estado de mantenimiento correspondiente.
 
-El proyecto de código abierto [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) resuelve este problema proporcionando implementaciones de comprobación de estado personalizadas para cada uno de estos servicios empresariales basados en .NET Core 2.2. Cada comprobación de estado está disponible como paquete NuGet individual que se puede agregar fácilmente al proyecto. eShopOnContainers los usa mayoritariamente en todos sus microservicios.
+El proyecto de código abierto [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) resuelve este problema mediante implementaciones de comprobación de estado personalizadas para cada uno de estos servicios empresariales basados en .NET Core 3.1. Cada comprobación de estado está disponible como paquete NuGet individual que se puede agregar fácilmente al proyecto. eShopOnContainers los usa mayoritariamente en todos sus microservicios.
 
 Por ejemplo, en el microservicio `Catalog.API`, se agregaron los siguientes paquetes NuGet:
 
@@ -175,7 +187,7 @@ public static IServiceCollection AddCustomHealthCheck(this IServiceCollection se
 }
 ```
 
-Por último, agregamos el middleware HealthCheck que se va a escuchar al punto de conexión “/hc”:
+Por último, agregue el middleware HealthCheck que se va a escuchar al punto de conexión "/hc":
 
 ```csharp
 // HealthCheck middleware
@@ -279,7 +291,7 @@ Por último, si almacena todos los flujos de eventos, se puede utilizar Microsof
 - **Introduction to Service Fabric health monitoring (Introducción al seguimiento de estado de Service Fabric)**  \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Monitor**  
+- **Azure Monitor** \
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]

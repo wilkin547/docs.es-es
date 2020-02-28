@@ -3,13 +3,13 @@ title: Principios de la arquitectura
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Principios de la arquitectura
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416688"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450276"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -34,7 +34,7 @@ En las clases, la encapsulación se logra mediante la limitación del acceso ext
 
 ### <a name="dependency-inversion"></a>Inversión de dependencias
 
-La dirección de dependencia dentro de la aplicación debe estar en la dirección de la abstracción, no de los detalles de implementación. La mayoría de las aplicaciones se escriben de manera que la dependencia de tiempo de compilación fluya en la dirección de ejecución del tiempo de ejecución. Esto genera un gráfico de dependencias directas. Es decir, si el módulo A llama a una función en el módulo B, que llama a una función en el módulo C, en tiempo de compilación A dependerá de B que dependerá de C, como se muestra en la figura 4-1.
+La dirección de dependencia dentro de la aplicación debe estar en la dirección de la abstracción, no de los detalles de implementación. La mayoría de las aplicaciones se escriben de manera que la dependencia de tiempo de compilación fluya en la dirección de ejecución del tiempo de ejecución. Esto genera un gráfico de dependencias directas. Es decir, si el módulo A llama a una función en el módulo B, que llama a una función en el módulo C, A dependerá en tiempo de compilación de B, que a su vez dependerá de C, como se muestra en la figura 4-1.
 
 ![Gráfico de dependencias directas](./media/image4-1.png)
 
@@ -46,17 +46,17 @@ Aplicar el principio de inversión de dependencias permite que A llame a método
 
 **Figura 4-2.** Gráfico de dependencias invertidas.
 
-La **Inversión de dependencias** es una parte fundamental de la creación de aplicaciones de acoplamiento flexible, ya que se pueden escribir detalles de implementación de los que depender e implementar abstracciones de nivel superior, en lugar de hacerlo al contrario. Como resultado, las aplicaciones son modulares y más fáciles de probar y mantener. La práctica de la *inserción de dependencias* es posible si se sigue el principio de inversión de dependencias.
+La **Inversión de dependencias** es una parte fundamental de la creación de aplicaciones de acoplamiento flexible, ya que se pueden escribir detalles de implementación de los que depender e implementar abstracciones de nivel superior, en lugar de hacerlo al revés. Como resultado, las aplicaciones son modulares y más fáciles de probar y mantener. La práctica de la *inserción de dependencias* es posible si se sigue el principio de inversión de dependencias.
 
 ### <a name="explicit-dependencies"></a>Dependencias explícitas
 
-**Los métodos y las clases deben requerir explícitamente todos los objetos de colaboración que necesiten para funcionar correctamente.** Los constructores de clases proporcionan una oportunidad para que las clases identifiquen lo que necesitan para poder tener un estado válido y funcionar correctamente. Si se definen clases que se pueden construir y llamar, pero que solo funcionarán correctamente si existen determinados componentes globales o de infraestructura, estas clases no estarán siendo *honestas* con sus clientes. El contrato de constructor indica al cliente que solo necesita los elementos especificados (posiblemente ninguno si la clase solo usa un constructor sin parámetros), pero después, en tiempo de ejecución, en realidad el objeto necesita algo más.
+**Los métodos y las clases deben requerir explícitamente todos los objetos de colaboración que necesiten para funcionar correctamente.** Los constructores de clases proporcionan una oportunidad para que las clases identifiquen lo que necesitan para poder tener un estado válido y funcionar correctamente. Si se definen clases que se pueden construir y a las que se puede llamar, pero que solo funcionarán correctamente si existen determinados componentes globales o de infraestructura, estas clases *no estarán siendo honestas* con sus clientes. El contrato de constructor indica al cliente que solo necesita los elementos especificados (posiblemente ninguno si la clase solo usa un constructor sin parámetros), pero después, en tiempo de ejecución, en realidad el objeto necesita algo más.
 
 Si siguen el principio de dependencias explícitas, las clases y métodos estarán siendo sinceros con sus clientes con respecto a lo que necesitan para poder funcionar. Esto hace que el código sea más autoexplicativo y los contratos de codificación más fáciles de usar, puesto que los usuarios confiarán en eso siempre que proporcionen lo que se necesita en forma de parámetros de método o constructor, los objetos con los trabajan se comportarán correctamente en tiempo de ejecución.
 
 ### <a name="single-responsibility"></a>Responsabilidad única
 
-El principio de responsabilidad única se aplica al diseño orientado a objetos, pero también se puede considerar como un principio de arquitectura similar a la separación de intereses. Indica que los objetos solo deben tener una responsabilidad y solo una razón para cambiar. En concreto, la única situación en la que el objeto debe cambiar es si hay que actualizar la manera en la que lleva a cabo su única responsabilidad. El seguimiento de este principio ayuda a generar sistemas más modulares y de acoplamiento flexible, dado que muchos tipos de comportamientos nuevos se pueden implementar como clases nuevas, en lugar de mediante la adición de responsabilidad adicional a las clases existentes. Agregar clases nuevas siempre es más seguro que cambiar las existentes, puesto que todavía no hay código que dependa de las clases nuevas.
+El principio de responsabilidad única se aplica al diseño orientado a objetos, pero también se puede considerar como un principio de arquitectura similar a la separación de intereses. Indica que los objetos solo deben tener una responsabilidad y solo una razón para cambiar. En concreto, la única situación en la que el objeto debe cambiar es si hay que actualizar la manera en la que lleva a cabo su única responsabilidad. El hecho de seguir este principio ayuda a generar sistemas más modulares y de acoplamiento flexible, dado que muchos tipos de comportamientos nuevos se pueden implementar como clases nuevas, en lugar de mediante la incorporación de responsabilidad adicional a las clases existentes. Agregar clases nuevas siempre es más seguro que cambiar las existentes, puesto que todavía no hay código que dependa de las clases nuevas.
 
 En una aplicación monolítica, se puede aplicar el principio de responsabilidad única en un nivel general a las capas de la aplicación. La responsabilidad de la presentación debe mantenerse en el proyecto de la interfaz de usuario, mientras que la responsabilidad de acceso a los datos se debe mantener en un proyecto de infraestructura. La lógica de negocios se debe mantener en el proyecto principal de la aplicación, donde se puede probar fácilmente y puede evolucionar con independencia de otras responsabilidades.
 

@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712109"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452011"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
- Las convenciones de codificación tienen los objetivos siguientes:  
+
+Las convenciones de codificación tienen los objetivos siguientes:  
   
 - Crean una apariencia coherente en el código, para que los lectores puedan centrarse en el contenido, no en el diseño.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "75712109"
   
 - Muestran los procedimientos recomendados de C#.  
 
- Microsoft usa las instrucciones de este tema para desarrollar ejemplos y documentación.  
+Microsoft usa las instrucciones de este artículo para desarrollar ejemplos y documentación.  
   
 ## <a name="naming-conventions"></a>Convenciones de nomenclatura  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712109"
 - No es necesario cambiar los nombres de objetos que se crearon con las herramientas del diseñador de Visual Studio para que se ajusten a otras directrices.  
   
 ## <a name="layout-conventions"></a>Convenciones de diseño  
- Un buen diseño utiliza un formato que destaque la estructura del código y haga que el código sea más fácil de leer. Las muestras y ejemplos de Microsoft cumplen las convenciones siguientes:  
+
+Un buen diseño utiliza un formato que destaque la estructura del código y haga que el código sea más fácil de leer. Las muestras y ejemplos de Microsoft cumplen las convenciones siguientes:  
   
 - Utilice la configuración del Editor de código predeterminada (sangría automática, sangrías de 4 caracteres, tabulaciones guardadas como espacios). Para obtener más información, vea [Opciones, editor de texto, C#, formato](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712109"
 - No cree bloques con formato de asteriscos alrededor de comentarios.  
   
 ## <a name="language-guidelines"></a>Convenciones de lenguaje  
- En las secciones siguientes se describen las prácticas que sigue el equipo C# para preparar las muestras y ejemplos de código.  
+
+En las secciones siguientes se describen las prácticas que sigue el equipo C# para preparar las muestras y ejemplos de código.  
   
 ### <a name="string-data-type"></a>String (Tipo de datos)  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712109"
   
 - Evite el uso de `var` en lugar de [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
-- Use tipos implícitos para determinar el tipo de la variable de bucle en bucles [for](../../language-reference/keywords/for.md) y [foreach](../../language-reference/keywords/foreach-in.md).  
+- Use tipos implícitos para determinar el tipo de la variable de bucle en bucles [for](../../language-reference/keywords/for.md).  
   
      En el ejemplo siguiente se usan tipos implícitos en una instrucción `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     En el ejemplo siguiente se usan tipos implícitos en una instrucción `foreach`.  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- No use tipos implícitos para determinar el tipo de la variable de bucle en bucles [foreach](../../language-reference/keywords/foreach-in.md).
+
+     En el ejemplo siguiente se usan tipos explícitos en una instrucción `foreach`.
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > Tenga cuidado de no cambiar accidentalmente un tipo de elemento de la colección iterable. Por ejemplo, es fácil cambiar de <xref:System.Linq.IQueryable?displayProperty=nameWithType> a <xref:System.Collections.IEnumerable?displayProperty=nameWithType> en una instrucción `foreach`, lo cual cambia la ejecución de una consulta.
+
 ### <a name="unsigned-data-type"></a>Tipo de datos sin signo  
   
-- En general, utilice `int` en lugar de tipos sin signo. El uso de `int` es común en todo C#, y es más fácil interactuar con otras bibliotecas cuando se usa `int`.  
+En general, utilice `int` en lugar de tipos sin signo. El uso de `int` es común en todo C#, y es más fácil interactuar con otras bibliotecas cuando se usa `int`.  
   
 ### <a name="arrays"></a>Matrices  
   
-- Utilice sintaxis concisa para inicializar las matrices en la línea de declaración.  
+Utilice sintaxis concisa para inicializar las matrices en la línea de declaración.  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Delegados  
   
-- Utilice sintaxis concisa para crear instancias de un tipo de delegado.  
+Utilice sintaxis concisa para crear instancias de un tipo de delegado.  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>Instrucciones try-catch y using en el control de excepciones  
   
@@ -134,9 +142,9 @@ ms.locfileid: "75712109"
   
 ### <a name="-and-124124-operators"></a>Operadores && y &#124;&#124;  
   
-- Para evitar excepciones y aumentar el rendimiento omitiendo las comparaciones innecesarias, use [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) en lugar de [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) y [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) en lugar de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) cuando realice comparaciones, como se muestra en el ejemplo siguiente.  
+Para evitar excepciones y aumentar el rendimiento omitiendo las comparaciones innecesarias, use [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) en lugar de [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) y [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) en lugar de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) cuando realice comparaciones, como se muestra en el ejemplo siguiente.  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>New (Operador)  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712109"
   
 ### <a name="event-handling"></a>Control de eventos  
   
-- Si va a definir un controlador de eventos que no es necesario quitar más tarde, utilice una expresión lambda.  
+Si va a definir un controlador de eventos que no es necesario quitar más tarde, utilice una expresión lambda.  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>Miembros estáticos  
   
-- Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
+Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
   
 ### <a name="linq-queries"></a>Consultas LINQ  
   
@@ -193,7 +201,8 @@ ms.locfileid: "75712109"
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>Seguridad  
- Siga las instrucciones de [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md).  
+
+Siga las instrucciones de [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md).  
   
 ## <a name="see-also"></a>Vea también
 

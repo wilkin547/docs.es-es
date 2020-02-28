@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937692"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452687"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -140,7 +140,7 @@ Estas versiones de la plataforma WCF se han codificado de forma rígida para usa
 
 ## <a name="if-your-app-targets-net-framework-35"></a>Si la aplicación tiene como destino .NET Framework 3.5
 
-Si se debe establecer explícitamente un protocolo de seguridad en lugar de permitir a .NET Framework o el sistema operativo seleccionar el protocolo de seguridad, agregue las enumeraciones `SecurityProtocolTypeExtensions` y `SslProtocolsExtension` a su código. `SecurityProtocolTypeExtensions` y `SslProtocolsExtension` incluyen valores para el valor `Tls12`, `Tls11` y `SystemDefault`. Vea [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5 en Windows 8.1 y Windows Server 2012 R2.
+Si se debe establecer explícitamente un protocolo de seguridad en lugar de permitir a .NET o el sistema operativo seleccionar el protocolo de seguridad, agregue las enumeraciones `SecurityProtocolTypeExtensions` y `SslProtocolsExtension` a su código. `SecurityProtocolTypeExtensions` y `SslProtocolsExtension` incluyen valores para el valor `Tls12`, `Tls11` y `SystemDefault`. Para obtener más información, consulte [Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5 en Windows 8.1 y Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework).
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -209,7 +209,7 @@ Si la aplicación tiene como destino .NET Framework 4.7 o versiones posteriores,
 
 Para obtener más información, consulte [Actualización acumulativa para Windows 10 versión 1511 y Windows Server 2016 Technical Preview 4: 10 de mayo de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
-Para obtener más información con .NET Framework 3.5.1, consulte [Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5.1 en Windows 7 SP1 y Server 2008 R2 SP1).
+Para obtener más información con .NET Framework 3.5.1, consulte [Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5.1 en Windows 7 SP1 y Windows Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 
 El siguiente archivo _. REG_ establece las claves del Registro y sus variantes en sus valores más seguros:
 

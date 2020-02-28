@@ -1,13 +1,13 @@
 ---
 title: Implementación del nivel de aplicación de microservicios mediante la API web
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Comprenda los procesos de inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737541"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502446"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ Básicamente, la clase de comando contiene todos los datos que se necesitan para
 
 Como una característica adicional, los comandos son inmutables, dado que el uso esperado es que el modelo de dominio los procese directamente. No deben cambiar durante su duración prevista. En una clase de C#, se puede lograr la inmutabilidad si no hay establecedores ni otros métodos que cambien el estado interno.
 
-Tenga en cuenta que si pretende o espera que los comandos pasen a través de un proceso de serialización o deserialización, las propiedades deben tener un establecedor privado y el atributo `[DataMember]` (o `[JsonProperty]`), en caso contrario, el deserializador no podrá reconstruir el objeto en el destino con los valores necesarios.
+Tenga en cuenta que si quiere o espera que los comandos pasen por un proceso de serialización o deserialización, las propiedades deben tener un establecedor privado y el atributo `[DataMember]` (o `[JsonProperty]`). De lo contrario, el deserializador no podrá reconstruir el objeto en el destino con los valores necesarios. También puede usar propiedades que realmente sean de solo lectura si la clase tiene un constructor con parámetros para todas las propiedades, con la convención de nomenclatura de camelCase habitual, y anotar el constructor como `[JsonConstructor]`. Sin embargo, esta opción requiere más código.
 
 Por ejemplo, la clase de comando para crear un pedido probablemente sea similar en cuanto a los datos del pedido que se quiere crear, pero es probable que no se necesiten los mismos atributos. Por ejemplo, `CreateOrderCommand` no tiene un identificador de pedido, porque el pedido aún no se ha creado.
 
@@ -313,9 +311,9 @@ public class UpdateOrderStatusCommand
 
 Algunos desarrolladores separan los objetos de solicitud de interfaz de usuario de los DTO de comando, pero es solo una cuestión de preferencia. Es una separación tediosa sin demasiado valor añadido y los objetos tienen prácticamente la misma forma. Por ejemplo, en eShopOnContainers, algunos comandos proceden directamente del lado cliente.
 
-### <a name="the-command-handler-class"></a>La clase de controlador de comandos
+### <a name="the-command-handler-class"></a>Clase de controlador de comandos
 
-Debe implementar una clase de controlador de comandos específica para cada comando. Ese es el funcionamiento del patrón y el lugar en que se usarán el objeto de comando, los objetos de dominio y los objetos de repositorio de infraestructura. De hecho, el controlador de comandos es el núcleo del nivel de aplicación en lo que a CQRS y DDD respecta. Pero toda la lógica del dominio debe incluirse en las clases de dominio, dentro de las raíces agregadas (entidades raíz), las entidades secundarias o [los servicios de dominio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), pero no en el controlador de comandos, que es una clase del nivel de aplicación.
+Debe implementar una clase de controlador de comandos específica para cada comando. Ese es el funcionamiento del patrón y el lugar en el que se usarán el objeto de comando, los objetos de dominio y los objetos de repositorio de infraestructura. De hecho, el controlador de comandos es el núcleo del nivel de aplicación en lo que a CQRS y DDD respecta. Sin embargo, toda la lógica del dominio debe incluirse en las clases de dominio, dentro de las raíces agregadas (entidades raíz), las entidades secundarias o [los servicios de dominio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), pero no en el controlador de comandos, que es una clase del nivel de aplicación.
 
 La clase de controlador de comandos ofrece un punto de partida seguro en la forma de lograr el principio de responsabilidad única (SRP) mencionado en una sección anterior.
 

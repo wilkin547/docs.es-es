@@ -4,12 +4,12 @@ description: Información sobre las expresiones de coincidencia de patrones en C
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039361"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501629"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -136,3 +136,7 @@ Las *construcciones de coincidencia de patrones* permiten administrar fácilment
 La coincidencia de patrones funciona con cualquier tipo de datos. Se escriben expresiones que examinan el objeto y se toman decisiones de flujo de control basadas en esas condiciones.
 
 Compare el código de este ejemplo con el diseño que se obtendría al crear una jerarquía de clases para un elemento `Shape` abstracto y formas derivadas concretas cada una con su propia implementación de un método virtual para calcular el área. A menudo encontrará que las expresiones de coincidencia de patrones pueden ser una herramienta muy útil al trabajar con datos y querer separar las preocupaciones sobre almacenamiento de datos de las preocupaciones sobre comportamiento.
+
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos](tutorials/pattern-matching.md)

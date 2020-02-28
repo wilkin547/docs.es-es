@@ -1,13 +1,13 @@
 ---
 title: Incluir en un contenedor aplicaciones monolíticas
 description: Incluir en un contenedor aplicaciones monolíticas, aunque no obtenga todos los beneficios de la arquitectura de microservicios, tiene ventajas importantes de implementación que se pueden entregar inmediatamente.
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738010"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503281"
 ---
 # <a name="containerizing-monolithic-applications"></a>Incluir en un contenedor aplicaciones monolíticas
 
@@ -61,7 +61,7 @@ Tanto si quiere obtener la validación de un contenedor implementado en Azure o 
 
 ![Captura de pantalla del cuadro de diálogo Crear servicio de aplicaciones que muestra una instancia de Container Registry.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**Figura 4-4**. Publicar una aplicación de contenedor único en Azure App Service desde Visual Studio
+**Figura 4-4**. Publicación de una aplicación de contenedor único en Azure App Service desde Visual Studio 2019
 
 Sin Docker, si necesitaba otras capacidades, marcos o dependencias que no fueran compatibles con Azure App Service, tenía que esperar a que el equipo de Azure actualizara esas dependencias en App Service. O tenía que cambiar a otros servicios como Azure Cloud Services o máquinas virtuales, en que tenía más control y podía instalar un componente o un marco necesario para la aplicación.
 

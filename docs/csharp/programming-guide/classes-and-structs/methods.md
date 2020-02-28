@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743908"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543565"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 
@@ -21,7 +21,7 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
 
 ## <a name="method-signatures"></a>Firmas de método
 
-Los métodos se declaran en una [clase](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md) especificando el nivel de acceso, como `public` o `private`, modificadores opcionales como `abstract` o `sealed`, el valor de retorno, el nombre del método y cualquier parámetro de método. Todas estas partes forman la firma del método.
+Los métodos se declaran en una [clase](../../language-reference/keywords/class.md), [struct](../../language-reference/keywords/struct.md) o [interfaz](../interfaces/index.md) especificando el nivel de acceso, como `public` o `private`, modificadores opcionales como `abstract` o `sealed`, el valor devuelto, el nombre del método y cualquier parámetro de método. Todas estas partes forman la firma del método.
 
 > [!NOTE]
 > Un tipo de valor devuelto de un método no forma parte de la firma del método con el objetivo de sobrecargar el método. Sin embargo, forma parte de la firma del método al determinar la compatibilidad entre un delegado y el método que señala.

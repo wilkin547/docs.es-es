@@ -3,13 +3,13 @@ title: Arquitecturas de aplicaciones web comunes
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Explorar las arquitecturas de aplicaciones web comunes
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884246"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450195"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -99,8 +99,7 @@ El enfoque más sencillo para escalar una aplicación web en Azure consiste en c
 
 Las aplicaciones que siguen el principio de inversión de dependencias, así como los principios de diseño controlado por dominios (DDD), tienden a llegar a una arquitectura similar. Esta arquitectura ha pasado por muchos nombres con los años. Uno de los primeros nombres fue Arquitectura hexagonal, seguido por Puertos y adaptadores. Más recientemente, se ha citado como [arquitectura cebolla](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) o [arquitectura limpia](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Este último nombre, Arquitectura limpia, es el que se usa para esta arquitectura en este libro electrónico.
 
-> [!NOTE]
-> El término Arquitectura limpia se puede aplicar tanto a las aplicaciones que se compilan mediante principios de DDD como a las que no. En el caso de las primeras, esta combinación se puede denominar "Arquitectura DDD limpia".
+La aplicación de referencia eShopOnWeb utiliza el enfoque de arquitectura limpia para organizar su código en proyectos. Puede encontrar una plantilla de solución que puede usar como punto de partida para su propio ASP.NET Core en el repositorio de GitHub [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture).
 
 La arquitectura limpia coloca el modelo de lógica de negocios y aplicación en el centro de la aplicación. En lugar de tener lógica de negocios que depende del acceso a datos o de otros aspectos de infraestructura, esta dependencia se invierte: los detalles de la infraestructura y la implementación dependen del núcleo de la aplicación. Esto se logra mediante la definición de abstracciones o interfaces, en el núcleo de la aplicación, que después se implementan mediante tipos definidos en el nivel de infraestructura. Una forma habitual de visualizar esta arquitectura es usar una serie de círculos concéntricos, similares a una cebolla. En la figura 5-7 se muestra un ejemplo de este estilo de representación de la arquitectura.
 
@@ -212,7 +211,7 @@ Implementar las actualizaciones como imágenes de Docker es mucho más rápido y
 
 Como por diseño los contenedores son intrínsecamente inmutables, no tendrá que preocuparse de que las máquinas virtuales resulten dañadas, mientras que es posible que los scripts de actualización olviden tener en cuenta alguna configuración concreta o archivo que se conserve en disco.
 
-Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no se volverá a hacer esta pregunta: "Funciona en mi equipo, ¿por qué no funciona en producción?".
+Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no tendrá que pensar en por qué no funciona en producción, aunque sí que funcione en su equipo.
 
 Una arquitectura basada en microservicios tiene muchas ventajas, pero a costa de una mayor complejidad. En algunos casos, los costos superan las ventajas, por lo que es una opción mejor utilizar una aplicación de implementación monolítica que se ejecute en un solo contenedor o en unos pocos contenedores.
 
@@ -263,21 +262,19 @@ networks:
 El archivo `docker-compose.yml` hace referencia a `Dockerfile` en el proyecto `Web`. El `Dockerfile` se usa para especificar qué contenedor base se va a utilizar y cómo se configurará la aplicación en él. El `Dockerfile` de `Web`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Si quiere agregar compatibilidad con Docker a la aplicación mediante Visual Stu
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **The Repository Pattern** (El modelo de repositorio)  
   <https://deviq.com/repository-pattern/>
-- **Clean Architecture Solution Sample** (Ejemplo de solución de arquitectura limpia)  
+- **Plantilla de solución de arquitectura limpia**  
   <https://github.com/ardalis/cleanarchitecture>
 - **Architecting Microservices e-book** (Libro electrónico de arquitectura de microservicios)  
   <https://aka.ms/MicroservicesEbook>

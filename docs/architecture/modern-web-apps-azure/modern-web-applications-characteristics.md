@@ -3,13 +3,13 @@ title: Características de las aplicaciones web modernas
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Características de las aplicaciones web modernas
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 12/04/2019
+ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374089"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451569"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
@@ -61,20 +61,28 @@ Muchas aplicaciones web implican una combinación del comportamiento de aplicaci
 
 ## <a name="simple-development-and-deployment"></a>Implementación y desarrollo simples
 
-Las aplicaciones ASP.NET Core se pueden escribir mediante interfaces de línea de comandos y editores de texto simples, o bien con entornos de desarrollo completos como Visual Studio. Las aplicaciones monolíticas normalmente se implementan en un solo punto de conexión. Las implementaciones se pueden automatizar con facilidad para que tengan lugar como parte de una canalización de integración continua (CI) y entrega continua (CD). Además de las herramientas de CI/CD tradicionales, Windows Azure tiene compatibilidad integrada para repositorios de Git y puede implementar automáticamente las actualizaciones que se realicen en una rama o etiqueta de Git especificada.
+Las aplicaciones de ASP.NET Core se pueden escribir mediante interfaces de línea de comandos y editores de texto simples, o bien con entornos de desarrollo completos como Visual Studio. Las aplicaciones monolíticas normalmente se implementan en un solo punto de conexión. Las implementaciones se pueden automatizar con facilidad para que tengan lugar como parte de una canalización de integración continua (CI) y entrega continua (CD). Además de las herramientas de CI/CD tradicionales, Microsoft Azure tiene compatibilidad integrada para repositorios de Git y puede implementar automáticamente las actualizaciones que se realicen en una rama o etiqueta de Git especificada. Azure DevOps proporciona una canalización de compilación e implementación de CI/CD con todas las características; por su parte, Acciones de GitHub proporciona otra opción para los proyectos hospedados allí.
 
 ## <a name="traditional-aspnet-and-web-forms"></a>ASP.NET tradicional y formularios Web Forms
 
-Además de ASP.NET Core, ASP.NET 4.x tradicional sigue siendo una plataforma sólida y confiable para compilar aplicaciones web. ASP.NET es compatible con los modelos de desarrollo de MVC y API web, así como los formularios Web Forms, que resultan muy adecuados para el desarrollo de aplicaciones basadas en páginas y ofrecen un ecosistema enriquecido de componentes de terceros. Desde hace tiempo, Windows Azure ofrece una gran compatibilidad con las aplicaciones ASP.NET 4.x y muchos desarrolladores están familiarizados con esta plataforma.
+Además de ASP.NET Core, ASP.NET 4.x tradicional sigue siendo una plataforma sólida y confiable para compilar aplicaciones web. ASP.NET es compatible con los modelos de desarrollo de MVC y API web, así como los formularios Web Forms, que resultan muy adecuados para el desarrollo de aplicaciones basadas en páginas y ofrecen un ecosistema enriquecido de componentes de terceros. Desde hace tiempo, Microsoft Azure ofrece una gran compatibilidad con las aplicaciones de ASP.NET 4.x y muchos desarrolladores están familiarizados con esta plataforma.
+
+## <a name="blazor"></a>Blazor
+
+Blazor se incluye con ASP.NET Core 3.0 y versiones posteriores. Proporciona un nuevo mecanismo para compilar aplicaciones cliente web interactivas enriquecidas con Razor, C# y ASP.NET Core. Asimismo, ofrece otra solución que debe tener en cuenta a la hora de desarrollar aplicaciones web modernas. Hay dos versiones de Blazor que se deben tener en cuenta: lado servidor y lado cliente.
+
+Blazor lado servidor se lanzó en 2019 con ASP.NET Core 3.0. Como su nombre implica, se ejecuta en el servidor, lo que hace que los cambios en el documento cliente se representen en el explorador a través de la red. Blazor lado servidor proporciona una experiencia de cliente enriquecida sin requerir JavaScript del lado cliente y sin la necesidad de cargas de páginas independientes para cada interacción de la página del cliente. El servidor solicita y procesa los cambios en la página cargada y, después, estos se devuelven al cliente mediante SignalR.
+
+Blazor lado cliente se publicará en 2020 y eliminará la necesidad de representar los cambios en el servidor. En su lugar, aprovechará WebAssembly para ejecutar código de .NET en el cliente. El cliente todavía puede realizar llamadas API al servidor si es necesario para solicitar datos, pero todo el comportamiento del lado cliente se ejecuta en el cliente a través de WebAssembly, que ya es compatible con todos los exploradores principales y es solo una biblioteca de JavaScript.
 
 > ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones web modernas
 >
 > - **Introducción a ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/>
-> - **Six Key Benefits of ASP.NET Core which make it Different and Better** (Seis ventajas clave de ASP.NET Core que lo hacen diferente y mejor)  
->   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Pruebas y depuración en ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Blazor: introducción**  
+>   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

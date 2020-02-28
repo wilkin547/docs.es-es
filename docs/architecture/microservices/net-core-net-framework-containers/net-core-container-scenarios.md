@@ -1,13 +1,13 @@
 ---
 title: Cuándo elegir .NET Core para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Core para contenedores de Docker
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920980"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501847"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Cuándo elegir .NET Core para contenedores de Docker
 
@@ -35,11 +35,11 @@ Además de los editores e IDE, puede utilizar la [CLI de .NET Core](../../../co
 
 Normalmente los contenedores se usan en combinación con una arquitectura de microservicios, aunque también se pueden usar para contener servicios o aplicaciones web que siguen cualquier patrón de arquitectura. Aunque puede usar .NET Framework en contenedores de Windows, la modularidad y ligereza de .NET Core lo convierten en la opción perfecta para los contenedores y las arquitecturas de microservicio. Al crear e implementar un contenedor, su imagen es mucho más pequeña con .NET Core que con .NET Framework.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>Creación e implementación de microservicios en contenedores
+## <a name="create-and-deploy-microservices-on-containers"></a>Creación e implementación de microservicios en contenedores
 
-Puede utilizar el tradicional .NET Framework para crear aplicaciones basadas en microservicios (sin contenedores) mediante el uso de procesos sin formato. De este modo, como .NET Framework ya está instalado y se comparte entre procesos, los procesos son ligeros y rápidos al iniciarse. Pero, si usa contenedores, la imagen del tradicional .NET Framework también se basa en Windows Server Core y esto hace que sea demasiado pesada para una opción de microservicios en contenedores.
+Puede utilizar el tradicional .NET Framework para crear aplicaciones basadas en microservicios (sin contenedores) mediante el uso de procesos sin formato. De este modo, como .NET Framework ya está instalado y se comparte entre procesos, los procesos son ligeros y rápidos al iniciarse. Pero, si usa contenedores, la imagen del tradicional .NET Framework también se basa en Windows Server Core y esto hace que sea demasiado pesada para una opción de microservicios en contenedores. Sin embargo, los equipos también han estado buscando oportunidades para mejorar la experiencia de los usuarios de .NET Framework. Recientemente, el tamaño de las [imágenes de contenedor de Windows Server Core se ha reducido un 40 %](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
 
-En cambio, .NET Core es la mejor opción si ha adoptado un sistema orientado a microservicios que se basa en contenedores, puesto que .NET Core es ligero. Además, sus imágenes de contenedor relacionadas, ya sea la imagen de Linux o la imagen de Windows Nano, son eficientes y pequeñas, lo que hace que los contenedores sean ligeros y rápidos al iniciarse.
+Por otra parte, .NET Core es la mejor opción si ha adoptado un sistema orientado a microservicios que se basa en contenedores, puesto que .NET Core es ligero. Además, sus imágenes de contenedor relacionadas, ya sean de Linux o de Windows Nano Server, son eficientes y pequeñas, lo que hace que los contenedores sean ligeros y rápidos al iniciarse.
 
 Un microservicio está pensado para ser lo más pequeño posible: que sea ligero al acelerar, que tenga una superficie pequeña, que tenga un pequeño contexto limitado (comprobar DDD, [diseño basado en dominios](https://en.wikipedia.org/wiki/Domain-driven_design)), que represente una pequeña área de problemas y que se pueda iniciar y detener rápidamente. Para cumplir con estos requisitos, le recomendamos que utilice imágenes de contenedor pequeñas y fáciles de ejemplificar, como la imagen de contenedor de .NET Core.
 

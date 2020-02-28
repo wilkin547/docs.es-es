@@ -1,13 +1,13 @@
 ---
 title: Implementar objetos de valor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899774"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502506"
 ---
 # <a name="implement-value-objects"></a>Implementación de objetos de valor
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 Puede ver cómo esta implementación de objeto de valor de Address no tiene ninguna identidad y, por tanto, ningún campo de identificador, ni en la clase Address ni tampoco en la clase ValueObject.
 
-Hasta EF Core 2.0 no fue posible no tener ningún campo de identificador en una clase que se fuera a usar en Entity Framework, lo que ayuda a implementar mejor los objetos de valor sin identificador. Eso es precisamente la explicación de la sección siguiente.
+El hecho de no tener que disponer de un campo de identificador para su uso en Entity Framework (EF) no fue posible hasta EF Core 2.0, lo que ayuda a implementar mejor los objetos de valor sin identificador. Eso es precisamente la explicación de la sección siguiente.
 
-Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, propiedades get-only), y realmente es cierto. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como un conjunto privado, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
+Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, tener propiedades get-only), y así es. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como un conjunto privado, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Cómo conservar los objetos de valor en la base de datos con EF Core 2.0
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Procedimiento para conservar objetos de valor en la base de datos con EF Core 2.0 y versiones posteriores
 
-Acaba de ver cómo definir un objeto de valor en el modelo de dominio, pero ¿cómo puede conservarlo en la base de datos mediante Entity Framework (EF) Core, que suele tener como destino las entidades con identidad?
+Acaba de ver cómo definir un objeto de valor en el modelo de dominio, Pero ¿cómo puede conservarlo en la base de datos mediante Entity Framework Core, dado que suele tener como destino las entidades con identidad?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Contexto y enfoques anteriores con EF Core 1.1
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 Pero la persistencia de ese objeto de valor en la base de datos se efectuaba como una entidad normal en otra tabla.
 
-Con EF Core 2.0 hay nuevos y mejores métodos para conservar los objetos de valor.
+Con EF Core 2.0 y versiones posteriores hay nuevos y mejores métodos para conservar los objetos de valor.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Conservar objetos de valor como tipos entidad de propiedad en EF Core 2.0
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Conservación de objetos de valor como tipos entidad de propiedad en EF Core 2.0 y versiones posteriores
 
-Aunque haya algunas lagunas entre el patrón de objeto de valor canónico en el DDD y el tipo de entidad de propiedad en EF Core, ahora mismo es la mejor manera de conservar objetos de valor con EF Core 2.0. Puede consultar las limitaciones al final de esta sección.
+Aunque haya algunas lagunas entre el patrón de objeto de valor canónico en el DDD y el tipo de entidad de propiedad en EF Core, ahora mismo es la mejor manera de conservar objetos de valor con EF Core 2.0 y versiones posteriores. Puede consultar las limitaciones al final de esta sección.
 
 La función del tipo de entidad de propiedad se agregó a EF Core a partir de la versión 2.0.
 
@@ -178,7 +178,7 @@ La identidad de las instancias de los tipos de propiedad no es totalmente suya. 
 
 - La propiedad de navegación que los señala
 
-- En el caso de las colecciones de tipos de propiedad, un componente independiente (todavía no se admite en EF Core 2.0, se hará en la versión 2.2).
+- En el caso de las colecciones de tipos de propiedad, un componente independiente (compatible con EF Core 2.2 y versiones posteriores).
 
 Por ejemplo, en el modelo de dominio Ordering de eShopOnContainers, como parte de la entidad Order, el objeto de valor Address se implementa como un tipo de entidad de propiedad dentro de la entidad del propietario, que es la entidad Order. Address es un tipo sin ninguna propiedad de identidad definida en el modelo de dominio. Se usa como propiedad del tipo Order para especificar la dirección de envío de un pedido en concreto.
 
@@ -275,7 +275,7 @@ public class Address
 
 - La identidad (clave) de una instancia de tipo de propiedad en nuestra pila es una composición de la identidad del tipo de propietario y la definición del tipo de propiedad.
 
-#### <a name="owned-entities-capabilities"></a>Capacidades de las entidades de propiedad:
+#### <a name="owned-entities-capabilities"></a>Capacidades de las entidades de propiedad
 
 - Los tipos de propiedad pueden hacer referencia a otras entidades, ya sean de propiedad (tipos de propiedad anidados) o de no propiedad (propiedades de navegación de referencia normal a otras entidades).
 
@@ -283,17 +283,17 @@ public class Address
 
 - La división de tablas se configura por convención, pero puede dejar de usarla si asigna el tipo de propiedad a otra tabla mediante ToTable.
 
-- En los tipos de propiedad se efectúa una carga diligente de forma automática; es decir, no es necesario llamar a Include() en la consulta.
+- En los tipos de propiedad se efectúa una carga diligente de forma automática; es decir, no es necesario llamar a `.Include()` en la consulta.
 
-- Desde EF Core 2.1, se puede configurar con el atributo \[Owned\].
+- A partir de EF Core 2.1 y versiones posteriores, se puede configurar con el atributo `[Owned]`.
 
-#### <a name="owned-entities-limitations"></a>Limitaciones de las entidades de propiedad:
+- Puede controlar colecciones de tipos de propiedad (con la versión 2.2 y posteriores).
 
-- No se puede crear un DbSet\<T\> de un tipo de propiedad (por diseño).
+#### <a name="owned-entities-limitations"></a>Limitaciones de las entidades de propiedad
 
-- No se puede llamar a ModelBuilder.Entity\<T\>() en los tipos de propiedad (actualmente por cuestiones de diseño).
+- No se puede crear un elemento `DbSet<T>` de un tipo de propiedad (por cuestiones de diseño).
 
-- Todavía no hay colecciones de tipos de propiedad (en EF Core 2.1, pero se admitirán en la versión 2.2).
+- No se puede llamar a `ModelBuilder.Entity<T>()` en los tipos de propiedad (actualmente por cuestiones de diseño).
 
 - No se admiten los tipos de propiedad opcionales (es decir, que aceptan valores NULL) que se asignan con el propietario en la misma tabla (es decir, mediante la división de tablas). Esto se debe a que la asignación se realiza para cada propiedad; no hay un centinela independiente para el valor complejo NULL como un todo.
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon. Implementing Domain-Driven Design** (Implementación del diseño guiado por el dominio). (Libro; incluye una descripción de los objetos de valor) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **Tipos de entidad en propiedad** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **Propiedades reemplazadas** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **Complex types and/or value objects** (Tipos u objetos de valor complejos). Descripción en el repositorio de GitHub de EF Core (pestaña Problemas) \
   <https://github.com/dotnet/efcore/issues/246>

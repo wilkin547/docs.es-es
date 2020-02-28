@@ -1,23 +1,23 @@
 ---
 title: System.Delegate y la palabra clave `delegate`
-description: Obtenga información sobre las clases de .NET Framework que admiten delegados y sobre cómo se asignan a la palabra clave "delegate".
+description: Obtenga información sobre las clases de .NET que admiten delegados y sobre cómo se asignan a la palabra clave "delegate".
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420366"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450926"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate y la palabra clave `delegate`
 
 [Anterior](delegates-overview.md)
 
-Este artículo trata sobre las clases de .NET Framework que admiten delegados y sobre cómo se asignan a la palabra clave `delegate`.
+En este artículo se tratan las clases de .NET que admiten delegados y sobre cómo se asignan a la palabra clave `delegate`.
 
-## <a name="defining-delegate-types"></a>Definir tipos de delegados
+## <a name="define-delegate-types"></a>Definición de los tipos delegados
 
 Comencemos con la palabra clave "delegate", ya que es lo que usará principalmente al trabajar con delegados. El código que genere el compilador cuando se usa la palabra clave `delegate` se asignará a las llamadas de método que invocan a miembros de las clases <xref:System.Delegate> y <xref:System.MulticastDelegate>. 
 
@@ -41,7 +41,7 @@ Observe que puede parecer que la sintaxis declara una variable, pero en realidad
 
 El compilador también genera controladores de adición y eliminación para este nuevo tipo, de modo que los clientes de esta clase puedan agregar y quitar métodos de la lista de invocación de una instancia. El compilador forzará que la firma del método que se agrega o se quita coincida con la firma usada al declarar el método. 
 
-## <a name="declaring-instances-of-delegates"></a>Declarar instancias de delegados
+## <a name="declare-instances-of-delegates"></a>Declaración de instancias de delegados
 
 Después de definir el delegado, puede crear una instancia de ese tipo.
 Al igual que todas las variables en C#, no puede declarar instancias de delegados directamente en un espacio de nombres o en el espacio de nombres global.
@@ -57,7 +57,7 @@ El tipo de la variable es `Comparison<T>`, el tipo de delegado definido anterior
  
  El fragmento de código anterior declara una variable de miembro dentro de una clase. También puede declarar variables de delegado que sean variables locales o argumentos para los métodos.
 
-## <a name="invoking-delegates"></a>Invocar delegados
+## <a name="invoke-delegates"></a>Invocación de delegados
 
 Para invocar los métodos que se encuentran en la lista de invocación de un delegado, llame a dicho delegado. Dentro del método `Sort()`, el código llamará al método de comparación para determinar en qué orden colocará los objetos:
 
@@ -70,7 +70,7 @@ La variable se trata como un nombre de método y se invoca mediante la sintaxis 
 
 Esa línea de código realiza una suposición no segura: No hay ninguna garantía de que se haya agregado un destino en el delegado. Si no se ha asociado ningún destino, la línea anterior haría que se produjese una `NullReferenceException`. Las expresiones que se usan para resolver este problema son más complicadas que una simple comprobación de null y se tratan más adelante en esta [serie](delegates-patterns.md).
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>Asignar, agregar y quitar destinos de invocación
+## <a name="assign-add-and-remove-invocation-targets"></a>Asignación, adición y eliminación de destinos de invocación
 
 Hemos visto cómo se define un tipo de delegado y cómo se declaran y se invocan las instancias de delegado.
 

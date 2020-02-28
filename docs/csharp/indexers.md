@@ -4,12 +4,12 @@ description: Obtenga información sobre los indexadores de C# y cómo implementa
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039117"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450887"
 ---
 # <a name="indexers"></a>Indizadores
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 Estas instrucciones crean un *alias* para un tipo genérico construido y permiten que el código use después los nombres `DateMeasurements` y `CityDateMeasurements` (más descriptivos) en vez de la construcción genérica de `Dictionary<DateTime, Measurements>` y `Dictionary<string, Dictionary<DateTime, Measurements> >`. Esta construcción requiere el uso de los nombres completos de tipo en el lado derecho del signo `=`.
 
-La segunda técnica consiste en quitar las partes de tiempo de cualquier objeto `DateTime` usado para indizarse en las colecciones. .NET framework no incluye un tipo de solo fecha.
+La segunda técnica consiste en quitar las partes de tiempo de cualquier objeto `DateTime` usado para indizarse en las colecciones. .NET no incluye un tipo de solo fecha.
 Los desarrolladores usan el tipo `DateTime`, aunque emplean la propiedad `Date` para asegurarse de que cualquier objeto `DateTime` de ese día sea igual.
 
 ## <a name="summing-up"></a>Resumen

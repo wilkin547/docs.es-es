@@ -3,12 +3,12 @@ title: Procedimiento para modificar el contenido de cadenas - Guía de C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973263"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543266"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
@@ -62,12 +62,13 @@ En el siguiente ejemplo se muestra cómo reemplazar un conjunto de caracteres en
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Modificaciones no seguras a una cadena
+## <a name="programmatically-build-up-string-content"></a>Creación mediante programación del contenido de la cadena
 
-Con el código **unsafe** puede modificar una cadena "en contexto" después de haberla creado. Con este código se anulan muchas de las características de .NET diseñadas para minimizar ciertos tipos de errores en el código. Es necesario su uso para modificar una cadena en contexto porque la clase de cadena se diseña como un tipo **inmutable**. Una vez se haya creado, el valor no cambia. El código no seguro evita esta propiedad mediante el acceso y la modificación de la memoria que usa una `string` sin usar los métodos `string` normales.
-En el ejemplo siguiente se indican estas extrañas situaciones en las que quiere modificar una cadena en contexto con código no seguro. En este ejemplo se muestra cómo usar la palabra clave `fixed`. Con la palabra clave `fixed` se evita que el recolector de elementos no utilizados (GC) mueva los objetos de cadenas en memoria mientras que el código accede a la memoria mediante el puntero no seguro. También muestra un posible efecto secundario de operaciones no seguras en cadenas que se obtienen de la manera en que el compilador de C# almacena cadenas (internos) internamente. En general, no debe usar esta técnica a no ser que sea absolutamente necesario. Puede obtener más información en los artículos sobre [unsafe](../language-reference/keywords/unsafe.md) y [fixed](../language-reference/keywords/fixed-statement.md). En la referencia a la API para <xref:System.String.Intern%2A> se incluye información sobre el internamiento de cadenas.
+Dado que las cadenas son inmutables, en los ejemplos anteriores se crean cadenas temporales o matrices de caracteres. En escenarios de alto rendimiento, puede ser conveniente evitar estas asignaciones de montón. .NET Core proporciona un método <xref:System.String.Create%2A?displayProperty=nameWithType> que permite rellenar mediante programación el contenido de los caracteres de una cadena a través de una devolución de llamada, a la vez que evita las asignaciones de cadenas temporales intermedias.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+Puede modificar una cadena en un bloque fijo con código no seguro, pero es **totalmente** desaconsejable modificar el contenido de la cadena una vez que se ha creado. Si lo hace, puede haber problemas imprevisibles. Por ejemplo, si alguien se conecta a una cadena que tiene el mismo contenido que el suyo, obtendrá una copia y no esperará que usted modifique la cadena.
 
 Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
