@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628142"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673399"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -113,7 +113,7 @@ Puede usar la palabra clave [struct](../../language-reference/builtin-types/stru
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Para más información sobre estructuras, vea [Structs](../classes-and-structs/structs.md). Para más información sobre los tipos de valor, vea [Tipos de valor](../../language-reference/builtin-types/value-types.md).
+Para más información sobre estructuras, vea [Tipos de estructura](../../language-reference/builtin-types/struct.md). Para más información sobre los tipos de valor, vea [Tipos de valor](../../language-reference/builtin-types/value-types.md).
 
 La otra categoría de tipos de valor es [enum](../../language-reference/builtin-types/enum.md). Una enumeración define un conjunto de constantes integrales con nombre. Por ejemplo, la enumeración <xref:System.IO.FileMode?displayProperty=nameWithType> de la biblioteca de clases .NET contiene un conjunto de enteros constantes con nombre que especifican cómo se debe abrir un archivo. Se define como se muestra en el ejemplo siguiente:
 
@@ -205,3 +205,4 @@ Para obtener más información, vea los temas siguientes:
 - [Guía de programación de C#](../index.md)
 - [Conversión de tipos de datos XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tipos enteros](../../language-reference/builtin-types/integral-numeric-types.md)
+ 

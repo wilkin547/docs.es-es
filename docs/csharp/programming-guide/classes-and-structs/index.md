@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714821"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673425"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Clases y estructuras (Guía de programación de C#)
 Las clases (class) y estructuras (struct) son dos de las construcciones básicas de Common Type System en .NET Framework. Cada una de ellas es básicamente una estructura de datos que encapsula un conjunto de datos y comportamientos que forman un conjunto como una unidad lógica. Los datos y comportamientos son los *miembros* de la clase o estructura, e incluyen sus métodos, propiedades y eventos, entre otros elementos, como se muestra más adelante en este tema.  
@@ -28,7 +28,7 @@ Las clases (class) y estructuras (struct) son dos de las construcciones básicas
   
  En general, las clases se utilizan para modelar comportamientos más complejos, o datos que se prevén modificar después de haber creado un objeto de clase. Las estructuras son más adecuadas para las estructuras de datos pequeñas que contienen principalmente datos que no se prevén modificar después de haber creado la estructura.  
   
- Para más información, vea [Clases](./classes.md), [Objectos](./objects.md) y [Estructuras](./structs.md).  
+ Para más información, vea [Clases](./classes.md), [Objectos](./objects.md) y [Tipos de estructura](../../language-reference/builtin-types/struct.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, `CustomClass` en el espacio de nombres `ProgrammingGuide` tiene tres miembros: un constructor de instancia, una propiedad denominada `Number` y un método denominado `Multiply`. El método `Main` de la clase `Program` crea una instancia (objeto) de `CustomClass`, y se puede acceder a la propiedad y al método del objeto mediante una notación de puntos.
