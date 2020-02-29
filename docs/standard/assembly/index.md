@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921369"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156510"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -85,7 +85,7 @@ Como los ensamblados contienen información sobre contenido, control de versione
 Para usar un ensamblado en una aplicación, debe agregar una referencia a él. Una vez que se hace referencia a un ensamblado, todos los tipos accesibles, propiedades, métodos y otros miembros de sus espacios de nombres están disponibles para la aplicación como si su código formara parte del archivo de origen.
 
 > [!NOTE]
-> La referencia a la mayoría de los ensamblados de la biblioteca de clases de .NET se hace automáticamente. Si no se hace referencia a un ensamblado del sistema de forma automática, para .NET Core puede agregar una referencia al paquete NuGet que contiene el ensamblado. Use el administrador de paquetes NuGet de Visual Studio, o bien agregue un elemento [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) para el ensamblado al proyecto *.csproj* o *.vbproj*. En .NET Framework, puede agregar una referencia al ensamblado mediante el cuadro de diálogo **Agregar referencia** de Visual Studio o mediante la opción de la línea de comandos `-reference` para los compiladores de [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) o [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md).
+> La referencia a la mayoría de los ensamblados de la biblioteca de clases de .NET se hace automáticamente. Si no se hace referencia a un ensamblado del sistema de forma automática, para .NET Core puede agregar una referencia al paquete NuGet que contiene el ensamblado. Use el administrador de paquetes NuGet de Visual Studio, o bien agregue un elemento [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) para el ensamblado al proyecto *.csproj* o *.vbproj*. En .NET Framework, puede agregar una referencia al ensamblado mediante el cuadro de diálogo **Agregar referencia** de Visual Studio o mediante la opción de la línea de comandos `-reference` para los compiladores de [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) o [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md).
 
 En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. Para obtener más información, vea [alias externo](../../csharp/language-reference/keywords/extern-alias.md).
 

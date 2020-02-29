@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708376"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156314"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -124,7 +124,7 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
  Common language runtime proporciona nuevos opcode y prefijos para admitir tipos genéricos en el lenguaje intermedio de Microsoft (MSIL), incluidos <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>y <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# y Visual Basic proporcionan compatibilidad completa para definir y utilizar genéricos. Para más información sobre la compatibilidad de lenguaje, consulte [Tipos genéricos en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introducción a los genéricos](../../csharp/programming-guide/generics/index.md) e [Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp). 
+ Visual C++, C# y Visual Basic proporcionan compatibilidad completa para definir y utilizar genéricos. Para más información sobre la compatibilidad de lenguaje, consulte [Tipos genéricos en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introducción a los genéricos](../../csharp/programming-guide/generics/index.md) e [Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>Genéricos y tipos anidados  
  Un tipo que está anidado en un tipo genérico puede depender de los parámetros de tipo del tipo genérico envolvente. Common language runtime considera que los tipos anidados son genéricos, aunque no tengan sus propios parámetros de tipo genérico. Cuando cree una instancia de un tipo anidado, especifique los argumentos de tipo para todos los tipos genéricos envolventes.  

@@ -3,12 +3,12 @@ title: CLI de .NET Core
 titleSuffix: ''
 description: Información general de la CLI de .NET Core y sus características.
 ms.date: 02/13/2020
-ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625987"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156717"
 ---
 # <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
 
@@ -63,7 +63,7 @@ De forma predeterminada, se instalan los siguientes comandos:
 - [tool run](global-tools.md#invoke-a-local-tool) **Disponible a partir del SDK de .NET Core 3.0**
 - [tool uninstall](dotnet-tool-uninstall.md)
 
-Las herramientas son aplicaciones de consola que se instalan mediante paquetes de NuGet y se invocan desde el símbolo del sistema. Puede escribir herramientas usted mismo o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
+Las herramientas son aplicaciones de consola que se instalan mediante paquetes de NuGet y se invocan desde el símbolo del sistema. Puede encargarse de escribir las herramientas o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Estructura de comandos
 
@@ -77,7 +77,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Controlador
 
-El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../deploying/index.md) o ejecutar un comando. 
+El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../deploying/index.md) o ejecutar un comando.
 
 Para ejecutar una aplicación dependiente del marco, especifique la aplicación después del controlador, por ejemplo, `dotnet /path/to/my_app.dll`. Cuando ejecute el comando desde la carpeta donde reside la DLL de la aplicación, simplemente ejecute `dotnet my_app.dll`. Si quiere usar una versión específica del entorno de ejecución .NET Core, use la opción `--fx-version <VERSION>` (consulte la referencia del [comando dotnet](dotnet.md)).
 

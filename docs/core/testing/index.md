@@ -4,12 +4,12 @@ description: En este artículo se proporciona información general breve de las 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899894"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157406"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard
 
@@ -23,9 +23,9 @@ Puede usar plantillas de proyecto de prueba unitaria integradas de .NET Core 2.0
 
 ## <a name="what-are-unit-tests"></a>¿Qué son las pruebas unitarias?
 
-Automatizar pruebas es un método magnífico para asegurarse de que una aplicación de software hace lo que sus autores pretenden. Hay varios tipos de pruebas para aplicaciones de software. Estas incluyen pruebas de integración, pruebas web y pruebas de carga, entre otras. Con las **pruebas unitarias** se comprueban componentes y métodos de software individuales. Estas solo deberían probar código que pueda controlar el desarrollador. No se deberían usar para comprobar problemas con la infraestructura. Estos problemas incluyen los relacionados con bases de datos, el sistema de archivos o recursos de red. 
+Automatizar pruebas es un método magnífico para asegurarse de que una aplicación de software hace lo que sus autores pretenden. Hay varios tipos de pruebas para aplicaciones de software. Estas incluyen pruebas de integración, pruebas web y pruebas de carga, entre otras. Con las **pruebas unitarias** se comprueban componentes y métodos de software individuales. Estas solo deberían probar código que pueda controlar el desarrollador. No se deberían usar para comprobar problemas con la infraestructura. Estos problemas incluyen los relacionados con bases de datos, el sistema de archivos o recursos de red.
 
-Además, es recomendable que tenga en cuenta que hay procedimientos recomendados para la escritura de pruebas. Por ejemplo, [Test Driven Development (TTD)](https://deviq.com/test-driven-development/) es un proceso en el que una prueba unitaria se escribe antes que el código que debería comprobar. Este método se puede comparar a la creación del esquema de un libro antes de escribirlo. Está diseñado para ayudar a los desarrolladores a escribir código más simple, legible y eficaz. 
+Además, es recomendable que tenga en cuenta que hay procedimientos recomendados para la escritura de pruebas. Por ejemplo, [Test Driven Development (TTD)](https://deviq.com/test-driven-development/) es un proceso en el que una prueba unitaria se escribe antes que el código que debería comprobar. Este método se puede comparar a la creación del esquema de un libro antes de escribirlo. Está diseñado para ayudar a los desarrolladores a escribir código más simple, legible y eficaz.
 
 > [!NOTE]
 > El equipo de ASP.NET sigue [estas convenciones](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) para ayudar a los desarrolladores a asignar buenos nombres a clases de prueba y métodos.
@@ -40,11 +40,11 @@ Los proyectos de pruebas unitarias de .NET Core son compatibles con los siguient
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 También puede elegir entre las siguientes opciones:
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711368"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160396"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
 A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección. Puede usar la clase <xref:System.Array?displayProperty=nameWithType> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> y System.Collections.Immutable para agregar, quitar y modificar elementos individuales o intervalos de elementos de una colección.  
@@ -24,7 +24,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
  A partir de .NET Framework 4, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos con el fin de obtener acceso a los elementos de la colección desde varios subprocesos. Las clases de colección inmutables en el espacio de nombres System.Collections.Immutable ([NuGet package](https://www.nuget.org/packages/System.Collections.Immutable)) son intrínsecamente seguras para los subprocesos, ya que las operaciones se realizan en una copia de la colección original, mientras que la colección original no se puede modificar.  
 
-<a name="BKMK_Commoncollectionfeatures"></a>   
+<a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Características comunes de las colecciones  
  Todas las colecciones ofrecen métodos para agregar, quitar o buscar elementos en la colección. Además, todas las colecciones que implementan directa o indirectamente las interfaces <xref:System.Collections.ICollection> o <xref:System.Collections.Generic.ICollection%601> comparten estas características:  
   
@@ -54,10 +54,10 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
      Los tipos de colecciones no genéricas del espacio de nombres <xref:System.Collections> proporcionan una seguridad de subprocesos con sincronización; normalmente se exponen a través de los miembros <xref:System.Collections.ICollection.SyncRoot%2A> y <xref:System.Collections.ICollection.IsSynchronized%2A>. Estas colecciones no son seguras para subprocesos de forma predeterminada. Si necesita un acceso multiproceso escalable y eficaz a una colección, utilice una de las clases del espacio de nombres <xref:System.Collections.Concurrent> o considere el uso de una colección inmutable. Para obtener más información, consulte [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md).  
   
-<a name="BKMK_Choosingacollection"></a>   
+<a name="BKMK_Choosingacollection"></a>
 ## <a name="choosing-a-collection"></a>Elegir una colección  
  En general, debería utilizar colecciones genéricas. En la tabla siguiente se describen algunos escenarios habituales de las colecciones y las clases de colección que puede utilizar en esos escenarios. Si es la primera vez que usa colecciones genéricas, con esta tabla le será más fácil elegir la colección genérica que funciona mejor para su tarea.  
- 
+
 |Deseo...|Opciones de colección genérica|Opciones de colección no genérica|Opciones de colección de subprocesos o inmutable|  
 |-|-|-|-|  
 |Almacenar elementos como pares clave/valor para una consulta rápida por clave|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Colección de pares clave/valor que se organizan en función del código hash de la clave).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
@@ -69,7 +69,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
 |Una colección ordenada|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
 |Un conjunto de funciones matemáticas|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Sin recomendación|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
-<a name="BKMK_RelatedTopics"></a>   
+<a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|Descripción|  
@@ -83,7 +83,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
 |[Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md)|Describe los tipos de colección, como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> y <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>, que admiten un acceso simultáneo seguro y eficaz desde varios subprocesos.|  
 |System.Collections.Immutable|Presenta las colecciones inalterables y proporciona vínculos a los tipos de colección.|  
   
-<a name="BKMK_Reference"></a>   
+<a name="BKMK_Reference"></a>
 ## <a name="reference"></a>Referencia  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  

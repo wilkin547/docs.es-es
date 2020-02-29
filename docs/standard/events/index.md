@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423525"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159629"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 
@@ -78,7 +78,7 @@ En el ejemplo siguiente se muestra un método de control de eventos denominado `
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Controladores de eventos estáticos y dinámicos  
- 
+
 .NET permite a los suscriptores registrarse para las notificaciones de eventos estática o dinámicamente. Los controladores de eventos estáticos son efectivos durante toda la vida de la clase cuyos eventos controlan. Los controladores de eventos dinámicos se activan y desactivan explícitamente durante la ejecución de un programa, normalmente en respuesta a alguna lógica condicional del programa. Por ejemplo, pueden utilizarse si las notificaciones de eventos solo son necesarias en condiciones específicas o si una aplicación proporciona varios controladores de eventos y las condiciones en tiempo de ejecución determinan cuál es el que debe utilizarse. En el ejemplo de la sección anterior se muestra cómo agregar dinámicamente un controlador de eventos. Para obtener más información, vea [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) (en Visual Basic) y [Eventos](../../csharp/programming-guide/events/index.md) (en C#).  
   
 ## <a name="raising-multiple-events"></a>Generar múltiples eventos  
@@ -88,7 +88,7 @@ En el ejemplo siguiente se muestra un método de control de eventos denominado `
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|DESCRIPCIÓN|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Provocar y utilizar eventos](how-to-raise-and-consume-events.md)|Contiene ejemplos de cómo generar y consumir eventos.|  
 |[Cómo: Controlar varios eventos mediante las propiedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  

@@ -2,18 +2,18 @@
 title: Publicación de aplicaciones
 description: Obtenga más información sobre las formas de publicar una aplicación de .NET Core. .NET Core puede publicar aplicaciones específicas de la plataforma o multiplataforma. Puede publicar una aplicación como independiente o como dependiente del entorno de ejecución. Cada modo afecta a la forma en la que un usuario ejecuta la aplicación.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448989"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157940"
 ---
 # <a name="net-core-application-publishing-overview"></a>Información general sobre la publicación de aplicaciones de .NET Core
 
 Las aplicaciones que se crean con .NET Core se pueden publicar de dos modos diferentes, lo cual afecta a la forma en la que un usuario ejecuta la aplicación.
 
-La publicación de la aplicación como *independiente* genera una aplicación que incluye el entorno de ejecución y las bibliotecas de .NET Core, así como la aplicación y sus dependencias. Los usuarios de la aplicación pueden ejecutarla en un equipo que no tenga instalado el entorno de ejecución de .NET Core. 
+La publicación de la aplicación como *independiente* genera una aplicación que incluye el entorno de ejecución y las bibliotecas de .NET Core, así como la aplicación y sus dependencias. Los usuarios de la aplicación pueden ejecutarla en un equipo que no tenga instalado el entorno de ejecución de .NET Core.
 
 La publicación de la aplicación como *dependiente del entorno de ejecución* genera una aplicación que incluye únicamente la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el entorno de ejecución de .NET Core por separado.
 
@@ -132,7 +132,7 @@ Dado que la aplicación incluye el entorno de ejecución de .NET Core y todas la
   > Puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) de .NET Core. Esto obliga a la aplicación a tratar todas las referencias culturales como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - **Mayor dificultad para actualizar la versión de .NET Core**\
-El entorno de ejecución de .NET Core (distribuido con la aplicación) solo se puede actualizar mediante la publicación de una nueva versión de la aplicación. Usted es responsable de proporcionar una versión actualizada de la aplicación para las revisiones de seguridad del entorno de ejecución de .NET Core. 
+El entorno de ejecución de .NET Core (distribuido con la aplicación) solo se puede actualizar mediante la publicación de una nueva versión de la aplicación. Usted es responsable de proporcionar una versión actualizada de la aplicación para las revisiones de seguridad del entorno de ejecución de .NET Core.
 
 ### <a name="examples"></a>Ejemplos
 
