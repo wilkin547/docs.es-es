@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900114"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157835"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 Con este comando se compila la aplicación en la carpeta *publish*. La ruta de acceso a la carpeta *publish* desde la carpeta de trabajo debería ser `.\app\bin\Release\netcoreapp3.1\publish\`.
 
-En la carpeta *app*, obtenga un listado de los directorios de la carpeta publish para comprobar que se creó el archivo *myapp.dll*. 
+En la carpeta *app*, obtenga un listado de los directorios de la carpeta publish para comprobar que se creó el archivo *myapp.dll*.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish

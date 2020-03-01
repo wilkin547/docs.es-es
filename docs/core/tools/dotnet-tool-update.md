@@ -2,12 +2,12 @@
 title: Comando dotnet tool update
 description: El comando dotnet tool update actualiza la herramienta de .NET Core en su equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543422"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156951"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -58,7 +58,7 @@ El comando `dotnet tool update` permite actualizar las herramientas de .NET Cor
 
 - **`-g|--global`**
 
-  Especifica que la actualización es para una herramienta del ámbito de los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a actualizar es una herramienta local. 
+  Especifica que la actualización es para una herramienta del ámbito de los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a actualizar es una herramienta local.
 
 - **`-h|--help`**
 
@@ -66,7 +66,7 @@ El comando `dotnet tool update` permite actualizar las herramientas de .NET Cor
 
 - **`--tool-path <PATH>`**
 
-  Especifica la ubicación en la que está instalada la herramienta global. PATH puede ser una ruta absoluta o relativa. No se puede combinar con la opción `--global`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a actualizar es una herramienta local. 
+  Especifica la ubicación en la que está instalada la herramienta global. PATH puede ser una ruta absoluta o relativa. No se puede combinar con la opción `--global`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a actualizar es una herramienta local.
 
 - **`-v|--verbosity <LEVEL>`**
 

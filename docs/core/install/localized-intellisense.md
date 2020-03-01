@@ -2,12 +2,12 @@
 title: Instalación de archivos de IntelliSense localizados
 description: Obtenga información sobre cómo configurar su máquina de desarrollo con el fin de usar archivos de IntelliSense localizados para los proyectos de .NET Core en Visual Studio.
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733651"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157718"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Procedimiento para instalar archivos de IntelliSense localizados para .NET Core
 
@@ -42,7 +42,7 @@ ms.locfileid: "76733651"
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Escritorio de Windows | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. Vaya a la versión para la que quiera instalar el archivo de IntelliSense localizado. Por ejemplo, la *3.1.0*.
    1. Abra la carpeta *ref*.
    1. Abra la carpeta del moniker. Por ejemplo, *netcoreapp3.1*.
@@ -116,7 +116,7 @@ Una vez que haya instalado los paquete de idioma deseados, modifique la configur
 
 1. En el nodo **Entorno**, seleccione **Configuración internacional**.
 
-1. En la lista desplegable **Idioma**, seleccione el que quiera usar. Elija **Aceptar**. 
+1. En la lista desplegable **Idioma**, seleccione el que quiera usar. Elija **Aceptar**.
 
 1. Aparecerá un cuadro de diálogo en el que se le informará de que debe reiniciar Visual Studio para que se apliquen los cambios. Elija **Aceptar**.
 

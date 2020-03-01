@@ -2,12 +2,12 @@
 title: Comando dotnet tool list
 description: El comando dotnet tool list enumera las herramientas de .NET Core que están instaladas en el equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543461"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156990"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ El comando `dotnet tool list` permite enumerar todas las herramientas locales, d
 
 - **`-g|--global`**
 
-  Enumera las herramientas globales de los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se muestran las herramientas locales. 
+  Enumera las herramientas globales de los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se muestran las herramientas locales.
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ El comando `dotnet tool list` permite enumerar todas las herramientas locales, d
 
 - **`--tool-path <PATH>`**
 
-  Especifica una ubicación personalizada para las herramientas globales. PATH puede ser una ruta absoluta o relativa. No se puede combinar con la opción `--global`. Al omitir `--global` y `--tool-path`, se muestran las herramientas locales. 
+  Especifica una ubicación personalizada para las herramientas globales. PATH puede ser una ruta absoluta o relativa. No se puede combinar con la opción `--global`. Al omitir `--global` y `--tool-path`, se muestran las herramientas locales.
 
 ## <a name="examples"></a>Ejemplos
 

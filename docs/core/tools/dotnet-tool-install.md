@@ -2,12 +2,12 @@
 title: Comando dotnet tool install
 description: El comando dotnet tool install instala la herramienta especificada de .NET Core en el equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543474"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156979"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 El comando `dotnet tool install` permite instalar en el equipo herramientas de .NET Core. Para usar el comando, especifique una de las siguientes opciones de instalación:
 
-* Para instalar una herramienta global en la ubicación predeterminada, use la opción `--tool-path`.
+* Para instalar una herramienta global en la ubicación predeterminada, use la opción `--global`.
 * Para instalar una herramienta global en una ubicación personalizada, use la opción `--tool-path`.
 * Para instalar una herramienta local, omita las opciones `--global` y `--tool-path`.
 
@@ -73,7 +73,7 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
 - **`-g|--global`**
 
-  Especifica que la instalación se realiza en todos los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se especifica la instalación de una herramienta local. 
+  Especifica que la instalación se realiza en todos los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se especifica la instalación de una herramienta local.
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
 - **`tool-path <PATH>`**
 
-  Especifica la ubicación de donde se tiene que instalar la herramienta global. PATH puede ser una ruta absoluta o relativa. Si la ruta no existe, el comando intenta crearla. Al omitir `--global` y `--tool-path`, se especifica la instalación de una herramienta local. 
+  Especifica la ubicación de donde se tiene que instalar la herramienta global. PATH puede ser una ruta absoluta o relativa. Si la ruta no existe, el comando intenta crearla. Al omitir `--global` y `--tool-path`, se especifica la instalación de una herramienta local.
 
 - **`-v|--verbosity <LEVEL>`**
 

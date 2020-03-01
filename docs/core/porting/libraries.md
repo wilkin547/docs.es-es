@@ -3,12 +3,12 @@ title: Traslado de bibliotecas a .NET Core
 description: Obtenga información sobre cómo portar proyectos de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920609"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157536"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -97,7 +97,7 @@ Este puede ser el mejor enfoque para proyectos de mayor tamaño y más complejos
 1. ¿Es razonable escribir su propia implementación de una API de .NET Framework no disponible?
    Podría considerar copiar, modificar y usar código del [código fuente de referencia de .NET Framework](https://github.com/Microsoft/referencesource). El código fuente de referencia está sujeto a la [licencia de MIT](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), por lo que tiene plena libertad para usar la fuente como base para su propio código. Solo debe asegurarse de atribuir adecuadamente la propiedad de Microsoft en el código.
 1. Repita este proceso las veces que sea necesario para proyectos distintos.
- 
+
 La fase de análisis puede tardar un poco en función del tamaño de la base de código. Dedicar tiempo en esta fase a comprender profundamente el ámbito de los cambios que se necesitan y para desarrollar un plan suele ahorrarle tiempo a largo plazo, principalmente si tiene una base de código compleja.
 
 El plan podría significar realizar cambios importantes en la base de código mientras se sigue apuntando a .NET Framework 4.7.2, lo que hace que esta sea una versión más estructurada del enfoque anterior. La forma de ejecutar el plan depende de la base de código.

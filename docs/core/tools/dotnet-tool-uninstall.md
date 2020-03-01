@@ -2,12 +2,12 @@
 title: Comando dotnet tool uninstall
 description: El comando dotnet tool uninstall desinstala del equipo la herramienta especificada de .NET Core.
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543448"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157050"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas d
 
 - **`-g|--global`**
 
-  Especifica que la herramienta que se va a quitar es de una instalación en el ámbito de los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a quitar es una herramienta local. 
+  Especifica que la herramienta que se va a quitar es de una instalación en el ámbito de los usuarios. No se puede combinar con la opción `--tool-path`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a quitar es una herramienta local.
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas d
 
 - **`--tool-path <PATH>`**
 
-  Especifica la ubicación de donde se tiene que desinstalar la herramienta. PATH puede ser una ruta absoluta o relativa. No se puede combinar con la opción `--global`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a quitar es una herramienta local. 
+  Especifica la ubicación de donde se tiene que desinstalar la herramienta. PATH puede ser una ruta absoluta o relativa. No se puede combinar con la opción `--global`. Al omitir `--global` y `--tool-path`, se especifica que la herramienta que se va a quitar es una herramienta local.
 
 ## <a name="examples"></a>Ejemplos
 

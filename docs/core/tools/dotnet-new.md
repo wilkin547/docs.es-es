@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451335"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157224"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451335"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Para obtener una lista de las versiones predeterminadas de C#, vea [Valores predeterminados](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Si se especifica, no se ejecuta ninguna restauración implícita durante la creación del proyecto. Disponible a partir del SDK de .NET Core 2.2.
 
@@ -202,7 +202,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1. 
+  Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1. 
+  Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Tipo de autenticación que se va a usar. Disponible desde el SDK de .NET Core 3.0. 
+  Tipo de autenticación que se va a usar. Disponible desde el SDK de .NET Core 3.0.
   
   Los valores posibles son:
 
@@ -512,7 +512,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - **`--exclude-launch-settings`**
 
-  Excluye *launchSettings.json* de la plantilla generada. 
+  Excluye *launchSettings.json* de la plantilla generada.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - **`--exclude-launch-settings`**
 
-  Excluye *launchSettings.json* de la plantilla generada. 
+  Excluye *launchSettings.json* de la plantilla generada.
 
 - **`-f|--framework <FRAMEWORK>`**
 

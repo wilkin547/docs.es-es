@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973311"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157549"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Exposición de los componentes de .NET Core a COM
 
-En .NET Core, el proceso de exposición de los objetos .NET a COM se ha simplificado significativamente en comparación con .NET Framework. El siguiente proceso le guiará a través de la exposición de una clase a COM. En este tutorial se muestra cómo realizar las siguientes acciones:
+En .NET Core, el proceso de exposición de los objetos .NET a COM se ha simplificado significativamente en comparación con .NET Framework. El siguiente proceso le guiará a través de la exposición de una clase a COM. En este tutorial se le enseñará a hacer lo siguiente:
 
 - Exponer una clase a COM desde .NET Core.
 - Generar un servidor COM como parte de la creación de la biblioteca de .NET Core.
@@ -32,7 +32,7 @@ En .NET Core, el proceso de exposición de los objetos .NET a COM se ha simplifi
 El primer paso consiste en crear la biblioteca.
 
 1. Cree una carpeta nueva y, en ella, ejecute el siguiente comando:
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
@@ -43,10 +43,10 @@ El primer paso consiste en crear la biblioteca.
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
-5. Agregue el atributo `[Guid("<IID>")]` a la interfaz con el GUID de la interfaz para la interfaz COM que está implementando. Por ejemplo, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Tenga en cuenta que este GUID debe ser único, ya que es el único identificador de esta interfaz para COM. En Visual Studio, puede generar un GUID desde Herramientas > Crear GUID para abrir la herramienta de creación de GUID.
+5. Agregue el atributo `[Guid("<IID>")]` a la interfaz con el GUID de la interfaz para la interfaz COM que está implementando. Por ejemplo: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Tenga en cuenta que este GUID debe ser único, ya que es el único identificador de esta interfaz para COM. En Visual Studio, puede generar un GUID desde Herramientas > Crear GUID para abrir la herramienta de creación de GUID.
 6. Agregue el atributo `[InterfaceType]` a la interfaz y especifique qué interfaces COM base debe implementar la interfaz.
 7. Cree una clase denominada `Server` que implemente `IServer`.
-8. Agregue el atributo `[Guid("<CLSID>")]` a la clase, con el identificador de clase GUID para la clase COM que está implementando. Por ejemplo, `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Igual que sucede con la interfaz GUID, este GUID debe ser único, ya que es el único identificador de esta interfaz para COM.
+8. Agregue el atributo `[Guid("<CLSID>")]` a la clase, con el identificador de clase GUID para la clase COM que está implementando. Por ejemplo: `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Igual que sucede con la interfaz GUID, este GUID debe ser único, ya que es el único identificador de esta interfaz para COM.
 9. Agregue el atributo `[ComVisible(true)]` a la interfaz y a la clase.
 
 > [!IMPORTANT]
@@ -70,7 +70,7 @@ Abra un símbolo del sistema con privilegios elevados y ejecute `regsvr32 Projec
 
 Ahora el resultado también contendrá un archivo `ProjectName.X.manifest`. Este archivo es el manifiesto en paralelo que se podrá usar con COM sin registro.
 
-## <a name="sample"></a>Muestra
+## <a name="sample"></a>Ejemplo
 
 Puede encontrar un [ejemplo de servidor COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) totalmente funcional en el repositorio dotnet/samples de GitHub.
 

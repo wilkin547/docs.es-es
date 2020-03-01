@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741568"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156639"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publicación de la aplicación Hola mundo de .NET Core con Visual Studio
 
@@ -25,15 +25,15 @@ En [Creación de una aplicación Hola mundo con .NET Core en Visual Studio](with
 1. Haga clic con el botón derecho en el proyecto **HelloWorld** (no en la solución HelloWorld) y seleccione **Publicar** en el menú. (también puede seleccionar **Publicar Hola mundo** en el menú principal **Compilar**).
 
    ![Menú contextual de Publicar de Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. En la página **Elegir un destino de publicación**, seleccione **Carpeta** y, a continuación, seleccione **Crear perfil**.
 
    ![Elegir un destino de publicación en Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. En la página **Publicar**, seleccione **Publicar**.
 
    ![Ventana Publicar de Visual Studio](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>Inspección de los archivos
 
 El proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecuta en cualquier plataforma compatible con .NET Core con .NET Core instalado en el sistema. Los usuarios pueden ejecutar la aplicación publicada haciendo doble clic en el archivo ejecutable o emitiendo el comando `dotnet HelloWorld.dll` desde un símbolo del sistema.
@@ -59,7 +59,7 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
          Esta es la versión de [implementación dependiente del marco](../deploying/deploy-with-cli.md#framework-dependent-deployment) de la aplicación. Para ejecutar esta biblioteca de vínculos dinámicos, escriba `dotnet HelloWorld.dll` en un símbolo del sistema.
 
       * *HelloWorld.exe*
-      
+
          Esta es la versión del [ejecutable dependiente del marco](../deploying/deploy-with-cli.md#framework-dependent-executable) de la aplicación. Para ejecutarlo, escriba `HelloWorld.exe` en un símbolo del sistema.
 
       * *HelloWorld.pdb* (opcional para la implementación)

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503545"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156665"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Introducción a .NET Core mediante la CLI de .NET Core
 
@@ -40,30 +40,30 @@ Veamos un tutorial rápido:
 01. `dotnet new console`
 
     [dotnet new](../tools/dotnet-new.md) crea un archivo de proyecto *Hello.csproj* actualizado con las dependencias necesarias para compilar una aplicación de consola. Además, también crea *Program.cs*, un archivo básico que contiene el punto de entrada para la aplicación.
-    
+
     *Hello.csproj*:
-    
+
     [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
     El archivo de proyecto especifica todo lo que es necesario para restaurar las dependencias y compilar el programa.
-    
+
     - El elemento `<OutputType>` especifica que estamos creando un archivo ejecutable, es decir, una aplicación de consola.
     - El elemento `<TargetFramework>` especifica el destino de la implementación de .NET. En un escenario avanzado, con una sola operación puede especificar varios marcos de destino y compilar en todos ellos. En este tutorial, nos centraremos en compilar únicamente para .NET Core 3.1.
-    
+
     *Program.cs*:
-    
+
     [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
     El programa se inicia mediante `using System`, lo que significa "llevar cada cosa del espacio de nombres `System` al ámbito de este archivo". El espacio de nombres `System` incluye la clase `Console`.
-    
+
     Después, definimos un espacio de nombres denominado `Hello`. Puede cambiar esto por cualquier cosa que desee. Se define una clase denominada `Program` dentro del espacio de nombres, con un método `Main` que toma una matriz de cadenas llamada `args`. Esta matriz contiene la lista de argumentos que se han pasado cuando se ejecuta el programa. Esta matriz no se usa tal cual y el programa escribe simplemente el texto "¡Hola mundo!". en la consola. Después, realizaremos cambios en el código que usará este argumento.
-    
+
     `dotnet new` llama a [dotnet restore](../tools/dotnet-restore.md) de forma implícita. `dotnet restore` llama a [NuGet](https://www.nuget.org/) (el administrador de paquetes de .NET) para restaurar el árbol de dependencias. NuGet analiza el archivo *Hello.csproj*, descarga las dependencias descritas en el archivo (o las toma de la memoria caché del equipo) y escribe el archivo *obj/project.assets.json*, que es necesario para compilar y ejecutar el ejemplo.
 
 02. `dotnet run`
 
     [dotnet run](../tools/dotnet-run.md) llama a [dotnet build](../tools/dotnet-build.md) para garantizar que se han creado los destinos de compilación y, luego, llama a `dotnet <assembly.dll>` para ejecutar la aplicación de destino.
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ Veamos un tutorial rápido:
     ```console
     Hello World!
     ```
-    
+
     También puede ejecutar `dotnet build` para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada, como un archivo DLL, basada en el nombre del proyecto. En este caso, el archivo creado se llama *Hello.dll*. Esta aplicación se puede ejecutar con `dotnet bin\Debug\netcoreapp3.1\Hello.dll` en Windows (use `/` con sistemas que no son Windows).
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ Veamos un tutorial rápido:
     ```console
     Hello World!
     ```
-    
+
     Cuando se compila la aplicación, se crea un archivo ejecutable específico del sistema operativo junto con `Hello.dll`. En Windows, sería `Hello.exe`; en Linux o macOS, sería `hello`. Con el ejemplo anterior, el archivo se designa con `Hello.exe` o `Hello`. Puede ejecutar ese archivo ejecutable directamente.
 
     ```console

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451985"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156587"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novedades de .NET Core 2.2
 
@@ -26,7 +26,7 @@ Este nuevo modo de implementación tiene la ventaja de compilar un archivo ejecu
 
 **Control de eventos en los servicios en tiempo de ejecución**
 
-A menudo es posible que desee supervisar el uso que hace la aplicación de los servicios de tiempo de ejecución, como GC, JIT y ThreadPool, para comprender cómo afectan a la aplicación. En los sistemas Windows, esto se hace normalmente mediante la supervisión de los eventos ETW del proceso actual. Aunque este método sigue funcionando bien, no siempre es posible usar ETW si la ejecución se realiza en un entorno con pocos privilegios o en Linux o macOS. 
+A menudo es posible que desee supervisar el uso que hace la aplicación de los servicios de tiempo de ejecución, como GC, JIT y ThreadPool, para comprender cómo afectan a la aplicación. En los sistemas Windows, esto se hace normalmente mediante la supervisión de los eventos ETW del proceso actual. Aunque este método sigue funcionando bien, no siempre es posible usar ETW si la ejecución se realiza en un entorno con pocos privilegios o en Linux o macOS.
 
 A partir de .NET Core 2.2, ahora se pueden consumir eventos CoreCLR utilizando la clase <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Estos eventos describen el comportamiento de esos servicios en tiempo de ejecución como la interoperabilidad, ThreadPool, JIT y GC. Estos son los mismos eventos que se exponen como parte del proveedor ETW de CoreCLR.  De esta forma, las aplicaciones pueden consumir estos eventos o usar un mecanismo de transporte para enviarlos a un servicio de agregación de telemetría. Puede ver cómo suscribirse a eventos en el código de ejemplo siguiente:
 

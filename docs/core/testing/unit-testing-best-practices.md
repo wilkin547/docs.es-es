@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714284"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157394"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -169,7 +169,7 @@ La asignación de nombres a las variables de las pruebas unitarias es tan import
 
 Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una cadena tiene un aspecto fuera de lo normal, puede preguntarse por qué se ha elegido un determinado valor para un parámetro o valor devuelto. Esto puede dar lugar a un vistazo más detallado a los detalles de implementación, en lugar de centrarse en la prueba.
 
-> [!TIP] 
+> [!TIP]
 > Al escribir pruebas, su objetivo debe ser expresar tanta intención como sea posible. En el caso de las cadenas mágicas, un buen enfoque es asignar estos valores a constantes.
 
 #### <a name="bad"></a>Malo:
@@ -208,7 +208,7 @@ Si necesita un objeto o un estado similares para las pruebas, se prefiere un mé
 
 En los marcos de trabajo de pruebas unitarias, se llama a `Setup` antes de cada prueba unitaria del conjunto de pruebas. Aunque algunos puedan verlo como una herramienta útil, por lo general termina por dar lugar a pruebas recargadas y difíciles de leer. Cada prueba normalmente tendrá requisitos diferentes para funcionar y ejecutarse. Por desgracia, `Setup` obliga a usar los mismos requisitos para cada prueba.
 
-> [!NOTE] 
+> [!NOTE]
 > xUnit ha quitado la instalación y el desmontaje a partir de la versión 2.x
 
 #### <a name="bad"></a>Malo:
@@ -239,7 +239,7 @@ Al escribir las pruebas, intente incluir solo una aserción por prueba. Los enfo
 
 - Si se produce un error en una aserción, no se evalúan las aserciones posteriores.
 - Garantiza que no se estén declarando varios casos en las pruebas.
-- Proporciona la imagen completa de por qué se producen errores en las pruebas. 
+- Proporciona la imagen completa de por qué se producen errores en las pruebas.
 
 Al incorporar varias aserciones en un caso de prueba, no se garantiza que se ejecuten todas. En la mayoría de los marcos de trabajo de pruebas unitarias, una vez que se produce un error en una aserción de una prueba unitaria, las pruebas siguientes se consideran erróneas automáticamente. Esto puede ser confuso, ya que funciones que realmente están funcionando se muestran como erróneas.
 
@@ -253,7 +253,7 @@ Al incorporar varias aserciones en un caso de prueba, no se garantiza que se eje
 [!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Validar métodos privados mediante la prueba unitaria de métodos públicos
-En la mayoría de los casos, no debería haber necesidad de probar un método privado. Los métodos privados son un detalle de implementación. Se puede considerar de esta forma: los métodos privados nunca existen de forma aislada. En algún momento, va a haber un método público que llame al método privado como parte de su implementación. Lo que debería importarle es el resultado final del método público que llama al privado. 
+En la mayoría de los casos, no debería haber necesidad de probar un método privado. Los métodos privados son un detalle de implementación. Se puede considerar de esta forma: los métodos privados nunca existen de forma aislada. En algún momento, va a haber un método público que llame al método privado como parte de su implementación. Lo que debería importarle es el resultado final del método público que llama al privado.
 
 Considere el caso siguiente
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-Su primera reacción puede ser empezar a escribir una prueba para `TrimInput` porque quiere asegurarse de que el método funciona según lo previsto. Pero es muy posible que `ParseLogLine` manipule a `sanitizedInput` de una forma totalmente imprevista, con lo que una prueba en `TrimInput` sería inútil. 
+Su primera reacción puede ser empezar a escribir una prueba para `TrimInput` porque quiere asegurarse de que el método funciona según lo previsto. Pero es muy posible que `ParseLogLine` manipule a `sanitizedInput` de una forma totalmente imprevista, con lo que una prueba en `TrimInput` sería inútil.
 
-La prueba real debe realizarse en el método público `ParseLogLine`, porque eso es lo debe importarle en última instancia. 
+La prueba real debe realizarse en el método público `ParseLogLine`, porque eso es lo debe importarle en última instancia.
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ Uno de los principios de una prueba unitaria es que debe tener control total del
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-Lamentablemente, pronto comprobará que hay un par de problemas con las pruebas. 
+Lamentablemente, pronto comprobará que hay un par de problemas con las pruebas.
 
 - Si el conjunto de pruebas se ejecuta un martes, se superará la segunda prueba, pero se producirá un error en la primera.
 - Si el conjunto de pruebas se ejecuta otro día, se superará la primera prueba, pero se producirá un error en la segunda.
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
