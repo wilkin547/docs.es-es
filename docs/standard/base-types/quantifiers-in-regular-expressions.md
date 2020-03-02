@@ -14,17 +14,17 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084236"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160019"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
   
-|Cuantificador expansivo|Cuantificador diferido|DESCRIPCIÓN|  
+|Cuantificador expansivo|Cuantificador diferido|Descripción|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Coincide cero o más veces.|  
 |`+`|`+?`|Coincide una o más veces.|  
@@ -54,7 +54,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`91*`|Coincide con un "9" seguido de cero o más caracteres "1".|  
@@ -71,7 +71,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`an+`|Coincide con una "a" seguida de uno o más caracteres "n".|  
@@ -88,7 +88,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`an?`|Coincide con una "a" seguida de cero o un carácter "n".|  
@@ -104,7 +104,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
@@ -122,7 +122,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\d{2,}`|Coincide con al menos dos dígitos decimales.|  
@@ -147,7 +147,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\w*?`|Coincide con cero o más caracteres de palabra, pero con el menor número de caracteres posible.|  
@@ -173,7 +173,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Coincide con el inicio del flujo de entrada.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
@@ -192,7 +192,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(\w{3,}?\.)`|Coincide con al menos 3 caracteres de palabra, pero con el menor número de caracteres posible, seguidos de un carácter de punto. Este es el primer grupo de captura.|  
@@ -214,7 +214,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`[A-Z]`|Coincide con cualquier letra mayúscula de la A a la Z.|  
@@ -222,7 +222,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`{1,10}`|Coincide con el patrón anterior entre una y diez veces.|  
 |`[.!?]`|Coincide con cualquiera de los caracteres de puntuación ".", "!" o "?".|  
   
-<a name="Greedy"></a>   
+<a name="Greedy"></a>
 ## <a name="greedy-and-lazy-quantifiers"></a>Cuantificadores expansivos y diferidos  
  Varios cuantificadores tienen dos versiones:  
   
@@ -258,7 +258,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  Para ver la diferencia práctica entre un grupo de captura que define un número mínimo y máximo de capturas y otro que define un número fijo de capturas, tenga en cuenta los patrones de expresiones regulares `(a\1|(?(1)\1)){0,2}` y `(a\1|(?(1)\1)){2}`. Ambas expresiones regulares constan de un único grupo de captura, que se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(a\1`|Coincide con "a", junto con el valor del primer grupo capturado...|  
 |<code>&#124;(?(1)</code>|… o bien, prueba si se ha definido el primer grupo capturado. (Tenga en cuenta que la construcción `(?(1)` no define un grupo de captura).|  
