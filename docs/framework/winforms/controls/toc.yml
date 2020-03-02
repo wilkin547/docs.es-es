@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 'Tutorial: Herencia de un control'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'Tutorial: Realización de tareas comunes con etiquetas inteligentes'
+        - name: 'Tutorial: Realización de tareas comunes con acciones de diseño'
           href: perform-common-tasks-design-actions.md
         - name: 'Tutorial: Serialización de colecciones de tipos estándar'
           href: serializing-collections-designerserializationvisibilityattribute.md
