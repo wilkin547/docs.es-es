@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337580"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160344"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -21,13 +21,13 @@ En este artículo, se ofrece un paseo guiado por algunas de las características
 
 ## <a name="how-to-run-the-code-samples"></a>Ejecución de ejemplos de código
 
-Para obtener más información sobre cómo configurar un entorno de desarrollo para ejecutar los ejemplos de código, consulte el tema [Introducción](get-started.md). Copie y pegue los ejemplos de código de esta página en su entorno para ejecutarlos. 
+Para obtener más información sobre cómo configurar un entorno de desarrollo para ejecutar los ejemplos de código, consulte el tema [Introducción](get-started.md). Copie y pegue los ejemplos de código de esta página en su entorno para ejecutarlos.
 
 ## <a name="programming-languages"></a>Lenguajes de programación
 
 .NET admite varios lenguajes de programación. Las implementaciones de .NET implementan [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre otras cosas, especifica un entorno de ejecución independiente del lenguaje y la interoperabilidad del lenguaje. Esto significa que elige cualquier lenguaje .NET para crear aplicaciones y servicios en .NET.
 
-Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual Basic. 
+Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual Basic.
 
 * C# es simple, eficaz, incluye seguridad de tipos y está orientado a objetos, al mismo tiempo que mantiene la expresividad y elegancia de los lenguajes de estilo C. Cualquiera que esté familiarizado con C y lenguajes similares, encuentra pocos problemas para adaptarse a C#. Consulte la [Guía de C#](../csharp/index.yml) para más información sobre C#.
 

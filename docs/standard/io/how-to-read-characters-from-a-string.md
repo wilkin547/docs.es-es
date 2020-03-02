@@ -13,17 +13,17 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ed267ad62e46f6216c94906df1bcefb0684ab51b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706678"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155768"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Procedimiento Leer caracteres de una cadena
 En los ejemplos de código siguientes se muestra cómo leer caracteres desde una cadena de forma sincrónica o asincrónica.  
   
-## <a name="example-read-characters-synchronously"></a>Ejemplo: Leer caracteres de forma sincrónica 
+## <a name="example-read-characters-synchronously"></a>Ejemplo: Leer caracteres de forma sincrónica
  Este ejemplo lee trece caracteres de forma sincrónica de una cadena, los almacena en una matriz y los muestra. A continuación, el ejemplo lee el resto de los caracteres de la cadena, los almacena en la matriz a partir del sexto elemento y muestra el contenido de la matriz.  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]

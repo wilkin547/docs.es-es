@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123174"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159369"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadenar tareas mediante tareas de continuación
 En la programación asincrónica, es habitual que una operación asincrónica, al finalizar, invoque una segunda operación y le pase los datos. Tradicionalmente, las continuaciones se han realizado mediante métodos de devolución de llamada. En la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas), se proporciona la misma funcionalidad mediante *tareas de continuación*. Una tarea de continuación (también conocida simplemente como una continuación) es una tarea asincrónica invocada por otra tarea, conocida como el *antecedente*, cuando esta finaliza.  
@@ -42,7 +42,7 @@ En la programación asincrónica, es habitual que una operación asincrónica, a
  Una continuación es en sí misma un <xref:System.Threading.Tasks.Task> y no bloquea el subproceso en el que se inicia. Para un bloqueo, llame al método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> hasta que finalice la tarea de continuación.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Crear una continuación para un antecedente único  
- Se puede crear una continuación que se ejecute una vez completado su antecedente mediante una llamada al método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> . En el ejemplo siguiente se muestra el patrón básico (para mayor claridad, se omite el control de excepciones). En él se ejecuta una tarea antecedente, `taskA`, que devuelve un objeto <xref:System.DayOfWeek> que indica el nombre del día actual de la semana. Cuando finaliza el antecedente, este se pasa a la tarea de continuación, `continuation`, y se muestra una cadena que incluye su resultado. 
+ Se puede crear una continuación que se ejecute una vez completado su antecedente mediante una llamada al método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> . En el ejemplo siguiente se muestra el patrón básico (para mayor claridad, se omite el control de excepciones). En él se ejecuta una tarea antecedente, `taskA`, que devuelve un objeto <xref:System.DayOfWeek> que indica el nombre del día actual de la semana. Cuando finaliza el antecedente, este se pasa a la tarea de continuación, `continuation`, y se muestra una cadena que incluye su resultado.
 
 > [!NOTE]
 > En los ejemplos de C# de este artículo se usa el modificador `async` en el método `Main`. Esa característica está disponible en C# 7.1 y versiones posteriores. En las versiones anteriores se genera [`CS5001`](../../csharp/misc/cs5001.md) al compilar este código de ejemplo. Tendrá que establecer la versión del lenguaje en C# 7.1 o posterior. Puede obtener información sobre cómo configurar la versión del lenguaje en el artículo sobre [configuración de la versión del lenguaje](../../csharp/language-reference/configure-language-version.md).

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo el analizador de API de .NET puede
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542629"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156139"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -47,7 +47,7 @@ El analizador de API usa códigos de error específicos de API que empiezan por 
    3. Seleccione **Incluir versión preliminar**.
    4. Busque **Microsoft.DotNet.Analyzers.Compatibility**.
    5. Seleccione ese paquete de la lista.
-   6. Seleccione el botón **Instalar**. 
+   6. Seleccione el botón **Instalar**.
    7. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
 
 ### <a name="use-the-api-analyzer"></a>Uso del analizador de API
@@ -56,13 +56,13 @@ Cuando una API en desuso, como <xref:System.Net.WebClient>, se utiliza en un có
 
 !["Captura de pantalla de WebClient API con una línea ondulada de color verde y una bombilla a la izquierda"](media/api-analyzer/green-squiggle.jpg)
 
-La ventana **Lista de errores** contiene advertencias con un identificador exclusivo por cada API en desuso, como se muestra en el ejemplo siguiente (`DE004`): 
+La ventana **Lista de errores** contiene advertencias con un identificador exclusivo por cada API en desuso, como se muestra en el ejemplo siguiente (`DE004`):
 
 !["Captura de pantalla de la ventana Lista de errores en la que se muestra el identificador de la advertencia y su descripción"](media/api-analyzer/warnings-id-and-descriptions.jpg "Ventana Lista de errores con advertencias.")
 
 Al hacer clic en el identificador, se le remite a una página web que contiene información detallada sobre la API en desuso y sugerencias sobre las API alternativas que pueden usarse.
 
-Las advertencias pueden suprimirse si se hace clic con el botón derecho del ratón en el miembro resaltado y se selecciona **Suprimir \<Id. de diagnóstico>** . Hay dos maneras de suprimir las advertencias: 
+Las advertencias pueden suprimirse si se hace clic con el botón derecho del ratón en el miembro resaltado y se selecciona **Suprimir \<Id. de diagnóstico>** . Hay dos maneras de suprimir las advertencias:
 
 - [localmente (en el origen)](#suppress-warnings-locally)
 - [globalmente (en un archivo de supresión)](#suppress-warnings-globally); se trata de la opción recomendada

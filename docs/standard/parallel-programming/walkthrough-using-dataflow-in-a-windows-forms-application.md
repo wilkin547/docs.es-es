@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: b6f4b933f76834f48d522d9c97fb0c9b5c24e13d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139920"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159772"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms
 Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
@@ -35,7 +35,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
 - [Ejemplo completo](#complete)  
   
-<a name="winforms"></a>   
+<a name="winforms"></a>
 ## <a name="creating-the-windows-forms-application"></a>Crear una aplicación de Windows Forms  
  En esta sección se describe cómo crear la aplicación básica de Windows Forms y agregar controles al formulario principal.  
   
@@ -51,7 +51,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
 5. Agregue un objeto <xref:System.Windows.Forms.PictureBox> al formulario principal. Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-<a name="network"></a>   
+<a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Crear la red del flujo de datos  
  En esta sección se describe cómo crear la red del flujo de datos que lleva a cabo el procesamiento de imágenes.  
   
@@ -84,7 +84,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
  En la tabla siguiente se describen los miembros de la red.  
   
-|Miembro|Tipo|DESCRIPCIÓN|  
+|Miembro|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Acepta una ruta de carpeta como entrada y genera una colección de objetos <xref:System.Drawing.Bitmap> como salida.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Acepta una colección de objetos <xref:System.Drawing.Bitmap> como entrada y produce un mapa de bits compuesto como salida.|  
@@ -101,7 +101,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
  Este ejemplo usa un token de cancelación compartido en lugar de establecer la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, porque la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela permanentemente la ejecución del bloque de flujo de datos. En este ejemplo, un token de cancelación permite reutilizar la misma red del flujo de datos varias veces, incluso cuando el usuario cancela una o varias operaciones. Para obtener un ejemplo que usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> para cancelar la ejecución de un bloque de flujo de datos de modo permanente, vea [Cómo: Cómo: Cancelar un bloque de flujos de datos](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
-<a name="ui"></a>   
+<a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Conectar la red del flujo de datos a la interfaz de usuario  
  En esta sección se describe cómo conectar la red del flujo de datos a la interfaz de usuario. La creación de la imagen compuesta y la cancelación de la operación se inician desde los botones **Elegir carpeta** y **Cancelar**. Cuando el usuario elige cualquiera de ellos, se inicia la acción correspondiente de forma asincrónica.  
   
@@ -119,7 +119,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
-<a name="complete"></a>   
+<a name="complete"></a>
 ## <a name="the-complete-example"></a>Ejemplo completo  
  En el ejemplo siguiente se muestra el código completo de este tutorial.  
   

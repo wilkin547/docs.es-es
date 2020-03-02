@@ -4,16 +4,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702901"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628168"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Uso de indizadores (Guía de programación de C#)
 
-Los indexadores son una comodidad sintáctica que le permiten crear una [clase](../../language-reference/keywords/class.md), un [struct](../../language-reference/keywords/struct.md) o una [interfaz](../../language-reference/keywords/interface.md) a los que pueden acceder las aplicaciones cliente simplemente como una matriz. Los indexadores se implementan con más frecuencia en tipos cuyo propósito principal consiste en encapsular una matriz o colección interna. Por ejemplo, suponga que tiene una clase `TempRecord` que representa la temperatura en grados Fahrenheit que se registra en 10 momentos diferentes durante un período de 24 horas. La clase contiene una matriz `temps` de tipo `float[]` para almacenar los valores de temperatura. Si implementa un indizador en esta clase, los clientes pueden tener acceso a las temperaturas en una instancia de `TempRecord` como `float temp = tr[4]` en lugar de como `float temp = tr.temps[4]`. La notación del indexador no solo simplifica la sintaxis para las aplicaciones cliente; también hace que la clase y su finalidad sean más intuitivas para que las conozcan otros desarrolladores.  
+Los indexadores son una comodidad sintáctica que le permiten crear una [clase](../../language-reference/keywords/class.md), un [struct](../../language-reference/builtin-types/struct.md) o una [interfaz](../../language-reference/keywords/interface.md) a los que pueden acceder las aplicaciones cliente simplemente como una matriz. Los indexadores se implementan con más frecuencia en tipos cuyo propósito principal consiste en encapsular una matriz o colección interna. Por ejemplo, suponga que tiene una clase `TempRecord` que representa la temperatura en grados Fahrenheit que se registra en 10 momentos diferentes durante un período de 24 horas. La clase contiene una matriz `temps` de tipo `float[]` para almacenar los valores de temperatura. Si implementa un indizador en esta clase, los clientes pueden tener acceso a las temperaturas en una instancia de `TempRecord` como `float temp = tr[4]` en lugar de como `float temp = tr.temps[4]`. La notación del indexador no solo simplifica la sintaxis para las aplicaciones cliente; también hace que la clase y su finalidad sean más intuitivas para que las conozcan otros desarrolladores.  
   
 Para declarar un indizador en una clase o un struct, use la palabra clave [this](../../language-reference/keywords/this.md), como en este ejemplo:
 

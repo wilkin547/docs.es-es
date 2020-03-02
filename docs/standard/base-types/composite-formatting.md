@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338510"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159317"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 
@@ -31,7 +31,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
 - <xref:System.String.Format%2A?displayProperty=nameWithType>, que devuelve una cadena de resultado con formato.  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, que anexa una cadena de resultado con formato a un objeto <xref:System.Text.StringBuilder>.   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, que anexa una cadena de resultado con formato a un objeto <xref:System.Text.StringBuilder>.
 - Algunas sobrecargas del método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que muestran una cadena de resultado con formato en la consola.  
   
 - Algunas sobrecargas del método <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, que escriben la cadena de resultado con formato en una secuencia o un archivo. Las clases derivadas de <xref:System.IO.TextWriter>, como <xref:System.IO.StreamWriter> y <xref:System.Web.UI.HtmlTextWriter>, también comparten esta funcionalidad.  

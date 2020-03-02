@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696762"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160175"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
 
@@ -56,7 +56,7 @@ Una clase puede proporcionar métodos o propiedades que permiten evitar realizar
 
 Otro modo de evitar excepciones es devolver un valor NULL (o el valor predeterminado) para los casos de errores muy frecuentes en lugar de iniciar una excepción. Un caso de error muy común se puede considerar como un flujo de control normal. Al devolver un valor NULL en estos casos, se minimiza el impacto en el rendimiento de una aplicación.
 
-Para los tipos de valores, el uso de `Nullable<T>` o de valores predeterminados como indicador de error es algo que se debe tener en cuenta para la aplicación en particular. Al utilizar `Nullable<Guid>`, `default` se convierte en `null` en lugar de `Guid.Empty`. Algunas veces, agregar `Nullable<T>` puede aclarar cuando un valor está presente o ausente. Otras veces, agregar `Nullable<T>` puede crear casos adicionales para comprobar que no son necesarios, y solo sirven para crear posibles orígenes de errores. 
+Para los tipos de valores, el uso de `Nullable<T>` o de valores predeterminados como indicador de error es algo que se debe tener en cuenta para la aplicación en particular. Al utilizar `Nullable<Guid>`, `default` se convierte en `null` en lugar de `Guid.Empty`. Algunas veces, agregar `Nullable<T>` puede aclarar cuando un valor está presente o ausente. Otras veces, agregar `Nullable<T>` puede crear casos adicionales para comprobar que no son necesarios, y solo sirven para crear posibles orígenes de errores.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Iniciar excepciones en lugar de devolver un código de error
 
@@ -113,7 +113,7 @@ El mensaje de error que ve el usuario deriva de la propiedad <xref:System.Except
 Para las aplicaciones localizadas, debe proporcionar una cadena de mensaje localizada para todas las excepciones que la aplicación pueda desencadenar. Use archivos de recursos para proporcionar mensajes de error localizados. Para información sobre la localización de aplicaciones y la recuperación de cadenas localizadas, consulte los siguientes artículos:
 
 - [Procedimientos: Creación de excepciones definidas por el usuario con mensajes de excepción localizados](how-to-create-localized-exception-messages.md)
-- [Recursos de aplicaciones de escritorio](../../framework/resources/index.md) 
+- [Recursos de aplicaciones de escritorio](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>En excepciones personalizadas, proporcione propiedades adicionales según sea necesario

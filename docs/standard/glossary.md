@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921107"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160097"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -22,11 +22,11 @@ Similar a [JIT](#jit), este compilador también convierte [IL](#il) en código d
 
 Vea [CoreRT](#corert) y [.NET Native](#net-native).
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 La implementación original de ASP.NET que se distribuye con .NET Framework.
 
-A veces, ASP.NET es un término genérico que hace referencia a ambas implementaciones de ASP.NET, incluido ASP.NET Core. El significado que lleva el término en una instancia específica se determina según el contexto. Haga referencia a ASP.NET 4.x cuando desee dejar claro que no usa ASP.NET para indicar ambas implementaciones. 
+A veces, ASP.NET es un término genérico que hace referencia a ambas implementaciones de ASP.NET, incluido ASP.NET Core. El significado que lleva el término en una instancia específica se determina según el contexto. Haga referencia a ASP.NET 4.x cuando desee dejar claro que no usa ASP.NET para indicar ambas implementaciones.
 
 Vea la [documentación de ASP.NET](/aspnet/#pivot=aspnet).
 
@@ -78,7 +78,7 @@ Todo el software en tiempo de ejecución, las herramientas de desarrollo y los r
 
 El término "ecosistema de .NET" se diferencia de términos parecidos como "pila de .NET" en que incluye bibliotecas y aplicaciones de terceros. Aquí se muestra un ejemplo en una frase:
 
-- "La finalidad de [.NET Standard](#net-standard) es establecer una mayor uniformidad en el ecosistema de .NET". 
+- "La finalidad de [.NET Standard](#net-standard) es establecer una mayor uniformidad en el ecosistema de .NET".
 
 ## <a name="framework"></a>marco de trabajo
 
@@ -96,7 +96,7 @@ En la documentación existente, "marco de trabajo" a veces hace referencia a una
 
 Recolector de elementos no utilizados.
 
-El recolector de elementos no utilizados es una implementación de administración de memoria automática.  GC libera la memoria ocupada por objetos que ya no se usan. 
+El recolector de elementos no utilizados es una implementación de administración de memoria automática.  GC libera la memoria ocupada por objetos que ya no se usan.
 
 Vea [Recolección de elementos no utilizados](garbage-collection/index.md).
 
@@ -157,7 +157,7 @@ El término que engloba [.NET Standard](#net-standard) y todas las cargas de tra
 
 Consulte la [Guía de la plataforma .NET](index.md).
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 Una implementación multiplataforma, de alto rendimiento y de código abierto de .NET. Incluye Core Common Language Runtime (CoreCLR), el entorno de ejecución AOT de Core (CoreRT, en desarrollo), la biblioteca de clases base de Core y el SDK de Core.
 
@@ -217,7 +217,7 @@ Un sistema operativo y el hardware en que se ejecuta, como Windows, macOS, Linux
 
 Aquí tiene ejemplos de uso en frases:
 
-- ".NET Core es una implementación multiplataforma de .NET". 
+- ".NET Core es una implementación multiplataforma de .NET".
 - "Los perfiles de PCL representan plataformas de Microsoft, mientras que .NET Standard es independiente de la plataforma".
 
 La documentación de .NET usa con frecuencia "plataforma de .NET" para indicar una implementación de .NET o la pila de .NET que incluye todas las implementaciones. Estos dos usos tienden a confundirse con el significado principal (sistema operativo o hardware), por tanto, tenemos previsto eliminar estos usos de la documentación.
@@ -239,13 +239,13 @@ A veces, la documentación de .NET usa "entorno de ejecución" para indicar una 
 - "Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo". (Hace referencia a .NET Standard).
 - "Los diversos entornos de ejecución .NET implementan versiones concretas de .NET Standard. … Cada versión del entorno de ejecución de .NET anuncia la última versión de .NET Standard que admite...".
 
-Tenemos previsto eliminar este uso incoherente. 
+Tenemos previsto eliminar este uso incoherente.
 
 ## <a name="stack"></a>pila
 
 Un conjunto de tecnologías de programación que se usan para compilar y ejecutar aplicaciones.
 
-La "pila de .NET" hace referencia a .NET Standard y a todas las implementaciones de .NET. La frase "una pila de .NET" puede hacer referencia a una implementación de .NET. 
+La "pila de .NET" hace referencia a .NET Standard y a todas las implementaciones de .NET. La frase "una pila de .NET" puede hacer referencia a una implementación de .NET.
 
 ## <a name="target-framework"></a>versión de .NET Framework de destino
 

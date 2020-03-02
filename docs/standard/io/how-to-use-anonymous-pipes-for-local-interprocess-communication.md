@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 16018be820951a2739d602edb99845eb89495d5e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706652"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627999"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
 Las canalizaciones anónimas permiten la comunicación entre procesos en un equipo local. Proporcionan menos funcionalidad que las canalizaciones con nombre, pero también tienen menos carga de procesamiento. Puede utilizar las canalizaciones anónimas para facilitar la comunicación entre procesos en un equipo local. No se puede utilizar las canalizaciones anónimas para la comunicación a través de una red.  
@@ -35,6 +35,8 @@ Las canalizaciones anónimas permiten la comunicación entre procesos en un equi
  [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el proceso del cliente. El proceso de servidor inicia el proceso de cliente y da un identificador de cliente a ese proceso. El ejecutable resultante del código de cliente debe denominarse `pipeClient.exe` y copiarse en el mismo directorio que el ejecutable del servidor antes de ejecutar el proceso de servidor.  

@@ -3,12 +3,12 @@ title: Tipos no administrados - Referencia de C#
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342589"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626950"
 ---
 # <a name="unmanaged-types-c-reference"></a>Tipos no administrados (referencia de C#)
 
@@ -17,7 +17,7 @@ Un tipo es un **tipo no administrado** si es cualquiera de los siguientes tipos:
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` o `bool`
 - Cualquier tipo [enum](enum.md).
 - Cualquier tipo [pointer](../../programming-guide/unsafe-code-pointers/pointer-types.md).
-- Cualquier tipo de [struct](../keywords/struct.md) definido por el usuario que solo contenga campos de tipos no administrados, en C# 7.3 y versiones anteriores, no es un tipo construido (un tipo que incluya al menos un argumento de tipo)
+- Cualquier tipo de [struct](struct.md) definido por el usuario que solo contenga campos de tipos no administrados, en C# 7.3 y versiones anteriores, no es un tipo construido (un tipo que incluya al menos un argumento de tipo)
 
 A partir de C# 7.3, puede usar [`unmanaged`constraint](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) para especificar que un parámetro de tipo es un tipo no administrado que no acepta valores NULL y que no es de puntero.
 

@@ -3,12 +3,12 @@ title: Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 description: Una guía sobre qué implementación de .NET debe tener en cuenta al crear una aplicación de servidor en .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124629"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159980"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -75,7 +75,7 @@ En la mayoría de los casos, no necesita migrar sus aplicaciones existentes a .N
 
 Las bibliotecas están adoptando rápidamente .NET Standard. .NET Standard permite compartir código entre todas las implementaciones de .NET, incluido .NET Core. Con .NET Standard 2.0, esto es incluso más fácil:
 
-- La superficie de API es mucho más grande. 
+- La superficie de API es mucho más grande.
 - Se ha introducido un modo de compatibilidad de .NET Framework. Este modo de compatibilidad permite a los proyectos de .NET Standard o .NET Core hacer referencia a bibliotecas de .NET Framework. Para obtener más información sobre el modo de compatibilidad, vea [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/) (Anuncio de .NET Standard 2.0).
 
 Por tanto, solo en casos en que las bibliotecas o paquetes de NuGet usen tecnologías que no están disponibles en .NET Standard o .NET Core, debe usar .NET Framework.
@@ -86,7 +86,7 @@ Algunas tecnologías de .NET Framework no están disponibles en .NET Core. Algun
 
 - Aplicaciones de formularios Web Forms ASP.NET: ASP.NET Web Forms solo está disponible en .NET Framework. No se puede usar ASP.NET Core para ASP.NET Web Forms. No está previsto migrar ASP.NET Web Forms a .NET Core.
 
-- Aplicaciones de ASP.NET Web Pages: ASP.NET Web Pages no se incluye en ASP.NET Core. 
+- Aplicaciones de ASP.NET Web Pages: ASP.NET Web Pages no se incluye en ASP.NET Core.
 
 - Implementación de servicios WCF. Aunque hay una [biblioteca cliente de WCF](https://github.com/dotnet/wcf) para consumir servicios WCF desde .NET Core, actualmente, la implementación del servidor WCF solo está disponible en .NET Framework. Este escenario no es parte del plan actual de .NET Core, pero se está considerando para el futuro.
 

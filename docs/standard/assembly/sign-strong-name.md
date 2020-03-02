@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738770"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160318"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedimiento para firmar un ensamblado con un nombre seguro
 
@@ -73,9 +73,9 @@ Para obtener más información sobre esta herramienta, consulte el tema sobre [A
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Firma de un ensamblado con un nombre seguro mediante el uso de atributos  
   
 1. Agregue el atributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> o <xref:System.Reflection.AssemblyKeyNameAttribute> al archivo de código fuente y especifique el nombre del archivo o contenedor donde se incluye el par de claves que se va a usar al firmar el ensamblado con un nombre seguro.  
-   
+
 2. Compile el archivo de código fuente normalmente.  
-   
+
    > [!NOTE]
    > Los compiladores de C# y Visual Basic emiten advertencias del compilador (CS1699 y BC41008, respectivamente) cuando encuentran el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> en el código fuente. Las advertencias se pueden omitir.  
 

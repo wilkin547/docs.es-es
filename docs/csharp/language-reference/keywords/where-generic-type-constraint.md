@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712811"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626716"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
 
@@ -32,7 +32,7 @@ La cláusula `where` puede especificar que el tipo es `class` o `struct`. La res
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-La cláusula `where` puede incluir la restricción `notnull`. La restricción `notnull` limita el parámetro de tipo a tipos que no aceptan valores NULL. Ese tipo puede ser un [tipo de valor](struct.md) o un tipo de referencia que no acepta valores NULL. La restricción `notnull` está disponible a partir C# 8.0 para el código compilado en un contexto [`nullable enable`](../../nullable-references.md#nullable-contexts). A diferencia de otras restricciones, si un argumento de tipo infringe la restricción `notnull`, el compilador genera una advertencia en lugar de un error. Las advertencias solo se generan en un contexto `nullable enable`. 
+La cláusula `where` puede incluir la restricción `notnull`. La restricción `notnull` limita el parámetro de tipo a tipos que no aceptan valores NULL. Ese tipo puede ser un [tipo de valor](../builtin-types/value-types.md) o un tipo de referencia que no acepta valores NULL. La restricción `notnull` está disponible a partir C# 8.0 para el código compilado en un contexto [`nullable enable`](../../nullable-references.md#nullable-contexts). A diferencia de otras restricciones, si un argumento de tipo infringe la restricción `notnull`, el compilador genera una advertencia en lugar de un error. Las advertencias solo se generan en un contexto `nullable enable`.
 
 > [!IMPORTANT]
 > Las declaraciones genéricas que incluyen la restricción `notnull` se pueden usar en un contexto donde se desconoce que se aceptan valores NULL, pero el compilador no aplica la restricción.

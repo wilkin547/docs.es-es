@@ -4,12 +4,12 @@ description: Obtenga información sobre los ensamblados de referencia, un tipo e
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089271"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156470"
 ---
 # <a name="reference-assemblies"></a>Ensamblados de referencia
 
@@ -39,7 +39,7 @@ Los IDE y las herramientas de compilación también pueden aprovechar los ensamb
 
 Puede generar ensamblados de referencia:
 
-- En un proyecto de MSBuild, mediante la propiedad de proyecto [ `ProduceReferenceAssembly`](/visualstudio/msbuild/common-msbuild-project-properties).
+- En un proyecto de MSBuild, mediante la propiedad de proyecto [`ProduceReferenceAssembly`](/visualstudio/msbuild/common-msbuild-project-properties).
 - Al compilar el programa desde la línea de comandos, especificando las opciones de compilador `-refonly` ([C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) / [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md)) o `-refout` ([C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) / [Visual Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)).
 - Al usar la API de Roslyn, estableciendo <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> en `true` y <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> en `false` en un objeto que se pasa al método <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType>.
 

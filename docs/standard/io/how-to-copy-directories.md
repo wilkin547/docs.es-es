@@ -12,17 +12,17 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 223e83a5ff6a73825985ec4e3b6b601fb196fe5e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75707905"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159460"
 ---
 # <a name="how-to-copy-directories"></a>Procedimiento para copiar directorios
-En este tema se muestra cómo usar las clases de E/S para copiar de forma sincrónica el contenido de un directorio en otra ubicación. 
+En este tema se muestra cómo usar las clases de E/S para copiar de forma sincrónica el contenido de un directorio en otra ubicación.
 
-Para obtener un ejemplo de la copia asincrónica de archivos, vea [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md). 
+Para obtener un ejemplo de la copia asincrónica de archivos, vea [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md).
 
 En este ejemplo, para copiar los subdirectorios se establece el elemento `copySubDirs` del método `DirectoryCopy` en `true`. Para copiar de forma recursiva los subdirectorios, el método `DirectoryCopy` se llama a si mismo en cada subdirectorio hasta que no haya ninguno más para copiar.  
   
@@ -30,6 +30,8 @@ En este ejemplo, para copiar los subdirectorios se establece el elemento `copySu
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IO.FileInfo>

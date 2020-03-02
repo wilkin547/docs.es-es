@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128974"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159395"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para multithreading
 
@@ -64,13 +64,13 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
  En ambos casos, si se produce una excepción en el bloque de código, el bloqueo de **lock** o **SyncLock** se anula automáticamente. Los compiladores de C# y Visual Basic emiten un bloque **try**/**finally** con **Monitor.Enter** al principio de try, y **Monitor.Exit** en el bloque **finalmente**. Si se produce una excepción en el bloque **lock** o **SyncLock**, el controlador**finally** se ejecuta para que realice los trabajos de limpieza.  
   
 ## <a name="synchronized-context"></a>Contexto sincronizado  
- 
+
 Solo en aplicaciones de .NET Framework y Xamarin, puede usar <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> en cualquier <xref:System.ContextBoundObject> para sincronizar todos los campos y métodos de instancia. Todos los objetos del mismo dominio de contexto comparten la misma instrucción lock. Varios subprocesos pueden acceder a los métodos y los campos, pero solo se permite uno a la vez.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
-- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)
+- [Información general sobre las primitivas de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
 - [SyncLock (instrucción)](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock (instrucción)](../../csharp/language-reference/keywords/lock-statement.md)

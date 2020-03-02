@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348068"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156548"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
 
@@ -72,7 +72,7 @@ Pero, aunque puede usar sobrecargas del método <xref:System.DateTime.Parse%2A> 
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 Si se ajusta a uno de los patrones de cadena especificados, el método <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> convierte una cadena en un objeto <xref:System.DateTime>. Cuando se pasa a este método una cadena que no tiene uno de las formas especificadas, se genera una excepción <xref:System.FormatException>. Puede definirse uno de los especificadores de formato de fecha y hora estándar o una combinación de los especificadores de formato de fecha y hora personalizados. Con el uso de especificadores de formato personalizados, es posible construir una cadena de reconocimiento personalizada. Para obtener una explicación de los especificadores, consulte los temas sobre [cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md) y [cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md).  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972064"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160084"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
   
  .NET Framework define los elementos de sustitución que se enumeran en la siguiente tabla.  
   
-|Sustitución|DESCRIPCIÓN|  
+|Sustitución|Descripción|  
 |------------------|-----------------|  
 |$ *number*|Incluye la última subcadena coincidente por el grupo capturado que identifica *number*, donde *number* es un valor decimal, en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo numerado](#substituting-a-numbered-group).|  
 |${ *name* }|Incluye la última subcadena coincidente por el grupo con nombre que designa `(?<`*name*`> )` en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo con nombre](#substituting-a-named-group).|  
@@ -60,7 +60,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
   
  El patrón de expresión regular `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Busca una coincidencia con cero o más caracteres de símbolo de divisa.|  
 |`\s?`|Busca una coincidencia con cero o un carácter de espacio en blanco.|  
@@ -83,7 +83,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
   
  El patrón de expresión regular `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Busca una coincidencia con cero o más caracteres de símbolo de divisa.|  
 |`\s?`|Busca una coincidencia con cero o un carácter de espacio en blanco.|  
@@ -102,7 +102,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
   
  El patrón de expresión regular `\b(\d+)(\.(\d+))?` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Comenzar la búsqueda de coincidencias al principio de un límite de palabras.|  
 |`(\d+)`|Buscar coincidencias con uno o más dígitos decimales. Este es el primer grupo de captura.|  
@@ -120,7 +120,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
   
  El patrón de expresión regular `^(\w+\s?)+$` se define como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencias al principio de la cadena de entrada.|  
 |`(\w+\s?)+`|Buscar coincidencias con el patrón de uno o varios caracteres de palabra seguidos de cero o un carácter de espacio en blanco una o varias veces.|  
@@ -144,7 +144,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Sustituir el texto detrás de la coincidencia  
  La sustitución `$'` reemplaza la cadena coincidente por la cadena de entrada completa después de la coincidencia. Es decir, duplica la cadena de entrada después de la coincidencia quitando el texto coincidente. Cualquier texto que anteceda al texto coincidente no cambia en la cadena de resultado. Si no hay ninguna coincidencia, la sustitución  `$'` no tiene ningún efecto.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132893"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159993"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Recorte y eliminación de caracteres de cadenas en .NET
 Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás. En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena. En la tabla siguiente se describen los métodos de recorte disponibles.  
@@ -77,7 +77,7 @@ Si va a analizar una frase en las palabras que la forman, el resultado pueden se
   
  Con este código se muestra `World!` en la consola.  
   
-## <a name="remove"></a>Quitar 
+## <a name="remove"></a>Quitar
 
  El método <xref:System.String.Remove%2A?displayProperty=nameWithType> quita un número especificado de caracteres, comenzando en una posición especificada de una cadena existente. Este método utiliza un índice basado en cero.  
   

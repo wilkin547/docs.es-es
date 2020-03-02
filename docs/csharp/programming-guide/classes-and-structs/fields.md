@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714933"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628246"
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guía de programación de C#)
 
-Un *campo* es una variable de cualquier tipo que se declara directamente en una [clase](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md). Los campos son *miembros* de su tipo contenedor.
+Un *campo* es una variable de cualquier tipo que se declara directamente en una [clase](../../language-reference/keywords/class.md) o [struct](../../language-reference/builtin-types/struct.md). Los campos son *miembros* de su tipo contenedor.
 
 Una clase o struct puede tener campos de instancia, campos estáticos o ambos. Los campos de instancia son específicos de una instancia de un tipo. Si tiene una clase T, con un campo de instancia F, puede crear dos objetos de tipo T y modificar el valor de F en cada objeto sin afectar el valor del otro objeto. Por el contrario, un campo estático pertenece a la propia clase y se comparte entre todas las instancias de esa clase. Solo puede tener acceso al campo estático mediante el nombre de clase. Si obtiene acceso al campo estático mediante un nombre de instancia, obtendrá el error en tiempo de compilación [CS0176](../../misc/cs0176.md).
 

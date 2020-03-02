@@ -14,12 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711472"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159356"
 ---
 # <a name="changing-case-in-net"></a>Cambiar mayúsculas y minúsculas en .NET
 Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos. Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario. En la tabla siguiente se describen tres métodos para cambiar las mayúsculas y minúsculas. Los dos primeros métodos proporcionan una sobrecarga que acepta una referencia cultural.  
@@ -33,7 +33,7 @@ Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá est
 > [!WARNING]
 > Tenga en cuenta que los métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> y <xref:System.String.ToLower%2A?displayProperty=nameWithType> no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad. Para más información, vea la sección [Comparar cadenas con mayúsculas y minúsculas mezcladas](#Comparing).  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>Comparar cadenas con mayúsculas y minúsculas mezcladas  
  Para comparar cadenas con mayúsculas y minúsculas mezcladas para determinar su orden, llame a una de las sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> con un parámetro `comparisonType` y proporcione un valor <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> o <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para el argumento `comparisonType`. Para realizar una comparación usando una referencia cultural específica que no sea la referencia cultural actual, llame a una sobrecarga del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> con los parámetros `culture` y `options`, y proporcione el valor <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> como el argumento `options`.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960478"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160123"
 ---
 # <a name="work-with-buffers-in-net"></a>Trabajo con búferes en .NET
 
@@ -115,6 +115,8 @@ En el siguiente ejemplo se analiza una longitud de entero bid endian de 4 bytes
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>Procesamiento de datos de texto
 
 En el ejemplo siguiente:
@@ -146,7 +148,7 @@ Hay varios resultados inusuales cuando se trabaja con `ReadOnlySequence<T>`/`Seq
 - No se pueden comparar dos valores `SequencePosition`, lo que dificulta:
   - Saber si una posición es mayor o menor que otra.
   - Escribir algunos algoritmos de análisis.
-- `ReadOnlySequence<T>` es mayor que una referencia de objeto y debe pasarse mediante [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) o [ref](../../csharp/language-reference/keywords/ref.md) siempre que sea posible. Pasar `ReadOnlySequence<T>` mediante `in` o `ref` reduce las copias de la [estructura](../../csharp/language-reference/keywords/struct.md).
+- `ReadOnlySequence<T>` es mayor que una referencia de objeto y debe pasarse mediante [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) o [ref](../../csharp/language-reference/keywords/ref.md) siempre que sea posible. Pasar `ReadOnlySequence<T>` mediante `in` o `ref` reduce las copias de la [estructura](../../csharp/language-reference/builtin-types/struct.md).
 - Segmentos vacíos:
   - Son válidos dentro de `ReadOnlySequence<T>`.
   - Pueden aparecer cuando se recorre en iteración mediante el método `ReadOnlySequence<T>.TryGet`.

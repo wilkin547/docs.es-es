@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921209"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160305"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedimiento Escribir un bucle Parallel.ForEach sencillo
 
@@ -50,7 +50,7 @@ En Visual Studio, hay plantillas de aplicación de consola de Visual Basic y C# 
 Desde la línea de comandos, puede usar la CLI de .NET Core y sus comandos (por ejemplo, `dotnet new console` o `dotnet new console -lang vb`). También puede crear el archivo y usar el compilador de línea de comandos para una aplicación de .NET Framework.
 
 Para un proyecto de .NET Core, debe hacer referencia al paquete NuGet **System.Drawing.Common**. En Visual Studio, use el Administrador de paquetes de NuGet para instalar el paquete. Si lo prefiere, puede agregar una referencia al paquete en su archivo \*.csproj o \*.vbproj:
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />

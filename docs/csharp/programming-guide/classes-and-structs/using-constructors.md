@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964357"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626417"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizar constructores (Guía de programación de C#)
 
-Cuando se crea una [class](../../language-reference/keywords/class.md) o un [struct](../../language-reference/keywords/struct.md), se llama a su constructor. Los constructores tienen el mismo nombre que la class o el struct y suelen inicializar los miembros de datos del nuevo objeto.  
+Cuando se crea una [class](../../language-reference/keywords/class.md) o un [struct](../../language-reference/builtin-types/struct.md), se llama a su constructor. Los constructores tienen el mismo nombre que la class o el struct y suelen inicializar los miembros de datos del nuevo objeto.  
   
  En el ejemplo siguiente, una clase denominada `Taxi` se define mediante un constructor simple. Luego, se crea una instancia de la clase con el operador [new](../../language-reference/operators/new-operator.md). El constructor `Taxi` se invoca con el operador `new` inmediatamente después de asignar memoria para el nuevo objeto.  
   
@@ -29,7 +29,7 @@ Cuando se crea una [class](../../language-reference/keywords/class.md) o un [str
   
  Para obtener más información, vea [Private Constructors](./private-constructors.md) (Constructores privados [Guía de programación de C#]).  
   
- Los constructores de tipos [struct](../../language-reference/keywords/struct.md) son similares a los constructores de clases, pero `structs` no puede contener un constructor sin parámetros explícito porque el compilador proporciona uno automáticamente. Este constructor inicializa cada campo del `struct` en los [valores predeterminados](../../language-reference/builtin-types/default-values.md). Pero este constructor sin parámetros solo se invoca si las instancias de `struct` se crean con `new`. Por ejemplo, este código usa el constructor sin parámetros para <xref:System.Int32>, por lo que se tiene la certeza de que el entero se inicializa:  
+ Los constructores de tipos [struct](../../language-reference/builtin-types/struct.md) son similares a los constructores de clases, pero `structs` no puede contener un constructor sin parámetros explícito porque el compilador proporciona uno automáticamente. Este constructor inicializa cada campo del `struct` en los [valores predeterminados](../../language-reference/builtin-types/default-values.md). Pero este constructor sin parámetros solo se invoca si las instancias de `struct` se crean con `new`. Por ejemplo, este código usa el constructor sin parámetros para <xref:System.Int32>, por lo que se tiene la certeza de que el entero se inicializa:  
   
 ```csharp  
 int i = new int();  

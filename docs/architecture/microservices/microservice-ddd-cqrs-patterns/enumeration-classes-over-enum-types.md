@@ -2,12 +2,12 @@
 title: Uso de las clases de enumeración en lugar de los tipos de enumeración
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre cómo se pueden usar las clases de enumeración en lugar de las enumeraciones como una forma de resolver algunas limitaciones de estas últimas.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337688"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628467"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Uso de las clases de enumeración en lugar de los tipos de enumeración
 
@@ -81,12 +81,6 @@ public class CardType : Enumeration
 ```
 
 ## <a name="additional-resources"></a>Recursos adicionales
-
-- **Enum’s are evil—update (Las enumeraciones son contraproducentes: actualice)**  \
-  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
-
-- **Daniel Hardman. How Enums Spread Disease — And How To Cure It (Cómo las enumeraciones contagian la enfermedad y cómo curarla)**  \
-  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard. Enumeration classes (Clases de enumeración)**  \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744684"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625857"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (Referencia de C#)
 
-Una interfaz define un contrato. Cualquier [`class`](class.md) o [`struct`](struct.md) que implemente ese contrato debe proporcionar una implementación de los miembros definidos en la interfaz. A partir de C# 8.0, una interfaz puede definir una implementación predeterminada de miembros. También puede definir miembros [`static`](static.md) para proporcionar una única implementación de funcionalidad común.
+Una interfaz define un contrato. Cualquier [`class`](class.md) o [`struct`](../builtin-types/struct.md) que implemente ese contrato debe proporcionar una implementación de los miembros definidos en la interfaz. A partir de C# 8.0, una interfaz puede definir una implementación predeterminada de miembros. También puede definir miembros [`static`](static.md) para proporcionar una única implementación de funcionalidad común.
 
 En el ejemplo siguiente, la clase `ImplementationClass` debe implementar un método denominado `SampleMethod` que no tiene ningún parámetro y devuelve `void`.
 
@@ -78,6 +78,4 @@ Para obtener más información, vea la sección [Interfaces](~/_csharplang/spec/
 - [Interfaces](../../programming-guide/interfaces/index.md)
 - [Utilizar propiedades](../../programming-guide/classes-and-structs/using-properties.md)
 - [Utilizar indizadores](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [Interfaces](../../programming-guide/interfaces/index.md)

@@ -4,12 +4,12 @@ description: Describe los componentes de la arquitectura .NET, como .NET Standar
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124395"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160383"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -70,7 +70,7 @@ Un entorno de ejecución es el entorno de ejecución de un programa administrado
 
 - Common Language Runtime (CLR) para .NET Framework
 - Core Common Language Runtime (CoreCLR) para .NET Core
-- .NET Native para la Plataforma universal de Windows 
+- .NET Native para la Plataforma universal de Windows
 - El entorno de ejecución Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac y el marco de escritorio de Mono
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Herramientas de .NET e infraestructura común
@@ -96,7 +96,7 @@ Los siguientes documentos oficiales de ECMA están disponibles para [C#](http://
 - **El estándar del lenguaje C# (versión 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **Common Language Infrastructure**: está disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip).
 - **Información derivada del archivo XML de la parte IV**: está disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip).
- 
+
 Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Estándares disponibles públicamente](https://standards.iso.org/ittf/PubliclyAvailableStandards/). Estos vínculos son directos de esa página:
 
 - **Tecnología de la información: lenguajes de programación, C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
