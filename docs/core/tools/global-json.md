@@ -3,12 +3,12 @@ title: Información general de global.json
 description: Obtenga información sobre cómo usar el archivo global.json para establecer la versión del SDK de .NET Core al ejecutar comandos de la CLI de .NET Core.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920507"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626000"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > Las reglas de coincidencia se rigen por el punto de entrada de `dotnet.exe`, que es común en todos los runtime instalados de .NET Core. Las reglas de coincidencia de la última versión instalada del runtime de .NET Core se usan cuando se tienen varios runtime instalados en paralelo.
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3.x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
 A partir de .NET Core 3.0, se aplican las reglas siguientes al determinar qué versión del SDK se va a usar:
 
@@ -160,7 +160,7 @@ A partir de .NET Core 3.0, se aplican las reglas siguientes al determinar qué v
   - Si no hay ningún valor `rollFoward` establecido, se usa `latestPatch` como directiva de `rollForward` predeterminada. De lo contrario, vea cada valor y su comportamiento en la sección [rollForward](#rollforward).
   - En la sección [allowPrerelease](#allowprerelease) se explica si se tienen en cuenta las versiones preliminares y cuál es el comportamiento predeterminado cuando `allowPrerelease` no está establecido.
 
-## <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 En el SDK de .NET Core 2.x, se aplican las reglas siguientes a la hora de determinar qué versión del SDK se va a usar:
 
@@ -182,17 +182,19 @@ Las versiones del SDK de .NET Core de `2.1.100` a `2.1.201` se publicaron durant
 
 ---
 
-## <a name="troubleshooting-build-warnings"></a>Solución de problemas de advertencias de compilación
+## <a name="troubleshoot-build-warnings"></a>Solución de problemas de advertencias de compilación
 
-> [!WARNING]
-> Trabaja con una versión preliminar del SDK de .NET Core. Puede definir la versión del SDK a través de un archivo global.json en el proyecto actual. Más información en <https://go.microsoft.com/fwlink/?linkid=869452>.
+* La advertencia siguiente indica que el proyecto se ha compilado con una versión preliminar del SDK de .NET Core:
 
-Esta advertencia indica que el proyecto se ha compilado con una versión preliminar del SDK de .NET Core. Las versiones del SDK de .NET Core tienen un historial y el compromiso de ser de alta calidad. Pero si no quiere usar una versión preliminar, vea las distintas estrategias que puede aplicar con el SDK de .NET Core 3.0 o una versión posterior en la sección [allowPrerelease](#allowprerelease). En el caso de los equipos que nunca han tenido instalado un SDK o un runtime de .NET Core 3.0 o superior, debe crear un archivo *global.json* y especificar la versión exacta que quiere usar.
+  > Trabaja con una versión preliminar del SDK de .NET Core. Puede definir la versión del SDK a través de un archivo global.json en el proyecto actual. Más información en <https://go.microsoft.com/fwlink/?linkid=869452>.
 
-> [!WARNING]
-> El proyecto de inicio "{proyectoDeInicio}" está destinado a la versión "{versiónPlataformaDeDestino}" de ".NETCoreApp". Esta versión de las herramientas de línea de comandos de Entity Framework Core .NET solo admite la versión 2.0 o superior. Para obtener información sobre el uso de las versiones anteriores de las herramientas, vea <https://go.microsoft.com/fwlink/?linkid=871254>
+  Las versiones del SDK de .NET Core tienen un historial y el compromiso de ser de alta calidad. Pero si no quiere usar una versión preliminar, vea las distintas estrategias que puede aplicar con el SDK de .NET Core 3.0 o una versión posterior en la sección [allowPrerelease](#allowprerelease). En el caso de los equipos que nunca han tenido instalado un SDK o un runtime de .NET Core 3.0 o superior, debe crear un archivo *global.json* y especificar la versión exacta que quiere usar.
 
-A partir del SDK de .NET Core 2.1 (versión 2.1.300), el comando `dotnet ef` se incluye en el SDK. Esta advertencia indica que el proyecto tiene como destino EF Core 1.0 ó 1.1, que no es compatible con el SDK de .NET Core 2.1 y versiones posteriores. Para compilar el proyecto, instale el SDK de .NET Core 2.0 (versión 2.1.201) y versiones anteriores en el equipo y defina la versión del SDK deseada mediante el archivo *global.json*. Para obtener más información sobre el comando `dotnet ef`, vea [EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet) (Herramientas de línea de comandos de EF Core .NET).
+* La advertencia siguiente indica que el proyecto tiene como destino EF Core 1.0 ó 1.1, que no es compatible con el SDK de .NET Core 2.1 y versiones posteriores:
+
+  > El proyecto de inicio "{proyectoDeInicio}" está destinado a la versión "{versiónPlataformaDeDestino}" de ".NETCoreApp". Esta versión de las herramientas de línea de comandos de Entity Framework Core .NET solo admite la versión 2.0 o superior. Para obtener información sobre el uso de versiones anteriores de las herramientas, vea <https://go.microsoft.com/fwlink/?linkid=871254>.
+
+  A partir del SDK de .NET Core 2.1 (versión 2.1.300), el comando `dotnet ef` se incluye en el SDK. Para compilar el proyecto, instale el SDK de .NET Core 2.0 (versión 2.1.201) o versiones anteriores en el equipo y defina la versión del SDK deseada mediante el archivo *global.json*. Para obtener más información sobre el comando `dotnet ef`, vea [EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet) (Herramientas de línea de comandos de EF Core .NET).
 
 ## <a name="see-also"></a>Vea también
 

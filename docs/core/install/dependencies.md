@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448898"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157820"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dependencias y requisitos de .NET Core
 
@@ -294,6 +294,14 @@ En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.D
 | 3.0               | High Sierra (10.13 y posteriores)  | x64 | [Más información](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12 y posteriores)       | x64 | [Más información](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 y posteriores)       | x64 | [Más información](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+A partir de macOS Catalina (versión 10.15), se debe conceder la certificación a todo el software creado después del 1 de junio de 2019 que se distribuye con el identificador de desarrollador. Este requisito se aplica al runtime de .NET Core, al SDK de .NET Core y al software creado con .NET Core.
+
+Desde el 18 de febrero de 2020, se ha concedido la certificación a los instaladores de las versiones 3.1, 3.0 y 2.1 de .NET Core (tanto el runtime como el SDK). A las versiones publicadas anteriores no se les ha concedido la certificación. Si ejecuta una aplicación sin certificación, verá un error similar al de la imagen siguiente:
+
+![Alerta de certificación de macOS Catalina](media/dependencies/macos-notarized-pkg-warning.png)
+
+Para obtener más información sobre cómo afecta la certificación forzada a .NET Core (y a las aplicaciones de .NET Core), vea [Trabajo con la certificación de macOS Catalina](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 

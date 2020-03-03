@@ -1,14 +1,14 @@
 ---
 title: 'Matrices de C#: un paseo por el lenguaje C#'
 description: Las matrices son el tipo más básico de colección en el lenguaje C#.
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634606"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159200"
 ---
 # <a name="arrays"></a>Matrices
 
@@ -35,14 +35,14 @@ El nuevo operador permite especificar los valores iniciales de los elementos de 
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Tenga en cuenta que la longitud de la matriz se deduce del número de expresiones entre { y }. Las declaraciones de variable local y campo se pueden acortar más para que así no sea necesario reformular el tipo de matriz.
+La longitud de la matriz se deduce del número de expresiones entre { y }. Las declaraciones de variable local y campo se pueden acortar más para que así no sea necesario reformular el tipo de matriz.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Los dos ejemplos anteriores son equivalentes a lo siguiente:
+Los dos ejemplos anteriores son equivalentes al código siguiente:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Anterior](structs.md)
+>[Anterior](classes-and-objects.md)
 >[Siguiente](interfaces.md)

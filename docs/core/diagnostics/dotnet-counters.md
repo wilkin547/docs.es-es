@@ -1,13 +1,13 @@
 ---
 title: 'dotnet-counters: .Net Core'
 description: Obtenga información sobre cómo instalar y usar la herramienta de línea de comandos dotnet-counter.
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737709"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157887"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -45,8 +45,53 @@ dotnet-counters [-h|--help] [--version] <command>
 
 | Comando                                             |
 | --------------------------------------------------- |
+| [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters list](#dotnet-counters-list)       |
 | [dotnet-counters monitor](#dotnet-counters-monitor) |
+| [dotnet-counters ps](#dotnet-counters-ps) |
+
+## <a name="dotnet-counters-collect"></a>dotnet-counters collect
+
+Recopila periódicamente los valores de contador seleccionados y los exporta a un formato de archivo especificado para su posterior procesamiento.
+
+### <a name="synopsis"></a>Sinopsis
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a>Opciones
+
+- **`-p|--process-id <PID>`**
+
+  Id. del proceso que se va a supervisar.
+
+- **`--refresh-interval <SECONDS>`**
+
+  Número de segundos de retraso entre la actualización de los contadores mostrados.
+
+- **`counter_list <COUNTERS>`**
+
+  Una lista de contadores separados por espacios. Los contadores pueden ser `provider_name[:counter_name]` especificados. Si `provider_name` se usa sin un elemento `counter_name` calificado, se mostrarán todos los contadores. Para descubrir los nombres del proveedor y del contador, use el comando [dotnet-counters list](#dotnet-counters-list).
+
+- **`--format <csv|json>`**
+
+  El formato que se va a exportar. Actualmente disponibles: csv, json.
+
+- **`-o|--output <output>`**
+
+  Nombre del archivo de salida.
+
+### <a name="examples"></a>Ejemplos
+
+- Recopilación de todos los contadores en un intervalo de actualización de tres segundos y generación de un archivo CSV como salida:
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-counters list
 
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+
+Muestra una lista de los procesos de dotnet que se pueden supervisar.
+
+### <a name="synopsis"></a>Sinopsis
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a>Ejemplo
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```

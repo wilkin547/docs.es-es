@@ -3,13 +3,13 @@ title: Compilación de una aplicación de .NET para Apache Spark en Windows
 description: Aprenda a compilar una aplicación de .NET para Apache Spark en Windows.
 ms.date: 01/29/2020
 ms.topic: conceptual
-ms.custom: mvc,how-to
-ms.openlocfilehash: e6dec09f7d3e8d478cdcccf9df1c3e72d5f884eb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.custom: how-to
+ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928065"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628662"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Aprenda a compilar una aplicación de .NET para Apache Spark en Windows
 
@@ -19,30 +19,30 @@ En este artículo se enseña cómo crear aplicaciones de .NET para Apache Spark
 
 Si ya cumple con todos los requisitos previos siguientes, vaya a los pasos de [compilación](#build).
 
-  1. Descargue e instale el **[SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core/2.1)** . Al instalar el SDK, se agregará la cadena de herramientas `dotnet` a la variable de entorno PATH. Se admiten las versiones de .NET Core 2.1, 2.2 y 3.1.
+  1. Descargue e instale el **[SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core/2.1)**. Al instalar el SDK, se agregará la cadena de herramientas `dotnet` a la variable de entorno PATH. Se admiten las versiones de .NET Core 2.1, 2.2 y 3.1.
   2. Instale **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (versión 16.3 o posterior). La versión Community es completamente gratis. Al configurar la instalación, incluya al menos estos componentes:
      * Desarrollo de escritorio de .NET
        * Todos los componentes necesarios
          * Herramientas de desarrollo de .NET Framework 4.6.1
      * Desarrollo multiplataforma de .NET Core
        * Todos los componentes necesarios
-  3. Instale **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** . 
-     - Seleccione la versión adecuada para el sistema operativo, por ejemplo, jdk-8u201-windows-x64.exe para una máquina Win x64.
+  3. Instale **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**. 
+     - Seleccione la versión adecuada según su sistema operativo. Por ejemplo, *jdk-8u201-windows-x64.exe* si el equipo es Windows x64.
      - Use el instalador para realizar la instalación y compruebe que puede ejecutar `java` desde la línea de comandos.
-  4. Instale **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)** .
-     - Descargue [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip).
-     - Extraiga en un directorio loca, por ejemplo, `C:\bin\apache-maven-3.6.0\`.
-     - Agregue Apache Maven a la [variable de entorno PATH](https://www.java.com/en/download/help/path.xml), por ejemplo, `C:\bin\apache-maven-3.6.0\bin`.
+  4. Instale **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.
+     - Descargue [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip).
+     - Extraiga en un directorio local. Por ejemplo, *C:\bin\apache-maven-3.6.0\*.
+     - Agregue Apache Maven a la [variable de entorno PATH](https://www.java.com/en/download/help/path.xml). Por ejemplo, *C:\bin\apache-maven-3.6.0\bin*.
      - Confirme que puede ejecutar `mvn` desde la línea de comandos.
-  5. Instale **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)** .
-     - Descargue [Apache Spark 2.3+](https://spark.apache.org/downloads.html) y extráigalo en una carpeta local (por ejemplo, `C:\bin\spark-2.3.2-bin-hadoop2.7\`) con [7-zip](https://www.7-zip.org/). (Las versiones compatibles de Spark son 2.3.*, 2.4.0, 2.4.1, 2.4.3 y 2.4.4).
-     - Agregue una [variable de entorno nueva](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` por ejemplo, `C:\bin\spark-2.3.2-bin-hadoop2.7\`.
+  5. Instale **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.
+     - Descargue [Apache Spark 2.3+](https://spark.apache.org/downloads.html) y extráigalo en una carpeta local (por ejemplo, *C:\bin\spark-2.3.2-bin-hadoop2.7\*), mediante [7-zip](https://www.7-zip.org/). (Las versiones compatibles de Spark son 2.3.*, 2.4.0, 2.4.1, 2.4.3 y 2.4.4)
+     - Agregue una [variable de entorno nueva](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`. Por ejemplo, *C:\bin\spark-2.3.2-bin-hadoop2.7\*.
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
        ```
 
-     - Agregue Apache Spark a la [variable de entorno PATH](https://www.java.com/en/download/help/path.xml), por ejemplo, `C:\bin\spark-2.3.2-bin-hadoop2.7\bin`.
+     - Agregue Apache Spark a la [variable de entorno PATH](https://www.java.com/en/download/help/path.xml). Por ejemplo, *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*.
 
        ```powershell       
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -69,9 +69,9 @@ Si ya cumple con todos los requisitos previos siguientes, vaya a los pasos de [c
 
         </details>
 
-  6. Instale **[WinUtils](https://github.com/steveloughran/winutils)** .
-     - Descargue el archivo binario `winutils.exe` del [repositorio de WinUtils](https://github.com/steveloughran/winutils). Debe seleccionar la versión de Hadoop con que se compiló la distribución de Spark, por ejemplo, use hadoop-2.7.1 para Spark 2.3.2.
-     - Guarde el archivo binario `winutils.exe` en un directorio de su elección, por ejemplo, `C:\hadoop\bin`.
+  6. Instale **[WinUtils](https://github.com/steveloughran/winutils)**.
+     - Descargue el archivo binario `winutils.exe` del [repositorio de WinUtils](https://github.com/steveloughran/winutils). Debe seleccionar la versión de Hadoop con la que se ha compilado la distribución de Spark. Por ejemplo, use hadoop-2.7.1 para Spark 2.3.2.
+     - Guarde el archivo binario `winutils.exe` en el directorio que elija. Por ejemplo, *C:\hadoop\bin*.
      - Establezca `HADOOP_HOME` para reflejar el directorio con winutils.exe (sin bin). Por ejemplo, con la línea de comandos:
 
        ```powershell
@@ -87,11 +87,11 @@ Si ya cumple con todos los requisitos previos siguientes, vaya a los pasos de [c
 Asegúrese de que puede ejecutar `dotnet`, `java`, `mvn`, `spark-shell` desde la línea de comandos antes de pasar a la sección siguiente. ¿Cree que hay una mejor manera de hacerlo? [Abra una incidencia](https://github.com/dotnet/spark/issues) y háganos llegar sus comentarios.
 
 > [!NOTE]
-> Es posible que se requiera una instancia nueva de la línea de comandos si se actualizaran las variables de entorno.
+> Es posible que sea necesaria una instancia nueva de la línea de comandos si se actualizaran las variables de entorno.
 
 ## <a name="build"></a>Compilar
 
-En el resto de esta guía, deberá haber clonado el repositorio de .NET para Apache Spark en la máquina. Puede elegir cualquier ubicación para el repositorio clonado, por ejemplo, `C:\github\dotnet-spark\`.
+En el resto de esta guía, deberá haber clonado el repositorio de .NET para Apache Spark en la máquina. Puede elegir cualquier ubicación para el repositorio clonado. Por ejemplo, *C:\github\dotnet-spark\*.
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -99,7 +99,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>Creación de la capa de extensiones de Scala de .NET para Apache Spark
 
-Cuando se envía una aplicación de .NET, .NET para Apache Spark tiene escrita en Scala la lógica necesaria que informa a Apache Spark cómo administrar las solicitudes (por ejemplo, solicitud para crear una sesión de Spark nueva, solicitud para transferir datos desde el lado de .NET al lado de JVM, etc.). Esta lógica se puede encontrar en el [código fuente de Scala de .NET para Spark](https://github.com/dotnet/spark/tree/master/src/scala).
+Cuando se envía una aplicación de .NET, .NET para Apache Spark escribe en Scala la lógica necesaria que informa a Apache Spark cómo administrar las solicitudes (por ejemplo, solicitud para crear una sesión de Spark, solicitud para transferir datos desde el lado de .NET al lado de JVM, etc.). Esta lógica se puede encontrar en el [código fuente de Scala de .NET para Spark](https://github.com/dotnet/spark/tree/master/src/scala).
 
 Independientemente de si usa .NET Framework o .NET Core, tendrá que crear la capa de extensiones de Scala de .NET para Apache Spark:
 
@@ -212,13 +212,13 @@ En esta sección se explica cómo compilar las [aplicaciones de ejemplo](https:/
 
 Una vez que se compilan los ejemplos, su ejecución se realizará a través de `spark-submit` independientemente de si el destino es .NET Framework o .NET Core. Asegúrese de haber seguido la sección de [requisitos previos](#prerequisites) y de haber instalado Apache Spark.
 
-  1. Establezca la variable de entorno `DOTNET_WORKER_DIR` o `PATH` para incluir la ruta de acceso donde se generó el archivo binario `Microsoft.Spark.Worker` (por ejemplo, `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461` para .NET Framework, `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish` para .NET Core):
+  1. Establezca la variable de entorno `DOTNET_WORKER_DIR` o `PATH` para incluir la ruta de acceso en la que se ha generado el binario `Microsoft.Spark.Worker` (por ejemplo, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* para .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* para .NET Core):
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. Abra PowerShell y vaya al directorio donde se generó el archivo binario de la aplicación (por ejemplo, `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461` para .NET Framework, `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish` para .NET Core):
+  2. Abra Powershell y vaya al directorio en el que se haya generado el archivo binario de la aplicación (por ejemplo, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* para .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* para .NET Core):
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish

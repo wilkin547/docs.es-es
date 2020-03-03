@@ -3,18 +3,18 @@ title: Telemetría del SDK de .NET Core
 description: Descubra las características de telemetría del SDK de .NET Core que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714101"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156691"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetría del SDK de .NET Core
 
 El [SDK de .NET Core](index.md) incluye una característica de telemetría que recopila datos de uso e información de excepción cuando se bloquea el CLI de .NET Core. El CLI de .NET Core incluye el SDK de .NET Core y es el conjunto de verbos que permiten compilar, probar y publicar las aplicaciones de .NET Core. Es importante que el equipo de .NET entienda cómo se usan las herramientas con el fin de mejorarlas. Con la información sobre los errores, el equipo consigue resolver problemas y corregir errores.
 
-Los datos recopilados son anónimos y se publican de forma agregada bajo la [licencia de atribución de Creative Commons](https://creativecommons.org/licenses/by/4.0/). 
+Los datos recopilados son anónimos y se publican de forma agregada bajo la [licencia de atribución de Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Ámbito
 
@@ -30,7 +30,7 @@ La telemetría *se recopila* cuando se usa cualquiera de los [comandos de la CLI
 
 ## <a name="how-to-opt-out"></a>Cómo desactivar la característica
 
-La característica de telemetría del SDK de .NET Core está habilitada de manera predeterminada. Para desactivar la característica de telemetría, establezca la variable de entorno `DOTNET_CLI_TELEMETRY_OPTOUT` en `1` o `true`. 
+La característica de telemetría del SDK de .NET Core está habilitada de manera predeterminada. Para desactivar la característica de telemetría, establezca la variable de entorno `DOTNET_CLI_TELEMETRY_OPTOUT` en `1` o `true`.
 
 El instalador del SDK de .NET Core también envía una única entrada de telemetría cuando se produce una instalación correcta. Para desactivarla, establezca la variable de entorno de `DOTNET_CLI_TELEMETRY_OPTOUT` antes de instalar el SDK de .NET Core.
 
@@ -128,11 +128,11 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>Evitar divulgación involuntaria de información
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Evasión de la divulgación involuntaria de información
 
 Los colaboradores de .NET Core y cualquier otro usuario que ejecute una versión del SDK de .NET Core compilada por ellos mismos deben tener en cuenta la ruta de acceso al código fuente del SDK. Si se produce un bloqueo mientras se usa un SDK de .NET Core que es una compilación de depuración personalizada o está configurado con archivos de símbolos de compilación personalizados, la ruta de acceso del archivo de origen del SDK desde el equipo de compilación se recopila como parte del seguimiento de la pila y no tiene un algoritmo hash.
 
-Por este motivo, las compilaciones personalizadas del SDK de .NET Core no deben almacenarse en directorios cuyos nombres de ruta de acceso expongan información personal o confidencial. 
+Por este motivo, las compilaciones personalizadas del SDK de .NET Core no deben almacenarse en directorios cuyos nombres de ruta de acceso expongan información personal o confidencial.
 
 ## <a name="see-also"></a>Vea también
 

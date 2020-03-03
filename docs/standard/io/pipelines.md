@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423676"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627557"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines en .NET
 
@@ -67,6 +67,8 @@ Para solucionar los problemas anteriores, es necesario realizar los siguientes c
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
 El código anterior es complejo y no aborda todos los problemas identificados. Las redes de alto rendimiento normalmente implican la escritura de código muy complejo para maximizar el rendimiento. `System.IO.Pipelines` se ha diseñado para facilitar la escritura de este tipo de código.
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="pipe"></a>Canalización (|).
 
@@ -163,7 +165,7 @@ A menudo, es eficiente la reutilización del objeto `Pipe`. Para restablecer la 
 
 ## <a name="pipereader"></a>PipeReader
 
-<xref:System.IO.Pipelines.PipeReader> administra la memoria en nombre del autor de la llamada. Llame a <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> **siempre** después de llamar a <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>. Esto permite que `PipeReader` sepa cuándo ha acabado con la memoria el autor de la llamada, de tal modo que se le pueda realizar un seguimiento. El elemento `ReadOnlySequence<byte>` que devuelve `PipeReader.ReadAsync` solo es válido hasta que se llame a `PipeReader.AdvanceTo`. No es válido usar `ReadOnlySequence<byte>` después de llamar a `PipeReader.AdvanceTo`.
+<xref:System.IO.Pipelines.PipeReader> administra la memoria en nombre del autor de la llamada. Llame a <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType>**siempre** después de llamar a <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>. Esto permite que `PipeReader` sepa cuándo ha acabado con la memoria el autor de la llamada, de tal modo que se le pueda realizar un seguimiento. El elemento `ReadOnlySequence<byte>` que devuelve `PipeReader.ReadAsync` solo es válido hasta que se llame a `PipeReader.AdvanceTo`. No es válido usar `ReadOnlySequence<byte>` después de llamar a `PipeReader.AdvanceTo`.
 
 `PipeReader.AdvanceTo` toma dos argumentos <xref:System.SequencePosition>:
 

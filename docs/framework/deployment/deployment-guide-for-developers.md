@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094142"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628129"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de .NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -134,21 +134,7 @@ InstallAware compila paquetes de aplicación de Windows (APPX), Windows Installe
 
 ### <a name="installshield-deployment"></a>Implementación de InstallShield
 
-En Visual Studio, para elegir la implementación de InstallShield y agregar una dependencia en .NET Framework:
-
-1. En la barra de menús de Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**.
-
-2. En el panel izquierdo del cuadro de diálogo **Nuevo proyecto** , elija **Otros tipos de proyectos**, **Instalación e implementación**, **InstallShield LE**.
-
-3. En el cuadro **Nombre** , escriba un nombre para el proyecto y, a continuación, elija **Aceptar**.
-
-4. Si va a crear un proyecto de instalación e implementación por primera vez, elija **Ir a InstallShield** o **Habilitar InstallShield Limited Edition** a fin de descargar InstallShield Limited Edition para su versión de Microsoft Visual Studio. Reinicie Visual Studio.
-
-5. Vaya al **Asistente para proyectos** y elija **Archivos de aplicación** para agregar la salida del proyecto. Puede configurar otros atributos del proyecto mediante este asistente.
-
-6. Vaya a **Requisitos de Instalación** y seleccione los sistemas operativos y la versión de .NET Framework que desea instalar.
-
-7. Abra el menú contextual para el proyecto de instalación y elija **Compilar**.
+InstallShield compila paquetes de aplicaciones de Windows (MSIX, APPX), paquetes de Windows Installer (MSI) e instaladores de código nativo (EXE). InstallShield también proporciona integración con Visual Studio. Para obtener más información, vea el sitio web de [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html).
 
 <a name="wix"></a>
 
@@ -359,7 +345,7 @@ En la tabla siguiente se muestran las opciones que se pueden incluir cuando se e
 |Opción|Descripción|
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
-|**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"** . Para obtener un ejemplo de un paquete de encadenamiento, vea [Información de progreso de un paquete de instalación](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Información de progreso de un paquete de instalación](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:**  Use esta opción solo con el instalador web.|
 |**/log** `file` &#124; `folder`|Especifica la ubicación del archivo de registro. El valor predeterminado es la carpeta temporal para el proceso y el nombre de archivo predeterminado se basa en el paquete. Si la extensión de archivo es .txt, se genera un registro de texto. Si especifica cualquier otra extensión o no especifica ninguna, se crea un registro HTML.|
 |**/msioptions**|Especifica opciones que se pasarán para los elementos .msi y .msp; por ejemplo: `/msioptions "PROPERTY1='Value'"`.|

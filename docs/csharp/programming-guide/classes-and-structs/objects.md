@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705488"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673386"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guía de programación de C#)
 Una definición de clase o estructura es como un plano que especifica qué puede hacer el tipo. Un objeto es básicamente un bloque de memoria que se ha asignado y configurado de acuerdo con el plano. Un programa puede crear muchos objetos de la misma clase. Los objetos también se denominan instancias y pueden almacenarse en una variable con nombre, o en una matriz o colección. El código de cliente es el código que usa estas variables para llamar a los métodos y acceder a las propiedades públicas del objeto. En un lenguaje orientado a objetos, como C#, un programa típico consta de varios objetos que interactúan dinámicamente.  
@@ -52,8 +52,6 @@ Una definición de clase o estructura es como un plano que especifica qué puede
   
 - [Clases](./classes.md)  
   
-- [Structs](./structs.md)  
-  
 - [Constructores](./constructors.md)  
   
 - [Finalizadores](./destructors.md)  
@@ -66,6 +64,6 @@ Una definición de clase o estructura es como un plano que especifica qué puede
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Herencia](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [Tipos de estructura](../../language-reference/builtin-types/struct.md)
 - [new (operador)](../../language-reference/operators/new-operator.md)
 - [Sistema de tipos comunes](../../../standard/base-types/common-type-system.md)

@@ -2,12 +2,12 @@
 title: 'Tutorial: Instalación y uso de herramientas locales de .NET Core'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta local.
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543819"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156704"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core
 
@@ -24,9 +24,9 @@ En este tutorial se enseña cómo instalar y usar una herramienta local. Usará 
 
 ## <a name="create-a-manifest-file"></a>Crear un archivo de manifiesto
 
-Para instalar una herramienta solo para el acceso local (del directorio y los subdirectorios actuales), debe agregarse a un archivo de manifiesto. 
+Para instalar una herramienta solo para el acceso local (del directorio y los subdirectorios actuales), debe agregarse a un archivo de manifiesto.
 
-En la carpeta *botsay-\<nombre>* , suba un nivel hasta la carpeta *repository*:
+Desde la carpeta *microsoft.botsay*, suba un nivel hasta la carpeta *repository*:
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ Si se usa un comando de la CLI que hace referencia a una herramienta local, el S
 Instale la herramienta desde el paquete que ha creado en el primer tutorial:
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 Este comando agrega la herramienta al archivo de manifiesto que ha creado en el paso anterior. En la salida del comando se muestra el archivo de manifiesto en el que se encuentra la herramienta que acaba de instalar:
@@ -71,7 +71,7 @@ Este comando agrega la herramienta al archivo de manifiesto que ha creado en el 
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ Ahora, el archivo *.config/dotnet-tools.json* tiene una herramienta:
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ Normalmente, una herramienta local se instala en el directorio raíz del reposit
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ Normalmente, una herramienta local se instala en el directorio raíz del reposit
 
 1. Guarde los cambios.
 
-   Cambiar esto tiene el mismo resultado que obtener la versión más reciente del repositorio después de que otra persona haya instalado el paquete `dotnetsay` en el directorio del proyecto. 
+   Cambiar esto tiene el mismo resultado que obtener la versión más reciente del repositorio después de que otra persona haya instalado el paquete `dotnetsay` en el directorio del proyecto.
 
 1. Ejecute el comando `dotnet tool restore`.
 
@@ -142,7 +142,7 @@ Normalmente, una herramienta local se instala en el directorio raíz del reposit
    El comando genera una salida como la del siguiente ejemplo:
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ Normalmente, una herramienta local se instala en el directorio raíz del reposit
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. Pruebe las herramientas:
@@ -191,7 +191,7 @@ El comando update busca el primer archivo de manifiesto que contiene el identifi
 Ejecute el comando [dotnet tool uninstall](dotnet-tool-uninstall.md) para quitar las herramientas instaladas:
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli

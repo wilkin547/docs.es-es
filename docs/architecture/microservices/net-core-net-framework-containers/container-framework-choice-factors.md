@@ -2,12 +2,12 @@
 title: Tabla de decisiones. Versiones de .NET Framework para su uso con Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Tabla de decisiones, versiones de .NET Framework para su uso con Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039675"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628324"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabla de decisiones: versiones de .NET Framework para su uso con Docker
 
@@ -18,16 +18,16 @@ En la siguiente tabla de decisiones se resume si se debe usar .NET Framework o .
 
 | Arquitectura/tipo de aplicación | Contenedores de Linux | Contenedores de Windows |
 |-------------------------|------------------|--------------------|
-| Microservicios en contenedores | Núcleo de .NET | Núcleo de .NET |
-| Aplicación monolítica | Núcleo de .NET | .NET Framework <br/> Núcleo de .NET |
-| Rendimiento y escalabilidad líderes | Núcleo de .NET | Núcleo de .NET |
+| Microservicios en contenedores | Núcleo de .NET | .NET Core |
+| Aplicación monolítica | .NET Core | .NET Framework <br/> .NET Core |
+| Rendimiento y escalabilidad líderes | .NET Core | .NET Core |
 | Migración de aplicación heredada de Windows Server ("brown-field") a contenedores | -- | .NET Framework |
-| Nuevo desarrollo basado en contenedor ("green-field") | Núcleo de .NET | Núcleo de .NET |
-| ASP.NET Core | Núcleo de .NET | .NET Core (recomendado) <br/> .NET Framework |
+| Nuevo desarrollo basado en contenedor ("green-field") | .NET Core | .NET Core |
+| ASP.NET Core | .NET Core | .NET Core (recomendado) <br/> .NET Framework |
 | ASP.NET 4 (MVC 5, API web 2 y formularios Web Forms) | -- | .NET Framework |
 | Servicios SignalR | .NET Core 2.1 o versiones posteriores | .NET Framework <br/> .NET Core 2.1 o versiones posteriores |
 | WCF, WF y otros marcos heredados | WCF en .NET Core (solo la biblioteca cliente) | .NET Framework <br/> WCF en .NET Core (solo la biblioteca cliente) |
-| Consumo de servicios de Azure | Núcleo de .NET <br/> (finalmente todos los servicios de Azure proporcionarán el SDK de cliente para .NET Core) | .NET Framework <br/> Núcleo de .NET <br/> (finalmente todos los servicios de Azure proporcionarán el SDK de cliente para .NET Core) |
+| Consumo de servicios de Azure | .NET Core <br/> (finalmente, la mayoría de los servicios de Azure proporcionarán el SDK de cliente para .NET Core) | .NET Framework <br/> .NET Core <br/> (finalmente, la mayoría de los servicios de Azure proporcionarán el SDK de cliente para .NET Core) |
 
 >[!div class="step-by-step"]
 >[Anterior](net-framework-container-scenarios.md)

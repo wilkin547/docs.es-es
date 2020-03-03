@@ -1,32 +1,34 @@
 ---
-title: Administración de dependencias en las herramientas de .NET Core
-description: Explica cómo administrar las dependencias con las herramientas de .NET Core.
-ms.date: 03/06/2017
-ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+title: Administración de dependencias en .NET Core
+description: Se explica cómo administrar las dependencias del proyecto para una aplicación .NET Core.
+no-loc:
+- dotnet add package
+- dotnet remove package
+- dotnet list package
+ms.date: 02/25/2020
+ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965625"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157250"
 ---
-# <a name="manage-dependencies-with-net-core-sdk-10"></a>Administración de dependencias con el SDK 1.0 de .NET Core
+# <a name="manage-dependencies-in-net-core-applications"></a>Administración de dependencias en aplicaciones .NET Core
 
-Con el paso de los proyectos .NET Core de project.json a csproj y MSBuild, también se ha producido una inversión significativa que ha dado lugar a la unificación del archivo de proyecto y los recursos que permiten el seguimiento de dependencias. Para los proyectos .NET Core, esto es similar a lo que hizo project.json. No hay ningún archivo independiente JSON o XML que realice el seguimiento de las dependencias de NuGet. Con este cambio, también hemos introducido otro tipo de *referencia* en la sintaxis de csproj llamada `<PackageReference>`.
+En este artículo se explica cómo agregar y quitar dependencias mediante la modificación del archivo de proyecto o mediante la CLI.
 
-Este documento describe el nuevo tipo de referencia. También muestra cómo agregar a su proyecto una dependencia de paquete mediante este nuevo tipo de referencia.
+## <a name="the-packagereference-element"></a>Elemento \<PackageReference>
 
-## <a name="the-new-packagereference-element"></a>El nuevo elemento \<PackageReference>
-
-El elemento `<PackageReference>` tiene la siguiente estructura básica:
+El archivo del proyecto `<PackageReference>` tiene la estructura siguiente:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Si ya conoce MSBuild, le resultarán familiares los otros tipos de referencia que ya existen. La clave es la instrucción `Include`, que especifica el id. de paquete que se quiere agregar al proyecto. El elemento secundario `<Version>` especifica la versión que se obtiene. Las versiones se especifican según las como por [reglas de versión de NuGet](/nuget/create-packages/dependency-versions#version-ranges).
+El atributo `Include` especifica el identificador del paquete que se va a agregar al proyecto. El atributo `Version` especifica la versión que se va a obtener. Las versiones se especifican en función de las [reglas de versión de NuGet](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
-> Si no está familiarizado con la sintaxis del archivo del proyecto, vea la documentación de [referencia de proyecto de MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) para obtener más información.
+> Si no está familiarizado con la sintaxis del archivo del proyecto, vea la documentación de [Referencia de proyectos de MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) para obtener más información.
 
 Use condiciones para agregar una dependencia que solo está disponible en un destino específico, tal como se muestra en el ejemplo siguiente:
 
@@ -34,39 +36,47 @@ Use condiciones para agregar una dependencia que solo está disponible en un des
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-La dependencia solo será válida si la compilación sucede para ese destino dado. El elemento `$(TargetFramework)` de la condición es una propiedad de MSBuild que se está configurando en el proyecto. Con aplicaciones .NET Core más comunes, no será necesario hacer esto.
+En el ejemplo anterior, la dependencia solo será válida si la compilación sucede para ese destino dado. El elemento `$(TargetFramework)` de la condición es una propiedad de MSBuild que se está configurando en el proyecto. En las aplicaciones .NET Core más comunes, no es necesario hacer esto.
 
-## <a name="add-a-dependency-to-the-project"></a>Incorporación de una dependencia al proyecto
+## <a name="add-a-dependency-by-editing-the-project-file"></a>Adición de una dependencia mediante la edición del archivo del proyecto
 
-Agregar una dependencia a su proyecto es muy sencillo. Este es un ejemplo de cómo agregar la versión `9.0.1` de Json.NET a su proyecto. Por supuesto, es aplicable a cualquier otra dependencia de NuGet.
-
-El archivo del proyecto tiene dos o más nodos `<ItemGroup>`. Uno de los nodos ya contiene elementos `<PackageReference>`. Se puede agregar la nueva dependencia a este nodo o crear uno nuevo; el resultado será el mismo.
-
-En el ejemplo siguiente se usa la plantilla predeterminada que coloca `dotnet new console`. Se trata de una aplicación de consola simple. Cuando abra el proyecto, encontrará el elemento `<ItemGroup>` que ya contiene `<PackageReference>`. Agréguele lo siguiente:
+Para agregar una dependencia, agregue un elemento `<PackageReference>` dentro de un elemento `<ItemGroup>`. Puede agregar a un elemento `<ItemGroup>` existente o crear uno. En el ejemplo siguiente se usa el proyecto de aplicación de consola predeterminado creado por `dotnet new console`:
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-```
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-Después de esto, guarde el proyecto y ejecute el comando `dotnet restore` para instalar la dependencia.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-El proyecto completo tiene este aspecto:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
+
 </Project>
 ```
 
-## <a name="remove-a-dependency-from-the-project"></a>Eliminación de una dependencia del proyecto
+## <a name="add-a-dependency-by-using-the-cli"></a>Adición de una dependencia mediante la CLI
 
-La eliminación de una dependencia del archivo de proyecto supone simplemente quitar el elemento `<PackageReference>` del archivo de proyecto.
+Para agregar una dependencia, ejecute el comando [dotnet add package](dotnet-add-package.md), como se muestra en el ejemplo siguiente:
+
+```dotnetcli
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>Eliminación de una dependencia mediante la edición del archivo del proyecto
+
+Para quitar una dependencia, quite su elemento `<PackageReference>` del archivo del proyecto.
+
+## <a name="remove-a-dependency-by-using-the-cli"></a>Eliminación de una dependencia mediante la CLI
+
+Para quitar una dependencia, ejecute el comando [dotnet remove package](dotnet-remove-package.md), como se muestra en el ejemplo siguiente:
+
+```dotnetcli
+dotnet remove package Microsoft.EntityFrameworkCore
+```
+
+## <a name="see-also"></a>Vea también
+
+* [Paquetes NuGet en archivos de proyecto](../project-sdk/msbuild-props.md#nuget-packages)
+* [Comando dotnet list package](dotnet-remove-package.md)

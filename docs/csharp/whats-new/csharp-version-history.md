@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739107"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673282"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -37,7 +37,7 @@ C# 1.0 parecía estar privado de características, en comparación con la actual
 Las principales características de C# 1.0 incluían lo siguiente:
 
 - [Clases](../programming-guide/classes-and-structs/classes.md)
-- [Structs](../programming-guide/classes-and-structs/structs.md)
+- [Structs](../language-reference/builtin-types/struct.md)
 - [Interfaces](../programming-guide/interfaces/index.md)
 - [Eventos](../events-overview.md)
 - [Propiedades](../properties.md)
@@ -81,7 +81,7 @@ Aun así, C# seguía yendo por detrás de Java. Java ya había publicado version
 La versión 3.0 de C# llegó a finales de 2007, junto con Visual Studio 2008, aunque la cartera completa de características de lenguaje no llegaría realmente hasta la versión 3.5 de .NET Framework. Esta versión marcó un cambio importante en el crecimiento de C#. Estableció C# como un lenguaje de programación realmente formidable. Echemos un vistazo a algunas de las principales características de esta versión:
 
 - [Propiedades implementadas automáticamente](../programming-guide/classes-and-structs/auto-implemented-properties.md)
-- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])
+- [Tipos anónimos (Guía de programación de C#)](../programming-guide/classes-and-structs/anonymous-types.md).
 - [Expresiones de consulta](../linq/query-expression-basics.md)
 - [Expresiones lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Árboles de expresión](../expression-trees.md)
@@ -122,7 +122,7 @@ La versión 5.0 de C#, publicada con Visual Studio 2012, era una versión cent
 - [Miembros asincrónicos](../async.md)
 - [Atributos de información del llamador](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>Otras referencias
+### <a name="see-also"></a>Vea también
 
 - [Proyecto de código: Atributos de información del autor de llamada en C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
@@ -173,4 +173,4 @@ Todas estas características ofrecen capacidades nuevas e interesantes para los 
 
 Pero C# se está usando cada vez más. .NET Core ahora tiene como destino cualquier sistema operativo y tiene puesta la mirada en la nube y la portabilidad.  Por supuesto, esas nuevas capacidades ocupan las ideas y el tiempo de los diseñadores de lenguaje, además de ofrecer nuevas características.
 
-_Artículo_ [_publicado originalmente en el blog de NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, por cortesía de Erik Dietrich y Patrick Smacchia._
+_Artículo_ [_publicado originalmente en el blog de NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, por cortesía de Erik Dietrich y Patrick Smacchia._

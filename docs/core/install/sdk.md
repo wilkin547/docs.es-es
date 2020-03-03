@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740568"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157576"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
 
@@ -35,6 +35,19 @@ Windows tiene instaladores independientes que se pueden usar para instalar el SD
 macOS tiene instaladores independientes que se pueden usar para instalar el SDK de .NET Core 3.1:
 
 - [CPU de x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
+
+Como alternativa a los instaladores de macOS para .NET Core, puede descargar e instalar el SDK de forma manual.
+
+Para extraer el SDK y hacer que los comandos de la CLI de .NET Core estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. Después, abra un terminal y ejecute los comandos siguientes. Se supone que el entorno de ejecución se ha descargado al archivo `~/Downloads/dotnet-sdk.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -104,6 +117,25 @@ Al instalar o modificar Visual Studio, seleccione una de las cargas de trabajo 
 - La carga de trabajo **Desarrollo de escritorio de .NET** en la sección **Móviles y de escritorio**.
 
 [![Visual Studio 2019 para Windows con la carga de trabajo de .NET Core](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
+
+Para extraer el runtime y hacer que los comandos de la CLI de .NET Core estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. A continuación, cree un directorio para la instalación, por ejemplo `%USERPROFILE%\dotnet`. Por último, extraiga el archivo zip descargado en ese directorio.
+
+De forma predeterminada, los comandos y las aplicaciones de la CLI de .NET Core no usarán la versión de .NET Core instalada de esta manera. Debe optar explícitamente por usarla. Para ello, cambie las variables de entorno con las que se inicia una aplicación:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Este enfoque permite instalar varias versiones en ubicaciones independientes y elegir explícitamente qué ubicación de instalación debe usar una aplicación mediante la ejecución de la aplicación con variables de entorno que apuntan a esa ubicación.
+
+Incluso cuando se establecen estas variables de entorno, .NET Core sigue teniendo en cuenta la ubicación de instalación global predeterminada al seleccionar el mejor marco para ejecutar la aplicación. Normalmente, el valor predeterminado es `C:\Program Files\dotnet`, que usan los instaladores. Puede indicar al motor en tiempo de ejecución que solo use la ubicación de instalación personalizada mediante la configuración de esta variable de entorno:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Para obtener más información sobre el uso de .NET Core en un contenedor de Doc
 
 ::: zone pivot="os-macos"
 
+- [Trabajo con la certificación de macOS Catalina](macos-notarization-issues.md).
 - [Tutorial: Introducción a macOS](../tutorials/using-on-mac-vs.md).
 - [Tutorial: Creación de una aplicación con Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713692"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673100"
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -33,9 +33,9 @@ Solo la herencia simple se permite en C#. En otras palabras, una clase puede her
 |Herencia|Ejemplo|
 |-----------------|-------------|
 |None|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|Ninguna, implementa dos interfaces|`class ImplClass: IFace1, IFace2 { }`|
-|Única, implementa una interfaz|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|Ninguna, implementa dos interfaces|`class ImplClass : IFace1, IFace2 { }`|
+|Única, implementa una interfaz|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](./public.md) o [internal](./internal.md). De forma predeterminada, las clases son `internal`.
 
@@ -71,9 +71,9 @@ Una clase puede contener declaraciones de los miembros siguientes:
 
 - [Interfaces](../../programming-guide/interfaces/index.md)
 
-- [Structs](../../programming-guide/classes-and-structs/structs.md)
+- [Tipos de estructura](../builtin-types/struct.md)
 
-- [Enumeraciones](../builtin-types/enum.md)
+- [Tipos de enumeración](../builtin-types/enum.md)
 
 ## <a name="example"></a>Ejemplo
 

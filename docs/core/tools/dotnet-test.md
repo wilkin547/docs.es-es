@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
-ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451199"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157016"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
 ## <a name="name"></a>NOMBRE
 
@@ -19,36 +19,15 @@ ms.locfileid: "77451199"
 
 ## <a name="synopsis"></a>Sinopsis
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Descripción
 
@@ -60,213 +39,103 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 ## <a name="arguments"></a>Argumentos
 
-`PROJECT`
+- **`PROJECT`**
 
-Ruta de acceso al proyecto de prueba. Si no se especifica, se toma como predeterminado el directorio actual.
+  Ruta de acceso al proyecto de prueba. Si no se especifica, se toma como predeterminado el directorio actual.
 
 ## <a name="options"></a>Opciones
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
 
-Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
+- **`-blame`**
 
-`--blame`
+  Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Crea un archivo de salida en el directorio actual como *Sequence.xml* que captura el orden de ejecución de pruebas antes del bloqueo.
 
-Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Crea un archivo de salida en el directorio actual como *Sequence.xml* que captura el orden de ejecución de pruebas antes del bloqueo.
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
 
-Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  Habilita el recopilador de datos para la ejecución de pruebas. Para obtener más información, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Supervisar y analizar ejecuciones de pruebas).
 
-Habilita el recopilador de datos para la ejecución de pruebas. Para obtener más información, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Supervisar y analizar ejecuciones de pruebas).
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
 
-Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
 
-Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
 
-Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
+- **`h|--help`**
 
-`-h|--help`
+  Imprime una corta ayuda para el comando.
 
-Imprime una corta ayuda para el comando.
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  Especifica un registrador para los resultados de pruebas.
 
-Especifica un registrador para los resultados de pruebas.
+- **`--no-build`**
 
-`--no-build`
+  No compila el proyecto de prueba antes de ejecutarlo. También establece la marca - `--no-restore` de forma implícita.
 
-No compila el proyecto de prueba antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
+- **`--no-restore`**
 
-`--no-restore`
+  No ejecuta una restauración implícita al ejecutar el comando.
 
-No ejecuta una restauración implícita al ejecutar el comando.
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  Directorio donde se encuentran los archivos binarios que se ejecutarán.
 
-Directorio donde se encuentran los archivos binarios que se ejecutarán.
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
 
-El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
-El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  Enumera todas las pruebas detectadas en el proyecto actual.
 
-Enumera todas las pruebas detectadas en el proyecto actual.
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+- Argumentos de `RunSettings`
 
-`RunSettings arguments`
+  Los argumentos se pasan como configuraciones de `RunSettings` para la prueba. Los argumentos se especifican como `[name]=[value]` pares después de "-- " (tenga en cuenta el espacio después de --). Se usa un espacio para separar varios pares de `[name]=[value]`.
 
-Argumentos pasados como configuraciones de RunSettings para la prueba. Los argumentos se especifican como `[name]=[value]` pares después de "-- " (tenga en cuenta el espacio después de --). Se usa un espacio para separar varios pares de `[name]=[value]`.
+  Ejemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Ejemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-Para obtener más información sobre RunSettings, vea [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) (vstest.console.exe: paso de argumentos RunSettings).
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
-
-`-c|--configuration {Debug|Release}`
-
-Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-Habilita el recopilador de datos para la ejecución de pruebas. Para obtener más información, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Supervisar y analizar ejecuciones de pruebas).
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
-
-`-f|--framework <FRAMEWORK>`
-
-Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
-
-`--filter <EXPRESSION>`
-
-Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Imprime una corta ayuda para el comando.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Especifica un registrador para los resultados de pruebas.
-
-`--no-build`
-
-No compila el proyecto de prueba antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
-
-`--no-restore`
-
-No ejecuta una restauración implícita al ejecutar el comando.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Directorio donde se encuentran los archivos binarios que se ejecutarán.
-
-`-r|--results-directory <PATH>`
-
-El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
-
-`-s|--settings <SETTINGS_FILE>`
-
-El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Enumera todas las pruebas detectadas en el proyecto actual.
-
-`-v|--verbosity <LEVEL>`
-
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
-
-`-c|--configuration {Debug|Release}`
-
-Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
-
-`-f|--framework <FRAMEWORK>`
-
-Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
-
-`--filter <EXPRESSION>`
-
-Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Imprime una corta ayuda para el comando.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Especifica un registrador para los resultados de pruebas.
-
-`--no-build`
-
-No compila el proyecto de prueba antes de ejecutarlo.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Directorio donde se encuentran los archivos binarios que se ejecutarán.
-
-`-s|--settings <SETTINGS_FILE>`
-
-El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Enumera todas las pruebas detectadas en el proyecto actual.
-
-`-v|--verbosity <LEVEL>`
-
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
-
----
+  Para obtener más información, vea [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) (vstest.console.exe: paso de argumentos RunSettings).
 
 ## <a name="examples"></a>Ejemplos
 
-Ejecución de las pruebas en el proyecto en el directorio actual:
+- Ejecución de las pruebas en el proyecto en el directorio actual:
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-Ejecute las pruebas en el proyecto `test1`:
+- Ejecute las pruebas en el proyecto `test1`:
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-Ejecute las pruebas en el proyecto en el directorio actual y genere un archivo de resultados de prueba en formato trx:
+- Ejecute las pruebas en el proyecto en el directorio actual y genere un archivo de resultados de prueba en formato trx:
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>Detalles de la opción de filtro
 

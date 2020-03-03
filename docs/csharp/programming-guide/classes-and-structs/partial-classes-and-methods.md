@@ -6,16 +6,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451920"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673360"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Clases y métodos parciales (Guía de programación de C#)
 
-Es posible dividir la definición de una [clase](../../language-reference/keywords/class.md), un [struct](../../language-reference/keywords/struct.md), una [interfaz](../../language-reference/keywords/interface.md) o un método en dos o más archivos de código fuente. Cada archivo de código fuente contiene una sección de la definición de tipo o método, y todos los elementos se combinan cuando se compila la aplicación.
+Es posible dividir la definición de una [clase](../../language-reference/keywords/class.md), un [struct](../../language-reference/builtin-types/struct.md), una [interfaz](../../language-reference/keywords/interface.md) o un método en dos o más archivos de código fuente. Cada archivo de código fuente contiene una sección de la definición de tipo o método, y todos los elementos se combinan cuando se compila la aplicación.
 
 ## <a name="partial-classes"></a>Clases parciales
 
@@ -173,6 +173,6 @@ Para obtener más información, vea la sección [Tipos parciales](~/_csharplang/
 
 - [Guía de programación de C#](../index.md)
 - [Clases](./classes.md)
-- [Structs](./structs.md)
+- [Tipos de estructura](../../language-reference/builtin-types/struct.md)
 - [Interfaces](../interfaces/index.md)
 - [partial (Tipos)](../../language-reference/keywords/partial-type.md)

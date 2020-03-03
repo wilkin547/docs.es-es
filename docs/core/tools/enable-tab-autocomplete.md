@@ -4,18 +4,18 @@ description: En este artículo se describe cómo habilitar la finalización con 
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920531"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156756"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
 
-A partir del SDK de .NET Core 2.0, la CLI de .NET Core admite la finalización con tabulación. En este artículo se describe cómo configurar la finalización con tabulación para tres shells: PowerShell, Bash y zsh. Otros shells pueden tener compatibilidad con la finalización automática. Consulte su documentación sobre cómo configurar la finalización automática, los pasos deben ser similares a los que se describen en este artículo.
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
-[!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
+En este artículo se describe cómo configurar la finalización con tabulación para tres shells: PowerShell, Bash y zsh. En el caso de otros shells, consulte la documentación para saber cómo configurar la finalización con tabulación.
 
 Una vez configurada, para desencadenar la finalización con tabulación para la CLI de .NET Core, escriba un comando `dotnet` en el shell y, después, presione el tabulador. La línea de comandos que se envía al comando `dotnet complete` y los resultados se procesan mediante el shell. Puede probar los resultados sin habilitar la finalización con tabulación si envía algo directamente al comando `dotnet complete`. Por ejemplo:
 
@@ -38,18 +38,18 @@ Entrada                                | se convierte en                        
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | `add` es el primer subcomando, por orden alfabético.
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | La finalización con tabulación hace coincidir las subcadenas y `--help` aparece primero alfabéticamente.
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Al presionar la tecla Tab una segunda vez aparece la siguiente sugerencia.      
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Al presionar la tecla Tab una segunda vez aparece la siguiente sugerencia.
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | Los resultados se devuelven por orden alfabético.
 `dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | La finalización con tabulación es compatible con archivos de proyecto.
 
 ## <a name="powershell"></a>PowerShell
 
-Para agregar finalización con tabulación a **PowerShell** para la CLI de .NET Core, cree o edite el perfil almacenado en la variable `$PROFILE`. Para obtener más información, vea [Cómo crear el perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) y [Los perfiles y la directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy). 
+Para agregar finalización con tabulación a **PowerShell** para la CLI de .NET Core, cree o edite el perfil almacenado en la variable `$PROFILE`. Para obtener más información, vea [Cómo crear el perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) y [Los perfiles y la directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).
 
 Agregue el código siguiente al perfil:
 
 ```powershell
-# PowerShell parameter completion shim for the dotnet CLI 
+# PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
      param($commandName, $wordToComplete, $cursorPosition)
          dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
@@ -88,7 +88,7 @@ Para agregar finalización con tabulación al shell de **zsh** para la CLI de .N
 ```zsh
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 

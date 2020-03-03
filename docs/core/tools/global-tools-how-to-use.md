@@ -2,12 +2,12 @@
 title: 'Tutorial: Instalación y uso de una herramienta global de .NET Core'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta global.
 ms.date: 02/12/2020
-ms.openlocfilehash: 65047af9d8a7f2fd4c1a07f65af3a6ddbf870c5d
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543825"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156743"
 ---
 # <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core
 
@@ -21,21 +21,21 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
 
 ## <a name="use-the-tool-as-a-global-tool"></a>Uso de la herramienta como una herramienta global
 
-1. Instale la herramienta desde el paquete; para ello, ejecute el comando [dotnet tool install](dotnet-tool-install.md) en la carpeta del proyecto *botsay-\<nombre>* :
+1. Instale la herramienta desde el paquete; para ello, ejecute el comando [dotnet tool install](dotnet-tool-install.md) en la carpeta del proyecto *microsoft.botsay*:
 
    ```dotnetcli
-   dotnet tool install --global --add-source ./nupkg botsay-<name>
+   dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
    El parámetro `--global` indica a la CLI de .NET Core que instale los archivos binarios de la herramienta en una ubicación predeterminada que se agrega automáticamente a la variable de entorno PATH.
 
-   El parámetro `--add-source` indica a la CLI de .NET Core que use temporalmente el directorio *./nupkg* como una fuente de origen adicional para los paquetes NuGet. Ha asignado un nombre único al paquete para asegurarse de que solo se encontrará en el directorio *./nupkg*, no en el sitio de Nuget.org. 
+   El parámetro `--add-source` indica a la CLI de .NET Core que use temporalmente el directorio *./nupkg* como una fuente de origen adicional para los paquetes NuGet. Ha asignado un nombre único al paquete para asegurarse de que solo se encontrará en el directorio *./nupkg*, no en el sitio de Nuget.org.
 
    En la salida se muestra el comando que se ha usado para llamar a la herramienta y la versión instalada:
 
    ```console
    You can invoke the tool using the following command: botsay
-   Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+   Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
    ```
 
 1. Invoque la herramienta:
@@ -50,7 +50,7 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
 1. Ejecute el comando [dotnet tool uninstall](dotnet-tool-uninstall.md) para quitar la herramienta:
 
    ```dotnetcli
-   dotnet tool uninstall -g botsay-<name>
+   dotnet tool uninstall -g microsoft.botsay
    ```
 
 ## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Uso de la herramienta como una herramienta global instalada en una ubicación personalizada
@@ -60,13 +60,13 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
    En Windows:
 
    ```dotnetcli
-   dotnet tool install --tool-path c:\dotnet-tools --add-source ./nupkg botsay-<name>
+   dotnet tool install --tool-path c:\dotnet-tools --add-source ./nupkg microsoft.botsay
    ```
 
    En Linux o macOS:
 
    ```dotnetcli
-   dotnet tool install --tool-path ~/bin --add-source ./nupkg botsay-<name>
+   dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
    El parámetro `--tool-path` indica a la CLI de .NET Core que instale los archivos binarios de la herramienta en la ubicación especificada. Si el directorio no existe, se crea. Este directorio no se agrega automáticamente a la variable de entorno PATH.
@@ -75,7 +75,7 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
 
    ```console
    You can invoke the tool using the following command: botsay
-   Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+   Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
    ```
 
 1. Invoque la herramienta:
@@ -97,18 +97,18 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
    En Windows:
 
    ```dotnetcli
-   dotnet tool uninstall --tool-path c:\dotnet-tools botsay --add-source ./nupkg botsay-<name>
+   dotnet tool uninstall --tool-path c:\dotnet-tools microsoft.botsay
    ```
 
    En Linux o macOS:
 
    ```dotnetcli
-   dotnet tool uninstall --tool-path ~/bin botsay-<name>
+   dotnet tool uninstall --tool-path ~/bin microsoft.botsay
    ```
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Si recibe un mensaje de error al seguir el tutorial, consulte [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
+Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
