@@ -2,12 +2,12 @@
 title: 'Personalización de la serialización de parámetros: .NET'
 description: Obtenga información sobre cómo personalizar la forma en que .NET serializa los parámetros de una representación nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706366"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159616"
 ---
 # <a name="customizing-parameter-marshaling"></a>Personalización de la serialización de parámetros
 
@@ -21,10 +21,10 @@ Cuando el comportamiento predeterminado de serialización de los parámetros del
 
 Cada uno de estos formatos pasa una cadena terminada en valor NULL al código nativo. Se diferencian en la codificación de la cadena nativa.
 
-| Valor de `System.Runtime.InteropServices.UnmanagedType` | Encoding |
+| Valor de `System.Runtime.InteropServices.UnmanagedType` | Codificación |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 

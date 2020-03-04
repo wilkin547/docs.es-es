@@ -3,12 +3,12 @@ title: Integración de XML con datos relacionales y ADO.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709938"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155625"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integración de XML con datos relacionales y ADO.NET
 La clase **XmlDataDocument** se deriva de **XmlDocument**, y contiene datos XML. La ventaja que aporta la clase **XmlDataDocument** es que proporciona un puente entre los datos relacionales y jerárquicos. Se trata de una clase **XmlDocument** que puede enlazarse con otra **DataSet** para sincronizar cambios realizados en los datos incluidos en las dos clases. Una clase **XmlDocument** que está enlazada con otra **DataSet** permite a XML integrarse con datos relacionales, sin necesidad de que los datos estén representados ni en formato XML ni relacional. Se pueden hacer ambas cosas sin necesidad de restringirse a una única representación de los datos.  
@@ -27,7 +27,7 @@ La clase **XmlDataDocument** se deriva de **XmlDocument**, y contiene datos XML.
   
  Como **XmlDataDocument** se hereda de **XmlDocument**, proporciona una implementación de DOM del consorcio W3C. El hecho de que **XmlDataDocument** se asocie con una clase **DataSet** y almacene en su interior un subconjunto de sus datos, no restringe o altera en absoluto su uso como **XmlDocument**. El código escrito para consumir una clase **XmlDocument** funciona sin alteraciones en **XmlDataDocument**. **DataSet** proporciona la vista relacional de los mismos datos definiendo tablas, columnas, relaciones y restricciones, y constituye un almacén independiente y en memoria de datos de usuario.  
   
- En la siguiente ilustración se muestran las distintas asociaciones que los datos XML tienen con **DataSet** y **XmlDataDocument**: 
+ En la siguiente ilustración se muestran las distintas asociaciones que los datos XML tienen con **DataSet** y **XmlDataDocument**:
   
  ![Diagrama que muestra las distintas asociaciones con el conjunto de datos XML.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   

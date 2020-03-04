@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 72e866e43b556d8534024a219d924b1f372ed073
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 715ce65bd932a45cc22d00a2346d18f3c5526229
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710523"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156392"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recuperación de nodos ordenados por índice
 En Document Object Model (DOM) XML del World Wide Web Consortium (W3C) también se describe un objeto NodeList, que tiene la capacidad de controlar una lista de nodos ordenados, en contraposición al conjunto desordenado controlado por **XmlNamedNodeMap**. El objeto NodeList incluido en Microsoft .NET Framework se denomina **XmlNodeList**. Los métodos y las propiedades que devuelve un objeto **XmlNodeList** son los siguientes:  
@@ -47,10 +47,10 @@ doc.Load("books.xml");
 XmlElement root = doc.DocumentElement;  
 XmlNodeList elemList = root.GetElementsByTagName("title");  
 for (int i=0; i < elemList.Count; i++)  
-{     
+{
    // Display all book titles in the Node List.  
    Console.WriteLine(elemList[i].InnerXml);  
-}   
+}
 ```  
   
  Además de la propiedad **Count**, hay un método **GetEnumerator** que proporciona una forma de iteración del estilo de `foreach` sobre la colección de nodos de **XmlNodeList**. En el código de ejemplo siguiente se muestra el uso de la instrucción `foreach`.  
@@ -63,7 +63,7 @@ doc.Load("books.xml")
 Dim root As XmlElement = doc.DocumentElement  
 Dim elemList As XmlNodeList = root.GetElementsByTagName("title")  
 Dim ienum As IEnumerator = elemList.GetEnumerator()  
-' Loop over the XmlNodeList using the enumerator ienum          
+' Loop over the XmlNodeList using the enumerator ienum
 While ienum.MoveNext()  
     ' Display the book title.  
     Dim title As XmlNode = CType(ienum.Current, XmlNode)  
@@ -79,8 +79,8 @@ End While
      // Get book titles.  
      XmlElement root = doc.DocumentElement;  
      XmlNodeList elemList = root.GetElementsByTagName("title");  
-     IEnumerator ienum = elemList.GetEnumerator();    
-     // Loop over the XmlNodeList using the enumerator ienum          
+     IEnumerator ienum = elemList.GetEnumerator();
+     // Loop over the XmlNodeList using the enumerator ienum
      while (ienum.MoveNext())  
      {  
           // Display the book title.  

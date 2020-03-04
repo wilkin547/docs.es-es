@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129120"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159447"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Cómo: enumerar zonas horarias presentes en un equipo
 
@@ -55,7 +55,7 @@ En el ejemplo se inicia una aplicación de Windows que muestra las zonas horaria
 La mayoría de los controles de lista (como el control <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> o <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>) le permiten asignar una colección de variables de objeto a su propiedad `DataSource`, siempre y cuando dicha colección implemente la interfaz de <xref:System.Collections.IEnumerable>. (La clase <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> genérica lo hace). Para mostrar un objeto individual en la colección, el control llama al método `ToString` del objeto para extraer la cadena que se utiliza para representar el objeto. En el caso de <xref:System.TimeZoneInfo> objetos, el método `ToString` devuelve el nombre para mostrar del objeto <xref:System.TimeZoneInfo> (el valor de su propiedad <xref:System.TimeZoneInfo.DisplayName%2A>).
 
 > [!NOTE]
-> Dado que los controles de lista llaman al método `ToString` de un objeto, se puede asignar una colección de objetos <xref:System.TimeZoneInfo> al control, hacer que el control muestre un nombre descriptivo para cada objeto y recuperar el objeto <xref:System.TimeZoneInfo> que ha seleccionado el usuario. Esto elimina la necesidad de extraer una cadena para cada objeto de la colección, asignar la cadena a una colección que, a su vez, se asigna a la propiedad `DataSource` del control, recuperar la cadena que el usuario ha seleccionado y, a continuación, utilizar esta cadena para extraer el objeto que describe. 
+> Dado que los controles de lista llaman al método `ToString` de un objeto, se puede asignar una colección de objetos <xref:System.TimeZoneInfo> al control, hacer que el control muestre un nombre descriptivo para cada objeto y recuperar el objeto <xref:System.TimeZoneInfo> que ha seleccionado el usuario. Esto elimina la necesidad de extraer una cadena para cada objeto de la colección, asignar la cadena a una colección que, a su vez, se asigna a la propiedad `DataSource` del control, recuperar la cadena que el usuario ha seleccionado y, a continuación, utilizar esta cadena para extraer el objeto que describe.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 

@@ -3,16 +3,16 @@ title: Vulnerabilidad de descifrado de CBC
 description: Obtenga información acerca de cómo detectar y mitigar las vulnerabilidades de tiempo con el descifrado simétrico del modo de encadenamiento de bloques de cifrado (CBC) mediante el relleno.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705852"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159967"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno
 
-Microsoft considera que ya no es seguro descifrar los datos cifrados con el modo de encadenamiento de bloques de cifrado (CBC) del cifrado simétrico cuando se ha aplicado el relleno comprobable sin asegurar primero la integridad del texto cifrado, excepto en el caso de que sea muy específico circunstancias. Este juicio se basa en la investigación criptográfica conocida actualmente. 
+Microsoft considera que ya no es seguro descifrar los datos cifrados con el modo de encadenamiento de bloques de cifrado (CBC) del cifrado simétrico cuando se ha aplicado el relleno comprobable sin asegurar primero la integridad del texto cifrado, excepto en el caso de que sea muy específico circunstancias. Este juicio se basa en la investigación criptográfica conocida actualmente.
 
 ## <a name="introduction"></a>Introducción
 
