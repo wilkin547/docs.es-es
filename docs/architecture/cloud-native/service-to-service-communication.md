@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo los microservicios de back-end nat
 author: robvet
 ms.date: 09/09/2019
 ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087593"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675133"
 ---
 # <a name="service-to-service-communication"></a>Comunicación entre servicios
 
@@ -54,7 +54,7 @@ Por supuesto, puede imaginarse el riesgo en el diseño que se muestra en la imag
 
 El gran grado de acoplamiento en la imagen anterior sugiere que los servicios no se modelaron de forma óptima. El equipo volvería a revisar su diseño.
 
-### <a name="materialized-view-pattern"></a>Patrón de vista materializada
+### <a name="materialized-view-pattern"></a>Patrón Materialized View
 
 Una opción popular para quitar el acoplamiento de microservicios es el [patrón de vista materializada](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Con este patrón, un microservicio almacena su propia copia local y desnormalizada de los datos que pertenecen a otros servicios. En lugar del microservicio de cesta de la compra que consulta el catálogo de productos y los microservicios de precios, mantiene su propia copia local de los datos. Este patrón elimina el acoplamiento innecesario y mejora la confiabilidad y el tiempo de respuesta. Toda la operación se ejecuta dentro de un único proceso. Exploramos este patrón y otros aspectos relacionados con los datos en el capítulo 5.
 
@@ -78,7 +78,7 @@ Otro enfoque para desacoplar mensajes HTTP sincrónicos es un [patrón de solici
 
 En este caso, el productor de mensajes crea un mensaje basado en consulta que contiene un identificador de correlación único y lo coloca en una cola de solicitudes. El servicio consumidor quita los mensajes de la cola, los procesa y coloca la respuesta en la cola de respuesta con el mismo identificador de correlación. El servicio productor quita el mensaje de la cola, lo hace coincidir con el identificador de correlación y continúa el procesamiento. En la sección siguiente se describen los detalles de las colas.
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos:
 
 Otro tipo de interacción de comunicación es un *comando*. Un microservicio puede necesitar otro microservicio para realizar una acción. El microservicio de pedidos puede necesitar el microservicio de envío para crear un envío para un pedido aprobado. En la figura 4-12, un microservicio, denominado productor, envía un mensaje a otro microservicio, el consumidor, y le hace algo.
 
