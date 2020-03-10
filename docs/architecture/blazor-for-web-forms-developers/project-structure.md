@@ -5,11 +5,11 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841910"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675000"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Estructura del proyecto para aplicaciones increíbles
 
@@ -238,7 +238,7 @@ public class Startup
 
 Cuando se crea un proyecto increíblemente brillante, todos los archivos de código y componentes de Razor se compilan en un único ensamblado. A diferencia de los proyectos de formularios Web Forms de ASP.NET, increíble no admite la compilación en tiempo de ejecución de la lógica de la interfaz de usuario.
 
-## <a name="run-the-app"></a>Ejecutar la aplicación
+## <a name="run-the-app"></a>Ejecución la aplicación
 
 Para ejecutar la aplicación de servidor de extraordinarias, presione `F5` en Visual Studio. Las aplicaciones increíbles no admiten la compilación en tiempo de ejecución. Para ver los resultados de los cambios de código y marcado de componentes, vuelva a compilar y reiniciar la aplicación con el depurador asociado. Si ejecuta sin el depurador asociado (`Ctrl+F5`), Visual Studio inspecciona los cambios de archivo y reinicia la aplicación a medida que se realizan cambios. Actualice manualmente el explorador a medida que se realicen cambios.
 

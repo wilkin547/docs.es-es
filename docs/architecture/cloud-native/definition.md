@@ -4,11 +4,11 @@ description: Obtenga información sobre los pilares básicos que proporcionan el
 author: robvet
 ms.date: 08/20/2019
 ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841808"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675124"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
@@ -32,7 +32,7 @@ La nube nativa es mucho más *rápida* y *ágil*. Los sistemas empresariales est
 
 Estas son algunas compañías que han implementado estas técnicas. Piense en la velocidad, la agilidad y la escalabilidad que han logrado.
 
-| Organización | Evaluación |
+| Compañía | Experiencia |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tiene 600 y servicios en producción. Implementa cien veces al día. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Tiene más de 1000 servicios almacenados en producción. Implementa varios miles de compilaciones cada semana. |
@@ -80,7 +80,7 @@ En la tabla siguiente se resalta la metodología de doce factores:
 | :-------- | :-------- | :-------- |
 | 1 | Código base | Una única base de código para cada microservicio, almacenada en su propio repositorio. Con el control de versiones, se puede implementar en varios entornos (QA, ensayo, producción). |
 | 2 | Dependencias | Cada microservicio aísla y empaqueta sus propias dependencias, y adopta los cambios sin afectar a todo el sistema. |
-| 3 | Configuraciones  | La información de configuración se mueve fuera del microservicio y se externaliza a través de una herramienta de administración de configuración fuera del código. La misma implementación se puede propagar entre entornos con la configuración correcta aplicada.  |
+| 3 | Configurations  | La información de configuración se mueve fuera del microservicio y se externaliza a través de una herramienta de administración de configuración fuera del código. La misma implementación se puede propagar entre entornos con la configuración correcta aplicada.  |
 | 4 | Servicios de respaldo | Los recursos auxiliares (almacenes de datos, memorias caché, agentes de mensajes) deben exponerse a través de una dirección URL direccionable. Al hacerlo, se desacopla el recurso de la aplicación, lo que permite que sea intercambiable.  |
 | 5 | Compilación, lanzamiento, ejecución | Cada versión debe exigir una separación estricta entre las fases de compilación, lanzamiento y ejecución. Cada una debe etiquetarse con un identificador único y admitir la capacidad de revertir. Los sistemas de CI/CD modernos ayudan a completar este principio. |
 | 6 | Procesos | Cada microservicio debe ejecutarse en su propio proceso, aislado de otros servicios en ejecución. Externalizar el estado necesario para un servicio de respaldo, como una caché distribuida o un almacén de datos. |
@@ -105,7 +105,7 @@ Haremos referencia a muchos de los 12 factores de este capítulo y a lo largo de
 
 Además de las instrucciones proporcionadas en la metodología de doce factores, hay varias decisiones de diseño críticas que debe tomar al construir sistemas distribuidos.
 
-*Comunicaci*
+*Communication*
 
 ¿Cómo se comunican las aplicaciones cliente front-end con los servicios principales de back-end? ¿Permitirá la comunicación directa? O bien, ¿puede abstraer los servicios back-end con una fachada de puerta de enlace que proporcione flexibilidad, control y seguridad?
 
@@ -225,14 +225,14 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 
 |  Tareas | Explicación  |
 | :-------- | :-------- |
-| Programación | Aprovisionar automáticamente las instancias de contenedor.|
+| Scheduling | Aprovisionar automáticamente las instancias de contenedor.|
 | Afinidad/antiafinidad | Aprovisione contenedores cercanos o alejados entre sí, ayudando a la disponibilidad y al rendimiento. |
-| Seguimiento de estado | Detectar y corregir errores automáticamente.|
+| Supervisión del estado | Detectar y corregir errores automáticamente.|
 | Conmutación por error | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
-| Cambiar escala | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
+| Ampliación | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
 | Redes | Administrar una superposición de redes para la comunicación del contenedor.|
 | Detección de servicios | Permite que los contenedores se localicen entre sí.|
-| Actualizaciones graduales | Coordine actualizaciones incrementales con una implementación sin tiempo de inactividad. Revertir cambios problemáticos automáticamente.|
+| Actualizaciones sucesivas | Coordine actualizaciones incrementales con una implementación sin tiempo de inactividad. Revertir cambios problemáticos automáticamente.|
 
 Tenga en cuenta cómo los orquestadores adoptan los principios de eliminación y simultaneidad de la [aplicación de doce factores](https://12factor.net/), descritos anteriormente en el capítulo.
 
