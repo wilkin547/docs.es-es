@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 420b41f586a6980d40cf1171eef00dad37bf5abf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712759"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398062"
 ---
 # <a name="assignment-operators-c-reference"></a>Operadores de asignación (referencia de C#)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 En el ejemplo siguiente se muestra el uso del operador de asignación con una variable local, una propiedad y un elemento indexador como su operando izquierdo:
 
-[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](snippets/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Operador de asignación ref
 
 A partir C# 7.3, puede usar el operador de asignación ref `= ref` para reasignar una variable [local de tipo ref](../keywords/ref.md#ref-locals) o [local de tipo ref readonly](../keywords/ref.md#ref-readonly-locals). En el siguiente ejemplo se muestra el uso del operador de asignación ref:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](snippets/AssignmentOperator.cs#RefAssignment)]
 
 En el caso del operador de asignación de referencias, sus dos operandos deben ser del mismo tipo.
 
@@ -69,7 +69,7 @@ Un tipo definido por el usuario no puede [sobrecargar](operator-overloading.md) 
 
 Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta. Pero si un tipo definido por el usuario sobrecarga un operador binario `op`, el operador `op=`, si existe, también se sobrecarga de forma implícita.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, consulte la sección sobre [operadores de asignación](~/_csharplang/spec/expressions.md#assignment-operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

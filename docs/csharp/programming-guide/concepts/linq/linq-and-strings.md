@@ -3,10 +3,10 @@ title: LINQ y cadenas (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
 ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635540"
 ---
 # <a name="linq-and-strings-c"></a>LINQ y cadenas (C#)
@@ -64,7 +64,7 @@ Muchos tipos diferentes de archivos de texto se componen de una serie de líneas
   
   Muestra cómo combinar cadenas de dos listas en una sola mediante una clave coincidente.
 
-- [Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Procedimiento para dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
   Muestra cómo crear nuevos archivos mediante un solo archivo como origen de datos.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9c00f14da9d79418e4fb204bac30e539b234197f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715015"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170304"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
@@ -57,9 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 > Los finalizadores vacíos no deben usarse. Cuando una clase contiene un finalizador, se crea una entrada en la cola `Finalize`. Cuando se llama al finalizador, se invoca al recolector de elementos no utilizados para procesar la cola. Un finalizador vacío simplemente produce una pérdida de rendimiento innecesaria.  
   
- El programador no puede controlar cuándo se llama al finalizador, porque esto lo determina el recolector de elementos no utilizados. El recolector de elementos no utilizados comprueba si hay objetos que ya no están siendo usados por ninguna aplicación. Si considera un objeto elegible para su finalización, llama al finalizador (si existe) y reclama la memoria usada para almacenar el objeto. 
- 
- En las aplicaciones de .NET Framework (pero no en las de .NET Core), cuando se cierra el programa también se llama a los finalizadores. 
+ El programador no puede controlar cuándo se llama al finalizador, porque esto lo determina el recolector de elementos no utilizados. El recolector de elementos no utilizados comprueba si hay objetos que ya no están siendo usados por ninguna aplicación. Si considera un objeto elegible para su finalización, llama al finalizador (si existe) y reclama la memoria usada para almacenar el objeto.
+
+ En las aplicaciones de .NET Framework (pero no en las de .NET Core), cuando se cierra el programa también se llama a los finalizadores.
   
  Es posible forzar la recolección de elementos no utilizados llamando a <xref:System.GC.Collect%2A>, pero en general debe evitarse su uso por razones de rendimiento.  
   
@@ -73,7 +73,7 @@ protected override void Finalize()
   
 - [Limpieza de recursos no administrados](../../../standard/garbage-collection/unmanaged.md)  
   
-- [Implementación de un método Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementar un método Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
 - [using (instrucción)](../../language-reference/keywords/using-statement.md)  
   
@@ -82,7 +82,7 @@ protected override void Finalize()
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a>especificación del lenguaje C#  
 
 Para más información, vea la sección sobre [destructores](~/_csharplang/spec/classes.md#destructors) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).
   

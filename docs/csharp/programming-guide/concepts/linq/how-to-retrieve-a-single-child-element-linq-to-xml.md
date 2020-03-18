@@ -3,10 +3,10 @@ title: Procedimiento para recuperar un único elemento secundario (LINQ to XML) 
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347476"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Procedimiento para recuperar un único elemento secundario (LINQ to XML) (C#)
@@ -21,7 +21,7 @@ En este tema se explica cómo recuperar un único elemento secundario, dado el n
   
  El ejemplo de Visual Basic muestra el uso de la notación del indizador de matriz para recuperar un elemento único.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -38,7 +38,7 @@ Console.WriteLine(e);
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra el mismo código sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrderInNamespace.xml");  

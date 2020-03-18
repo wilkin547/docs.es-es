@@ -3,11 +3,11 @@ title: Publicación de aplicaciones
 description: Obtenga más información sobre las formas de publicar una aplicación de .NET Core. .NET Core puede publicar aplicaciones específicas de la plataforma o multiplataforma. Puede publicar una aplicación como independiente o como dependiente del entorno de ejecución. Cada modo afecta a la forma en la que un usuario ejecuta la aplicación.
 ms.date: 01/31/2020
 ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157940"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397591"
 ---
 # <a name="net-core-application-publishing-overview"></a>Información general sobre la publicación de aplicaciones de .NET Core
 

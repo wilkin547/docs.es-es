@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c5bc9e0efb39032d388d141e8bccf3e520ebd45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048942"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180893"
 ---
 # <a name="automatic-proxy-detection"></a>Detección automática de proxy
 La detección automática de proxy es un proceso por el que el sistema identifica un servidor proxy web que se usa para enviar solicitudes en nombre del cliente. Esta característica también se conoce como detección automática de proxy web (WPAD). Cuando la detección automática de proxy está habilitada, el sistema intenta localizar un script de configuración de proxy responsable de devolver el conjunto de servidores proxy que se puede usar para la solicitud. Si se localiza el script de configuración de proxy, se descarga, se compila y se ejecuta en el equipo local cuando se obtiene información del proxy, el flujo de la solicitud o la respuesta de una solicitud que usa una instancia <xref:System.Net.WebProxy>.  
@@ -62,7 +62,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
     Dim request As WebRequest = WebRequest.Create(resource)  
     request.Proxy = Nothing  
     Dim response As WebResponse = request.GetResponse()  
-    End Sub   
+    End Sub
 ```  
   
  Las solicitudes que no tienen proxy usan el proxy predeterminado del dominio de aplicación, que está disponible en la propiedad <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  

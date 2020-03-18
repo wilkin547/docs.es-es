@@ -6,10 +6,10 @@ helpviewer_keywords:
 - arrays [C#], byte
 - pointers [C#], to copy bytes
 ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75698461"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Procedimiento Utilizar punteros para copiar una matriz de bytes (Guía de programación de C#)

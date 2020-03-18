@@ -5,12 +5,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713162"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173528"
 ---
 # <a name="query-keywords-c-reference"></a>Palabras clave de consulta (Referencia de C#)
 
@@ -18,7 +18,7 @@ En esta sección, se incluyen las palabras clave contextuales que se usan en exp
 
 ## <a name="in-this-section"></a>En esta sección
 
-|Cláusula|Descripción|
+|Cláusula|Description|
 |------------|-----------------|
 |[from](from-clause.md)|Especifica un origen de datos y una variable de rango (similar a una variable de iteración).|
 |[where](where-clause.md)|Filtra los elementos de origen en función de una o varias expresiones booleanas separadas por operadores lógicos AND y OR (`&&` o <code>&#124;&#124;</code>).|
@@ -40,4 +40,3 @@ En esta sección, se incluyen las palabras clave contextuales que se usan en exp
 - [Palabras clave de C#](index.md)
 - [LINQ (Language Integrated Query)](../../programming-guide/concepts/linq/index.md)
 - [LINQ en C#](../../linq/index.md)
-- [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/)
