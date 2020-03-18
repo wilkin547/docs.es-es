@@ -16,10 +16,10 @@ helpviewer_keywords:
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 ms.openlocfilehash: 99e2a837877494dd4c7e0106047bce3cc39a9282
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75342362"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Establecimiento de variables de entorno para la línea de comandos de Visual Studio

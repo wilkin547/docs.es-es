@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333808"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
@@ -44,12 +44,12 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
 4. Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   
-    |Control|Propiedad.|Valor|  
+    |Control|Property|Valor|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **Texto**|`browseButton`<br /><br /> **Examinar**|  
-    |**Button**|**Name**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examine** (Examinar)|  
-    |**CheckBox**|**Name**<br /><br /> **Texto**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
+    |**Button**|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **Examinar**|  
+    |**Button**|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **Examine** (Examinar)|  
+    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
     |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Para seleccionar una carpeta y enumerar archivos en una carpeta  
@@ -167,4 +167,4 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Tutorial: Manipulación de archivos mediante métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Tutorial: Manipulación de archivos utilizando métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

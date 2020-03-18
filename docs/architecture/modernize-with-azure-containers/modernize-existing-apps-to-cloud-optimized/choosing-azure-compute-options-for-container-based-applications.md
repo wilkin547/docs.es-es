@@ -3,10 +3,10 @@ title: Elección de plataformas de procesos de Azure para aplicaciones basadas e
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Elección de las plataformas de proceso de Azure para las aplicaciones basadas en contenedores
 ms.date: 02/18/2020
 ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503893"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores

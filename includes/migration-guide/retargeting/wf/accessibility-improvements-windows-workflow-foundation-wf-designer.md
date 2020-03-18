@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d4f03e10d6f3dc879d80cb6de57c0a54b0ec8a2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74284163"
 ---
 ### <a name="accessibility-improvements-in-windows-workflow-foundation-wf-workflow-designer"></a>Mejoras de accesibilidad en el Diseñador de flujo de trabajo de Windows Workflow Foundation (WF)

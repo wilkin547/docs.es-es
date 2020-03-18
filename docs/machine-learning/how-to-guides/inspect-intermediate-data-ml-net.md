@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977099"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>Inspección de los datos intermedios durante el procesamiento

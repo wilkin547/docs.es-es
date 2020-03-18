@@ -36,10 +36,10 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160006"
 ---
 # <a name="the-regular-expression-object-model"></a>El modelo de objetos de expresión regular
@@ -89,7 +89,7 @@ ms.locfileid: "78160006"
   
  El patrón de la expresión regular `^\d{3}-\d{2}-\d{4}$` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Buscar coincidencias con el principio de la cadena de entrada.|  
 |`\d{3}`|Coincide con tres dígitos decimales.|  
@@ -107,7 +107,7 @@ ms.locfileid: "78160006"
   
  El patrón de la expresión regular `\b(\w+)\W+(\1)\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -129,7 +129,7 @@ ms.locfileid: "78160006"
   
  El patrón de la expresión regular `\b\d+\.\d{2}\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
@@ -152,7 +152,7 @@ ms.locfileid: "78160006"
   
  El patrón de la expresión regular `\b\d{1,2}\.\s` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\d{1,2}`|Buscar coincidencias con uno o dos dígitos decimales.|  
@@ -215,7 +215,7 @@ ms.locfileid: "78160006"
   
  El patrón de expresión regular `\b\d+(,\d{3})*\.\d{2}\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
@@ -246,7 +246,7 @@ ms.locfileid: "78160006"
   
  El patrón de expresión regular `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -275,14 +275,14 @@ ms.locfileid: "78160006"
   
  El patrón de expresión regular `^(?<name>\w+):(?<value>\w+)` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`(?<name>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. El nombre de este grupo de captura es `name`.|  
 |`:`|Buscar coincidencia con un signo de dos puntos.|  
 |`(?<value>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. El nombre de este grupo de captura es `value`.|  
   
- Las propiedades de la clase <xref:System.Text.RegularExpressions.Group> proporcionan información sobre el grupo capturado: La propiedad `Group.Value` contiene la subcadena capturada, la propiedad `Group.Index` indica la posición inicial del grupo capturado en el texto de entrada, la propiedad `Group.Length` contiene la longitud del texto capturado y la propiedad `Group.Success` indica si una subcadena coincidió con el patrón definido por el grupo de captura.  
+ Las propiedades de la clase <xref:System.Text.RegularExpressions.Group> proporcionan información sobre el grupo capturado: la propiedad `Group.Value` contiene la subcadena capturada, la propiedad `Group.Index` indica la posición inicial del grupo capturado en el texto de entrada, la propiedad `Group.Length` contiene la longitud del texto capturado y la propiedad `Group.Success` indica si una subcadena coincidió con el patrón definido por el grupo de captura.  
   
  Al aplicar cuantificadores a un grupo (para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)), se modifica la relación de una captura por grupo de captura de dos maneras:  
   
@@ -299,7 +299,7 @@ ms.locfileid: "78160006"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
-- Los cuantificadores pueden coincidir con varias apariciones de un patrón definido por un grupo de captura. En este caso, las propiedades `Value` y `Length` de un objeto <xref:System.Text.RegularExpressions.Group> solo contienen información sobre la última subcadena capturada. Por ejemplo, la siguiente coincidencia de expresión regular coincide con una frase única que finaliza con un punto. La expresión utiliza dos construcciones de agrupación: la primera captura palabras individuales junto con un carácter de espacio en blanco; la segunda captura palabras individuales. Como lo muestra el resultado del ejemplo, aunque la expresión regular logre capturar una frase completa, el segundo grupo de captura solo captura la última palabra.  
+- Los cuantificadores pueden coincidir con varias apariciones de un patrón definido por un grupo de captura. En este caso, las propiedades `Value` y `Length` de un objeto <xref:System.Text.RegularExpressions.Group> solo contienen información sobre la última subcadena capturada. Por ejemplo, la siguiente coincidencia de expresión regular coincide con una frase única que finaliza con un punto. Utiliza dos construcciones de agrupación: el primero captura palabras individuales junto con un carácter de espacio en blanco; el segundo captura palabras individuales. Como lo muestra el resultado del ejemplo, aunque la expresión regular logre capturar una frase completa, el segundo grupo de captura solo captura la última palabra.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -339,7 +339,7 @@ ms.locfileid: "78160006"
   
  La expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
 |`(\s\w+)*`|Coincide con cero o más apariciones de un carácter de espacio en blanco seguido de uno o varios caracteres que se usan para formar palabras. Este patrón busca coincidencias con nombres de ciudades de múltiples palabras. Éste es el tercer grupo de captura.|  

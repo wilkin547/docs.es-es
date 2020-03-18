@@ -5,10 +5,10 @@ helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
 ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626417"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizar constructores (Guía de programación de C#)
@@ -21,7 +21,7 @@ Cuando se crea una [class](../../language-reference/keywords/class.md) o un [str
   
  Un constructor que no toma ningún parámetro se denomina *constructor sin parámetros*. Los constructores sin parámetros se invocan cada vez que se crea una instancia de un objeto mediante el operador `new` y no se especifica ningún argumento en `new`. Para obtener más información, vea [Instance Constructors](./instance-constructors.md) (Constructores de instancias [Guía de programación de C#]).  
   
- A menos que la clase sea [static](../../language-reference/keywords/static.md), las clases sin constructores tienen un constructor público sin parámetros por el compilador de C# con el fin de habilitar la creación de instancias de clase. Para más información, vea [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).  
+ A menos que la clase sea [static](../../language-reference/keywords/static.md), las clases sin constructores tienen un constructor público sin parámetros por el compilador de C# con el fin de habilitar la creación de instancias de clase. Para obtener más información, consulte [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).  
   
  Puede impedir que se cree una instancia de una clase convirtiendo el constructor en privado, de la manera siguiente:  
   
@@ -84,7 +84,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
   
- Los constructores se pueden marcar como [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md) o [private protected](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden construir la clase. Para obtener más información, consulte [Modificadores de acceso](./access-modifiers.md).  
+ Los constructores se pueden marcar como [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md) o [private protected](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden construir la clase. Para obtener más información, vea [Modificadores de acceso](./access-modifiers.md).  
   
  Un constructor puede declararse estático mediante la palabra clave [static](../../language-reference/keywords/static.md). Los constructores estáticos se llaman automáticamente, inmediatamente antes de acceder a los campos estáticos y, por lo general, se usan para inicializar miembros de clase estática. Para obtener más información, vea [Static Constructors](./static-constructors.md) (Constructores estáticos [Guía de programación de C#]).  
   

@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714236"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240901"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de C# en .NET Core mediante pruebas de dotnet y xUnit
 
@@ -207,7 +207,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 
 por el siguiente código:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 En el código anterior, `[Theory]` y `[InlineData]` habilitan la prueba de varios valores inferiores a dos. Dos es el número primo más pequeño.
 

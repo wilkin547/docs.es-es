@@ -5,10 +5,10 @@ helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700424"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Procedimiento Utilizar el espacio de nombres My (Guía de programación de C#)

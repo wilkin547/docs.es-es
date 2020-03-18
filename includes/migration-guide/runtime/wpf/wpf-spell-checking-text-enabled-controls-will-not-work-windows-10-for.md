@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 97ca78e154eb25e863256e06caa119fe753bc344
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: abb89099c4c8a5d9c0e55ef8f357faf44e75b045
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858406"
 ---
 ### <a name="wpf-spell-checking-in-text-enabled-controls-will-not-work-in-windows-10-for-languages-not-in-the-oss-input-language-list"></a>La revisión ortográfica de WPF en controles habilitados para texto no funcionará en Windows 10 para los idiomas no incluidos en la lista de idiomas de entrada del sistema operativo
@@ -15,4 +15,3 @@ ms.locfileid: "67858406"
 |Ámbito|Borde|
 |Versión|4.6|
 |Tipo|Tiempo de ejecución|
-

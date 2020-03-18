@@ -12,10 +12,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "77504015"
 items:
 - durationInMinutes: 1

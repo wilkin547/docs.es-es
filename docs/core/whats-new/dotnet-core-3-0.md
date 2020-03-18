@@ -7,17 +7,17 @@ author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
 ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156574"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397828"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
 En este artículo se describen las novedades de .NET Core 3.0. Una de las mejoras más importantes es la compatibilidad con las aplicaciones de Escritorio de Windows (solo Windows). Mediante el componente Escritorio de Windows del SDK de .NET Core 3.0, puede portar sus aplicaciones de Windows Forms y Windows Presentation Foundation (WPF). Para ser más precisos, el componente Escritorio de Windows solo se admite e incluye en Windows. Para obtener más información, vea la sección [Escritorio de Windows](#windows-desktop) más adelante en este artículo.
 
-.NET Core 3.0 agrega compatibilidad con C# 8.0. Se recomienda encarecidamente usar [Visual Studio 2019, versión 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o una versión posterior, [Visual Studio para Mac 8.3](/visualstudio/mac/install-preview) o una versión posterior, o [Visual Studio Code](https://code.visualstudio.com/) con la última **extensión de C#**.
+.NET Core 3.0 agrega compatibilidad con C# 8.0. Se recomienda encarecidamente usar [Visual Studio 2019, versión 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o una versión posterior, [Visual Studio para Mac 8.3](/visualstudio/mac/install-preview) o una versión posterior, o [Visual Studio Code](https://code.visualstudio.com/) con la última **extensión de C#** .
 
 [Descargue .NET Core 3.0 y empiece a trabajar](https://aka.ms/netcore3download) ya en Windows, macOS o Linux.
 

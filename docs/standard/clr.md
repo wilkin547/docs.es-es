@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
 ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74884415"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Introducción a Common Language Runtime
@@ -66,7 +66,7 @@ El número de versión de .NET Framework no se corresponde necesariamente con el
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Título|Description|
 |-----------|-----------------|
 |[Proceso de ejecución administrada](managed-execution-process.md)|Describe los pasos requeridos para aprovechar al máximo las ventajas de Common Language Runtime.|
 |[Administración automática de la memoria](automatic-memory-management.md)|Describe cómo asigna y libera memoria el recolector de elementos no utilizados.|

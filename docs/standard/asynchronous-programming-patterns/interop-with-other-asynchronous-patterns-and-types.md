@@ -13,14 +13,14 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159759"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidad con otros tipos y patrones asincrónicos
-.NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult>, conocido también como [Modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  
+.NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult> , conocido también como [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  
   
  En este tema:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "78159759"
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- Con este método se pueden usar las implementaciones existentes <xref:System.Threading.WaitHandle> en métodos asincrónicos.  Por ejemplo, si quiere restringir el número de operaciones asincrónicas que se ejecutan en un momento dado, puede usar un semáforo (un objeto <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> ).  Se puede restringir a *N* el número de operaciones que se ejecutan simultáneamente mediante una inicialización del contador del semáforo a *N*, esperando al semáforo cuando se quiera realizar una operación y liberando el semáforo cuando se haya terminado:  
+ Con este método se pueden usar las implementaciones existentes <xref:System.Threading.WaitHandle> en métodos asincrónicos.  Por ejemplo, si quiere restringir el número de operaciones asincrónicas que se ejecutan en un momento dado, puede usar un semáforo (un objeto <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>).  Se puede restringir a *N* el número de operaciones que se ejecutan simultáneamente mediante una inicialización del contador del semáforo a *N*, esperando al semáforo cuando se quiera realizar una operación y liberando el semáforo cuando se haya terminado:  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
@@ -113,6 +113,6 @@ ms.locfileid: "78159759"
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

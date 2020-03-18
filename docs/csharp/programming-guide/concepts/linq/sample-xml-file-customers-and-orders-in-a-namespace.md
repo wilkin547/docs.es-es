@@ -1,12 +1,12 @@
 ---
-title: 'Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres2'
+title: 'Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres'
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
 ms.openlocfilehash: 80bc052ecc62dfbd78f1dfdffac1925f8a03f31a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483801"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres

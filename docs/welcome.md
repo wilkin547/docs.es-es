@@ -4,10 +4,10 @@ description: Introducción a la familia de tecnologías .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124226"
 ---
 # <a name="welcome-to-net"></a>Bienvenido a .NET
@@ -16,7 +16,7 @@ Para obtener más información sobre cómo crear aplicaciones .NET Core, consult
 
 Cree muchos tipos de aplicaciones con .NET, como de nube, IoT y juegos, mediante herramientas multiplataforma gratis. Las aplicaciones se pueden ejecutar en Android, iOS, Linux, Mac OS y Windows. Implemente aplicaciones en servidores o equipos de sobremesa y publique en tiendas de aplicaciones para la implementación en dispositivos móviles. .NET es accesible para los estudiantes y aficionados, y todos pueden participar en una comunidad de desarrolladores internacional animada y realizar contribuciones directas a muchas de las tecnologías .NET.
 
-## <a name="news"></a>Novedades
+## <a name="news"></a>Noticias
 
 Para conocer las novedades de .NET, consulte los blogs siguientes:
 
@@ -46,7 +46,7 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes. Puede 
 - [Guía de .NET Core](core/index.md)
 - [Guía de .NET Framework](framework/index.md)
 - [Guía de C#](csharp/index.yml)
-- [Guía de F#](fsharp/index.yml)
+- [F# Guide](fsharp/index.yml)
 - [Guía de Visual Basic](visual-basic/index.yml)
 - [Guía de ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)
@@ -60,7 +60,7 @@ Explore vídeos en la web, dispositivos móviles, de escritorio, C#, aprendizaje
 
 [Serie de vídeos de .NET 101](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>Código Abierto
+## <a name="open-source"></a>Abrir origen
 
 Esta documentación es completamente de [código abierto](https://github.com/dotnet/docs). Puede contribuir de la manera que quiera, desde crear informes de problemas hasta escribir documentación. Además, gran parte del propio .NET también es de código abierto. En la lista siguiente encontrará los principales repositorios de .NET en GitHub:
 

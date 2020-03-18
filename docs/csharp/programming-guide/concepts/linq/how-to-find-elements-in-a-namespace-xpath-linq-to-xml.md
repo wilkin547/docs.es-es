@@ -3,10 +3,10 @@ title: Procedimiento para buscar elementos de un espacio de nombres (XPath-LINQ 
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
 ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141070"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos de un espacio de nombres (XPath-LINQ to XML) (C#)

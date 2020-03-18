@@ -9,10 +9,10 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 ms.openlocfilehash: 007b10f6f27233c43caad4c1910e3d1158682950
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920366"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (Opciones del compilador de C#)
@@ -64,17 +64,17 @@ Para obtener otras formas de especificar la versión del lenguaje C#, consulte e
 
 Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
-|Versión|Link|Descripción|
+|Versión|Link|Description|
 |-------|----|-----------|
 |C# 7.0 y posterior||actualmente, no disponible|
 |C# 6.0|[Vínculo](/dotnet/csharp/language-reference/language-specification/introduction)|Versión 6 de la especificación del lenguaje C#, borrador no oficial: .NET Foundation|
 |C# 5.0|[Descargar PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Norma ECMA-334 estándar, quinta edición|
-|C# 3.0|[Decargar DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Especificación del lenguaje C#, versión 3.0: Microsoft Corporation|
+|C# 3.0|[Decargar DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Versión 3.0 de la especificación del lenguaje C#: Microsoft Corporation|
 |C# 2.0|[Descargar PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Norma ECMA-334 estándar, cuarta edición|
-|C# 1.2|[Decargar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Especificación del lenguaje C#, versión 1.2: Microsoft Corporation|
-|C# 1.0|[Decargar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Especificación del lenguaje C#, versión 1.0: Microsoft Corporation|
+|C# 1.2|[Decargar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Versión 1.2 de la especificación del lenguaje C#: Microsoft Corporation|
+|C# 1.0|[Decargar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Versión 1.0 de la especificación del lenguaje C#: Microsoft Corporation|
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>Versión del SDK mínima necesaria para admitir todas las características del lenguaje
 
@@ -97,4 +97,4 @@ En la tabla siguiente se enumeran las versiones mínimas del SDK con el compilad
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

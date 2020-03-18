@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: bc33266bb2af639d7d0d1cb532ed73abd7f1ba9a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803236"
 ---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>EF ya no inicia excepciones para elementos QueryView con características específicas
@@ -15,4 +15,3 @@ ms.locfileid: "67803236"
 |Ámbito|Borde|
 |Versión|4.5.2|
 |Tipo|Tiempo de ejecución|
-

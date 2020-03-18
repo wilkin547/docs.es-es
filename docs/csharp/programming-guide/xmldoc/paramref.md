@@ -9,10 +9,10 @@ helpviewer_keywords:
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
 ms.openlocfilehash: 12df257271369dc7f0a5c066b712a8d8e6c38761
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793399"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref> (Guía de programación de C#)

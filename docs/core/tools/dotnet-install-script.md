@@ -3,15 +3,15 @@ title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092868"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet-install.ps1` | `dotnet-install.sh`: script usado para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 
@@ -33,7 +33,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
     [--runtime-id] [--skip-non-versioned-files] [--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 Los scripts `dotnet-install` se usan para realizar una instalación sin derechos administrativos del SDK de .NET Core, que incluye la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 

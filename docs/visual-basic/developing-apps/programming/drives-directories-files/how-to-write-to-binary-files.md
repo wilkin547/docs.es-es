@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para escribir en archivos binarios
+title: 'Cómo: Escribir en archivos binarios'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
 ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334430"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Procedimiento para escribir en archivos binarios en Visual Basic
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Cómo: Escribir en archivos binarios en Visual Basic
 
 El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> escribe datos en un archivo binario. Si el parámetro `append` es `True`, anexará los datos al archivo; de lo contrario se sobrescriben los datos existentes en el archivo.
 
@@ -46,4 +46,4 @@ Las condiciones siguientes pueden crear una excepción:
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Cómo: Escribir texto en archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+- [Escribir texto en archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

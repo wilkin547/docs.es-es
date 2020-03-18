@@ -3,28 +3,28 @@ title: Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
 ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73970033"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)
 
-Se puede mejorar el rendimiento de la solución asincrónica en [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) con el método <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Este método espera de forma asincrónica varias operaciones asincrónicas, que se representan como una colección de tareas.
+El rendimiento de la solución asincrónica de [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: acceso a la web con async y await [C#]) se puede mejorar con el método <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Este método espera de forma asincrónica varias operaciones asincrónicas, que se representan como una colección de tareas.
 
 Es posible que en el tutorial observara que los sitios web se descargan a distintas velocidades. A veces uno de los sitios web es muy lento, lo que retrasa las descargas restantes. Cuando ejecute las soluciones asincrónicas que se compilan en el tutorial, puede finalizar el programa fácilmente si no quiere esperar, pero una mejor opción sería iniciar todas las descargas al mismo tiempo y dejar que las más rápidas continúen sin tener que esperar a la que se retrasa.
 
 El método `Task.WhenAll` se aplica a una colección de tareas. La aplicación de `WhenAll` devuelve una única tarea que no está completa hasta que se completen todas las tareas de la colección. La tarea parece ejecutarse en paralelo, pero no se crean subprocesos adicionales. Las tareas se pueden completar en cualquier orden.
 
 > [!IMPORTANT]
-> En los procedimientos siguientes se describen las extensiones para las aplicaciones asincrónicas que se desarrollan en [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md). Puede desarrollar las aplicaciones completando el tutorial o descargando el código de [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
+> Los procedimientos siguientes describen las extensiones para las aplicaciones asincrónicas que se desarrollan en [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web con async y await [C#]). Puede desarrollar las aplicaciones completando el tutorial o descargando el código de [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
 >
 > Para ejecutar el ejemplo, debe tener instalado Visual Studio 2012 o una versión posterior en el equipo.
 
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Para agregar Task.WhenAll a la solución GetURLContentsAsync
 
-1. Agregue el método `ProcessURLAsync` a la primera aplicación que se desarrolla en [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Agregue el método `ProcessURLAsync` a la primera aplicación que se desarrolla en [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web con async y await [C#]).
 
     - Si descargó el código de [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra el proyecto AsyncWalkthrough y, después, agregue `ProcessURLAsync` al archivo MainWindow.xaml.cs.
 
@@ -96,7 +96,7 @@ El método `Task.WhenAll` se aplica a una colección de tareas. La aplicación d
 
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Para agregar Task.WhenAll a la solución HttpClient.GetByteArrayAsync
 
-1. Agregue la versión siguiente de `ProcessURLAsync` a la primera aplicación que se desarrolla en [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Agregue la siguiente versión de `ProcessURLAsync` a la segunda aplicación que se desarrolla en [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web con async y await [C#]).
 
     - Si descargó el código de [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra el proyecto AsyncWalkthrough_HttpClient y, después, agregue `ProcessURLAsync` al archivo MainWindow.xaml.cs.
 
@@ -171,7 +171,7 @@ El método `Task.WhenAll` se aplica a una colección de tareas. La aplicación d
 
 ### <a name="to-test-the-taskwhenall-solutions"></a>Para probar las soluciones Task.WhenAll
 
-- Para cualquiera de las soluciones, presione la tecla F5 para ejecutar el programa y después haga clic en el botón **Start**. El resultado debe ser similar al de las soluciones asincrónicas de [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md). Pero tenga en cuenta que los sitios web cada vez aparecen en un orden diferente.
+- Para cualquiera de las soluciones, presione la tecla F5 para ejecutar el programa y después haga clic en el botón **Start**. El resultado debe ser similar al de las soluciones asincrónicas en [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: acceso a la web con async y await [C#]). Pero tenga en cuenta que los sitios web cada vez aparecen en un orden diferente.
 
 ## <a name="example"></a>Ejemplo
 
@@ -440,4 +440,4 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])

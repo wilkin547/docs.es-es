@@ -33,10 +33,10 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093206"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
@@ -120,7 +120,7 @@ var longVariable = (long)42;
 
 Puede convertir un tipo numérico entero en cualquier otro tipo numérico entero. Si el tipo de destino puede almacenar todos los valores del tipo de origen, la conversión es implícita. De lo contrario, se necesita usar el [operador de conversión `()`](../operators/type-testing-and-cast.md#cast-operator-) para invocar una conversión explícita. Para obtener más información, consulte [Conversiones numéricas integradas](numeric-conversions.md).
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

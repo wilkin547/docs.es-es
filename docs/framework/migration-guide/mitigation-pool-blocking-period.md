@@ -3,10 +3,10 @@ title: 'Mitigación: período de bloqueo del grupo'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457846"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigación: período de bloqueo del grupo

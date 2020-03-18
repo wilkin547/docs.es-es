@@ -3,10 +3,10 @@ title: Crear interfaces genéricas variantes (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
 ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595308"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Crear interfaces genéricas variantes (C#)

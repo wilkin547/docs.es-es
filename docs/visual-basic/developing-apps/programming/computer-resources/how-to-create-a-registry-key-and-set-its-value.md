@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear una clave del Registro y establecer su valor
+title: 'Cómo: Crear una clave del Registro y establecer su valor'
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349199"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procedimiento para crear una clave del Registro y establecer su valor en Visual Basic
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Cómo: Crear una clave del Registro y establecer su valor en Visual Basic
 
 El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para crear una clave del Registro.
 
@@ -72,7 +72,7 @@ Las condiciones siguientes pueden provocar una excepción:
 
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework
 
-Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Conceptos básicos sobre la seguridad de acceso del código](../../../../framework/misc/code-access-security-basics.md).
+Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).
 
 ## <a name="see-also"></a>Vea también
 
@@ -80,4 +80,4 @@ Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio conced
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
 - [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Conceptos básicos sobre la seguridad de acceso del código](../../../../framework/misc/code-access-security-basics.md)
+- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)

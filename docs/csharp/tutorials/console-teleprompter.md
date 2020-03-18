@@ -5,15 +5,15 @@ ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76921131"
 ---
 # <a name="console-app"></a>Aplicación de consola
 
-Este tutorial le enseña varias características de .NET Core y el lenguaje C#. Aprenderá lo siguiente:
+Este tutorial le enseña varias características de .NET Core y el lenguaje C#. Aprenderá a realizar los siguientes procedimientos:
 
 - Los aspectos básicos de la CLI de .NET Core
 - La estructura de una aplicación de consola en C#
@@ -33,7 +33,7 @@ Hay muchas características en este tutorial. Vamos a compilarlas una a una.
 
 ## <a name="create-the-app"></a>Creación de la aplicación
 
-El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola mundo".
+El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola a todos".
 
 Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para ejecutar la aplicación Hola mundo sencilla. Después de crear la aplicación, escriba `dotnet restore` en el símbolo del sistema. Este comando ejecuta el proceso de restauración de paquetes de NuGet. NuGet es un administrador de paquetes .NET. Este comando permite descargar cualquiera de las dependencias que faltan para el proyecto. Como se trata de un nuevo proyecto, ninguna de las dependencias está en su lugar, así que con la primera ejecución se descargará .NET Core Framework. Después de este paso inicial, solo deberá ejecutar `dotnet restore` al agregar nuevos paquetes dependientes, o actualizar las versiones de cualquiera de sus dependencias.
 
@@ -253,7 +253,7 @@ Coloque esa clase en un archivo nuevo e inclúyala en el espacio de nombres `Tel
 using static System.Math;
 ```
 
-A continuación, debe actualizar los métodos `ShowTeleprompter` y `GetInput` para usar el nuevo objeto `config`. Escriba un método final `async` de devolución de `Task` para iniciar ambas tareas y salir cuando la primera tarea finalice:
+A continuación, debe actualizar los métodos `ShowTeleprompter` y `GetInput` para usar el nuevo objeto `config`. Escriba un método final `Task` de devolución de `async` para iniciar ambas tareas y salir cuando la primera tarea finalice:
 
 ```csharp
 private static async Task RunTeleprompter()

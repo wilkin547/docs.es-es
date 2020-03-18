@@ -6,10 +6,10 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352114"
 ---
 # <a name="programming-in-visual-basic"></a>Programar en Visual Basic
@@ -33,7 +33,7 @@ En esta sección se describen las tareas de programación sobre las que necesita
  [Acceso a los servicios web de la aplicación](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Contiene documentación sobre cómo acceder a los servicios web a los que hace referencia la aplicación con el objeto `My.WebServices`.  
   
- [Acceso a la configuración de la aplicación](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Contiene documentación sobre el acceso a la configuración de una aplicación con el objeto `My.Settings`.  
   
  [Procesar unidades, directorios y archivos](drives-directories-files/index.md)  

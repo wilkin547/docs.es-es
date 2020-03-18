@@ -3,10 +3,10 @@ title: Procedimiento para escribir una consulta que busca elementos en función 
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75348367"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Procedimiento para escribir una consulta que busca elementos en función del contexto (C#)

@@ -3,10 +3,10 @@ title: Procedimiento para buscar elementos anteriores del mismo nivel (XPath-LIN
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141062"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos anteriores del mismo nivel (XPath-LINQ to XML) (C#)
@@ -21,7 +21,7 @@ En este tema se compara el eje XPath `preceding-sibling` con el eje secundario d
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo busca el elemento `FullAddress` y, a continuación, recupera los elementos anteriores utilizando el eje `preceding-sibling`.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

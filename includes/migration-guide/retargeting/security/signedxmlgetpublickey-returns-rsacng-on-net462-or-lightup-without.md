@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 52693beada7b301e62414e38cef523226ee9c044
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: cdcf7f540a9ded4108121b2cd8e855687a0c7e27
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858928"
 ---
 ### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a>SignedXml.GetPublicKey devuelve RSACng en net462 (o Lightup) sin cambios de redestinación
@@ -16,4 +16,3 @@ ms.locfileid: "67858928"
 |Versión|4.6.2|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
-

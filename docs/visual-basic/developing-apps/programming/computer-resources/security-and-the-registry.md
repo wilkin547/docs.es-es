@@ -6,10 +6,10 @@ helpviewer_keywords:
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
 ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345480"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>La seguridad y el Registro (Visual Basic)
@@ -31,7 +31,7 @@ En esta página se describen las implicaciones de seguridad relativas al almacen
 |`AllAccess`|Creación, lectura y escritura|  
 |`Create`|Crear|  
 |`NoAccess`|Sin acceso|  
-|`Read`|Leer|  
+|`Read`|Lectura|  
 |`Write`|Write|  
   
 ## <a name="checking-values-in-registry-keys"></a>Comprobar valores en las claves del Registro  

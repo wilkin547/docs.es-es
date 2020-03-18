@@ -3,10 +3,10 @@ title: Procedimiento para filtrar por nombres de elemento (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 ms.openlocfilehash: 74efb19ef5ec77ca29145d27a8e5aa977530b68b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141264"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Procedimiento para filtrar por nombres de elemento (LINQ to XML) (C#)
@@ -15,7 +15,7 @@ Al llamar a uno de los métodos que devuelven <xref:System.Collections.Generic.I
 ## <a name="example"></a>Ejemplo  
  Este ejemplo recupera una colección de descendientes que se filtra para incluir solo los descendientes con el nombre especificado.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -52,7 +52,7 @@ ProductName:Baby Monitor
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -73,4 +73,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejes de LINQ to XML (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ to XML Axes (C#)](./linq-to-xml-axes-overview.md) (Ejes de LINQ to XML [C#])

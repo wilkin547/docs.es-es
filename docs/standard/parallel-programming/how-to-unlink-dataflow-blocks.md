@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Desvinculación de bloques de flujos de datos
+title: 'Cómo: Desvincular bloques de flujos de datos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139291"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Procedimiento Desvinculación de bloques de flujos de datos
+# <a name="how-to-unlink-dataflow-blocks"></a>Cómo: Desvincular bloques de flujos de datos
 En este documento se describe cómo desvincular un bloque de flujo de datos de destino de su origen.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

@@ -3,10 +3,10 @@ title: 'La herramienta dotnet-trace: .NET Core'
 description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
 ms.date: 11/21/2019
 ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737649"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace

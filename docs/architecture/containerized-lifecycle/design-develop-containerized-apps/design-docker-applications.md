@@ -3,10 +3,10 @@ title: Diseño de aplicaciones de Docker
 description: Aquí encontrará una referencia a una guía detallada de la arquitectura de microservicios, porque es un tema que no se describe en esta guía.
 ms.date: 02/15/2019
 ms.openlocfilehash: b9539ff4edf405ab890d83be59a248ffa2360c99
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674042"
 ---
 # <a name="design-docker-applications"></a>Diseño de aplicaciones de Docker

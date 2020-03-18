@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74101472"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorización: la sobrecarga de AddAuthorization se ha cambiado a otro ensamblado
@@ -29,7 +29,7 @@ Los métodos `AddAuthorization` existen en `Microsoft.AspNetCore.Authorization.P
 
 Agregue una referencia a `Microsoft.AspNetCore.Authorization.Policy` o, en su lugar, use `AddAuthorizationCore`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoría
 
 ASP.NET Core
 

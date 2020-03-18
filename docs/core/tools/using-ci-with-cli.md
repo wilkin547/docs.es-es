@@ -3,10 +3,10 @@ title: Integración continua (CI) con el SDK de .NET Core y herramientas
 description: Aprenda a usar el SDK de .NET Core y sus herramientas en el servidor de compilación con la integración continua.
 ms.date: 05/18/2017
 ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451043"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
@@ -159,7 +159,7 @@ Para usar un script de instalación manual en Azure DevOps Services, cree una de
 
    ![Agregar un paso de compilación](./media/using-ci-with-cli/add-build-step.png)
 
-1. Se abre el **Catálogo de tareas**. El catálogo contiene tareas que se utilizan en la compilación. Como ya tiene un script, haga clic en el botón **Agregar** en **PowerShell: Ejecute un script de PowerShell**.
+1. Se abre el **Catálogo de tareas**. El catálogo contiene tareas que se utilizan en la compilación. Como ya tiene un script, seleccione el botón **Agregar** en **PowerShell: Ejecute un script de PowerShell**.
 
    ![Paso para agregar un script de PowerShell](./media/using-ci-with-cli/add-powershell-script.png)
 

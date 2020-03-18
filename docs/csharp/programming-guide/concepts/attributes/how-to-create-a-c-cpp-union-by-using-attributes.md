@@ -3,10 +3,10 @@ title: Procedimiento para crear una unión de C o C++ mediante atributos (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141575"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedimiento para crear una unión de C o C++ mediante atributos (C#)

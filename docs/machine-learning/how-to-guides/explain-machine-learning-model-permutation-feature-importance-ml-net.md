@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092621"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretación de las predicciones del modelo mediante la importancia de características de permutación
@@ -26,7 +26,7 @@ Además, al resaltar las características más importantes, los compiladores del
 
 Las características del conjunto de datos que se usa para este ejemplo están en las columnas 1 a 12. El objetivo es predecir `Price`.
 
-| Columna | Característica | Descripción
+| Columna | Característica | Description
 | --- | --- | --- |
 | 1 | CrimeRate | Tasa de criminalidad per cápita
 | 2 | ResidentialZones | Zonas residenciales en la ciudad

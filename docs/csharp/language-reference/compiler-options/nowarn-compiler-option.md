@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: fa3079bf1431ba1a16b5a2eef0dd5500fe95909c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606615"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (Opciones del compilador de C#)
@@ -54,5 +54,5 @@ La opción **-nowarn** permite impedir que el compilador muestre una o más adve
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
 - [Errores del compilador de C#](../compiler-messages/index.md)

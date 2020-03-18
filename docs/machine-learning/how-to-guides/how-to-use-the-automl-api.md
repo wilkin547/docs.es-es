@@ -4,10 +4,10 @@ description: La API de ML automatizada de ML.NET automatiza el proceso de compil
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636567"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Cómo usar la API de aprendizaje automático automatizada de ML.NET

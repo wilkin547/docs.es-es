@@ -8,10 +8,10 @@ helpviewer_keywords:
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
 ms.openlocfilehash: 52770187568d0ba0f54ec36ee2c3d754a9b4d9a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348889"
 ---
 # <a name="file-encodings-visual-basic"></a>Codificación de archivos (Visual Basic)
@@ -30,7 +30,7 @@ Los estándares de codificación de caracteres anteriores constaban de juegos de
 
 La clase <xref:System.Text.Encoding> representa una codificación de caracteres. En esta tabla se muestra el tipo de codificaciones disponibles y se describe cada uno.
 
-|Name|DESCRIPCIÓN|
+|Name|Description|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|Representa una codificación de caracteres ASCII de caracteres Unicode.|
 |<xref:System.Text.UnicodeEncoding>|Representa una codificación UTF-16 de caracteres Unicode.|

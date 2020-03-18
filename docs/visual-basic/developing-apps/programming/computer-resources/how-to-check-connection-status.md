@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para comprobar el estado de la conexión
+title: 'Cómo: Comprobar el estado de conexión'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
 ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345882"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a>Procedimiento para comprobar el estado de conexión en Visual Basic
+# <a name="how-to-check-connection-status-in-visual-basic"></a>Cómo: Comprobar el estado de conexión en Visual Basic
 
 La propiedad <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> puede usarse para determinar si el equipo tiene una conexión activa a una red o a Internet.  
   
@@ -26,7 +26,7 @@ La propiedad <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> puede usar
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
+     Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="see-also"></a>Vea también
 

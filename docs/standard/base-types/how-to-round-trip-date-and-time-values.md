@@ -13,10 +13,10 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132003"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedimiento para valores de fecha y hora de ida y vuelta
@@ -101,4 +101,4 @@ Para estos ejemplos se necesita:
 
 - [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

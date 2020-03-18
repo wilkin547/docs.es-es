@@ -3,10 +3,10 @@ title: Protocolo de resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428222"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo de resolución de nombres del mismo nivel
@@ -38,7 +38,7 @@ El Protocolo de resolución de nombres de mismo nivel tiene las propiedades sigu
   
 - <xref:System.Net.PeerToPeer.Cloud>: define la información que describe una nube PNRP disponible, incluido su ámbito.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: define un nombre del mismo nivel que se puede usar para registrar y resolver posteriormente un elemento del mismo nivel dentro de una nube.  
+- <xref:System.Net.PeerToPeer.PeerName>: define un nombre del mismo nivel que puede usarse para registrar y resolver posteriormente un elemento del mismo nivel dentro de una nube.  
   
 - <xref:System.Net.PeerToPeer.PeerNameRecord>: define el registro de la nube PNRP que contiene la información de registro de un elemento del mismo nivel, que incluye los puntos de conexión de red en los que se puede establecer contacto con dicho elemento.  
   
@@ -50,7 +50,7 @@ El Protocolo de resolución de nombres de mismo nivel tiene las propiedades sigu
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
-- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
+- [Ejemplos de programación de red](network-programming-samples.md)
 
 <!-- to-do: review sample links
 - [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)

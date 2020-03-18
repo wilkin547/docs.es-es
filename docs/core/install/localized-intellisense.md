@@ -3,10 +3,10 @@ title: Instalación de archivos de IntelliSense localizados
 description: Obtenga información sobre cómo configurar su máquina de desarrollo con el fin de usar archivos de IntelliSense localizados para los proyectos de .NET Core en Visual Studio.
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157718"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Procedimiento para instalar archivos de IntelliSense localizados para .NET Core
@@ -37,7 +37,7 @@ ms.locfileid: "78157718"
    1. Vaya a la carpeta de instalación de .NET Core. De manera predeterminada, se encuentra en *%Archivos de programa%\dotnet\packs*.
    1. Elija para qué SDK quiere instalar el archivo de IntelliSense y vaya a la ruta de acceso correspondiente. Dispone de las siguientes opciones:
 
-      | Tipo de SDK        | Ruta de acceso                               |
+      | Tipo de SDK        | Path                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Escritorio de Windows | *Microsoft.WindowsDesktop.App.Ref* |

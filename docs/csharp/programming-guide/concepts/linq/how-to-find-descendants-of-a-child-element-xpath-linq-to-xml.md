@@ -3,10 +3,10 @@ title: Procedimiento para buscar descendientes de un elemento secundario (XPath-
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
 ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141097"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Procedimiento para buscar descendientes de un elemento secundario (XPath-LINQ to XML) (C#)

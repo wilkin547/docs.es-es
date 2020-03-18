@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 8dc98b2d9c2c0b5f145ebce48cf8f5e054975c6e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8433899058c6f569e380999800557dbe8ed0a169
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858575"
 ---
-### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a>Los generadores de perfiles no enumeran COR_PRF_GC_ROOT_HANDLE
+### <a name="cor_prf_gc_root_handles-are-not-being-enumerated-by-profilers"></a>Los generadores de perfiles no enumeran COR_PRF_GC_ROOT_HANDLE
 
 |   |   |
 |---|---|
@@ -15,4 +15,3 @@ ms.locfileid: "67858575"
 |Ámbito|Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
-

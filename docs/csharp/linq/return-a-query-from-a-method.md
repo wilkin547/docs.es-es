@@ -4,10 +4,10 @@ description: Cómo devolver una consulta.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
 ms.openlocfilehash: 1df533770f76301432b104d6f8398f1687750cce
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972522"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Cómo devolver una consulta desde un método (Guía de programación de C#)

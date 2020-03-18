@@ -4,11 +4,11 @@ description: Obtenga información general de las nuevas características de la v
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448639"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398344"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -107,7 +107,7 @@ En el ejemplo siguiente se define un método `QueryCityDataForYears` que devuelv
 
 Para obtener más información, vea [Descartes](../discards.md).
 
-## <a name="pattern-matching"></a>Detección de patrones
+## <a name="pattern-matching"></a>Coincidencia de patrones
 
 La *coincidencia de patrones* es una característica que permite implementar la distribución de métodos en propiedades distintas al tipo de un objeto. Probablemente ya esté familiarizado con la distribución de métodos en función del tipo de un objeto. En la programación orientada a objetos, los métodos virtuales y de invalidación proporcionan la sintaxis del lenguaje para implementar la distribución de métodos en función del tipo de un objeto. Las clases base y derivadas proporcionan distintas implementaciones.
 Las expresiones de coincidencia de patrones extienden este concepto para que se puedan implementar fácilmente patrones de distribución similares para tipos y elementos de datos que no se relacionan mediante una jerarquía de herencia.
@@ -222,7 +222,7 @@ En C# 6 se presentaron los [miembros con forma de expresión](csharp-6.md#expres
 > [!NOTE]
 > En este ejemplo no se requiere un finalizador, pero se muestra para demostrar la sintaxis. No debe implementar un finalizador en la clase salvo que sea necesario para liberar recursos no administrados. También debe plantearse el uso de la clase <xref:System.Runtime.InteropServices.SafeHandle> en lugar de administrar directamente los recursos no administrados.
 
-Estas nuevas ubicaciones para los miembros con forma de expresión representan un hito importante para el lenguaje C#: miembros de la comunidad que trabajan en el proyecto [Roslyn](https://github.com/dotnet/Roslyn) de código abierto implementaron estas características.
+Estas nuevas ubicaciones de miembros con forma de expresión representan un hito importante en el lenguaje C#: estas características las han implementado miembros de la comunidad que trabajan en el proyecto de código abierto [Roslyn](https://github.com/dotnet/Roslyn).
 
 Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatible con un elemento binario](version-update-considerations.md#binary-compatible-changes).
 

@@ -1,17 +1,17 @@
 ---
-title: Procedimiento para mover un archivo
+title: 'Cómo: Mover archivos'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335364"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a>Procedimiento para mover un archivo en Visual Basic
+# <a name="how-to-move-a-file-in-visual-basic"></a>Cómo: Mover un archivo en Visual Basic
 
 El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo a otra carpeta. Si la estructura de destino no existe, se creará.  
   
@@ -54,6 +54,6 @@ El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
-- [Cómo: Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
-- [Cómo: Crear una copia de un archivo en otro directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Cómo: Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Crear una copia de un archivo en un directorio diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

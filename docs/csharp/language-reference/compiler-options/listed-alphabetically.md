@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
 ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972740"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético

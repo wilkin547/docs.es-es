@@ -9,11 +9,11 @@ helpviewer_keywords:
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965924"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398608"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -26,7 +26,7 @@ Este artículo contiene vínculos para instalar todas las versiones de .NET Fram
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Para más información sobre las versiones de .NET Framework y cómo saber las versiones que hay instaladas en un equipo, consulte [Versiones y dependencias](../migration-guide/versions-and-dependencies.md) y [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
+Para obtener más información acerca de las versiones de .NET Framework y cómo determinar qué versiones están instaladas en un equipo, consulte [Versiones y dependencias](../migration-guide/versions-and-dependencies.md) y [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!NOTE]
 > Para obtener información sobre .NET Framework 3.5, consulte [Instalación de .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8](dotnet-35-windows-10.md).
@@ -166,7 +166,7 @@ Los paquetes de idioma son archivos ejecutables que contienen recursos localizad
 
 En la siguiente tabla se indican los idiomas compatibles.
 
-| Lenguaje              | culture |
+| Lenguaje              | Referencia cultural |
 | --------------------- | :-----: |
 | Árabe                | ar      |
 | Checo                 | cs      |
@@ -205,7 +205,7 @@ En la siguiente tabla se indican los idiomas compatibles.
 
 - Para más información sobre cómo migrar una aplicación desde .NET Framework 4 hasta .NET Framework 4.5 o versiones posteriores, consulte la [guía de migración](../migration-guide/index.md).
 
-- Consulte el [código fuente de referencia de .NET Framework](https://referencesource.microsoft.com/) para ver este código en línea. El origen de referencia también está disponible en [GitHub](https://github.com/Microsoft/referencesource). Puede [descargar el origen de referencia](https://referencesource.microsoft.com/download.html) para visualizar y examinar el código fuente (incluidas revisiones y actualizaciones) sin conexión durante la depuración. Para obtener más información, vea la entrada de blog [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/) (Un nuevo aspecto para el origen de referencia de .NET).
+- Consulte el [código fuente de referencia de .NET Framework](https://referencesource.microsoft.com/) para ver este código en línea. El origen de referencia también está disponible en [GitHub](https://github.com/Microsoft/referencesource). Puede [descargar el origen de referencia](https://referencesource.microsoft.com/download.html) para visualizar y examinar el código fuente (incluidas revisiones y actualizaciones) sin conexión durante la depuración. Para obtener más información, vea la entrada de blog [Un nuevo aspecto para el origen de referencia de .NET](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 ## <a name="see-also"></a>Vea también
 

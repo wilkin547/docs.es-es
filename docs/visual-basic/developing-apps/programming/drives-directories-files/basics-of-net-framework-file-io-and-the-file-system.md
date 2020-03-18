@@ -10,10 +10,10 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348943"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
@@ -55,11 +55,11 @@ Hay muchos tipos de secuencias, pero para trabajar con la entrada/salida (E/S) d
 
 - <xref:System.IO.MemoryStream>
 
-- <xref:System.Net.Sockets.NetworkStream>.
+- <xref:System.Net.Sockets.NetworkStream>Operador
 
 En la tabla siguiente se enumeran las tareas que se suelen realizar con una secuencia:
 
-|En|Vea|
+|Para|Vea|
 |---|---|
 |Leer y escribir en un archivo de datos|[Cómo: Leer y escribir en un archivo de datos recién creado](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
 |Leer texto de un archivo|[Cómo: Leer texto de un archivo](../../../../standard/io/how-to-read-text-from-a-file.md)|
@@ -77,14 +77,14 @@ La enumeración <xref:System.IO.FileAttributes> permite la recopilación de info
 
 En la tabla siguiente se enumeran las tareas que implican acceso a archivos y atributos de archivo:
 
-|En|Vea|
+|Para|Vea|
 |---|---|
 |Abrir y anexar texto a un archivo de registro|[Cómo: Abrir y anexar a un archivo de registro](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Determinar los atributos de un archivo|<xref:System.IO.FileAttributes>|
 
 ## <a name="file-permissions"></a>Permisos de archivo
 
-Es posible controlar el acceso a archivos y directorios mediante la clase <xref:System.Security.Permissions.FileIOPermission>. Esto puede ser especialmente importante para los desarrolladores que trabajan con formularios Web Forms, que, de forma predeterminada, se ejecutan en el contexto de una cuenta de usuario local especial denominada ASPNET, creada como parte de las instalaciones de ASP.NET y .NET Framework. Cuando este tipo de aplicación solicita acceso a un recurso, la cuenta de usuario ASPNET tiene permisos limitados, que pueden impedir que el usuario realice acciones como escribir en un archivo desde una aplicación web. Para más información, consulte <xref:System.Security.Permissions.FileIOPermission>.
+Es posible controlar el acceso a archivos y directorios mediante la clase <xref:System.Security.Permissions.FileIOPermission>. Esto puede ser especialmente importante para los desarrolladores que trabajan con formularios Web Forms, que, de forma predeterminada, se ejecutan en el contexto de una cuenta de usuario local especial denominada ASPNET, creada como parte de las instalaciones de ASP.NET y .NET Framework. Cuando este tipo de aplicación solicita acceso a un recurso, la cuenta de usuario ASPNET tiene permisos limitados, que pueden impedir que el usuario realice acciones como escribir en un archivo desde una aplicación web. Para obtener más información, consulta <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Almacenamiento aislado de archivos
 
@@ -92,7 +92,7 @@ El almacenamiento aislado es un intento de resolver los problemas creados al tra
 
 En la tabla siguiente se enumeran las tareas que suelen estar asociadas con el almacenamiento aislado de archivos.
 
-|En|Vea|
+|Para|Vea|
 |---|---|
 |Crear un almacenamiento aislado|[Cómo: Obtener los almacenes de almacenamiento aislado](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |Enumerar almacenamientos aislados|[Cómo: Enumerar los almacenes de almacenamiento aislado](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
@@ -110,5 +110,5 @@ El componente <xref:System.IO.FileSystemWatcher> permite ver los cambios en los 
 
 - [Crear secuencias](../../../../standard/io/composing-streams.md)
 - [E/S de archivos y secuencias](../../../../standard/io/index.md)
-- [E/S de archivos asincrónica](../../../../standard/io/asynchronous-file-i-o.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

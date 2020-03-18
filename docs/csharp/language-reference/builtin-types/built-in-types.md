@@ -7,10 +7,10 @@ helpviewer_keywords:
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
 ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77095298"
 ---
 # <a name="built-in-types-c-reference"></a>Tipos integrados (referencia de C#)

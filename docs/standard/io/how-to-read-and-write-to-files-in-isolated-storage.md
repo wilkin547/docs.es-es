@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para leer y escribir en archivos en almacenamiento aislado
+title: 'Cómo: Leer y escribir en archivos en almacenamiento aislado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706691"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Procedimiento para leer y escribir en archivos en almacenamiento aislado
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Cómo: Leer y escribir en archivos en almacenamiento aislado
 Para leer o escribir en un archivo de un almacén aislado, use un objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lector de secuencias (objeto <xref:System.IO.StreamReader>) o el escritor de secuencias (objeto <xref:System.IO.StreamWriter>).  
   
 ## <a name="example"></a>Ejemplo  

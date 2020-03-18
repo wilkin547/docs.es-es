@@ -3,10 +3,10 @@ title: Información general sobre los espacios de nombres (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: d5f176a5561b77126ef23af996ab1e4bf51092ad
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68868822"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Información general sobre los espacios de nombres (LINQ to XML)
@@ -23,4 +23,4 @@ Una de la ventajas de usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]
 
 En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la clase que representa los nombres XML es <xref:System.Xml.Linq.XName>. Los nombres XML aparecen frecuentemente en la API [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], y cuando se requiera un nombre XML, encontrará un parámetro <xref:System.Xml.Linq.XName>. En cambio, apenas se trabaja directamente con un objeto <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName> contiene una conversión implícita de cadena.
 
-Para obtener más información, vea <xref:System.Xml.Linq.XNamespace> y <xref:System.Xml.Linq.XName>.
+Para obtener más información, consulte <xref:System.Xml.Linq.XNamespace> y <xref:System.Xml.Linq.XName>.

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793390"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Procesamiento del archivo XML (guía de programación de C#)

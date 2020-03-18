@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2bb40294685c987de84138ee889e6b88f7184bb0
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 22c4b61b293ac2366cae1dc73e0f6805a4a5fb8b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67857208"
 ---
 ### <a name="chained-popups-with-staysopenfalse"></a>Menús emergentes encadenados con StaysOpen=False
@@ -15,4 +15,3 @@ ms.locfileid: "67857208"
 |Versión|4.7.1|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|
-

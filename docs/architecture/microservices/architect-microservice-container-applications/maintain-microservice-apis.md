@@ -3,10 +3,10 @@ title: Creación, desarrollo y control de versiones de los contratos y las API d
 description: Cree las API de microservicio y contratos teniendo en cuenta la evolución y el control de versiones, porque las necesidades pueden cambiar.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672902"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Creación, desarrollo y control de versiones de los contratos y las API de microservicio
@@ -25,7 +25,7 @@ Por último, si utiliza una arquitectura REST, [Hypermedia](https://www.infoq.co
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Scott Hanselman. Control de versiones simplificado de API web RESTful de ASP.NET Core** \
+- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy** (Control de versiones simplificado de API web RESTful de ASP.NET Core) \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Control de versiones de una API web RESTful** \

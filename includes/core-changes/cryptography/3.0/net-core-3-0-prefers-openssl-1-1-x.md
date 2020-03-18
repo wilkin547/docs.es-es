@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b49b2f88b130bb952b77964d5bf38374dc606385
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567978"
 ---
 ### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 prefiere OpenSSL 1.1.x a OpenSSL 1.0.x

@@ -3,10 +3,10 @@ title: Introducción a la plataforma y las herramientas de Microsoft para aplica
 description: Descubra las ofertas de Microsoft compatibles con el ciclo de vida de aplicaciones de Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738089"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor

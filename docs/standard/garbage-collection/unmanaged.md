@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423035"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpiar recursos no administrados

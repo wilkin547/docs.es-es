@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para buscar archivos con un patrón concreto
+title: 'Cómo: Buscar archivos con un modelo concreto'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
 ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348755"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Procedimiento para buscar archivos con un modelo concreto en Visual Basic
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Cómo: Buscar archivos con un modelo concreto en Visual Basic
 
 El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> devuelve una colección de cadenas de solo lectura que representan los nombres de ruta de acceso de los archivos. Puede usar el parámetro `wildCards` para especificar un patrón concreto. Si quiere incluir los subdirectorios en la búsqueda, establezca el parámetro `searchType` en `SearchOption.SearchAllSubDirectories`.  
   
@@ -51,6 +51,6 @@ El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> d
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [Cómo: Buscar subdirectorios con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Buscar subdirectorios con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [Solución de problemas: Leer y escribir en archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Cómo: Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

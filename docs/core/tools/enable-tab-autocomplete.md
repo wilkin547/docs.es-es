@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
 ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156756"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core

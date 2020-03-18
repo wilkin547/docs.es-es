@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 79a251f3d08a253db2e1a805113f46f83c6a9410
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68235553"
 ---
 ### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>Asignación de espacio del elemento Grid de WPF a las columnas de asterisco

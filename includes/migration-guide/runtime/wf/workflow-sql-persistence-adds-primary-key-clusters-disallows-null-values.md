@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9e98d3bca645cf82bf4fe99160dd096b0e274ef7
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 566a3e0455b30e901b09be88b4256ffe67bdc2b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802490"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>La persistencia SQL de flujo de trabajo agrega clústeres de clave principal y no permite valores NULL en algunas columnas
@@ -15,4 +15,3 @@ ms.locfileid: "67802490"
 |Ámbito|Borde|
 |Versión|4.7|
 |Tipo|Tiempo de ejecución|
-

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976490"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversión de tipos en .NET Framework

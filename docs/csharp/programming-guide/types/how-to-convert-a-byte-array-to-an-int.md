@@ -6,10 +6,10 @@ helpviewer_keywords:
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
 ms.openlocfilehash: 9f477649dba1b42d7a10d521c010977707daf3ec
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75698760"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Procedimiento Convertir una matriz de bytes en un valor int (Guía de programación de C#)

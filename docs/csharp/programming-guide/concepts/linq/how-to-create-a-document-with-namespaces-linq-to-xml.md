@@ -3,10 +3,10 @@ title: Procedimiento para crear un documento con espacios de nombres (C#) (LINQ 
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
 ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141325"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Procedimiento para crear un documento con espacios de nombres (C#) (LINQ to XML)

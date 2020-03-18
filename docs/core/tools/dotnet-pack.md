@@ -3,17 +3,17 @@ title: Comando dotnet
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503642"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet pack`: empaqueta el código en un paquete de NuGet.
 
@@ -26,7 +26,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-sou
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet pack` compila el proyecto y crea paquetes de NuGet. El resultado de este comando es un paquete de NuGet (es decir, un archivo *.nupkg*).
 

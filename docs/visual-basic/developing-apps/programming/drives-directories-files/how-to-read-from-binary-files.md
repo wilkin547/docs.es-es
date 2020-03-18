@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para leer archivos binarios
+title: 'Cómo: Leer archivos binarios'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
 ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335294"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Procedimiento para leer archivos binarios en Visual Basic
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Cómo: Leer archivos binarios en Visual Basic
 
 El objeto `My.Computer.FileSystem` proporciona el método `ReadAllBytes` para leer archivos binarios.  
   
@@ -57,5 +57,5 @@ El objeto `My.Computer.FileSystem` proporciona el método `ReadAllBytes` para le
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Leer archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Cómo: Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Almacenar y leer datos en el Portapapeles](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

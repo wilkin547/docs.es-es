@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333778"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Tutorial: Manipular archivos utilizando métodos de .NET Framework (Visual Basic)
@@ -46,9 +46,9 @@ Inicie Visual Studio y comience el proyecto mediante la creación de un formular
 
 |**Objeto**|**Propiedades**|**Valor**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**|`Submit`<br /><br /> **Enviar entrada**|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**|`Clear`<br /><br /> **Borrar entrada**|
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Texto**<br /><br /> **Multiline**|`Entry`<br /><br /> **Escriba algo.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Submit`<br /><br /> **Enviar entrada**|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Clear`<br /><br /> **Borrar entrada**|
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Escriba algo.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Escribir en el archivo
 
@@ -83,7 +83,7 @@ Para agregar la capacidad de escribir en un archivo a través de la aplicación,
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Por último, adjunte el código para borrar <xref:System.Windows.Forms.TextBox>. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Clear`.
+4. Por último, adjunte el código para borrar <xref:System.Windows.Forms.TextBox>. Agregue el código siguiente al evento `Clear` del botón <xref:System.Windows.Forms.Control.Click>.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
@@ -96,9 +96,9 @@ Para esta sección del tutorial, agregue los controles de la siguiente tabla al 
 |Control|Propiedades|Valores|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**|`Display`<br /><br /> **Pantalla**|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **Pantalla**|
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`GetEntries`<br /><br /> **Obtener entradas**|
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Seleccione una entrada**<br /><br /> `False`|
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleccione una entrada**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Para rellenar el cuadro combinado
 
@@ -124,13 +124,13 @@ Agregue los controles de la siguiente tabla al formulario y establezca los valor
 
 |Control|Propiedades|Valores|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`DeleteEntry`<br /><br /> **Eliminar entrada**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Enviar edición**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Eliminar entrada**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Enviar edición**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar la eliminación y la modificación de entradas
 
-1. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display`, después de `DisplayEntry.Text = ReadString`.
+1. Agregue el código siguiente al evento `Display` del botón <xref:System.Windows.Forms.Control.Click>, después de `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 

@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306929"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240615"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -36,7 +36,7 @@ Este proyecto usa los métodos de clase <xref:Microsoft.CodeAnalysis.CSharp.Synt
 
 Agregue la siguiente directiva using en la parte superior del archivo `Program.cs` para importar los patrones Factory Method de la clase <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> y los métodos de <xref:System.Console> para que los puede usar más adelante sin calificarlos:
 
-[!code-csharp[import the SyntaxFactory class](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
+[!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
 Creará **nodos de sintaxis de nombre** para generar el árbol que representa la instrucción `using System.Collections.Generic;`. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> es la clase base para los cuatro tipos de nombres que aparecen en C#. Junte estos cuatro tipos de nombres para crear cualquier nombre que pueda aparecer en el lenguaje C#:
 
@@ -47,17 +47,17 @@ Creará **nodos de sintaxis de nombre** para generar el árbol que representa la
 
 Use el método <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IdentifierName(System.String)> para crear un nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>. Agregue el código siguiente al método `Main` en `Program.cs`:
 
-[!code-csharp[create the system identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateIdentifierName "Create and display the system name identifier")]
+[!code-csharp[create the system identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateIdentifierName "Create and display the system name identifier")]
 
 El código anterior crea un objeto <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> y lo asigna a la variable `name`. Muchas de las API de Roslyn devuelven clases base para que sea más fácil trabajar con tipos relacionados. La variable `name`, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>, puede volver a usarse al crear <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>. No use la inferencia de tipo al crear el ejemplo. Podrá automatizar ese paso en este proyecto.
 
 Ha creado el nombre. Ahora, es el momento de crear más nodos en el árbol mediante la creación de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>. El nuevo árbol usa `name` como parte izquierda del nombre, y un nuevo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> para el espacio de nombres `Collections` como parte derecha de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>. Agrega el código siguiente a `program.cs`:
 
-[!code-csharp[create the collections identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
+[!code-csharp[create the collections identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
 
 Vuelva a ejecutar el código y observe los resultados. Está creando un árbol de nodos que representa código. Continuará con este patrón para compilar <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> para el espacio de nombres `System.Collections.Generic`. Agrega el código siguiente a `Program.cs`:
 
-[!code-csharp[create the full identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
+[!code-csharp[create the full identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
 Ejecute el programa nuevamente para ver si ha creado el árbol para agregar el código.
 
@@ -67,26 +67,26 @@ Ha creado un pequeño árbol de sintaxis que contiene una instrucción. Las API 
 
 El siguiente paso consiste en crear un árbol que representa todo un programa (pequeño) y, a continuación, modificarlo. Agregue el siguiente código al principio de la clase `Program`:
 
-[!code-csharp[create a parse tree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#DeclareSampleCode "Create a tree that represents a small program")]
+[!code-csharp[create a parse tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#DeclareSampleCode "Create a tree that represents a small program")]
 
 > [!NOTE]
 > El código de ejemplo utiliza el espacio de nombres `System.Collections` y no el espacio de nombres `System.Collections.Generic`.
 
 A continuación, agregue el código siguiente a la parte inferior del método `Main` para analizar el texto y crear un árbol:
 
-[!code-csharp[create a parse tree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateParseTree "Create a tree that represents a small program")]
+[!code-csharp[create a parse tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateParseTree "Create a tree that represents a small program")]
 
 En este ejemplo se utiliza el método <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)?displayProperty=NameWithType> para reemplazar el nombre de un nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> por el que se creó en el código anterior.
 
 Cree un nuevo nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> mediante el método <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)> para actualizar el nombre `System.Collections` con el nombre que creó en el código anterior. Agregue el siguiente código en la parte inferior del método `Main`:
 
-[!code-csharp[create a new subtree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
+[!code-csharp[create a new subtree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
 
 Ejecute el programa y observe con detenimiento el resultado. `newusing` todavía no se ha colocado en el árbol de la raíz. No se ha modificado el árbol original.
 
 Agregue el siguiente código utilizando el método de extensión <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> para crear un nuevo árbol. El nuevo árbol es el resultado de reemplazar la importación existente por el nodo `newUsing` actualizado. Asigne este nuevo árbol a la variable `root` existente:
 
-[!code-csharp[create a new root tree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#TransformTree "Create the transformed root tree with the replaced namespace")]
+[!code-csharp[create a new root tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#TransformTree "Create the transformed root tree with the replaced namespace")]
 
 Ejecute el programa otra vez. Esta vez el árbol importa correctamente el espacio de nombres `System.Collections.Generic`.
 
@@ -100,15 +100,15 @@ El primer paso es crear una clase que se derive de <xref:Microsoft.CodeAnalysis.
 
 Agregue las siguientes directivas using al archivo `TypeInferenceRewriter.cs`:
 
-[!code-csharp[add necessary usings](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#AddUsings "Add required usings")]
+[!code-csharp[add necessary usings](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#AddUsings "Add required usings")]
 
 A continuación, haga que la clase `TypeInferenceRewriter` se extienda a la clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter>:
 
-[!code-csharp[add base class](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BaseClass "Add base class")]
+[!code-csharp[add base class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BaseClass "Add base class")]
 
 Agregue el código siguiente para declarar un campo privado de solo lectura para que contenga un <xref:Microsoft.CodeAnalysis.SemanticModel> e inicializarlo en el constructor. Necesitará este campo más adelante para determinar donde se puede usar la inferencia de tipos:
 
-[!code-csharp[initialize members](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Construction "Declare and initialize member variables")]
+[!code-csharp[initialize members](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Construction "Declare and initialize member variables")]
 
 Invalide el método <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>:
 
@@ -140,25 +140,25 @@ Type variable;
 
 Agregue el código siguiente al cuerpo del método `VisitLocalDeclarationStatement` para que omita la reescritura de estas formas de declaraciones:
 
-[!code-csharp[exclude other declarations](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Exclusions "Exclude variables declarations not processed by this sample")]
+[!code-csharp[exclude other declarations](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Exclusions "Exclude variables declarations not processed by this sample")]
 
 El método indica que no se realiza la reescritura mediante la devolución del parámetro `node` sin modificar. Si ninguna de esas expresiones `if` son verdaderas, el nodo representa una declaración posible con la inicialización. Agregue estas instrucciones para extraer el nombre del tipo especificado en la declaración y asócielo con el campo <xref:Microsoft.CodeAnalysis.SemanticModel> para obtener un símbolo de tipo:
 
-[!code-csharp[extract type name](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ExtractTypeSymbol "Extract the type name specified by the declaration")]
+[!code-csharp[extract type name](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ExtractTypeSymbol "Extract the type name specified by the declaration")]
 
 Ahora, agregue esta instrucción para enlazar la expresión de inicializador:
 
-[!code-csharp[bind initializer](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Bind the initializer expressions")]
+[!code-csharp[bind initializer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Bind the initializer expressions")]
 
 Por último, agregue la siguiente instrucción `if` para reemplazar el nombre de tipo existente por la palabra clave `var` si el tipo de la expresión de inicializador coincide con el tipo especificado:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 El atributo condicional es necesario porque la declaración puede convertir la expresión de inicializador en una interfaz o clase base. Si se desea, los tipos del lado izquierdo y derecho de la asignación no coinciden. El hecho de quitar el tipo explícito en estos casos también cambiaría la semántica de un programa. `var` se especifica como un identificador en lugar de una palabra clave porque `var` es una palabra clave contextual. Las curiosidades iniciales y finales (espacios en blanco) se transfieren desde el nombre de tipo anterior a la palabra clave `var` para mantener el espacio en blanco vertical y la sangría. Es más fácil utilizar `ReplaceNode` en lugar de `With*` para transformar el <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> porque el nombre de tipo es realmente el descendiente del elemento secundario de la instrucción de declaración.
 
 Ha terminado el `TypeInferenceRewriter`. Ahora vuelva a su archivo `Program.cs` para finalizar el ejemplo. Cree una prueba <xref:Microsoft.CodeAnalysis.Compilation> y obtenga <xref:Microsoft.CodeAnalysis.SemanticModel> de ella. Use ese <xref:Microsoft.CodeAnalysis.SemanticModel> para probar su `TypeInferenceRewriter`. Llevará a cabo este último paso. Mientras tanto, declare una variable de marcador de posición que represente la compilación de prueba:
 
-[!code-csharp[DeclareCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#DeclareTestCompilation "Declare the test compilation")]
+[!code-csharp[DeclareCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#DeclareTestCompilation "Declare the test compilation")]
 
 Después de un momento de pausa, debería aparecer un subrayado ondulado de error que indica que no existe ningún método `CreateTestCompilation`. Presione **CTRL+Punto** para abrir la bombilla y, a continuación, presione Entrar para invocar el comando **Generar código auxiliar del método**. Este comando generará un código auxiliar para el método `CreateTestCompilation` en la clase `Program`. Podrá volver a rellenar este método más adelante:
 
@@ -166,17 +166,17 @@ Después de un momento de pausa, debería aparecer un subrayado ondulado de erro
 
 Escriba el código siguiente para recorrer en iteración cada <xref:Microsoft.CodeAnalysis.SyntaxTree> en la prueba <xref:Microsoft.CodeAnalysis.Compilation>. Para cada una de ellas, inicialice un nuevo `TypeInferenceRewriter` con el <xref:Microsoft.CodeAnalysis.SemanticModel> para ese árbol:
 
-[!code-csharp[IterateTrees](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#IterateTrees "Iterate all the source trees in the test compilation")]
+[!code-csharp[IterateTrees](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#IterateTrees "Iterate all the source trees in the test compilation")]
 
 Dentro de la instrucción `foreach` que ha creado, agregue el código siguiente para realizar la transformación en cada árbol de origen. Este código escribe condicionalmente el nuevo árbol transformado si se hicieron modificaciones. El sistema de reescritura sólo debe modificar un árbol si encuentra una o más declaraciones de variables locales que pudieron simplificarse mediante la inferencia de tipos:
 
-[!code-csharp[TransformTrees](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#TransformTrees "Transform and save any trees that are modified by the rewriter")]
+[!code-csharp[TransformTrees](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#TransformTrees "Transform and save any trees that are modified by the rewriter")]
 
 Debería ver los subrayados ondulados bajo el código `File.WriteAllText`. Seleccione la bombilla y agregue la instrucción `using System.IO;` necesaria.
 
 Casi ha terminado. Queda un último paso: crear una prueba <xref:Microsoft.CodeAnalysis.Compilation>. Puesto que no ha utilizado ninguna inferencia de tipos durante este tutorial rápido, habría sido un caso de prueba perfecto. Desafortunadamente, la creación de una compilación desde un archivo de proyecto de C# queda fuera del ámbito de este tutorial. Pero afortunadamente, si ha seguido las instrucciones con cuidado, hay esperanza. Reemplace el contenido del método `CreateTestCompilation` con el código siguiente. Crea una compilación de prueba que casualmente coincide con el proyecto descrito en este tutorial rápido:
 
-[!code-csharp[CreateTestCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
+[!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
 Cruce los dedos y ejecute el proyecto. En Visual Studio, elija **Depurar** > **Iniciar depuración**. Visual Studio le debería notificar que los archivos de su proyecto han cambiado. Haga clic en "**Sí a todo**" para volver a cargar los archivos modificados. Examínelos para observar su genialidad. Observe que el código se ve mucho más limpio sin todos los especificadores de tipo explícitos y redundantes.
 

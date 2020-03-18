@@ -3,10 +3,10 @@ title: Implementar un modelo de dominio de microservicio con .NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972039"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core

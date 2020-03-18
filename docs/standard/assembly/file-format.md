@@ -6,10 +6,10 @@ ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711589"
 ---
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET

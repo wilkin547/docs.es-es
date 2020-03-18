@@ -4,10 +4,10 @@ description: Conozca las herramientas de Docker disponibles en Visual Studio 2
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673882"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Herramientas de Docker en Visual Studio 2017 en Windows
@@ -31,7 +31,7 @@ Los comandos **Agregar > Compatibilidad con Docker** y **Agregar > Compatibilida
 
 **Figura 4-31**. Incorporación de compatibilidad con Docker a un proyecto de Visual Studio 2017
 
-### <a name="add-docker-support"></a>Agregue compatibilidad con Docker
+### <a name="add-docker-support"></a>Adición de compatibilidad con Docker
 
 Puede agregar compatibilidad con Docker a un proyecto de ASP.NET Core existente si selecciona **Agregar** > **Compatibilidad con Docker** en el **Explorador de soluciones**. También puede habilitar compatibilidad con Docker durante la creación del proyecto si selecciona **Habilitar compatibilidad con Docker** en el cuadro de diálogo **Nueva aplicación web ASP.NET Core** que se abre al hacer clic en **Aceptar** en el cuadro de diálogo **Nuevo proyecto**, tal y como se muestra en la figura 4-32.
 
@@ -72,7 +72,7 @@ En el menú principal, elija **Herramientas > Opciones** y expanda **Herramienta
 
 La tabla siguiente puede ayudarle a decidir cómo configurar estas opciones.
 
-| nombre | Configuración predeterminada | Se aplica a | DESCRIPCIÓN |
+| NOMBRE | Valor predeterminado | Se aplica a | Descripción |
 | -----|:---------------:|:----------:| ----------- |
 | Extraer automáticamente las imágenes de Docker necesarias al cargar el proyecto | Activado | Docker Compose | Para aumentar el rendimiento al cargar proyectos, Visual Studio iniciará una operación docker pull en segundo plano para que cuando se esté listo para ejecutar el código, la imagen ya esté descargada o en proceso de descarga. Si simplemente carga proyectos y explora código, puede desactivar esta opción para evitar la descarga de imágenes de contenedor que no son necesarias. |
 | Iniciar automáticamente los contenedores en segundo plano | Activado | Docker Compose | Una vez más, para aumentar el rendimiento, Visual Studio crea un contenedor con montajes de volumen listos para cuando se compile y ejecute el contenedor. Si desea controlar cuándo se crea el contenedor, desactive esta opción. |

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75938112"
 ---
 # <a name="thread-safe-collections"></a>Colecciones seguras para subprocesos
@@ -32,7 +32,7 @@ ms.locfileid: "75938112"
   
  La siguiente tabla enumera los tipos de colección en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|Descripción|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Proporciona funcionalidad de límite y bloqueo para cualquier tipo que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Para obtener más información, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementación segura para subprocesos de un diccionario de pares clave-valor.|  
@@ -43,15 +43,15 @@ ms.locfileid: "75938112"
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Describe la funcionalidad proporcionada por el tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Cómo: agregar y quitar elementos de ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Describe cómo agregar y quitar los elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
-|[Cómo: agregar y tomar elementos de forma individual en una clase BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Describe cómo agregar y recuperar elementos de una colección de bloqueo sin utilizar el enumerador de solo lectura.|  
-|[Cómo: agregar la funcionalidad de límite y bloqueo a una colección](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Describe cómo utilizar cualquier clase de colección como mecanismo de almacenamiento subyacente para una colección <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Cómo: utilizar ForEach para quitar elementos de BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Describe cómo utilizar `foreach`, (`For Each` en Visual Basic) para quitar todos los elementos en una colección de bloqueo.|  
-|[Cómo: usar matrices de colecciones de bloqueo en una canalización](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Describe cómo utilizar varias colecciones de bloqueo para implementar una canalización al mismo tiempo.|  
-|[Cómo: crear un grupo de objetos usando ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Muestra cómo usar un controlador simultáneo para mejorar el rendimiento en escenarios donde puede reutilizar objetos en lugar de crear continuamente otros nuevos.|  
+|[Cómo agregar y quitar elementos de ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Describe cómo agregar y quitar los elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Cómo agregar y tomar elementos de forma individual en una clase BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Describe cómo agregar y recuperar elementos de una colección de bloqueo sin utilizar el enumerador de solo lectura.|  
+|[Cómo agregar la funcionalidad de límite y bloqueo a una colección](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Describe cómo utilizar cualquier clase de colección como mecanismo de almacenamiento subyacente para una colección <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
+|[Cómo utilizar ForEach para quitar elementos de BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Describe cómo utilizar `foreach`, (`For Each` en Visual Basic) para quitar todos los elementos en una colección de bloqueo.|  
+|[Cómo usar matrices de colecciones de bloqueo en una canalización](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Describe cómo utilizar varias colecciones de bloqueo para implementar una canalización al mismo tiempo.|  
+|[Cómo crear un grupo de objetos usando ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Muestra cómo usar un controlador simultáneo para mejorar el rendimiento en escenarios donde puede reutilizar objetos en lugar de crear continuamente otros nuevos.|  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

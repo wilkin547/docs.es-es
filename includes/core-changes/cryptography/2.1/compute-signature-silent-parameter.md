@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449235"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Se respeta el parámetro booleano de SignedCms.ComputeSignature

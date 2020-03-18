@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139952"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL y la programación asincrónica tradicional de .NET Framework
@@ -102,7 +102,7 @@ ms.locfileid: "73139952"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Para obtener un ejemplo más completo, en donde se incluye control de excepciones adicional y se muestra cómo llamar al método desde código de cliente, vea [Procedimiento: Encapsulado de patrones de EAP en una tarea](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Para obtener un ejemplo más completo, que incluye control de excepciones adicional y muestra cómo llamar al método desde el código de cliente, vea [Cómo: Encapsular modelos de EAP en una tarea](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Recuerde que TaskCompletionSource iniciará cualquier tarea creada por <xref:System.Threading.Tasks.TaskCompletionSource%601> y, por consiguiente, el código de usuario no debería llamar al método Start en esa tarea.  
   

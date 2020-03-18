@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
 ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74336730"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información (Visual Basic)
@@ -18,9 +18,9 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El objeto `Log` puede escribir información en varios agentes de escucha de registro. Debe determinar la configuración actual de los agentes de escucha de registro antes de cambiar las configuraciones. Para obtener más información, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+El objeto `Log` puede escribir información en varios agentes de escucha de registro. Debe determinar la configuración actual de los agentes de escucha de registro antes de cambiar las configuraciones. Para obtener más información, consulta [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
-Es posible que quiera revisar [Cómo: Escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) o [Cómo: Escribir el registro de eventos de una aplicación](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+Es posible que quiera consultar [Cómo: Escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) o [Cómo: Escribir el registro de eventos de una aplicación](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
 
 ### <a name="to-add-listeners"></a>Para agregar agentes de escucha
 
@@ -155,13 +155,13 @@ Es posible que quiera revisar [Cómo: Escribir información de eventos en un arc
 
      Algunos tipos válidos que puede usar son:
 
-    - Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, que escribe en un archivo de registro.
+    - Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> , que escribe en un archivo de registro.
 
-    - Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData`.
+    - Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> , que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData` .
 
-    - Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, que escriben en el archivo especificado en el parámetro `initializeData`.
+    - Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> , que escriben en el archivo especificado en el parámetro `initializeData` .
 
-    - Un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, que escribe en la consola de línea de comandos.
+    - Un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> , que escribe en la consola de línea de comandos.
 
      Para obtener información sobre dónde escriben información otros tipos de agentes de escucha de registro, consulte la documentación de ese tipo.
 
@@ -189,5 +189,5 @@ Es posible que quiera revisar [Cómo: Escribir información de eventos en un arc
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Cómo: Escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
+- [Escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
 - [Cómo: Escribir el registro de eventos de una aplicación](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

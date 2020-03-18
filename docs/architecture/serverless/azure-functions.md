@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920975"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401488"
 ---
 # <a name="azure-functions"></a>Comprobación de
 

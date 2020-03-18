@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para leer un valor en una clave del Registro
+title: 'Cómo: Leer un valor a partir de una clave del Registro'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345614"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedimiento para leer un valor a partir de una clave del Registro en Visual Basic
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Cómo: Leer un valor a partir de una clave del Registro en Visual Basic
 
 El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer valores en el Registro de Windows.  
   
@@ -31,7 +31,7 @@ El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer 
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows > Registro**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows > Registro**. Para obtener más información, vea [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Para determinar si un valor existe en una clave del Registro  
   

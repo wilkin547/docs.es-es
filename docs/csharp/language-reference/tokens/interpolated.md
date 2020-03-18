@@ -11,10 +11,10 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76980124"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas: referencia de C#
@@ -37,7 +37,7 @@ La estructura de un elemento con una expresión de interpolación es como se mue
 
 Los elementos entre corchetes son opcionales. En esta tabla se describe cada elemento:
 
-|Elemento|Descripción|
+|Elemento|Description|
 |-------------|-----------------|
 |`interpolationExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|
@@ -60,7 +60,7 @@ En este ejemplo, se muestra cómo incluir una llave en una cadena de resultado y
 Las cadenas textuales interpoladas comienzan por el carácter `$`, seguido del carácter `@`. Para más información sobre las cadenas textuales, vea los temas [string](../builtin-types/reference-types.md) e [Identificador textual](verbatim.md).
 
 > [!NOTE]
-> A partir de C# 8.0, puede usar los tokens `$` y `@` en cualquier orden; tanto `$@"..."` como `@$"..."` son cadenas textuales interpoladas válidas. En versiones de C# anteriores, el token `$` debe aparecer delante del token `@`.
+> A partir C# 8.0, puede usar los tokens `$` y `@` en cualquier orden; tanto `$@"..."` como `@$"..."` son cadenas textuales interpoladas válidas. En versiones de C# anteriores, el token `$` debe aparecer delante del token `@`.
 
 ## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversiones implícitas y cómo especificar la implementación de `IFormatProvider`
 
@@ -92,7 +92,7 @@ Si una cadena interpolada tiene el tipo `string`, normalmente se transforma en u
 
 Si una cadena interpolada tiene el tipo <xref:System.IFormattable> o <xref:System.FormattableString>, el compilador genera una llamada al método <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Interpolated strings](~/_csharplang/spec/expressions.md#interpolated-strings) (Cadenas interpoladas) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

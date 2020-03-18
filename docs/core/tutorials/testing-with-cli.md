@@ -3,12 +3,12 @@ title: Organización y prueba de proyectos con la CLI de .NET Core
 description: En este tutorial se explica cómo organizar y probar proyectos .NET Core desde la línea de comandos.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0d61e0fc004cfcb6d78c49475c7b7f0f523aad2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920414"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239916"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organización y prueba de proyectos con la CLI de .NET Core
 
@@ -65,23 +65,23 @@ Cree la siguiente estructura de carpetas con el contenido del archivo indicado:
 
 *IPet.cs*:
 
-[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+[!code-csharp[IPet interface](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/IPet.cs)]
 
 *Dog.cs*:
 
-[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+[!code-csharp[Dog class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/Dog.cs)]
 
 *Cat.cs*:
 
-[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+[!code-csharp[Cat class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/Cat.cs)]
 
 *Program.cs*:
 
-[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+[!code-csharp[Main](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Program.cs)]
 
 *NewTypes.csproj*:
 
-[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+[!code-xml[NewTypes csproj](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/NewTypes.csproj)]
 
 Ejecute el siguiente comando:
 
@@ -96,7 +96,7 @@ Woof!
 Meow!
 ```
 
-Ejercicio opcional: puede agregar un nuevo tipo de mascota, como `Bird`, si amplía este proyecto. Haga que el método `TalkToOwner` de las aves proporcione `Tweet!` al propietario. Ejecute la aplicación de nuevo. El resultado incluirá `Tweet!`.
+Ejercicio opcional: puede agregar un nuevo tipo de mascota, como `Bird`, ampliando este proyecto. Haga que el método `TalkToOwner` de las aves proporcione `Tweet!` al propietario. Ejecute la aplicación de nuevo. El resultado incluirá `Tweet!`.
 
 ### <a name="testing-the-sample"></a>Probar el ejemplo
 
@@ -120,7 +120,7 @@ O bien, también tiene la opción de agregar manualmente la referencia del proye
 
 *NewTypesTests.csproj*:
 
-[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+[!code-xml[NewTypesTests csproj](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/test/NewTypesTests/NewTypesTests.csproj)]
 
 El archivo *NewTypesTests.csproj* contiene lo siguiente:
 
@@ -217,7 +217,7 @@ Test execution time: 1.7000 Seconds
 
 Cambie las aserciones de sus pruebas de `Assert.NotEqual` a `Assert.Equal`:
 
-[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+[!code-csharp[PetTests class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/test/NewTypesTests/PetTests.cs)]
 
 Vuelva a ejecutar las pruebas con el comando `dotnet test` y obtenga el siguiente resultado:
 

@@ -3,10 +3,10 @@ title: Principios de diseño de contenedores comunes
 description: 'Conozca un principio fundamental del buen diseño de contenedores: un contenedor solo debe hospedar un único proceso.'
 ms.date: 02/15/2019
 ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672502"
 ---
 # <a name="common-container-design-principles"></a>Principios de diseño de contenedores comunes

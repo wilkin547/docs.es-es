@@ -4,10 +4,10 @@ description: Obtenga información sobre las plantillas personalizadas para cualq
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420878"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
@@ -52,9 +52,9 @@ Los archivos que genera la plantilla se pueden modificar según la lógica y la 
 
 El archivo *template.json* se coloca en una carpeta *.template.config* en el directorio raíz de la plantilla. El archivo proporciona información de configuración al motor de plantillas. La configuración mínima necesita los miembros que se muestran en la tabla siguiente, que es suficiente para crear una plantilla funcional.
 
-| Miembro            | Tipo          | DESCRIPCIÓN |
+| Member            | Tipo          | Description |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | Identificador URI           | El esquema JSON para el archivo *template.json*. Los editores que admiten los esquemas JSON habilitan las características de edición JSON cuando se especifica el esquema. Por ejemplo, [Visual Studio Code](https://code.visualstudio.com/) necesita este miembro para habilitar IntelliSense. Use un valor de `http://json.schemastore.org/template`. |
+| `$schema`         | URI           | El esquema JSON para el archivo *template.json*. Los editores que admiten los esquemas JSON habilitan las características de edición JSON cuando se especifica el esquema. Por ejemplo, [Visual Studio Code](https://code.visualstudio.com/) necesita este miembro para habilitar IntelliSense. Use un valor de `http://json.schemastore.org/template`. |
 | `author`          | cadena        | El autor de la plantilla. |
 | `classifications` | array(string) | Cero o más características de la plantilla que un usuario puede usar para buscar la plantilla al buscarla. Las clasificaciones también aparecen en la columna *Etiquetas* cuando aparece en una lista de plantillas que se han generado mediante el comando `dotnet new -l|--list`. |
 | `identity`        | cadena        | Un nombre único para esta plantilla. |

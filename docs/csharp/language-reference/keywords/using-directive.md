@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093154"
 ---
 # <a name="using-directive-c-reference"></a>using (Directiva, Referencia de C# Reference)
@@ -89,7 +89,7 @@ En el ejemplo siguiente se muestra cómo definir una directiva `using` y un alia
 
 [!code-csharp[csrefKeywordsNamespace#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#9)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Directivas using](~/_csharplang/spec/namespaces.md#using-directives) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
 

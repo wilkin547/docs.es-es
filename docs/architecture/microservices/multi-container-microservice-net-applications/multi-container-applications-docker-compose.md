@@ -3,10 +3,10 @@ title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
 ms.date: 01/30/2020
 ms.openlocfilehash: 86d6feda343df7f4b72374f93fc45b3246780cdf
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502471"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml

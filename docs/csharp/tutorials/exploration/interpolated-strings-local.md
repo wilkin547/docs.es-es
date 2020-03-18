@@ -3,10 +3,10 @@ title: 'Interpolación de cadenas: tutorial de C#'
 description: En este tutorial se muestra cómo usar la característica de interpolación de cadenas de C# para incluir resultados de expresión con formato en una cadena mayor.
 ms.date: 10/23/2018
 ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346778"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato

@@ -3,10 +3,10 @@ title: Cuándo se deben implementar contenedores de Windows en la infraestructur
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Cuándo se deben implementar contenedores Windows en la infraestructura de máquinas virtuales de IaaS local
 ms.date: 04/28/2018
 ms.openlocfilehash: 5986073e295eeba5921a2d899b236c68a27251fd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577978"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Cuándo se deben implementar contenedores de Windows en la infraestructura de máquina virtual IaaS local

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74282526"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: Cambio a Ninguno de algunos valores predeterminados de cookie de SameSite

@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo realizar combinaciones internas co
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857962"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659844"
 ---
 # <a name="perform-inner-joins"></a>Realizar combinaciones internas
 
@@ -70,4 +70,4 @@ El resultado de `query1` es equivalente al conjunto de resultados que se habría
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Realizar combinaciones agrupadas](perform-grouped-joins.md)
 - [Realizar operaciones de combinación externa izquierda](perform-left-outer-joins.md)
-- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])
+- [Tipos anónimos](../programming-guide/classes-and-structs/anonymous-types.md)

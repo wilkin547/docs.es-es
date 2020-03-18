@@ -3,10 +3,10 @@ title: 'Tutorial: Acceso a web usando Async y Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74281790"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
@@ -222,7 +222,7 @@ Tenga en cuenta que los recuentos tardan unos segundos en mostrarse. Durante ese
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>Convertir GetURLContents en un método asincrónico
 
-1. Para convertir la solución sincrónica a una solución asincrónica, lo mejor es comenzar en `GetURLContents`, ya que las llamadas al método <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpWebRequest.GetResponse%2A> y al método <xref:System.IO.Stream> <xref:System.IO.Stream.CopyTo%2A> son el lugar desde donde la aplicación accede a la web. .NET Framework facilita la conversión proporcionando versiones asincrónicas de ambos métodos.
+1. Para convertir la solución sincrónica a una solución asincrónica, lo mejor es comenzar en `GetURLContents`, ya que las llamadas al método <xref:System.Net.HttpWebRequest><xref:System.Net.HttpWebRequest.GetResponse%2A> y al método <xref:System.IO.Stream><xref:System.IO.Stream.CopyTo%2A> son el lugar desde donde la aplicación accede a la web. .NET Framework facilita la conversión proporcionando versiones asincrónicas de ambos métodos.
 
      Para obtener más información sobre los modelos que se usan en `GetURLContents`, vea <xref:System.Net.WebRequest>.
 
@@ -397,7 +397,7 @@ Tenga en cuenta que los recuentos tardan unos segundos en mostrarse. Durante ese
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Reemplazar el método GetURLContentsAsync con un método de .NET Framework
 
-1. .NET Framework 4.5 pone a su disposición muchos métodos asincrónicos. Uno de ellos, el método <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, hace justo lo que necesita para este tutorial. Se puede usar en lugar del método `GetURLContentsAsync` que creó en un procedimiento anterior.
+1. .NET Framework 4.5 pone a su disposición muchos métodos asincrónicos. Uno de ellos, el método <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, hace justo lo que necesita para este tutorial. Se puede usar en lugar del método `GetURLContentsAsync` que creó en un procedimiento anterior.
 
      El primer paso es crear un objeto `HttpClient` en el método `SumPageSizesAsync`. Agregue la siguiente declaración al principio del método.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Vea también
 
-- [Async Sample: Acceso al tutorial web (C# y Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
+- [Ejemplo de async: Acceso al tutorial web (C# y Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [Programación asincrónica con Async y Await (C#)](./index.md)
-- [Async Return Types (C#)](./async-return-types.md) (Tipos de valor devuelto de async [C#])
+- [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md)
 - [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])
 - [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

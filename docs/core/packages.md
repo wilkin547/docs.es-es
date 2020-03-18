@@ -4,11 +4,11 @@ description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de t
 author: richlander
 ms.date: 06/20/2016
 ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965898"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397936"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos
 

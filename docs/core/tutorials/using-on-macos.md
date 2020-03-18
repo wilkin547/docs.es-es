@@ -3,10 +3,10 @@ title: 'Tutorial: Creación de una solución de .NET Core en macOS con Visual 
 description: En este documento se proporcionan los pasos y el flujo de trabajo para crear una solución de .NET Core con Visual Studio Code.
 ms.date: 12/19/2019
 ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156600"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: Creación de una solución de .NET Core en macOS con Visual Studio Code

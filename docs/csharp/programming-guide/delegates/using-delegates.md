@@ -5,10 +5,10 @@ helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
 ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448444"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizar delegados (Guía de programación de C#)

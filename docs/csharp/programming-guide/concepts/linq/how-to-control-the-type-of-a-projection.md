@@ -3,10 +3,10 @@ title: Procedimiento para controlar el tipo de una proyección (C#)
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141353"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Procedimiento para controlar el tipo de una proyección (C#)
@@ -15,7 +15,7 @@ La proyección es el proceso de tomar un conjunto de datos, filtrarlo, cambiar s
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, se define un nuevo tipo, `Customer`. La expresión de consulta crea una instancia de nuevos objetos `Customer` en la cláusula `Select`. Esto hace que el tipo de la expresión de consulta sea <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 public class Customer  

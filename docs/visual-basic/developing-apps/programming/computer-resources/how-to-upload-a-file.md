@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para cargar un archivo
+title: 'Cómo: Cargar un archivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345561"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Procedimiento para cargar un archivo en Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Cómo: Cargar un archivo en Visual Basic
 
 El método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> se puede usar para cargar un archivo y almacenarlo en una ubicación remota. Si el parámetro `ShowUI` se establece en `True`, aparece un cuadro de diálogo que muestra el progreso de la carga y permite a los usuarios cancelar la operación.  
   
@@ -51,5 +51,5 @@ El método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> se puede u
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [Cómo: Descargar un archivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-- [Cómo: Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Descargar un archivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

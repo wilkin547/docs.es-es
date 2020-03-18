@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: fbc39b6e1cc19f6c2846caaabb9a8a721494b4e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67856925"
 ---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>Permitir Unicode en URI similares a los recursos compartidos UNC
@@ -16,4 +16,3 @@ ms.locfileid: "67856925"
 |Versión|4.7.2|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

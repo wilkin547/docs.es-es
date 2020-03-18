@@ -5,10 +5,10 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116027"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento para: Migrar una aplicación de escritorio de Windows Forms a .NET Core
@@ -17,7 +17,7 @@ En este artículo se explica cómo migrar una aplicación de escritorio basada e
 
 En este artículo, se usan diferentes nombres para identificar los tipos de archivos que se utilizan para la migración. Al migrar su proyecto, sus archivos se nombrarán de manera diferente, así que establezca una relación mental con los que se enumeran a continuación:
 
-| Archivo | Descripción |
+| Archivo | Description |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyForms.csproj** | Nombre del proyecto de Windows Forms de .NET Framework para migrar. |
@@ -160,7 +160,7 @@ Agregue el siguiente nodo `<ItemGroup>` al proyecto. Cada instrucción incluye u
 
 Como alternativa, puede crear una entrada `<Compile>` o `<EmbeddedResource>` para cada archivo en el proyecto de .NET Framework.
 
-## <a name="add-nuget-packages"></a>Adición de paquetes NuGet
+## <a name="add-nuget-packages"></a>Incorporación de paquetes NuGet
 
 Agregue cada paquete NuGet al que hace referencia el proyecto de .NET Framework al proyecto de .NET Core.
 
@@ -188,7 +188,7 @@ Si tiene un proyecto de biblioteca de controles de Windows Forms para migrar, la
 
 Usando el ejemplo del paso anterior, vamos a expandir los proyectos y archivos con los que estamos trabajando.
 
-| Archivo | Descripción |
+| Archivo | Description |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyControls.csproj** | Nombre del proyecto de controles de Windows Forms de .NET Framework para migrar. |

@@ -3,10 +3,10 @@ title: ¿Qué es Docker?
 description: Para profundizar un poco más en sus conocimientos de Docker, aquí encontrará una analogía simple que le será de gran ayuda.
 ms.date: 02/15/2019
 ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76919877"
 ---
 # <a name="what-is-docker"></a>¿Qué es Docker?

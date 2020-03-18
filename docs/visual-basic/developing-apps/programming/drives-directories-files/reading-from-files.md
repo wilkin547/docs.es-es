@@ -9,10 +9,10 @@ helpviewer_keywords:
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
 ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333820"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Leer archivos en Visual Basic
@@ -21,22 +21,22 @@ En esta sección se explica cómo realizar tareas que se asocian a la lectura de
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Cómo: Leer de archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ [Leer de archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  Muestra cómo leer de un archivo de texto.  
   
- [Cómo: Leer archivos de texto delimitado por comas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [Leer archivos de texto delimitado por comas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
  Muestra cómo leer de un archivo de texto delimitado.  
   
- [Cómo: Leer archivos de texto de ancho fijo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [Leer archivos de texto de ancho fijo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
  Muestra cómo leer de un archivo de texto de ancho fijo.  
   
- [Cómo: Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
  Muestra cómo leer de un archivo de texto con varios formatos.  
   
- [Cómo: Leer archivos binarios](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ [Leer archivos binarios](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
  Muestra cómo leer de un archivo binario.  
   
- [Cómo: Leer texto de archivos con StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [Leer texto de archivos con StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  Muestra cómo usar <xref:System.IO.StreamReader> para leer de un archivo.  
   
 ## <a name="reference"></a>Referencia  
@@ -64,8 +64,8 @@ En esta sección se explica cómo realizar tareas que se asocian a la lectura de
  [Análisis de archivos de texto con el objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  Ofrece información general de cómo leer archivos de texto con el objeto `TextFieldParser`.  
   
- [Tutorial: Manipulación de archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Tutorial: Manipular archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo usar la característica `My` con archivos y directorios.  
   
- [Tutorial: Manipulación de archivos mediante métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Tutorial: Manipulación de archivos utilizando métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Muestra cómo usar métodos de .NET Framework con archivos y directorios.

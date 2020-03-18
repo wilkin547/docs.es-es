@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
 ms.openlocfilehash: 670af18d4b2b356aa33a0a03a29c05f5ba9bf78f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744497"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Pasar parámetros de tipo de valor (Guía de programación de C#)

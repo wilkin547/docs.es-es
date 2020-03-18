@@ -7,10 +7,10 @@ helpviewer_keywords:
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965989"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework

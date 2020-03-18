@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para eliminar un archivo
+title: 'Cómo: Eliminar un archivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348780"
 ---
-# <a name="how-to-delete-a-file-in-visual-basic"></a>Procedimiento para eliminar un archivo en Visual Basic
+# <a name="how-to-delete-a-file-in-visual-basic"></a>Cómo: Eliminar un archivo en Visual Basic
 
 El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un archivo. Entre las opciones que ofrece se encuentran: enviar el archivo eliminado a la **Papelera de reciclaje**, pedir al usuario que confirme la eliminación del archivo o qué hacer si el usuario cancela la operación.  
   
@@ -66,4 +66,4 @@ El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.UIOption>
 - <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
-- [Cómo: Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

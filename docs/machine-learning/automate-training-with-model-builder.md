@@ -2,13 +2,13 @@
 title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
 ms.date: 01/07/2020
-ms.custom: overview
-ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.custom: overview, mlnet-tooling
+ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777402"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397810"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -159,7 +159,7 @@ Estos números son solo una guía. La duración exacta del entrenamiento depende
 
 La evaluación es el proceso por el que se mide el grado de calidad del modelo. El Generador de modelo usa el modelo entrenado para realizar predicciones con nuevos datos de prueba y luego mide la calidad de las predicciones.
 
-El Generador de modelos divide los datos de entrenamiento en un conjunto de entrenamiento y un conjunto de prueba. Los datos de entrenamiento (80 %) se usan para entrenar el modelo y los datos de prueba (20 %) se incluyen para evaluar el modelo. 
+El Generador de modelos divide los datos de entrenamiento en un conjunto de entrenamiento y un conjunto de prueba. Los datos de entrenamiento (80 %) se usan para entrenar el modelo y los datos de prueba (20 %) se incluyen para evaluar el modelo.
 
 ### <a name="how-do-i-understand-my-model-performance"></a>¿Cómo puedo interpretar el rendimiento de mi modelo?
 

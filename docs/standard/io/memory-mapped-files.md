@@ -10,10 +10,10 @@ helpviewer_keywords:
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159720"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
@@ -52,12 +52,12 @@ Un archivo asignado a memoria incluye el contenido de un archivo en la memoria v
 |Tarea|Métodos o propiedades que se usan|  
 |----------|----------------------------------|  
 |Para obtener un objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> que representa un archivo asignado a memoria persistente de un archivo en disco.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
-|Para obtener un objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> que representa un archivo asignado a memoria no persistente (no asociado a ningún archivo en disco).|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> o bien<br /><br /> Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
+|Para obtener un objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> que representa un archivo asignado a memoria no persistente (no asociado a ningún archivo en disco).|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
 |Para obtener un objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> de un archivo asignado a memoria existente (persistente o no persistente).|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
 |Para obtener un objeto <xref:System.IO.UnmanagedMemoryStream> de una vista de acceso secuencial al archivo asignado a memoria.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
 |Para obtener un objeto <xref:System.IO.UnmanagedMemoryAccessor> de una vista de acceso aleatorio a un archivo asignado a memoria.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
-|Para obtener un objeto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> que se va a usar con código no administrado.|Propiedad <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> o bien<br /><br /> Propiedad <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> o bien<br /><br /> Propiedad <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
-|Para retrasar la asignación de memoria hasta que se crea una vista (solo archivos no persistentes).<br /><br /> (Para determinar el actual tamaño de página del sistema, utilice la propiedad <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.)|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> con el valor <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> o bien<br /><br /> Métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> como parámetro.|  
+|Para obtener un objeto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> que se va a usar con código no administrado.|Propiedad <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Propiedad <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Propiedad <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
+|Para retrasar la asignación de memoria hasta que se crea una vista (solo archivos no persistentes).<br /><br /> (Para determinar el actual tamaño de página del sistema, utilice la propiedad <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.)|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> con el valor <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> como parámetro.|  
   
 ### <a name="security"></a>Seguridad  
  Se pueden aplicar derechos de acceso cuando se crea un archivo asignado a memoria si se usan los siguientes métodos con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> como parámetro:  

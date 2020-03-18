@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2e974d277d6659aaada321b2a7e7a604df78a7bd
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3b7309347c643d89a28331c6ef3cac36085a969a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858648"
 ---
 ### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>Las ventanas de WPF se representan sin recortes al ampliarse fuera de un monitor
@@ -15,4 +15,3 @@ ms.locfileid: "67858648"
 |Ámbito|Secundaria|
 |Versión|4.6|
 |Tipo|Tiempo de ejecución|
-

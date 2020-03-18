@@ -3,10 +3,10 @@ title: Estrategias para tratar errores parciales
 description: Conozca varias estrategias para controlar errores parciales con elegancia.
 ms.date: 10/16/2018
 ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674512"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Estrategias para controlar errores parciales

@@ -3,10 +3,10 @@ title: Abordar la complejidad empresarial en un microservicio con patrones DDD y
 description: Arquitectura de microservicios .NET para aplicaciones .NET en contenedor | Cómo abordar escenarios empresariales complejos donde se aplican patrones DDD y CQRS
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73739840"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS

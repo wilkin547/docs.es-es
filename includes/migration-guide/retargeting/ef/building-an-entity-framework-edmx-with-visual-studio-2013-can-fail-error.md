@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 25060a42b4ff66b1e25881b8c704ae0958e5f245
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: ffafb0c9e3982dd168f907d32a8f59f96e6040d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804561"
 ---
 ### <a name="building-an-entity-framework-edmx-with-visual-studio-2013-can-fail-with-error-msb4062-if-using-the-entitydeploysplit-or-entityclean-tasks"></a>Se puede producir un error MSB4062 al compilar un archivo edmx de Entity Framework con Visual Studio 2013 si se usan las tareas EntityDeploySplit o EntityClean
@@ -15,4 +15,3 @@ ms.locfileid: "67804561"
 |Ámbito|Major|
 |Versión|4.5.1|
 |Tipo|Redestinación|
-

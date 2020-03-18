@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: e605e0f2636d83745815ec4ed27bf72692f18d15
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: ea0e1583cd611a624cf2d2edf9defb2294eb89d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802703"
 ---
 ### <a name="aspnet-fix-handling-of-inputattributes-and-labelattributes-for-webforms-checkbox-control"></a>Se ha corregido el procesamiento de ASP.NET en InputAttributes y LabelAttributes para el control de casilla de WebForms
@@ -16,4 +16,3 @@ ms.locfileid: "67802703"
 |Versión|4.8|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType></li></ul>|
-

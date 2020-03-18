@@ -5,15 +5,15 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450113"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
-> "Ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
+> "La ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
 > _\- Jeff Atwood_
 
 En la actualidad hay dos enfoques generales para crear aplicaciones web: aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web, y se comunican con el servidor web principalmente mediante las API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
@@ -116,7 +116,7 @@ En siguiente la tabla de decisiones se resumen algunos de los factores básicos 
 | Familiaridad del equipo necesaria con JavaScript o TypeScript | **Mínima**             | **Obligatoria**                | **Mínima**     |
 | Compatibilidad con exploradores sin scripting                   | **Compatible**           | **No compatible**           | **Compatible**   |
 | Comportamiento mínimo del lado cliente de la aplicación             | **Adecuado**         | **Excesivo**                | **Viable**      |
-| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuados**             | **Adecuados** |
+| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuado**             | **Adecuado** |
 
 >[!div class="step-by-step"]
 >[Anterior](modern-web-applications-characteristics.md)

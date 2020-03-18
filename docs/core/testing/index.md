@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78157406"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard

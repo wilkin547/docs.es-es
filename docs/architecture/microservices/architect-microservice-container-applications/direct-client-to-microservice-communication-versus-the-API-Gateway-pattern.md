@@ -3,11 +3,11 @@ title: Diferencias entre el patrón de puerta de enlace de API y la comunicació
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
 ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090133"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401560"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 

@@ -4,10 +4,10 @@ description: Obtenga información sobre el paquete de compatibilidad de Windows 
 author: terrajobst
 ms.date: 12/07/2018
 ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733610"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Uso del paquete de compatibilidad de Windows para trasladar código a .NET Core

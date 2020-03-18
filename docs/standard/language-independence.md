@@ -8,10 +8,10 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423634"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
@@ -21,7 +21,7 @@ ms.locfileid: "73423634"
 > [!NOTE]
 > La primera parte de este artículo describe la creación de componentes independientes del lenguaje; es decir, los componentes que pueden usarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#cross-language-interoperability) en la segunda parte de este artículo.
 
-Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [Estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 Si el componente se ajusta a Common Language Specification, existe la garantía de que será conforme a CLS y que será accesible desde el código de un ensamblado escrito en cualquier lenguaje de programación que admita CLS. Para determinar si el componente se ajusta o no a Common Language Specification en tiempo de compilación, puede aplicar el atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) en el código fuente. Para obtener más información, consulte [CLSCompliantAttribute (Atributo)](#the-clscompliantattribute-attribute).
 
@@ -53,7 +53,7 @@ En este artículo:
 
   * [Eventos](#events)
 
-  * [Sobrecargas](#overloads)
+  * [Overloads](#overloads)
 
   * [Excepciones](#exceptions)
 
@@ -65,7 +65,7 @@ En este artículo:
 
 ## <a name="cls-compliance-rules"></a>Reglas de conformidad con CLS
 
-En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de las normas, vea el apartado I, cláusula 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de reglas, consulte el apartado I, cláusula 11 del [Estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > Common Language Specification describe en cada regla la conformidad con CLS en referencia a los consumidores (desarrolladores que acceden mediante programación a un componente que es conforme a CLS), los marcos (desarrolladores que usan un compilador de lenguaje para crear bibliotecas conformes a CLS) y los extensores (desarrolladores que crean una herramienta, como un compilador de lenguaje o un analizador de código, que crea componentes conformes a CLS). Este artículo se centra en las reglas que se aplican a los marcos. Pero observe que algunas de las reglas que se aplican a los extensores también se pueden aplicar a los ensamblados que se crean mediante [Reflection.Emit](xref:System.Reflection.Emit).
@@ -150,7 +150,7 @@ Las interfaces públicas de una biblioteca se componen de los elementos siguient
 
 * Parámetros y tipos devueltos de los métodos públicos de las clases públicas y parámetros y tipos devueltos de los métodos accesibles por las clases derivadas.
 
-Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de las normas se toma literalmente del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright de 2012 de Ecma International. En las secciones siguientes encontrará información más detallada sobre estas reglas.
+Las reglas de conformidad con CLS se muestran en la tabla siguiente. Las reglas se han traducido a partir del texto literal del [Estándar ECMA-335 - Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm), con Copyright de 2012 de ECMA International. En las secciones siguientes encontrará información más detallada sobre estas reglas.
 
 Categoría | Vea | Regla | Número de regla
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ Accesibilidad | [Accesibilidad de miembros](#member-accessibility) | Cuando se r
 Accesibilidad | [Accesibilidad de miembros](#member-accessibility) | La visibilidad y accesibilidad de los tipos y miembros se establecerá de modo que los tipos de la signatura de cualquier miembro sean visibles y accesibles siempre que el propio miembro sea visible y accesible. Por ejemplo, un método público que sea visible fuera del ensamblado no debe tener ningún argumento cuyo tipo solamente sea visible en el interior del ensamblado. La visibilidad y la accesibilidad de los tipos que conforman un tipo genérico con instancias que se utilice en la signatura de cualquier miembro deben establecerse de forma que serán visibles y accesibles siempre que el propio miembro sea visible y accesible. Por ejemplo, un tipo genérico con instancias que esté presente en la signatura de un miembro que sea visible fuera del ensamblado no debe tener ningún argumento genérico cuyo tipo solamente sea visible en el interior del ensamblado. | 12
 Matrices | [Matrices](#arrays) | Las matrices deben tener elementos con un tipo conforme a CLS y los límites inferiores de todas las dimensiones de la matriz deben ser iguales a cero. Para distinguir entre sobrecargas, solo se tendrá en cuenta el hecho de que el elemento es una matriz y el tipo de elementos de la matriz. Cuando la sobrecarga se basa en dos o varios tipos de matrices, los tipos de elementos deben ser tipos con nombre. | 16
 Atributos | [Atributos](#attributes) | Los atributos deben ser del tipo [System.Attribute](xref:System.Attribute) o heredarse de este. | 41
-Atributos | [Atributos](#attributes) | CLS solo permite un subconjunto de codificaciones de atributos personalizados. Los únicos tipos que deben aparecer en estas codificaciones son (vea el apartado IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) y cualquier tipo de enumeración basada en un tipo entero base compatible con CLS. | 34
+Atributos | [Atributos](#attributes) | CLS solo permite un subconjunto de codificaciones de atributos personalizados. Los únicos tipos que deben aparecer en estas codificaciones son (consulte el apartado IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) y cualquier tipo de enumeración basada en un tipo entero base compatible con CLS. | 34
 Atributos | [Atributos](#attributes) | CLS no admite modificadores obligatorios que sean visibles públicamente (`modreq`, vea el Apartado II), pero sí admite modificadores opcionales (`modopt`, vea el apartado II) que no comprenda. | 35
 Constructores | [Constructores](#constructors) | Un constructor de objetos debe llamar a un constructor de instancias de su clase base antes de que tenga lugar cualquier acceso a los datos de instancia heredados. (Esto no se aplica a los tipos de valor, que no necesitan constructores.)  | 21
 Constructores | [Constructores](#constructors) | No debe llamarse a los constructores de objetos excepto durante la creación de un objeto y no podrá iniciarse dos veces un objeto. | 22
@@ -187,8 +187,8 @@ Miembros | [Miembros de tipos en general](#type-members-in-general) | La restric
 Convenciones de nomenclatura | [Convenciones de nomenclatura](#naming-conventions) | Los ensamblados seguirán las directrices del anexo 7 del informe técnico 15 del estándar Unicode 3.0, que rige el conjunto de caracteres permitidos que pueden usarse como iniciales e incluirse en los identificadores. Estas directrices están disponibles en línea en [Formularios de normalización Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Los identificadores deben aparecer en el formato canónico definido por el Formulario C de normalización Unicode. En aras de la conformidad con CLS, dos identificadores se considerarán iguales si sus asignaciones de minúsculas (tal y como se especificó en las asignaciones unívocas de minúsculas de Unicode en las que no se tiene en cuenta la configuración regional) son iguales. Es decir, para que dos identificadores se consideren diferentes según CLS, tendrán que diferenciarse en algo más que en el uso de mayúsculas y minúsculas. Pero para invalidar una definición heredada, CLI requiere que se use la codificación exacta de la declaración original. | 4
 Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Todos los nombres especificados en un ámbito conforme a CLS deben ser distintos independientemente del tipo, salvo en los casos en los que los nombres sean idénticos y se resuelvan mediante sobrecarga. Es decir, mientras CTS permite que un tipo único use el mismo nombre para un método y un campo, CLS no. | 5
 Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Los campos y los tipos anidados deben distinguirse únicamente por la comparación de identificadores, aunque CTS permita que se distingan signaturas diferentes. Los métodos, las propiedades y los eventos que tengan el mismo nombre (por comparación de identificadores) deben distinguirse por algo más que el tipo de valor devuelto, excepto según lo especificado en la regla 39 de CLS | 6
-Sobrecarga | [Sobrecargas](#overloads) | Solo las propiedades y los métodos se pueden sobrecargar. | 37
-Sobrecarga | [Sobrecargas](#overloads) |Las propiedades y los métodos se pueden sobrecargar únicamente en función del número y los tipos de sus parámetros, excepto los operadores de conversión denominados `op_Implicit` y `op_Explicit`, que también se pueden sobrecargar en función del tipo de valor devuelto. | 38
+Sobrecarga | [Overloads](#overloads) | Solo las propiedades y los métodos se pueden sobrecargar. | 37
+Sobrecarga | [Overloads](#overloads) |Las propiedades y los métodos se pueden sobrecargar únicamente en función del número y los tipos de sus parámetros, excepto los operadores de conversión denominados `op_Implicit` y `op_Explicit`, que también se pueden sobrecargar en función del tipo de valor devuelto. | 38
 Sobrecarga | -- | Si dos o más de los métodos conformes a CLS declarados en un tipo tienen el mismo nombre y, en un conjunto específico de instancias de tipos, tienen los mismos tipos de valor devuelto y parámetros, todos estos métodos serán semánticamente equivalentes en esas instancias de tipos. | 48
 Propiedades | [Propiedades](#properties) | Los métodos que implementan los métodos de captador y establecedor de una propiedad deben estar marcados con `SpecialName` en los metadatos. | 24
 Propiedades | [Propiedades](#properties) | Todos los descriptores de acceso de una propiedad deben ser estáticos, virtuales o de instancia. | 26
@@ -315,7 +315,7 @@ Todos los tipos que aparecen en las signaturas de miembros, incluidos los tipos 
 
 El [sistema de tipos común](common-type-system.md) de .NET incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS.
 
-Tipo conforme a CLS | DESCRIPCIÓN
+Tipo conforme a CLS | Description
 ------------------ | -----------
 [Byte](xref:System.Byte) | Entero de 8 bits sin signo
 [Int16](xref:System.Int16) | Entero de 16 bits con signo
@@ -331,7 +331,7 @@ Tipo conforme a CLS | DESCRIPCIÓN
 
 Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.
 
-Tipo no conforme | DESCRIPCIÓN | Alternativa conforme a CLS
+Tipo no conforme | Description | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo de datos enteros de 8 bits con signo | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Entero de 16 bits sin signo | [Int32](xref:System.Int32)
@@ -2582,7 +2582,7 @@ El constructor o las propiedades de un atributo conforme a CLS pueden exponer so
 
 * [String](xref:System.String)
 
-* [Type](xref:System.Type)
+* [ype](xref:System.Type)
 
 * Cualquier tipo de enumeración cuyo tipo subyacente sea `Byte`, `Int16`, `Int32` o `Int64`.
 

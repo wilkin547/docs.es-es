@@ -4,10 +4,10 @@ description: En este tutorial sobre ramas y bucles, escribirá código de C# par
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73739129"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle

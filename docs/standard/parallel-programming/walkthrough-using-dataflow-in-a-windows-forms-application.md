@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms'
+title: 'Tutorial: Usar flujos de datos en aplicaciones de Windows Forms'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159772"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Usar flujos de datos en aplicaciones de Windows Forms
 Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
   
  En este ejemplo se cargan archivos de imagen de la carpeta especificada, se crea una imagen compuesta y se muestra el resultado. En el ejemplo se utiliza el modelo de flujo de datos para distribuir las imágenes por la red. En el modelo de flujo de datos, los componentes independientes de un programa se comunican entre sí mediante mensajes. Cuando un componente recibe un mensaje, realiza alguna acción y pasa el resultado a otro componente. Compare esto con el modelo de flujo de control, en el que una aplicación utiliza estructuras de control, como por ejemplo, instrucciones condicionales, bucles, etc., para controlar el orden de las operaciones en un programa.  
@@ -84,7 +84,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
  En la tabla siguiente se describen los miembros de la red.  
   
-|Miembro|Tipo|Descripción|  
+|Member|Tipo|Description|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Acepta una ruta de carpeta como entrada y genera una colección de objetos <xref:System.Drawing.Bitmap> como salida.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Acepta una colección de objetos <xref:System.Drawing.Bitmap> como entrada y produce un mapa de bits compuesto como salida.|  
@@ -99,7 +99,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
  Dado que los bloques de flujo de datos `displayCompositeBitmap` y `operationCancelled` actúan sobre la interfaz de usuario, es importante que esta acción se produzca en el subproceso de interfaz de usuario. Para lograrlo, durante la construcción, cada uno de estos objetos proporciona un objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tiene la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida como <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. El método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> crea un objeto <xref:System.Threading.Tasks.TaskScheduler> que funciona en el contexto de sincronización actual. Como se llama al método `CreateImageProcessingNetwork` desde el controlador del botón **Elegir carpeta**, que se ejecuta en el subproceso de la interfaz de usuario, las acciones para los bloques de flujo de datos `displayCompositeBitmap` y `operationCancelled` también se ejecutan en el subproceso de la interfaz de usuario.  
   
- Este ejemplo usa un token de cancelación compartido en lugar de establecer la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, porque la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela permanentemente la ejecución del bloque de flujo de datos. En este ejemplo, un token de cancelación permite reutilizar la misma red del flujo de datos varias veces, incluso cuando el usuario cancela una o varias operaciones. Para obtener un ejemplo que usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> para cancelar la ejecución de un bloque de flujo de datos de modo permanente, vea [Cómo: Cómo: Cancelar un bloque de flujos de datos](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ Este ejemplo usa un token de cancelación compartido en lugar de establecer la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, porque la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela permanentemente la ejecución del bloque de flujo de datos. En este ejemplo, un token de cancelación permite reutilizar la misma red del flujo de datos varias veces, incluso cuando el usuario cancela una o varias operaciones. Para obtener un ejemplo que usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> para cancelar la ejecución de un bloque de flujo de datos de modo permanente, vea [Cómo: Cancelar un bloque de flujos de datos](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Conectar la red del flujo de datos a la interfaz de usuario  

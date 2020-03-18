@@ -4,10 +4,10 @@ description: 'Seguridad en microservicios y aplicaciones web de .NET: no almacen
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501798"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Almacenar secretos de aplicación de forma segura durante el desarrollo

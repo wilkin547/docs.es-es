@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para registrar mensajes cuando se inicia o se cierra la aplicación
+title: 'Cómo: Registrar mensajes cuando se inicia o se cierra la aplicación'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
 ms.openlocfilehash: 5a4ef3888ba8371d26204c3569b5fb9bae1f15f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352094"
 ---
-# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Procedimiento para registrar mensajes cuando se inicia o se cierra la aplicación (Visual Basic)
+# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Cómo: Registrar mensajes cuando se inicia o se cierra la aplicación (Visual Basic)
 
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` con los eventos `Startup` y `Shutdown` para escribir información de seguimiento.  
   
@@ -65,5 +65,5 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Página Aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

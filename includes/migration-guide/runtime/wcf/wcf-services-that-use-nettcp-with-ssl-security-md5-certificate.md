@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ae3766e2045b5834fbf6ea20415942413b1590c0
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 9e8fdb54bddc32c08adbe114e2d46e2508585bc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858477"
 ---
 ### <a name="wcf-services-that-use-nettcp-with-ssl-security-and-md5-certificate-authentication"></a>Servicios de WCF que usan NETTCP con seguridad SSL y autenticación de certificados MD5
@@ -15,4 +15,3 @@ ms.locfileid: "67858477"
 |Ámbito|Secundaria|
 |Versión|4.6|
 |Tipo|Tiempo de ejecución|
-

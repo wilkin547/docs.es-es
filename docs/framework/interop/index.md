@@ -11,10 +11,10 @@ helpviewer_keywords:
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457969"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperar con código no administrado
@@ -34,16 +34,16 @@ Se describe cómo usar los componentes de .NET Framework desde las aplicaciones 
 [Consumir funciones DLL no administradas](consuming-unmanaged-dll-functions.md)  
 Se describe cómo llamar a funciones DLL no administradas mediante la invocación de plataforma.
 
-[Serialización de interoperabilidad](interop-marshaling.md)  
+[Serialización para interoperabilidad](interop-marshaling.md)  
 Se describe la serialización de la interoperabilidad COM y la invocación de plataforma.
 
-[Cómo: Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)  
+[Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)  
 Se describe la asignación entre las excepciones y los valores HRESULT.
 
 [Equivalencia de tipos y tipos de interoperabilidad incrustados](type-equivalence-and-embedded-interop-types.md)  
 Describe cómo la información de tipo para tipos COM está insertada en los ensamblados y cómo Common Language Runtime determina la equivalencia de los tipos COM insertados.
 
-[Cómo: para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Describe cómo producir ensamblados de interoperabilidad primarios con *Tlbimp.exe*  (importador de bibliotecas de tipos).
 
 [Cómo: Registrar ensamblados de interoperabilidad primarios](how-to-register-primary-interop-assemblies.md)  

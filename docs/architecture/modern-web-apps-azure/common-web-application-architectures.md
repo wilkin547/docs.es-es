@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450195"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes

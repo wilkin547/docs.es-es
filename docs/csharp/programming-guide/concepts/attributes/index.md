@@ -2,11 +2,11 @@
 title: Atributos (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141568"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397645"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -75,7 +75,7 @@ La lista de posibles valores `target` se muestra en la tabla siguiente.
 |`event`|evento|
 |`method`|Método o descriptores de acceso de propiedad `get` y `set`|
 |`param`|Parámetros de método o parámetros de descriptor de acceso de propiedad `set`|
-|`property`|Propiedad.|
+|`property`|Property|
 |`return`|Valor devuelto de un método, indexador de propiedad o descriptor de acceso de propiedad `get`|
 |`type`|Estructura, clase, interfaz, enumeración o delegado|
 
@@ -101,8 +101,8 @@ En el ejemplo siguiente, se muestra cómo aplicar atributos a métodos, parámet
 
 La lista siguiente incluye algunos de los usos comunes de atributos en el código:
 
-- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para más información, consulte <xref:System.Web.Services.WebMethodAttribute>.
-- Describir cómo serializar parámetros de método al interoperar con código nativo. Para más información, consulte <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, consulta <xref:System.Web.Services.WebMethodAttribute>.
+- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, consulta <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Describir las propiedades COM para clases, métodos e interfaces.
 - Llamar al código no administrado mediante la clase <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Describir los ensamblados en cuanto a título, versión, descripción o marca.

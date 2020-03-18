@@ -3,12 +3,12 @@ title: Prueba unitaria de C# con NUnit y .NET Core
 description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y NUnit.'
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157276"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240888"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Prueba unitaria de C# con NUnit y .NET Core
 
@@ -87,7 +87,7 @@ dotnet new nunit
 
 El comando [dotnet new](../tools/dotnet-new.md) crea un proyecto de prueba que usa NUnit como la biblioteca de pruebas. La plantilla generada configura el ejecutor de pruebas en el archivo *PrimeService.Tests.csproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
 El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias. En el paso anterior, `dotnet new` agrega el SDK de prueba de Microsoft, el marco de pruebas de NUnit y el adaptador de prueba de NUnit. Ahora, agregue la biblioteca de clases `PrimeService` como otra dependencia al proyecto. Use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
@@ -120,35 +120,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 Escribirá una prueba de errores, la aprobará y, luego, repetirá el proceso. En el directorio *PrimeService.Tests*, cambie el nombre del archivo *UnitTest1.cs* por *PrimeService_IsPrimeShould.cs* y reemplace todo su contenido por el código siguiente:
 
-```csharp
-using NUnit.Framework;
-using Prime.Services;
-
-namespace Prime.UnitTests.Services
-{
-    [TestFixture]
-    public class PrimeService_IsPrimeShould
-    {
-        [Test]
-        public void IsPrime_InputIs1_ReturnFalse()
-        {
-            PrimeService primeService = CreatePrimeService();
-            var result = primeService.IsPrime(1);
-
-            Assert.IsFalse(result, "1 should not be prime");
-        }
-
-        /*
-        More tests
-        */
-
-        private PrimeService CreatePrimeService()
-        {
-             return new PrimeService();
-        }
-    }
-}
-```
+[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 El atributo `[TestFixture]` indica una clase que contiene pruebas unitarias. El atributo `[Test]` indica que un método es un método de prueba.
 
@@ -171,11 +143,11 @@ En el directorio *unit-testing-using-nunit*, vuelva a ejecutar `dotnet test`. El
 
 ## <a name="adding-more-features"></a>Agregar más características
 
-Ahora que la prueba se ha superado, es el momento de escribir más. Hay otros casos simples para números primos: 0, -1. Puede agregar pruebas nuevas con el atributo `[Test]`, pero enseguida este proceso se hace tedioso. Hay otros atributos de NUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `[TestCase]` se usa para crear un conjunto de pruebas que ejecutan el mismo código pero tienen diferentes argumentos de entrada. Puede usar el atributo `[TestCase]` para especificar valores para esas entradas.
+Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregar pruebas nuevas con el atributo `[Test]`, pero enseguida este proceso se hace tedioso. Hay otros atributos de NUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `[TestCase]` se usa para crear un conjunto de pruebas que ejecutan el mismo código pero tienen diferentes argumentos de entrada. Puede usar el atributo `[TestCase]` para especificar valores para esas entradas.
 
 En lugar de crear pruebas, aplique este atributo para crear una sola prueba controlada por datos. La prueba controlada por datos es un método que prueba varios valores menores que dos, que es el número primo menor:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Ejecute `dotnet test`, y dos de estas pruebas no se superarán. Para superar todas las pruebas, cambie la cláusula `if` al principio del método `Main` en el archivo *PrimeService.cs*:
 

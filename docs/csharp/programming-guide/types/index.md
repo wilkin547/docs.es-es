@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 2fec7b5c36173bf4a99b35cc2bf9e3ca26354a11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673399"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397639"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -205,4 +205,3 @@ Para obtener más información, vea los temas siguientes:
 - [Guía de programación de C#](../index.md)
 - [Conversión de tipos de datos XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tipos enteros](../../language-reference/builtin-types/integral-numeric-types.md)
- 

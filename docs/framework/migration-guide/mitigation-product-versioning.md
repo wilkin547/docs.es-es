@@ -1,15 +1,15 @@
 ---
-title: 'Mitigación: control de versiones de producto'
+title: 'Mitigación: Control de versiones de producto'
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 ms.openlocfilehash: 64a68d2b79a0a3ccdd806949ffd6cb3760974390
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457824"
 ---
-# <a name="mitigation-product-versioning"></a>Mitigación: control de versiones de producto
+# <a name="mitigation-product-versioning"></a>Mitigación: Control de versiones de producto
 
 En .NET Framework 4.6 y versiones posteriores, el control de versiones del producto ha cambiado con respecto a las versiones anteriores de .NET Framework (.NET Framework 4, 4.5, 4.5.1 y 4.5.2).
 
@@ -29,7 +29,7 @@ Estos son los cambios detallados:
 
 En general, las aplicaciones deben depender de las técnicas recomendadas para detectar elementos como la versión del tiempo de ejecución de .NET Framework y el directorio de instalación:
 
-- Para detectar la versión de tiempo de ejecución de .NET Framework, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](how-to-determine-which-versions-are-installed.md).
+- Para detectar la versión de runtime de .NET Framework, consulte el artículo sobre la [determinación de las versiones instaladas de .NET Framework](how-to-determine-which-versions-are-installed.md).
 
 - Para determinar la ruta de instalación de .NET Framework, utilice el valor de la entrada `InstallPath` en la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.
 

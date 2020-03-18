@@ -7,10 +7,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625857"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (Referencia de C#)
@@ -65,7 +65,7 @@ En el ejemplo siguiente se muestra la implementación de una interfaz. En este e
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Interfaces](~/_csharplang/spec/interfaces.md) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md) y la especificación de características de [Miembros de interfaz predeterminados (C# 8.0)](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 

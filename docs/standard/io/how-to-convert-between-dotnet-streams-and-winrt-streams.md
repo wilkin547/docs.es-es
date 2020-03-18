@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159473"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Procedimiento Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa (solo Windows)

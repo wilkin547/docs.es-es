@@ -4,17 +4,17 @@ description: Información general sobre la herramienta dotnet-svcutil de WCF de 
 author: mlacouture
 ms.date: 02/22/2019
 ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920949"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Herramienta dotnet-svcutil de WCF para .NET Core
 
 La herramienta **dotnet-svcutil** de Windows Communication Foundation (WCF) es una herramienta de .NET que recupera metadatos de un servicio web en una ubicación de red o de un archivo WSDL, y genera una clase de WCF que contiene métodos de proxy de cliente que acceden a las operaciones del servicio web.
 
-Similar a la herramienta [**de utilidad de metadatos de ServiceModel (Svcutil.exe)** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para proyectos de .NET Framework, **dotnet-svcutil** es una herramienta de línea de comandos para generar una referencia de servicio web compatible con proyectos de .NET Core y .NET Standard.
+Similar a la herramienta [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para proyectos de .NET Framework, **dotnet-svcutil** es una herramienta de línea de comandos para generar una referencia de servicio web compatible con proyectos de .NET Core y .NET Standard.
 
 La herramienta **dotnet-svcutil** es una alternativa al proveedor de servicios conectados de Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que se distribuyó por primera vez en la versión 15.5 de Visual Studio 2017. La herramienta multiplataforma **dotnet-svcutil**, como herramienta de .NET, está disponible en Linux, macOS y Windows.
 
@@ -25,12 +25,12 @@ La herramienta **dotnet-svcutil** es una alternativa al proveedor de servicios c
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 - [SDK de .NET Core 2.1](https://dotnet.microsoft.com/download) o versiones posteriores
 - Su editor de código favorito
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 - [SDK de .NET Core 1.0.4](https://dotnet.microsoft.com/download) o versiones posteriores
 - Su editor de código favorito
@@ -68,13 +68,13 @@ Desde una ventana de comandos de Windows, Mac OS o Linux, siga estos pasos:
     ```
 
 3. Instale el [paquete NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como herramienta CLI:  <!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
     Abra el archivo de proyecto `HelloSvcutil.csproj` en su editor, edite el elemento `Project` y agregue el [paquete NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como referencia de la herramienta CLI, usando el siguiente código:
 
     ```xml
@@ -93,13 +93,13 @@ Desde una ventana de comandos de Windows, Mac OS o Linux, siga estos pasos:
 
 4. Ejecute el comando _dotnet-svcutil_ para generar el archivo de referencia del servicio web de la siguiente manera:
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -153,16 +153,16 @@ El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_
 
 6. Vaya a la dirección URL indicada en la consola (por ejemplo, `http://localhost:5000`) en el explorador web.
 
-Debería ver los siguientes resultados: "Hello dotnet-svcutil!"
+Debería ver el siguiente resultado: "Hello dotnet-svcutil!".
 
 Para obtener una descripción detallada de los parámetros de la herramienta `dotnet-svcutil`, invoque la herramienta pasando el parámetro de ayuda del siguiente modo:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help

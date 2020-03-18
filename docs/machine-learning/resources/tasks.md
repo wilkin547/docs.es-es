@@ -3,11 +3,11 @@ title: Tareas de aprendizaje automático
 description: Explore las diferentes tareas de aprendizaje automático y las tareas asociadas que se admiten en ML.NET.
 ms.date: 12/23/2019
 ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745107"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397792"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tareas de aprendizaje automático en ML.NET
 
@@ -56,7 +56,7 @@ Los datos de la columna de características de entrada deben ser un vector de ta
 
 Estos instructores generan las columnas siguientes:
 
-| Nombre de columna de salida | Tipo de columna | Descripción|
+| Nombre de columna de salida | Tipo de columna | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Puntuación sin procesar calculada por el modelo|
 | `PredictedLabel` | <xref:System.Boolean> | Etiqueta de predicción, según el signo de la puntuación. Una puntuación negativa se asigna a `false` y una positiva a `true`.|
@@ -94,7 +94,7 @@ La columna de características debe ser un vector de tamaño fijo de <xref:Syste
 
 Este instructor produce lo siguiente:
 
-| Nombre de archivo de salida | Tipo | Descripción|
+| Nombre de archivo de salida | Tipo | Description|
 | -- | -- | -- |
 | `Score` | Vector de <xref:System.Single> | Puntuaciones de todas las clases. Un valor más alto indica mayor probabilidad de que caigan en la clase asociada. Si el elemento i-th tiene el valor más grande, el índice de la etiqueta de predicción sería i. Tenga en cuenta que i es el índice de base cero. |
 | `PredictedLabel` | Tipo de [clave](xref:Microsoft.ML.Data.KeyDataViewType) | Índice de la etiqueta de predicción. Si su valor es i, la etiqueta real sería la categoría de i-th en el tipo de etiqueta de entrada con valores de clave. |
@@ -127,7 +127,7 @@ Los datos de la columna de etiquetas de entrada deben ser <xref:System.Single>.
 
 Los instructores para esta tarea producen lo siguiente:
 
-| Nombre de archivo de salida | Tipo | Descripción|
+| Nombre de archivo de salida | Tipo | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Puntuación sin procesar que el modelo predijo |
 
@@ -151,7 +151,7 @@ Los datos de las características de entrada deben ser <xref:System.Single>. No 
 
 Este instructor produce lo siguiente:
 
-| Nombre de archivo de salida | Tipo | Descripción|
+| Nombre de archivo de salida | Tipo | Description|
 | -- | -- | -- |
 | `Score` | Vector de <xref:System.Single> | Las distancias de los datos especificados apuntan a todos los centroides de los clústeres |
 | `PredictedLabel` | Tipo de [clave](xref:Microsoft.ML.Data.KeyDataViewType) | El índice del clúster más cercano predicho por el modelo. |
@@ -183,7 +183,7 @@ Las características de entrada deben ser un vector de tamaño fijo de <xref:Sys
 
 Este instructor produce lo siguiente:
 
-| Nombre de archivo de salida | Tipo | Descripción|
+| Nombre de archivo de salida | Tipo | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Puntuación no negativa sin enlazar que ha calculado el modelo de detección de anomalías |
 | `PredictedLabel` | <xref:System.Boolean> | Un valor true o false que representa si la entrada es una anomalía (PredictedLabel=true) o no (PredictedLabel=false) |
@@ -207,7 +207,7 @@ Los datos de la característica deben ser un vector de tamaño fijo de <xref:Sys
 
 Este instructor produce lo siguiente:
 
-| Nombre de archivo de salida | Tipo | Descripción|
+| Nombre de archivo de salida | Tipo | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Puntuación sin enlazar que ha calculado el modelo para determinar la predicción |
 

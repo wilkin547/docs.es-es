@@ -11,10 +11,10 @@ helpviewer_keywords:
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160227"
 ---
 # <a name="managed-execution-process"></a>proceso de ejecución administrada
@@ -40,7 +40,7 @@ ms.locfileid: "78160227"
 ## <a name="choosing-a-compiler"></a>Elegir un compilador  
  Para aprovechar las ventajas que ofrece Common Language Runtime (CLR), deben emplearse uno o varios compiladores de lenguaje destinados al motor en tiempo de ejecución, como Visual Basic, C#, Visual C++, F# o uno de los muchos compiladores de otros fabricantes, como un compilador Eiffel, Perl o COBOL.  
   
- Como se ejecuta en un entorno multilenguaje, el motor en tiempo de ejecución es compatible con una gran variedad de tipos de datos y características de lenguajes. El compilador de lenguaje utilizado determina las características en tiempo de ejecución que están disponibles, y el código se diseña con esas características. El compilador, y no el motor en tiempo de ejecución, es el que establece la sintaxis que se debe utilizar en el código. Si los componentes escritos en otros lenguajes deben poder usar plenamente el componente, los tipos exportados de ese componente solo deben exponer las características del lenguaje incluidas en [Independencia del lenguaje y componentes independientes del lenguaje](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Puede utilizar el atributo <xref:System.CLSCompliantAttribute> para garantizar que su código es conforme a CLS. Para obtener más información, consulta [Independencia del lenguaje y componentes independientes del lenguaje](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Como se ejecuta en un entorno multilenguaje, el motor en tiempo de ejecución es compatible con una gran variedad de tipos de datos y características de lenguajes. El compilador de lenguaje utilizado determina las características en tiempo de ejecución que están disponibles, y el código se diseña con esas características. El compilador, y no el motor en tiempo de ejecución, es el que establece la sintaxis que se debe utilizar en el código. Si los componentes escritos en otros lenguajes deben poder usar plenamente el componente, los tipos exportados de ese componente solo deben exponer las características del lenguaje incluidas en [Independencia del lenguaje y componentes independientes del lenguaje](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Puede utilizar el atributo <xref:System.CLSCompliantAttribute> para garantizar que su código es conforme a CLS. Para más información, consulte [Independencia del lenguaje y componentes independientes del lenguaje](../../docs/standard/language-independence-and-language-independent-components.md).  
   
  [Volver al principio](#introduction)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "78160227"
 - [Metadatos y componentes autodescriptivos](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (Ensamblador de IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Seguridad](../../docs/standard/security/index.md)
-- [Interoperar con código no administrado](../../docs/framework/interop/index.md)
+- [Interoperating with Unmanaged Code](../../docs/framework/interop/index.md) (Interoperar con código no administrado)
 - [Implementación](../../docs/framework/deployment/net-framework-applications.md)
 - [Ensamblados de .NET](assembly/index.md)
 - [Dominios de aplicación](../../docs/framework/app-domains/application-domains.md)

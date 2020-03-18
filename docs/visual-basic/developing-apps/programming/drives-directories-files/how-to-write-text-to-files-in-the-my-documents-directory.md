@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para escribir texto en archivos del directorio Mis documentos
+title: 'Cómo: Escribir texto en archivos del directorio Mis documentos'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
 ms.openlocfilehash: bc62f2bc63a2ea185b8ea4c8d271dd28d347d6f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334521"
 ---
-# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedimiento para escribir texto en archivos del directorio Mis documentos en Visual Basic
+# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Cómo: Escribir texto en archivos del directorio Mis documentos en Visual Basic
 
 El objeto `My.Computer.FileSystem.SpecialDirectories` le permite tener acceso a los directorios especiales, como el directorio **MyDocuments**.  
   

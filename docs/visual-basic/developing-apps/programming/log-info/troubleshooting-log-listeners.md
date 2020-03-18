@@ -1,5 +1,5 @@
 ---
-title: 'Solución del problema: agentes de escucha de registro'
+title: 'Solución de problemas: Agentes de escucha de registro'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
 ms.openlocfilehash: dd139935dae7fe4d1334b861e6590df29bab7202
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74346853"
 ---
-# <a name="troubleshooting-log-listeners-visual-basic"></a>Solución del problema: Agentes de escucha de registro (Visual Basic)
+# <a name="troubleshooting-log-listeners-visual-basic"></a>Solucionar problemas: Agentes de escucha del Registro (Visual Basic)
 
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación.  
   
  Para determinar qué agentes de escucha de registro reciben esos mensajes, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
- El objeto `Log` puede usar el filtrado del registro para limitar la cantidad de información que registra. Si los filtros se configuran de manera incorrecta, los registros pueden contener información equivocada. Para más información sobre el filtrado, vea [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ El objeto `Log` puede usar el filtrado del registro para limitar la cantidad de información que registra. Si los filtros se configuran de manera incorrecta, los registros pueden contener información equivocada. Para obtener más información sobre los filtros, vea [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  En cambio, si un registro se configura incorrectamente, puede necesitar más información sobre su configuración actual. Puede obtener esta información mediante la propiedad `TraceSource` avanzada del registro.  
   
@@ -37,7 +37,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
      [!code-vb[VbVbalrMyApplicationLog#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#19)]  
   
-     Para más información, consulte <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
+     Para obtener más información, consulta <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
 ## <a name="see-also"></a>Vea también
 

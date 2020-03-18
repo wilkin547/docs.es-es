@@ -7,11 +7,11 @@ ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503837"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397984"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Cómo comprobar que .NET Core ya está instalado
 

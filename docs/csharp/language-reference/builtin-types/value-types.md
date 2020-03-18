@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625952"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398272"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
 Los *tipos de valor* y los [tipos de referencia](../keywords/reference-types.md) son las dos categorías principales de tipos de C#. Una variable de un tipo de valor contiene una instancia del tipo. Esto difiere de una variable de un tipo de referencia, que contiene una referencia a una instancia del tipo. De forma predeterminada, al [asignar](../operators/assignment-operator.md), pasar un argumento a un método o devolver el resultado de un método, se copian los valores de variable. En el caso de las variables de tipo de valor, se copian las instancias de tipo correspondientes. En el ejemplo siguiente se muestra ese comportamiento:
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
 Como se muestra en el ejemplo anterior, las operaciones en una variable de tipo de valor solo afectan a esa instancia del tipo de valor, almacenado en la variable.
 
 Si un tipo de valor contiene un miembro de datos de un tipo de referencia, solo se copia la referencia a la instancia del tipo de referencia al copiar una instancia de tipo de valor. Tanto la instancia de tipo de valor original como la copia tienen acceso a la misma instancia de tipo de referencia. En el ejemplo siguiente se muestra ese comportamiento:
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > Para que el código sea menos propenso a errores y más sólido, defina y use tipos de valor inmutables. En este artículo se usan tipos de valor mutables solo con fines de demostración.

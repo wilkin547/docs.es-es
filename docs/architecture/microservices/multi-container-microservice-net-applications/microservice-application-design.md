@@ -3,10 +3,10 @@ title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
 ms.date: 10/02/2018
 ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76965768"
 ---
 # <a name="design-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
