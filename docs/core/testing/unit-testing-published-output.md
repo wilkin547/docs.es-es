@@ -5,10 +5,10 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714264"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Prueba de la salida publicada con vstest dotnet

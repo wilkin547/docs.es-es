@@ -3,11 +3,11 @@ title: NuGet y bibliotecas de .NET
 description: Procedimientos recomendados para el empaquetado con NuGet para bibliotecas de. NET.
 ms.date: 01/15/2019
 ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731376"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398536"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ Las dependencias de paquetes NuGet se tratan detalladamente en el artículo [Dep
 
 Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nuspec). La tabla siguiente contiene los metadatos principales que deben proporcionar todos los paquetes de NuGet.org:
 
-| Nombre de la propiedad de MSBuild              | Nombre de nuspec              | Descripción  |
+| Nombre de la propiedad de MSBuild              | Nombre de nuspec              | Description  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identificador del paquete. Se puede reservar un prefijo del identificador si cumple los [criterios](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Versión del paquete NuGet. Para información, vea [NuGet package version](./versioning.md#nuget-package-version) (Versión del paquete NuGet).             |

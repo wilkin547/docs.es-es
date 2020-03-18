@@ -4,12 +4,12 @@ description: Procedimiento para administrar los problemas de certificación con 
 author: thraka
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: b16ef4074f829246df0aedebf7ffe4df75faed51
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78165354"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146754"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Certificación de macOS Catalina y el impacto en las descargas y proyectos de .NET Core
 
@@ -78,7 +78,7 @@ Para obtener más información sobre cómo solucionar problemas de certificados 
 ## <a name="default-entitlements"></a>Derechos predeterminados
 
 El host predeterminado de .NET Core (el comando `dotnet`) tiene un conjunto de derechos predeterminados. Estos derechos son necesarios para el funcionamiento correcto de .NET Core. Es posible que la aplicación necesite derechos adicionales, en cuyo caso tendrá que generar y usar un archivo [appHost](#apphost-is-disabled-by-default) y, después, agregar los derechos necesarios de forma local.
- 
+
 Conjunto predeterminado de derechos para .NET Core:
 
 - `com.apple.security.cs.allow-jit`

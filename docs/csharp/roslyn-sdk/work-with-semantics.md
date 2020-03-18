@@ -3,12 +3,12 @@ title: Trabajar con el modelo semántico del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción del tipo que se usa para entender y manipular el modelo semántico del código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105665"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156940"
 ---
 # <a name="work-with-semantics"></a>Trabajar con semántica
 
@@ -19,7 +19,7 @@ Los [árboles de sintaxis](work-with-syntax.md) representan la estructura léxic
 - un método
 - una variable local
 
-Aunque cada uno de ellos es exclusivamente diferente, determinar a cuál hace referencia realmente un identificador suele exigir una comprensión profunda de las reglas del lenguaje. 
+Aunque cada uno de ellos es exclusivamente diferente, determinar a cuál hace referencia realmente un identificador suele exigir una comprensión profunda de las reglas del lenguaje.
 
 Hay elementos de programa representados en el código fuente y, además, los programas pueden hacer referencia a bibliotecas compiladas anteriormente, empaquetadas en archivos de ensamblado. Aunque no hay ningún código fuente y, por tanto, ningún nodo ni árbol de sintaxis, disponible para los ensamblados, los programas aún pueden hacer referencia a los elementos incluidos en ellos.
 
@@ -29,7 +29,7 @@ Además de un modelo sintáctico del código fuente, un modelo semántico encaps
 
 ## <a name="compilation"></a>Compilación
 
-Una compilación es una representación de todo lo necesario para compilar un programa de C# o Visual Basic, lo que incluye todas las referencias de ensamblado, las opciones de compilador y los archivos de origen. 
+Una compilación es una representación de todo lo necesario para compilar un programa de C# o Visual Basic, lo que incluye todas las referencias de ensamblado, las opciones de compilador y los archivos de origen.
 
 Dado que toda esta información está en un solo lugar, los elementos incluidos en el código fuente pueden describirse con más detalle. La compilación representa cada tipo declarado, miembro o variable como un símbolo. La compilación contiene una serie de métodos que ayudan a encontrar y relacionar los símbolos que se han declarado en el código fuente o importado como metadatos desde un ensamblado.
 
@@ -37,7 +37,7 @@ Al igual que los árboles de sintaxis, las compilaciones son inmutables. Despué
 
 ## <a name="symbols"></a>Símbolos
 
-Un símbolo representa un elemento diferenciado declarado por el código fuente o importado desde un ensamblado como metadatos. Cada espacio de nombres, tipo, método, propiedad, campo, evento, parámetro o variable local se representa mediante un símbolo. 
+Un símbolo representa un elemento diferenciado declarado por el código fuente o importado desde un ensamblado como metadatos. Cada espacio de nombres, tipo, método, propiedad, campo, evento, parámetro o variable local se representa mediante un símbolo.
 
 Una serie de métodos y propiedades del tipo <xref:Microsoft.CodeAnalysis.Compilation> ayudan a encontrar símbolos. Por ejemplo, puede buscar el símbolo de un tipo declarado por su nombre de metadatos común. También puede acceder a la tabla de símbolos completa como un árbol de símbolos enraizado por el espacio de nombres global.
 
@@ -49,7 +49,7 @@ Los símbolos son similares en concepto al sistema de tipos de CLR representado 
 
 ## <a name="semantic-model"></a>Modelo semántico
 
-Un modelo semántico representa toda la información semántica de un solo archivo de origen. Puede usarlo para descubrir lo siguiente: 
+Un modelo semántico representa toda la información semántica de un solo archivo de origen. Puede usarlo para descubrir lo siguiente:
 
 - Los símbolos a los que se hace referencia en una ubicación concreta del origen.
 - El tipo resultante de cualquier expresión.

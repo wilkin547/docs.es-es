@@ -6,11 +6,11 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733309"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397762"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Implementación de un modelo en una ASP.NET Core Web API
 
@@ -186,7 +186,7 @@ Para procesar las solicitudes HTTP entrantes, cree un controlador.
     }
     ```
 
-Este código asigna `PredictionEnginePool` al pasarlo al constructor del controlador que se obtiene a través de una inserción de dependencias. Luego, el método `Post` del controlador `Predict` usa `PredictionEnginePool` para hacer predicciones con el `SentimentAnalysisModel` registrado en la clase `Startup` y devuelve los resultados al usuario si se realiza correctamente.
+Este código asigna `PredictionEnginePool` al pasarlo al constructor del controlador que se obtiene a través de una inserción de dependencias. Luego, el método `Predict` del controlador `Post` usa `PredictionEnginePool` para hacer predicciones con el `SentimentAnalysisModel` registrado en la clase `Startup` y devuelve los resultados al usuario si se realiza correctamente.
 
 ## <a name="test-web-api-locally"></a>Prueba local de Web API
 

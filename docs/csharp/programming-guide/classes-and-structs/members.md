@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705514"
 ---
 # <a name="members-c-programming-guide"></a>Miembros (Guía de programación de C#)
@@ -18,7 +18,7 @@ Las clases y structs tienen miembros que representan sus datos y comportamiento.
   
  En la tabla siguiente se enumeran los tipos de miembros que puede contener una clase o struct:  
   
-|Miembro|Descripción|  
+|Member|Description|  
 |------------|-----------------|  
 |[Campos](./fields.md)|Los campos son variables declaradas en el ámbito de clase. Un campo puede ser un tipo numérico integrado o una instancia de otra clase. Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.|  
 |[Constantes](./constants.md)|Las constantes son campos cuyo valor se establece en tiempo de compilación y no se puede cambiar.|  

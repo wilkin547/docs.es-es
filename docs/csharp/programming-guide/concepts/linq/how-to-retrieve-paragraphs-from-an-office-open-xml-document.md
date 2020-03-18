@@ -3,10 +3,10 @@ title: Procedimiento para recuperar párrafos de un documento XML abierto de Off
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
 ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347459"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Procedimiento para recuperar párrafos de un documento XML abierto de Office (C#)
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- En este ejemplo se genera el resultado siguiente cuando se ejecuta con el documento descrito en [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML [C#]):  
+ En este ejemplo se genera el resultado siguiente cuando se ejecuta con el documento descrito en [Crear el documento de origen de Office Open XML (C#)](./creating-the-source-office-open-xml-document.md):  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 7203e1271da66e78bfbd70717b0f5e536a7ebd86
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 28e77304edee617adc1422e6a52d0a617cd9b3bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712525"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173411"
 ---
 # <a name="error-c-reference"></a>#error (Referencia de C#)
 `#error` permite generar un error [CS1029](../compiler-messages/cs1029.md) definido por el usuario desde una ubicación específica en el código. Por ejemplo:  
@@ -31,9 +31,9 @@ ms.locfileid: "75712525"
 // preprocessor_error.cs  
 // CS1029 expected  
 #define DEBUG  
-class MainClass   
+class MainClass
 {  
-    static void Main()   
+    static void Main()
     {  
 #if DEBUG  
 #error DEBUG is defined  

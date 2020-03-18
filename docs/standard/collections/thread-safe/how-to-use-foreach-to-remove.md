@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar ForEach para quitar elementos de BlockingCollection
+title: 'Cómo: Utilizar ForEach para quitar elementos de BlockingCollection'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711238"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Procedimiento para usar ForEach para quitar elementos de BlockingCollection
+# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Cómo: Utilizar ForEach para quitar elementos de BlockingCollection
 
 Además de obtener los elementos de <xref:System.Collections.Concurrent.BlockingCollection%601> mediante los métodos <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> y <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, también puede usar [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) en Visual Basic) para quitar elementos hasta que se complete la adición y se vacíe la colección. Esto se denomina una *enumeración de mutación* o *enumeración de consumo* porque, a diferencia de un bucle `foreach` (`For Each`) típico, este enumerador modifica la colección de origen mediante la eliminación de elementos.
 

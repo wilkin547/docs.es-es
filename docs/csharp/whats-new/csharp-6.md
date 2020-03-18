@@ -3,11 +3,11 @@ title: Novedades de C# 6 - Guía de C#
 description: Obtenga información sobre las nuevas características de la versión 6 de C#
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971385"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398158"
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
@@ -91,7 +91,7 @@ El *operador condicional NULL* realiza comprobaciones NULL de una forma mucho m�
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-En el ejemplo anterior, se asigna `null` a la variable `first` si el objeto person es `null`. De lo contrario, se le asigna el valor de la propiedad `FirstName`. Y lo más importante es que `?.` significa que esta línea de código no genera una excepción `NullReferenceException` si la variable `person` es `null`. En su lugar, se cortocircuita y devuelve `null`. También puede usar un operador condicional NULL para el acceso de matriz o indizador. Reemplace `[]` por `?[]` en la expresión de índice.
+En el ejemplo anterior, se asigna `first` a la variable `null` si el objeto person es `null`. De lo contrario, se le asigna el valor de la propiedad `FirstName`. Y lo más importante es que `?.` significa que esta línea de código no genera una excepción `NullReferenceException` si la variable `person` es `null`. En su lugar, se cortocircuita y devuelve `null`. También puede usar un operador condicional NULL para el acceso de matriz o indizador. Reemplace `[]` por `?[]` en la expresión de índice.
 
 La siguiente expresión devuelve `string`, independientemente del valor de `person`. A menudo se usa esta construcción con el operador de *fusión nula* para asignar valores predeterminados cuando una de las propiedades es `null`. Si la expresión se cortocircuita, se asigna tipo al valor `null` devuelto para que coincida con la expresión completa.
 

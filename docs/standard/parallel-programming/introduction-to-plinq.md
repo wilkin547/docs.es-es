@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75632368"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
@@ -26,7 +26,7 @@ Parallel LINQ (PLINQ) es una implementación en paralelo del modelo LINQ. En muc
 A través de la ejecución en paralelo, PLINQ puede alcanzar importantes mejoras de rendimiento con respecto al código heredado en ciertos tipos de consultas, a menudo solo con agregar la operación de consulta <xref:System.Linq.ParallelEnumerable.AsParallel%2A> al origen de datos. Sin embargo, el paralelismo puede presentar sus propias complejidades y no todas las operaciones de consulta se ejecutan más rápido en PLINQ. De hecho, la paralelización en realidad ralentiza ciertas consultas. Por lo tanto, debe entender cómo ciertos problemas, como la ordenación, afectan a las consultas en paralelo. Para más información, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
 > [!NOTE]
-> En esta documentación, se utilizan expresiones lambda para definir delegados en PLINQ. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md) (Expresiones lambda en PLINQ y TPL).
+> En esta documentación, se utilizan expresiones lambda para definir delegados en PLINQ. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 En el resto del artículo se ofrece información general de las principales clases PLINQ y se analiza cómo crear consultas PLINQ. Cada sección incluye vínculos a información más detallada y ejemplos de código.
 

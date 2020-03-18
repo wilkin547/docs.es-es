@@ -4,11 +4,11 @@ description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673282"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398338"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -173,4 +173,4 @@ Todas estas características ofrecen capacidades nuevas e interesantes para los 
 
 Pero C# se está usando cada vez más. .NET Core ahora tiene como destino cualquier sistema operativo y tiene puesta la mirada en la nube y la portabilidad.  Por supuesto, esas nuevas capacidades ocupan las ideas y el tiempo de los diseñadores de lenguaje, además de ofrecer nuevas características.
 
-_Artículo_ [_publicado originalmente en el blog de NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, por cortesía de Erik Dietrich y Patrick Smacchia._
+_Artículo_ [_publicado originalmente en el blog de NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, por cortesía de Erik Dietrich y Patrick Smacchia._

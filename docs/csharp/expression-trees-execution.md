@@ -4,12 +4,12 @@ description: Obtenga información sobre la ejecución de árboles de expresión 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037115"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146026"
 ---
 # <a name="executing-expression-trees"></a>Ejecución de árboles de expresión
 
@@ -21,7 +21,7 @@ No es código compilado y ejecutable. Si quiere ejecutar el código de .NET que 
 ## <a name="lambda-expressions-to-functions"></a>Expresiones lambda a funciones
 
 Puede convertir cualquier objeto LambdaExpression o cualquier tipo derivado de LambdaExpression en lenguaje intermedio ejecutable. Otros tipos de expresión no se pueden convertir directamente a código. Esta restricción tiene poco efecto en la práctica. Las expresiones lambda son los únicos tipos de expresiones que podría querer ejecutar mediante la conversión a lenguaje intermedio (IL) ejecutable. (Piense lo que significaría ejecutar directamente una `ConstantExpression`. ¿Tendría algún significado útil?). Cualquier árbol de expresión que es una `LambdaExpression` o un tipo derivado de `LambdaExpression` se puede convertir a lenguaje intermedio.
-El tipo de expresión `Expression<TDelegate>` es el único ejemplo concreto en las bibliotecas de .NET Core. Se usa para representar una expresión que se asigna a cualquier tipo de delegado. Dado que este tipo se asigna a un tipo de delegado, .NET puede examinar la expresión y generar el lenguaje intermedio de un delegado adecuado que coincida con la firma de la expresión lambda. 
+El tipo de expresión `Expression<TDelegate>` es el único ejemplo concreto en las bibliotecas de .NET Core. Se usa para representar una expresión que se asigna a cualquier tipo de delegado. Dado que este tipo se asigna a un tipo de delegado, .NET puede examinar la expresión y generar el lenguaje intermedio de un delegado adecuado que coincida con la firma de la expresión lambda.
 
 En la mayoría de los casos, esto crea una asignación simple entre una expresión y su delegado correspondiente. Por ejemplo, un árbol de expresión que se representa por `Expression<Func<int>>` se convertiría a un delegado del tipo `Func<int>`. Para una expresión lambda con cualquier tipo de valor devuelto y lista de argumentos, existe un tipo de delegado que es el tipo de destino para el código ejecutable representado por esa expresión lambda.
 
@@ -50,7 +50,7 @@ No es aconsejable intentar crear cualquier mecanismo de almacenamiento en caché
 
 ## <a name="caveats"></a>Advertencias
 
-Compilar una expresión lambda en un delegado e invocar ese delegado es una de las operaciones más simples que se pueden realizar con un árbol de expresión. Pero incluso con esta sencilla operación, hay advertencias que debe conocer. 
+Compilar una expresión lambda en un delegado e invocar ese delegado es una de las operaciones más simples que se pueden realizar con un árbol de expresión. Pero incluso con esta sencilla operación, hay advertencias que debe conocer.
 
 Las expresiones lambda crean clausuras sobre las variables locales a las que se hace referencia en la expresión. Debe garantizar que las variables que formarían parte del delegado se pueden usar en la ubicación desde la que se llama a `Compile`, y cuando se ejecuta el delegado resultante.
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-El delegado devuelto por este método se clausuró sobre el objeto `constant`, que se eliminó. (Se eliminó porque se declaró en una instrucción `using`). 
+El delegado devuelto por este método se clausuró sobre el objeto `constant`, que se eliminó. (Se eliminó porque se declaró en una instrucción `using`).
 
 Ahora, al ejecutar el delegado devuelto por este método, se producirá una excepción `ObjectDisposedException` en el punto de ejecución.
 

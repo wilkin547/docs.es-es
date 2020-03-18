@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 13600ea01e18ad47e6295653ba3b79ce53ff3257
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157576"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397960"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
 
@@ -157,7 +157,7 @@ Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core 
 
 01. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/Download).
 01. [Descargue e instale el SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
-01. [Instale la extensión de C# desde el Marketplace de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
+01. [Instale la extensión de C# desde el Marketplace de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ::: zone pivot="os-windows"
 

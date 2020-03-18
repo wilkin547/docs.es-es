@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901786"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Protección de datos: DataProtection.AzureStorage usa API nuevas de Azure Storage

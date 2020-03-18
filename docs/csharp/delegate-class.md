@@ -4,12 +4,12 @@ description: Obtenga información sobre las clases de .NET que admiten delegados
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87fdf19c4ea810c5ac4409fe16c3cba9d5fc6574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450926"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146286"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate y la palabra clave `delegate`
 
@@ -19,7 +19,7 @@ En este artículo se tratan las clases de .NET que admiten delegados y sobre có
 
 ## <a name="define-delegate-types"></a>Definición de los tipos delegados
 
-Comencemos con la palabra clave "delegate", ya que es lo que usará principalmente al trabajar con delegados. El código que genere el compilador cuando se usa la palabra clave `delegate` se asignará a las llamadas de método que invocan a miembros de las clases <xref:System.Delegate> y <xref:System.MulticastDelegate>. 
+Comencemos con la palabra clave "delegate", ya que es lo que usará principalmente al trabajar con delegados. El código que genere el compilador cuando se usa la palabra clave `delegate` se asignará a las llamadas de método que invocan a miembros de las clases <xref:System.Delegate> y <xref:System.MulticastDelegate>.
 
 Para definir un tipo de delegado, se usa una sintaxis similar a la definición de una firma de método. Solo hace falta agregar la palabra clave `delegate` a la definición.
 
@@ -37,9 +37,9 @@ El compilador genera una clase derivada de `System.Delegate` que coincide con la
 Observe que puede parecer que la sintaxis declara una variable, pero en realidad declara un *tipo*. Puede definir tipos de delegado dentro de clases, directamente dentro de espacios de nombres o incluso en el espacio de nombres global.
 
 > [!NOTE]
-> No se recomienda declarar tipos de delegado (u otros tipos) directamente en el espacio de nombres global. 
+> No se recomienda declarar tipos de delegado (u otros tipos) directamente en el espacio de nombres global.
 
-El compilador también genera controladores de adición y eliminación para este nuevo tipo, de modo que los clientes de esta clase puedan agregar y quitar métodos de la lista de invocación de una instancia. El compilador forzará que la firma del método que se agrega o se quita coincida con la firma usada al declarar el método. 
+El compilador también genera controladores de adición y eliminación para este nuevo tipo, de modo que los clientes de esta clase puedan agregar y quitar métodos de la lista de invocación de una instancia. El compilador forzará que la firma del método que se agrega o se quita coincida con la firma usada al declarar el método.
 
 ## <a name="declare-instances-of-delegates"></a>Declaración de instancias de delegados
 
@@ -54,7 +54,7 @@ public Comparison<T> comparator;
 ```
 
 El tipo de la variable es `Comparison<T>`, el tipo de delegado definido anteriormente. El nombre de la variable es `comparator`.
- 
+
  El fragmento de código anterior declara una variable de miembro dentro de una clase. También puede declarar variables de delegado que sean variables locales o argumentos para los métodos.
 
 ## <a name="invoke-delegates"></a>Invocación de delegados
@@ -68,7 +68,7 @@ int result = comparator(left, right);
 En la línea anterior, el código *invoca* al método asociado al delegado.
 La variable se trata como un nombre de método y se invoca mediante la sintaxis de llamada de método normal.
 
-Esa línea de código realiza una suposición no segura: No hay ninguna garantía de que se haya agregado un destino en el delegado. Si no se ha asociado ningún destino, la línea anterior haría que se produjese una `NullReferenceException`. Las expresiones que se usan para resolver este problema son más complicadas que una simple comprobación de null y se tratan más adelante en esta [serie](delegates-patterns.md).
+Esta línea de código realiza una suposición arriesgada, ya que no hay ninguna garantía de que se haya agregado un destino al delegado. Si no se ha asociado ningún destino, la línea anterior haría que se produjese una `NullReferenceException`. Las expresiones que se usan para resolver este problema son más complicadas que una simple comprobación de null y se tratan más adelante en esta [serie](delegates-patterns.md).
 
 ## <a name="assign-add-and-remove-invocation-targets"></a>Asignación, adición y eliminación de destinos de invocación
 
@@ -115,10 +115,10 @@ En el ejemplo de Sort() se suele asociar un método de destino único al delegad
 
 La compatibilidad de lenguaje descrita anteriormente proporciona las características y la compatibilidad que normalmente necesitará para trabajar con delegados. Estas características están integradas en dos clases en .NET Core Framework: <xref:System.Delegate> y <xref:System.MulticastDelegate>.
 
-La clase `System.Delegate` y su única subclase directa `System.MulticastDelegate` proporcionan la compatibilidad con el marco para crear delegados, registrar métodos como destinos de delegados e invocar todos los métodos que se registran como un destino del delegado. 
+La clase `System.Delegate` y su única subclase directa `System.MulticastDelegate` proporcionan la compatibilidad con el marco para crear delegados, registrar métodos como destinos de delegados e invocar todos los métodos que se registran como un destino del delegado.
 
 Curiosamente, las clases `System.Delegate` y `System.MulticastDelegate` no son tipos de delegado, pero proporcionan la base para todos los tipos de delegado específicos. El propio proceso de diseño del lenguaje dictaba que no se puede declarar una clase que derive de `Delegate` o `MulticastDelegate`. Las reglas del lenguaje C# lo prohíben.
- 
+
 En cambio, el compilador de C# crea instancias de una clase derivada de `MulticastDelegate` cuando se usa la palabra clave del lenguaje C# para declarar tipos de delegado.
 
 Este diseño tiene sus orígenes en la primera versión de C# y. NET. Uno de los objetivos del equipo de diseño era asegurarse de que el lenguaje aplicaba seguridad de tipos al usar delegados. Esto significaba que debían asegurarse no solo de que los delegados se invocaban con el tipo y el número adecuados de argumentos, sino de que todos los tipos de valor devueltos se indicaban correctamente en tiempo de compilación. Los delegados formaban parte de la versión 1.0 .NET, que apareció antes que los genéricos.

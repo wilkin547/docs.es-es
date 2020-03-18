@@ -1,18 +1,18 @@
 ---
-title: Procedimiento para asignar la información de usuario para agrupar conexiones
+title: 'Cómo: asignar la información de usuario para agrupar conexiones'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048426"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180845"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Procedimiento para asignar la información de usuario para agrupar conexiones
+# <a name="how-to-assign-user-information-to-group-connections"></a>Cómo: asignar la información de usuario para agrupar conexiones
 
  En el ejemplo siguiente se muestra cómo asignar la información del usuario para agrupar las conexiones, presuponiendo que la aplicación establece las variables *UserName*, *SecurelyStoredPassword* y *Domain* antes de que se llame a esta sección del código y que *UserName* es único.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71048426"
 3. Establezca las credenciales y la conexión GroupName para la solicitud web, y llame a **GetResponse** para recuperar un objeto **WebResponse**.  
   
     ```csharp  
-    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
     myWebRequest.ConnectionGroupName = secureGroupName;  
   
     WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -79,7 +79,7 @@ String secureGroupName = Encoding.Default.GetString(updHash);
 // Create a request for a specific URL.  
 WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
   
-myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
 myWebRequest.ConnectionGroupName = secureGroupName;  
   
 WebResponse myWebResponse=myWebRequest.GetResponse();  

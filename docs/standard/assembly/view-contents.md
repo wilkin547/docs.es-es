@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347050"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187390"
 ---
 # <a name="how-to-view-assembly-contents"></a>Procedimiento para ver el contenido de un ensamblado
 
@@ -104,7 +104,7 @@ Al ejecutar el comando *ildasm.exe* en el ensamblado *Hello.exe* y hacer doble c
 
 En la tabla siguiente se explica cada directiva del manifiesto del ensamblado *Hello.exe* usado en el ejemplo:
 
-|Directiva|DESCRIPCIÓN|
+|Directiva|Descripción|
 |---------------|-----------------|
 |**.assembly extern \<nombre del ensamblado>**|Especifica otro ensamblado que contiene elementos a los que hace referencia el módulo actual (en este ejemplo, `mscorlib`).|
 |**.publickeytoken \<token>**|Especifica el token de la clave real del ensamblado al que se hace referencia.|
@@ -118,7 +118,7 @@ En la tabla siguiente se explica cada directiva del manifiesto del ensamblado *H
 
 Un manifiesto de ensamblado puede contener varias directivas diferentes, según el contenido del ensamblado. Para obtener una lista completa de las directivas del manifiesto del ensamblado, vea la documentación de Ecma, especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)”.
 
-- [Estándares de ECMA C# y Common Language Infrastructure](/dotnet/standard/components#applicable-standards)
+- [Estándares de ECMA C# y Common Language Infrastructure](../components.md#applicable-standards)
 - [Estándar ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>Vea también

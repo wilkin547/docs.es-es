@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 90d224080f607cbac96514aaf5ac6d67affef9e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713240"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173554"
 ---
 # <a name="params-c-reference"></a>params (Referencia de C#)
 
@@ -29,9 +29,9 @@ El tipo declarado del parámetro `params` debe ser una matriz unidimensional, co
 
 En el ejemplo siguiente se muestran varias maneras de enviar argumentos a un parámetro `params`.
 
-[!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
+[!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: dd8c2c6b3cfa919970f68f2faae2044568f6c9ac
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457916"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181253"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
 A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
@@ -36,7 +36,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 - En determinadas condiciones, si se utiliza una instrucción `if` para comprobar una condición antes de entrar en un bloque `try` y en la salida del bloque `try`, y se evalúa la misma condición en el bloque `catch` o `finally`, el compilador JIT de 64 bits nuevo quita la condición `if` del bloque `catch` o `finally` cuando optimiza el código. Como resultado, el código dentro de la instrucción `if` en el bloque `catch` o `finally` se ejecuta de forma incondicional.  
   
-<a name="General"></a>   
+<a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>Mitigación de problemas conocidos  
  Si encuentra los problemas mencionados anteriormente, puede solucionarlos realizando las siguientes operaciones:  
   
@@ -46,7 +46,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 - Compilación con el compilador JIT de 64 bits más antiguo. Vea la sección [Mitigación de otros problemas](#Other) sección para obtener más información sobre el procedimiento.  
   
-<a name="Other"></a>   
+<a name="Other"></a>
 ## <a name="mitigation-of-other-issues"></a>Mitigación de otros problemas  
  Si detecta cualquier otra diferencia en el comportamiento entre el código compilado con el compilador de 64 bits antiguo y el compilador de 64 bits nuevo, o entre las versiones de depuración y publicación de la aplicación que se compilan con el nuevo compilador JIT de 64 bits, puede realizar el siguiente procedimiento para compilar la aplicación con el compilador JIT de 64 bits anterior:  
   

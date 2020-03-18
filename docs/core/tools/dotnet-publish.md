@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157004"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146560"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,7 +20,7 @@ ms.locfileid: "78157004"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -48,7 +48,7 @@ La salida del comando `dotnet publish` está lista para la implementación en un
   
   * `PROJECT` es la ruta de acceso y el nombre de archivo de un archivo de proyecto de [C#](csproj.md), F# o Visual Basic, o bien la ruta de acceso a un directorio que contiene un archivo de proyecto de C#, F# o Visual Basic. Si no se especifica el directorio, se toma como predeterminado el actual.
 
-  * `SOLUTION` es la ruta de acceso y el nombre de archivo de un archivo de solución (extensión *.sln*), o bien la ruta de acceso a un directorio que contiene un archivo de solución. Si no se especifica el directorio, se toma como predeterminado el actual. **Disponible a partir del SDK de .NET 3.0.** 
+  * `SOLUTION` es la ruta de acceso y el nombre de archivo de un archivo de solución (extensión *.sln*), o bien la ruta de acceso a un directorio que contiene un archivo de solución. Si no se especifica el directorio, se toma como predeterminado el actual. Disponible desde el SDK de .NET Core 3.0.
 
 ## <a name="options"></a>Opciones
 
@@ -68,9 +68,9 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 
   Imprime una corta ayuda para el comando.
 
-- **`--interactive`** **Disponible a partir del SDK de .NET 3.0.**
+- **`--interactive`**
 
-  Permite que el comando se detenga y espere una entrada o una acción del usuario. Por ejemplo, para completar la autenticación. 
+  Permite que el comando se detenga y espere una entrada o una acción del usuario. Por ejemplo, para completar la autenticación. Disponible desde el SDK de .NET Core 3.0.
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
@@ -84,9 +84,9 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 
   Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.
 
-- **`--nologo`** **Disponible a partir del SDK de .NET 3.0.**
+- **`--nologo`**
 
-  No se muestra la pancarta de inicio ni el mensaje de copyright. 
+  No se muestra la pancarta de inicio ni el mensaje de copyright. Disponible desde el SDK de .NET Core 3.0.
 
 - **`--no-restore`**
 
@@ -102,9 +102,9 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 
   Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino. Si se especifica un identificador de tiempo de ejecución, el valor predeterminado es `true`. Para obtener más información, vea [Publicación de aplicaciones .NET Core](../deploying/index.md) y [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
 
-- **`--no-self-contained`**  **Disponible a partir del SDK de .NET 3.0.**
+- **`--no-self-contained`**
 
-  Equivalente a `--self-contained false`.
+  Equivalente a `--self-contained false`. Disponible desde el SDK de .NET Core 3.0.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -112,7 +112,7 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. El valor predeterminado es `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

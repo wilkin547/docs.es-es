@@ -3,11 +3,11 @@ title: Atributos comunes (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595461"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398386"
 ---
 # <a name="common-attributes-c"></a>Atributos comunes (C#)
 En este tema se describen los atributos que más se usan en los programas de C#.  
@@ -221,13 +221,13 @@ class SampleClass
   
  Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Atributo|DESCRIPCIÓN|Tipo|  
+|Atributo|Description|Tipo|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea del archivo de código fuente desde el que se llama al método.|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [Información del llamador (C#)](../caller-information.md).|`String`|  
   
- Para obtener más información sobre los atributos de información del llamador, vea [Información del llamador (C#)](../caller-information.md).  
+ Para obtener más información sobre los atributos de información del llamador, vea [Caller Information (C#)](../caller-information.md) (Información del llamador (C#)).  
   
 ## <a name="see-also"></a>Vea también
 

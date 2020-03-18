@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452011"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398380"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
 
@@ -170,7 +170,7 @@ Si va a definir un controlador de eventos que no es necesario quitar más tarde,
   
 ### <a name="static-members"></a>Miembros estáticos  
   
-Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
+Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
   
 ### <a name="linq-queries"></a>Consultas LINQ  
   

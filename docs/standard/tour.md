@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160344"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241148"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -41,7 +41,7 @@ Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual B
 
 Las dos líneas siguientes asignan memoria:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 No hay ninguna palabra clave análoga para anular la asignación de memoria, ya que la anulación de la asignación se realiza automáticamente cuando el recolector de elementos no utilizados reclama la memoria a través de su ejecución programada.
 
@@ -49,7 +49,7 @@ El recolector de elementos no utilizados es uno de los servicios que ayudan a ga
 
 En el ejemplo siguiente, el entorno de ejecución devuelve una excepción <xref:System.IndexOutOfRangeException> para activar la protección de la memoria:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Trabajar con recursos no administrados
 
@@ -57,7 +57,7 @@ Algunos objetos hacen referencia a *recursos no administrados*. Los recursos no 
 
 En .NET, los objetos que hacen referencia a recursos no administrados implementan la interfaz de <xref:System.IDisposable>. Cuando haya acabado de usar el objeto, deberá llamar al método <xref:System.IDisposable.Dispose> del objeto, que es el responsable de liberar cualquier recurso no administrado. Los lenguajes .NET ofrecen una [`using` instrucción ](../csharp/language-reference/keywords/using.md) muy útil para esos objetos, como se muestra en el ejemplo siguiente:
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 Cuando el bloque `using` se completa, el entorno de ejecución .NET llama automáticamente al método <xref:System.IDisposable.Dispose> del objeto `stream`, que libera el identificador de archivo. El entorno de ejecución también sigue el mismo procedimiento en caso de que una excepción provoque que el control abandone el bloque.
 
@@ -73,15 +73,15 @@ Un objeto es una instancia de un tipo específico. Las únicas operaciones permi
 
 Los lenguajes .NET están orientados a objetos, con las jerarquías de clases base y derivadas. El entorno de ejecución .NET solo permite llamadas y conversiones de objetos que se alineen con la jerarquía de objetos. Recuerde que cada tipo definido en cualquier lenguaje .NET se deriva del tipo <xref:System.Object> base.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 La seguridad de tipos también se usa para ayudar a aplicar la encapsulación a través de la garantía de la fidelidad de las palabras clave del descriptor de acceso. Las palabras clave del descriptor de acceso son artefactos que controlan el acceso a los miembros de un tipo determinado a través de otro código. Normalmente se usan para distintos tipos de datos dentro de un tipo, que se usan para administrar su comportamiento.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#, Visual Basic y F# admiten *inferencia de tipos* local. La inferencia de tipos significa que el compilador deduce el tipo de la expresión en el lado izquierdo a partir de la expresión en el lado derecho. Esto no significa que la seguridad de tipos se divida o evite. El tipo resultante tiene un tipo seguro con todo lo que ello implica. En el ejemplo anterior, se vuelve a escribir `dog` para introducir la inferencia de tipos, y el resto del ejemplo no se modifica:
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F# tiene incluso más funcionalidades de inferencia de tipos que la inferencia de tipos method-local encontrada en C# y Visual Basic. Para obtener más información, consulte [Inferencia de tipos](../fsharp/language-reference/type-inference.md).
 
@@ -101,7 +101,7 @@ Los genéricos se agregaron para ayudar a los programadores a implementar estruc
 
 En el siguiente ejemplo, se muestra una ejecución básica de programa mediante una instancia de tipos <xref:System.Collections.Generic.List%601>:
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 Para obtener más información, consulte el tema [Información general (genéricos) de tipos genéricos](generics.md).
 
@@ -133,7 +133,7 @@ Según la compatibilidad con el lenguaje, CLR le permite tener acceso a memoria 
 
 El ejemplo siguiente es una versión modificada del método `ToString()` desde la clase `StringBuilder`. Ilustra cómo mediante el código `unsafe` se puede implementar de forma eficiente un algoritmo desplazándose por los fragmentos de memoria directamente:
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712148"
 ---
 # <a name="hello-world----your-first-program"></a>Hola mundo, su primer programa
@@ -25,7 +25,7 @@ En este artículo, usará Visual Studio para crear el tradicional programa "¡H
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 Inicie Visual Studio. Verá la siguiente imagen en Windows:
 
@@ -51,7 +51,7 @@ Press any key to close this window . . .
 
 Presione cualquier tecla para cerrar la ventana.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Inicie Visual Studio para Mac: Verá la siguiente imagen en Mac:
 

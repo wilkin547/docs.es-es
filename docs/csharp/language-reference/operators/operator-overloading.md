@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: cdb35b212d5bfc4cc685fbfd6c294066983709df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451933"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847305"
 ---
 # <a name="operator-overloading-c-reference"></a>Sobrecarga de operadores (referencia de C#)
 
@@ -25,7 +25,7 @@ Use la palabra clave `operator` para declarar un operador. Una declaración de o
 
 En el ejemplo siguiente se muestra una estructura simplificada para representar un número racional. La estructura sobrecarga algunos de los [operadores aritméticos](arithmetic-operators.md):
 
-[!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
 
 Puede ampliar el ejemplo anterior mediante la [definición de una conversión implícita](user-defined-conversion-operators.md) de `int` a `Fraction`. A continuación, los operadores sobrecargados admiten argumentos de esos dos tipos. Es decir, sería posible agregar un valor entero a una fracción y obtener como resultado una fracción.
 
@@ -52,7 +52,7 @@ En la tabla siguiente se proporciona información sobre la posibilidad de sobrec
 > - Operadores `<` y `>`
 > - Operadores `<=` y `>=`
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

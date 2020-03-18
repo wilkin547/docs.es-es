@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para eliminar almacenes de almacenamiento aislado
+title: 'Cómo: Eliminar almacenes de almacenamiento aislado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707832"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>Procedimiento para eliminar almacenes de almacenamiento aislado
+# <a name="how-to-delete-stores-in-isolated-storage"></a>Cómo: Eliminar almacenes de almacenamiento aislado
 La clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona dos métodos para eliminar archivos de almacenamiento aislado:  
   
 - El método de instancia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> no toma ningún argumento y elimina el almacén que lo llama. No se requieren permisos para realizar esta operación. Cualquier código que pueda acceder al almacén puede eliminar alguno o todos los datos que contenga.  

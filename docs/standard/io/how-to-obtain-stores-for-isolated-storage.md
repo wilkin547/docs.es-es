@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para obtener los almacenes de almacenamiento aislado
+title: 'Cómo: Obtener los almacenes de almacenamiento aislado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 ms.openlocfilehash: 7104ba665f60c2d55217a2d8628c85f6e469ad6f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706936"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Procedimiento para obtener los almacenes de almacenamiento aislado
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Cómo: Obtener los almacenes de almacenamiento aislado
 Un almacén aislado expone un sistema de archivos virtual dentro de un compartimiento de datos. La clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona una serie de métodos para interactuar con un almacén aislado. Para crear y recuperar almacenes, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona tres métodos estáticos:  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> devuelve el almacenamiento que está aislado por usuario y ensamblado.  

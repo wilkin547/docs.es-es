@@ -4,12 +4,12 @@ description: En este tutorial avanzado se muestra cómo usar técnicas de coinci
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039190"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156537"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -41,7 +41,7 @@ Considere un área metropolitana importante que usa peajes y precios estipulados
 
 Desde esa descripción breve, puede haber esbozado rápidamente una jerarquía de objetos para modelar este sistema. Sin embargo, los datos provienen de varios orígenes, como otros sistemas de administración de registros de vehículos. Estos sistemas ofrecen distintas clases para modelar esos datos y no se tiene un modelo de objetos único que puede usar. En este tutorial, usará estas clases simplificadas para modelar los datos del vehículo desde dichos sistemas externos, tal como se muestra en el código siguiente:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Puede descargar el código de inicio del repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) de GitHub. Puede ver que las clases de vehículo provienen de distintos sistemas y que están en distintos espacios de nombres. No se puede aprovechar ninguna clase base común distinta de `System.Object`.
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Ese método funciona, pero es redundante. Puede simplificarlo tal como se muestra en el código siguiente:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 A continuación, agregue una función similar para categorizar la hora en los bloques:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 El método anterior no usa la coincidencia de patrones. Es más claro usar una cascada familiar de instrucciones `if`. Sí agrega una `enum` privada para convertir cada intervalo de tiempo en un valor discreto.
 
 Después de usar esos métodos, puede usar otra expresión `switch` con el **patrón de tuplas** para calcular el recargo en los precios. Puede crear una expresión `switch` con los 16 segmentos:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 El código anterior funciona, pero se puede simplificar. Las ocho combinaciones para el fin de semana tienen el mismo peaje. Puede reemplazar las ocho por la siguiente línea:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 Por último, puede quitar las dos horas punta en que se paga el precio regular. Cuando quite esos segmentos, puede reemplazar `false` por un descarte (`_`) en el segmento modificador final. Tendrá el siguiente método finalizado:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 En este ejemplo se resalta una de las ventajas de la coincidencia de patrones: las ramas del patrón se evalúan en orden. Si vuelve a ordenarlas para que una rama anterior controle uno de los últimos casos, el compilador genera una advertencia sobre el código inaccesible. Esas reglas de lenguaje facilitan la realización de las simplificaciones anteriores con la confianza de que el código no cambió.
 

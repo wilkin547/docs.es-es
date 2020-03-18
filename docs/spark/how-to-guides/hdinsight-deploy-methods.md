@@ -4,12 +4,12 @@ description: Aprenda a enviar un trabajo de .NET para Apache Spark a Azure HDIns
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868023"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185798"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Envío de un trabajo de .NET para Apache Spark a Azure HDInsight
 
@@ -18,7 +18,7 @@ Hay dos maneras de implementar el trabajo de .NET para Apache Spark en HDInsight
 ## <a name="deploy-using-spark-submit"></a>Implementación mediante spark-submit
 
 Puede usar el comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar trabajos de .NET para Apache Spark a Azure HDInsight.
- 
+
 1. Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **SSH e inicio de sesión del clúster**.
 
 2. Copie la información de inicio de sesión de SSH y pegue el inicio de sesión en un terminal. Inicie sesión en el clúster con la contraseña que se ha establecido durante la creación del clúster. Debería ver mensajes de bienvenida a Ubuntu y Spark.

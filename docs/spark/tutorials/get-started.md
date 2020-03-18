@@ -4,12 +4,12 @@ description: Descubra cómo ejecutar una aplicación .NET para Apache Spark con 
 ms.date: 01/31/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 018c21804bf942233e07039281d7ec22a6bef763
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7375c385245a05d7dc29d5df89d875bf6cb4141a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092322"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187539"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -121,7 +121,7 @@ Ejecute uno de los comandos siguientes para establecer la Variable de entorno `D
 
 En **Windows**, cree una [variable de entorno nueva](https://www.java.com/en/download/help/path.xml) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, `C:\bin\Microsoft.Spark.Worker\`).
 
-En **MacOS**, cree una variable de entorno nueva mediante `export DOTNET_WORKER_DIR <your_path>` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker/* ). 
+En **MacOS**, cree una variable de entorno nueva mediante `export DOTNET_WORKER_DIR <your_path>` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker/* ).
 
 En **Ubuntu**, cree una [variable de entorno nueva](https://help.ubuntu.com/community/EnvironmentVariables) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker*).
 

@@ -3,12 +3,12 @@ title: Introducción a los eventos
 description: Obtenga información sobre los eventos en .NET Core y nuestros objetivos de diseño del lenguaje para los eventos en esta introducción.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138521"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146119"
 ---
 # <a name="introduction-to-events"></a>Introducción a los eventos
 
@@ -59,11 +59,11 @@ Progress?.Invoke(this, new FileListArgs(file));
 
 Como se ha tratado en la sección sobre [delegados](delegates-patterns.md), el operador ?.
 hace que se garantice más fácilmente que no intenta generar el evento cuando no existen suscriptores en este.
- 
+
 Se suscribe a un evento con el operador `+=`:
 
 ```csharp
-EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
+EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
 
 fileLister.Progress += onProgress;

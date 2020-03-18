@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716570"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
@@ -28,6 +28,6 @@ El perfil de cliente .NET es un subconjunto de .NET Framework que se proporciona
 ## <a name="see-also"></a>Vea también
 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
-- [Información general sobre la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Introducción a la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Cómo: Usar una versión de .NET Framework como destino](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

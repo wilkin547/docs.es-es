@@ -6,10 +6,10 @@ helpviewer_keywords:
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
 ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705267"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Usar excepciones (Guía de programación de C#)
