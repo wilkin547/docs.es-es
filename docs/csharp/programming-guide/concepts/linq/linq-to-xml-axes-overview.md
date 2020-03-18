@@ -3,10 +3,10 @@ title: Información general sobre los ejes de LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635527"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Información general sobre los ejes de LINQ to XML (C#)
@@ -23,7 +23,7 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>Métodos para recuperar una colección de elementos  
  A continuación encontrará un resumen de los métodos de la clase <xref:System.Xml.Linq.XElement> (o de sus clases base) a los que podrá pasar un <xref:System.Xml.Linq.XElement> para devolver una colección de elementos.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores que tengan el <xref:System.Xml.Linq.XName> especificado.|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes que tengan el <xref:System.Xml.Linq.XName> especificado.|  
@@ -36,21 +36,21 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
 ## <a name="method-for-retrieving-a-single-element"></a>Método para recuperar un único elemento  
  El siguiente método recupera un único elemento secundario a partir del objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Devuelve el objeto del primer elemento <xref:System.Xml.Linq.XElement> secundario que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Método para recuperar una colección de atributos  
  El siguiente método recupera atributos a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> de todos los atributos.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Método para recuperar un único atributo  
  El siguiente método recupera un único atributo a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   

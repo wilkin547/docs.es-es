@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699098"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
@@ -82,7 +82,7 @@ C# admite *miembros con forma de expresión*, que le permiten proporcionar una d
 
  Siempre que se identifica un acceso a una variable, propiedad de objeto o indexador de objeto desde una expresión, el valor de ese elemento se usa como valor de la expresión. Una expresión se puede colocar en cualquier parte de C# donde se requiera un valor u objeto, siempre que la expresión finalmente se evalúe como el tipo requerido.  
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, consulte la sección [Expresiones](~/_csharplang/spec/expressions.md) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

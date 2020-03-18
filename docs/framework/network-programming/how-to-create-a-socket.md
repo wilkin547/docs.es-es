@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear un socket
+title: Cómo crear un socket
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048384"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180831"
 ---
-# <a name="how-to-create-a-socket"></a>Procedimiento para crear un socket
+# <a name="how-to-create-a-socket"></a>Cómo crear un socket
 Para poder usar un socket a fin de comunicarse con dispositivos remotos, es necesario inicializarlo con la información del protocolo y de la dirección de red. El constructor para la clase <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de direcciones, el tipo de socket y el tipo de protocolo que el socket usa para establecer conexiones.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un socket que se puede usar para comunicarse en una red basada en TCP/IP, como Internet.  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Stream, ProtocolType.Tcp);  
 ```  
   
@@ -43,7 +43,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Para usar UDP en lugar de TCP, cambie el tipo de protocolo, como en el ejemplo siguiente:  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Dgram, ProtocolType.Udp);  
 ```  
   

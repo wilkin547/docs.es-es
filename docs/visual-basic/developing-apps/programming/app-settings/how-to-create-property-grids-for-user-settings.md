@@ -8,10 +8,10 @@ helpviewer_keywords:
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
 ms.openlocfilehash: bed4e8a2b50f0115c3b8d9d6abf427df5f216388
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329609"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Procedimiento para crear cuadrículas de propiedades para la configuración del usuario en Visual Basic

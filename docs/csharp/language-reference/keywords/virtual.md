@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712876"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173463"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referencia de C#)
 
 La palabra clave `virtual` se usa para modificar una declaración de método, propiedad, indizador o evento y permitir que se invalide en una clase derivada. Por ejemplo, cualquier clase que herede este método puede reemplazarlo:
 
 ```csharp
-public virtual double Area() 
+public virtual double Area()
 {
     return x * y;
 }
@@ -57,7 +57,7 @@ El programa siguiente calcula y muestra el área apropiada de cada figura al inv
 
 [!code-csharp[csrefKeywordsModifiers#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#23)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705332"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
@@ -103,4 +103,4 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
 - [event](../../language-reference/keywords/event.md)
 - [Procedimiento para publicar eventos que cumplan las instrucciones de .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operadores - y -=](../../language-reference/operators/subtraction-operator.md)
-- [Operadores + y +=](../../language-reference/operators/addition-operator.md)
+- [Operadores + y += ](../../language-reference/operators/addition-operator.md)

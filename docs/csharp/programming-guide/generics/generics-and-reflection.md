@@ -6,10 +6,10 @@ helpviewer_keywords:
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
 ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712174"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos y reflexión (Guía de programación de C#)
@@ -19,7 +19,7 @@ Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos g
   
  Para obtener una lista de las condiciones invariables para los términos usados en la reflexión genérica, vea los comentarios de la propiedad <xref:System.Type.IsGenericType%2A>.  
   
-|Nombre de miembro System.Type|Descripción|  
+|Nombre de miembro System.Type|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Devuelve true si un tipo es genérico.|  
 |<xref:System.Type.GetGenericArguments%2A>|Devuelve una matriz de objetos `Type` que representan los argumentos de tipo proporcionados para un tipo construido, o los parámetros de tipo de una definición de tipo genérico.|  
@@ -35,7 +35,7 @@ Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos g
   
  Además, los miembros de la clase <xref:System.Reflection.MethodInfo> habilitan la información en tiempo de ejecución para métodos genéricos. Para obtener una lista de las condiciones invariables para los términos usados para reflejarse en métodos genéricos, vea los comentarios de la propiedad <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
-|Nombre de miembro System.Reflection.MemberInfo|Descripción|  
+|Nombre de miembro System.Reflection.MemberInfo|Description|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Devuelve true si un método es genérico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Devuelve una matriz de objetos Type que representan los argumentos de tipo de un método genérico construido o los parámetros de tipo de una definición de método genérico.|  

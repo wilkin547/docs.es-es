@@ -6,10 +6,10 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789869"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilar la línea de comandos con csc.exe
@@ -24,7 +24,7 @@ Si trabaja en un equipo que solo tiene el kit de desarrollo de software (SDK) de
 
 También puede usar MSBuild para compilar programas de C# mediante programación. Para obtener más información, vea [MSBuild](/visualstudio/msbuild/msbuild).
 
-El archivo ejecutable *csc.exe* suele encontrarse en la carpeta Microsoft.NET\Framework\\*\<Versión>* del directorio de *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+El archivo ejecutable *csc.exe* suele encontrarse en la carpeta Microsoft.NET\Framework\\ *\<Versión>* del directorio de *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 > Al compilar un proyecto mediante el IDE de Visual Studio, puede mostrar el comando **csc** y las opciones del compilador asociadas en la ventana **Salida**. Para mostrar esta información, siga las instrucciones de [Cómo: Ver, guardar y configurar archivos de registro de compilación](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) para cambiar el nivel de detalle de los datos del registro a **Normal** o **Detallado**. Una vez recompilado el proyecto, busque **csc** en la ventana **Salida** para localizar la invocación del compilador de C#.
@@ -95,7 +95,7 @@ El compilador de C# utiliza las siguientes reglas para interpretar los argumento
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Diferencias entre el resultado del compilador de C++ y el compilador de C#
 
-No se crean archivos objeto (*.obj*) como resultado de invocar el compilador de C#; se crean directamente archivos de salida. Como consecuencia de ello, el compilador de C# no requiere un vinculador.
+No se crean archivos objeto ( *.obj*) como resultado de invocar el compilador de C#; se crean directamente archivos de salida. Como consecuencia de ello, el compilador de C# no requiere un vinculador.
 
 ## <a name="see-also"></a>Vea también
 

@@ -3,13 +3,13 @@ title: Recopilación de telemetría mediante la CLI de ML.NET
 description: Descubra las características de telemetría de la CLI de ML.NET que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas. Además, encuentre vínculos al contrato de licencia de .NET, así como información sobre el cumplimiento de Microsoft del RGPD.
 ms.topic: conceptual
 ms.date: 09/03/2019
-ms.custom: ''
-ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 99e11acba343cc689c3219ca9316144fc62cd618
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977262"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849749"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Recopilación de telemetría mediante la CLI de ML.NET
 

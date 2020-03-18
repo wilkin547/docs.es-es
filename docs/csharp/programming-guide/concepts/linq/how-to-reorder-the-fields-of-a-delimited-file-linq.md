@@ -3,10 +3,10 @@ title: Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347653"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
@@ -81,5 +81,5 @@ Cree un proyecto de aplicación de consola de C# con directivas `using` para los
 ## <a name="see-also"></a>Vea también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
-- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)
+- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
 - [Procedimiento para generar XML a partir de archivos CSV (C#)](./how-to-generate-xml-from-csv-files.md)

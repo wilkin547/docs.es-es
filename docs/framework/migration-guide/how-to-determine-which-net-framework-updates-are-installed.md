@@ -9,12 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5c7bf48d5786530a9bcb69fb7cf605ac2c80a4eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716252"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181271"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Determinación de las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
 
@@ -35,7 +35,7 @@ Las actualizaciones de seguridad y las revisiones instaladas para cada versión 
 
      Las actualizaciones instaladas se muestran bajo subclaves que identifican la versión de .NET Framework a la que se aplican. Cada actualización se identifica mediante un número de la Knowledge Base (KB).
 
-En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de versión instalados, vea [Procedimiento para determinar qué versiones de .NET Framework están instaladas](how-to-determine-which-versions-are-installed.md).
+En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de la versión instalada, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](how-to-determine-which-versions-are-installed.md).
 
 ## <a name="query-the-registry-using-code"></a>Consulta del registro mediante código
 
@@ -74,7 +74,7 @@ $DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | W
  "*.NET Framework*"}
 
 ForEach($Version in $DotNetVersions){
-    
+
    $Updates = Get-ChildItem $Version.PSPath
     $Version.PSChildName
     ForEach ($Update in $Updates){

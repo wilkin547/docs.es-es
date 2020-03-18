@@ -6,10 +6,10 @@ ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
 ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124265"
 ---
 # <a name="get-started"></a>Primeros pasos

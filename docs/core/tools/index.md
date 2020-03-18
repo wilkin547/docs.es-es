@@ -3,12 +3,12 @@ title: CLI de .NET Core
 titleSuffix: ''
 description: Información general de la CLI de .NET Core y sus características.
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156717"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397603"
 ---
 # <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
 
@@ -24,46 +24,46 @@ De forma predeterminada, se instalan los siguientes comandos:
 
 ### <a name="basic-commands"></a>Comandos básicos
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [help](dotnet-help.md)
-- [store](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>Comandos de modificación del proyecto
 
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>Comandos avanzados
 
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>Comandos de administración de herramientas
 
-- [tool install](dotnet-tool-install.md)
-- [tool list](dotnet-tool-list.md)
-- [tool update](dotnet-tool-update.md)
-- [tool restore](global-tools.md#install-a-local-tool) **Disponible a partir del SDK de .NET Core 3.0**
-- [tool run](global-tools.md#invoke-a-local-tool) **Disponible a partir del SDK de .NET Core 3.0**
-- [tool uninstall](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool) Disponible a partir del SDK de .NET Core 3.0.
+- [`tool run`](global-tools.md#invoke-a-local-tool) Disponible a partir del SDK de .NET Core 3.0.
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Las herramientas son aplicaciones de consola que se instalan mediante paquetes de NuGet y se invocan desde el símbolo del sistema. Puede encargarse de escribir las herramientas o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
+Las herramientas son aplicaciones de consola que se instalan mediante paquetes NuGet y se invocan desde el símbolo del sistema. Puede encargarse de escribir las herramientas o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Estructura de comandos
 

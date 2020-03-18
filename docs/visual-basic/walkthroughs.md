@@ -9,10 +9,10 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636047"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Tutoriales del lenguaje Visual Basic
@@ -73,7 +73,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
 - [Manipular archivos y directorios en Visual Basic](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo usar funciones de Visual Basic para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.
 
-- [Manipular archivos utilizando métodos de .NET Framework](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+- [Manipulating Files Using .NET Framework Methods](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md) (Manipular archivos usando métodos de .NET Framework)  
  Muestra cómo usar métodos de .NET Framework para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.
 
 - [Conservar un objeto en Visual Basic](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  

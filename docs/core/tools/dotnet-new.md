@@ -3,17 +3,17 @@ title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 02/13/2020
 ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157224"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398032"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.0 y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet new`: crea un nuevo proyecto, archivo de configuración o solución según la plantilla especificada.
 
@@ -26,7 +26,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet new` crea un proyecto de .NET Core u otros artefactos basados en una plantilla.
 
@@ -74,7 +74,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 | ASP.NET Core con React.js                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
 | ASP.NET Core con React.js y Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Biblioteca de clases de Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de clases de Razor | 2.1        |
-| API web de ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | Servicio gRPC de ASP.NET Core                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | Archivo de búfer de protocolo                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | Archivo dotnet gitignore                        | `gitignore`                     |              | Configuración                                | 3.0        |
@@ -96,7 +96,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 - **`-h|--help`**
 
-  Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet new` o para cualquier plantilla. Por ejemplo: `dotnet new mvc --help`.
+  Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet new` o para cualquier plantilla. Por ejemplo, `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -104,7 +104,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
   
   Si ya hay instalada una versión de la plantilla al ejecutar este comando, la plantilla se actualizará a la versión especificada o a la versión estable más reciente si no se ha especificado ninguna versión.
 
-  Para obtener información sobre cómo crear plantillas personalizadas, consulte [Plantillas personalizadas para dotnet new](custom-templates.md).
+  Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
 
 - **`-l|--list`**
 
@@ -115,7 +115,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
   El lenguaje de la plantilla que se va a crear. El lenguaje aceptado cambia según la plantilla (vea los valores predeterminados en la sección [argumentos](#arguments)). No es válido para algunas plantillas.
 
   > [!NOTE]
-  > Algunos shells interpretan `#` como un carácter especial. En esos casos, incluya el valor del parámetro de lenguaje entre comillas. Por ejemplo: `dotnet new console -lang "F#"`.
+  > Algunos shells interpretan `#` como un carácter especial. En esos casos, incluya el valor del parámetro de lenguaje entre comillas. Por ejemplo, `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -727,7 +727,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ## <a name="see-also"></a>Vea también
 
-- [Plantillas personalizadas para dotnet new](custom-templates.md)
+- [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)
 - [Creación de una plantilla personalizada para dotnet new](../tutorials/cli-templates-create-item-template.md)
 - [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160149"
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
@@ -31,7 +31,7 @@ El recolector de elementos no utilizados de .NET administra la asignación y lib
 <a name="related_topics"></a>
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Fundamentos de la recolección de elementos no utilizados](../../../docs/standard/garbage-collection/fundamentals.md)|Describe cómo funciona la recolección de elementos no utilizados, cómo se asignan los objetos en el montón administrado y otros conceptos básicos.|  
 |[Recolección de elementos no utilizados y rendimiento](../../../docs/standard/garbage-collection/performance.md)|Describe las comprobaciones de rendimiento que se pueden utilizar para diagnosticar los problemas con la recolección de elementos no utilizados y los problemas de rendimiento.|  

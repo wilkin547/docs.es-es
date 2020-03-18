@@ -4,10 +4,10 @@ description: 'Seguridad en microservicios y aplicaciones web de .NET: obtenga in
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501765"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Acerca de la autorización en microservicios y aplicaciones web de .NET

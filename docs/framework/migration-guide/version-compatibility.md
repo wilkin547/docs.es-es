@@ -8,15 +8,15 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974954"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidad de versiones en .NET Framework
 
-La compatibilidad con versiones anteriores significa que una aplicación desarrollada en una versión determinada de una plataforma se ejecutará en las versiones posteriores de esa plataforma. .NET Framework intenta maximizar la compatibilidad con versiones anteriores: el código fuente escrito para una versión de .NET Framework debe compilarse en versiones posteriores de .NET Framework, y los archivos binarios que se ejecutan en una versión de .NET Framework deberán comportarse del mismo modo en versiones posteriores de .NET Framework.
+La compatibilidad con versiones anteriores significa que una aplicación desarrollada en una versión determinada de una plataforma se ejecutará en las versiones posteriores de esa plataforma. .NET Framework intenta maximizar la compatibilidad con versiones anteriores. El código fuente escrito para una versión de .NET Framework debe compilarse en versiones posteriores de .NET Framework y los binarios que se ejecutan en una versión de .NET Framework deberán comportarse del mismo modo en versiones posteriores de .NET Framework.
 
 ## <a name="Apps"></a>Compatibilidad de versiones de las aplicaciones
 
@@ -33,7 +33,7 @@ Para definir las versiones concretas en las que se ejecuta la aplicación, agreg
 </configuration>
 ```
 
-Para obtener más información, vea [Cómo: Configurar una aplicación para que admita .NET Framework 4 o 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
+Para más información, consulte [Cómo: Configurar una aplicación para admitir .NET Framework 4 o 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
 
 ## <a name="version-compatibility-for-components"></a>Compatibilidad de versiones de los componentes
 

@@ -3,10 +3,10 @@ title: Controlar la reentrada en aplicaciones asincrónicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
 ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451868"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
@@ -586,7 +586,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 5. Asigne un nombre al proyecto `WebsiteDownloadWPF`, elija la versión 4.6 de .NET Framework o una posterior y, después, haga clic en el botón **Aceptar**.
 
-     El proyecto nuevo aparece en el **Explorador de soluciones**.
+     El nuevo proyecto aparece en el **Explorador de soluciones**.
 
 6. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .
 
@@ -616,7 +616,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
      Agregue una referencia para <xref:System.Net.Http>, si aún no está seleccionada.
 
-9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después elija **Ver código**.
+9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después seleccione **Ver código**.
 
 10. Reemplace el código del archivo MainWindow.xaml.cs por el código siguiente.
 
@@ -730,5 +730,5 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programación asincrónica con Async y Await (C#)](./index.md)
+- [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])
+- [Asynchronous Programming with async and await (C#)](./index.md) (Programación asincrónica con async y await (C#))

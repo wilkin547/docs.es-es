@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705397"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
@@ -61,7 +61,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base. Éste es el comportamiento predeterminado.  
+ Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base. Este es el comportamiento predeterminado.  
   
 ## <a name="override-and-method-selection"></a>Selección de método y reemplazo  
  Cuando se llama a un método en una clase, el compilador de C# selecciona el mejor método para llamar si hay más de uno compatible con la llamada, como cuando hay dos métodos con el mismo nombre y parámetros que son compatibles con el parámetro pasado. Los métodos siguientes serían compatibles:  
@@ -76,7 +76,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- Para obtener otros ejemplos de `new` y `override`, vea [Saber cuándo utilizar las palabras clave Override y New (Guía de programación de C#)](./knowing-when-to-use-override-and-new-keywords.md).  
+ Para obtener otros ejemplos de `new` y `override`, vea [Knowing When to Use Override and New Keywords](./knowing-when-to-use-override-and-new-keywords.md) (Saber cuándo usar las palabras clave override y new [Guía de programación de C#]).  
   
 ## <a name="see-also"></a>Vea también
 

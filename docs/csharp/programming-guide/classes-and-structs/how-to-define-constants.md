@@ -6,10 +6,10 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337652"
 ---
 # <a name="how-to-define-constants-in-c"></a>Definición de constantes en C\#

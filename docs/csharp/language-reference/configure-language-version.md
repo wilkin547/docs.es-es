@@ -2,16 +2,18 @@
 title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.date: 02/21/2020
-ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626769"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398236"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
 El compilador de C# más actualizado determina una versión de lenguaje predeterminada basada en los marcos o las plataformas de destino del proyecto. Visual Studio no proporciona una interfaz de usuario para cambiar el valor, pero se puede cambiar si se modifica el archivo *csproj*. La opción predeterminada garantiza que se use la versión del lenguaje más reciente compatible con el marco de trabajo de destino. Se beneficia del acceso a las características de lenguaje más recientes compatibles con el destino del proyecto. Esta opción predeterminada también garantiza que no se use un lenguaje que requiera tipos o el comportamiento en tiempo de ejecución no esté disponible en la plataforma de destino. La elección de una versión del lenguaje más reciente que la predeterminada puede provocar errores en tiempo de compilación y en tiempo de ejecución difíciles de diagnosticar.
+
+Las reglas de este artículo se aplican al compilador ofrecido con Visual Studio 2019 o al SDK de .NET Core 3.0. Los compiladores de C# que forman parte de la instalación de Visual Studio 2017 o versiones anteriores del SDK de .NET Core tienen como destino C# 7.0 de forma predeterminada.
 
 C# 8.0 (y versiones posteriores) solo se admite en .NET Core 3.x y versiones más recientes. Muchas de las características más recientes requieren características de biblioteca y runtime introducidas en .NET Core 3.x:
 

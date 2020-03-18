@@ -2,16 +2,16 @@
 title: Varianza en interfaces genéricas (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 71225814a11074f52e4937dec88ca5e27114d6c7
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2020ea54734724de775192a1a438413a73003d17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179059"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169667"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianza en interfaces genéricas (C#)
 
-En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces. 
+En .NET Framework 4 se introdujo la compatibilidad con la varianza para varias interfaces genéricas existentes. La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces.
 
 A partir de .NET Framework 4, las siguientes interfaces son variantes:
 

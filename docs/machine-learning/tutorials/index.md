@@ -3,10 +3,10 @@ title: Tutoriales de ML.NET
 description: Explore los tutoriales de ML.NET para obtener información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET.
 ms.date: 07/08/2019
 ms.openlocfilehash: 771ecd83d3f901af84da1f55d7b48152e8145205
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716617"
 ---
 # <a name="mlnet-tutorials"></a>Tutoriales de ML.NET

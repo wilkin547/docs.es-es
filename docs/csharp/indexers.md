@@ -4,12 +4,12 @@ description: Obtenga información sobre los indexadores de C# y cómo implementa
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450887"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145689"
 ---
 # <a name="indexers"></a>Indizadores
 
@@ -39,7 +39,7 @@ También puede especificar indizadores de solo lectura (omitiendo el descriptor 
 
 Puede aplicar a los indizadores casi todo lo que aprenda al trabajar con propiedades. La única excepción a esta regla son las *propiedades implementadas automáticamente*. El compilador no siempre puede generar el almacenamiento correcto para un indizador.
 
-La presencia de argumentos para hacer referencia a un elemento en un conjunto de elementos distingue los indizadores de las propiedades. Puede definir varios indizadores en un tipo, mientras que las listas de argumentos de cada indizador son únicas. Vamos a explorar escenarios diferentes en los que puede usar uno o varios indizadores en una definición de clase. 
+La presencia de argumentos para hacer referencia a un elemento en un conjunto de elementos distingue los indizadores de las propiedades. Puede definir varios indizadores en un tipo, mientras que las listas de argumentos de cada indizador son únicas. Vamos a explorar escenarios diferentes en los que puede usar uno o varios indizadores en una definición de clase.
 
 ## <a name="scenarios"></a>Escenarios
 
@@ -50,7 +50,7 @@ Veamos algunos de los escenarios habituales en los que se usan los *indizadores*
 
 ### <a name="arrays-and-vectors"></a>Matrices y vectores
 
-Uno de los escenarios más comunes para crear indizadores es cuando el tipo modela una matriz o un vector. Puede crear un indizador para modelar una lista ordenada de datos. 
+Uno de los escenarios más comunes para crear indizadores es cuando el tipo modela una matriz o un vector. Puede crear un indizador para modelar una lista ordenada de datos.
 
 La ventaja de crear su propio indizador es que puede definir el almacenamiento de esa colección para satisfacer sus necesidades. Piense en un escenario en el que el tipo modela datos históricos que tienen un tamaño demasiado grande para poder cargarlos en la memoria de una vez. Debe cargar y descargar secciones de la colección en función del uso. En el ejemplo siguiente se modela este comportamiento. Informa sobre el número de puntos de datos existente, crea páginas para incluir secciones de los datos a petición y quita páginas de la memoria para dejar espacio para las páginas necesarias para las solicitudes más recientes.
 
@@ -224,9 +224,10 @@ En este ejemplo, la colección `ArgsAction` está estrechamente relacionada con 
 
 ### <a name="multi-dimensional-maps"></a>Asignaciones multidimensionales
 
-Puede crear indizadores que usen varios argumentos. Además, estos argumentos no se restringen para que sean del mismo tipo. Veamos dos ejemplos.   
+Puede crear indizadores que usen varios argumentos. Además, estos argumentos no se restringen para que sean del mismo tipo. Veamos dos ejemplos.
 
-En el primer ejemplo se muestra una clase que genera valores para el conjunto Mandelbrot. Para obtener más información sobre las matemáticas subyacentes en el conjunto, lea [este artículo](https://en.wikipedia.org/wiki/Mandelbrot_set). El indizador usa dos valores double para definir un punto en el plano X, Y.
+En el primer ejemplo se muestra una clase que genera valores para el conjunto Mandelbrot. Para obtener más información sobre las matemáticas subyacentes en el conjunto, lea [este artículo](https://en.wikipedia.org/wiki/Mandelbrot_set).
+El indizador usa dos valores double para definir un punto en el plano X, Y.
 El descriptor de acceso get calcula el número de iteraciones existente hasta que se determina que un punto no está en el conjunto. Si se alcanza el número máximo de iteraciones, el punto está en el conjunto y se devuelve el valor maxIterations de la clase (las imágenes generadas por PC popularizadas para el conjunto Mandelbrot definen colores para el número de iteraciones que son necesarias para determinar que un punto en concreto está fuera del conjunto).
 
 ```csharp
@@ -267,9 +268,9 @@ Con esto se define un diccionario que puede contener un número infinito de valo
 Vamos a examinar un último uso de los indizadores, en el que el indizador toma varios argumentos de distintos tipos. Imagínese un programa que administra datos históricos de temperaturas. Este indizador usa una ciudad y una fecha para establecer u obtener las temperaturas máximas y mínimas de ese lugar:
 
 ```csharp
-using DateMeasurements = 
+using DateMeasurements =
     System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
-using CityDataMeasurements = 
+using CityDataMeasurements =
     System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 
 public class HistoricalWeatherData
@@ -319,7 +320,8 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-Estas instrucciones crean un *alias* para un tipo genérico construido y permiten que el código use después los nombres `DateMeasurements` y `CityDateMeasurements` (más descriptivos) en vez de la construcción genérica de `Dictionary<DateTime, Measurements>` y `Dictionary<string, Dictionary<DateTime, Measurements> >`. Esta construcción requiere el uso de los nombres completos de tipo en el lado derecho del signo `=`.
+Estas instrucciones crean un *alias* para un tipo genérico construido y permiten que el código use después los nombres `DateMeasurements` y `CityDateMeasurements` (más descriptivos) en vez de la construcción genérica de `Dictionary<DateTime, Measurements>` y `Dictionary<string, Dictionary<DateTime, Measurements> >`.
+Esta construcción requiere el uso de los nombres completos de tipo en el lado derecho del signo `=`.
 
 La segunda técnica consiste en quitar las partes de tiempo de cualquier objeto `DateTime` usado para indizarse en las colecciones. .NET no incluye un tipo de solo fecha.
 Los desarrolladores usan el tipo `DateTime`, aunque emplean la propiedad `Date` para asegurarse de que cualquier objeto `DateTime` de ese día sea igual.

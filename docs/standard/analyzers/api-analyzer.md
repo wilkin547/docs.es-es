@@ -5,10 +5,10 @@ author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
 ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156139"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
@@ -69,7 +69,7 @@ Las advertencias pueden suprimirse si se hace clic con el botón derecho del rat
 
 ### <a name="suppress-warnings-locally"></a>Supresión de advertencias localmente
 
-Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>**  > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: !["Captura de pantalla encuadrada con la advertencia #pragma deshabilitada".](media/api-analyzer/suppress-in-source.jpg)
+Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>**  > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: !["Captura de pantalla encuadrada con la advertencia #pragma deshabilitada"](media/api-analyzer/suppress-in-source.jpg).
 
 ### <a name="suppress-warnings-globally"></a>Supresión de advertencias globalmente
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160175"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
@@ -88,7 +88,7 @@ Use al menos tres constructores comunes al crear sus propias clases de excepció
 
 - <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, que acepta un mensaje de cadena y una excepción interna.
 
-Como ejemplo, vea [Cómo: Crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md).
+Por ejemplo, consulte [Cómo: Crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Asegúrese de que los datos de excepción estén disponibles cuando el código se ejecute de forma remota
 

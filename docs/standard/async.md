@@ -7,10 +7,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159733"
 ---
 # <a name="async-overview"></a>Información general de Async
@@ -39,10 +39,10 @@ Para obtener más información, vea el tema [Async en profundidad](async-in-dept
 
 En el tema [Modelos para la programación asincrónica](asynchronous-programming-patterns/index.md), se proporciona una introducción de los tres modelos de programación asincrónica que se admiten en .NET:  
   
-- [Modelo de programación asincrónica (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (heredado)  
+- [Asynchronous Programming Model (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) [Modelo de programación asincrónica (APM)] (heredado)  
   
 - [Modelo asincrónico basado en eventos (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (heredado)  
   
-- [Modelo asincrónico basado en tareas (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (recomendado para nuevos desarrollos)  
+- [Task-based Asynchronous Pattern (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) [Modelo asincrónico basado en tareas (TAP)] (recomendado para nuevos desarrollos)  
 
 Para obtener más información sobre el modelo de programación basado en tareas recomendado, consulte el tema [Programación asincrónica basada en tareas](parallel-programming/task-based-asynchronous-programming.md).

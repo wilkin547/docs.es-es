@@ -5,18 +5,18 @@ ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101482"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398716"
 ---
 # <a name="methods"></a>Métodos
 
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método `Main` es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.
 
 > [!NOTE]
-> En este tema se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas](programming-guide/statements-expressions-operators/anonymous-functions.md).
+> En este tema se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas (Guía de programación de C#)](programming-guide/statements-expressions-operators/anonymous-functions.md).
 
 <a name="signatures"></a>
 
@@ -24,7 +24,7 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
 
 Los métodos se declaran en una `class` o `struct` al especificar:
 
-- Un nivel de acceso opcional, como, por ejemplo, `public` o `private`. De manera predeterminada, es `private`.
+- Un nivel de acceso opcional, como, por ejemplo, `public` o `private`. El valor predeterminado es `private`.
 - Modificadores opcionales, como, por ejemplo, `abstract` o `sealed`.
 - El valor devuelto o, si el método no tiene ninguno, `void`.
 - El nombre del método.
@@ -232,7 +232,7 @@ Normalmente, hay dos maneras de agregar un método a un tipo existente:
 
 Los métodos de extensión permiten agregar un método a un tipo existente sin modificar el propio tipo o implementar el nuevo método en un tipo heredado. El método de extensión tampoco tiene que residir en el mismo ensamblado que el tipo que extiende. Llame a un método de extensión como si fuera miembro de un tipo definido.
 
-Para obtener más información, vea [Métodos de extensión](programming-guide/classes-and-structs/extension-methods.md).
+Para más información, vea [Métodos de extensión](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
 
@@ -240,7 +240,7 @@ Para obtener más información, vea [Métodos de extensión](programming-guide/c
 
 Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda.
 
-Si marca un método con el modificador [async](language-reference/keywords/async.md), puede usar el operador [await](language-reference/operators/await.md) en el método. Cuando el control llega a una expresión `await` en el método asincrónico, el control se devuelve al autor de la llamada si la tarea en espera no se ha completado y se suspende el progreso del método con la palabra clave `await` hasta que dicha tarea se complete. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
+Si marca un método con el modificador [async](language-reference/keywords/async.md) , puede usar el operador [await](language-reference/operators/await.md) en el método. Cuando el control llega a una expresión `await` en el método asincrónico, el control se devuelve al autor de la llamada si la tarea en espera no se ha completado y se suspende el progreso del método con la palabra clave `await` hasta que dicha tarea se complete. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
 
 > [!NOTE]
 > Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
@@ -276,9 +276,9 @@ Si el método devuelve `void` o se trata de un método asincrónico, el cuerpo d
 
 ## <a name="iterators"></a>Iterators
 
-Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](language-reference/keywords/yield.md) para devolver los elementos de uno en uno. Cuando se llega a una instrucción `yield return`, se recuerda la ubicación actual para que el autor de la llamada pueda solicitar el siguiente elemento en la secuencia.
+Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se llega a una instrucción `yield return`, se recuerda la ubicación actual para que el autor de la llamada pueda solicitar el siguiente elemento en la secuencia.
 
-El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
+El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
 Para obtener más información, consulta [Iteradores](programming-guide/concepts/iterators.md).
 

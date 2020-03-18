@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959707"
 ---
 # <a name="how-to-search-strings"></a>Cómo buscar cadenas
@@ -39,7 +39,7 @@ Los métodos <xref:System.String.IndexOf%2A> y <xref:System.String.LastIndexOf%2
 
 La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> se puede usar para buscar cadenas. Estas búsquedas pueden abarcar una complejidad que va desde patrones de texto simples hasta otros complejos.
 
-En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para más información, consulte <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para obtener más información, consulta <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
 El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, se describe cada elemento del patrón de búsqueda. (En la tabla siguiente, se usa el valor único `\` que se deben escribir como `\\` en una cadena de C#).
 

@@ -2,12 +2,12 @@
 title: Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347691"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168861"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)
 En este ejemplo se muestra cómo buscar frases en un archivo de texto que contengan coincidencias con cada uno de los conjuntos de palabras especificados. Aunque la matriz de términos de búsqueda está codificada de forma rígida en este ejemplo, también se podría rellenar dinámicamente en tiempo de ejecución. En este ejemplo, la consulta devuelve las frases que contienen las palabras "Historically", "data" e "integrated".  
@@ -46,7 +46,7 @@ class FindSentences
   
         // Execute the query. Note that you can explicitly type  
         // the iteration variable here even though sentenceQuery  
-        // was implicitly typed.   
+        // was implicitly typed.
         foreach (string str in sentenceQuery)  
         {  
             Console.WriteLine(str);  

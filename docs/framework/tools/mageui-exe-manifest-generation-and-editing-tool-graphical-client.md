@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
 ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74714453"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
@@ -26,7 +26,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ## <a name="uielement-list"></a>Lista de UIElement  
  La siguiente tabla enumera los elementos de menú y de barra de herramientas disponibles.  
   
-|Comando|Menú|Acceso directo|DESCRIPCIÓN|  
+|Comando|Menú|Acceso directo|Description|  
 |-------------|----------|--------------|-----------------|  
 |**Manifiesto de aplicación**|**Archivo, Nuevo**||Crea un nuevo manifiesto de aplicación.|  
 |**Manifiesto de implementación**|**Archivo, Nuevo**||Crea un nuevo manifiesto de implementación.|  
@@ -47,7 +47,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ## <a name="preferences-dialog-box"></a>Cuadro de diálogo Preferencias  
  El cuadro de diálogo **Preferencias** contiene los elementos siguientes.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Firmar al guardar**|Le pide que firme un archivo cada vez que guarde sus modificaciones.|  
 |**Usar certificado de firma predeterminado**|Usa la clave especificada en el cuadro de texto **Archivo de certificado** para firmar todos los archivos. Esta opción elimina el mensaje de solicitud de firma que suele aparecer al guardar un archivo si la opción **Firmar al guardar** está seleccionada. Use el botón de puntos suspensivos ( **…** ) situado junto al cuadro de texto **Archivo de certificado** para seleccionar un archivo de claves.|  
@@ -58,7 +58,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
  Este cuadro de diálogo contiene los siguientes elementos.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Firmar con archivo de certificado**|Firma el manifiesto con un certificado digital almacenado en el sistema de archivos.|  
 |**Archivo**|Proporciona un área para escribir la ruta de acceso al archivo .pfx que representa el certificado.|  
@@ -77,7 +77,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
  La pestaña **Manifiesto de aplicación** contiene las siguientes pestañas.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Name**|Especifica la información de identificación de la implementación.|  
 |**Descripción**|Especifica la información de publicador, producto y compatibilidad.|  
@@ -88,18 +88,18 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="name-tab"></a>Pestaña Nombre  
  La pestaña **Nombre** se muestra al crear o abrir por primera vez un manifiesto de aplicación. Identifica de forma única la implementación y, opcionalmente, especifica una plataforma de destino válida.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Name**|Obligatorio. Es el nombre del manifiesto de aplicación. Normalmente, coincide con el nombre de archivo.|  
 |**Versión**|Obligatorio. Es el número de versión de la implementación en formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
 |**Procesador**|Opcional. Es la arquitectura de la máquina en la que se puede ejecutar esta implementación. El valor predeterminado es `msil` o Lenguaje Intermedio de Microsoft, que es el formato predeterminado de todos los ensamblados administrados. Modifique este campo si ha precompilado los ensamblados en la aplicación para una arquitectura concreta. Para más información sobre la precompilación, consulte [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md).|  
-|**Referencia cultural**|Opcional. Es el código ISO de dos partes, país y región, en el que se ejecuta esta aplicación. De manera predeterminada, es `neutral`.|  
+|**Referencia cultural**|Opcional. Es el código ISO de dos partes, país y región, en el que se ejecuta esta aplicación. El valor predeterminado es `neutral`.|  
 |**Token de clave pública**|Opcional. Es la clave pública con la que se ha firmado este manifiesto de aplicación. Si se trata de un manifiesto nuevo o sin firmar, este campo aparecerá como `Unsigned`.|  
   
 ### <a name="description-tab"></a>Pestaña Descripción  
  Esta información normalmente se proporciona dentro del manifiesto de implementación. Estos campos solo pueden modificarse si se selecciona la casilla **Usar manifiesto de la aplicación para la información de confianza** en la pestaña **Opciones de la aplicación**.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Publicador**|Nombre de la persona u organización responsable de la aplicación. Este valor se usa como nombre de la carpeta del menú Inicio.|  
 |**Producto**|Nombre completo del producto. Si seleccionó **Instalar localmente** para el elemento **Tipo de aplicación** de la pestaña **Opciones de implementación** del manifiesto de implementación, este nombre aparecerá en el vínculo del menú **Inicio** y en **Agregar o quitar programas** para esta aplicación.|  
@@ -107,26 +107,26 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
 ### <a name="application-options-tab"></a>Pestaña Opciones de la aplicación  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Aplicación Explorador de Windows Presentation Foundation**|Especifica si se trata de una aplicación WPF que se ejecuta en el explorador como una aplicación de explorador XAML (XBAP).|  
 |**Usar manifiesto de la aplicación para la información de confianza**|Especifica si este manifiesto contiene información de confianza.|  
   
 ### <a name="files-tab"></a>Pestaña Archivos  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Directorio de la aplicación**|Es el directorio en el que residen los archivos de la aplicación. Use el botón de puntos suspensivos ( **…** ) para seleccionar el directorio.|  
 |**Rellenar**|Agrega todos los archivos del directorio de la aplicación y sus subdirectorios al manifiesto de aplicación. Si MageUI.exe encuentra un único archivo ejecutable en el directorio, lo marca automáticamente como punto de entrada, es decir, como el archivo que se ejecuta primero cuando se inicia la aplicación ClickOnce en el cliente.|  
 |**Archivos de aplicación**|Enumera todos los archivos de la aplicación. Cada archivo tiene tres atributos modificables, descritos a continuación.|  
 |**Tipo de archivo**|El tipo de archivo puede ser uno de cuatro valores:<br /><br /> -   Ninguno.<br />-   Punto de entrada. Archivo ejecutable principal de la aplicación. Tan solo se puede marcar un archivo ejecutable como punto de entrada.<br />-   Archivo de datos. Archivo que proporciona datos a la aplicación (por ejemplo, un archivo XML).<br />-   Archivo de icono. Icono de la aplicación, como el que aparece en el escritorio o en la esquina de una ventana de aplicación.|  
-|**Opcional**|Los archivos marcados como opcionales no se descargan en la instalación o actualización inicial, pero se pueden descargar en tiempo de ejecución mediante la API a petición System.Deployment. Para obtener más información, vea [Tutorial: Descarga de ensamblados a petición con la API de implementación ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**Optional**|Los archivos marcados como opcionales no se descargan en la instalación o actualización inicial, pero se pueden descargar en tiempo de ejecución mediante la API a petición System.Deployment. Para más información, consulte [Tutorial: Descargar ensamblados a petición con la API de implementación de ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grupo**|Etiqueta para un conjunto de archivos opcionales. Puede aplicar esta etiqueta a un conjunto de archivos y usar la API a petición para descargar un lote de archivos con una sola llamada API.|  
   
 ### <a name="permissions-required-tab"></a>Pestaña Permisos necesarios  
  Use la pestaña **Permisos necesarios** si necesita conceder a la aplicación más acceso al equipo local del que se concede de forma predeterminada. Para más información, consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para obtener una descripción de estos conjuntos de permisos y ver qué permisos se exigen, vea [Conjuntos de permisos con nombre](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Detalles**|Es el XML creado para el manifiesto de aplicación para representar el conjunto de permisos. A menos que tenga amplios conocimientos del formato XML del manifiesto de aplicación, no debe modificar manualmente este XML. Para más información, consulte [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
@@ -134,7 +134,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="deployment-manifest-tab"></a>Pestaña Manifiesto de implementación  
  La pestaña **Manifiesto de implementación** contiene las siguientes pestañas.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Name**|Especifica la información de identificación de la implementación.|  
 |**Descripción**|Especifica la información de publicador, producto y compatibilidad.|  
@@ -145,25 +145,25 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="name-tab"></a>Pestaña Nombre  
  La pestaña **Nombre** aparece al crear o abrir por primera vez un manifiesto de implementación. Identifica de forma única la implementación y, opcionalmente, especifica una plataforma de destino válida.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Name**|Obligatorio. Es el nombre del manifiesto de implementación. Normalmente, coincide con el nombre de archivo.|  
 |**Versión**|Obligatorio. Es el número de versión de la implementación en formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
 |**Procesador**|Opcional. Es la arquitectura de la máquina en la que se puede ejecutar esta implementación. El valor predeterminado es `msil` o Lenguaje Intermedio de Microsoft, que es el formato predeterminado de todos los ensamblados administrados. Modifique este campo si ha compilado los ensamblados en la aplicación para una arquitectura concreta.|  
-|**Referencia cultural**|Opcional. Es el código ISO de dos partes, país y región, en el que se ejecuta esta aplicación. De manera predeterminada, es `neutral`.|  
+|**Referencia cultural**|Opcional. Es el código ISO de dos partes, país y región, en el que se ejecuta esta aplicación. El valor predeterminado es `neutral`.|  
 |**Token de clave pública**|Opcional. Es la clave pública con la que se firmó el manifiesto de implementación. Si se trata de un manifiesto nuevo o sin firmar, este campo aparecerá como `Unsigned`.|  
   
 ### <a name="description-tab"></a>Pestaña Descripción  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
-|**Publicador**|Obligatorio. Es el nombre de la persona u organización responsable de la aplicación. Este valor se usa como nombre de la carpeta del menú Inicio.|  
+|**Publicador**|Obligatorio. Nombre de la persona u organización responsable de la aplicación. Este valor se usa como nombre de la carpeta del menú Inicio.|  
 |**Producto**|Obligatorio. Nombre completo del producto. Si seleccionó **Instalar localmente** para el elemento **Tipo de aplicación** en la pestaña **Opciones de implementación**, este nombre aparecerá en el vínculo del menú **Inicio** y en **Agregar o quitar programas** para esta aplicación.|  
 |**Ubicación de soporte técnico**|Opcional. Es la dirección URL desde la que los clientes pueden obtener ayuda y soporte técnico para la aplicación.|  
   
 ### <a name="deployment-options-tab"></a>Pestaña Opciones de implementación  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Tipo de aplicación**|Opcional. Especifica si la aplicación se instala por sí misma en el equipo cliente (**Instalar localmente**), se ejecuta en línea (**Solo en línea**) o es una aplicación WPF que se ejecuta en el explorador (**Aplicación de explorador WPF**). El valor predeterminado es **Instalar localmente**.|  
 |**Ubicación de inicio**|Opcional. Es la dirección URL desde la que debe iniciarse realmente la aplicación. Resulta útil al implementar una aplicación desde un CD que debe actualizarse desde la Web.|  
@@ -175,23 +175,23 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="update-options-tab"></a>Pestaña Opciones de actualización  
  La pestaña **Opciones de actualización** solo contiene las opciones mencionadas aquí cuando el cuadro de selección **Tipo de aplicación** de la pestaña **Nombre** se establece en **Instalar localmente**.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Esta aplicación debe buscar actualizaciones**|Especifica si ClickOnce debe comprobar si hay actualizaciones de la aplicación. Si no se selecciona esta casilla, la aplicación no buscará actualizaciones a menos que se actualice mediante programación usando las API en el espacio de nombres <xref:System.Deployment.Application>.|  
 |**Elija cuándo debe buscar actualizaciones la aplicación**|Proporciona dos opciones para la búsqueda de actualizaciones:<br /><br /> -   **Antes de que se inicie la aplicación**. La búsqueda de actualizaciones se realiza antes de la ejecución de la aplicación.<br />-   **Después de que se inicie la aplicación**. La búsqueda de actualizaciones comienza una vez que se ha inicializado el formulario principal de la aplicación y se ejecutará la próxima vez que se inicie la aplicación.|  
-|**Actualice la frecuencia de comprobación**|Determina la frecuencia con la que ClickOnce debe buscar actualizaciones:<br /><br /> -   **Comprobar cada vez que se ejecute la aplicación**. ClickOnce llevará a cabo una búsqueda de actualizaciones cada vez que el usuario abra la aplicación.<br />-   **Comprobar cada**: Seleccione el intervalo y la unidad (horas, días o semanas) del tiempo que debe transcurrir antes de comprobar si hay actualizaciones.|  
+|**Actualice la frecuencia de comprobación**|Determina la frecuencia con la que ClickOnce debe buscar actualizaciones:<br /><br /> -   **Comprobar cada vez que se ejecute la aplicación**. ClickOnce llevará a cabo una búsqueda de actualizaciones cada vez que el usuario abra la aplicación.<br />-   **Buscar cada**: seleccione el intervalo y la unidad (horas, días o semanas) del tiempo que debe transcurrir antes de comprobar si hay actualizaciones.|  
 |**Especifique la versión mínima requerida para esta aplicación**|Opcional. Especifica la instalación obligatoria de una versión concreta de la aplicación para evitar que los usuarios trabajen con una versión anterior.|  
-|**Version**|Obligatorio si se selecciona la casilla **Especifique la versión mínima requerida para esta aplicación**. El número de versión proporcionado debe tener el formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
+|**Versión**|Obligatorio si se selecciona la casilla **Especifique la versión mínima requerida para esta aplicación**. El número de versión proporcionado debe tener el formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
   
 ### <a name="application-reference-tab"></a>Pestaña Referencia de aplicación  
  La pestaña **Referencia de la aplicación** contiene los mismos campos que la pestaña **Nombre** descrita anteriormente en este tema. La única excepción es el campo siguiente.  
   
-|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
+|Elemento de la interfaz de usuario|Description|  
 |----------------|-----------------|  
 |**Seleccionar manifiesto**|Le permite elegir el manifiesto de aplicación. El resto de campos de esta página se rellenarán cuando elija un manifiesto de aplicación.|  
   
 ## <a name="see-also"></a>Vea también
 
 - [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Tutorial: Implementación manual de una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Mage.exe (Herramienta de generación y edición de manifiestos)](mage-exe-manifest-generation-and-editing-tool.md)

@@ -2,12 +2,12 @@
 title: Procedimiento para realizar una transformación de streaming de documentos XML grandes (C#)
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 86b74534635dcca7e8c7f94873abcb50ea7c4d2b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345826"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169109"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Procedimiento para realizar una transformación de streaming de documentos XML grandes (C#)
 A veces tiene que transformar los archivos XML grandes y escribir la aplicación para que sea predecible la superficie en memoria de la aplicación. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
@@ -28,7 +28,7 @@ Incluso si se usa la técnica descrita en [Procedimiento para hacer streaming de
  A continuación, se muestra el documento de origen, Source.xml:  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8" ?>   
+<?xml version="1.0" encoding="utf-8" ?>
 <Root>  
   <Customer>  
     <Name>A. Datum Corporation</Name>  

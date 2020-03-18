@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920907"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397996"
 ---
 # <a name="publish-net-core-apps-with-the-net-core-cli"></a>Publicación de aplicaciones .NET Core con la CLI de .NET Core
 

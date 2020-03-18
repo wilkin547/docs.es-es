@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606579"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173671"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
 La opción **-reference** hace que el compilador importe información de tipo [public](../keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
@@ -61,7 +61,7 @@ La opción **-reference** hace que el compilador importe información de tipo [p
  De forma predeterminada se usa el archivo de respuesta (.rsp) csc, que hace referencia a los ensamblados de .NET Framework usados habitualmente. Use [-noconfig](./noconfig-compiler-option.md) si no quiere que el compilador use csc.rsp.  
   
 > [!NOTE]
-> En Visual Studio, use el cuadro de diálogo **Agregar referencia**. Para obtener más información, vea [Cómo: Agregar o quitar referencias con el Administrador de referencias](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) Para garantizar un comportamiento equivalente entre agregar referencias mediante `-reference` y agregar referencias mediante el cuadro de diálogo **Agregar referencia**, establezca la propiedad **Incrustar tipos de interoperabilidad** en **False** para el ensamblado que se va a agregar. El valor predeterminado de la propiedad es **True**.  
+> En Visual Studio, use el cuadro de diálogo **Agregar referencia**. Para obtener más información, consulta [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantizar un comportamiento equivalente entre agregar referencias mediante `-reference` y agregar referencias mediante el cuadro de diálogo **Agregar referencia**, establezca la propiedad **Incrustar tipos de interoperabilidad** en **False** para el ensamblado que se va a agregar. El valor predeterminado de la propiedad es **True**.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo usar la característica [alias externo](../keywords/extern-alias.md).  
@@ -89,10 +89,10 @@ GridV1::Grid
  Además, se puede hacer referencia al control de cuadrícula desde `grid20.dll` si se antepone `GridV2` al nombre del control, de esta forma:  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

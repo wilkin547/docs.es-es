@@ -7,10 +7,10 @@ helpviewer_keywords:
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
 ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635449"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Procedimiento para crear una clave del Registro (guía de programación de C#)

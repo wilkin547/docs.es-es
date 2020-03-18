@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet, seodoc18
 ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156626"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Prueba de una biblioteca .NET Standard con .NET Core en Visual Studio
@@ -154,7 +154,7 @@ Su serie de pruebas no tuvo errores, pero vamos a cambiarla un poco para que uno
    > [!div class="mx-imgBorder"]
    > ![Ventana Explorador de pruebas con pruebas no superadas](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Seleccione la prueba con errores, `TestDoesNotStartWith`. En la ventana **Explorador de pruebas** se muestra el mensaje generado por la instrucción Assert: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
+1. Seleccione la prueba con errores, `TestDoesNotStartWith`. En la ventana **Explorador de pruebas** se muestra el mensaje generado por la aserción: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
 
    > [!div class="mx-imgBorder"]
    > ![Ventana del Explorador de pruebas que muestra el error de aserción IsFalse](./media/testing-library-with-visual-studio/failed-test-detail.png)

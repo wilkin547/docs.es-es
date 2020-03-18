@@ -2,12 +2,12 @@
 title: Procedimiento para escribir datos de objeto en un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f7ffb47a22d3cd94cd7cb6f702b64180a8790eb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346449"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167523"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Procedimiento para escribir datos de objeto en un archivo XML (C#)
 En este ejemplo se escribe el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -25,14 +25,14 @@ public class XMLWrite
   
     public class Book  
     {  
-        public String title;   
+        public String title;
     }  
   
     public static void WriteXML()  
     {  
         Book overview = new Book();  
         overview.title = "Serialization Overview";  
-        System.Xml.Serialization.XmlSerializer writer =   
+        System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(Book));  
   
         var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//SerializationOverview.xml";  

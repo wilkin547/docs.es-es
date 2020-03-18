@@ -4,12 +4,12 @@ description: Información sobre las expresiones de coincidencia de patrones en C
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501629"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170389"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -27,7 +27,7 @@ Conforme avance en este ejemplo, compare este código con cómo se estructurarí
 
 En lugar de empezar con una definición de forma abstracta y agregar diferentes clases de formas concretas, se comenzará con simples definiciones solo de datos para cada una de las formas geométricas:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 A partir de estas estructuras se va a escribir un método que calcula el área de alguna forma.
 
@@ -35,13 +35,13 @@ A partir de estas estructuras se va a escribir un método que calcula el área d
 
 Antes de C# 7.0, había que comprobar cada tipo en una serie de instrucciones `if` e `is`:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 El código anterior es una expresión clásica del *patrón de tipo*: se prueba una variable para determinar su tipo y se realiza una acción diferente basada en ese tipo.
 
 Este código se simplifica con extensiones de la expresión `is` para asignar una variable si la prueba se realiza correctamente:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 En esta versión actualizada, la expresión `is` prueba la variable y la asigna a una nueva variable del tipo correcto. Observe también que esta versión incluye el tipo `Rectangle`, que es un elemento `struct`. La nueva expresión `is` funciona con tipos de valor y con tipos de referencia.
 
@@ -59,17 +59,17 @@ Estas reglas significan que es poco probable que se acceda accidentalmente al re
 
 ## <a name="using-pattern-matching-switch-statements"></a>Uso de instrucciones de coincidencia de patrones `switch`
 
-Con el tiempo, es posible que tenga que admitir otros tipos de formas. A medida que crece el número de condiciones que se está probando, puede resultar pesado el uso de expresiones de coincidencia de patrones `is`. Además de necesitar instrucciones `if` en cada tipo que se quiere comprobar, las expresiones `is` solo se pueden probar si la entrada coincide con un único tipo. En este caso, las expresiones de coincidencia de patrones `switch` son una mejor opción. 
+Con el tiempo, es posible que tenga que admitir otros tipos de formas. A medida que crece el número de condiciones que se está probando, puede resultar pesado el uso de expresiones de coincidencia de patrones `is`. Además de necesitar instrucciones `if` en cada tipo que se quiere comprobar, las expresiones `is` solo se pueden probar si la entrada coincide con un único tipo. En este caso, las expresiones de coincidencia de patrones `switch` son una mejor opción.
 
 La instrucción tradicional `switch` era una expresión de patrón: admitía el patrón de constante.
 Se podía comparar una variable con cualquier constante usada en una instrucción `case`:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 El único patrón admitido por la instrucción `switch` era el patrón de constante. Se limitaba aún más a tipos numéricos y al tipo `string`.
 Esas restricciones se han eliminado y ahora se puede escribir una instrucción `switch` con el patrón de tipos:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 La instrucción de coincidencia de patrones `switch` usa una sintaxis familiar para los desarrolladores que han empleado la instrucción de estilo C tradicional `switch`. Cada `case` se evalúa y se ejecuta el código debajo de la condición que coincide con la variable de entrada. La ejecución de código no puede "pasar explícitamente" de una expresión case a la siguiente; la sintaxis de la instrucción `case` exige que cada `case` termine con `break`, `return` o `goto`.
 
@@ -87,7 +87,7 @@ El caso `default` solo se ejecutará si no coincide ninguna otra etiqueta case. 
 
 Puede crear casos especiales para las formas que tengan área 0 mediante una cláusula `when` en la etiqueta `case`. Un cuadrado con una longitud de lado de 0 o un círculo con un radio de 0 tiene un área 0. Esa condición se especifica mediante una cláusula `when` en la etiqueta `case`:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Este cambio muestra algunos puntos importantes sobre la nueva sintaxis. En primer lugar, se pueden aplicar varias etiquetas `case` a una sección `switch`. El bloque de instrucciones se ejecuta cuando cualquiera de esas etiquetas es `true`. En esta instancia, si la expresión `switch` es un círculo o un cuadrado con área 0, el método devuelve la constante 0.
 
@@ -98,13 +98,13 @@ Pero no es posible saber *cuál* se ha asignado en tiempo de compilación, ya qu
 
 Una vez agregadas esas formas con área 0, se van a agregar un par de tipos de formas más: un rectángulo y un triángulo:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- Este conjunto de cambios agrega etiquetas `case` para el caso degenerado y etiquetas y bloques para cada una de las nuevas formas. 
+ Este conjunto de cambios agrega etiquetas `case` para el caso degenerado y etiquetas y bloques para cada una de las nuevas formas.
 
 Por último, puede agregar un caso `null` para garantizar que el argumento no sea `null`:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 El comportamiento especial del patrón `null` es interesante porque la constante `null` del patrón no tiene un tipo, pero se puede convertir a cualquier tipo de referencia o tipo que acepte valores NULL. En lugar de convertir `null` en cualquier tipo, el lenguaje define que un valor `null` no coincidirá con ningún patrón de tipo, independientemente del tipo de tiempo de compilación de la variable. Este comportamiento hace que el nuevo patrón de tipo basado en `switch` sea coherente con la instrucción `is`: las instrucciones `is` siempre devuelven `false` cuando el valor que se está comprobando es `null`. También es más sencillo: una vez que haya comprobado el tipo, no necesita una comprobación de NULL adicional. Puede comprobar esto en que no existen comprobaciones de NULL en ninguno de los bloques de casos de los ejemplos anteriores: no son necesarias, ya que la coincidencia del patrón de tipo garantiza un valor distinto de NULL.
 
@@ -124,7 +124,7 @@ Dado que se prefiere cualquier caso que no sea default al caso `default`, el cas
 
 La tercera regla presenta usos donde un caso `var` puede resultar útil. Imagine que va a realizar una coincidencia de patrones donde la entrada es una cadena y busca valores de comando conocidos. Podría escribir algo parecido a esto:
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 El caso `var` coincide con `null`, la cadena vacía, o cualquier cadena que contenga solo espacios en blanco. Tenga en cuenta que el código anterior usa el operador `?.` para asegurarse de que no genera por accidente una <xref:System.NullReferenceException>. El caso `default` controla cualquier otro valor de cadena que no entienda este analizador de comandos.
 

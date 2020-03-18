@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - fixed keyword [C#]
 ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713519"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed (Instrucción, Referencia de C#)
@@ -64,7 +64,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 
 Puede asignar memoria en la pila, donde no está sujeta a la recolección de elementos no utilizados y, por tanto, no necesita anclarse. Para hacerlo, utilice el [operador `stackalloc`](../operators/stackalloc.md).
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, consulte la sección [La declaración fixed](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

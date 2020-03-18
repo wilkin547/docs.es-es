@@ -18,10 +18,10 @@ helpviewer_keywords:
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
 ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635943"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operaciones básicas de consulta LINQ (C#)
@@ -29,9 +29,9 @@ En este tema se ofrece una breve introducción a las expresiones de consulta LIN
   
  [Expresiones de consulta LINQ](../../../linq/index.md)  
   
- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))  
+ [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
   
- [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)  
+ [Walkthrough: Writing Queries in C#](./walkthrough-writing-queries-linq.md) (Tutorial: Escribir consultas en C#)  
   
 > [!NOTE]
 > Si ya está familiarizado con un lenguaje de consultas como SQL o XQuery, puede omitir la mayoría de este tema. Lea la parte dedicada a la "cláusula `from`" en la sección siguiente para obtener información sobre el orden de las cláusulas en las expresiones de consulta LINQ.  
@@ -46,7 +46,7 @@ En este tema se ofrece una breve introducción a las expresiones de consulta LIN
 > [!NOTE]
 > Para los orígenes de datos no genéricos, como <xref:System.Collections.ArrayList>, el tipo de la variable de rango debe establecerse explícitamente. Para más información, consulte el [procedimiento para consultar un objeto ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) y [Cláusula from](../../../language-reference/keywords/from-clause.md).  
   
-## <a name="filtering"></a>Filtrado  
+## <a name="filtering"></a>Filtros  
  Probablemente la operación de consulta más común es aplicar un filtro en forma de expresión booleana. El filtro hace que la consulta devuelva solo los elementos para los que la expresión es verdadera. El resultado se genera mediante la cláusula `where`. El filtro aplicado especifica qué elementos se deben excluir de la secuencia de origen. En el ejemplo siguiente, solo se devuelven los `customers` cuya dirección se encuentra en Londres.  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
@@ -102,6 +102,6 @@ from order in Customer.Orders...
 ## <a name="see-also"></a>Vea también
 
 - [Expresiones de consulta LINQ](../../../linq/index.md)
-- [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)
+- [Walkthrough: Writing Queries in C#](./walkthrough-writing-queries-linq.md) (Tutorial: Escribir consultas en C#)
 - [Palabras clave para consultas (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Tipos anónimos](../../classes-and-structs/anonymous-types.md)

@@ -3,11 +3,11 @@ title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
 ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339221"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397549"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727875"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141099"
 ---
 # <a name="net-docs"></a>Documentos de .NET
 
@@ -18,7 +18,7 @@ Aquí se realiza un seguimiento de los problemas y las tareas de todos los repos
 
 Agradecemos la colaboración de los usuarios para mejorar y completar la documentación de .NET. Se trata de un repositorio muy grande, que abarca una gran área. Si esta es su primera visita, vea nuestra [hoja de ruta de etiquetas y proyectos](styleguide/labels-projects.md), con la que le ayudaremos a navegar por las incidencias y los proyectos de este repositorio.
 
-Si quiere colaborar, vea [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para colaboradores de la comunidad de .NET) para obtener ideas. La [guía de colaboración](CONTRIBUTING.md) contiene instrucciones sobre los procedimientos que seguimos. 
+Si quiere colaborar, vea [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para colaboradores de la comunidad de .NET) para obtener ideas. La [guía de colaboración](CONTRIBUTING.md) contiene instrucciones sobre los procedimientos que seguimos.
 
 Si está interesado en ayudar a migrar código existente que tiene como destino .NET Framework desde el sitio [Galería de código retirada](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) a las aplicaciones de .NET Core almacenadas en el [repositorio de ejemplos](https://github.com/dotnet/samples) y que se pueden descargar desde el [Explorador de ejemplos](https://docs.microsoft.com/samples/browse), vea el proyecto [Migración de la galería de código](https://github.com/dotnet/docs/projects/88). Los ejemplos de la galería de código se han migrado a la organización [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery).
 

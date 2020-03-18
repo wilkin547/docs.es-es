@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568219"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Cambio del tipo de excepción del serializador de JSON de `JsonException` a `NotSupportedException`

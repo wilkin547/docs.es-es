@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741339"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181678"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 
@@ -141,7 +141,7 @@ El modo seguro se puede establecer para toda la aplicación o para los ensamblad
 ### <a name="machine-configuration-file"></a>Archivo de configuración del equipo
 En tercer lugar, el tiempo de ejecución examina el archivo de configuración del equipo. Este archivo, denominado Machine.config, reside en el equipo local, el subdirectorio Config del directorio raíz donde está instalado el tiempo de ejecución. Los administradores pueden usar este archivo para especificar las restricciones de enlace de ensamblado locales de ese equipo. La configuración incluida en el archivo de configuración del equipo tiene prioridad sobre otras opciones de configuración; sin embargo, esto no significa que todos los valores de configuración deban colocarse en este archivo. La versión determinada por el archivo de directiva del administrador es final y no se puede invalidar. Los reemplazos especificados en el archivo Machine.config afectan a todas las aplicaciones. Para obtener más información acerca de los archivos de configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
 
-<a name="step2"></a> 
+<a name="step2"></a>
 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Paso 2: Comprobación de los ensamblados a los que se ha hecho referencia previamente
 

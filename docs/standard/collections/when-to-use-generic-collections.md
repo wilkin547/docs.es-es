@@ -7,10 +7,10 @@ helpviewer_keywords:
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711212"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas

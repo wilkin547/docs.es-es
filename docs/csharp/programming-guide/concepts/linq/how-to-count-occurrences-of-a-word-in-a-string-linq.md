@@ -2,12 +2,12 @@
 title: Procedimiento para realizar un recuento de las repeticiones de una palabra en una cadena (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 0411b0c17b57a49e031f078412b9e45692c619fe
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141344"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169330"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Procedimiento para realizar un recuento de las repeticiones de una palabra en una cadena (LINQ) (C#)
 En este ejemplo se muestra cómo usar una consulta LINQ para contar las apariciones de una palabra determinada en una cadena. Observe que para realizar el recuento, primero se llama al método <xref:System.String.Split%2A> para crear una matriz de palabras. Existe un costo de rendimiento en el método <xref:System.String.Split%2A>. Si la única operación de la cadena es para contar las palabras, debe considerar la posibilidad de usar en su lugar los métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>. Pero si el rendimiento no es un problema crítico, o si ya ha dividido la frase para realizar otros tipos de consultas, tiene sentido usar LINQ para además contar las palabras o frases.  
@@ -35,7 +35,7 @@ class CountWords
         //Convert the string into an array of words  
         string[] source = text.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);  
   
-        // Create the query.  Use ToLowerInvariant to match "data" and "Data"   
+        // Create the query.  Use ToLowerInvariant to match "data" and "Data"
         var matchQuery = from word in source  
                          where word.ToLowerInvariant() == searchTerm.ToLowerInvariant()  
                          select word;  

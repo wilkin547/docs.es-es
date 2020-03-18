@@ -2,12 +2,12 @@
 title: Procedimiento para encadenar llamadas de métodos de eje (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141433"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169472"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Procedimiento para encadenar llamadas de métodos de eje (LINQ to XML) (C#)
 Un patrón común que puede utilizar en el código consiste en llamar a un método Axis y, después, llamar a uno de los métodos de extensión Axes.  
@@ -17,7 +17,7 @@ Un patrón común que puede utilizar en el código consiste en llamar a un méto
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> y <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> para buscar todos los elementos `Name` en todos los elementos `Address` de todos los elementos `PurchaseOrder`.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -73,7 +73,7 @@ foreach (XElement e in names)
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
-IEnumerable<XElement> configParameters =   
+IEnumerable<XElement> configParameters =
     root.Elements("Customer").Elements("Config").  
     Elements("ConfigParameter");  
 foreach (XElement cp in configParameters)  
@@ -90,7 +90,7 @@ foreach (XElement cp in configParameters)
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma técnica para XML que se encuentre en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejes de LINQ to XML (C#)](linq-to-xml-axes-overview.md)
+- [LINQ to XML Axes (C#)](linq-to-xml-axes-overview.md) (Ejes de LINQ to XML [C#])

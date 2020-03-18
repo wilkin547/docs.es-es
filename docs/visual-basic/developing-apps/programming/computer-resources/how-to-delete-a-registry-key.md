@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para eliminar una clave del Registro
+title: 'Cómo: Eliminar una clave del Registro'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345653"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Procedimiento para eliminar una clave del Registro en Visual Basic
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Cómo: Eliminar una clave del Registro en Visual Basic
 
 Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> y <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> se pueden usar para eliminar las claves del Registro.  
   

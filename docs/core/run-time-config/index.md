@@ -3,11 +3,11 @@ title: Opciones de configuración de runtime
 description: Aprenda a configurar aplicaciones .NET Core mediante opciones de configuración de tiempo de ejecución.
 ms.date: 01/21/2020
 ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733440"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397615"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Opciones de configuración en tiempo de ejecución de .NET Core
 

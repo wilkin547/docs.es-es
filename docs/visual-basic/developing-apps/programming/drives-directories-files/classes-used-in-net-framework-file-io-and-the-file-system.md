@@ -5,10 +5,10 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348931"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
@@ -21,7 +21,7 @@ Para obtener una lista más completa, vea [Información general de la biblioteca
 
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
   
-|Clase|DESCRIPCIÓN|  
+|Clase|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Proporciona métodos estáticos para crear, mover y enumerar en directorios y subdirectorios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Proporciona métodos de instancia para crear, mover y enumerar en directorios y subdirectorios.|  
@@ -39,7 +39,7 @@ Para obtener una lista más completa, vea [Información general de la biblioteca
 
  En la tabla siguiente se muestran y describen las clases principales usadas para crear secuencias.  
   
-|Clase|DESCRIPCIÓN|  
+|Clase|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Agrega una capa de almacenamiento en búfer para las operaciones de lectura y escritura en otra secuencia.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Admite el acceso aleatorio a archivos a través de su método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre los archivos sincrónicamente de manera predeterminada, pero también admite operaciones asincrónicas.|  

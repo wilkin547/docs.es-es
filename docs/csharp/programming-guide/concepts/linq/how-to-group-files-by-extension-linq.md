@@ -2,12 +2,12 @@
 title: Procedimiento para agrupar archivos por extensión (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2ee1fa1291f5845c818395dfe038ec5894adc863
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345897"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169160"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Procedimiento para agrupar archivos por extensión (LINQ) (C#)
 En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
@@ -42,7 +42,7 @@ class GroupByExtension
             orderby fileGroup.Key  
             select fileGroup;  
   
-        // Display one group at a time. If the number of   
+        // Display one group at a time. If the number of
         // entries is greater than the number of lines  
         // in the console window, then page the output.  
         PageOutput(trimLength, queryGroupByExt);  
@@ -110,4 +110,4 @@ class GroupByExtension
 ## <a name="see-also"></a>Vea también
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)
+- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])

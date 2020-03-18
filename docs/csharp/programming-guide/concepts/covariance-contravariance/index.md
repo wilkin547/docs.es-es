@@ -2,12 +2,12 @@
 title: Covarianza y contravarianza (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 1d5a1de1825e585512f694a0cd72cee9b37cda36
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595274"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169875"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covarianza y contravarianza (C#)
 En C#, la covarianza y la contravarianza habilitan la conversión de referencias implícita de tipos de matriz, tipos de delegado y argumentos de tipo genérico. La covarianza conserva la compatibilidad de asignaciones y la contravarianza la invierte.  
@@ -15,25 +15,25 @@ En C#, la covarianza y la contravarianza habilitan la conversión de referencias
  El siguiente código muestra la diferencia entre la compatibilidad de asignaciones, la covarianza y la contravarianza.  
   
 ```csharp  
-// Assignment compatibility.   
+// Assignment compatibility.
 string str = "test";  
-// An object of a more derived type is assigned to an object of a less derived type.   
+// An object of a more derived type is assigned to an object of a less derived type.
 object obj = str;  
   
-// Covariance.   
+// Covariance.
 IEnumerable<string> strings = new List<string>();  
-// An object that is instantiated with a more derived type argument   
-// is assigned to an object instantiated with a less derived type argument.   
-// Assignment compatibility is preserved.   
+// An object that is instantiated with a more derived type argument
+// is assigned to an object instantiated with a less derived type argument.
+// Assignment compatibility is preserved.
 IEnumerable<object> objects = strings;  
   
-// Contravariance.             
-// Assume that the following method is in the class:   
-// static void SetObject(object o) { }   
+// Contravariance.
+// Assume that the following method is in the class:
+// static void SetObject(object o) { }
 Action<object> actObject = SetObject;  
-// An object that is instantiated with a less derived type argument   
-// is assigned to an object instantiated with a more derived type argument.   
-// Assignment compatibility is reversed.   
+// An object that is instantiated with a less derived type argument
+// is assigned to an object instantiated with a more derived type argument.
+// Assignment compatibility is reversed.
 Action<string> actString = actObject;  
 ```  
   
@@ -81,7 +81,7 @@ IEnumerable<Object> objects = strings;
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|DESCRIPCIÓN|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md)|Describe la covarianza y contravarianza en las interfaces genéricas y proporciona una lista de interfaces genéricas variantes en .NET Framework.|  
 |[Crear interfaces genéricas variantes (C#)](./creating-variant-generic-interfaces.md)|Se muestra cómo crear interfaces variantes personalizadas.|  

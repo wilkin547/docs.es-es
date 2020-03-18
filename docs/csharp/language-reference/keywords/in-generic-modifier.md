@@ -5,10 +5,10 @@ helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713487"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (Modificador genérico) (Referencia de C#)
@@ -23,7 +23,7 @@ Una interfaz que tiene un parámetro de tipo contravariante permite que sus mét
 
 A un delegado contravariante se le puede asignar otro delegado del mismo tipo, pero con un parámetro de tipo genérico menos derivado.
 
-Para obtener más información, vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).
+Para obtener más información, vea [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (Covarianza y contravarianza).
 
 ## <a name="contravariant-generic-interface"></a>Interfaz genérica contravariante
 
@@ -37,7 +37,7 @@ En el ejemplo siguiente se muestra cómo declarar e invocar un delegado genéric
 
 [!code-csharp[csVarianceKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#2)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

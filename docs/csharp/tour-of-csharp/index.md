@@ -2,12 +2,12 @@
 title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 02/26/2020
-ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159148"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79156849"
 ---
 # <a name="a-tour-of-the-c-language"></a>Paseo por el lenguaje C#
 
@@ -33,12 +33,12 @@ El programa "Hola mundo" tradicionalmente se usa para presentar un lenguaje de p
 
 Normalmente, los archivos de código fuente de C# tienen la extensión de archivo `.cs`. Para crear este programa, primero descargue e instale el [SDK de .NET Core](https://dotnet.microsoft.com/download). Después, ejecute el comando `dotnet new console -o hello` para crear un programa y un script de compilación. El programa y el script de compilación se encuentran en los archivos `Program.cs` y `hello.csproj` respectivamente. Compilará y ejecutará la aplicación con los comandos `run`:
 
-```console
+```dotnetcli
 cd hello
 dotnet run
 ```
 
-El programa produce el siguiente resultado: 
+El programa produce el siguiente resultado:
 
 ```console
 Hello, World!

@@ -4,10 +4,10 @@ titleSuffix: ''
 description: Obtenga información sobre qué API de .NET Framework siempre producen una excepción en .NET Core.
 ms.date: 12/23/2019
 ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092972"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>API que siempre producen excepciones en .NET Core
@@ -23,7 +23,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="system"></a>Sistema
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> | Todas |
 | <xref:System.AppDomain.ExecuteAssembly(System.String,System.String[],System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)?displayProperty=nameWithType> | Todas |
@@ -38,7 +38,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A?displayProperty=nameWithType> | Todas |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A?displayProperty=nameWithType> | Todas |
@@ -46,7 +46,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemcollectionsspecialized"></a>System.Collections.Specialized
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
@@ -54,13 +54,13 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemconfiguration"></a>System.Configuration
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType> (todos los miembros) | Todas |
 
 ## <a name="systemconsole"></a>System.Console
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux y macOS |
 | <xref:System.Console.BufferHeight?displayProperty=nameWithType> (solo Establecer) | Linux y macOS |
@@ -78,13 +78,13 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType> (genera <xref:System.NotSupportedException>) | Todas |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType> (solo Establecer) | Linux |
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType> (solo Establecer) | Linux |
@@ -101,14 +101,14 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemio"></a>System.IO
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemiopipes"></a>System.IO.Pipes
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances?displayProperty=nameWithType> | Linux y macOS |
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux y macOS |
@@ -119,13 +119,13 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemmedia"></a>System.Media
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemnet"></a>System.Net
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Todas |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Todas |
@@ -147,26 +147,26 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformation
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows (UWP) |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)?displayProperty=nameWithType> | Todas |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Net.WebSockets.WebSocket.RegisterPrefixes?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemreflection"></a>System.Reflection
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> | Todas |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | Todas |
@@ -178,13 +178,13 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemruntimeinteropservices"></a>System.Runtime.InteropServices
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Runtime.InteropServices.Marshal.GetIDispatchForObject(System.Object)?displayProperty=nameWithType> | Todas |
 | <xref:System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile?displayProperty=nameWithType> | Todas |
@@ -196,13 +196,13 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemruntimeserialization"></a>System.Runtime.Serialization
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemsecurity"></a>System.Security
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.CodeAccessPermission.Deny?displayProperty=nameWithType> | Todas |
 | <xref:System.Security.CodeAccessPermission.PermitOnly?displayProperty=nameWithType> | Todas |
@@ -221,7 +221,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemsecurityclaims"></a>System.Security.Claims
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | Todas |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
@@ -231,7 +231,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | Todas |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux y macOS |
@@ -264,7 +264,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemsecuritycryptographypkcs"></a>System.Security.Cryptography.Pkcs
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | Todas |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | Todas |
@@ -272,7 +272,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | Todas |
@@ -281,31 +281,31 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemsecuritypolicy"></a>System.Security.Policy
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceController
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> | Todas |
 
 ## <a name="systemthreading"></a>System.Threading
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Todas |
@@ -316,7 +316,7 @@ En este artículo se organizan los miembros de API afectados por el espacio de n
 
 ## <a name="systemxml"></a>System.Xml
 
-| Miembro | Plataformas en las que se produce |
+| Member | Plataformas en las que se produce |
 | - | - |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Todas |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Todas |

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74429665"
 ---
 # <a name="64-bit-applications"></a>Aplicaciones de 64 bits
 Al compilar una aplicación, puede especificar que debe ejecutarse en un sistema operativo Windows de 64 bits como una aplicación nativa o bajo WOW64 (Windows de 32 bits en Windows de 64 bits). WOW64 es un entorno de compatibilidad que permite a una aplicación de 32 bits ejecutarse en un sistema de 64 bits. WOW64 se incluye en todas las versiones de 64 bits del sistema operativo Windows.  
   
-## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Ejecutar en Windows aplicaciones de 32 bits frente a aplicaciones de 64 bits  
+## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Ejecutar aplicaciones de 32 bits frente a 64 bits en Windows  
  Todas las aplicaciones compiladas con .NET Framework 1.0 o 1.1 se tratan como aplicaciones de 32 bits en un sistema operativo de 64 bits y siempre se ejecutan bajo WOW64 y el Common Language Runtime (CLR) de 32 bits. Las aplicaciones de 32 bits que se compilan en .NET Framework 4 o versiones posteriores también se ejecutan bajo WOW64 en sistemas de 64 bits.  
   
  Visual Studio instala la versión de 32 bits de CLR en un equipo x86, y la versión de 32 bits y la versión de 64 bits apropiada de CLR en un equipo Windows de 64 bits. (Dado que Visual Studio es una aplicación de 32 bits, cuando se instala en un sistema de 64 bits, se ejecuta bajo WOW64).  

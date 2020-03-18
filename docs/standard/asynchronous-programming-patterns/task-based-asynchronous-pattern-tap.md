@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158173"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modelo asincrónico basado en tareas (TAP)
@@ -189,9 +189,9 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Patrones para la programación asincrónica](../../../docs/standard/asynchronous-programming-patterns/index.md)|Presenta los tres patrones para realizar las operaciones asincrónicas: el patrón asincrónico basado en tareas (TAP), el modelo de programación asincrónica (APM) y el patrón asincrónico basado en eventos (EAP).|  
 |[Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Describe cómo implementar el patrón asincrónico basado en tareas (TAP) de tres maneras: mediante los compiladores de C# y Visual Basic de Visual Studio, manualmente o a través de una combinación del compilador y de métodos manuales.|  
-|[Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Describe cómo se pueden utilizar las tareas y las devoluciones de llamada para conseguir esperas sin bloqueos.|  
+|[Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Describe cómo se pueden utilizar las tareas y las devoluciones de llamada para conseguir esperas sin bloqueos.|  
 |[Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|Describe cómo usar el patrón asincrónico basado en tareas (TAP) para implementar el modelo de programación asincrónica (APM) y el patrón asincrónico basado en eventos (EAP).|

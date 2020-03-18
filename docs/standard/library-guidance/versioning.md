@@ -3,11 +3,11 @@ title: Control de versiones y bibliotecas de .NET
 description: Procedimientos recomendados para el control de versiones de las bibliotecas de .NET.
 ms.date: 12/10/2018
 ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745028"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398500"
 ---
 # <a name="versioning"></a>Control de versiones
 
@@ -33,7 +33,7 @@ El identificador del paquete NuGet combinado con la versión de dicho paquete se
 
 Dado que la versión del paquete NuGet es la versión más visible para los desarrolladores, es una buena idea actualizarla mediante [Versionamiento Semántico (SemVer)](https://semver.org/). SemVer indica la importancia de los cambios entre versiones y ayuda a los desarrolladores a tomar una decisión informada a la hora de elegir qué versión se debe usar. Por ejemplo, pasar de `1.0` a `2.0` indica que hay cambios potencialmente importantes.
 
-✔️ ES RECOMENDABLE usar [SemVer 2.0.0](https://semver.org/) para crear versiones del paquete NuGet.
+✔️ ES RECOMENDABLE usar [SemVer 2.0.0](https://semver.org/) para crear versiones de los paquetes NuGet.
 
 ✔️ NO use la versión del paquete NuGet en la documentación pública, ya que es el número de versión que normalmente ven los usuarios.
 

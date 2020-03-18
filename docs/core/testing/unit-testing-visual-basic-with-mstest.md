@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en .NET Core: cree una 
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: df167e0559c841510df17ba39801e43315036241
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714250"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240940"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y MSTest
 
@@ -129,11 +129,11 @@ En el directorio *unit-testing-vb-mstest*, vuelva a ejecutar `dotnet test`. El c
 
 ## <a name="adding-more-features"></a>Agregar más características
 
-Ahora que la prueba se ha superado, es el momento de escribir más. Hay otros casos simples para números primos: 0, -1. Puede agregar esos casos como nuevas pruebas con el atributo `<TestMethod>`, pero enseguida este proceso se hace tedioso. Hay otros atributos de MSTest que le permiten escribir un conjunto de pruebas similares.  Un atributo `<DataTestMethod>` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el atributo `<DataRow>` para especificar valores para esas entradas.
+Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregar esos casos como nuevas pruebas con el atributo `<TestMethod>`, pero enseguida este proceso se hace tedioso. Hay otros atributos de MSTest que le permiten escribir un conjunto de pruebas similares.  Un atributo `<DataTestMethod>` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el atributo `<DataRow>` para especificar valores para esas entradas.
 
 En lugar de crear pruebas nuevas, aplique estos dos atributos para crear una sola teoría. La teoría es un método que prueba varios valores menores que dos, que es el número primo menor:
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-mstest/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 Ejecute `dotnet test`, y dos de estas pruebas no se superarán. Para superar todas las pruebas, cambie la cláusula `if` al principio del método:
 

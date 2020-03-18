@@ -4,17 +4,17 @@ description: El comando dotnet nuget locals borra o muestra los recursos de NuGe
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503685"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet nuget locals`: borra o enumera recursos locales de NuGet.
 
@@ -25,7 +25,7 @@ dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english
 dotnet nuget locals [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet nuget locals` borra o enumera los recursos locales de NuGet en la caché de solicitudes http, la caché temporal o la carpeta de paquetes globales de toda la máquina.
 

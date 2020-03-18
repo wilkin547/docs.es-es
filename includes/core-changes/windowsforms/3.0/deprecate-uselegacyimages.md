@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937072"
 ---
 ### <a name="uselegacyimages-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad UseLegacyImages
@@ -30,7 +30,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>API afectadas
 
-- None
+- Ninguna
 
 <!-- 
 

@@ -3,10 +3,10 @@ title: Procedimiento para modificar árboles de expresión (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
 ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73969902"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Procedimiento para modificar árboles de expresión (C#)
@@ -14,7 +14,7 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
   
 ### <a name="to-modify-an-expression-tree"></a>Para modificar un árbol de expresión  
   
-1. Cree un nuevo proyecto de **aplicación de consola**.  
+1. Cree un nuevo proyecto de **Aplicación de consola**.  
   
 2. Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
   

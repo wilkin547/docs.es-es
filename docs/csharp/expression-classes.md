@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos de marco que admiten árboles 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037617"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146091"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de marco que admiten árboles de expresión
 
@@ -65,5 +65,5 @@ Hay tipos de nodos de expresión que se asignan a casi todos los elementos de si
 3. Fíjese en la clase `ExpressionVisitor` para crear un árbol de expresión modificado.
 
 Encontrará más información a medida que observe cada una de esas tres áreas. Siempre encontrará lo que necesita empezando con uno de esos tres pasos.
- 
+
  [Siguiente: Ejecutar árboles de expresión](expression-trees-execution.md)

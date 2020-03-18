@@ -26,10 +26,10 @@ helpviewer_keywords:
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75348255"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato en .NET
@@ -215,8 +215,8 @@ Todos los tipos numéricos (es decir, los tipos <xref:System.Byte>, <xref:System
 |-----------|----------------|
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
+|[Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
+|[Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
 |[Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de intervalos de tiempo.|
 |[Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
@@ -353,7 +353,7 @@ En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a
 |-----------|----------------|
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> .|
+|[Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> .|
 |[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> .|
 |[Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de intervalos de tiempo.|
 |[Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|

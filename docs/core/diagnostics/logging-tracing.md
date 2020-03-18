@@ -3,10 +3,10 @@ title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714421"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
@@ -85,9 +85,9 @@ Por ejemplo, para que pueda elegir la mejor opción para la aplicación, `ASP.NE
 
 ## <a name="logging-related-references"></a>Referencias relacionadas de registro
 
-- [Cómo: Compilación condicional con Trace y Debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Compilación condicional con Trace y Debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [Cómo: agregar instrucciones de seguimiento al código de aplicación](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Adición de instrucciones de seguimiento al código de la aplicación](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - [El registro de ASP.NET](/aspnet/core/fundamentals/logging) proporciona información general sobre las técnicas de registro que admite.
 

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635358"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 
 Visual Studio presenta características en C# y Visual Basic que mejoran la programación de Microsoft Office. Las características útiles de C# incluyen argumentos opcionales y con nombre, y devuelven valores de tipo `dynamic`. En la programación COM, puede omitir la palabra clave `ref` y obtener acceso a las propiedades indexadas. Las nuevas características de Visual Basic incluyen propiedades implementadas automáticamente, instrucciones de expresiones lambda e inicializadores de colección.
 
-En ambos lenguajes se puede insertar información de tipo, lo que permite la implementación de ensamblados que interactúan con componentes COM sin necesidad de implementar ensamblados de interoperabilidad primarios (PIA) en el equipo del usuario. Para obtener más información, vea [Tutorial: Insertar los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md).
+En ambos lenguajes se puede insertar información de tipo, lo que permite la implementación de ensamblados que interactúan con componentes COM sin necesidad de implementar ensamblados de interoperabilidad primarios (PIA) en el equipo del usuario. Para obtener más información, vea [Tutorial: Incrustar los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
 
 En este tutorial se muestran estas características en el contexto de la programación de Office, pero muchas de ellas también son útiles en la programación general. En el tutorial, usa una aplicación complemento de Excel para crear un libro de Excel. Después, crea un documento de Word que contiene un vínculo al libro. Por último, ve cómo habilitar y deshabilitar la dependencia de un PIA.
 
@@ -46,13 +46,13 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
 7. Haga clic en **Aceptar**.
 
-8. El proyecto nuevo aparece en el **Explorador de soluciones**.
+8. El nuevo proyecto aparece en el **Explorador de soluciones**.
 
 ### <a name="to-add-references"></a>Para agregar referencias
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
 
-2. En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalar ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
 
 3. Haga clic en **Aceptar**.
 
@@ -70,7 +70,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto, haga clic en **Agregar** y luego, en **Clase**. Denomine la clase Account.vb si está utilizando Visual Basic o Account.cs si está utilizando C#. Haga clic en **Agregar**.
 
-2. Reemplace la definición de la clase `Account` por el código siguiente. Las definiciones de clase usan *propiedades implementadas automáticamente*. Para obtener más información, vea [Propiedades implementadas automáticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
+2. Reemplace la definición de la clase `Account` por el código siguiente. Las definiciones de clase usan *propiedades implementadas automáticamente*. Para obtener más información, vea [Auto-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md) (Propiedades implementadas automáticamente).
 
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
@@ -124,7 +124,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
 ### <a name="to-invoke-displayinexcel"></a>Para invocar DisplayInExcel
 
-1. Agregue el código siguiente al final del método `ThisAddIn_StartUp`. La llamada a `DisplayInExcel` contiene dos argumentos. El primer argumento es el nombre de la lista de cuentas que se va a procesar. El segundo argumento es una expresión lambda de varias líneas que define cómo se procesarán los datos. Los valores `ID` y `balance` de cada cuenta se muestran en las celdas adyacentes y la fila se muestra en rojo si el saldo es inferior a cero. Para obtener más información, vea [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Agregue el código siguiente al final del método `ThisAddIn_StartUp` . La llamada a `DisplayInExcel` contiene dos argumentos. El primer argumento es el nombre de la lista de cuentas que se va a procesar. El segundo argumento es una expresión lambda de varias líneas que define cómo se procesarán los datos. Los valores `ID` y `balance` de cada cuenta se muestran en las celdas adyacentes y la fila se muestra en rojo si el saldo es inferior a cero. Para obtener más información, vea [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -160,7 +160,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
 4. En el menú **Archivo** de la ventana de IL DASM, seleccione **Archivo** > **Abrir**. Haga doble clic en **Visual Studio \<versión>** y, después, haga doble clic en **Proyectos**. Abra la carpeta de su proyecto y, en la carpeta bin/Debug, busque *su_proyecto*.dll. Haga doble clic en *su_proyecto*.dll. Una nueva ventana muestra los atributos del proyecto, además de las referencias a otros módulos y ensamblados. Tenga en cuenta que los espacios de nombres `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` se incluyen en el ensamblado. De manera predeterminada en Visual Studio, el compilador importa los tipos necesarios desde un PIA con referencia a su ensamblado.
 
-     Para obtener más información, vea [Cómo: Consulta del contenido de un ensamblado](../../../standard/assembly/view-contents.md).
+     Para obtener más información, vea [Cómo: Ver el contenido de un ensamblado](../../../standard/assembly/view-contents.md).
 
 5. Haga doble clic en el icono **MANIFIESTO**. Aparecerá una ventana con una lista de ensamblados que contienen los elementos a los que hace referencia el proyecto. `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` no están incluidos en la lista. Dado que los tipos que su proyecto necesita se han importado en el ensamblado, las referencias a un PIA no son necesarias. Esto facilita la implementación. Los PIA no tienen que estar presentes en el equipo del usuario y, puesto que una aplicación no requiere la implementación de una versión concreta de un PIA, se pueden diseñar aplicaciones que trabajen con varias versiones de Office, siempre que las API necesarias existan en todas las versiones.
 
@@ -204,8 +204,8 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 - [Expresiones lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Expresiones lambda (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [Procedimiento para usar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office en Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Tutorial: Inserción de tipos de ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
+- [Tutorial: Incrustar información de tipos de los ensamblados de Microsoft Office en Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [Tutorial: Incrustación de los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
 - [Tutorial: Creación del primer complemento VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilidad](./index.md)

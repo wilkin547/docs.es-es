@@ -3,12 +3,12 @@ title: Introducción al análisis semántico
 description: En este tutorial, se proporciona una introducción sobre cómo trabajar con el análisis semántico mediante el SDK de .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346977"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240516"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introducción al análisis semántico
 
@@ -46,15 +46,15 @@ Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis
 Va a analizar el programa básico "Hola mundo" mostrado anteriormente.
 Agregue el texto para el programa Hola mundo como una constante en su clase `Program`:
 
-[!code-csharp[Declare the program test](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program test](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 A continuación, agregue el código siguiente para crear el árbol de sintaxis para el texto del código de la constante `programText`.  Agregue la línea siguiente al método `Main`:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
 
 A continuación, compile una <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> del árbol que ya ha creado. El ejemplo "Hola mundo" se basa en los tipos <xref:System.String> y <xref:System.Console>. Debe hacer referencia al ensamblado que declara esos dos tipos en la compilación. Agregue la siguiente línea a su método `Main` para crear una compilación de su árbol de sintaxis, incluida la referencia al ensamblado adecuado:
 
-[!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
+[!code-csharp[Create the compilation](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
 El método <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> agrega referencias a la compilación. El método <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> carga un ensamblado como referencia.
 
@@ -62,19 +62,19 @@ El método <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2
 
 Una vez que tenga una <xref:Microsoft.CodeAnalysis.Compilation>, puede pedirle un <xref:Microsoft.CodeAnalysis.SemanticModel> para cualquier <xref:Microsoft.CodeAnalysis.SyntaxTree> incluido en esa <xref:Microsoft.CodeAnalysis.Compilation>. Puede considerar el modelo semántico como el origen de toda la información que normalmente obtendría de IntelliSense. Un <xref:Microsoft.CodeAnalysis.SemanticModel> puede responder a preguntas como "¿Qué nombres entran en el ámbito de esta ubicación?", "¿A qué miembros se puede acceder desde este método?", "¿Qué variables se usan en este bloque de texto?" y "¿A qué hace referencia este nombre o expresión?". Agregue esta instrucción para crear el modelo semántico:
 
-[!code-csharp[Create the semantic model](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
+[!code-csharp[Create the semantic model](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>Enlazar un nombre
 
 La <xref:Microsoft.CodeAnalysis.Compilation> crea el <xref:Microsoft.CodeAnalysis.SemanticModel> desde el <xref:Microsoft.CodeAnalysis.SyntaxTree>. Después de crear el modelo, puede consultarlo para buscar la primera directiva `using` y recuperar la información de símbolo del espacio de nombres `System`. Agregue estas dos líneas en su método `Main` para crear el modelo semántico y recuperar el símbolo de la primera instrucción using:
 
-[!code-csharp[Find the namespace symbol for the first using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
+[!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
 En el código anterior se muestra cómo enlazar el nombre de la primera directiva de `using` para recuperar un <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> para el espacio de nombres `System`. El código anterior también muestra que usa el **modelo de sintaxis** para buscar la estructura del código y usa el **modelo semántico** para entender su significado. El **modelo de sintaxis** busca la cadena `System` en la instrucción using. El **modelo semántico** tiene toda la información sobre los tipos definidos en el espacio de nombres `System`.
 
 Desde el objeto <xref:Microsoft.CodeAnalysis.SymbolInfo> puede obtener el <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> mediante la propiedad <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>. Esta propiedad devuelve el símbolo al que hace referencia esta expresión. Para las expresiones que no hacen referencia a ningún elemento (por ejemplo, los literales numéricos), esta propiedad es `null`. Cuando el <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> no es NULL, el <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> denota el tipo del símbolo. En este ejemplo, la propiedad <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> es un <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>. Agregue el código siguiente al método `Main`. Recupera el símbolo del espacio de nombres `System` y, después, muestra todos los espacios de nombres secundarios que se declaran en el espacio de nombres `System`:
 
-[!code-csharp[Display all the child namespaces](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
+[!code-csharp[Display all the child namespaces](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 
 Ejecute el programa y debería ver la siguiente salida:
 
@@ -107,31 +107,31 @@ El programa "Hola mundo" contiene una <xref:Microsoft.CodeAnalysis.CSharp.Syntax
 
 Encontrará la cadena "Hello, World!" si busca el literal de cadena único en el programa. A continuación, una vez que haya encontrado el nodo de sintaxis, obtenga la información de tipo de ese nodo del modelo semántico. Agregue el código siguiente al método `Main`:
 
-[!code-csharp[Find the namespace symbol for the only using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
+[!code-csharp[Find the namespace symbol for the only using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
 
 La estructura <xref:Microsoft.CodeAnalysis.TypeInfo?displayProperty=nameWithType> incluye una propiedad <xref:Microsoft.CodeAnalysis.TypeInfo.Type?displayProperty=nameWithType> que permite el acceso a la información semántica sobre el tipo del literal. En este ejemplo, es el tipo `string`. Agregue una declaración que asigne esta propiedad a una variable local:
 
-[!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[Find the semantic information about the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
 
 Para finalizar este tutorial, crearemos una consulta LINQ que crea una secuencia de todos los métodos públicos declarados en el tipo `string` que devuelven una `string`. Esta consulta es más compleja, así que la compilaremos línea a línea y, después, la volveremos a construir como una única consulta. El origen de esta consulta es la secuencia de todos los miembros declarados en el tipo `string`:
 
-[!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
+[!code-csharp[Access the sequence of members on the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
 Esa secuencia de origen contiene todos los miembros, incluidas las propiedades y los campos, de modo que tiene que filtrarlos con el método <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> para buscar los elementos que son objetos <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType>:
 
-[!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
+[!code-csharp[Filter the sequence to only methods](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
 A continuación, agregue otro filtro para devolver solo aquellos métodos que son públicos y devuelven una `string`:
 
-[!code-csharp[Filter on return type and accessibility](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
+[!code-csharp[Filter on return type and accessibility](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
 
 Seleccione solo la propiedad name y solo los nombres distintos; para ello, elimine las sobrecargas:
 
-[!code-csharp[find the distinct names.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[find the distinct names.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
 
 También puede compilar la consulta completa con la sintaxis de consulta LINQ y, después, mostrar todos los nombres de método en la consola:
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 Compile y ejecute el programa. Debería ver los siguientes resultados:
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711992"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Miembros con cuerpo de expresión (Guía de programación de C#)
@@ -23,14 +23,14 @@ donde *expresión* es una expresión válida.
 
 La compatibilidad con las definiciones de cuerpos de expresión se introdujo para los métodos y las propiedades de solo lectura en C# 6 y se expandió en C# 7.0. Las definiciones de cuerpos de expresión se pueden usar con los miembros de tipo que se muestran en la tabla siguiente:
 
-|Miembro  |Se admite desde... |
+|Member  |Se admite desde... |
 |---------|---------|
 |[Método](#methods)  |C# 6 |
 |[Propiedad de solo lectura](#read-only-properties)   |C# 6  |
-|[Property](#properties)  |C# 7.0 |
+|[Propiedad](#properties)  |C# 7.0 |
 |[Constructor](#constructors)   |C# 7.0 |
 |[Finalizador](#finalizers)     |C# 7.0 |
-|[Indizador](#indexers)       |C# 7.0 |
+|[Indexador](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Métodos
 

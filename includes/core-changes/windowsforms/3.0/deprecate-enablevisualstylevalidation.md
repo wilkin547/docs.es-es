@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937103"
 ---
 ### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad EnableVisualStyleValidation
@@ -30,7 +30,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>API afectadas
 
-- None
+- Ninguna
 
 <!-- 
 

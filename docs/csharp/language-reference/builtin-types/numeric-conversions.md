@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
 ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776022"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398290"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Conversiones numéricas integradas (referencia de C#)
 
@@ -23,7 +23,7 @@ C# proporciona un conjunto de tipos numéricos [enteros](integral-numeric-types.
 
 En la tabla siguiente se muestran las conversiones implícitas predefinidas entre los tipos numéricos integrados:
 
-|De|En|
+|De|Para|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` o `decimal`|
 |[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|
@@ -31,8 +31,8 @@ En la tabla siguiente se muestran las conversiones implícitas predefinidas entr
 |[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|
 |[int](integral-numeric-types.md)|`long`, `float`, `double` o `decimal`|
 |[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` o `decimal`|
-|[long](integral-numeric-types.md)|`float`, `double`o `decimal`|
-|[ulong](integral-numeric-types.md)|`float`, `double`o `decimal`|
+|[long](integral-numeric-types.md)|`float`, `double` o `decimal`|
+|[ulong](integral-numeric-types.md)|`float`, `double` o `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
@@ -59,12 +59,12 @@ Tenga en cuenta también lo siguiente:
 
 La siguiente tabla muestra las conversiones explícitas predefinidas entre tipos numéricos integrados para los que no hay ninguna [conversión implícita](#implicit-numeric-conversions):
 
-|De|En|
+|De|Para|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` o `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` o `ulong`|
-|[ushort](integral-numeric-types.md)|`sbyte`, `byte`o `short`|
+|[ushort](integral-numeric-types.md)|`sbyte`, `byte` o `short`|
 |[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` o `ulong`|
 |[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort` o `int`|
 |[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` o `ulong`|
@@ -100,7 +100,7 @@ Tenga en cuenta también lo siguiente:
 
 - Cuando se convierte `decimal` en `float` o `double`, el valor de origen se redondea al valor `float` o `double` más cercano, respectivamente.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

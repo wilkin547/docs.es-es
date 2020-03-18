@@ -7,10 +7,10 @@ metadata:
   ms.topic: landing-page
   ms.date: 11/19/2019
   ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/25/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "75339169"
 landingContent:
 - title: Aprender a programar en C#
@@ -71,7 +71,7 @@ landingContent:
       url: whats-new/csharp-8.md
   - linkListType: overview
     links:
-    - text: Detección de patrones
+    - text: Coincidencia de patrones
       url: pattern-matching.md
     - text: Tipos de referencia que aceptan valores NULL
       url: nullable-references.md
@@ -111,5 +111,5 @@ landingContent:
       url: language-reference/operators/index.md
     - text: Configurar la versión del lenguaje
       url: language-reference/configure-language-version.md
-    - text: Especificación del lenguaje C#
+    - text: especificación del lenguaje C#
       url: ../../_csharplang/spec/introduction.md

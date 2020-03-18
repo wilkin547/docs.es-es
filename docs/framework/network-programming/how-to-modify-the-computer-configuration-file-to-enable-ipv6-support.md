@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
+title: 'Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 98fb57abfff985ab96cb5139f15ae4c29c986a18
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 73408afe9fcb35daa898c08b087a3411a6cb342b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040619"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180799"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Procedimiento para modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
 En el ejemplo de código siguiente se muestra cómo modificar el archivo de configuración de equipo, *machine.config*, para permitir la compatibilidad con IPv6. El archivo *machine.config* se almacena en la carpeta *%Windir%\Microsoft.NET\Framework* en el directorio donde se ha instalado Windows. Hay un archivo *machine.config* distinto en las carpetas bajo *%Windir%\Microsoft.NET\Framework* para cada versión de .NET Framework instalada en el equipo (por ejemplo, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.  
@@ -28,7 +28,7 @@ En el ejemplo de código siguiente se muestra cómo modificar el archivo de conf
     …………  
     <settings>  
         …………  
-        <ipv6 enabled="true"/>   
+        <ipv6 enabled="true"/>
     ……………  
     </settings>  
     ………………  

@@ -3,17 +3,17 @@ title: Comando dotnet msbuild
 description: El comando dotnet msbuild proporciona acceso a la línea de comandos de MSBuild.
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503672"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet msbuild`: compila un proyecto y todas sus dependencias.
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503672"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet msbuild` permite el acceso a una instancia de MSBuild completamente funcional.
 

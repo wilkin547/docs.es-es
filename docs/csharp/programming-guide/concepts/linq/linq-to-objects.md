@@ -3,10 +3,10 @@ title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344780"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
@@ -33,7 +33,7 @@ El término "LINQ to Objects" se refiere al uso de consultas LINQ con cualquier 
  [LINQ y reflexión (C#)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  Vincula a un ejemplo que muestra cómo usa LINQ la reflexión.  
   
- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)  
+ [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])  
  Explica cómo se puede usar LINQ para interactuar con sistemas de archivos. También incluye vínculos a temas que muestran estos conceptos.  
   
  [Procedimiento para consultar un objeto ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
