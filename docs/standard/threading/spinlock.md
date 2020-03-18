@@ -6,10 +6,10 @@ helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 ms.openlocfilehash: eac9a1be38ea81e8ccee1d05d9061ceeb597627f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106164"
 ---
 # <a name="spinlock"></a>SpinLock
@@ -19,9 +19,9 @@ La estructura <xref:System.Threading.SpinLock> es un primitivo de sincronizació
   
  Como SpinLock es un tipo de valor, explícitamente debe pasarlo por referencia si pretende que las dos copias hagan referencia al mismo bloqueo.  
   
- Para obtener más información acerca de cómo utilizar este tipo, vea <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Como ejemplo, vea [Cómo: para usar SpinLock para la sincronización de bajo nivel](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
+ Para obtener más información acerca de cómo utilizar este tipo, vea <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Para consultar un ejemplo, vea [Utilizar SpinLock para la sincronización de bajo nivel](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock> admite un modo *thread*-*tracking* que puede usar durante la fase de desarrollo para ayudar a realizar un seguimiento del subproceso que está reteniendo el bloqueo en un momento determinado. El modo de seguimiento de subprocesos es muy útil para la depuración, pero se recomienda apagarlo en la versión de lanzamiento del programa porque puede ralentizar el rendimiento. Para obtener más información, vea [Cómo: para habilitar el modo de seguimiento de subprocesos en el bloqueo SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> admite un modo *thread*-*tracking* que puede usar durante la fase de desarrollo para ayudar a realizar un seguimiento del subproceso que está reteniendo el bloqueo en un momento determinado. El modo de seguimiento de subprocesos es muy útil para la depuración, pero se recomienda apagarlo en la versión de lanzamiento del programa porque puede ralentizar el rendimiento. Para más información, vea [Habilitar el modo de seguimiento de subproceso en el bloqueo SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
 ## <a name="see-also"></a>Vea también
 

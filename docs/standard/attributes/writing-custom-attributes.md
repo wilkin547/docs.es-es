@@ -17,10 +17,10 @@ helpviewer_keywords:
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140586"
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
@@ -131,7 +131,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
-## <a name="custom-attribute-example"></a>ejemplo de atributo personalizado  
+## <a name="custom-attribute-example"></a>Ejemplo del atributo personalizado  
  En esta sección se incorpora la información anterior y se muestra cómo se diseña un atributo simple que documente información sobre el autor de una sección del código. El atributo de este ejemplo almacena el nombre y el nivel del programador y si se ha revisado el código. Utiliza tres variables privadas para almacenar los valores reales que se deben guardar. Cada variable se representa mediante una propiedad pública que obtiene y establece los valores. Por último, el constructor se define con dos parámetros obligatorios.  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]

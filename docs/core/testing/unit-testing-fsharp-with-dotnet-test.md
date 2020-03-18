@@ -5,10 +5,10 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157315"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y xUnit

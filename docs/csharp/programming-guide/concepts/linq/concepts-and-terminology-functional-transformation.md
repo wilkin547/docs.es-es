@@ -3,10 +3,10 @@ title: Conceptos y terminología (transformación funcional) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70040630"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceptos y terminología (transformación funcional) (C#)
@@ -62,7 +62,7 @@ Conjunto de datos estructurados, normalmente del mismo tipo. Para que una colecc
 Tupla (tipos anónimos) \
 Se trata de un concepto matemático: una tupa es una secuencia finita de objetos, cada uno de los cuales es de un tipo específico. A las tuplas también se las conoce como listas ordenadas. Los tipos anónimos son una implementación del lenguaje para este concepto, lo que permite declarar un tipo de clase sin nombre e instanciar un objeto de este tipo al mismo tiempo.
 
-Para más información, vea [Tipos anónimos](../../classes-and-structs/anonymous-types.md).
+Para obtener más información, consulte [Tipos anónimos](../../classes-and-structs/anonymous-types.md) (Guía de programación de C#).
 
 Inferencia de tipos (tipos implícitos) \
 Consiste en la capacidad del compilador para determinar el tipo de una variable en caso de que no exista una declaración de tipos explícita.

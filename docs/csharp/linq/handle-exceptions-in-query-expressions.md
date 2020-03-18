@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo controlar excepciones en expresion
 ms.date: 12/01/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
 ms.openlocfilehash: f900669412026e69598d3939c51ff8208b51b7ec
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857507"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688506"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>Controlar excepciones en expresiones de consulta
 
@@ -26,7 +26,7 @@ En el ejemplo siguiente se muestra cómo mover código de control de excepciones
 
 En algunos casos, la mejor respuesta a una excepción que se produce dentro de una consulta podría ser detener la ejecución de la consulta inmediatamente. En el ejemplo siguiente se muestra cómo controlar las excepciones que pueden producirse desde el cuerpo de una consulta. Supongamos que `SomeMethodThatMightThrow` puede producir una excepción que requiere que se detenga la ejecución de la consulta.
 
-Tenga en cuenta que el bloque `try` encierra el bucle `foreach` y no la propia consulta. Esto es porque el bucle `foreach` es el punto en el que se ejecuta realmente la consulta. Para obtener más información, vea [Introducción a las consultas LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Tenga en cuenta que el bloque `try` encierra el bucle `foreach` y no la propia consulta. Esto es porque el bucle `foreach` es el punto en el que se ejecuta realmente la consulta. Para obtener más información, vea [Introduction to LINQ queries](../programming-guide/concepts/linq/introduction-to-linq-queries.md) (Introducción a las consultas LINQ).
 
 [!code-csharp[csProgGuideLINQ#12](~/samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]
 

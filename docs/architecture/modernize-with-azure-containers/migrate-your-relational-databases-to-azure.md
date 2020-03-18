@@ -3,10 +3,10 @@ title: Migración de las bases de datos relacionales a Azure
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Migración de las bases de datos relacionales a Azure
 ms.date: 04/28/2018
 ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73093611"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migración de las bases de datos relacionales a Azure

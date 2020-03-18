@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para establecer en una aplicación una directiva de caché predeterminada de duración definida
+title: Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048099"
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedimiento para establecer en una aplicación una directiva de caché predeterminada de duración definida
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida
 La directiva de caché predeterminada de duración definida permite que una aplicación tenga su comportamiento de caché definido mediante los encabezados que se han enviado con el recurso almacenado en caché y el comportamiento de caché definido en las secciones 13 y 14 de RFC 2616, disponibles en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Este es el comportamiento de caché apropiado para la mayoría de aplicaciones.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Para establecer la directiva automática predeterminada para una aplicación  

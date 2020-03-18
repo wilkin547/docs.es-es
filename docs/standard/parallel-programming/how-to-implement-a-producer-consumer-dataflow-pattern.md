@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Implementación de un modelo de flujo de datos productor-consumidor
+title: 'Cómo: Implementar un modelo de flujo de datos productor-consumidor'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091487"
 ---
-# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Procedimiento Implementación de un modelo de flujo de datos productor-consumidor
+# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Cómo: Implementar un modelo de flujo de datos productor-consumidor
 Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para implementar un modelo productor-consumidor. En este modelo, el *productor* envía mensajes a un bloque de mensajes y el *consumidor* lee los mensajes de este bloque.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para quitar caracteres no válidos de una cadena
+title: 'Cómo: Quitar caracteres no válidos de una cadena'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 ms.openlocfilehash: cc90e6609f9335b7e2f08271e5540b182901e8c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127652"
 ---
-# <a name="how-to-strip-invalid-characters-from-a-string"></a>Procedimiento para quitar caracteres no válidos de una cadena
+# <a name="how-to-strip-invalid-characters-from-a-string"></a>Cómo: Quitar caracteres no válidos de una cadena
 En el ejemplo siguiente se usa el método estático <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para quitar caracteres no válidos de una cadena.  
   
 ## <a name="example"></a>Ejemplo  

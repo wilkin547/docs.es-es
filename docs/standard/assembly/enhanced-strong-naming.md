@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141173"
 ---
 # <a name="enhanced-strong-naming"></a>Nombres seguros mejorados

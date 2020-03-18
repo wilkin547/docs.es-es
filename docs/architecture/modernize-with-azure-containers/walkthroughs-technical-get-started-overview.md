@@ -3,10 +3,10 @@ title: Tutoriales e introducción técnica
 description: Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Tutoriales e introducción técnica
 ms.date: 04/28/2018
 ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69660882"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales e introducción técnica

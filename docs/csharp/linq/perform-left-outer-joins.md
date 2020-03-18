@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo realizar combinaciones externas iz
 ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
 ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857585"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688584"
 ---
 # <a name="perform-left-outer-joins"></a>Realizar operaciones de combinación externa izquierda
 
@@ -33,4 +33,4 @@ El segundo paso consiste en incluir cada elemento de la primera colección (izqu
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Realizar combinaciones internas](perform-inner-joins.md)
 - [Realizar combinaciones agrupadas](perform-grouped-joins.md)
-- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])
+- [Tipos anónimos (Guía de programación de C#)](../programming-guide/classes-and-structs/anonymous-types.md).

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buffers"
 - pipeline processing
 ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121985"
 ---
 # <a name="memory--and-span-related-types"></a>Tipos relacionados con el intervalo y la memoria

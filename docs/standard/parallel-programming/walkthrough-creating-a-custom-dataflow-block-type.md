@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Creación de tipos de bloques de flujos de datos personalizados'
+title: 'Tutorial: Crear tipos de bloques de flujos de datos personalizados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 ms.openlocfilehash: cb953952bbed90edd2db799e92d44ec9f062babf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139882"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Tutorial: Creación de tipos de bloques de flujos de datos personalizados
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Tutorial: Crear tipos de bloques de flujos de datos personalizados
 Aunque la biblioteca de flujo de datos TPL proporciona varios tipos de bloques de flujo de datos que permiten una variedad de funciones, también puede crear tipos de bloques personalizados. En este documento se describe cómo crear un tipo de bloque de flujo de datos que implementa un comportamiento personalizado.  
   
 ## <a name="prerequisites"></a>Requisitos previos  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132913"
 ---
 # <a name="basic-string-operations-in-net"></a>Operaciones básicas de cadenas en .NET
@@ -37,7 +37,7 @@ A menudo, las aplicaciones responden a los usuarios mediante la construcción de
  [Utilizar la clase StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
  Se describe cómo crear y modificar objetos de cadena dinámicos con la clase <xref:System.Text.StringBuilder>.  
   
- [Cómo: para realizar manipulaciones de cadena básicas](../../../docs/standard/base-types/basic-manipulations.md)  
+ [Realizar manipulaciones de cadena básicas](../../../docs/standard/base-types/basic-manipulations.md)  
  Se describe el uso de las operaciones de cadena básicas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156665"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240862"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Introducción a .NET Core mediante la CLI de .NET Core
 
@@ -43,7 +43,7 @@ Veamos un tutorial rápido:
 
     *Hello.csproj*:
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     El archivo de proyecto especifica todo lo que es necesario para restaurar las dependencias y compilar el programa.
 
@@ -52,7 +52,7 @@ Veamos un tutorial rápido:
 
     *Program.cs*:
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     El programa se inicia mediante `using System`, lo que significa "llevar cada cosa del espacio de nombres `System` al ámbito de este archivo". El espacio de nombres `System` incluye la clase `Console`.
 
@@ -100,7 +100,7 @@ Cambiemos un poco el programa. Los números Fibonacci son divertidos, así que v
 
 01. Reemplace el contenido de su archivo *Program.cs* por el código siguiente:
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. Ejecute [dotnet build](../tools/dotnet-build.md) para compilar los cambios.
 
@@ -140,11 +140,11 @@ Los archivos únicos son adecuados para programas sencillos de uso único, pero,
 
 01. Agregue un archivo nuevo dentro del directorio *Hello* denominado *FibonacciGenerator.cs* con el código siguiente:
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
 02. Cambie el método `Main` en su archivo *Program.cs* para crear una instancia de la nueva clase y llamar a su método como se muestra en el ejemplo siguiente:
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. Ejecute [dotnet build](../tools/dotnet-build.md) para compilar los cambios.
 

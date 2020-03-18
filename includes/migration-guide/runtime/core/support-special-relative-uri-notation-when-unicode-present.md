@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 841cb06bf94844d9f4da9dc33e60bad0d43dcd84
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70997717"
 ---
 ### <a name="support-special-relative-uri-notation-when-unicode-is-present"></a>Admitir una notación de URI relativo especial cuando Unicode está presente

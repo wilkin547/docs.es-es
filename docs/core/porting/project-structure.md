@@ -4,10 +4,10 @@ description: Ayuda para los propietarios del proyecto que quieren compilar su so
 author: conniey
 ms.date: 12/07/2018
 ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75777334"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core

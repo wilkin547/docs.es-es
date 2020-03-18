@@ -3,10 +3,10 @@ title: Aplicar los patrones CQRS y DDD simplificados en un microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre la relación general entre patrones DDD y CQRS.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834314"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicación de patrones CQRS y DDD simplificados en un microservicio

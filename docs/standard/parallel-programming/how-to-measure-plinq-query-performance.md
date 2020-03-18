@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para medir el rendimiento de consultas PLINQ
+title: 'Cómo: Medir el rendimiento de consultas PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 ms.openlocfilehash: 91b6165be2f4f464626fb25f7152de68de9d86e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124995"
 ---
-# <a name="how-to-measure-plinq-query-performance"></a>Procedimiento para medir el rendimiento de consultas PLINQ
+# <a name="how-to-measure-plinq-query-performance"></a>Cómo: Medir el rendimiento de consultas PLINQ
 En este ejemplo se muestra cómo utilizar la clase <xref:System.Diagnostics.Stopwatch> para medir el tiempo que tarda en ejecutarse una consulta PLINQ.  
   
 ## <a name="example"></a>Ejemplo  

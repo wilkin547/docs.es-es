@@ -21,10 +21,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121699"
 ---
 # <a name="net-regular-expressions"></a>Expresiones regulares de .NET
@@ -109,7 +109,7 @@ Las expresiones regulares proporcionan un método eficaz y flexible para procesa
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|DESCRIPCIÓN|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)|Ofrece información sobre el conjunto de caracteres, operadores y construcciones que se pueden utilizar para definir expresiones regulares.|  
 |[Modelo de objetos de expresión regular](the-regular-expression-object-model.md)|Proporciona información y ejemplos de código que muestran cómo usar las clases de expresiones regulares.|  

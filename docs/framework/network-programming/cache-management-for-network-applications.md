@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048877"
 ---
 # <a name="cache-management-for-network-applications"></a>Administración de la memoria caché para aplicaciones de red
@@ -26,10 +26,10 @@ Este tema y los temas secundarios relacionados describen el almacenamiento en ca
  [Directiva de caché](cache-policy.md)  
  Explica qué es una directiva de caché y cómo definirla.  
   
- [Directivas de caché basadas en la ubicación](location-based-cache-policies.md)  
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](location-based-cache-policies.md)  
  Define cada tipo de directiva de caché basada en la ubicación disponible para recursos de protocolo de transferencia de hipertexto (http y https).  
   
- [Directivas de caché de duración definida](time-based-cache-policies.md)  
+ [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)  
  Describe los criterios que pueden usarse para personalizar una directiva de caché basada en el tiempo.  
   
  [Configurar el almacenamiento en caché de las aplicaciones de red](configuring-caching-in-network-applications.md)  

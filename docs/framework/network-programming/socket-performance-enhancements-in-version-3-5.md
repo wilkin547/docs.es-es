@@ -3,10 +3,10 @@ title: Mejoras de rendimiento de socket en la versión 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047237"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Mejoras de rendimiento de socket en la versión 3.5
@@ -39,5 +39,5 @@ En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displ
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
+- [Ejemplos de programación de red](network-programming-samples.md)
 - [Ejemplos de código de socket](socket-code-examples.md)

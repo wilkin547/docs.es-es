@@ -3,10 +3,10 @@ title: Habilitar y deshabilitar IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048564"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitar y deshabilitar IPv6
@@ -15,7 +15,7 @@ Para usar el protocolo IPv6, asegúrese de que está ejecutando una versión del
 ## <a name="configuration-steps"></a>Pasos de la configuración  
  En la tabla siguiente se muestran varias configuraciones  
   
-|¿El sistema operativo está habilitado para IPv6?|¿Las clases de red están habilitadas para IPv6?|DESCRIPCIÓN|  
+|¿El sistema operativo está habilitado para IPv6?|¿Las clases de red están habilitadas para IPv6?|Description|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |No|No|Puede analizar las direcciones de IPv6.|  
 |No|Sí|Puede analizar las direcciones de IPv6.|  
@@ -24,7 +24,7 @@ Para usar el protocolo IPv6, asegúrese de que está ejecutando una versión del
   
  Tenga en cuenta que para habilitar la compatibilidad con IPv6 para todas las clases del espacio de nombres System.Net, debe modificar el archivo de configuración del equipo o el archivo de configuración de la aplicación. El archivo de configuración de la aplicación tiene prioridad sobre el archivo de configuración del equipo.  
   
- Para obtener un ejemplo de cómo modificar el archivo de configuración de equipo, *machine.config*, para permitir la compatibilidad con Ipv6, vea [Cómo: Modificar el archivo de configuración de equipo para habilitar la compatibilidad con Ipv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Además, asegúrese de que la compatibilidad con IPv6 está habilitada para el sistema operativo.  
+ Para obtener un ejemplo de cómo modificar el archivo de configuración del equipo, *machine.config*, para habilitar la compatibilidad con IPv6, vea [Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Además, asegúrese de que la compatibilidad con IPv6 está habilitada para el sistema operativo.  
   
  .NET Framework tiene un modificador de configuración establecido en un archivo de configuración como se muestra a continuación:  
   

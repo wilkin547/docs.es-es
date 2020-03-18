@@ -3,10 +3,10 @@ title: Diseño de la arquitectura de aplicaciones basadas en contenedores y micr
 description: El diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios no es ninguna tontería y no debe tomarse a la ligera. Conozca sobre los conceptos principales en este capítulo.
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295022"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios

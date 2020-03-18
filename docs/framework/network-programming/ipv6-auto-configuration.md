@@ -3,10 +3,10 @@ title: Configuración automática de IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047816"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuración automática de IPv6
@@ -22,7 +22,7 @@ Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es
  Independientemente de cómo se determine la dirección, el nodo debe comprobar que su dirección potencial es única para el vínculo local. Para ello, envía un mensaje de convocatoria de vecino a la dirección potencial. Si el nodo recibe respuesta, sabe que la dirección ya está en uso y debe establecer otra dirección.  
   
 ## <a name="ipv6-mobility"></a>Movilidad de IPv6  
- La proliferación de dispositivos móviles ha introducido un requisito nuevo: un dispositivo debe poder cambiar de forma arbitraria las ubicaciones en Internet IPv6 y seguir manteniendo las conexiones existentes. Para proporcionar esta funcionalidad, se asigna a un nodo móvil una dirección principal en la que siempre se puede establecer contacto con él. Cuando el nodo móvil se encuentra en su ubicación principal, se conecta con el vínculo principal y usa su dirección principal. Cuando el nodo móvil cambia de ubicación, un agente principal, que normalmente es un enrutador, transmite los mensajes entre el nodo móvil y los nodos con los que se comunica.  
+ La proliferación de dispositivos móviles ha introducido un nuevo requisito: un dispositivo debe poder cambiar de forma arbitraria las ubicaciones en Internet IPv6 y seguir manteniendo las conexiones existentes. Para proporcionar esta funcionalidad, se asigna a un nodo móvil una dirección principal en la que siempre se puede establecer contacto con él. Cuando el nodo móvil se encuentra en su ubicación principal, se conecta con el vínculo principal y usa su dirección principal. Cuando el nodo móvil cambia de ubicación, un agente principal, que normalmente es un enrutador, transmite los mensajes entre el nodo móvil y los nodos con los que se comunica.  
   
 ## <a name="see-also"></a>Vea también
 

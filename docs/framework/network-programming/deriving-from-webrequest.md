@@ -11,16 +11,16 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 ms.openlocfilehash: 6bee864f8d24076d16f226c29d61801e856739d9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048608"
 ---
 # <a name="deriving-from-webrequest"></a>Derivar de WebRequest
 La clase <xref:System.Net.WebRequest> es una clase base abstracta que proporciona las propiedades y métodos básicos para crear un controlador de solicitudes específico del protocolo adecuado al modelo de protocolo acoplable de .NET Framework. Las aplicaciones que usan la clase **WebRequest** pueden solicitar datos mediante cualquier protocolo admitido sin necesidad de especificar el protocolo empleado.  
   
- Para que una clase específica del protocolo se use como un protocolo conectable, se deben cumplir dos criterios: la clase debe implementar la interfaz <xref:System.Net.IWebRequestCreate> y se debe registrar con el método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>. La clase debe invalidar todos los métodos y propiedades abstractos de **WebRequest** para proporcionar la interfaz acoplable.  
+ Para usar una clase específica del protocolo como protocolo acoplable se deben cumplir dos criterios: la clase debe implementar la interfaz <xref:System.Net.IWebRequestCreate> y se debe registrar con el método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>. La clase debe invalidar todos los métodos y propiedades abstractos de **WebRequest** para proporcionar la interfaz acoplable.  
   
  Las instancias de **WebRequest** están diseñadas para un solo uso; si quiere realizar otra solicitud, cree una nueva instancia de **WebRequest**. **WebRequest** admite la interfaz <xref:System.Runtime.Serialization.ISerializable> para permitir que los desarrolladores serialicen una plantilla **WebRequest** y luego vuelvan a crear la plantilla para otras solicitudes.  
   
@@ -93,5 +93,5 @@ La clase <xref:System.Net.WebRequest> es una clase base abstracta que proporcion
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>
-- [Programming Pluggable Protocols (Programar protocolos acoplables)](programming-pluggable-protocols.md)
+- [Programar protocolos acoplables](programming-pluggable-protocols.md)
 - [Derivar de WebResponse](deriving-from-webresponse.md)

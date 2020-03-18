@@ -5,10 +5,10 @@ author: pkulikov
 ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
 ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73039209"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C\#
@@ -99,7 +99,7 @@ Tal y como se muestra en el ejemplo, se puede usar una instancia de <xref:System
 
 ## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Cómo crear una cadena de resultado usando la referencia de cultura invariable
 
-Puede usar el método estático <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> junto con el método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para resolver una cadena interpolada en una cadena de resultado de <xref:System.Globalization.CultureInfo.InvariantCulture>. En el siguiente ejemplo se muestra cómo hacerlo:
+Puede usar el método estático <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> junto con el método <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> para resolver una cadena interpolada en una cadena de resultado de <xref:System.Globalization.CultureInfo.InvariantCulture>. En el siguiente ejemplo se muestra cómo hacerlo:
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para cancelar una tarea y sus elementos secundarios
+title: 'Cómo: Cancelar una tarea y sus elementos secundarios'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 ms.openlocfilehash: 4e0e783a4dfe3bf3a55795d7baef461369d7405a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134201"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Procedimiento para cancelar una tarea y sus elementos secundarios
+# <a name="how-to-cancel-a-task-and-its-children"></a>Cómo: Cancelar una tarea y sus elementos secundarios
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
   
 1. Crear e iniciar una tarea cancelable.  
@@ -43,5 +43,5 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [Programación asincrónica basada en tareas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
-- [Tareas secundarias asociadas y desasociadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
+- [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas)
 - [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

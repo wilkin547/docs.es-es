@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para implementar un observador
+title: 'Cómo: Implementar un observador'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139311"
 ---
-# <a name="how-to-implement-an-observer"></a>Procedimiento para implementar un observador
+# <a name="how-to-implement-an-observer"></a>Cómo: Implementar un observador
 El modelo de diseño de observador requiere una división entre un observador, que registra notificaciones, y un proveedor, que controla los datos y envía notificaciones a uno o varios observadores. En este tema se describe cómo crear un observador. En un tema relacionado, [Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md), se describe cómo crear un proveedor.  
   
 ### <a name="to-create-an-observer"></a>Para crear un observador  
@@ -51,5 +51,5 @@ El modelo de diseño de observador requiere una división entre un observador, q
 
 - <xref:System.IObserver%601>
 - [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)
-- [Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)

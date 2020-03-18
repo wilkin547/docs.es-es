@@ -3,10 +3,10 @@ title: Materialización intermedia (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
 ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253164"
 ---
 # <a name="intermediate-materialization-c"></a>Materialización intermedia (C#)
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  Los operadores de consulta estándar también se pueden encadenar juntos. Esto se ilustra en el tema final de este tutorial.  
   
-- [Encadenar operadores de consulta estándar juntos (C#)](./chaining-standard-query-operators-together.md)  
+- [Chaining Standard Query Operators Together (C#)](./chaining-standard-query-operators-together.md) (Encadenar juntos operadores de consulta estándar [C#])  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129003"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausa e interrupción de subprocesos
@@ -41,7 +41,7 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
 > [!NOTE]
 > Si el subproceso de destino no está bloqueado cuando se llama a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, el subproceso no se interrumpe hasta que se bloquea. Si el subproceso nunca se bloquea, puede finalizar sin ser interrumpido.  
   
- Si una espera es administrada, tanto <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> como <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activan el subproceso inmediatamente. Si una espera es de tipo no administrado (por ejemplo, una llamada de invocación de plataforma a la función [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) de Win32), ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> pueden tomar el control del subproceso hasta que este vuelva o llame a código administrado. En código administrado, el comportamiento es el siguiente:  
+ Si una espera es administrada, tanto <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> como <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activan el subproceso inmediatamente. Si una espera es de tipo no administrado (por ejemplo, una llamada de invocación de plataforma a la función [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) de Win32), ni <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> pueden tomar el control del subproceso hasta que este vuelva o llame a código administrado. En código administrado, el comportamiento es el siguiente:  
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere una <xref:System.Threading.ThreadInterruptedException> en el subproceso de destino.  
   
@@ -54,4 +54,4 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
 - <xref:System.Threading.ThreadAbortException>
 - [Subprocesamiento](../../../docs/standard/threading/index.md)
 - [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)
+- [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124297"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en tareas
@@ -101,6 +101,6 @@ En este ejemplo también se muestra cómo se puede incluir en un subproceso un �
 
 ## <a name="see-also"></a>Vea también
 
-- [Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
 - [Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

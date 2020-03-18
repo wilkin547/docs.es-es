@@ -8,10 +8,10 @@ helpviewer_keywords:
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
 ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793362"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (Guía de programación de C#)
@@ -26,7 +26,7 @@ ms.locfileid: "76793362"
 
 - `name`
 
-  El nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").
+  Nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").
 
 - `description`
 

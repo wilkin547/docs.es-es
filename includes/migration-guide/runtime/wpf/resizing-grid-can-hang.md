@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: eff7e7cfc8fa0b4bc8ee3a64a7c60ee21d51f466
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70997718"
 ---
 ### <a name="resizing-a-grid-can-hang"></a>El cambio de tamaño de una cuadrícula puede dejar de responder

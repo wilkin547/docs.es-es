@@ -5,10 +5,10 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73088127"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor para desarrolladores de ASP.NET Web Forms
@@ -31,7 +31,7 @@ Redmond, Washington 98052-6399
 
 Copyright © 2019 de Microsoft Corporation
 
-Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
+All rights reserved. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
 Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las opiniones y la información expresados en este libro, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso.
 

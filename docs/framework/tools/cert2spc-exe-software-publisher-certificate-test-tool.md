@@ -9,10 +9,10 @@ helpviewer_keywords:
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129886"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Herramienta de prueba de certificados del publicador de software)
@@ -30,13 +30,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
   
 ## <a name="parameters"></a>Parámetros  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |`certN.cer`|Nombre de certificado X.509 que se incluye en el archivo SPC. Se pueden especificar varios nombres separados por espacios.|  
 |`crlN.crl`|Nombre de la lista de revocación de certificados que se va a incluir en el archivo SPC. Se pueden especificar varios nombres separados por espacios.|  
 |`outputSPCfile.spc`|Nombre del objeto PKCS #7 que contendrá los certificados X.509.|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para especificar el modo de ejecución en PLINQ
+title: 'Cómo: Especificar el modo de ejecución en PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 ms.openlocfilehash: c602aba6e18f80b007b15cd61dfd2b48a36dd2c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139241"
 ---
-# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Procedimiento para especificar el modo de ejecución en PLINQ
+# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Cómo: Especificar el modo de ejecución en PLINQ
 En este ejemplo se muestra cómo forzar a PLINQ a omitir su heurística predeterminada y paralelizar una consulta, independientemente de la forma de la consulta.  
   
 > [!WARNING]

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047665"
 ---
 # <a name="location-based-cache-policies"></a>directivas de caché basadas en la ubicación
-Una directiva de caché basada en la ubicación define la actualización de las entradas válidas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Un recurso almacenado en caché es válido si al usarlo no se infringen los requisitos de revalidación especificados por el servidor. Una directiva de caché basada en la ubicación se crea mediante programación con un constructor de clase <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. El tipo de la directiva basada en la ubicación se pasa al constructor con un valor de enumeración <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obtener ejemplos de código en los que se crean directivas de caché basadas en ubicación, vea [Cómo: Establecer en una aplicación una directiva de caché basada en la ubicación](how-to-set-a-location-based-cache-policy-for-an-application.md). En las secciones siguientes se explica cada tipo de directiva de caché basada en la ubicación para recursos del Protocolo de transferencia de hipertexto (http y https).  
+Una directiva de caché basada en la ubicación define la actualización de las entradas válidas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Un recurso almacenado en caché es válido si al usarlo no se infringen los requisitos de revalidación especificados por el servidor. Una directiva de caché basada en la ubicación se crea mediante programación con un constructor de clase <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. El tipo de la directiva basada en la ubicación se pasa al constructor con un valor de enumeración <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obtener ejemplos de código en los que se crean directivas de caché basadas en ubicación, vea [How to: Set a Location-Based Cache Policy for an Application](how-to-set-a-location-based-cache-policy-for-an-application.md) (Cómo: establecer en una aplicación una directiva de caché basada en la ubicación). En las secciones siguientes se explica cada tipo de directiva de caché basada en la ubicación para recursos del Protocolo de transferencia de hipertexto (http y https).  
   
 ## <a name="cache-if-available-policy"></a>Directiva de caché si está disponible  
  Si un recurso solicitado válido se encuentra en la caché local, se usa el recurso almacenado en caché; en caso contrario, la solicitud del recurso se envía al servidor. Si el recurso solicitado está disponible en cualquier caché entre el cliente y el servidor, una caché intermedia puede atender a la solicitud.  

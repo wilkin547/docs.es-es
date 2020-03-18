@@ -3,10 +3,10 @@ title: Modernización de aplicaciones con supervisión y telemetría
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Modernice sus aplicaciones con supervisión y telemetría
 ms.date: 04/30/2018
 ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393850"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernización de aplicaciones con supervisión y telemetría

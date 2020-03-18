@@ -12,24 +12,24 @@ helpviewer_keywords:
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140142"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programación asincrónica (APM)
 Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResult> se implementa como dos métodos con nombre `BeginOperationName` y `EndOperationName` que comienzan y terminan la operación asincrónica *OperationName* respectivamente. Por ejemplo, la clase <xref:System.IO.FileStream> ofrece los métodos <xref:System.IO.FileStream.BeginRead%2A> y <xref:System.IO.FileStream.EndRead%2A> para leer bytes de un archivo de manera asincrónica. Estos métodos implementan la versión asincrónica del método <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
-> A partir de .NET Framework 4, la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) ofrece un nuevo modelo para programación asincrónica y paralela. Para obtener más información, vea [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) y [Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+> A partir de .NET Framework 4, la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) ofrece un nuevo modelo para programación asincrónica y paralela. Para obtener más información, vea [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) y [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
  Después de llamar a `BeginOperationName`, una aplicación puede seguir ejecutando instrucciones en el subproceso de llamada mientras la operación asincrónica tiene lugar en un subproceso diferente. Para cada llamada a `BeginOperationName`, la aplicación debe llamar a `EndOperationName` para obtener los resultados de la operación.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Comenzar una operación asincrónica  
  El método `BeginOperationName` comienza la operación asincrónica *OperationName* y devuelve un objeto que implementa la interfaz <xref:System.IAsyncResult>. Los objetos<xref:System.IAsyncResult> almacenan información sobre una operación asincrónica. En la tabla siguiente se muestra información sobre una operación asincrónica.  
   
-|Miembro|DESCRIPCIÓN|  
+|Member|Description|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Objeto opcional específico de la aplicación que contiene información sobre la operación asincrónica.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Un <xref:System.Threading.WaitHandle> que se puede usar para bloquear la ejecución de la aplicación hasta que se complete la operación asincrónica.|  
@@ -55,7 +55,7 @@ Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResu
   
 - Llame a `EndOperationName` desde el subproceso principal de la aplicación, bloqueando la ejecución de la aplicación hasta que finalice la operación. Para ver un ejemplo que ilustre esta técnica, consulte [Bloquear la ejecución de una aplicación al finalizar una operación asincrónica](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
-- Use el <xref:System.IAsyncResult.AsyncWaitHandle%2A> para bloquear la ejecución de aplicaciones hasta que se completen una o más operaciones. Para ver un ejemplo que ilustre esta técnica, consulte [Bloquear la ejecución de una aplicación mediante AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Use el <xref:System.IAsyncResult.AsyncWaitHandle%2A> para bloquear la ejecución de aplicaciones hasta que se completen una o más operaciones. Para ver un ejemplo que ilustre esta técnica, consulte [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
  Las aplicaciones que no necesiten bloquear mientras se completa la operación asincrónica pueden usar uno de los siguientes métodos:  
   

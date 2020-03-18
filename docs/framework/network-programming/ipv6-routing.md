@@ -3,10 +3,10 @@ title: Enrutamiento de IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047787"
 ---
 # <a name="ipv6-routing"></a>Enrutamiento de IPv6

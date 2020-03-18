@@ -11,10 +11,10 @@ helpviewer_keywords:
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048770"
 ---
 # <a name="cache-policy"></a>Directiva de caché
@@ -24,13 +24,13 @@ Una directiva de caché define reglas que se usan para determinar si se puede sa
   
  Las clases descritas en la siguiente tabla se usan para especificar directivas de caché.  
   
-|Nombre de la clase|DESCRIPCIÓN|  
+|Nombre de la clase|Description|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Representa directivas de caché basadas en la ubicación y en el tiempo para los recursos solicitados mediante objetos <xref:System.Net.HttpWebRequest>.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Representa directivas de caché basadas en la ubicación o la directiva de caché basada en el tiempo <xref:System.Net.Cache.RequestCacheLevel.Default> para los recursos solicitados mediante objetos <xref:System.Net.WebRequest>.|  
 |<xref:System.Net.Cache.HttpCacheAgeControl>|Especifica valores usados para crear objetos <xref:System.Net.Cache.HttpRequestCachePolicy> basados en el tiempo.|  
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|Especifica valores usados para crear objetos <xref:System.Net.Cache.HttpRequestCachePolicy> basados en el tiempo y en la ubicación.|  
-|<xref:System.Net.Cache.RequestCacheLevel>|Especifica valores usados para crear objetos <xref:System.Net.Cache.RequestCachePolicy> basados en la ubicación o el objeto basado en el tiempo <xref:System.Net.Cache.RequestCacheLevel.Default>.|  
+|<xref:System.Net.Cache.RequestCacheLevel>|Especifica valores usados para crear objetos <xref:System.Net.Cache.RequestCacheLevel.Default> basados en la ubicación o el objeto basado en el tiempo <xref:System.Net.Cache.RequestCachePolicy>.|  
   
  Puede definir una directiva de caché para todas las solicitudes realizadas por la aplicación o para solicitudes individuales. Cuando se especifican una directiva de caché de nivel de aplicación y una directiva de caché de nivel de solicitud, se usa la directiva de nivel de solicitud. Puede especificar una directiva de caché de nivel de aplicación mediante programación o mediante archivos de configuración de aplicación o equipo. Para más información, vea [Elemento \<requestCaching> (configuración de red)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   

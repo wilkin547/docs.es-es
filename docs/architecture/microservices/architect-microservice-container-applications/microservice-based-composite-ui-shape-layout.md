@@ -3,10 +3,10 @@ title: Creación de interfaces de usuario compuestas basadas en microservicios
 description: La arquitectura de microservicios no es solo para el back-end. Obtenga una vista de inspección usándola en el front-end.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72275740"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Creación de interfaces de usuario compuestas basadas en microservicios

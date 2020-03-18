@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120743"
 ---
 # <a name="handling-io-errors-in-net"></a>Control de errores de E/S en .NET
@@ -23,12 +23,12 @@ ms.locfileid: "73120743"
 Además de las excepciones que se pueden producir en cualquier llamada al método (como <xref:System.OutOfMemoryException> cuando un sistema está sobrecargado o <xref:System.NullReferenceException> debido a errores de programador), los métodos del sistema de archivos de .NET pueden producir las excepciones siguientes:
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, la clase base de todos los tipos de excepción <xref:System.IO>. Se produce por errores cuyos códigos de retorno del sistema operativo no se asignan directamente a cualquier otro tipo de excepción.
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>Operador
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>Operador
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>Operador
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>Operador
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>Operador
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>Operador
 - <xref:System.ArgumentException?displayProperty=nameWithType>, que se produce para caracteres de ruta no válidos en .NET Framework y en .NET Core 2.0 y versiones anteriores.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, que se produce para dos puntos no válidos en .NET Framework.
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>, que se produce para las aplicaciones que se ejecutan con confianza limitada y que carecen de los permisos necesarios solo en .NET Framework. (La plena confianza es el valor predeterminado en .NET Framework).
@@ -45,7 +45,7 @@ Sin embargo, las condiciones precisas en las que el sistema operativo devuelve c
 
 Debido a esta dependencia en el sistema operativo, condiciones de excepción idénticas (como el caso en que el directorio no encontró el error en nuestro ejemplo) pueden dar lugar a que un método de E/S genere cualquier clase entera de excepciones de E/S. Esto significa que, al llamar a API de E/S, el código debe prepararse para controlar la mayoría de estas excepciones o todas, como se muestra en la siguiente tabla:
 
-| Tipo de excepción | Núcleo de .NET | .NET Framework |
+| Tipo de excepción | .NET Core | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | Sí | Sí |
 | <xref:System.IO.FileNotFoundException> | Sí | Sí |
@@ -71,7 +71,7 @@ Tenga en cuenta que, en el código de control de excepciones, siempre debe contr
 
 Si se trata de <xref:System.IO.IOException>, puede obtener información de error adicional de la propiedad [IOException.HResult](xref:System.Exception.HResult). Para convertir el valor HResult en un código de error de Win32, quite los 16 bits superiores del valor de 32 bits. En la tabla siguiente se enumeran los códigos de error que pueden encapsularse en <xref:System.IO.IOException>.
 
-| HResult | Constante | Descripción |
+| HResult | Constante | Description |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Falta el nombre de archivo, o el archivo o directorio está en uso. |
 | ERROR_FILE_EXISTS | 80 | El archivo ya existe. |

@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156002"
 ---
 # <a name="the-net-framework-analyzer"></a>Analizador de .NET Framework
@@ -49,21 +49,21 @@ Los analizadores examinan el código en la solución y proporcionan una lista de
 
 Hay un pequeño número de tipos en .NET Framework de los que no debe derivar directamente.
 
-**Categoría**: diseño
+**Categoría:** diseño
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
-Información adicional: [CA:1058: Los tipos no deben ampliar ciertos tipos base](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
+Información adicional: [CA1058: Los tipos no deben ampliar ciertos tipos base](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
 
-### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: No tomar excepciones de estado dañado
+### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: No capturar excepciones de estado dañado
 
 Si se capturan excepciones de estado dañado, podrían enmascarar errores (por ejemplo, infracciones de acceso), lo que da como resultado un estado incoherente de la ejecución o lo que facilita a los atacantes poner en peligro un sistema. En su lugar, detecte y controle un conjunto más específico de tipos de excepción o vuelva a producir la excepción.
 
-**Categoría**: Seguridad
+**Categoría:** seguridad
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
-Información adicional: [CA2153: No tomar excepciones de estado dañado](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
+Información adicional: [CA2153: No capturar excepciones de estado dañado](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
 ### <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementar constructores de serialización
 
@@ -80,19 +80,19 @@ public class MyItemType
 }
 ```
 
-**Categoría**: Uso
+**Categoría:** uso
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
-Información adicional: [CA2229: implementar constructores de serialización](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
+Información adicional: [CA2229: Implementar constructores de serialización](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
 ### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: Marcar todos los campos no serializables
 
 Un campo de instancia de un tipo que no es serializable se declara en un tipo que es serializable. Debe marcar explícitamente ese campo con el <xref:System.NonSerializedAttribute> para corregir esta advertencia.
 
-**Categoría**: Uso
+**Categoría:** uso
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
 Información adicional: [CA2235: Marcar todos los campos no serializables](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
@@ -100,9 +100,9 @@ Información adicional: [CA2235: Marcar todos los campos no serializables](/visu
 
 Para que Common Language Runtime reconozca los tipos como serializables, deben marcarse con el atributo <xref:System.SerializableAttribute> incluso si el tipo usa una rutina de serialización personalizada al implementar la interfaz <xref:System.Runtime.Serialization.ISerializable>.
 
-**Categoría**: Uso
+**Categoría:** uso
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
 Información adicional: [CA2237: Marcar los tipos ISerializable con serializable](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
@@ -110,9 +110,9 @@ Información adicional: [CA2237: Marcar los tipos ISerializable con serializable
 
 Si usa instancias de <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> no seguras o hace referencia a orígenes de entidades externas, el analizador podría aceptar entradas que no sean de confianza y revelar información confidencial a atacantes.  
 
-**Categoría**: Seguridad
+**Categoría:** seguridad
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
 Información adicional: [A3075: Procesamiento de DTD no seguro en XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
@@ -120,18 +120,18 @@ Información adicional: [A3075: Procesamiento de DTD no seguro en XML](/visualst
 
 Los algoritmos criptográficos se degradan con el paso del tiempo, ya que los ataques aumentan. En función del tipo y la aplicación de este algoritmo criptográfico, una mayor degradación de su intensidad de cifrado puede permitir a los atacantes leer mensajes cifrados, manipular mensajes cifrados, falsificar firmas digitales, manipular contenido con hash o poner en peligro los sistemas de cifrado basados en este algoritmo. Para el cifrado, use un algoritmo AES (AES-256, AES-192 y AES-128 son aceptables) con una longitud de clave mayor o igual que 128 bits. Para el hash, use una función hash de la familia SHA-2, como SHA-2 512, SHA-2 384 o SHA-2 256.
 
-**Categoría**: Seguridad
+**Categoría:** seguridad
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
 Información adicional: [CA5350: No usar algoritmos criptográficos no seguros](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
 
-### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: No usar algoritmos criptográficos dañados
+### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: No usar algoritmos criptográficos rotos
 
 Existe un ataque que, a nivel computacional, puede interrumpir este algoritmo. De esta forma, los atacantes pueden interrumpir las garantías cifradas que debe proporcionar por diseño. En función del tipo y la aplicación de este algoritmo criptográfico, puede permitir a los atacantes leer mensajes cifrados, manipular mensajes cifrados, falsificar firmas digitales, manipular contenido con hash o poner en peligro los sistemas de cifrado basados en este algoritmo. Para el cifrado, use un algoritmo AES (AES-256, AES-192 y AES-128 son aceptables) con una longitud de clave mayor o igual que 128 bits. Para el hash, use una función hash de la familia SHA-2, como SHA512, SHA384 o SHA256. Para las firmas digitales, use RSA con una longitud de clave mayor o igual que 2048 bits, o ECDSA con una longitud de clave mayor o igual que 256 bits.
 
-**Categoría**: Seguridad
+**Categoría:** seguridad
 
-**Gravedad**: Advertencia
+**Gravedad:** advertencia
 
-Información adicional: [CA5351: No usar algoritmos criptográficos dañados](/visualstudio/code-quality/ca5351)
+Información adicional: [CA5351: No usar algoritmos criptográficos rotos](/visualstudio/code-quality/ca5351)

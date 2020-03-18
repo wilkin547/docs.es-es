@@ -3,10 +3,10 @@ title: Razones para modernizar las aplicaciones .NET existentes a aplicaciones o
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Razones para modernizar las aplicaciones .NET existentes a aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
 ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73093629"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes a aplicaciones optimizadas para la nube

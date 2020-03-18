@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para registrar devoluciones de llamadas de solicitudes de cancelación
+title: 'Cómo: Registrar devoluciones de llamadas de solicitudes de cancelación'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137997"
 ---
-# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Procedimiento para registrar devoluciones de llamadas de solicitudes de cancelación
+# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Cómo: Registrar devoluciones de llamadas de solicitudes de cancelación
 En el ejemplo siguiente se muestra cómo registrar un delegado que se invoca cuando una propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> pasa a ser true debido a una llamada a <xref:System.Threading.CancellationTokenSource.Cancel%2A> en el objeto que creó el token. Use esta técnica para cancelar operaciones asincrónicas que no admiten el marco de cancelación unificado de forma nativa, y para desbloquear métodos que podrían estar esperando que una operación asincrónica finalice.  
   
 > [!NOTE]

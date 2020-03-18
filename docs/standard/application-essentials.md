@@ -6,10 +6,10 @@ helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122548"
 ---
 # <a name="net-framework-application-essentials"></a>Elementos esenciales de aplicaciones .NET Framework

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 ms.openlocfilehash: 234efba66d87b520b54d6d113afcc4bba0bfe06a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138658"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Ensamblados y ejecución en paralelo

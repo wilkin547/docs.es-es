@@ -3,10 +3,10 @@ title: Selección entre .NET Core y .NET Framework para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Selección entre .NET Core y .NET Framework para contenedores de Docker
 ms.date: 09/11/2018
 ms.openlocfilehash: b01aaf25f4071e8e4a07905a12ec9dd0d89a738d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70849276"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Selección entre .NET Core y .NET Framework para contenedores de Docker

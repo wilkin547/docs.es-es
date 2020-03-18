@@ -12,10 +12,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156483"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Procedimiento para hacer referencia a un ensamblado con nombre seguro
@@ -30,7 +30,7 @@ Una referencia en tiempo de compilación se produce cuando se le indica al compi
 
 En un símbolo del sistema, escriba el siguiente comando:  
 
-\<*compiler command*> **/reference:**\<*assembly name*>  
+\<*compiler command*>  **/reference:** \<*assembly name*>  
 
 En este comando, *compiler command* es el comando del compilador para el lenguaje que está usando, y *assembly name* es el nombre del ensamblado con nombre seguro al que se hace referencia. También puede usar otras opciones de compilador, como la opción **/t:library** para crear un ensamblado de biblioteca.  
 
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Cuando se crea una referencia en tiempo de ejecución a un ensamblado con nombre seguro (por ejemplo, mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), debe usar el nombre para mostrar del ensamblado con nombre seguro al que se hace referencia. La sintaxis de un nombre para mostrar es la siguiente:  
 
-\<*nombre del ensamblado*>**,** \<*número de versión*>**,** \<*referencia cultural*>**,** \<*token de clave pública*>  
+\<*nombre del ensamblado*> **,** \<*número de versión*> **,** \<*referencia cultural*> **,** \<*token de clave pública*>  
 
 Por ejemplo:  
 

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Uso de JoinBlock para leer datos de diferentes orígenes
+title: 'Cómo: Usar JoinBlock para leer datos de diferentes orígenes'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139742"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procedimiento Uso de JoinBlock para leer datos de diferentes orígenes
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Cómo: Usar JoinBlock para leer datos de diferentes orígenes
 En este documento se explica cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para realizar una operación cuando los datos están disponibles en varios orígenes. También se demuestra cómo usar el modo no expansivo para habilitar varios bloques de combinación para compartir un origen de datos más eficazmente.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

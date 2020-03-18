@@ -3,10 +3,10 @@ title: Buscar texto en documentos de Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70205389"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Buscar texto en documentos de Word (C#)
@@ -15,7 +15,7 @@ En este tema se amplían las consultas vistas anteriormente para conseguir algo 
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, con el objetivo de encontrar todas las apariciones de una porción de texto en particular dentro del documento. Para ello, utilizaremos una consulta que encuentre la cadena "Hello". Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra la nueva consulta.  
   
- Para obtener instrucciones sobre cómo crear el documento de origen de este ejemplo, vea [Crear el documento de origen de Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
+ Para obtener instrucciones sobre cómo crear el documento de origen de este ejemplo, vea [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -329,6 +329,6 @@ StyleName:Code ><
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
 - [Refactorizar mediante una función pura (C#)](./refactoring-using-a-pure-function.md)
 - [Ejecución aplazada y evaluación diferida en LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

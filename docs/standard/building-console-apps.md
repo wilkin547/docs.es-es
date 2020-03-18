@@ -8,10 +8,10 @@ helpviewer_keywords:
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132862"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilar aplicaciones de consola en .NET Framework
@@ -28,7 +28,7 @@ Las aplicaciones de .NET Framework pueden usar la clase <xref:System.Console?dis
   
  Las aplicaciones de consola carecen de un bombeo de mensajes que se inicie de forma predeterminada. Por tanto, las llamadas de la consola a los temporizadores de Microsoft Win32 pueden producir errores.  
   
- La clase **System.Console** tiene métodos que pueden leer caracteres individuales o líneas enteras de la consola. Otros métodos convierten datos y cadenas de formato y, después, escriben las cadenas con formato en la consola. Para obtener más información sobre cómo dar formato a las cadenas, vea [Tipos de formato](../../docs/standard/base-types/formatting-types.md).  
+ La clase **System.Console** tiene métodos que pueden leer caracteres individuales o líneas enteras de la consola. Otros métodos convierten datos y cadenas de formato y, después, escriben las cadenas con formato en la consola. Para obtener más información sobre cómo dar formato a las cadenas, vea [Formatting Types](../../docs/standard/base-types/formatting-types.md) (Aplicar formato a tipos).  
   
 ## <a name="see-also"></a>Vea también
 

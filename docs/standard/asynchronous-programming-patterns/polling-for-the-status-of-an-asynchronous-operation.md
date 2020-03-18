@@ -11,10 +11,10 @@ helpviewer_keywords:
 - status information [.NET Framework], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
 ms.openlocfilehash: ff9cefc73adfe1ece1bf7545c75ccb6cc618e89f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123960"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Sondear el estado de una operación asincrónica
@@ -33,4 +33,4 @@ Las aplicaciones que pueden realizar otro trabajo mientras esperan los resultado
 ## <a name="see-also"></a>Vea también
 
 - [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)

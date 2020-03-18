@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar Parallel.Invoke para ejecutar operaciones en paralelo
+title: 'Cómo: Usar Parallel.Invoke para ejecutar operaciones paralelas'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
 ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139729"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procedimiento para usar Parallel.Invoke para ejecutar operaciones en paralelo
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Cómo: Usar Parallel.Invoke para ejecutar operaciones paralelas
 
 En este ejemplo se muestra cómo paralelizar operaciones usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> en Task Parallel Library. Se realizan tres operaciones en un origen de datos compartido. Como ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.
 
@@ -39,5 +39,5 @@ Copie y pegue el ejemplo completo en un proyecto de Microsoft Visual Studio y pr
 ## <a name="see-also"></a>Vea también
 
 - [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Cómo: Cancelar una tarea y sus elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md) (Cancelar una tarea y los elementos secundarios)
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

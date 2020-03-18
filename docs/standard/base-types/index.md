@@ -8,10 +8,10 @@ helpviewer_keywords:
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103546"
 ---
 # <a name="working-with-base-types-in-net"></a>Trabajar con tipos base en .NET
@@ -27,7 +27,7 @@ Esta sección describe las operaciones de tipo base .NET, incluidas operaciones 
  [Manipular cadenas](../../../docs/standard/base-types/manipulating-strings.md)  
  Se describe cómo manipular y dar formato a cadenas.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)  
  Se describe cómo convertir cadenas en tipos de .NET Framework.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047315"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
@@ -55,5 +55,5 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ## <a name="see-also"></a>Vea también
 
 - [Programación para redes en .NET Framework](index.md)
-- [Cómo: Solicitar una página web y recuperar los resultados como una secuencia](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Cómo: Recuperar una WebResponse específica de protocolo que coincida con una WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Cómo: solicitar una página web y recuperar los resultados como una secuencia](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Cómo: recuperar una WebResponse específica de protocolo que coincida con una WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

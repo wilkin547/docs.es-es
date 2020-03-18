@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103826"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET

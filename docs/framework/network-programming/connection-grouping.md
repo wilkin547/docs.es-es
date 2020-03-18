@@ -9,10 +9,10 @@ helpviewer_keywords:
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048646"
 ---
 # <a name="connection-grouping"></a>Agrupación de conexiones
@@ -23,4 +23,4 @@ La agrupación de conexiones asocia solicitudes específicas de una aplicación 
 ## <a name="see-also"></a>Vea también
 
 - [Administración de conexiones](managing-connections.md)
-- [Cómo: Asignar la información de usuario para agrupar conexiones](how-to-assign-user-information-to-group-connections.md)
+- [Cómo: asignar la información de usuario para agrupar conexiones](how-to-assign-user-information-to-group-connections.md)

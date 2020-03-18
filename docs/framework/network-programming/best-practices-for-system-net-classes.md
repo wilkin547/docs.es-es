@@ -11,16 +11,16 @@ helpviewer_keywords:
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048891"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Procedimientos recomendados para las clases System.Net
 Las siguientes recomendaciones le ayudarán a usar las clases incluidas en <xref:System.Net> para su beneficio:  
   
-- Para más información sobre los procedimientos recomendados sobre la Seguridad de la capa de transporte (TLS), vea [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](tls.md).
+- Para más información sobre los procedimientos recomendados sobre la Seguridad de la capa de transporte (TLS), vea [Transport Layer Security (TLS) best practices with .NET Framework](tls.md) (Procedimientos recomendados sobre la Seguridad de la capa de transporte (TLS) con .NET Framework).
 
 - Use <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> siempre que sea posible en lugar de la conversión de tipos en clases descendientes. Las aplicaciones que usan **WebRequest** y **WebResponse** pueden aprovechar los nuevos protocolos de Internet sin necesidad de grandes cambios de código.  
   

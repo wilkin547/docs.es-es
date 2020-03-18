@@ -3,10 +3,10 @@ title: Orientación general
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orientación general
 ms.date: 09/11/2018
 ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73089649"
 ---
 # <a name="general-guidance"></a>Orientación general

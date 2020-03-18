@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - where (generic type constraint) [C#]
 ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626716"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
@@ -65,7 +65,7 @@ Para obtener información sobre los delegados genéricos, vea [Delegados genéri
 
 Para obtener más información sobre la sintaxis y el uso de restricciones, vea [Restricciones de tipos de parámetros](../../programming-guide/generics/constraints-on-type-parameters.md).
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

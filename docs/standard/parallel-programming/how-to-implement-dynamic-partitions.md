@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para implementar particiones dinámicas
+title: 'Cómo: Implementar las particiones dinámicas'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 ms.openlocfilehash: 3970566b4e3f51ce538c328d4e69b20ec22ec09b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091416"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a>Procedimiento para implementar particiones dinámicas
+# <a name="how-to-implement-dynamic-partitions"></a>Cómo: Implementar las particiones dinámicas
 
 En el ejemplo siguiente se muestra cómo implementar una clase <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> personalizada que implementa la partición dinámica y que puede usarse desde determinadas sobrecargas <xref:System.Threading.Tasks.Parallel.ForEach%2A> y desde PLINQ.  
   
@@ -31,4 +31,4 @@ Este es un ejemplo de creación de particiones por fragmentos, donde cada fragme
 ## <a name="see-also"></a>Vea también
 
 * [Particionadores personalizados para PLINQ y TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-* [Cómo: Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+* [Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

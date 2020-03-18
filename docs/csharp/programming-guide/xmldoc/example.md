@@ -9,10 +9,10 @@ helpviewer_keywords:
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
 ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789813"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (Guía de programación de C#)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084224"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
@@ -36,7 +36,7 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
   
  El patrón de la expresión regular `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`href`|Coincide con la cadena literal "href". La búsqueda no distingue entre mayúsculas y minúsculas.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  

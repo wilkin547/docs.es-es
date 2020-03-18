@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e5355387d5cb6d9e6de89f5b85e64bc100b32ae1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522652"
 ---
 ### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>SPA: SpaServices y NodeServices ya no vuelven al registrador de la consola

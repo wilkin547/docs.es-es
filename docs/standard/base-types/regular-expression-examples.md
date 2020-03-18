@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 ms.openlocfilehash: 788fa2a6793e14189def4c30a0baf0d4a5cf6b0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128095"
 ---
 # <a name="regular-expression-examples"></a>Ejemplos de expresiones regulares
@@ -24,16 +24,16 @@ Esta sección contiene ejemplos de código que ilustran el uso de expresiones re
  [Ejemplo: Buscar etiquetas HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
  Ofrece un ejemplo en el que se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
   
- [Ejemplo: Cambio de formatos de fecha](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
+ [Ejemplo: Cambiar formatos de fecha](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
  Ofrece un ejemplo en el que se reemplazan las fechas en formato mm/dd/aa por fechas en el formato dd-mm-aa.  
   
- [Cómo: Extraer un protocolo y un número de puerto de una dirección URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
+ [Extraer un protocolo y un número de puerto de una dirección URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
  Ofrece un ejemplo en el que se extrae un protocolo y número de puerto de una cadena que contiene una dirección URL. Por ejemplo, "http://www.contoso.com:8080/letters/readme.html" devuelve "http:8080".  
   
- [Cómo: Quitar caracteres no válidos de una cadena](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
+ [Quitar caracteres no válidos de una cadena](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  Ofrece un ejemplo en el que se eliminan los caracteres no alfanuméricos no válidos de una cadena.  
   
- [Cómo: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
+ [Comprobar si las cadenas tienen un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  Proporciona un ejemplo que comprueba si una cadena tiene un formato de correo electrónico válido.  
   
 ## <a name="reference"></a>Referencia  

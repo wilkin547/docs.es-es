@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DateTime object
 - time strings
 ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156548"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
+title: 'Cómo: Escribir un bucle Parallel.For con variables locales de subproceso'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139714"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Cómo: Escribir un bucle Parallel.For con variables locales de subproceso
 En este ejemplo se muestra la forma de usar variables locales para el subproceso para almacenar y recuperar el estado en cada una de las tareas independientes creadas por un bucle <xref:System.Threading.Tasks.Parallel.For%2A>. Mediante el uso de datos locales de subproceso, se puede evitar la sobrecarga que supone la sincronización de un gran número de accesos a un estado compartido. En vez de escribir en un recurso compartido en cada iteración, se calcula y se almacena el valor hasta que finalizan todas las iteraciones de la tarea. A continuación, se escribe una vez el resultado final en el recurso compartido o se pasa a otro método.  
   
 ## <a name="example"></a>Ejemplo  

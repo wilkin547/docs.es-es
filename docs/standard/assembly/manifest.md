@@ -9,10 +9,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107152"
 ---
 # <a name="assembly-manifest"></a>Manifiesto del ensamblado
@@ -39,11 +39,11 @@ Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección
 ## <a name="assembly-manifest-contents"></a>Contenido del manifiesto del ensamblado  
  En la tabla siguiente, se muestra la información que contiene el manifiesto del ensamblado. Los cuatro primeros elementos (nombre del ensamblado, número de versión, referencia cultural e información sobre el nombre seguro) constituyen la identidad del ensamblado.  
   
-|Información|DESCRIPCIÓN|  
+|Información|Description|  
 |-----------------|-----------------|  
 |Nombre del ensamblado|Cadena de texto donde se especifica el nombre del ensamblado.|  
 |Número de versión|Número de versión principal y secundaria, y número de revisión y de compilación. Common Language Runtime utiliza estos números para exigir las directivas de versión.|  
-|culture|Información sobre la referencia cultural o idioma que admite el ensamblado. Esta información se debe utilizar sólo para designar un ensamblado como ensamblado satélite que contiene información específica sobre la referencia cultural o el idioma. (Se asume que un ensamblado con información de referencia cultural es un ensamblado satélite).|  
+|Referencia cultural|Información sobre la referencia cultural o idioma que admite el ensamblado. Esta información se debe utilizar sólo para designar un ensamblado como ensamblado satélite que contiene información específica sobre la referencia cultural o el idioma. (Se asume que un ensamblado con información de referencia cultural es un ensamblado satélite).|  
 |Información sobre el nombre seguro|Clave pública del editor si el ensamblado tiene un nombre seguro|  
 |Lista de todos los archivos del ensamblado|Un código hash de cada archivo que contiene el ensamblado y nombre de archivo . Tenga en cuenta que todos los archivos que componen el ensamblado deben encontrarse en el mismo directorio que el archivo que contiene el manifiesto del ensamblado.|  
 |Información de referencia de tipos|Información que utiliza el motor en tiempo de ejecución para asignar una referencia de tipos al archivo que contiene su declaración e implementación. Se utiliza para tipos que se exportan desde el ensamblado.|  
@@ -53,7 +53,7 @@ Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección
   
 ## <a name="see-also"></a>Vea también
 
-- [Contenido de un ensamblado](contents.md)
-- [Control de versiones de los ensamblados](versioning.md)
+- [Contenido de los ensamblados](contents.md)
+- [Versiones de los ensamblados](versioning.md)
 - [Creación de ensamblados satélite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Ensamblados con nombre seguro](strong-named.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713546"
 ---
 # <a name="extern-alias-c-reference"></a>alias externo (Referencia de C#)
@@ -45,5 +45,5 @@ Es posible que deba hacer referencia a dos versiones de ensamblados que tienen l
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](./index.md)
-- [:: !](../operators/namespace-alias-qualifier.md)
+- [Operador ::](../operators/namespace-alias-qualifier.md)
 - [-reference (Opciones del compilador de C#)](../compiler-options/reference-compiler-option.md)

@@ -2,11 +2,11 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589322"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668723"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -19,9 +19,9 @@ Determina cómo se puede usar una clase de atributo personalizado. <xref:System.
   - evento
   - método
   - param
-  - propiedad
+  - Propiedad
   - return
-  - type
+  - tipo
 - Si un atributo se puede aplicar a un mismo elemento de programa varias veces.
 - Si las clases derivadas heredan atributos.
 

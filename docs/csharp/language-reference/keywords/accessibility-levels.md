@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713814"
 ---
 # <a name="accessibility-levels-c-reference"></a>Niveles de accesibilidad (Referencia de C#)
@@ -37,9 +37,9 @@ Use los modificadores de acceso `public`, `protected`, `internal` o `private` pa
   
 |Miembros de|Accesibilidad de miembro predeterminada|Accesibilidad declarada permitida del miembro|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|None|  
+|`enum`|`public`|Ninguna|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|None|  
+|`interface`|`public`|Ninguna|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  La accesibilidad de un tipo anidado depende de su [dominio de accesibilidad](./accessibility-domain.md), que viene determinado por la accesibilidad declarada del miembro y el dominio de accesibilidad del tipo contenedor inmediato. Sin embargo, el dominio de accesibilidad de un tipo anidado no puede superar al del tipo contenedor.  

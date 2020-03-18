@@ -14,10 +14,10 @@ helpviewer_keywords:
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
 ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048009"
 ---
 # <a name="http"></a>HTTP
@@ -35,4 +35,4 @@ ms.locfileid: "71048009"
 
 - [Acceso a Internet a través de un proxy](accessing-the-internet-through-a-proxy.md)
 - [Usar protocolos de aplicaciones](using-application-protocols.md)
-- [Cómo: Acceder a propiedades específicas de HTTP](how-to-access-http-specific-properties.md)
+- [Cómo: obtener acceso a propiedades específicas de HTTP](how-to-access-http-specific-properties.md)

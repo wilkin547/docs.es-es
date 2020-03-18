@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo ordenar los resultados de una clá
 ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
 ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857893"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659870"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Ordenar los resultados de una cláusula join
 

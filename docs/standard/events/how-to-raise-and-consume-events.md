@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para provocar y consumir eventos
+title: 'Cómo: Provocar y utilizar eventos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131592"
 ---
-# <a name="how-to-raise-and-consume-events"></a>Procedimiento para provocar y consumir eventos
+# <a name="how-to-raise-and-consume-events"></a>Cómo: Provocar y utilizar eventos
 En los ejemplos de este tema se muestra cómo trabajar con eventos. Se incluyen ejemplos del delegado <xref:System.EventHandler>, el delegado <xref:System.EventHandler%601> y un delegado personalizado, para ilustrar eventos con y sin datos.  
   
  En los ejemplos se usan los conceptos descritos en el artículo [Eventos](../../../docs/standard/events/index.md).  

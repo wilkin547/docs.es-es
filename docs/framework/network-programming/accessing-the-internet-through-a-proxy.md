@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71049046"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acceso a Internet a través de un proxy
@@ -30,7 +30,7 @@ Si el sitio usa un proxy para proporcionar acceso a Internet, debe configurar un
   
 - [Cómo: Habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Cómo: Reemplazar una selección del proxy global](how-to-override-a-global-proxy-selection.md)  
+- [Cómo: reemplazar una selección del proxy global](how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Vea también
 

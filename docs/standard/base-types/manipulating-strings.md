@@ -7,10 +7,10 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135230"
 ---
 # <a name="manipulating-strings-in-net"></a>Manipular cadenas en .NET
@@ -33,5 +33,5 @@ ms.locfileid: "73135230"
  [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
  Se explica cómo usar la biblioteca de clases base para implementar el formato, cómo dar formato a tipos numéricos, cómo dar formato a tipos de cadena y cómo dar formato a una referencia cultural concreta.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)  
  Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.

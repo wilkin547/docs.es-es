@@ -4,10 +4,10 @@ ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543266"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#

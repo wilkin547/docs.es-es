@@ -19,10 +19,10 @@ helpviewer_keywords:
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73101669"
 ---
 # <a name="comparing-strings-in-net"></a>Comparación de cadenas en .NET
@@ -44,9 +44,9 @@ ms.locfileid: "73101669"
   
 |Valor devuelto|Condición|  
 |------------------|---------------|  
-|Un entero negativo|La primera cadena precede a la segunda cadena en el criterio de ordenación.<br /><br /> O bien<br /><br /> La primera cadena es `null`.|  
-|0|La primera y la segunda cadena son iguales.<br /><br /> O bien<br /><br /> Ambas cadenas son `null`.|  
-|Un entero positivo.<br /><br /> O bien<br /><br /> 1|La primera cadena sigue a la segunda cadena en el criterio de ordenación.<br /><br /> O bien<br /><br /> La segunda cadena es `null`.|  
+|Un entero negativo|La primera cadena precede a la segunda cadena en el criterio de ordenación.<br /><br /> o bien<br /><br /> La primera cadena es `null`.|  
+|0|La primera y la segunda cadena son iguales.<br /><br /> o bien<br /><br /> Ambas cadenas son `null`.|  
+|Un entero positivo.<br /><br /> o bien<br /><br /> 1|La primera cadena sigue a la segunda cadena en el criterio de ordenación.<br /><br /> o bien<br /><br /> La segunda cadena es `null`.|  
   
 > [!IMPORTANT]
 > La finalidad principal del método <xref:System.String.Compare%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.Compare%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  

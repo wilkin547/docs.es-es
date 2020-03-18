@@ -11,10 +11,10 @@ helpviewer_keywords:
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130912"
 ---
 # <a name="applying-attributes"></a>Aplicar atributos
@@ -53,7 +53,7 @@ Para aplicar un atributo a un elemento del código se puede utilizar el proceso 
 ## <a name="see-also"></a>Vea también
 
 - [Atributos](../../../docs/standard/attributes/index.md)
-- [Recuperar la información almacenada en atributos](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Retrieving Information Stored in Attributes](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
 - [Conceptos](/cpp/windows/attributed-programming-concepts)
 - [Atributos (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Información general sobre los atributos (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

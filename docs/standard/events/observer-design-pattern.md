@@ -13,10 +13,10 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131571"
 ---
 # <a name="observer-design-pattern"></a>Modelo de diseño de observador
@@ -66,7 +66,7 @@ Ambas colecciones están representadas por objetos <xref:System.Collections.Gene
 [!code-csharp[Conceptual.ObserverDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#2)]
 [!code-vb[Conceptual.ObserverDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#2)]
 
-Los clientes que deseen recibir información actualizada llaman al método `BaggageHandler.Subscribe`. Si el cliente no se ha suscrito previamente a las notificaciones, en la colección de `observers` se agrega una referencia a la implementación de <xref:System.IObserver%601> del cliente.
+Los clientes que deseen recibir información actualizada llaman al método `BaggageHandler.Subscribe`. Si el cliente no se ha suscrito previamente a las notificaciones, en la colección de <xref:System.IObserver%601> se agrega una referencia a la implementación de `observers` del cliente.
 
 Se puede llamar al método `BaggageHandler.BaggageStatus` sobrecargado para indicar que el equipaje de un vuelo se está descargando o ya no se está descargando. En el primer caso, se pasa al método un número de vuelo, el aeropuerto de origen del vuelo y la cinta en la que se está descargando el equipaje. En el segundo caso, solo se pasa al método un número de vuelo. Para el equipaje que se está descargado, el método comprueba si la información `BaggageInfo` que se pasa al método existe en la colección `flights`. Si no es así, el método agrega la información y llama al método `OnNext` de cada observador. Para los vuelos cuyo equipaje ya no se está descargando, el método comprueba si la información del vuelo se almacena en la colección `flights`. Si es así, el método llama al método `OnNext` de cada observador y quita el objeto `BaggageInfo` de la colección `flights`.
 
@@ -91,8 +91,8 @@ El ejemplo siguiente contiene el punto de entrada de la aplicación que crea una
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Título|Description|
 |-----------|-----------------|
 |[Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Describe los procedimientos recomendados que deben adoptarse en el desarrollo de aplicaciones que implementan el modelo de diseño de observador.|
-|[Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)|Proporciona una implementación detallada de un proveedor para una aplicación de supervisión de temperatura.|
-|[Cómo: Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)|Proporciona una implementación detallada de un observador para una aplicación de supervisión de temperatura.|
+|[Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)|Proporciona una implementación detallada de un proveedor para una aplicación de supervisión de temperatura.|
+|[Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)|Proporciona una implementación detallada de un observador para una aplicación de supervisión de temperatura.|

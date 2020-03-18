@@ -3,10 +3,10 @@ title: Implementación de aplicaciones .NET existentes como contenedores de Wind
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Implementación de aplicaciones .NET existentes como contenedores de Windows
 ms.date: 04/29/2018
 ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73089556"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows

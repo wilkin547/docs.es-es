@@ -13,10 +13,10 @@ helpviewer_keywords:
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130899"
 ---
 # <a name="extending-metadata-using-attributes"></a>Extender metadatos mediante atributos
@@ -26,13 +26,13 @@ Common Language Runtime permite agregar declaraciones descriptivas a modo de pal
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|DESCRIPCIÓN|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Aplicar atributos](../../../docs/standard/attributes/applying-attributes.md)|Describe cómo aplicar un atributo a un elemento del código.|  
 |[Escribir atributos personalizados](../../../docs/standard/attributes/writing-custom-attributes.md)|Describe cómo diseñar clases de atributos personalizados.|  
 |[Retrieving Information Stored in Attributes](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)|Describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución.|  
 |[Metadatos y componentes autodescriptivos](../../../docs/standard/metadata-and-self-describing-components.md)|Proporciona información general de los metadatos y describe cómo se implementan en un archivo portable ejecutable (PE) de .NET Framework.|  
-|[Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Explica cómo recuperar la información de los atributos personalizados en el contexto de solo reflexión.|  
+|[Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Explica cómo recuperar la información de los atributos personalizados en el contexto de solo reflexión.|  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Attribute?displayProperty=nameWithType>

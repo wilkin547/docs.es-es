@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141570"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ y TPL
@@ -115,11 +115,11 @@ Al implementar un particionador personalizado, siga estas instrucciones para ayu
 
 - Los siguientes captadores booleanos deben devolver siempre con precisión los siguientes valores para que no se altere el orden de salida:
 
-  - `KeysOrderedInEachPartition`: cada partición devuelve elementos con índices de clave crecientes.
+  - `KeysOrderedInEachPartition`: cada partición devuelve elementos con índices de claves crecientes.
 
-  - `KeysOrderedAcrossPartitions`: para todas las particiones que se devuelven, los índices de clave de la partición *i* son más altos que los de la partición *i*-1.
+  - `KeysOrderedAcrossPartitions`: para todas las particiones que se devuelven, los índices de clave de la partición *i* son más altos que los índices de clave de la partición *i*-1.
 
-  - `KeysNormalized`: todos los índices de clave aumentan ininterrumpidamente sin espacios, empezando desde cero.
+  - `KeysNormalized`: todos los índices de claves aumentan ininterrumpidamente sin espacios, empezando desde cero.
 
 - Todos los índices deben ser únicos. No puede haber índices duplicados. Si no se respeta esta regla, se puede alterar el orden de salida.
 
@@ -128,5 +128,5 @@ Al implementar un particionador personalizado, siga estas instrucciones para ayu
 ## <a name="see-also"></a>Vea también
 
 - [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Cómo: Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [Cómo: Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
+- [Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

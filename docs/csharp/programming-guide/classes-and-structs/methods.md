@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626534"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
@@ -17,7 +17,7 @@ ms.locfileid: "77626534"
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método `Main` es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.
 
 > [!NOTE]
-> En este artículo se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas](../statements-expressions-operators/anonymous-functions.md).
+> En este artículo se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas (Guía de programación de C#)](../statements-expressions-operators/anonymous-functions.md).
 
 ## <a name="method-signatures"></a>Firmas de método
 
@@ -119,7 +119,7 @@ Para obtener más información, consulta [return](../../language-reference/keywo
 
 Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda.
 
-Si marca un método con el modificador [async](../../language-reference/keywords/async.md), puede usar el operador [await](../../language-reference/operators/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
+Si marca un método con el modificador [async](../../language-reference/keywords/async.md) , puede usar el operador [await](../../language-reference/operators/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
 
 > [!NOTE]
 > Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
@@ -132,7 +132,7 @@ El método `startButton_Click` es un ejemplo de un método asincrónico con un t
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
-Un método aisncrónico no puede declarar ningún parámetro [ref](../../language-reference/keywords/ref.md) u [out](../../language-reference/keywords/out-parameter-modifier.md) , pero puede llamar a los métodos que tienen estos parámetros.
+Un método asincrónico no puede declarar ningún parámetro [ref](../../language-reference/keywords/ref.md) u [out](../../language-reference/keywords/out-parameter-modifier.md), pero puede llamar a los métodos que tienen estos parámetros.
 
 Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](../concepts/async/index.md), [Flujo de control en programas asincrónicos](../concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devuelto de Async](../concepts/async/async-return-types.md).
 
@@ -153,7 +153,7 @@ Si el método devuelve `void` o si es un método asincrónico, el cuerpo del mé
 
 ## <a name="iterators"></a>Iterators
 
-Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador utiliza la instrucción [yield return](../../language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../language-reference/keywords/yield.md) , se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.
+Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](../../language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../language-reference/keywords/yield.md) , se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.
 
 Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../language-reference/keywords/foreach-in.md) .
 
@@ -161,7 +161,7 @@ El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnu
 
 Para obtener más información, consulta [Iteradores](../concepts/iterators.md).
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

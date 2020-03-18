@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123148"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estructuras de datos para la programación paralela
@@ -20,7 +20,7 @@ ms.locfileid: "73123148"
   
  En la tabla siguiente se enumeran las nuevas clases de colecciones simultáneas:  
   
-|Tipo|DESCRIPCIÓN|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Proporciona capacidades de bloqueo y establecimiento de límites en colecciones seguras para subprocesos que implementan <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Los subprocesos de productor se bloquean si no hay ranuras disponibles o si la colección está llena. Los subprocesos de consumidor se bloquean si la colección está vacía. Este tipo también admite el acceso sin bloqueo de productores y consumidores. <xref:System.Collections.Concurrent.BlockingCollection%601> puede utilizarse como una clase base o una memoria auxiliar para proporcionar el bloqueo y el establecimiento de límite de cualquier clase de colección que admite <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Una implementación de contenedor segura para subprocesos que ofrece operaciones add y get escalables.|  
@@ -35,7 +35,7 @@ ms.locfileid: "73123148"
   
  En la tabla siguiente se enumeran los nuevos tipos de sincronización:  
   
-|Tipo|DESCRIPCIÓN|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permite que varios subprocesos funcionen en un algoritmo en paralelo proporcionando un punto en el que cada tarea pueda señalizar su llegada y después bloquearse hasta que llegan algunas tareas o todas. Para más información, consulte [Barrier](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica los escenarios de bifurcación y combinación proporcionando un mecanismo sencillo de encuentro. Para más información, vea [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -46,16 +46,16 @@ ms.locfileid: "73123148"
   
  Para obtener más información, consulte:  
   
-- [Cómo: Usar SpinLock para la sincronización de bajo nivel](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Utilizar SpinLock para la sincronización de bajo nivel](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [Cómo: Sincronizar operaciones simultáneas con una clase Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Sincronizar operaciones simultáneas con una clase Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)  
   
 ## <a name="lazy-initialization-classes"></a>Clases de inicialización diferida  
  Con la inicialización diferida, no se asigna la memoria para un objeto hasta que se necesite. La inicialización diferida puede mejorar el rendimiento al distribuir las asignaciones de objetos uniformemente a lo largo de la duración de un programa. Puede habilitar la inicialización diferida para cualquier tipo personalizado ajustando el tipo <xref:System.Lazy%601>.  
   
  En la tabla siguiente se enumeran los tipos de inicialización diferida:  
   
-|Tipo|DESCRIPCIÓN|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Proporciona una inicialización diferida segura para subprocesos y ligera.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Proporciona un valor inicializado de forma diferida por cada subproceso, donde cada subproceso invoca de forma diferida la función de inicialización.|  
@@ -64,7 +64,7 @@ ms.locfileid: "73123148"
  Para obtener más información, vea [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Agregar excepciones  
- El tipo <xref:System.AggregateException?displayProperty=nameWithType> puede usarse para capturar varias excepciones que se producen simultáneamente en subprocesos independientes y devolverlas al subproceso combinado como una única excepción. Los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y PLINQ usan <xref:System.AggregateException> de forma amplia para este propósito. Para más información, vea [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) y [Cómo: Controlar excepciones en una consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ El tipo <xref:System.AggregateException?displayProperty=nameWithType> puede usarse para capturar varias excepciones que se producen simultáneamente en subprocesos independientes y devolverlas al subproceso combinado como una única excepción. Los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y PLINQ usan <xref:System.AggregateException> de forma amplia para este propósito. Para obtener más información, vea [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) y [Cómo: Controlar excepciones en una consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Vea también
 

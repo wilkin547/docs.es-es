@@ -3,13 +3,13 @@ title: Aprendizaje automático automatizado con ML.NET
 description: Introducción a la selección y el entrenamiento de modelos automáticos
 ms.date: 05/01/2019
 ms.topic: overview
-ms.custom: mvc
-ms.openlocfilehash: c6c369dc0b0375f180d33d85ef320ddb24102f3e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: acd6cae71d2d5d79209a77d34175e7f1b3c1ee35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740099"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849359"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Aprendizaje automático automatizado con ML.NET
 

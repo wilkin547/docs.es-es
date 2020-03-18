@@ -5,11 +5,11 @@ author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
 ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465430"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61923856"
 ---
 # <a name="generic-types-overview"></a>Información general de tipos genéricos
 
@@ -62,7 +62,7 @@ Non-Generic Sort: System.Collections.ArrayList
  Time taken: 0.2592ms
 ```
 
-Lo primero que verá aquí es que la ordenación de la lista genérica es significativamente más rápida que la de la lista no genérica. También puede observar que el tipo de la lista genérica es distinto ([System.Int32]), mientras que el tipo de la lista no genérica es generalizado. Dado que el tiempo de ejecución sabe que el genérico `List<int>` es de tipo `ArrayList`, puede almacenar los elementos de la lista en una matriz de enteros subyacente en memoria, mientras el no genérico <xref:System.Int32> tiene que convertir cada elemento de la lista en un objeto. Como se muestra en este ejemplo, las conversiones adicionales consumen tiempo y ralentizan la ordenación de la lista.
+Lo primero que verá aquí es que la ordenación de la lista genérica es significativamente más rápida que la de la lista no genérica. También puede observar que el tipo de la lista genérica es distinto ([System.Int32]), mientras que el tipo de la lista no genérica es generalizado. Dado que el tiempo de ejecución sabe que el genérico `List<int>` es de tipo <xref:System.Int32>, puede almacenar los elementos de la lista en una matriz de enteros subyacente en memoria, mientras el no genérico `ArrayList` tiene que convertir cada elemento de la lista en un objeto. Como se muestra en este ejemplo, las conversiones adicionales consumen tiempo y ralentizan la ordenación de la lista.
 
 Otra ventaja adicional de que el tiempo de ejecución conozca el tipo de la clase genérica es una mejor experiencia de depuración. Cuando se depura un genérico en C#, sabe qué tipo de cada elemento se encuentra en la estructura de datos. Sin genéricos, no sabría qué tipo de cada elemento estaba presente.
 

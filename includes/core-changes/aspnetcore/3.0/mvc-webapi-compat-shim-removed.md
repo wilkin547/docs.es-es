@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394404"
 ---
 ### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC: se han quitado las correcciones de compatibilidad (shim) con la API web

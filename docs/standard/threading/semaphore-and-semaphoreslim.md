@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127586"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore y SemaphoreSlim

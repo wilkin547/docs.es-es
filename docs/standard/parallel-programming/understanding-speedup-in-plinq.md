@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139908"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Introducción a la velocidad en PLINQ
@@ -68,7 +68,7 @@ El objetivo principal de PLINQ es acelerar la ejecución de consultas LINQ to Ob
 ## <a name="when-plinq-chooses-sequential-mode"></a>Cuando PLINQ elige el modo secuencial  
  PLINQ siempre intentará ejecutar una consulta al menos tan rápido como se ejecutaría de forma secuencial. Aunque PLINQ no se fija en lo caros que son los delegados de usuario desde el punto de vista computacional o en lo grande que es el origen de entrada, sí busca determinadas "formas" de consulta. En concreto, busca operadores de consulta o combinaciones de operadores que normalmente provocan que una consulta se ejecute más lentamente en modo paralelo. Cuando encuentra esas formas, PLINQ vuelve al modo secuencial de forma predeterminada.  
   
- Sin embargo, después de medir el rendimiento de una consulta concreta, puede determinar que realmente se ejecute más rápido en modo paralelo. En tales casos puede usar la marca <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> con el método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> para indicar a PLINQ que paralelice la consulta. Para obtener más información, vea [Cómo: Especificar el modo de ejecución en PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Sin embargo, después de medir el rendimiento de una consulta concreta, puede determinar que realmente se ejecute más rápido en modo paralelo. En tales casos puede usar la marca <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> con el método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> para indicar a PLINQ que paralelice la consulta. Para más información, consulte [Especificación del modo de ejecución en PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
  En la lista siguiente se describen las formas de consulta PLINQ que de forma predeterminada se ejecutarán en modo secuencial:  
   

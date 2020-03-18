@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Toma de medidas cuando un bloque de flujos de datos recibe datos
+title: 'Cómo: Realizar una acción cuando un bloque de flujos de datos recibe datos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124214"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Procedimiento Toma de medidas cuando un bloque de flujos de datos recibe datos
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Cómo: Realizar una acción cuando un bloque de flujos de datos recibe datos
 Los tipos *Bloque de flujo de datos de ejecución* llaman a un delegado proporcionado por el usuario cuando reciben datos. Las clases <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> son tipos de bloques de flujo de datos de ejecución. Puede usar la palabra clave `delegate` (`Sub` en Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> o una expresión lambda cuando proporcione una función de trabajo a un bloque de flujo de datos de ejecución. Este documento describe cómo usar <xref:System.Func%602> y expresiones lambda para realizar la acción en bloques de ejecución.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

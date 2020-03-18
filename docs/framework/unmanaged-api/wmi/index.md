@@ -3,10 +3,10 @@ title: WMI y contadores de rendimiento (referencia de API no administrada)
 description: Resume la API no administrada de .NET Framework para WMI y la información sobre los contadores de rendimiento.
 ms.date: 11/06/2017
 ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127421"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumental de administración de Windows (WMI) y contadores de rendimiento (referencia de API no administrada)
@@ -17,7 +17,7 @@ La API no administrada de la WMI y los contadores de rendimiento de .NET Framewo
 
 La API incluye estas funciones:
 
-| Función | DESCRIPCIÓN |
+| Función | Description |
 |---------|---------|
 | [BeginEnumeration (función)](beginenumeration.md) | Restablece el enumerador al principio de una enumeración de propiedades del objeto de la WMI. |
 | [BeginMethodEnumeration (función)](beginmethodenumeration.md) |  Comienza una enumeración de los métodos disponibles para un objeto. |

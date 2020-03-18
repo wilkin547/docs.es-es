@@ -12,10 +12,10 @@ helpviewer_keywords:
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047360"
 ---
 # <a name="proxy-configuration"></a>Configuración de proxy
@@ -53,7 +53,7 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
   
  En la siguiente tabla se muestran las opciones de configuración de un proxy estático.  
   
-|Parámetro, atributo o propiedad del archivo de configuración|DESCRIPCIÓN|  
+|Parámetro, atributo o propiedad del archivo de configuración|Description|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` o <xref:System.Net.WebProxy.Address>|La dirección de proxy que se va a usar.|  
 |`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Controla si se omite el proxy para direcciones locales.|  

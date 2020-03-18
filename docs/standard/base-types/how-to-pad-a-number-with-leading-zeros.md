@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para rellenar un número con ceros a la izquierda
+title: 'Cómo: Rellenar un número con ceros iniciales'
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131974"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedimiento para rellenar un número con ceros a la izquierda
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Cómo: Rellenar un número con ceros iniciales
 
 Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un especificador de precisión. Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico personalizada](../../../docs/standard/base-types/custom-numeric-format-strings.md). En este artículo se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.
 
@@ -83,7 +83,7 @@ En el ejemplo siguiente se da formato a varios valores numéricos con ceros inic
 
     1. Si incluye un símbolo de separador decimal, determine el número de caracteres a la izquierda del separador decimal.
 
-         O bien
+         o bien
 
          Si no incluye un símbolo de separador decimal, determine la longitud de la cadena.
 
@@ -102,6 +102,6 @@ En el ejemplo siguiente se rellenan dos valores <xref:System.Double> con cinco c
 
 ## <a name="see-also"></a>Vea también
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)

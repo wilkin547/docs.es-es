@@ -3,10 +3,10 @@ title: Procedimiento para cargar y descargar ensamblados
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
 ms.openlocfilehash: a520ffd41c3465737be7494d374cbcf64e3f1b85
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155781"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>Procedimiento Carga y descarga de ensamblados

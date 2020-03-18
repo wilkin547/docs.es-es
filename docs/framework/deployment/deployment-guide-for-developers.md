@@ -7,10 +7,10 @@ helpviewer_keywords:
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628129"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
@@ -345,7 +345,7 @@ En la tabla siguiente se muestran las opciones que se pueden incluir cuando se e
 |Opción|Descripción|
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
-|**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Información de progreso de un paquete de instalación](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"** . Para obtener un ejemplo de un paquete de encadenamiento, vea [Información de progreso de un paquete de instalación](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:**  Use esta opción solo con el instalador web.|
 |**/log** `file` &#124; `folder`|Especifica la ubicación del archivo de registro. El valor predeterminado es la carpeta temporal para el proceso y el nombre de archivo predeterminado se basa en el paquete. Si la extensión de archivo es .txt, se genera un registro de texto. Si especifica cualquier otra extensión o no especifica ninguna, se crea un registro HTML.|
 |**/msioptions**|Especifica opciones que se pasarán para los elementos .msi y .msp; por ejemplo: `/msioptions "PROPERTY1='Value'"`.|

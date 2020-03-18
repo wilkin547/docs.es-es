@@ -3,10 +3,10 @@ title: Información acerca de los problemas y excepciones del elemento WebReques
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
 ms.openlocfilehash: 172ad7508bdcac94cc278faab65a2e265b3c6a65
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76743892"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Información acerca de los problemas y excepciones del elemento WebRequest

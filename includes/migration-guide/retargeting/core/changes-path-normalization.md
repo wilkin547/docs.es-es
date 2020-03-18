@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 994876457f9745de99be30e567f400f69a0192fa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70259813"
 ---
 ### <a name="changes-in-path-normalization"></a>Cambios en la normalización de la ruta de acceso

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
 ms.openlocfilehash: 856b65d3b2217dbe5d53ecda00723b47247d80a4
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72773851"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (Opciones del compilador de C#)
@@ -33,4 +33,4 @@ Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente 
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091590"
 ---
 # <a name="numerics-in-net"></a>Valores numéricos en .NET
@@ -42,7 +42,7 @@ Cada tipo de entero admite un conjunto de operadores aritméticos estándar. La 
 También puede trabajar con los bits individuales de un valor entero usando la clase <xref:System.BitConverter?displayProperty=nameWithType>.  
 
 > [!NOTE]  
-> Los tipos enteros sin signo no son conformes a CLS. Para obtener más información, consulte [Independencia del lenguaje y componentes independientes del lenguaje](language-independence-and-language-independent-components.md).
+> Los tipos enteros sin signo no son conformes a CLS. Para más información, consulte [Independencia del lenguaje y componentes independientes del lenguaje](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 

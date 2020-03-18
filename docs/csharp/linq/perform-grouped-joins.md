@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo realizar combinaciones agrupadas c
 ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
 ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857559"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61689143"
 ---
 # <a name="perform-grouped-joins"></a>Realizar combinaciones agrupadas
 
@@ -39,4 +39,4 @@ Las combinaciones agrupadas resultan ideales para crear XML con LINQ to XML. El 
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Realizar combinaciones internas](perform-inner-joins.md)
 - [Realizar operaciones de combinación externa izquierda](perform-left-outer-joins.md)
-- [Tipos anónimos (Guía de programación de C#)](../programming-guide/classes-and-structs/anonymous-types.md).
+- [Tipos anónimos](../programming-guide/classes-and-structs/anonymous-types.md)

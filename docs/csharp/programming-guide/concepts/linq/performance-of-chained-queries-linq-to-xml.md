@@ -3,10 +3,10 @@ title: Rendimiento de consultas encadenadas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
 ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253119"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Rendimiento de consultas encadenadas (LINQ to XML) (C#)
@@ -55,4 +55,4 @@ Por lo tanto, la iteración por `query2` es directamente proporcional al número
 
 Para más información sobre iteradores, vea [yield](../../../language-reference/keywords/yield.md).
 
-Para obtener un tutorial más detallado sobre el encadenamiento de consultas, vea [Tutorial: Encadenar consultas juntas](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Para obtener un tutorial más detallado sobre consultas encadenadas, vea [Tutorial: encadenar cadenas juntas](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

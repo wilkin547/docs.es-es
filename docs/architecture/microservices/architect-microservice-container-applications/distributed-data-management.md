@@ -3,10 +3,10 @@ title: Desafíos y soluciones de la administración de datos distribuidos
 description: Descubra cuáles son los desafíos y soluciones de la administración de datos distribuidos en el mundo de los microservicios.
 ms.date: 09/20/2018
 ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834459"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos

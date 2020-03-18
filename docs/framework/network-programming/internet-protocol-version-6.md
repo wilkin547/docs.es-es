@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047877"
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo de Internet versión 6
@@ -42,7 +42,7 @@ El protocolo de Internet versión 6 (IPv6) es un nuevo conjunto de protocolos es
   
 - Autenticación y confidencialidad integradas.  
   
- Para más información, vea [Direccionamiento IPv6](ipv6-addressing.md), [Enrutamiento de IPv6](ipv6-routing.md), [Configuración automática de IPv6](ipv6-auto-configuration.md), [Habilitar y deshabilitar IPv6](enabling-and-disabling-ipv6.md) y [Cómo: Modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
+ Para obtener más información, vea [IPv6 Addressing](ipv6-addressing.md) (Direccionamiento IPv6), [IPv6 Routing](ipv6-routing.md) (Enrutamiento de IPv6), [IPv6 Auto-Configuration](ipv6-auto-configuration.md) (Configuración automática de IPv6), [Enabling and Disabling IPv6](enabling-and-disabling-ipv6.md) (Habilitar y deshabilitar IPv6) y [How to: Modify the Computer Configuration File to Enable IPv6 Support](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md) (Cómo: Modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6).  
   
 ## <a name="references"></a>Referencias  
  Aquí hay una selección de documentos RFC que se pueden encontrar en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/):  
@@ -60,5 +60,5 @@ El protocolo de Internet versión 6 (IPv6) es un nuevo conjunto de protocolos es
 ## <a name="see-also"></a>Vea también
 
 - [Ejemplo de sockets IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
-- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
+- [Ejemplos de programación de red](network-programming-samples.md)
 - [Sockets](sockets.md)

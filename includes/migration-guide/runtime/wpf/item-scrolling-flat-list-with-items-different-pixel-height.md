@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3a82822aae281ea7e873ba649f05b1d68686ec69
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70997719"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Desplazamiento de elementos de una lista plana con elementos con alto en píxeles diferente

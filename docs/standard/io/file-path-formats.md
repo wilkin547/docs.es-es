@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628051"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
@@ -30,7 +30,7 @@ Una ruta de acceso DOS estándar puede constar de tres componentes:
 
 Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no se especifica la letra de volumen o unidad y el nombre de directorio comienza por el [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>), la ruta de acceso es relativa con respecto a la raíz de la unidad actual. En caso contrario, la ruta de acceso es relativa al directorio actual. En la tabla siguiente se muestran algunas rutas de acceso de directorio y archivo posibles.
 
-|Ruta de acceso  |Descripción  |
+|Path  |Description  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ruta de acceso de archivo absoluta desde la raíz de la unidad C:. |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ruta de acceso absoluta desde la raíz de la unidad actual. |
@@ -62,7 +62,7 @@ Las rutas de acceso de convención de nomenclatura universal (UNC), que se usan 
 
 A continuación se muestran algunos ejemplos de rutas de acceso UNC:
 
-|Ruta de acceso  |Descripción  |
+|Path  |Description  |
 | -- | -- |
 | `\\system07\C$\` | Directorio raíz de la unidad C: en `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | El archivo Foo.txt en el directorio Test del volumen \\\\Server2\\Share.|
@@ -104,7 +104,7 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 
 Por definición, las rutas de acceso de dispositivo DOS son completas. No se permiten los segmentos de directorio relativos (`.` y `..`). Los directorios actuales nunca entran en uso.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>Ejemplo: Formas de hacer referencia al mismo archivo
+## <a name="example-ways-to-refer-to-the-same-file"></a>Ejemplo: formas de hacer referencia al mismo archivo
 
 En el ejemplo siguiente se muestran algunas formas de hacer referencia a un archivo cuando se usan las API del espacio de nombres <xref:System.IO>. En el ejemplo se crea una instancia de un objeto <xref:System.IO.FileInfo> y se usan sus propiedades <xref:System.IO.FileInfo.Name> y <xref:System.IO.FileInfo.Length> para mostrar el nombre y la longitud del archivo.
 

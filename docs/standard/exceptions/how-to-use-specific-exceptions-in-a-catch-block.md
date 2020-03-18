@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar excepciones específicas en un bloque Catch
+title: 'Cómo: Utilizar excepciones específicas en un bloque Catch'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,10 +12,10 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
 ms.openlocfilehash: 48b450e579263876725f96e0adfc4c16aac1d869
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160162"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Cómo: Utilizar excepciones específicas en un bloque Catch

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138138"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelación en subprocesos administrados
@@ -52,7 +52,7 @@ A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la 
 ## <a name="cancellation-types"></a>Tipos de cancelación  
  El marco de cancelación se implementa como un conjunto de tipos relacionados. Estos tipos se enumeran en la tabla siguiente.  
   
-|Nombre de tipo|DESCRIPCIÓN|  
+|Nombre de tipo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Objeto que se crea un token de cancelación y también emite la solicitud de cancelación para todas las copias de ese token.|  
 |<xref:System.Threading.CancellationToken>|Tipo de valor ligero pasado a uno o varios agentes de escucha, normalmente como un parámetro de método. Los agentes de escucha supervisan el valor de la propiedad `IsCancellationRequested` del token mediante sondeo, devolución de llamada o identificador de espera.|  
@@ -84,7 +84,7 @@ A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la 
   
  Sin embargo, en casos más complejos, es posible que sea necesario que el delegado de usuario notifique al código de biblioteca que se ha producido la cancelación. En estos casos, la manera correcta de finalizar la operación es que el delegado llame al método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, lo que provocará que se genere <xref:System.OperationCanceledException>. El código de biblioteca puede detectar esta excepción en el subproceso de delegado de usuario y examinar el token de la excepción para determinar si la excepción indica una cancelación cooperativa o alguna otra situación excepcional.  
   
- La clase <xref:System.Threading.Tasks.Task> administra <xref:System.OperationCanceledException> de esta manera. Para más información, vea [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ La clase <xref:System.Threading.Tasks.Task> administra <xref:System.OperationCanceledException> de esta manera. Para más información, vea [Cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Escuchas mediante sondeo  
  Para los cálculos de ejecución prolongada que se repiten, puede escuchar una solicitud de cancelación sondeando periódicamente el valor de la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>. Si su valor es `true`, el método debe realizar una limpieza y finalizar lo antes posible. La frecuencia óptima de sondeo depende del tipo de aplicación. Es el desarrollador quien determina la mejor frecuencia de sondeo para cualquier programa dado. El sondeo en sí no afecta significativamente al rendimiento. En el ejemplo siguiente se muestra una posible manera de sondeo.  

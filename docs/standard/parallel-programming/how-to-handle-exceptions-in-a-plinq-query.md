@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para controlar excepciones en una consulta PLINQ
+title: 'Cómo: Controlar excepciones en una consulta PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123091"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedimiento para controlar excepciones en una consulta PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Cómo: Controlar excepciones en una consulta PLINQ
 
 El primer ejemplo de este tema muestra cómo controlar la clase <xref:System.AggregateException?displayProperty=nameWithType> que se puede iniciar desde una consulta PLINQ cuando se ejecuta. El segundo ejemplo muestra cómo colocar bloques try-catch dentro de los delegados, lo más cerca posible de donde se producirá la excepción. De este modo, se pueden detectar en cuanto se producen y posiblemente continuar con la ejecución de la consulta. Cuando las excepciones pueden propagarse de nuevo al subproceso de unión, es posible que una consulta continúe procesando algunos elementos después de que se haya producido la excepción.
 

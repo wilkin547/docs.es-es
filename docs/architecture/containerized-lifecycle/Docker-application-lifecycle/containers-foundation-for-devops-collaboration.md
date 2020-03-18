@@ -3,10 +3,10 @@ title: Contenedores como base para la colaboración de DevOps
 description: Descripción del papel clave de los contenedores en la optimización de DevOps.
 ms.date: 02/15/2019
 ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73094499"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps

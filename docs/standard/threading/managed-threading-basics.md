@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139228"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
@@ -41,7 +41,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  [Subprocesamiento administrado y no administrado en Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Se describe la relación entre subprocesos administrados y no administrados, se enumeran los administrados equivalentes para las API de subprocesos de Windows y se describe la interacción entre apartamentos COM y subprocesos administrados.  
   
- [Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [Almacenamiento local para el subproceso: Campos estáticos relacionados con subproceso y ranuras de datos](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Se describen los mecanismos de almacenamiento relacionados con subprocesos.  
   
 ## <a name="reference"></a>Referencia
@@ -54,7 +54,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
   
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Información general sobre las primitivas de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  Se describen las clases administradas utilizadas para sincronizar las actividades de varios subprocesos.  
   
  [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md)  

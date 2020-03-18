@@ -4,12 +4,12 @@ description: En este tutorial se enseña cómo generar secuencias con LINQ, escr
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345609"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240020"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Uso de Language-Integrated Query (LINQ)
 
@@ -179,7 +179,7 @@ La interfaz <xref:System.Collections.Generic.IEnumerable%601> tiene un método: 
 
 A continuación se muestra la implementación de ese método:
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Ahora que ha escrito este método, vuelva al método `Main` y ordene la baraja aleatoriamente una vez:
 
@@ -213,7 +213,7 @@ public static void Main(string[] args)
 
 Debe ser sencillo escribir un método para determinar si las dos secuencias son iguales. Presenta una estructura similar al método que se escribió para ordenar la baraja aleatoriamente. Solo que esta vez, en lugar de aplicar `yield return` a cada elemento, se compararán los elementos coincidentes de cada secuencia. Después de que se haya enumerado la secuencia completa, si cada elemento coincide, las secuencias son las mismas:
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Esto muestra una segunda expresión LINQ: los métodos de terminal. Adoptan una secuencia como entrada (o, en este caso, dos secuencias) y devuelven un único valor escalar. Cuando se utilizan métodos de terminal, siempre son el método final en una cadena de métodos para una consulta LINQ, de ahí el nombre "terminal".
 
@@ -267,7 +267,7 @@ Recuerde que la baraja original se generó con una consulta LINQ. Cada orden ale
 
 En su archivo `Extensions.cs`, escriba o copie el siguiente método. Este método de extensión crea otro archivo denominado `debug.log` en el directorio del proyecto y registra la consulta que se ejecuta actualmente en el archivo de registro. Este método de extensión se puede anexar a una consulta para marcar que se ha ejecutado.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Verá un subrayado en zigzag rojo bajo `File`, lo que indica que no existe. No se compilará, ya que el compilador no sabe qué es `File`. Para solucionar este problema, asegúrese de agregar la siguiente línea de código bajo la primera línea de `Extensions.cs`:
 
@@ -329,7 +329,7 @@ Observe que no se genera un registro cada vez que accede a una consulta. El regi
 
 Aquí puede mejorar el rendimiento del código para reducir el número de ejecuciones que realiza. Una corrección sencilla que puede hacer es almacenar en *caché* los resultados de la consulta LINQ original que construye la baraja de cartas. Actualmente, ejecuta las consultas una y otra vez siempre que el bucle do-while pasa por una iteración, lo que vuelve a construir la baraja de cartas y cambia continuamente el orden aleatorio. Para almacenar en caché la baraja de cartas, puede aprovechar los métodos LINQ <xref:System.Linq.Enumerable.ToArray%2A> y <xref:System.Linq.Enumerable.ToList%2A>; cuando los anexe a las consultas, realizarán las mismas acciones que les ha indicado que hagan, pero ahora almacenarán los resultados en una matriz o una lista, según el método al que elija llamar. Anexe el método <xref:System.Linq.Enumerable.ToArray%2A> de LINQ a las dos consultas y ejecute de nuevo el programa:
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Ahora el orden aleatorio externo se reduce a 30 consultas. Vuelva a ejecutarlo con el orden aleatorio interno y verá mejoras similares: ahora ejecuta 162 consultas.
 

@@ -3,10 +3,10 @@ title: Clasificación de operadores de consulta estándar por modo de ejecución
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
 ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924293"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Clasificación de operadores de consulta estándar por modo de ejecución (C#)
@@ -36,60 +36,60 @@ Las implementaciones de LINQ to Objects de los métodos de operador de consulta 
   
 |Operador de consulta estándar|Tipo devuelto|Ejecución inmediata|Ejecución aplazada de streaming|Ejecución aplazada de no streaming|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
-|<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Average%2A>|Valor numérico único|X|||  
-|<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|X|||  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|X|||  
-|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.First%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-<xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|X|||  
-|<xref:System.Linq.Enumerable.Max%2A>|Valor numérico único, TSource o TResult|X|||  
-|<xref:System.Linq.Enumerable.Min%2A>|Valor numérico único, TSource o TResult|X|||  
-|<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.Range%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Repeat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Single%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Sum%2A>|Valor numérico único|X|||  
-|<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-<xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ToArray%2A>|Matriz de TSource|X|||  
-|<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|X|||  
-|<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|X|||  
-|<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|X|||  
-|<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
+|<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|x|||  
+|<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|x|||  
+|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Average%2A>|Valor numérico único|x|||  
+|<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|x|||  
+|<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|x|||  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|x|||  
+|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
+|<xref:System.Linq.Enumerable.First%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
+<xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
+|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
+|<xref:System.Linq.Enumerable.Last%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|x|||  
+|<xref:System.Linq.Enumerable.Max%2A>|Valor numérico único, TSource o TResult|x|||  
+|<xref:System.Linq.Enumerable.Min%2A>|Valor numérico único, TSource o TResult|x|||  
+|<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.Range%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Repeat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|x|||  
+|<xref:System.Linq.Enumerable.Single%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Sum%2A>|Valor numérico único|x|||  
+|<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+<xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.ToArray%2A>|Matriz de TSource|x|||  
+|<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|x|||  
+|<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|x|||  
+|<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|x|||  
+|<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
 - [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](./query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

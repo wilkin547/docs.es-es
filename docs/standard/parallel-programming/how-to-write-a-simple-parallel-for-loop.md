@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para escribir un bucle Parallel.For simple
+title: 'Cómo: Escribir un bucle Parallel.For simple'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139658"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedimiento para escribir un bucle Parallel.For simple
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Cómo: Escribir un bucle Parallel.For simple
 
 Este tema contiene dos ejemplos que ilustran el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. El primer ejemplo usa la sobrecarga del método <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> y el segundo usa la sobrecarga <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, las dos sobrecargas más simples del método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Puede usar estas dos sobrecargas del método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> cuando no sea necesario cancelar el bucle, interrumpir las iteraciones del bucle o mantener cualquier estado local de subproceso.
 

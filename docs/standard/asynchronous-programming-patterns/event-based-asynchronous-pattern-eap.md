@@ -8,10 +8,10 @@ helpviewer_keywords:
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130944"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Patrón asincrónico basado en eventos (EAP)
@@ -23,7 +23,7 @@ Hay varias maneras de exponer las características asincrónicas al código de c
   
 ## <a name="in-this-section"></a>En esta sección
 
- [Información general sobre el modelo asincrónico basado en eventos](event-based-asynchronous-pattern-overview.md)  
+ [Event-based Asynchronous Pattern Overview](event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)  
  Describe cómo el Modelo asincrónico basado en evento pone a su disposición las ventajas de las aplicaciones multithreading ocultando muchos de los problemas complejos inherentes al diseño multithreading.  
   
  [Implementación del modelo asincrónico basado en eventos](implementing-the-event-based-asynchronous-pattern.md)  
@@ -35,13 +35,13 @@ Hay varias maneras de exponer las características asincrónicas al código de c
  [Decisión de cuándo implementar el modelo asincrónico basado en eventos](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  En este tema se describe cómo determinar el momento conveniente para implementar el modelo asincrónico basado en eventos en lugar del modelo <xref:System.IAsyncResult>, representado por el [modelo de programación asincrónica (APM)](asynchronous-programming-model-apm.md).
   
- [Cómo: Implementación de un componente que admita el modelo asincrónico basado en eventos](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Implementar un componente que admita el modelo asincrónico basado en eventos](component-that-supports-the-event-based-asynchronous-pattern.md)  
  En este tema se describe cómo crear un componente que implemente el modelo asincrónico basado en eventos. Se implementa utilizando las clases del asistente del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación.  
 
- [Cómo: Implementar un cliente en un modelo asincrónico basado en eventos](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ [Implementar un cliente en un modelo asincrónico basado en eventos](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  En este tema se describe cómo crear un cliente que use un componente que implemente el modelo asincrónico basado en eventos.
   
- [Cómo: Uso de componentes que admitan el modelo asincrónico basado en eventos](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [Uso de componentes que admitan el modelo asincrónico basado en eventos](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Describe cómo utilizar un componente que admite el Modelo asincrónico basado en evento.  
   
 ## <a name="reference"></a>Referencia
@@ -67,4 +67,4 @@ Hay varias maneras de exponer las características asincrónicas al código de c
 
 - [Procedimientos recomendados para el subprocesamiento administrado](../threading/managed-threading-best-practices.md)
 - [Eventos](../events/index.md)
-- [Patrones para la programación asincrónica](index.md)
+- [Asynchronous Programming Design Patterns](index.md) (Patrones de diseño para programación asincrónica)

@@ -3,10 +3,10 @@ title: Ejecución, administración y supervisión de entornos de producción de 
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 ms.date: 02/15/2019
 ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295034"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ejecución, administración y supervisión de entornos de producción de Docker

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084191"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Ejemplo de expresiones regulares: Cambiar formatos de fecha
@@ -35,7 +35,7 @@ En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularE
 ## <a name="comments"></a>Comentarios  
  El patrón de la expresión regular `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(?<month>\d{1,2})`|Buscar coincidencias con uno o dos dígitos decimales. Es el grupo `month` capturado.|  
@@ -47,7 +47,7 @@ En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularE
   
  El patrón `${day}-${month}-${year}` define la cadena de reemplazo como se muestra en la siguiente tabla.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`$(day)`|Agregar la cadena capturada por el grupo de captura `day`.|  
 |`-`|Agregar un guión.|  

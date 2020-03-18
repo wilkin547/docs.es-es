@@ -4,17 +4,17 @@ description: Cómo agrupar resultados por claves con LINQ en C#.
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193010"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659909"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Agrupar resultados por claves contiguas
 
 En el ejemplo siguiente se muestra cómo agrupar elementos en fragmentos que representan subsecuencias de claves contiguas. Por ejemplo, suponga que tiene la siguiente secuencia de pares clave-valor:
 
-|Key|Valor|
+|Clave|Valor|
 |---------|-----------|
 |A|We|
 |A|think|

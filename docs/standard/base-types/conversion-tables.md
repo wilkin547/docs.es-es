@@ -13,16 +13,16 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103886"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tablas de conversión de tipos en .NET
 Una conversión de ampliación se produce cuando se convierte un valor de un tipo a otro tipo que es de igual o mayor tamaño. Una conversión de restricción se produce cuando se convierte un valor de un tipo a otro tipo que es de un tamaño menor. En las tablas de este tema se muestran los comportamientos de ambos tipos de conversiones.  
   
-## <a name="widening-conversions"></a>conversiones de ampliación  
+## <a name="widening-conversions"></a>Conversiones de ampliación  
  En la tabla siguiente se describen las conversiones de ampliación que pueden realizarse sin pérdida de información.  
   
 |Tipo|Se puede convertir sin pérdida de datos a|  
@@ -48,7 +48,7 @@ Una conversión de ampliación se produce cuando se convierte un valor de un tip
 |<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
-## <a name="narrowing-conversions"></a>conversiones de restricción  
+## <a name="narrowing-conversions"></a>Conversiones de restricción  
  Una conversión de restricción a <xref:System.Single> o <xref:System.Double> puede provocar una pérdida de información. Si el tipo de destino no puede expresar correctamente la magnitud del origen, el tipo resultante se establece en la constante `PositiveInfinity` o `NegativeInfinity`. `PositiveInfinity` resulta al dividir un número positivo por cero y también se devuelve cuando el valor de <xref:System.Single> o <xref:System.Double> supera el valor del campo `MaxValue`. `NegativeInfinity` resulta al dividir un número negativo por cero y también se devuelve cuando el valor de <xref:System.Single> o <xref:System.Double> cae por debajo del valor del campo `MinValue`. Una conversión de <xref:System.Double> a <xref:System.Single> podría dar lugar a `PositiveInfinity` o `NegativeInfinity`.  
   
  Una conversión de restricción también puede traducirse en una pérdida de información para otros tipos de datos. Pero se inicia <xref:System.OverflowException> si el valor de un tipo que se va a convertir está fuera del intervalo especificado por los campos `MaxValue` y `MinValue` del tipo de destino y el tiempo de ejecución comprueba la conversión para asegurarse de que el valor del tipo de destino no supera su `MaxValue` o `MinValue`. Las conversiones que se realizan con la clase <xref:System.Convert?displayProperty=nameWithType> siempre se comprueban de esta manera.  

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para extraer un protocolo y un número de puerto de una dirección URL
+title: 'Cómo: Extraer un protocolo y un número de puerto de una dirección URL'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138722"
 ---
-# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Procedimiento para extraer un protocolo y un número de puerto de una dirección URL
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Cómo: Extraer un protocolo y un número de puerto de una dirección URL
 En los siguientes ejemplos se extrae un protocolo y un número de puerto de una dirección URL.  
   
 ## <a name="example"></a>Ejemplo  
@@ -31,7 +31,7 @@ En los siguientes ejemplos se extrae un protocolo y un número de puerto de una 
   
  El patrón de la expresión regular `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` puede interpretarse como se muestra en la tabla siguiente.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencia al principio de la cadena.|  
 |`(?<proto>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Asigne a este grupo el nombre `proto`.|  

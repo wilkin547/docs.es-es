@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo crear un grupo anidado en una expr
 ms.date: 12/01/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
 ms.openlocfilehash: 7d056c9e215ccc7ca24d621b64e2328bed79f22e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857676"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688623"
 ---
 # <a name="create-a-nested-group"></a>Crear un grupo anidado
 
@@ -17,7 +17,7 @@ En el ejemplo siguiente se muestra cómo crear grupos anidados en una expresión
 ## <a name="example"></a>Ejemplo
 
 > [!NOTE]
-> Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo del tema [Consultar una colección de objetos](query-a-collection-of-objects.md).
+> Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo de [Query a collection of objects](query-a-collection-of-objects.md) (Consultar una colección de objetos).
 
 [!code-csharp[csProgGuideLINQ#24](~/samples/snippets/csharp/concepts/linq/how-to-create-a-nested-group_1.cs)]
 

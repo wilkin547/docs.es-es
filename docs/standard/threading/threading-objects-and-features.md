@@ -7,17 +7,17 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128969"
 ---
 # <a name="threading-objects-and-features"></a>Objetos y características de subprocesos
 
 Junto con la clase <xref:System.Threading.Thread?displayProperty=nameWithType>, .NET proporciona una serie de clases que le ayudarán a desarrollar aplicaciones multiproceso. En los siguientes artículos encontrará información general sobre estas clases:
 
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Grupo de subprocesos administrado](the-managed-thread-pool.md)|Describe cómo usar la clase <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, que proporciona un grupo de subprocesos de trabajo administrados por .NET.|  
 |[Timers](timers.md) (Temporizadores)|Describe los temporizadores de .NET que se pueden usar en un entorno multiproceso.|
