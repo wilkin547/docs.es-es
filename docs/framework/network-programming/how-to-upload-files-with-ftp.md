@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para cargar archivos mediante FTP
+title: Cómo cargar archivos mediante FTP
 description: En este artículo se muestra cómo cargar un archivo a un servidor FTP.
 ms.date: 06/26/2018
 dev_langs:
@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
 ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632809"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="847da-103">Procedimiento para cargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="847da-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="179fe-103">Cómo cargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="179fe-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="847da-104">En este ejemplo se muestra cómo cargar un archivo en un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="847da-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="179fe-104">En este ejemplo se muestra cómo cargar un archivo en un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="179fe-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="847da-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="847da-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="179fe-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="179fe-105">Example</span></span>
 
 ```csharp
 using System;
