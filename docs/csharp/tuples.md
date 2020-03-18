@@ -4,12 +4,12 @@ description: Más información sobre tipos de tupla con nombre y sin nombre en C
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039723"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156914"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C#
 
@@ -165,7 +165,7 @@ Vamos a actualizar este método para que los tres valores calculados durante la 
 La compatibilidad de refactorización de Visual Studio facilita la extracción de la funcionalidad de las estadísticas principales en un método privado. Le ofrece un método `private static` que devuelve el tipo de tupla con los tres valores de `Sum`, `SumOfSquares` y `Count`:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
- 
+
 El lenguaje permite un par de opciones más que puede usar si quiere realizar algunas modificaciones rápidas manualmente. En primer lugar, puede usar la declaración `var` para inicializar el resultado de la tupla de la llamada al método `ComputeSumAndSumOfSquares`. También puede crear tres variables discretas dentro del método `ComputeSumAndSumOfSquares`. La versión final se muestra en el siguiente código:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
@@ -225,7 +225,7 @@ También puede declarar variables con tipo implícito para cada campo de una tup
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-También es válido usar la palabra clave `var` con alguna de las declaraciones de variable, o todas, dentro de los paréntesis. 
+También es válido usar la palabra clave `var` con alguna de las declaraciones de variable, o todas, dentro de los paréntesis.
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
@@ -282,7 +282,7 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-El método `Deconstruct` podría convertir el objeto `Person` `p` en una tupla que contiene dos cadenas, pero no se puede aplicar en el contexto de las pruebas de igualdad.
+El método `Deconstruct` podría convertir el objeto `Person``p` en una tupla que contiene dos cadenas, pero no se puede aplicar en el contexto de las pruebas de igualdad.
 
 ## <a name="tuples-as-out-parameters"></a>Tuplas como parámetros de salida
 
@@ -290,7 +290,7 @@ Las tuplas se pueden usar como parámetros de salida *en sí*. No se deben confu
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
-Como alternativa, puede usar una tupla [ _sin nombre_](#named-and-unnamed-tuples) y hacer referencia a sus campos como `Item1` y `Item2`:
+Como alternativa, puede usar una tupla [_sin nombre_](#named-and-unnamed-tuples) y hacer referencia a sus campos como `Item1` y `Item2`:
 
 ```csharp
 dict.TryGetValue(2, out (int, string) pair);
@@ -298,6 +298,6 @@ dict.TryGetValue(2, out (int, string) pair);
 Console.WriteLine($"{pair.Item1}: {pair.Item2}");
 ```
 
-## <a name="conclusion"></a>Conclusión 
+## <a name="conclusion"></a>Conclusión
 
 La compatibilidad con tuplas con nombre del nuevo lenguaje y la biblioteca hace que resulte mucho más fácil trabajar con diseños que usan estructuras de datos que almacenan varios elementos, pero no definen el comportamiento, como clases y structs. El uso de tuplas para esos tipos resulta fácil y conciso. Se tienen todas las ventajas de la comprobación de tipos estáticos, sin necesidad de crear tipos con la sintaxis más detallada de `class` o `struct`. Aun así, resultan muy útiles para métodos de utilidad que sean `private` o `internal`. Cree tipos definidos por el usuario, tipos `class` o `struct`, cuando los métodos públicos devuelvan un valor con varios elementos.

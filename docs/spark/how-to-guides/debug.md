@@ -4,12 +4,12 @@ description: Sepa cómo depurar una aplicación de .NET para Apache Spark en Win
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919923"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185809"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Depuración de una aplicación de .NET para Apache Spark
 
@@ -63,7 +63,7 @@ Vaya al archivo *.cs* que contiene la UDF que va a depurar y [establezca un punt
 
 Presione `F5` para continuar la aplicación y, a la larga, se alcanzará el punto de interrupción.
 
-> [!NOTE] 
+> [!NOTE]
 > La ventana Choose Just-In-Time Debugger (Elegir el depurador Just-In-Time) aparece para cada tarea. Para evitar un exceso de elementos emergentes, establezca el número de ejecutores en un número bajo. Por ejemplo, puede usar la opción **--master local[1]** para spark-submit para establecer el número de tareas en 1, lo que inicia una instancia de depurador única.
 
 ## <a name="debug-scala-code"></a>Depuración de código de Scala

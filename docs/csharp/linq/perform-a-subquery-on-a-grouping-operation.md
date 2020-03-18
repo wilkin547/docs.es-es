@@ -3,12 +3,12 @@ title: Realizar una subconsulta en una operación de agrupación (LINQ en C#)
 description: Obtenga información sobre cómo realizar una subconsulta en una operación de agrupación con LINQ en C#.
 ms.date: 12/01/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: a3757a7d358a310dd1404f85e34178f6e561bcb9
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: fd26f87ad7d5b4892f086bf8c7a34cf19a7f9e02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857442"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173372"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Realizar una subconsulta en una operación de agrupación
 
@@ -23,7 +23,7 @@ Para obtener más información sobre continuaciones, consulte [into](../language
 > [!NOTE]
 > Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo de [Query a collection of objects](query-a-collection-of-objects.md) (Consultar una colección de objetos).
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]
 
 La consulta del fragmento de código anterior también se puede escribir con la sintaxis de método. El siguiente fragmento de código tiene una consulta semánticamente equivalente escrita con sintaxis de método.
 

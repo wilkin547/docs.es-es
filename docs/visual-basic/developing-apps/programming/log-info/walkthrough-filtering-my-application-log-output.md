@@ -7,10 +7,10 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353589"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
@@ -43,7 +43,7 @@ Cada mensaje que `My.Application.Log` escribe tiene un nivel de gravedad asociad
 
 6. Cierre la aplicación.
 
-     Para obtener información sobre cómo ver la ventana de salida de la depuración de la aplicación, vea [Resultados (Ventana)](/visualstudio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+     Para obtener información sobre cómo ver la ventana de salida de la depuración de la aplicación, vea [Resultados (Ventana)](/visualstudio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
     > [!NOTE]
     > De manera predeterminada, la aplicación vacía el resultado del archivo de registro cuando la aplicación se cierra.
@@ -60,7 +60,7 @@ En esta tabla se muestra el nivel de gravedad necesario para que el registro esc
 |---|---|
 |`Critical`|`Critical`|
 |`Error`|`Critical` o `Error`|
-|`Warning`|`Critical`, `Error`o `Warning`|
+|`Warning`|`Critical`, `Error` o `Warning`|
 |`Information`|`Critical`, `Error`, `Warning` o `Information`|
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` o `Transfer`|
@@ -76,7 +76,7 @@ En esta tabla se explica el resultado del registro que se muestra en el ejemplo 
 
 1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.
 
-     O bien
+     o bien
 
      Si no hay ningún archivo app.config:
 
@@ -254,8 +254,8 @@ Para obtener más información sobre cómo cambiar la configuración del registr
 ## <a name="see-also"></a>Vea también
 
 - [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [Tutorial: Crear agentes de escucha de registro personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Modificadores de seguimiento](../../../../framework/debug-trace-profile/trace-switches.md)
 - [Registrar información de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/index.md)

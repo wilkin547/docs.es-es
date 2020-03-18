@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127536"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398560"
 ---
 # <a name="the-managed-thread-pool"></a>Grupo de subprocesos administrado
 
@@ -89,8 +89,8 @@ Hay varios escenarios en los que es adecuado crear y administrar sus propios sub
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [Biblioteca TPL](../parallel-programming/task-parallel-library-tpl.md)
-- [Cómo: Devolver un valor a partir de una tarea](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [How to: Return a Value from a Task](../parallel-programming/how-to-return-a-value-from-a-task.md) (Devolver un valor a partir de una tarea)
 - [Objetos y características de subprocesos](threading-objects-and-features.md)
 - [Subprocesos y subprocesamiento](threads-and-threading.md)
-- [E/S de archivos asincrónica](../io/asynchronous-file-i-o.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
 - [Timers](timers.md) (Temporizadores)

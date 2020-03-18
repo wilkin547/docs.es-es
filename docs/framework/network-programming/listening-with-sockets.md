@@ -15,17 +15,17 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736775"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180737"
 ---
 # <a name="listening-with-sockets"></a>escuchas con sockets
 Los sockets de escucha o de servidor abren un puerto en la red y esperan a que un cliente se conecte a ese puerto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear un servicio remoto para una red TCP/IP.  
   
- La dirección única de un servicio TCP/IP se define mediante la combinación de la dirección IP del host con el número de puerto del servicio para crear un punto de conexión para el servicio. La clase <xref:System.Net.Dns> proporciona métodos que devuelven información sobre las direcciones de red compatibles con el dispositivo de red local. Cuando el dispositivo de red local tiene más de una dirección de red, o si el sistema local admite más de un dispositivo de red, la clase **Dns** devuelve información sobre todas las direcciones de red y la aplicación debe elegir la dirección correcta para el servicio. Internet Assigned Numbers Authority (Iana) define números de puerto para los servicios comunes; para obtener más información, vea [Registro del nombre de servicio y del número de puerto del protocolo de transporte](https://www.iana.org/assignments/port-numbers) Hay otros servicios que pueden tener registrados números de puerto en el intervalo comprendido entre 1024 y 65 535.  
+ La dirección única de un servicio TCP/IP se define mediante la combinación de la dirección IP del host con el número de puerto del servicio para crear un punto de conexión para el servicio. La clase <xref:System.Net.Dns> proporciona métodos que devuelven información sobre las direcciones de red compatibles con el dispositivo de red local. Cuando el dispositivo de red local tiene más de una dirección de red, o si el sistema local admite más de un dispositivo de red, la clase **Dns** devuelve información sobre todas las direcciones de red y la aplicación debe elegir la dirección correcta para el servicio. Internet Assigned Numbers Authority (Iana) define números de puerto para los servicios comunes; para obtener más información, vea [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/port-numbers) (Registro del nombre de servicio y del número de puerto del protocolo de transporte). Hay otros servicios que pueden tener registrados números de puerto en el intervalo comprendido entre 1024 y 65 535.  
   
  En el ejemplo siguiente se crea una clase <xref:System.Net.IPEndPoint> para un servidor mediante la combinación de la primera dirección IP devuelta por **Dns** para el equipo host con un número de puerto elegido entre el intervalo de números de puerto registrados.  
   
@@ -45,7 +45,7 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  
-    SocketType.Stream, ProtocolType.Tcp) 
+    SocketType.Stream, ProtocolType.Tcp)
 listener.Bind(localEndPoint)  
 listener.Listen(100)  
 ```  
@@ -64,5 +64,5 @@ listener.Listen(100);
 - [Uso de un socket de servidor sincrónico](using-a-synchronous-server-socket.md)
 - [Uso de un socket de servidor asincrónico](using-an-asynchronous-server-socket.md)
 - [Uso de sockets de cliente](using-client-sockets.md)
-- [Cómo: Crear un socket](how-to-create-a-socket.md)
+- [Cómo: crear un socket](how-to-create-a-socket.md)
 - [Sockets](sockets.md)

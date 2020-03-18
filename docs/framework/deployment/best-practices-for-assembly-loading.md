@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716588"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181702"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedimientos recomendados para cargar ensamblados
 En este artículo se abordan formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros. En él se ofrecen las siguientes recomendaciones:  
@@ -34,7 +34,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
  La primera recomendación, [comprenda las ventajas y las desventajas de los contextos de carga](#load_contexts), proporciona información general para las demás recomendaciones, ya que todas dependen del conocimiento de los contextos de carga.  
   
-<a name="load_contexts"></a>   
+<a name="load_contexts"></a>
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Comprenda las ventajas y las desventajas de los contextos de carga  
  En un dominio de aplicación, los ensamblados se pueden cargar en uno de entre tres contextos o sin contexto:  
   
@@ -42,7 +42,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
 - El contexto de origen de carga contiene ensamblados que se cargan desde ubicaciones en las que no busca el cargador. Por ejemplo, los complementos podrían instalarse en un directorio que no esté bajo la ruta de acceso de la aplicación. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> y <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> son ejemplos de métodos que cargan por ruta de acceso.  
   
-- El contexto de solo reflexión contiene ensamblados cargados con los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. No se puede ejecutar código en este contexto, por lo que no se trata aquí. Para obtener más información, vea [Cómo: Cargar ensamblados en el contexto de solo reflexión](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- El contexto de solo reflexión contiene ensamblados cargados con los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. No se puede ejecutar código en este contexto, por lo que no se trata aquí. Para más información, vea [How to: Load Assemblies into the Reflection-Only Context (Cómo: Cargar ensamblados en el contexto de solo reflexión)](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - Si ha generado un ensamblado dinámico transitorio mediante la reflexión de la emisión, el ensamblado no está en ningún contexto. Además, la mayoría de los ensamblados que se carga mediante el método <xref:System.Reflection.Assembly.LoadFile%2A> lo hace sin contexto, mientras que los ensamblados que se cargan desde matrices de bytes lo hacen sin contexto a menos que su identidad (una vez aplicada la directiva) establezca que están en la caché global de ensamblados.  
   
@@ -95,7 +95,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
 - En las versiones 1.0 y 1.1 de .NET Framework no se aplica la directiva.  
   
-<a name="avoid_partial_names"></a>   
+<a name="avoid_partial_names"></a>
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Evite los enlaces en nombres de ensamblado parciales  
  Los enlaces de nombre parcial se producen cuando se especifica solo parte del nombre para mostrar del ensamblado (<xref:System.Reflection.Assembly.FullName%2A>) al cargar un ensamblado. Por ejemplo, puede llamar al método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> con solo el nombre simple del ensamblado, omitiendo la versión, la referencia cultural y el token de clave pública. O bien puede llamar al método <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>, que primero llama al método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> y, si así no logra encontrar el ensamblado, busca en la caché global de ensamblados y carga la última versión disponible del ensamblado.  
   
@@ -115,7 +115,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
  Si quiere usar el método <xref:System.Reflection.Assembly.LoadWithPartialName%2A> porque facilita la carga de ensamblados, tenga en cuenta que un error de la aplicación con un mensaje de error que identifique el ensamblado que falta es probable que proporcione una mejor experiencia de usuario que el empleo automático de una versión desconocida del ensamblado, que podría dar lugar a un comportamiento impredecible y a vulnerabilidades de seguridad.  
   
-<a name="avoid_loading_into_multiple_contexts"></a>   
+<a name="avoid_loading_into_multiple_contexts"></a>
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>Evite la carga de un ensamblado en varios contextos  
  La carga de un ensamblado en varios contextos puede ocasionar problemas de identidad de tipos. Si se carga el mismo tipo desde el mismo ensamblado en dos contextos diferentes, es como si se hubieran cargado dos tipos diferentes con el mismo nombre. Si intenta convertir un tipo en el otro, se produce una <xref:System.InvalidCastException> con el confuso mensaje de que no se puede convertir el tipo `MyType` en el tipo `MyType`.  
   
@@ -131,7 +131,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
  En la sección [Considere la posibilidad de cambiar al contexto de carga predeterminado](#switch_to_default) se explican alternativas al uso de cargas de ruta de acceso de archivo como <xref:System.Reflection.Assembly.LoadFile%2A> y <xref:System.Reflection.Assembly.LoadFrom%2A>.  
   
-<a name="avoid_loading_multiple_versions"></a>   
+<a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>Evite la carga de varias versiones de un ensamblado en el mismo contexto  
  La carga de varias versiones de un ensamblado en un contexto de carga puede producir problemas de identidad de tipos. Si se carga el mismo tipo desde dos versiones del mismo ensamblado, es como si se hubieran cargado dos tipos diferentes con el mismo nombre. Si intenta convertir un tipo en el otro, se produce una <xref:System.InvalidCastException> con el confuso mensaje de que no se puede convertir el tipo `MyType` en el tipo `MyType`.  
   
@@ -145,7 +145,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
  Revise el código atentamente para garantizar que solo se cargue una versión de un ensamblado. Puede usar el método <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> para determinar qué ensamblados se cargan en un momento dado.  
   
-<a name="switch_to_default"></a>   
+<a name="switch_to_default"></a>
 ## <a name="consider-switching-to-the-default-load-context"></a>Considere la posibilidad de cambiar al contexto de carga predeterminado  
  Examine los patrones de carga e implementación de ensamblados de la aplicación. ¿Puede eliminar ensamblados cargados desde matrices de bytes? ¿Puede mover ensamblados a la ruta de acceso de sondeo? Si los ensamblados se encuentran en la caché global de ensamblados o en la ruta de acceso de sondeo del dominio de la aplicación (es decir, su <xref:System.AppDomainSetup.ApplicationBase%2A> y <xref:System.AppDomainSetup.PrivateBinPath%2A>), puede cargar el ensamblado por su identidad.  
   

@@ -5,11 +5,11 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72303687"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398008"
 ---
 # <a name="default-probing"></a>Sondeo predeterminado
 
@@ -21,7 +21,7 @@ Cuando se inicia el runtime, el host de tiempo de ejecución proporciona un conj
 
 Cada propiedad de sondeo es opcional. Si está presente, cada propiedad es un valor de cadena que contiene una lista delimitada de rutas de acceso absolutas. El delimitador es ";" en Windows y ":" en el resto de plataformas.
 
-|Nombre de la propiedad                 |DESCRIPCIÓN  |
+|Nombre de la propiedad                 |Description  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | Lista de rutas de acceso de archivos de ensamblado de plataforma y aplicación. |
 |`PLATFORM_RESOURCE_ROOTS`       | Lista de rutas de acceso de directorio para buscar ensamblados de recursos satélite. |
@@ -48,7 +48,7 @@ Cada propiedad está disponible mediante una llamada a la función <xref:System.
 
 El host de tiempo de ejecución de .NET Core generará mensajes de seguimiento útiles cuando se habiliten determinadas variables de entorno:
 
-|Variable de entorno        |DESCRIPCIÓN  |
+|Variable de entorno        |Description  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |Habilita el seguimiento.|
 |`COREHOST_TRACEFILE=<path>` |Realiza un seguimiento de una ruta de acceso de archivo en lugar del elemento `stderr` predeterminado.|

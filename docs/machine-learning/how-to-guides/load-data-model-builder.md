@@ -4,13 +4,13 @@ description: Obtenga información sobre cómo cargar datos de entrenamiento desd
 ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: cc93b3f77284ed283a8d7cbd52b8cd02b4fd9066
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977049"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849164"
 ---
 # <a name="load-training-data-into-model-builder"></a>Carga de datos de entrenamiento en el Generador de modelos
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 169ba2a1307a301c80b3d9ccac45f4ac9f707921
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 58980bd0d70d8a778cdb208f56d31ee8465871a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626293"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170174"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 
@@ -24,7 +24,7 @@ Los métodos virtuales permiten trabajar con grupos de objetos relacionados de m
 1. Crear una jerarquía de clases en la que cada clase de forma específica deriva de una clase base común.
 1. Usar un método virtual para invocar el método apropiado en una clase derivada mediante una sola llamada al método de la clase base.
 
-Primero, cree una clase base llamada `Shape` y clases derivadas como `Rectangle`, `Circle` y `Triangle`. Dé a la clase `Shape` un método virtual llamado `Draw` e invalídelo en cada clase derivada para dibujar la forma determinada que la clase representa. Cree un objeto `List<Shape>` y agréguele una instancia de `Circle`, `Triangle` y `Rectangle`. 
+Primero, cree una clase base llamada `Shape` y clases derivadas como `Rectangle`, `Circle` y `Triangle`. Dé a la clase `Shape` un método virtual llamado `Draw` e invalídelo en cada clase derivada para dibujar la forma determinada que la clase representa. Cree un objeto `List<Shape>` y agréguele una instancia de `Circle`, `Triangle` y `Rectangle`.
 
 [!code-csharp[Polymorphism overview](~/samples/snippets/csharp/objectoriented/Inheritance.cs#PolymorphismOverview)]
 

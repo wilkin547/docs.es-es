@@ -4,12 +4,12 @@ description: Aprenda a implementar binarios de trabajo y función definida por e
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f9197ca3cf8066f0849ebbe70d7757c9035d02f6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748546"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187593"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 
@@ -19,19 +19,19 @@ En este artículo de procedimientos se proporcionan instrucciones generales sobr
 Las configuraciones muestran las variables de entorno generales y la configuración de parámetros para implementar los binarios de trabajo y función definida por el usuario de .NET para Apache Spark.
 
 ### <a name="environment-variables"></a>Variables de entorno
-Al implementar trabajos y escribir UDF, hay algunas variables de entorno de uso común que puede que tenga que establecer: 
+Al implementar trabajos y escribir UDF, hay algunas variables de entorno de uso común que puede que tenga que establecer:
 
 | Variable de entorno         | Descripción
-| :--------------------------- | :---------- 
+| :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | Ruta de acceso donde se ha generado el binario de <code>Microsoft.Spark.Worker</code>.</br>La usa el controlador de Spark y se pasa a los ejecutores de Spark. Si esta variable no está configurada, los ejecutores de Spark buscan la ruta de acceso especificada en la variable de entorno <code>PATH</code>.</br>_Por ejemplo, "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Rutas de acceso separadas por comas donde <code>Microsoft.Spark.Worker</code> va a cargar los ensamblados.</br>Tenga en cuenta que si una ruta de acceso comienza por ".", el directorio de trabajo se antepone. Si está en **modo Yarn**, "." representaría el directorio de trabajo del contenedor.</br>_Por ejemplo, "C:\Users\\&lt;nombre de usuario&gt;\\&lt;miaplicaciónspark&gt;\bin\Debug\\&lt;versión de dotnet&gt;"_
 | DOTNET_WORKER_DEBUG          | Si quiere <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">depurar una UDF</a>, establezca esta variable de entorno en <code>1</code> antes de ejecutar <code>spark-submit</code>.
 
 ### <a name="parameter-options"></a>Opciones de parámetros
-Una vez que la aplicación Spark está [agrupada](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies), puede iniciarla mediante `spark-submit`. En la tabla siguiente se muestran algunas opciones usadas frecuentemente: 
+Una vez que la aplicación Spark está [agrupada](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies), puede iniciarla mediante `spark-submit`. En la tabla siguiente se muestran algunas opciones usadas frecuentemente:
 
 | Nombre de parámetro        | Descripción
-| :---------------------| :---------- 
+| :---------------------| :----------
 | --class               | Punto de entrada de la aplicación.</br>_Por ejemplo, org.apache.spark.deploy.dotnet.DotnetRunner_
 | --master              | <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">Dirección URL principal</a> del clúster.</br>_Por ejemplo, yarn_
 | --deploy-mode         | Si se va a implementar el controlador en los nodos de trabajo (<code>cluster</code>) o localmente como un cliente externo (<code>client</code>).</br>Valor predeterminado: <code>client</code>

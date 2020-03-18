@@ -3,11 +3,11 @@ title: Diseño de un microservicio orientado a un DDD
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre el diseño del microservicio Ordering orientado a DDD y sus niveles de aplicación.
 ms.date: 10/08/2018
 ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739954"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401536"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a DDD
 

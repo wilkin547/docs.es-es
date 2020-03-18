@@ -3,12 +3,12 @@ title: 'Estructura del programa de C#: un paseo por el lenguaje C#'
 description: Conozca más acerca de los bloques de compilación básicos de un programa de C#.
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 828146ba509daf9427e6dd1a4ebf3ad747ac7c39
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159122"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156836"
 ---
 # <a name="program-structure"></a>Estructura del programa
 
@@ -27,7 +27,7 @@ En ese proyecto, declare una clase denominada `Stack` en un espacio de nombres l
 El nombre completo de esta clase es `Acme.Collections.Stack`. La clase contiene varios miembros: un campo denominado `top`, dos métodos denominados `Push` y `Pop`, y una clase anidada denominada `Entry`. La clase `Entry` contiene además tres miembros: un campo denominado `next`, un campo denominado `data` y un constructor. El comando:
 
 ```console
-dotnet build 
+dotnet build
 ```
 
 compila el ejemplo como una biblioteca (código sin un punto de entrada `Main` y genera un ensamblado denominado `acme.dll`.

@@ -2,12 +2,12 @@
 title: 'Mitigación: Método X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f94a5f685a5aa94332bf2e15e5d5eb0def02d7ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457760"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398668"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigación: Método X509CertificateClaimSet.FindClaims
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> intentará hacer coincidir el argumento `claimType` con todas las entradas DNS de su campo de SAN.  
@@ -22,7 +22,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el m
   
 ```xml  
 <runtime>  
-   <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=true" />   
+   <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=true" />
 </runtime>  
 ```  
   
@@ -30,7 +30,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el m
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=false" />   
+    <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=false" />
 </runtime>  
 ```  
   

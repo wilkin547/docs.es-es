@@ -2,12 +2,12 @@
 title: Procedimiento para leer datos de objeto de un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346431"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167823"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objeto de un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -18,7 +18,7 @@ En este ejemplo se leen los datos de objetos que se han escrito anteriormente en
 public class Book  
 {  
     public String title;  
-}         
+}
   
 public void ReadXML()  
 {  
@@ -30,7 +30,7 @@ public void ReadXML()
     wfile.Close();  
   
     // Now we can read the serialized book ...  
-    System.Xml.Serialization.XmlSerializer reader =   
+    System.Xml.Serialization.XmlSerializer reader =
         new System.Xml.Serialization.XmlSerializer(typeof(Book));  
     System.IO.StreamReader file = new System.IO.StreamReader(  
         @"c:\temp\SerializationOverview.xml");  

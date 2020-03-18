@@ -1,18 +1,18 @@
 ---
-title: Procedimiento para acceder a propiedades específicas de HTTP
+title: 'Cómo: obtener acceso a propiedades específicas de HTTP'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: f902fb3ee97e94c85192836be047dfe632249735
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 68ad6b2c55cd5cc467e53441caa778ea10b994fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048489"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180849"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Procedimiento para acceder a propiedades específicas de HTTP
+# <a name="how-to-access-http-specific-properties"></a>Cómo: obtener acceso a propiedades específicas de HTTP
 En este ejemplo se muestra cómo desactivar el comportamiento de **conexión persistente** HTTP y obtener el número de versión del protocolo de servidor web.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,7 +32,7 @@ HttpWResp.Close()
 ```  
   
 ```csharp  
-HttpWebRequest HttpWReq =   
+HttpWebRequest HttpWReq =
     (HttpWebRequest)WebRequest.Create("http://www.contoso.com");  
 // Turn off connection keep-alives.  
 HttpWReq.KeepAlive = false;  

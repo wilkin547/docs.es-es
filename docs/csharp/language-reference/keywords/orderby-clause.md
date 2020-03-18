@@ -8,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713295"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173580"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby (Cláusula, Referencia de C#)
 
@@ -39,6 +39,6 @@ En tiempo de compilación, la cláusula `orderby` se convierte en una llamada al
 
 - [Referencia de C#](../index.md)
 - [Palabras clave para consultas (LINQ)](query-keywords.md)
-- [Language-Integrated Query (LINQ)](../../linq/index.md)
+- [LINQ en C#](../../linq/index.md)
 - [group (cláusula)](group-clause.md)
-- [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Language-Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

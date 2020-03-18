@@ -3,12 +3,12 @@ title: Conceptos básicos de las expresiones de consulta (LINQ en C#)
 description: En este tema se presentan los conceptos relacionados con las expresiones de consulta.
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635865"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173359"
 ---
 # <a name="query-expression-basics"></a>Conceptos básicos de las expresiones de consultas
 
@@ -156,7 +156,7 @@ Use la cláusula `join` para asociar o combinar elementos de un origen de datos 
 
 También puede realizar una combinación agrupada. Para ello, almacene los resultados de la operación `join` en una variable temporal mediante el uso de la palabra clave [into](../language-reference/keywords/into.md). Para obtener más información, vea [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).
 
-#### <a name="let-clause"></a>let (cláusula) 
+#### <a name="let-clause"></a>let (cláusula)
 
 Use la cláusula `let` para almacenar el resultado de una expresión, como una llamada de método, en una nueva variable de rango. En el ejemplo siguiente, la variable de rango `firstName` almacena el primer elemento de la matriz de cadenas devuelta por `Split`.
 

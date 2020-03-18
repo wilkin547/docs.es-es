@@ -3,12 +3,12 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634955"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156598"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-En este tutorial, se van a crear tipos nuevos que representan una cuenta bancaria. Normalmente los desarrolladores definen cada clase en un archivo de texto diferente. De esta forma, la tarea de administración resulta más sencilla a medida que aumenta el tamaño del programa. Cree un archivo denominado *CuentaBancaria.cs* en el directorio *clases*. 
+En este tutorial, se van a crear tipos nuevos que representan una cuenta bancaria. Normalmente los desarrolladores definen cada clase en un archivo de texto diferente. De esta forma, la tarea de administración resulta más sencilla a medida que aumenta el tamaño del programa. Cree un archivo denominado *CuentaBancaria.cs* en el directorio *clases*.
 
 Este archivo contendrá la definición de una ***cuenta bancaria***. La programación orientada a objetos organiza el código mediante la creación de tipos en forma de ***clases***. Estas clases contienen el código que representa una entidad específica. La clase `BankAccount` representa una cuenta bancaria. El código implementa operaciones específicas a través de métodos y propiedades. En este tutorial, la cuenta bancaria admite el siguiente comportamiento:
 
@@ -71,13 +71,13 @@ namespace classes
 }
 ```
 
-Antes de avanzar, se va a dar un repaso a lo que ha compilado.  La declaración `namespace` permite organizar el código de forma lógica. Este tutorial es relativamente pequeño, por lo que deberá colocar todo el código en un espacio de nombres. 
+Antes de avanzar, se va a dar un repaso a lo que ha compilado.  La declaración `namespace` permite organizar el código de forma lógica. Este tutorial es relativamente pequeño, por lo que deberá colocar todo el código en un espacio de nombres.
 
 `public class BankAccount` define la clase o el tipo que va a crear. Todo lo que se encuentra entre `{` y `}` después de la declaración de clase define el estado y el comportamiento de la clase. Hay cinco ***miembros*** de la clase `BankAccount`. Los tres primeros son ***propiedades***. Las propiedades son elementos de datos que pueden contener código que exige la validación u otras reglas. Los dos últimos son ***métodos***. Los métodos son bloques de código que realizan una única función. La lectura de los nombres de cada miembro debe proporcionar suficiente información tanto al usuario como a otro desarrollador para entender cuál es la función de la clase.
 
 ## <a name="open-a-new-account"></a>Apertura de una cuenta nueva
 
-La primera característica que se va a implementar es la apertura de una cuenta bancaria. Cuando un cliente abre una cuenta, debe proporcionar un saldo inicial y la información sobre el propietario o los propietarios de esa cuenta. 
+La primera característica que se va a implementar es la apertura de una cuenta bancaria. Cuando un cliente abre una cuenta, debe proporcionar un saldo inicial y la información sobre el propietario o los propietarios de esa cuenta.
 
 La creación de un objeto del tipo `BankAccount` conlleva definir un ***constructor*** que asigne dichos valores. Un ***constructor*** es un miembro que tiene el mismo nombre que la clase. Se utiliza para inicializar los objetos de ese tipo de clase. Agregue el siguiente constructor al tipo `BankAccount`:
 
@@ -121,11 +121,11 @@ La clase de la cuenta bancaria debe aceptar depósitos y reintegros para que el 
 
 Se va a empezar por crear un tipo para representar una transacción. Se trata de un tipo simple que no tiene ninguna responsabilidad. Necesita algunas propiedades. Cree un archivo denominado *Transaction.cs*. Agregue el código siguiente a él:
 
-[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
+[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
 Ahora se va a agregar <xref:System.Collections.Generic.List%601> de objetos `Transaction` a la clase `BankAccount`. Agregue la declaración siguiente:
 
-[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
 La clase <xref:System.Collections.Generic.List%601> requiere la importación de un espacio de nombres diferente. Agregue lo siguiente al principio de *CuentaBancaria.cs*:
 
@@ -135,21 +135,21 @@ using System.Collections.Generic;
 
 Ahora se va a cambiar la forma en que se notifica `Balance`.  Esto se puede conseguir con la suma de los valores de todas las transacciones. Modifique la declaración de `Balance` en la clase `BankAccount` por lo siguiente:
 
-[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 En este ejemplo se muestra un aspecto importante de las ***propiedades***. Ahora va a calcular el saldo cuando otro programador solicite el valor. El cálculo enumera todas las transacciones y proporciona la suma como el saldo actual.
 
-Después, implemente los métodos `MakeDeposit` y `MakeWithdrawal`. Estos métodos exigirán las dos reglas finales: el saldo inicial debe ser positivo y ningún reintegro debe generar un saldo negativo. 
+Después, implemente los métodos `MakeDeposit` y `MakeWithdrawal`. Estos métodos exigirán las dos reglas finales: el saldo inicial debe ser positivo y ningún reintegro debe generar un saldo negativo.
 
 Esta operación introduce el concepto de las ***excepciones***. La forma habitual de indicar que un método no puede completar su trabajo correctamente consiste en generar una excepción. El tipo de excepción y el mensaje asociado a ella describen el error. En este caso, el método `MakeDeposit` genera una excepción si el importe del depósito es negativo. El método `MakeWithdrawal` genera una excepción si la cantidad retirada es negativa o si la aplicación del reintegro resulta en un saldo negativo:
 
-[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 La instrucción [`throw`](../../language-reference/keywords/throw.md)**genera** una excepción. La ejecución del bloque actual finaliza y el control se transfiere al primer bloque `catch` coincidente que se encuentra en la pila de llamadas. Se agregará un bloque `catch` para probar este código un poco más adelante.
 
 El constructor debe obtener un cambio para que agregue una transacción inicial, en lugar de actualizar el saldo directamente. Puesto que ya escribió el método `MakeDeposit`, llámelo desde el constructor. El constructor terminado debe tener este aspecto:
 
-[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> es una propiedad que devuelve la fecha y hora actuales. Agregue algunos depósitos y reintegros en el método `Main` para probar esta operación:
 
@@ -196,7 +196,7 @@ Guarde el archivo y escriba `dotnet run` para probarlo.
 
 Para finalizar este tutorial, puede escribir el método `GetAccountHistory` que crea `string` para el historial de transacciones. Agregue este método al tipo `BankAccount`:
 
-[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
+[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
 Usa la clase <xref:System.Text.StringBuilder> para dar formato a una cadena que contiene una línea para cada transacción. Se ha visto anteriormente en estos tutoriales el código utilizado para dar formato a una cadena. Un carácter nuevo es `\t`. Inserta una pestaña para dar formato a la salida.
 

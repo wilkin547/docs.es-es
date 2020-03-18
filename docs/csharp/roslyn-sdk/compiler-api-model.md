@@ -3,16 +3,16 @@ title: Modelo de objetos y conceptos del SDK de .NET Compiler Platform
 description: En este tema se proporciona la información necesaria para trabajar de forma eficaz con el SDK de .NET Compiler. Aprenderá sobre las capas de API, los tipos principales implicados y el modelo de objetos general.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675711"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156966"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Descripción del modelo del SDK de .NET Compiler Platform
 
-Los compiladores procesan el código que se escribe conforme a reglas estructuradas que a menudo se diferencian de la forma en que los seres humanos lo leen y lo entienden. Una comprensión básica del modelo usado por los compiladores resulta fundamental para entender las API que se usan al compilar herramientas basadas en Roslyn. 
+Los compiladores procesan el código que se escribe conforme a reglas estructuradas que a menudo se diferencian de la forma en que los seres humanos lo leen y lo entienden. Una comprensión básica del modelo usado por los compiladores resulta fundamental para entender las API que se usan al compilar herramientas basadas en Roslyn.
 
 ## <a name="compiler-pipeline-functional-areas"></a>Áreas funcionales de canalización de compilador
 
@@ -30,7 +30,7 @@ En correspondencia a cada una de esas fases, el SDK de .NET Compiler Platform ex
 
 Cada compilador combina estos componentes como un único todo.
 
-Estas API son las mismas que usa Visual Studio. Por ejemplo, las características de formato y esquema del código usan los árboles de sintaxis, las características de navegación y el Examinador de objetos usan la tabla de símbolos, las refactorizaciones e Ir a definición usan el modelo semántico y Editar y continuar usa todos ellos, incluida la API de emisión. 
+Estas API son las mismas que usa Visual Studio. Por ejemplo, las características de formato y esquema del código usan los árboles de sintaxis, las características de navegación y el Examinador de objetos usan la tabla de símbolos, las refactorizaciones e Ir a definición usan el modelo semántico y Editar y continuar usa todos ellos, incluida la API de emisión.
 
 ## <a name="api-layers"></a>Capas de API
 

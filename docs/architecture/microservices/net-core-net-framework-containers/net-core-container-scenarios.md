@@ -2,12 +2,12 @@
 title: Cuándo elegir .NET Core para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Core para contenedores de Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: f784512af3f520f96d499ab002eda58071b3c284
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501847"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147380"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Cuándo elegir .NET Core para contenedores de Docker
 
@@ -37,7 +37,7 @@ Normalmente los contenedores se usan en combinación con una arquitectura de mic
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>Creación e implementación de microservicios en contenedores
 
-Puede utilizar el tradicional .NET Framework para crear aplicaciones basadas en microservicios (sin contenedores) mediante el uso de procesos sin formato. De este modo, como .NET Framework ya está instalado y se comparte entre procesos, los procesos son ligeros y rápidos al iniciarse. Pero, si usa contenedores, la imagen del tradicional .NET Framework también se basa en Windows Server Core y esto hace que sea demasiado pesada para una opción de microservicios en contenedores. Sin embargo, los equipos también han estado buscando oportunidades para mejorar la experiencia de los usuarios de .NET Framework. Recientemente, el tamaño de las [imágenes de contenedor de Windows Server Core se ha reducido un 40 %](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
+Puede utilizar el tradicional .NET Framework para crear aplicaciones basadas en microservicios (sin contenedores) mediante el uso de procesos sin formato. De este modo, como .NET Framework ya está instalado y se comparte entre procesos, los procesos son ligeros y rápidos al iniciarse. Pero, si usa contenedores, la imagen del tradicional .NET Framework también se basa en Windows Server Core y esto hace que sea demasiado pesada para una opción de microservicios en contenedores. Sin embargo, los equipos también han estado buscando oportunidades para mejorar la experiencia de los usuarios de .NET Framework. Recientemente, el tamaño de las [imágenes de contenedor de Windows Server Core se ha reducido un 40 %](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller).
 
 Por otra parte, .NET Core es la mejor opción si ha adoptado un sistema orientado a microservicios que se basa en contenedores, puesto que .NET Core es ligero. Además, sus imágenes de contenedor relacionadas, ya sean de Linux o de Windows Nano Server, son eficientes y pequeñas, lo que hace que los contenedores sean ligeros y rápidos al iniciarse.
 

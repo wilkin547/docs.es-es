@@ -10,18 +10,18 @@ helpviewer_keywords:
 - '@ character (C#)'
 - $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-ms.openlocfilehash: 3deb4fd1de5b81e95d1caaf2a04e2daca7f285f5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 241f973baac1671a30da391fb8c3f055fb3ad754
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712434"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79173385"
 ---
 # <a name="c-special-characters"></a>Caracteres especiales de C#
 
-Los caracteres especiales son caracteres contextuales predefinidos que modifican el elemento de programa (una cadena literal, un identificador o un nombre de atributo) para que se antepongan. C# admite los siguientes caracteres especiales: 
+Los caracteres especiales son caracteres contextuales predefinidos que modifican el elemento de programa (una cadena literal, un identificador o un nombre de atributo) para que se antepongan. C# admite los siguientes caracteres especiales:
 
-- [@](./verbatim.md), el carácter de identificador textual. 
+- [@](./verbatim.md), el carácter de identificador textual.
 
 - [$](./interpolated.md), el carácter de cadena interpolada.
 

@@ -2,12 +2,12 @@
 title: 'Mitigación: comprobaciones de dos puntos en las rutas de acceso'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457899"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181247"
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigación: comprobaciones de dos puntos en las rutas de acceso
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, se han realizado una serie de cambios para admitir rutas de acceso que anteriormente no se admitían (en términos de longitud y formato). En concreto, las comprobaciones de la sintaxis de separador de la unidad correspondiente (dos puntos) se realizan de manera más correcta.  
@@ -26,7 +26,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, se h
   
     ```xml  
     <runtime>  
-        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
     </runtime>  
     ```  
   

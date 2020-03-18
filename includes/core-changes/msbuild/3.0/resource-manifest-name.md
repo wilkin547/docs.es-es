@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451904"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78967979"
 ---
 ### <a name="resource-manifest-file-names"></a>Nombres de archivo de manifiesto del recurso
 
@@ -63,7 +63,7 @@ A partir de .NET Core 3.0, si un archivo *.resx* está en la misma ubicación 
   Los archivos *MyTypes.cs* y *MyTypes.resx* o *MyTypes.fr-FR.resx* existen en la misma carpeta.
   
   **Nombre de archivo de manifiesto del recurso generado**: *Namespace.Classname.resources* o *Namespace.Classname.fr-FR.resources* (donde `Namespace.Classname` es el nombre de la primera clase de *MyTypes.cs*).
-    
+
 - Si no se aplica ninguna de las reglas anteriores, el nombre de archivo de manifiesto del recurso generado es *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*. La ruta de acceso relativa es el valor del atributo `Link` del elemento `EmbeddedResource` si se ha establecido. En caso contrario, la ruta de acceso relativa es el valor del atributo `Identity` del elemento `EmbeddedResource`. En Visual Studio, esta es la ruta de acceso de la raíz del proyecto al archivo en el Explorador de soluciones.
 
 #### <a name="recommended-action"></a>Acción recomendada

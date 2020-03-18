@@ -2,12 +2,12 @@
 title: Valores devueltos y variables locales de tipo ref (Guía de C#)
 description: Obtenga información sobre cómo definir y usar valores locales y devueltos de tipo ref
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736818"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170078"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -82,7 +82,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 El uso posterior de `p` es lo mismo que usar la variable devuelta por `GetContactInformation`, porque `p` es un alias para dicha variable. Los cambios realizados en `p` también modifican la variable devuelta desde `GetContactInformation`.
 
-La palabra clave `ref` se usa antes de la declaración de variable local *y* antes de la llamada al método. 
+La palabra clave `ref` se usa antes de la declaración de variable local *y* antes de la llamada al método.
 
 Puede acceder a un valor por referencia de la misma manera. En algunos casos, acceder a un valor por referencia aumenta el rendimiento, ya que evita una operación de copia potencialmente cara. Por ejemplo, en la instrucción siguiente se muestra cómo es posible definir un valor local de referencia que se usa para hacer referencia a un valor.
 
@@ -90,7 +90,7 @@ Puede acceder a un valor por referencia de la misma manera. En algunos casos, ac
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-La palabra clave `ref` se usa antes de la declaración de variable local *y* antes del valor en el segundo ejemplo. Si no se incluyen ambas palabras clave `ref` en la asignación y declaración de variable en ambos ejemplos, se produce el error del compilador CS8172, "No se puede inicializar una variable por referencia con un valor". 
+La palabra clave `ref` se usa antes de la declaración de variable local *y* antes del valor en el segundo ejemplo. Si no se incluyen ambas palabras clave `ref` en la asignación y declaración de variable en ambos ejemplos, se produce el error del compilador CS8172, "No se puede inicializar una variable por referencia con un valor".
 
 Antes de C# 7.3, las variables locales de tipo ref no se podían reasignar para hacer referencia a otro almacenamiento después de haberse inicializado. Esta restricción se ha quitado. En el ejemplo siguiente, se muestra una reasignación:
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Valores devueltos y variables locales de tipo ref: un ejemplo
 
-En el ejemplo siguiente, se define una clase `NumberStore` que almacena una matriz de valores enteros. El método `FindNumber` devuelve por referencia el primer número que es mayor o igual que el número que se pasa como argumento. Si ningún número es mayor o igual que el argumento, el método devuelve el número en el índice 0. 
+En el ejemplo siguiente, se define una clase `NumberStore` que almacena una matriz de valores enteros. El método `FindNumber` devuelve por referencia el primer número que es mayor o igual que el número que se pasa como argumento. Si ningún número es mayor o igual que el argumento, el método devuelve el número en el índice 0.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 

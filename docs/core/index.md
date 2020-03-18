@@ -5,10 +5,10 @@ author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75740748"
 ---
 # <a name="net-core-guide"></a>Guía de .NET Core
@@ -44,7 +44,7 @@ Debería ver los siguientes resultados:
 Hello World!
 ```
 
-## <a name="support"></a>Soporte técnico
+## <a name="support"></a>Compatibilidad
 
 [Microsoft admite](https://dotnet.microsoft.com/platform/support/policy) .NET Core en Windows, macOS y Linux. Varias veces al año, por lo general mensualmente, se actualiza para aumentar la seguridad y la calidad.
 

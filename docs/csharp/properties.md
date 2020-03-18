@@ -4,11 +4,11 @@ description: Obtenga información sobre las propiedades de C#, que incluyen cara
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039743"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398692"
 ---
 # <a name="properties"></a>Propiedades
 

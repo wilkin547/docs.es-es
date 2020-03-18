@@ -2,12 +2,12 @@
 title: 'Introducción a C#: familiarización con las herramientas de desarrollo'
 description: En este artículo se proporciona una introducción básica a las herramientas que usará para desarrollar de C# y .NET en el equipo.
 ms.date: 10/23/2018
-ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 0b1df9e733eef92b1eeb0a7f3ba3ba49602f219d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834085"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156576"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Familiarización con las herramientas de desarrollo de .NET
 
@@ -26,25 +26,25 @@ Los otros comandos que se van a utilizar son [`dotnet build`](../../../core/tool
 
 Puede empezar con cualquiera de los siguientes tutoriales:
 
-## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Números en C#](numbers-in-csharp-local.md)
+## <a name="numbers-in-c"></a>[Números en C#](numbers-in-csharp-local.md)
 
 En el tutorial [Números en C#](numbers-in-csharp-local.md), obtendrá información sobre cómo se almacenan los números en los equipos y cómo realizar cálculos con distintos tipos numéricos. Conocerá los datos básicos sobre cómo realizar redondeos y cálculos matemáticos con C#.
 
 En este tutorial se asume que ha completado la lección [Hola mundo](hello-world.yml).
 
-## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Bifurcaciones y bucles](branches-and-loops-local.md)
+## <a name="branches-and-loops"></a>[Bifurcaciones y bucles](branches-and-loops-local.md)
 
 En el tutorial [Ramas y bucles](branches-and-loops-local.md) se explican los datos básicos sobre la selección de diferentes rutas de acceso de la ejecución del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones.
 
 En este tutorial se supone que ha completado las lecciones [Hola mundo](hello-world.yml) y [Números en C#](numbers-in-csharp-local.md).
 
-## <a name="list-collectionarrays-and-collectionsmd"></a>[Colección de listas](arrays-and-collections.md)
+## <a name="list-collection"></a>[Colección de listas](arrays-and-collections.md)
 
-En la lección [Colección de listas](arrays-and-collections.md) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas. 
+En la lección [Colección de listas](arrays-and-collections.md) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas.
 
 En este tutorial se presupone que ha completado las lecciones que se muestran anteriormente.
 
-## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introducción a las clases](introduction-to-classes.md)
+## <a name="introduction-to-classes"></a>[Introducción a las clases](introduction-to-classes.md)
 
 Este tutorial final de introducción a C# solo se encuentra disponible para ejecutarse en el equipo con un entorno de desarrollo local propio y .NET Core.
 Creará una aplicación de consola y conocerá las características básicas orientadas a objetos que forman parte del lenguaje C#.

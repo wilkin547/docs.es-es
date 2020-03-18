@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 394ed636cece766d61b1a10403b98c73f1d3cb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 99153bb9cf3287951a1e52e716c799ee64eb82ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041264"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78950990"
 ---
 # <a name="labels-and-projects-roadmap"></a>Hoja de ruta de etiquetas y proyectos
 
-El equipo de documentación de .NET usan mucho las [etiquetas de GitHub](https://github.com/dotnet/docs/labels) para organizar nuestro trabajo. Al filtrar por combinaciones de etiquetas, podemos centrarnos rápidamente en las secciones de interés en el [sitio web de documentación de .NET](https://docs.microsoft.com/dotnet). 
+El equipo de documentación de .NET usan mucho las [etiquetas de GitHub](https://github.com/dotnet/docs/labels) para organizar nuestro trabajo. Al filtrar por combinaciones de etiquetas, podemos centrarnos rápidamente en las secciones de interés en el [sitio web de documentación de .NET](https://docs.microsoft.com/dotnet).
 
 También usamos [proyectos de GitHub](https://github.com/dotnet/docs/projects) para organizar sprints y otras epopeyas orientadas a objetivos.
 
@@ -28,7 +28,7 @@ Puede combinar una etiqueta de cada conjunto (guía, versión, prioridad) para c
 
 ### <a name="find-a-single-net-guide"></a>Búsqueda de una sola guía de .NET
 
-Usamos etiquetas para cada uno de los libros electrónicos de la arquitectura y para cada guía de .NET. 
+Usamos etiquetas para cada uno de los libros electrónicos de la arquitectura y para cada guía de .NET.
 
 ![Guía :book: sobre un fondo de color verde claro](./images/guide.png "Prefijo para etiquetas de guía de arquitectura")
 
@@ -97,7 +97,7 @@ Las guías de .NET son grandes, por lo que estas etiquetas limitan aún más el 
 
 ![:checkered_flag: Versión: en color amarillo oscuro](./images/release.png "Prefijo para etiquetas de versión")
 
-Las incidencias etiquetadas para una versión específica se anotan con el prefijo `:checkered_flag: Release:` y tienen un fondo de color amarillo oscuro. 
+Las incidencias etiquetadas para una versión específica se anotan con el prefijo `:checkered_flag: Release:` y tienen un fondo de color amarillo oscuro.
 
 - .NET Core 2.2
 - .NET Core 3.0
@@ -116,7 +116,7 @@ Los equipos de contenido usan muchas otras etiquetas para administrar distintas 
 
 ## <a name="projects"></a>Proyectos
 
-Los colaboradores deben comprobar los [Proyectos para colaboradores de la comunidad .NET](https://github.com/dotnet/docs/projects/35). Hemos creado columnas diferentes para el mantenimiento, las actualizaciones de documentos y las nuevas tareas de contenido. Puede ser una manera de buscar tareas de interés. (Tenga en cuenta que la vista de proyecto se puede filtrar con las etiquetas descritas antes). 
+Los colaboradores deben comprobar los [Proyectos para colaboradores de la comunidad .NET](https://github.com/dotnet/docs/projects/35). Hemos creado columnas diferentes para el mantenimiento, las actualizaciones de documentos y las nuevas tareas de contenido. Puede ser una manera de buscar tareas de interés. (Tenga en cuenta que la vista de proyecto se puede filtrar con las etiquetas descritas antes).
 
 También usamos proyectos de otras dos maneras:
 

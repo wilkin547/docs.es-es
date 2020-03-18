@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/13/2019
 ms.topic: tutorial
-ms.openlocfilehash: bd91fb401b9beb6ae74c4599b25e43284473f8b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 460c37e66c2c0a8a9b197a9abaff9eead842bdeb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75466428"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187552"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Tutorial: Procesamiento por lotes con .NET para Apache Spark
 
-En este tutorial, aprenderá a realizar el procesamiento por lotes con .NET para Apache Spark. El procesamiento por lotes es la transformación de datos en reposo, lo que significa que los datos de origen ya se han cargado en el almacenamiento de datos. 
+En este tutorial, aprenderá a realizar el procesamiento por lotes con .NET para Apache Spark. El procesamiento por lotes es la transformación de datos en reposo, lo que significa que los datos de origen ya se han cargado en el almacenamiento de datos.
 
-El procesamiento por lotes se realiza normalmente sobre grandes conjuntos de valores planos que se deben preparar para su posterior análisis. El procesamiento de registros y el almacenamiento de datos son escenarios comunes de procesamiento por lotes. En este escenario, se analiza la información sobre los proyectos de GitHub, como el número de veces que se han bifurcado proyectos diferentes o cómo de recientemente se han actualización los proyectos. 
+El procesamiento por lotes se realiza normalmente sobre grandes conjuntos de valores planos que se deben preparar para su posterior análisis. El procesamiento de registros y el almacenamiento de datos son escenarios comunes de procesamiento por lotes. En este escenario, se analiza la información sobre los proyectos de GitHub, como el número de veces que se han bifurcado proyectos diferentes o cómo de recientemente se han actualización los proyectos.
 
 En este tutorial aprenderá a:
 
@@ -26,7 +26,7 @@ En este tutorial aprenderá a:
 > * Leer datos en DataFrame y prepararlos para su análisis
 > * Procesar los datos mediante Spark SQL
 
-## <a name="prerequisites"></a>Requisitos previos 
+## <a name="prerequisites"></a>Requisitos previos
 
 Si esta es la primera vez que usa .NET para Apache Spark, consulte el tutorial [Introducción a .NET para Apache Spark](../tutorials/get-started.md) para aprender a preparar el entorno y ejecutar la primera aplicación .NET para Apache Spark.
 
@@ -128,7 +128,7 @@ El objetivo de esta aplicación es obtener información detallada sobre los dato
 
    ```csharp
    // Sort by most forked languages first
-   groupedDF.OrderBy(Desc("avg(forked_from)")).Show(); 
+   groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
 1. El siguiente bloque de código muestra cómo de recientemente se han actualizado los proyectos. Registre una nueva función definida por el usuario llamada *MyUDF* y compárela con una fecha, *s_referenceDate*, que se declaró al principio del tutorial. La fecha de cada proyecto se compara con la fecha de referencia. A continuación, Spark SQL se usa para llamar a la función definida por el usuario en cada fila de los datos para analizar cada proyecto del conjunto de datos.
@@ -137,8 +137,8 @@ El objetivo de esta aplicación es obtener información detallada sobre los dato
    spark.Udf().Register<string, bool>(
        "MyUDF",
        (date) => DateTime.TryParse(date, out DateTime convertedDate) &&
-           (convertedDate > s_referenceDate);   
-   cleanedProjects.CreateOrReplaceTempView("dateView"); 
+           (convertedDate > s_referenceDate);
+   cleanedProjects.CreateOrReplaceTempView("dateView");
 
    DataFrame dateDf = spark.Sql(
        "SELECT *, MyUDF(dateView.updated_at) AS datebefore FROM dateView");
