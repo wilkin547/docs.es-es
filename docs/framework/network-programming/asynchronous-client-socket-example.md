@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: b284698904b3795c2369a5bca47742175e012553
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cf8ffff1b219614cd57b56af48d72c03ac63dda
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048987"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180925"
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="e6a06-102">Ejemplo de sockets de cliente asincrónicos</span><span class="sxs-lookup"><span data-stu-id="e6a06-102">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="e6a06-103">El programa de ejemplo siguiente crea un cliente que se conecta a un servidor.</span><span class="sxs-lookup"><span data-stu-id="e6a06-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="e6a06-104">El cliente se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de cliente mientras se espera una respuesta del servidor.</span><span class="sxs-lookup"><span data-stu-id="e6a06-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="e6a06-105">La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.</span><span class="sxs-lookup"><span data-stu-id="e6a06-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="ef2d6-102">Ejemplo de sockets de cliente asincrónicos</span><span class="sxs-lookup"><span data-stu-id="ef2d6-102">Asynchronous Client Socket Example</span></span>
+<span data-ttu-id="ef2d6-103">El programa de ejemplo siguiente crea un cliente que se conecta a un servidor.</span><span class="sxs-lookup"><span data-stu-id="ef2d6-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="ef2d6-104">El cliente se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de cliente mientras se espera una respuesta del servidor.</span><span class="sxs-lookup"><span data-stu-id="ef2d6-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="ef2d6-105">La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.</span><span class="sxs-lookup"><span data-stu-id="ef2d6-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -108,7 +108,7 @@ Public Class AsynchronousClient
   
     Private Shared Sub ReceiveCallback(ByVal ar As IAsyncResult)  
   
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -178,11 +178,11 @@ public class AsynchronousClient {
     private const int port = 11000;  
   
     // ManualResetEvent instances signal completion.  
-    private static ManualResetEvent connectDone =   
+    private static ManualResetEvent connectDone =
         new ManualResetEvent(false);  
-    private static ManualResetEvent sendDone =   
+    private static ManualResetEvent sendDone =
         new ManualResetEvent(false);  
-    private static ManualResetEvent receiveDone =   
+    private static ManualResetEvent receiveDone =
         new ManualResetEvent(false);  
   
     // The response from the remote device.  
@@ -192,7 +192,7 @@ public class AsynchronousClient {
         // Connect to a remote device.  
         try {  
             // Establish the remote endpoint for the socket.  
-            // The name of the   
+            // The name of the
             // remote device is "host.contoso.com".  
             IPHostEntry ipHostInfo = Dns.GetHostEntry("host.contoso.com");  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
@@ -203,7 +203,7 @@ public class AsynchronousClient {
                 SocketType.Stream, ProtocolType.Tcp);  
   
             // Connect to the remote endpoint.  
-            client.BeginConnect( remoteEP,   
+            client.BeginConnect( remoteEP,
                 new AsyncCallback(ConnectCallback), client);  
             connectDone.WaitOne();  
   
@@ -261,7 +261,7 @@ public class AsynchronousClient {
   
     private static void ReceiveCallback( IAsyncResult ar ) {  
         try {  
-            // Retrieve the state object and the client socket   
+            // Retrieve the state object and the client socket
             // from the asynchronous state object.  
             StateObject state = (StateObject) ar.AsyncState;  
             Socket client = state.workSocket;  
@@ -321,8 +321,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e6a06-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="e6a06-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef2d6-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef2d6-106">See also</span></span>
 
-- [<span data-ttu-id="e6a06-107">Ejemplo de sockets de servidor asincrónicos</span><span class="sxs-lookup"><span data-stu-id="e6a06-107">Asynchronous Server Socket Example</span></span>](asynchronous-server-socket-example.md)
-- [<span data-ttu-id="e6a06-108">Uso de un socket de servidor sincrónico</span><span class="sxs-lookup"><span data-stu-id="e6a06-108">Using a Synchronous Server Socket</span></span>](using-a-synchronous-server-socket.md)
-- [<span data-ttu-id="e6a06-109">Ejemplos de código de socket</span><span class="sxs-lookup"><span data-stu-id="e6a06-109">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="ef2d6-107">Ejemplo de sockets de servidor asincrónicos</span><span class="sxs-lookup"><span data-stu-id="ef2d6-107">Asynchronous Server Socket Example</span></span>](asynchronous-server-socket-example.md)
+- [<span data-ttu-id="ef2d6-108">Uso de un socket de servidor sincrónico</span><span class="sxs-lookup"><span data-stu-id="ef2d6-108">Using a Synchronous Server Socket</span></span>](using-a-synchronous-server-socket.md)
+- [<span data-ttu-id="ef2d6-109">Ejemplos de código de socket</span><span class="sxs-lookup"><span data-stu-id="ef2d6-109">Socket Code Examples</span></span>](socket-code-examples.md)
