@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156652"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240849"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -105,7 +105,7 @@ El paso siguiente en la creación de una aplicación con complementos consiste e
 
 En la carpeta raíz del proyecto, ejecute `dotnet new classlib -o PluginBase`. Además, ejecute `dotnet sln add PluginBase/PluginBase.csproj` para agregar el proyecto al archivo de la solución. Elimine el archivo `PluginBase/Class1.cs` y cree uno en la carpeta `PluginBase` con el nombre `ICommand.cs` con la definición de interfaz siguiente:
 
-[!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
+[!code-csharp[the-plugin-interface](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/PluginBase/ICommand.cs)]
 
 Esta interfaz `ICommand` es la que van a implementar todos los complementos.
 
@@ -148,7 +148,7 @@ if (command == null)
 command.Execute();
 ```
 
-Y, por último, agregue los métodos estáticos denominados `LoadPlugin` y `CreateCommands` a la clase `Program`, como se muestra aquí:
+Y, por último, agregue los métodos estáticos denominados `Program` y `LoadPlugin` a la clase `CreateCommands`, como se muestra aquí:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -187,7 +187,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 Ahora la aplicación puede cargar correctamente y crear instancias de los comandos a partir de los ensamblados de complemento cargados, pero todavía no puede cargar los ensamblados de complemento. Cree un archivo denominado *PluginLoadContext.cs* en la carpeta *AppWithPlugin* con el contenido siguiente:
 
-[!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
+[!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
 El tipo `PluginLoadContext` se deriva de <xref:System.Runtime.Loader.AssemblyLoadContext>. El tipo `AssemblyLoadContext` es un tipo especial en el runtime que permite a los desarrolladores aislar los ensamblados cargados en grupos diferentes para asegurarse de que las versiones de ensamblado no entren en conflicto. Además, un elemento `AssemblyLoadContext` personalizado puede elegir otras rutas de acceso desde las que cargar los ensamblados e invalidar el comportamiento predeterminado. El elemento `PluginLoadContext` usa una instancia del tipo `AssemblyDependencyResolver` que se introdujo en .NET Core 3.0 para resolver los nombres de ensamblado en rutas de acceso. El objeto `AssemblyDependencyResolver` se construye con la ruta de acceso a una biblioteca de clases .NET. Resuelve los ensamblados y las bibliotecas nativas en sus rutas de acceso relativas en función del archivo *deps.json* para la biblioteca de clases cuya ruta de acceso se haya pasado al constructor `AssemblyDependencyResolver`. El elemento `AssemblyLoadContext` personalizado permite que los complementos tengan sus propias dependencias y el elemento `AssemblyDependencyResolver` facilita la tarea de cargar correctamente las dependencias.
 
@@ -231,7 +231,7 @@ En la carpeta raíz, siga estos pasos:
 
 3. Reemplace el archivo *HelloPlugin/Class1.cs* con un archivo denominado *HelloCommand.cs* con el contenido siguiente:
 
-[!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
+[!code-csharp[the-hello-plugin](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/HelloPlugin/HelloCommand.cs)]
 
 Ahora, abra el archivo *HelloPlugin.csproj*. Debería tener un aspecto similar al siguiente:
 

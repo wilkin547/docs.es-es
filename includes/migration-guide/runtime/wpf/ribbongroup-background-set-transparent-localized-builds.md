@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802458"
 ---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>El fondo de RibbonGroup se establece en transparente en las compilaciones localizadas
@@ -15,4 +15,3 @@ ms.locfileid: "67802458"
 |Ámbito|Borde|
 |Versión|4.6.2|
 |Tipo|Tiempo de ejecución|
-

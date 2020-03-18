@@ -7,10 +7,10 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714878"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento para usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)
@@ -39,11 +39,11 @@ Debe tener Microsoft Office Word instalado en el equipo para completar estos pro
 
 7. Haga clic en **Aceptar**.
 
-     El proyecto nuevo aparece en el **Explorador de soluciones**.
+     El nuevo proyecto aparece en el **Explorador de soluciones**.
 
 ## <a name="to-add-a-reference"></a>Para agregar una referencia
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
 
 2. En la página **.NET**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente**.
 

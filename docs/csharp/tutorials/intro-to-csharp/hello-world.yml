@@ -12,10 +12,10 @@ metadata:
   interactive: csharp
   ms.custom: mvc
   ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969410"
 items:
 - durationInMinutes: 1
@@ -301,6 +301,6 @@ items:
 
     Para obtener más información sobre el tipo `string`:
 
-    - tema sobre [cadenas](../../programming-guide/strings/index.md) de la [Guía de programación de C#](../../programming-guide/index.md).
+    - tema sobre [cadenas](../../programming-guide/index.md) de la [Guía de programación de C#](../../programming-guide/strings/index.md).
 
     - [Sugerencias sobre cómo trabajar con cadenas](../../how-to/index.md#working-with-strings).

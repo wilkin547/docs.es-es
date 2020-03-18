@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131532"
 ---
 # <a name="garbage-collection-notifications"></a>Notificaciones de recolección de elementos no utilizados
@@ -52,7 +52,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
 ## <a name="notification-threshold-parameters"></a>Parámetros del umbral de notificación  
  El método <xref:System.GC.RegisterForFullGCNotification%2A> tiene dos parámetros para especificar los valores de umbral de los objetos de generación 2 y del montón de objetos grandes. Cuando se alcanza dichos valores, debe generarse una notificación de recolección de elementos no utilizados. En la siguiente tabla se describen estos parámetros.  
   
-|Parámetro|DESCRIPCIÓN|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Número comprendido entre 1 y 99 que especifica cuándo debe emitirse la notificación basándose en los objetos promocionados en la generación 2.|  
 |`largeObjectHeapThreshold`|Un número comprendido entre 1 y 99 que especifica cuándo debe emitirse la notificación basándose en los objetos asignados en el montón de objetos grandes.|  
@@ -63,7 +63,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
+### <a name="description"></a>Descripción  
  En el ejemplo siguiente, un grupo de solicitudes web entrantes del servicio de servidores. Para simular la carga de trabajo de procesamiento de solicitudes, se agregan matrices de bytes a una colección <xref:System.Collections.Generic.List%601>. Cada servidor registra una notificación de la recolección de elementos no utilizados y luego inicia un subproceso en el método del usuario `WaitForFullGCProc` para supervisar continuamente la enumeración <xref:System.GCNotificationStatus> devuelta por los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  Los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A> llaman a sus respectivos métodos de usuario de control de eventos cuando se emite una notificación:  

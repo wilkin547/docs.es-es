@@ -4,10 +4,10 @@ description: 'Seguridad en microservicios de .NET y aplicaciones web: Azure Key 
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501756"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar Azure Key Vault para proteger secretos en tiempo de producción

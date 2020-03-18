@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 78f4d533f1efdc8d43a9ab96508b84a77e3260bc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803191"
 ---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>Ya no se puede establecer EnableViewStateMac en false
@@ -15,4 +15,3 @@ ms.locfileid: "67803191"
 |Ámbito|Major|
 |Versión|4.5.2|
 |Tipo|Tiempo de ejecución|
-

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487533"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparación de XPath y LINQ to XML

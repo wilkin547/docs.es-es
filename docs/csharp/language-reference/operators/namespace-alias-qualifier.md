@@ -11,10 +11,10 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712681"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (referencia de C#)
@@ -58,7 +58,7 @@ Use el calificador de alias de espacio de nombres `::` para acceder a un miembro
 
 También puede usar el [operador de acceso a miembros `.`](member-access-operators.md#member-access-operator-) para acceder a un miembro de un espacio de nombres con alias. Pero el operador `.` también se usa para acceder a un miembro de un tipo. El calificador `::` garantiza que el identificador de la izquierda siempre hace referencia a un alias de espacio de nombres, aunque exista un tipo o un espacio de nombres con el mismo nombre.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, consulte la sección sobre [calificadores de alias de espacio de nombres](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

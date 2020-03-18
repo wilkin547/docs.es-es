@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
 ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416714"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendaciones de hospedaje en Azure de aplicaciones web ASP.NET Core
@@ -110,7 +110,7 @@ Si tiene una aplicación existente que requeriría modificaciones importantes pa
 
 Los procesos lógicos individuales que se pueden desacoplar del resto de la aplicación se pueden implementar por separado en Azure Functions de forma "sin servidor". Azure Functions permite escribir simplemente el código que se necesita para un problema determinado, sin preocuparse por la aplicación o infraestructura para ejecutarlo. Se puede elegir entre una variedad de lenguajes de programación, incluyendo C\#, F\#, Node.js, Python y PHP, lo que permite elegir el lenguaje más productivo para la tarea en cuestión. Al igual que la mayoría de las soluciones basadas en la nube, solo se paga por la cantidad de tiempo que se usa y se puede confiar en Azure Functions para escalar verticalmente según sea necesario.
 
-## <a name="data"></a>Datos
+## <a name="data"></a>data
 
 Azure ofrece una amplia variedad de opciones de almacenamiento de datos, por lo que la aplicación puede usar el proveedor de datos adecuado para los datos en cuestión.
 

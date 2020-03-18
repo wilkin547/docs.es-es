@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628675"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implementación de un modelo en Azure Functions
@@ -33,7 +33,7 @@ Este ejemplo es una **aplicación de desencadenador HTTP de C# de Azure Function
 ## <a name="create-azure-functions-project"></a>Creación de un proyecto de Azure Functions
 
 1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **Cloud**. A continuación, seleccione la plantilla de proyecto **Azure Functions**. En el cuadro de texto **Nombre**, escriba "SentimentAnalysisFunctionsApp" y después haga clic en el botón **Aceptar**.
-1. En el cuadro de diálogo **Nuevo proyecto**, abra el menú desplegable que se encuentra sobre las opciones del proyecto y seleccione **Azure Functions v2 (.NET Core)**. Luego, seleccione el proyecto **Desencadenador HTTP** y luego haga clic en el botón **Aceptar**.
+1. En el cuadro de diálogo **Nuevo proyecto**, abra el menú desplegable que se encuentra sobre las opciones del proyecto y seleccione **Azure Functions v2 (.NET Core)** . Luego, seleccione el proyecto **Desencadenador HTTP** y luego haga clic en el botón **Aceptar**.
 1. En el proyecto, cree un directorio denominado *MLModels* para guardar el modelo:
 
     En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nueva carpeta**. Escriba "MLModels" y presione ENTRAR.

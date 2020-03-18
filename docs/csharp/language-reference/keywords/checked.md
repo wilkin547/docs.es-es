@@ -8,10 +8,10 @@ helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
 ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713701"
 ---
 # <a name="checked-c-reference"></a>checked (Referencia de C#)
@@ -36,7 +36,7 @@ En este ejemplo, se muestra cómo usar `checked` para habilitar la comprobación
 
 [!code-csharp[csrefKeywordsChecked#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#1)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -6,10 +6,10 @@ ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714519"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usar el generador de serializador XML de Microsoft en .NET Core
@@ -101,7 +101,7 @@ Agregue esta línea dentro de *Main* para crear un `XmlSerializer` para MyClass:
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a>Compilar y ejecutar la aplicación
+### <a name="build-and-run-the-application"></a>Compilación y ejecución de la aplicación
 
 Seguimos en la carpeta *MyApp*, desde donde vamos a ejecutar la aplicación a través de [`dotnet run`](../tools/dotnet-run.md). Se carga automáticamente y usa los serializadores generados previamente en tiempo de ejecución.
 
@@ -132,4 +132,4 @@ Si todo se realiza correctamente, se genera un ensamblado con el nombre *.dll My
 
 - [Introducción a la serialización XML](../../standard/serialization/introducing-xml-serialization.md)
 - [Serialización con XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-- [Cómo: Serializar con XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Cómo: serializar con XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos'
+title: 'Almacenamiento local de subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127523"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local de subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
 Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
   
 - Use campos estáticos relacionados con subprocesos (campos `Shared` relacionados con subprocesos en Visual Basic) si puede anticipar las necesidades exactas en tiempo de compilación. Los campos estáticos relacionados con subprocesos proporcionan el mejor rendimiento. También proporcionan las ventajas de la comprobación de tipos en tiempo de compilación.  

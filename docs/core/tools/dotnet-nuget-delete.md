@@ -4,10 +4,10 @@ description: El comando dotnet-nuget-delete elimina o quita de la lista un paque
 author: karann-msft
 ms.date: 06/26/2019
 ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733120"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
@@ -18,7 +18,7 @@ ms.locfileid: "76733120"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet nuget delete`: elimina o quita de la lista un paquete del servidor.
 
@@ -30,7 +30,7 @@ dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] 
 dotnet nuget delete [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet nuget delete` elimina o quita de la lista un paquete del servidor. Para [nuget.org](https://www.nuget.org/), la acción es quitar de la lista el paquete.
 

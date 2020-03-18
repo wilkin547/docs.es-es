@@ -3,10 +3,10 @@ title: Nombres de identificador
 description: Obtenga información sobre las reglas de los nombres de identificador válidos en el lenguaje de programación C#.
 ms.date: 08/21/2018
 ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673373"
 ---
 # <a name="identifier-names"></a>Nombres de identificador

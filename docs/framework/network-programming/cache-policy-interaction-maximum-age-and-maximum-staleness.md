@@ -10,10 +10,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048841"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima

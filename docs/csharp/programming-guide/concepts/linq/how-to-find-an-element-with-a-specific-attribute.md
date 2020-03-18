@@ -3,10 +3,10 @@ title: Procedimiento para buscar un elemento con un atributo específico (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141163"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Procedimiento para buscar un elemento con un atributo específico (C#)
@@ -15,7 +15,7 @@ En este tema se muestra cómo buscar un elemento que tiene un atributo con un va
 ## <a name="example"></a>Ejemplo  
  El ejemplo muestra cómo buscar el elemento `Address` que tiene un atributo `Type` con un valor de "Billing".  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
 - [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])

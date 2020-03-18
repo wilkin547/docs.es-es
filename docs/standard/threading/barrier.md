@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138148"
 ---
 # <a name="barrier"></a>Barrier
@@ -50,7 +50,7 @@ ms.locfileid: "73138148"
   
 - <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
   
- Para más información, consulte [Encadenar tareas mediante tareas de continuación](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
+ Para más información, consulte [Chaining Tasks by Using Continuation Tasks](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md) (Encadenar tareas mediante tareas de continuación).  
   
 ## <a name="see-also"></a>Vea también
 

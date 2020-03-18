@@ -3,10 +3,10 @@ title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
 ms.date: 02/14/2020
 ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503762"
 ---
 # <a name="dotnet-build"></a>dotnet build

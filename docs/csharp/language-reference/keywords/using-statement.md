@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712967"
 ---
 # <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)

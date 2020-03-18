@@ -11,10 +11,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 ms.openlocfilehash: 2ec958cc035ac62086cdd3e2844811accc181d47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048809"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interacción de la directiva de caché, antigüedad máxima y actualización mínima

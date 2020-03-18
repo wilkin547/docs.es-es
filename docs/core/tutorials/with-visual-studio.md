@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714000"
 ---
 # <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>Tutorial: Creación de su primera aplicación de consola con .NET Core en Visual Studio 2019
@@ -28,7 +28,7 @@ Las instrucciones siguientes crean una sencilla aplicación de consola de Hola m
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Abra Visual Studio 2019.
 
@@ -53,7 +53,7 @@ Las instrucciones siguientes crean una sencilla aplicación de consola de Hola m
 
    ![Visual Studio y el nuevo proyecto Hola mundo](./media/with-visual-studio/visual-studio-main-window.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Abra Visual Studio 2019.
 
@@ -96,7 +96,7 @@ Las instrucciones siguientes crean una sencilla aplicación de consola de Hola m
 
 Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la fecha y la hora. Las instrucciones siguientes modifican y ejecutan de nuevo la aplicación:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Reemplace el contenido del método `Main`, que actualmente es solo la línea que llama a `Console.WriteLine`, con el código siguiente:
 
@@ -114,7 +114,7 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
 1. Presione cualquier tecla para cerrar la ventana de consola.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Reemplace el contenido del método `Main`, que actualmente es solo la línea que llama a `Console.WriteLine`, con el código siguiente:
 

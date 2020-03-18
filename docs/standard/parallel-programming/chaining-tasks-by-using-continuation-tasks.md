@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159369"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadenar tareas mediante tareas de continuación
@@ -117,11 +117,11 @@ En la programación asincrónica, es habitual que una operación asincrónica, a
  El estado final de la tarea antecedente depende del estado final de las tareas secundarias asociadas. El estado de las tareas secundarias desasociadas no afecta al elemento primario. Para más información, consulte [Tareas secundarias asociadas y desasociadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="associating-state-with-continuations"></a>Asociación de estado con continuaciones  
- Un estado arbitrario se puede asociar con una continuación de tarea. El método <xref:System.Threading.Tasks.Task.ContinueWith%2A> proporciona versiones sobrecargadas, y cada una de ellas toma un valor <xref:System.Object> que representa el estado de la continuación. Más adelante se puede tener acceso a este objeto de estado mediante la propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> . Si no se proporciona un valor, este objeto de estado es `null` .  
+ Un estado arbitrario se puede asociar con una continuación de tarea. El método <xref:System.Threading.Tasks.Task.ContinueWith%2A> proporciona versiones sobrecargadas, y cada una de ellas toma un valor <xref:System.Object> que representa el estado de la continuación. Más adelante se puede tener acceso a este objeto de estado mediante la propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> . Si no se proporciona un valor, este objeto de estado es `null`.  
   
  El estado de continuación es útil al convertir un código existente que use el [modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para utilizar la TPL. En el APM, normalmente se proporciona el estado del objeto en el método **Begin**_Método_ y el acceso posterior a ese estado mediante la propiedad <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Si se usa el método <xref:System.Threading.Tasks.Task.ContinueWith%2A> , se puede conservar este estado al convertir código que usa el APM para usar la TPL.  
   
- El estado de continuación también puede ser útil cuando se trabaja con objetos <xref:System.Threading.Tasks.Task> en el depurador de Visual Studio. Por ejemplo, en la ventana **Tareas paralelas** , la columna **Tarea** muestra la representación de cadena del objeto de estado de cada tarea. Para más información sobre la ventana **Tareas paralelas**, consulte el artículo [Usar la ventana Tareas](/visualstudio/debugger/using-the-tasks-window).  
+ El estado de continuación también puede ser útil cuando se trabaja con objetos <xref:System.Threading.Tasks.Task> en el depurador de Visual Studio. Por ejemplo, en la ventana **Tareas paralelas**, la columna **Tarea** muestra la representación de cadena del objeto de estado de cada tarea. Para más información sobre la ventana **Tareas paralelas**, consulte el artículo [Usar la ventana Tareas](/visualstudio/debugger/using-the-tasks-window).  
   
  En el ejemplo siguiente se muestra cómo usar el estado de continuación. En él se crea una cadena de tareas de continuación. Cada tarea proporciona la hora actual —un objeto <xref:System.DateTime> — para el parámetro `state` del método <xref:System.Threading.Tasks.Task.ContinueWith%2A> . Cada objeto <xref:System.DateTime> representa la hora en que se creó la tarea de continuación. Cada tarea produce como resultado un segundo objeto <xref:System.DateTime> que representa la hora en que finaliza la tarea. Una vez que finalizan todas las tareas, se muestran la hora de creación y la hora de finalización de cada tarea de continuación.  
   

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: 17e7386571e8c74d411204ade0d56ffe8a710ee8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76741998"
 ---
 # <a name="null-c-reference"></a>null (Referencia de C#)
@@ -22,7 +22,7 @@ En el ejemplo siguiente se muestran algunos comportamientos de la palabra clave 
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

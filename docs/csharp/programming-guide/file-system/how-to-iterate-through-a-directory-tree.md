@@ -6,10 +6,10 @@ helpviewer_keywords:
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712265"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedimiento Recorrer en iteración un árbol de directorio (Guía de programación de C#)

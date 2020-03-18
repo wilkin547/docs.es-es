@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
 ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713912"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introducción al lenguaje C# y .NET Framework

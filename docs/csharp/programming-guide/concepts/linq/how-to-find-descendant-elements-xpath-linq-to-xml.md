@@ -3,10 +3,10 @@ title: Procedimiento para buscar elementos descendientes (XPath-LINQ to XML) (C#
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141102"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos descendientes (XPath-LINQ to XML) (C#)
@@ -17,7 +17,7 @@ En este tema se muestra cómo obtener los elementos descendientes con un nombre 
 ## <a name="example"></a>Ejemplo  
  Este ejemplo busca todos los descendientes con el nombre `Name`.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

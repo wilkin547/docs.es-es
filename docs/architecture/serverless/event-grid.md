@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522715"
 ---
 # <a name="event-grid"></a>Event Grid
@@ -90,7 +90,7 @@ Todo lo relacionado con el mensaje es estándar excepto la propiedad `data`. Pue
 
 Una ventaja importante del uso de Event Grid son los mensajes automáticos que genera Azure. En Azure, los recursos se publican automáticamente en un *tema* que le permite suscribirse a varios eventos. En la tabla siguiente se enumeran los tipos de recursos, los tipos de mensajes y los eventos que están disponibles automáticamente.
 
-| Recurso de Azure | Tipo de evento. | DESCRIPCIÓN |
+| Recurso de Azure | Tipo de evento. | Descripción |
 | -------------- | ---------- | ----------- |
 | Suscripción a Azure | Microsoft.Resources.ResourceWriteSuccess | Se genera cuando una operación de actualización o de creación de un recurso se realiza correctamente. |
 | | Microsoft.Resources.ResourceWriteFailure | Se genera cuando una operación de actualización o de creación de un recurso da error. |

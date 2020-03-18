@@ -5,10 +5,10 @@ author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
 ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159746"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Uso y depuración de la descargabilidad de ensamblado en .NET Core

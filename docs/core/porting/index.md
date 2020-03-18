@@ -4,10 +4,10 @@ description: Comprenda el proceso de portabilidad y descubra herramientas que le
 author: cartermp
 ms.date: 10/22/2019
 ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937310"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Introducción a la portabilidad de .NET Framework a .NET Core

@@ -5,10 +5,10 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920920"
 ---
 # <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Creación de un paquete NuGet con la CLI de .NET Core

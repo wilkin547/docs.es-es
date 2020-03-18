@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: c800b3fcc1eff5d7a669611cb0697aa8c87a37a4
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e39b4e85b47902babac7a22a93aa64c2f86ef01f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804640"
 ---
 ### <a name="dataobjectgetdata-now-retrieves-data-as-utf-8"></a>DataObject.GetData ahora recupera los datos como UTF-8
@@ -16,4 +16,3 @@ ms.locfileid: "67804640"
 |Versión|4.5.2|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Windows.DataObject.GetData(System.String)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.Type)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

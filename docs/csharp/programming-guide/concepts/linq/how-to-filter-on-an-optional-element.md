@@ -3,10 +3,10 @@ title: Procedimiento para filtrar por un elemento opcional (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
 ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141254"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Procedimiento para filtrar por un elemento opcional (C#)
@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
-- [Operaciones de proyección (C#)](./projection-operations.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+- [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])

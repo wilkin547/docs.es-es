@@ -7,10 +7,10 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: f160df456f1a3437e11de2d3660d158ae4d4bb67
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75900562"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>Sistema de archivos y el Registro (Guía de programación de C#)

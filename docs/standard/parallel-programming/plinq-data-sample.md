@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140009"
 ---
 # <a name="plinq-data-sample"></a>Ejemplo de datos de PLINQ
@@ -44,7 +44,7 @@ Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que l
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Datos  
+## <a name="data"></a>data  
   
 ```console  
 CUSTOMERS  

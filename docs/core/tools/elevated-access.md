@@ -4,10 +4,10 @@ description: Obtenga información sobre los procedimientos recomendados para los
 author: wli3
 ms.date: 06/26/2019
 ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156769"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acceso con privilegios elevados para comandos de dotnet

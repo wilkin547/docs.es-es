@@ -1,18 +1,18 @@
 ---
-title: Procedimiento para analizar rutas de acceso a archivos
+title: 'Cómo: Analizar rutas de acceso a archivos'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
 ms.openlocfilehash: 6a959994be3a57795dc9f7e3447fa54bf075d3ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335351"
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a>Procedimiento para analizar rutas de acceso a archivos en Visual Basic
+# <a name="how-to-parse-file-paths-in-visual-basic"></a>Cómo: Analizar rutas de acceso a archivos en Visual Basic
 
 El objeto <xref:Microsoft.VisualBasic.FileIO.FileSystem> ofrece una serie de métodos útiles al analizar rutas de acceso a archivos.  
   
@@ -42,4 +42,4 @@ El objeto <xref:Microsoft.VisualBasic.FileIO.FileSystem> ofrece una serie de mé
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
 - <xref:System.IO.FileInfo>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>
-- [Cómo: Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

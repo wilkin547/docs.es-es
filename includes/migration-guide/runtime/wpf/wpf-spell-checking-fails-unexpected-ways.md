@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8049bf01bc10c5913fa11b25e49afd1b1317eecc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802972"
 ---
 ### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>Se produce un error inesperado en la revisión ortográfica de WPF
@@ -15,4 +15,3 @@ ms.locfileid: "67802972"
 |Ámbito|Borde|
 |Versión|4.6.1|
 |Tipo|Tiempo de ejecución|
-

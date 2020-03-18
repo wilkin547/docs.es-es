@@ -3,10 +3,10 @@ title: 'Mitigación: representación de ventanas de WPF'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 ms.openlocfilehash: 42d6abf1ba6ed7c17a5a5604e98b5ee46d0c3ac2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457769"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigación: representación de ventanas de WPF

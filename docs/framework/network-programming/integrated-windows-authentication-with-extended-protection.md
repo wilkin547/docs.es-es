@@ -3,10 +3,10 @@ title: Autenticación de Windows integrada con protección ampliada
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74444235"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticación de Windows integrada con protección ampliada

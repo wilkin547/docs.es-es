@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602408"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (Opciones del compilador de C#)
@@ -30,7 +30,7 @@ La opción **-warn** especifica el nivel de advertencia que debe mostrar el comp
   
 ## <a name="arguments"></a>Argumentos  
  `option`  
- El nivel de advertencia que se quiere mostrar para la compilación: los números más bajos solo muestran advertencias de gravedad alta; los más altos muestran más advertencias. Los valores válidos son 0 a 4:  
+ El nivel de advertencia que quiere que se muestre para la compilación: los números más bajos muestran solo advertencias de gravedad alta; los números más altos muestran más advertencias. Los valores válidos son 0 a 4:  
   
 |Nivel de advertencia|Significado|  
 |-------------------|-------------|  
@@ -67,4 +67,4 @@ csc -warn:1 in.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

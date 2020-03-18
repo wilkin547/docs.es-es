@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713389"
 ---
 # <a name="lock-statement-c-reference"></a>Instrucción lock (Referencia de C#)
 
-La instrucción `lock` adquiere el bloqueo de exclusión mutua de un objeto determinado, ejecuta un bloque de instrucciones y luego libera el bloqueo. Mientras se mantiene un bloqueo, el subproceso que lo mantiene puede volver a adquirir y liberar el bloqueo. Ningún otro subproceso puede adquirir el bloqueo y espera hasta que se libera.
+La instrucción `lock` adquiere el bloqueo de exclusión mutua de un objeto determinado, ejecuta un bloque de instrucciones y luego libera el bloqueo. Mientras se mantiene un bloqueo, el subproceso que lo mantiene puede volver a adquirir y liberar dicho bloqueo. Ningún otro subproceso puede adquirir el bloqueo y espera hasta que se libera.
 
 La instrucción `lock` tiene el formato
 
@@ -62,7 +62,7 @@ En el ejemplo siguiente se define una clase `Account` que sincroniza el acceso a
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, consulte la sección sobre la [instrucción lock](~/_csharplang/spec/statements.md#the-lock-statement) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

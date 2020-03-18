@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
 ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972712"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
@@ -96,7 +96,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[-codepage](codepage-compiler-option.md)|Especifica la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.|
 |[-help](help-compiler-option.md)|Enumera las opciones del compilador para stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que el archivo ejecutable es compatible con la selección aleatoria del diseño del espacio de direcciones (ASLR).|
-|[-langversion](langversion-compiler-option.md)|Especifique la versión de lenguaje: predeterminada, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o más reciente |
+|[-langversion](langversion-compiler-option.md)|Especifica la versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o el más reciente |
 |[-main](main-compiler-option.md)|Especifica la ubicación del método **Main**.|
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilador que no debe compilar con csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Suprime la información de titular del compilador.|
@@ -105,7 +105,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[/unsafe](unsafe-compiler-option.md)|Habilita la compilación del código que usa la palabra clave [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Muestra los resultados del compilador en codificación UTF-8.|
 |-parallel[+&#124;-]|Especifica si hay que usar la compilación simultánea (+).|
-|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|
+|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|
 
 ## <a name="obsolete-options"></a>Opciones obsoletas
 

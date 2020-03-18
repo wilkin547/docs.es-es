@@ -9,10 +9,10 @@ helpviewer_keywords:
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713467"
 ---
 # <a name="group-clause-c-reference"></a>group (Cláusula, Referencia de C#)

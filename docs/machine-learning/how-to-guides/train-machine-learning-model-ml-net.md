@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976756"
 ---
 # <a name="train-and-evaluate-a-model"></a>Entrenamiento y evaluación de un modelo

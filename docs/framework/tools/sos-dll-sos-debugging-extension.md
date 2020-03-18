@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 ms.openlocfilehash: 4c3a7f2798791f0c8a6b752f06bc2937fc970d40
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715728"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extensión de depuración de SOS)
@@ -25,7 +25,7 @@ La extensión de depuración de SOS (SOS.dll) ayuda a depurar programas administ
 
 ## <a name="commands"></a>Comandos
 
-|Comando|Descripción|
+|Comando|Description|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|Muestra la información sobre el último evento de memoria insuficiente (OOM) que se produjo en una solicitud de asignación al montón de recolección de elementos no utilizados. (En la recolección de elementos no utilizados del servidor, se muestra OOM, si hubiera alguno, en cada montón de recolección de elementos no utilizados).|
 |**BPMD** [ **-nofuturemodule**] [\<*nombre del módulo*> \<*nombre del método*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*número de punto de interrupción pendiente*>  **-clearall**|Crea un punto de interrupción en el método especificado en el módulo especificado.<br /><br /> Si no se han cargado el módulo y el método especificados, antes de crear el punto de interrupción, este comando espera una notificación de que el módulo se ha cargado y se ha compilado Just-In-Time (JIT).<br /><br /> Puede administrar la lista de puntos de interrupción pendientes mediante las opciones **-list**, **-clear** y **-clearall**:<br /><br /> La opción **-list** genera una lista con todos los puntos de interrupción pendientes. Si un punto de interrupción pendiente tiene un identificador de módulo distinto de cero, el punto de interrupción es específico de una función de ese módulo cargado en particular. Si el punto de interrupción pendiente tiene un identificador de módulo cuyo valor es cero, el punto de interrupción se aplica a los módulos que no se han cargado todavía.<br /><br /> Use la opción **-clear** o **-clearall** para quitar los puntos de interrupción pendientes de la lista.|

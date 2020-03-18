@@ -3,10 +3,10 @@ title: Puntos clave
 description: Obtenga las conclusiones de la arquitectura de microservicios de .NET para la guía/e-book de aplicaciones de .NET en contenedores, a fin de echar un vistazo rápido a los problemas de alto nivel que se producen al usar una arquitectura de microservicios, como ventajas e inconvenientes, patrones DDD para diseño y desarrollo, así como resistencia, seguridad y el uso de orquestadores.
 ms.date: 10/19/2018
 ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674462"
 ---
 # <a name="key-takeaways"></a>Puntos clave

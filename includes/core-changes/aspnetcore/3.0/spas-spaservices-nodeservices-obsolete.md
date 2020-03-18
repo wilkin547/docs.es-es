@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394103"
 ---
 ### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPA: SpaServices y NodeServices se han marcado como obsoletos
@@ -53,7 +53,7 @@ Si usa estos paquetes, actualice las aplicaciones para usar la funcionalidad:
 - En el paquete `Microsoft.AspNetCore.SpaServices.Extensions`.
 - Que proporcionan los marcos de SPA que está usando.
 
-Para habilitar características como la representación previa del lado servidor y la recarga de módulos frecuentes, consulte la documentación del marco de SPA correspondiente. La funcionalidad de `Microsoft.AspNetCore.SpaServices.Extensions` *no* está obsoleta y seguirá siendo compatible.
+Para habilitar características como la representación previa del lado servidor y la recarga de módulos frecuentes, consulte la documentación del marco de SPA correspondiente. La funcionalidad de `Microsoft.AspNetCore.SpaServices.Extensions`*no* está obsoleta y seguirá siendo compatible.
 
 #### <a name="category"></a>Categoría
 

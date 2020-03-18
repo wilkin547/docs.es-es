@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f672645fb98f511f7e1326c9c584b287a0fae7dc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859339"
 ---
 ### <a name="long-path-support"></a>Compatibilidad con rutas de acceso con formato largo
@@ -15,4 +15,3 @@ ms.locfileid: "67859339"
 |Ámbito|Secundaria|
 |Versión|4.6.2|
 |Tipo|Redestinación|
-

@@ -3,10 +3,10 @@ title: 'Depuradores administrados: .NET Core'
 description: Información general de los depuradores administrados de Visual Studio y Visual Studio Code.
 ms.date: 08/05/2019
 ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715568"
 ---
 # <a name="net-core-managed-debuggers"></a>Depuradores administrados de .Net Core

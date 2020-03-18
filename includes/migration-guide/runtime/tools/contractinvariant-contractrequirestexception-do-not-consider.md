@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 204fe32ec8b7fbaab89e37d7e761469212091728
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68237920"
 ---
 ### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant o Contract.Requires\<TException> no consideran que String.IsNullOrEmpty sea puro

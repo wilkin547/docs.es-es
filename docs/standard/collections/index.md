@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160396"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
@@ -72,7 +72,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
 <a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Seleccionar una clase de colección](../../../docs/standard/collections/selecting-a-collection-class.md)|Describe las diferentes colecciones y le ayuda a seleccionar una para su escenario.|  
 |[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Describe los tipos de colección genéricos y no genéricos más utilizados, como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  

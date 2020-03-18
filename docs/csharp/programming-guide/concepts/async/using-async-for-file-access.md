@@ -3,10 +3,10 @@ title: Usar Async en acceso a archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595535"
 ---
 # <a name="using-async-for-file-access-c"></a>Usar Async en acceso a archivos (C#)
@@ -176,6 +176,6 @@ public async Task ProcessWriteMultAsync()
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación asincrónica con Async y Await (C#)](./index.md)
+- [Asynchronous Programming with async and await (C#)](./index.md) (Programación asincrónica con async y await (C#))
 - [Async Return Types (C#)](./async-return-types.md) (Tipos de valor devuelto de async [C#])
-- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujos de control en programas asincrónicos [C#])
+- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#])

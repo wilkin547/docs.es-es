@@ -13,10 +13,10 @@ helpviewer_keywords:
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141275"
 ---
 # <a name="culture-insensitive-string-operations"></a>Operaciones de cadenas que no distinguen entre referencias culturales

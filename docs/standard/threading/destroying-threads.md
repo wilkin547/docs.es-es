@@ -10,15 +10,15 @@ helpviewer_keywords:
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 ms.openlocfilehash: 842ca4ff17f9cbab3a1518d2dea37436c9b23f9d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155937"
 ---
 # <a name="destroying-threads"></a>Destrucción de subprocesos
 
-Para finalizar la ejecución del subproceso, normalmente se usa el [modelo de cancelación cooperativa](cancellation-in-managed-threads.md). A veces no es posible detener un subproceso de forma cooperativa, ya que ejecuta código de terceros no diseñado para la cancelación cooperativa. El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> de .NET Framework se puede utilizar para terminar un subproceso administrado forzosamente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime inicia una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, vea <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> no se admite en .NET Core. Si necesita terminar la ejecución de código de terceros de forma forzada en .NET Core, ejecútelo en el proceso independiente y use <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+Para finalizar la ejecución del subproceso, normalmente se usa el [modelo de cancelación cooperativa](cancellation-in-managed-threads.md). A veces no es posible detener un subproceso de forma cooperativa, ya que ejecuta código de terceros no diseñado para la cancelación cooperativa. El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> de .NET Framework se puede utilizar para terminar un subproceso administrado forzosamente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime inicia una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, consulta <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> no se admite en .NET Core. Si necesita terminar la ejecución de código de terceros de forma forzada en .NET Core, ejecútelo en el proceso independiente y use <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
 > Si un subproceso ejecuta código no administrado al llamar a su método <xref:System.Threading.Thread.Abort%2A>, el tiempo de ejecución lo marca como <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. La excepción se produce cuando el subproceso vuelve al código administrado.  

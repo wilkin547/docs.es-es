@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77504002"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
@@ -33,7 +33,7 @@ Modifique el método `Main` en *program.cs* como se indica a continuación:
 
 Cuando un programa se ejecuta en Windows, cualquier valor devuelto por la función `Main` se almacena en una variable de entorno. Esta variable de entorno se puede recuperar mediante `ERRORLEVEL` desde un archivo por lotes, o mediante `$LastExitCode` desde PowerShell.
 
-Puede compilar la aplicación mediante el comando `dotnet build` de la [CLI de dotnet](../../../core/tools/dotnet.md).
+Puede compilar la aplicación mediante el comando [ de la ](../../../core/tools/dotnet.md)CLI de dotnet`dotnet build`.
 
 Después, cree un script de PowerShell para ejecutar la aplicación y mostrar el resultado. Pegue el código siguiente en un archivo de texto y guárdelo como `test.ps1` en la carpeta que contiene el proyecto. Ejecute el script de PowerShell. Para ello, escriba `test.ps1` en el símbolo del sistema de PowerShell.
 
@@ -53,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>Resultados de ejemplo
+## <a name="sample-output"></a>Salida de ejemplo
 
 ```txt
 Execution succeeded

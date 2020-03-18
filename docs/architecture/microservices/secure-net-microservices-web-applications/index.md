@@ -4,10 +4,10 @@ description: 'Seguridad en microservicios y aplicaciones web .NET: familiaríces
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628337"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Protección de microservicios y aplicaciones web .NET

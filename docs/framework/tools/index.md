@@ -8,10 +8,10 @@ helpviewer_keywords:
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715769"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
@@ -104,7 +104,7 @@ Convierte archivos de texto ( *.txt* o *.restext*) y archivos de formato de recu
 - [SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)](secannotate-exe-net-security-annotator-tool.md)  
 Identifica las partes `SecurityCritical` y `SecuritySafeCritical` de un ensamblado.
 
-- [SignTool.exe (Herramienta de firma)](signtool-exe.md)  
+- [SignTool.exe (Sign Tool)](signtool-exe.md)  
 Firma digitalmente los archivos, comprueba las firmas de los mismos y les agrega una marca de tiempo.
 
 - [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)  

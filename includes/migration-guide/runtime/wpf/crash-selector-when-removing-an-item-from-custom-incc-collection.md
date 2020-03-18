@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8f4ee44e8432bae3537c6f064f564b9f044a7c33
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802463"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Al quitar un elemento de una colección personalizada de INCC se produce un bloqueo en Selector
@@ -15,4 +15,3 @@ ms.locfileid: "67802463"
 |Ámbito|Secundaria|
 |Versión|4.7|
 |Tipo|Tiempo de ejecución|
-

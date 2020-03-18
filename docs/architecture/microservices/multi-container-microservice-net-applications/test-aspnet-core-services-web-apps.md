@@ -3,10 +3,10 @@ title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
 ms.date: 01/30/2020
 ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501984"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core

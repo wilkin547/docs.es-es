@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76980189"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>Administrador de paquetes de RHEL 7: instalación de .NET Core

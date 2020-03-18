@@ -15,10 +15,10 @@ helpviewer_keywords:
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
 ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348894"
 ---
 # <a name="file-access-with-visual-basic"></a>Acceso a archivos con Visual Basic
@@ -42,7 +42,7 @@ El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con ar
  [Codificaciones de archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Explica codificaciones de archivos y su uso.  
   
- [Tutorial: Manipulación de archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Tutorial: Manipular archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo crear una utilidad que presenta información sobre archivos y carpetas.  
   
  [Solución de problemas: Leer y escribir en archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  

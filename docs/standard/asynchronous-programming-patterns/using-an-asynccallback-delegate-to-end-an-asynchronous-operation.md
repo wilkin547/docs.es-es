@@ -12,10 +12,10 @@ helpviewer_keywords:
 - stopping asynchronous operations
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
 ms.openlocfilehash: c3cac2db57a24bf6a0f5640e4ad8101686e6c3e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130925"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>Utilizar un delegado AsyncCallback para finalizar una operación asincrónica
@@ -36,6 +36,6 @@ Las aplicaciones que pueden realizar otro trabajo mientras esperan los resultado
 ## <a name="see-also"></a>Vea también
 
 - [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)
 - [Llamar a métodos asincrónicos mediante IAsyncResult](../../../docs/standard/asynchronous-programming-patterns/calling-asynchronous-methods-using-iasyncresult.md)
 - [Utilizar un delegado AsyncCallback y un objeto State](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)

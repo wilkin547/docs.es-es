@@ -3,10 +3,10 @@ title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicació
 description: Conozca los pasos del "bucle exterior" del flujo de trabajo de DevOps.
 ms.date: 02/15/2019
 ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936782"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker

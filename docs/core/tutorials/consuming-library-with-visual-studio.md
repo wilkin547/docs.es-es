@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920459"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Consumo de una biblioteca de .NET Standard en Visual Studio
@@ -30,13 +30,13 @@ En este tutorial aprenderá a:
 
 Así como incluyó pruebas unitarias en la misma solución que la biblioteca de clases en [Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017](testing-library-with-visual-studio.md), puede incluir la aplicación como parte de esa solución. Por ejemplo, se puede usar la biblioteca de clases en una aplicación de consola que pide al usuario que inserte una cadena e informa de si su primer carácter está en mayúsculas:
 
-1. Abra la solución `ClassLibraryProjects` que creó en el artículo [Creación de una biblioteca de clases de .NET Standard en Visual Studio](library-with-visual-studio.md).
+1. Abra la solución `ClassLibraryProjects` que creó en el artículo [Creación de una biblioteca de .NET Standard con C# y el SDK de .NET Core en Visual Studio 2017](library-with-visual-studio.md).
 
 1. Agregue una nueva aplicación de consola de .NET Core denominada "Showcase" a la solución.
 
    1. Haga clic con el botón derecho en la solución en el **Explorador de soluciones** y seleccione **Agregar** > **Nuevo proyecto**.
 
-   1. En el cuadro de búsqueda de la página **Agregar un nuevo proyecto**, escriba **consola**. Elija **C#** o **Visual Basic** en la lista de lenguajes y luego, **Todas las plataformas** en la lista de plataformas. Elija la plantilla **Aplicación de consola (.NET Core)** y haga clic en **Siguiente**.
+   1. En el cuadro de búsqueda de la página **Agregar un nuevo proyecto**, escriba **consola**. En la lista de lenguajes, elija **C#** o **Visual Basic** y, luego, en la lista de plataformas, elija **Todas las plataformas**. Elija la plantilla **Aplicación de consola (.NET Core)** y haga clic en **Siguiente**.
 
    1. En la página **Configure el nuevo proyecto**, escriba **ShowCase** en el cuadro **Nombre del proyecto**. Luego, elija **Crear**.
 
@@ -44,7 +44,7 @@ Así como incluyó pruebas unitarias en la misma solución que la biblioteca de 
 
    ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Inicialmente, el proyecto no tiene acceso a la biblioteca de clases. Para permitir que se llame a métodos de la biblioteca de clases, puede crear una referencia a la biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto `ShowCase` y seleccione **Agregar referencia**.
+1. Inicialmente, el proyecto no tiene acceso a la biblioteca de clases. Para permitir que se llame a métodos de la biblioteca de clases, puede crear una referencia a la biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo `ShowCase`Dependencias**del proyecto** y seleccione **Agregar referencia**.
 
    ![Menú contextual Agregar referencia de Visual Studio](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
@@ -71,7 +71,7 @@ La aplicación que usa esta biblioteca se puede depurar y publicar siguiendo los
 
 Puede hacer que la biblioteca de clases tenga una disponibilidad amplia si la publica como un paquete NuGet. Visual Studio no admite la creación de paquetes NuGet. Para crear uno, debe usar los comandos de la CLI de .NET Core:
 
-1. Abra una ventana de consola.
+1. Abra una ventana de la consola.
 
    Por ejemplo, escriba **Símbolo del sistema** en el cuadro de búsqueda de la barra de tareas de Windows. Seleccione la aplicación de escritorio **Símbolo del sistema** o presione **Entrar** si ya está seleccionado en los resultados de búsqueda.
 

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 448a6160bd64143000c00d21a9ddecdc61b53475
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 81b104d8e5a9ccc8e790c3b16e4837cfa0c0def5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859055"
 ---
 ### <a name="serialport-background-thread-exceptions"></a>Excepciones de subprocesos en segundo plano SerialPort
@@ -16,4 +16,3 @@ ms.locfileid: "67859055"
 |Versión|4.7.1|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.IO.Ports.SerialPort?displayProperty=nameWithType></li></ul>|
-

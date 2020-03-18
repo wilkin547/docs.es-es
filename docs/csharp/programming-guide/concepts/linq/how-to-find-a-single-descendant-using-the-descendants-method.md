@@ -3,10 +3,10 @@ title: Procedimiento para buscar un único descendiente con el método Descendan
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
 ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141201"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Procedimiento para buscar un único descendiente con el método Descendants (C#)

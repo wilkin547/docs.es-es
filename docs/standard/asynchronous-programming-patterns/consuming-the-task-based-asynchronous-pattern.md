@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139816"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizar el modelo asincrónico basado en tareas
@@ -245,13 +245,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Puede usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para esperar de manera asincrónica solo una de varias operaciones asincrónicas que se representan como tareas para completar.  Este método actúa en cuatro casos de uso principales:
 
-- Redundancia:  Realizar una operación varias veces y seleccionar la que se complete primero (por ejemplo, ponerse en contacto con varios servicios web de cotización bursátil que generen un único resultado y seleccionar el que se complete más rápido).
+- Redundancia: realizar una operación varias veces y seleccionar la que se complete primero (por ejemplo, ponerse en contacto con varios servicios web de cotización bursátil que va a generar un único resultado y seleccionar la que se completa con más rapidez).
 
-- Intercalación:  Iniciar varias operaciones y esperar a que todas ellas se completen, pero procesarlas a medida que se completan.
+- Intercalación: iniciar varias operaciones y esperar que se completen todas, pero procesarlas a medida que se completan.
 
-- Limitación:  Permitir que comiencen otras operaciones a medida que otras se completan.  Esto es una extensión del escenario de intercalación.
+- Limitación: permitir que operaciones adicionales comiencen a medida que otras se completan.  Esto es una extensión del escenario de intercalación.
 
-- Salida anticipada:  Por ejemplo, una operación representada por la tarea t1 puede agruparse en una tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> con otra tarea t2 y se puede esperar en la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A>. La tarea t2 podría representar un tiempo de espera o cancelación, o alguna otra señal que hace que la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> se complete antes de que finalice t1.
+- Recursividad temprana: por ejemplo, una operación representada por la tarea t1 puede agruparse en una tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> con otra tarea t2, y puede esperar a la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A>. La tarea t2 podría representar un tiempo de espera o cancelación, o alguna otra señal que hace que la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> se complete antes de que finalice t1.
 
 #### <a name="redundancy"></a>Redundancia
  Considere un caso en el que quiera tomar la decisión de comprar o no una acción.  Hay varios servicios web de recomendación bursátil en los que confía, pero según la carga diaria, cada servicio puede acabar ralentizándose en momentos diferentes.  Puede usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para recibir una notificación cuando se complete cualquier operación:
@@ -288,7 +288,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Además, aunque una primera tarea se complete correctamente, las tareas subsiguientes pueden producir un error.  En este punto, tiene varias opciones para tratar las excepciones:  Puede esperar hasta que se hayan completado todas las tareas iniciadas, en cuyo caso puede utilizar el método <xref:System.Threading.Tasks.Task.WhenAll%2A>, o bien decidir que todas las excepciones son importantes y deben haber iniciado sesión.  Para ello, puede usar las continuaciones para recibir una notificación cuando se hayan completado las tareas de forma asincrónica:
+ Además, aunque una primera tarea se complete correctamente, las tareas subsiguientes pueden producir un error.  En este punto, tiene varias opciones para tratar las excepciones: puede esperar hasta que han completado todas las tareas iniciadas, en cuyo caso puede utilizar el método <xref:System.Threading.Tasks.Task.WhenAll%2A>, o bien puede decidir que todas las excepciones son importantes y se deben registrar.  Para ello, puede usar las continuaciones para recibir una notificación cuando se hayan completado las tareas de forma asincrónica:
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -835,6 +835,6 @@ private static void Produce(int data)
 
 ## <a name="see-also"></a>Vea también
 
-- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP])
+- [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
 - [Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

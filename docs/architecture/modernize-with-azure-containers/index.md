@@ -3,10 +3,10 @@ title: Modernización de las aplicaciones .NET existentes con la nube de Azure y
 description: Obtenga información sobre cómo elevar, desplazar y modernizar las aplicaciones existentes en la nube de Azure y en los contenedores con este e-book.
 ms.date: 04/28/2018
 ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628453"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (segunda edición)

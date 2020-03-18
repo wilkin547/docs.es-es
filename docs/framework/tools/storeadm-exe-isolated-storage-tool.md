@@ -9,10 +9,10 @@ helpviewer_keywords:
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715715"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
@@ -30,7 +30,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/list**|Muestra todos los almacenes existentes del usuario actual. Entre estos se incluyen los almacenes de todas las aplicaciones o ensamblados ejecutados por este usuario.|  

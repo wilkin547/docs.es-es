@@ -3,10 +3,10 @@ title: Implementación de comunicación basada en eventos entre microservicios (
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los eventos de integración para implementar la comunicación basada en eventos entre microservicios.
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712408"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0036fc2b03dde64d24d883e55b9f00c931f0c218
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70997716"
 ---
 ### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>La interoperabilidad de .NET se ejecutará ahora con QueryInterface para IAgileObject (una interfaz de WinRT)

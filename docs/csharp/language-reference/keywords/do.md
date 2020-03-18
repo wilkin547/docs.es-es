@@ -8,10 +8,10 @@ helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
 ms.openlocfilehash: 38224ce70c19ff67ad80b99d3da52155849f1341
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713600"
 ---
 # <a name="do-c-reference"></a>do (Referencia de C#)
@@ -30,7 +30,7 @@ En el ejemplo siguiente se muestra el uso de la instrucción `do`. Haga clic en 
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, vea la sección sobre la [instrucción do](~/_csharplang/spec/statements.md#the-do-statement) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).
 

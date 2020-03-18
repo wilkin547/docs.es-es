@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para leer texto de archivos con StreamReader
+title: 'Cómo: Leer texto de archivos con StreamReader'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading files [Visual Basic], text
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
 ms.openlocfilehash: 572463d1f03d768fb133f2dac59b012051f053bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334563"
 ---
-# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Procedimiento para leer texto de archivos con StreamReader (Visual Basic)
+# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Cómo: Leer texto de archivos con StreamReader (Visual Basic)
 
 El objeto `My.Computer.FileSystem` proporciona métodos para abrir un <xref:System.IO.TextReader> y un <xref:System.IO.TextWriter>. Estos métodos, `OpenTextFileWriter` y `OpenTextFileReader`, son métodos avanzados que no aparecen en IntelliSense a menos que seleccione la pestaña **Todos**.  
   

@@ -3,10 +3,10 @@ title: LINQ y directorios de archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
 ms.openlocfilehash: fe503584e7d14e8d1dd281eb644f0723782feb4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714624"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ y directorios de archivos (C#)

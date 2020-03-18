@@ -3,10 +3,10 @@ title: Instalación de .NET Framework 3.5 en Windows 10, 8.1 y 8
 description: Aprenda a instalar .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8.
 ms.date: 07/16/2018
 ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965950"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Instalación de .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8
@@ -41,7 +41,7 @@ Puede habilitar .NET Framework 3.5 mediante el Panel de control de Windows. Esta
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Solución de problemas de instalación de .NET Framework 3.5
 
-Durante la instalación es posible que encuentre el error 0x800f0906, 0x800f0907, 0x800f081f o 0x800F0922. En ese caso, consulte [Error de instalación de .NET Framework 3.5: 0x800f0906, 0x800f0907 o 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) para obtener información sobre cómo resolver estos problemas.
+Durante la instalación es posible que encuentre el error 0x800f0906, 0x800f0907, 0x800f081f, o 0x800F0922. En ese caso, consulte [Error de instalación de .NET Framework 3.5: 0x800F0906, 0x800F081F, 0x800F0907](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) para ver cómo solucionar estos problemas.
 
 Si todavía no puede resolver el problema de instalación o no dispone de una conexión a Internet, puede intentar instalarlo mediante el soporte de instalación de Windows. Para obtener más información, consulte [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism) (Implementación de .NET Framework 3.5 mediante Administración y mantenimiento de imágenes de implementación). Si no tiene los medios para realizar la instalación, vea [Crear medios de instalación de Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
 

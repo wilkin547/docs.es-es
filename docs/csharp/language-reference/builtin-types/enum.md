@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450874"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847719"
 ---
 # <a name="enumeration-types-c-reference"></a>Tipos de enumeración (referencia de C#)
 
@@ -54,7 +54,7 @@ Un tipo de enumeración se usa para representar una opción de un conjunto de va
 
 Si quiere que un tipo de enumeración represente una combinación de opciones, defina los miembros de enumeración de esas opciones de modo que una opción individual sea un campo de bits. Es decir, los valores asociados de esos miembros de enumeración deben ser las potencias de dos. Luego, puede usar los [operadores lógicos bit a bit`|` o `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) para combinar o formar intersección de combinaciones de opciones, respectivamente. Para indicar que un tipo de enumeración declara campos de bits, aplíquele el atributo [Flags](xref:System.FlagsAttribute). Como se muestra en el ejemplo siguiente, también puede incluir algunas combinaciones típicas en la definición de un tipo de enumeración.
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
 Para más información y ver algunos ejemplos, consulte la página de referencia de API de <xref:System.FlagsAttribute?displayProperty=nameWithType> y la sección [miembros no exclusivos y el atributo Flags](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) de la página de referencia de API de <xref:System.Enum?displayProperty=nameWithType>.
 
@@ -68,7 +68,7 @@ A partir C# 7.3, puede usar `System.Enum` en una restricción de clase base (con
 
 Para cualquier tipo de enumeración, existen conversiones explícitas entre el tipo de enumeración y su tipo entero subyacente. Si convierte (usa[cast](../operators/type-testing-and-cast.md#cast-operator-)) un valor de enumeración a su tipo subyacente, el resultado es el valor entero asociado de un miembro de enumeración.
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
 Use el método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar si un tipo de enumeración contiene un miembro de enumeración con el valor asociado determinado.
 

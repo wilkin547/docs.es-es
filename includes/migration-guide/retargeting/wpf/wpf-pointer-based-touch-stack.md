@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: a620028a4e286799a6762c57145264ac0e2dbaf9
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3463b6c45952aab0023e40921739e84eb51ca001
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859156"
 ---
 ### <a name="wpf-pointer-based-touch-stack"></a>Pila táctil basada en punteros de WPF
@@ -15,4 +15,3 @@ ms.locfileid: "67859156"
 |Ámbito|Borde|
 |Versión|4.7|
 |Tipo|Redestinación|
-

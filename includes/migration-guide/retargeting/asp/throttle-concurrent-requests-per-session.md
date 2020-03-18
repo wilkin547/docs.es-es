@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: db8eb017bdf166b0f1a241f5a8f7db9b9430898a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 9c3eedb7f7d4cd030a12c141b8630876c1ffdb4d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859117"
 ---
 ### <a name="throttle-concurrent-requests-per-session"></a>Límite de solicitudes simultáneas por sesión
@@ -15,4 +15,3 @@ ms.locfileid: "67859117"
 |Ámbito|Borde|
 |Versión|4.7|
 |Tipo|Redestinación|
-

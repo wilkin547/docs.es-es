@@ -6,10 +6,10 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937611"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espacios de nombres (Guía de programación de C#)
@@ -41,7 +41,7 @@ Los espacios de nombres tienen las propiedades siguientes:
 - La directiva `using` obvia la necesidad de especificar el nombre del espacio de nombres para cada clase.
 - El espacio de nombres `global` es el espacio de nombres "raíz": `global::System` siempre hará referencia al espacio de nombres <xref:System> de .NET.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para más información, vea la sección [Espacio de nombres](~/_csharplang/spec/namespaces.md) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
@@ -52,4 +52,4 @@ Para más información, vea la sección [Espacio de nombres](~/_csharplang/spec/
 - [Procedimiento para usar el espacio de nombres My](how-to-use-the-my-namespace.md)
 - [Nombres de identificador](../inside-a-program/identifier-names.md)
 - [using (directiva)](../../language-reference/keywords/using-directive.md)
-- [:: !](../../language-reference/operators/namespace-alias-qualifier.md)
+- [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)

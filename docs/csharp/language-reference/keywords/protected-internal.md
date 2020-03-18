@@ -3,10 +3,10 @@ title: 'protected internal: Referencia de C#'
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713201"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Referencia de C#)
@@ -61,7 +61,7 @@ En el segundo archivo, un intento de tener acceso a `myValue` a través de una i
 
 Los miembros de struct no pueden ser `protected internal`, porque los structs no se heredan.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394185"
 ---
 ### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: los métodos UseSignalR y UseConnections se han marcado como obsoletos

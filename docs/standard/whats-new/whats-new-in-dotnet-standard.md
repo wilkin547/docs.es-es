@@ -5,10 +5,10 @@ ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921056"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novedades de .NET Standard
@@ -69,7 +69,7 @@ Si instala Visual Studio con la carga de trabajo de **desarrollo multiplataforma
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 ![Agregar un proyecto de biblioteca nuevo de .NET Standard](./media/std-project-cs.png)
 
@@ -79,7 +79,7 @@ Si usa la CLI de .NET Core, el siguiente comando [dotnet new](../../core/tools/d
 dotnet new classlib
 ```
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 ![Agregar un proyecto de biblioteca nuevo de .NET Standard](./media/std-project-vb.png)
 

@@ -5,10 +5,10 @@ ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
 ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73458173"
 ---
 # <a name="what-is-apache-spark"></a>¿Qué es Apache Spark?
@@ -23,7 +23,7 @@ Es posible que considere la posibilidad de usar una arquitectura de macrodatos s
 
 [Extracción, transformación y carga de datos (ETL)](/azure/architecture/data-guide/relational-data/etl) es el proceso de recopilación de datos de uno o varios orígenes, su modificación y el traslado a un nuevo almacén de datos. Existen varias maneras de transformar datos, como las siguientes:
 
-* Filtrado
+* Filtros
 * Ordenar
 * Agregación
 * Combinación
@@ -73,12 +73,12 @@ El administrador de clústeres se comunica con el controlador y los ejecutores p
 * Administrar la división de programas
 * Administrar la ejecución de programas
 
-## <a name="language-support"></a>Compatibilidad con lenguajes
+## <a name="language-support"></a>Compatibilidad con idiomas
 
 Apache Spark admite los lenguajes de programación siguientes:
 
 * Scala
-* Python
+* Plantillas de
 * Java
 * SQL
 * R

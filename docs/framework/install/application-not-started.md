@@ -3,10 +3,10 @@ title: Solución del error "No se pudo iniciar esta aplicación"
 description: Obtenga información sobre qué hacer si ve el cuadro de diálogo "No se pudo iniciar esta aplicación".
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965911"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Solución de un mensaje de error "No se pudo iniciar esta aplicación"

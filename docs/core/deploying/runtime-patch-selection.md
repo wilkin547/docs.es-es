@@ -4,10 +4,10 @@ description: Obtenga información sobre los cambios de dotnet publish para imple
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740786"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Puesta al día del runtime de implementación autocontenida

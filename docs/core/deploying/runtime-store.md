@@ -3,10 +3,10 @@ title: Almacenamiento de paquetes en tiempo de ejecución
 description: Aprenda a usar el almacenamiento de paquetes en tiempo de ejecución para destinar manifiestos que usa .NET Core.
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448963"
 ---
 # <a name="runtime-package-store"></a>Almacenamiento de paquetes en tiempo de ejecución

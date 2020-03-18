@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: d374ded6a29ce815beeb26505010563a26d978e8
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: b92086c8ccf7592ce70b75bd31d4ea255c35b543
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803468"
 ---
 ### <a name="hwndhost-now-correctly-resizes-child-hwnd-during-dpi-changes"></a>HwndHost ahora cambia correctamente el tamaño del elemento secundario HWND durante los cambios de PPP
@@ -15,4 +15,3 @@ ms.locfileid: "67803468"
 |Ámbito|Major|
 |Versión|4.8|
 |Tipo|Redestinación|
-

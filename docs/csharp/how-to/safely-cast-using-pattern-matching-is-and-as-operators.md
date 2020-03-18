@@ -7,10 +7,10 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973090"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Procedimiento para convertir de forma segura mediante la coincidencia de patrones y los operadores is y as

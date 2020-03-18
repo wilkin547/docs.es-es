@@ -3,10 +3,10 @@ title: Información general
 ms.date: 12/13/2019
 description: Introducción a Microsoft.Data.Sqlite
 ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543604"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Introducción a Microsoft.Data.Sqlite

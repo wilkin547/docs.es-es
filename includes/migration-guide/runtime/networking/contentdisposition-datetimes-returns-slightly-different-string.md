@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 529d1b83c0637f705b725a64aa82e2c053bbfd19
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 705bbd0e0bf80e0726d41898685a5e166e039f99
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858469"
 ---
 ### <a name="contentdisposition-datetimes-returns-slightly-different-string"></a>ContentDisposition DateTimes devuelve una cadena ligeramente diferente
@@ -16,4 +16,3 @@ ms.locfileid: "67858469"
 |Versión|4.6|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=nameWithType></li><li><xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=nameWithType></li></ul>|
-

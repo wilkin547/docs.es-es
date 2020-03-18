@@ -27,10 +27,10 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156314"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
@@ -63,7 +63,7 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
 - El término general *tipo genérico* incluye tanto tipos construidos como definiciones de tipo genérico.  
   
-- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (Covarianza y contravarianza).  
   
 - Las*restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor sin parámetros o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
   
@@ -131,7 +131,7 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
 
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Colecciones genéricas en .NET](../../../docs/standard/generics/collections.md)|Describe las clases de colección genérica y otros tipos genéricos en .NET.|  
 |[Delegados genéricos para manipular matrices y listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Describe los delegados genéricos para conversiones, predicados de búsqueda y acciones realizadas en los elementos de una matriz o colección.|  
@@ -139,7 +139,7 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
 |[Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md)|Describe la covarianza y la contravarianza en los parámetros de tipo genérico.|  
 |[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Proporciona información de resumen sobre las características y escenarios de uso de los tipos de colección en .NET, incluidos los tipos genéricos.|  
 |[Cuándo utilizar colecciones genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Describe las reglas generales para determinar cuándo utilizar los tipos de colección genéricos.|  
-|[Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
+|[Definición de un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
 |[Tipos genéricos en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Describe los genéricos a los usuarios de Visual Basic e incluye temas sobre el uso y la definición de tipos genéricos.|  
 |[Introducción a los genéricos](../../csharp/programming-guide/generics/index.md)|Proporciona información general sobre la definición y uso de tipos genéricos para usuarios de C#.|  
 |[Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Describe los genéricos a los usuarios de C++ e incluye las diferencias entre genéricos y plantillas.|  

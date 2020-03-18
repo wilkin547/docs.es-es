@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937291"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Marco compartido: se han quitado los ensamblados de Microsoft.AspNetCore.App
@@ -54,7 +54,7 @@ No será necesario que los proyectos consuman ensamblados en `Microsoft.AspNetCo
 
 Este cambio no se aplica a todos los archivos binarios a los que se hace referencia a través de `Microsoft.AspNetCore.App` en ASP.NET Core 2.x. Entre las excepciones destacables se incluyen las siguientes:
 
-- Las bibliotecas de `Microsoft.Extensions` que todavía tienen .NET Standard como destino estarán disponibles como paquetes NuGet (vea https://github.com/dotnet/extensions)).
+- Las bibliotecas de `Microsoft.Extensions` que todavía tienen .NET Standard como destino estarán disponibles como paquetes NuGet (vea https://github.com/dotnet/extensions) ).
 - API generadas por el equipo de ASP.NET Core que no forman parte de `Microsoft.AspNetCore.App`. Por ejemplo, los componentes siguientes están disponibles como paquetes NuGet:
   - Entity Framework Core
   - API que proporcionan integración de terceros

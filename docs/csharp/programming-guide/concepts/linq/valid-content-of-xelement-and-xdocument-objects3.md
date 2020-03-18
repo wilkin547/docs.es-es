@@ -3,10 +3,10 @@ title: Contenido válido de objetos XElement y XDocument
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590938"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenido válido de objetos XElement y XDocument
@@ -45,7 +45,7 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
+- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>  
   
  Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XNode> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Si la colección contiene texto (u objetos convertidos a texto), el texto de la colección se concatena y se agrega como un nodo de texto.  
   
@@ -75,7 +75,7 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Constructores y funciones que permiten agregar contenido  
  Los métodos siguientes permiten agregar contenido secundario a un objeto <xref:System.Xml.Linq.XElement> o a un objeto <xref:System.Xml.Linq.XDocument>:  
   
-|Método|DESCRIPCIÓN|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Construye un objeto <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Construye un objeto <xref:System.Xml.Linq.XDocument>.|  
@@ -90,4 +90,4 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
   
 ## <a name="see-also"></a>Vea también
 
-- [Creating XML Trees (C#)](./linq-to-xml-overview.md) (Crear árboles XML (C#))
+- [Crear árboles XML (C#)](./linq-to-xml-overview.md)

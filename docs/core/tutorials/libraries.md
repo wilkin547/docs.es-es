@@ -4,10 +4,10 @@ description: Aprenda a crear bibliotecas de .NET Core con la CLI de .NET Core.
 author: cartermp
 ms.date: 05/01/2017
 ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503509"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Desarrollo de bibliotecas con la CLI de .NET Core

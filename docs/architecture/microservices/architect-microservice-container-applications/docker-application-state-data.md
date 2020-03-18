@@ -3,10 +3,10 @@ title: Estado y datos en aplicaciones de Docker
 description: Administración de estado y datos en aplicaciones de Docker. Las instancias de microservicios son prescindibles, pero LOS DATOS NO, aquí se explica cómo controlarlos con microservicios.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771441"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716461"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
@@ -158,7 +158,7 @@ Las cuestiones de seguridad pueden afectar también al modo en que se implementa
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Description|
 |-----------|-----------------|
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](how-the-runtime-locates-assemblies.md)|Describe la forma en que Common Language Runtime determina el ensamblado que se va a utilizar para llevar a cabo una solicitud de enlace.|
 |[Procedimientos recomendados para cargar ensamblados](best-practices-for-assembly-loading.md)|Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.|

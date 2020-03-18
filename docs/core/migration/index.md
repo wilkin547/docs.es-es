@@ -3,10 +3,10 @@ title: Migración de .NET Core desde project.json
 description: Aprenda a migrar un proyecto anterior de .NET Core con project.json.
 ms.date: 07/19/2017
 ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77450692"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migración de proyectos de .NET Core desde project.json
@@ -28,7 +28,7 @@ La migración desde *project.json* a *.csproj* puede realizarse mediante uno de 
 
 Ambos métodos usan el mismo motor subyacente para migrar los proyectos, por lo que los resultados serán los mismos para ambos. En la mayoría de los casos, tan solo será necesario usar una de estas dos formas de migrar *project.json* a *csproj*, y no se requerirá ninguna otra edición manual del archivo del proyecto. El archivo *.csproj* resultante tendrá el mismo nombre que el directorio que lo contiene.
 
-### <a name="visual-studio"></a>Programa para la mejora
+### <a name="visual-studio"></a>Visual Studio
 
 Al abrir un archivo *.xproj* o un archivo de solución que hace referencia a archivos *.xproj* en Visual Studio 2017 o Visual Studio 2019, versión 16.2 y versiones anteriores, se abre el cuadro de diálogo **Actualización unidireccional**. El cuadro de diálogo muestra los proyectos que se van a migrar. Si se abre un archivo de solución, se enumeran todos los proyectos especificados en el archivo de solución. Revise la lista de proyectos que se van a migrar y haga clic en **Aceptar**.
 

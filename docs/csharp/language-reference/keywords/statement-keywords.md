@@ -6,10 +6,10 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
 ms.openlocfilehash: c829414cc197b18ad0dbd9c2cf401a05f6f2fbc6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715143"
 ---
 # <a name="statement-keywords-c-reference"></a>Palabras clave de instrucciones (Referencia de C#)

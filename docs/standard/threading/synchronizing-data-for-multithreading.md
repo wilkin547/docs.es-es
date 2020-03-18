@@ -8,10 +8,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159395"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para multithreading
@@ -71,6 +71,6 @@ Solo en aplicaciones de .NET Framework y Xamarin, puede usar <xref:System.Runtim
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
-- [Información general sobre las primitivas de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
 - [SyncLock (instrucción)](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock (instrucción)](../../csharp/language-reference/keywords/lock-statement.md)

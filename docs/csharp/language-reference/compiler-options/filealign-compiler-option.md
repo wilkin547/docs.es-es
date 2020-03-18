@@ -17,10 +17,10 @@ helpviewer_keywords:
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603008"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (Opciones del compilador de C#)
@@ -58,4 +58,4 @@ La opción **-filealign** permite especificar el tamaño de las secciones en el 
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

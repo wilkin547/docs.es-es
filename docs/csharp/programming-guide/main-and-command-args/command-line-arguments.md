@@ -5,10 +5,10 @@ helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
 ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093515"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
@@ -38,13 +38,13 @@ También se puede usar el tipo de C# `long`, que tiene como alias `Int64`:
 long num = long.Parse(args[0]);
 ```
 
-También puede usar el método `ToInt64` de la clase `Convert` para hacer lo mismo:
+También puede usar el método `Convert` de la clase `ToInt64` para hacer lo mismo:
 
 ```csharp
 long num = Convert.ToInt64(s);
 ```
 
-Para obtener más información, vea <xref:System.Int64.Parse%2A> y <xref:System.Convert>.
+Para obtener más información, consulte <xref:System.Int64.Parse%2A> y <xref:System.Convert>.
 
 ## <a name="example"></a>Ejemplo
 
@@ -71,7 +71,7 @@ Para compilar y ejecutar la aplicación desde un símbolo del sistema, siga esto
 5. El comando genera este resultado: `The factorial of 3 is 6.`
 
 > [!NOTE]
-> Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).
+> Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).
 
 ## <a name="see-also"></a>Vea también
 

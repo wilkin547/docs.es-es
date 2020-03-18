@@ -3,10 +3,10 @@ title: Administración de entornos de Docker en producción
 description: Familiarícese con los puntos clave para administrar un entorno de producción basado en contenedores.
 ms.date: 02/15/2019
 ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834503"
 ---
 # <a name="manage-production-docker-environments"></a>Administración de entornos de Docker en producción
@@ -23,7 +23,7 @@ En la tabla 6-1 se enumeran las herramientas de administración comunes relacio
 
 **Tabla 6-1**. Herramientas de administración de Docker
 
-| Herramientas de administración | DESCRIPCIÓN | Orquestadores relacionados |
+| Herramientas de administración | Description | Orquestadores relacionados |
 |------------------|-------------|-----------------------|
 | [Azure Monitor para contenedores](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Herramienta de administración de Kubernetes dedicada a Azure. | Azure Kubernetes Services (AKS) |
 | [Interfaz de usuario web de Kubernetes (panel)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Herramienta de administración de Kubernetes que puede supervisar y administrar un clúster local de Kubernetes. | Azure Kubernetes Service (AKS)<br/>Kubernetes local |

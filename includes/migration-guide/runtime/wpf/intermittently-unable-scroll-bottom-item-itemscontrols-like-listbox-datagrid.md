@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2674edc595d8e4e1e4c2ee42b39aa59265127462
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803153"
 ---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>Incapacidad intermitente para desplazarse hasta el último elemento de instancias ItemsControl (como ListBox y DataGrid) al usar elementos DataTemplate personalizados
@@ -15,4 +15,3 @@ ms.locfileid: "67803153"
 |Ámbito|Secundaria|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
-

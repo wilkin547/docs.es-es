@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937209"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (Opciones del compilador de C#)
@@ -51,4 +51,4 @@ La opción **-baseaddress** permite especificar la dirección base preferida par
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

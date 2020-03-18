@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329593"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Acceso a los puertos del equipo (Visual Basic)
@@ -18,16 +18,16 @@ El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener 
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Cómo: Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ [Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Describe cómo mostrar los puertos serie disponibles.  
   
- [Cómo: Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
  Muestra cómo marcar un módem conectado al puerto serie de un equipo.  
   
- [Cómo: Enviar cadenas a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [Enviar cadenas a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
  Muestra cómo enviar una cadena al puerto serie de un equipo.  
   
- [Cómo: Recibir cadenas de puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ [Recibir cadenas de puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
  Muestra cómo recibir una cadena desde el puerto serie de un equipo.  
   
  [Operaciones de puertos en .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  

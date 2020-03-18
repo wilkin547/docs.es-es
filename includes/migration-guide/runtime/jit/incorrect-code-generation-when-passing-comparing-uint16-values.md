@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: b23909c53b451b4b18bf0ccdf59f51e7c8e3114f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: ad624a665dbe8e989ea05acc20213809e515e6ac
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802436"
 ---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>Generación de código incorrecto al pasar y comparar valores UInt16
@@ -15,4 +15,3 @@ ms.locfileid: "67802436"
 |Ámbito|Borde|
 |Versión|4.7|
 |Tipo|Tiempo de ejecución|
-

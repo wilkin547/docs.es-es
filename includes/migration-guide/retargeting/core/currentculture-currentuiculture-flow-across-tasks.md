@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: de40d16dbb5e7a7a49ae0988342b3eb75bc078c5
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: efe8a2dd98865f6a24b65ce0f08eb0c574b708f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804578"
 ---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>CurrentCulture y CurrentUICulture fluyen entre tareas
@@ -16,4 +16,3 @@ ms.locfileid: "67804578"
 |Versión|4.6|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType></li></ul>|
-

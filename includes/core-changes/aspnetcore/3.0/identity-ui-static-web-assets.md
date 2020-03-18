@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041664"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>Identity: la interfaz de usuario usa la característica de recursos web estáticos

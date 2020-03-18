@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716537"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
@@ -123,13 +123,13 @@ Para crear un paquete:
 
     3. **Ejecutar:** elija **Oculto**.
 
-    4. **El programa se puede ejecutar:** elija la opción que especifica que el programa se puede ejecutar independientemente de si un usuario ha iniciado sesión.
+    4. **El programa se puede ejecutar:** elija la opción que especifica que el programa puede ejecutarse independientemente de si un usuario ha iniciado sesión.
 
 8. En la página **Requisitos**, elija **Siguiente** para aceptar los valores predeterminados y, después, finalice el asistente.
 
 En la tabla siguiente se describen las opciones de la línea de comandos especificadas en el paso 7.
 
-|Opción|Descripción|
+|Opción|Description|
 |------------|-----------------|
 |**/q**|Establece el modo silencioso. No se requiere proporcionar ningún dato y no se muestra ningún resultado.|
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, Configuration Manager debe controlar el reinicio del equipo.|
@@ -188,7 +188,7 @@ Para implementar el paquete y el programa de .NET Framework 4.5:
 9. En la página **Experiencia del usuario** del asistente, use los valores predeterminados y elija **Siguiente**.
 
     > [!WARNING]
-    > El entorno de producción puede tener directivas que requieran selecciones distintas para la programación de distribución. Para obtener información sobre estas opciones, vea [Advertisement Name Properties: Schedule Tab](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) (Propiedades de nombre de anuncio: pestaña Programación).
+    > El entorno de producción puede tener directivas que requieran selecciones distintas para la programación de distribución. Para obtener información sobre estas opciones, vea el tema sobre [la pestaña programación de las propiedades de nombre de anuncio](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
 
 10. En la página **Puntos de distribución** del asistente, use los valores predeterminados y elija **Siguiente**.
 
@@ -251,7 +251,7 @@ En la siguiente tabla se muestra una lista de los códigos devueltos más habitu
 
 Para obtener vínculos a información detallada, vea la sección siguiente, [Descargar códigos de error](#additional_error_codes).
 
-|Código devuelto|Descripción|
+|Código devuelto|Description|
 |-----------------|-----------------|
 |0|La instalación se completó correctamente.|
 |1602|El usuario canceló la instalación.|

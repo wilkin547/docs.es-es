@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157342"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240914"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Prueba unitaria de C# con MSTest y .NET Core
 
@@ -144,11 +144,11 @@ En el directorio *unit-testing-using-mstest*, vuelva a ejecutar `dotnet test`. E
 
 ## <a name="add-more-features"></a>Adición de más características
 
-Ahora que la prueba se ha superado, es el momento de escribir más. Hay otros casos simples para números primos: 0, -1. Puede agregar pruebas nuevas con el [atributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), pero este proceso enseguida se hace tedioso. Hay otros atributos de MSTest que le permiten escribir un conjunto de pruebas similares.  Un [atributo DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el [atributo DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) para especificar valores para esas entradas.
+Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregar pruebas nuevas con el [atributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), pero este proceso enseguida se hace tedioso. Hay otros atributos de MSTest que le permiten escribir un conjunto de pruebas similares.  Un [atributo DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el [atributo DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) para especificar valores para esas entradas.
 
 En lugar de crear pruebas nuevas, aplique estos dos atributos para crear una sola prueba controlada por datos. La prueba controlada por datos es un método que prueba varios valores menores que dos, que es el número primo menor:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-mstest/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Ejecute `dotnet test`, y dos de estas pruebas no se superarán. Para superar todas las pruebas, cambie la cláusula `if` al principio del método:
 

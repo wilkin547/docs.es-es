@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: 6038e64a2aa50d09923454e346f05c58a6c1e2fb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920708"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Administrador de paquetes de Ubuntu 16.04: instalación de .NET Core

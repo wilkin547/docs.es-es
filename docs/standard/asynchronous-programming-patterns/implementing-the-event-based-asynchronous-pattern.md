@@ -18,10 +18,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
 ms.openlocfilehash: 9865fa169e0776765f9a97ec0a7b4555bf253886
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67663704"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en eventos
@@ -30,7 +30,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
 
 El modelo asincrónico basado en eventos proporciona una forma estandarizada de empaquetar una clase que tenga características asincrónicas. Si se implementa con clases auxiliares como <xref:System.ComponentModel.AsyncOperationManager>, la clase funciona correctamente en cualquier modelo de aplicación, incluidas aplicaciones de ASP.NET, de consola y de Windows Forms.
 
-Para obtener un ejemplo en el que se implementa el modelo asincrónico basado en eventos, vea: [Procedimiento: Implementación de un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).
+Para obtener un ejemplo que implemente el modelo asincrónico basado en eventos, consulte [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) (Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos).
 
 Para las operaciones asincrónicas sencillas, puede encontrar el componente <xref:System.ComponentModel.BackgroundWorker> adecuado. Para más información sobre <xref:System.ComponentModel.BackgroundWorker>, vea [Cómo: Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
 
@@ -261,9 +261,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Cómo: Implementación de un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Cómo: Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Cómo: Implementar un formulario que usa una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Implementar un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Decisión de cuándo implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 01bbc49cb0febc5a29dafc7c311b848387a4094a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e04134ec731c5e7bede3388621078c6518805ec2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803534"
 ---
 ### <a name="add-selectiontextbrush-public-property-to-textboxpasswordbox-non-adorner-selection"></a>Adición de la propiedad pública SelectionTextBrush a la selección de no basada en Adorner de TextBox y PasswordBox
@@ -16,4 +16,3 @@ ms.locfileid: "67803534"
 |Versión|4.8|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrushProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush?displayProperty=nameWithType></li><li>[System.Windows.Controls.TextBox](xref:System.Windows.Controls.TextBox)</li><li>[System.Windows.Controls.PasswordBox](xref:System.Windows.Controls.PasswordBox)</li></ul>|
-

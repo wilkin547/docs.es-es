@@ -3,10 +3,10 @@ title: Uso de comandos de Windows PowerShell en un archivo DockerFile para confi
 description: Obtenga información sobre cómo usar PowerShell al trabajar con Docker en contenedores de Windows.
 ms.date: 02/15/2019
 ms.openlocfilehash: e91d278aef1365a111e8d67ff04092dfc6a44185
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673582"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Uso de comandos de Windows PowerShell en un archivo DockerFile para configurar contenedores con Windows (basado en Docker estándar)

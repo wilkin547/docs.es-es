@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70849866"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (Opciones del compilador de C#)
@@ -84,4 +84,4 @@ csc -platform:anycpu filename.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

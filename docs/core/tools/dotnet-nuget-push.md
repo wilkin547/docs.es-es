@@ -4,17 +4,17 @@ description: El comando dotnet nuget push inserta un paquete en el servidor y lo
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503661"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet nuget push`: inserta un paquete en el servidor y lo publica.
 
@@ -26,7 +26,7 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. El comando push usa los detalles del servidor y de las credenciales encontrados en el archivo de configuración NuGet del sistema o en la cadena de archivos de configuración. Para más información sobre los archivos de configuración, consulte [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configuración del comportamiento de NuGet). La configuración predeterminada de NuGet se obtiene mediante la carga de *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS), y luego la carga de cualquier archivo *nuget.config* o *.nuget\nuget.config* comenzando desde la raíz de la unidad y finalizando en el directorio actual.
 
@@ -64,7 +64,7 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
 
 - **`--no-service-endpoint`**
 
-  No agrega "api/v2/paquete" a la dirección URL de origen. Opción disponible desde el SDK de .NET Core 2.1.
+  No agrega "api/v2/paquete" a la dirección URL de origen. Opción disponible a partir del SDK de .NET Core 2.1.
 
 - **`-s|--source <SOURCE>`**
 

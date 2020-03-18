@@ -3,10 +3,10 @@ title: Eventos de LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253173"
 ---
 # <a name="linq-to-xml-events-c"></a>Eventos de LINQ to XML (C#)
@@ -19,21 +19,21 @@ Los eventos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permiten re
 ## <a name="types-and-events"></a>Tipos y eventos  
  Puede utilizar los siguientes tipos a la hora de trabajar con eventos:  
   
-|Tipo|DESCRIPCIÓN|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Especifica el tipo de evento cuando se genera éste para un <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Proporciona datos para los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.|  
   
  Los siguientes eventos se generan cuando se modifica un árbol XML:  
   
-|evento|DESCRIPCIÓN|  
+|evento|Description|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Se produce justo antes de que este <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes se vayan a modificar.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Se produce cuando ha cambiado un <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes.|  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
+### <a name="description"></a>Description  
  Los eventos resultan útiles cuando desea mantener cierta información de agregado en un árbol XML. Por ejemplo, quizá desee mantener el total de una factura que es la suma de los conceptos de la factura. Este ejemplo utiliza eventos para mantener el total de todos los elementos secundarios que se encuentran bajo el elemento complejo `Items`.  
   
 ### <a name="code"></a>Código  

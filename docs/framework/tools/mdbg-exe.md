@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 ms.openlocfilehash: 58502626fed6c9cee52acb673ae34f6024f78b9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715763"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
@@ -32,7 +32,7 @@ MDbg [ProgramName[arguments]] [options]
   
  Los comandos de MDbg.exe distinguen mayúsculas de minúsculas.  
   
-|Comando|Descripción|  
+|Comando|Description|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|Cambia a otro proceso depurado o imprime los procesos disponibles. Los números no son identificadores de proceso reales (PID), sino una lista indizada por 0.|  
 |**a**[**ttach**] [*pid*]|Asocia a un proceso o imprime los procesos disponibles.|  
@@ -55,7 +55,7 @@ MDbg [ProgramName[arguments]] [options]
 |**int**[**ercept**] *FrameNumber*|Revierte el depurador hasta un número de marco especificado.<br /><br /> Si el depurador encuentra una excepción, utilice este comando para revertir el depurador hasta el número de marco especificado. También puede cambiar el estado del programa mediante el comando **set** y seguir usando el comando **go**.|  
 |**k**[**ill**]|Detiene el proceso activo.|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|Muestra los módulos, dominios de aplicación o ensamblados cargados.|  
-|**lo**[**ad**] *assemblyName*|Carga una extensión de la manera siguiente: se carga el ensamblado especificado y se intenta ejecutar el método estático `LoadExtension` del tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
+|**lo**[**ad**] *assemblyName*|Carga una extensión de la forma siguiente: se carga el ensamblado especificado y se intenta ejecutar el método estático `LoadExtension` del tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
 |**log** [*eventType*]|Permite establecer o mostrar los eventos que se van a registrar.|  
 |**mo**[**de**] [*option on/off*]|Establece las distintas opciones de depurador. Utilice `mode` sin opciones para obtener una lista de los modos de depuración y su configuración actual.|  
 |**mon**[**itorInfo**] *monitorReference*|Muestra la información de bloqueo del monitor de objetos.|  

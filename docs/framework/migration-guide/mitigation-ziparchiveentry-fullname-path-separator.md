@@ -9,10 +9,10 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457735"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigación: separador de ruta de acceso ZipArchiveEntry.FullName
@@ -26,7 +26,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, ha c
  El impacto de este cambio en los archivos .zip que se descomprimen en el sistema operativo Windows por las API en el espacio de nombres de .NET Framework <xref:System.IO> debe ser mínimo, ya que estas API pueden controlar sin problemas una barra diagonal ("/") o una barra diagonal inversa ("\\") como carácter separador de la ruta de acceso.  
   
 ## <a name="mitigation"></a>Mitigación  
- Si no desea este comportamiento, puede rechazar la adición de un valor de configuración para la sección [ \<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de rechazo.  
+ Si no desea este comportamiento, puede rechazar la adición de un valor de configuración para la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de rechazo.  
   
 ```xml  
 <runtime>  

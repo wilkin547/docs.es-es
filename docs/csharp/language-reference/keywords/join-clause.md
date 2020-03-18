@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713403"
 ---
 # <a name="join-clause-c-reference"></a>join (Cláusula, Referencia de C#)

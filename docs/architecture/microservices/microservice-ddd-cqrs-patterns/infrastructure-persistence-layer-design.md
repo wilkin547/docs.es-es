@@ -2,12 +2,12 @@
 title: Diseño de la capa de persistencia de infraestructura
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre el modelo de repositorio en el diseño de la capa de persistencia de infraestructura.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737950"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846814"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Diseño del nivel de persistencia de infraestructura
 
@@ -109,9 +109,6 @@ Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, 
 ## <a name="additional-resources"></a>Recursos adicionales
 
 ### <a name="repository-pattern"></a>Modelo de repositorio
-
-- **The Repository Pattern** \ (El modelo de repositorio)\
-  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt y Rob Mee. Modelo de repositorio.** \
   <https://martinfowler.com/eaaCatalog/repository.html>

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9678c077e278a9d76ffd5c2ce10e63ebe3ad09f7
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68235516"
 ---
 ### <a name="x509certificateclaimsetfindclaims-considers-all-claimtypes"></a>X509CertificateClaimSet.FindClaims considera todos los argumentos claimType

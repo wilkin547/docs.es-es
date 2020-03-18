@@ -3,10 +3,10 @@ title: Creación de versiones del entorno de ejecución y el SDK de .NET Core
 description: En este artículo se le enseña cómo se crean versiones del entorno de ejecución y el SDK de .NET Core (parecido al control de versiones semántico).
 ms.date: 07/26/2018
 ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75777315"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
@@ -80,11 +80,11 @@ Los archivos descargados para .NET Core indican la versión; por ejemplo, `dotne
 
 ### <a name="preview-versions"></a>Versiones preliminares
 
-Las versiones preliminares tienen un elemento `-preview[number]-([build]|"final")` anexado a la versión. Por ejemplo: `2.0.0-preview1-final`.
+Las versiones preliminares tienen un elemento `-preview[number]-([build]|"final")` anexado a la versión. Por ejemplo, `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versiones de mantenimiento
 
-Cuando se lanza una versión, las ramas de la versión generalmente dejan de producir compilaciones diarias y, en su lugar, empiezan a generar compilaciones de mantenimiento. Las versiones de mantenimiento tienen un elemento `-servicing-[number]` anexado a la versión. Por ejemplo: `2.0.1-servicing-006924`.
+Cuando se lanza una versión, las ramas de la versión generalmente dejan de producir compilaciones diarias y, en su lugar, empiezan a generar compilaciones de mantenimiento. Las versiones de mantenimiento tienen un elemento `-servicing-[number]` anexado a la versión. Por ejemplo, `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>Relación con versiones de .NET Standard
 
@@ -107,7 +107,7 @@ Cada versión de .NET Core implementa una versión de .NET Standard. Implementar
 ## <a name="see-also"></a>Vea también
 
 - [Marcos de trabajo de destino](../../standard/frameworks.md)
-- [Empaquetado de distribución de .NET Core](../build/distribution-packaging.md)
+- [.NET Core distribution packaging](../build/distribution-packaging.md) (Empaquetado de distribución de .NET Core)
 - [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Version Binding (Enlace de versión de .NET Core 2+)](https://github.com/dotnet/designs/issues/3)
 - [Imágenes de Docker para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d1ddba72ce25c5e01025d916d52f785b5a1a9e71
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901701"
 ---
 ### <a name="hosting-generic-host-restricts-startup-constructor-injection"></a>Hospedaje: el host genérico restringe la inserción del constructor de Startup

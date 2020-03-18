@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0ab6be6f2c6d8ebbe67051e4e3f967a325e654c8
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804536"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter no representa el elemento `<br/>` de forma correcta
@@ -16,4 +16,3 @@ ms.locfileid: "67804536"
 |Versión|4.6|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
-

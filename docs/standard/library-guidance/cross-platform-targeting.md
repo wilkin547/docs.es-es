@@ -3,10 +3,10 @@ title: Destino multiplataforma para bibliotecas de .NET
 description: Procedimientos recomendados para la creación de bibliotecas de .NET multiplataforma.
 ms.date: 08/12/2019
 ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731448"
 ---
 # <a name="cross-platform-targeting"></a>Destinatarios multiplataforma
@@ -96,7 +96,7 @@ public static class GpsLocation
 
 > El uso de .NET Standard 2.0 de .NET Framework tiene algunos problemas que se han solucionado en .NET Framework 4.7.2. Puede mejorar la experiencia para los desarrolladores que siguen usando .NET Framework 4.6.1 - 4.7.1 ofreciéndoles un archivo binario que se ha creado para .NET Framework 4.6.1.
 
-✔️ DISTRIBUYA la biblioteca mediante un paquete NuGet.
+✔️ DEBE distribuir las bibliotecas mediante un paquete NuGet.
 
 > NuGet seleccionará el mejor destino para el desarrollador y evitará que tenga de tener que elegir la implementación apropiada.
 
@@ -117,7 +117,7 @@ public static class GpsLocation
 
 .NET admite las versiones de destino de .NET Framework que llevan mucho tiempo sin soporte técnico, así como las plataformas que ya no se suelen utilizar. Si bien es valioso hacer que la biblioteca funcione en tantos destinos como sea posible, tener que trabajar con API ausentes puede agregar una sobrecarga significativa. Creemos que ciertos marcos ya no valen la pena como destino, considerando su alcance y limitaciones.
 
-❌ NO incluya un destino de Biblioteca de clases portátil (PCL). Por ejemplo: `portable-net45+win8+wpa81+wp8`.
+❌ NO incluya un destino de Biblioteca de clases portátil (PCL). Por ejemplo, `portable-net45+win8+wpa81+wp8`.
 
 > .NET standard es la forma moderna de admitir las bibliotecas de .NET multiplataforma y reemplaza a las PCL.
 

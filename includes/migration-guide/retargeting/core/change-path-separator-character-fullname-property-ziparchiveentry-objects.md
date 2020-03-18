@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e4860113f45d3b3466e01e5db61d355a8ea745df
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68235608"
 ---
 ### <a name="change-in-path-separator-character-in-fullname-property-of-ziparchiveentry-objects"></a>Cambio en el carácter separador de ruta de acceso de la propiedad FullName de los objetos ZipArchiveEntry

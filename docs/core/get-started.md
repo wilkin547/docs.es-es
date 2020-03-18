@@ -6,10 +6,10 @@ ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714392"
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
@@ -43,7 +43,7 @@ Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriale
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 - [Creación de su primera aplicación de consola con .NET Core en Visual Studio 2019](./tutorials/with-visual-studio.md)
 - [Compilación de una biblioteca de clases con .NET Standard en Visual Studio](./tutorials/library-with-visual-studio.md)
@@ -56,7 +56,7 @@ Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriale
 
 Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.md?pivots=os-windows) para obtener una lista de las versiones de Windows admitidas.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales paso a paso:
 
@@ -68,7 +68,7 @@ Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriale
 
 Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.md?pivots=os-linux) para obtener una lista de las distribuciones y las versiones de Linux admitidas.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales paso a paso:
 

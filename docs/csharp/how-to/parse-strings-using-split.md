@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
 ms.openlocfilehash: b46429f3b55658e1f2a7d21eed714c1d02236c57
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973231"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Procedimiento para analizar cadenas mediante String.Split (Guía de C#)

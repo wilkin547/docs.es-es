@@ -3,17 +3,17 @@ title: Comando dotnet clean
 description: El comando dotnet clean limpia el directorio actual.
 ms.date: 02/14/2020
 ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503754"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet clean`: limpia la salida de un proyecto.
 
@@ -25,7 +25,7 @@ dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--int
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet clean` limpia la salida de la compilación anterior. Se implementa como un [destino MSBuild](/visualstudio/msbuild/msbuild-targets), por lo que el proyecto se evalúa cuando se ejecuta el comando. Solo se limpian las salidas que se crearon durante la compilación. Se limpian las carpetas intermedias (*obj*) y de la salida final (*bin*).
 
@@ -67,7 +67,7 @@ Proyecto o solución de MSBuild que se va a limpiar. Si no se especifica un arch
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Establece el nivel de detalle de MSBuild. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. De manera predeterminada, es `normal`.
+  Establece el nivel de detalle de MSBuild. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. El valor predeterminado es `normal`.
 
 ## <a name="examples"></a>Ejemplos
 

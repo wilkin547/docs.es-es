@@ -3,10 +3,10 @@ title: Categorías de cambios importantes
 description: Obtenga información sobre la forma de clasificar los cambios importantes en .NET Core.
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093050"
 ---
 # <a name="breaking-change-categories"></a>Categorías de cambios importantes

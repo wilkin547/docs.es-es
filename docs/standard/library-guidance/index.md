@@ -3,10 +3,10 @@ title: Guía de la biblioteca .NET de código abierto
 description: Procedimientos recomendados para desarrolladores a la hora de crear bibliotecas .NET de alta calidad
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731426"
 ---
 # <a name="open-source-library-guidance"></a>Guía de la biblioteca de código abierto
@@ -40,7 +40,7 @@ Por otro lado, las recomendaciones de tipo **Es recomendable** generalmente debe
 
 Las recomendaciones de tipo **Evite** mencionan prácticas que, en general, no son convenientes, aunque a veces tiene sentido no seguirlas:
 
-❌ EVITE las referencias de paquetes NuGet que requieren una versión exacta.
+❌ EVITE las referencias de paquetes NuGet que exijan una versión exacta.
 
 Y, por último, las recomendaciones de tipo **No está permitido** indican qué no se puede hacer casi nunca:
 

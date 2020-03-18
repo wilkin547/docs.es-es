@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Realizar escuchas de varias solicitudes de cancelación
+title: 'Cómo: Realizar escuchas de varias solicitudes de cancelación'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138009"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Procedimiento Realizar escuchas de varias solicitudes de cancelación
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Cómo: Realizar escuchas de varias solicitudes de cancelación
 En este ejemplo se muestra cómo escuchar dos tokens de cancelación simultáneamente, para poder cancelar una operación si el token lo solicita.  
   
 > [!NOTE]

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
 ms.openlocfilehash: adfc53cbe4fd603ac3a6de6b9a0162320d5a2e19
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712291"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Procedimiento Controlar una excepción mediante Try y Catch (Guía de programación de C#)

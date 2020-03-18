@@ -4,10 +4,10 @@ description: Descubra las características de telemetría del SDK de .NET Core q
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156691"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetría del SDK de .NET Core

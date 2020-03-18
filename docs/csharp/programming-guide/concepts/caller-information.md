@@ -3,10 +3,10 @@ title: Información del llamador (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595338"
 ---
 # <a name="caller-information-c"></a>Información del llamador (C#)
@@ -15,7 +15,7 @@ Mediante los atributos de información del llamador, se puede obtener informaci�
 
 Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:
 
-|Atributo|DESCRIPCIÓN|Tipo|
+|Atributo|Description|Tipo|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|
@@ -84,4 +84,4 @@ En el gráfico siguiente se muestran los nombres de miembro que se devuelven cua
 - [Atributos (C#)](./attributes/index.md)
 - [Atributos comunes (C#)](./attributes/common-attributes.md)
 - [Argumentos opcionales y con nombre](../classes-and-structs/named-and-optional-arguments.md)
-- [Conceptos de programación (C#)](./index.md)
+- [Programming Concepts (C#)](./index.md) (Conceptos de programación (C#))

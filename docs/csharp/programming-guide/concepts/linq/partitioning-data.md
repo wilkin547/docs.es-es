@@ -3,10 +3,10 @@ title: Realizar particiones de datos (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
 ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591583"
 ---
 # <a name="partitioning-data-c"></a>Realizar particiones de datos (C#)
@@ -20,14 +20,14 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
   
 ## <a name="operators"></a>Operadores  
   
-|Nombre de operador|DESCRIPCIÓN|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del operador|Description|Sintaxis de la expresión de consulta de C#|Más información|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|Omite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
-|SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
-|Take|Admite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
-|TakeWhile|Admite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
+|Skip|Omite los elementos hasta una determinada posición de una secuencia.|No disponible.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No disponible.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|Take|Admite los elementos hasta una determinada posición de una secuencia.|No disponible.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|TakeWhile|Admite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No disponible.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))

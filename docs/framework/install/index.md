@@ -3,10 +3,10 @@ title: Guía de instalación de .NET Framework
 description: Aprenda a instalar .NET Framework en Windows.
 ms.date: 08/03/2017
 ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716359"
 ---
 # <a name="installation-guide"></a>Guía de instalación

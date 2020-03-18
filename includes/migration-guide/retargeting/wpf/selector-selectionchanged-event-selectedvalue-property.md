@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: a4054ee893ba8b8c290a447689d3aa58dcc84cbe
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e6c93a1bc31c041f36fca3704bca32012a2b42ac
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859018"
 ---
 ### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>Evento SelectionChanged y propiedad SelectedValue de Selector
@@ -16,4 +16,3 @@ ms.locfileid: "67859018"
 |Versión|4.7.1|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
-

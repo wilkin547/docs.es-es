@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138219"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservar el orden en PLINQ
@@ -64,17 +64,17 @@ En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una 
   
  Algunos operadores de consulta PLINQ se comportan de manera diferente, dependiendo de si su secuencia de origen está ordenada o no. En la siguiente tabla se enumeran estos operadores.  
   
-|Operador|Resultado cuando la secuencia de origen está ordenada|Resultado cuando la secuencia de origen no está ordenada|  
+|"??"|Resultado cuando la secuencia de origen está ordenada|Resultado cuando la secuencia de origen no está ordenada|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
 |<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|Salida no determinista para operaciones no asociativas o no conmutativas.|Salida no determinista para operaciones no asociativas o no conmutativas.|  
-|<xref:System.Linq.ParallelEnumerable.All%2A>|No es aplicable|No es aplicable|  
-|<xref:System.Linq.ParallelEnumerable.Any%2A>|No es aplicable|No es aplicable|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|No es aplicable|No es aplicable|  
+|<xref:System.Linq.ParallelEnumerable.All%2A>|No aplicable|No aplicable|  
+|<xref:System.Linq.ParallelEnumerable.Any%2A>|No aplicable|No aplicable|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|No aplicable|No aplicable|  
 |<xref:System.Linq.ParallelEnumerable.Average%2A>|Salida no determinista para operaciones no asociativas o no conmutativas.|Salida no determinista para operaciones no asociativas o no conmutativas.|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|Resultados ordenados|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Resultados ordenados|Resultados no ordenados|  
-|<xref:System.Linq.ParallelEnumerable.Count%2A>|No es aplicable|No es aplicable|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|No es aplicable|No es aplicable|  
+|<xref:System.Linq.ParallelEnumerable.Count%2A>|No aplicable|No aplicable|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|No aplicable|No aplicable|  
 |<xref:System.Linq.ParallelEnumerable.Distinct%2A>|Resultados ordenados|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|Se devuelve el elemento especificado|Elemento arbitrario|  
 |<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|Se devuelve el elemento especificado|Elemento arbitrario|  
@@ -88,20 +88,20 @@ En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una 
 |<xref:System.Linq.ParallelEnumerable.Join%2A>|Resultados ordenados|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.Last%2A>|Se devuelve el elemento especificado|Elemento arbitrario|  
 |<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|Se devuelve el elemento especificado|Elemento arbitrario|  
-|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|No es aplicable|No es aplicable|  
-|<xref:System.Linq.ParallelEnumerable.Min%2A>|No es aplicable|No es aplicable|  
+|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|No aplicable|No aplicable|  
+|<xref:System.Linq.ParallelEnumerable.Min%2A>|No aplicable|No aplicable|  
 |<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|Reordena la secuencia|Inicia una nueva sección ordenada|  
 |<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|Reordena la secuencia|Inicia una nueva sección ordenada|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|No aplicable (el mismo valor predeterminado que <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|No es aplicable|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|No aplicable (el mismo valor predeterminado que <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|No es aplicable|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|No aplicable (el mismo valor predeterminado que <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|No aplicable|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|No aplicable (el mismo valor predeterminado que <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|No aplicable|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Invierte el orden|No hace nada|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|Resultados ordenados|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A> (indexada)|Resultados ordenados|Resultados no ordenados.|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Resultados ordenados.|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A> (indexada)|Resultados ordenados.|Resultados no ordenados.|  
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Comparación ordenada|Comparación no ordenada|  
-|<xref:System.Linq.ParallelEnumerable.Single%2A>|No es aplicable|No es aplicable|  
-|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|No es aplicable|No es aplicable|  
+|<xref:System.Linq.ParallelEnumerable.Single%2A>|No aplicable|No aplicable|  
+|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|No aplicable|No aplicable|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|Omite los primeros *n* elementos|Omite todos los *n* elementos|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Resultados ordenados.|No determinista. Ejecuta SkipWhile en el orden arbitrario actual|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|Salida no determinista para operaciones no asociativas o no conmutativas.|Salida no determinista para operaciones no asociativas o no conmutativas.|  
@@ -110,7 +110,7 @@ En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una 
 |<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Complementa `OrderBy`|Complementa `OrderBy`|  
 |<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Complementa `OrderBy`|Complementa `OrderBy`|  
 |<xref:System.Linq.ParallelEnumerable.ToArray%2A>|Resultados ordenados|Resultados no ordenados|  
-|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|No es aplicable|No es aplicable|  
+|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|No aplicable|No aplicable|  
 |<xref:System.Linq.ParallelEnumerable.ToList%2A>|Resultados ordenados|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|Resultados ordenados|Resultados no ordenados|  
 |<xref:System.Linq.ParallelEnumerable.Union%2A>|Resultados ordenados|Resultados no ordenados|  
