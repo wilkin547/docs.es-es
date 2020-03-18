@@ -4,12 +4,12 @@ description: Obtenga información sobre los delegados en este tema de introducci
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: deff297ccce6cd14a7cd21c49638a9c6030a9996
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd594f77c034533a1d5aee1d8279e9b727284311
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037413"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146234"
 ---
 # <a name="introduction-to-delegates"></a>Introducción a los delegados
 
@@ -31,9 +31,10 @@ Los diseñadores de lenguaje enumeraron varios objetivos para la característica
 
 El equipo aspiraba a crear una construcción de lenguaje común que pudiera usarse para cualquier algoritmo de enlace en tiempo de ejecución. Esto permite a los desarrolladores aprender un concepto y usarlo en muchos problemas de software diferentes.
 
-En segundo lugar, el equipo quería que se admitiesen llamadas a métodos únicos y multidifusión. Los delegados de multidifusión son delegados que encadenan varias llamadas a métodos. Se verán ejemplos [más adelante en esta serie](delegate-class.md). 
+En segundo lugar, el equipo quería que se admitiesen llamadas a métodos únicos y multidifusión. Los delegados de multidifusión son delegados que encadenan varias llamadas a métodos.
+Se verán ejemplos [más adelante en esta serie](delegate-class.md).
 
-El equipo quería que los delegados admitiesen la misma seguridad de tipos que los desarrolladores esperan de todas las construcciones C#. 
+El equipo quería que los delegados admitiesen la misma seguridad de tipos que los desarrolladores esperan de todas las construcciones C#.
 
 Por último, el equipo reconocía que un patrón de eventos es un patrón específico en el que los delegados, o cualquier algoritmo de enlace en tiempo de ejecución, resultan muy útiles. El equipo quería garantizar que el código de los delegados proporcionase una base para el patrón de eventos de .NET.
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 7457b05ae827675969398792bcb02f025f3028fb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712590"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173437"
 ---
 # <a name="define-c-reference"></a>#define (Referencia de C#)
 Usa `#define` para definir un símbolo. Si usa el símbolo como expresión que se pasa a la directiva [#if](./preprocessor-if.md), la expresión se evaluará como `true`, como se muestra en el siguiente ejemplo:  
- 
+
  ```csharp
  #define DEBUG
  ```
@@ -69,6 +69,6 @@ public class TestDefine
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Directivas de preprocesador de C#](./index.md)
 - [const](../keywords/const.md)
-- [Cómo: Compilación condicional con Trace y Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Compilación condicional con Trace y Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)
 - [#if](./preprocessor-if.md)

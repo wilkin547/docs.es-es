@@ -4,20 +4,20 @@ description: Obtenga información sobre técnicas para crear árboles de expresi
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037092"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146052"
 ---
 # <a name="building-expression-trees"></a>Crear árboles de expresión
 
 [Anterior: Interpretación de expresiones](expression-trees-interpreting.md)
 
-Hasta ahora, todos los árboles de expresión que ha visto se han creado con el compilador de C#. Todo lo que tenía que hacer era crear una expresión lambda que se asignaba a una variable de tipo `Expression<Func<T>>` o de algún tipo similar. Esa no es la única manera de crear un árbol de expresión. En muchos escenarios, puede que necesite crear una expresión en memoria en tiempo de ejecución. 
+Hasta ahora, todos los árboles de expresión que ha visto se han creado con el compilador de C#. Todo lo que tenía que hacer era crear una expresión lambda que se asignaba a una variable de tipo `Expression<Func<T>>` o de algún tipo similar. Esa no es la única manera de crear un árbol de expresión. En muchos escenarios, puede que necesite crear una expresión en memoria en tiempo de ejecución.
 
-Crear árboles de expresión es complicado por el hecho de que esos árboles de expresión son inmutables. Inmutable significa que debe crear el árbol desde las hojas hasta la raíz. Las API que usará para crear árboles de expresión reflejan este hecho: los métodos que usará para compilar un nodo toman todos sus elementos secundarios como argumentos. Veamos algunos ejemplos para mostrarle las técnicas.
+Crear árboles de expresión es complicado por el hecho de que esos árboles de expresión son inmutables. Inmutable significa que debe crear el árbol desde las hojas hasta la raíz. Las API que usará para crear los árboles de expresión reflejan este hecho: los métodos que usará para crear un nodo toman todos sus elementos secundarios como argumentos. Veamos algunos ejemplos para mostrarle las técnicas.
 
 ## <a name="creating-nodes"></a>Crear nodos
 
@@ -71,7 +71,7 @@ Vamos a crear un árbol de expresión para crear esta expresión:
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
- 
+
 Comenzará creando expresiones de parámetro para `x` y `y`:
 
 ```csharp
@@ -111,7 +111,7 @@ Después, necesita usar un subconjunto de las API de reflexión para crear un ob
 
 ## <a name="building-code-in-depth"></a>Crear código en profundidad
 
-No está limitado en lo que puede crear con estas API. En cambio, cuánto más complicado sea el árbol de expresión que quiera crear, más difícil será la administración y la lectura del código. 
+No está limitado en lo que puede crear con estas API. En cambio, cuánto más complicado sea el árbol de expresión que quiera crear, más difícil será la administración y la lectura del código.
 
 Vamos a crear un árbol de expresión que sea equivalente a este código:
 
@@ -128,7 +128,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-Observe anteriormente que no he creado el árbol de expresión, sino simplemente el delegado. Con la clase `Expression` no puede crear expresiones lambda de instrucción. Aquí se muestra el código necesario para crear la misma función. Es complicado por el hecho de que no existe una API para crear un bucle `while`, en su lugar necesita crear un bucle que contenga una prueba condicional y un destino de la etiqueta para salir del bucle. 
+Observe anteriormente que no he creado el árbol de expresión, sino simplemente el delegado. Con la clase `Expression` no puede crear expresiones lambda de instrucción. Aquí se muestra el código necesario para crear la misma función. Es complicado por el hecho de que no existe una API para crear un bucle `while`, en su lugar necesita crear un bucle que contenga una prueba condicional y un destino de la etiqueta para salir del bucle.
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -162,13 +162,13 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-El código para crear el árbol de expresión para la función factorial es bastante más largo, más complicado y está lleno de etiquetas, instrucciones Break y otros elementos que nos gustaría evitar en nuestras tareas de codificación diarias. 
+El código para crear el árbol de expresión para la función factorial es bastante más largo, más complicado y está lleno de etiquetas, instrucciones Break y otros elementos que nos gustaría evitar en nuestras tareas de codificación diarias.
 
 En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) en el repositorio dotnet/docs de GitHub. Pruébelo compilando y ejecutando los ejemplos. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Examinar las API
 
-Las API del árbol de expresión son algunas de las más difíciles para navegar en .NET Core, pero no pasa nada. Su finalidad es una tarea más compleja: escribir código que genere código en tiempo de ejecución. Son inevitablemente complicadas a la hora de proporcionar un equilibrio entre la compatibilidad con todas las estructuras de control disponibles en el lenguaje de C# y mantener el área expuesta de las API tan pequeña como sea razonable. Este equilibrio significa que muchas estructuras de control se representan no por sus construcciones de C#, sino por construcciones que representan la lógica subyacente que genera el compilador desde estas construcciones de nivel superior. 
+Las API del árbol de expresión son algunas de las más difíciles para navegar en .NET Core, pero no pasa nada. Su finalidad es una tarea más compleja: escribir código que genere código en tiempo de ejecución. Son inevitablemente complicadas a la hora de proporcionar un equilibrio entre la compatibilidad con todas las estructuras de control disponibles en el lenguaje de C# y mantener el área expuesta de las API tan pequeña como sea razonable. Este equilibrio significa que muchas estructuras de control se representan no por sus construcciones de C#, sino por construcciones que representan la lógica subyacente que genera el compilador desde estas construcciones de nivel superior.
 
 Además, en este momento, existen expresiones de C# que no pueden crearse directamente con métodos de clase `Expression`. En general, estos serán las expresiones y los operadores más recientes que se han agregado a C# 5 y C# 6. (Por ejemplo, las expresiones `async` no pueden crearse y el operador `?.` nuevo no puede crearse directamente).
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711342"
 ---
 # <a name="sorted-collection-types"></a>Tipos de colecciones ordenadas

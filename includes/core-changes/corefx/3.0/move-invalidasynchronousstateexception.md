@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 82835915efa0e113e81bb09bd5062ee3252f2a64
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 19359422f79f8240676b0057c7391f6b06f961ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568228"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147554"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>Se ha movido InvalidAsynchronousStateException a otro ensamblado
 
@@ -30,7 +30,7 @@ CoreFX
 
 #### <a name="affected-apis"></a>API afectadas
 
-- None
+Ninguno.
 
 <!--
 

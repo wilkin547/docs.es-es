@@ -3,10 +3,10 @@ title: 'Interoperabilidad nativa: .NET'
 description: Obtenga información sobre cómo interactuar con componentes nativos en .NET.
 ms.date: 01/18/2019
 ms.openlocfilehash: 330466d74cc268214f74c4f575e6a2961f678972
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706340"
 ---
 # <a name="native-interoperability"></a>Interoperabilidad nativa

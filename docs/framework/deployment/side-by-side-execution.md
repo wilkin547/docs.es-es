@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122236"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181643"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 
@@ -28,7 +28,7 @@ La ilustración siguiente muestra varias aplicaciones que utilizan dos versiones
 La ejecución en paralelo ofrece un mayor control sobre las versiones de un componente a las que se enlaza una aplicación, y sobre la versión del motor en tiempo de ejecución que utiliza una aplicación.  
   
 ## <a name="benefits-of-side-by-side-execution"></a>Ventajas de la ejecución en paralelo  
- 
+
 Antes de Windows XP y de .NET Framework, se producían conflictos en las DLL porque las aplicaciones no podían distinguir las versiones incompatibles del mismo código. La información de los tipos contenida en una DLL se enlazaba únicamente a un nombre de archivo. Una aplicación no podía saber de ninguna manera si los tipos incluidos en una DLL eran los mismos los tipos con los que se había compilado la aplicación. Como consecuencia de esto, una nueva versión de un componente podía sobrescribir la versión antigua e interrumpir las aplicaciones.  
   
 La ejecución en paralelo y .NET Framework proporcionan las siguientes características que eliminan los conflictos con las DLL:  
@@ -102,13 +102,13 @@ Para reducir las referencias de ensamblados parciales en el código, puede usar 
  En el ejemplo siguiente se muestra la entrada del archivo de configuración de la aplicación para completar un ensamblado llamado `myAssembly`.  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
  Cada vez que una instrucción de carga de ensamblado hace referencia a `myAssembly`, estos valores del archivo de configuración hacen que el tiempo de ejecución convierta automáticamente la referencia parcial a `myAssembly` en una referencia completa. Por ejemplo, Assembly.Load("myAssembly") se convierte en Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral").  
@@ -118,7 +118,7 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|DESCRIPCIÓN|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Describe cómo enlazar una aplicación a una versión específica de un ensamblado.|  
 |[Configurar el redireccionamiento del enlace de ensamblados](configuring-assembly-binding-redirection.md)|Explica cómo redirigir referencias a enlaces de ensamblados a una versión específica de los ensamblados de .NET Framework.|  

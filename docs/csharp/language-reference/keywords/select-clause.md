@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713097"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173515"
 ---
 # <a name="select-clause-c-reference"></a>select (Cláusula, Referencia de C#)
 
@@ -45,4 +45,4 @@ En tiempo de compilación, la cláusula `select` se convierte en una llamada de 
 - [partial (Método) (Referencia de C#)](partial-method.md)
 - [Tipos anónimos](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [LINQ en C#](../../linq/index.md)
-- [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Language-Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

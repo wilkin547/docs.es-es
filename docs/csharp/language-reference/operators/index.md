@@ -10,10 +10,10 @@ helpviewer_keywords:
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74552472"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
@@ -64,7 +64,7 @@ En la tabla siguiente se muestran los operadores de C# desde la precedencia más
 Cuando los operadores tienen la misma prioridad, su asociatividad determina el orden en el que se realizan las operaciones:
 
 - Los operadores *asociativos a la izquierda* se evalúan, por orden, de izquierda a derecha. A excepción de los [operadores de asignación](assignment-operator.md) y el [operador de integración nula ](null-coalescing-operator.md), todos los operadores binarios son asociativos a la izquierda. Por ejemplo, `a + b - c` se evalúa como `(a + b) - c`.
-- Los operadores *asociativos a la derecha* se evalúan, por orden, de derecha a izquierda. Los operadores de asignación, el operador de integración nula y el operador condicional [ `?:`](conditional-operator.md) son asociativos a la derecha. Por ejemplo, `x = y = z` se evalúa como `x = (y = z)`.
+- Los operadores *asociativos a la derecha* se evalúan, por orden, de derecha a izquierda. Los operadores de asignación, el operador de integración nula y el operador condicional [`?:`](conditional-operator.md) son asociativos a la derecha. Por ejemplo, `x = y = z` se evalúa como `x = (y = z)`.
 
 Use paréntesis, para cambiar el orden de evaluación impuesto por la asociatividad de los operadores:
 
@@ -87,7 +87,7 @@ Independientemente de la prioridad y la asociatividad de los operadores, los ope
 
 Normalmente, se evalúan todos los operandos de un operador. Sin embargo, algunos operadores evalúan los operandos de forma condicional. Esto significa que el valor del operando situado más a la izquierda de este tipo de operador define si se deben evaluar otros operandos, o bien qué operandos deben evaluarse. Estos operadores son los operadores lógicos condicionales [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) y [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), los [operadores de integración nula `??` y `??=`](null-coalescing-operator.md), los [operadores condicionales nulos `?.` y `?[]`](member-access-operators.md#null-conditional-operators--and-), así como el [operador condicional `?:`](conditional-operator.md). Para más información, consulte la descripción de cada operador.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para obtener más información, vea la sección sobre [Operadores](~/_csharplang/spec/expressions.md#operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

@@ -4,12 +4,12 @@ description: ML.NET ofrece la posibilidad de agregar aprendizaje automático en 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794572"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185864"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
@@ -28,13 +28,13 @@ Algunos ejemplos del tipo de predicciones que puede hacer con ML.NET:
 |Clasificación y categorización|Clasifique automáticamente los comentarios del cliente en positivos y negativos.|
 |Valores continuos de regresión y predicción|Prediga el precio de la vivienda según el tamaño y la ubicación.|
 |Detección de anomalías|Detecte transacciones bancarias fraudulentas. |
-|Recomendaciones|Sugiera productos que los compradores en línea pueden comprar, en función de sus compras anteriores.|
+|Recomendaciones|Sugerencias de productos que pueden interesar a los compradores en Internet en función de compras anteriores|
 |Series temporales y datos secuenciales|Haga una previsión del tiempo y de las ventas de productos|
 |Clasificación de la imagen|Clasifique las patologías de imágenes médicas|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-El código en el siguiente fragmento muestra la aplicación de ML.NET más sencilla. En este ejemplo se crea un modelo de regresión lineal para predecir los precios de la vivienda con información sobre el tamaño y el precio de la vivienda. 
+El código en el siguiente fragmento muestra la aplicación de ML.NET más sencilla. En este ejemplo se crea un modelo de regresión lineal para predecir los precios de la vivienda con información sobre el tamaño y el precio de la vivienda.
 
  ```csharp
     using System;

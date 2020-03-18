@@ -2,12 +2,12 @@
 title: 'Mitigación: marcos PNG en objetos de icono'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: 1a4ae0c069a4cd6d53bce77e64822ebf3fbb5361
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d661e45bfbbe5e1c5ca5b7eb123e71aa32a096ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457872"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181216"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Mitigación: marcos PNG en objetos de icono
 A partir de .NET Framework 4.6, el método <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> convierte correctamente iconos con marcos PNG en objetos <xref:System.Drawing.Bitmap> .  
@@ -21,14 +21,14 @@ A partir de .NET Framework 4.6, el método <xref:System.Drawing.Icon.ToBitmap%2A
  Si no desea este comportamiento, puede conservar el comportamiento anterior agregando el siguiente elemento en la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:  
   
 ```xml  
-<AppContextSwitchOverrides   
+<AppContextSwitchOverrides
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true" />  
 ```  
   
  Si el archivo app.config ya contiene el elemento `AppContextSwitchOverrides` , el nuevo valor se debe combinar con el atributo `value` como este:  
   
 ```xml  
-<AppContextSwitchOverrides   
+<AppContextSwitchOverrides
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
 ```  
   

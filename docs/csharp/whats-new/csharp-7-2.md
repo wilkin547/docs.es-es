@@ -3,10 +3,10 @@ title: Novedades de C# 7.2
 description: Información general sobre las nuevas características en C# 7.2.
 ms.date: 08/16/2017
 ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75694600"
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2

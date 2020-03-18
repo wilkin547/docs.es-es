@@ -3,12 +3,12 @@ title: Patrones comunes para delegados
 description: Obtenga información sobre los patrones comunes para usar delegados en su código para evitar el acoplamiento seguro entre sus componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22ab88e5b139381e3a8921baa20df035f1405146
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454083"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398740"
 ---
 # <a name="common-patterns-for-delegates"></a>Patrones comunes para delegados
 
@@ -54,15 +54,15 @@ Con este diseño, el componente de registro principal puede ser una clase no vir
 
 Comencemos poco a poco: la implementación inicial aceptará mensajes nuevos y los escribirá con cualquier delegado asociado. Puede comenzar con un delegado que escriba mensajes en la consola.
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
-La clase estática anterior es lo más sencillo que puede funcionar. Necesitamos escribir solo la implementación para el método que escribe mensajes en la consola: 
+La clase estática anterior es lo más sencillo que puede funcionar. Necesitamos escribir solo la implementación para el método que escribe mensajes en la consola:
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Por último, necesita conectar el delegado asociándolo al delegado WriteMessage que se declara en el registrador:
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Procedimientos
 
@@ -70,7 +70,7 @@ Hasta ahora nuestro ejemplo es bastante sencillo, pero sigue mostrando algunas i
 
 Con los tipos de delegado definidos en Core Framework es más sencillo para los usuarios trabajar con los delegados. No necesita definir tipos nuevos, y los desarrolladores que usen su biblioteca no necesitan aprender nuevos tipos de delegado especializados.
 
-Las interfaces que se usan son tan mínimas y flexibles como sea posible: Para crear un nuevo registrador de salida, debe crear un método. Ese método puede ser un método estático o un método de instancia. Puede tener cualquier acceso.
+Las interfaces que se han usado son tan mínimas y flexibles como es posible: para crear un registrador de salida nuevo, debe crear un método. Ese método puede ser un método estático o un método de instancia. Puede tener cualquier acceso.
 
 ## <a name="formatting-output"></a>Resultados con formato
 
@@ -78,12 +78,12 @@ Vamos a hacer esta primera versión un poco más sólida y, después, empezaremo
 
 Después, vamos a agregar algunos argumentos al método `LogMessage()` de manera que su clase de registro cree más mensajes estructurados:
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
-A continuación, vamos a usar ese argumento `Severity` para filtrar los mensajes que se envían a la salida del registro. 
+A continuación, vamos a usar ese argumento `Severity` para filtrar los mensajes que se envían a la salida del registro.
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>Procedimientos
 
@@ -97,11 +97,11 @@ El componente de registro se está desarrollando correctamente. Vamos a agregar 
 
 Aquí se muestra ese registrador basado en archivos:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 Una vez que haya creado esta clase, puede inicializarla y esta asocia su método LogMessage al componente de registrador:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Estos dos no son mutuamente exclusivos. Puede asociar ambos métodos de registro y generar mensajes en la consola y en un archivo:
 

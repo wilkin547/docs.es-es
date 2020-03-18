@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503974"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156862"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -161,7 +161,7 @@ Coloque el código anterior en un archivo nuevo llamado "repo.cs". Esta versión
 El serializador JSON pasará por alto la información que no esté incluida en el tipo de clase que se va a usar.
 Esta característica facilita la creación de tipos que funcionan con solo un subconjunto de los campos del paquete JSON.
 
-Ahora que ha creado el tipo, vamos a deserializarlo. 
+Ahora que ha creado el tipo, vamos a deserializarlo.
 
 A continuación, usará el serializador para convertir JSON en objetos de C#. Reemplace la llamada a <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> en su método `ProcessRepositories` por las tres líneas siguientes:
 

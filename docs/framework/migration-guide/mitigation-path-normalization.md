@@ -1,15 +1,15 @@
 ---
-title: 'Mitigación: normalización de la ruta de acceso'
+title: 'Mitigación: Normalización de la ruta de acceso'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457887"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181230"
 ---
-# <a name="mitigation-path-normalization"></a>Mitigación: normalización de la ruta de acceso
+# <a name="mitigation-path-normalization"></a>Mitigación: Normalización de la ruta de acceso
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, la normalización de la ruta de acceso en .NET Framework ha cambiado.  
   
 ## <a name="what-is-path-normalization"></a>¿Qué es la normalización de la ruta de acceso?  
@@ -47,7 +47,7 @@ Las aplicaciones que tienen como destino .NET Framework 4.6.1 y versiones ante
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
 </runtime>  
 ```  
   
@@ -55,7 +55,7 @@ Las aplicaciones que tienen como destino .NET Framework 4.6.1 o versiones anter
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
 </runtime>  
 ```  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: b284698904b3795c2369a5bca47742175e012553
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cf8ffff1b219614cd57b56af48d72c03ac63dda
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048987"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180925"
 ---
 # <a name="asynchronous-client-socket-example"></a>Ejemplo de sockets de cliente asincrónicos
 El programa de ejemplo siguiente crea un cliente que se conecta a un servidor. El cliente se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de cliente mientras se espera una respuesta del servidor. La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.  
@@ -108,7 +108,7 @@ Public Class AsynchronousClient
   
     Private Shared Sub ReceiveCallback(ByVal ar As IAsyncResult)  
   
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -178,11 +178,11 @@ public class AsynchronousClient {
     private const int port = 11000;  
   
     // ManualResetEvent instances signal completion.  
-    private static ManualResetEvent connectDone =   
+    private static ManualResetEvent connectDone =
         new ManualResetEvent(false);  
-    private static ManualResetEvent sendDone =   
+    private static ManualResetEvent sendDone =
         new ManualResetEvent(false);  
-    private static ManualResetEvent receiveDone =   
+    private static ManualResetEvent receiveDone =
         new ManualResetEvent(false);  
   
     // The response from the remote device.  
@@ -192,7 +192,7 @@ public class AsynchronousClient {
         // Connect to a remote device.  
         try {  
             // Establish the remote endpoint for the socket.  
-            // The name of the   
+            // The name of the
             // remote device is "host.contoso.com".  
             IPHostEntry ipHostInfo = Dns.GetHostEntry("host.contoso.com");  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
@@ -203,7 +203,7 @@ public class AsynchronousClient {
                 SocketType.Stream, ProtocolType.Tcp);  
   
             // Connect to the remote endpoint.  
-            client.BeginConnect( remoteEP,   
+            client.BeginConnect( remoteEP,
                 new AsyncCallback(ConnectCallback), client);  
             connectDone.WaitOne();  
   
@@ -261,7 +261,7 @@ public class AsynchronousClient {
   
     private static void ReceiveCallback( IAsyncResult ar ) {  
         try {  
-            // Retrieve the state object and the client socket   
+            // Retrieve the state object and the client socket
             // from the asynchronous state object.  
             StateObject state = (StateObject) ar.AsyncState;  
             Socket client = state.workSocket;  

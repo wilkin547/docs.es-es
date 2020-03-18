@@ -6,10 +6,10 @@ helpviewer_keywords:
 - .NET Framework 1.1, running on Windows 8
 ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
 ms.openlocfilehash: 507de3ca635986d1f4e0e3ba7c607a4af774cdcf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716276"
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Ejecución de aplicaciones de .NET Framework 1.1 en Windows 8, Windows 8.1 o Windows 10
@@ -18,7 +18,7 @@ ms.locfileid: "75716276"
 
 ## <a name="install-the-net-framework-11-from-a-cd-or-download-center"></a>Instalación de .NET Framework 1.1 desde un CD o desde el Centro de descarga
 
-No es posible instalar manualmente .NET Framework 1.1 en Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2 ni Windows 10. Ya no se admite. Si intenta instalar el paquete, se muestra el mensaje de error siguiente: "El programa de instalación no puede continuar porque esta versión de .NET Framework no es compatible con una instalada previamente". Para solucionar este problema, instale [.NET Framework 3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22). Esta versión incluye .NET Framework 2.0 (la versión siguiente a .NET Framework 1.1), que es compatible con Windows 8, Windows 8.1 y Windows 10. Siempre debería intentar instalar primero la aplicación para determinar si se va a actualizar automáticamente a una versión posterior de .NET Framework. De no ser así, póngase en contacto con el ISV para obtener una actualización de la aplicación.
+No es posible instalar manualmente .NET Framework 1.1 en Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2 ni Windows 10. Ya no se admite. Si intenta instalar el paquete, aparece el mensaje de error siguiente: “El programa de instalación no puede continuar porque esta versión de .NET Framework no es compatible con una instalada previamente”. Para solucionar este problema, instale [.NET Framework 3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22). Esta versión incluye .NET Framework 2.0 (la versión siguiente a .NET Framework 1.1), que es compatible con Windows 8, Windows 8.1 y Windows 10. Siempre debería intentar instalar primero la aplicación para determinar si se va a actualizar automáticamente a una versión posterior de .NET Framework. De no ser así, póngase en contacto con el ISV para obtener una actualización de la aplicación.
 
 ## <a name="see-also"></a>Vea también
 
