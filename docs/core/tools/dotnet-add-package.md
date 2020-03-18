@@ -2,35 +2,35 @@
 title: Comando dotnet add package
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503801"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146611"
 ---
-# <a name="dotnet-add-package"></a><span data-ttu-id="d7d94-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="d7d94-103">dotnet add package</span></span>
+# <a name="dotnet-add-package"></a><span data-ttu-id="bbe17-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="bbe17-103">dotnet add package</span></span>
 
-<span data-ttu-id="d7d94-104">**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="d7d94-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="bbe17-104">**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="bbe17-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="d7d94-105">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="d7d94-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="bbe17-105">Name</span><span class="sxs-lookup"><span data-stu-id="bbe17-105">Name</span></span>
 
-<span data-ttu-id="d7d94-106">`dotnet add package`: agrega una referencia de paquete a un archivo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7d94-106">`dotnet add package` - Adds a package reference to a project file.</span></span>
+<span data-ttu-id="bbe17-106">`dotnet add package`: agrega una referencia de paquete a un archivo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="bbe17-106">`dotnet add package` - Adds a package reference to a project file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="d7d94-107">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="d7d94-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="bbe17-107">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="bbe17-107">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a><span data-ttu-id="d7d94-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="d7d94-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="bbe17-108">Description</span><span class="sxs-lookup"><span data-stu-id="bbe17-108">Description</span></span>
 
-<span data-ttu-id="d7d94-109">El comando `dotnet add package` constituye una opción práctica para agregar una referencia de paquete a un archivo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7d94-109">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="d7d94-110">Después de ejecutar el comando, existe una comprobación de compatibilidad para garantizar que el paquete es compatible con los marcos del proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7d94-110">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="d7d94-111">Si se pasa la comprobación, un elemento `<PackageReference>` se agrega al archivo del proyecto y [dotnet restore](dotnet-restore.md) se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="d7d94-111">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
+<span data-ttu-id="bbe17-109">El comando `dotnet add package` constituye una opción práctica para agregar una referencia de paquete a un archivo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="bbe17-109">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="bbe17-110">Después de ejecutar el comando, existe una comprobación de compatibilidad para garantizar que el paquete es compatible con los marcos del proyecto.</span><span class="sxs-lookup"><span data-stu-id="bbe17-110">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="bbe17-111">Si se pasa la comprobación, un elemento `<PackageReference>` se agrega al archivo del proyecto y [dotnet restore](dotnet-restore.md) se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="bbe17-111">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-<span data-ttu-id="d7d94-112">Por ejemplo, si agrega `Newtonsoft.Json` a *ToDo.csproj* se producirá un resultado similar al del siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="d7d94-112">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
+<span data-ttu-id="bbe17-112">Por ejemplo, si agrega `Newtonsoft.Json` a *ToDo.csproj* se producirá un resultado similar al del siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="bbe17-112">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
 
 ```console
-  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -42,73 +42,73 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-<span data-ttu-id="d7d94-113">El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) para el paquete al que hace referencia.</span><span class="sxs-lookup"><span data-stu-id="d7d94-113">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
+<span data-ttu-id="bbe17-113">El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) para el paquete al que hace referencia.</span><span class="sxs-lookup"><span data-stu-id="bbe17-113">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a><span data-ttu-id="d7d94-114">Argumentos</span><span class="sxs-lookup"><span data-stu-id="d7d94-114">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="bbe17-114">Argumentos</span><span class="sxs-lookup"><span data-stu-id="bbe17-114">Arguments</span></span>
 
 - **`PROJECT`**
 
-  <span data-ttu-id="d7d94-115">Especifica el archivo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7d94-115">Specifies the project file.</span></span> <span data-ttu-id="d7d94-116">Si no se especifica, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="d7d94-116">If not specified, the command searches the current directory for one.</span></span>
+  <span data-ttu-id="bbe17-115">Especifica el archivo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="bbe17-115">Specifies the project file.</span></span> <span data-ttu-id="bbe17-116">Si no se especifica, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="bbe17-116">If not specified, the command searches the current directory for one.</span></span>
 
 - **`PACKAGE_NAME`**
 
-  <span data-ttu-id="d7d94-117">La referencia de paquete que se va a agregar.</span><span class="sxs-lookup"><span data-stu-id="d7d94-117">The package reference to add.</span></span>
+  <span data-ttu-id="bbe17-117">La referencia de paquete que se va a agregar.</span><span class="sxs-lookup"><span data-stu-id="bbe17-117">The package reference to add.</span></span>
 
-## <a name="options"></a><span data-ttu-id="d7d94-118">Opciones</span><span class="sxs-lookup"><span data-stu-id="d7d94-118">Options</span></span>
+## <a name="options"></a><span data-ttu-id="bbe17-118">Opciones</span><span class="sxs-lookup"><span data-stu-id="bbe17-118">Options</span></span>
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="d7d94-119">Agrega una referencia de paquete solo cuando se destina a un [marco](../../standard/frameworks.md) específico.</span><span class="sxs-lookup"><span data-stu-id="d7d94-119">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
+  <span data-ttu-id="bbe17-119">Agrega una referencia de paquete solo cuando se destina a un [marco](../../standard/frameworks.md) específico.</span><span class="sxs-lookup"><span data-stu-id="bbe17-119">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="d7d94-120">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="d7d94-120">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="bbe17-120">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="bbe17-120">Prints out a short help for the command.</span></span>
 
 - **`--interactive`**
 
-  <span data-ttu-id="d7d94-121">Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación).</span><span class="sxs-lookup"><span data-stu-id="d7d94-121">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="d7d94-122">Disponible desde el SDK de .NET Core 2.1, versión 2.1.400 o posterior.</span><span class="sxs-lookup"><span data-stu-id="d7d94-122">Available since .NET Core 2.1 SDK, version 2.1.400 or later.</span></span>
+  <span data-ttu-id="bbe17-121">Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación).</span><span class="sxs-lookup"><span data-stu-id="bbe17-121">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="bbe17-122">Disponible desde el SDK de .NET Core 2.1, versión 2.1.400 o posterior.</span><span class="sxs-lookup"><span data-stu-id="bbe17-122">Available since .NET Core 2.1 SDK, version 2.1.400 or later.</span></span>
 
 - **`-n|--no-restore`**
 
-  <span data-ttu-id="d7d94-123">Agrega una referencia de paquete sin realizar una vista previa de restauración y una comprobación de compatibilidad.</span><span class="sxs-lookup"><span data-stu-id="d7d94-123">Adds a package reference without performing a restore preview and compatibility check.</span></span>
+  <span data-ttu-id="bbe17-123">Agrega una referencia de paquete sin realizar una vista previa de restauración y una comprobación de compatibilidad.</span><span class="sxs-lookup"><span data-stu-id="bbe17-123">Adds a package reference without performing a restore preview and compatibility check.</span></span>
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  <span data-ttu-id="d7d94-124">Directorio donde quiere restaurar los paquetes.</span><span class="sxs-lookup"><span data-stu-id="d7d94-124">The directory where to restore the packages.</span></span> <span data-ttu-id="d7d94-125">La ubicación predeterminada de restauración de paquetes es `%userprofile%\.nuget\packages` en Windows y `~/.nuget/packages` en macOS y Linux.</span><span class="sxs-lookup"><span data-stu-id="d7d94-125">The default package restore location is `%userprofile%\.nuget\packages` on Windows and `~/.nuget/packages` on macOS and Linux.</span></span> <span data-ttu-id="d7d94-126">Para obtener más información, vea [Administración de las carpetas de paquetes globales, de caché y temporales in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).</span><span class="sxs-lookup"><span data-stu-id="d7d94-126">For more information, see [Managing the global packages, cache, and temp folders in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).</span></span>
+  <span data-ttu-id="bbe17-124">Directorio donde quiere restaurar los paquetes.</span><span class="sxs-lookup"><span data-stu-id="bbe17-124">The directory where to restore the packages.</span></span> <span data-ttu-id="bbe17-125">La ubicación predeterminada de restauración de paquetes es `%userprofile%\.nuget\packages` en Windows y `~/.nuget/packages` en macOS y Linux.</span><span class="sxs-lookup"><span data-stu-id="bbe17-125">The default package restore location is `%userprofile%\.nuget\packages` on Windows and `~/.nuget/packages` on macOS and Linux.</span></span> <span data-ttu-id="bbe17-126">Para obtener más información, vea [Administración de las carpetas de paquetes globales, de caché y temporales in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).</span><span class="sxs-lookup"><span data-stu-id="bbe17-126">For more information, see [Managing the global packages, cache, and temp folders in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).</span></span>
 
 - **`-s|--source <SOURCE>`**
 
-  <span data-ttu-id="d7d94-127">Origen del paquete NuGet que se usará durante la operación de restauración.</span><span class="sxs-lookup"><span data-stu-id="d7d94-127">The NuGet package source to use during the restore operation.</span></span>
+  <span data-ttu-id="bbe17-127">Origen del paquete NuGet que se usará durante la operación de restauración.</span><span class="sxs-lookup"><span data-stu-id="bbe17-127">The NuGet package source to use during the restore operation.</span></span>
 
 - **`-v|--version <VERSION>`**
 
-  <span data-ttu-id="d7d94-128">Versión del paquete.</span><span class="sxs-lookup"><span data-stu-id="d7d94-128">Version of the package.</span></span> <span data-ttu-id="d7d94-129">Consulte [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning) (Control de versiones de paquetes NuGet).</span><span class="sxs-lookup"><span data-stu-id="d7d94-129">See [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning).</span></span>
+  <span data-ttu-id="bbe17-128">Versión del paquete.</span><span class="sxs-lookup"><span data-stu-id="bbe17-128">Version of the package.</span></span> <span data-ttu-id="bbe17-129">Consulte [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning) (Control de versiones de paquetes NuGet).</span><span class="sxs-lookup"><span data-stu-id="bbe17-129">See [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="d7d94-130">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="d7d94-130">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="bbe17-130">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="bbe17-130">Examples</span></span>
 
-- <span data-ttu-id="d7d94-131">Agregar un paquete de NuGet `Newtonsoft.Json` a un proyecto:</span><span class="sxs-lookup"><span data-stu-id="d7d94-131">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
+- <span data-ttu-id="bbe17-131">Agregar un paquete de NuGet `Newtonsoft.Json` a un proyecto:</span><span class="sxs-lookup"><span data-stu-id="bbe17-131">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
 
   ```dotnetcli
   dotnet add package Newtonsoft.Json
   ```
 
-- <span data-ttu-id="d7d94-132">Agregar una versión específica de un paquete a un proyecto:</span><span class="sxs-lookup"><span data-stu-id="d7d94-132">Add a specific version of a package to a project:</span></span>
+- <span data-ttu-id="bbe17-132">Agregar una versión específica de un paquete a un proyecto:</span><span class="sxs-lookup"><span data-stu-id="bbe17-132">Add a specific version of a package to a project:</span></span>
 
   ```dotnetcli
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-- <span data-ttu-id="d7d94-133">Agregar un paquete con un origen de NuGet específico:</span><span class="sxs-lookup"><span data-stu-id="d7d94-133">Add a package using a specific NuGet source:</span></span>
+- <span data-ttu-id="bbe17-133">Agregar un paquete con un origen de NuGet específico:</span><span class="sxs-lookup"><span data-stu-id="bbe17-133">Add a package using a specific NuGet source:</span></span>
 
   ```dotnetcli
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a><span data-ttu-id="d7d94-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="d7d94-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbe17-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="bbe17-134">See also</span></span>
 
-- [<span data-ttu-id="d7d94-135">Administración de las carpetas de paquetes globales, de caché y temporales en NuGet</span><span class="sxs-lookup"><span data-stu-id="d7d94-135">Managing the global packages, cache, and temp folders in NuGet</span></span>](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [<span data-ttu-id="d7d94-136">Control de versiones de paquetes NuGet</span><span class="sxs-lookup"><span data-stu-id="d7d94-136">NuGet package versioning</span></span>](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [<span data-ttu-id="bbe17-135">Administración de las carpetas de paquetes globales, de caché y temporales en NuGet</span><span class="sxs-lookup"><span data-stu-id="bbe17-135">Managing the global packages, cache, and temp folders in NuGet</span></span>](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [<span data-ttu-id="bbe17-136">Control de versiones de paquetes NuGet</span><span class="sxs-lookup"><span data-stu-id="bbe17-136">NuGet package versioning</span></span>](https://docs.microsoft.com/nuget/reference/package-versioning)
