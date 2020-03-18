@@ -4,11 +4,11 @@ description: Descubra el significado de algunos de los términos usados en la do
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160097"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398752"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -98,7 +98,7 @@ Recolector de elementos no utilizados.
 
 El recolector de elementos no utilizados es una implementación de administración de memoria automática.  GC libera la memoria ocupada por objetos que ya no se usan.
 
-Vea [Recolección de elementos no utilizados](garbage-collection/index.md).
+Vea [Garbage Collection](garbage-collection/index.md) (Recolección de elementos no utilizados).
 
 ## <a name="il"></a>IL
 
@@ -124,7 +124,7 @@ Una implementación de .NET incluye lo siguiente:
 Ejemplos de implementaciones de .NET:
 
 - [.NET Framework](#net-framework)
-- [Núcleo de .NET](#net-core)
+- [.NET Core](#net-core)
 - [Plataforma universal de Windows (UWP)](#uwp)
 
 ## <a name="library"></a>biblioteca
@@ -205,7 +205,7 @@ Generación (de imágenes) nativas.
 
 Esta tecnología se puede considerar como un compilador JIT persistente. Normalmente, compila código en el equipo en que se ejecuta el código, pero la compilación se suele producir durante la instalación.
 
-## <a name="package"></a>paquete
+## <a name="package"></a>Paquete
 
 Un paquete de NuGet &mdash; o simplemente un paquete &mdash; es un archivo *.zip* con uno o varios ensamblados del mismo nombre junto con metadatos adicionales, como el nombre del autor.
 
@@ -275,6 +275,6 @@ Una implementación de .NET que se usa para compilar aplicaciones Windows modern
 
 - [Guía de .NET](index.md)
 - [Guía de .NET Framework](../framework/index.md)
-- [Núcleo de .NET](../core/index.md)
+- [.NET Core](../core/index.md)
 - [ASP.NET Overview](/aspnet/index#pivot=aspnet) (Información general de ASP.NET)
 - [ASP.NET Core Overview](/aspnet/index#pivot=core) (Información general de ASP.NET Core)

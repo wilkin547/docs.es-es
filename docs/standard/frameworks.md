@@ -5,11 +5,11 @@ ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124603"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398800"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 

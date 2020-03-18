@@ -6,10 +6,10 @@ helpviewer_keywords:
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
 ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711862"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Uso de tipo dinámico (Guía de programación de C#)
@@ -59,7 +59,7 @@ La resolución de sobrecarga se produce en tiempo de ejecución y no en tiempo d
 
 ## <a name="dynamic-language-runtime"></a>Dynamic Language Runtime
 
-Dynamic Language Runtime (DLR) es una nueva API en .NET Framework 4. Proporciona la infraestructura que admite el tipo `dynamic` en C# y también la implementación de lenguajes de programación dinámicos como IronPython e IronRuby. Para obtener más información sobre el entorno DLR, vea [Información general acerca de Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
+Dynamic Language Runtime (DLR) es una nueva API en .NET Framework 4. Proporciona la infraestructura que admite el tipo `dynamic` en C# y también la implementación de lenguajes de programación dinámicos como IronPython e IronRuby. Para obtener más información sobre el entorno DLR, consulte [Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Información general sobre Dynamic Language Runtime).
 
 ## <a name="com-interop"></a>Interoperabilidad COM
 
@@ -73,9 +73,9 @@ Muchos métodos COM permiten variaciones en los tipos de argumento y el tipo de 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Description|
 |-----------|-----------------|
 |[dynamic](../../language-reference/builtin-types/reference-types.md)|Describe el uso de la palabra clave `dynamic`.|
 |[Información general sobre Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Ofrece información general sobre DLR, que es un entorno en tiempo de ejecución que agrega un conjunto de servicios para lenguajes dinámicos en Common Language Runtime (CLR).|
-|[Tutorial: Crear y usar objetos dinámicos](walkthrough-creating-and-using-dynamic-objects.md)|Ofrece instrucciones paso a paso para crear un objeto dinámico personalizado y para crear un proyecto que acceda a una biblioteca de `IronPython`.|
+|[Walkthrough: Creating and Using Dynamic Objects](walkthrough-creating-and-using-dynamic-objects.md) (Tutorial: Crear y usar objetos dinámicos [C# y Visual Basic])|Ofrece instrucciones paso a paso para crear un objeto dinámico personalizado y para crear un proyecto que acceda a una biblioteca de `IronPython`.|
 |[Procedimiento para acceder a objetos de interoperabilidad de Office mediante características de C#](../interop/how-to-access-office-onterop-objects.md)|Muestra cómo crear un proyecto que use argumentos opcionales y con nombre, el tipo `dynamic` y otras mejoras que simplifican el acceso a objetos de la API de Office.|

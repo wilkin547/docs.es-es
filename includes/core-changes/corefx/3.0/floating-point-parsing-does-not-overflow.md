@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568086"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Las operaciones de análisis de punto flotante ya no producen un error o lanzan una excepción OverflowException

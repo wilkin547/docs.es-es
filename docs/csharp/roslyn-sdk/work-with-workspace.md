@@ -3,30 +3,30 @@ title: Trabajar con el modelo de área de trabajo del SDK de .NET Compiler Platf
 description: En este tema se proporciona una descripción del tipo que se usa para consultar y manipular el área de trabajo y los proyectos del código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d21873b132d5f0788033693a319e556feeac59a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346909"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156888"
 ---
 # <a name="work-with-a-workspace"></a>Trabajar con un área de trabajo
 
-La capa **Áreas de trabajo** es el punto de partida para realizar análisis de código y refactorización de soluciones completas. En esta capa, la API de área de trabajo ayuda a organizar toda la información sobre los proyectos de una solución en un modelo de objetos único, lo que ofrece acceso directo a modelos de objetos de capa de compilador como texto de origen, árboles de sintaxis, modelos semánticos y compilaciones sin necesidad de analizar archivos, configurar opciones ni administrar dependencias entre proyectos. 
+La capa **Áreas de trabajo** es el punto de partida para realizar análisis de código y refactorización de soluciones completas. En esta capa, la API de área de trabajo ayuda a organizar toda la información sobre los proyectos de una solución en un modelo de objetos único, lo que ofrece acceso directo a modelos de objetos de capa de compilador como texto de origen, árboles de sintaxis, modelos semánticos y compilaciones sin necesidad de analizar archivos, configurar opciones ni administrar dependencias entre proyectos.
 
 Los entornos de host, como un IDE, proporcionan un área de trabajo que corresponde a la solución abierta. También es posible usar este modelo fuera de un IDE con solo cargar un archivo de solución.
 
 ## <a name="workspace"></a>Área de trabajo
 
-Un área de trabajo es una representación activa de la solución como una colección de proyectos, cada uno con una colección de documentos. Normalmente, un área de trabajo está asociada a un entorno de host en continuo cambio a medida que el usuario escribe o manipula las propiedades. 
+Un área de trabajo es una representación activa de la solución como una colección de proyectos, cada uno con una colección de documentos. Normalmente, un área de trabajo está asociada a un entorno de host en continuo cambio a medida que el usuario escribe o manipula las propiedades.
 
-<xref:Microsoft.CodeAnalysis.Workspace> proporciona acceso al modelo actual de la solución. Cuando se produce un cambio en el entorno de host, el área de trabajo desencadena los eventos correspondientes y la propiedad <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> se actualiza. Por ejemplo, cuando el usuario escribe en un editor de texto correspondiente a uno de los documentos de origen, el área de trabajo usa un evento para indicar que ha cambiado el modelo general de la solución y qué documento se ha modificado. Luego puede reaccionar a esos cambios mediante el análisis de la corrección del nuevo modelo, resaltando las áreas de importancia o realizando una sugerencia para un cambio de código. 
+<xref:Microsoft.CodeAnalysis.Workspace> proporciona acceso al modelo actual de la solución. Cuando se produce un cambio en el entorno de host, el área de trabajo desencadena los eventos correspondientes y la propiedad <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> se actualiza. Por ejemplo, cuando el usuario escribe en un editor de texto correspondiente a uno de los documentos de origen, el área de trabajo usa un evento para indicar que ha cambiado el modelo general de la solución y qué documento se ha modificado. Luego puede reaccionar a esos cambios mediante el análisis de la corrección del nuevo modelo, resaltando las áreas de importancia o realizando una sugerencia para un cambio de código.
 
 También puede crear áreas de trabajo independientes desconectadas del entorno de host o que se usen en una aplicación sin entorno de host.
 
 ## <a name="solutions-projects-documents"></a>Soluciones, proyectos, documentos
 
-Aunque un área de trabajo puede cambiar cada vez que se pulsa una tecla, puede trabajar con el modelo de la solución de forma aislada. 
+Aunque un área de trabajo puede cambiar cada vez que se pulsa una tecla, puede trabajar con el modelo de la solución de forma aislada.
 
 Una solución es un modelo inmutable de los proyectos y los documentos. Esto significa que el modelo se puede compartir sin que haya bloqueo ni duplicación. Después de obtener una instancia de solución de la propiedad <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType>, esa instancia no cambia nunca. Pero, al igual que con los árboles de sintaxis y las compilaciones, puede modificar soluciones mediante la creación de nuevas instancias basadas en soluciones existentes y cambios concretos. Para que el área de trabajo refleje los cambios, debe aplicar explícitamente la solución modificada al área de trabajo.
 

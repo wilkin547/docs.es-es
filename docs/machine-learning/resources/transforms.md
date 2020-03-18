@@ -3,11 +3,11 @@ title: Transformaciones de datos
 description: Explore los componentes de ingeniería de características que se admiten en ML.NET.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739592"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397756"
 ---
 # <a name="data-transformations"></a>Transformaciones de datos
 

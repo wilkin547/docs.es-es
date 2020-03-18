@@ -8,12 +8,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 5b880cfc3ace197a3bad2f707cf55543dbe7b78e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714927"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170291"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Procedimiento para declarar y usar propiedades de lectura y escritura (Guía de programación de C#)
 Las propiedades proporcionan la comodidad de los miembros de datos públicos sin los riesgos que provienen del acceso sin comprobar, sin controlar y sin proteger a los datos de un objeto. Esto se consigue mediante los *descriptores de acceso*: métodos especiales que asignan y recuperan valores del miembro de datos subyacente. El descriptor de acceso [set](../../language-reference/keywords/set.md) permite que los miembros de datos se asignen, y el descriptor de acceso [get](../../language-reference/keywords/get.md) recupera los valores de los miembros de datos.  
@@ -45,7 +45,7 @@ Las propiedades proporcionan la comodidad de los miembros de datos públicos sin
  Si los métodos `set` y `get` independientes se han usado para modelar las propiedades, el código equivalente puede tener este aspecto:  
   
 ```csharp  
-person.SetAge(person.GetAge() + 1);   
+person.SetAge(person.GetAge() + 1);
 ```  
   
  El método `ToString` se invalida en este ejemplo:  

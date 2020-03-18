@@ -4,12 +4,12 @@ description: Aprenda a usar la herencia en bibliotecas y aplicaciones en C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120135"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156758"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -291,7 +291,7 @@ Después, se pueden derivar algunas clases de `Shape` que representan formas con
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-En el ejemplo siguiente se usan objetos derivados de `Shape`. Se crea una instancia de una matriz de objetos derivados de `Shape` y se llama a los métodos estáticos de la clase `Shape`, que ajusta los valores de propiedad `Shape` devueltos. El runtime recupera los valores de las propiedades invalidadas de los tipos derivados. En el ejemplo también se convierte cada objeto `Shape` de la matriz a su tipo derivado y, si la conversión se realiza correctamente, recupera las propiedades de esa subclase específica de `Shape`. 
+En el ejemplo siguiente se usan objetos derivados de `Shape`. Se crea una instancia de una matriz de objetos derivados de `Shape` y se llama a los métodos estáticos de la clase `Shape`, que ajusta los valores de propiedad `Shape` devueltos. El runtime recupera los valores de las propiedades invalidadas de los tipos derivados. En el ejemplo también se convierte cada objeto `Shape` de la matriz a su tipo derivado y, si la conversión se realiza correctamente, recupera las propiedades de esa subclase específica de `Shape`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 97b0dbf8716edc4cd465eb5ac693efa0ecaa498b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0b293709abe64a0a82d8575f6793a07ca6c9533b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713084"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173502"
 ---
 # <a name="set-c-reference"></a>set (Referencia de C#)
 
@@ -26,11 +26,11 @@ A menudo, el descriptor de acceso `set` consta de una única instrucción que as
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   
-En los casos sencillos en los que los descriptores de acceso `get` y `set` de una propiedad no realizan ninguna operación aparte de establecer o recuperar un valor en un campo de respaldo privado, puede aprovechar la compatibilidad del compilador de C# con las propiedades implementadas automáticamente. En el ejemplo siguiente se implementa `Hours` como una propiedad implementada automáticamente. 
+En los casos sencillos en los que los descriptores de acceso `get` y `set` de una propiedad no realizan ninguna operación aparte de establecer o recuperar un valor en un campo de respaldo privado, puede aprovechar la compatibilidad del compilador de C# con las propiedades implementadas automáticamente. En el ejemplo siguiente se implementa `Hours` como una propiedad implementada automáticamente.
 
 [!code-csharp[set#2](~/samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

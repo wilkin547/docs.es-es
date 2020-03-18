@@ -5,13 +5,13 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341552"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185839"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: Clasificación de la gravedad de las infracciones sanitarias en restaurantes con el Generador de modelos
 

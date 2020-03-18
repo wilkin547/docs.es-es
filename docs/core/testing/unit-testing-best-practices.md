@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157394"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240966"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -118,10 +118,10 @@ El nombre de la prueba debe constar de tres partes:
 Las pruebas van más allá de garantizar que el código funciona, también proporcionan documentación. Con solo mirar el conjunto de pruebas unitarias, debe ser capaz de deducir el comportamiento del código sin ni siquiera mirar el propio código. Además, cuando no se superan las pruebas, puede ver exactamente qué escenarios no cumplen las expectativas.
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Organizar las pruebas
 **Organizar, actuar, declarar** es un patrón común al realizar pruebas unitarias. Como el propio nombre implica, consta de tres acciones principales:
@@ -138,10 +138,10 @@ Las pruebas van más allá de garantizar que el código funciona, también propo
 La legibilidad es uno de los aspectos más importantes a la hora de escribir una prueba. Al separar cada una de estas acciones dentro de la prueba, se resaltan claramente las dependencias necesarias para llamar al código, la forma de llamarlo y lo que se intenta declarar. Aunque es posible combinar algunos pasos y reducir el tamaño de la prueba, el objetivo principal es que sea lo más legible posible.
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>Escribir pruebas correctas lo más sencillas posible
 La entrada que se use en una prueba unitaria debe ser lo más sencilla posible para comprobar el comportamiento que se está probando.
@@ -154,10 +154,10 @@ La entrada que se use en una prueba unitaria debe ser lo más sencilla posible p
 Las pruebas que incluyen más información de la necesaria para superarse tienen una mayor posibilidad de incorporar errores en la prueba y pueden hacer confusa su intención. Al escribir pruebas, el usuario quiere centrarse en el comportamiento. El establecimiento de propiedades adicionales en los modelos o el empleo de valores distintos de cero cuando no es necesario solo resta de lo que se quiere probar.
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>Evitar cadenas mágicas
 La asignación de nombres a las variables de las pruebas unitarias es tan importante, si no más, que la asignación de nombres a las variables del código de producción. Las pruebas unitarias no deben contener cadenas mágicas.
@@ -173,10 +173,10 @@ Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una
 > Al escribir pruebas, su objetivo debe ser expresar tanta intención como sea posible. En el caso de las cadenas mágicas, un buen enfoque es asignar estos valores a constantes.
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Evitar la lógica en las pruebas
 Al escribir las pruebas unitarias, evite la concatenación de cadenas manual y las condiciones lógicas como `if`, `while`, `for`, `switch`, etc.
@@ -192,10 +192,10 @@ Al incorporar lógica al conjunto de pruebas, aumenta considerablemente la posib
 > Si la lógica en la prueba parece inevitable, considere la posibilidad de dividirla en dos o más pruebas diferentes.
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Se prefieren métodos auxiliares a la instalación y el desmontaje
 Si necesita un objeto o un estado similares para las pruebas, se prefiere un método auxiliar al aprovechamiento de los atributos de instalación y desmontaje, si existen.
@@ -212,22 +212,22 @@ En los marcos de trabajo de pruebas unitarias, se llama a `Setup` antes de cada 
 > xUnit ha quitado la instalación y el desmontaje a partir de la versión 2.x
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>Evitar varias aserciones
 Al escribir las pruebas, intente incluir solo una aserción por prueba. Los enfoques comunes para usar solo una aserción incluyen:
@@ -247,10 +247,10 @@ Al incorporar varias aserciones en un caso de prueba, no se garantiza que se eje
 > Una excepción común a esta regla es cuando se declara en un objeto. En este caso, suele ser aceptable que haya varias aserciones en cada propiedad para asegurarse de que el objeto está en el estado que se espera que esté.
 
 #### <a name="bad"></a>Malo:
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Mejor:
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Validar métodos privados mediante la prueba unitaria de métodos públicos
 En la mayoría de los casos, no debería haber necesidad de probar un método privado. Los métodos privados son un detalle de implementación. Se puede considerar de esta forma: los métodos privados nunca existen de forma aislada. En algún momento, va a haber un método público que llame al método privado como parte de su implementación. Lo que debería importarle es el resultado final del método público que llama al privado.

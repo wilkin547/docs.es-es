@@ -4,11 +4,11 @@ description: En este artículo se proporciona información general sobre los tip
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
 ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398704"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 

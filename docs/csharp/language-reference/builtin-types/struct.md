@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634642"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847734"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
 Un *tipo de estructura* (o *tipo struct*) es un [tipo de valor](value-types.md) que puede encapsular datos y funcionalidad relacionada. Para definir un tipo de estructura se usa la palabra clave `struct`:
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
 Los tipos de estructura tienen *semántica de valores*. Es decir, una variable de un tipo de estructura contiene una instancia del tipo. De forma predeterminada, los valores de variable se copian al asignar, pasar un argumento a un método o devolver el resultado de un método. En el caso de una variable de tipo de estructura, se copia una instancia del tipo. Para más información, vea [Tipos de valor](value-types.md).
 
@@ -47,7 +47,7 @@ Normalmente, para crear una instancia de un tipo de estructura, se llama a un co
 
 Si se puede acceder a todos los campos de instancia de un tipo de estructura, también puede crear una instancia de él sin el operador `new`. En ese caso, debe inicializar todos los campos de instancia antes del primer uso de la instancia. En el siguiente ejemplo se muestra cómo hacerlo:
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
 En el caso de los [tipos de valor integrados](value-types.md#built-in-value-types), use los literales correspondientes para especificar un valor del tipo.
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8aae403e3f23d3bfc755140b2ac29d757f10f753
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74451691"
 ---
 ### <a name="data-binding-improvement-for-keyedcollection"></a>Mejora de enlace de datos para KeyedCollection

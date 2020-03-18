@@ -13,10 +13,10 @@ helpviewer_keywords:
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711407"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de colección utilizados normalmente
@@ -32,7 +32,7 @@ Los tipos de colecciones son las variaciones comunes de las colecciones de datos
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Título|Description|  
 |-----------|-----------------|  
 |[Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)|Describe los diversos tipos de colecciones disponibles en .NET Framework, incluidas las pilas, colas, listas, matrices y diccionarios.|  
 |[Tipos de las colecciones Hashtable y Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Describe las características de los tipos de diccionario basado en hash genéricos y no genéricos.|  

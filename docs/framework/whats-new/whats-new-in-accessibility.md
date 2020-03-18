@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938143"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398680"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novedades de accesibilidad en .NET Framework
 
@@ -478,11 +478,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   El objeto visual de foco del control <xref:System.Windows.Controls.Expander> ahora es visible. Los objetos visuales de teclado de los controles <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> y <xref:System.Windows.Controls.RadioButton> también son visibles. Por ejemplo:
 
-  Antes: 
+  Antes:
 
   ![Captura de pantalla del control de expansor con objeto visual de foco y sin foco.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  Después: 
+  Después:
 
   ![Captura de pantalla del control de expansor con el foco que muestra una línea de puntos alrededor del texto del control.](./media/whats-new-in-accessibility/expander-control-after.png)
 
@@ -490,11 +490,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   El texto de los controles <xref:System.Windows.Controls.CheckBox> y <xref:System.Windows.Controls.RadioButton> ahora es más fácil de ver cuando se selecciona en los temas de contraste alto. Por ejemplo:
 
-  Antes: 
+  Antes:
 
   ![Captura de pantalla de los botones de radio y de comprobación con visibilidad de texto deficiente en los temas de contraste alto.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  Después: 
+  Después:
 
   ![Captura de pantalla de los botones de radio y de comprobación con una mejor visibilidad de texto en los temas de contraste alto.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
@@ -502,11 +502,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   A partir de .NET Framework 4.7.1, el borde de un control <xref:System.Windows.Controls.ComboBox> deshabilitado es del mismo color que el texto deshabilitado. Por ejemplo:
 
-  Antes: 
+  Antes:
 
   ![Captura de pantalla de un cuadro combinado deshabilitado con borde y texto del control en distintos colores.](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  Después:   
+  Después:
 
   ![Captura de pantalla de un cuadro combinado deshabilitado con borde del mismo color que el texto del control.](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
@@ -514,43 +514,43 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   Antes:
 
-  ![Captura de pantalla de un botón negro con texto en gris que indica "Focus Me" (Enfócame).](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![Captura de pantalla de un botón negro con texto en gris que indica "Focus Me" (Enfócame).](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
-  Después: 
+  Después:
 
-  ![Captura de pantalla de un botón azul con texto en negro que indica "Focus Me" (Enfócame).](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![Captura de pantalla de un botón azul con texto en negro que indica "Focus Me" (Enfócame).](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
   Por último, en .NET Framework 4.7 y versiones anteriores, al establecer el estilo de un control <xref:System.Windows.Controls.ComboBox> en `Toolbar.ComboBoxStyleKey`, la flecha de lista desplegable se hacía invisible. Este problema se corrigió a partir de .NET Framework 4.7.1. Por ejemplo:
 
-  Antes: 
+  Antes:
 
-  ![Captura de pantalla de un control de cuadro combinado con una flecha desplegable invisible.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
+  ![Captura de pantalla de un control de cuadro combinado con una flecha desplegable invisible.](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
-  Después: 
+  Después:
 
-  ![Captura de pantalla de un control de cuadro combinado que muestra la flecha desplegable.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
+  ![Captura de pantalla de un control de cuadro combinado que muestra la flecha desplegable.](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - Control <xref:System.Windows.Controls.DataGrid>
 
   A partir de .NET Framework 4.7.1, la flecha de indicador de orden de los controles <xref:System.Windows.Controls.DataGrid> usa los colores de tema correctos. Por ejemplo:
 
-  Antes: 
+  Antes:
 
-  ![Captura de pantalla de la flecha de indicador de orden antes de las mejoras.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![Captura de pantalla de la flecha de indicador de orden antes de las mejoras.](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
-  Después:   
+  Después:
 
-  ![Captura de pantalla de la flecha de indicador de orden después de las mejoras.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![Captura de pantalla de la flecha de indicador de orden después de las mejoras.](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   Además, en .NET Framework 4.7 y versiones anteriores, el estilo de vínculo predeterminado cambiaba a un color incorrecto cuando se colocaba el mouse encima en los modos de contraste alto. Esto se resolvió a partir de .NET Framework 4.7.1. Del mismo modo, a partir de .NET Framework 4.7.1, las columnas de casilla <xref:System.Windows.Controls.DataGrid> usan los colores esperados para comentarios de foco de teclado.
 
-  Antes: 
+  Antes:
 
-  ![Captura de pantalla de un vínculo que indica "Click Me!" (Hacer clic aquí) en rojo.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![Captura de pantalla de un vínculo que indica "Click Me!" (Hacer clic aquí) en rojo.](./media/whats-new-in-accessibility/default-link-style-before.png)
 
-  Después:    
+  Después:
 
-  ![Captura de pantalla de un vínculo que indica "Click Me!" (Hacer clic aquí) en amarillo.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![Captura de pantalla de un vínculo que indica "Click Me!" (Hacer clic aquí) en amarillo.](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 Para más información sobre las mejoras de accesibilidad de WPF en .NET Framework 4.7.1, vea [Mejoras de accesibilidad en WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -581,11 +581,11 @@ Algunos ejemplos de cambios de contraste alto:
 
   Antes:
 
-  ![Captura de pantalla de una aplicación que usa distintos controles que se ejecutan en el modo de alto contraste antes de las mejoras de accesibilidad.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![Captura de pantalla de una aplicación que usa distintos controles que se ejecutan en el modo de alto contraste antes de las mejoras de accesibilidad.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   Después:
 
-  ![Captura de pantalla de una aplicación que usa distintos controles que se ejecutan en el modo de alto contraste después de las mejoras de accesibilidad.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![Captura de pantalla de una aplicación que usa distintos controles que se ejecutan en el modo de alto contraste después de las mejoras de accesibilidad.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - Mejoras de contraste alto en el cuadro de diálogo de excepción de subproceso.
 

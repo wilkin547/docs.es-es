@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75710796"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML

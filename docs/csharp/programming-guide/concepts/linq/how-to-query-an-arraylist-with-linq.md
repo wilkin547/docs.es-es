@@ -2,12 +2,12 @@
 title: Procedimiento para consultar un objeto ArrayList con LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: b8edb90d33c92324d4f76c7e6977641fe4499d9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345705"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168939"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Procedimiento para consultar un objeto ArrayList con LINQ (C#)
 Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de objetos `Student`, la [cláusula from](../../../language-reference/keywords/from-clause.md) debe tener un aspecto similar a este:  
@@ -77,7 +77,7 @@ namespace NonGenericLINQ
         }  
     }  
 }  
-/* Output:   
+/* Output:
     Omelchenko: 98  
     Garcia: 97  
 */  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
 ms.openlocfilehash: f3239184beb58312a8e3598545fc37423ff85287
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333848"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analizar archivos de texto con el objeto TextFieldParser (Visual Basic)
@@ -33,7 +33,7 @@ El objeto `TextFieldParser` permite analizar y procesar archivos muy grandes est
   
 ## <a name="parsing-files-with-multiple-formats"></a>Analizar archivos con varios formatos  
 
- El método `PeekChars` del objeto `TextFieldParser` se puede usar para comprobar cada campo antes de leerlo, lo que le permite definir varios formatos para los campos y actuar en consecuencia. Para obtener más información, vea [Cómo: Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+ El método `PeekChars` del objeto `TextFieldParser` se puede usar para comprobar cada campo antes de leerlo, lo que le permite definir varios formatos para los campos y actuar en consecuencia. Para obtener más información, consulte [Cómo: Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Vea también
 

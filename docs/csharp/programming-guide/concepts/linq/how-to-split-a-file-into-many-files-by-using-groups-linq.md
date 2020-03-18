@@ -2,12 +2,12 @@
 title: Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347320"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168575"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C#)
 En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.  
@@ -29,7 +29,7 @@ En este ejemplo se muestra una manera de combinar el contenido de dos archivos y
     Garcia, Debra  
     ```  
   
-2. Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2. Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.  
   
     ```text  
     Liu, Jinghao  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -131,4 +131,4 @@ Cree un proyecto de aplicación de consola de C# con directivas `using` para los
 ## <a name="see-also"></a>Vea también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
-- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)
+- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])

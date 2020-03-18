@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 578413b053fc1daab0c3162d9032f4d64d3e470d
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626703"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398260"
 ---
 # <a name="equality-operators-c-reference"></a>Operadores de igualdad (referencia de C#)
 
@@ -34,7 +34,7 @@ El operador de igualdad `==` devuelve `true` si sus operandos son iguales; en ca
 
 Los operandos de los [tipos de valor integrados](../builtin-types/value-types.md#built-in-value-types) son iguales si sus valores son iguales:
 
-[!code-csharp-interactive[value types equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
+[!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
 > Para los operadores `==`, [`<`, `>`, `<=` y `>=`](comparison-operators.md), si cualquier operando no es un número (<xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>), el resultado del operador será `false`. Esto significa que el valor `NaN` no es mayor, inferior ni igual que cualquier otro valor `double` o `float`, incluido `NaN`. Para obtener más información y ejemplos, vea el artículo de referencia <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
@@ -49,7 +49,7 @@ A partir de C# 7.3, los operadores `==` y `!=` son compatibles con las [tuplas]
 
 De forma predeterminada, dos operandos de tipo de referencia son iguales si hacen referencia al mismo objeto:
 
-[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+[!code-csharp[reference type equality](snippets/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Como se muestra en el ejemplo, el operador `==` es compatible de forma predeterminada con los tipos de referencia definidos por el usuario. Sin embargo, un tipo de referencia puede sobrecargar el operador `==`. Si un tipo de referencia sobrecarga el operador `==`, use el método <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> para comprobar si dos referencias de ese tipo hacen referencia al mismo objeto.
 
@@ -57,7 +57,7 @@ Como se muestra en el ejemplo, el operador `==` es compatible de forma predeterm
 
 Dos operandos [string](../builtin-types/reference-types.md#the-string-type) son iguales si ambos son `null`, o bien si las instancias de ambas cadenas tienen la misma longitud y los mismos caracteres en cada posición de caracteres:
 
-[!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
+[!code-csharp-interactive[string equality](snippets/EqualityOperators.cs#StringEquality)]
 
 Es la comparación de ordinales que distingue entre mayúsculas de minúsculas. Para obtener más información sobre la comparación de cadenas, vea [Cómo comparar cadenas en C# ](../../how-to/compare-strings.md).
 
@@ -65,13 +65,13 @@ Es la comparación de ordinales que distingue entre mayúsculas de minúsculas. 
 
 Dos operandos de [delegado](../../programming-guide/delegates/index.md) con el mismo tipo de entorno de ejecución son iguales cuando ambos son `null`, o bien cuando sus listas de invocación tienen la misma longitud y las mismas entradas en cada posición:
 
-[!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+[!code-csharp-interactive[delegate equality](snippets/EqualityOperators.cs#DelegateEquality)]
 
 Para obtener más información, vea la sección sobre los [operadores de igualdad entre delegados](~/_csharplang/spec/expressions.md#delegate-equality-operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 Los delegados que se producen mediante la evaluación de [expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) semánticamente idénticas no son iguales, tal como se muestra en el ejemplo siguiente:
 
-[!code-csharp-interactive[from identical lambdas](~/samples/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
+[!code-csharp-interactive[from identical lambdas](snippets/EqualityOperators.cs#IdenticalLambdas)]
 
 ## <a name="inequality-operator-"></a>Operador de desigualdad !=
 
@@ -79,13 +79,13 @@ El operador de desigualdad (`!=`) devuelve `true` si sus operandos son iguales; 
 
 En el siguiente ejemplo se muestra el uso del operador `!=`:
 
-[!code-csharp-interactive[non-equality examples](~/samples/csharp/language-reference/operators/EqualityOperators.cs#NonEquality)]
+[!code-csharp-interactive[non-equality examples](snippets/EqualityOperators.cs#NonEquality)]
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
 Un tipo definido por el usuario puede [sobrecargar](operator-overloading.md) los operadores `==` y `!=`. Si un tipo sobrecarga uno de los dos operadores, también debe sobrecargar el otro.
 
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
+## <a name="c-language-specification"></a>especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Operadores de comprobación de tipos y relacionales](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) de la [Especificación del lenguaje de C#](~/_csharplang/spec/introduction.md).
 

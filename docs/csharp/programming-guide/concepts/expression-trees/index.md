@@ -2,19 +2,19 @@
 title: Árboles de expresión (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: e1ba2ac9107b5c0ab4547bd8cc5f23ca84753951
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f425ab38bf7bb54814fe777b7cb02180d022a8af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969842"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169641"
 ---
 # <a name="expression-trees-c"></a>Árboles de expresión (C#)
 Los árboles de expresión representan el código en una estructura de datos en forma de árbol donde cada nodo es una expresión, por ejemplo, una llamada a método o una operación binaria como `x < y`.  
   
  El código representado en árboles de expresión se puede compilar y ejecutar. Esto permite realizar cambios dinámicos en el código ejecutable, ejecutar consultas LINQ en varias bases de datos y crear consultas dinámicas. Para obtener más información sobre los árboles de expresión en LINQ, consulte [Procedimiento para usar árboles de expresión para crear consultas dinámicas (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).
   
- Los árboles de expresión también se usan en Dynamic Language Runtime (DLR) para proporcionar interoperabilidad entre los lenguajes dinámicos y .NET Framework y, asimismo, para permitir que los programadores de compiladores emitan árboles de expresión en lugar de Lenguaje intermedio de Microsoft (MSIL). Para obtener más información sobre el entorno DLR, vea [Información general acerca de Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
+ Los árboles de expresión también se usan en Dynamic Language Runtime (DLR) para proporcionar interoperabilidad entre los lenguajes dinámicos y .NET Framework y, asimismo, para permitir que los programadores de compiladores emitan árboles de expresión en lugar de Lenguaje intermedio de Microsoft (MSIL). Para obtener más información sobre el entorno DLR, consulte [Dynamic Language Runtime Overview](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Información general sobre Dynamic Language Runtime).  
   
  Puede hacer que el compilador de Visual Basic o de C# cree un árbol de expresión en función de una expresión lambda anónima, o bien puede crear árboles de expresión manualmente usando el espacio de nombres <xref:System.Linq.Expressions>.  
   
@@ -38,7 +38,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
 // Add the following using directive to your code file:  
 // using System.Linq.Expressions;  
   
-// Manually build the expression tree for   
+// Manually build the expression tree for
 // the lambda expression num => num < 5.  
 ParameterExpression numParam = Expression.Parameter(typeof(int), "num");  
 ConstantExpression five = Expression.Constant(5, typeof(int));  
@@ -55,7 +55,7 @@ Expression<Func<int, bool>> lambda1 =
 // Creating a parameter expression.  
 ParameterExpression value = Expression.Parameter(typeof(int), "value");  
   
-// Creating an expression to hold a local variable.   
+// Creating an expression to hold a local variable.
 ParameterExpression result = Expression.Parameter(typeof(int), "result");  
   
 // Creating a label to jump to from a loop.  
@@ -154,4 +154,4 @@ Console.WriteLine(expr.Compile()(4));
 - [Procedimiento para modificar árboles de expresión (C#)](./how-to-modify-expression-trees.md)
 - [Expresiones lambda](../../statements-expressions-operators/lambda-expressions.md)
 - [Información general sobre Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
-- [Conceptos de programación (C#)](../index.md)
+- [Programming Concepts (C#)](../index.md) (Conceptos de programación (C#))

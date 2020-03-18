@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
 ms.openlocfilehash: 60ac7a8d982e7788f07debce114896859385c8e2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705475"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Pasar parámetros (Guía de programación de C#)
@@ -22,7 +22,7 @@ En C#, los argumentos se pueden pasar a parámetros por valor o por referencia. 
   
  [!code-csharp[csProgGuideParameters#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#10)]  
   
- Para obtener más información, vea los temas siguientes:  
+ Para obtener más información, consulta los temas siguientes:  
   
 - [Pasar parámetros de tipo de valor](./passing-value-type-parameters.md)  
   

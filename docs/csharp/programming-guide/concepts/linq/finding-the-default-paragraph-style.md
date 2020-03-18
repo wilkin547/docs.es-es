@@ -2,19 +2,19 @@
 title: Buscar el estilo de párrafo predeterminado (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204105"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169537"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Buscar el estilo de párrafo predeterminado (C#)
 La primera tarea del tutorial Manipular información en un documento WordprocessingML consiste en buscar el estilo predeterminado de los párrafos del documento.  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
+### <a name="description"></a>Description  
  El siguiente ejemplo abre un documento XML WordprocessingML abierto de Office, busca las partes del documento y del estilo del paquete y ejecuta una consulta que busca el nombre de estilo predeterminado. Para obtener información sobre los paquetes Office Open XML y las partes de las que constan, vea [Información de los documentos de WordprocessingML de Office Open XML (C#)](./wordprocessingml-document-with-styles.md).  
   
  La consulta busca un nodo con el nombre `w:style` que tiene un atributo con el nombre `w:type` con un valor de "paragraph" y también un atributo con el nombre `w:default` con un valor de "1". Puesto que sólo habrá un nodo XML con estos atributos, la consulta utiliza el operador <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> para convertir una recopilación en un singleton. A continuación obtiene el valor de un atributo con el nombre `w:styleId`.  
@@ -65,7 +65,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
   
 // The following query finds all the paragraphs that have the default style.  
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  

@@ -4,12 +4,12 @@ description: Se resume cómo puede usar árboles de expresión para crear progra
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 513244a987e295c81cfb5d00d9a0cfd6912074e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036757"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145896"
 ---
 # <a name="expression-trees-summary"></a>Resumen de árboles de expresión
 
@@ -19,7 +19,7 @@ En esta serie, se vio cómo se pueden usar *árboles de expresión* para crear p
 
 Se pueden examinar los árboles de expresión para entender el propósito de un algoritmo. No se puede examinar solo ese código. Se pueden crear árboles de expresión nuevos que representen las versiones modificadas del código original.
 
-También se pueden usar árboles de expresión para buscar en un algoritmo y traducirlo a otro lenguaje o entorno. 
+También se pueden usar árboles de expresión para buscar en un algoritmo y traducirlo a otro lenguaje o entorno.
 
 ## <a name="limitations"></a>Limitaciones
 

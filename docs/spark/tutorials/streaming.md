@@ -5,14 +5,14 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504044"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186511"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming con .NET para Apache Spark 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming con .NET para Apache Spark
 
 En este tutorial aprenderá a invocar Spark Structured Streaming mediante .NET para Apache Spark. Spark Structured Streaming es la compatibilidad de Apache Spark con el procesamiento de flujos de datos en tiempo real. El procesamiento de flujos se refiere a la realización de análisis de datos activos a medida que se producen.
 
@@ -47,7 +47,7 @@ Si esta es su primera aplicación de .NET para Apache Spark, comience con el [tu
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>Establecimiento y conexión a un flujo de datos
 
-Una forma popular de probar el procesamiento de flujos es a través de **netcat**. netcat (también conocido como *nc*) le permite leer desde conexiones de red y escribir en ellas. Establezca una conexión de red con netcat a través de una ventana de terminal. 
+Una forma popular de probar el procesamiento de flujos es a través de **netcat**. netcat (también conocido como *nc*) le permite leer desde conexiones de red y escribir en ellas. Establezca una conexión de red con netcat a través de una ventana de terminal.
 
 ### <a name="create-a-data-stream-with-netcat"></a>Creación de un flujo de datos con netcat
 
@@ -108,14 +108,14 @@ DataFrame lines = spark
 
 Puede usar UDF, *funciones definidas por el usuario*, en aplicaciones Spark para realizar cálculos y análisis de los datos.
 
-Agregue el siguiente código a su método `Main` para registrar una UDF llamada `udfArray`. 
+Agregue el siguiente código a su método `Main` para registrar una UDF llamada `udfArray`.
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-Esta UDF procesa cada cadena que recibe del terminal netcat para producir una cadena que incluye la cadena original (contenida en *str*), seguida de la cadena original concatenada con la longitud de la cadena original. 
+Esta UDF procesa cada cadena que recibe del terminal netcat para producir una cadena que incluye la cadena original (contenida en *str*), seguida de la cadena original concatenada con la longitud de la cadena original.
 
 Por ejemplo, al escribir *Hola mundo* en el terminal netcat se produce una matriz donde:
 

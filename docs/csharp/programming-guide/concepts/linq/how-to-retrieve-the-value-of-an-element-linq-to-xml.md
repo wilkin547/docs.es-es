@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar el valor de un elemento (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347416"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168692"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Procedimiento para recuperar el valor de un elemento (LINQ to XML) (C#)
 Este tema muestra cómo obtener el valor de los elementos. Existen dos formas principales de hacerlo. Una forma consiste en convertir un elemento <xref:System.Xml.Linq.XElement> o un atributo <xref:System.Xml.Linq.XAttribute> al tipo deseado. El operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado y lo asigna a la variable. Como alternativa, se puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
@@ -54,7 +54,7 @@ Value of e:44
  Puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para recuperar el contenido de un elemento:  
   
 ```csharp  
-XElement e = new XElement("StringElement", "abcde");   
+XElement e = new XElement("StringElement", "abcde");
 Console.WriteLine(e);  
 Console.WriteLine("Value of e:" + e.Value);  
 ```  

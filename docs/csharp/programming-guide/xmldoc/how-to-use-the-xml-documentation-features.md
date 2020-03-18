@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789771"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157005"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Procedimiento para usar las características de la documentación XML
 
@@ -62,7 +62,7 @@ En el ejemplo se genera un archivo *.xml* con el contenido siguiente.
             </summary>
             <param name="s"> Parameter description for s goes here.</param>
             <seealso cref="T:System.String">
-            You can use the cref attribute on any tag to reference a type or member 
+            You can use the cref attribute on any tag to reference a type or member
             and the compiler will check that the reference exists.
             </seealso>
         </member>

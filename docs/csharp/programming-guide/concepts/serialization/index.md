@@ -1,12 +1,12 @@
 ---
 title: Serialización (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635735"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167600"
 ---
 # <a name="serialization-c"></a>Serialización (C#)
 
@@ -43,7 +43,7 @@ La serialización de JSON serializa las propiedades públicas de un objeto en un
 
 El espacio de nombres <xref:System.Runtime.Serialization> contiene clases para la serialización y deserialización binaria y XML.
 
-La serialización binaria utiliza la codificación binaria para generar una serialización compacta para usos como almacenamiento o secuencias de red basadas en socket. En la serialización binaria se serializan todos los miembros, incluso aquellos que son de solo lectura, y mejora el rendimiento. 
+La serialización binaria utiliza la codificación binaria para generar una serialización compacta para usos como almacenamiento o secuencias de red basadas en socket. En la serialización binaria se serializan todos los miembros, incluso aquellos que son de solo lectura, y mejora el rendimiento.
 
 La serialización XML serializa las propiedades y los campos públicos de un objeto o los parámetros y valores devueltos de los métodos en una secuencia XML que se ajusta a un documento específico del lenguaje de definición de esquema XML (XSD). La serialización XML produce clases fuertemente tipadas cuyas propiedades y campos públicos se convierten a XML. <xref:System.Xml.Serialization> contiene clases para serializar y deserializar XML. Se aplican atributos a clases y a miembros de clase para controlar la forma en que <xref:System.Xml.Serialization.XmlSerializer> serializa o deserializa una instancia de la clase.
 
@@ -79,9 +79,10 @@ La serialización de diseñador es una forma especial de serialización que conl
 
 En [Información general de System.Text.Json](../../../../standard/serialization/system-text-json-overview.md) se muestra cómo obtener la biblioteca `System.Text.Json`.
 
-En [Procedimiento para serializar y deserializar JSON en .NET](../../../../standard/serialization/system-text-json-how-to.md) se muestra cómo leer y escribir datos de objetos a y desde JSON mediante la clase <xref:System.Text.Json.JsonSerializer>.
+En [Procedimiento para serializar y deserializar JSON en .NET](../../../../standard/serialization/system-text-json-how-to.md)
+se muestra cómo leer y escribir datos de objetos a y desde JSON mediante la clase <xref:System.Text.Json.JsonSerializer>.
 
-[Tutorial: Conservar un objeto en Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Tutorial: Conservar un objeto en Visual Studio [C#])  
 Se explica cómo se puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.
 
 [Procedimiento para leer datos de objeto de un archivo XML (C#)](how-to-read-object-data-from-an-xml-file.md)  

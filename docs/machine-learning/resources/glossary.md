@@ -4,11 +4,11 @@ description: Un glosario de los términos importantes sobre aprendizaje automát
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739878"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397768"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -36,7 +36,7 @@ En ML.NET, un catálogo es una colección de funciones de extensión, agrupadas 
 
 Por ejemplo, cada tarea de aprendizaje automático (clasificación binaria, regresión, clasificación, etcétera) tiene un catálogo de algoritmos de aprendizaje automático disponibles (instructores). El catálogo para los instructores de clasificación binaria es: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
 
-## <a name="classification"></a>Clasificación
+## <a name="classification"></a>clasificación
 
 Cuando los datos se usan para predecir una categoría, la tarea de [aprendizaje automático supervisado](#supervised-machine-learning) se llama clasificación. La [clasificación binaria](#binary-classification) hace referencia a la predicción de únicamente dos categorías (por ejemplo, clasificar una imagen como la foto de un "gato" o un "perro"). La [clasificación multiclase ](#multiclass-classification) hace referencia a la predicción de varias categorías (por ejemplo, clasificar una imagen como la foto de una raza específica de perro).
 
@@ -44,7 +44,7 @@ Cuando los datos se usan para predecir una categoría, la tarea de [aprendizaje 
 
 En [regresión](#regression), una métrica de evaluación que indica en qué grado los datos se ajustan a un modelo. Va de 0 a 1. Un valor de 0 significa que los datos son aleatorios o no pueden ajustarse al modelo. Un valor de 1 significa que el modelo coincide exactamente con los datos. Esto se conoce a menudo como r<sup>2</sup>, R<sup>2</sup>, o r cuadrado.
 
-## <a name="data"></a>Datos
+## <a name="data"></a>data
 
 Los datos son esenciales en cualquier aplicación de aprendizaje automático. En ML.NET, los datos se representan mediante objetos <xref:Microsoft.ML.IDataView>. Objetos de vista de datos:
 

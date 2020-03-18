@@ -2,12 +2,12 @@
 title: Crear árboles XML en C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594628"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169550"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Crear árboles XML en C# (LINQ to XML)
 En esta sección encontrará información acerca de cómo crear árboles XML en C#.  
@@ -25,7 +25,7 @@ En esta sección encontrará información acerca de cómo crear árboles XML en 
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -42,7 +42,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>Constructores de XElement  
  La clase <xref:System.Xml.Linq.XElement> utiliza los siguientes constructores para llevar a cabo una construcción funcional. Observe que existen algunos constructores más para <xref:System.Xml.Linq.XElement>, pero, dado que no se utilizan para el proceso de construcción funcional, no se detallarán aquí.  
   
-|Constructor|DESCRIPCIÓN|  
+|Constructor|Description|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Crea una interfaz <xref:System.Xml.Linq.XElement>. El parámetro `name` especifica el nombre del elemento; `content` especifica el contenido del elemento.|  
 |`XElement(XName name)`|Crea un <xref:System.Xml.Linq.XElement> cuyo <xref:System.Xml.Linq.XName> se inicializa con el nombre especificado.|  
@@ -139,7 +139,7 @@ Console.WriteLine(address);
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),                                                   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -183,7 +183,7 @@ Console.WriteLine(phone);
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
-```   
+```
 
 ### <a name="creating-an-empty-element"></a>Creación de un elemento vacío  
  Para crear un <xref:System.Xml.Linq.XElement> vacío, no pase ningún contenido al constructor. El siguiente ejemplo crea un elemento vacío:  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>Vea también
 
-- [Creación de árboles XML (C#)](./linq-to-xml-overview.md)
+- [Crear árboles XML (C#)](./linq-to-xml-overview.md)

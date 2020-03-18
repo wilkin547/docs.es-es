@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
 ms.openlocfilehash: 68f0c67b8135c6bb7ce8a134e2a324bc12c0aad9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345506"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Operaciones de puertos en .NET Framework con Visual Basic
@@ -24,7 +24,7 @@ La forma más sencilla de crear un objeto <xref:System.IO.Ports.SerialPort> es a
 
 En esta tabla se enumeran y se describen las enumeraciones principales usadas para acceder a un puerto serie:
 
-|Enumeración|DESCRIPCIÓN|
+|Enumeración|Description|
 |---|---|
 |<xref:System.IO.Ports.Handshake>|Especifica el protocolo de control usado para establecer una comunicación de puerto serie para un objeto <xref:System.IO.Ports.SerialPort>.|
 |<xref:System.IO.Ports.Parity>|Especifica el bit de paridad para un objeto <xref:System.IO.Ports.SerialPort>.|

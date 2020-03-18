@@ -4,12 +4,12 @@ description: Comprender cómo funciona el control de versiones en C# y .NET
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039652"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156472"
 ---
 # <a name="versioning-in-c"></a>Control de versiones en C\#
 
@@ -35,7 +35,8 @@ También existen maneras de especificar otros escenarios como versiones prelimin
 ### <a name="backwards-compatibility"></a>Compatibilidad con versiones anteriores
 
 A medida que presente versiones nuevas de su biblioteca, la compatibilidad con las versiones anteriores será probablemente una de sus mayores preocupaciones.
-Una versión nueva de su biblioteca es compatible en su origen con una versión anterior si el código que depende de la versión anterior, puede, cuando se vuelve a compilar, trabajar con la versión nueva. Una versión nueva de su biblioteca tiene compatibilidad binaria si una aplicación que dependía de la versión anterior, puede, sin que se vuelva a compilar, trabajar con la versión nueva.
+Una versión nueva de su biblioteca es compatible en su origen con una versión anterior si el código que depende de la versión anterior, puede, cuando se vuelve a compilar, trabajar con la versión nueva.
+Una versión nueva de su biblioteca tiene compatibilidad binaria si una aplicación que dependía de la versión anterior, puede, sin que se vuelva a compilar, trabajar con la versión nueva.
 
 Aquí se muestran algunos aspectos a tener en cuenta al intentar mantener la compatibilidad con versiones anteriores de su biblioteca:
 
@@ -82,7 +83,7 @@ Use el modificador `new` para ocultar los miembros heredados de una clase base. 
 
 Considere el ejemplo siguiente:
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **Salida**
 
@@ -100,7 +101,7 @@ Cuando no se especifica ningún modificador `new`, una clase derivada ocultará 
 
 El modificador `override` significa que una implementación derivada extiende la implementación de un miembro de clase base en lugar de ocultarlo. El miembro de clase base necesita que se le aplique el modificador `virtual`.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **Salida**
 

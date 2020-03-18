@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para establecer en una aplicación una directiva de caché basada en la ubicación
+title: Cómo establecer en una aplicación una directiva de caché basada en la ubicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6fe569e781b005461ea41e3d6b90859666f9601a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048118"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180776"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedimiento para establecer en una aplicación una directiva de caché basada en la ubicación
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Cómo establecer en una aplicación una directiva de caché basada en la ubicación
 Las directivas de caché basadas en la ubicación permiten que una aplicación defina explícitamente el comportamiento de caché basándose en la ubicación del recurso solicitado. En este tema se muestra cómo establecer la directiva de caché mediante programación. Para obtener información sobre cómo establecer la directiva de una aplicación con los archivos de configuración, vea [Elemento \<requestCaching> (configuración de red)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Para establecer en una aplicación una directiva de caché basada en la ubicación  
@@ -55,7 +55,7 @@ Las directivas de caché basadas en la ubicación permiten que una aplicación d
     ```csharp  
     public static void DoNotUseCache()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.NoCacheNoStore);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -76,7 +76,7 @@ Las directivas de caché basadas en la ubicación permiten que una aplicación d
     ```csharp  
     public static void OnlyUseCache()  
     {  
-        HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+        HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.CacheOnly);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -97,7 +97,7 @@ Las directivas de caché basadas en la ubicación permiten que una aplicación d
     ```csharp  
     public static void DoNotUseLocalCache()  
     {  
-     HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+     HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Refresh);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -118,7 +118,7 @@ Las directivas de caché basadas en la ubicación permiten que una aplicación d
     ```csharp  
     public static void SendToServer()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Reload);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  

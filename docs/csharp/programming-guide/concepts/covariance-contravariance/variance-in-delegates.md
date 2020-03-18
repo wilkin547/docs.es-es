@@ -2,12 +2,12 @@
 title: Varianza en delegados (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: cdf7cad97ececbf4baae8328b1df55318c627cbb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fd1b4824dc3d8f12347e01b804a6e39fe2e086c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345175"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169719"
 ---
 # <a name="variance-in-delegates-c"></a>Varianza en delegados (C#)
 En .NET Framework 3.5 se presentó por primera vez la compatibilidad con la varianza para hacer coincidir firmas de método con tipos de delegados en todos los delegados en C#. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  
@@ -36,7 +36,7 @@ public static Second ASecondRSecond(Second second)
 public static First AFirstRFirst(First first)  
 { return new First(); }  
   
-// The return type is more derived   
+// The return type is more derived
 // and the argument type is less derived.  
 public static Second AFirstRSecond(First first)  
 { return new Second(); }  
@@ -45,10 +45,10 @@ public static Second AFirstRSecond(First first)
  En el ejemplo de código siguiente se ilustra la conversión implícita entre la firma del método y el tipo de delegado.  
   
 ```csharp  
-// Assigning a method with a matching signature   
+// Assigning a method with a matching signature
 // to a non-generic delegate. No conversion is necessary.  
 SampleDelegate dNonGeneric = ASecondRFirst;  
-// Assigning a method with a more derived return type   
+// Assigning a method with a more derived return type
 // and less derived argument type to a non-generic delegate.  
 // The implicit conversion is used.  
 SampleDelegate dNonGenericConversion = AFirstRSecond;  
@@ -56,7 +56,7 @@ SampleDelegate dNonGenericConversion = AFirstRSecond;
 // Assigning a method with a matching signature to a generic delegate.  
 // No conversion is necessary.  
 SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;  
-// Assigning a method with a more derived return type   
+// Assigning a method with a more derived return type
 // and less derived argument type to a generic delegate.  
 // The implicit conversion is used.  
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
@@ -81,7 +81,7 @@ public static void Test()
   
     // You can assign delegates to each other,  
     // because the type T is declared covariant.  
-    SampleGenericDelegate <Object> dObject = dString;             
+    SampleGenericDelegate <Object> dObject = dString;
 }  
 ```  
   
@@ -98,7 +98,7 @@ public static void Test()
   
     // You can assign the dObject delegate  
     // to the same lambda expression as dString delegate  
-    // because of the variance support for   
+    // because of the variance support for
     // matching method signatures with delegate types.  
     SampleGenericDelegate<Object> dObject = () => " ";  
   
@@ -192,7 +192,7 @@ public static void Test()
     // DInvariant<Object> dObject = dInt;  
     // DInvariant<long> dLong = dInt;  
     // DVariant<Object> dVariantObject = dVariantInt;  
-    // DVariant<long> dVariantLong = dVariantInt;              
+    // DVariant<long> dVariantLong = dVariantInt;
 }  
 ```  
   

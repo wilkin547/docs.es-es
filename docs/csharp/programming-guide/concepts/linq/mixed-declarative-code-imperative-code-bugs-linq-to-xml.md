@@ -2,12 +2,12 @@
 title: Errores en código declarativo-imperativo mixto (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591626"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168354"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Errores en códigos declarativos/imperativos mixtos (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye numerosos métodos que le permiten modificar directamente un árbol XML. Puede agregar elementos, eliminarlos, cambiar sus contenidos, agregar atributos, etc. Esta interfaz de programación se describe en [Modificar árboles XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Si está llevando a cabo una iteración por uno de los ejes, como puede ser <xref:System.Xml.Linq.XContainer.Elements%2A>, y está modificando el árbol XML a medida que recorre el eje, es posible que acabe encontrando errores extraños.  
@@ -167,4 +167,3 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
- 

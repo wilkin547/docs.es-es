@@ -20,20 +20,20 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627275"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398314"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referencia integrados (referencia de C#)
 
-C# tiene un número de tipos de referencia integrados. Tienen palabras clave u operadores que son sinónimos para un tipo en la biblioteca de .NET. 
+C# tiene un número de tipos de referencia integrados. Tienen palabras clave u operadores que son sinónimos para un tipo en la biblioteca de .NET.
 
 ## <a name="the-object-type"></a>Tipo object
 
-El tipo `object` es un alias de <xref:System.Object?displayProperty=nameWithType> en .NET. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de <xref:System.Object?displayProperty=nameWithType>. Puede asignar valores de cualquier tipo a las variables de tipo `object`. Cualquier variable `object` puede asignarse a su valor predeterminado con el literal `null`. Cuando una variable de un tipo de valor se convierte en objeto, se dice que se aplica la *conversión boxing*. Cuando una variable de tipo `object` se convierte en un tipo de valor, se dice que se *aplica la conversión unboxing*. Para obtener más información, vea [Conversión boxing y unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+El tipo `object` es un alias de <xref:System.Object?displayProperty=nameWithType> en .NET. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de <xref:System.Object?displayProperty=nameWithType>. Puede asignar valores de cualquier tipo a las variables de tipo `object`. Cualquier variable `object` puede asignarse a su valor predeterminado con el literal `null`. Cuando una variable de un tipo de valor se convierte en objeto, se dice que se aplica la *conversión boxing*. Cuando una variable de tipo `object` se convierte en un tipo de valor, se dice que se *aplica la conversión unboxing*. Para obtener más información, vea [Conversión boxing y unboxing](../../programming-guide/types/boxing-and-unboxing.md).
 
 ## <a name="the-string-type"></a>Tipo string
 
@@ -84,7 +84,7 @@ for (int i = 0; i < str.Length; i++)
   Console.Write(str[i] + " ");
 }
 // Output: t e s t
-``` 
+```
 
 Los literales de cadena son del tipo `string` y se pueden escribir de dos formas, entre comillas y entre `@`. Los literales de cadena se incluyen entre comillas dobles ("):
 
@@ -136,7 +136,7 @@ En. NET, los tipos `System.Action` y `System.Func` proporcionan definiciones gen
 
 Un `delegate` es un tipo de referencia que puede usarse para encapsular un método con nombre o anónimo. Los delegados son similares a los punteros de función en C++; pero son más seguros y proporcionan mayor seguridad de tipos. Para las aplicaciones de delegados, vea [Delegados](../../programming-guide/delegates/index.md) y [Delegados genéricos](../../programming-guide/generics/generic-delegates.md). Los delegados son la base de los [eventos](../../programming-guide/events/index.md). Se pueden crear instancias de un delegado asociándolo a un método con nombre o anónimo.
 
-Para crear instancias del delegado debe usarse un método o una expresión lambda que tenga un tipo de valor devuelto y parámetros de entrada compatibles. Para obtener más información sobre el grado de variación permitida en la firma de método, vea [Varianza en delegados](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Para el uso con métodos anónimos, el delegado y el código que se van a asociar se declaran juntos. 
+Para crear instancias del delegado debe usarse un método o una expresión lambda que tenga un tipo de valor devuelto y parámetros de entrada compatibles. Para obtener más información sobre el grado de variación permitida en la firma de método, vea [Varianza en delegados](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Para el uso con métodos anónimos, el delegado y el código que se van a asociar se declaran juntos.
 
 ## <a name="the-dynamic-type"></a>Tipo dynamic
 

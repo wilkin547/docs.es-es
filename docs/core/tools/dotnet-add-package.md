@@ -2,18 +2,18 @@
 title: Comando dotnet add package
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503801"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146611"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>Name
 
 `dotnet add package`: agrega una referencia de paquete a un archivo del proyecto.
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503801"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El comando `dotnet add package` constituye una opción práctica para agregar una referencia de paquete a un archivo del proyecto. Después de ejecutar el comando, existe una comprobación de compatibilidad para garantizar que el paquete es compatible con los marcos del proyecto. Si se pasa la comprobación, un elemento `<PackageReference>` se agrega al archivo del proyecto y [dotnet restore](dotnet-restore.md) se ejecuta.
 
@@ -30,7 +30,7 @@ El comando `dotnet add package` constituye una opción práctica para agregar un
 Por ejemplo, si agrega `Newtonsoft.Json` a *ToDo.csproj* se producirá un resultado similar al del siguiente ejemplo:
 
 ```console
-  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json

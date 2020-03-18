@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715749"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180345"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 
@@ -104,7 +104,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - De forma predeterminada, Mpgo.exe no está en la ruta de acceso de compilación de Visual Studio. Debe agregar la ruta de acceso a Visual Studio o especificar la ruta de acceso completa en la línea de comandos de Mpgo. Puede usar `–Scenario` o el parámetro `–Import` en el evento posterior a la compilación en Visual Studio. Pero el proceso típico es usar `–Scenario` una vez desde Símbolo del sistema para desarrolladores de Visual Studio y, luego, usar `–Import` para actualizar los ensamblados optimizados después de cada compilación; por ejemplo: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
-<a name="samples"></a>   
+<a name="samples"></a>
 ## <a name="examples"></a>Ejemplos  
  El siguiente comando de Mpgo.exe usado desde Símbolo del sistema para desarrolladores de Visual Studio optimiza una aplicación fiscal:  
   

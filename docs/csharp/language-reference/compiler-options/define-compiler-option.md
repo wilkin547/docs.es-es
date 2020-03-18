@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924795"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173749"
 ---
 # <a name="-define-c-compiler-options"></a>-define (Opciones del compilador de C#)
 La opción **-define** define `name` como un símbolo en todos los archivos de código fuente de su programa.  
@@ -65,11 +65,11 @@ La opción **-define** define `name` como un símbolo en todos los archivos de c
 // or uncomment the next line  
 // #define xx  
 using System;  
-public class Test   
+public class Test
 {  
-    public static void Main()   
+    public static void Main()
     {  
-        #if (xx)   
+        #if (xx)
             Console.WriteLine("xx defined");  
         #else  
             Console.WriteLine("xx not defined");  
@@ -81,4 +81,4 @@ public class Test
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)

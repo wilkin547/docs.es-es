@@ -7,10 +7,10 @@ helpviewer_keywords:
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74802692"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
@@ -86,7 +86,7 @@ En las tablas siguientes se enumeran los tipos que se han declarado obsoletos en
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Use <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|La clase <xref:System.Configuration.Assemblies.AssemblyHash> está desusada.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5. Use la clase <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> del espacio de nombres System.Runtime.CompilerServices en su lugar.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Utilice <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Utilice <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Utilice <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> en su lugar.|
@@ -187,7 +187,7 @@ En las tablas siguientes se enumeran los tipos que se han declarado obsoletos en
 
 |Tipo|Mensaje|
 |----------|-------------|
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Esta clase está en desuso. Utilice <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> en su lugar.|
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Esta clase está desusada. Utilice <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|No se recomienda el uso de este tipo porque la edición de DataBindings se inicia mediante <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> en lugar de la cuadrícula de propiedades.|
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|No se recomienda el uso de este tipo porque la edición de DataBindings se inicia mediante <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> en lugar de la cuadrícula de propiedades.|
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|La alternativa recomendada es <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> y <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|
@@ -210,12 +210,12 @@ En las tablas siguientes se enumeran los tipos que se han declarado obsoletos en
 
 |Tipo|Mensaje|
 |----------|-------------|
-|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Esta interfaz está desusada. En su lugar, agregue un objeto <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> para controlar el tipo <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>.|
+|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Esta interfaz está en desuso. En su lugar, agregue un objeto <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> para controlar el tipo <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Utilice <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> en su lugar para trabajar con el nuevo modelo de configuración.|
 |<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Este atributo está obsoleto. Utilice <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> en su lugar.|
-|<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Esta clase está en desuso.|
-|<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Esta clase está en desuso. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> en su lugar.|
-|<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Esta clase está en desuso. Utilice <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> en su lugar para obtener acceso al proxy global predeterminado y establecerlo. Use "null" en lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
+|<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Esta clase está desusada.|
+|<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Esta clase está desusada. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> en su lugar.|
+|<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Esta clase está desusada. Utilice <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> en su lugar para obtener acceso al proxy global predeterminado y establecerlo. Use "null" en lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|
 
 [Volver al principio](#introduction)
@@ -250,7 +250,7 @@ En las tablas siguientes se enumeran los tipos que se han declarado obsoletos en
 
 <a name="servicemodel"></a>
 
-### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.dll
+### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.Channels.dll
 
 |Tipo|Mensaje|
 |----------|-------------|
@@ -621,8 +621,8 @@ Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos 
 
 |Tipo|Mensaje|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> del ensamblado *Microsoft.Build* en su lugar.|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> del ensamblado *Microsoft.Build* en su lugar.|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Esta clase está desusada. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> del ensamblado *Microsoft.Build* en su lugar.|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Esta clase está desusada. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> del ensamblado *Microsoft.Build* en su lugar.|
 
 [Volver al principio](#introduction)
 
