@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901051"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401272"
 ---
 # <a name="binary-serialization"></a>Serialización binaria
 
@@ -28,16 +28,16 @@ Al implementar un mecanismo de la serialización en un entorno orientado a objet
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-La serialización binaria permite modificar miembros privados dentro de un objeto y, por tanto, cambiar su estado. Por este motivo, se recomiendan otros marcos de serialización, como <xref:System.Text.Json?displayProperty=fullName>, que operan en la superficie de la API pública.
+La serialización binaria permite modificar miembros privados dentro de un objeto y, por lo tanto, cambiar el estado del mismo. Debido a esto, se recomiendan otros marcos de serialización, como <xref:System.Text.Json?displayProperty=fullName>, que funcionan en la superficie de API pública.
 
-## <a name="net-core"></a>Núcleo de .NET
+## <a name="net-core"></a>.NET Core
 
-.NET Core admite la serialización binaria para un subconjunto de tipos. Puede ver la lista de tipos admitidos en la sección [tipos serializables](#serializable-types) que se indican a continuación. Se garantiza que los tipos enumerados son serializables entre .NET Framework 4.5.1 y versiones posteriores, y entre .NET Core 2,0 y versiones posteriores. Otras implementaciones de .NET, como mono, no se admiten oficialmente, sino que también deberían funcionar.
+.NET Core admite la serialización binaria para un subconjunto de tipos. Puede ver la lista de tipos admitidos en la sección [Tipos serializables](#serializable-types) que se muestra a continuación. Se garantiza que los tipos enumerados son serializables entre .NET Framework 4.5.1 y versiones posteriores y entre .NET Core 2.0 y versiones posteriores. Otras implementaciones de .NET, como Mono, no se admiten oficialmente, pero también deben funcionar.
 
 ### <a name="serializable-types"></a>Tipos serializables
 
 > [!div class="mx-tdCol2BreakAll"]
-> | Tipo de | Notas |
+> | Tipo | Notas |
 > | - | - |
 > | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
@@ -96,7 +96,7 @@ La serialización binaria permite modificar miembros privados dentro de un objet
 > | <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
-> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4.<br/>No se admite la serialización desde .NET Framework a .NET Core. |
+> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4.<br/>No se admite la serialización de .NET Framework a .NET Core. |
 > | <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
@@ -112,7 +112,7 @@ La serialización binaria permite modificar miembros privados dentro de un objet
 > | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Data.DataException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | Si establece `RemotingFormat` en `SerializationFormat.Binary`, solo se puede intercambiar con .NET Core 2,1 y versiones posteriores. |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | Si establece `RemotingFormat` `SerializationFormat.Binary`en , solo se puede intercambiar con .NET Core 2.1 y versiones posteriores. |
 > | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
@@ -126,7 +126,7 @@ La serialización binaria permite modificar miembros privados dentro de un objet
 > | <xref:System.Data.PropertyCollection?displayProperty=nameWithType> | |
 > | <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
-> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4.<br/>No se admite la serialización desde .NET Framework a .NET Core |
+> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4.<br/>No se admite la serialización de .NET Framework a .NET Core |
 > | <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType> | |
@@ -251,7 +251,7 @@ La serialización binaria permite modificar miembros privados dentro de un objet
 > | <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
-> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4.<br/>No se admite la serialización desde .NET Framework a .NET Core. |
+> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4.<br/>No se admite la serialización de .NET Framework a .NET Core. |
 > | <xref:System.Reflection.TargetException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
@@ -325,7 +325,7 @@ La serialización binaria permite modificar miembros privados dentro de un objet
 > | <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Uri?displayProperty=nameWithType> | |
 > | <xref:System.UriFormatException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
-> | <xref:System.ValueTuple?displayProperty=nameWithType> | No serializable en .NET Framework 4,7 y versiones anteriores. |
+> | <xref:System.ValueTuple?displayProperty=nameWithType> | No se puede serializar en .NET Framework 4.7 y versiones anteriores. |
 > | <xref:System.ValueType?displayProperty=nameWithType> | |
 > | <xref:System.Version?displayProperty=nameWithType> | |
 > | <xref:System.WeakReference%601?displayProperty=nameWithType> | |
@@ -338,19 +338,19 @@ La serialización binaria permite modificar miembros privados dentro de un objet
 > | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 > | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | A partir de .NET Core 2.0.4. |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.Serialization>\
 Contiene clases que se pueden usar para serializar y deserializar objetos.
 
-- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [Serialización XML y SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
 Describe el mecanismo de la serialización XML que está incluido con Common Language Runtime.
 
-- \ [de seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)
+- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)\
 Describe las instrucciones de la codificación seguras que hay que seguir al escribir el código que realiza la serialización.
 
-- \ [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
-Describe los distintos métodos a partir de .NET Framework para las comunicaciones remotas.
+- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+Describe los distintos métodos que comienzan en .NET Framework para las comunicaciones remotas.
 
-- [Servicios Web XML creados mediante ASP.net y clientes de servicios web xml](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
-Artículos que describen y explican cómo programar los servicios Web XML creados con ASP.NET.
+- [Servicios Web XML creados con ASP.NET y clientes de servicios Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+Artículos que describen y explican cómo programar servicios Web XML creados mediante ASP.NET.

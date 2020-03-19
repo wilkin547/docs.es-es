@@ -13,11 +13,11 @@ helpviewer_keywords:
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120729"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401176"
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 
@@ -49,7 +49,7 @@ Además de exponer las interfaces implementadas explícitamente por una clase en
 
 |Interfaz|Descripción|
 |---------------|-----------------|
-|**IDispatch**|Proporciona un mecanismo para el enlace en tiempo de ejecución al tipo.|
+|**Idispatch**|Proporciona un mecanismo para el enlace en tiempo de ejecución al tipo.|
 |**IErrorInfo**|Proporciona una descripción textual del error, su origen, un archivo de ayuda, contexto de ayuda y el GUID de la interfaz que definió el error (siempre **GUID_NULL** para las clases. NET).|
 |**IProvideClassInfo**|Permite que los clientes COM tengan acceso a la interfaz **ITypeInfo** implementada por una clase administrada. Devuelve `COR_E_NOTSUPPORTED` en .NET Core para los tipos no importados desde COM. |
 |**ISupportErrorInfo**|Permite a un cliente COM determinar si el objeto administrado es compatible con la interfaz **IErrorInfo**. Si es así, permite al cliente obtener un puntero al objeto de excepción más reciente. Todos los tipos administrados son compatibles con la interfaz **IErrorInfo**.|
@@ -60,8 +60,8 @@ Además de exponer las interfaces implementadas explícitamente por una clase en
 
 |Interfaz|Descripción|
 |---------------|-----------------|
-|Interfaz de clase (\_*nombreDeClase*)|Interfaz, expuesta por el runtime y no definida explícitamente, que expone todas las interfaces públicas, métodos, propiedades y campos que se exponen explícitamente en un objeto administrado.|
-|**IConnectionPoint** e **IConnectionPointContainer**|Interfaz para objetos que son origen de eventos basados en delegados (interfaz para registrar suscriptores de eventos).|
+|La\_interfaz de clase (*classname*)|Interfaz, expuesta por el runtime y no definida explícitamente, que expone todas las interfaces públicas, métodos, propiedades y campos que se exponen explícitamente en un objeto administrado.|
+|**IConnectionPoint** y **IConnectionPointContainer**|Interfaz para objetos que son origen de eventos basados en delegados (interfaz para registrar suscriptores de eventos).|
 |**IDispatchEx** (solo .NET Framework)|Interfaz proporcionada por el tiempo de ejecución si la clase implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch**, permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|
 |**IEnumVARIANT**|Interfaz para clases de tipo de colección que enumera los objetos de la colección si la clase implementa **IEnumerable**.|
 
@@ -119,7 +119,7 @@ coclass Mammal
 }
 ```
 
-Generar la interfaz de clase es una acción opcional. De manera predeterminada, la interoperabilidad COM genera una interfaz solo de envío para cada clase que se exporta a una biblioteca de tipos. La creación automática de esta interfaz se puede impedir o modificar aplicando <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> a la clase. Si bien la interfaz de clase puede facilitar la tarea de exponer clases administradas a COM, sus usos son limitados.
+Generar la interfaz de clase es una acción opcional. De manera predeterminada, la interoperabilidad COM genera una interfaz solo de envío para cada clase que se exporta a una biblioteca de tipos. La creación automática de esta interfaz se puede impedir o modificar aplicando <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> a la clase.  Si bien la interfaz de clase puede facilitar la tarea de exponer clases administradas a COM, sus usos son limitados.
 
 > [!CAUTION]
 > Si se usa la interfaz de clase en lugar de definir una interfaz propia de manera explícita, el control de las futuras versiones de la clase administrada puede ser más complicado. Antes de usar la interfaz de clase lea las instrucciones siguientes.
@@ -192,10 +192,10 @@ Si la aplicación requiere las llamadas enlazadas tempranamente a los métodos d
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Contenedores COM](com-wrappers.md)
+- [ENvoltorios COM](com-wrappers.md)
 - [Exponer componentes de .NET Framework en COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Exposición de los componentes de .NET Core a COM](../../core/native-interop/expose-components-to-com.md)
 - [Habilitar tipos de .NET para la interoperación](qualify-net-types-for-interoperation.md)

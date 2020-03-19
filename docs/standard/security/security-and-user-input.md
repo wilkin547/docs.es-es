@@ -1,5 +1,6 @@
 ---
 title: Seguridad e introducción de datos por el usuario
+description: El código puede pasar datos introducidos por el usuario como parámetros a otro código, lo que puede afectar a la seguridad. Puede realizar la comprobación de rango para rechazar la entrada problemática.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705865"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186107"
 ---
 # <a name="security-and-user-input"></a>Seguridad e introducción de datos por el usuario
 
@@ -23,7 +24,7 @@ Estos son los errores de seguridad más sutiles y más difíciles de localizar p
 
 A continuación se indican algunas consideraciones importantes que afectan a los datos de usuario:
 
-- Los datos de usuario de una respuesta del servidor se ejecutan en el contexto del sitio del servidor en el cliente. Si el servidor web toma los datos de usuario y los inserta en la página web, podría incluir, por ejemplo, una etiqueta **\<script>** y ejecutarlos como si se encontrase en el servidor.
+- Los datos de usuario de una respuesta del servidor se ejecutan en el contexto del sitio del servidor en el cliente. Si el servidor web toma datos de usuario y los inserta en la ** \<** página Web devuelta, podría incluir, por ejemplo, un script>etiqueta y ejecutarlos como si fueran del servidor.
 
 - Recuerde que el cliente puede solicitar cualquier dirección URL.
 
@@ -57,6 +58,6 @@ A continuación se indican algunas consideraciones importantes que afectan a los
 
 - Tenga cuidado con los nombres de usuario que pueden tener más de un formato canónico. Por ejemplo, a menudo puede utilizar cualquier forma de MIDOMINIO\\*nombreUsuario* o de *nombreUsuario*@mydomain.example.com.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

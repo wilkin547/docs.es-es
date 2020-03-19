@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741532"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401170"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalización de la serialización de estructuras
 
@@ -20,17 +20,17 @@ A veces, las reglas de serialización predeterminadas para las estructuras no es
 
 .NET proporciona el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> y la enumeración <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> para poder personalizar cómo se colocan los campos en la memoria. Las siguientes instrucciones lo ayudarán a evitar problemas comunes.
 
-✔️ considere la posibilidad de usar `LayoutKind.Sequential` siempre que sea posible.
+✔️ PLANTÉESE  usar `LayoutKind.Sequential` siempre que sea posible.
 
-✔️ usar solo `LayoutKind.Explicit` en el cálculo de referencias cuando la estructura nativa también tiene un diseño explícito, como una Unión.
+✔️ USE  solo `LayoutKind.Explicit` en la serialización cuando la estructura nativa tenga un diseño explícito, como una unión.
 
-❌ evitar el uso de `LayoutKind.Explicit` al calcular las referencias de estructuras en plataformas que no son de Windows si necesita tener como destino los tiempos de ejecución antes de .NET Core 3,0. El tiempo de ejecución de .NET Core antes 3,0 no admite pasar estructuras explícitas por valor a funciones nativas en sistemas Intel o AMD de 64 bits que no son de Windows. Sin embargo, el entorno de ejecución admite pasar estructuras explícitas por referencia en todas las plataformas.
+❌EVITAR `LayoutKind.Explicit` el uso de serializaciones al calcular el cálculo de referencias de estructuras en plataformas que no sean Windows si necesita tener como destino tiempos de ejecución antes de .NET Core 3.0. El tiempo de ejecución de .NET Core anterior a 3.0 no admite pasar estructuras explícitas por valor a funciones nativas en sistemas Intel o AMD de 64 bits que no sean Windows. Sin embargo, el entorno de ejecución admite pasar estructuras explícitas por referencia en todas las plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalización de la serialización de campos booleanos
 
 El código nativo tiene muchas representaciones booleanas diferentes. En Windows, hay tres formas de representar valores booleanos. El entorno de ejecución no sabe la definición nativa de la estructura, por lo que se recomienda realizar una estimación sobre cómo serializar los valores booleanos. El entorno de ejecución de .NET proporciona una manera de indicar cómo serializar el campo booleano. En los ejemplos siguientes se muestra cómo serializar el tipo `bool` de .NET a diferentes tipos nativos booleanos.
 
-Los valores booleanos predeterminados se ordenan como un valor nativo de 4 bytes de Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) como se muestra en el siguiente ejemplo:
+Los valores booleanos tienen como valor predeterminado [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) el cálculo de referencias como un valor Win32 nativo de 4 bytes, como se muestra en el ejemplo siguiente:
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalización de la serialización de campos de decimal
 
-Si está trabajando en Windows, puede encontrar algunas API que usan la estructura [`CY` o `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. De forma predeterminada, el tipo `decimal` de .NET serializa a la estructura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. Sin embargo, puede usar <xref:System.Runtime.InteropServices.MarshalAsAttribute> con el valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para indicar al serializador que convierta un valor `decimal` al valor `CY` nativo.
+Si está trabajando en Windows, es posible que [ `CY` encuentre `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) algunas API que usan el nativo o la estructura. De forma predeterminada, `decimal` el tipo .NET se calcula en la estructura nativa. [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) Sin embargo, puede usar <xref:System.Runtime.InteropServices.MarshalAsAttribute> con el valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para indicar al serializador que convierta un valor `decimal` al valor `CY` nativo.
 
 ```csharp
 public struct Currency

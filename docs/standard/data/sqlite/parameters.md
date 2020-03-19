@@ -1,27 +1,27 @@
 ---
-title: Parameters
+title: Parámetros
 ms.date: 12/13/2019
-description: Obtenga información sobre cómo usar los parámetros SQL.
+description: Aprenda a usar parámetros SQL.
 ms.openlocfilehash: 1d2f818ad392a919faedd785394de28a9c6f56c3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450427"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401206"
 ---
-# <a name="parameters"></a>Parameters
+# <a name="parameters"></a>Parámetros
 
-Los parámetros se usan para protegerse frente a ataques de inyección de SQL. En lugar de concatenar los datos proporcionados por el usuario con instrucciones SQL, use los parámetros para asegurarse de que la entrada solo se trate como un valor literal y no se ejecute nunca. En SQLite, los parámetros se permiten normalmente en cualquier lugar en el que se permita un literal en las instrucciones SQL.
+Los parámetros se utilizan para proteger contra ataques de inyección SQL. En lugar de concatenar la entrada del usuario con instrucciones SQL, utilice parámetros para asegurarse de que la entrada solo se trata como un valor literal y nunca se ejecuta. En SQLite, los parámetros normalmente se permiten en cualquier lugar donde se permite un literal en instrucciones SQL.
 
-Los parámetros pueden tener como prefijo `:`, `@`o `$`.
+Los parámetros se `:`pueden `@`prefijar con , , o `$`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_Parameter)]
 
-Vea [tipos de datos](types.md) para obtener más información sobre cómo se asignan los valores de .net a los valores de SQLite.
+Consulte [Tipos](types.md) de datos para obtener más información sobre cómo se asignan los valores de .NET a los valores de SQLite.
 
 ## <a name="truncation"></a>Truncamiento
 
-Use la propiedad <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> para truncar los valores de texto y BLOB.
+Utilice <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> la propiedad para truncar los valores TEXT y BLOB.
 
 ```csharp
 // Truncate name to 30 characters
@@ -30,24 +30,24 @@ command.Parameters.AddWithValue("$name", name).Length = 30;
 
 ## <a name="alternative-types"></a>Tipos alternativos
 
-En ocasiones, es posible que desee usar un tipo de SQLite alternativo. Para ello, establezca la propiedad <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType>.
+A veces, es posible que desee utilizar un tipo SQLite alternativo. Para ello, <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> establezca la propiedad.
 
-Se pueden usar las siguientes asignaciones de tipos alternativos. Para las asignaciones predeterminadas, vea [tipos de datos](types.md).
+Se pueden utilizar las siguientes asignaciones de tipos alternativos. Para ver las asignaciones predeterminadas, consulte [Tipos de datos](types.md).
 
-| {2&gt;Value&lt;2}          | SqliteType | Notas          |
+| Value          | SqliteType | Observaciones          |
 | -------------- | ---------- | ---------------- |
-| Char           | Integer    | UTF-16           |
-| DateTime       | Real       | Valor de día juliano |
-| DateTimeOffset | Real       | Valor de día juliano |
-| GUID           | Blob       |                  |
+| Char           | Entero    | UTF-16           |
+| DateTime       | Real       | Valor del día juliano |
+| DateTimeOffset | Real       | Valor del día juliano |
+| Guid           | Blob       |                  |
 | TimeSpan       | Real       | En días          |
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DateAndTimeSample/Program.cs?name=snippet_SqliteType)]
 
 ## <a name="output-parameters"></a>Parámetros de salida
 
-SQLite no admite parámetros de salida. En su lugar, devuelve los valores de los resultados de la consulta.
+SQLite no admite parámetros de salida. En su lugar, devuelve valores en los resultados de la consulta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tipos de datos](types.md)

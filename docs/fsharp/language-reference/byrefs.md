@@ -1,20 +1,20 @@
 ---
 title: Byrefs
-description: Obtenga información sobre los tipos byref y tipo ByRef F#en, que se usan para la programación de bajo nivel.
+description: Obtenga más información sobre los tipos byref y byref-like en F, que se utilizan para la programación de bajo nivel.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 527f465ee87fe153a2deae1306b6730531dc4123
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092793"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187049"
 ---
 # <a name="byrefs"></a>Byrefs
 
-F#tiene dos áreas de características principales que se ocupan del espacio de programación de bajo nivel:
+F tiene dos áreas de características principales que se ocupa en el espacio de la programación de bajo nivel:
 
-* El /de `byref``inref`/tipos de `outref`, que son punteros administrados. Tienen restricciones de uso para que no pueda compilar un programa que no sea válido en tiempo de ejecución.
-* Struct de tipo `byref`, que es una [estructura](structures.md) que tiene una semántica similar y las mismas restricciones en tiempo de compilación que `byref<'T>`. Un ejemplo es <xref:System.Span%601>.
+* `byref` / Los `inref` / tipos, que son punteros administrados. `outref` Tienen restricciones de uso para que no pueda compilar un programa que no sea válido en tiempo de ejecución.
+* Una `byref`estructura -like, que es una [estructura](structures.md) que tiene una semántica `byref<'T>`similar y las mismas restricciones en tiempo de compilación que . Un ejemplo <xref:System.Span%601>es .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,19 +37,19 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-## <a name="byref-inref-and-outref"></a>ByRef, inref y outref
+## <a name="byref-inref-and-outref"></a>Byref, inref y outref
 
-Hay tres formas de `byref`:
+Hay tres formas `byref`de:
 
 * `inref<'T>`, un puntero administrado para leer el valor subyacente.
 * `outref<'T>`, un puntero administrado para escribir en el valor subyacente.
 * `byref<'T>`, un puntero administrado para leer y escribir el valor subyacente.
 
-Se puede pasar una `byref<'T>` en la que se espera un `inref<'T>`. De forma similar, se puede pasar una `byref<'T>` en la que se espera un `outref<'T>`.
+A `byref<'T>` se puede `inref<'T>` pasar donde se espera un. Del mismo `byref<'T>` modo, se `outref<'T>` puede pasar a donde se espera un.
 
-## <a name="using-byrefs"></a>Usar byrefs
+## <a name="using-byrefs"></a>Uso de byrefs
 
-Para usar un `inref<'T>`, debe obtener un valor de puntero con `&`:
+Para utilizar `inref<'T>`un , es necesario `&`obtener un valor de puntero con:
 
 ```fsharp
 open System
@@ -62,7 +62,7 @@ let usage =
     f &dt // Pass a pointer to 'dt'
 ```
 
-Para escribir en el puntero mediante un `outref<'T>` o `byref<'T>`, también debe hacer el valor que obtiene un puntero a `mutable`.
+Para escribir en el `outref<'T>` puntero `byref<'T>`mediante un o , también debe `mutable`hacer que el valor que se captura un puntero a .
 
 ```fsharp
 open System
@@ -78,9 +78,9 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-Si solo está escribiendo el puntero en lugar de leerlo, considere la posibilidad de usar `outref<'T>` en lugar de `byref<'T>`.
+Si solo está escribiendo el puntero en `outref<'T>` lugar `byref<'T>`de leerlo, considere la posibilidad de usar archivos en lugar de .
 
-### <a name="inref-semantics"></a>Semántica de Inref
+### <a name="inref-semantics"></a>Semántica inref
 
 Observe el código siguiente:
 
@@ -90,51 +90,51 @@ let f (x: inref<SomeStruct>) = x.SomeField
 
 Semánticamente, esto significa lo siguiente:
 
-* El titular del puntero `x` solo puede usarlo para leer el valor.
-* Cualquier puntero adquirido a `struct` campos anidados en `SomeStruct` tiene un tipo `inref<_>`.
+* El titular `x` del puntero solo puede usarlo para leer el valor.
+* Cualquier puntero `struct` adquirido a `SomeStruct` los `inref<_>`campos anidados dentro se les da el tipo .
 
 También se cumple lo siguiente:
 
 * No hay ninguna implicación de que otros subprocesos o alias no tengan acceso de escritura a `x`.
-* No hay ninguna implicación de que `SomeStruct` sea inmutable en virtud de `x` ser una `inref`.
+* No hay implicación que `SomeStruct` sea inmutable en virtud de `x` ser un `inref`archivo .
 
-Sin embargo, F# en el caso de los tipos de valor que **son** inmutables, el puntero de `this` se deduce como `inref`.
+Sin embargo, para los tipos de `this` valor de F que `inref` **son** inmutables, se deduce que el puntero es un archivo .
 
-Todas estas reglas juntas indican que el titular de un puntero `inref` no puede modificar el contenido inmediato de la memoria a la que se apunta.
+Todas estas reglas juntas significan que `inref` el titular de un puntero no puede modificar el contenido inmediato de la memoria que se apunta.
 
 ### <a name="outref-semantics"></a>Semántica de Outref
 
-El propósito de `outref<'T>` es indicar que el puntero solo debe escribirse en. De forma inesperada, `outref<'T>` permite leer el valor subyacente a pesar de su nombre. Esto es así por motivos de compatibilidad. Semánticamente, `outref<'T>` no es diferente de `byref<'T>`.
+El propósito `outref<'T>` de es indicar que el puntero sólo debe escribirse en. Inesperadamente, `outref<'T>` permite leer el valor subyacente a pesar de su nombre. Esto es para fines de compatibilidad. Semánticamente, `outref<'T>` no es `byref<'T>`diferente de .
 
 ### <a name="interop-with-c"></a>Interoperabilidad con C\#
 
-C#admite las palabras clave `in ref` y `out ref`, además de `ref` devuelve. En la tabla siguiente se F# muestra cómo interpreta C# lo que emite:
+Además `in ref` de `out ref` las devoluciones, `ref` c. admite las palabras clave y, además de las devoluciones. En la tabla siguiente se muestra cómo f- interpreta lo que emite:
 
-|C#construir|F#deduce|
+|Construcción de C-|Inferidos de F|
 |------------|---------|
-|`ref` valor devuelto|`outref<'T>`|
-|`ref readonly` valor devuelto|`inref<'T>`|
+|`ref`valor de retorno|`outref<'T>`|
+|`ref readonly`valor de retorno|`inref<'T>`|
 |Parámetro `in ref`|`inref<'T>`|
 |Parámetro `out ref`|`outref<'T>`|
 
-En la tabla siguiente se F# muestra lo que emite:
+En la tabla siguiente se muestra lo que emite F:
 
-|F#construir|Construcción emitida|
+|Construcción de F -|Construcción emitida|
 |------------|-----------------|
-|Argumento `inref<'T>`|`[In]` atributo en el argumento|
-|`inref<'T>` devolver|`modreq` atributo en el valor|
-|`inref<'T>` en la ranura o la implementación abstracta|`modreq` argumento on o Return|
-|Argumento `outref<'T>`|`[Out]` atributo en el argumento|
+|Argumento `inref<'T>`|`[In]`atributo en el argumento|
+|`inref<'T>`devolución|`modreq`atributo sobre el valor|
+|`inref<'T>`en ranura abstracta o implementación|`modreq`sobre discusión o devolución|
+|Argumento `outref<'T>`|`[Out]`atributo en el argumento|
 
-### <a name="type-inference-and-overloading-rules"></a>Inferencia de tipos y reglas de sobrecarga
+### <a name="type-inference-and-overloading-rules"></a>Reglas de inferencia y sobrecarga de tipos
 
-El F# compilador deduce un tipo `inref<'T>` en los casos siguientes:
+En `inref<'T>` los siguientes casos, el compilador de F - deduce un tipo:
 
-1. Un parámetro o tipo de valor devuelto de .NET que tiene un atributo `IsReadOnly`.
-2. `this` puntero en un tipo de estructura que no tiene ningún campo mutable.
-3. Dirección de una ubicación de memoria derivada de otro puntero `inref<_>`.
+1. Un parámetro o tipo de `IsReadOnly` valor devuelto de .NET que tiene un atributo.
+2. El `this` puntero en un tipo struct que no tiene campos mutables.
+3. La dirección de una ubicación `inref<_>` de memoria derivada de otro puntero.
 
-Cuando se está llevando a cabo una dirección implícita de un `inref`, se prefiere una sobrecarga con un argumento de tipo `SomeType` a una sobrecarga con un argumento de tipo `inref<SomeType>`. Por ejemplo:
+Cuando se toma `inref` una dirección implícita de un, `SomeType` se prefiere una sobrecarga con `inref<SomeType>`un argumento de tipo a una sobrecarga con un argumento de tipo . Por ejemplo:
 
 ```fsharp
 type C() =
@@ -148,11 +148,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-En ambos casos, las sobrecargas que toman `System.DateTime` se resuelven en lugar de las sobrecargas que toman `inref<System.DateTime>`.
+En ambos casos, las `System.DateTime` sobrecargas que toman `inref<System.DateTime>`se resuelven en lugar de las sobrecargas que toman .
 
-## <a name="byref-like-structs"></a>Structs similares a ByRef
+## <a name="byref-like-structs"></a>Estructuras similares a referencias externas
 
-Además de la `byref`/`inref`/de `outref` trío, puede definir sus propios Structs que pueden adherirse a la semántica similar a la de `byref`. Esto se hace con el atributo <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>:
+Además `byref` / `inref` / `outref` del trío, puede definir sus propias estructuras que se adhieran a `byref`la semántica -como. Esto se hace <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> con el atributo:
 
 ```fsharp
 open System
@@ -164,31 +164,31 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike` no implica `Struct`. Ambos deben estar presentes en el tipo.
+`IsByRefLike`no implica `Struct`. Ambos deben estar presentes en el tipo.
 
-Un struct "`byref`" en F# es un tipo de valor enlazado a la pila. Nunca se asigna en el montón administrado. Una estructura de tipo `byref`es útil para la programación de alto rendimiento, ya que se aplica con un conjunto de comprobaciones fuertes sobre la duración y la no captura. Las reglas son:
+Una`byref`estructura " -like" en F es un tipo de valor enlazado a la pila. Nunca se asigna en el montón administrado. Una `byref`estructura -like es útil para la programación de alto rendimiento, ya que se aplica con un conjunto de comprobaciones sólidas sobre la duración y la no captura. Las reglas son:
 
-* Se pueden usar como parámetros de función, parámetros de método, variables locales, devoluciones de métodos.
-* No pueden ser miembros estáticos o de instancia de una clase o un struct normal.
-* No se pueden capturar con ninguna construcción de cierre (métodos`async` o expresiones lambda).
-* No se pueden usar como parámetros genéricos.
+* Se pueden utilizar como parámetros de función, parámetros de método, variables locales, retornos de método.
+* No pueden ser miembros estáticos o de instancia de una clase o estructura normal.
+* No se pueden capturar mediante`async` ninguna construcción de cierre (métodos o expresiones lambda).
+* No se pueden utilizar como parámetro genérico.
 
-Este último punto es fundamental para F# la programación de estilo de canalización, dado que `|>` es una función genérica que parametriza sus tipos de entrada. Esta restricción puede ser relajada para `|>` en el futuro, ya que está alineada y no realiza ninguna llamada a funciones genéricas no insertadas en su cuerpo.
+Este último punto es crucial para la `|>` programación de estilo de canalización de F, al igual que una función genérica que parametriza sus tipos de entrada. Esta restricción puede `|>` ser relajada para el futuro, ya que está en línea y no hace ninguna llamada a funciones genéricas no insertadas en su cuerpo.
 
-Aunque estas reglas restringen el uso de forma rigurosa, lo hacen para satisfacer la promesa de la informática de alto rendimiento de una manera segura.
+Aunque estas reglas restringen fuertemente el uso, lo hacen para cumplir la promesa de la informática de alto rendimiento de una manera segura.
 
-## <a name="byref-returns"></a>ByRef devuelve
+## <a name="byref-returns"></a>Devoluciones byref
 
-ByRef devuelve de F# funciones o miembros que se pueden generar y consumir. Cuando se utiliza un método de devolución de `byref`, el valor se desreferencia implícitamente. Por ejemplo:
+Las devoluciones Byref de las funciones o miembros de F. se pueden producir y consumir. Al consumir `byref`un método -returning, el valor se desreferencia implícitamente. Por ejemplo:
 
 ```fsharp
-let squareAndPrint (data : byref<int>) = 
+let squareAndPrint (data : byref<int>) =
     let squared = data*data    // data is implicitly dereferenced
     printfn "%d" squared
 ```
 
-Para devolver un valor ByRef, la variable que contiene el valor debe ser más larga que el ámbito actual.
-Además, para devolver ByRef, use `&value` (donde valor es una variable que vive más tiempo que el ámbito actual).
+Para devolver un valor byref, la variable que contiene el valor debe vivir más tiempo que el ámbito actual.
+Además, para devolver `&value` byref, use (donde value es una variable que dura más que el ámbito actual).
 
 ```fsharp
 let mutable sum = 0
@@ -198,9 +198,9 @@ let safeSum (bytes: Span<byte>) =
     &sum  // sum lives longer than the scope of this function.
 ```
 
-Para evitar la desreferenciación implícita, como pasar una referencia a través de varias llamadas encadenadas, use `&x` (donde `x` es el valor).
+Para evitar la desreferencia implícita, como pasar una `&x` referencia `x` a través de varias llamadas encadenadas, use (donde está el valor).
 
-También puede asignar directamente a un `byref`devuelto. Considere el siguiente programa (muy imperativo):
+También puede asignar directamente `byref`a una devolución. Considere el siguiente programa (altamente imperativo):
 
 ```fsharp
 type C() =
@@ -236,9 +236,9 @@ Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a>Ámbito de byrefs
+## <a name="scoping-for-byrefs"></a>Scoping para byrefs
 
-Un valor enlazado a `let`no puede tener su referencia superior al ámbito en el que se definió. Por ejemplo, no se permite lo siguiente:
+Un `let`valor enlazado no puede hacer que su referencia supere el ámbito en el que se definió. Por ejemplo, no se permite lo siguiente:
 
 ```fsharp
 let test2 () =
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Esto evita que se obtengan resultados diferentes en función de si se compila con optimizaciones o no.
+Esto le impide obtener resultados diferentes dependiendo de si compila con optimizaciones o no.
