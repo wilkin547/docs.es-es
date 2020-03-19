@@ -14,10 +14,10 @@ helpviewer_keywords:
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105075"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Herramienta Installer)
@@ -36,7 +36,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Parámetros
 
-|Argumento|DESCRIPCIÓN|
+|Argumento|Descripción|
 |--------------|-----------------|
 |`assembly`|Nombre de archivo del ensamblado en el que se ejecutan los componentes del instalador. Omita este parámetro si desea especificar el nombre seguro del ensamblado mediante la opción `/AssemblyName`.|
 
@@ -44,10 +44,10 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Opciones
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> O bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
-|`/help` *assembly*<br /><br /> O bien<br /><br /> `/?` *assembly*|Muestra opciones adicionales reconocidas por instaladores individuales dentro del ensamblado especificado, junto con la sintaxis y las opciones de los comandos de InstallUtil.exe. Esta opción agrega el texto devuelto por la propiedad <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente del instalador al texto de ayuda de InstallUtil.exe.|
+|`/h[elp]`<br /><br /> o bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
+|`/help` *assembly*<br /><br /> o bien<br /><br /> `/?` *assembly*|Muestra opciones adicionales reconocidas por instaladores individuales dentro del ensamblado especificado, junto con la sintaxis y las opciones de los comandos de InstallUtil.exe. Esta opción agrega el texto devuelto por la propiedad <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente del instalador al texto de ayuda de InstallUtil.exe.|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica el nombre seguro de un ensamblado, que debe registrarse en la memoria caché global de ensamblados. El nombre del ensamblado debe ser completo e incluir la versión, la referencia cultural y el token de clave pública. El nombre completo debe ir entre comillas.<br /><br /> Por ejemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" es un nombre de ensamblado completo.|
 |`/InstallStateDir=[` *directoryName* `]`|Especifica el directorio del archivo .InstallState que contiene los datos usados para desinstalar el ensamblado. El directorio predeterminado es el que contiene el ensamblado.|
 |`/LogFile=`[*filename*]|Especifica el nombre del archivo de registro donde se graba el progreso de la instalación. De forma predeterminada, si se omite la opción `/LogFile`, se crea un archivo de registro denominado *assemblyname*.InstallLog. Si se omite *filename*, no se genera ningún archivo de registro.|

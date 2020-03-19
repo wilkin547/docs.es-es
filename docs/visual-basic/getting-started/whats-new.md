@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802054"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187143"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -186,7 +186,7 @@ Para obtener más información, vea la sección "Asignaciones literales" de los 
 
 A partir de C# 7.0, C# admite los valores devueltos de referencia. Es decir, cuando el método de llamada recibe un valor devuelto mediante referencia, puede cambiar el valor de esta. Visual Basic no le permite crear métodos con valores devueltos de referencia, pero le permite consumirlos y modificarlos.
 
-Por ejemplo, la siguiente clase `Sentence` escrita en C# incluye un método `FindNext` que busca la siguiente palabra de una frase que comienza por una subcadena especificada. La cadena se devuelve como un valor devuelto de referencia, y una variable `Boolean` que se ha pasado mediante referencia al método indica si la búsqueda se ha realizado correctamente. Esto significa que el autor de la llamada no solo puede leer el valor devuelto; él o ella también puede modificarlo, y esa modificación se refleja en la clase `Sentence`.
+Por ejemplo, la siguiente clase `Sentence` escrita en C# incluye un método `FindNext` que busca la siguiente palabra de una frase que comienza por una subcadena especificada. La cadena se devuelve como un valor devuelto de referencia, y una variable `Boolean` que se ha pasado mediante referencia al método indica si la búsqueda se ha realizado correctamente. Esto significa que, aparte de leer el valor devuelto, el autor de la llamada también puede modificarlo, y esa modificación se refleja en la clase `Sentence`.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 

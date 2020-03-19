@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 ms.openlocfilehash: 87f3cb799ba4e406906759e1facd19d00c8bdace
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107502"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
@@ -40,13 +40,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 ## <a name="parameters"></a>Parámetros
 
-|Argumento|DESCRIPCIÓN|
+|Argumento|Descripción|
 |--------------|-----------------|
 |*assemblyName*|El nombre de un ensamblado. Puede especificar parte del nombre del ensamblado, como `myAssembly`, o puede especificar un nombre de ensamblado completo, como `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|
 |*assemblyPath*|El nombre de un archivo que contiene un manifiesto del ensamblado.|
 |*assemblyListFile*|La ruta de acceso a un archivo de texto ANSI donde se enumeran los ensamblados que se van a instalar o desinstalar. Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo. La herramienta interpreta las rutas de acceso relativas en relación con la ubicación de *assemblyListFile*. Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo. Puede ver algunos ejemplos del contenido de *assemblyListFile* más adelante en este tema.|
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |**/cdl**|Elimina el contenido de la memoria caché de descarga.|
 |**/f**|Especifique esta opción con las opciones **/i** o **/il** para forzar la reinstalación de un ensamblado. Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.|

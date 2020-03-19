@@ -1,13 +1,13 @@
 ---
 title: Implementación del patrón de interruptor
 description: Aprenda a implementar el patrón de interruptor como un sistema complementario en los reintentos HTTP.
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732831"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847250"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -25,11 +25,11 @@ Por tanto, se necesita algún tipo de barrera de defensa para que se detengan la
 
 El patrón de interruptor tiene una finalidad distinta a la del "patrón de reintento". El "patrón de reintento" permite que una aplicación reintente una operación con la expectativa de que finalmente se realice correctamente. El patrón de interruptor impide que una aplicación realice una operación que es probable que falle. Una aplicación puede combinar estos dos patrones. Pero la lógica de reintento debe ser sensible a las excepciones devueltas por el interruptor, y debe dejar de intentar repetir la operación si el interruptor indica que un error no es transitorio.
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>Implementar el patrón de interruptor con HttpClientFactory y Polly
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>Implementación de un patrón de interruptor con `IHttpClientFactory` y Polly
 
-Como sucede al implementar los reintentos, el enfoque recomendado para los interruptores es aprovechar las bibliotecas .NET de eficacia probada como Polly y su integración nativa con HttpClientFactory.
+Como sucede al implementar los reintentos, el enfoque recomendado para los interruptores es aprovechar las bibliotecas .NET de eficacia probada como Polly y su integración nativa con `IHttpClientFactory`.
 
-Agregar una directiva de interruptor a la canalización de software intermedio saliente de HttpClientFactory es tan sencillo como agregar un único fragmento de código incremental a lo que ya tiene cuando se usa HttpClientFactory.
+Agregar una directiva de interruptor a la canalización de software intermedio saliente de `IHttpClientFactory` es tan sencillo como agregar un único fragmento de código incremental a lo que ya tiene cuando se usa `IHttpClientFactory`.
 
 En este caso, lo único que se agrega al código que se usa para los reintentos de llamada HTTP es el código en el que se agrega la directiva de interruptor a la lista de directivas que se van a usar, como se muestra en el código incremental siguiente, parte del método ConfigureServices().
 
@@ -61,7 +61,7 @@ Los interruptores también se deben usar para redirigir las solicitudes a una in
 
 Todas estas características sirven para los casos en los que se administra la conmutación por error desde el código .NET, y no cuando Azure lo hace de forma automática, con la transparencia de ubicación.
 
-Desde un punto de vista del uso, al utilizar HttpClient no hay necesidad de agregar nada nuevo aquí porque el código es el mismo que cuando se usa HttpClient con HttpClientFactory, como se mostró en las secciones anteriores.
+Desde un punto de vista del uso, al utilizar HttpClient no hay necesidad de agregar nada nuevo aquí porque el código es el mismo que cuando se usa `HttpClient` con `IHttpClientFactory`, como se mostró en las secciones anteriores.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Prueba de reintentos HTTP e interruptores en eShopOnContainers
 

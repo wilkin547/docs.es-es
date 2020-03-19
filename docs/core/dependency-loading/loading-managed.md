@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973508"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>Algoritmo de carga de ensamblado administrado
@@ -23,7 +23,7 @@ El mecanismo más común para desencadenar la carga de un ensamblado administrad
 
 El uso directo de API específicas también desencadenará cargas:
 
-|API  |DESCRIPCIÓN  |`Active`<xref:System.Runtime.Loader.AssemblyLoadContext> |
+|API  |Descripción  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
 |---------|---------|---------|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|La instancia de [this](../../csharp/language-reference/keywords/this.md).|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|Cargue desde la ruta de acceso.|La instancia de [this](../../csharp/language-reference/keywords/this.md).|
@@ -40,11 +40,11 @@ El uso directo de API específicas también desencadenará cargas:
 
 El algoritmo siguiente describe cómo el runtime carga un ensamblado administrado.
 
-1. Determine el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> de `active`.
+1. Determine el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active`.
 
-    - En el caso de una referencia estática de ensamblado, `active` <xref:System.Runtime.Loader.AssemblyLoadContext> es la instancia que ha cargado el ensamblado de referencia.
-    - Las API preferidas hacen que `active` <xref:System.Runtime.Loader.AssemblyLoadContext> sean explícitos.
-    - Otras API infieren el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> de `active`. Para estas API, se usa la propiedad <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType>. Si su valor es `null`, se usa la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> inferida.
+    - En el caso de una referencia estática de ensamblado, el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active` es la instancia que ha cargado el ensamblado de referencia.
+    - Las API preferidas hacen que el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active` sea explícito.
+    - Otras API infieren el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active`. Para estas API, se usa la propiedad <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType>. Si su valor es `null`, se usa la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> inferida.
     - Consulte la tabla anterior.
 
 2. En el caso de los métodos `Load-by-name`, el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> activo carga el ensamblado. En orden de prioridad por:
@@ -58,7 +58,7 @@ El algoritmo siguiente describe cómo el runtime carga un ensamblado administrad
 
     - Generar el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-3. Para los demás tipos de cargas, el <xref:System.Runtime.Loader.AssemblyLoadContext> `active` carga el ensamblado. En orden de prioridad por:
+3. En los demás tipos de cargas, el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active` carga el ensamblado. En orden de prioridad por:
     - Comprobar su `cache-by-name`.
 
     - Cargar desde la ruta de acceso especificada o el objeto de ensamblado sin formato.
@@ -67,4 +67,4 @@ El algoritmo siguiente describe cómo el runtime carga un ensamblado administrad
    - Se genera el evento <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType>.
    - Se agrega una referencia al elemento `cache-by-name` de la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> del ensamblado.
 
-5. Si se encuentra el ensamblado, se agrega una referencia según sea necesario al elemento `cache-by-name` de la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> de `active`.
+5. Si se encuentra el ensamblado, se agrega una referencia según sea necesario al elemento `cache-by-name` de la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> `active`.

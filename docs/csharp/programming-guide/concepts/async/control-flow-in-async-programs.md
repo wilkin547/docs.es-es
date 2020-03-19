@@ -3,10 +3,10 @@ title: Controlar el flujo en los programas asincrónicos (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204444"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Controlar el flujo en los programas asincrónicos (C#)
@@ -274,7 +274,7 @@ Para ejecutar el proyecto, realice los pasos siguientes:
 
 Las dos primeras líneas siguen la ruta de acceso a medida que `startButton_Click` llama a `AccessTheWebAsync` y `AccessTheWebAsync` llama al método <xref:System.Net.Http.HttpClient> asincrónico <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. En la siguiente imagen se describen las llamadas de método a método.
 
-![Pasos UNO y DOS](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![Pasos UNO y DOS](./media/asynctrace-onetwo.png "AsyncTrace (pasos UNO y DOS)")
 
 El tipo de valor devuelto de `AccessTheWebAsync` y `client.GetStringAsync` es <xref:System.Threading.Tasks.Task%601>. Para `AccessTheWebAsync`, TResult es un entero. Para `GetStringAsync`, TResult es una cadena. Para obtener más información sobre los tipos de valor devuelto de los métodos asincrónicos, vea [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md).
 
@@ -306,7 +306,7 @@ string urlContents = await getStringTask;
 
  En la siguiente imagen se muestra el flujo de control procedente de `client.GetStringAsync` a la asignación de `getStringTask` y procedente de la creación de `getStringTask` a la aplicación de un operador await.
 
- ![Paso TRES](./media/asynctrace-three.png "AsyncTrace-Three")
+ ![Paso TRES](./media/asynctrace-three.png "AsyncTrace (paso TRES)")
 
  La expresión await suspende `AccessTheWebAsync` hasta que se devuelva `client.GetStringAsync`. Mientras tanto, el control vuelve al llamador de `AccessTheWebAsync`, `startButton_Click`.
 
@@ -341,7 +341,7 @@ int contentLength = await getLengthTask;
 
  En la siguiente ilustración, las flechas muestran el flujo de control desde la expresión await en `AccessTheWebAsync` hasta la asignación de un valor a `getLengthTask`, seguido del procesamiento normal en `startButton_Click` hasta que se espera a `getLengthTask`.
 
- ![Paso CUATRO](./media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![Paso CUATRO](./media/asynctrace-four.png "AsyncTrace (paso CUATRO)")
 
 ### <a name="step-five"></a>Paso CINCO
 
@@ -358,7 +358,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  En la siguiente imagen se muestra la transferencia de control una vez concluido `client.GetStringAsync` (y `getStringTask`).
 
- ![Paso CINCO](./media/asynctrace-five.png "AsyncTrace-FIVE")
+ ![Paso CINCO](./media/asynctrace-five.png "AsyncTrace (paso CINCO)")
 
  `AccessTheWebAsync` se ejecuta hasta el final y el control vuelve a `startButton_Click`, que espera la finalización.
 
@@ -383,7 +383,7 @@ int contentLength = await getLengthTask;
 
  En la siguiente imagen se muestra la devolución del control de `AccessTheWebAsync` a `startButton_Click`.
 
- ![Paso SEIS](./media/asynctrace-six.png "AsyncTrace-SIX")
+ ![Paso SEIS](./media/asynctrace-six.png "AsyncTrace (paso SEIS)")
 
 ## <a name="see-also"></a>Vea también
 

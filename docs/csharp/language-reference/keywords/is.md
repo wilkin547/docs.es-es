@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715233"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398308"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#)
 
@@ -36,7 +36,7 @@ Cuando se usa el patrón de tipo para realizar la coincidencia de patrones, `is`
    expr is type varname
 ```
 
-donde *expr* es una expresión que se evalúa como una instancia de un tipo, *type* es el nombre del tipo al que se va a convertir el resultado de *expr* y *varname* es el objeto al que se va a convertir el resultado de *expr* si la prueba `is` es `true`. 
+Donde *expr* es una expresión que se evalúa como una instancia de un tipo, *type* es el nombre del tipo al que se va a convertir el resultado de *expr* y *varname* es el objeto al que se va a convertir el resultado de *expr* si la prueba `is` es `true`.
 
 La expresión `is` es `true` si *expr* no es `null` y se cumple alguna de las siguientes condiciones:
 
@@ -106,15 +106,21 @@ En el ejemplo siguiente se muestra una comparación de comprobaciones `null`:
 
 ### <a name="var-pattern"></a>Patrón var
 
-El patrón `var` es un comodín para cualquier tipo o valor. El valor de *expr* siempre se asigna a una variable local del mismo tipo que el tipo de tiempo de compilación de *expr*. El resultado de la expresión `is` es siempre `true`. Su sintaxis es:
+Una coincidencia de patrones con el patrón `var` siempre se realiza correctamente. Su sintaxis es:
 
 ```csharp
    expr is var varname
 ```
 
-En el ejemplo siguiente se usa el patrón var para asignar una expresión a una variable denominada `obj`. Después, se muestra el valor y el tipo de `obj`.
+Donde el valor de *expr* siempre se asigna a una variable local denominada *varname*. *varname* es una variable del mismo tipo que el tipo en tiempo de compilación de *expr*.
+
+Si *expr* se evalúa como `null`, la expresión de `is` produce `true` y asigna `null` a *varname*. El patrón var es uno de los pocos usos de `is` que produce `true` con un valor `null`.
+
+El patrón `var` se puede usar para crear una variable temporal dentro de una expresión booleana, como se muestra en el ejemplo siguiente:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+En el ejemplo anterior, la variable temporal se usa para almacenar el resultado de una operación costosa. Tras ello, la variable se puede usar varias veces.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
   

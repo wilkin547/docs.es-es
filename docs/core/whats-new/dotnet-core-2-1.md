@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920392"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397876"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -43,7 +43,7 @@ Un aspecto fundamental de .NET Core 2.1 es mejorar el rendimiento del tiempo de 
 
 ### <a name="new-cli-commands"></a>Nuevos comandos de la CLI
 
-Una serie de herramientas que estaban disponibles solo en función del proyecto mediante [`DotnetCliToolReference`](../tools/extensibility.md) ahora están disponibles como parte del SDK de .NET Core. Estas herramientas incluyen:
+Una serie de herramientas que estaban disponibles solo en función del proyecto mediante `DotnetCliToolReference` ahora están disponibles como parte del SDK de .NET Core. Estas herramientas incluyen:
 
 - `dotnet watch` proporciona un monitor del sistema de archivos que espera que un archivo cambie antes de ejecutar un conjunto designado de comandos. Por ejemplo, el siguiente comando vuelve a generar automáticamente el proyecto actual y genera un resultado detallado cada vez que cambie un archivo en él:
 
@@ -65,7 +65,7 @@ Una serie de herramientas que estaban disponibles solo en función del proyecto 
 
 ### <a name="global-tools"></a>Herramientas globales
 
-.NET core 2.1 es compatible con *Herramientas globales*: es decir, las herramientas personalizadas que están disponibles globalmente desde la línea de comandos. El modelo de extensibilidad en versiones previas de .NET Core permitió que las herramientas personalizadas estuvieran disponibles para cada proyecto solo utilizando [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
+.NET core 2.1 es compatible con *Herramientas globales*: es decir, las herramientas personalizadas que están disponibles globalmente desde la línea de comandos. El modelo de extensibilidad en versiones previas de .NET Core permitió que las herramientas personalizadas estuvieran disponibles en cada proyecto solo utilizando `DotnetCliToolReference`.
 
 Para instalar una herramienta global, use el comando [dotnet tool install](../tools/dotnet-tool-install.md). Por ejemplo:
 
@@ -124,7 +124,7 @@ La puesta al día de versiones de revisión es independiente de esta configuraci
 
 ### <a name="self-contained-application-servicing"></a>Mantenimiento de aplicaciones independientes
 
-`dotnet publish` ahora publica aplicaciones independientes con una versión en tiempo de ejecución con mantenimiento. Cuando publica una aplicación independiente con el SDK 2.1 de .NET Core (v. 2.1.300), su aplicación incluye la última versión de tiempo de ejecución con mantenimiento conocida por ese SDK. Cuando actualice a la versión más reciente del SDK, publicará con la versión más reciente del tiempo de ejecución de .NET Core. Esto se aplica para tiempos de ejecución de .NET Core 1.0 y versiones posteriores.
+`dotnet publish` ahora publica aplicaciones independientes con una versión en tiempo de ejecución con mantenimiento. Cuando publica una aplicación independiente con el SDK 2.1 de .NET Core (v. 2.1.300), su aplicación incluye la última versión de tiempo de ejecución con mantenimiento conocida por ese SDK. Cuando actualice a la versión más reciente del SDK, publicará con la versión más reciente del tiempo de ejecución de .NET Core. Esto se aplica para tiempos de ejecución de .NET Core 1.0 y versiones posteriores.
 
 La publicación independiente se basa en las versiones del tiempo de ejecución en NuGet.org. No necesita tener el tiempo de ejecución con mantenimiento en su máquina.
 
@@ -177,17 +177,17 @@ Sin estos tipos, al pasar tales elementos como una porción de una matriz o una 
 
 En el ejemplo siguiente se usa una instancia de <xref:System.Span%601> y <xref:System.Memory%601> para proporcionar una vista virtual de 10 elementos de una matriz.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compresión de Brotli
 
 .NET Core 2.1 agrega compatibilidad con la compresión y descompresión de Brotli. Brotli es un algoritmo de compresión sin pérdida de datos de uso general que se define en [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) y es compatible con la mayoría de los exploradores web y servidores web principales. Puede usar la clase <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> basada en secuencias o las clases <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> y <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> basadas en intervalos de alto rendimiento. En el ejemplo siguiente se muestra la compresión con la clase <xref:System.IO.Compression.BrotliStream>:
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 El comportamiento de <xref:System.IO.Compression.BrotliStream> es el mismo que <xref:System.IO.Compression.DeflateStream> y <xref:System.IO.Compression.GZipStream>, lo que facilita la conversión de código que llama a estas API a <xref:System.IO.Compression.BrotliStream>.
 
@@ -244,6 +244,10 @@ También puede usar una variable de entorno para optar por no usar implementacio
 En Windows, también puede optar por usar <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>, que se basa en una implementación nativa, o la clase <xref:System.Net.Http.SocketsHttpHandler> pasando una instancia de la clase al constructor <xref:System.Net.Http.HttpClient>.
 
 En Linux y macOS, solo se puede configurar <xref:System.Net.Http.HttpClient> para cada proceso. En Linux, deberá implementar [libcurl](https://curl.haxx.se/libcurl/) si desea usar la antigua implementación de <xref:System.Net.Http.HttpClient>. (Se instala con .NET Core 2.0).
+
+### <a name="breaking-changes"></a>Cambios importantes
+
+Para obtener más información sobre los cambios importantes, vea [Cambios importantes para la migración de la versión 2.0 a la 2.1](../compatibility/2.0-2.1.md).
 
 ## <a name="see-also"></a>Vea también
 

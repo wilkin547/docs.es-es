@@ -4,12 +4,12 @@ description: Obtenga información sobre los ensamblados de referencia, un tipo e
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156470"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79141073"
 ---
 # <a name="reference-assemblies"></a>Ensamblados de referencia
 
@@ -29,7 +29,7 @@ Los ensamblados de referencia de las bibliotecas de .NET Framework se distribuye
 
 Cuando se agregan referencias a ensamblados de .NET Framework en Visual Studio mediante el cuadro de diálogo **Agregar referencia**, se selecciona un ensamblado de la lista y Visual Studio busca automáticamente los ensamblados de referencia correspondientes a la versión de la plataforma de destino seleccionada en el proyecto. Lo mismo se aplica a la hora de agregar referencias directamente en el proyecto de MSBuild mediante el elemento de proyecto [Reference ](/visualstudio/msbuild/common-msbuild-project-items#reference): solo tiene que especificar el nombre del ensamblado, no la ruta de acceso del archivo completa. Al agregar referencias a estos ensamblados en la línea de comandos mediante la opción del compilador `-reference` ([en C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) y en [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) o mediante el método <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> en la API de Roslyn, debe especificar manualmente los archivos de ensamblado de referencia para la versión de la plataforma de destino correcta. Los archivos de ensamblado de referencia de .NET Framework se encuentran en el directorio *%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework*. Para .NET Core, puede forzar la operación de publicación para copiar los ensamblados de referencia de la plataforma de destino en el subdirectorio *publish/refs* del directorio de salida. Para ello, establezca la propiedad de proyecto `PreserveCompilationContext` en `true`. A continuación, puede pasar estos archivos de ensamblado de referencia al compilador. El uso de `DependencyContext` del paquete [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) puede ayudar a localizar sus rutas de acceso.
 
-Dado que no contienen ninguna implementación, no se pueden cargar ensamblados de referencia para su ejecución. Si intenta hacerlo, se producirá una excepción <xref:System.BadImageFormatException?displayProperty=nameWithType>. Sin embargo, se pueden cargar en el contexto de solo reflexión (con el método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>) si necesita examinar su contenido.
+Dado que no contienen ninguna implementación, no se pueden cargar ensamblados de referencia para su ejecución. Si intenta hacerlo, se producirá una excepción <xref:System.BadImageFormatException?displayProperty=nameWithType>. Si quiere examinar el contenido de un ensamblado de referencia, puede cargarlo en el contexto de solo reflexión en .NET Framework (mediante el método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>) o en el contexto <xref:System.Reflection.MetadataLoadContext> en .NET Core.
 
 ## <a name="generating-reference-assemblies"></a>Generar ensamblados de referencia
 

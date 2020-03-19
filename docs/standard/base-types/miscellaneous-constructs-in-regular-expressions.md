@@ -11,10 +11,10 @@ helpviewer_keywords:
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141606"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
@@ -27,7 +27,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  Indique las opciones que quiere habilitar después del signo de interrogación y las opciones que quiere deshabilitar después del signo menos. En la siguiente tabla se describe cada una de las opciones. Para obtener más información sobre cada opción, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`i`|Coincidencia sin distinción entre mayúsculas y minúsculas.|  
 |`m`|Modo multilínea.|  
@@ -47,7 +47,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  En el ejemplo se definen dos expresiones regulares. La primera, `\b(D\w+)\s(d\w+)\b`, coincide con dos palabras consecutivas que empiezan con una "D" mayúscula y una "d" minúscula. La segunda expresión regular, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opciones insertadas para modificar este patrón, como se describe en la tabla siguiente. Una comparación de los resultados confirma los efectos de la construcción `(?ixn)`.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(D\w+)`|Coincide con una "D" mayúscula seguida de uno o más caracteres de palabra. Este es el primer grupo de capturas.|  
@@ -61,7 +61,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  En el ejemplo siguiente se repite el primer patrón de expresión regular del ejemplo de la sección anterior. Se agregan dos comentarios alineados en la expresión regular para indicar si la comparación distingue entre mayúsculas y minúsculas. El patrón de expresión regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, se define como se indica a continuación.  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?# case-sensitive comparison)`|Comentario. No afecta al comportamiento de la coincidencia de patrones.|  
@@ -82,7 +82,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Modelo|DESCRIPCIÓN|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\{`|Coincide con una llave de apertura.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  

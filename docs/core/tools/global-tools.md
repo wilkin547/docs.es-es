@@ -3,12 +3,12 @@ title: Herramientas de .NET Core
 description: Cómo instalar, usar, actualizar y quitar las herramientas de .NET Core. Abarca las herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2f0101c6385c41eda49bcb2458428c1f14552617
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543396"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847797"
 ---
 # <a name="how-to-manage-net-core-tools"></a>Cómo administrar las herramientas de .NET Core
 
@@ -273,3 +273,9 @@ dotnet <command> --help
 ```
 
 Si una herramienta no se puede instalar o ejecutar, consulte [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
+
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Creación de una herramienta de .NET Core mediante la CLI de .NET Core](global-tools-how-to-create.md)
+- [Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core](global-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)

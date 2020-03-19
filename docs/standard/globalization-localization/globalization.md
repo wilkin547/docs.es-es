@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120903"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174789"
 ---
 # <a name="globalization"></a>Globalización
 
@@ -66,7 +66,7 @@ Cuando sea posible, debe tratar las cadenas como cadenas enteras en lugar de tra
 > [!TIP]
 > Puede usar la clase <xref:System.Globalization.StringInfo> para trabajar con los elementos de texto en lugar de los caracteres individuales de una cadena.
 
-En búsquedas y comparaciones de cadenas, un error común es tratar la cadena como una colección de caracteres, cada uno de ellos se representa mediante un objeto <xref:System.Char>. De hecho, un solo carácter puede estar formado por uno, dos o más objetos <xref:System.Char>. Estos caracteres se encuentran con más frecuencia en cadenas de referencias culturales cuyos alfabetos constan de caracteres fuera del intervalo de caracteres de latín básico de Unicode (U+0021 a U+007E). En el ejemplo siguiente se intenta encontrar el índice del carácter LETRA LATINA A MAYÚSCULA CON ACENTO GRAVE (U+00C0) en una cadena. Pero este carácter se puede representar de dos formas diferentes: como una única unidad de código (U+00C0), o bien como un carácter compuesto (dos unidades de código: U+0021 y U+007E). En este caso, el carácter se representa en la instancia de cadena mediante dos objetos <xref:System.Char>, U+0021 y U+007E. El código de ejemplo llama a las sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> y <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para buscar la posición de este carácter en la instancia de cadena, pero estas devuelven resultados diferentes. La primera llamada al método tiene un argumento <xref:System.Char>; realiza una comparación ordinal y, por tanto, no se puede encontrar una coincidencia. La segunda llamada tiene un argumento <xref:System.String>; realiza una comparación que tiene en cuenta la referencia cultural y, por tanto, se encuentra una coincidencia.
+En búsquedas y comparaciones de cadenas, un error común es tratar la cadena como una colección de caracteres, cada uno de ellos se representa mediante un objeto <xref:System.Char>. De hecho, un solo carácter puede estar formado por uno, dos o más objetos <xref:System.Char>. Estos caracteres se encuentran con más frecuencia en cadenas de referencias culturales cuyos alfabetos constan de caracteres fuera del intervalo de caracteres de latín básico de Unicode (U+0021 a U+007E). En el ejemplo siguiente se intenta encontrar el índice del carácter LETRA LATINA A MAYÚSCULA CON ACENTO GRAVE (U+00C0) en una cadena. Pero este carácter se puede representar de dos formas diferentes: como una única unidad de código (U+00C0), o bien como un carácter compuesto (dos unidades de código: U+0041 y U+0300). En este caso, el carácter se representa en la instancia de cadena mediante dos objetos <xref:System.Char>, U+0041 y U+0300. El código de ejemplo llama a las sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> y <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para buscar la posición de este carácter en la instancia de cadena, pero estas devuelven resultados diferentes. La primera llamada al método tiene un argumento <xref:System.Char>; realiza una comparación ordinal y, por tanto, no se puede encontrar una coincidencia. La segunda llamada tiene un argumento <xref:System.String>; realiza una comparación que tiene en cuenta la referencia cultural y, por tanto, se encuentra una coincidencia.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -336,7 +336,7 @@ En general, no realice ninguna suposición sobre los valores de propiedades <xre
 
 - .NET es compatible con referencias culturales de reemplazo. Esto permite definir una nueva referencia cultural personalizada que complementa las referencias culturales estándares existentes o reemplaza por completo una referencia cultural estándar existente.
 
-- En sistemas Windows, el usuario puede personalizar la configuración específica de la referencia cultural mediante la aplicación **Región e idioma** del Panel de control. Al crear una instancia de un objeto <xref:System.Globalization.CultureInfo>, puede determinar si muestra estas personalizaciones de usuario mediante una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para las aplicaciones de usuario final, debe respetar las preferencias del usuario para que se le presenten los datos en un formato que espera.
+- En sistemas Windows, el usuario puede personalizar la configuración específica de la referencia cultural mediante la aplicación **Región e idioma** del Panel de control. Al crear una instancia de un objeto <xref:System.Globalization.CultureInfo>, puede determinar si muestra estas personalizaciones de usuario mediante una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, en las aplicaciones de usuario final hay que respetar las preferencias del usuario para que este pueda ver los datos en un formato que espera.
 
 ## <a name="see-also"></a>Vea también
 

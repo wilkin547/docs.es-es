@@ -14,10 +14,10 @@ helpviewer_keywords:
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129874"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
@@ -44,12 +44,12 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
   
 ## <a name="parameters"></a>Parámetros  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*sourceStorename*|El almacén de certificados que contiene los certificados, las CTL o las CRL existentes que se van a agregar, eliminar, guardar o mostrar. Puede ser un archivo de almacén o un almacén del sistema.|  
 |*destinationStorename*|El archivo o el almacén de certificados de salida.|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/add**|Agrega certificados, listas CTL y listas CRL a un almacén de certificados.|  
 |**/all**|Agrega todas las entradas cuando se usa con la opción **/add**. Elimina todas las entradas cuando se usa con la opción **/delete**. Muestra todas las entradas cuando se usa sin la opción **/add** o **/del**. La opción **/all** no se puede usar con la opción **/put**.|  

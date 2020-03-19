@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336722"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141138"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -25,6 +25,10 @@ Este repositorio contiene documentación conceptual de .NET. El sitio de documen
 - [Ejemplos de código y fragmentos de código](https://github.com/dotnet/samples) Se realiza un seguimiento de los problemas y tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
 - [Referencia de API .NET](https://github.com/dotnet/dotnet-api-docs) Se realiza un seguimiento de los problemas y tareas de este repositorio en [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
 - [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs) Se realiza un seguimiento de los problemas y tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+
+### <a name="contributing-to-international-content"></a>Contribución a contenido internacional
+
+Actualmente no se admiten las contribuciones de contenido de traducción automática (MT). En un esfuerzo por mejorar la calidad del contenido de MT, hemos realizado la transición a un motor neuronal de MT. Aceptamos y fomentamos las contribuciones de contenido de traducción humana (HT), que se usa para entrenar el motor neuronal de MT. Por lo tanto, con el tiempo, las contribuciones al contenido de HT mejorarán la calidad de HT y MT. Los temas de MT tendrán una declinación de responsabilidades que indica que es posible que parte del tema sea MT y que el botón **Editar** no se mostrará cuando esté deshabilitado.
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 

@@ -1,13 +1,13 @@
 ---
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
-ms.date: 01/30/2020
-ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502415"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846951"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -140,7 +140,7 @@ Pero la comunicación de acceso directo al microservicio, en este caso a través
 
 Ocelot es básicamente un conjunto de software intermedio que se puede aplicar en un orden específico.
 
-Ocelot está diseñado para trabajar solamente con ASP.NET Core. Está destinado para `netstandard2.0`, por lo que se puede usar en cualquier lugar donde se admita .NET Standard 2.0, incluido el entorno de ejecución de .NET Core 2.0 y el de .NET Framework 4.6.1 o versiones posteriores.
+Ocelot está diseñado para trabajar solamente con ASP.NET Core. La versión más reciente del paquete tiene como destino `.NETCoreApp 3.1` y, por tanto, no es adecuada en aplicaciones de .NET Framework.
 
 Ocelot y sus dependencias se instalan en el proyecto de ASP.NET Core con el [paquete NuGet de Ocelot](https://www.nuget.org/packages/Ocelot/), desde Visual Studio.
 

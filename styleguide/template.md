@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 1ddeeaca4645bd4788f03018643a0bc2682c731a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089276"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79186909"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -36,7 +36,7 @@ Puede encontrar el bloque de metadatos completo más arriba (en el [Markdown sin
 - Dos puntos en un valor (por ejemplo, un título) interrumpen el analizador de metadatos. En este caso, encierre el título con comillas dobles (por ejemplo, `title: "Writing .NET Core console apps: An advanced step-by-step guide"`).
 - **title**: aparece en los resultados del motor de búsqueda. El título no debe ser idéntico al título en el encabezado H1 y debe contener 60 caracteres o menos.
 - **description**: resume el contenido del artículo. Habitualmente aparece en la página de resultados de la búsqueda, pero no se usa para la clasificación de la búsqueda. Debe tener entre 115 y 145 caracteres, incluidos los espacios.
-- **author** y **ms.author**: el campo author debe contener el **nombre de usuario de GitHub** del autor, no su alias.  Por otro lado, el campo **ms.author** debe contener un alias de Microsoft e indica al responsable de mantener el artículo.
+- **author** y **ms.author**: el campo author debe contener el **nombre de usuario de GitHub** del autor, no su alias. Por otro lado, el campo **ms.author** debe contener un alias de Microsoft e indica al responsable de mantener el artículo.
 - **ms.topic**: el tipo de tema. El valor más común es `conceptual` y se establece en un nivel global. Otros valores comunes que se usan son `tutorial`, `overview` y `reference`.
 - **dev_langs** define el filtro de lenguaje que se muestra para el tema. Puede ver una lista de los valores admitidos en la sección [Lenguajes admitidos](#supported-languages). Solo se debe establecer cuando el tema abarca más de un lenguaje de programación. Por lo general, en nuestro contenido solo se usa `csharp`, `vb`, `fsharp` y `cpp` para este valor.
 - **ms.prod**: identificación del producto que se usa con fines de inteligencia empresarial. Por lo general, se establecen en un nivel global, por lo que no suelen aparecer en el bloque de metadatos de cada artículo.
@@ -57,14 +57,14 @@ Markdown utiliza caracteres especiales como \*, \` y \# para dar formato. Si des
 - Colocar una barra diagonal inversa antes del carácter especial para "aplicarle escape" (por ejemplo, `\*` para \*).
 - Usar el [código de entidad HTML](https://www.ascii.cl/htmlcodes.htm) para el carácter (por ejemplo, `&#42;` para &#42;).
 
-## <a name="file-name"></a>Nombre de archivo
+## <a name="file-name"></a>Nombre del archivo
 
 Los nombres de archivo utilizan las siguientes reglas:
 
 - Solo contienen letras minúsculas, números y guiones.
 - No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
-- Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. No utilice gerundios.
-- No utilice palabras cortas ni incluya un, y, el, en, o, etc.
+- Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
+- No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
 - Debe estar en Markdown y utilizar la extensión de archivo .md.
 - Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
 
@@ -78,7 +78,7 @@ Los encabezados deben realizarse con estilo atx, es decir, usar de uno a seis ca
 
 Solo **debe** haber un encabezado de primer nivel (H1) en el tema, que se mostrará como título en la página.
 
-Si el encabezado termina en un carácter `#`, debe agregar un carácter de escape para que el título se represente correctamente. Por ejemplo, `# Async programming in F\#`.
+Si el encabezado termina en un carácter `#`, debe agregar un carácter de escape para que el título se represente correctamente. Por ejemplo: `# Async programming in F\#`.
 
 Los encabezados de segundo nivel generarán la tabla de contenido en la página que aparece en la sección "En este artículo" debajo del título en la página.
 
@@ -182,7 +182,7 @@ Ejemplos:
 ### <a name="ordered-lists"></a>Listas ordenadas
 
 1. Esto
-1. Is
+1. Es
 1. Una
 1. Por orden
 1. Lista
@@ -196,11 +196,11 @@ Ejemplos:
     1. Señora Beatriz
     1. Profesor Alcalá
 1. ordered
-1. list
+1. lista
 
 ### <a name="unordered-lists"></a>Listas desordenadas
 
-- Este
+- Esto
 - is
 - a
 - con viñetas
@@ -208,9 +208,9 @@ Ejemplos:
 
 #### <a name="unordered-list-with-an-embedded-list"></a>Lista desordenada con una lista insertada
 
-- Este
+- Esto
 - con viñetas
-- list
+- lista
   - Sr. Valladares
   - Sr. Tórrez
 - contains
@@ -274,14 +274,14 @@ Incluir fragmentos de programas completos garantiza que todo el código se ejecu
 
 Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar la codificación de color específica del lenguaje a un bloque de código. Esta es la lista de lenguajes admitidos donde se muestra la etiqueta de Markdown para cada id. de lenguaje.
 
-#### <a name="supported-languages"></a>Idiomas admitidos
+#### <a name="supported-languages"></a>Idiomas compatibles
 
 |NOMBRE|Etiqueta de Markdown|
 |-----|-------|
 |Consola de .NET|dotnetcli|
 |ASP.NET (C#)|aspx-csharp|
 |ASP.NET (VB)|aspx-vb|
-|CLI de Azure|azurecli|
+|Azure CLI|azurecli|
 |AzCopy|azcopy|
 |Azure PowerShell|azurepowershell|
 |Bash|Bash|
@@ -290,12 +290,12 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 |C++/WinRT|cppwinrt|
 |C#|csharp|
 |C# en el explorador|csharp-interactive|
-|Consola|console|
+|Consola|consola|
 |CSHTML|cshtml|
 |DAX|dax|
 |Dockerfile|dockerfile|
 |F#|fsharp|
-|Go|go|
+|Ir|go|
 |HTML|html|
 |HTTP|http|
 |Java|Java|
@@ -321,7 +321,7 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 |Visual Basic|vb|
 |VBScript|vbscript|
 |XAML|xaml|
-|XML|Xml|
+|XML|xml|
 |yml|yml|
 
 El nombre `csharp-interactive` especifica el lenguaje C# y la capacidad de ejecutar los ejemplos desde el explorador. Estos fragmentos de código se compilan y ejecutan en un contenedor de Docker y los resultados de la ejecución del programa se muestran en la ventana del explorador del usuario.

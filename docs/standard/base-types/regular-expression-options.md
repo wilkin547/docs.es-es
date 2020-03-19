@@ -13,10 +13,10 @@ helpviewer_keywords:
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972111"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
@@ -160,7 +160,7 @@ En el ejemplo siguiente se extraen los nombres y las puntuaciones de los jugador
 
 El patrón de expresión regular `^(\w+)\s(\d+)\r*$` se define como se muestra en la tabla siguiente.
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`^`|Comienza al principio de la línea.|
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|
@@ -198,7 +198,7 @@ A menudo, los constructores de agrupamiento se usan únicamente para aplicar cua
 
 Su única finalidad es extraer de un documento las oraciones que finalizan con un punto, signo de exclamación o signo de interrogación, y solo la oración resultante (representada mediante el objeto <xref:System.Text.RegularExpressions.Match>) es de interés. En cambio, las palabras individuales de la colección no son de interés.
 
-Los grupos de captura que no se usan posteriormente pueden ser costosos, ya que el motor de expresiones regulares debe rellenar los objetos de colección <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection>. Como alternativa, se puede usar la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o la opción insertada `n` para especificar que las únicas capturas válidas son grupos con nombre o número explícitos que se designan mediante el constructor `(?<`*nombre*`>` *subexpresión*`)`.
+Los grupos de captura que no se usan posteriormente pueden ser costosos, ya que el motor de expresiones regulares debe rellenar los objetos de colección <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection>. Como alternativa, se puede usar la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o la opción insertada `n` para especificar que las únicas capturas válidas son grupos con nombre o número explícitos que se designan mediante la construcción `(?<`*nombre*`>` *subexpresión*`)`.
 
 En el ejemplo siguiente se muestra información sobre las coincidencias devueltas por el patrón de expresión regular `\b\(?((\w+),?\s?)+[\.!?]\)?` cuando se llama al método <xref:System.Text.RegularExpressions.Regex.Match%2A> con y sin la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>. Tal como muestra el resultado de la primera llamada a método, el motor de expresiones regulares rellena totalmente los objetos de colección <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection> con información sobre las subcadenas capturadas. Dado que el segundo método se llama con `options` establecido en <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>, no se captura información en grupos.
 
@@ -207,7 +207,7 @@ En el ejemplo siguiente se muestra información sobre las coincidencias devuelta
 
 El patrón de expresión regular `\b\(?((?>\w+),?\s?)+[\.!?]\)?` se define como se muestra en la siguiente tabla.
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`\b`|Empieza en un límite de palabras.|
 |`\(?`|Busca una coincidencia con cero o con una aparición de los paréntesis de apertura ("(").|
@@ -305,7 +305,7 @@ Observe también que la aserción de búsqueda anticipada (el elemento de lengua
 
 El patrón de expresión regular se define como se muestra en la tabla siguiente.
 
-|Modelo|DESCRIPCIÓN|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|El inicio de la coincidencia debe estar precedido por uno o dos dígitos decimales seguidos de un espacio.|
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|
@@ -338,7 +338,7 @@ El comportamiento de las expresiones regulares canónicas y ECMAScript se difere
 
   La expresión regular se define como se muestra en la tabla siguiente.
 
-  |Modelo|DESCRIPCIÓN|
+  |Modelo|Descripción|
   |-------------|-----------------|
   |(a+)|Busca una coincidencia con la letra “a” una o más veces. Este es el segundo grupo de captura.|
   |(\1)|Busca una coincidencia con la subcadena capturada por el primer grupo de captura. Éste es el tercer grupo de captura.|

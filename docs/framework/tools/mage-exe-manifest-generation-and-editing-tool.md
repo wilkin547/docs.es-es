@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b04fda81ae51462d9e686585de1477b4c9af4b26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714472"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180384"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 En la tabla siguiente se muestran los comandos que admite *Mage.exe*. Para más información sobre las opciones que admiten estos comandos, vea [Opciones de los comandos New y Update](#new-and-update-command-options) y [Opciones del comando Sign](#sign-command-options).
 
-|Comando|DESCRIPCIÓN|
+|Comando|Descripción|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Borra la memoria caché de aplicaciones descargadas de todas las aplicaciones que solo están disponibles en línea.|
 |**-n, -New** *fileType [newOptions]*|Crea un nuevo archivo del tipo especificado. Los tipos válidos son:<br /><br /> -   `Deployment`: Crea un nuevo manifiesto de implementación.<br />-   `Application`: Crea un nuevo manifiesto de aplicación.<br /><br /> Si no especifica parámetros adicionales con este comando, se creará un archivo del tipo adecuado con etiquetas y valores de atributo predeterminados adecuados.<br /><br /> Use la opción **-ToFile** (consulte la tabla siguiente) para especificar el nombre de archivo y la ruta de acceso del nuevo archivo.<br /><br /> Use la opción **-FromDirectory** (consulte la tabla siguiente) para crear un manifiesto de aplicación con todos los ensamblados de una aplicación agregados a la sección \<dependency> del manifiesto.|
@@ -45,7 +45,7 @@ En la tabla siguiente se muestran los comandos que admite *Mage.exe*. Para más 
 
 En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y `-Update`:
 
-|Opciones|Valor predeterminado|Se aplica a|DESCRIPCIÓN|
+|Opciones|Valor predeterminado|Se aplica a|Descripción|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|Especifica el algoritmo con el que se generarán los resúmenes de dependencia. El valor debe ser "sha256RSA" o "sha1RSA.<br /><br /> Úselo con la opción "-Update". Esta opción se omite cuando se usa la opción "-Sign".|
 |**-appc, -AppCodeBase** `manifestReference`||Manifiestos de implementación.|Inserta una dirección URL o una referencia a la ruta de acceso del archivo en el archivo de manifiesto de aplicación. Este valor debe ser la ruta de acceso completa al manifiesto de aplicación.|
@@ -76,7 +76,7 @@ En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y
 
 En la siguiente tabla se muestran las opciones que admite el comando `-Sign` y que se aplican a todos los tipos de archivos.
 
-|Opciones|DESCRIPCIÓN|
+|Opciones|Descripción|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Especifica la ubicación de un certificado digital para firmar un manifiesto. Esta opción se puede usar junto con la opción **-Password** si el certificado requiere una contraseña para archivos de intercambio de información personal (PFX). A partir de .NET Framework 4.7, si el archivo no contiene una clave privada, se necesita una combinación de las opciones **-CryptoProvider** y **-KeyContainer** opciones.<br/><br/>A partir de .NET Framework 4.6.2, *Mage.exe* firma manifiestos con CNG así como certificados CAPI.|
 |**-ch, -CertHash** `hashSignature`|El hash de un certificado digital guardado en el almacén de certificados personal del equipo cliente. Corresponde a la propiedad de huella digital de un certificado digital que aparece en la consola de certificados de Windows.<br /><br /> `hashSignature` puede ir en mayúsculas o minúsculas y puede especificarse como cadena única, o bien, separando cada octeto de la huella digital mediante espacios y poniendo toda la huella digital entre comillas.|

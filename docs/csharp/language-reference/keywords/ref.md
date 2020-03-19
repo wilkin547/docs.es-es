@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715182"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398134"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
@@ -41,7 +41,7 @@ Los miembros de una clase no pueden tener signaturas que se diferencien solo por
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -115,9 +115,11 @@ Tenga en cuenta que en ambos ejemplos la palabra clave `ref` debe usarse en ambo
 
 A partir C# 7.3, la variable de iteración de la instrucción `foreach` puede ser una variable ref local o ref readonly local. Para más información, vea el artículo sobre la [instrucción foreach](foreach-in.md).
 
+A partir C# 7.3, las variables locales de tipo ref o locales de tipo ref readonly se pueden reasignar con el [operador de asignación ref](../operators/assignment-operator.md#ref-assignment-operator).
+
 ## <a name="ref-readonly-locals"></a>Variables locales de tipo ref readonly
 
-Una variable local de tipo ref readonly se usa para hacer referencia a los valores devueltos por el método o la propiedad que tiene `ref readonly` en su firma y utiliza `return ref`. Una variable `ref readonly` combina las propiedades de una `ref` variable local con una variable `readonly`: es un alias para el almacenamiento al que se asigna y no se puede modificar. 
+Una variable local de tipo ref readonly se usa para hacer referencia a los valores devueltos por el método o la propiedad que tiene `ref readonly` en su firma y utiliza `return ref`. Una variable `ref readonly` combina las propiedades de una `ref` variable local con una variable `readonly`: es un alias para el almacenamiento al que se asigna y no se puede modificar.
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Un ejemplo de valores devueltos y variables locales de tipo ref
 
@@ -137,7 +139,7 @@ El objetivo de mantener un tipo `ref struct` como una variable asignada a la pil
 
 - No puede encerrar un valor de `ref struct`. No puede asignar un tipo `ref struct` a una variable de tipo `object`, `dynamic` o cualquier tipo de interfaz.
 - Los tipos `ref struct` no pueden implementar interfaces.
-- No se puede declarar `ref struct` como miembro de campo de una clase o una estructura normal. Esto incluye la declaración de una propiedad implementada automáticamente, lo que crea un campo de respaldo generado por el compilador. 
+- No se puede declarar `ref struct` como miembro de campo de una clase o una estructura normal. Esto incluye la declaración de una propiedad implementada automáticamente, lo que crea un campo de respaldo generado por el compilador.
 - No puede declarar variables locales que sean tipos `ref struct` en métodos asincrónicos. Puede declararlas en los métodos sincrónicos que devuelven tipos similares a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
 - No puede declarar las variables locales de `ref struct` en iteradores.
 - No puede capturar variables `ref struct` en expresiones lambda o funciones locales.
@@ -155,7 +157,6 @@ Puede combinar modificadores para declarar una estructura como `readonly ref`. `
 - [Escritura de código seguro y eficaz](../../write-safe-efficient-code.md)
 - [Devoluciones y variables locales ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expresión condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
-- [Operador de asignación ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Pasar parámetros](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parámetros de métodos](method-parameters.md)
 - [Referencia de C#](../index.md)

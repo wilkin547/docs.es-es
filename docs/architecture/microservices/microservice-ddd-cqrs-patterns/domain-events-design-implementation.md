@@ -3,10 +3,10 @@ title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
 ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74884233"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
@@ -136,7 +136,7 @@ Pero cuando la clase de eventos de dominio es estática, también lo envía a lo
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>El enfoque diferido para generar y enviar eventos
 
-En lugar de enviar a un controlador de eventos de dominio de forma inmediata, un enfoque más adecuado consiste en agregar los eventos de dominio a una colección y, después, enviarlos *justo antes* o *justo* *después* de confirmar la transacción (como ocurre con SaveChanges en EF). (Este enfoque lo describió Jimmy Bogard en esta publicación [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) [Un patrón de eventos de dominio mejor]).
+En lugar de enviar a un controlador de eventos de dominio de forma inmediata, un método más adecuado consiste en agregar los eventos de dominio a una colección y, después, enviarlos *justo antes* o *justo* *después* de confirmar la transacción (como ocurre con SaveChanges en EF). (Este enfoque lo describió Jimmy Bogard en esta publicación [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) [Un patrón de eventos de dominio mejor]).
 
 Decidir si enviar los eventos de dominio justo antes o justo después de confirmar la transacción es importante, ya que determina si se van a incluir los efectos secundarios como parte de la misma transacción o en transacciones diferentes. En este último caso, debe controlar la coherencia final entre varios agregados. Este tema se analiza en la sección siguiente.
 

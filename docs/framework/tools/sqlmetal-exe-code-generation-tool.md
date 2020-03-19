@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71044077"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Herramienta de generación de código)
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de conexión**  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/server:** *\<nombre>*|Especifica el nombre del servidor de bases de datos.|  
 |**/database:** *\<nombre>*|Especifica el catálogo de base de datos del servidor.|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de extracción**  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/views**|Extrae las vistas de base de datos.|  
 |**/functions**|Extrae las funciones de base de datos.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de salida**  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Envía el resultado como .dbml. No se puede usar con la opción **/map** .|  
 |**/code** *[:file]*|Envía el resultado como código fuente. No se puede usar con la opción **/dbml** .|  
@@ -70,7 +70,7 @@ sqlmetal [options] [<input file>]
   
  **Varios**  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/language:** *\<lenguaje>*|Especifica el lenguaje del código fuente.<br /><br /> *\<Lenguaje>* válido: vb, csharp.<br /><br /> Valor predeterminado: Se deriva de la extensión del nombre del archivo de código.|  
 |**/namespace:** *\<nombre>*|Especifica el espacio de nombres del código generado. Valor predeterminado: sin espacio de nombres.|  
@@ -81,7 +81,7 @@ sqlmetal [options] [<input file>]
   
  **Archivo de entrada**  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**\<archivo de entrada>**|Especifica un archivo .mdf de SQL Server Express, un archivo .sdf de SQL Server Compact 3.5 o un archivo intermedio .dbml.|  
   

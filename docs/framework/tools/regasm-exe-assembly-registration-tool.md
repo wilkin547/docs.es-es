@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104950"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Herramienta de registro de ensamblados)
@@ -30,11 +30,11 @@ regasm assemblyFile [options]
 
 ## <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*assemblyFile*|El ensamblado que se va a registrar con COM.|
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |**/codebase**|Crea una entrada de código base en el Registro. La entrada de código base especifica la ruta de acceso de archivo de un ensamblado que no está instalado en la caché global de ensamblados. No debe especificar esta opción si posteriormente va a instalar el ensamblado que va a registrar en la caché global de ensamblados. El argumento *assemblyFile* especificado con la opción **/codebase** debe ser un [ensamblado con nombre seguro](../../standard/assembly/strong-named.md).|
 |**/registered**|Especifica que esta herramienta solo hará referencia a las bibliotecas de tipos que ya se hayan registrado.|

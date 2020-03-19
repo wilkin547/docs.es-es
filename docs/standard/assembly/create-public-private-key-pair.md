@@ -16,10 +16,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122516"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Procedimiento para crear un par de claves privada y pública
@@ -33,7 +33,7 @@ Para firmar un ensamblado con un nombre seguro, debe disponer de un par de clave
 
 Para crear un par de claves, en un símbolo del sistema, escriba el siguiente comando:
 
-**sn –k** \<*nombre de archivo*>
+**sn –k** \<*file name*>
 
 En este comando, *nombre de archivo* es el nombre del archivo de salida que contiene el par de claves.
 

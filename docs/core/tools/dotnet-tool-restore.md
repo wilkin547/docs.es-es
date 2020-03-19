@@ -2,12 +2,12 @@
 title: Comando dotnet tool restore
 description: El comando dotnet tool restore instala en el equipo las herramientas locales de .NET Core que se encuentran en el ámbito del directorio actual.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2900d431987661a9232ceed10d9a424093f8be45
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543855"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146442"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -20,7 +20,11 @@ ms.locfileid: "77543855"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME> [--configfile] [--add-source] [tool-manifest] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [-interactive] [-v|--verbosity]
+dotnet tool restore <PACKAGE_NAME>
+    [--configfile] [--add-source] [tool-manifest]
+    [--disable-parallel] [--ignore-failed-sources]
+    [--no-cache] [-interactive] [-v|--verbosity]
+
 dotnet tool restore <-h|--help>
 ```
 
@@ -81,3 +85,4 @@ Nombre o identificador del paquete NuGet que contiene la herramienta de .NET Co
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas de .NET Core](global-tools.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105058"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
@@ -34,7 +34,7 @@ ildasm [options] [PEfilename] [options]
 
 Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd*.
 
-| Opción | DESCRIPCIÓN |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/out=** `filename`|Crea un archivo de salida con el `filename` especificado, en lugar de mostrar los resultados en una interfaz gráfica de usuario.|
 |**/rtf**|Genera la salida en formato de texto enriquecido. Esta opción no es válida si se usa junto con la opción **/text**.|
@@ -44,7 +44,7 @@ Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.li
 
 Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y *.winmd*.
 
-| Opción | DESCRIPCIÓN |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/bytes**|Muestra bytes reales, en formato hexadecimal, como comentarios de instrucciones.|
 |**/caverbal**|Genera objetos binarios de atributos personalizados en formato verbal. El valor predeterminado es el formato binario.|
@@ -61,7 +61,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | DESCRIPCIÓN |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/all**|Especifica una combinación de las opciones **/header**, **/bytes**, **/stats**, **/classlist** y **/tokens**.|
 |**/classlist**|Incluye una lista de las clases definidas en el módulo.|
@@ -76,18 +76,18 @@ Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* pa
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | DESCRIPCIÓN |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Muestra metadatos, donde `specifier` es:<br /><br /> **MDHEADER**: muestra la información y los tamaños del encabezado de metadatos.<br /><br /> **HEX**: muestra información tanto en hexadecimal como en palabras.<br /><br /> **CSV**: muestra el número de registros y los tamaños de los montones.<br /><br /> **UNREX**: muestra externos sin resolver.<br /><br /> **SCHEMA**: muestra información del esquema y del encabezado de metadatos.<br /><br /> **RAW**: muestra las tablas de metadatos sin formato.<br /><br /> **HEAPS**: muestra los montones sin formato.<br /><br /> **VALIDATE**: valida la coherencia de los metadatos.<br /><br /> Puede especificar **/metadata** varias veces con valores diferentes para `specifier`.|
 
 Las siguientes opciones se pueden usar con archivos *.lib* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | DESCRIPCIÓN |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Muestra los metadatos de un único archivo objeto en la biblioteca especificada.|
 
 > [!NOTE]
-> Ninguna de las opciones de *Ildasm.exe* distingue entre mayúsculas y minúsculas, y se reconocen mediante las tres primeras letras. Por ejemplo, **/quo** equivale a **/quoteallnames**. Las opciones que especifican argumentos aceptan un signo de dos puntos (:) o un signo igual (=) como separador entre la opción y el argumento. Por ejemplo, **/output:** *nombreArchivo* equivale a **/output=** *nombreArchivo*.
+> Ninguna de las opciones de *Ildasm.exe* distingue entre mayúsculas y minúsculas, y se reconocen mediante las tres primeras letras. Por ejemplo, **/quo** equivale a **/quoteallnames**. Las opciones que especifican argumentos aceptan un signo de dos puntos (:) o un signo igual (=) como separador entre la opción y el argumento. Por ejemplo, **/output:** *filename* equivale a **/output=** *filename*.
 
 ## <a name="remarks"></a>Comentarios
 

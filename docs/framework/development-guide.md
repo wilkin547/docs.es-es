@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122468"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181622"
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
 En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework. Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  
@@ -30,8 +30,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  [Aplicaciones orientadas a servicios con WCF](./wcf/index.md)  
  Describe cómo utilizar Windows Communication Foundation (WCF) para compilar aplicaciones orientadas a servicios que sean seguras y confiables.  
   
- [Creación de flujos de trabajo con Windows Workflow Foundation](windows-workflow-foundation/index.md)     
- Proporciona información sobre el modelo de programación, las muestras y las herramientas para usar Windows Workflow Foundation (WF).  
+ [Creación de flujos de trabajo con Windows Workflow Foundation](windows-workflow-foundation/index.md) Proporciona información sobre el modelo de programación, las muestras y las herramientas para usar Windows Workflow Foundation (WF).  
 
  [Aplicaciones de servicios de Windows](./windows-services/index.md)  
  Explica cómo puede utilizar Visual Studio y .NET Framework para crear una aplicación que se instala como servicio, iniciarla, detenerla y controlar su comportamiento de cualquier otro modo.  
@@ -42,8 +41,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  [Programación para redes en .NET Framework](./network-programming/index.md)  
  Describe la implementación por capas, extensible y administrada de servicios de Internet que se pueden integrar rápida y fácilmente en sus aplicaciones.  
   
- [Configurar aplicaciones de .NET Framework](configure-apps/index.md)    
- Explica cómo puede utilizar archivos de configuración para cambiar valores sin tener que volver a compilar las aplicaciones de .NET Framework.  
+ [Configuración de aplicaciones de .NET Framework](configure-apps/index.md) Se explica cómo se pueden utilizar archivos de configuración para cambiar valores sin tener que volver a compilar las aplicaciones de .NET Framework.  
   
  [Compilar aplicaciones con .NET Native](./net-native/index.md)  
  Explica cómo usar la tecnología de precompilación de .NET Native para compilar e implementar aplicaciones de la Tienda Windows. .NET Native compila aplicaciones escritas en código administrado (C#) y que destinan .NET Framework a código nativo.  
@@ -62,7 +60,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
   
  [Rendimiento](./performance/index.md)  
  Proporciona información sobre el almacenamiento en caché, la inicialización diferida, la confiabilidad y eventos ETW.  
- 
+
 ## <a name="reference"></a>Referencia  
  [Biblioteca de clases .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Proporciona sintaxis, ejemplos de código e información de uso para cada una de las clases incluidas en los espacios de nombres de .NET Framework.  

@@ -3,12 +3,12 @@ title: Solución de problemas de uso de herramientas de .NET Core
 description: Descubra los problemas comunes que se producen al ejecutar herramientas de .NET Core y sus posibles soluciones.
 author: kdollard
 ms.date: 02/14/2020
-ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543279"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146455"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solución de problemas de uso de herramientas de .NET Core
 
@@ -42,16 +42,16 @@ El nombre del archivo ejecutable determina cómo se invoca la herramienta. En la
 
 * Herramientas globales
 
-    Las herramientas globales pueden instalarse en el directorio predeterminado o en una ubicación específica. Los directorios predeterminados son:
+  Las herramientas globales pueden instalarse en el directorio predeterminado o en una ubicación específica. Los directorios predeterminados son:
 
-    | SO          | Ruta de acceso                          |
-    |-------------|-------------------------------|
-    | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+  | SO          | Ruta de acceso                          |
+  |-------------|-------------------------------|
+  | Linux/macOS | `$HOME/.dotnet/tools`         |
+  | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    Si intenta ejecutar una herramienta global, compruebe que la variable del entorno `PATH` de su máquina contiene la ruta de acceso donde instaló la herramienta global y que el archivo ejecutable está en esa ruta de acceso.
+  Si intenta ejecutar una herramienta global, compruebe que la variable del entorno `PATH` de su máquina contiene la ruta de acceso donde instaló la herramienta global y que el archivo ejecutable está en esa ruta de acceso.
 
-    La primera vez que se usa, la CLI de .NET Core intenta agregar las ubicaciones predeterminadas a la variable de entorno PATH. Sin embargo, hay un par de escenarios en los que la ubicación podría no agregarse automáticamente a PATH, por lo que deberá editar PATH para configurarlo en los siguientes casos:
+  La primera vez que se usa, la CLI de .NET Core intenta agregar la ubicación predeterminada a la variable de entorno PATH. Pero hay algunos escenarios en los que la ubicación podría no agregarse a PATH automáticamente:
 
   * Si usa Linux y ha instalado el SDK de .NET Core mediante el uso de archivos *.tar.gz* en lugar de “apt-get” o “rpm”.
   * Si usa macOS 10.15 “Catalina” o versiones posteriores.
@@ -59,7 +59,7 @@ El nombre del archivo ejecutable determina cómo se invoca la herramienta. En la
   * Si ha instalado el SDK de .NET Core 3.0 y ha establecido la variable de entorno `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` en `false`.
   * Si ha instalado el SDK de .NET Core 2.2 o versiones anteriores y ha establecido la variable de entorno `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` en `true`.
 
-  Para obtener más información, vea [Herramientas de .NET Core](global-tools.md).
+  En estos casos, o si especificó la opción `--tool-path`, la variable de entorno `PATH` del equipo no contiene automáticamente la ruta de acceso donde se instaló la herramienta global. En tal caso, anexe la ubicación de la herramienta (por ejemplo, `$HOME/.dotnet/tools`) a la variable de entorno `PATH` usando el método que el shell proporcione para actualizar variables de entorno. Para obtener más información, vea [Herramientas de .NET Core](global-tools.md).
 
 * Herramientas locales
 

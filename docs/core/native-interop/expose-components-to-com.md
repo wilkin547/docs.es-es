@@ -1,5 +1,6 @@
 ---
 title: Exposición de los componentes de .NET Core a COM
+description: En este tutorial se muestra cómo exponer una clase a COM desde .NET Core. Generaremos automáticamente un servidor COM y un manifiesto de servidor en paralelo para COM sin registro.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157549"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146663"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Exposición de los componentes de .NET Core a COM
 
@@ -41,7 +42,21 @@ El primer paso consiste en crear la biblioteca.
 3. Agregue `using System.Runtime.InteropServices;` a la parte superior del archivo.
 4. Cree una interfaz denominada `IServer`. Por ejemplo:
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. Agregue el atributo `[Guid("<IID>")]` a la interfaz con el GUID de la interfaz para la interfaz COM que está implementando. Por ejemplo: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Tenga en cuenta que este GUID debe ser único, ya que es el único identificador de esta interfaz para COM. En Visual Studio, puede generar un GUID desde Herramientas > Crear GUID para abrir la herramienta de creación de GUID.
 6. Agregue el atributo `[InterfaceType]` a la interfaz y especifique qué interfaces COM base debe implementar la interfaz.

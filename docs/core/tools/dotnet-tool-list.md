@@ -2,12 +2,12 @@
 title: Comando dotnet tool list
 description: El comando dotnet tool list enumera las herramientas de .NET Core que están instaladas en el equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: def3c345a775e5a65ec3d37718d207c80ca7ceee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156990"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847877"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,8 +21,11 @@ ms.locfileid: "78156990"
 
 ```dotnetcli
 dotnet tool list <-g|--global>
+
 dotnet tool list <--tool-path>
+
 dotnet tool list
+
 dotnet tool list <-h|--help>
 ```
 
@@ -71,3 +74,5 @@ El comando `dotnet tool list` permite enumerar todas las herramientas locales, d
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas de .NET Core](global-tools.md)
+- [Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core](global-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)

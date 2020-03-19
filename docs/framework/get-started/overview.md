@@ -7,16 +7,16 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975654"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181594"
 ---
-# <a name="overview-of-the-net-framework"></a>Información general acerca de .NET Framework
+# <a name="overview-of-net-framework"></a>Información general acerca de .NET Framework
 
-.NET Framework es una tecnología que admite la compilación y ejecución de la última generación de aplicaciones y Servicios web XML. El diseño de .NET Framework está enfocado a cumplir los objetivos siguientes:
+.NET Framework es una tecnología que admite la creación y ejecución de servicios web y aplicaciones Windows. El diseño de .NET Framework está enfocado a cumplir los objetivos siguientes:
 
 - Proporcionar un entorno coherente de programación orientada a objetos, en el que el código de los objetos se pueda almacenar y ejecutar de forma local, ejecutar de forma local pero distribuida en Internet o ejecutar de forma remota.
 
@@ -28,16 +28,16 @@ ms.locfileid: "73975654"
 
 - Ofrecer al programador una experiencia coherente entre tipos de aplicaciones muy diferentes, como las basadas en Windows o en Web.
 
-- Basar toda la comunicación en estándares del sector para asegurar que el código de .NET Framework se puede integrar con otros tipos de código.
+- Basar toda la comunicación en estándares del sector para asegurar que el código de .NET Framework se puede integrar con otros tipos de código.
 
 > [!NOTE]
-> Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](index.md).
+> Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](index.md).
 
-.NET Framework consta de dos componentes principales: Common Language Runtime (CLR) y la biblioteca de clases de .NET Framework. Common Language Runtime es el fundamento de .NET Framework. El tiempo de ejecución se puede considerar como un agente que administra el código en tiempo de ejecución y proporciona servicios centrales, como la administración de memoria, la administración de subprocesos y la comunicación remota, al tiempo que aplica una seguridad de tipos estricta y otras formas de especificación del código que promueven su seguridad y solidez. De hecho, el concepto de administración de código es un principio básico del motor en tiempo de ejecución. El código destinado al tiempo de ejecución se denomina código administrado, a diferencia del resto de código, que se conoce como código no administrado. La biblioteca de clases es una colección completa orientada a objetos de tipos reutilizables que se pueden emplear para desarrollar aplicaciones que abarcan desde las tradicionales herramientas de interfaz gráfica de usuario (GUI) o de línea de comandos hasta las aplicaciones basadas en las innovaciones más recientes proporcionadas por ASP.NET, como formularios Web Forms y Servicios web XML.
+.NET Framework consta de dos componentes principales: Common Language Runtime (CLR) y la biblioteca de clases de .NET Framework. Common Language Runtime es el fundamento de .NET Framework. El tiempo de ejecución se puede considerar como un agente que administra el código en tiempo de ejecución y proporciona servicios centrales, como la administración de memoria, la administración de subprocesos y la comunicación remota, al tiempo que aplica una seguridad de tipos estricta y otras formas de especificación del código que promueven su seguridad y solidez. De hecho, el concepto de administración de código es un principio básico del motor en tiempo de ejecución. El código destinado al tiempo de ejecución se denomina código administrado, a diferencia del resto de código, que se conoce como código no administrado. La biblioteca de clases es una colección completa orientada a objetos de tipos reutilizables que se puede emplear para desarrollar aplicaciones que abarcan desde las tradicionales herramientas de interfaz gráfica de usuario (GUI) o de línea de comandos hasta aplicaciones basadas en las innovaciones más recientes proporcionadas por ASP.NET, como formularios Web Forms y servicios web XML.
 
-.NET Framework puede hospedarse en componentes no administrados que cargan Common Language Runtime en sus procesos e inician la ejecución de código administrado, con lo que se crea un entorno de software que usa características administradas y no administradas. En .NET Framework no solo se ofrecen varios hosts de tiempo de ejecución, sino que también se admite el desarrollo de estos hosts por parte de terceros.
+.NET Framework puede hospedarse en componentes no administrados que cargan Common Language Runtime en sus procesos e inician la ejecución de código administrado, con lo que se crea un entorno de software que usa características administradas y no administradas. En .NET Framework no solo se ofrecen varios hosts de tiempo de ejecución, sino que también se admite el desarrollo de estos hosts por parte de terceros.
 
-Por ejemplo, ASP.NET hospeda el motor en tiempo de ejecución para proporcionar un entorno de servidor escalable para el código administrado. ASP.NET trabaja directamente con el tiempo de ejecución para habilitar aplicaciones de ASP.NET y Servicios web XML, que se tratan más adelante en este tema.
+Por ejemplo, ASP.NET hospeda el motor en tiempo de ejecución para proporcionar un entorno de servidor escalable para el código administrado. ASP.NET trabaja directamente con el tiempo de ejecución para habilitar aplicaciones de ASP.NET y servicios web XML, que se tratan más adelante en este artículo.
 
 Internet Explorer es un ejemplo de aplicación no administrada que hospeda el tiempo de ejecución (en forma de una extensión de tipo MIME). Al usar Internet Explorer para hospedar el motor en tiempo de ejecución, puede incrustar componentes administrados o controles de Windows Forms en documentos HTML. Al hospedar el tiempo de ejecución de esta manera se hace posible el uso de código móvil administrado, pero con mejoras significativas que solo el código administrado puede ofrecer, como la ejecución con confianza parcial y el almacenamiento aislado de archivos.
 
@@ -45,7 +45,7 @@ En la ilustración siguiente se muestra la relación de Common Language Runtime 
 
 ![Captura de pantalla que muestra cómo funciona el código administrado dentro de una arquitectura más amplia.](./media/overview/language-runtime-class-library-relationship.gif)
 
-En las secciones siguientes se describen con más detalle las características principales de .NET Framework.
+En las siguientes secciones se describen con más detalle las características principales de .NET Framework.
 
 ## <a name="features-of-the-common-language-runtime"></a>Características de Common Language Runtime
 

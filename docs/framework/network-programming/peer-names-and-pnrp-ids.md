@@ -3,10 +3,10 @@ title: Nombres de mismo nivel e identificadores PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047504"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
@@ -20,7 +20,7 @@ Un nombre de mismo nivel representa un punto de conexión para la comunicación,
  Los nombres de mismo nivel seguros solo se registran por su propietario y están protegidos con criptografía de clave pública. Un nombre seguro de mismo nivel se considera que pertenecen a la entidad de mismo nivel que tiene la clave privada correspondiente. La propiedad se puede probar a través de la dirección de mismo nivel certificada (CPA), que se firma con la clave privada. Un usuario malintencionado no puede falsificar la propiedad de un nombre de mismo nivel sin la clave privada correspondiente.  
   
 ## <a name="pnrp-ids"></a>Identificadores PNRP  
- ![Identificador PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![Identificador de PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  Los identificadores PNRP se componen de lo siguiente:  
   

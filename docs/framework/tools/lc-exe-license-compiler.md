@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774204"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180394"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de licencias)
 El Compilador de licencias lee archivos de texto que contienen información sobre licencias y crea un archivo binario que se puede incrustar como recurso en un archivo ejecutable de Common Language Runtime.  
@@ -38,7 +38,7 @@ targetPE /complist:filename [-outdir:path]
 /i:modules [/nologo] [/v]  
 ```  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/complist:** *filename*|Especifica el nombre de un archivo que contiene la lista de componentes con licencia que se van a incluir en el archivo .licenses. Se hace referencia a cada componente utilizando su nombre completo con un solo componente por línea.<br /><br /> Los usuarios de la línea de comandos pueden especificar un archivo independiente para cada formulario del proyecto. Lc.exe acepta varios archivos de entrada y crea un único archivo .licenses.|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
@@ -81,8 +81,8 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
 ```text  
 /target:hostapp.exe  
-/complist:hostapplic.txt   
-/i:WFCPrj.dll   
+/complist:hostapplic.txt
+/i:WFCPrj.dll
 /outdir:"C:\My Folder"  
 ```  
   

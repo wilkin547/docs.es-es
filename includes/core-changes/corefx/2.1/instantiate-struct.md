@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449571"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78262407"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Campos privados agregados a tipos struct integrados
 
-Los campos privados se agregaron a los tipos de struct integrados en [ensamblados de referencia](../../../../docs/standard/assembly/reference-assemblies.md). Como resultado, en C#, siempre se deben crear instancias de struct mediante el [operador new](../../../../docs/csharp/language-reference/operators/new-operator.md) o un [literal predeterminado](../../../../docs/csharp/language-reference/operators/default.md#default-literal), o también inicializando cada uno de los campos privados.
+Se han agregado campos privados a [algunos tipos de struct](#affected-apis) en [ensamblados de referencia](../../../../docs/standard/assembly/reference-assemblies.md). Como resultado, en C#, siempre se deben crear instancias de esos structs mediante el [operador new](../../../../docs/csharp/language-reference/operators/new-operator.md) o un [literal predeterminado](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
 #### <a name="change-description"></a>Descripción del cambio
 
-En .NET Core 2.0 y versiones anteriores, se podría crear una instancia de algunos tipos de struct integrados, por ejemplo, <xref:System.ConsoleKeyInfo>, sin usar el operador `new` ni un [literal predeterminado](../../../../docs/csharp/language-reference/operators/default.md#default-literal) en C#. Esto se debe a que los [ensamblados de referencia](../../../../docs/standard/assembly/reference-assemblies.md) que usa el compilador de C# no contenían los campos privados de los structs. Todos los campos privados de los tipos de struct .NET se agregan a los ensamblados de referencia a partir de .NET Core 2.1.
+En .NET Core 2.0 y versiones anteriores, se podría crear una instancia de algunos tipos de struct proporcionados, por ejemplo, <xref:System.ConsoleKeyInfo>, sin usar el operador `new` ni un [literal predeterminado](../../../../docs/csharp/language-reference/operators/default.md#default-literal) en C#. Esto se debe a que los [ensamblados de referencia](../../../../docs/standard/assembly/reference-assemblies.md) que usa el compilador de C# no contenían los campos privados de los structs. Todos los campos privados de los tipos de struct .NET se agregan a los ensamblados de referencia a partir de .NET Core 2.1.
 
 Por ejemplo, el siguiente código de C# se compila en .Net Core 2.0, pero no en .NET Core 2.1:
 
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>Categoría

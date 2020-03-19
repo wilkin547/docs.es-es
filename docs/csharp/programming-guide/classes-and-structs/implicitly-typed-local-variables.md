@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714829"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398434"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales con asignación implícita de tipos (Guía de programación de C#)
 
@@ -48,7 +48,7 @@ Para obtener más información, vea [Procedimiento para usar matrices y variable
 
 ## <a name="var-and-anonymous-types"></a>var y tipos anónimos
 
-En muchos casos, el uso de `var` es opcional y es simplemente una comodidad sintáctica. Pero cuando una variable se inicializa con un tipo anónimo, la variable se debe declarar como `var` si necesita acceder más adelante a las propiedades del objeto. Se trata de un escenario común en expresiones de consulta LINQ. Para más información, vea [Tipos anónimos](anonymous-types.md).
+En muchos casos, el uso de `var` es opcional y es simplemente una comodidad sintáctica. Pero cuando una variable se inicializa con un tipo anónimo, la variable se debe declarar como `var` si necesita acceder más adelante a las propiedades del objeto. Se trata de un escenario común en expresiones de consulta LINQ. Para obtener más información, consulte [Tipos anónimos](anonymous-types.md) (Guía de programación de C#).
 
 Desde el punto de vista del código fuente, un tipo anónimo no tiene nombre. Por lo tanto, si una variable de consulta se ha inicializado con `var`, la única manera de tener acceso a las propiedades de la secuencia de objetos devuelta consiste en usar `var` como el tipo de la variable de iteración en la instrucción `foreach`.
 
@@ -88,7 +88,7 @@ La palabra clave `var` también puede ser útil cuando resulte tedioso escribir 
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-Pero el uso de `var` supone al menos la posibilidad de que el código sea más difícil de comprender para otros programadores. Por ese motivo, la documentación de C# por lo general solo usa `var` cuando es necesario.
+El uso de `var` ayuda a simplificar el código, pero debe quedar restringido a los casos en los que sea necesario, o cuando haga que el código sea más fácil de leer. Para obtener más información sobre cuándo usar `var` correctamente, vea la sección [Variables locales con asignación implícita de tipos](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) en el artículo sobre directrices de codificación de C#.
 
 ## <a name="see-also"></a>Vea también
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104983"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Herramienta PEVerify)
@@ -32,11 +32,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*filename*|Archivo portable ejecutable (PE) para el que se comprueban el lenguaje MSIL y los metadatos.|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Anula la comprobación si se generan tantos errores como indica *maxErrorCount*.<br /><br /> Este parámetro no es compatible con .NET Framework versión 2.0 o posterior.|  
 |**/clock**|Mide los siguientes tiempos de comprobación en milisegundos y los notifica:<br /><br /> **MD Val. cycle**<br /> Ciclo de validación de metadatos<br /><br /> **MD Val. pure**<br /> Validación pura de metadatos<br /><br /> **IL Ver. cycle**<br /> Ciclo de comprobación del Lenguaje intermedio de Microsoft (MSIL)<br /><br /> **IL Ver pure**<br /> Comprobación pura de MSIL<br /><br /> Los valores de **MD Val. cycle** e **IL Ver. cycle** incluyen el tiempo requerido para realizar los procedimientos necesarios de inicio y de cierre. Los valores de **MD Val. pure** e **IL Ver pure** reflejan el tiempo requerido únicamente para realizar la validación o comprobación.|  
@@ -57,7 +57,7 @@ peverify filename [options]
 ## <a name="remarks"></a>Comentarios  
  Common Language Runtime se basa en la ejecución con seguridad de tipos del código de la aplicación para ayudar a imponer mecanismos de aislamiento y seguridad. Normalmente, el código en el que no [se puede comprobar la seguridad de tipos](../../standard/security/key-security-concepts.md#type-safety-and-security) no se puede ejecutar, aunque puede establecer una directiva de seguridad para permitir la ejecución de código de confianza pero que no se puede comprobar.  
   
- Si no se especifican las opciones **/md** o **/il**, Peverify.exe realiza ambos tipos de comprobaciones. Primero realiza comprobaciones de tipo **/md**. Si no hay errores, realiza comprobaciones de tipo **/il**. Si especifica ambas opciones ( **/md** e **/il**), se realizarán comprobaciones de tipo **/il** aunque existan errores en los metadatos. Así, si no hay ningún error de metadatos, **peverify** *filename* es equivalente a **peverify** *filename* **/md** **/il**.  
+ Si no se especifican las opciones **/md** o **/il**, Peverify.exe realiza ambos tipos de comprobaciones. Primero realiza comprobaciones de tipo **/md**. Si no hay errores, realiza comprobaciones de tipo **/il**. Si especifica ambas opciones ( **/md** e **/il**), se realizarán comprobaciones de tipo **/il** aunque existan errores en los metadatos. Así, si no hay ningún error de metadatos, **peverify** *filename* equivale a **peverify** *filename* **/md** **/il**.  
   
  Peverify.exe realiza comprobaciones exhaustivas de MSIL basándose en el análisis del flujo de datos y en una lista que contiene centenares de reglas sobre metadatos válidos. Para obtener información detallada sobre las comprobaciones que realiza Peverify.exe, vea las secciones sobre especificaciones para la validación de metadatos y para el conjunto de instrucciones de MSIL en la carpeta Tools Developers Guide de Windows SDK.  
   

@@ -5,10 +5,10 @@ ms.date: 10/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: c651aa6e0f37a968e6f8b26d1909def6fa488ccd
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72303699"
 ---
 # <a name="unmanaged-native-library-loading-algorithm"></a>Algoritmo de carga de biblioteca no administrada (nativa)
@@ -21,9 +21,9 @@ El algoritmo siguiente describe cómo se cargan las bibliotecas nativas a travé
 
 `PInvoke` usa el algoritmo siguiente al intentar cargar un ensamblado no administrado:
 
-1. Determine el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> de `active`. En el caso de una biblioteca de carga no administrada, el elemento AssemblyLoadContext de `active` es el que tiene el ensamblado que define `PInvoke`.
+1. Determine el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active`. En el caso de una biblioteca de carga no administrada, el elemento AssemblyLoadContext de `active` es el que tiene el ensamblado que define `PInvoke`.
 
-2. En el caso del elemento <xref:System.Runtime.Loader.AssemblyLoadContext> de `active`, intente buscar el ensamblado en orden de prioridad por:
+2. En el caso del elemento <xref:System.Runtime.Loader.AssemblyLoadContext> `active`, intente buscar el ensamblado en orden de prioridad por:
     * Comprobar la memoria caché.
 
     * Llamar al delegado <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> actual que establece la función <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType>.

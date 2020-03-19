@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72303627"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>Algoritmo de carga de ensamblado satélite
@@ -29,7 +29,7 @@ Las API de nivel alto pueden abstraer la API de nivel bajo.
 
 El proceso de reserva de recursos de .NET Core conlleva los pasos siguientes:
 
-1. Determine la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> de `active`. En todos los casos, la instancia de `active` es el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> del ensamblado que se ejecuta.
+1. Determine la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext> `active`. En todos los casos, la instancia de `active` es el elemento <xref:System.Runtime.Loader.AssemblyLoadContext> del ensamblado que se ejecuta.
 
 2. La instancia de `active` intenta cargar un ensamblado satélite para la referencia cultural solicitada por orden de prioridad al realizar lo siguiente:
     - Comprobar la memoria caché.

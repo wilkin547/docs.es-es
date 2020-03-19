@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104940"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180360"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Herramienta de instalación de servicios de .NET)
 La herramienta Instalación de servicios de .NET realiza las siguientes acciones:  
@@ -34,16 +34,16 @@ La herramienta Instalación de servicios de .NET realiza las siguientes acciones
 ```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
-[/nologo] [/quiet]assemblyFile.dll   
+[/nologo] [/quiet]assemblyFile.dll
 ```  
   
 ## <a name="parameters"></a>Parámetros  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|Archivo de ensamblado de origen con el que se va a trabajar. El ensamblado debe estar firmado con un nombre seguro. Para obtener más información, vea [Procedimiento para firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/appdir:** *path*|Especifica el directorio raíz de la aplicación.|  
 |**/appname:** *applicationName*|Especifica el nombre de la aplicación COM+ que se busca o se crea.|  

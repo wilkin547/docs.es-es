@@ -38,11 +38,11 @@ helpviewer_keywords:
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132855"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398770"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -84,15 +84,15 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
  En la tabla siguiente se muestra una lista de los tipos base que proporciona .NET, se describe brevemente cada tipo y se indica el tipo correspondiente de Visual Basic, C#, C++ y F#.  
   
-|Categoría|Nombre de la clase|DESCRIPCIÓN|Tipo de datos en Visual Basic|Tipo de datos en C#|Tipo de datos en C++/CLI|Tipo de datos en F#|  
+|Categoría|Nombre de la clase|Descripción|Tipo de datos en Visual Basic|Tipo de datos en C#|Tipo de datos en C++/CLI|Tipo de datos en F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Entero de 8 bits sin signo.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Entero de 8 bits con signo.<br /><br /> No es conforme a CLS.|**SByte**|**sbyte**|**char**<br /> O bien<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|Entero de 8 bits con signo.<br /><br /> No es conforme a CLS.|**SByte**|**sbyte**|**char**<br /> o bien<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Entero de 16 bits con signo.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Entero de 32 bits con signo.|**Integer**|**int**|**int**<br /><br /> O bien<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Entero de 32 bits con signo.|**Integer**|**int**|**int**<br /><br /> o bien<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Entero de 64 bits con signo.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Entero de 16 bits sin signo.<br /><br /> No es conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Entero de 32 bits sin signo.<br /><br /> No es conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> O bien<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Entero de 32 bits sin signo.<br /><br /> No es conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> o bien<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Entero de 64 bits sin signo.<br /><br /> No es conforme a CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |Punto flotante|<xref:System.Single>|Número de punto flotante (32 bits) de precisión sencilla.|**Single**|**float**|**float**|**float32**<br> o<br>**single**|  
 ||<xref:System.Double>|Número de punto flotante (64 bits) de doble precisión.|**Double**|**double**|**double**|**float**<br> o <br> **double**|  

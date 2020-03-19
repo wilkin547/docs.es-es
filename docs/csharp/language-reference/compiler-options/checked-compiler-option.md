@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606989"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173775"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (Opciones del compilador de C#)
 La opción **-checked** especifica si una instrucción aritmética de enteros que produce un valor fuera del intervalo del tipo de datos y que no está en el ámbito de las palabras clave [checked](../keywords/checked.md) o [unchecked](../keywords/unchecked.md) provocará una excepción en tiempo de ejecución.  
@@ -30,9 +30,9 @@ La opción **-checked** especifica si una instrucción aritmética de enteros qu
  Si una instrucción aritmética de enteros que no está en el ámbito de la palabra clave `checked` o `unchecked` produce un valor fuera del intervalo del tipo de datos, y si se usa **-checked+** (o **-checked**) en la compilación, la instrucción provoca una excepción en tiempo de ejecución. Si se usa **-checked-** en la compilación, la instrucción no produce una excepción en tiempo de ejecución.  
   
  El valor predeterminado para esta opción es **-checked-** y la comprobación de desbordamiento está deshabilitada.
- 
+
  A veces, las herramientas automatizadas que se usan para compilar aplicaciones de gran tamaño establecen -check en +. Una situación para usar -checked- es reemplazar el valor predeterminado global de la herramienta especificando -checked-.
- 
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
 1. Abra la página **Propiedades** del proyecto. Para obtener más información, consulte [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
@@ -41,7 +41,7 @@ La opción **-checked** especifica si una instrucción aritmética de enteros qu
   
 3. Haga clic en el botón **Avanzada** .  
   
-4. Modifique la propiedad **Comprobar el desbordamiento y subdesbordamiento aritmético**.  
+4. Modifique la propiedad **Comprobar el desbordamiento aritmético**.  
   
  Para acceder a esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   

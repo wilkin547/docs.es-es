@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: be1fad236dd3eed047b010e93285aec8bc607b61
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394333"
 ---
 ### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hospedaje: los tipos IHostingEnvironment e IApplicationLifetime se han marcado como obsoletos y se han reemplazado
@@ -46,7 +46,7 @@ Reemplazados los usos de los tipos anteriores por los tipos recién introducidos
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-Los métodos de extensión `IsDevelopment` y `IsProduction` de `IHostEnvironment` se encuentran en el espacio de nombres `Microsoft.Extensions.Hosting`. Es posible que sea necesario agregar ese espacio de nombres al proyecto.
+Los nuevos métodos de extensión `IsDevelopment` y `IsProduction` de `IHostEnvironment` se encuentran en el espacio de nombres `Microsoft.Extensions.Hosting`. Es posible que sea necesario agregar ese espacio de nombres al proyecto.
 
 #### <a name="category"></a>Categoría
 

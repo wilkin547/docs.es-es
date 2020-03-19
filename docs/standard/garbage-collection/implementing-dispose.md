@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156340"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78238993"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementar un método Dispose
 
@@ -33,7 +33,7 @@ El patrón de Dispose tiene dos variaciones:
   
 Para asegurarse de que los recursos se limpien siempre correctamente, un método <xref:System.IDisposable.Dispose%2A> debe debe ser invocable varias veces sin que se produzca una excepción.  
   
-El ejemplo de código proporcionado para el método <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> muestra cómo la recolección de elementos no utilizados rigurosa puede hacer que se ejecute un finalizador mientras un miembro del objeto reclamado todavía se está ejecutando. Suele ser recomendable llamar al método <xref:System.GC.KeepAlive%2A> al final de un método <xref:System.IDisposable.Dispose%2A> prolongado.  
+El ejemplo de código proporcionado para el método <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> muestra cómo la recolección de elementos no utilizados puede hacer que un finalizador se ejecute mientras una referencia no administrada al objeto o a sus miembros todavía está en uso. Usar <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> tiene sentido para hacer que el objeto no sea válido para la recolección de elementos no utilizados desde el principio de la rutina actual y hasta el momento en que se llamó a este método.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() y Dispose (booleano)  

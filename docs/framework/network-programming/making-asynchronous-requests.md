@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a49233596bafebd4f07372e59f29ea77afb21458
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047662"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180721"
 ---
 # <a name="making-asynchronous-requests"></a>Realizar solicitudes asincrónicas
 Las clases <xref:System.Net> usan el modelo de programación asincrónica estándar de .NET Framework para obtener acceso asincrónico a recursos de Internet. Los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A> de la clase <xref:System.Net.WebRequest> inician y completan las solicitudes asincrónicas para un recurso de Internet.  
@@ -34,7 +34,7 @@ Las clases <xref:System.Net> usan el modelo de programación asincrónica están
   
 - La propiedad `allDone` contiene una instancia de la clase <xref:System.Threading.ManualResetEvent> que indica la finalización de la solicitud.  
   
-- El método `Main()` lee la línea de comandos y comienza la solicitud para el recurso de Internet especificado. Crea la clase **WebRequest** `wreq` y **RequestState** `rs`, llama a **BeginGetResponse** para empezar a procesar la solicitud y, después, llama al método `allDone.WaitOne()` para que la aplicación no se cierre hasta que se complete la devolución de llamada. Una vez que se ha leído la respuesta del recurso de Internet, `Main()` lo escribe en la consola y la aplicación finaliza.  
+- El método `Main()` lee la línea de comandos y comienza la solicitud para el recurso de Internet especificado. Crea la clase **WebRequest**`wreq` y **RequestState** `rs`, llama a **BeginGetResponse** para empezar a procesar la solicitud y, después, llama al método `allDone.WaitOne()` para que la aplicación no se cierre hasta que la devolución de llamada se complete. Una vez que se ha leído la respuesta del recurso de Internet, `Main()` lo escribe en la consola y la aplicación finaliza.  
   
 - El método `showusage()` escribe una línea de comandos de ejemplo en la consola. Lo llama `Main()` cuando no se proporciona ningún URI en la línea de comandos.  
   
@@ -69,18 +69,18 @@ public class RequestState
       RequestData = new StringBuilder(String.Empty);  
       Request = null;  
       ResponseStream = null;  
-   }       
+   }
 }  
   
 // ClientGetAsync issues the async request.  
-class ClientGetAsync   
+class ClientGetAsync
 {  
    public static ManualResetEvent allDone = new ManualResetEvent(false);  
    const int BUFFER_SIZE = 1024;  
   
-   public static void Main(string[] args)   
+   public static void Main(string[] args)
    {  
-      if (args.Length < 1)   
+      if (args.Length < 1)
       {  
          showusage();  
          return;  
@@ -102,7 +102,7 @@ class ClientGetAsync
       IAsyncResult r = (IAsyncResult) wreq.BeginGetResponse(  
          new AsyncCallback(RespCallback), rs);  
   
-      // Wait until the ManualResetEvent is set so that the application   
+      // Wait until the ManualResetEvent is set so that the application
       // does not exit until after the callback is called.  
       allDone.WaitOne();  
   
@@ -127,18 +127,18 @@ class ClientGetAsync
   
       // Call EndGetResponse, which produces the WebResponse object  
       //  that came from the request issued above.  
-      WebResponse resp = req.EndGetResponse(ar);           
+      WebResponse resp = req.EndGetResponse(ar);
   
       //  Start reading data from the response stream.  
       Stream ResponseStream = resp.GetResponseStream();  
   
-      // Store the response stream in RequestState to read   
+      // Store the response stream in RequestState to read
       // the stream asynchronously.  
       rs.ResponseStream = ResponseStream;  
   
       //  Pass rs.BufferRead to BeginRead. Read data into rs.BufferRead  
-      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,   
-         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);   
+      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,
+         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);
    }  
   
    private static void ReadCallBack(IAsyncResult asyncResult)  
@@ -146,10 +146,10 @@ class ClientGetAsync
       // Get the RequestState object from AsyncResult.  
       RequestState rs = (RequestState)asyncResult.AsyncState;  
   
-      // Retrieve the ResponseStream that was set in RespCallback.   
+      // Retrieve the ResponseStream that was set in RespCallback.
       Stream responseStream = rs.ResponseStream;  
   
-      // Read rs.BufferRead to verify that it contains data.   
+      // Read rs.BufferRead to verify that it contains data.
       int read = responseStream.EndRead( asyncResult );  
       if (read > 0)  
       {  
@@ -158,7 +158,7 @@ class ClientGetAsync
   
          // Convert byte stream to Char array and then to String.  
          // len contains the number of characters converted to Unicode.  
-      int len =   
+      int len =
          rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0);  
   
          String str = new String(charBuffer, 0, len);  
@@ -166,12 +166,12 @@ class ClientGetAsync
          // Append the recently read data to the RequestData stringbuilder  
          // object contained in RequestState.  
          rs.RequestData.Append(  
-            Encoding.ASCII.GetString(rs.BufferRead, 0, read));           
+            Encoding.ASCII.GetString(rs.BufferRead, 0, read));
   
-         // Continue reading data until   
+         // Continue reading data until
          // responseStream.EndRead returns –1.  
-         IAsyncResult ar = responseStream.BeginRead(   
-            rs.BufferRead, 0, BUFFER_SIZE,   
+         IAsyncResult ar = responseStream.BeginRead(
+            rs.BufferRead, 0, BUFFER_SIZE,
             new AsyncCallback(ReadCallBack), rs);  
       }  
       else  
@@ -179,16 +179,16 @@ class ClientGetAsync
          if(rs.RequestData.Length>0)  
          {  
             //  Display data to the console.  
-            string strContent;                    
+            string strContent;
             strContent = rs.RequestData.ToString();  
          }  
          // Close down the response stream.  
-         responseStream.Close();           
+         responseStream.Close();
          // Set the ManualResetEvent so the main thread can exit.  
-         allDone.Set();                             
+         allDone.Set();
       }  
       return;  
-   }      
+   }
 }  
 ```  
   
@@ -302,9 +302,9 @@ Class ClientGetAsync
          ' len contains the number of characters converted to Unicode.  
          Dim len As Integer = _  
            rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0)  
-         Dim str As String = new String(charBuffer, 0, len)      
+         Dim str As String = new String(charBuffer, 0, len)
   
-         ' Append the recently read data to the RequestData stringbuilder   
+         ' Append the recently read data to the RequestData stringbuilder
          ' object contained in RequestState.  
          rs.RequestData.Append( _  
             Encoding.ASCII.GetString(rs.BufferRead, 0, read))  

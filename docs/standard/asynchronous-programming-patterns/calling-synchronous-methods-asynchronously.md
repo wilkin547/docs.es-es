@@ -21,10 +21,10 @@ helpviewer_keywords:
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105124"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
@@ -36,7 +36,7 @@ ms.locfileid: "73105124"
 
 El método `BeginInvoke` inicia la llamada asincrónica. Tiene los mismos parámetros que el método que desea ejecutar de forma asincrónica, más dos parámetros opcionales adicionales. El primer parámetro es un delegado <xref:System.AsyncCallback> que hace referencia a un método que se habrá de llamar cuando finalice la llamada asincrónica. El segundo parámetro es un objeto definido por el usuario que pasa información al método de devolución de llamada. `BeginInvoke` vuelve inmediatamente y no espera que se complete la llamada asincrónica. `BeginInvoke` devuelve <xref:System.IAsyncResult>, que se puede usar para supervisar el progreso de la llamada asincrónica.
 
-El método `EndInvoke` recupera los resultados de la llamada asincrónica. Se puede llamar en cualquier momento después de ejecutar `BeginInvoke`. Si la llamada asincrónica no ha completado, `EndInvoke` bloquea el subproceso que realiza la llamada hasta que se completa. Entre los parámetros de `EndInvoke` se incluyen los parámetros `out` y `ref` (`<Out>` `ByRef` y `ByRef` en Visual Basic) del método que desea ejecutar de forma asincrónica, además de la interfaz <xref:System.IAsyncResult> devuelta por `BeginInvoke`.
+El método `EndInvoke` recupera los resultados de la llamada asincrónica. Se puede llamar en cualquier momento después de ejecutar `BeginInvoke`. Si la llamada asincrónica no ha completado, `EndInvoke` bloquea el subproceso que realiza la llamada hasta que se completa. Entre los parámetros de `EndInvoke` se incluyen los parámetros `out` y `ref` (`<Out>` `ByRef` y `ByRef` en Visual Basic) del método que se quiere ejecutar de forma asincrónica, además de la interfaz <xref:System.IAsyncResult> devuelta por `BeginInvoke`.
 
 > [!NOTE]
 > La característica IntelliSense en Visual Studio muestra los parámetros de `BeginInvoke` y `EndInvoke`. Si no utiliza Visual Studio u otra herramienta similar, o si está utilizando C# con Visual Studio, consulte [Modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), donde encontrará una descripción de los parámetros definidos para estos métodos.

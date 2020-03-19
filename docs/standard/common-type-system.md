@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo Common Type System (CTS) y Common 
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8983e456b051ace434fda9f6ed9cf9028c2ec2d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664516"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187675"
 ---
 # <a name="common-type-system--common-language-specification"></a>Common Type System y Common Language Specification
 
@@ -17,7 +17,7 @@ De nuevo, dos términos que se usan libremente en el mundo de .NET, en realidad,
 
 ## <a name="common-type-system"></a>Sistema de tipos comunes
 
-Para comenzar desde el principio, recuerde que una implementación de .NET es _independiente del lenguaje_. Esto no solo significa que un programador pueda escribir su código en cualquier lenguaje que se pueda compilar en IL. Significa también que tiene que poder interactuar con código escrito en otros lenguajes que se pueden usar en una implementación de .NET.
+Para comenzar desde el principio, recuerde que una implementación de .NET es _independiente del lenguaje_. Esto no solo significa que un programador pueda escribir su código en cualquier lenguaje que se pueda compilar en IL, sino también que tiene que poder interactuar con código escrito en otros lenguajes que se pueden usar en una implementación de .NET.
 
 Para hacer esto de forma transparente, debe haber una forma común de describir todos los tipos compatibles. De esto se encarga Common Type System (CTS). Se ha creado para realizar varias acciones:
 

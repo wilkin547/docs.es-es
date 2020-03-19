@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104345"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180272"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de la biblioteca de tipos)
 El Exportador de la biblioteca de tipos genera una biblioteca que describe los tipos definidos en un ensamblado de Common Language Runtime.  
@@ -30,22 +30,22 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*assemblyName*|Ensamblado para el que se exporta una biblioteca de tipos.|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**/asmpath:** *directorio*|Especifica la ubicación en la que buscar los ensamblados. Si utiliza esta opción, debe especificar de forma explícita las ubicaciones en las que desea buscar los ensamblados a los que se hace referencia, incluido el directorio actual.<br /><br /> Cuando se usa la opción **asmpath**, el Exportador de la biblioteca de tipos no busca ensamblados en la caché global de ensamblados (GAC).|  
+|**/asmpath:** *directory*|Especifica la ubicación en la que buscar los ensamblados. Si utiliza esta opción, debe especificar de forma explícita las ubicaciones en las que desea buscar los ensamblados a los que se hace referencia, incluido el directorio actual.<br /><br /> Cuando se usa la opción **asmpath**, el Exportador de la biblioteca de tipos no busca ensamblados en la caché global de ensamblados (GAC).|  
 |**/help**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|**/names:** *nombreDeArchivo*|Especifica el uso de mayúsculas y minúsculas en los nombres de una biblioteca de tipos. El argumento *nombreDeArchivo* es un archivo de texto. Cada línea del archivo especifica el uso de mayúsculas y minúsculas en un nombre de la biblioteca de tipos.|  
+|**/names:** *filename*|Especifica el uso de mayúsculas y minúsculas en los nombres de una biblioteca de tipos. El argumento *nombreDeArchivo* es un archivo de texto. Cada línea del archivo especifica el uso de mayúsculas y minúsculas en un nombre de la biblioteca de tipos.|  
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|  
 |**/oldnames**|Fuerza a Tlbexp.exe a exportar los nombres de los tipos representativos si existe un conflicto de nombres de tipos. Tenga en cuenta que este era el comportamiento predeterminado en versiones anteriores a la versión 2.0 de .NET Framework.|  
-|**/out:** *archivo*|Especifica el nombre del archivo de biblioteca de tipos que se genera. Si se omite esta opción, Tlbexp.exe genera una biblioteca de tipos con el mismo nombre que el ensamblado (el nombre real del ensamblado, que no tiene por qué coincidir necesariamente con el del archivo que lo contiene) y una extensión .tlb.|  
+|**/out:** *file*|Especifica el nombre del archivo de biblioteca de tipos que se genera. Si se omite esta opción, Tlbexp.exe genera una biblioteca de tipos con el mismo nombre que el ensamblado (el nombre real del ensamblado, que no tiene por qué coincidir necesariamente con el del archivo que lo contiene) y una extensión .tlb.|  
 |**/silence:** `warningnumber`|Suprime la presentación de la advertencia especificada. Esta opción no se puede utilizar con la opción **/silent**.|  
 |**/silent**|Suprime la presentación de mensajes de aprobación. Esta opción no se puede utilizar con la opción **/silence**.|  
-|**/tlbreference:** *nombreDeBibliotecaDeTipos*|Fuerza a Tlbexp.exe a resolver de forma explícita las referencias a bibliotecas de tipos sin consultar el Registro. Por ejemplo, si el ensamblado B hace referencia al ensamblado A, puede utilizar esta opción para proporcionar una referencia explícita a la biblioteca de tipos, en lugar de confiar en la biblioteca de tipos especificada en el Registro. Tlbexp.exe realiza una comprobación de la versión para asegurarse de que la versión de la biblioteca de tipos coincide con la del ensamblado; de lo contrario, genera un error.<br /><br /> Observe que la opción **tlbreference** sigue consultado el Registro en los casos en los que se aplica el atributo <xref:System.Runtime.InteropServices.ComImportAttribute> a una interfaz que otro tipo implementa posteriormente.|  
-|**/tlbrefpath:** *rutaDeAcceso*|Ruta de acceso completa a una biblioteca de tipos a la que se hace referencia.|  
+|**/tlbreference:** *typelibraryname*|Fuerza a Tlbexp.exe a resolver de forma explícita las referencias a bibliotecas de tipos sin consultar el Registro. Por ejemplo, si el ensamblado B hace referencia al ensamblado A, puede utilizar esta opción para proporcionar una referencia explícita a la biblioteca de tipos, en lugar de confiar en la biblioteca de tipos especificada en el Registro. Tlbexp.exe realiza una comprobación de la versión para asegurarse de que la versión de la biblioteca de tipos coincide con la del ensamblado; de lo contrario, genera un error.<br /><br /> Observe que la opción **tlbreference** sigue consultado el Registro en los casos en los que se aplica el atributo <xref:System.Runtime.InteropServices.ComImportAttribute> a una interfaz que otro tipo implementa posteriormente.|  
+|**/tlbrefpath:** *path*|Ruta de acceso completa a una biblioteca de tipos a la que se hace referencia.|  
 |**/win32**|Al realizar la compilación en un equipo de 64 bits, esta opción especifica que Tlbexp.exe debe generar una biblioteca de tipos de 32 bits.|  
 |**/win64**|Al realizar la compilación en un equipo de 32 bits, esta opción especifica que Tlbexp.exe debe generar una biblioteca de tipos de 64 bits.|  
 |**/verbose**|Especifica el modo detallado; muestra una lista de los ensamblados relacionados para los que es necesario generar una biblioteca de tipos.|  
@@ -79,7 +79,7 @@ tlbexp assemblyName [options]
   
  se genera la biblioteca de tipos siguiente:  
   
-```cpp 
+```cpp
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  

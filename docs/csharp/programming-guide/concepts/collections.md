@@ -2,12 +2,12 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418706"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169888"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 
@@ -200,7 +200,7 @@ Puede crear una colección genérica mediante una de las clases del espacio de n
 
 En la tabla siguiente se enumeran algunas de las clases usadas con frecuencia del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Clase|DESCRIPCIÓN|
+|Clase|Descripción|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Representa una colección de pares de clave y valor que se organizan según la clave.|
 |<xref:System.Collections.Generic.List%601>|Representa una lista de objetos a los que puede tener acceso el índice. Proporciona métodos para buscar, ordenar y modificar listas.|
@@ -230,7 +230,7 @@ Siempre que sea posible, debe usar las colecciones genéricas del espacio de nom
 
 En la siguiente tabla se enumeran algunas de las clases usadas con frecuencia en el espacio de nombres `System.Collections`:
 
-|Clase|DESCRIPCIÓN|
+|Clase|Descripción|
 |---|---|
 |<xref:System.Collections.ArrayList>|Representa una matriz cuyo tamaño aumenta dinámicamente cuando es necesario.|
 |<xref:System.Collections.Hashtable>|Representa una colección de pares de clave y valor que se organizan por código hash de la clave.|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Uso de LINQ para tener acceso a una colección
 
-LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, vea [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/).
+LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, vea [Introducción a LINQ en C#](linq/index.md).
 
 El ejemplo siguiente ejecuta una consulta LINQ en una `List` genérica. La consulta LINQ devuelve otra colección que contiene los resultados.
 

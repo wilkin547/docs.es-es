@@ -1,27 +1,25 @@
 ---
 title: Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly
-description: Obtenga información sobre cómo controlar los errores HTTP con Polly y HttpClientFactory.
-ms.date: 01/30/2020
-ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+description: Obtenga información sobre cómo controlar los errores HTTP con Polly e IHttpClientFactory.
+ms.date: 03/03/2020
+ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502667"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846801"
 ---
-# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con HttpClientFactory y las directivas de Polly
+# <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con IHttpClientFactory y las directivas de Polly
 
 El enfoque recomendado para los reintentos con retroceso exponencial consiste en aprovechar las ventajas de las bibliotecas de .NET más avanzadas como la biblioteca de código abierto [Polly](https://github.com/App-vNext/Polly).
 
 Polly es una biblioteca de .NET que proporciona capacidades de resistencia y control de errores transitorios. Puede implementar esas funcionalidades mediante la aplicación de directivas de Polly como las de reintento, interruptor, aislamiento compartimentado, tiempo de espera y reserva. Polly tiene como destino .NET Framework 4.x y .NET Standard 1.0, 1.1 y 2.0 (que admite .NET Core).
 
-Sin embargo, escribir su propio código personalizado para usar la biblioteca de Polly’s con HttpClient puede ser bastante complejo. En la versión original de eShopOnContainers, había un [bloque de creación ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) basado en Polly. Pero con el lanzamiento de [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), la implementación de la comunicación HTTP resistente con Polly se ha convertido en un proceso mucho más sencillo, por lo que ese bloque de creación ha quedado en desuso en eShopOnContainers.
-
-En los pasos siguientes se muestra cómo usar reintentos HTTP con Polly integrados en HttpClientFactory, que se explica en la sección anterior.
+En los pasos siguientes se muestra cómo usar reintentos HTTP con Polly integrados en `IHttpClientFactory`, que se explica en la sección anterior.
 
 **Referencias a los paquetes de ASP.NET Core 3.1**
 
-`HttpClientFactory` está disponible desde .NET Core 2.1, pero, a pesar de ello, le recomendamos que use los últimos paquetes de ASP.NET Core 3.1 de NuGet en su proyecto. Normalmente también es necesario hacer referencia al paquete de extensión `Microsoft.Extensions.Http.Polly`.
+`IHttpClientFactory` está disponible desde .NET Core 2.1, pero, a pesar de ello, le recomendamos que use los últimos paquetes de ASP.NET Core 3.1 de NuGet en su proyecto. Normalmente también es necesario hacer referencia al paquete de extensión `Microsoft.Extensions.Http.Polly`.
 
 **Configurar un cliente con la directiva de reintentos de Polly, en Startup**
 
@@ -73,7 +71,7 @@ Polly proporciona algoritmos de vibración listos para la producción a través 
 - **Patrón de reintento**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly y HttpClientFactory**  
+- **Polly e IHttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
 - **Polly (.NET resilience and transient-fault-handling library) (Polly [Biblioteca de control de errores transitorios y resistencia de .NET])**  
@@ -86,5 +84,5 @@ Polly proporciona algoritmos de vibración listos para la producción a través 
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Anterior](explore-custom-http-call-retries-exponential-backoff.md)
+>[Anterior](use-httpclientfactory-to-implement-resilient-http-requests.md)
 >[Siguiente](implement-circuit-breaker-pattern.md)

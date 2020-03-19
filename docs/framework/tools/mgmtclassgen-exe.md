@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5002d7a180e480b0e1d38f1c1180fe565dc5e1dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105020"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180378"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
@@ -24,19 +24,19 @@ La herramienta Generador de clases fuertemente tipadas para administración perm
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-mgmtclassgen   
-WMIClass [options]   
+mgmtclassgen
+WMIClass [options]
 ```  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*WMIClass*|Clase de Instrumental de administración de Windows para la que se genera una clase administrada en tiempo de compilación.|  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/l**  *language*|Especifica el lenguaje en el que se genera la clase administrada en tiempo de compilación. Puede especificar **CS** (C#, predeterminado), **VB** (Visual Basic), **MC** (C++) o **JS** (JScript) como argumento del lenguaje.|  
 |**/m**  *machine*|Especifica el equipo con el que se va a conectar y en el que reside la clase de WMI. La opción predeterminada es el equipo local.|  
-|**/n**  *ruta*|Especifica la ruta de acceso al espacio de nombres de WMI que contiene la clase de WMI. Si no se especifica esta opción, la herramienta genera código para *WMIClass* en el espacio de nombres **Root\cimv2** predeterminado.|  
+|**/n**  *path*|Especifica la ruta de acceso al espacio de nombres de WMI que contiene la clase de WMI. Si no se especifica esta opción, la herramienta genera código para *WMIClass* en el espacio de nombres **Root\cimv2** predeterminado.|  
 |**/o**  *classnamespace*|Especifica el espacio de nombres de .NET en el que se genera la clase de código administrado. Si no se especifica esta opción, la herramienta genera el espacio de nombres utilizando el espacio de nombres de WMI y el prefijo de esquema. El prefijo de esquema es la parte del nombre de clase que figura delante del carácter de subrayado. Por ejemplo, para la clase **Win32_OperatingSystem** del espacio de nombres **Root\cimv2**, la herramienta generaría la clase en **ROOT.CIMV2.Win32**.|  
 |**/p**  *filepath*|Especifica la ruta de acceso al archivo donde se guarda el código generado. Si no se especifica esta opción, la herramienta crea el archivo en el directorio actual. Asigna un nombre a la clase y al archivo donde se genera la clase mediante el argumento *WMIClass*. El nombre de la clase y el nombre del archivo coinciden con el nombre de *WMIClass*. Si *WMIClass* contiene un carácter de subrayado, la herramienta usa la parte del nombre de clase que figura detrás del carácter de subrayado. Por ejemplo, si el nombre de *WMIClass* tiene el formato **Win32_LogicalDisk**, el nombre de la clase generada y del archivo es "logicaldisk". Si ya existe un archivo, la herramienta sobrescribe el archivo existente.|  
 |**/pw**  *password*|Especifica la contraseña que se usa al iniciar sesión en el equipo especificado con la opción **/m**.|  
@@ -105,11 +105,11 @@ Imports System
 Imports System.Management  
 Imports ROOT.CIMV2.Win32  
   
-Public Class App     
-   Public Shared Sub Main()        
+Public Class App
+   Public Shared Sub Main()
       ' Enumerate instances of the Win32_process.  
       ' Print the Name property of the instance.  
-      Dim ps As Process     
+      Dim ps As Process
       For Each ps In  Process.GetInstances()  
          Console.WriteLine(ps.Name)  
       Next ps  

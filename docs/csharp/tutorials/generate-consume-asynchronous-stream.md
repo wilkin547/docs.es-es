@@ -4,12 +4,12 @@ description: En este tutorial avanzado se muestran escenarios donde la generaci�
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039224"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156745"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0
 
@@ -45,7 +45,7 @@ Puede obtener el código para la aplicación de inicio utilizada en este tutoria
 
 La aplicación de inicio es una aplicación de consola que usa la interfaz [GraphQL de GitHub](https://developer.github.com/v4/) para recuperar las incidencias recientes escritas en el repositorio [dotnet/docs](https://github.com/dotnet/docs). Comience por mirar el código siguiente para el método `Main` de la aplicación de inicio:
 
-[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
 
 Puede establecer una variable de entorno `GitHubKey` para el token de acceso personal, o bien puede reemplazar el último argumento en la llamada a `GenEnvVariable` por el token de acceso personal. No incluya el código de acceso en el código fuente si va a guardar el origen con otras personas o va a ponerlo en un repositorio de código fuente compartido.
 
@@ -57,7 +57,7 @@ Al ejecutar la aplicación inicial, puede realizar algunas observaciones importa
 
 La implementación revela por qué observó el comportamiento descrito en la sección anterior. Examine el código de `runPagedQueryAsync`:
 
-[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
 Vamos a concentrarnos en el algoritmo de paginación y la estructura asincrónica del código anterior. (Puede consultar la [documentación de GraphQL de GitHub](https://developer.github.com/v4/guides/) para obtener más información sobre la API de GraphQL de GitHub). El método `runPagedQueryAsync` enumera las incidencias desde la más reciente hasta la más antigua. Solicita 25 incidencias por página y examina la estructura `pageInfo` de la respuesta para continuar con la página anterior. Eso sigue al soporte de paginación estándar de GraphQL para respuestas de varias páginas. La respuesta incluye un objeto `pageInfo` que incluye a su vez un valor `hasPreviousPages` y un valor `startCursor` usado para solicitar la página anterior. Las incidencias se encuentran en la matriz `nodes`. El método `runPagedQueryAsync` anexa estos nodos a una matriz que contiene todos los resultados de todas las páginas.
 
@@ -108,29 +108,31 @@ Un tipo que podría ser desconocido es <xref:System.Threading.Tasks.ValueTask?di
 
 A continuación, convierta el método `runPagedQueryAsync` para generar una secuencia asincrónica. En primer lugar, cambie la signatura de `runPagedQueryAsync` para que devuelva un `IAsyncEnumerable<JToken>`y quite el token de cancelación y los objetos de progreso de la lista de parámetros como se muestra en el código siguiente:
 
-[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
 
 El código de inicio procesa cada página a medida que se recupera, tal como se muestra en el código siguiente:
 
-[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
 
 Reemplace esas tres líneas por el código siguiente:
 
-[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
 
 También puede quitar la declaración de `finalResults` anteriormente en este método y la instrucción `return` que sigue al bucle modificado.
 
 Ha terminado los cambios para generar una secuencia asincrónica. El método finalizado debe ser similar al siguiente código:
 
-[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
 
 A continuación, cambie el código que utiliza la colección para usar la secuencia asincrónica. Busque el código siguiente en `Main` que procesa la colección de incidencias:
 
-[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
 
 Reemplace el código por el siguiente bucle `await foreach`:
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+
+Los elementos de secuencia se procesan de forma predeterminada en el contexto capturado. Si quiere deshabilitar la captura del contexto, use el método de extensión <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Para obtener más información sobre los contextos de sincronización y la captura del contexto actual, vea el artículo sobre el [consumo del patrón asincrónico basado en tareas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 Puede obtener el código para el tutorial finalizado en el repositorio [dotnet/samples](https://github.com/dotnet/samples) de la carpeta [csharp/tutoriales/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished).
 

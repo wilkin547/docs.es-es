@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 540b95beaf00c17812a3b602602504278be69b0e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429393"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398332"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -105,7 +105,7 @@ Además de nuevos patrones en nuevos lugares C# 8.0 agrega **patrones recursivos
 
 ### <a name="switch-expressions"></a>Expresiones switch
 
-Con frecuencia, una instrucción [ `switch`](../language-reference/keywords/switch.md) genera un valor en cada uno de sus bloques `case`. Las **expresiones switch** le permiten usar una sintaxis de expresiones más concisa. Hay menos palabras clave `case` y `break` repetitivas y menos llaves.  Por ejemplo, considere la siguiente enumeración que muestra los colores del arco iris:
+Con frecuencia, una instrucción [`switch`](../language-reference/keywords/switch.md) genera un valor en cada uno de sus bloques `case`. Las **expresiones switch** le permiten usar una sintaxis de expresiones más concisa. Hay menos palabras clave `case` y `break` repetitivas y menos llaves.  Por ejemplo, considere la siguiente enumeración que muestra los colores del arco iris:
 
 ```csharp
 public enum Rainbow
@@ -319,7 +319,7 @@ En ambos casos, el compilador genera la llamada a `Dispose()`. El compilador gen
 
 ## <a name="static-local-functions"></a>Funciones locales estáticas
 
-Ahora puede agregar el modificador `static` a funciones locales para asegurarse de que la función local no captura (hace referencia a) las variables del ámbito de inclusión. Si lo hace, se generará un error `CS8421` en el que se indicará que una función local estática no puede contener una referencia a \<variable>. 
+Ahora puede agregar el modificador `static` a funciones locales para asegurarse de que la función local no captura (hace referencia a) las variables del ámbito de inclusión. Si lo hace, se generará un error `CS8421` en el que se indicará que una función local estática no puede contener una referencia a \<variable>.
 
 Observe el código siguiente. La función local `LocalFunction` accede a la variable `y`, declarada en el ámbito de inclusión (el método `M`). Por lo tanto, `LocalFunction` no se puede declarar con el modificador `static`:
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la [creación y consumo de secuencias asincrónicas](../tutorials/generate-consume-asynchronous-stream.md).
+Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la [creación y consumo de secuencias asincrónicas](../tutorials/generate-consume-asynchronous-stream.md). Los elementos de secuencia se procesan de forma predeterminada en el contexto capturado. Si quiere deshabilitar la captura del contexto, use el método de extensión <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Para obtener más información sobre los contextos de sincronización y la captura del contexto actual, vea el artículo sobre el [consumo del patrón asincrónico basado en tareas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="indices-and-ranges"></a>Índices y rangos
 

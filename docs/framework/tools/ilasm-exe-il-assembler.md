@@ -12,10 +12,10 @@ helpviewer_keywords:
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105098"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
@@ -34,11 +34,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parámetros
 
-| Argumento | DESCRIPCIÓN |
+| Argumento | Descripción |
 | -------- | ----------- |
 |`filename`|El nombre del archivo de código fuente con extensión .il. Este archivo consta de directivas de declaraciones de metadatos e instrucciones simbólicas de IL. Con *Ilasm.exe* se pueden proporcionar varios argumentos de archivo de código fuente para producir un único archivo PE. **Nota:** Asegúrese de que la última línea de código del archivo de código fuente .il tiene un espacio en blanco al final o un carácter de fin de línea.|
 
-| Opción | DESCRIPCIÓN |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea una imagen preferida de 32 bits (PE32).|
 |**/alignment:** `integer`|Establece FileAlignment en el valor especificado por `integer` en el encabezado NT opcional. Si se especifica la directiva IL .alignment en el archivo, esta opción la reemplaza.|

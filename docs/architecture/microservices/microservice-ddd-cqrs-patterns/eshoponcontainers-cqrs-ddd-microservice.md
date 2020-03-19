@@ -1,13 +1,13 @@
 ---
 title: Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre cómo se implementa CQRS en el microservicio de pedidos en eShopOnContainers.
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674132"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847159"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicación de enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
@@ -23,7 +23,7 @@ Los patrones DDD presentados en esta guía no se deben aplicar de forma general,
 
 Un patrón de este tipo es el patrón Aggregate, que se analiza en más detalle en secciones posteriores. En pocas palabras, en el patrón Aggregate, muchos objetos de dominio se tratan como una sola unidad como resultado de su relación en el dominio. Es posible que no siempre obtenga ventajas de este patrón en las consultas; puede aumentar la complejidad de la lógica de consulta. En las consultas de solo lectura no se obtienen las ventajas de tratar varios objetos como un único agregado. Solo se obtiene la complejidad.
 
-Como se muestra en la figura 7-2, esta guía sugiere usar patrones DDD solo en el área transaccional o de actualizaciones del microservicio (es decir, como se desencadena con comandos). Las consultas pueden seguir un enfoque más simple y deben separarse de los comandos, según un enfoque CQRS.
+Como se muestra en la figura 7-2 de la sección anterior, esta guía sugiere usar patrones DDD solo en el área transaccional o de actualizaciones del microservicio (es decir, como se desencadena con comandos). Las consultas pueden seguir un enfoque más simple y deben separarse de los comandos, según un enfoque CQRS.
 
 Para implementar el "lado de consultas", puede elegir entre varios enfoques, desde un ORM completo como EF Core, proyecciones de AutoMapper, procedimientos almacenados, vistas, vistas materializadas o un micro ORM.
 

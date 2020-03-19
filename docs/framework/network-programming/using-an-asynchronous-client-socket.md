@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047063"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180644"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usar un socket de cliente asincrónico
 Un socket de cliente asincrónico no suspende la aplicación mientras espera a que finalicen las operaciones de red. En lugar de eso, usa el modelo de programación asincrónico estándar de .NET Framework para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original. Los sockets asincrónicos son adecuados para aplicaciones que hacen un uso intensivo de la red o que no pueden esperar a que finalicen las operaciones de red antes de continuar.  
@@ -46,14 +46,14 @@ End Sub 'Connect
   
 ```csharp  
 public static void Connect(EndPoint remoteEP, Socket client) {  
-    client.BeginConnect(remoteEP,   
+    client.BeginConnect(remoteEP,
         new AsyncCallback(ConnectCallback), client );  
   
    connectDone.WaitOne();  
 }  
 ```  
   
- El método de devolución de llamada de conexión `ConnectCallback` implementa el delegado <xref:System.AsyncCallback>. Se conecta al dispositivo remoto cuando este está disponible y luego indica al subproceso de aplicación que la conexión está completada al establecer **ManualResetEvent** `connectDone`. El código siguiente implementa el método `ConnectCallback`.  
+ El método de devolución de llamada de conexión `ConnectCallback` implementa el delegado <xref:System.AsyncCallback>. Se conecta al dispositivo remoto cuando este está disponible y luego indica al subproceso de aplicación que la conexión está completada estableciendo **ManualResetEvent** en `connectDone`. El código siguiente implementa el método `ConnectCallback`.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -162,11 +162,11 @@ private static void SendCallback(IAsyncResult ar) {
 ```vb  
 Public Class StateObject  
     ' Client socket.  
-    Public workSocket As Socket = Nothing   
+    Public workSocket As Socket = Nothing
     ' Size of receive buffer.  
     Public BufferSize As Integer = 256  
     ' Receive buffer.  
-    Public buffer(256) As Byte   
+    Public buffer(256) As Byte
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
@@ -219,14 +219,14 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- El método de devolución de llamada de recepción `ReceiveCallback` implementa el delegado **AsyncCallback**. Recibe los datos del dispositivo de red y genera una cadena de mensaje. Lee uno o más bytes de datos de la red al búfer de datos y luego llama al método **BeginReceive** de nuevo hasta que los datos enviados por el cliente están completos. Una vez que se han leído todos los datos del cliente, `ReceiveCallback` indica al subproceso de aplicación que los datos están completos al establecer **ManualResetEvent** `sendDone`.  
+ El método de devolución de llamada de recepción `ReceiveCallback` implementa el delegado **AsyncCallback**. Recibe los datos del dispositivo de red y genera una cadena de mensaje. Lee uno o más bytes de datos de la red al búfer de datos y luego llama al método **BeginReceive** de nuevo hasta que los datos enviados por el cliente están completos. Una vez que se han leído todos los datos del cliente, `ReceiveCallback` indica al subproceso de aplicación que los datos están completos estableciendo **ManualResetEvent** en `sendDone`.  
   
  El código de ejemplo siguiente implementa el método `ReceiveCallback`. Asume una cadena global denominada `response` que contiene la cadena recibida y un elemento global **ManualResetEvent** denominado `receiveDone`. El servidor debe cerrar el socket de cliente correctamente para finalizar la sesión de red.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
     Try  
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -259,7 +259,7 @@ End Sub 'ReceiveCallback
 ```csharp  
 private static void ReceiveCallback( IAsyncResult ar ) {  
     try {  
-        // Retrieve the state object and the client socket   
+        // Retrieve the state object and the client socket
         // from the asynchronous state object.  
         StateObject state = (StateObject) ar.AsyncState;  
         Socket client = state.workSocket;  

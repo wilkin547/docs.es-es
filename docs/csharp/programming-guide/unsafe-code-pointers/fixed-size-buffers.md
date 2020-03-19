@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627804"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157031"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Búferes de tamaño fijo (Guía de programación de C#)
 
@@ -24,7 +24,7 @@ private fixed char name[30];
 
 En el código seguro, un struct de C# que contiene una matriz no contiene los elementos de matriz. En su lugar, el struct contiene una referencia a los elementos. Puede insertar una matriz de tamaño fijo en un [struct](../../language-reference/builtin-types/struct.md) cuando se usa en un bloque de código [no seguro](../../language-reference/keywords/unsafe.md).
 
-El siguiente `struct` tiene 8 bytes. La matriz `pathName` es una referencia:
+El tamaño del siguiente `struct` no depende del número de elementos en la matriz, ya que `pathName` es una referencia:
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
