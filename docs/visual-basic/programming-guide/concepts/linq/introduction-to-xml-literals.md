@@ -2,19 +2,19 @@
 title: Introducción a los literales XML en Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834991"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266955"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introducción a los literales XML de Visual Basic
-En esta sección se proporciona información sobre cómo crear árboles XML en Visual Basic.  
+En esta sección se proporciona información acerca de la creación de árboles XML en Visual Basic.  
   
- Para obtener información sobre el uso de los resultados de las consultas LINQ como contenido para un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Para obtener información sobre el uso de los resultados de las consultas LINQ como contenido para un árbol XML, vea [Construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Para obtener más información sobre los literales XML en Visual Basic, consulte [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obtener más información sobre los literales XML en Visual Basic, vea [Información general de LINQ to XMLLINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Crear árboles XML  
  El siguiente ejemplo muestra cómo crear un <xref:System.Xml.Linq.XElement>; en este caso, `contacts`:  
@@ -40,10 +40,10 @@ Dim contacts As XElement = _
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
-Console.WriteLine(n)   
+Console.WriteLine(n)
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
@@ -57,7 +57,7 @@ Dim n As XElement = <Customer/>
 Console.WriteLine(n)  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```xml  
 <Customer />  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```xml  
 <Root>  
@@ -102,7 +102,7 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```xml  
 <Root>Some content</Root>  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```xml  
 <Root>  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```xml  
 <Root att="aValue">  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Diferencias entre clonación y adjuntar  
+### <a name="cloning-vs-attaching"></a>Clonación frente a asociación  
  Como ya se mencionó anteriormente, si utiliza una expresión incrustada para agregar nodos (incluyendo elementos) y atributos ya existentes a nuevo árbol XML y los nodos existentes ya tienen elementos primarios, los nodos se clonarán y esos nuevos nodos clonados se adjuntarán al nuevo árbol XML. Si los nodos ya existentes no tienen elementos primarios, simplemente se adjuntan al nuevo árbol XML.  
   
 ```vb  
@@ -188,13 +188,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ En este ejemplo se produce la siguiente salida:  
   
 ```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creación de árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

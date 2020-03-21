@@ -2,24 +2,24 @@
 title: 'Cómo: Realizar una transformación de streaming de documentos XML grandes'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 58bc76e6f2a269b0baac009f1247d5e94d508cbd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f5e6063f0a850c03a605d75b0cbdc0bf9e03b325
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344507"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267020"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Cómo: realizar una transformación de transmisión por secuencias de documentos XML de gran tamaño (Visual Basic)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Cómo: Realizar la transformación de streaming de documentos XML grandes (Visual Basic)
 A veces tiene que transformar los archivos XML grandes y escribir la aplicación para que sea predecible la superficie en memoria de la aplicación. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
   
  Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia. Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña para la aplicación.  
   
- Incluso si usa la técnica descrita en [Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), si intenta ensamblar un árbol XML que contiene el documento transformado, el uso de memoria será demasiado grande.  
+ Incluso si utiliza la técnica descrita en [Cómo: transmitir fragmentos XML con acceso a](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)información de encabezado (Visual Basic), si intenta ensamblar un árbol XML que contiene el documento transformado, el uso de memoria será demasiado grande.  
   
  Hay dos grandes enfoques. Un enfoque consiste en utilizar las características de procesamiento aplazada de <xref:System.Xml.Linq.XStreamingElement>. El otro enfoque consiste en crear un <xref:System.Xml.XmlWriter> y utilizar las capacidades de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>. En este tema se muestran ambos enfoques.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se basa en el ejemplo de [Cómo: hacer streaming de fragmentos XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ En el ejemplo siguiente se basa en el ejemplo [de Cómo: transmitir fragmentos XML con acceso a](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)información de encabezado (Visual Basic).  
   
  Este ejemplo utiliza las funciones de ejecución aplazada de <xref:System.Xml.Linq.XStreamingElement> para transmitir por secuencias el resultado. Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
   
@@ -28,7 +28,7 @@ A veces tiene que transformar los archivos XML grandes y escribir la aplicación
  A continuación, se muestra el documento de origen, Source.xml:  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8" ?>   
+<?xml version="1.0" encoding="utf-8" ?>
 <Root>  
   <Customer>  
     <Name>A. Datum Corporation</Name>  
@@ -246,7 +246,7 @@ End Class
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente también se basa en el ejemplo de [Cómo: hacer streaming de fragmentos XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ En el ejemplo siguiente también se basa en el ejemplo de [Cómo: transmitir fragmentos XML con acceso a](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)información de encabezado (Visual Basic).  
   
  Este ejemplo utiliza la capacidad de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>. Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
   
@@ -439,6 +439,6 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación avanzada de LINQ to XMLLINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

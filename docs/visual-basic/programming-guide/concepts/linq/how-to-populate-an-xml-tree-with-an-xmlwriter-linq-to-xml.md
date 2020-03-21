@@ -2,14 +2,14 @@
 title: 'Cómo: Rellenar un árbol XML con un objeto XmlWriter (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-ms.openlocfilehash: ec44f6e21453a1333f842030bae0c4f80dedb9c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fecf57eac570a9ca57dd1fe2f7a0b54cd78c33b5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333771"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267007"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Cómo: rellenar un árbol XML con XmlWriter (LINQ to XML) (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Cómo: Rellenar un árbol XML con un XmlWriter (LINQ to XML) (Visual Basic)
 Una forma de rellenar un árbol XML consiste en utilizar <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear <xref:System.Xml.XmlWriter> y después escribir en <xref:System.Xml.XmlWriter>. El árbol XML se rellena con todos los nodos que se escriben en <xref:System.Xml.XmlWriter>.  
   
  Normalmente se usa este método cuando se usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con otra clase que espera escribir en un <xref:System.Xml.XmlWriter>, como <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -19,7 +19,7 @@ Una forma de rellenar un árbol XML consiste en utilizar <xref:System.Xml.Linq.X
   
 ```vb  
 Dim xslMarkup As XDocument = _  
-    <?xml version='1.0'?>   
+    <?xml version='1.0'?>
     <xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0'>  
         <xsl:template match='/Parent'>  
             <Root>  
@@ -67,4 +67,4 @@ Console.WriteLine(newTree)
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creación de árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

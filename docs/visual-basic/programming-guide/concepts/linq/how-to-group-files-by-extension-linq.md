@@ -2,14 +2,14 @@
 title: 'Cómo: Agrupar archivos por extensión (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 67beec0d3681bf7f0b04d9a402566076fd27ceba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347483"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267033"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Cómo: Agrupar archivos por extensión (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -39,7 +39,7 @@ Module GroupByExtension
         ' page the display with good performance.  
         Dim groupByExtList = queryGroupByExt.ToList()  
   
-        ' Display one group at a time. If the number of   
+        ' Display one group at a time. If the number of
         ' entries is greater than the number of lines  
         ' in the console window, then page the output.  
         Dim trimLength = startFolder.Length  
@@ -94,7 +94,7 @@ End Module
  La salida de este programa puede ser larga, dependiendo de los detalles del sistema de archivos local y de la configuración de `startFolder`. Para habilitar la visualización de todos los resultados, en este ejemplo se muestra cómo paginar los resultados. Se pueden aplicar las mismas técnicas a las aplicaciones web y Windows. Observe que, como el código pagina los elementos en un grupo, se necesita un bucle `For Each` anidado. También hay alguna lógica adicional para calcular la posición actual en la lista y para permitir que el usuario detenga la paginación y salga del programa. En este caso en concreto, la consulta de paginación se ejecuta en los resultados almacenados en caché de la consulta original. En otros contextos, como en LINQ to SQL, este almacenamiento en caché no es necesario.  
   
 ## <a name="compile-the-code"></a>Compilar el código  
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación `Imports` de consola de Visual Basic, con una instrucción para el espacio de nombres System.Linq.
   
 ## <a name="see-also"></a>Vea también
 

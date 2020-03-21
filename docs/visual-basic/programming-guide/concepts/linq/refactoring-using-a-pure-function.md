@@ -2,20 +2,20 @@
 title: Refactorizar mediante una función pura
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: ce07622a030f291bbbee54dc342562ffecd3258c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a0365c79b8283fef242ecf8f2b68ea4de780049
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341667"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266942"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactorizar mediante una función pura (Visual Basic)
-En el ejemplo siguiente se refactoriza el ejemplo anterior, la [refactorización mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar una función pura en este ejemplo, el código para buscar el texto de un párrafo se mueve al método estático puro `ParagraphText`.  
+En el ejemplo siguiente se refactoriza el ejemplo anterior, [Refactorización mediante un método de extensión (Visual Basic),](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)para utilizar una `ParagraphText`función pura En este ejemplo, el código para buscar el texto de un párrafo se mueve al método estático puro.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo de cada uno de los párrafos. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra el código refactorizado.  
   
- Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea Crear el documento XML abierto de Office de [origen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -144,7 +144,7 @@ Module Module1
             Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)  
         Next  
     End Sub  
-End Module   
+End Module
 ```  
   
  Este ejemplo genera la misma salida que antes de la refactorización:  
@@ -170,10 +170,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Pasos siguientes  
  El siguiente ejemplo muestra cómo proyectar un XML con un aspecto diferente:  
   
-- [Proyectar XML en una forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Proyección de XML en una forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactorizar mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactorización mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [Refactorización en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

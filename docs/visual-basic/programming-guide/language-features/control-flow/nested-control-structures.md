@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 5818b13661fb4415c6f531b741b8a963a80bd2b8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b696c79cd3cada4416b3f4b6cdf96f00b89a5a0a
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348150"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266929"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estructuras de control anidadas (Visual Basic)
-Puede colocar instrucciones de control dentro de otras instrucciones de control, por ejemplo, un bloque `If...Then...Else` dentro de un bucle `For...Next`. Una instrucción de control colocada dentro de otra instrucción de control se dice que está *anidada*.  
+Puede colocar instrucciones de control dentro de otras `If...Then...Else` instrucciones `For...Next` de control, por ejemplo, un bloque dentro de un bucle. Se dice que una instrucción de control colocada dentro de otra instrucción de control está *anidada.*  
   
-## <a name="nesting-levels"></a>Niveles de anidamiento  
- Las estructuras de control de Visual Basic se pueden anidar hasta tantos niveles como se desee. Es habitual que las estructuras anidadas sean más legibles mediante la sangría del cuerpo de cada una. El editor del entorno de desarrollo integrado (IDE) lo hace automáticamente.  
+## <a name="nesting-levels"></a>Niveles de anidación  
+ Las estructuras de control de Visual Basic se pueden anidar en tantos niveles como desee. Es una práctica común hacer que las estructuras anidadas sean más legibles mediante la sangría del cuerpo de cada una. El editor de entorno de desarrollo integrado (IDE) lo hace automáticamente.  
   
- En el ejemplo siguiente, el procedimiento `sumRows` agrega juntos los elementos positivos de cada fila de la matriz.  
+ En el ejemplo siguiente, el procedimiento `sumRows` suma los elementos positivos de cada fila de la matriz.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- En el ejemplo anterior, la primera instrucción `Next` cierra el bucle de `For` interno y la última instrucción `Next` cierra el bucle de `For` externo.  
+ En el ejemplo anterior, `Next` la primera `For` instrucción cierra `Next` el bucle `For` interno y la última instrucción cierra el bucle externo.  
   
- Del mismo modo, en las instrucciones `If` anidadas, las instrucciones de `End If` se aplican automáticamente a la instrucción de `If` anterior más cercana. Los bucles `Do` anidados funcionan de manera similar, con la instrucción de `Loop` más interna que coincide con la instrucción de `Do` más interna.  
+ Del mismo modo, en las instrucciones anidadas, `If` las `End If` instrucciones se aplican automáticamente a la instrucción anterior `If` más cercana. Los `Do` bucles anidados funcionan de forma `Loop` similar, con `Do` la instrucción más interna que coincide con la instrucción más interna.  
   
 > [!NOTE]
-> En el caso de muchas estructuras de control, al hacer clic en una palabra clave, se resaltan todas las palabras clave de la estructura. Por ejemplo, al hacer clic en `If` en una construcción de `If...Then...Else`, se resaltan todas las instancias de `If`, `Then`, `ElseIf`, `Else`y `End If` de la construcción. Para desplazarse a la palabra clave resaltada siguiente o anterior, presione CTRL + MAYÚS + flecha abajo o CTRL + MAYÚS + flecha arriba.  
+> Para muchas estructuras de control, al hacer clic en una palabra clave, se resaltan todas las palabras clave de la estructura. Por ejemplo, al `If` hacer `If...Then...Else` clic en una `If` `Then`construcción, se resaltan todas las instancias de , , `ElseIf` `Else`, y `End If` en la construcción. Para pasar a la palabra clave resaltada siguiente o anterior, presione CTRL+MAYO+FLECHA ABAJO o CTRL+MAYO+FLECHA ARRIBA.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Anidar distintos tipos de estructuras de control  
- Puede anidar un tipo de estructura de control dentro de otro tipo. En el ejemplo siguiente se usa un bloque `With` dentro de un bucle de `For Each` y bloques de `If` anidados dentro del bloque de `With`.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Anidar diferentes tipos de estructuras de control  
+ Puede anidar un tipo de estructura de control dentro de otro tipo. En el ejemplo `With` siguiente `For Each` se utiliza `If` un `With` bloque dentro de un bucle y bloques anidados dentro del bloque.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,13 +65,13 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Estructuras de control superpuestas  
- No se pueden superponer estructuras de control. Esto significa que cualquier estructura anidada debe estar contenida completamente dentro de la siguiente estructura más interna. Por ejemplo, la siguiente disposición no es válida porque el bucle `For` finaliza antes de que finalice el bloque de `With` interno.  
+ No se pueden superponer estructuras de control. Esto significa que cualquier estructura anidada debe estar completamente contenida dentro de la siguiente estructura más interna. Por ejemplo, la siguiente disposición no es válida porque el `For` bucle finaliza antes de que finalice el bloque interno. `With`  
   
- ![Diagrama que muestra un ejemplo de anidación no válida.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagrama que muestra un ejemplo de anidamiento no válido.](./media/nested-control-structures/example-invalid-nesting.gif)
   
- El compilador Visual Basic detecta esas estructuras de control superpuestas y señala un error en tiempo de compilación.  
+ El compilador de Visual Basic detecta estas estructuras de control superpuestas y señala un error en tiempo de compilación.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Flujo de control](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estructuras de decisión](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

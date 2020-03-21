@@ -2,14 +2,14 @@
 title: Programar con nodos
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 447c462f95536cd40291f9b0d54ab85dcde200db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2c9022cb57cf122af47bbe6d1a7fe2b4d41327c
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346638"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266968"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Programar con nodos (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>Programación con nodos (Visual Basic)
 Los desarrolladores de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  
   
 ## <a name="node-details"></a>Detalles del nodo  
@@ -104,7 +104,7 @@ Console.WriteLine(child2)
  La propiedad <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica si un atributo es una declaración de espacio de nombres.  
   
 ```vb  
-Dim root As XElement = _   
+Dim root As XElement = _
 <Root  
     xmlns='http://www.adventure-works.com'  
     xmlns:fc='www.fourthcoffee.com'  
@@ -124,7 +124,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Los métodos del eje XPath no devuelven un espacio en blanco secundario de XDocument  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite nodos de texto secundarios de un <xref:System.Xml.Linq.XDocument>, siempre que los nodos de texto contengan solo espacios en blanco. No obstante, el modelo del objeto XPath no incluye el espacio en blanco como nodos secundarios de un documento, así que cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando el eje <xref:System.Xml.Linq.XContainer.Nodes%2A>, se devolverán los nodos de texto del espacio en blanco. Sin embargo, cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando los métodos del eje de XPath, no se devolverán los nodos de texto de espacio en blanco.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite nodos de texto secundarios de un <xref:System.Xml.Linq.XDocument> mientras los nodos de texto contengan solamente espacios en blanco. No obstante, el modelo del objeto XPath no incluye el espacio en blanco como nodos secundarios de un documento, así que cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando el eje <xref:System.Xml.Linq.XContainer.Nodes%2A>, se devolverán los nodos de texto del espacio en blanco. Sin embargo, cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando los métodos del eje de XPath, no se devolverán los nodos de texto de espacio en blanco.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -171,6 +171,6 @@ Console.WriteLine(doc.Nodes().Count())
 1  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación avanzada de LINQ to XMLLINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
