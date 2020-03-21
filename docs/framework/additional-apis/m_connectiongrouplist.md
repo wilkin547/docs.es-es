@@ -1,5 +1,5 @@
 ---
-title: Campo ServicePoint. m_ConnectionGroupList
+title: ServicePoint.m_ConnectionGroupList Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: f2759f82f335415edf7bab33edbd446eec6ffbb5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155900"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. m\_campo ConnectionGroupList
+# <a name="servicepointm_connectiongrouplist-field"></a>Campo ConnectionGroupList de ServicePoint.m\_
 
-`ServicePoint.m_ConnectionGroupList` es una <xref:System.Collections.Hashtable> de grupos de conexión, cada uno de los cuales mantiene una conexión para el URI del <xref:System.Net.ServicePoint>.
+`ServicePoint.m_ConnectionGroupList`es <xref:System.Collections.Hashtable> un de grupos de conexión, <xref:System.Net.ServicePoint>cada uno de los dos mantiene una conexión para el URI 's.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -28,14 +28,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> El campo `ServicePoint.m_ConnectionGroupList` es privado y no está diseñado para usarse directamente en el código.
-> 
-> Microsoft no admite el uso de este campo en una aplicación de producción en cualquier circunstancia.
+> El `ServicePoint.m_ConnectionGroupList` campo es privado y no está diseñado para usarse directamente en el código.
+>
+> Microsoft no admite el uso de este campo en una aplicación de producción bajo ninguna circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:** <xref:System.Net>
+**Espacio de nombres:**<xref:System.Net>
 
-**Ensamblado:** Sistema (en System. dll)
+**Montaje:** Sistema (en System.dll)
 
-**.NET Framework versiones:** Disponible desde 2,0.
+**Versiones de .NET Framework:** Disponible desde 2.0.

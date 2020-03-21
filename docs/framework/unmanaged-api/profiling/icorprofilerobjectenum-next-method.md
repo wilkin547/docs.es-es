@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861143"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177012"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next (Método)
-Obtiene el número especificado de objetos contiguos de una colección secuencial de objetos, empezando en la posición actual del enumerador en la secuencia.  
+Obtiene el número especificado de objetos contiguos de una colección secuencial de objetos, comenzando en la posición actual del enumerador en la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] Número de objetos que se van a recuperar.  
   
  `objects`  
- enuncia Matriz de valores de `ObjectID`, cada uno de los cuales representa un objeto recuperado.  
+ [fuera] Matriz de `ObjectID` valores, cada uno de los cuales representa un objeto recuperado.  
   
  `pceltFetched`  
  [out] Puntero al número de elementos realmente devueltos en la matriz `objects`.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorProfilerObjectEnum (interfaz)](icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum (Interfaz)](icorprofilerobjectenum-interface.md)

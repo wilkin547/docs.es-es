@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446207"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176583"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData (Método)
-Devuelve los datos del servidor de origen para el módulo. El llamador debe liberar recursos mediante `CoTaskMemFree`.  
+Devuelve los datos del servidor de origen para el módulo. El autor de la `CoTaskMemFree`llamada debe liberar recursos mediante .  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetSourceServerData(  
-    [out] ULONG* pDataByteCount,   
+    [out] ULONG* pDataByteCount,
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pDataByteCount`  
- enuncia Puntero a un `ULONG32` que recibe el tamaño, en bytes, de los datos del servidor de origen.  
+ [fuera] Puntero a `ULONG32` un que recibe el tamaño, en bytes, de los datos del servidor de origen.  
   
  `ppData`  
- enuncia Puntero al valor de `pDataByteCount` devuelto.  
+ [fuera] Un puntero al `pDataByteCount` valor devuelto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; de lo contrario, E_FAIL o algún otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym. idl, CorSym. h  
+ **Encabezado:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ISymUnmanagedSourceServerModule (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [ISymUnmanagedSourceServerModule (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

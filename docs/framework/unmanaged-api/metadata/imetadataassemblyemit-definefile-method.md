@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440206"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176063"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile (Método)
 Crea una estructura de metadatos `File` que contiene los metadatos para el ensamblado al que se refiere este ensamblado y devuelve el token de metadatos asociado.  
@@ -29,8 +29,8 @@ Crea una estructura de metadatos `File` que contiene los metadatos para el ensam
   
 ```cpp  
 HRESULT DefineFile (  
-    [in]  LPCWSTR        szName,   
-    [in]  const void     *pbHashValue,   
+    [in]  LPCWSTR        szName,
+    [in]  const void     *pbHashValue,
     [in]  ULONG          cbHashValue,  
     [in]  DWORD          dwFileFlags,  
     [out] mdFile         *pmdf  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- de Nombre del archivo que se va a consumir.  
+ [en] El nombre del archivo que se va a consumir.  
   
  `pbHashValue`  
- de Puntero a los datos hash asociados al ensamblado.  
+ [en] Puntero a los datos hash asociados al ensamblado.  
   
  `cbHashValue`  
- de Tamaño en bytes de `pbHashValue`.  
+ [en] El tamaño en `pbHashValue`bytes de .  
   
  `dwFileFlags`  
- de Combinación bit a bit de valores de `FileFlags` que especifican la configuración de propiedades.  
+ [en] Una combinación `FileFlags` bit a bit de valores que especifican la configuración de la propiedad.  
   
  `pmdf`  
- enuncia Puntero al token de `File` devuelto.  
+ [fuera] Un puntero al `File` token devuelto.  
   
-## <a name="remarks"></a>Comentarios  
- Se debe definir una `File` estructura de metadatos para cada archivo que formaba parte de este ensamblado en el momento en que se compiló este ensamblado, excluyendo el archivo que contiene los metadatos.  
+## <a name="remarks"></a>Observaciones  
+ Se `File` debe definir una estructura de metadatos para cada archivo que formaba parte de este ensamblado en el momento en que se creó este ensamblado, excluyendo el archivo que contiene los metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

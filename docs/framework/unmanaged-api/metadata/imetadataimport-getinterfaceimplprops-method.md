@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437540"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175387"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps (Método)
-Obtiene un puntero a los tokens de metadatos para el <xref:System.Type> que implementa el método especificado y para la interfaz que declara ese método.
+Obtiene un puntero a los <xref:System.Type> tokens de metadatos para el que implementa el método especificado y para la interfaz que declara ese método.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +37,19 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parámetros  
  `iiImpl`  
- de Token de metadatos que representa el método para el que se van a devolver los tokens de la clase y la interfaz.  
+ [en] El token de metadatos que representa el método para el que se devuelven los tokens de clase e interfaz.  
   
  `pClass`  
- enuncia Token de metadatos que representa la clase que implementa el método.  
+ [fuera] El token de metadatos que representa la clase que implementa el método.  
   
  `ptkIface`  
- enuncia Token de metadatos que representa la interfaz que define el método implementado.  
+ [fuera] El token de metadatos que representa la interfaz que define el método implementado.  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
- Obtiene el valor de `iImpl` llamando al método [enuminterfaceimpls (](imetadataimport-enuminterfaceimpls-method.md) .
- 
- Por ejemplo, supongamos que una clase tiene un valor de token `mdTypeDef` de 0x02000007 y que implementa tres interfaces cuyos tipos tienen tokens: 
+ Se obtiene el `iImpl` valor de mediante una llamada a la [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) método.
+
+ Por ejemplo, supongamos que `mdTypeDef` una clase tiene un valor de token de 0x02000007 y que implementa tres interfaces cuyos tipos tienen tokens:
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
@@ -68,20 +68,20 @@ Conceptualmente, esta información se almacena en una tabla de implementación d
 Recuerde que el token es un valor de 4 bytes:
 
 - Los 3 bytes inferiores contienen el número de fila o RID.
-- El byte superior contiene el tipo de token – 0x09 para `mdtInterfaceImpl`.
+- El byte superior contiene el tipo de `mdtInterfaceImpl`token – 0x09 para .
 
-`GetInterfaceImplProps` devuelve la información contenida en la fila cuyo token se proporciona en el argumento `iImpl`. 
+`GetInterfaceImplProps`devuelve la información contenida en la fila `iImpl` cuyo token se proporciona en el argumento.
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

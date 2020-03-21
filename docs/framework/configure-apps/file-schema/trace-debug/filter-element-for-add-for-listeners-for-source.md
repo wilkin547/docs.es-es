@@ -1,5 +1,5 @@
 ---
-title: <filter> elemento de <add> para <listeners> para <source>
+title: <filter>Elemento <add> para <listeners> for for<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0cb668782de263d5f784691f46cb8b74541d942b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088903"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153521"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filtro > elemento para \<agregar > para \<agentes de escucha > \<de origen >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filtrar> \<elemento para \<agregar> \<para los agentes de escucha> para el origen>
 Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<orígenes**](sources-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**origen**](source-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**agentes de escucha**](listeners-element-for-source.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**agregar >** ](add-element-for-listeners-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**filtro** >
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<fuentes>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<fuente>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oyentes>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<añadir>**](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de filtro**
 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<filter   
-  type="traceFilterClassName"   
+<filter
+  type="traceFilterClassName"
   initializeData="data" />  
 ```  
   
@@ -42,8 +42,8 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`type`|Atributo necesario.<br /><br /> Especifica el tipo de filtro, que debe heredar de la clase <xref:System.Diagnostics.TraceFilter>. Puede usar el nombre completo del espacio de nombres del tipo, que corresponde a la propiedad <xref:System.Type.FullName%2A> del tipo, o puede usar el nombre de tipo completo, incluida la información del ensamblado, que corresponde a la propiedad <xref:System.Type.AssemblyQualifiedName%2A>. Para obtener información sobre los nombres de tipo completos, vea [especificar nombres de tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase de filtro especificada.|  
+|`type`|Atributo necesario.<br /><br /> Especifica el tipo del filtro, que <xref:System.Diagnostics.TraceFilter> debe heredar de la clase. Puede usar el nombre completo del espacio de nombres del <xref:System.Type.FullName%2A> tipo, que corresponde a la propiedad del tipo, o puede <xref:System.Type.AssemblyQualifiedName%2A> usar el nombre de tipo completo, incluida la información del ensamblado, que corresponde a la propiedad. Para obtener información acerca de los nombres de tipo completos, vea Especificar nombres de [tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Atributo opcional.<br /><br /> La cadena que se pasa al constructor para la clase de filtro especificada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -56,27 +56,27 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
 |`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
-|`listeners`|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.|  
+|`listeners`|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes. Los agentes de escucha dirigen la salida de seguimiento a un destino adecuado.|  
 |`add`|Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
- El elemento `<filter>` debe estar incluido en un elemento `<add>` para un agente de escucha de origen de seguimiento que especifique el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en un [> sharedListeners\<](sharedlisteners-element.md). Si el agente de escucha se define en una [\<sharedListeners >](sharedlisteners-element.md), el filtro para ese agente de escucha debe definirse en ese elemento.  
+## <a name="remarks"></a>Observaciones  
+ El `<filter>` elemento debe estar `<add>` contenido en un elemento para un agente de escucha de origen de seguimiento que especifica el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en un [ \<sharedListeners>](sharedlisteners-element.md). Si el agente de escucha se define en un [ \<sharedListeners>](sharedlisteners-element.md), el filtro de ese agente de escucha debe definirse en ese elemento.  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+ Este elemento se puede utilizar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento `<filter>` para agregar un filtro a la `console` del agente de escucha de la colección de `Listeners` para la `myTraceSource`de origen de seguimiento, especificando el nivel de evento de filtro como `Error`.  
+ En el ejemplo siguiente `<filter>` se muestra cómo utilizar `console` el `Listeners` elemento para agregar `myTraceSource`un filtro al agente `Error`de escucha de la colección para el origen de seguimiento, especificando el nivel de evento de filtro como .  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="myTraceSource" switchName="SourceSwitch"   
+      <source name="myTraceSource" switchName="SourceSwitch"
         switchType="System.Diagnostics.SourceSwitch"  >  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener" >  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error" />  
           </add>  
           <remove name="Default" />  
@@ -90,10 +90,10 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)

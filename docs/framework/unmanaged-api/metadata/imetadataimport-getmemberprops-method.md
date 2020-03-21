@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437520"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177229"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps (Método)
-Obtiene información almacenada en los metadatos de una definición de miembro especificada, incluidos el nombre, la firma binaria y la dirección virtual relativa, del miembro de <xref:System.Type> al que hace referencia el token de metadatos especificado. Se trata de un método auxiliar sencillo: Si *MB* es un MethodDef, se llama a **GetMethodProps (** ; Si *MB* es un FieldDef, se llama a **getfieldprops (** . Consulte estos otros métodos para obtener más información. 
+Obtiene información almacenada en los metadatos de una definición de miembro especificada, incluido <xref:System.Type> el nombre, la firma binaria y la dirección virtual relativa, del miembro al que hace referencia el token de metadatos especificado. Este es un método auxiliar simple: si *mb* es un MethodDef, a continuación, **GetMethodProps** se llama; si *mb* es un FieldDef, a continuación, **GetFieldProps** se llama. Consulte estos otros métodos para obtener más información.
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetMemberProps (  
-   [in]  mdToken           mb,   
+   [in]  mdToken           mb,
    [out] mdTypeDef         *pClass,  
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
    [out] DWORD             *pdwAttr,  
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] ULONG             *pulCodeRVA,   
-   [out] DWORD             *pdwImplFlags,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] ULONG             *pulCodeRVA,
+   [out] DWORD             *pdwImplFlags,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- de Token que hace referencia al miembro para el que se van a obtener los metadatos asociados.  
+ [en] El token que hace referencia al miembro para el que se obtienen los metadatos asociados.  
   
  `pClass`  
- enuncia Puntero al símbolo (token) de metadatos que representa la clase del miembro.  
+ [fuera] Puntero al token de metadatos que representa la clase del miembro.  
   
  `szMember`  
- enuncia Nombre del miembro.  
+ [fuera] El nombre del miembro.  
   
  `cchMember`  
- de Tamaño en caracteres anchos del búfer `szMember`.  
+ [en] El tamaño en caracteres anchos del `szMember` búfer.  
   
  `pchMember`  
- enuncia Tamaño en caracteres anchos del nombre devuelto.  
+ [fuera] El tamaño en caracteres anchos del nombre devuelto.  
   
  `pdwAttr`  
- enuncia Los valores de marca aplicados al miembro.  
+ [fuera] Cualquier valor de marca aplicado al miembro.  
   
  `ppvSigBlob`  
- enuncia Puntero a la firma de metadatos binarios del miembro.  
+ [fuera] Un puntero a la firma de metadatos binarios del miembro.  
   
  `pcbSigBlob`  
- enuncia Tamaño en bytes de `ppvSigBlob`.  
+ [fuera] El tamaño en `ppvSigBlob`bytes de .  
   
  `pulCodeRVA`  
- enuncia Puntero a la dirección virtual relativa del miembro.  
+ [fuera] Un puntero a la dirección virtual relativa del miembro.  
   
  `pdwImplFlags`  
- enuncia Cualquier marcador de implementación de método asociado al miembro.  
+ [fuera] Cualquier indicador de implementación de método asociado con el miembro.  
   
  `pdwCPlusTypeFlag`  
- enuncia Marca que marca un <xref:System.ValueType>. Es uno de los valores de `ELEMENT_TYPE_*`.
+ [fuera] Una bandera que <xref:System.ValueType>marca un archivo . Es uno de `ELEMENT_TYPE_*` los valores.
   
  `ppValue`  
- enuncia Un valor de cadena constante devuelto por este miembro.  
+ [fuera] Un valor de cadena constante devuelto por este miembro.  
   
  `pcchValue`  
- enuncia Tamaño en caracteres de `ppValue`, o cero si `ppValue` no contiene una cadena.  
+ [fuera] El tamaño en `ppValue`caracteres `ppValue` de , o cero si no contiene una cadena.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

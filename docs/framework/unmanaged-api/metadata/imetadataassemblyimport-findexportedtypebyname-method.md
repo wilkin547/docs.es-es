@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449446"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175998"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName (Método)
 Obtiene un puntero a un tipo exportado, dado su nombre y tipo envolvente.  
@@ -29,35 +29,35 @@ Obtiene un puntero a un tipo exportado, dado su nombre y tipo envolvente.
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- de Nombre del tipo exportado.  
+ [en] El nombre del tipo exportado.  
   
  `mdtExportedType`  
- de Símbolo (token) de metadatos para la clase envolvente del tipo exportado. Este valor se `mdExportedTypeNil` si el tipo exportado solicitado no es un tipo anidado.  
+ [en] El token de metadatos para la clase envolvente del tipo exportado. Este valor `mdExportedTypeNil` es si el tipo exportado solicitado no es un tipo anidado.  
   
  `ptkExportedType`  
- enuncia Puntero al token de `mdExportedType` que representa el tipo exportado.  
+ [fuera] Puntero al `mdExportedType` token que representa el tipo exportado.  
   
-## <a name="remarks"></a>Comentarios  
- El método `FindExportedTypeByName` utiliza las reglas estándar empleadas por el Common Language Runtime para resolver las referencias.  
+## <a name="remarks"></a>Observaciones  
+ El `FindExportedTypeByName` método utiliza las reglas estándar empleadas por Common Language Runtime para resolver referencias.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

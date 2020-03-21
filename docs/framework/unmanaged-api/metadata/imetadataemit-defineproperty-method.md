@@ -15,82 +15,82 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431524"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175790"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty (Método)
-Crea una definición de propiedad para el tipo especificado, con los descriptores de acceso `get` y `set` método especificados, y obtiene un token para esa definición de propiedad.  
+Crea una definición de propiedad para el `get` `set` tipo especificado, con los descriptores de acceso especificados y de método, y obtiene un token a esa definición de propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- de Token de la clase o interfaz en la que se define la propiedad.  
+ [en] El token para la clase o interfaz en la que se está definiendo la propiedad.  
   
  `szProperty`  
- de Nombre de la propiedad.  
+ [in] Nombre de la propiedad.  
   
  `dwPropFlags`  
- de Marcas de propiedad.  
+ [en] Las marcas de propiedad.  
   
  `pvSig`  
- de Firma de la propiedad.  
+ [en] La firma de la propiedad.  
   
  `cbSig`  
- de Recuento de bytes de `pvSig`.  
+ [en] El recuento de `pvSig`bytes en .  
   
  `dwCPlusTypeFlag`  
- de Tipo del valor predeterminado de la propiedad.  
+ [en] El tipo del valor predeterminado de la propiedad.  
   
  `pValue`  
- de Valor predeterminado de la propiedad.  
+ [en] El valor predeterminado de la propiedad.  
   
  `cchValue`  
- de Recuento de caracteres (Unicode) de `pValue`.  
+ [en] El recuento de caracteres `pValue`(Unicode) en .  
   
  `mdSetter`  
- de El método que establece el valor de propiedad.  
+ [en] El método que establece el valor de propiedad.  
   
  `mdGetter`  
- de Método que obtiene el valor de propiedad.  
+ [en] El método que obtiene el valor de propiedad.  
   
  `rmdOtherMethods[]`  
- de Matriz de otros métodos asociados a la propiedad. Finalice la matriz con un `mdTokenNil`.  
+ [en] Matriz de otros métodos asociados a la propiedad. Termine la matriz `mdTokenNil`con un archivo .  
   
  `pmdProp`  
- enuncia El token de `mdProperty` asignado.  
+ [fuera] El `mdProperty` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446236"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176622"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants (Método)
 Obtiene las constantes locales definidas dentro de este ámbito.  
@@ -32,26 +32,26 @@ HRESULT GetConstants(
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  
      [out, size_is(cConstants),  
-         length_is(*pcConstants)] ISymUnmanagedConstant*   
+         length_is(*pcConstants)] ISymUnmanagedConstant*
              constants[]);  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `cConstants`  
- de Longitud del búfer al que apunta el parámetro `pcConstants`.  
+ [en] La longitud del búfer `pcConstants` a la que apunta el parámetro.  
   
  `pcConstants`  
- enuncia Puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener las constantes.  
+ [fuera] Puntero a `ULONG32` un que recibe el tamaño, en caracteres, del búfer necesario para contener las constantes.  
   
  `constants`  
- enuncia Búfer que almacena las constantes.  
+ [fuera] El búfer que almacena las constantes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; de lo contrario, E_FAIL o algún otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym. idl, CorSym. h  
+ **Encabezado:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedScope2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

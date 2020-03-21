@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-ms.openlocfilehash: f0c390509a698fdc4682ba81182d4b407d8718c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ae9097725aecd21e910e49a78d81951df39e9b2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448255"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177780"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName (Método)
 Obtiene un puntero al recurso de manifiesto con el nombre especificado.  
@@ -29,31 +29,31 @@ Obtiene un puntero al recurso de manifiesto con el nombre especificado.
   
 ```cpp
 HRESULT FindManifestResourceByName (  
-    [in]  LPCWSTR                szName,   
+    [in]  LPCWSTR                szName,
     [out] mdManifestResource     *ptkManifestResource  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- de Nombre del recurso.  
+ [in] Nombre del recurso.  
   
  `ptkManifestResource`  
- enuncia La matriz que se usa para almacenar los tokens de metadatos de `mdManifestResource`, cada uno de los cuales representa un recurso de manifiesto.  
+ [fuera] Matriz utilizada para `mdManifestResource` almacenar los tokens de metadatos, cada uno de los cuales representa un recurso de manifiesto.  
   
-## <a name="remarks"></a>Comentarios  
- El método `FindManifestResourceByName` utiliza las reglas estándar empleadas por el Common Language Runtime para resolver las referencias.  
+## <a name="remarks"></a>Observaciones  
+ El `FindManifestResourceByName` método utiliza las reglas estándar empleadas por Common Language Runtime para resolver referencias.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

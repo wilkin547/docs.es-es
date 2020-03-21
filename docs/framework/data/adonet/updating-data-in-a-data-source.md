@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780616"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174451"
 ---
 # <a name="updating-data-in-a-data-source"></a>Actualizar datos de un origen de datos
-Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, cree un objeto **Command** con el comando SQL adecuado y una **conexión**, incluidos los **parámetros**necesarios. Ejecute el comando con el método **ExecuteNonQuery** del objeto **Command** .  
+Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, cree un objeto **Command** con el comando SQL adecuado y una **conexión**, incluidos los **parámetros necesarios.** Ejecute el comando con el método **ExecuteNonQuery** del objeto **Command.**  
   
- El método **ExecuteNonQuery** devuelve un entero que representa el número de filas afectadas por la instrucción o el procedimiento almacenado que se ha ejecutado. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
+ El **Método ExecuteNonQuery** devuelve un entero que representa el número de filas afectadas por la instrucción o el procedimiento almacenado que se ejecutó. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se ejecuta una instrucción INSERT para insertar un registro en una base de datos mediante **ExecuteNonQuery**.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- En el ejemplo de código siguiente se ejecuta el procedimiento almacenado creado por el código de ejemplo en la [realización de operaciones de catálogo](performing-catalog-operations.md). El procedimiento almacenado no devuelve ninguna fila, por lo que se utiliza el método **ExecuteNonQuery** , pero el procedimiento almacenado recibe un parámetro de entrada y devuelve un parámetro de salida y un valor devuelto.  
+ En el ejemplo de código siguiente se ejecuta el procedimiento almacenado creado por el código de ejemplo en [Realizar operaciones](performing-catalog-operations.md)de catálogo . El procedimiento almacenado no devuelve ninguna fila, por lo que se usa el método **ExecuteNonQuery,** pero el procedimiento almacenado recibe un parámetro de entrada y devuelve un parámetro de salida y un valor devuelto.  
   
- En el <xref:System.Data.OleDb.OleDbCommand> caso del objeto, el parámetro **ReturnValue** debe agregarse primero a la colección **Parameters** .  
+ Para <xref:System.Data.OleDb.OleDbCommand> el objeto, el **parámetro ReturnValue** debe agregarse primero a la colección **Parameters.**  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -66,7 +66,7 @@ command.Parameters("@CategoryName").Value = "New Category"
 command.ExecuteNonQuery()  
   
 Dim categoryID As Int32 = CInt(command.Parameters("@Identity").Value)  
-Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)   
+Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)
 ```  
   
 ```csharp  
@@ -91,9 +91,9 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Uso de comandos para modificar datos](using-commands-to-modify-data.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](updating-data-sources-with-dataadapters.md)
 - [Comandos y parámetros](commands-and-parameters.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

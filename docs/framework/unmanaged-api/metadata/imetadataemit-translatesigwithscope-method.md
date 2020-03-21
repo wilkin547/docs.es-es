@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440475"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175556"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope (Método)
 Importa un ensamblado en el ámbito actual y obtiene una nueva firma de metadatos para el ámbito combinado.  
@@ -28,67 +28,67 @@ Importa un ensamblado en el ámbito actual y obtiene una nueva firma de metadato
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pAssemImport`  
- de Interfaz para el ensamblado de importación (donde se define la firma).  
+ [en] La interfaz para el ensamblado de importación (donde se define la firma).  
   
  `pbHashValue`  
- de Objeto binario hash para el ensamblado.  
+ [en] El blob hash para el ensamblado.  
   
  `cbHashValue`  
- de Recuento de bytes de `pbHashValue`.  
+ [en] El recuento de `pbHashValue`bytes en .  
   
  `import`  
- de La interfaz para importar el ámbito de metadatos.  
+ [en] La interfaz para el ámbito de metadatos de importación.  
   
  `pbSigBlob`  
- de Firma que se va a importar.  
+ [en] La firma que se va a importar.  
   
  `cbSigBlob`  
- de Tamaño, en bytes, de `pbSigBlob`.  
+ [en] El tamaño, en `pbSigBlob`bytes, de .  
   
  `pAssemEmit`  
- de Interfaz para el ensamblado de exportación.  
+ [en] La interfaz para el ensamblado de exportación.  
   
  `emit`  
- de La interfaz para el ámbito de exportación de metadatos.  
+ [en] La interfaz para el ámbito de metadatos de exportación.  
   
  `pvTranslatedSig`  
- enuncia Búfer que va a contener el BLOB de firma traducido.  
+ [fuera] El búfer que contiene el blob de firma traducido.  
   
  `cbTranslatedSigMax`  
- de La capacidad, en bytes, de `pvTranslatedSig`.  
+ [en] La capacidad, en `pvTranslatedSig`bytes, de .  
   
  `pcbTranslatedSig`  
- enuncia Número de bytes reales de la firma traducida.  
+ [fuera] El número de bytes reales en la firma traducida.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

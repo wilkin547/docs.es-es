@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449538"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175517"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields (Método)
 Enumera los tokens de FieldDef del tipo al que hace referencia el token de TypeDef especificado.  
@@ -28,48 +28,48 @@ Enumera los tokens de FieldDef del tipo al que hace referencia el token de TypeD
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT EnumFields (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [out]     mdFieldDef  rFields[],   
-   [in]      ULONG       cMax,   
+HRESULT EnumFields (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [out]     mdFieldDef  rFields[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Puntero al enumerador.  
+ [adentro, fuera] Un puntero al enumerador.  
   
  `cl`  
- de El token TypeDef de la clase cuyos campos se van a enumerar.  
+ [en] El token TypeDef de la clase cuyos campos se van a enumerar.  
   
  `rFields`  
- enuncia Lista de tokens de FieldDef.  
+ [fuera] La lista de tokens FieldDef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rFields`.  
   
  `pcTokens`  
- enuncia Número real de tokens de FieldDef devueltos en `rFields`.  
+ [fuera] El número real de tokens `rFields`FieldDef devueltos en .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` devolvió correctamente.|  
-|`S_FALSE`|No hay campos que enumerar. En ese caso, `pcTokens` es cero.|  
+|`S_OK`|`EnumFields`regresó con éxito.|  
+|`S_FALSE`|No hay campos que enumerar. En ese `pcTokens` caso, es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

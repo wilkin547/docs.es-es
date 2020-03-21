@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-ms.openlocfilehash: 9837e4e3428a0293c8e689b3f3e081aa07f055b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dded37fdef02963f60883b289462aa6a96693b3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192070"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176310"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc (Método)
-Solicita que el host asigne la cantidad de memoria especificada del montón.  
+Solicita que el host asigne la cantidad especificada de memoria del montón.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT Alloc (  
-    [in] SIZE_T  cbSize,   
-    [in] EMemoryCriticalLevel dwCriticalLevel,   
+    [in] SIZE_T  cbSize,
+    [in] EMemoryCriticalLevel dwCriticalLevel,
     [out] void** ppMem  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `cbSize`  
- de Tamaño, en bytes, de la solicitud de asignación de memoria actual.  
+ [en] El tamaño, en bytes, de la solicitud de asignación de memoria actual.  
   
  `dwCriticalLevel`  
- de Uno de los valores de [ememorycriticallevel (](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) , que indica el impacto de un error de asignación.  
+ [en] Uno de los [eMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) valores, que indica el impacto de un error de asignación.  
   
  `ppMem`  
- enuncia Puntero a la memoria asignada o null si no se pudo completar la solicitud.  
+ [fuera] Un puntero a la memoria asignada, o null si no se pudo completar la solicitud.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Alloc` devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
-|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`Alloc`regresó con éxito.|  
+|HOST_E_CLRNOTAVAILABLE|Common Language Runtime (CLR) no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se adelantó la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no es el propietario de la cerradura.|  
+|HOST_E_ABANDONED|Un evento se canceló mientras un hilo bloqueado o fibra lo esperaba.|  
+|E_FAIL|Se ha producido un fallo catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para completar la solicitud de asignación.|  
   
-## <a name="remarks"></a>Comentarios  
- CLR obtiene un puntero de interfaz a una instancia de `IHostMalloc` llamando al método [IHostMemoryManager:: CreateMAlloc (](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) .  
+## <a name="remarks"></a>Observaciones  
+ El CLR obtiene un puntero `IHostMalloc` de interfaz a una instancia mediante una llamada a la [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE. h  
+ **Encabezado:** MScorEE.h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IHostMemoryManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
 - [IHostMalloc (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

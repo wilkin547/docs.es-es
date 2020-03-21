@@ -7,20 +7,18 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 66abd7f057bc6d060e50a889a945281d07c97592
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214837"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155432"
 ---
-# <a name="clear-element-for-configsections"></a>\<borrar > elemento para \<configSections >
+# <a name="clear-element-for-configsections"></a>\<claro> \<elemento para configSections>
 
-Borra todas las secciones y grupos de sección definidos previamente.
+Borra todas las secciones y grupos de secciones definidos anteriormente.
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+&nbsp; &nbsp; &nbsp; [** \<configuración>**](configuration-element.md) &nbsp; &nbsp; &nbsp;>**>>>>de>\<** [** \<**](configsections-element-for-configuration.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,13 +30,13 @@ Borra todas las secciones y grupos de sección definidos previamente.
 
 |           | Descripción |
 | --------- | ----------- |
-| **name**  | Atributo necesario.<br><br>Especifica el nombre de la sección o grupo de secciones que se va a quitar. |
+| **nombre**  | Atributo necesario.<br><br>Especifica el nombre de la sección o grupo de secciones que se va a quitar. |
 
 ## <a name="parent-element"></a>Elemento primario
 
 |     | Descripción |
 | --- | ----------- |
-| [ **\<configSections >** Element](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
+| [** \<configSections>** Elemento](configsections-element-for-configuration.md) | Contiene declaraciones de sección de configuración y espacio de nombres. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -46,13 +44,13 @@ None
 
 ## <a name="remarks"></a>Observaciones
 
-El elemento **\<clear >** quita todas las secciones y grupos de secciones de la aplicación que se definieron anteriormente en el archivo de configuración actual o en un nivel superior en la jerarquía del archivo de configuración.
+El elemento ** \<>claro** quita todas las secciones y grupos de secciones de la aplicación que se definieron anteriormente en el archivo de configuración actual o en un nivel superior de la jerarquía de archivos de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se define un archivo de configuración del equipo y un archivo de configuración de la aplicación y se muestra cómo usar el elemento **\<clear >** en un archivo de configuración de la aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
+En este ejemplo se define un archivo de configuración ** \<** de máquina y un archivo de configuración de la aplicación y se muestra cómo utilizar el elemento>claro en un archivo de configuración de la aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
 
-El siguiente código de archivo de configuración de máquina declara dos secciones, **\<sampleSection >** y **\<anotherSampleSection >** , que se leen antes del archivo de configuración de la aplicación:
+El siguiente código de archivo de configuración del equipo declara dos secciones, ** \<sampleSection>** y ** \<anotherSampleSection>**, que se leen antes del archivo de configuración de la aplicación:
 
 ```xml
 <!-- Machine.config file -->
@@ -63,13 +61,13 @@ El siguiente código de archivo de configuración de máquina declara dos seccio
     <section name="anotherSampleSection"
              type="System.Configuration.NameValueSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación borra todas las secciones declaradas previamente. La aplicación no puede usar ni recuperar la configuración de ninguna de las secciones que se han declarado en el archivo de configuración del equipo. Sin embargo, puede usar la configuración de **\<anotherSection >** porque va después del elemento de **> Clear\<** .
+El siguiente código de archivo de configuración de la aplicación borra todas las secciones declaradas anteriormente. La aplicación no puede usar ni recuperar la configuración en ninguna de las secciones que se declararon en el archivo de configuración del equipo. Sin embargo, puede usar la configuración de ** \<otroSection>** porque viene después del ** \<elemento de>claro.**
 
 ```xml
 <!-- Application configuration file -->
@@ -79,16 +77,16 @@ El siguiente código de archivo de configuración de la aplicación borra todas 
     <section name="anotherSection"
              type="System.Configuration.NameValueSectionHandler" />
   </configSections>
-  <anotherSection setting1="Value1" 
-                 setting2="value two" 
+  <anotherSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
+Este elemento se puede utilizar en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y los archivos *Web.config* que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema del archivo de configuración para el .NET Framework](index.md)
+- [Esquema de archivo de configuración para .NET Framework](index.md)

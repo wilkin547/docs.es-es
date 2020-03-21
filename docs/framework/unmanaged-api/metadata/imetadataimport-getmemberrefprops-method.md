@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437490"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175374"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps (Método)
 Obtiene los metadatos asociados al miembro al que hace referencia el token especificado.  
@@ -29,48 +29,48 @@ Obtiene los metadatos asociados al miembro al que hace referencia el token espec
   
 ```cpp  
 HRESULT GetMemberRefProps (  
-   [in]  mdMemberRef       mr,   
-   [out] mdToken           *ptk,   
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pbSig   
+   [in]  mdMemberRef       mr,
+   [out] mdToken           *ptk,
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pbSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `mr`  
- de Token de MemberRef para el que se van a devolver los metadatos asociados.  
+ [en] El token MemberRef para el que se va a devolver los metadatos asociados.  
   
  `ptk`  
- enuncia Un token TypeDef o TypeRef, o TypeSpec que representa la clase que declara el miembro, o un token ModuleRef que representa la clase de módulo que declara el miembro, o un MethodDef que representa el miembro.  
+ [fuera] Un TypeDef o TypeRef, o TypeSpec token que representa la clase que declara el miembro, o un ModuleRef token que representa la clase de módulo que declara el miembro, o un MethodDef que representa el miembro.  
   
  `szMember`  
- enuncia Un búfer de cadena para el nombre del miembro.  
+ [fuera] Un búfer de cadena para el nombre del miembro.  
   
  `cchMember`  
- de Tamaño solicitado en caracteres anchos de `szMember`.  
+ [en] El tamaño solicitado en `szMember`caracteres anchos de .  
   
  `pchMember`  
- enuncia Tamaño devuelto en caracteres anchos de `szMember`.  
+ [fuera] El tamaño devuelto en `szMember`caracteres anchos de .  
   
  `ppvSibBlob`  
- enuncia Puntero a la firma de metadatos binarios para el miembro.  
+ [fuera] Un puntero a la firma de metadatos binarios para el miembro.  
   
  `pbSig`  
- enuncia Tamaño en bytes de `ppvSigBlob`.  
+ [fuera] El tamaño en `ppvSigBlob`bytes de .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

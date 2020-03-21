@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 81d11c87c9bc970dd5b5c9010023610cea7c0e72
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: be257930ca0fad658afa75d6efa4573d4f888a2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865199"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177091"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted (Método)
-Notifica al generador de perfiles que el compilador Just-in-Time (JIT) ha empezado a volver a compilar una función.  
+Notifica al generador de perfiles que el compilador Just-In-Time (JIT) ha comenzado a volver a compilar una función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT ReJITCompilationStarted(   
+HRESULT ReJITCompilationStarted(
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `functionId`  
- de IDENTIFICADOR de la función que el compilador JIT ha empezado a volver a compilar.  
+ [en] El identificador de la función que el compilador JIT ha comenzado a volver a compilar.  
   
  `rejitId`  
- de IDENTIFICADOR de recompilación de la nueva versión de la función.  
+ [en] El identificador de recompilación de la nueva versión de la función.  
   
  `fIsSafeToBlock`  
- [in] `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución. Un valor de `true` no perjudica al tiempo de ejecución, pero puede afectar a los resultados de la generación de perfiles.  
+ [en] `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada vuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución. Un valor `true` de no daña el tiempo de ejecución, pero puede afectar a los resultados de generación de perfiles.  
   
-## <a name="remarks"></a>Notas  
- Es posible recibir más de un par de llamadas a métodos `ReJITCompilationStarted` y [rejitcompilationfinished (](icorprofilercallback4-rejitcompilationfinished-method.md) para cada función debido a la manera en que el tiempo de ejecución controla los constructores de clase. Por ejemplo, el tiempo de ejecución comienza a volver a compilar el método A, pero es necesario ejecutar el constructor de clase de la clase B. Por consiguiente, el tiempo de ejecución vuelve a compilar el constructor de la clase B y lo ejecuta. Mientras se ejecuta el constructor, realiza una llamada al método a, que hace que se vuelva a compilar el método a. En este escenario, se detiene la primera recompilación del método A. Sin embargo, ambos intentos de volver a compilar el método A se registran con eventos de recompilación JIT.  
+## <a name="remarks"></a>Observaciones  
+ Es posible recibir más de `ReJITCompilationStarted` un par de llamadas al método [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) para cada función debido a la forma en que el tiempo de ejecución controla los constructores de clase. Por ejemplo, el tiempo de ejecución comienza a volver a compilar el método A, pero es necesario ejecutar el constructor de clase para la clase B. Por lo tanto, el tiempo de ejecución vuelve a compilar el constructor para la clase B y lo ejecuta. Mientras se ejecuta el constructor, realiza una llamada al método A, lo que hace que el método A se vuelva a compilar. En este escenario, se detiene la primera recompilación del método A. Sin embargo, ambos intentos de volver a compilar el método A se notifican con eventos de recompilación JIT.  
   
- Los profileres deben admitir la secuencia de devoluciones de llamada de recompilación JIT en los casos en que dos subprocesos realizan simultáneamente devoluciones de llamada. Por ejemplo, el subproceso A llama a `ReJITCompilationStarted`; sin embargo, antes de que el subproceso A llame a [rejitcompilationfinished (](icorprofilercallback4-rejitcompilationfinished-method.md), el subproceso B llama a [ICorProfilerCallback:: EXCEPTIONSEARCHFUNCTIONENTER (](icorprofilercallback-exceptionsearchfunctionenter-method.md) con el identificador de función de la devolución de llamada `ReJITCompilationStarted` para el subproceso A. Podría parecer que el identificador de función no debería ser válido todavía porque el generador de perfiles no ha recibido todavía una llamada a [rejitcompilationfinished (](icorprofilercallback4-rejitcompilationfinished-method.md) . Sin embargo, en este caso, el identificador de función es válido.  
+ Los generadores de perfiles deben admitir la secuencia de devoluciones de llamada de recompilación JIT en los casos en que dos subprocesos realizan simultáneamente devoluciones de llamada. Por ejemplo, el `ReJITCompilationStarted`subproceso A llama a ; sin embargo, antes de que el subproceso A llame a [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md), el `ReJITCompilationStarted` subproceso B llama a [ICorProfilerCallback::ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) con el identificador de función de la devolución de llamada para el subproceso A. Puede parecer que el identificador de función aún no debe ser válido porque el generador de perfiles aún no ha recibido una llamada a [ReJITCompilationFinished.](icorprofilercallback4-rejitcompilationfinished-method.md) Sin embargo, en este caso, el IDENTIFICADOR de función es válido.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ICorProfilerCallback4 (interfaz)](icorprofilercallback4-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 (Interfaz)](icorprofilercallback4-interface.md)
 - [JITCompilationFinished (método)](icorprofilercallback-jitcompilationfinished-method.md)
-- [ReJITCompilationFinished (método)](icorprofilercallback4-rejitcompilationfinished-method.md)
+- [Método ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)

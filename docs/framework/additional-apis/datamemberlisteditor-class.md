@@ -11,16 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 407bbe87e3d186dc901b18dbfee38e2ff69d356a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215607"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156004"
 ---
 # <a name="datamemberlisteditor-class"></a>Clase DataMemberListEditor
 
-Proporciona una interfaz de usuario desplegable para editar las propiedades de los objetos enlazados a datos (objetos que tienen la propiedad `DataSource` no NULL) enumerando todas las propiedades del objeto `DataSource` para seleccionar el origen del valor.  
+Proporciona una interfaz de usuario desplegable para editar las propiedades de `DataSource` objetos enlazados a `DataSource` datos (objetos que tienen una propiedad no nula) enumerando todas las propiedades del objeto para seleccionar el origen del valor.  
   
 ## <a name="syntax"></a>Sintaxis
   
@@ -29,17 +29,17 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> La clase `DataMemberListEditor` es interna y no está diseñada para usarse directamente en el código.
-> 
-> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
+> La `DataMemberListEditor` clase es interna y no está diseñada para usarse directamente en el código.
+>
+> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
   
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Espacio de nombres:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Ensamblado:** System. Design (en System. Design. dll)  
+**Montaje:** System.Design (en System.Design.dll)  
   
-**.NET Framework versiones:** Disponible desde 2,0.  
+**Versiones de .NET Framework:** Disponible desde 2.0.  
   
 ## <a name="see-also"></a>Consulte también
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431489"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177752"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap (Método)
 Establece las características de la firma PInvoke del método al que hace referencia el token especificado.  
@@ -28,37 +28,37 @@ Establece las características de la firma PInvoke del método al que hace refer
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT DefinePinvokeMap (   
-    [in]  mdToken            tk,   
-    [in]  DWORD              dwMappingFlags,   
-    [in]  LPCWSTR            szImportName,   
-    [in]  mdModuleRef        mrImportDLL   
+HRESULT DefinePinvokeMap (
+    [in]  mdToken            tk,
+    [in]  DWORD              dwMappingFlags,
+    [in]  LPCWSTR            szImportName,
+    [in]  mdModuleRef        mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- de Token del método de destino.  
+ [en] El token para el método de destino.  
   
  `dwMappingFlags`  
- de Marcas usadas por PInvoke para realizar la asignación.  
+ [en] Indicadores utilizados por PInvoke para realizar la asignación.  
   
  `szImportName`  
- de Nombre del método de exportación de destino en un archivo DLL no administrado.  
+ [en] El nombre del método de exportación de destino en un archivo DLL no administrado.  
   
  `mrImportDLL`  
- de El token para la DLL nativa de destino.  
+ [en] El token para el archivo DLL nativo de destino.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

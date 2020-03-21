@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: de13e07eb5c19b8beffa724fec4a128c418a4fed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151369"
 ---
 # <a name="copying-dataset-contents"></a>Copiar el contenido de DataSet
-Puede crear una copia de <xref:System.Data.DataSet> para que pueda trabajar con datos sin que afecte a los datos originales o trabajar con un subconjunto de los datos de un **conjunto**de datos. Al copiar un **conjunto de DataSet**, puede:  
+Puede crear una copia <xref:System.Data.DataSet> de a para que pueda trabajar con datos sin afectar a los datos originales o trabajar con un subconjunto de los datos de un **dataSet**. Al copiar un **DataSet,** puede:  
   
-- Cree una copia exacta del **conjunto**de datos, incluidos el esquema, los datos, la información de estado de fila y las versiones de fila.  
+- Cree una copia exacta del **conjunto de datos,** incluidos el esquema, los datos, la información de estado de fila y las versiones de fila.  
   
-- Cree un **conjunto de DataSet** que contenga el esquema de un **conjunto**de los existentes, pero solo las filas que se hayan modificado. Puede devolver todas las filas que se han modificado o especificar un **DataRowState**específico. Para obtener más información sobre los Estados de fila, vea [Estados de fila y versiones de fila](row-states-and-row-versions.md).  
+- Cree un **DataSet** que contenga el esquema de un **DataSet**existente, pero solo las filas que se han modificado. Puede devolver todas las filas que se han modificado o especificar un **DataRowState**específico. Para obtener más información acerca de los estados de fila, vea [Estados de fila y versiones](row-states-and-row-versions.md)de fila .  
   
-- Copiar el esquema o la estructura relacional solo del **conjunto** de filas, sin copiar ninguna fila. Las filas se pueden importar en un objeto <xref:System.Data.DataTable> existente mediante <xref:System.Data.DataTable.ImportRow%2A>.  
+- Copie el esquema, o estructura relacional, de la **DataSet** solamente, sin copiar ninguna fila. Las filas se pueden importar en un objeto <xref:System.Data.DataTable> existente mediante <xref:System.Data.DataTable.ImportRow%2A>.  
   
- Para crear una copia exacta del **DataSet** que incluya tanto el esquema como los datos, use <xref:System.Data.DataSet.Copy%2A> el método del **conjunto**de datos. En el ejemplo de código siguiente se muestra cómo crear una copia exacta del **conjunto**de elementos.  
+ Para crear una copia exacta del **conjunto de datos** <xref:System.Data.DataSet.Copy%2A> que incluya tanto el esquema como los datos, utilice el método de **DataSet**. En el ejemplo de código siguiente se muestra cómo crear una copia exacta de la **DataSet**.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Para crear una copia de un **conjunto** de datos que incluya el esquema y solo los datos que representan filas **agregadas**, **modificadas**o **eliminadas** , use el <xref:System.Data.DataSet.GetChanges%2A> método del **conjunto**de datos. También puede usar **GetChanges** para devolver solo las filas con un estado de fila especificado pasando un valor de **DataRowState** al llamar a **GetChanges**. En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
+ Para crear una copia de un **DataSet** que incluya el esquema y solo <xref:System.Data.DataSet.GetChanges%2A> los datos que representan las filas **Added**, **Modified**o **Deleted,** utilice el método de **DataSet**. También puede usar **GetChanges** para devolver solo filas con un estado de fila especificado pasando un valor **DataRowState** al llamar a **GetChanges**. En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Para crear una copia de un **conjunto de DataSet** que solo incluya el esquema <xref:System.Data.DataSet.Clone%2A> , use el método del **conjunto de DataSet**. También puede Agregar filas existentes al **conjunto** de filas clonado mediante el método **ImportRow** de la **DataTable**. **ImportRow** agrega información de datos, de estado de fila y de versión de fila a la tabla especificada. Los valores de columna sólo se agregan cuando los nombres de columna coinciden y el tipo de datos es compatible.  
+ Para crear una copia de un **DataSet** <xref:System.Data.DataSet.Clone%2A> que solo incluye esquema, utilice el método de **DataSet**. También puede agregar filas existentes al **conjunto de datos** clonado mediante el método **ImportRow** de **DataTable**. **ImportRow** agrega información de datos, estado de fila y versión de fila a la tabla especificada. Los valores de columna sólo se agregan cuando los nombres de columna coinciden y el tipo de datos es compatible.  
   
- En el ejemplo de código siguiente se crea un clon de un **DataSet** y, a continuación, se agregan las filas del **conjunto** de valores original a la tabla **Customers** del clon del **conjunto** de elementos para los clientes en los que la columna **PaísRegión** tiene el valor "Alemania. ".  
+ En el ejemplo de código siguiente se crea un clon de un **DataSet** y, a continuación, agrega las filas del **conjunto** de datos original a **la** Customers tabla en el **DataSet** clon para los clientes donde el **CountryRegion** columna tiene el valor "Alemania".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -85,7 +85,7 @@ customerDataSet.Tables["Customers"].Rows.Add("John", "UK");
   
 DataSet germanyCustomers = customerDataSet.Clone();  
   
-DataRow[] copyRows =   
+DataRow[] copyRows =
   customerDataSet.Tables["Customers"].Select("CountryRegion = 'Germany'");  
   
 DataTable customerTable = germanyCustomers.Tables["Customers"];  
@@ -94,9 +94,9 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

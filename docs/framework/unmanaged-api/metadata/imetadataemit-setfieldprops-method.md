@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445455"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177547"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps (Método)
 Establece o actualiza el valor predeterminado para el campo al que hace referencia el token de campo especificado.  
@@ -29,40 +29,40 @@ Establece o actualiza el valor predeterminado para el campo al que hace referenc
   
 ```cpp  
 HRESULT SetFieldProps (  
-    [in]  mdFieldDef  fd,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+    [in]  mdFieldDef  fd,
+    [in]  DWORD       dwFieldFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `fd`  
- de El token para el campo de destino.  
+ [en] El token para el campo de destino.  
   
  `dwFieldFlags`  
- de Atributos de campo. Se trata de una máscara de máscara de valores `CorFieldAttr`.  
+ [en] Atributos de campo. Esta es una `CorFieldAttr` máscara de bits de valores.  
   
  `dwCPlusTypeFlag`  
- de *\** de `ELEMENT_TYPE_`para el valor constante. Se trata de un valor de `CorElementType`. Si no se define una constante, establezca este valor en `ELEMENT_TYPE_END`.  
+ [en] El `ELEMENT_TYPE_` *\** valor constante for. Este es `CorElementType` un valor. Si no se está definiendo una `ELEMENT_TYPE_END`constante, establezca este valor en .  
   
  `pValue`  
- de Valor constante para el campo.  
+ [en] El valor constante para el campo.  
   
  `cchValue`  
- de Tamaño, en caracteres Unicode, de `pValue`.  
+ [en] El tamaño, en caracteres Unicode, de `pValue`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

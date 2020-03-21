@@ -15,70 +15,70 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432546"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177714"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField (Método)
-Crea una definición para un campo con la firma de metadatos especificada y obtiene un token para esa definición de campo.  
+Crea una definición para un campo con la firma de metadatos especificada y obtiene un token a esa definición de campo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT DefineField (   
-    [in]  mdTypeDef   td,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  PCCOR_SIGNATURE pvSigBlob,   
-    [in]  ULONG       cbSigBlob,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue,   
-    [out] mdFieldDef  *pmd   
+HRESULT DefineField (
+    [in]  mdTypeDef   td,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwFieldFlags,
+    [in]  PCCOR_SIGNATURE pvSigBlob,
+    [in]  ULONG       cbSigBlob,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue,
+    [out] mdFieldDef  *pmd
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- de El token de `mdTypeDef` de la clase o interfaz envolvente.  
+ [en] El `mdTypeDef` token para la clase o interfaz envolvente.  
   
  `szName`  
- de Nombre del campo en Unicode.  
+ [en] El nombre del campo en Unicode.  
   
  `dwFieldFlags`  
- de Atributos del campo. Se trata de una máscara de máscara de valores `CorFieldAttr`.  
+ [en] Los atributos de campo. Esta es una `CorFieldAttr` máscara de bits de valores.  
   
  `pvSigBlob`  
- de La firma del campo como un BLOB.  
+ [en] La firma de campo como BLOB.  
   
  `cbSigBlob`  
- de Recuento de bytes de `pvSigBlob`.  
+ [en] El recuento de `pvSigBlob`bytes en .  
   
  `dwCPlusTypeFlag`  
- de *\** de `ELEMENT_TYPE_`para el valor constante. Se trata de un valor de `CorElementType`. Si no se define un valor constante para el campo, utilice `ELEMENT_TYPE_END`.  
+ [en] El `ELEMENT_TYPE_` *\** valor constante for. Este es `CorElementType` un valor. Si no define un valor constante `ELEMENT_TYPE_END`para el campo, utilice .  
   
  `pValue`  
- de Valor constante para el campo.  
+ [en] El valor constante para el campo.  
   
  `cchValue`  
- de El tamaño en caracteres (Unicode) de `pValue`.  
+ [en] El tamaño en caracteres `pValue`(Unicode) de .  
   
  `pmd`  
- enuncia El token de `mdFieldDef` asignado.  
+ [fuera] El `mdFieldDef` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

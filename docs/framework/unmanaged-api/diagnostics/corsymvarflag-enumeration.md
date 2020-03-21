@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: 86cac53508665c3c97caaa415d8d3c38660928bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21e92d8f2fb80c4c41d516ef281bf4fc8a75f4e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448550"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176648"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag (Enumeración)
-Indica si una variable es generada por el compilador.  
+Indica si una variable se genera en el compilador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-typedef enum CorSymVarFlag   
+typedef enum CorSymVarFlag
 {  
     VAR_IS_COMP_GEN = 1  
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indica que la variable especificada es generada por el compilador.|  
+|`VAR_IS_COMP_GEN`|Indica que la variable dada se genera en el compilador.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym. idl, CorSym. h  
+ **Encabezado:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bf0008ce9429671f0c156df4256bed0b2aaee184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450284"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176180"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr (Enumeración)
-Contiene valores que describen los parámetros de <xref:System.Type> para los tipos genéricos, tal y como se usan en las llamadas a [IMetaDataEmit2::D efinegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Contiene valores que <xref:System.Type> describen los parámetros de los tipos genéricos, como se usa en las llamadas a [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,40 +30,40 @@ Contiene valores que describen los parámetros de <xref:System.Type> para los ti
 typedef enum CorGenericParamAttr {  
   
     gpVarianceMask                     =   0x0003,  
-    gpNonVariant                       =   0x0000,   
+    gpNonVariant                       =   0x0000,
     gpCovariant                        =   0x0001,  
     gpContravariant                    =   0x0002,  
   
     gpSpecialConstraintMask            =   0x001C,  
     gpNoSpecialConstraint              =   0x0000,  
-    gpReferenceTypeConstraint          =   0x0004,   
+    gpReferenceTypeConstraint          =   0x0004,
     gpNotNullableValueTypeConstraint   =   0x0008,  
     gpDefaultConstructorConstraint     =   0x0010  
   
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
-|`gpVarianceMask`|La varianza de parámetros solo se aplica a los parámetros genéricos para interfaces y delegados.|  
+|`gpVarianceMask`|La varianza de parámetros solo se aplica a parámetros genéricos para interfaces y delegados.|  
 |`gpNonVariant`|Indica la ausencia de varianza.|  
 |`gpCovariant`|Indica covarianza.|  
-|`gpContravariant`|Indica la contravarianza.|  
-|`gpSpecialConstraintMask`|Las restricciones especiales se pueden aplicar a cualquier <xref:System.Type> parámetro.|  
-|`gpNoSpecialConstraint`|Indica que no se aplica ninguna restricción al parámetro <xref:System.Type>.|  
-|`gpReferenceTypeConstraint`|Indica que el parámetro <xref:System.Type> debe ser un tipo de referencia.|  
-|`gpNotNullableValueTypeConstraint`|Indica que el parámetro <xref:System.Type> debe ser un tipo de valor que no puede ser un valor null.|  
-|`gpDefaultConstructorConstraint`|Indica que el parámetro <xref:System.Type> debe tener un constructor público predeterminado que no tome ningún parámetro.|  
+|`gpContravariant`|Indica contravarianza.|  
+|`gpSpecialConstraintMask`|Se pueden aplicar restricciones especiales a cualquier <xref:System.Type> parámetro.|  
+|`gpNoSpecialConstraint`|Indica que no se <xref:System.Type> aplica ninguna restricción al parámetro.|  
+|`gpReferenceTypeConstraint`|Indica que <xref:System.Type> el parámetro debe ser un tipo de referencia.|  
+|`gpNotNullableValueTypeConstraint`|Indica que <xref:System.Type> el parámetro debe ser un tipo de valor que no puede ser un valor nulo.|  
+|`gpDefaultConstructorConstraint`|Indica que <xref:System.Type> el parámetro debe tener un constructor público predeterminado que no toma ningún parámetro.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr. h  
+ **Encabezado:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

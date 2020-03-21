@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e3af361f4268e9a83efe4d28547dc95fc242633e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 33b51cf26a35bbdda70582d86db6ac39c22597da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040202"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174399"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  
@@ -23,25 +23,25 @@ La clase <xref:System.Transactions.TransactionScope> proporciona una manera simp
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- El ambiente de transacción ha comenzado una vez que se ha creado un nuevo objeto <xref:System.Transactions.TransactionScope> .  Tal y como se ilustra en la muestra del código se recomienda la creación de ambientes con una instrucción `using`. La instrucción `using` está disponible tanto en C# como en Visual Basic y funciona como un bloque`try`...`finally`para asegurarse de que el ámbito se elimina correctamente.  
+ El ambiente de transacción ha comenzado una vez que se ha creado un nuevo objeto <xref:System.Transactions.TransactionScope> .  Como se muestra en el ejemplo de código, se `using` recomienda crear ámbitos con una instrucción. La `using` instrucción está disponible tanto en C- como `try`en Visual Basic, y funciona como un ... `finally` bloque para asegurarse de que el alcance se elimina correctamente.  
   
- Al crear una instancia de <xref:System.Transactions.TransactionScope>, el administrador de transacciones determina en qué transacción participar. Una vez determinado, el ámbito siempre participa en esa transacción. La decisión se basa en dos factores: si está presente una transacción de ambiente y el valor del parámetro `TransactionScopeOption` del constructor. La transacción ambiente es la transacción dentro de la que su código se ejecuta. Puede obtener una referencia a la transacción ambiente llamando a la propiedad estática <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> de la clase <xref:System.Transactions.Transaction>. Para obtener más información sobre cómo se usa este parámetro, consulte la sección Administración del flujo de la [transacción mediante TransactionScopeOption](#ManageTxFlow) de este tema.  
+ Al crear una instancia de <xref:System.Transactions.TransactionScope>, el administrador de transacciones determina en qué transacción participar. Una vez determinado, el ámbito siempre participa en esa transacción. La decisión se basa en dos factores: si está presente una transacción de ambiente y el valor del parámetro `TransactionScopeOption` del constructor. La transacción ambiente es la transacción dentro de la que su código se ejecuta. Puede obtener una referencia a la transacción ambiente llamando a la propiedad estática <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> de la clase <xref:System.Transactions.Transaction>. Para obtener más información sobre cómo se usa este parámetro, vea la sección Administración del flujo de [transacciones mediante TransactionScopeOption](#ManageTxFlow) de este tema.  
   
 ## <a name="completing-a-transaction-scope"></a>Completar un ámbito de la transacción  
- Cuando la aplicación termina todo el trabajo que tiene que llevar a cabo en una transacción, debe llamar al método <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> solo una vez para notificar al administrador de transacciones que la transacción se puede confirmar. Es muy recomendable colocar la llamada <xref:System.Transactions.TransactionScope.Complete%2A> como la última instrucción del bloque `using`.  
+ Cuando la aplicación termina todo el trabajo que tiene que llevar a cabo en una transacción, debe llamar al método <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> solo una vez para notificar al administrador de transacciones que la transacción se puede confirmar. Es muy buena práctica poner <xref:System.Transactions.TransactionScope.Complete%2A> la llamada como `using` la última instrucción en el bloque.  
   
- Si no se llama a este método, se anula la transacción, porque el administrador de transacciones lo interpreta como un error del sistema o equivalente a una excepción iniciada en el ámbito de la transacción. Sin embargo, llamar a este método no garantiza que se vaya a confirmar la transacción. Es solo una manera de informar al administrador de transacciones de su estado. Después de llamar a este método<xref:System.Transactions.TransactionScope.Complete%2A> ya no podrá obtener acceso a la transacción de ambiente mediante la propiedad <xref:System.Transactions.Transaction.Current%2A> y, si intenta hacerlo, se producirá una excepción.  
+ Si no se llama a este método, se anula la transacción, porque el administrador de transacciones interpreta esto como un error del sistema o equivalente a una excepción iniciada dentro del ámbito de la transacción. Sin embargo, llamar a este método no garantiza que se vaya a confirmar la transacción. Es solo una manera de informar al administrador de transacciones de su estado. Después de llamar a este método<xref:System.Transactions.TransactionScope.Complete%2A> ya no podrá obtener acceso a la transacción de ambiente mediante la propiedad <xref:System.Transactions.Transaction.Current%2A> y, si intenta hacerlo, se producirá una excepción.  
   
- Si el objeto <xref:System.Transactions.TransactionScope> creara inicialmente la transacción, el trabajo real de confirmar la transacción por el administrador de transacciones se produce después de la última línea de código en el bloque `using`. Si no ha creado la transacción, se produce la confirmación cada vez que el propietario del objeto <xref:System.Transactions.CommittableTransaction.Commit%2A> llama al método <xref:System.Transactions.CommittableTransaction>. En ese momento, el administrador de transacciones llama a los administradores de recursos y les informa de la confirmación o la reversión, en función de si se llamó al método <xref:System.Transactions.TransactionScope.Complete%2A> en el objeto <xref:System.Transactions.TransactionScope>.  
+ Si <xref:System.Transactions.TransactionScope> el objeto creó la transacción inicialmente, el trabajo real de confirmar la `using` transacción por el administrador de transacciones se produce después de la última línea de código del bloque. Si no ha creado la transacción, se produce la confirmación cada vez que el propietario del objeto <xref:System.Transactions.CommittableTransaction.Commit%2A> llama al método <xref:System.Transactions.CommittableTransaction>. En ese momento, el administrador de transacciones llama a los administradores <xref:System.Transactions.TransactionScope.Complete%2A> de recursos y <xref:System.Transactions.TransactionScope> les informa para confirmar o revertir, en función de si se llamó al método en el objeto.  
   
- La instrucción `using` asegura que el método <xref:System.Transactions.TransactionScope.Dispose%2A> de <xref:System.Transactions.TransactionScope> se llama aún cuando se produzca una excepción. El método <xref:System.Transactions.TransactionScope.Dispose%2A> marca el fin del ámbito de la transacción. Las excepciones que se producen después de llamar a este método quizá no afecten a la transacción. Este método también restaura la transacción de ambiente a su estado previo.  
+ La `using` instrucción <xref:System.Transactions.TransactionScope.Dispose%2A> garantiza que <xref:System.Transactions.TransactionScope> se llama al método del objeto incluso si se produce una excepción. El método <xref:System.Transactions.TransactionScope.Dispose%2A> marca el fin del ámbito de la transacción. Las excepciones que se producen después de llamar a este método quizá no afecten a la transacción. Este método también restaura la transacción de ambiente a su estado previo.  
   
  Se inicia <xref:System.Transactions.TransactionAbortedException> si el ámbito crea la transacción, y ésta se anula. Se inicia <xref:System.Transactions.TransactionInDoubtException> si el administrador de transacciones no puede llegar a una decisión de la confirmación. No se produce ninguna excepción si se confirma la transacción.  
   
-## <a name="rolling-back-a-transaction"></a>Deshacer una transacción  
+## <a name="rolling-back-a-transaction"></a>Revertir una transacción  
  Si desea revertir una transacción, no debería llamar al método <xref:System.Transactions.TransactionScope.Complete%2A> dentro del ámbito de la transacción. Por ejemplo, puede producir una excepción dentro del ámbito. Se deshará la transacción en la que participa.  
   
-## <a name="ManageTxFlow"></a>Administrar el flujo de la transacción mediante TransactionScopeOption  
+## <a name="managing-transaction-flow-using-transactionscopeoption"></a><a name="ManageTxFlow"></a>Administración del flujo de transacciones mediante TransactionScopeOption  
  El ámbito de la transacción puede estar anidado al llamar a un método que utiliza desde dentro <xref:System.Transactions.TransactionScope> un método que utiliza su propio ámbito, como es el caso con el método `RootMethod` en el ejemplo siguiente,  
   
 ```csharp  
@@ -81,16 +81,16 @@ void SomeMethod()
   
  Si se crean instancias del ámbito con <xref:System.Transactions.TransactionScopeOption.RequiresNew>, siempre es el ámbito de la raíz. Inicia una nueva transacción y su transacción se vuelve la nueva transacción ambiente dentro del ámbito.  
   
- Si se crea del ámbito instancias con <xref:System.Transactions.TransactionScopeOption.Suppress>, nunca toma la parte en una transacción, sin tener en cuenta si una transacción ambiente está presente. Un ámbito con instancias creadas siempre tiene `null` con este valor como su transacción ambiente.  
+ Si se crea del ámbito instancias con <xref:System.Transactions.TransactionScopeOption.Suppress>, nunca toma la parte en una transacción, sin tener en cuenta si una transacción ambiente está presente. Un ámbito que se crea `null` con este valor siempre tiene como transacción ambiente.  
   
  Las opciones anteriores se resumen en la tabla siguiente.  
   
 |TransactionScopeOption|Transacción ambiente|El ámbito toma parte.|  
 |----------------------------|-------------------------|-----------------------------|  
-|Requerido|No|Nueva transacción (será la raíz)|  
-|Se requiere nueva|No|Nueva transacción (será la raíz)|  
-|Suprimir|No|Sin transacción|  
-|Requerido|Sí|Transacción ambiente|  
+|Obligatorio|Sin |Nueva transacción (será la raíz)|  
+|Se requiere nueva|Sin |Nueva transacción (será la raíz)|  
+|Suprimir|Sin |Sin transacción|  
+|Obligatorio|Sí|Transacción ambiente|  
 |Se requiere nueva|Sí|Nueva transacción (será la raíz)|  
 |Suprimir|Sí|Sin transacción|  
   
@@ -107,7 +107,7 @@ using(TransactionScope scope1 = new TransactionScope())
         //...
     }
 
-    using(TransactionScope scope3 = new TransactionScope(TransactionScopeOption.RequiresNew))   
+    using(TransactionScope scope3 = new TransactionScope(TransactionScopeOption.RequiresNew))
     {
         //...  
     }
@@ -119,13 +119,13 @@ using(TransactionScope scope1 = new TransactionScope())
 }
 ```  
   
- El ejemplo muestra un bloque de código sin cualquier transacción ambiente que crea un nuevo ámbito (`scope1`) con <xref:System.Transactions.TransactionScopeOption.Required>. El ámbito `scope1` es un ámbito raíz porque cuando crea una nueva transacción (la transacción A) y hace que la transacción A sea transacción ambiente. a continuación, `Scope1` crea tres objetos más, cada uno con un valor de <xref:System.Transactions.TransactionScopeOption> diferente. Por ejemplo, `scope2` se crea con <xref:System.Transactions.TransactionScopeOption.Required>y hay subsecuentemente una transacción ambiente, que se une la primera transacción creada por `scope1`. Observe que `scope3` es el ámbito de la raíz de una nueva transacción, y `scope4` no tiene ninguna transacción ambiente.  
+ El ejemplo muestra un bloque de código sin cualquier transacción ambiente que crea un nuevo ámbito (`scope1`) con <xref:System.Transactions.TransactionScopeOption.Required>. El ámbito `scope1` es un ámbito raíz porque cuando crea una nueva transacción (la transacción A) y hace que la transacción A sea transacción ambiente. `Scope1`a continuación, crea tres objetos más, cada uno con un valor diferente. <xref:System.Transactions.TransactionScopeOption> Por ejemplo, `scope2` se crea con <xref:System.Transactions.TransactionScopeOption.Required>y hay subsecuentemente una transacción ambiente, que se une la primera transacción creada por `scope1`. Observe que `scope3` es el ámbito de la raíz de una nueva transacción, y `scope4` no tiene ninguna transacción ambiente.  
   
  Aunque el valor predeterminado y más comúnmente utilizado de <xref:System.Transactions.TransactionScopeOption> es <xref:System.Transactions.TransactionScopeOption.Required>, cada uno de los otros valores tiene su propósito único.  
 
 ### <a name="non-transactional-code-inside-a-transaction-scope"></a>Código no transaccional dentro de un ámbito de transacción
 
- <xref:System.Transactions.TransactionScopeOption.Suppress> resulta útil si desea conservar las operaciones realizadas por la sección de código y no desea anular la transacción ambiente si se produce un error en las operaciones. Por ejemplo, al desear realizar un registro u operaciones de la auditoría, o al desear publicar los eventos a los suscriptores sin tener en cuenta si su transacción ambiente se confirma o sufre interrupciones. Este valor le permite tener una sección de código no transaccional dentro de un ámbito de la transacción, como se muestra en el ejemplo siguiente.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress>es útil cuando desea conservar las operaciones realizadas por la sección de código y no desea anular la transacción ambiente si se produce un error en las operaciones. Por ejemplo, al desear realizar un registro u operaciones de la auditoría, o al desear publicar los eventos a los suscriptores sin tener en cuenta si su transacción ambiente se confirma o sufre interrupciones. Este valor le permite tener una sección de código no transaccional dentro de un ámbito de la transacción, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())
@@ -160,14 +160,14 @@ using(TransactionScope scope1 = new TransactionScope())
   
  Además, no todos los administradores de recursos admiten todos los niveles de aislamiento y pueden elegir tomar parte en la transacción en un nivel más alto que el que se configuró.  
   
- Cada nivel de aislamiento además de <xref:System.Transactions.IsolationLevel.Serializable> es susceptible a la inconsistencia que es el resultado de otras transacciones que tienen acceso a la misma información. La diferencia entre los niveles de aislamiento diferentes es la manera en que se utilizan los bloqueos de la lectura y escritura. Se puede contener un bloqueo solo cuando la transacción tiene acceso a los datos en el administrador de recursos, o se puede contener hasta que la transacción se confirme o anule. Lo primero es mejor para el rendimiento, lo último para la coherencia. Los dos tipos de bloqueos y los dos tipos de operaciones (lectura/escritura) proporcionan cuatro niveles de aislamiento básicos. Vea <xref:System.Transactions.IsolationLevel> para obtener más información.  
+ Cada nivel de aislamiento además de <xref:System.Transactions.IsolationLevel.Serializable> es susceptible a la inconsistencia que es el resultado de otras transacciones que tienen acceso a la misma información. La diferencia entre los niveles de aislamiento diferentes es la manera en que se utilizan los bloqueos de la lectura y escritura. Se puede contener un bloqueo solo cuando la transacción tiene acceso a los datos en el administrador de recursos, o se puede contener hasta que la transacción se confirme o anule. Lo primero es mejor para el rendimiento, lo último para la coherencia. Los dos tipos de bloqueos y los dos tipos de operaciones (lectura/escritura) proporcionan cuatro niveles de aislamiento básicos. Consulte <xref:System.Transactions.IsolationLevel> para obtener más información.  
   
  Al utilizar los objetos <xref:System.Transactions.TransactionScope> anidados, todos los ámbitos anidados se deben configurar para utilizar exactamente el mismo nivel de aislamiento si desean unir la transacción ambiente. Si un objeto <xref:System.Transactions.TransactionScope> anidado intenta unir la transacción ambiente todavía especifica un nivel de aislamiento diferente, se inicia <xref:System.ArgumentException>.  
   
 ## <a name="interop-with-com"></a>Interoperabilidad con COM+  
- Al crear que una nueva instancia <xref:System.Transactions.TransactionScope>, se puede utilizar la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> en uno de los constructores para especificar cómo interactuar con COM+. Para obtener más información sobre esto, consulte [interoperabilidad con Enterprise Services y transacciones de com+](interoperability-with-enterprise-services-and-com-transactions.md).  
+ Al crear que una nueva instancia <xref:System.Transactions.TransactionScope>, se puede utilizar la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> en uno de los constructores para especificar cómo interactuar con COM+. Para obtener más información al respecto, vea [Interoperabilidad con Enterprise Services y Transacciones COM+.](interoperability-with-enterprise-services-and-com-transactions.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>
