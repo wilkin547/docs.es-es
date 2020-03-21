@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: b3f2eabad3a6ef8e8fd5cc8f44f3132a3f5d8427
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8c0c084ac3b1cf06fc5f2b3df85fa979744e17b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755233"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185420"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedimientos recomendados acerca de seguridad en WCF
 En las secciones siguientes se enumeran los procedimientos recomendados que tener en cuenta a la hora de crear aplicaciones seguras mediante Windows Communication Foundation (WCF). Para obtener más información sobre la seguridad, vea [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) y [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -24,14 +24,14 @@ En las secciones siguientes se enumeran los procedimientos recomendados que tene
  WS-SecurityPolicy permite a los servicios publicar información sobre sus propias identidades en los metadatos. Cuando se recupera a través de `svcutil` u otros métodos como <xref:System.ServiceModel.Description.WsdlImporter>, esta información de identidad se convierte en las propiedades de identidad de las direcciones de punto de conexión del servicio WCF. Los clientes que no comprueban que estas identidades de servicio son correctas y válidas, omiten la autenticación del servicio. Un servicio malintencionado se puede aprovechar de estos clientes para ejecutar ataques de reenvío de credenciales y otros ataques de tipo "Man in the middle" cambiando la identidad alegada en su WSDL.  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Uso de certificados X509 en lugar de NTLM  
- WCF ofrece dos mecanismos para la autenticación de punto a punto: X509 certificados (usados por el canal del mismo nivel) y la autenticación de Windows donde la negociación SSPI disminuye de Kerberos a NTLM.  Se prefiere la autenticación basada en certificado con tamaños de clave de 1024 bits o más antes que NTLM por varias razones:  
+ WCF proporciona dos mecanismos para la autenticación punto a punto: los certificados X509 (usados por el canal del mismo nivel) y la autenticación de Windows, donde la negociación SSPI disminuye de Kerberos a NTLM.  Se prefiere la autenticación basada en certificado con tamaños de clave de 1024 bits o más antes que NTLM por varias razones:  
   
 - la disponibilidad de la autenticación mutua  
   
 - el uso de algoritmos criptográficos más seguros y  
   
 - la mayor dificultad de usar credenciales X509 reenviadas.  
-   
+
 ## <a name="always-revert-after-impersonation"></a>Siempre revierta tras la suplantación  
  Al utilizar API que permiten la suplantación de un cliente, asegúrese de revertir a la identidad original. Por ejemplo, al usar <xref:System.Security.Principal.WindowsIdentity> y <xref:System.Security.Principal.WindowsImpersonationContext>, use la instrucción `using` de C# o la instrucción `Using` de Visual Basic, como se muestra en el código siguiente. La clase <xref:System.Security.Principal.WindowsImpersonationContext> implementa la interfaz <xref:System.IDisposable> y, por consiguiente, Common Language Runtime (CLR) revierte automáticamente a la identidad original una vez que el código deja el bloque `using`.  
   
@@ -45,7 +45,7 @@ En las secciones siguientes se enumeran los procedimientos recomendados que tene
  Asegúrese de que confía en el origen de sus metadatos y de que nadie ha manipulado los metadatos. Los metadatos recuperados utilizando el protocolo HTTP se envían en texto no cifrado y se pueden manipular. Si el servicio utiliza la propiedad <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> y <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilice la URL proporcionada por el creador del servicio para descargar los datos mediante el protocolo HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publicación de metadatos utilizando la seguridad  
- Para evitar la modificación de los metadatos publicados de un servicio, proteja el punto de conexión de intercambio de metadatos mediante seguridad de mensajes o de transporte. Para obtener más información, consulte [extremos de metadatos de publicación](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) y [Cómo: Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Para evitar la modificación de los metadatos publicados de un servicio, proteja el punto de conexión de intercambio de metadatos mediante seguridad de mensajes o de transporte. Para obtener más información, vea [Publicación de puntos de conexión de metadatos](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) y [Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Asegure el uso de un emisor local  
  Si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los extremos que utilizan ese enlace. Los clientes que esperan utilizar siempre el emisor local deberían asegurarse de que no utilizan dicho enlace o de que modifican el enlace de manera que la dirección del emisor sea null.  
@@ -56,8 +56,8 @@ En las secciones siguientes se enumeran los procedimientos recomendados que tene
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Establecer SecurityBindingElement.IncludeTimestamp en True en enlaces personalizados  
  Al crear un enlace personalizado, debe establecer <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> en `true`. De lo contrario, si <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> se establece en `false` y el cliente usa un token basado en clave asimétrica, como un certificado X509, el mensaje no se firmará.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Consideraciones de seguridad para los datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965872"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180018"
 ---
 # <a name="microsoft-ui-automation"></a>Automatización de la interfaz de usuario de Microsoft
 
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET que desean usar las clases de automatización de la interfaz de usuario administrada definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más reciente sobre la automatización de la interfaz de usuario, consulte [API de automatización de Windows: UI Automation](/windows/win32/winauto/entry-uiauto-win32).
+> Esta documentación está destinada a los desarrolladores de .NET <xref:System.Windows.Automation> que desean usar las clases de Automatización de la interfaz de usuarioUI Automation administradas definidas en el espacio de nombres. Para obtener la información más reciente acerca de Automatización de la interfaz de usuarioUI Automation, consulte API de automatización de [Windows: Automatización](/windows/win32/winauto/entry-uiauto-win32)de la interfaz de usuario .
 
- La automatización de la interfaz de usuario de Microsoft es un marco de accesibilidad para Microsoft Windows. Satisface las necesidades de los productos de tecnología de asistencia y los marcos de pruebas automatizadas al proporcionar acceso mediante programación a información sobre la interfaz de usuario (UI). Además, la automatización de la interfaz de usuario permite que los desarrolladores de controles y aplicaciones puedan tener acceso a sus productos.
+ Automatización de la interfaz de usuario de Microsoft es un marco de accesibilidad para Microsoft Windows. Aborda las necesidades de los productos de tecnología de asistencia y los marcos de pruebas automatizados proporcionando acceso mediante programación a la información sobre la interfaz de usuario (UI). Además, Automatización de la interfaz de usuarioUI Automation permite a los desarrolladores de aplicaciones y control hacer que sus productos sean accesibles.
 
- En esta documentación se describe la API de automatización de la interfaz de usuario para código administrado. Para obtener información sobre la programación de la C++automatización de la interfaz de usuario en, vea [automatización de la interfaz de usuario para aplicaciones Win32](/windows/desktop/winauto/windows-automation-api-portal).
+ En esta documentación se describe la API de automatización de la interfaz de usuario para código administrado. Para obtener información sobre la programación de Automatización de la interfaz de usuarioUI Automation en C++, vea Automatización de la interfaz de [usuario para aplicaciones Win32](/windows/desktop/winauto/windows-automation-api-portal).
 
 ## <a name="in-this-section"></a>En esta sección
 
 - [Procedimientos recomendados para la accesibilidad](accessibility-best-practices.md)
-- [Aspectos básicos de Automatización de la interfaz de usuario](ui-automation-fundamentals.md)
-- [Proveedores de Automatización de la interfaz de usuario para código administrado](ui-automation-providers-for-managed-code.md)
-- [Clientes de Automatización de la interfaz de usuario para código administrado](ui-automation-clients-for-managed-code.md)
-- [Patrones de control de Automatización de la interfaz de usuario](ui-automation-control-patterns.md)
-- [Patrón de texto de Automatización de la interfaz de usuario](ui-automation-text-pattern.md)
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [Fundamentos de automatización de la interfaz de usuario](ui-automation-fundamentals.md)
+- [Proveedores de UI Automation para código administrado](ui-automation-providers-for-managed-code.md)
+- [Clientes de UI Automation para código administrado](ui-automation-clients-for-managed-code.md)
+- [Patrones de control de UI Automation](ui-automation-control-patterns.md)
+- [Modelo de texto de UI Automation](ui-automation-text-pattern.md)
+- [Tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types.md)
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-- [Ejemplos de accesibilidad](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Ejemplos de accesibilidad](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

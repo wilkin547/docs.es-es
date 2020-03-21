@@ -15,96 +15,96 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: cd1d9e768698115bee22e35699b044e0c3526d2d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db721e1ef774c87de0fa7da178463d832a3da756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136318"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178156"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo (Función)
-Obtiene información de la versión y del directorio sobre el Common Language Runtime (CLR) solicitado por una aplicación.  
+Obtiene información de versión y directorio sobre Common Language Runtime (CLR) solicitada por una aplicación.  
   
- Esta función está en desuso en el .NET Framework 4.  
+ Esta función ha quedado en desuso en .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetRequestedRuntimeInfo (  
-    [in]  LPCWSTR  pExe,   
-    [in]  LPCWSTR  pwszVersion,   
-    [in]  LPCWSTR  pConfigurationFile,   
-    [in]  DWORD    startupFlags,   
-    [in]  DWORD    runtimeInfoFlags,   
-    [out] LPWSTR   pDirectory,   
-    [in]  DWORD    dwDirectory,   
-    [out] DWORD   *dwDirectoryLength,   
-    [out] LPWSTR   pVersion,   
-    [in]  DWORD    cchBuffer,   
+    [in]  LPCWSTR  pExe,
+    [in]  LPCWSTR  pwszVersion,
+    [in]  LPCWSTR  pConfigurationFile,
+    [in]  DWORD    startupFlags,
+    [in]  DWORD    runtimeInfoFlags,
+    [out] LPWSTR   pDirectory,
+    [in]  DWORD    dwDirectory,
+    [out] DWORD   *dwDirectoryLength,
+    [out] LPWSTR   pVersion,
+    [in]  DWORD    cchBuffer,
     [out] DWORD   *dwlength  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pExe`  
- de El nombre de la aplicación.  
+ [en] El nombre de la aplicación.  
   
  `pwszVersion`  
- de Cadena que especifica el número de versión del motor en tiempo de ejecución.  
+ [en] Cadena que especifica el número de versión del tiempo de ejecución.  
   
  `pConfigurationFile`  
- de Nombre del archivo de configuración asociado a `pExe`.  
+ [en] El nombre del archivo de `pExe`configuración asociado a .  
   
  `startupFlags`  
- de Uno o varios de los valores de la enumeración [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
+ [en] Uno o varios de los valores de enumeración [STARTUP_FLAGS.](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)  
   
  `runtimeInfoFlags`  
- de Uno o varios de los valores de la enumeración [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) .  
+ [en] Uno o varios de los [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) valores de enumeración.  
   
  `pDirectory`  
- enuncia Un búfer que contiene la ruta de acceso al directorio al tiempo de ejecución cuando se completa correctamente.  
+ [fuera] Un búfer que contiene la ruta de acceso del directorio al tiempo de ejecución una vez completado correctamente.  
   
  `dwDirectory`  
- de Longitud del búfer de directorio.  
+ [en] La longitud del búfer de directorio.  
   
  `dwDirectoryLength`  
- enuncia Puntero a la longitud de la cadena de ruta de acceso del directorio.  
+ [fuera] Un puntero a la longitud de la cadena de ruta de acceso del directorio.  
   
  `pVersion`  
- enuncia Un búfer que contiene el número de versión del motor en tiempo de ejecución cuando se completa correctamente.  
+ [fuera] Un búfer que contiene el número de versión del tiempo de ejecución una vez completado correctamente.  
   
  `cchBuffer`  
- de Longitud del búfer de cadena de versión.  
+ [en] La longitud del búfer de cadena de versión.  
   
  `dwlength`  
- enuncia Puntero a la longitud de la cadena de versión.  
+ [fuera] Un puntero a la longitud de la cadena de versión.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los valores siguientes.  
+ Este método devuelve códigos de error estándar del modelo de objetos componentes (COM), tal como se define en WinError.h, además de los siguientes valores.  
   
-|Código devuelto|Descripción|  
+|Código de retorno|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|ERROR_INSUFFICIENT_BUFFER|El búfer de directorio no es lo suficientemente grande como para almacenar la ruta de acceso al directorio.<br /><br /> O bien<br /><br /> El búfer de versión no es lo suficientemente grande como para almacenar la cadena de versión.|  
+|ERROR_INSUFFICIENT_BUFFER|El búfer de directorio no es lo suficientemente grande como para almacenar la ruta de acceso del directorio.<br /><br /> O bien<br /><br /> El búfer de versión no es lo suficientemente grande como para almacenar la cadena de versión.|  
   
-## <a name="remarks"></a>Comentarios  
- El método `GetRequestedRuntimeInfo` devuelve información en tiempo de ejecución sobre la versión cargada en el proceso, que no es necesariamente la versión más reciente instalada en el equipo.  
+## <a name="remarks"></a>Observaciones  
+ El `GetRequestedRuntimeInfo` método devuelve información en tiempo de ejecución sobre la versión cargada en el proceso, que no es necesariamente la versión más reciente instalada en el equipo.  
   
- En la versión .NET Framework 2,0, puede obtener información sobre la última versión instalada mediante el método `GetRequestedRuntimeInfo` de la siguiente manera:  
+ En la versión 2.0 de .NET Framework, puede obtener `GetRequestedRuntimeInfo` información sobre la última versión instalada mediante el método siguiente:  
   
-- Especifique los parámetros `pExe`, `pwszVersion`y `pConfigurationFile` como null.  
+- Especifique `pExe`los `pwszVersion`parámetros , , y `pConfigurationFile` null.  
   
-- Especifique la marca RUNTIME_INFO_UPGRADE_VERSION en las enumeraciones de `RUNTIME_INFO_FLAGS` para el parámetro `runtimeInfoFlags`.  
+- Especifique el indicador `RUNTIME_INFO_FLAGS` RUNTIME_INFO_UPGRADE_VERSION en `runtimeInfoFlags` las enumeraciones del parámetro.  
   
- El método `GetRequestedRuntimeInfo` no devuelve la última versión de CLR en las siguientes circunstancias:  
+ El `GetRequestedRuntimeInfo` método no devuelve la versión más reciente de CLR en las siguientes circunstancias:  
   
-- Existe un archivo de configuración de la aplicación que especifica la carga de una determinada versión de CLR. Tenga en cuenta que la .NET Framework usará el archivo de configuración aunque especifique NULL para el parámetro `pConfigurationFile`.  
+- Existe un archivo de configuración de aplicación que especifica la carga de una versión CLR determinada. Tenga en cuenta que .NET Framework usará el archivo `pConfigurationFile` de configuración incluso si especifica null para el parámetro.  
   
 - Se llamó al método [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) especificando una versión anterior de CLR.  
   
-- Se está ejecutando una aplicación que se compiló para una versión anterior de CLR.  
+- Una aplicación que se compiló para una versión anterior de CLR se está ejecutando actualmente.  
   
- En el caso del parámetro `runtimeInfoFlags`, solo puede especificar una de las constantes de la arquitectura de la enumeración `RUNTIME_INFO_FLAGS` a la vez:  
+ Para `runtimeInfoFlags` el parámetro, puede especificar solo una de `RUNTIME_INFO_FLAGS` las constantes de arquitectura de la enumeración a la vez:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,13 +115,13 @@ HRESULT GetRequestedRuntimeInfo (
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE. h  
+ **Encabezado:** MScorEE.h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** Mscoree.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)

@@ -1,20 +1,20 @@
 ---
-title: 'Servicio: Duración de llamadas'
+title: 'Servicio: Duración de las llamadas'
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
-ms.openlocfilehash: 39f8d81d008283888db3529e4b99b1db503ce038
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c6232047de04838d0241c44f935e43841a0800c
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916141"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674880"
 ---
-# <a name="service-calls-duration"></a>Servicio: Duración de llamadas
-Nombre del contador: Duración de llamadas  
+# <a name="service-calls-duration"></a>Servicio: Duración de las llamadas
+Nombre del contador: Duración de las llamadas  
   
 ## <a name="description"></a>Descripción  
- La duración media de las llamadas a este servicio. La duración promedio se calcula en función de esta ecuación: (N1-N0)/(D1-D0).  
+ La duración media de las llamadas a este servicio. La duración media se calcula aplicando esta ecuación: (N1-N0)/(D1-D0).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [PERF_AVERAGE_TIMER](https://go.microsoft.com/fwlink/?LinkID=95015)
+- [PERF_AVERAGE_TIMER](https://docs.microsoft.com/previous-versions/windows/embedded/ms938538(v%3dmsdn.10))

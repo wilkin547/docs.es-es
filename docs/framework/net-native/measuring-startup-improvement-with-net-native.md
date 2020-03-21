@@ -2,12 +2,12 @@
 title: Medir la mejora del inicio con .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 453159c3fd0590a1ed549bb7e6f8c171aac7d064
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937746"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180998"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medir la mejora del inicio con .NET Native
 .NET Native mejora significativamente el tiempo de inicio de las aplicaciones. Esta mejora es especialmente palpable en los dispositivos portátiles de baja potencia y con aplicaciones complejas. Este tema sirve de introducción a la instrumentación básica necesaria para medir esta mejora de inicio.  
@@ -60,7 +60,7 @@ ms.locfileid: "75937746"
  PerfView también se puede invocar desde la línea de comandos. Para registrar solo los eventos de su proveedor, abra una ventana de símbolo del sistema y escriba el comando:  
   
 ```console
-perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
+perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
  donde:  
@@ -93,8 +93,8 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Seleccione todos los eventos que se muestran en el panel izquierdo (Ctrl+A) y presione la tecla **ENTRAR**. Ahora, debería poder ver las marcas de tiempo de cada evento. Estas marcas hacen referencia al inicio del seguimiento, por lo que debe restar la hora de cada evento de la hora de inicio del proceso para averiguar el tiempo transcurrido desde el inicio. Si usa Ctrl+clic para seleccionar dos marcas de tiempo, verá la diferencia entre ambas en la barra de estado de la parte inferior de la página. Esto hace que sea muy sencillo ver en pantalla el tiempo transcurrido entre dos eventos (incluido el inicio del proceso). Puede abrir el menú contextual de la vista y seleccionar diversas opciones de gran utilidad, como exportar a un archivo CSV o abrir Microsoft Excel para guardar o procesar los datos.  
   
- Al repetir el procedimiento para la aplicación original y la versión que creó mediante la cadena de herramientas de .NET Native, puede comparar la diferencia de rendimiento.   Normalmente, las aplicaciones .NET Native se inician más rápido que las aplicaciones nativas de non-.NET. Si le interesa seguir ahondando en este asunto, PerfView también es capaz identificar las partes del código que consumen más tiempo. Para obtener más información, vea los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o lea la [entrada de blog de Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
+ Al repetir el procedimiento para la aplicación original y la versión que creó mediante la cadena de herramientas de .NET Native, puede comparar la diferencia de rendimiento.   Las aplicaciones nativas de .NET generalmente se inician más rápido que non-.NET aplicaciones nativas. Si le interesa seguir ahondando en este asunto, PerfView también es capaz identificar las partes del código que consumen más tiempo. Para obtener más información, vea los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o lea la [entrada de blog de Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.Tracing.EventSource>

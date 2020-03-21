@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 7f2e644340a2ec7fe807830422b927ce811ddcf9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790573"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178382"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName (Método)
-Obtiene la ruta de acceso completa del archivo ejecutable para el proceso al que hace referencia esta [ICorPublishProcess](icorpublishprocess-interface.md).  
+Obtiene la ruta de acceso completa del ejecutable para el proceso al que hace referencia este [ICorPublishProcess](icorpublishprocess-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetDisplayName (  
-    [in]  ULONG32                    cchName,   
+    [in]  ULONG32                    cchName,
     [out] ULONG32                    *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR                        *szName  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `cchName`  
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- enuncia Número de caracteres anchos devueltos en la matriz de `szName`.  
+ [fuera] El número de caracteres `szName` anchos devueltos en la matriz.  
   
  `szName`  
- enuncia Una matriz para almacenar el nombre, incluida la ruta de acceso completa, del ejecutable. El nombre termina en NULL.  
+ [fuera] Matriz para almacenar el nombre, incluida la ruta de acceso completa, del ejecutable. El nombre es null-terminated.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorPub. idl, CorPub. h  
+ **Encabezado:** CorPub.idl, CorPub.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorPublishProcess (interfaz)](icorpublishprocess-interface.md)
+- [ICorPublishProcess (Interfaz)](icorpublishprocess-interface.md)

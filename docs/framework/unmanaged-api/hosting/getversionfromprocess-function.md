@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127035"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178129"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess (Función)
-Obtiene el número de versión del Common Language Runtime (CLR) que está asociado al identificador de proceso especificado.  
+Obtiene el número de versión de Common Language Runtime (CLR) asociado al identificador de proceso especificado.  
   
- Esta función está en desuso en el .NET Framework 4.  
+ Esta función ha quedado en desuso en .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
-    [in]  HANDLE  hProcess,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  HANDLE  hProcess,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `hProcess`  
- de Identificador de un proceso.  
+ [en] Un identificador de un proceso.  
   
  `pVersion`  
- enuncia Un búfer que contiene la cadena del número de versión cuando se completa correctamente el método.  
+ [fuera] Un búfer que contiene la cadena de número de versión al completar correctamente el método.  
   
  `cchBuffer`  
- de Longitud del búfer de versión.  
+ [en] La longitud del búfer de versión.  
   
  `pdwLength`  
- enuncia Puntero a la longitud de la cadena del número de versión.  
+ [fuera] Un puntero a la longitud de la cadena de número de versión.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los valores siguientes.  
+ Este método devuelve códigos de error estándar del modelo de objetos componentes (COM), tal como se define en WinError.h, además de los siguientes valores.  
   
-|Código devuelto|Descripción|  
+|Código de retorno|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`pVersion` es NULL y `cchBuffer` no es null, o viceversa.<br /><br /> o bien<br /><br /> `hProcess` no es un identificador válido para un proceso.<br /><br /> o bien<br /><br /> CLR no está cargado.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` es null o menor que la longitud de la cadena de versión.|  
+|E_INVALIDARG|`pVersion`es null `cchBuffer` y no es null, o viceversa.<br /><br /> O bien<br /><br /> `hProcess`no es un identificador válido para un proceso.<br /><br /> O bien<br /><br /> El CLR no se carga.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`es null o menor que la longitud de la cadena de versión.|  
 |E_NOTIMPL|Este método no está disponible en el sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE. h  
+ **Encabezado:** MScorEE.h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** Mscoree.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)

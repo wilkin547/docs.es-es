@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130042"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180463"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 .NET Framework proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
@@ -32,9 +32,9 @@ ms.locfileid: "73130042"
 > [!NOTE]
 > Los permisos necesarios para la reflexión en código y la emisión de código han cambiado en las sucesivas versiones de .NET Framework. Vea el apartado [Información de versión](#Version_Information) más adelante en este tema.  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Ensamblados dinámicos  
- Los ensamblados dinámicos se crean mediante sobrecargas del método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La mayoría de las sobrecargas de este método quedaron obsoletas en .NET Framework 4 debido a la eliminación de la directiva de seguridad de toda la máquina. (Consulte [cambios de seguridad](../security/security-changes.md)). Las sobrecargas restantes se pueden ejecutar con cualquier código, independientemente del nivel de confianza. Estas sobrecargas se dividen en dos grupos: las que especifican una lista de atributos que se aplican al ensamblado dinámico cuando este se crea y las que no lo hacen. Si no se especifica el modelo de transparencia para el ensamblado durante su creación, mediante la aplicación del atributo <xref:System.Security.SecurityRulesAttribute>, el modelo de transparencia se hereda del ensamblado emisor.  
+ Los ensamblados dinámicos se crean mediante sobrecargas del método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La mayoría de las sobrecargas de este método quedaron obsoletas en .NET Framework 4 debido a la eliminación de la directiva de seguridad de toda la máquina. (Consulte [Cambios](../security/security-changes.md)de seguridad .) Las sobrecargas restantes se pueden ejecutar mediante cualquier código, independientemente del nivel de confianza. Estas sobrecargas se dividen en dos grupos: las que especifican una lista de atributos que se aplican al ensamblado dinámico cuando este se crea y las que no lo hacen. Si no se especifica el modelo de transparencia para el ensamblado durante su creación, mediante la aplicación del atributo <xref:System.Security.SecurityRulesAttribute>, el modelo de transparencia se hereda del ensamblado emisor.  
   
 > [!NOTE]
 > Los atributos que se aplican al ensamblado dinámico después de crearlo —mediante el método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>— no serán efectivos hasta que el ensamblado se guarde en el disco y se vuelva a cargar en la memoria.  
@@ -57,7 +57,7 @@ ms.locfileid: "73130042"
   
 - Los símbolos de depuración no se generan. (Los conjuntos de permisos `Internet` y `LocalIntranet` no incluyen los permisos necesarios).  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>Métodos dinámicos hospedados de forma anónima  
  Los métodos dinámicos hospedados de forma anónima se crean mediante los dos constructores <xref:System.Reflection.Emit.DynamicMethod> que no especifican un tipo o módulo asociado, <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> y <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>. Estos constructores colocan los métodos dinámicos en un ensamblado proporcionado por el sistema, de plena confianza y seguridad transparente. No se requieren permisos para usar estos constructores o emitir código para los métodos dinámicos.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73130042"
 > [!NOTE]
 > Los métodos dinámicos no admiten símbolos de depuración.  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Métodos dinámicos asociados a ensamblados existentes  
  Para asociar un método dinámico con un tipo o módulo en un ensamblado existente, use cualquiera de los constructores <xref:System.Reflection.Emit.DynamicMethod> que especifican el tipo o módulo asociado. Los permisos necesarios para llamar a estos constructores varían, ya que al asociar un método dinámico con un tipo o módulo existente, el método dinámico obtiene acceso a los miembros y tipos no públicos:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73130042"
 > [!NOTE]
 > Los métodos dinámicos no admiten símbolos de depuración.  
   
-<a name="Version_Information"></a>   
+<a name="Version_Information"></a>
 ## <a name="version-information"></a>Información de versión  
  A partir de .NET Framework 4, se elimina la directiva de seguridad de todo el equipo y la transparencia en seguridad se convierte en el mecanismo de cumplimiento predeterminado. Vea [Security Changes](../security/security-changes.md) (Cambios de seguridad).  
   
@@ -151,7 +151,7 @@ ms.locfileid: "73130042"
 ### <a name="obtaining-information-on-types-and-members"></a>Obtener información sobre tipos y miembros  
  A partir de .NET Framework 2.0, no se requieren permisos para obtener información sobre tipos y miembros no públicos. A fin de obtener la información necesaria para emitir métodos dinámicos, se usa la reflexión. Por ejemplo, los objetos <xref:System.Reflection.MethodInfo> se usan para emitir llamadas a métodos. Las versiones anteriores de .NET Framework requieren <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obtener más información, vea el artículo sobre [consideraciones de seguridad sobre la reflexión](security-considerations-for-reflection.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Consideraciones de seguridad sobre la reflexión](security-considerations-for-reflection.md)
 - [Emitir métodos y ensamblados dinámicos](emitting-dynamic-methods-and-assemblies.md)

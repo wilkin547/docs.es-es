@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4932e1fd6294f4a01264e982835dd0707324082a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136922"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178227"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading (Función)
 Notifica al cargador cuando se descargan las imágenes del módulo administrado.  
@@ -29,24 +29,24 @@ Notifica al cargador cuando se descargan las imágenes del módulo administrado.
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-STDAPI (VOID) _CorImageUnloading(   
+STDAPI (VOID) _CorImageUnloading(
    [in] PVOID* ImageBase  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `ImageBase`  
- de Puntero a la ubicación inicial de la imagen que se va a descargar.  
+ [en] Puntero a la ubicación inicial de la imagen que se va a descargar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

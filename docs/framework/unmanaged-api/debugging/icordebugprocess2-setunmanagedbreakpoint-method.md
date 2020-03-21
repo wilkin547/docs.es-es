@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137178"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178648"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint (Método)
 Establece un punto de interrupción no administrado en el desplazamiento de imagen nativo especificado.  
@@ -31,7 +31,7 @@ Establece un punto de interrupción no administrado en el desplazamiento de imag
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,19 +39,19 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- de Objeto `CORDB_ADDRESS` que especifica el desplazamiento de la imagen nativa.  
+ [en] Objeto `CORDB_ADDRESS` que especifica el desplazamiento de imagen nativa.  
   
  `bufsize`  
- de Tamaño, en bytes, de la matriz de `buffer`.  
+ [en] El tamaño, en bytes, de la `buffer` matriz.  
   
  `buffer`  
- enuncia Una matriz que contiene el código de operación reemplazado por el punto de interrupción.  
+ [fuera] Matriz que contiene el código de operación que se reemplaza por el punto de interrupción.  
   
  `bufLen`  
- enuncia Puntero al número de bytes devuelto en la matriz de `buffer`.  
+ [fuera] Puntero al número de bytes `buffer` devueltos en la matriz.  
   
-## <a name="remarks"></a>Comentarios  
- Si el desplazamiento de la imagen nativa se encuentra dentro del Common Language Runtime (CLR), se omitirá el punto de interrupción. Esto permite al CLR evitar el envío de un punto de interrupción fuera de banda, cuando el depurador establece el punto de interrupción.  
+## <a name="remarks"></a>Observaciones  
+ Si el desplazamiento de imagen nativa está dentro de Common Language Runtime (CLR), se omitirá el punto de interrupción. Esto permite que CLR evite distribuir un punto de interrupción fuera de banda, cuando el depurador establece el punto de interrupción.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

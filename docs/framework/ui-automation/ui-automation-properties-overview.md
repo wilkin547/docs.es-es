@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 2f96f3c7261882af58cd10038d729c4e723d6fa0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447954"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179868"
 ---
 # <a name="ui-automation-properties-overview"></a>Información general acerca de las propiedades de UI Automation
 > [!NOTE]
@@ -20,17 +20,17 @@ ms.locfileid: "74447954"
   
  En esta sección se ofrece información general sobre las propiedades de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . En los temas siguientes se proporciona información más específica:  
   
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+- [Propiedades de UI Automation para clientes](ui-automation-properties-for-clients.md)  
   
 - [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)  
   
-<a name="Property_Identifiers"></a>   
+<a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>Identificadores de propiedad  
  Cada propiedad se identifica mediante un número y un nombre. Los nombres de las propiedades se utilizan únicamente para la depuración y el diagnóstico. Los proveedores usan los identificadores numéricos para identificar las solicitudes de propiedad entrantes. Las aplicaciones cliente, sin embargo, solo utilizan <xref:System.Windows.Automation.AutomationProperty>, que encapsula el número y el nombre, para identificar las propiedades que quieren recuperar.  
   
  Los objetos<xref:System.Windows.Automation.AutomationProperty> que representan propiedades determinadas están disponibles como campos en diversas clases. Por motivos de seguridad, los proveedores de Automatización de la interfaz de usuario obtienen estos objetos de un conjunto independiente de clases que están incluidas en Uiautomationtypes.dll.  
   
- En la tabla siguiente se clasifican las propiedades por las clases que contienen los identificadores de <xref:System.Windows.Automation.AutomationProperty>.  
+ En la tabla siguiente se clasifican <xref:System.Windows.Automation.AutomationProperty>las propiedades por las clases que contienen los términos.  
   
 |Tipos de propiedades|Los clientes obtienen los identificadores de|Los proveedores obtienen los identificadores de|  
 |-------------------------|--------------------------|----------------------------|  
@@ -51,18 +51,18 @@ ms.locfileid: "74447954"
 |Capacidades de lectura y escritura y valor de un elemento que tiene un valor|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
 |Capacidades y estado de una ventana|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
-<a name="Properties_by_Category"></a>   
+<a name="Properties_by_Category"></a>
 ## <a name="properties-by-category"></a>Propiedades por categoría  
- En las siguientes tablas se clasifican las propiedades cuyos identificadores se encuentran en <xref:System.Windows.Automation.AutomationElement> y <xref:System.Windows.Automation.AutomationElementIdentifiers>. Estas propiedades son comunes para todos los controles. Salvo algunas de ellas, todas suelen ser estáticas a lo largo de la duración de la aplicación de proveedor; la mayoría de propiedades dinámicas están asociadas con patrones de control.  
+ En las tablas siguientes se clasifican <xref:System.Windows.Automation.AutomationElement> las <xref:System.Windows.Automation.AutomationElementIdentifiers>propiedades en las que se encuentran los guisos y . Estas propiedades son comunes para todos los controles. Salvo algunas de ellas, todas suelen ser estáticas a lo largo de la duración de la aplicación de proveedor; la mayoría de propiedades dinámicas están asociadas con patrones de control.  
   
  En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
 > Para obtener información específica sobre cada propiedad, siga el vínculo de la columna **Property Access** .  
   
-### <a name="display-characteristics"></a>Mostrar características  
+### <a name="display-characteristics"></a>Características de presentación  
   
-|Identificador de propiedad|Property Access|  
+|Identificador de la propiedad|Property Access|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.CultureProperty>|N/D|  
@@ -70,9 +70,9 @@ ms.locfileid: "74447954"
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Elemento Type  
+### <a name="element-type"></a>Tipo de elemento  
   
-|Identificador de propiedad|Property Access|  
+|Identificador de la propiedad|Property Access|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
@@ -82,7 +82,7 @@ ms.locfileid: "74447954"
   
 ### <a name="identification"></a>Identificación  
   
-|Identificador de propiedad|Property Access|  
+|Identificador de la propiedad|Property Access|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClassNameProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName%2A>|  
@@ -95,7 +95,7 @@ ms.locfileid: "74447954"
   
 ### <a name="interaction"></a>Interacción  
   
-|Identificador de propiedad|Property Access|  
+|Identificador de la propiedad|Property Access|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey%2A>|  
@@ -106,7 +106,7 @@ ms.locfileid: "74447954"
   
 ### <a name="support-for-patterns"></a>Compatibilidad con patrones  
   
-|Identificador de propiedad|Property Access|  
+|Identificador de la propiedad|Property Access|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsExpandCollapsePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
@@ -129,13 +129,13 @@ ms.locfileid: "74447954"
   
 ### <a name="miscellaneous"></a>Varios  
   
-|Identificador de propiedad|Property Access|  
+|Identificador de la propiedad|Property Access|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
-<a name="Localization"></a>   
+<a name="Localization"></a>
 ## <a name="localization"></a>Localización  
  Los proveedores[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben presentar las siguientes propiedades en el idioma del sistema operativo:  
   
@@ -149,7 +149,7 @@ ms.locfileid: "74447954"
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
-<a name="Properties_and_Events"></a>   
+<a name="Properties_and_Events"></a>
 ## <a name="properties-and-events"></a>Propiedades y eventos  
  El concepto de eventos de cambio de propiedad está estrechamente relacionado con las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Para las propiedades dinámicas, la aplicación cliente necesita una manera de saber que un valor de propiedad ha cambiado, por lo que puede actualizar su caché de información o reaccionar a la nueva información de alguna otra manera.  
   
@@ -159,11 +159,11 @@ ms.locfileid: "74447954"
   
  Los clientes se ponen a la escucha de eventos suscribiéndose a ellos. La suscripción a eventos supone la creación de métodos delegados que pueden controlar los eventos y, después, pasan los métodos a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] junto con los eventos específicos que se tratarán en esos métodos. Para los eventos de cambio de propiedad en concreto, los clientes deben implementar <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
+- [Almacenar en caché en los clientes de automatización de la interfaz de usuario](caching-in-ui-automation-clients.md)
+- [Propiedades de UI Automation para clientes](ui-automation-properties-for-clients.md)
 - [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
 - [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](return-properties-from-a-ui-automation-provider.md)
-- [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](raise-events-from-a-ui-automation-provider.md)
+- [Devolución de propiedades por parte de un proveedor de UI Automation](return-properties-from-a-ui-automation-provider.md)
+- [Provocar eventos desde un proveedor de UI Automation](raise-events-from-a-ui-automation-provider.md)

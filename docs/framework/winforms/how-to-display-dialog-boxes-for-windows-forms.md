@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3625080c7c322e297a9de92e4f95a40c0caf3e72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739461"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181973"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Cómo: Mostrar cuadros de diálogo de Windows Forms
-Se muestra un cuadro de diálogo de la misma manera que se muestra cualquier otro formulario en una aplicación. El formulario de inicio se carga automáticamente cuando se ejecuta la aplicación. Para que aparezca un segundo formulario o cuadro de diálogo en la aplicación, escriba el código que desea cargar y mostrar. Del mismo modo, para que el formulario o el cuadro de diálogo desaparezcan, escriba código para descargarlo u ocultarlo.  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Cómo: Mostrar cuadros de diálogo de formularios Windows Forms
+Se muestra un cuadro de diálogo de la misma manera que se muestra cualquier otro formulario en una aplicación. El formulario de inicio se carga automáticamente cuando se ejecuta la aplicación. Para que aparezca un segundo formulario o cuadro de diálogo en la aplicación, escriba código para cargarlo y mostrarlo. Del mismo modo, para que el formulario o el cuadro de diálogo desaparezcan, escriba código para descargarlo u ocultarlo.  
   
 ### <a name="to-display-a-dialog-box"></a>Para mostrar un cuadro de diálogo  
   
-1. Navegue hasta el controlador de eventos con el que desea abrir el cuadro de diálogo. Esto puede ocurrir cuando se selecciona un comando de menú, cuando se hace clic en un botón o cuando se produce cualquier otro evento.  
+1. Vaya al controlador de eventos con el que desea abrir el cuadro de diálogo. Esto puede suceder cuando se selecciona un comando de menú, cuando se hace clic en un botón o cuando se produce cualquier otro evento.  
   
 2. En el controlador de eventos, agregue código para abrir el cuadro de diálogo. En este ejemplo, se utiliza un evento de clic de botón para mostrar el cuadro de diálogo:  
   
@@ -35,7 +35,7 @@ Se muestra un cuadro de diálogo de la misma manera que se muestra cualquier otr
     ```  
   
     ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)   
+    private void button1_Click(object sender, System.EventArgs e)
     {  
        Form dlg1 = new Form();  
        dlg1.ShowDialog();  
@@ -43,7 +43,7 @@ Se muestra un cuadro de diálogo de la misma manera que se muestra cualquier otr
     ```  
   
     ```cpp  
-    private:   
+    private:
       void button1_Click(System::Object ^ sender,  
         System::EventArgs ^ e)  
       {  

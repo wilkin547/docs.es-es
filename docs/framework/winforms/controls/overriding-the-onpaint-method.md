@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 863726a6264f01de9f00296b4a64b9fd1bb96765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506195"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182043"
 ---
 # <a name="overriding-the-onpaint-method"></a>Reemplazar el método OnPaint
-Los pasos básicos para reemplazar un evento definido en .NET Framework son idénticos y se resumen en la lista siguiente.  
+Los pasos básicos para reemplazar cualquier evento definido en .NET Framework son idénticos y se resumen en la lista siguiente.  
   
-#### <a name="to-override-an-inherited-event"></a>Para reemplazar un evento heredado  
+#### <a name="to-override-an-inherited-event"></a>Para anular un evento heredado  
   
-1. Invalidar protegido `On` *EventName* método.  
+1. Invalidar el `On`protegido *EventName* método.  
   
-2. Llame a la `On` *EventName* método de la clase base desde invalidado `On` *EventName* método, por lo que los delegados registrados reciban el evento.  
+2. Llame al método *EventName* de la `On`clase base desde el método *EventName* invalidado, para que los delegados registrados reciban el evento. `On`  
   
- El <xref:System.Windows.Forms.Control.Paint> evento se explica en detalle aquí porque cada control de Windows Forms debe reemplazar el <xref:System.Windows.Forms.Control.Paint> eventos que hereda de <xref:System.Windows.Forms.Control>. La base de <xref:System.Windows.Forms.Control> no sabe cómo debe dibujarse un control derivado de clase y no proporciona ninguna lógica de dibujo en el <xref:System.Windows.Forms.Control.OnPaint%2A> método. El <xref:System.Windows.Forms.Control.OnPaint%2A> método <xref:System.Windows.Forms.Control> simplemente envía el <xref:System.Windows.Forms.Control.Paint> eventos a los receptores de eventos registrado.  
+ El <xref:System.Windows.Forms.Control.Paint> evento se describe en detalle aquí porque <xref:System.Windows.Forms.Control.Paint> cada control de <xref:System.Windows.Forms.Control>formularios Windows Forms debe invalidar el evento del que hereda . La <xref:System.Windows.Forms.Control> clase base no sabe cómo se debe dibujar un control derivado <xref:System.Windows.Forms.Control.OnPaint%2A> y no proporciona ninguna lógica de pintura en el método. El <xref:System.Windows.Forms.Control.OnPaint%2A> método <xref:System.Windows.Forms.Control> de simplemente <xref:System.Windows.Forms.Control.Paint> distribuye el evento a los receptores de eventos registrados.  
   
- Si ha trabajado en el ejemplo de [Cómo: Desarrollar un Control de formularios de Windows Simple](how-to-develop-a-simple-windows-forms-control.md), ha visto un ejemplo de cómo reemplazar el <xref:System.Windows.Forms.Control.OnPaint%2A> método. El fragmento de código siguiente procede de ese ejemplo.  
+ Si ha trabajado a través del ejemplo en [Cómo: desarrollar un](how-to-develop-a-simple-windows-forms-control.md)control de <xref:System.Windows.Forms.Control.OnPaint%2A> formularios Windows Forms simple , ha visto un ejemplo de invalidación del método. El siguiente fragmento de código se toma de ese ejemplo.  
   
 ```vb  
 Public Class FirstControl  
@@ -41,7 +41,7 @@ Public Class FirstControl
       ' Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, New SolidBrush(ForeColor), RectangleF.op_Implicit(ClientRectangle))  
    End Sub  
-End Class   
+End Class
 ```  
   
 ```csharp  
@@ -52,11 +52,11 @@ public class FirstControl : Control {
       base.OnPaint(e);  
       // Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);  
-   }   
-}   
+   }
+}
 ```  
   
- El <xref:System.Windows.Forms.PaintEventArgs> clase contiene los datos de la <xref:System.Windows.Forms.Control.Paint> eventos. Tiene dos propiedades, como se muestra en el código siguiente.  
+ La <xref:System.Windows.Forms.PaintEventArgs> clase contiene <xref:System.Windows.Forms.Control.Paint> datos para el evento. Tiene dos propiedades, como se muestra en el código siguiente.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -68,7 +68,7 @@ Public Class PaintEventArgs
   
    Public ReadOnly Property Graphics() As System.Drawing.Graphics  
       ...  
-   End Property   
+   End Property
    ...  
 End Class  
 ```  
@@ -82,12 +82,12 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es el rectángulo que se va a pintar y el <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propiedad hace referencia a un <xref:System.Drawing.Graphics> objeto. Las clases en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres se administran las clases que proporcionan acceso a la funcionalidad de GDI +, la nueva biblioteca de gráficos de Windows. La <xref:System.Drawing.Graphics> objeto tiene métodos para dibujar puntos, cadenas, líneas, arcos, elipses y muchas otras formas.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>es el rectángulo que se <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> va a <xref:System.Drawing.Graphics> pintar, y la propiedad hace referencia a un objeto. Las clases <xref:System.Drawing?displayProperty=nameWithType> del espacio de nombres son clases administradas que proporcionan acceso a la funcionalidad de GDI+, la nueva biblioteca de gráficos de Windows. El <xref:System.Drawing.Graphics> objeto tiene métodos para dibujar puntos, cadenas, líneas, arcos, elipses y muchas otras formas.  
   
- Un control invoca su <xref:System.Windows.Forms.Control.OnPaint%2A> método cada vez que necesita cambiar su apariencia visual. Este método a su vez provoca la <xref:System.Windows.Forms.Control.Paint> eventos.  
+ Un control invoca <xref:System.Windows.Forms.Control.OnPaint%2A> su método cada vez que necesita cambiar su visualización visual. Este método a su <xref:System.Windows.Forms.Control.Paint> vez provoca el evento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Eventos](../../../standard/events/index.md)
 - [Representar un control de formularios Windows Forms](rendering-a-windows-forms-control.md)
-- [Definir un evento en los controles de Windows Forms](defining-an-event-in-windows-forms-controls.md)
+- [Definir un evento en los controles de formularios Windows Forms](defining-an-event-in-windows-forms-controls.md)

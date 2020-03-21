@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: crear y establecer un representador personalizado para el control ToolStrip'
+title: 'Cómo: Crear y establecer un renderizador personalizado para el ToolStrip Control'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: ad5ced42754fba6a714452220dd824c4f54fb5e5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 49db0d785155f19b7220ac64011eaf4253aaa7e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743409"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182403"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Cómo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms
-los controles de <xref:System.Windows.Forms.ToolStrip> proporcionan una compatibilidad sencilla con los temas y los estilos. Puede lograr una apariencia y un comportamiento completamente personalizados (aspecto y funcionamiento) estableciendo la propiedad <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> o la propiedad <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> en un representador personalizado.  
+<xref:System.Windows.Forms.ToolStrip>los controles dan un fácil apoyo a los temas y estilos. Puede lograr una apariencia y un comportamiento completamente personalizados (aspecto y sensación) estableciendo la <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> propiedad o la <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> propiedad en un representador personalizado.  
   
- Puede asignar representadores a cada <xref:System.Windows.Forms.ToolStrip>individual, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>o <xref:System.Windows.Forms.StatusStrip> control, o puede usar la propiedad <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> para afectar a todos los objetos estableciendo la propiedad <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> en <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
+ Puede asignar representadores a <xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.MenuStrip>cada <xref:System.Windows.Forms.ContextMenuStrip>control <xref:System.Windows.Forms.StatusStrip> individual, , , <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> o , o puede <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> utilizar <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>la propiedad para afectar a todos los objetos estableciendo la propiedad en .  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> devuelve <xref:System.Windows.Forms.ToolStripRenderMode.Custom> solo si el valor de <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> no está `null`.  
+> <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>devuelve <xref:System.Windows.Forms.ToolStripRenderMode.Custom> solo si <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> el `null`valor de no es .  
   
 ### <a name="to-create-a-custom-renderer"></a>Para crear un representador personalizado  
   
-1. Extienda la clase <xref:System.Windows.Forms.ToolStripRenderer>.  
+1. Amplíe <xref:System.Windows.Forms.ToolStripRenderer> la clase.  
   
-2. Implemente la representación personalizada deseada invalidando adecuado *en...* members  
+2. Implemente la representación personalizada deseada reemplazando el *on...* members  
   
     ```vb  
     Public Class RedTextRenderer  
         Inherits System.Windows.Forms.ToolStripRenderer  
         Protected Overrides Sub OnRenderItemText(ByVal e As _  
-            ToolStripItemTextRenderEventArgs)   
+            ToolStripItemTextRenderEventArgs)
             e.TextColor = Color.Red  
             e.TextFont = New Font("Helvetica", 7, FontStyle.Bold)  
             MyBase.OnRenderItemText(e)  
@@ -57,9 +57,9 @@ los controles de <xref:System.Windows.Forms.ToolStrip> proporcionan una compatib
     }  
     ```  
   
-### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Para establecer que el representador personalizado sea el representador actual  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Para establecer el representador personalizado para que sea el representador actual  
   
-1. Para establecer el representador personalizado para un <xref:System.Windows.Forms.ToolStrip>, establezca la propiedad <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> en el representador personalizado.  
+1. Para establecer el representador personalizado para uno, <xref:System.Windows.Forms.ToolStrip>establezca la propiedad en <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> el representador personalizado.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ los controles de <xref:System.Windows.Forms.ToolStrip> proporcionan una compatib
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2. O bien, para establecer el representador personalizado para todas las clases de <xref:System.Windows.Forms.ToolStrip> incluidas en la aplicación: establezca la propiedad <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> en el representador personalizado y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> en <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+2. O bien, para establecer <xref:System.Windows.Forms.ToolStrip> el representador personalizado para <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> todas las clases <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> contenidas <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>en la aplicación: establezca la propiedad en el representador personalizado y establezca la propiedad en .  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  

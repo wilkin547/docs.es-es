@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438129"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178316"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 (Método)
 Abre un método y proporciona su desplazamiento de sección real en la imagen.  
@@ -28,7 +28,7 @@ Abre un método y proporciona su desplazamiento de sección real en la imagen.
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT OpenMethod2(   
+HRESULT OpenMethod2(
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  
     [in] ULONG32 offset);  
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parámetros  
  `method`  
- de Símbolo (token) de metadatos para el método que se va a abrir.  
+ [en] El token de metadatos para el método que se va a abrir.  
   
  `isect`  
- de El desplazamiento de la sección en la imagen.  
+ [en] El desplazamiento de sección en la imagen.  
   
  `offset`  
- de Desplazamiento de la imagen.  
+ [en] El desplazamiento en la imagen.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; de lo contrario, E_FAIL o algún otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym. idl, CorSym. h  
+ **Encabezado:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ISymUnmanagedWriter3 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [OpenMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [ISymUnmanagedWriter3 (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [Método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

@@ -2,12 +2,12 @@
 title: Crear aplicaciones de multidifusión mediante el transporte UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6825aaafe87ae362fd9266f7c7a82a36d054a69f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857199"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185255"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Crear aplicaciones de multidifusión mediante el transporte UDP
 Las aplicaciones de multidifusión envían pequeños mensajes a un gran número de destinatarios al mismo tiempo sin necesidad de establecer conexiones punto a punto. El énfasis de esas aplicaciones es la velocidad sobre la conconfiabilidad. Es decir es más importante enviar datos puntualmente que asegurarse de que cualquier mensaje concreto se reciba realmente. WCF admite ahora la escritura de aplicaciones de multidifusión mediante <xref:System.ServiceModel.UdpBinding>. Este transporte es útil en escenarios donde un servicio necesita enviar pequeños mensajes a varios clientes simultáneamente. Una aplicación de cotización bursátil es un ejemplo de este tipo de servicio.  
@@ -71,7 +71,7 @@ string serviceAddress = "soap.udp://224.0.0.1:40000";
 UdpBinding myBinding = new UdpBinding();
 
 // Channel factory
-ChannelFactory<IStockTicker> factory 
+ChannelFactory<IStockTicker> factory
     = new ChannelFactory<IStockTicker>(myBinding,
                 new EndpointAddress(serviceAddress));
 
@@ -91,7 +91,7 @@ while (true)
  Este código genera información bursátil y usa el contrato de servicio IStockTicker para enviar mensajes de multidifusión para llamar a servicios que escuchan en la dirección UDP correcta.  
   
 ### <a name="udp-and-reliable-messaging"></a>Mensajería UDP y de confianza  
- El enlace UDP no admite mensajería de confianza debido a la naturaleza ligera del protocolo UDP. Si necesita confirmar que los mensajes son recibidos por un punto de conexión remoto, use un transporte que admita mensajería de confianza como HTTP o TCP. Para obtener más información sobre mensajería confiable, consulte https://go.microsoft.com/fwlink/?LinkId=231830  
+ El enlace UDP no admite mensajería de confianza debido a la naturaleza ligera del protocolo UDP. Si necesita confirmar que los mensajes son recibidos por un punto de conexión remoto, use un transporte que admita mensajería de confianza como HTTP o TCP. Para obtener más información acerca de la mensajería confiable, consultehttps://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Mensajería bidireccional de multidifusión  
  Mientras que los mensajes de multidifusión suelen ser unidireccionales, el UdpBinding admite intercambio de mensajes de solicitud y respuesta. Los mensajes enviados mediante el transporte UDP contienen direcciones From y To. Se ha de tener cuidado al usar la dirección From porque podría cambiarse malintencionadamente en la ruta.  La dirección se puede comprobar mediante el código siguiente:  
@@ -112,7 +112,7 @@ else
   
  Este código comprueba el primer byte de la dirección From para ver si contiene 0xE0, lo que significa que la dirección es una dirección de multidifusión.  
   
-### <a name="security-considerations"></a>Consideraciones de seguridad  
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
  Al escuchar mensajes de multidifusión se envía un paquete ICMP al enrutador para notificarle que está escuchando en la dirección de multidifusión. Cualquier usuario de la subred local que tenga permisos podría escuchar estos tipos de paquetes y determinar en qué dirección de multidifusión y puerto se está escuchando.  
   
  No use la dirección IP del remitente para ningún propósito de seguridad. Esta información se puede suplantar y puede hacer que una aplicación envíe respuestas al equipo incorrecto. Una manera de resolver esta amenaza es habilitar la seguridad de nivel de mensaje. En el nivel de red también se puede usar IPsec (protocolo de seguridad de Internet) o NAP (Protección de acceso a redes).

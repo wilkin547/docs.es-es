@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1b61c18c801059e95cd0b13a3135132a583882f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345147"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183340"
 ---
 # <a name="srmp"></a>SRMP
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ) a través de HTTP.  
@@ -18,27 +18,27 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .  
   
-4. Antes de ejecutar el ejemplo en **Agregar o quitar componentes de Windows**, asegúrese de que MSMQ está instalado con compatibilidad con http. Instalando la compatibilidad HTTP se instala automáticamente Internet Information Services (IIS) y se agrega la compatibilidad con protocolos en IIS para MSMQ.  
+4. Antes de ejecutar el ejemplo en **Agregar o quitar componentes**de Windows , asegúrese de que MSMQ está instalado con compatibilidad con HTTP. Instalando la compatibilidad HTTP se instala automáticamente Internet Information Services (IIS) y se agrega la compatibilidad con protocolos en IIS para MSMQ.  
   
 5. Si desea asegurarse de que HTTP se utiliza para la comunicación, puede permitirle a MSMQ ejecutarse en modo endurecido. Esto asegurar que ningún mensaje dirigido a cualquier cola hospedada en el equipo puede llegar utilizando cualquier transporte no HTTP.  
   
-6. Después de haber seleccionado MSMQ para que se ejecute en modo protegido, el equipo requiere un reinicio en Windows Server 2003.  
+6. Después de seleccionar MSMQ para ejecutarse en modo protegido, el equipo requiere un rearranque en Windows Server 2003.  
   
 7. Ejecute el servicio.  
   
 8. Ejecute el cliente. Aseguúrese de que cambia la dirección del extremo para señalar al nombre de equipo o dirección IP en lugar del host local. El cliente envía un mensaje y sale.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  Para ejecutar este ejemplo, IIS se debe instalar en el servicio y en los equipos cliente además de en MSMQ.  
   
-## <a name="demonstrates"></a>Demostraciones  
- En el ejemplo se muestra el envío de mensajes en cola WCF mediante MSMQ sobre HTTP. Esto también se denomina mensajería de SRMP. Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP. Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola. SRMP Secure habilita el uso de HTTPS.  
+## <a name="demonstrates"></a>Muestra  
+ En el ejemplo se muestra cómo enviar mensajes en cola WCF mediante MSMQ a través de HTTP. Esto también se denomina mensajería de SRMP. Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP. Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola. SRMP Secure habilita el uso de HTTPS.  
   
 ## <a name="example"></a>Ejemplo  
  El código muestra de este ejemplo está basado en el ejemplo de transacción. El modo en que se envía un mensaje a la cola y se recibe un mensaje de la cola utilizando SRMP es igual al modo en que se envían y reciben mensajes mediante un protocolo Native.  
@@ -57,9 +57,9 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
       <!-- Define NetMsmqEndpoint -->  
       <endpoint name="OrderProcessorEndpoint"  
            address=  
-          "net.msmq://localhost/private/ServiceModelSamplesSrmp"   
-           bindingConfiguration="srmpBinding"   
-           binding="netMsmqBinding"   
+          "net.msmq://localhost/private/ServiceModelSamplesSrmp"
+           bindingConfiguration="srmpBinding"
+           binding="netMsmqBinding"
            contract="IOrderProcessor" />  
     </client>  
     <bindings>  
@@ -78,20 +78,20 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
  Al ejecutar el ejemplo, se produce el resultado siguiente.  
   
 ```console  
-Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
-Customer: somecustomer.com   
-OrderDetails   
-    Order LineItem: 54 of Blue Widget @unit price: $29.99   
-    Order LineItem: 890 of Red Widget @unit price: $45.89   
-    Total cost of this order: $42461.56   
+Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4
+Customer: somecustomer.com
+OrderDetails
+    Order LineItem: 54 of Blue Widget @unit price: $29.99
+    Order LineItem: 890 of Red Widget @unit price: $45.89
+    Total cost of this order: $42461.56
     Order status: Pending  
 ```  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
->   
+>
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

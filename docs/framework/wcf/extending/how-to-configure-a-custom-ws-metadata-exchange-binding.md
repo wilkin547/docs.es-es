@@ -1,19 +1,19 @@
 ---
-title: Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
+title: 'Cómo: Configurar un enlace de WS-Metadata Exchange Binding personalizado'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: b4a4005a23c8c74edecb00475669e019b50a17af
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851227"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185595"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
-En este tema se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos con cualquier enlace que desee. En este tema, se mostrará cómo publicar metadatos mediante `wsHttpBinding`. Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en el [Introducción](../samples/getting-started-sample.md).  
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Cómo: Configurar un enlace de WS-Metadata Exchange Binding personalizado
+En este tema se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos mediante cualquier enlace que desee. En este tema, se mostrará cómo publicar metadatos mediante `wsHttpBinding`. Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en [introducción](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>El uso de un archivo de configuración  
   
@@ -33,7 +33,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">   
+    behaviorConfiguration="CalculatorServiceBehavior">
     ```  
   
 3. Agregue un punto de conexión de metadatos que especifique mex como dirección, `wsHttpBinding` como enlace, y <xref:System.ServiceModel.Description.IMetadataExchange> como contrato:  
@@ -113,7 +113,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Comportamiento de publicación de metadatos](../samples/metadata-publishing-behavior.md)
 - [Recuperación de metadatos](../samples/retrieve-metadata.md)

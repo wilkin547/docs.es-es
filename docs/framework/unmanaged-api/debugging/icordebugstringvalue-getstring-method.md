@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138973"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178501"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString (Método)
 Obtiene la cadena a la que hace referencia este ICorDebugStringValue.  
@@ -31,7 +31,7 @@ Obtiene la cadena a la que hace referencia este ICorDebugStringValue.
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
@@ -41,10 +41,10 @@ HRESULT GetString (
  [in] Tamaño de la matriz `szString`.  
   
  `pcchString`  
- enuncia Puntero al número de caracteres devueltos en la matriz de `szString`.  
+ [fuera] Puntero al número de caracteres `szString` devueltos en la matriz.  
   
  `szString`  
- enuncia Matriz que almacena la cadena recuperada.  
+ [fuera] Matriz que almacena la cadena recuperada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

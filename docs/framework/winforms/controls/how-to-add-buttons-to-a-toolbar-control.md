@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar botones a un control de la barra de herramientas
+title: 'Cómo: Agregar botones a un control ToolBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1bb6de58010e70a4edafacafe3dc00b511fc63de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912629"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182335"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procedimiento para agregar botones a un control de la barra de herramientas
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Cómo: Agregar botones a un control ToolBar
 > [!NOTE]
 > El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
- Una parte integral del <xref:System.Windows.Forms.ToolBar> control son los botones que se agregan a él. Se pueden usar para facilitar el acceso a los comandos de menú o, como alternativa, se pueden colocar en otra área de la interfaz de usuario de la aplicación para exponer comandos a los usuarios que no están disponibles en la estructura de menús.  
+ Una parte integral <xref:System.Windows.Forms.ToolBar> del control son los botones que se le agregan. Se pueden usar para facilitar el acceso a los comandos de menú o, alternativamente, se pueden colocar en otra área de la interfaz de usuario de la aplicación para exponer comandos a los usuarios que no están disponibles en la estructura de menús.  
   
- En los ejemplos siguientes se supone <xref:System.Windows.Forms.ToolBar> que se ha agregado un control a un formulario`Form1`de Windows Forms ().  
+ En los ejemplos <xref:System.Windows.Forms.ToolBar> siguientes se supone que se`Form1`ha agregado un control a un formulario Windows Forms ( ).  
   
 ### <a name="to-add-buttons-programmatically"></a>Para agregar botones mediante programación  
   
-1. En un procedimiento, cree botones de barra de herramientas agregándolos a <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> la colección.  
+1. En un procedimiento, cree botones <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> de barra de herramientas agregándolos a la colección.  
   
-2. Especifique la configuración de propiedades para un botón individual pasando el índice del botón a <xref:System.Windows.Forms.ToolBar.Buttons%2A> través de la propiedad.  
+2. Especifique la configuración de propiedades de un botón <xref:System.Windows.Forms.ToolBar.Buttons%2A> individual pasando el índice del botón a través de la propiedad.  
   
-     En el ejemplo siguiente se supone que ya <xref:System.Windows.Forms.ToolBar> se ha agregado un formulario con un control.  
+     En el ejemplo siguiente se <xref:System.Windows.Forms.ToolBar> supone un formulario con un control ya agregado.  
   
     > [!NOTE]
-    > La <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> colección es una colección basada en cero, por lo que el código debe continuar en consecuencia.  
+    > La <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> colección es una colección de base cero, por lo que el código debe continuar en consecuencia.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -90,7 +90,7 @@ ms.locfileid: "69912629"
        toolBar1.Buttons[2].PartialPush = true;  
   
        // Instantiate a ContextMenu component and menu items.  
-       // Set the DropDownButton's DropDownMenu property to   
+       // Set the DropDownButton's DropDownMenu property to
        // the context menu.  
        ContextMenu cm = new ContextMenu();  
        MenuItem miOne = new MenuItem("One");  
@@ -129,7 +129,7 @@ ms.locfileid: "69912629"
           toolBar1->Buttons[2]->PartialPush = true;  
   
           // Instantiate a ContextMenu component and menu items.  
-          // Set the DropDownButton's DropDownMenu property to   
+          // Set the DropDownButton's DropDownMenu property to
           // the context menu.  
           System::Windows::Forms::ContextMenu^ cm = gcnew System::Windows::Forms::ContextMenu;  
           MenuItem^ miOne = gcnew MenuItem( "One" );  
@@ -148,10 +148,10 @@ ms.locfileid: "69912629"
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Procedimientos: Definir un icono para un botón de la barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Cómo: Desencadenar eventos de menú para botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Definir un icono para un botón ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Cómo: Desencadenar eventos de menú para los botones de la barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)
-- [ToolBar (control)](toolbar-control-windows-forms.md)
+- [Barra de herramientas (Control)](toolbar-control-windows-forms.md)

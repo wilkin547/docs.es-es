@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109155"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178308"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME (Enumeración)
-Indica la versión, la compilación, la referencia cultural, la firma, etc., del ensamblado cuyas propiedades se recuperarán o establecerán mediante métodos de [IAssemblyName](iassemblyname-interface.md) .  
+Indica la versión, compilación, referencia cultural, firma, etc., del ensamblado cuyas propiedades se recuperarán o establecerán mediante [métodos IAssemblyName.](iassemblyname-interface.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ typedef enum {
     ASM_NAME_NULL_PUBLIC_KEY,  
     ASM_NAME_NULL_PUBLIC_KEY_TOKEN,  
     ASM_NAME_CUSTOM,  
-    ASM_NAME_NULL_CUSTOM,   
+    ASM_NAME_NULL_CUSTOM,
     ASM_NAME_MVID,  
     ASM_NAME_FILE_MAJOR_VERSION,  
     ASM_NAME_FILE_MINOR_VERSION,  
@@ -65,13 +65,13 @@ typedef enum {
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Fusion. h  
+ **Encabezado:** Fusion.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IAssemblyName (interfaz)](iassemblyname-interface.md)
 - [Enumeraciones de fusión](fusion-enumerations.md)

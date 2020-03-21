@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744567"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180472"
 ---
 # <a name="reflection-in-net"></a>Reflexión en .NET
 
-Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../../standard/assembly/index.md) cargados y los tipos definidos dentro de ellos, como [clases](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces)y tipos de valor (es decir, [estructuras](../../standard/base-types/common-type-system.md#structures) y [enumeraciones](../../standard/base-types/common-type-system.md#enumerations)). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.
+Las clases <xref:System.Reflection> del espacio <xref:System.Type?displayProperty=nameWithType>de nombres, junto con , permiten obtener información sobre [los ensamblados cargados](../../standard/assembly/index.md) y los tipos definidos en ellos, como [clases,](../../standard/base-types/common-type-system.md#classes) [interfaces](../../standard/base-types/common-type-system.md#interfaces)y tipos de valor (es decir, [estructuras](../../standard/base-types/common-type-system.md#structures) y [enumeraciones).](../../standard/base-types/common-type-system.md#enumerations) También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.
   
 El cargador de [Common Language Runtime](../../standard/clr.md) administra [dominios de aplicación](../app-domains/application-domains.md), que constituyen los límites definidos alrededor de los objetos que tienen el mismo ámbito de aplicación. Esta administración incluye la carga de cada ensamblado en el dominio de aplicación apropiado y el control del diseño de memoria de la jerarquía de tipos de cada ensamblado.  
   
@@ -67,17 +67,17 @@ Por ejemplo, cuando se usa el operador de C# `typeof` (`GetType` en Visual Basic
   
 Estas clases en tiempo de ejecución son `internal` (`Friend` en Visual Basic). No se documentan por separado de sus clases base, ya que su comportamiento se describe en la documentación de la clase base.  
   
-<a name="related_topics"></a>   
+<a name="related_topics"></a>
 
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Ver información tipos](viewing-type-information.md)|Describe la clase <xref:System.Type> y proporciona ejemplos de código que muestran cómo usar <xref:System.Type> con diversas clases de reflexión para obtener información sobre constructores, métodos, campos, propiedades y eventos.|  
-|[Reflection and Generic Types](reflection-and-generic-types.md) (Reflexión y tipos genéricos)|Explica cómo la reflexión controla los parámetros de tipo y los argumentos de tipo de tipos genéricos y métodos genéricos.|  
+|[Reflexión y tipos genéricos](reflection-and-generic-types.md)|Explica cómo la reflexión controla los parámetros de tipo y los argumentos de tipo de tipos genéricos y métodos genéricos.|  
 |[Consideraciones de seguridad sobre la reflexión](security-considerations-for-reflection.md)|Describe las reglas que determinan hasta qué punto se puede usar la reflexión para detectar la información sobre tipos y acceder a los tipos.|  
-|[Cargar y usar tipos dinámicamente](dynamically-loading-and-using-types.md)|Describe la interfaz de enlace personalizado de reflexión que admite enlace de tiempo de ejecución.|  
-|[Cargar ensamblados en el contexto de solo reflexión](how-to-load-assemblies-into-the-reflection-only-context.md)|Describe el contexto de carga de solo reflexión. Muestra cómo cargar un ensamblado, cómo probar el contexto y cómo examinar los atributos aplicados a un ensamblado en el contexto de solo reflexión.|  
+|[Cargar y utilizar tipos dinámicamente](dynamically-loading-and-using-types.md)|Describe la interfaz de enlace personalizado de reflexión que admite enlace de tiempo de ejecución.|  
+|[Cómo: Cargar ensamblados en el contexto de sólo reflexión](how-to-load-assemblies-into-the-reflection-only-context.md)|Describe el contexto de carga de solo reflexión. Muestra cómo cargar un ensamblado, cómo probar el contexto y cómo examinar los atributos aplicados a un ensamblado en el contexto de solo reflexión.|  
 |[Acceso a atributos personalizados](accessing-custom-attributes.md)|Muestra cómo usar la reflexión para consultar la existencia de atributos y sus valores.|  
 |[Especificar nombres de tipo completos](specifying-fully-qualified-type-names.md)|Describe el formato de nombres de tipo completos en términos del formulario Backus-Naur (BNF) así como la sintaxis necesaria para especificar caracteres especiales, nombres de ensamblados, punteros, referencias y matrices.|  
 |[Cómo: Enlazar un delegado mediante la reflexión](how-to-hook-up-a-delegate-using-reflection.md)|Explica cómo crear un delegado para un método y enlazar el delegado a un evento. Explica cómo crear un método de control de eventos en tiempo de ejecución mediante <xref:System.Reflection.Emit.DynamicMethod>.|  

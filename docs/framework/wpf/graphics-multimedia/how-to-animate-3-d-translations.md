@@ -1,25 +1,25 @@
 ---
-title: Procedimiento Animar traslaciones 3D
+title: 'Cómo: Animar traducciones 3D'
 ms.date: 03/30/2017
 helpviewer_keywords:
-- animation [WPF], 3-D translations
-- 3-D translations [WPF], animating
+- animation [WPF], 3D translations
+- 3D translations [WPF], animating
 ms.assetid: d4eece1f-0cd2-4a2c-8370-293354c380e4
-ms.openlocfilehash: 6d7e0b422d6e76d5d0e25ad276550613f264e9bc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d4fff9c74663bd220ad5d15a983bcb639621afd
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661186"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112263"
 ---
-# <a name="how-to-animate-3-d-translations"></a>Procedimiento Animar traslaciones 3D
-En este tema se muestra cómo animar una transformación de traslación establecido en un modelo 3D.  
+# <a name="how-to-animate-3d-translations"></a>Cómo: Animar traducciones 3D
+En este tema se muestra cómo animar un conjunto de transformación de traducción en un modelo 3D.  
   
- El código siguiente muestra la aplicación de un <xref:System.Windows.Media.Media3D.TranslateTransform3D> de objeto para el <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> propiedad de un <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+ El código siguiente muestra <xref:System.Windows.Media.Media3D.TranslateTransform3D> la aplicación <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> de <xref:System.Windows.Media.Media3D.GeometryModel3D>un objeto a la propiedad de un archivo .  
   
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline1)]  
   
- El <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> propiedad de este <xref:System.Windows.Media.Media3D.TranslateTransform3D> objeto se anima mediante el código siguiente.  
+ La <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> propiedad <xref:System.Windows.Media.Media3D.TranslateTransform3D> de este objeto se anima utilizando el código siguiente.  
   
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline2)]  
   
@@ -28,9 +28,9 @@ En este tema se muestra cómo animar una transformación de traslación establec
   
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre animaciones](animation-overview.md)
 - [Crear una escena 3D](how-to-create-a-3-d-scene.md)
-- [Información general sobre gráficos 3D](3-d-graphics-overview.md)
+- [Descripción general de los gráficos 3D](3-d-graphics-overview.md)
 - [Información general sobre transformaciones](transforms-overview.md)

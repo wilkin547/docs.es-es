@@ -1,45 +1,45 @@
 ---
-title: Procedimiento Ajustar la escala de un elemento
+title: 'Cómo: Ajustar la escala de un elemento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d954f68747be9eedc0ef71634e0c18b411d260
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942081"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112055"
 ---
-# <a name="how-to-scale-an-element"></a>Procedimiento Ajustar la escala de un elemento
-En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.ScaleTransform> para escalar un elemento.  
+# <a name="how-to-scale-an-element"></a>Cómo: Ajustar la escala de un elemento
+En este ejemplo se <xref:System.Windows.Media.ScaleTransform> muestra cómo utilizar a para escalar un elemento.  
   
- Use la <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> y <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propiedades para cambiar el tamaño del elemento por el factor que especifique. Por ejemplo, un <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> valor de 1,5 ajusta el elemento al 150 por ciento de su ancho original. Un <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> valor de 0,5 reduce el alto de un elemento en un 50%.  
+ Utilice <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> las <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propiedades y para cambiar el tamaño del elemento según el factor que especifique. Por ejemplo, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> un valor de 1,5 estira el elemento al 150 por ciento de su ancho original. Un <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> valor de 0,5 reduce la altura de un elemento en un 50 por ciento.  
   
- Use la <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A> propiedades para especificar el punto que es el centro de la operación de escalado. De forma predeterminada, un <xref:System.Windows.Media.ScaleTransform> se centra en el punto (0,0), que corresponde a la esquina superior izquierda del rectángulo. Esto tiene el efecto de mover el elemento y también de que parezca más grande, ya que al aplicar un <xref:System.Windows.Media.Transform>, cambie el espacio de coordenadas en el que reside el objeto.  
+ Utilice <xref:System.Windows.Media.ScaleTransform.CenterX%2A> las <xref:System.Windows.Media.ScaleTransform.CenterY%2A> propiedades y para especificar el punto que es el centro de la operación de escala. De forma <xref:System.Windows.Media.ScaleTransform> predeterminada, a se centra en el punto (0,0), que corresponde a la esquina superior izquierda del rectángulo. Esto tiene el efecto de mover el elemento y también de <xref:System.Windows.Media.Transform>hacerlo parecer más grande, porque cuando se aplica un , se cambia el espacio de coordenadas en el que reside el objeto.  
   
- En el ejemplo siguiente se usa un <xref:System.Windows.Media.ScaleTransform> duplicar el tamaño de un 50 por 50 <xref:System.Windows.Shapes.Rectangle>. El <xref:System.Windows.Media.ScaleTransform> tiene un valor de 0 (valor predeterminado) para ambos <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
+ En el ejemplo <xref:System.Windows.Media.ScaleTransform> siguiente se utiliza a para duplicar <xref:System.Windows.Shapes.Rectangle>el tamaño de un 50 por 50 . El <xref:System.Windows.Media.ScaleTransform> tiene un valor de 0 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> (valor predeterminado) para ambos y <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-xaml[transformsSample#21](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
- Normalmente, se establece <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A> al centro del objeto que se escala: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).  
+ Normalmente, se <xref:System.Windows.Media.ScaleTransform.CenterX%2A> <xref:System.Windows.Media.ScaleTransform.CenterY%2A> establece y se establece en el<xref:System.Windows.FrameworkElement.Width%2A>centro del <xref:System.Windows.FrameworkElement.Height%2A>objeto que se escala: ( /2, /2).  
   
- El ejemplo siguiente muestra otro <xref:System.Windows.Shapes.Rectangle> que tiene el doble de tamaño; sin embargo, esto <xref:System.Windows.Media.ScaleTransform> tiene un valor de 25 para ambos <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, que se corresponde con el centro del rectángulo.  
+ En el ejemplo <xref:System.Windows.Shapes.Rectangle> siguiente se muestra otro que se duplica en tamaño; sin <xref:System.Windows.Media.ScaleTransform> embargo, esto tiene un <xref:System.Windows.Media.ScaleTransform.CenterX%2A> <xref:System.Windows.Media.ScaleTransform.CenterY%2A>valor de 25 para ambos y , que corresponde al centro del rectángulo.  
   
  [!code-xaml[transformsSample#22](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
- La siguiente ilustración muestra la diferencia entre los dos <xref:System.Windows.Media.ScaleTransform> operaciones. La línea de puntos muestra el tamaño y la posición del rectángulo antes de escalar.  
+ En la ilustración siguiente <xref:System.Windows.Media.ScaleTransform> se muestra la diferencia entre las dos operaciones. La línea de puntos muestra el tamaño y la posición del rectángulo antes de escalar.  
   
- ![2 x se puede ampliar con diferentes puntos centrales](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
+ ![Escalas dobles con diferentes centros](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 Dos operaciones de ScaleTransform con valores idénticos de ScaleX y ScaleY pero con centros diferentes  
   
- Para ver el ejemplo completo, consulte [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Para ver el ejemplo completo, consulte Ejemplo de [transformaciones 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Información general sobre transformaciones](transforms-overview.md)
-- [Temas "Cómo..."](transformations-how-to-topics.md)
+- [Temas de información](transformations-how-to-topics.md)

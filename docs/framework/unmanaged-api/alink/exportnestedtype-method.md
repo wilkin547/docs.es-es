@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438422"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179413"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType (Método)
 Especifica los tipos anidados como exportables. El [método ExportType](exporttype-method.md) también puede exportar tipos anidados, pero este método es más rápido.  
@@ -36,38 +36,38 @@ HRESULT ExportNestedType(
     LPCWSTR         pszTypename,  
     DWORD           dwFlags,  
     mdExportedType* pType  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado del que se va a exportar.  
+ ID de ensamblado desde el que exportar.  
   
  `FileToken`  
- Token de archivo o ensamblado de archivo que define el tipo que se va a convertir.  
+ Token de archivo o ensamblado de archivo que define el tipo que se va a exportar.  
   
  `TypeToken`  
- Token de tipo del tipo que se va a convertir.  
+ Escriba el token de tipo que se va a exportar.  
   
  `ParentType`  
- Token del tipo primario.  
+ Token de tipo primario.  
   
  `pszTypename`  
- Nombre completo del tipo que se va a exportar.  
+ Nombre de tipo completo para exportar.  
   
  `dwFlags`  
- `ComType` marcas como `tdPublic` o `tdNested`. Este valor se puede pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`banderas `tdPublic` como `tdNested`o . Este valor se puede pasar al [método DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Recibe el token para el tipo exportado.  
+ Recibe token para el tipo exportado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Devuelve S_OK si el método se realiza correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requiere alink.h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IALink (interfaz)](ialink-interface.md)
 - [IALink2 (interfaz)](ialink2-interface.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a953dea9224d75907c593d87f06a0b0888f0af2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912698"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184661"
 ---
 # <a name="message-filters"></a>Filtros de mensajes
 Para implementar el enrutamiento basado en contenido, el servicio de enrutamiento usa implementaciones de <xref:System.ServiceModel.Dispatcher.MessageFilter> que inspeccionan secciones concretas de un mensaje, como la dirección, el nombre del extremo o una instrucción Xpath concreta. Si ninguno de los filtros de mensajes proporcionados con [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] satisface sus necesidades, puede crear un filtro personalizado creando una nueva implementación de la clase base <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
   
- Al configurar el servicio de enrutamiento, debe definir los elementos de<xref:System.ServiceModel.Routing.Configuration.FilterElement> filtro (objetos) que describen el tipo de **MessageFilter** y los datos auxiliares necesarios para crear el filtro, como los valores de cadena específicos que se van a buscar en el mensaje. . Tenga en cuenta que, al crear los elementos del filtro, solo se definen los filtros de mensajes individuales; para usar los filtros para evaluar y enrutar mensajes, también deberá definir una tabla de filtros (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
+ Al configurar el servicio de enrutamiento,<xref:System.ServiceModel.Routing.Configuration.FilterElement> debe definir elementos de filtro (objetos) que describan el tipo de **MessageFilter** y los datos auxiliares necesarios para crear el filtro, como valores de cadena específicos para buscar dentro del mensaje. Tenga en cuenta que, al crear los elementos del filtro, solo se definen los filtros de mensajes individuales; para usar los filtros para evaluar y enrutar mensajes, también deberá definir una tabla de filtros (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
   
  Cada entrada de la tabla de filtros hace referencia a un elemento del filtro y especifica el extremo de cliente al que se enrutará un mensaje si éste coincide con el filtro. Las entradas de la tabla de filtros también le permiten especificar una recopilación de puntos de conexión de reserva (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>), que definen una lista de puntos de conexión a los que se transmitirá el mensaje en caso de fallo de transmisión al realizar un envío al punto de conexión primario. Estos puntos de conexión se probarán en el orden especificado hasta que uno se realice correctamente.  
   
@@ -23,32 +23,32 @@ Para implementar el enrutamiento basado en contenido, el servicio de enrutamient
   
  La siguiente tabla muestra la enumeración <xref:System.ServiceModel.Routing.Configuration.FilterType> usada por el servicio de enrutamiento, la clase que implementa el filtro de mensajes concreto, así como los parámetros <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> necesarios.  
   
-|Tipo de filtro|DESCRIPCIÓN|Significado de datos del filtro|Ejemplo de filtro|  
+|Tipo de filtro|Descripción|Significado de datos del filtro|Ejemplo de filtro|  
 |------------------|-----------------|-------------------------|--------------------|  
-|.|Utiliza la clase <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> para coincidir con mensajes que contienen una acción concreta.|La acción según la cual se va a filtrar.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Usa la <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> clase con <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  parabuscarcoincidenciasconmensajesquecontienen`true` una dirección específica.|La dirección según la cual se va a filtrar (en el encabezado To).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Usa la <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> clase con <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  parahacercoincidirlosmensajesquecontienenunprefijo`true` de dirección específico.|La dirección según la cual se va a filtrar que usa la coincidencia de prefijo más larga.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|y|Utiliza la clase <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>, que siempre evalúa ambas condiciones antes de realizar la devolución.|no se usa filterData. en su lugar, Filter1 y filter2 tienen los nombres de los filtros de mensajes correspondientes (también en la tabla), que deben ser **y**Ed juntos.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
-|Personalizados|Tipo definido por el usuario que extiende la clase <xref:System.ServiceModel.Dispatcher.MessageFilter> y tiene un constructor que toma una cadena.|El atributo customType es el nombre del tipo completo de la clase que se va a crear; filterData es la cadena que se va a pasar al constructor al crear el filtro.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|Utiliza la clase <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para coincidir con mensajes en función del nombre del punto de conexión de servicio al que llegaron.|Nombre del punto de conexión de servicio, por ejemplo: "serviceEndpoint1".  Debería ser uno de los extremos expuestos en el servicio de enrutamiento.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
-|MatchAll|Utiliza la clase <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Este filtro coincide con todos los mensajes entrantes.|No se usa filterData. Este filtro siempre coincide con todos los mensajes.|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|Utiliza la clase <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> para coincidir con consultas XPath concretas dentro del mensaje.|Consulta XPath que se va a usar al realizar la coincidencia de mensajes.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|Acción|Utiliza la clase <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> para coincidir con mensajes que contienen una acción concreta.|La acción según la cual se va a filtrar.|\<nombre del filtro "action1" filterType -"Action" filterData""http://namespace/contract/operation" />|  
+|EndpointAddress|Utiliza <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> la clase, con <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` para hacer coincidir los mensajes que contienen una dirección específica.|La dirección según la cual se va a filtrar (en el encabezado To).|\<nombre del filtro "dirección1" filterType -"EndpointAddress" filterData"http://host/vdir/s.svc/b" />|  
+|EndpointAddressPrefix|Utiliza <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> la clase, con <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` para hacer coincidir los mensajes que contienen un prefijo de dirección específico.|La dirección según la cual se va a filtrar que usa la coincidencia de prefijo más larga.|\<nombre del filtro "prefijo1" filterType -"EndpointAddressPrefix" filterData"http://host/" ">|  
+|And|Utiliza la clase <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>, que siempre evalúa ambas condiciones antes de realizar la devolución.|filterData no se utiliza; en su lugar filter1 y filter2 tienen los nombres de los filtros de mensajes correspondientes (también en la tabla), que deben ser **AND**ed juntos.|\<nombre del filtro "y 1" filterType "Y" filter1"address1" filter2"action1" />|  
+|Personalizado|Tipo definido por el usuario que extiende la clase <xref:System.ServiceModel.Dispatcher.MessageFilter> y tiene un constructor que toma una cadena.|El atributo customType es el nombre del tipo completo de la clase que se va a crear; filterData es la cadena que se va a pasar al constructor al crear el filtro.|\<nombre del filtro "custom1" filterType "CustomType" customType"CustomAssembly.CustomMsgFilter, CustomAssembly" filterData"Custom Data" />|  
+|EndpointName|Utiliza la clase <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para coincidir con mensajes en función del nombre del punto de conexión de servicio al que llegaron.|El nombre del punto de conexión de servicio, por ejemplo: "serviceEndpoint1".  Debería ser uno de los extremos expuestos en el servicio de enrutamiento.|\<nombre del filtro "stock1" filterType "Endpoint" filterData"SvcEndpoint" />|  
+|MatchAll|Utiliza la clase <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Este filtro coincide con todos los mensajes entrantes.|No se usa filterData. Este filtro siempre coincide con todos los mensajes.|\<nombre del filtro "matchAll1" filterType"MatchAll" />|  
+|XPath|Utiliza la clase <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> para coincidir con consultas XPath concretas dentro del mensaje.|Consulta XPath que se va a usar al realizar la coincidencia de mensajes.|\<nombre del filtro "XPath1" filterType "XPath" filterData"//ns:element" />|  
   
  En el siguiente ejemplo, se definen entradas de filtro que usan los filtros de mensajes XPath, EndpointName y PrefixEndpointAddress. Este ejemplo también muestra cómo utilizar un filtro personalizado para las entradas de RoundRobinFilter1 y RoundRobinFilter2.  
   
 ```xml  
 <filters>  
-     <filter name="XPathFilter" filterType="XPath"   
+     <filter name="XPathFilter" filterType="XPath"
              filterData="/s12:Envelope/s12:Header/custom:RoundingCalculator = 1"/>  
-     <filter name="EndpointNameFilter" filterType="EndpointName"   
+     <filter name="EndpointNameFilter" filterType="EndpointName"
              filterData="calculatorEndpoint"/>  
-     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"   
+     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"
              filterData="http://localhost/routingservice/router/rounding/"/>  
-     <filter name="RoundRobinFilter1" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter1" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
-     <filter name="RoundRobinFilter2" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter2" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
 </filters>  
 ```  
@@ -71,7 +71,7 @@ Para implementar el enrutamiento basado en contenido, el servicio de enrutamient
 |tempuri|`http://tempuri.org`|  
 |ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- Si sabe que va a usar un espacio de nombres concreto en sus consultas de XPath, puede agregarlo a la tabla de espacio de nombres junto con un prefijo de espacio de nombres único y utilizar dicho prefijo en cualquier consulta XPath en lugar del espacio de nombres completo. En el ejemplo siguiente se define un prefijo de "Custom" `"http://my.custom.namespace"`para el espacio de nombres, que después se usa en la consulta XPath contenida en filterData.  
+ Si sabe que va a usar un espacio de nombres concreto en sus consultas de XPath, puede agregarlo a la tabla de espacio de nombres junto con un prefijo de espacio de nombres único y utilizar dicho prefijo en cualquier consulta XPath en lugar del espacio de nombres completo. En el ejemplo siguiente se define un `"http://my.custom.namespace"`prefijo de "custom" para el espacio de nombres, que se usa en la consulta XPath contenida en filterData.  
   
 ```xml  
 <namespaceTable>  
@@ -98,7 +98,7 @@ Para implementar el enrutamiento basado en contenido, el servicio de enrutamient
            <add filterName="SubtractAction" endpointName="Subtraction" />  
          </filters>  
        </table>  
-     </filterTables>      
+     </filterTables>
 </routing>  
 ```  
   
@@ -115,13 +115,13 @@ Para implementar el enrutamiento basado en contenido, el servicio de enrutamient
 ```xml  
 <filterTables>  
      <filterTable name="filterTable1">  
-          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"
                priority="2"/>  
-          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"   
+          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"
                priority="1"/>  
-          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"
                priority="1"/>  
-          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"   
+          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"
                priority="0"/>  
      </filterTable>  
 </filterTables>  
@@ -133,7 +133,7 @@ Para implementar el enrutamiento basado en contenido, el servicio de enrutamient
 > Cuando sea posible, utilice filtros exclusivos en lugar de especificar una prioridad, ya que la evaluación de la prioridad puede producir una reducción del rendimiento.  
   
 ### <a name="backup-lists"></a>Listas de reserva  
- Cada filtro de la tabla de filtros puede especificar opcionalmente una lista de reserva, que es una recopilación ordenada de puntos de conexión (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Esta colección contiene una lista ordenada de puntos de conexión a los que se transmitirá el mensaje en caso de <xref:System.ServiceModel.CommunicationException> durante un envío al punto de conexión primario especificado en <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. En el ejemplo siguiente se define una lista de copia de seguridad denominada "backupServiceEndpoints" que contiene dos extremos.  
+ Cada filtro de la tabla de filtros puede especificar opcionalmente una lista de reserva, que es una recopilación ordenada de puntos de conexión (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Esta colección contiene una lista ordenada de puntos de conexión a los que se transmitirá el mensaje en caso de <xref:System.ServiceModel.CommunicationException> durante un envío al punto de conexión primario especificado en <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. En el ejemplo siguiente se define una lista de copia de seguridad denominada "backupServiceEndpoints" que contiene dos puntos de conexión.  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ Para implementar el enrutamiento basado en contenido, el servicio de enrutamient
 </backupLists>  
 ```  
   
- En el ejemplo anterior, si se produce un error en un envío al punto de conexión principal "destino", el servicio de enrutamiento intentará enviar a cada punto de conexión en la secuencia en la que se enumeran, enviando primero a backupServiceQueue y enviando posteriormente a alternateServiceQueue si el el envío a backupServiceQueue produce un error. Si se produce un error en todos los puntos de conexión de reserva, se devuelve un error.
+ En el ejemplo anterior, si se produce un error en un envío al punto de conexión principal "Destino", el servicio de enrutamiento intentará enviar a cada extremo de la secuencia en la que se enumeran, primero enviando a backupServiceQueue y, posteriormente, enviando a alternateServiceQueue si el se produce un error en backupServiceQueue. Si se produce un error en todos los puntos de conexión de reserva, se devuelve un error.

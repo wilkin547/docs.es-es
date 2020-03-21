@@ -2,17 +2,17 @@
 title: Actividad Pick
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 51caf020042212b570ae915ead00a4225df2c588
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283182"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182895"
 ---
 # <a name="pick-activity"></a>Actividad Pick
-La actividad <xref:System.Activities.Statements.Pick> simplifica el modelado de un conjunto de desencadenadores de eventos seguido por sus controladores correspondientes.  Una actividad <xref:System.Activities.Statements.Pick> contiene una colección de actividades <xref:System.Activities.Statements.PickBranch>, donde cada <xref:System.Activities.Statements.PickBranch> es un emparejamiento entre las actividades <xref:System.Activities.Statements.PickBranch.Trigger%2A> y <xref:System.Activities.Statements.PickBranch.Action%2A>.  En el momento de la ejecución, los desencadenadores de todas las bifurcaciones se ejecutan en paralelo.  Cuando se completa un desencadenador, se ejecuta la acción correspondiente a continuación y se cancelan el resto de desencadenadores.  El comportamiento de la actividad de <xref:System.Activities.Statements.Pick> de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]es similar a la actividad de <xref:System.Workflow.Activities.ListenActivity> .NET Framework 3,5.  
+La actividad <xref:System.Activities.Statements.Pick> simplifica el modelado de un conjunto de desencadenadores de eventos seguido por sus controladores correspondientes.  Una actividad <xref:System.Activities.Statements.Pick> contiene una colección de actividades <xref:System.Activities.Statements.PickBranch>, donde cada <xref:System.Activities.Statements.PickBranch> es un emparejamiento entre las actividades <xref:System.Activities.Statements.PickBranch.Trigger%2A> y <xref:System.Activities.Statements.PickBranch.Action%2A>.  En el momento de la ejecución, los desencadenadores de todas las bifurcaciones se ejecutan en paralelo.  Cuando se completa un desencadenador, se ejecuta la acción correspondiente a continuación y se cancelan el resto de desencadenadores.  El comportamiento [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> de la actividad es similar a <xref:System.Workflow.Activities.ListenActivity> la actividad de .NET Framework 3.5.  
   
- La siguiente captura de pantalla del ejemplo de SDK [Uso de la actividad Pick](./samples/using-the-pick-activity.md) muestra una actividad Pick con dos bifurcaciones.  Una bifurcación tiene un desencadenador denominado **Read input**, una actividad personalizada que lee la entrada de la línea de comandos. La segunda bifurcación tiene un desencadenador de actividad <xref:System.Activities.Statements.Delay>. Si la actividad **leer entrada** recibe los datos antes de que finalice la actividad <xref:System.Activities.Statements.Delay>, se cancelará <xref:System.Activities.Statements.Delay> retraso y se escribirá un saludo en la consola.  De lo contrario, si la actividad **Read input** no recibe los datos en el tiempo asignado, se cancelará y se escribirá un mensaje de tiempo de espera en la consola.  Se trata de un patrón común que se usa para agregar un tiempo de espera a una acción.  
+ La siguiente captura de pantalla del ejemplo de SDK [Uso de la actividad Pick](./samples/using-the-pick-activity.md) muestra una actividad Pick con dos bifurcaciones.  Una bifurcación tiene un desencadenador denominado **Read input**, una actividad personalizada que lee la entrada de la línea de comandos. La segunda bifurcación tiene un desencadenador de actividad <xref:System.Activities.Statements.Delay>. Si la actividad **Leer entrada** <xref:System.Activities.Statements.Delay> recibe datos <xref:System.Activities.Statements.Delay> antes de que finalice la actividad, se cancelará Delay y se escribirá un saludo en la consola.  De lo contrario, si la actividad **Read input** no recibe los datos en el tiempo asignado, se cancelará y se escribirá un mensaje de tiempo de espera en la consola.  Se trata de un patrón común que se usa para agregar un tiempo de espera a una acción.  
   
  ![Actividad Pick](./media/pick-activity/pick-activity-two-branches.jpg)  
   
@@ -31,11 +31,11 @@ La actividad <xref:System.Activities.Statements.Pick> simplifica el modelado de 
 Sequence body = new Sequence()  
 {  
     Variables = { name },  
-    Activities =   
+    Activities =
    {  
        new System.Activities.Statements.Pick  
         {  
-           Branches =   
+           Branches =
            {  
                new PickBranch  
                {  
@@ -44,10 +44,10 @@ Sequence body = new Sequence()
                       Result = name,  
                       BookmarkName = "name"  
                    },  
-                   Action = new WriteLine   
-                   {   
-                       Text = ExpressionServices.Convert<string>(ctx => "Hello " +   
-                           name.Get(ctx))   
+                   Action = new WriteLine
+                   {
+                       Text = ExpressionServices.Convert<string>(ctx => "Hello " +
+                           name.Get(ctx))
                    }  
                },  
                new PickBranch  

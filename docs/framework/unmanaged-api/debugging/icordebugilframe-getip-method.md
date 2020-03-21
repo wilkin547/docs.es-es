@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: 7e1605eede55360e72d65da6744bc1dcce4f107f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f30516a8f59b90de9b4c052d92a8c88575ace3c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130991"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178821"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP (Método)
 Obtiene el valor del puntero de instrucción y un valor de combinación bit a bit que describe cómo se obtuvo el valor del puntero de instrucción.  
@@ -29,22 +29,22 @@ Obtiene el valor del puntero de instrucción y un valor de combinación bit a bi
   
 ```cpp  
 HRESULT GetIP (  
-    [out] ULONG32               *pnOffset,   
+    [out] ULONG32               *pnOffset,
     [out] CorDebugMappingResult *pMappingResult  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pnOffset`  
- enuncia Valor del puntero de instrucción.  
+ [fuera] El valor del puntero de instrucción.  
   
  `pMappingResult`  
- enuncia Puntero a una combinación bit a bit de los valores de enumeración de CorDebugMappingResult (que describen cómo se obtuvo el valor del puntero de instrucción.  
+ [fuera] Un puntero a una combinación bit a bit de la CorDebugMappingResult valores de enumeración que describen cómo se obtuvo el valor del puntero de instrucción.  
   
-## <a name="remarks"></a>Comentarios  
- El valor del puntero de instrucción es el desplazamiento del marco de pila en el código del lenguaje intermedio de Microsoft (MSIL) de la función. Si el marco de pila está activo, esta dirección es la siguiente instrucción que se va a ejecutar. Si el marco de pila no está activo, esta dirección es la siguiente instrucción que se debe ejecutar cuando se reactive el marco de pila.  
+## <a name="remarks"></a>Observaciones  
+ El valor del puntero de instrucción es el desplazamiento del marco de pila en el código de lenguaje intermedio de Microsoft (MSIL) de Microsoft de la función. Si el marco de pila está activo, esta dirección es la siguiente instrucción que se debe ejecutar. Si el marco de pila no está activo, esta dirección es la siguiente instrucción que se debe ejecutar cuando se reactiva el marco de pila.  
   
- Si este marco es un marco compilado Just-in-Time (JIT), el valor del puntero de instrucción estará determinado por la asignación hacia atrás desde el puntero de instrucción nativo real, por lo que el valor puede ser solo aproximado.  
+ Si este fotograma es un fotograma compilado Just-In-Time (JIT), el valor del puntero de instrucción se determinará mediante la asignación hacia atrás desde el puntero de instrucción nativo real, por lo que el valor puede ser solo aproximado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

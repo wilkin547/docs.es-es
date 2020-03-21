@@ -1,15 +1,15 @@
 ---
-title: Elemento <Subtypes> (.NET Native)
+title: <Subtypes>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128103"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180938"
 ---
-# <a name="subtypes-element-net-native"></a>\<subtipos > elemento (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<Subtipos> (.NET Native)
 Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tipo contenedor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -18,7 +18,7 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
 <Subtypes Activate="policy_type"  
           Browse="policy_type"  
           Dynamic="policy_type"  
-          Serialize="policy_type"   
+          Serialize="policy_type"
           DataContractSerializer="policy_setting"  
           DataContractJsonSerializer="policy_setting"  
           XmlSerializer="policy_setting"  
@@ -47,7 +47,7 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -58,9 +58,9 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<Tipo>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El elemento `<Subtypes>` aplica la directiva a todos los subtipos de su tipo contenedor. Se usa cuando se quieren aplicar directivas distintas a los tipos derivados y sus clases base.  
   
  Todos los atributos de reflexión, serialización e interoperabilidad son opcionales, aunque al menos uno debe estar presente.  
@@ -87,9 +87,9 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [\<tipo > elemento](type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [\<Elemento de> de tipo](type-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 450a99fc6604ccb3fa796e8a73e1ddc3e3adff9e
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964656"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184954"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Cómo: Habilitar la detección de repetición de mensajes
-Un ataque por repetición se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
+Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
- Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
+ Para obtener más información acerca de la detección de reproducción de mensajes, vea Detección de [reproducción](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))de mensajes .  
   
- En el procedimiento siguiente se muestran varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
+ El siguiente procedimiento muestra varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Para controlar la detección de reproducción en el cliente utilizando código  
   
@@ -30,13 +30,13 @@ Un ataque por repetición se produce cuando un atacante copia una secuencia de m
   
 2. Utilizar la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> para devolver una referencia a la clase <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> y establecer cualquiera de las propiedades siguientes, según corresponda:  
   
-    1. `DetectReplay`. Un valor Boolean. Esto rige si el cliente debería detectar las reproducciones del servidor. De manera predeterminada, es `true`.  
+    1. `DetectReplay`. Valor booleano. Esto rige si el cliente debería detectar las reproducciones del servidor. El valor predeterminado es `true`.  
   
-    2. `MaxClockSkew`. Valor <xref:System.TimeSpan>. Rige qué sesgo temporal puede tolerar el mecanismo de reproducción entre el cliente y el servidor. El mecanismo de seguridad examina la marca de tiempo enviada y determina si se fue enviada demasiado lejos en el pasado. El valor predeterminado es de 5 minutos.  
+    2. `MaxClockSkew`. Valor <xref:System.TimeSpan>. Rige qué sesgo temporal puede tolerar el mecanismo de reproducción entre el cliente y el servidor. El mecanismo de seguridad examina la marca de tiempo enviada y determina si se fue enviada demasiado lejos en el pasado. El valor predeterminado es 5 minutos.  
   
     3. `ReplayWindow`. Valor `TimeSpan`. Esto rige cuánto tiempo un mensaje puede vivir en la red después de que el servidor lo envíe (a través de los intermediarios) antes de alcanzar el cliente. El cliente realiza el seguimiento de las firmas de los mensajes enviados dentro del `ReplayWindow` último para los propósitos de detección de reproducción.  
   
-    4. `ReplayCacheSize`. Valor de entero. El cliente almacena las firmas del mensaje en una memoria caché. Este valor especifica cuántas firmas que puede almacenar la memoria caché. Si el número de mensajes enviado dentro de la última ventana de reproducción alcanza el límite de la memoria caché, se rechazan los nuevos mensajes hasta que las firmas almacenadas en memoria caché más antiguas alcancen el límite horario. El valor predeterminado es 500000.  
+    4. `ReplayCacheSize`. Valor entero. El cliente almacena las firmas del mensaje en una memoria caché. Este valor especifica cuántas firmas que puede almacenar la memoria caché. Si el número de mensajes enviado dentro de la última ventana de reproducción alcanza el límite de la memoria caché, se rechazan los nuevos mensajes hasta que las firmas almacenadas en memoria caché más antiguas alcancen el límite horario. El valor predeterminado es 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Para controlar la detección de reproducción en el servicio utilizando código  
   
@@ -46,25 +46,25 @@ Un ataque por repetición se produce cuando un atacante copia una secuencia de m
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Para controlar la detección de reproducción en configuración para el cliente o servicio  
   
-1. Cree una [\<customBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Cree un [ \<>customBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 2. Cree un elemento `<security>`.  
   
-3. Cree una [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) o [\<> localServiceSettings](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Cree un [ \<>localClientSettings o](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) [ \<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4. Establezca los siguientes valores de atributo según sea apropiado: `detectReplays`, `maxClockSkew`, `replayWindow`, y `replayCacheSize`. El ejemplo siguiente establece los atributos de `<localServiceSettings>`&lt;localClientSettings&gt; y un elemento`<localClientSettings>`:  
+4. Establezca los siguientes valores de atributo según sea apropiado: `detectReplays`, `maxClockSkew`, `replayWindow`, y `replayCacheSize`. El ejemplo siguiente establece los atributos de `<localServiceSettings>`:  
   
     ```xml  
     <customBinding>  
       <binding name="NewBinding0">  
        <textMessageEncoding />  
         <security>  
-         <localClientSettings   
-          replayCacheSize="800000"   
+         <localClientSettings
+          replayCacheSize="800000"
           maxClockSkew="00:03:00"  
           replayWindow="00:03:00" />  
-         <localServiceSettings   
-          replayCacheSize="800000"   
+         <localServiceSettings
+          replayCacheSize="800000"
           maxClockSkew="00:03:00"  
           replayWindow="00:03:00" />  
         <secureConversationBootstrap />  
@@ -102,10 +102,10 @@ Un ataque por repetición se produce cuando un atacante copia una secuencia de m
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Conversaciones y sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

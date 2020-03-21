@@ -2,12 +2,12 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bb1a6ab84ceba27b398d397b4407a55aa02c4cae
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935766"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185773"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -15,7 +15,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
   
 ### <a name="logging-sensitive-information"></a>Registrar información confidencial  
- Windows Communication Foundation (WCF) no modifica ningún dato en los encabezados y el cuerpo específicos de la aplicación. WCF tampoco realiza un seguimiento de la información personal en encabezados específicos de la aplicación o en datos de cuerpo.  
+ Windows Communication Foundation (WCF) no modifica ningún dato en encabezados y cuerpo específicos de la aplicación. WCF tampoco realiza un seguimiento de la información personal en encabezados específicos de la aplicación o datos del cuerpo.  
   
  Cuando el registro de mensajes está habilitado, la información personal en encabezados específicos de la aplicación, como una cadena de consulta; e información del cuerpo, como un número de tarjeta de crédito, se puede volver visible en los registros. El implementador de la aplicación es el responsable de exigir el control de acceso en los archivos de registro y configuración. Si no desea que este tipo de información sea visible, debería deshabilitar el registro o filtrar parte de los datos si desea compartir los registros.  
   
@@ -34,7 +34,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
    <system.serviceModel>  
       <machineSettings enableLoggingKnownPii="true"/>  
    </system.serviceModel>  
-</configuration>   
+</configuration>
 ```  
   
  Un implementador de aplicación puede utilizar el atributo `logKnownPii` en el archivo App.config o Web.config para permitir que PII se registre como sigue:  
@@ -72,7 +72,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
                       initializeData="c:\logs\messages.svclog" />  
               </listeners>  
             </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
               logKnownPii="true">  
               <listeners>  
                  <add name="traces"  
@@ -88,7 +88,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
  Los cambios solo son efectivos cuando la aplicación se inicia o reinicia. Un evento está registrado en el inicio cuando ambos atributos están establecidos en `true`. Un evento también está registrado si `logKnownPii` está establecido en `true` pero `enableLoggingKnownPii` es `false`.  
   
- El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más detallada sobre la privacidad y la protección de PII, vea privacidad de los [usuarios](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
+ El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más detallada sobre la privacidad y la protección de la PII para que no se exponga, consulte Privacidad del [usuario](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
 > [!CAUTION]
 > PII no se oculta en mensajes incorrectos. Tales mensajes se registran tal cual sin ninguna modificación. Los atributos mencionados previamente no tienen ningún efecto sobre esto.  
@@ -103,13 +103,13 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
 - Registro de mensajes desactivado: se emite este evento cuando el registro de mensajes se deshabilita a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
   
-- Registro PII conocido activado: se emite este evento cuando el registro de PII conocido está habilitado. Esto sucede cuando el atributo `enableLoggingKnownPii` del elemento `machineSettings` del archivo Machine. config se establece en `true`y el atributo `logKnownPii` del elemento `source` en el archivo app. config o Web. config se establece en `true`.  
+- Registro PII conocido activado: se emite este evento cuando el registro de PII conocido está habilitado. Esto sucede `enableLoggingKnownPii` cuando el `machineSettings` atributo del elemento del archivo `true`Machine.config se establece en , y el `logKnownPii` atributo del `source` elemento en el archivo App.config o Web.config se establece en `true`.  
   
-- Registro de PII conocido no permitido: se emite este evento cuando no se permite el registro de PII conocido. Esto sucede cuando el atributo `logKnownPii` del elemento `source` en el archivo app. config o Web. config está establecido en `true`, pero el atributo `enableLoggingKnownPii` del elemento `machineSettings` del archivo Machine. config se establece en `false`. No se inicia ninguna excepción.  
+- Registro de PII conocido no permitido: se emite este evento cuando no se permite el registro de PII conocido. Esto sucede `logKnownPii` cuando el `source` atributo del elemento en el archivo App.config o Web.config se establece `true`en , pero el `enableLoggingKnownPii` atributo del `machineSettings` elemento del archivo Machine.config se establece en . `false` No se inicia ninguna excepción.  
   
- Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información sobre esto, vea [registro de eventos](./event-logging/index.md).  
+ Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información al respecto, consulte [Registro de eventos](./event-logging/index.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Registro de mensajes](message-logging.md)
 - [Riesgos de seguridad y sugerencias útiles para el seguimiento](./tracing/security-concerns-and-useful-tips-for-tracing.md)

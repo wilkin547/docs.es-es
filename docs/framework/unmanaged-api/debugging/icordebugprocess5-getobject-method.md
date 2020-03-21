@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792362"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178603"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject (Método)
 Convierte una dirección de objeto en un objeto "ICorDebugObjectValue".  
@@ -29,31 +29,31 @@ Convierte una dirección de objeto en un objeto "ICorDebugObjectValue".
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `addr`  
- de Dirección del objeto.  
+ [en] La dirección del objeto.  
   
  `ppObject`  
- enuncia Puntero a la dirección de un objeto "ICorDebugObjectValue".  
+ [fuera] Puntero a la dirección de un objeto "ICorDebugObjectValue".  
   
-## <a name="remarks"></a>Notas  
- Si `addr` no apunta a un objeto administrado válido, el método `GetObject` devuelve `E_FAIL`.  
+## <a name="remarks"></a>Observaciones  
+ Si `addr` no apunta a un objeto `GetObject` administrado `E_FAIL`válido, el método devuelve .  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugProcess5 (interfaz)](icordebugprocess5-interface.md)
+- [ICorDebugProcess5 (Interfaz)](icordebugprocess5-interface.md)
 - [Interfaces de depuración](debugging-interfaces.md)

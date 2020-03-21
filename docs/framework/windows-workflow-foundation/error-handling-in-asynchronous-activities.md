@@ -2,12 +2,12 @@
 title: Control de errores en actividades asincrónicas
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: 7a1db144e4738870d3ff5fe68df11b2fb06ef3d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640958"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182948"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>Control de errores en actividades asincrónicas
 Proporcionar control de errores en una <xref:System.Activities.AsyncCodeActivity> implica el enrutamiento del error a través del sistema de devolución de llamada de la actividad. Este tema describe cómo obtener un error que se produce en una operación asincrónica de nuevo al host, mediante el ejemplo de la actividad SendMail.  
@@ -27,7 +27,7 @@ Proporcionar control de errores en una <xref:System.Activities.AsyncCodeActivity
 class SendMailAsyncResult : IAsyncResult  
         {  
             …  
-            public Exception Error { get; set; }   
+            public Exception Error { get; set; }
             …  
             void SendCompleted(object sender, AsyncCompletedEventArgs e)  
             {  
@@ -44,7 +44,7 @@ class SendMailAsyncResult : IAsyncResult
         {  
             SendMailAsyncResult sendMailResult = result as SendMailAsyncResult;  
             if (sendMailResult != null && sendMailResult.Error != null)  
-                throw sendMailResult.Error;   
+                throw sendMailResult.Error;
         }  
     }  
 ```

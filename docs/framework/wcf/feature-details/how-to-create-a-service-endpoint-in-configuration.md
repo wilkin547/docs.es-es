@@ -1,16 +1,16 @@
 ---
-title: Procedimiento para crear un punto de conexión de servicio en la configuración
+title: Cómo crear un punto de conexión de servicio en configuración
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787652"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184997"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedimiento para crear un punto de conexión de servicio en la configuración
-Los extremos proporcionan a los clientes con acceso a la funcionalidad que ofrece un servicio de Windows Communication Foundation (WCF). Puede definir uno o más extremos para un servicio usando una combinación de direcciones de extremo relativas y absolutas; si no se define ninguno, el tiempo de ejecución proporciona varios de forma predeterminada. En este tema se muestra cómo agregar extremos mediante un archivo de configuración que contiene tanto direcciones absolutas como relativas.  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Cómo crear un punto de conexión de servicio en configuración
+Los puntos de conexión proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio de Windows Communication Foundation (WCF). Puede definir uno o más extremos para un servicio usando una combinación de direcciones de extremo relativas y absolutas; si no se define ninguno, el tiempo de ejecución proporciona varios de forma predeterminada. En este tema se muestra cómo agregar extremos mediante un archivo de configuración que contiene tanto direcciones absolutas como relativas.  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente configuración de servicio especifica una dirección base y cinco extremos.  
@@ -73,7 +73,7 @@ Los extremos proporcionan a los clientes con acceso a la funcionalidad que ofrec
  La dirección base se especifica utilizando el elemento `add`, bajo service/host/baseAddresses, como se muestra en el siguiente ejemplo.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ Los extremos proporcionan a los clientes con acceso a la funcionalidad que ofrec
 ```  
   
 ## <a name="example"></a>Ejemplo  
- La primera definición de extremo mostrada en el siguiente ejemplo especifica una dirección relativa, que significa que la dirección del extremo es una combinación de la dirección base y la dirección relativa siguiendo las reglas de composición de identificadores uniformes de recursos (URI). La dirección relativa está vacía (""), por lo que la dirección del extremo es igual a la dirección base. La dirección del extremo real es `http://localhost:8000/servicemodelsamples/service`.  
+ La primera definición de extremo mostrada en el siguiente ejemplo especifica una dirección relativa, que significa que la dirección del extremo es una combinación de la dirección base y la dirección relativa siguiendo las reglas de composición de identificadores uniformes de recursos (URI). La dirección relativa está vacía (""), por lo que la dirección del extremo es igual a la dirección base. La dirección real `http://localhost:8000/servicemodelsamples/service`del punto de conexión es .  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>Ejemplo  
- La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración. La dirección relativa, "test", se anexa a la dirección base. La dirección del extremo real es `http://localhost:8000/servicemodelsamples/service/test`.  
+ La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración. La dirección relativa, "test", se anexa a la dirección base. La dirección real `http://localhost:8000/servicemodelsamples/service/test`del punto de conexión es .  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ Los extremos proporcionan a los clientes con acceso a la funcionalidad que ofrec
 ```  
   
 ## <a name="example"></a>Ejemplo  
- La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración. La dirección base no desempeña ningún papel en la dirección. La dirección del extremo real es `http://localhost:8001/hello/servicemodelsamples`.  
+ La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración. La dirección base no desempeña ningún papel en la dirección. La dirección real `http://localhost:8001/hello/servicemodelsamples`del punto de conexión es .  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  

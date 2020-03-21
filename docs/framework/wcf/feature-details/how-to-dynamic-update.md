@@ -1,15 +1,15 @@
 ---
-title: Cómo actualización dinámica
+title: 'Cómo: Actualización dinámica'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834719"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184963"
 ---
-# <a name="how-to-dynamic-update"></a>Cómo actualización dinámica
+# <a name="how-to-dynamic-update"></a>Cómo: Actualización dinámica
 Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el punto de conexión de destino del servicio de roundingCalc.  
   
 > [!NOTE]
@@ -64,7 +64,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     </filterTables>  
     ```  
   
-3. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente se muestra cómo asociar "filterTable1" al punto de conexión de servicio.  
+3. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente se muestra cómo asociar "filterTable1" con el punto de conexión de servicio.  
   
     ```xml  
     <behaviors>  
@@ -102,7 +102,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -164,7 +164,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
   
 ## <a name="example"></a>Ejemplo  
 
-A continuación se muestra una lista completa de la aplicación de consola usada en este ejemplo:
+A continuación se muestra una lista completa de la aplicación de consola utilizada en este ejemplo:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -242,8 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Ejemplo  
- 
-A continuación se muestra una lista completa del archivo de configuración que se usa en este ejemplo:
+
+A continuación se muestra una lista completa del archivo de configuración utilizado en este ejemplo:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,6 +298,6 @@ A continuación se muestra una lista completa del archivo de configuración que 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Servicios de enrutamiento](../samples/routing-services.md)

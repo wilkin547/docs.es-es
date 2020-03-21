@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088490"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179009"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement (Método)
-Obtiene el valor del elemento de la matriz especificado.  
+Obtiene el valor del elemento de matriz especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetElement (  
     [in]  ULONG32          cdim,  
-    [in, size_is(cdim), length_is(cdim)]   
+    [in, size_is(cdim), length_is(cdim)]
          ULONG32           indices[],  
     [out] ICorDebugValue   **ppValue  
 );  
@@ -38,17 +38,17 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parámetros  
  `cdim`  
- de Número de dimensiones de este objeto `ICorDebugArrayValue`.  
+ [en] El número de `ICorDebugArrayValue` dimensiones de este objeto.  
   
- Este valor también es el tamaño de la matriz de `indices` porque su tamaño es igual al número de dimensiones del objeto `ICorDebugArrayValue`.  
+ Este valor también es `indices` el tamaño de la matriz porque su `ICorDebugArrayValue` tamaño es igual al número de dimensiones del objeto.  
   
  `indices`  
- de Matriz de valores de índice, cada uno de los cuales especifica una posición dentro de una dimensión del objeto `ICorDebugArrayValue`.  
+ [en] Matriz de valores de índice, cada uno de los `ICorDebugArrayValue` cuales especifica una posición dentro de una dimensión del objeto.  
   
  Este valor no debe ser null.  
   
  `ppValue`  
- enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento especificado.  
+ [fuera] Puntero a la dirección de un ICorDebugValue objeto que representa el valor del elemento especificado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

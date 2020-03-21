@@ -2,17 +2,17 @@
 title: Protocolos de seguridad versión 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: e22150d21638cffdf804008c32285f900bb1e263
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459049"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184525"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de seguridad versión 1.0
-Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes. En esta sección se describen los detalles de la versión 1,0 de Windows Communication Foundation (WCF) (implementados en el <xref:System.ServiceModel.Channels.SecurityBindingElement>) para los siguientes protocolos de seguridad de servicios Web.  
+Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes. En esta sección se describen los detalles de Windows Communication <xref:System.ServiceModel.Channels.SecurityBindingElement>Foundation (WCF) versión 1.0 (implementados en el ) para los siguientes protocolos de seguridad de servicios web.  
   
-|Especificación/documento|Link|  
+|Especificación/documento|Vínculo|  
 |-|-|  
 |WSS: Message Security 1,0 de SOAP|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
 |WSS: Token Profile 1.0 de Username|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
@@ -28,9 +28,9 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |Nota de la aplicación:<br /><br /> Uso de WS-Trust para protocolo de enlace TLS|Para su publicación|  
 |Nota de la aplicación:<br /><br /> Uso de WS-Trust para SPNEGO|Para su publicación|  
 |Nota de la aplicación:<br /><br /> Referencias e identidad de extremos de direccionamiento de servicios Web|Para su publicación|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<https://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> tal como se ha modificado por [erratas](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) enviadas al Comité técnico de OASIS WS-SX |  
+|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<https://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> enmendada por [las erratas](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) presentadas al Comité Técnico de OASIS WS-SX |  
   
- WCF, versión 1, proporciona 17 modos de autenticación que se pueden usar como base para la configuración de seguridad de servicios Web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
+ WCF, versión 1, proporciona 17 modos de autenticación que se pueden usar como base para la configuración de seguridad de servicios web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
   
 - Credenciales utilizadas para autenticar cliente y servicio.  
   
@@ -38,31 +38,31 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
 - Patrones de intercambio de mensajes.  
   
-|Modo de autenticación|Autenticación del cliente|Autenticación de servidor|Modo|  
+|Modo de autenticación|Autenticación de clientes|Autenticación de servidor|Mode|  
 |-------------------------|---------------------------|---------------------------|----------|  
 |UserNameOverTransport|Nombre de usuario/contraseña|X509|Transporte|  
 |CertificateOverTransport|X509|X509|Transporte|  
 |KerberosOverTransport|Windows|X509|Transporte|  
 |IssuedTokenOverTransport|Federado|X509|Transporte|  
 |SspiNegotiatedOverTransport|Windows SSPI negociado|Windows SSPI negociado|Transporte|  
-|AnonymousForCertificate|Ninguno|X509|Mensaje|  
-|UserNameForCertificate|Nombre de usuario/contraseña|X509|Mensaje|  
-|MutualCertificate|X509|X509|Mensaje|  
-|MutualCertificateDuplex|X509|X509|Mensaje|  
-|IssuedTokenForCertificate|Federado|X509|Mensaje|  
-|Kerberos|Windows|Windows|Mensaje|  
-|IssuedToken|Federado|Federado|Mensaje|  
-|SspiNegotiated|Windows SSPI negociado|Windows SSPI negociado|Mensaje|  
-|AnonymousForSslNegotiated|Ninguno|X509, TLS-Nego|Mensaje|  
-|UserNameForSslNegotiated|Nombre de usuario/contraseña|X509, TLS-Nego|Mensaje|  
-|MutualSslNegotiated|X509|X509, TLS-Nego|Mensaje|  
-|IssuedTokenForSslNegotiated|Federado|X509, TLS-Nego|Mensaje|  
+|AnonymousForCertificate|None|X509|Message|  
+|UserNameForCertificate|Nombre de usuario/contraseña|X509|Message|  
+|MutualCertificate|X509|X509|Message|  
+|MutualCertificateDuplex|X509|X509|Message|  
+|IssuedTokenForCertificate|Federado|X509|Message|  
+|Kerberos|Windows|Windows|Message|  
+|IssuedToken|Federado|Federado|Message|  
+|SspiNegotiated|Windows SSPI negociado|Windows SSPI negociado|Message|  
+|AnonymousForSslNegotiated|None|X509, TLS-Nego|Message|  
+|UserNameForSslNegotiated|Nombre de usuario/contraseña|X509, TLS-Nego|Message|  
+|MutualSslNegotiated|X509|X509, TLS-Nego|Message|  
+|IssuedTokenForSslNegotiated|Federado|X509, TLS-Nego|Message|  
   
  Los extremos que usan tales modos de autenticación pueden expresar sus requisitos de seguridad mediante WS-SecurityPolicy (WS-SP). Este documento describe la estructura de mensajes de infraestructura y encabezado de seguridad para cada modo de autenticación y proporciona ejemplos de directivas y mensajes.  
   
- WCF aprovecha WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de varios mensajes entre las aplicaciones.  Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
+ WCF aprovecha WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de varios mensajes entre aplicaciones.  Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
   
- Además de los modos de autenticación, WCF proporciona opciones de configuración para controlar mecanismos de protección comunes que se aplican a la mayoría de los modos de autenticación basados en seguridad de mensajes, por ejemplo: orden de firma frente a operaciones de cifrado, conjuntos de algoritmos, derivación de claves y la confirmación de la firma.  
+ Además de los modos de autenticación, WCF proporciona la configuración para controlar los mecanismos de protección comunes que se aplican a la mayoría de los modos de autenticación basados en seguridad de mensajes, por ejemplo: orden de firma frente a operaciones de cifrado, conjuntos de algoritmos, derivación de claves , y la confirmación de la firma.  
   
  Los siguientes prefijos y espacios de nombres se utilizan en este documento.  
   
@@ -81,7 +81,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |wsp|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
 |mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
-## <a name="1-token-profiles"></a>1. perfiles de token  
+## <a name="1-token-profiles"></a>1. Perfiles de token  
  Las especificaciones Seguridad de Servicios web representan la credencial como tokens de seguridad. WCF admite los siguientes tipos de token:  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
@@ -89,9 +89,9 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  El atributo R1101 PasswordType en el elemento UsernameToken\Password no se debe omitir ni debe tener el valor #PasswordText (valor predeterminado).  
   
- Uno puede implementar el #PasswordDigest mediante extensibilidad. Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro. Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken. El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición. En los modos de autenticación WCF, las amenazas de ataque de reproducción se mitigan mediante el uso de firmas de mensaje.  
+ Uno puede implementar el #PasswordDigest mediante extensibilidad. Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro. Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken. El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición. En los modos de autenticación WCF, las amenazas de ataque de reproducción se mitigan mediante firmas de mensaje.  
   
- B1102 WCF nunca emite los subelementos nonce y creados de UsernameToken.  
+ B1102 WCF nunca emite Nonce y Created subelementos de la UsernameToken.  
   
  Estos subelementos están diseñados para ayudar a detectar las repeticiones. WCF usa firmas de mensaje en su lugar.  
   
@@ -102,7 +102,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
  Razón: las contraseñas generalmente están consideradas demasiado débiles como para ser utilizadas para operaciones criptográficas.  
   
 ### <a name="12-x509-token"></a>1.2 Token X509  
- WCF admite certificados X509v3 como un tipo de credencial y sigue X509TokenProfile 1.0 y X509TokenProfile 1.1 con las siguientes restricciones:  
+ WCF admite certificados X509v3 como tipo de credencial y sigue X509TokenProfile1.0 y X509TokenProfile1.1 con las siguientes restricciones:  
   
  R1201 El atributo ValueType en el elemento BinarySecurityToken debe tener el valor #X509v3 cuando contiene un certificado X509v3.  
   
@@ -116,37 +116,37 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  R1204 Si se está utilizando X509TokenProfile1.1, una referencia externa al token de seguridad X509 DEBERÍA utilizar la huella digital introducida por WS-Security 1.1.  
   
- WCF es compatible con X509IssuerSerial. Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: WCF usa una cadena para comparar dos valores de X509IssuerSerial. Por lo tanto, si una reordena los componentes del nombre de sujeto y envía a un servicio WCF una referencia a un certificado, es posible que no se encuentre.  
+ WCF admite X509IssuerSerial. Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: WCF usa una cadena para comparar dos valores de X509IssuerSerial. Por lo tanto, si uno reordena los componentes del nombre de sujeto y envía a un servicio WCF una referencia a un certificado, es posible que no se encuentre.  
   
 ### <a name="13-kerberos-token"></a>1.3 Token de Kerberos.  
- WCF admite KerberosTokenProfile 1.1 con el fin de la autenticación de Windows con las siguientes restricciones:  
+ WCF admite KerberosTokenProfile1.1 para el propósito de la autenticación de Windows con las siguientes restricciones:  
   
  R1301 Un Token de Kerberos debe llevar el valor de un AP_REQ de Kerberos v4 ajustado a GSS, tal y como se define en GSS_API y en la especificación de Kerberos, y debe tener el atributo ValueType con el valor #GSS_Kerberosv5_AP_REQ.  
   
- WCF usa la solicitud de AP-REQ Kerberos ajustada de GSS, no una solicitud de AP-REQ. Éste es un procedimiento de seguridad recomendado.  
+ WCF usa GSS envuelto Kerberos AP-REQ, no un AP-REQ desnudo. Éste es un procedimiento de seguridad recomendado.  
   
 ### <a name="14-saml-v11-token"></a>1.4 Token SAML v1.1  
- WCF admite los perfiles de token SAML de WSS 1,0 y 1,1 para los tokens SAML v 1.1. Es posible implementar otras versiones de formatos de token SAML.  
+ WCF admite los perfiles de token SAML de WSS 1.0 y 1.1 para los tokens SAML v1.1. Es posible implementar otras versiones de formatos de token SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Token de contexto de seguridad  
- WCF admite el token de contexto de seguridad (SCT) incluido en WS-SecureConversation. SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
+ WCF admite el token de contexto de seguridad (SCT) introducido en WS-SecureConversation. SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
   
-## <a name="2-common-message-security-parameters"></a>2. parámetros de seguridad de mensajes comunes  
+## <a name="2-common-message-security-parameters"></a>2. Parámetros comunes de seguridad de mensajes  
   
 ### <a name="21-timestamp"></a>2.1 Marca de tiempo  
- La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF siempre serializa wsse: TimeStamp con los campos wsse: Created y wsse: Expires. El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
+ La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF siempre serializa wsse:TimeStamp con wsse:Created y wsse:Expires campos. El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
   
 ### <a name="22-protection-order"></a>2.2 Orden de protección  
- WCF admite el orden de protección de mensajes "firmar antes de cifrar" y "cifrar antes de firmar" (Directiva de seguridad 1,1). "Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.  
+ WCF admite el orden de protección de mensajes "Sign Before Encrypt" y "Encrypt Before Sign" (directiva de seguridad 1.1). "Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.  
   
 ### <a name="23-signature-protection"></a>2.3 Protección de firmas  
  Cuando se usa Cifrar antes de firmar, se recomienda proteger la firma para evitar los ataques por fuerza bruta para adivinar el contenido cifrado o la clave de la firma (sobre todo cuando un token personalizado se utiliza con material de clave débil).  
   
 ### <a name="24-algorithm-suite"></a>2.4 Conjunto de algoritmos  
- WCF es compatible con todos los conjuntos de algoritmos enumerados en la Directiva de seguridad 1,1.  
+ WCF admite todos los conjuntos de algoritmos enumerados en la directiva de seguridad 1.1.  
   
 ### <a name="25-key-derivation"></a>2.5 Derivación de clave  
- WCF usa "derivación de claves para claves simétricas", como se describe en WS-SecureConversation.  
+ WCF usa "Derivación de claves para claves simétricas" como se describe en WS-SecureConversation.  
   
 ### <a name="26-signature-confirmation"></a>2.6 Confirmación de firma  
  La confirmación de firma puede ser como protección frente a ataques de intermediarios para proteger el conjunto de firmas.  
@@ -161,13 +161,13 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |LaxTimestampFirst|Igual que Lax, solo que el primer elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
 |LaxTimestampLast|Igual que lax, solo que el último elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
   
- WCF admite los cuatro modos de diseño del encabezado de seguridad. La estructura de encabezado de Seguridad y los ejemplos de mensajes para los modos de autenticación siguen el modo "Strict" (estricto).  
+ WCF admite los cuatro modos para el diseño de encabezado de seguridad. La estructura de encabezado de Seguridad y los ejemplos de mensajes para los modos de autenticación siguen el modo "Strict" (estricto).  
   
-## <a name="2-common-message-security-parameters"></a>2. parámetros de seguridad de mensajes comunes  
+## <a name="2-common-message-security-parameters"></a>2. Parámetros comunes de seguridad de mensajes  
  En esta sección se proporcionan ejemplos de directivas para cada modo de autenticación junto con ejemplos que muestran la estructura de encabezado de seguridad en mensajes intercambiados por cliente y servicio.  
   
 ### <a name="61-transport-protection"></a>6.1 Protección de transporte  
- WCF proporciona cinco modos de autenticación que utilizan el transporte seguro para proteger los mensajes; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport y SspiNegotiatedOverTransport.  
+ WCF proporciona cinco modos de autenticación que usan transporte seguro para proteger los mensajes; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport y SspiNegotiatedOverTransport.  
   
  Estos modos de autenticación se construyen utilizando el enlace de transportes descrito en SecurityPolicy. Para el modo de autenticación de UserNameOverTransport, UsernameToken es un token auxiliar firmado. Para los otros modos de autenticación el token aparece como un token de endoso firmado. Los apéndices C.1.2 y C.1.3 de SecurityPolicy describen en detalle el diseño del encabezado de seguridad. Los siguientes encabezados de seguridad del ejemplo muestran el diseño estricto para un modo de autenticación determinado.  
   
@@ -194,48 +194,48 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
         <wsp:Policy>  
           <sp:TransportToken>  
             <wsp:Policy>  
-              <sp:HttpsToken RequireClientCertificate='false' />   
+              <sp:HttpsToken RequireClientCertificate='false' />
             </wsp:Policy>  
           </sp:TransportToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
+          <sp:IncludeTimestamp />
         </wsp:Policy>  
       </sp:TransportBinding>  
       <sp:SignedSupportingTokens >  
         <wsp:Policy>  
-          <sp:UsernameToken   
+          <sp:UsernameToken
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
             <wsp:Policy>  
-              <sp:WssUsernameToken10 />   
+              <sp:WssUsernameToken10 />
             </wsp:Policy>  
           </sp:UsernameToken>  
         </wsp:Policy>  
       </sp:SignedSupportingTokens>  
       <sp:Wss11 >  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10 >  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -243,7 +243,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Diseño del encabezado de seguridad  
   
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -256,7 +256,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -279,53 +279,53 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
         <wsp:Policy>  
           <sp:TransportToken>  
             <wsp:Policy>  
-             <sp:HttpsToken RequireClientCertificate='false' />   
+             <sp:HttpsToken RequireClientCertificate='false' />
             </wsp:Policy>  
           </sp:TransportToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
+          <sp:IncludeTimestamp />
         </wsp:Policy>  
       </sp:TransportBinding>  
       <sp:EndorsingSupportingTokens>  
         <wsp:Policy>  
-          <sp:X509Token   
+          <sp:X509Token
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
             <wsp:Policy>  
-              <sp:RequireThumbprintReference />   
-              <sp:WssX509V3Token10 />   
+              <sp:RequireThumbprintReference />
+              <sp:WssX509V3Token10 />
             </wsp:Policy>  
           </sp:X509Token>  
           <sp:SignedParts>  
-            <sp:Header Name='To'   
-Namespace='http://www.w3.org/2005/08/addressing' />   
+            <sp:Header Name='To'
+Namespace='http://www.w3.org/2005/08/addressing' />
           </sp:SignedParts>  
         </wsp:Policy>  
       </sp:EndorsingSupportingTokens>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -333,7 +333,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Diseño del encabezado de seguridad  
   
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -349,7 +349,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <o:Security>  
@@ -372,57 +372,57 @@ Namespace='http://www.w3.org/2005/08/addressing' />
         <wsp:Policy>  
           <sp:TransportToken>  
             <wsp:Policy>  
-              <sp:HttpsToken RequireClientCertificate='false' />   
+              <sp:HttpsToken RequireClientCertificate='false' />
             </wsp:Policy>  
           </sp:TransportToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
+          <sp:IncludeTimestamp />
         </wsp:Policy>  
       </sp:TransportBinding>  
       <sp:EndorsingSupportingTokens>  
         <wsp:Policy>  
-          <sp:IssuedToken   
+          <sp:IssuedToken
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
             <sp:RequestSecurityTokenTemplate>  
               <wst:KeyType>  
               http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
-              </wst:KeyType>   
+              </wst:KeyType>
             </sp:RequestSecurityTokenTemplate>  
             <wsp:Policy>  
-              <sp:RequireInternalReference />   
+              <sp:RequireInternalReference />
             </wsp:Policy>  
           </sp:IssuedToken>  
           <sp:SignedParts>  
-            <sp:Header Name='To'   
-Namespace='http://www.w3.org/2005/08/addressing' />   
+            <sp:Header Name='To'
+Namespace='http://www.w3.org/2005/08/addressing' />
           </sp:SignedParts>  
         </wsp:Policy>  
       </sp:EndorsingSupportingTokens>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -430,7 +430,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Diseño del encabezado de seguridad  
   
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -446,7 +446,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -469,20 +469,20 @@ Namespace='http://www.w3.org/2005/08/addressing' />
         <wsp:Policy>  
           <sp:TransportToken>  
             <wsp:Policy>  
-              <sp:HttpsToken RequireClientCertificate='false' />   
+              <sp:HttpsToken RequireClientCertificate='false' />
             </wsp:Policy>  
           </sp:TransportToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic128 />   
+              <sp:Basic128 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
+          <sp:IncludeTimestamp />
         </wsp:Policy>  
       </sp:TransportBinding>  
       <sp:EndorsingSupportingTokens>  
@@ -490,31 +490,31 @@ Namespace='http://www.w3.org/2005/08/addressing' />
           <sp:KerberosToken  
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Once' >  
             <wsp:Policy>  
-              <sp:WssGssKerberosV5ApReqToken11 />   
+              <sp:WssGssKerberosV5ApReqToken11 />
             </wsp:Policy>  
           </sp:KerberosToken>  
           <sp:SignedParts>  
-            <sp:Header Name='To'   
-Namespace='http://www.w3.org/2005/08/addressing' />   
+            <sp:Header Name='To'
+Namespace='http://www.w3.org/2005/08/addressing' />
           </sp:SignedParts>  
         </wsp:Policy>  
       </sp:EndorsingSupportingTokens>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -522,7 +522,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Diseño del encabezado de seguridad  
   
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -538,7 +538,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -561,50 +561,50 @@ Namespace='http://www.w3.org/2005/08/addressing' />
         <wsp:Policy>  
           <sp:TransportToken>  
             <wsp:Policy>  
-              <sp:HttpsToken RequireClientCertificate='false' />   
+              <sp:HttpsToken RequireClientCertificate='false' />
             </wsp:Policy>  
           </sp:TransportToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
+          <sp:IncludeTimestamp />
         </wsp:Policy>  
       </sp:TransportBinding>  
       <sp:EndorsingSupportingTokens>  
         <wsp:Policy>  
-          <sp:SpnegoContextToken   
+          <sp:SpnegoContextToken
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
-            <wsp:Policy />   
+            <wsp:Policy />
           </sp:SpnegoContextToken>  
           <sp:SignedParts>  
-            <sp:Header Name='To'   
-Namespace='http://www.w3.org/2005/08/addressing' />   
+            <sp:Header Name='To'
+Namespace='http://www.w3.org/2005/08/addressing' />
           </sp:SignedParts>  
         </wsp:Policy>  
       </sp:EndorsingSupportingTokens>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -613,7 +613,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ### <a name="security-header-examples"></a>Ejemplos de encabezados de seguridad  
  Una vez se establece el token de contexto de seguridad (SCT) a través del protocolo de enlace de SPNEGO mediante negociación binaria WS-Trust, los mensajes de aplicación tienen encabezados de seguridad con la estructura siguiente.  
   
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -629,7 +629,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -669,60 +669,60 @@ Namespace='http://www.w3.org/2005/08/addressing' />
         <wsp:Policy>  
           <sp:InitiatorToken>  
             <wsp:Policy>  
-              <sp:X509Token   
+              <sp:X509Token
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
                 <wsp:Policy>  
-                  <sp:WssX509V3Token10 />   
+                  <sp:WssX509V3Token10 />
                 </wsp:Policy>  
               </sp:X509Token>  
             </wsp:Policy>  
           </sp:InitiatorToken>  
           <sp:RecipientToken>  
             <wsp:Policy>  
-              <sp:X509Token   
+              <sp:X509Token
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never' >  
                 <wsp:Policy>  
-                  <sp:WssX509V3Token10 />   
+                  <sp:WssX509V3Token10 />
                 </wsp:Policy>  
               </sp:X509Token>  
             </wsp:Policy>  
           </sp:RecipientToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:AsymmetricBinding>  
       <sp:Wss10>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
         </wsp:Policy>  
       </sp:Wss10>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -744,7 +744,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -765,7 +765,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Ejemplos de encabezado de seguridad: EncryptBeforeSign  
   
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -787,7 +787,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -833,53 +833,53 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
         <wsp:Policy>  
           <sp:InitiatorToken>  
             <wsp:Policy>  
-              <sp:X509Token   
+              <sp:X509Token
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
                 <wsp:Policy>  
-                  <sp:WssX509V3Token10 />   
+                  <sp:WssX509V3Token10 />
                 </wsp:Policy>  
               </sp:X509Token>  
             </wsp:Policy>  
           </sp:InitiatorToken>  
           <sp:RecipientToken>  
             <wsp:Policy>  
-              <sp:X509Token   
+              <sp:X509Token
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToInitiator' >  
                 <wsp:Policy>  
-                  <sp:WssX509V3Token10 />   
+                  <sp:WssX509V3Token10 />
                 </wsp:Policy>  
               </sp:X509Token>  
             </wsp:Policy>  
           </sp:RecipientToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:AsymmetricBinding>  
       <sp:Wss10>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
         </wsp:Policy>  
       </sp:Wss10>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -961,28 +961,28 @@ Protección de tokens: False
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <sp:X509Token   
+              <sp:X509Token
 sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never' >  
                 <wsp:Policy>  
-                  <sp:RequireDerivedKeys />   
-                  <sp:RequireThumbprintReference />   
-                  <sp:WssX509V3Token10 />   
+                  <sp:RequireDerivedKeys />
+                  <sp:RequireThumbprintReference />
+                  <sp:WssX509V3Token10 />
                 </wsp:Policy>  
               </sp:X509Token>  
             </wsp:Policy>  
           </sp:ProtectionToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
           <sp:OnlySignEntireHeadersAndBody />  
         </wsp:Policy>  
       </sp:SymmetricBinding>  
@@ -990,21 +990,21 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
       ...  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
-          <sp:RequireSignatureConfirmation />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
+          <sp:RequireSignatureConfirmation />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -1018,7 +1018,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
  Vea "Directiva" en 6.2.3 más arriba para obtener detalles sobre enlaces  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1043,7 +1043,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1069,7 +1069,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1094,7 +1094,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1131,7 +1131,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsp:Policy>  
     <sp:UsernameToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
       <wsp:Policy>  
-        <sp:WssUsernameToken10 />   
+        <sp:WssUsernameToken10 />
       </wsp:Policy>  
     </sp:UsernameToken>  
   </wsp:Policy>  
@@ -1139,7 +1139,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1167,7 +1167,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1190,7 +1190,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1218,7 +1218,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1254,8 +1254,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsp:Policy>  
     <sp:X509Token sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
       <wsp:Policy>  
-        <sp:RequireThumbprintReference />   
-        <sp:WssX509V3Token10 />   
+        <sp:RequireThumbprintReference />
+        <sp:WssX509V3Token10 />
       </wsp:Policy>  
     </sp:X509Token>  
   </wsp:Policy>  
@@ -1263,7 +1263,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1294,7 +1294,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1326,7 +1326,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1357,7 +1357,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1403,8 +1403,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
        </wst:KeyType>  
      </sp:RequestSecurityTokenTemplate>  
      <wsp:Policy>  
-       <sp:RequireDerivedKeys />   
-       <sp:RequireInternalReference />   
+       <sp:RequireDerivedKeys />
+       <sp:RequireInternalReference />
      </wsp:Policy>  
    </sp:IssuedToken>  
   </wsp:Policy>  
@@ -1412,7 +1412,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1446,7 +1446,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1475,7 +1475,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1509,7 +1509,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1557,50 +1557,50 @@ Protección de tokens: False
             <wsp:Policy>  
               <sp:KerberosToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Once' >  
                 <wsp:Policy>  
-                  <sp:RequireDerivedKeys />   
-                  <sp:WssGssKerberosV5ApReqToken11 />   
+                  <sp:RequireDerivedKeys />
+                  <sp:WssGssKerberosV5ApReqToken11 />
                 </wsp:Policy>  
               </sp:KerberosToken>  
             </wsp:Policy>  
           </sp:ProtectionToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic128 />   
+              <sp:Basic128 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:SymmetricBinding>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1625,7 +1625,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1644,11 +1644,11 @@ Protección de tokens: False
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1656,7 +1656,7 @@ TBD
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1690,53 +1690,53 @@ Protección de tokens: False
                 <sp:RequestSecurityTokenTemplate>  
                   <wst:KeyType>  
 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
-                  </wst:KeyType>   
+                  </wst:KeyType>
                 </sp:RequestSecurityTokenTemplate>  
                 <wsp:Policy>  
-                  <sp:RequireDerivedKeys />   
-                  <sp:RequireInternalReference />   
+                  <sp:RequireDerivedKeys />
+                  <sp:RequireInternalReference />
                 </wsp:Policy>  
               </sp:IssuedToken>  
             </wsp:Policy>  
           </sp:ProtectionToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:SymmetricBinding>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1761,7 +1761,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1780,11 +1780,11 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1809,7 +1809,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -1858,44 +1858,44 @@ Protección de tokens: False
             <wsp:Policy>  
               <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
                 <wsp:Policy>  
-                  <sp:RequireDerivedKeys />   
+                  <sp:RequireDerivedKeys />
                 </wsp:Policy>  
               </mssp:SslContextToken>  
             </wsp:Policy>  
           </sp:ProtectionToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:SymmetricBinding>  
       <!-- Supporting token assertions go here -->  
       ..  
-      <sp:Wss11>   
+      <sp:Wss11>
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
@@ -1909,7 +1909,7 @@ Protección de tokens: False
  Vea Directiva en 6.5.1 más arriba para obtener detalles sobre enlaces.  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1934,7 +1934,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1953,11 +1953,11 @@ Protección de tokens: False
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -1982,7 +1982,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -2018,7 +2018,7 @@ Protección de tokens: False
   <wsp:Policy>  
     <sp:UsernameToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
       <wsp:Policy>  
-        <sp:WssUsernameToken10 />   
+        <sp:WssUsernameToken10 />
       </wsp:Policy>  
     </sp:UsernameToken>  
   </wsp:Policy>  
@@ -2026,7 +2026,7 @@ Protección de tokens: False
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2054,7 +2054,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2073,11 +2073,11 @@ Protección de tokens: False
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -2105,7 +2105,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -2143,11 +2143,11 @@ Protección de tokens: False
       <sp:RequestSecurityTokenTemplate>  
         <wst:KeyType>  
 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
-        </wst:KeyType>   
+        </wst:KeyType>
       </sp:RequestSecurityTokenTemplate>  
       <wsp:Policy>  
-        <sp:RequireDerivedKeys />   
-        <sp:RequireInternalReference />   
+        <sp:RequireDerivedKeys />
+        <sp:RequireInternalReference />
       </wsp:Policy>  
     </sp:IssuedToken>  
   </wsp:Policy>  
@@ -2155,7 +2155,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2189,7 +2189,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2214,11 +2214,11 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -2252,7 +2252,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -2290,8 +2290,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   <wsp:Policy>  
     <sp:X509Token sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
       <wsp:Policy>  
-        <sp:RequireThumbprintReference />   
-        <sp:WssX509V3Token10 />   
+        <sp:RequireThumbprintReference />
+        <sp:WssX509V3Token10 />
       </wsp:Policy>  
     </sp:X509Token>  
   </wsp:Policy>  
@@ -2299,7 +2299,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2324,7 +2324,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2343,11 +2343,11 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -2372,7 +2372,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -2418,49 +2418,49 @@ Protección de tokens: False
             <wsp:Policy>  
               <sp:SpnegoContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
                 <wsp:Policy>  
-                  <sp:RequireDerivedKeys />   
+                  <sp:RequireDerivedKeys />
                 </wsp:Policy>  
               </sp:SpnegoContextToken>  
             </wsp:Policy>  
           </sp:ProtectionToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:SymmetricBinding>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2485,7 +2485,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2504,11 +2504,11 @@ Protección de tokens: False
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -2533,7 +2533,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  
@@ -2570,21 +2570,21 @@ Protección de tokens: False
             <wsp:Policy>  
               <sp:SecureConversationToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
                 <wsp:Policy>  
-                  <sp:RequireDerivedKeys />   
+                  <sp:RequireDerivedKeys />
                   <sp:BootstrapPolicy>  
                     <wsp:Policy>  
                       <sp:SignedParts>  
-                        <sp:Body />   
-                        <sp:Header Name='To' Namespace='http://www.w3.org/2005/08/addressing' />   
-                        <sp:Header Name='From' Namespace='http://www.w3.org/2005/08/addressing' />   
-                        <sp:Header Name='FaultTo' Namespace='http://www.w3.org/2005/08/addressing' />   
-                        <sp:Header Name='ReplyTo' Namespace='http://www.w3.org/2005/08/addressing' />   
-                        <sp:Header Name='MessageID' Namespace='http://www.w3.org/2005/08/addressing' />   
-                        <sp:Header Name='RelatesTo' Namespace='http://www.w3.org/2005/08/addressing' />   
-                        <sp:Header Name='Action' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Body />
+                        <sp:Header Name='To' Namespace='http://www.w3.org/2005/08/addressing' />
+                        <sp:Header Name='From' Namespace='http://www.w3.org/2005/08/addressing' />
+                        <sp:Header Name='FaultTo' Namespace='http://www.w3.org/2005/08/addressing' />
+                        <sp:Header Name='ReplyTo' Namespace='http://www.w3.org/2005/08/addressing' />
+                        <sp:Header Name='MessageID' Namespace='http://www.w3.org/2005/08/addressing' />
+                        <sp:Header Name='RelatesTo' Namespace='http://www.w3.org/2005/08/addressing' />
+                        <sp:Header Name='Action' Namespace='http://www.w3.org/2005/08/addressing' />
                       </sp:SignedParts>  
                       <sp:EncryptedParts>  
-                        <sp:Body />   
+                        <sp:Body />
                       </sp:EncryptedParts>  
                       <sp:SymmetricBinding>  
                         <wsp:Policy>  
@@ -2592,39 +2592,39 @@ Protección de tokens: False
                             <wsp:Policy>  
                               <sp:SpnegoContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
                                 <wsp:Policy>  
-                                  <sp:RequireDerivedKeys />   
+                                  <sp:RequireDerivedKeys />
                                 </wsp:Policy>  
                               </sp:SpnegoContextToken>  
                             </wsp:Policy>  
                           </sp:ProtectionToken>  
                           <sp:AlgorithmSuite>  
                             <wsp:Policy>  
-                              <sp:Basic256 />   
+                              <sp:Basic256 />
                             </wsp:Policy>  
                           </sp:AlgorithmSuite>  
                           <sp:Layout>  
                             <wsp:Policy>  
-                              <sp:Strict />   
+                              <sp:Strict />
                             </wsp:Policy>  
                           </sp:Layout>  
-                          <sp:IncludeTimestamp />   
-                          <sp:EncryptSignature />   
-                          <sp:OnlySignEntireHeadersAndBody />   
+                          <sp:IncludeTimestamp />
+                          <sp:EncryptSignature />
+                          <sp:OnlySignEntireHeadersAndBody />
                         </wsp:Policy>  
                       </sp:SymmetricBinding>  
                       <sp:Wss11>  
                         <wsp:Policy>  
-                          <sp:MustSupportRefKeyIdentifier />   
-                          <sp:MustSupportRefIssuerSerial />   
-                          <sp:MustSupportRefThumbprint />   
-                          <sp:MustSupportRefEncryptedKey />   
+                          <sp:MustSupportRefKeyIdentifier />
+                          <sp:MustSupportRefIssuerSerial />
+                          <sp:MustSupportRefThumbprint />
+                          <sp:MustSupportRefEncryptedKey />
                         </wsp:Policy>  
                       </sp:Wss11>  
                       <sp:Trust10>  
                         <wsp:Policy>  
-                          <sp:MustSupportIssuedTokens />   
-                          <sp:RequireClientEntropy />   
-                          <sp:RequireServerEntropy />   
+                          <sp:MustSupportIssuedTokens />
+                          <sp:RequireClientEntropy />
+                          <sp:RequireServerEntropy />
                         </wsp:Policy>  
                       </sp:Trust10>  
                     </wsp:Policy>  
@@ -2635,42 +2635,42 @@ Protección de tokens: False
           </sp:ProtectionToken>  
           <sp:AlgorithmSuite>  
             <wsp:Policy>  
-              <sp:Basic256 />   
+              <sp:Basic256 />
             </wsp:Policy>  
           </sp:AlgorithmSuite>  
           <sp:Layout>  
             <wsp:Policy>  
-              <sp:Strict />   
+              <sp:Strict />
             </wsp:Policy>  
           </sp:Layout>  
-          <sp:IncludeTimestamp />   
-          <sp:EncryptSignature />   
-          <sp:OnlySignEntireHeadersAndBody />   
+          <sp:IncludeTimestamp />
+          <sp:EncryptSignature />
+          <sp:OnlySignEntireHeadersAndBody />
         </wsp:Policy>  
       </sp:SymmetricBinding>  
       <sp:Wss11>  
         <wsp:Policy>  
-          <sp:MustSupportRefKeyIdentifier />   
-          <sp:MustSupportRefIssuerSerial />   
-          <sp:MustSupportRefThumbprint />   
-          <sp:MustSupportRefEncryptedKey />   
+          <sp:MustSupportRefKeyIdentifier />
+          <sp:MustSupportRefIssuerSerial />
+          <sp:MustSupportRefThumbprint />
+          <sp:MustSupportRefEncryptedKey />
         </wsp:Policy>  
       </sp:Wss11>  
       <sp:Trust10>  
         <wsp:Policy>  
-          <sp:MustSupportIssuedTokens />   
-          <sp:RequireClientEntropy />   
-          <sp:RequireServerEntropy />   
+          <sp:MustSupportIssuedTokens />
+          <sp:RequireClientEntropy />
+          <sp:RequireServerEntropy />
         </wsp:Policy>  
       </sp:Trust10>  
-      <wsaw:UsingAddressing />   
+      <wsaw:UsingAddressing />
     </wsp:All>  
   </wsp:ExactlyOne>  
 </wsp:Policy>  
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2695,7 +2695,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2714,11 +2714,11 @@ Protección de tokens: False
   <xenc:EncryptedData>  
   ...  
   </xenc:EncryptedData>  
-</wsse:Security>    
+</wsse:Security>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Request  
+ Solicitud  
   
 ```xml  
 <wsse:Security>  
@@ -2743,7 +2743,7 @@ Protección de tokens: False
 </wsse:Security>  
 ```  
   
- Respuesta  
+ Response  
   
 ```xml  
 <wsse:Security>  

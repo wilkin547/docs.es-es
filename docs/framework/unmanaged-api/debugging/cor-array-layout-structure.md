@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca2d00611a7530dfb0d1c2a27123947bdf69820d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099466"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179353"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT (Estructura)
 Proporciona información sobre la distribución de un objeto de matriz en la memoria.  
@@ -32,30 +32,30 @@ typedef struct COR_ARRAY_LAYOUT {
     CorElementType componentType;  
     ULONG32 firstElementOffset;  
     ULONG32 elementSize;  
-    ULONG32 countOffset;   
-    ULONG32 rankSize;   
-    ULONG32 numRanks;   
-    ULONG32 rankOffset;   
+    ULONG32 countOffset;
+    ULONG32 rankSize;
+    ULONG32 numRanks;
+    ULONG32 rankOffset;
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |`componentID`|Identificador del tipo de objetos que contiene la matriz.|  
-|`componentType`|Un valor de enumeración de CorElementType que indica si el componente es una referencia de recolección de elementos no utilizados, una clase de valor o un primitivo.|  
+|`componentType`|Un corElementType valor de enumeración que indica si el componente es una referencia de recolección de elementos no utilizados, una clase de valor o una primitiva.|  
 |`firstElementOffset`|Desplazamiento al primer elemento de la matriz.|  
-|`elementSize`|Tamaño de cada elemento.|  
+|`elementSize`|El tamaño de cada elemento.|  
 |`countOffset`|Desplazamiento al número de elementos de la matriz.|  
-|`rankSize`|Tamaño del rango, en bytes.|  
-|`numRanks`|Número de rangos de la matriz.|  
-|`rankOffset`|Desplazamiento en el que se inician los rangos.|  
+|`rankSize`|El tamaño del rango, en bytes.|  
+|`numRanks`|El número de rangos en la matriz.|  
+|`rankOffset`|Desplazamiento en el que comienzan los rangos.|  
   
-## <a name="remarks"></a>Comentarios  
- El campo `rankSize` especifica el tamaño de un rango en una matriz multidimensional. También es preciso para las matrices unidimensionales.  
+## <a name="remarks"></a>Observaciones  
+ El `rankSize` campo especifica el tamaño de un rango en una matriz multidimensional. También es preciso para matrices unidimensionales.  
   
- El valor de `numRanks` es 1 para una matriz unidimensional y `N` para una matriz multidimensional de dimensiones `N`.  
+ El valor `numRanks` de es 1 para `N` una matriz unidimensional `N` y para una matriz multidimensional de dimensiones.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
@@ -66,7 +66,7 @@ typedef struct COR_ARRAY_LAYOUT {
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

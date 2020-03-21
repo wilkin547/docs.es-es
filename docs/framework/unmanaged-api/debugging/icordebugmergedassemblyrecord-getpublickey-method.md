@@ -2,12 +2,12 @@
 title: ICorDebugMergedAssemblyRecord::GetPublicKey (método)
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: c8c6e9adcb9d29f5e234dd1b8dfd351fac575301
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 632e990899346493d5a7df08d293e25b83ed7ad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793116"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178740"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey (método)
 Obtiene la clave pública del ensamblado.  
@@ -16,12 +16,12 @@ Obtiene la clave pública del ensamblado.
   
 ```cpp  
 HRESULT GetPublicKey(  
-   [in] ULONG32 cbPublicKey,   
-   [out] ULONG32 *pcbPublicKey,   
+   [in] ULONG32 cbPublicKey,
+   [out] ULONG32 *pcbPublicKey,
    [out, size_is(cbPublicKey), length_is(*pcbPublicKey)] BYTE pbPublicKey[]);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `cbPublicKey`  
  [in] Número máximo de bytes en la matriz `pbPublicKey`.  
   
@@ -31,21 +31,21 @@ HRESULT GetPublicKey(
  `pbPublicKey`  
  [out] Puntero a una matriz de bytes que contiene la clave pública del ensamblado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugMergedAssemblyRecord (interfaz)](icordebugmergedassemblyrecord-interface.md)
+- [Interfaz ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Interfaces de depuración](debugging-interfaces.md)

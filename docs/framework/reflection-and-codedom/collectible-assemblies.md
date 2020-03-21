@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-ms.openlocfilehash: 85eacff22cf2e1c0b8c3d74a4971de035dfafbe4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130291"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180543"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Ensamblados recopilables para la generación dinámica de tipos
 
@@ -21,26 +21,26 @@ Para habilitar la descarga, use la marca <xref:System.Reflection.Emit.AssemblyBu
 
 ## <a name="lifetime-of-collectible-assemblies"></a>Duración de los ensamblados recopilables
 
-La duración de un ensamblado recopilable se controla mediante referencias a los tipos que contiene y los objetos que se crean a partir de esos tipos. Common Language Runtime no descarga un ensamblado siempre que existan uno o varios de los siguientes (`T` es cualquier tipo definido en el ensamblado): 
+La duración de un ensamblado recopilable se controla mediante referencias a los tipos que contiene y los objetos que se crean a partir de esos tipos. Common Language Runtime no descarga un ensamblado siempre que existan uno o varios de los siguientes (`T` es cualquier tipo definido en el ensamblado):
 
-- Una instancia de `T`.
+- Instancia de `T`.
 
 - Una instancia de una matriz de `T`.
- 
+
 - Una instancia de un tipo genérico que tenga `T` como uno de sus argumentos de tipo. Esto incluye las recopilaciones genéricas de `T`, aun cuando esa recopilación esté vacía.
 
-- Una instancia de <xref:System.Type> o <xref:System.Reflection.Emit.TypeBuilder> que represente a `T`. 
+- Una instancia de <xref:System.Type> o <xref:System.Reflection.Emit.TypeBuilder> que represente a `T`.
 
    > [!IMPORTANT]
    > Debe liberar todos los objetos que representen a partes del ensamblado. El elemento <xref:System.Reflection.Emit.ModuleBuilder> que define `T` mantiene una referencia a <xref:System.Reflection.Emit.TypeBuilder> y el objeto <xref:System.Reflection.Emit.AssemblyBuilder> mantiene una referencia a <xref:System.Reflection.Emit.ModuleBuilder>, así que las referencias a estos objetos deben liberarse. Incluso la existencia de un elemento <xref:System.Reflection.Emit.LocalBuilder> o <xref:System.Reflection.Emit.ILGenerator> usado en la construcción de `T` evita la descarga.
 
 - Una referencia estática a `T` por parte de otro tipo `T1` definido de forma dinámica que siga siendo accesible mediante la ejecución de código. Por ejemplo, `T1` puede derivar de `T`, o `T` puede ser el tipo de un parámetro en un método de `T1`.
- 
+
 - **ByRef** a un campo estático que pertenece a `T`.
 
 - <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle> o <xref:System.RuntimeMethodHandle> que hace referencia a `T` o a un componente de `T`.
 
-- Una instancia de cualquier objeto de reflexión que se pudiera usar de forma directa o indirecta para acceder al objeto <xref:System.Type> que representa `T`. Por ejemplo, el objeto <xref:System.Type> para `T` puede obtenerse a partir de un tipo de matriz cuyo tipo de elemento es `T` o de un tipo genérico que tiene `T` como argumento de tipo. 
+- Una instancia de cualquier objeto de reflexión que se pudiera usar de forma directa o indirecta para acceder al objeto <xref:System.Type> que representa `T`. Por ejemplo, el objeto <xref:System.Type> para `T` puede obtenerse a partir de un tipo de matriz cuyo tipo de elemento es `T` o de un tipo genérico que tiene `T` como argumento de tipo.
 
 - Un método `M` en la pila de llamadas de cualquier subproceso, donde `M` es un método de `T` o un método de nivel de módulo definido en el ensamblado.
 
@@ -52,32 +52,25 @@ Si solo existe un elemento de esta lista para un solo tipo o un método del ensa
 > El runtime no descarga realmente el ensamblado hasta que se han ejecutado los finalizadores de todos los elementos de la lista.
 
 Para realizar el seguimiento de la duración, se considera que en el ensamblado que contiene la definición del tipo genérico o en un ensamblado que contiene la definición de uno de sus argumentos de tipo se ha definido un tipo genérico construido `List<int>` (en C#) o `List(Of Integer)` (en Visual Basic) creado y usado en la generación de un ensamblado recopilable. El ensamblado exacto que se usa es un detalle de implementación y está sujeto a cambios.
- 
+
 ## <a name="restrictions-on-collectible-assemblies"></a>Restricciones de los ensamblados recopilables
 
-Las siguientes restricciones se aplican a los ensamblados recopilables: 
+Las siguientes restricciones se aplican a los ensamblados recopilables:
 
-- **Referencias estáticas**   
-  Los tipos de un ensamblado dinámico normal no pueden tener referencias estáticas a tipos definidos en un ensamblado recopilable. Por ejemplo, si define un tipo normal que hereda de un tipo de un ensamblado recopilable, se produce una excepción <xref:System.NotSupportedException>. Un tipo de un ensamblado recopilable puede tener referencias estáticas a un tipo de otro ensamblado recopilable, pero esto amplía la duración del ensamblado al que se hace referencia a la duración del ensamblado que hace referencia.
+- **Referencias estáticas** Los tipos de un ensamblado dinámico normal no pueden tener referencias estáticas a tipos definidos en un ensamblado coleccionable. Por ejemplo, si define un tipo normal que hereda de un tipo de un ensamblado recopilable, se produce una excepción <xref:System.NotSupportedException>. Un tipo de un ensamblado recopilable puede tener referencias estáticas a un tipo de otro ensamblado recopilable, pero esto amplía la duración del ensamblado al que se hace referencia a la duración del ensamblado que hace referencia.
 
-- **Interoperabilidad COM**   
-   No se pueden definir interfaces COM dentro de un ensamblado recopilable, ni ninguna instancia de tipos de un ensamblado recopilable se puede convertir en objetos COM. Un tipo de un ensamblado recopilable no puede actuar como contenedor CCW ni contenedor RCW. Pero los tipos de los ensamblados recopilables pueden usar objetos que implementen interfaces COM.
+- **Interoperabilidad COM** No se puede definir ninguna interfaz COM dentro de un ensamblado coleccionable y no se pueden convertir instancias de tipos dentro de un ensamblado coleccionable en objetos COM. Un tipo de un ensamblado recopilable no puede actuar como contenedor CCW ni contenedor RCW. Pero los tipos de los ensamblados recopilables pueden usar objetos que implementen interfaces COM.
 
-- **Invocación de plataforma**   
-   Los métodos que tienen el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> no se compilan si se han declarado en un ensamblado recopilable. La instrucción <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> no se puede usar en la implementación de un tipo de un ensamblado recopilable, y estos tipos no se pueden serializar en código no administrado. Pero se puede llamar al código nativo mediante el uso de un punto de entrada declarado en un ensamblado no recopilable.
- 
-- **Serialización**   
-   No se pueden serializar los objetos (en particular, delegados) definidos en ensamblados recopilables. Se trata de una restricción para todos los tipos transitorios emitidos.
+- **Invocación de plataforma** Los métodos <xref:System.Runtime.InteropServices.DllImportAttribute> que tienen el atributo no se compilarán cuando se declaren en un ensamblado coleccionable. La instrucción <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> no se puede usar en la implementación de un tipo de un ensamblado recopilable, y estos tipos no se pueden serializar en código no administrado. Pero se puede llamar al código nativo mediante el uso de un punto de entrada declarado en un ensamblado no recopilable.
 
-- **Carga de ensamblados**   
-   La emisión de la reflexión es el único mecanismo admitido para cargar ensamblados recopilables. Los ensamblados cargados mediante cualquier otra forma de carga de ensamblados no se pueden descargar.
- 
-- **Objetos enlazados a un contexto**    
-   No se admiten las variables context-static. Los tipos de un ensamblado recopilable no pueden extender <xref:System.ContextBoundObject>. Pero el código de los ensamblados recopilables puede usar objetos enlazados a un contexto definidos en otro lugar.
+- **Marshaling** Los objetos (en particular, los delegados) que se definen en ensamblados coleccionables no se pueden serializar. Se trata de una restricción para todos los tipos transitorios emitidos.
 
-- **Datos thread-static**       
-   No se admiten las variables Thread-static.
+- **Carga de montaje** La emisión de reflexión es el único mecanismo que se admite para cargar ensamblados coleccionables. Los ensamblados cargados mediante cualquier otra forma de carga de ensamblados no se pueden descargar.
 
-## <a name="see-also"></a>Vea también
+- **Objetos enlazados al contexto** No se admiten variables estáticas de contexto. Los tipos de un ensamblado recopilable no pueden extender <xref:System.ContextBoundObject>. Pero el código de los ensamblados recopilables puede usar objetos enlazados a un contexto definidos en otro lugar.
+
+- **Datos estáticos de subprocesos** No se admiten variables estáticas de subprocesos.
+
+## <a name="see-also"></a>Consulte también
 
 - [Emitir métodos y ensamblados dinámicos](emitting-dynamic-methods-and-assemblies.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447189"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179398"
 ---
 # <a name="getscope2-method"></a>GetScope2 (Método)
 Obtiene un ámbito de importación.  
@@ -32,29 +32,29 @@ HRESULT GetScope2(
     mdToken FileToken,  
     DWORD dwScope,  
     IMetaDataImport2** ppImportScope  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado de destino.  
+ ID del ensamblado de destino.  
   
  `FileToken`  
- IDENTIFICADOR del archivo desde el que se va a importar.  
+ ID del archivo desde el que se va a importar.  
   
  `dwScope`  
- Ámbito de base cero que se va a importar.  
+ Alcance de base cero que se va a importar.  
   
  `ppImportScope`  
- Recibe un puntero a la interfaz de [interfaz IMetaDataImport2](../metadata/imetadataimport2-interface.md) para el ámbito indicado.  
+ Recibe el puntero a [Interfaz IMetaDataImport2](../metadata/imetadataimport2-interface.md) interfaz para el ámbito indicado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Devuelve S_OK si el método se realiza correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h.  
+ Requiere alink.h.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IALink2 (interfaz)](ialink2-interface.md)
 - [IALink (interfaz)](ialink-interface.md)

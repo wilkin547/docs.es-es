@@ -10,31 +10,31 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: db9be1f57e15baac4820d33f6f245d69bd1ab430
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a58792ef6356c84d7d0c195eed21269e4036aacc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351951"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182091"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Cómo: Utilizar un subproceso en segundo plano para buscar archivos
-El componente <xref:System.ComponentModel.BackgroundWorker> reemplaza y agrega funcionalidad al espacio de nombres <xref:System.Threading>; sin embargo, el espacio de nombres <xref:System.Threading> se conserva por compatibilidad con versiones anteriores y uso futuro, si así lo decide. Para obtener más información, vea [información general sobre el componente BackgroundWorker](backgroundworker-component-overview.md).
+El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega funcionalidad <xref:System.Threading> al espacio de nombres; sin <xref:System.Threading> embargo, el espacio de nombres se conserva tanto para la compatibilidad con versiones anteriores como para el uso futuro, si lo desea. Para obtener más información, consulte Información general sobre [componentes de BackgroundWorker](backgroundworker-component-overview.md).
 
- Windows Forms utiliza el modelo de contenedor uniproceso (STA) porque Windows Forms se basa en ventanas nativas de Win32 que son subprocesos de apartamento de forma inherente. El modelo STA implica que se puede crear una ventana en cualquier subproceso, pero no puede cambiar de subprocesos una vez creada, y todas las llamadas de función a ella deben realizarse en su subproceso de creación. Fuera de Windows Forms, las clases del .NET Framework utilizan el modelo de subprocesamiento libre. Para obtener información sobre los subprocesos en el .NET Framework, vea [subprocesamiento](../../../standard/threading/index.md).
+ Windows Forms usa el modelo de apartamento de subproceso único (STA) porque Windows Forms se basa en ventanas Win32 nativas que son inherentemente con subprocesos de apartamento. El modelo STA implica que se puede crear una ventana en cualquier subproceso, pero no puede cambiar subprocesos una vez creados y todas las llamadas de función a él deben producirse en su subproceso de creación. Fuera de Windows Forms, las clases de .NET Framework usan el modelo de subprocesos libre. Para obtener información acerca de los subprocesos en .NET Framework, vea [Subprocesos](../../../standard/threading/index.md).
 
- El modelo STA requiere que se calculen las referencias de los métodos de un control que se deben llamar desde fuera del subproceso de creación del control (se ejecutan en) el subproceso de creación del control. La clase base <xref:System.Windows.Forms.Control> proporciona varios métodos (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>y <xref:System.Windows.Forms.Control.EndInvoke%2A>) para este propósito. <xref:System.Windows.Forms.Control.Invoke%2A> realiza llamadas de método sincrónicas; <xref:System.Windows.Forms.Control.BeginInvoke%2A> realiza llamadas a métodos asincrónicos.
+ El modelo STA requiere que los métodos de un control que se deben llamar desde fuera del subproceso de creación del control se deben serializar (ejecutar en) el subproceso de creación del control. La clase <xref:System.Windows.Forms.Control> base proporciona<xref:System.Windows.Forms.Control.Invoke%2A> <xref:System.Windows.Forms.Control.BeginInvoke%2A>varios <xref:System.Windows.Forms.Control.EndInvoke%2A>métodos ( , , y ) para este propósito. <xref:System.Windows.Forms.Control.Invoke%2A>realiza llamadas a métodos sincrónicos; <xref:System.Windows.Forms.Control.BeginInvoke%2A> realiza llamadas a métodos asincrónicos.
 
- Si utiliza el multithreading en el control para tareas que consumen muchos recursos, la interfaz de usuario puede seguir respondiendo mientras se ejecuta un cálculo de uso intensivo de recursos en un subproceso en segundo plano.
+ Si usa multithreading en el control para tareas que consumen muchos recursos, la interfaz de usuario puede seguir respondiendo mientras se ejecuta un cálculo que consume muchos recursos en un subproceso en segundo plano.
 
- En el ejemplo siguiente (`DirectorySearcher`) se muestra un control multiproceso Windows Forms que utiliza un subproceso en segundo plano para buscar de forma recursiva en un directorio los archivos que coinciden con una cadena de búsqueda especificada y, a continuación, rellena un cuadro de lista con el resultado de la búsqueda. Los conceptos clave que se ilustran en el ejemplo son los siguientes:
+ En el`DirectorySearcher`ejemplo siguiente ( ) se muestra un control de formularios Windows Forms multiproceso que usa un subproceso en segundo plano para buscar recursivamente en un directorio de archivos que coincidan con una cadena de búsqueda especificada y, a continuación, rellena un cuadro de lista con el resultado de la búsqueda. Los conceptos clave ilustrados por el ejemplo son los siguientes:
 
-- `DirectorySearcher` inicia un nuevo subproceso para realizar la búsqueda. El subproceso ejecuta el método de `ThreadProcedure` que, a su vez, llama al método auxiliar `RecurseDirectory` para realizar la búsqueda real y rellenar el cuadro de lista. Sin embargo, rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los dos elementos con viñetas siguientes.
+- `DirectorySearcher`inicia un nuevo subproceso para realizar la búsqueda. El subproceso ejecuta `ThreadProcedure` el método que `RecurseDirectory` a su vez llama al método auxiliar para realizar la búsqueda real y rellenar el cuadro de lista. Sin embargo, rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los dos elementos con viñetas siguientes.
 
-- `DirectorySearcher` define el método de `AddFiles` para agregar archivos a un cuadro de lista; sin embargo, `RecurseDirectory` no puede invocar directamente `AddFiles` porque `AddFiles` solo puede ejecutarse en el subproceso STA que creó `DirectorySearcher`.
+- `DirectorySearcher`define `AddFiles` el método para agregar archivos a un cuadro de lista; sin `RecurseDirectory` embargo, `AddFiles` `AddFiles` no se puede invocar directamente porque solo se puede ejecutar en el subproceso STA que creó `DirectorySearcher`.
 
-- La única manera `RecurseDirectory` puede llamar a `AddFiles` es a través de una llamada entre subprocesos, es decir, llamando a <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> para calcular las referencias de `AddFiles` al subproceso de creación de `DirectorySearcher`. `RecurseDirectory` usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que se pueda realizar la llamada de forma asincrónica.
+- La única `RecurseDirectory` manera `AddFiles` de llamar es a través de <xref:System.Windows.Forms.Control.Invoke%2A> <xref:System.Windows.Forms.Control.BeginInvoke%2A> una `AddFiles` llamada entre subprocesos, es decir, llamando o serializando el subproceso de creación de `DirectorySearcher`. `RecurseDirectory`usos <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que la llamada se pueda realizar de forma asincrónica.
 
-- La serialización de un método requiere el equivalente de un puntero de función o una devolución de llamada. Esto se logra mediante el uso de delegados en el .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> toma un delegado como argumento. por lo tanto, `DirectorySearcher` define un delegado (`FileListDelegate`), enlaza `AddFiles` a una instancia de `FileListDelegate` en su constructor y pasa esta instancia de delegado a <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` también define un delegado de eventos cuyas referencias se calculan cuando se completa la búsqueda.
+- El cálculo de referencias de un método requiere el equivalente de un puntero de función o devolución de llamada. Esto se logra mediante delegados en .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A>toma un delegado como argumento. `DirectorySearcher`por lo tanto, define un delegado`FileListDelegate`( ), se enlaza `AddFiles` a una instancia de `FileListDelegate` en su constructor y pasa esta instancia de delegado a <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher`también define un delegado de eventos que se calcula cuando se completa la búsqueda.
 
 ```vb
 Option Strict
@@ -568,8 +568,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a>Usar el control multiproceso en un formulario
- En el ejemplo siguiente se muestra cómo se puede utilizar el control de `DirectorySearcher` multiproceso en un formulario.
+## <a name="using-the-multithreaded-control-on-a-form"></a>Uso del control multiproceso en un formulario
+ En el ejemplo siguiente se `DirectorySearcher` muestra cómo se puede usar el control multiproceso en un formulario.
 
 ```vb
 Option Explicit
@@ -669,7 +669,7 @@ namespace SampleUsage
    using System.Drawing;
    using System.Windows.Forms;
    using Microsoft.Samples.DirectorySearcher;
-   
+
    /// <summary>
    ///      Summary description for Form1.
    /// </summary>
@@ -760,8 +760,8 @@ namespace SampleUsage
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Event-based Asynchronous Pattern Overview](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)
+- [Información general sobre el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

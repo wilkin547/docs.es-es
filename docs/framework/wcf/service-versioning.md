@@ -2,12 +2,12 @@
 title: Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ea5e80e33d1b29e01e6d1867c50bb3bb973b01c3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423684"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183121"
 ---
 # <a name="service-versioning"></a>Control de versiones del servicio
 Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, los servicios (y los puntos de conexión que exponen) pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Cada cambio produce una nueva versión del servicio. En este tema se explica cómo considerar el control de versiones en Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
   
 - Cambios de implementación: por ejemplo, cuando cambia una implementación de método interno.  
   
- Algunos de estos cambios se denominan "con interrupción" y otros son denominados "sin interrupción". Un cambio es sin *interrupción* si todos los mensajes que se habrían procesado correctamente en la versión anterior se procesan correctamente en la nueva versión. Cualquier cambio que no cumpla ese criterio es un cambio *importante* .  
+ Algunos de estos cambios se denominan "con interrupción" y otros son denominados "sin interrupción". Un cambio no se *rompe* si todos los mensajes que se habrían procesado correctamente en la versión anterior se procesan correctamente en la nueva versión. Cualquier cambio que no cumpla ese criterio es un cambio *importante.*  
   
 ## <a name="service-orientation-and-versioning"></a>Orientación del servicio y control de las versiones  
  Uno de los principios de orientación del servicio es que los servicios y los clientes son autónomos (o independientes). Entre otras cosas, esto implica que los programadores del servicio no pueden suponer que controlan o que incluso lo saben todo sobre los clientes del servicio. Esto elimina la opción de recompilar y volver a implementar todos los clientes cuando un servicio cambia de versión. En este tema se supone que el servicio se adhiere a este principio de orientación y, por consiguiente, su modificación o el "control de versiones" tiene lugar con independencia de los clientes.  
@@ -35,7 +35,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
   
  Para los contratos de servicios, la compatibilidad significa que se pueden agregar nuevas operaciones expuestas por el servicio pero que no se pueden quitar o cambiar semánticamente las operaciones existentes en el contrato.  
   
- Para los contratos de datos, la compatibilidad significa que se pueden agregar las nuevas definiciones de tipo de esquema pero las definiciones existentes de tipo de esquema no se pueden cambiar con interrupción. Los cambios con interrupción podrían incluir quitar los miembros de datos o cambiar de manera incompatible su tipo de datos. Esta característica da alguna libertad al servicio para cambiar la versión de sus contratos sin interrumpir a los clientes. En las dos secciones siguientes se explican los cambios no problemáticos e importantes que se pueden realizar en los contratos de servicio y datos de WCF.  
+ Para los contratos de datos, la compatibilidad significa que se pueden agregar las nuevas definiciones de tipo de esquema pero las definiciones existentes de tipo de esquema no se pueden cambiar con interrupción. Los cambios con interrupción podrían incluir quitar los miembros de datos o cambiar de manera incompatible su tipo de datos. Esta característica da alguna libertad al servicio para cambiar la versión de sus contratos sin interrumpir a los clientes. Las dos secciones siguientes explican los cambios de no interrupción y de interrupción que se pueden realizar en los contratos de servicio y datos de WCF.  
   
 ## <a name="data-contract-versioning"></a>Versiones de contratos de datos  
  Esta sección trata de datos que controlan las versiones al utilizar las clases <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.DataContractAttribute>.  
@@ -54,11 +54,11 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
 ### <a name="lax-versioning"></a>Control de versiones lax  
  En muchos otros escenarios, el programador del servicio puede suponer que al agregar un nuevo miembro opcional al contrato de datos no se interrumpirán los clientes existentes. Esto exige al programador del servicio que investigue si los clientes existentes no realizan una validación del esquema y que si omiten a los miembros de datos desconocidos. En estos escenarios, es posible aprovecharse de las características del contrato de datos para agregar los nuevos miembros sin interrupción. El programador del servicio puede hacer esta suposición con confianza si las características del contrato de datos para controlar las versiones ya se utilizaron para la primera versión del servicio.  
   
- WCF, los servicios Web ASP.NET y muchas otras pilas de servicios web admiten el *control LAX de versiones*: es decir, no inician excepciones para los nuevos miembros de datos desconocidos en los datos recibidos.  
+ WCF, ASP.NET Web Services y muchas otras pilas de servicios web admiten el control de versiones *laxo:* es decir, no producen excepciones para los nuevos miembros de datos desconocidos en los datos recibidos.  
   
  Es fácil creer erróneamente que al agregar un nuevo miembro no se interrumpirán los clientes existentes. Si no está seguro de que todos los clientes puedan controlar el control lax de versiones, la recomendación es utilizar las instrucciones del control estricto de las versiones y tratar los contratos de datos como inmutables.  
   
- Para obtener instrucciones detalladas sobre el control de versiones de los contratos de datos LAX y estricta, vea [prácticas recomendadas: control de versiones de contratos de datos](best-practices-data-contract-versioning.md).  
+ Para obtener instrucciones detalladas para el control de versiones de datos tanto laxos como estrictos, consulte [Prácticas recomendadas: control](best-practices-data-contract-versioning.md)de versiones de contratos de datos .  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Distinguir entre los tipos de contrato de datos y .NET  
  Una clase o estructura .NET se puede proyectar como un contrato de datos aplicando el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a la clase. El tipo .NET y sus proyecciones del contrato de datos son dos cuestiones distintas. Es posible tener varios tipos .NET con la misma proyección del contrato de datos. Esta distinción es especialmente útil para permitirle cambiar el tipo .NET mientras mantiene el contrato de datos proyectado, manteniendo así eso la compatibilidad con clientes existentes en el sentido estricto de la palabra. Hay dos cosas que siempre debería hacer para mantener esta distinción entre tipo .NET y contrato de datos:  
@@ -93,13 +93,13 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
 ## <a name="message-contract-versioning"></a>Versiones de contratos de mensaje  
  Las instrucciones para las versiones de contrato de mensaje son muy similares al control de las versiones de los contratos de datos. Si se requiere el control estricto de las versiones, no debería cambiar el cuerpo de su mensaje pero, en su lugar, debería crear un nuevo contrato de mensaje con un nombre único y completo. Si sabe que puede utilizar el control lax de las versiones, puede agregar nuevas piezas del cuerpo del mensaje pero no puede cambiar o quitar las existentes. Esta orientación se aplica tanto a los contratos de mensaje sencillos como a los ajustados.  
   
- Se pueden agregar los encabezados del mensaje siempre, aun cuando el control estricto de versiones esté en uso. La marca MustUnderstand puede afectar a las versiones. En general, el modelo de control de versiones para los encabezados en WCF es como se describe en la especificación SOAP.  
+ Se pueden agregar los encabezados del mensaje siempre, aun cuando el control estricto de versiones esté en uso. La marca MustUnderstand puede afectar a las versiones. En general, el modelo de control de versiones para encabezados en WCF es como se describe en la especificación SOAP.  
   
 ## <a name="service-contract-versioning"></a>Control de las versiones del contrato de servicios  
  De manera parecida al control de las versiones del contrato de datos, el contrato de servicios que también controla las versiones implica agregar, cambiar y quitar operaciones.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Especificar nombre, espacio de nombres y acción  
- De forma predeterminada, el nombre de un contrato de servicios es el nombre de la interfaz. Su espacio de nombres predeterminado es "http://tempuri.org", y la acción de cada operación es "http://tempuri.org/contractname/methodname". Se recomienda especificar explícitamente un nombre y un espacio de nombres para el contrato de servicio y una acción para cada operación para evitar usar "http://tempuri.org" y evitar que los nombres de interfaz y método se expongan en el contrato del servicio.  
+ De forma predeterminada, el nombre de un contrato de servicios es el nombre de la interfaz. Su espacio dehttp://tempuri.orgnombres predeterminado es " ", y la acción de cada operación es "http://tempuri.org/contractname/methodname". Se recomienda especificar explícitamente un nombre y un espacio de nombres para elhttp://tempuri.orgcontrato de servicio y una acción para cada operación para evitar el uso de " " y evitar que los nombres de interfaz y método se expongan en el contrato del servicio.  
   
 ### <a name="adding-parameters-and-operations"></a>Agregar parámetros y operaciones  
  Agregar operaciones del servicio expuestas por el servicio es un cambio sin interrupción porque los clientes existentes no necesitan ocuparse de esas nuevas operaciones.  
@@ -119,13 +119,13 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  La lista de errores descrita en el contrato de un servicio no se considera exhaustiva. En cualquier momento, una operación puede devolver errores que no se describen en su contrato. Cambiar, por consiguiente, el conjunto de errores descrito en el contrato no se considerado como con interrupción. Por ejemplo, agregar un nuevo error al contrato utilizando <xref:System.ServiceModel.FaultContractAttribute> o quitando un error existente del contrato.  
   
 ### <a name="service-contract-libraries"></a>Bibliotecas de contratos de servicios  
- Las organizaciones pueden tener bibliotecas de contratos donde un contrato se publica en un repositorio central y los implementadores de servicio y repositorio implementan los contratos desde ese repositorio. En este caso, al publicar un contrato de servicios en el repositorio, no tiene ningún control sobre quién crea servicios que lo implementan. Por tanto, no puede modificar el contrato de servicio una vez publicado, por lo que se presenta inmutable de manera efectiva. WCF admite la herencia de contratos, que se puede usar para crear un nuevo contrato que extienda los contratos existentes. Para utilizar esta característica, defina una nueva interfaz del contrato de servicios que se hereda de la interfaz del contrato de servicios anterior y, a continuación, agregue los métodos a la nueva interfaz. Cambia, a continuación, el servicio que implementa el contrato anterior para implementar el nuevo contrato y cambiar la definición de extremo de "versionOld" para utilizar el nuevo contrato. Para los clientes de "versionOld", el punto de conexión continuará apareciendo como si se expusiera el contrato de "versionOld"; para los clientes de "versionNew", el punto de conexión aparecerá para exponer el contrato de "versionNew."  
+ Las organizaciones pueden tener bibliotecas de contratos donde un contrato se publica en un repositorio central y los implementadores de servicio y repositorio implementan los contratos desde ese repositorio. En este caso, al publicar un contrato de servicios en el repositorio, no tiene ningún control sobre quién crea servicios que lo implementan. Por tanto, no puede modificar el contrato de servicio una vez publicado, por lo que se presenta inmutable de manera efectiva. WCF admite la herencia de contratos, que se puede usar para crear un nuevo contrato que extiende los contratos existentes. Para utilizar esta característica, defina una nueva interfaz del contrato de servicios que se hereda de la interfaz del contrato de servicios anterior y, a continuación, agregue los métodos a la nueva interfaz. Cambia, a continuación, el servicio que implementa el contrato anterior para implementar el nuevo contrato y cambiar la definición de extremo de "versionOld" para utilizar el nuevo contrato. Para los clientes de "versionOld", el punto de conexión continuará apareciendo como si se expusiera el contrato de "versionOld"; para los clientes de "versionNew", el punto de conexión aparecerá para exponer el contrato de "versionNew."  
   
 ## <a name="address-and-binding-versioning"></a>Dirección y enlace de las versiones  
  Los cambios de la dirección del extremo y enlace son cambios con interrupción a menos que los clientes sean capaces de detectar dinámicamente la nueva dirección del extremo o enlace. Un mecanismo para implementar esta función consiste en utilizar un registro de la Descripción e integración de la detección universal (UDDI) y el patrón de invocación UDDI donde un cliente intenta comunicar con un punto de conexión y, en cuando se produce un error, consulta los metadatos del punto de conexión actual en un registro de UDDI conocido. El cliente utiliza a continuación la dirección y el enlace desde estos metadatos para comunicarse con el extremo. Si esta comunicación se realiza con éxito, el cliente almacena en caché la dirección e información de enlace para su uso en el futuro.  
   
 ## <a name="routing-service-and-versioning"></a>Servicio de enrutamiento y control de versiones  
- Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. Para obtener más información acerca del servicio de enrutamiento de WCF, vea [servicio de enrutamiento](./feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento de WCF para el control de versiones del servicio, vea [Cómo: control de versiones del servicio](./feature-details/how-to-service-versioning.md).  
+ Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. Para obtener más información sobre el servicio de enrutamiento WCF, vea [Servicio de enrutamiento](./feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento WCF para el control de versiones de servicio, vea [Cómo: control de versiones](./feature-details/how-to-service-versioning.md)de servicio .  
   
 ## <a name="appendix"></a>Apéndice  
  La recomendación general para el control de versiones de los contratos de datos es que cuando se necesite un control estricto de las versiones los contratos de datos se traten como inmutables y crear otros nuevos cuando se requieran cambios. Se necesita crear una nueva clase para cada nuevo contrato de datos, por lo que necesita que un mecanismo evite tener que tomar código existente, que se escribió referido a la clase del contrato de datos antiguo y volverlo a escribir, referido a la nueva clase del contrato de datos.  
@@ -159,7 +159,7 @@ public interface IPurchaseOrderV2
     DateTime OrderDate { get; set; }  
 }
 
-[DataContract(   
+[DataContract(
 Name = "PurchaseOrder",  
 Namespace = "http://examples.microsoft.com/WCF/2006/02/PurchaseOrder")]  
 public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2  
@@ -175,7 +175,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  El contrato de servicios se actualizaría para incluir las nuevas operaciones que se escriben referidas a `PurchaseOrderV2`. La lógica empresarial existente, escrita referida a `IPurchaseOrderV1` seguiría funcionando para `PurchaseOrderV2` y la nueva lógica empresarial que necesita la propiedad `OrderDate` se escribiría referida a `IPurchaseOrderV2`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
@@ -187,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Equivalencia de contratos de datos](./feature-details/data-contract-equivalence.md)
+- [Data Contract Equivalence](./feature-details/data-contract-equivalence.md)
 - [Devoluciones de llamadas en la serialización tolerante a versiones](./feature-details/version-tolerant-serialization-callbacks.md)

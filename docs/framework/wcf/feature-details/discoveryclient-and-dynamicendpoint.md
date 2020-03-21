@@ -2,18 +2,18 @@
 title: DiscoveryClient y DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-ms.openlocfilehash: 455ccc7f09c13a33b4034099b16b116fd3a8dbdf
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c6d87a04a6787725ad7c4546650485af932882b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895300"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185180"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient y DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> y <xref:System.ServiceModel.Discovery.DynamicEndpoint> son dos clases usadas en el lado cliente para buscar servicios. <xref:System.ServiceModel.Discovery.DiscoveryClient> le proporciona una lista de servicios que coinciden con un conjunto concreto de criterios y le permite conectarse a los servicios. <xref:System.ServiceModel.Discovery.DynamicEndpoint> realiza la misma operación y además, conecta automáticamente con uno de los servicios que se encontró. Cualquier punto de conexión se puede convertir en <xref:System.ServiceModel.Discovery.DynamicEndpoint>, los criterios de búsqueda también se pueden agregar a través de la configuración. Por tanto, <xref:System.ServiceModel.Discovery.DynamicEndpoint> es útil si necesita la detección en su solución pero no desea modificar la lógica del cliente; solo necesita modificar los puntos de conexión. Por otra parte, <xref:System.ServiceModel.Discovery.DiscoveryClient> se puede usar para obtener un control más preciso sobre la operación de búsqueda. Más abajo, se elaboran los usos y ventajas de cada uno.  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
- <xref:System.ServiceModel.Discovery.DiscoveryClient> define métodos Find sincrónicos y asincrónicos, así como eventos <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> y <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged>.  También define métodos Resolve sincrónicos y asincrónicos, así como un evento <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveCompleted>. Utilice los métodos <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> o <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> para buscar servicios. Ambos métodos toma una instancia <xref:System.ServiceModel.Discovery.FindCriteria> que le permite especificar los nombres de tipo de contrato, ámbitos, número máximo de resultados solicitados y reglas de coincidencia de ámbito. Los eventos <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> y <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> se pueden usar al llamar al método <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> se desencadena siempre que <xref:System.ServiceModel.Discovery.DiscoveryClient> recibe una respuesta de un servicio. Se puede utilizar para mostrar una barra de progreso que muestra el progreso de la operación de búsqueda. También se puede utilizar para intervenir en la búsqueda de respuestas a medida que se reciben. El evento <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> se desencadena cuando finaliza la operación de búsqueda. Esto puede pasar porque se haya recibido el número máximo de respuestas o si ha transcurrido <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>. Cuando la operación de búsqueda finaliza, los resultados se devuelven en una instancia <xref:System.ServiceModel.Discovery.FindResponse>. <xref:System.ServiceModel.Discovery.FindResponse> contiene una recopilación de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> que incluye las direcciones, los nombres del tipo de contrato, las extensiones, los URI de escucha y los ámbitos de los servicios coincidentes. A continuación, puede utilizar esta información para conectarse y llamar a uno de los servicios coincidentes. En el ejemplo siguiente se muestra cómo llamar al método System. ServiceModel. Discovery. DiscoveryClient. Find (System. ServiceModel. Discovery. FindCriteria) y usar los metadatos devueltos para llamar al servicio encontrado. Una ventaja de usar <xref:System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria)> es que puede almacenar en caché la lista de puntos de conexión que ha encontrado y usarlos más adelante. Con esta memoria caché, puede crear una lógica personalizada para administrar diversas condiciones de error.  
+ <xref:System.ServiceModel.Discovery.DiscoveryClient> define métodos Find sincrónicos y asincrónicos, así como eventos <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> y <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged>.  También define métodos Resolve sincrónicos y asincrónicos, así como un evento <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveCompleted>. Utilice los métodos <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> o <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> para buscar servicios. Ambos métodos toma una instancia <xref:System.ServiceModel.Discovery.FindCriteria> que le permite especificar los nombres de tipo de contrato, ámbitos, número máximo de resultados solicitados y reglas de coincidencia de ámbito. Los eventos <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> y <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> se pueden usar al llamar al método <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> se desencadena siempre que <xref:System.ServiceModel.Discovery.DiscoveryClient> recibe una respuesta de un servicio. Se puede utilizar para mostrar una barra de progreso que muestra el progreso de la operación de búsqueda. También se puede utilizar para intervenir en la búsqueda de respuestas a medida que se reciben. El evento <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> se desencadena cuando finaliza la operación de búsqueda. Esto puede pasar porque se haya recibido el número máximo de respuestas o si ha transcurrido <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>. Cuando la operación de búsqueda finaliza, los resultados se devuelven en una instancia <xref:System.ServiceModel.Discovery.FindResponse>. <xref:System.ServiceModel.Discovery.FindResponse> contiene una recopilación de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> que incluye las direcciones, los nombres del tipo de contrato, las extensiones, los URI de escucha y los ámbitos de los servicios coincidentes. A continuación, puede utilizar esta información para conectarse y llamar a uno de los servicios coincidentes. En el ejemplo siguiente se muestra cómo llamar al método System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria) y usar los metadatos devueltos para llamar al servicio encontrado. Una ventaja <xref:System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria)> de usar es que puede almacenar en caché la lista de puntos de conexión que ha encontrado y usarlos más adelante. Con esta memoria caché, puede crear una lógica personalizada para administrar diversas condiciones de error.  
   
 ```csharp
 DiscoveryClient dc = new DiscoveryClient(new UdpDiscoveryEndpoint());  
@@ -46,18 +46,18 @@ else
 ```csharp
 static void FindServiceAsync()  
 {  
-   DiscoveryClient dc = new DiscoveryClient(new UdpDiscoveryEndpoint());   
+   DiscoveryClient dc = new DiscoveryClient(new UdpDiscoveryEndpoint());
    dc.FindCompleted += new EventHandler<FindCompletedEventArgs>( discoveryClient_FindCompleted);  
    dc.FindProgressChanged += new EventHandler<FindProgressChangedEventArgs>(discoveryClient_FindProgressChanged);  
-   dc.FindAsync(new FindCriteria(typeof(ICalculatorService)));   
-}   
+   dc.FindAsync(new FindCriteria(typeof(ICalculatorService)));
+}
 static void discoveryClient_FindProgressChanged(object sender, FindProgressChangedEventArgs e)  
 {  
    Console.WriteLine("Found service at: " + e.EndpointDiscoveryMetadata.Address  
-}   
+}
   
 static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs e)  
-{    
+{
       if (e.Result.Endpoints.Count > 0)  
             {  
                 EndpointAddress ep = e.Result.Endpoints[0].Address;  
@@ -89,7 +89,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>es un punto de conexión estándar (para obtener más información, consulte [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) que realiza la detección y selecciona automáticamente un servicio coincidente. Simplemente cree una clase <xref:System.ServiceModel.Discovery.DynamicEndpoint> pasando el contrato que se va a buscar y el enlace para usar y pasar la instancia <xref:System.ServiceModel.Discovery.DynamicEndpoint> al cliente de WCF. En el siguiente ejemplo, se muestra cómo crear y usar una clase <xref:System.ServiceModel.Discovery.DynamicEndpoint> para llamar al servicio de calculadora. La detección se realiza cada vez que se abre el cliente. Cualquier punto de conexión definido en la configuración también se <xref:System.ServiceModel.Discovery.DynamicEndpoint> puede convertir en agregando el `kind ="dynamicEndpoint"` atributo al elemento de configuración del punto de conexión.  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint>es un punto de conexión estándar (para obtener más información, consulte [Puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) que realiza la detección y selecciona automáticamente un servicio coincidente. Simplemente cree una clase <xref:System.ServiceModel.Discovery.DynamicEndpoint> pasando el contrato que se va a buscar y el enlace para usar y pasar la instancia <xref:System.ServiceModel.Discovery.DynamicEndpoint> al cliente de WCF. En el siguiente ejemplo, se muestra cómo crear y usar una clase <xref:System.ServiceModel.Discovery.DynamicEndpoint> para llamar al servicio de calculadora. La detección se realiza cada vez que se abre el cliente. Cualquier punto de conexión definido en <xref:System.ServiceModel.Discovery.DynamicEndpoint> la `kind ="dynamicEndpoint"` configuración también se puede convertir en un agregando el atributo al elemento de configuración del punto de conexión.  
   
 ```csharp  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  
@@ -105,7 +105,7 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Detección con ámbitos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [Básica](../../../../docs/framework/wcf/samples/basic-sample.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para dibujar un control ToolStrip de manera personalizada
+title: 'Cómo: Dibujar un control ToolStrip de manera personalizada'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9f603efdb4b4a5f68154da9c6a8bd05b55b8f46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935369"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182224"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Procedimiento para dibujar un control ToolStrip de manera personalizada
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Cómo: Dibujar un control ToolStrip de manera personalizada
 Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases de representación (dibujo) asociadas:  
   
 - <xref:System.Windows.Forms.ToolStripSystemRenderer> proporciona la apariencia y el estilo del sistema operativo.  
@@ -60,7 +60,7 @@ Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases
         ToolStrip1.Renderer = New ToolStripProfessionalRenderer(t)  
     End Sub  
   
-    Class MyColorTable   
+    Class MyColorTable
     Inherits ProfessionalColorTable  
   
     Public Overrides ReadOnly Property ButtonPressedGradientBegin() As Color  
@@ -133,11 +133,11 @@ Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)
-- [Cómo: Crear y establecer un representador personalizado para el control ToolStrip en Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Cómo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)

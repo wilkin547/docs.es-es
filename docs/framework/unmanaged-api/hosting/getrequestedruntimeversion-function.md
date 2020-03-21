@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6be0bc5d08f612dcb8ed7d256711e0c4367b9274
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136342"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178137"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion (Función)
-Obtiene el número de versión del Common Language Runtime (CLR) solicitado por la aplicación especificada. Si esa versión no está instalada, obtiene la versión más reciente instalada antes de la versión solicitada.  
+Obtiene el número de versión de Common Language Runtime (CLR) solicitado por la aplicación especificada. Si esa versión no está instalada, obtiene la versión más reciente que se instala antes de la versión solicitada.  
   
- Esta función está en desuso en el .NET Framework 4.  
+ Esta función ha quedado en desuso en .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersion (  
-    [in]  LPWSTR  pExe,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  LPWSTR  pExe,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *pdwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pExe`  
- de El nombre de la aplicación.  
+ [en] El nombre de la aplicación.  
   
  `pVersion`  
- enuncia Un búfer que contiene la cadena del número de versión cuando se completa correctamente.  
+ [fuera] Un búfer que contiene la cadena de número de versión una vez completado correctamente.  
   
  `cchBuffer`  
- de Longitud del búfer de versión.  
+ [en] La longitud del búfer de versión.  
   
  `pdwLength`  
- enuncia Puntero a la longitud de la cadena del número de versión.  
+ [fuera] Un puntero a la longitud de la cadena de número de versión.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los valores siguientes.  
+ Este método devuelve códigos de error estándar del modelo de objetos componentes (COM), tal como se define en WinError.h, además de los siguientes valores.  
   
-|Código devuelto|Descripción|  
+|Código de retorno|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|El búfer de versión no es lo suficientemente grande como para almacenar la cadena de versión.|  
@@ -63,13 +63,13 @@ HRESULT GetRequestedRuntimeVersion (
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE. h  
+ **Encabezado:** MScorEE.h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** Mscoree.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [GetVersionFromProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
