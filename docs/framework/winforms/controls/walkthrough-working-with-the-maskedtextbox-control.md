@@ -11,48 +11,48 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: 7f25e21008c77ebf5e55e7affbb4cf07db377c5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db32b3ec88a07747ea3e286af9f04edce3f1ba3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623280"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182050"
 ---
-# <a name="walkthrough-working-with-the-maskedtextbox-control"></a><span data-ttu-id="d6e4f-102">Tutorial: Trabajar con el control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="d6e4f-102">Walkthrough: Working with the MaskedTextBox Control</span></span>
-<span data-ttu-id="d6e4f-103">Las tareas ilustradas en este tutorial incluyen:</span><span class="sxs-lookup"><span data-stu-id="d6e4f-103">Tasks illustrated in this walkthrough include:</span></span>  
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a><span data-ttu-id="b7490-102">Tutorial: Trabajar con el control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="b7490-102">Walkthrough: Working with the MaskedTextBox Control</span></span>
+<span data-ttu-id="b7490-103">Las tareas ilustradas en este tutorial incluyen:</span><span class="sxs-lookup"><span data-stu-id="b7490-103">Tasks illustrated in this walkthrough include:</span></span>  
   
-- <span data-ttu-id="d6e4f-104">Inicializando el <xref:System.Windows.Forms.MaskedTextBox> control</span><span class="sxs-lookup"><span data-stu-id="d6e4f-104">Initializing the <xref:System.Windows.Forms.MaskedTextBox> control</span></span>  
+- <span data-ttu-id="b7490-104">Inicialización <xref:System.Windows.Forms.MaskedTextBox> del control</span><span class="sxs-lookup"><span data-stu-id="b7490-104">Initializing the <xref:System.Windows.Forms.MaskedTextBox> control</span></span>  
   
-- <span data-ttu-id="d6e4f-105">Mediante el <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> controlador de eventos para alertar al usuario cuando un carácter no es conforme a la máscara</span><span class="sxs-lookup"><span data-stu-id="d6e4f-105">Using the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event handler to alert the user when a character does not conform to the mask</span></span>  
+- <span data-ttu-id="b7490-105">Uso <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> del controlador de eventos para alertar al usuario cuando un carácter no se ajusta a la máscara</span><span class="sxs-lookup"><span data-stu-id="b7490-105">Using the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event handler to alert the user when a character does not conform to the mask</span></span>  
   
-- <span data-ttu-id="d6e4f-106">Asignar un tipo para el <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propiedad y el uso de la <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> controlador de eventos para alertar al usuario cuando el valor que se intenta confirmar no es válido para el tipo</span><span class="sxs-lookup"><span data-stu-id="d6e4f-106">Assigning a type to the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property and using the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event handler to alert the user when the value they're attempting to commit is not valid for the type</span></span>  
+- <span data-ttu-id="b7490-106">Asignar un tipo <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> a la <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> propiedad y usar el controlador de eventos para alertar al usuario cuando el valor que intentan confirmar no es válido para el tipo</span><span class="sxs-lookup"><span data-stu-id="b7490-106">Assigning a type to the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property and using the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event handler to alert the user when the value they're attempting to commit is not valid for the type</span></span>  
   
-## <a name="creating-the-project-and-adding-a-control"></a><span data-ttu-id="d6e4f-107">Crear el proyecto y agregar un Control</span><span class="sxs-lookup"><span data-stu-id="d6e4f-107">Creating the Project and Adding a Control</span></span>  
+## <a name="creating-the-project-and-adding-a-control"></a><span data-ttu-id="b7490-107">Creación del proyecto y adición de un control</span><span class="sxs-lookup"><span data-stu-id="b7490-107">Creating the Project and Adding a Control</span></span>  
   
-#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a><span data-ttu-id="d6e4f-108">Para agregar un control MaskedTextBox al formulario</span><span class="sxs-lookup"><span data-stu-id="d6e4f-108">To add a MaskedTextBox control to your form</span></span>  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a><span data-ttu-id="b7490-108">Para agregar un control MaskedTextBox al formulario</span><span class="sxs-lookup"><span data-stu-id="b7490-108">To add a MaskedTextBox control to your form</span></span>  
   
-1. <span data-ttu-id="d6e4f-109">Abra el formulario en el que desea colocar el <xref:System.Windows.Forms.MaskedTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-109">Open the form on which you want to place the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
+1. <span data-ttu-id="b7490-109">Abra el formulario en el <xref:System.Windows.Forms.MaskedTextBox> que desea colocar el control.</span><span class="sxs-lookup"><span data-stu-id="b7490-109">Open the form on which you want to place the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
-2. <span data-ttu-id="d6e4f-110">Arrastre un <xref:System.Windows.Forms.MaskedTextBox> controlar desde la **cuadro de herramientas** al formulario.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control from the **Toolbox** to your form.</span></span>  
+2. <span data-ttu-id="b7490-110">Arrastre <xref:System.Windows.Forms.MaskedTextBox> un control desde el **cuadro de herramientas** al formulario.</span><span class="sxs-lookup"><span data-stu-id="b7490-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control from the **Toolbox** to your form.</span></span>  
   
-3. <span data-ttu-id="d6e4f-111">Haga clic en el control y elija **propiedades**.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-111">Right-click the control and choose **Properties**.</span></span> <span data-ttu-id="d6e4f-112">En el **propiedades** ventana, seleccione el **máscara** propiedad y haga clic en el **...**  () botón de puntos suspensivos junto al nombre de propiedad.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-112">In the **Properties** window, select the **Mask** property and click the **...** (ellipsis) button next to the property name.</span></span>  
+3. <span data-ttu-id="b7490-111">Haga clic con el botón derecho en el control y elija **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="b7490-111">Right-click the control and choose **Properties**.</span></span> <span data-ttu-id="b7490-112">En la ventana **Propiedades,** seleccione la propiedad **Máscara** y haga clic en el botón **...** (ellipsis) situado junto al nombre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="b7490-112">In the **Properties** window, select the **Mask** property and click the **...** (ellipsis) button next to the property name.</span></span>  
   
-4. <span data-ttu-id="d6e4f-113">En el **máscara de entrada** cuadro de diálogo, seleccione el **fecha corta** enmascarar y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-113">In the **Input Mask** dialog box, select the **Short Date** mask and click **OK**.</span></span>  
+4. <span data-ttu-id="b7490-113">En el cuadro de diálogo Máscara de **entrada,** seleccione la máscara **Fecha corta** y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="b7490-113">In the **Input Mask** dialog box, select the **Short Date** mask and click **OK**.</span></span>  
   
-5. <span data-ttu-id="d6e4f-114">En el **propiedades** ventana conjunto el <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-114">In the **Properties** window set the <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> property to `true`.</span></span> <span data-ttu-id="d6e4f-115">Esta propiedad hace que un bip breve sonido cada vez que el usuario trata de un carácter que infringe la definición de la máscara de entrada.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-115">This property causes a short beep to sound every time the user attempts to input a character that violates the mask definition.</span></span>  
+5. <span data-ttu-id="b7490-114">En la ventana <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> **Propiedades,** establezca la propiedad en . `true`</span><span class="sxs-lookup"><span data-stu-id="b7490-114">In the **Properties** window set the <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> property to `true`.</span></span> <span data-ttu-id="b7490-115">Esta propiedad hace que un pitido corto suene cada vez que el usuario intenta introducir un carácter que infringe la definición de máscara.</span><span class="sxs-lookup"><span data-stu-id="b7490-115">This property causes a short beep to sound every time the user attempts to input a character that violates the mask definition.</span></span>  
   
- <span data-ttu-id="d6e4f-116">Para obtener un resumen de los caracteres compatibles con la propiedad de máscara, consulte la sección Comentarios de la <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-116">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
+ <span data-ttu-id="b7490-116">Para obtener un resumen de los caracteres que admite <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> la propiedad Mask, vea la sección Comentarios de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="b7490-116">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-## <a name="alert-the-user-to-input-errors"></a><span data-ttu-id="d6e4f-117">Alertar al usuario para errores de entrada</span><span class="sxs-lookup"><span data-stu-id="d6e4f-117">Alert the User to Input Errors</span></span>  
+## <a name="alert-the-user-to-input-errors"></a><span data-ttu-id="b7490-117">Alertar al usuario de los errores de entrada</span><span class="sxs-lookup"><span data-stu-id="b7490-117">Alert the User to Input Errors</span></span>  
   
-#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a><span data-ttu-id="d6e4f-118">Agregar un globo de sugerencias para la entrada de máscara rechazadas</span><span class="sxs-lookup"><span data-stu-id="d6e4f-118">Add a balloon tip for rejected mask input</span></span>  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a><span data-ttu-id="b7490-118">Agregue una punta de globo para la entrada de máscara rechazada</span><span class="sxs-lookup"><span data-stu-id="b7490-118">Add a balloon tip for rejected mask input</span></span>  
   
-1. <span data-ttu-id="d6e4f-119">Vuelva a la **cuadro de herramientas** y agregue un <xref:System.Windows.Forms.ToolTip> al formulario.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-119">Return to the **Toolbox** and add a <xref:System.Windows.Forms.ToolTip> to your form.</span></span>  
+1. <span data-ttu-id="b7490-119">Vuelva al cuadro de <xref:System.Windows.Forms.ToolTip> **herramientas** y agregue un al formulario.</span><span class="sxs-lookup"><span data-stu-id="b7490-119">Return to the **Toolbox** and add a <xref:System.Windows.Forms.ToolTip> to your form.</span></span>  
   
-2. <span data-ttu-id="d6e4f-120">Crear un controlador de eventos para el <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> eventos que provoca la <xref:System.Windows.Forms.ToolTip> cuando se produce un error de entrada.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-120">Create an event handler for the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event that raises the <xref:System.Windows.Forms.ToolTip> when an input error occurs.</span></span> <span data-ttu-id="d6e4f-121">El globo de sugerencias permanece visible durante cinco segundos, o hasta que el usuario hace clic en él.</span><span class="sxs-lookup"><span data-stu-id="d6e4f-121">The balloon tip remains visible for five seconds, or until the user clicks it.</span></span>  
+2. <span data-ttu-id="b7490-120">Cree un controlador <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> de eventos para <xref:System.Windows.Forms.ToolTip> el evento que provoca el momento en que se produce un error de entrada.</span><span class="sxs-lookup"><span data-stu-id="b7490-120">Create an event handler for the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event that raises the <xref:System.Windows.Forms.ToolTip> when an input error occurs.</span></span> <span data-ttu-id="b7490-121">La punta del globo permanece visible durante cinco segundos o hasta que el usuario hace clic en ella.</span><span class="sxs-lookup"><span data-stu-id="b7490-121">The balloon tip remains visible for five seconds, or until the user clicks it.</span></span>  
   
     ```csharp  
-    public void Form1_Load(Object sender, EventArgs e)   
+    public void Form1_Load(Object sender, EventArgs e)
     {  
         ... // Other initialization code  
         maskedTextBox1.Mask = "00/00/0000";  
@@ -78,11 +78,11 @@ ms.locfileid: "64623280"
     End Sub  
     ```  
   
-## <a name="alert-the-user-to-a-type-that-is-not-valid"></a><span data-ttu-id="d6e4f-122">Alertar al usuario a un tipo que no es válido</span><span class="sxs-lookup"><span data-stu-id="d6e4f-122">Alert the User to a Type that Is Not Valid</span></span>  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a><span data-ttu-id="b7490-122">Alertar al usuario de un tipo que no es válido</span><span class="sxs-lookup"><span data-stu-id="b7490-122">Alert the User to a Type that Is Not Valid</span></span>  
   
-#### <a name="add-a-balloon-tip-for-invalid-data-types"></a><span data-ttu-id="d6e4f-123">Agregar un globo de sugerencias para los tipos de datos no válidos</span><span class="sxs-lookup"><span data-stu-id="d6e4f-123">Add a balloon tip for invalid data types</span></span>  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a><span data-ttu-id="b7490-123">Agregue una sugerencia de globo para tipos de datos no válidos</span><span class="sxs-lookup"><span data-stu-id="b7490-123">Add a balloon tip for invalid data types</span></span>  
   
-1. <span data-ttu-id="d6e4f-124">En el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos, asigne un <xref:System.Type> objeto que representa el <xref:System.DateTime> escriba a la <xref:System.Windows.Forms.MaskedTextBox> del control <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propiedad:</span><span class="sxs-lookup"><span data-stu-id="d6e4f-124">In your form's <xref:System.Windows.Forms.Form.Load> event handler, assign a <xref:System.Type> object representing the <xref:System.DateTime> type to the <xref:System.Windows.Forms.MaskedTextBox> control's <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property:</span></span>  
+1. <span data-ttu-id="b7490-124">En el controlador <xref:System.Windows.Forms.Form.Load> de eventos <xref:System.Type> del formulario, asigne un objeto que represente el <xref:System.DateTime> tipo a la <xref:System.Windows.Forms.MaskedTextBox> propiedad del <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> control:</span><span class="sxs-lookup"><span data-stu-id="b7490-124">In your form's <xref:System.Windows.Forms.Form.Load> event handler, assign a <xref:System.Type> object representing the <xref:System.DateTime> type to the <xref:System.Windows.Forms.MaskedTextBox> control's <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property:</span></span>  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ ms.locfileid: "64623280"
     End Sub  
     ```  
   
-2. <span data-ttu-id="d6e4f-125">Agregue un controlador de eventos para el evento <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>:</span><span class="sxs-lookup"><span data-stu-id="d6e4f-125">Add an event handler for the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event:</span></span>  
+2. <span data-ttu-id="b7490-125">Agregue un controlador de eventos para el evento <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>:</span><span class="sxs-lookup"><span data-stu-id="b7490-125">Add an event handler for the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event:</span></span>  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -124,7 +124,7 @@ ms.locfileid: "64623280"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d6e4f-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="d6e4f-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7490-126">Consulte también</span><span class="sxs-lookup"><span data-stu-id="b7490-126">See also</span></span>
 
 - <xref:System.Windows.Forms.MaskedTextBox>
-- [<span data-ttu-id="d6e4f-127">MaskedTextBox (control)</span><span class="sxs-lookup"><span data-stu-id="d6e4f-127">MaskedTextBox Control</span></span>](maskedtextbox-control-windows-forms.md)
+- [<span data-ttu-id="b7490-127">Control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="b7490-127">MaskedTextBox Control</span></span>](maskedtextbox-control-windows-forms.md)

@@ -1,28 +1,28 @@
 ---
-title: Cómo actualización dinámica
+title: 'Cómo: Actualización dinámica'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834719"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184963"
 ---
-# <a name="how-to-dynamic-update"></a><span data-ttu-id="a4bb5-102">Cómo actualización dinámica</span><span class="sxs-lookup"><span data-stu-id="a4bb5-102">How To: Dynamic Update</span></span>
-<span data-ttu-id="a4bb5-103">Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-103">This topic outlines the basic steps required to create and dynamically update the routing configuration.</span></span> <span data-ttu-id="a4bb5-104">En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el punto de conexión de destino del servicio de roundingCalc.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-104">In this example, the initial routing configuration is obtained from the configuration file and routes all messages to the regularCalc calculator service; however, it is subsequently updated programmatically in order to change the destination endpoint the roundingCalc service.</span></span>  
+# <a name="how-to-dynamic-update"></a><span data-ttu-id="1ebe8-102">Cómo: Actualización dinámica</span><span class="sxs-lookup"><span data-stu-id="1ebe8-102">How To: Dynamic Update</span></span>
+<span data-ttu-id="1ebe8-103">Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-103">This topic outlines the basic steps required to create and dynamically update the routing configuration.</span></span> <span data-ttu-id="1ebe8-104">En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el punto de conexión de destino del servicio de roundingCalc.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-104">In this example, the initial routing configuration is obtained from the configuration file and routes all messages to the regularCalc calculator service; however, it is subsequently updated programmatically in order to change the destination endpoint the roundingCalc service.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a4bb5-105">En muchas implementaciones, la configuración será totalmente dinámica y no se basará en una configuración predeterminada; sin embargo, hay algunos casos, como el de este tema, en los que es deseable tener un estado de configuración predeterminada al iniciar el servicio.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-105">In many implementations, configuration will be fully dynamic and will not rely on a default configuration; however, there are some scenarios, such as the one in this topic, where it is desirable to have a default configuration state when the service starts.</span></span>  
+> <span data-ttu-id="1ebe8-105">En muchas implementaciones, la configuración será totalmente dinámica y no se basará en una configuración predeterminada; sin embargo, hay algunos casos, como el de este tema, en los que es deseable tener un estado de configuración predeterminada al iniciar el servicio.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-105">In many implementations, configuration will be fully dynamic and will not rely on a default configuration; however, there are some scenarios, such as the one in this topic, where it is desirable to have a default configuration state when the service starts.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a4bb5-106">Las actualizaciones dinámicas solo se llevan a cabo en la memoria y no ocasionan la modificación de los archivos de configuración.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-106">Dynamic updates occur only in memory, and do not result in the modification of configuration files.</span></span>  
+> <span data-ttu-id="1ebe8-106">Las actualizaciones dinámicas solo se llevan a cabo en la memoria y no ocasionan la modificación de los archivos de configuración.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-106">Dynamic updates occur only in memory, and do not result in the modification of configuration files.</span></span>  
   
- <span data-ttu-id="a4bb5-107">regularCalc y roundingCalc admiten las mismas operaciones de suma, resta, multiplicación y división; sin embargo, roundingCalc redondea todos los cálculos al valor entero más cercano antes de realizar la devolución.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-107">Both regularCalc and roundingCalc support the same operations of add, subtract, multiply and divide; however, roundingCalc rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="a4bb5-108">Se usa un archivo de configuración para configurar el servicio para enrutar todos los mensajes al servicio de regularCalc.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-108">A configuration file is used to configure the service to route all messages to the regularCalc service.</span></span> <span data-ttu-id="a4bb5-109">Una vez iniciado el servicio de enrutamiento, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> se utiliza para reconfigurar el servicio para enrutar los mensajes al servicio de roundingCalc.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-109">After the Routing Service has been started, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> is used to reconfigure the service to route messages to the roundingCalc service.</span></span>  
+ <span data-ttu-id="1ebe8-107">regularCalc y roundingCalc admiten las mismas operaciones de suma, resta, multiplicación y división; sin embargo, roundingCalc redondea todos los cálculos al valor entero más cercano antes de realizar la devolución.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-107">Both regularCalc and roundingCalc support the same operations of add, subtract, multiply and divide; however, roundingCalc rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="1ebe8-108">Se usa un archivo de configuración para configurar el servicio para enrutar todos los mensajes al servicio de regularCalc.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-108">A configuration file is used to configure the service to route all messages to the regularCalc service.</span></span> <span data-ttu-id="1ebe8-109">Una vez iniciado el servicio de enrutamiento, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> se utiliza para reconfigurar el servicio para enrutar los mensajes al servicio de roundingCalc.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-109">After the Routing Service has been started, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> is used to reconfigure the service to route messages to the roundingCalc service.</span></span>  
   
-### <a name="implement-initial-configuration"></a><span data-ttu-id="a4bb5-110">Implementación de la configuración inicial</span><span class="sxs-lookup"><span data-stu-id="a4bb5-110">Implement Initial Configuration</span></span>  
+### <a name="implement-initial-configuration"></a><span data-ttu-id="1ebe8-110">Implementación de la configuración inicial</span><span class="sxs-lookup"><span data-stu-id="1ebe8-110">Implement Initial Configuration</span></span>  
   
-1. <span data-ttu-id="a4bb5-111">Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-111">Create the basic Routing Service Configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="a4bb5-112">En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-112">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="a4bb5-113">También se define un extremo de cliente que se usará para enviar mensajes a regularCalc.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-113">It also defines a client endpoint that will be used to send messages to the regularCalc.</span></span>  
+1. <span data-ttu-id="1ebe8-111">Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-111">Create the basic Routing Service Configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="1ebe8-112">En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-112">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="1ebe8-113">También se define un extremo de cliente que se usará para enviar mensajes a regularCalc.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-113">It also defines a client endpoint that will be used to send messages to the regularCalc.</span></span>  
   
     ```xml  
     <services>  
@@ -49,7 +49,7 @@ ms.locfileid: "71834719"
     </client>  
     ```  
   
-2. <span data-ttu-id="a4bb5-114">Defina el filtro usado para enrutar mensajes a los puntos de conexión del destino.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-114">Define the filter used to route messages to the destination endpoints.</span></span> <span data-ttu-id="a4bb5-115">En este ejemplo, se usa el filtro de MatchAll para enrutar todos los mensajes a regularCalcEndpoint definido previamente.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-115">For this example, the MatchAll filter is used to route all messages to the regularCalcEndpoint defined previously.</span></span> <span data-ttu-id="a4bb5-116">En el siguiente ejemplo, se define el filtro y la tabla de filtros.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-116">The following example defines the filter and filter table.</span></span>  
+2. <span data-ttu-id="1ebe8-114">Defina el filtro usado para enrutar mensajes a los puntos de conexión del destino.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-114">Define the filter used to route messages to the destination endpoints.</span></span> <span data-ttu-id="1ebe8-115">En este ejemplo, se usa el filtro de MatchAll para enrutar todos los mensajes a regularCalcEndpoint definido previamente.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-115">For this example, the MatchAll filter is used to route all messages to the regularCalcEndpoint defined previously.</span></span> <span data-ttu-id="1ebe8-116">En el siguiente ejemplo, se define el filtro y la tabla de filtros.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-116">The following example defines the filter and filter table.</span></span>  
   
     ```xml  
     <filters>  
@@ -64,7 +64,7 @@ ms.locfileid: "71834719"
     </filterTables>  
     ```  
   
-3. <span data-ttu-id="a4bb5-117">Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-117">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="a4bb5-118">En el ejemplo siguiente se muestra cómo asociar "filterTable1" al punto de conexión de servicio.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-118">The following example demonstrates associating "filterTable1" with the service endpoint.</span></span>  
+3. <span data-ttu-id="1ebe8-117">Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-117">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="1ebe8-118">En el ejemplo siguiente se muestra cómo asociar "filterTable1" con el punto de conexión de servicio.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-118">The following example demonstrates associating "filterTable1" with the service endpoint.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -77,10 +77,10 @@ ms.locfileid: "71834719"
     </behaviors>  
     ```  
   
-## <a name="implement-dynamic-configuration"></a><span data-ttu-id="a4bb5-119">Implementación de la configuración dinámica</span><span class="sxs-lookup"><span data-stu-id="a4bb5-119">Implement Dynamic Configuration</span></span>  
- <span data-ttu-id="a4bb5-120">La configuración dinámica del servicio de enrutamiento solo se puede realizar en código creando un nuevo <xref:System.ServiceModel.Routing.RoutingConfiguration> y usando <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> para reemplazar la configuración actual.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-120">Dynamic configuration of the Routing Service can only be performed in code by creating a new <xref:System.ServiceModel.Routing.RoutingConfiguration> and using <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> to replace the current configuration.</span></span>  <span data-ttu-id="a4bb5-121">En este ejemplo, el servicio de enrutamiento se auto-hospeda dentro de una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-121">For this example, the Routing Service is self-hosted within a console application.</span></span> <span data-ttu-id="a4bb5-122">Después de que la aplicación se haya iniciado, puede modificar la configuración de enrutamiento escribiendo 'regular' (normal) o 'rounding' (redondeo) en la ventana de la consola para configurar el extremo de destino al que se enrutan los mensajes: regularCalc al escribir 'regular'; de lo contrario, roundingCalc al introducir 'rounding'.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-122">After the application has started, you can modify the routing configuration by entering ‘regular’ or ‘rounding’ at the console window to configure the destination endpoint that messages are routed to; regularCalc when ‘regular’ is entered, otherwise roundingCalc when ‘rounding’ is entered.</span></span>  
+## <a name="implement-dynamic-configuration"></a><span data-ttu-id="1ebe8-119">Implementación de la configuración dinámica</span><span class="sxs-lookup"><span data-stu-id="1ebe8-119">Implement Dynamic Configuration</span></span>  
+ <span data-ttu-id="1ebe8-120">La configuración dinámica del servicio de enrutamiento solo se puede realizar en código creando un nuevo <xref:System.ServiceModel.Routing.RoutingConfiguration> y usando <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> para reemplazar la configuración actual.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-120">Dynamic configuration of the Routing Service can only be performed in code by creating a new <xref:System.ServiceModel.Routing.RoutingConfiguration> and using <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> to replace the current configuration.</span></span>  <span data-ttu-id="1ebe8-121">En este ejemplo, el servicio de enrutamiento se auto-hospeda dentro de una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-121">For this example, the Routing Service is self-hosted within a console application.</span></span> <span data-ttu-id="1ebe8-122">Después de que la aplicación se haya iniciado, puede modificar la configuración de enrutamiento escribiendo 'regular' (normal) o 'rounding' (redondeo) en la ventana de la consola para configurar el extremo de destino al que se enrutan los mensajes: regularCalc al escribir 'regular'; de lo contrario, roundingCalc al introducir 'rounding'.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-122">After the application has started, you can modify the routing configuration by entering ‘regular’ or ‘rounding’ at the console window to configure the destination endpoint that messages are routed to; regularCalc when ‘regular’ is entered, otherwise roundingCalc when ‘rounding’ is entered.</span></span>  
   
-1. <span data-ttu-id="a4bb5-123">Deben agregarse las siguientes instrucciones de uso para admitir el servicio de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-123">The following using statements must be added in order to support the Routing Service.</span></span>  
+1. <span data-ttu-id="1ebe8-123">Deben agregarse las siguientes instrucciones de uso para admitir el servicio de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-123">The following using statements must be added in order to support the Routing Service.</span></span>  
   
     ```csharp  
     using System;  
@@ -92,7 +92,7 @@ ms.locfileid: "71834719"
     using System.ServiceModel.Routing;  
     ```  
   
-2. <span data-ttu-id="a4bb5-124">El siguiente código se usa para probar internamente el servicio de enrutamiento como una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-124">The following code is used to self-host the Routing Service as a console application.</span></span> <span data-ttu-id="a4bb5-125">Esto inicializa el servicio de enrutamiento mediante la configuración descrita en el paso anterior, que se incluye en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-125">This initializes the Routing Service using the configuration described in the previous step, which is contained within the application configuration file.</span></span> <span data-ttu-id="a4bb5-126">El bucle while contiene el código usado para cambiar la configuración de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-126">The while loop contains the code used to change the routing configuration.</span></span>  
+2. <span data-ttu-id="1ebe8-124">El siguiente código se usa para probar internamente el servicio de enrutamiento como una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-124">The following code is used to self-host the Routing Service as a console application.</span></span> <span data-ttu-id="1ebe8-125">Esto inicializa el servicio de enrutamiento mediante la configuración descrita en el paso anterior, que se incluye en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-125">This initializes the Routing Service using the configuration described in the previous step, which is contained within the application configuration file.</span></span> <span data-ttu-id="1ebe8-126">El bucle while contiene el código usado para cambiar la configuración de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-126">The while loop contains the code used to change the routing configuration.</span></span>  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -102,7 +102,7 @@ ms.locfileid: "71834719"
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -117,9 +117,9 @@ ms.locfileid: "71834719"
     }  
     ```  
   
-3. <span data-ttu-id="a4bb5-127">Para actualizar la configuración de enrutamiento dinámicamente, debe crearse una nueva configuración de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-127">To dynamically update the routing configuration, a new routing configuration must be created.</span></span> <span data-ttu-id="a4bb5-128">Esto debe contener todos los puntos de conexión, filtros y tablas de filtros necesarios para la nueva configuración de enrutamiento, ya que reemplazará por completo la configuración de enrutamiento existente.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-128">This must contain all endpoints, filters and filter tables that are required for the new routing configuration, as it will completely replace the existing routing configuration.</span></span> <span data-ttu-id="a4bb5-129">Para usar la nueva configuración de enrutamiento, debe invocar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> y pasar la nueva configuración.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-129">In order to use the new routing configuration, you must invoke <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> and pass the new configuration.</span></span>  
+3. <span data-ttu-id="1ebe8-127">Para actualizar la configuración de enrutamiento dinámicamente, debe crearse una nueva configuración de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-127">To dynamically update the routing configuration, a new routing configuration must be created.</span></span> <span data-ttu-id="1ebe8-128">Esto debe contener todos los puntos de conexión, filtros y tablas de filtros necesarios para la nueva configuración de enrutamiento, ya que reemplazará por completo la configuración de enrutamiento existente.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-128">This must contain all endpoints, filters and filter tables that are required for the new routing configuration, as it will completely replace the existing routing configuration.</span></span> <span data-ttu-id="1ebe8-129">Para usar la nueva configuración de enrutamiento, debe invocar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> y pasar la nueva configuración.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-129">In order to use the new routing configuration, you must invoke <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> and pass the new configuration.</span></span>  
   
-     <span data-ttu-id="a4bb5-130">Agregue el siguiente código al bucle while definido previamente para permitir que el servicio se reconfigure en función de los datos proporcionados por el usuario.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-130">Add the following code to the while loop defined previously to allow the service to be reconfigured based on user input.</span></span>  
+     <span data-ttu-id="1ebe8-130">Agregue el siguiente código al bucle while definido previamente para permitir que el servicio se reconfigure en función de los datos proporcionados por el usuario.</span><span class="sxs-lookup"><span data-stu-id="1ebe8-130">Add the following code to the while loop defined previously to allow the service to be reconfigured based on user input.</span></span>  
   
     ```csharp  
     Console.WriteLine("Enter 'regular' or 'rounding' to set the destination endpoint:");  
@@ -160,11 +160,11 @@ ms.locfileid: "71834719"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="a4bb5-131">Como el método para proporcionar un nuevo RoutingConfiguration se incluye en la extensión de servicio RoutingExtension, pueden proporcionarse nuevos objetos RoutingConfiguration en cualquier parte del modelo de extensibilidad de WCF que tiene o puede obtener una referencia a ServiceHost o ServiceExtensions (como en otros ServiceExtension).</span><span class="sxs-lookup"><span data-stu-id="a4bb5-131">Since the method for providing a new RoutingConfiguration is contained in the RoutingExtension service extension, new RoutingConfiguration objects can be provided anywhere in the WCF extensibility model that has or can obtain a reference to the ServiceHost or ServiceExtensions (such as in another ServiceExtension).</span></span>
+    > <span data-ttu-id="1ebe8-131">Como el método para proporcionar un nuevo RoutingConfiguration se incluye en la extensión de servicio RoutingExtension, pueden proporcionarse nuevos objetos RoutingConfiguration en cualquier parte del modelo de extensibilidad de WCF que tiene o puede obtener una referencia a ServiceHost o ServiceExtensions (como en otros ServiceExtension).</span><span class="sxs-lookup"><span data-stu-id="1ebe8-131">Since the method for providing a new RoutingConfiguration is contained in the RoutingExtension service extension, new RoutingConfiguration objects can be provided anywhere in the WCF extensibility model that has or can obtain a reference to the ServiceHost or ServiceExtensions (such as in another ServiceExtension).</span></span>
   
-## <a name="example"></a><span data-ttu-id="a4bb5-132">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a4bb5-132">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1ebe8-132">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1ebe8-132">Example</span></span>  
 
-<span data-ttu-id="a4bb5-133">A continuación se muestra una lista completa de la aplicación de consola usada en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="a4bb5-133">The following is a complete listing of the console application used in this example:</span></span>
+<span data-ttu-id="1ebe8-133">A continuación se muestra una lista completa de la aplicación de consola utilizada en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1ebe8-133">The following is a complete listing of the console application used in this example:</span></span>
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -241,9 +241,9 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a4bb5-134">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a4bb5-134">Example</span></span>  
- 
-<span data-ttu-id="a4bb5-135">A continuación se muestra una lista completa del archivo de configuración que se usa en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="a4bb5-135">The following is a complete listing of the configuration file used in this example:</span></span>
+## <a name="example"></a><span data-ttu-id="1ebe8-134">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1ebe8-134">Example</span></span>  
+
+<span data-ttu-id="1ebe8-135">A continuación se muestra una lista completa del archivo de configuración utilizado en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1ebe8-135">The following is a complete listing of the configuration file used in this example:</span></span>
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,6 +298,6 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4bb5-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4bb5-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ebe8-136">Consulte también</span><span class="sxs-lookup"><span data-stu-id="1ebe8-136">See also</span></span>
 
-- [<span data-ttu-id="a4bb5-137">Servicios de enrutamiento</span><span class="sxs-lookup"><span data-stu-id="a4bb5-137">Routing Services</span></span>](../samples/routing-services.md)
+- [<span data-ttu-id="1ebe8-137">Servicios de enrutamiento</span><span class="sxs-lookup"><span data-stu-id="1ebe8-137">Routing Services</span></span>](../samples/routing-services.md)

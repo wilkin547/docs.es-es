@@ -1,27 +1,27 @@
 ---
-title: Procedimiento Animar un giro 3D mediante Storyboards
+title: 'Cómo: Animar una rotación 3D mediante guiones gráficos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storyboards [WPF]
-- 3-D translations [WPF], animating [WPF], with Storyboards
-- animation [WPF], 3-D translations [WPF], with Storyboards
+- 3D translations [WPF], animating [WPF], with Storyboards
+- animation [WPF], 3D translations [WPF], with Storyboards
 ms.assetid: 1020e44e-e21e-49a8-be53-53cbc1910e83
-ms.openlocfilehash: 03b01205f1a31426a01b09533b350682c384df4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 088f1a33cfc73a706ffed55ffff6494adaf8fca4
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024760"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112223"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a><span data-ttu-id="20893-102">Procedimiento Animar un giro 3D mediante Storyboards</span><span class="sxs-lookup"><span data-stu-id="20893-102">How to: Animate a 3-D Rotation Using Storyboards</span></span>
-<span data-ttu-id="20893-103">El ejemplo siguiente muestra cómo hacer girar mientras se "tambalea" animar un objeto 3D el <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> y <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> las propiedades de un <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto.</span><span class="sxs-lookup"><span data-stu-id="20893-103">The following example shows how to make a 3D object rotate while it "wobbles" by animating the <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> and <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> properties of an <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> object.</span></span> <span data-ttu-id="20893-104">Esto <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto especifica la transformación de giro del objeto 3D y sus propiedades de animación por lo que crea el efecto de giro deseado.</span><span class="sxs-lookup"><span data-stu-id="20893-104">This <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> object specifies the rotation transform of the 3D object and so animating its properties creates the desire rotation effect.</span></span> <span data-ttu-id="20893-105">En el guión gráfico, <xref:System.Windows.Media.Animation.DoubleAnimation> sirve para animar la <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> propiedad mientras <xref:System.Windows.Media.Animation.Vector3DAnimation> sirve para animar el <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="20893-105">Within the Storyboard, <xref:System.Windows.Media.Animation.DoubleAnimation> is used to animate the <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> property while <xref:System.Windows.Media.Animation.Vector3DAnimation> is used to animate the <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> property.</span></span>  
+# <a name="how-to-animate-a-3d-rotation-using-storyboards"></a><span data-ttu-id="f64d6-102">Cómo: Animar una rotación 3D mediante guiones gráficos</span><span class="sxs-lookup"><span data-stu-id="f64d6-102">How to: Animate a 3D Rotation Using Storyboards</span></span>
+<span data-ttu-id="f64d6-103">En el ejemplo siguiente se muestra cómo hacer que un objeto 3D <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> gire <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> mientras se "wobbles" animando las <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> propiedades y de un objeto.</span><span class="sxs-lookup"><span data-stu-id="f64d6-103">The following example shows how to make a 3D object rotate while it "wobbles" by animating the <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> and <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> properties of an <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> object.</span></span> <span data-ttu-id="f64d6-104">Este <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto especifica la transformación de rotación del objeto 3D y, por lo tanto, animar sus propiedades crea el efecto de rotación de deseo.</span><span class="sxs-lookup"><span data-stu-id="f64d6-104">This <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> object specifies the rotation transform of the 3D object and so animating its properties creates the desire rotation effect.</span></span> <span data-ttu-id="f64d6-105">Dentro del <xref:System.Windows.Media.Animation.DoubleAnimation> guión gráfico, <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> se <xref:System.Windows.Media.Animation.Vector3DAnimation> usa para <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> animar la propiedad mientras se usa para animar la propiedad.</span><span class="sxs-lookup"><span data-stu-id="f64d6-105">Within the Storyboard, <xref:System.Windows.Media.Animation.DoubleAnimation> is used to animate the <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> property while <xref:System.Windows.Media.Animation.Vector3DAnimation> is used to animate the <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="20893-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="20893-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f64d6-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f64d6-106">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="20893-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="20893-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f64d6-107">Consulte también</span><span class="sxs-lookup"><span data-stu-id="f64d6-107">See also</span></span>
 
-- [<span data-ttu-id="20893-108">Animar un giro 3D mediante Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="20893-108">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [<span data-ttu-id="20893-109">Animar un giro 3D mediante fotogramas clave (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="20893-109">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)
-- [<span data-ttu-id="20893-110">Información general sobre gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="20893-110">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
-- [<span data-ttu-id="20893-111">Información general sobre objetos Storyboard </span><span class="sxs-lookup"><span data-stu-id="20893-111">Storyboards Overview</span></span>](storyboards-overview.md)
+- [<span data-ttu-id="f64d6-108">Animar una rotación 3D mediante Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="f64d6-108">Animate a 3D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [<span data-ttu-id="f64d6-109">Animar una rotación 3D mediante fotogramas clave (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="f64d6-109">Animate a 3D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)
+- [<span data-ttu-id="f64d6-110">Descripción general de los gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="f64d6-110">3D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="f64d6-111">Información general sobre objetos Storyboard </span><span class="sxs-lookup"><span data-stu-id="f64d6-111">Storyboards Overview</span></span>](storyboards-overview.md)
