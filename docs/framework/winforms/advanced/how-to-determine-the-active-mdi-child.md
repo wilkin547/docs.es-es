@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para determinar el formulario secundario MDI activo
+title: 'Cómo: Determinar el formulario secundario MDI activo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57491faa10c182630d41565ba236d65e393929b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946221"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182544"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a><span data-ttu-id="92bff-102">Procedimiento para determinar el formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="92bff-102">How to: Determine the Active MDI Child</span></span>
-<span data-ttu-id="92bff-103">En ocasiones, querrá proporcionar un comando que opere en el control que tenga el foco en el formulario de elemento secundario activo actualmente.</span><span class="sxs-lookup"><span data-stu-id="92bff-103">On occasion, you will want to provide a command that operates on the control that has focus on the currently active child form.</span></span> <span data-ttu-id="92bff-104">Por ejemplo, supongamos que desea copiar el texto seleccionado del cuadro de texto del formulario secundario en el portapapeles.</span><span class="sxs-lookup"><span data-stu-id="92bff-104">For example, suppose you want to copy selected text from the child form's text box to the Clipboard.</span></span> <span data-ttu-id="92bff-105">Debe crear un procedimiento que copie el texto seleccionado en el portapapeles <xref:System.Windows.Forms.Control.Click> mediante el evento del elemento de menú copiar en el menú edición estándar.</span><span class="sxs-lookup"><span data-stu-id="92bff-105">You would create a procedure that copies selected text to the Clipboard using the <xref:System.Windows.Forms.Control.Click> event of the Copy menu item on the standard Edit menu.</span></span>  
+# <a name="how-to-determine-the-active-mdi-child"></a><span data-ttu-id="0d9f4-102">Cómo: Determinar el formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="0d9f4-102">How to: Determine the Active MDI Child</span></span>
+<span data-ttu-id="0d9f4-103">En ocasiones, querrá proporcionar un comando que funcione en el control que se centra en el formulario secundario activo actualmente.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-103">On occasion, you will want to provide a command that operates on the control that has focus on the currently active child form.</span></span> <span data-ttu-id="0d9f4-104">Por ejemplo, supongamos que desea copiar el texto seleccionado del cuadro de texto del formulario secundario al Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-104">For example, suppose you want to copy selected text from the child form's text box to the Clipboard.</span></span> <span data-ttu-id="0d9f4-105">Crearía un procedimiento que copie el texto <xref:System.Windows.Forms.Control.Click> seleccionado en el Portapapeles utilizando el evento del elemento de menú Copiar del menú Edición estándar.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-105">You would create a procedure that copies selected text to the Clipboard using the <xref:System.Windows.Forms.Control.Click> event of the Copy menu item on the standard Edit menu.</span></span>  
   
- <span data-ttu-id="92bff-106">Dado que una aplicación MDI puede tener muchas instancias del mismo formulario secundario, el procedimiento debe saber qué formulario usar.</span><span class="sxs-lookup"><span data-stu-id="92bff-106">Because an MDI application can have many instances of the same child form, the procedure needs to know which form to use.</span></span> <span data-ttu-id="92bff-107">Para especificar el formato correcto, use la <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> propiedad, que devuelve el formulario secundario que tiene el foco o que estuvo activo más recientemente.</span><span class="sxs-lookup"><span data-stu-id="92bff-107">To specify the correct form, use the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, which returns the child form that has the focus or that was most recently active.</span></span>  
+ <span data-ttu-id="0d9f4-106">Dado que una aplicación MDI puede tener muchas instancias del mismo formulario secundario, el procedimiento debe saber qué formulario usar.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-106">Because an MDI application can have many instances of the same child form, the procedure needs to know which form to use.</span></span> <span data-ttu-id="0d9f4-107">Para especificar el formulario <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> correcto, utilice la propiedad, que devuelve el formulario secundario que tiene el foco o que se ha activo más recientemente.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-107">To specify the correct form, use the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, which returns the child form that has the focus or that was most recently active.</span></span>  
   
- <span data-ttu-id="92bff-108">Si tiene varios controles en un formulario, también debe especificar qué control está activo.</span><span class="sxs-lookup"><span data-stu-id="92bff-108">When you have several controls on a form, you also need to specify which control is active.</span></span> <span data-ttu-id="92bff-109">Al igual <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> que la propiedad <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> , la propiedad devuelve el control con el foco en el formulario secundario activo.</span><span class="sxs-lookup"><span data-stu-id="92bff-109">Like the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, the <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> property returns the control with the focus on the active child form.</span></span> <span data-ttu-id="92bff-110">En el procedimiento siguiente se muestra un procedimiento de copia al que se puede llamar desde un menú de formulario secundario, un menú del formulario MDI o un botón de la barra de herramientas.</span><span class="sxs-lookup"><span data-stu-id="92bff-110">The procedure below illustrates a copy procedure that can be called from a child form menu, a menu on the MDI form, or a toolbar button.</span></span>  
+ <span data-ttu-id="0d9f4-108">Cuando tiene varios controles en un formulario, también debe especificar qué control está activo.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-108">When you have several controls on a form, you also need to specify which control is active.</span></span> <span data-ttu-id="0d9f4-109">Al <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> igual que <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> la propiedad, la propiedad devuelve el control con el foco en el formulario secundario activo.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-109">Like the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, the <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> property returns the control with the focus on the active child form.</span></span> <span data-ttu-id="0d9f4-110">El procedimiento siguiente ilustra un procedimiento de copia que se puede llamar desde un menú de formulario secundario, un menú en el formulario MDI o un botón de barra de herramientas.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-110">The procedure below illustrates a copy procedure that can be called from a child form menu, a menu on the MDI form, or a toolbar button.</span></span>  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a><span data-ttu-id="92bff-111">Para determinar el elemento secundario MDI activo (para copiar su texto en el portapapeles)</span><span class="sxs-lookup"><span data-stu-id="92bff-111">To determine the active MDI child (to copy its text to the Clipboard)</span></span>  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a><span data-ttu-id="0d9f4-111">Para determinar el elemento secundario MDI activo (para copiar su texto en el Portapapeles)</span><span class="sxs-lookup"><span data-stu-id="0d9f4-111">To determine the active MDI child (to copy its text to the Clipboard)</span></span>  
   
-1. <span data-ttu-id="92bff-112">Dentro de un método, copie el texto del control activo del formulario secundario activo en el portapapeles.</span><span class="sxs-lookup"><span data-stu-id="92bff-112">Within a method, copy the text of the active control of the active child form to the Clipboard.</span></span>  
+1. <span data-ttu-id="0d9f4-112">Dentro de un método, copie el texto del control activo del formulario secundario activo en el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-112">Within a method, copy the text of the active control of the active child form to the Clipboard.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="92bff-113">En este ejemplo se da por supuesto que hay un`Form1`formulario MDI principal () que tiene una o varias ventanas <xref:System.Windows.Forms.RichTextBox> secundarias MDI que contienen un control.</span><span class="sxs-lookup"><span data-stu-id="92bff-113">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="92bff-114">Para obtener más información, vea [crear formularios MDI principales](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="92bff-114">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    > <span data-ttu-id="0d9f4-113">En este ejemplo se supone que`Form1`hay un formulario primario MDI ( <xref:System.Windows.Forms.RichTextBox> ) que tiene una o varias ventanas secundarias MDI que contienen un control.</span><span class="sxs-lookup"><span data-stu-id="0d9f4-113">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="0d9f4-114">Para obtener más información, consulte Creación de [formularios primarios MDI](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="0d9f4-114">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -64,7 +64,7 @@ ms.locfileid: "69946221"
        // If there is an active child form, find the active control, which  
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
-       {    
+       {
           try  
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
@@ -83,10 +83,10 @@ ms.locfileid: "69946221"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="92bff-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="92bff-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d9f4-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="0d9f4-115">See also</span></span>
 
-- [<span data-ttu-id="92bff-116">Aplicaciones de interfaz de múltiples documentos (MDI)</span><span class="sxs-lookup"><span data-stu-id="92bff-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="92bff-117">Cómo: Crear formularios MDI primarios</span><span class="sxs-lookup"><span data-stu-id="92bff-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="92bff-118">Cómo: Crear formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="92bff-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="92bff-119">Cómo: Enviar datos al elemento secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="92bff-119">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)
-- [<span data-ttu-id="92bff-120">Cómo: Organizar formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="92bff-120">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+- [<span data-ttu-id="0d9f4-116">Aplicaciones de interfaz de múltiples documentos (MDI)</span><span class="sxs-lookup"><span data-stu-id="0d9f4-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="0d9f4-117">Cómo: Crear formularios principales MDI</span><span class="sxs-lookup"><span data-stu-id="0d9f4-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="0d9f4-118">Cómo: Crear formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="0d9f4-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="0d9f4-119">Cómo: Enviar datos al formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="0d9f4-119">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)
+- [<span data-ttu-id="0d9f4-120">Cómo: Organizar formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="0d9f4-120">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)

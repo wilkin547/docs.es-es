@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: ef41514a57d08d66fcba2dbaeb8c8d88cdcf3875
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 245fe50ed5a80c51163652defb642cebefd55dbd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040707"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184032"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a><span data-ttu-id="9f41f-102">Cómo: Especificar un enlace de servicio en la configuración</span><span class="sxs-lookup"><span data-stu-id="9f41f-102">How to: Specify a Service Binding in Configuration</span></span>
-<span data-ttu-id="9f41f-103">En este ejemplo, se define un contrato `ICalculator` para un servicio de calculadora básico; el servicio se implementa en la clase `CalculatorService` y, después, su punto de conexión se configura en el archivo Web.config, donde se especifica que el servicio usa <xref:System.ServiceModel.BasicHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="9f41f-103">In this example, an `ICalculator` contract is defined for a basic calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is configured in the Web.config file, where it is specified that the service uses the <xref:System.ServiceModel.BasicHttpBinding>.</span></span> <span data-ttu-id="9f41f-104">Para obtener una descripción de cómo configurar este servicio con código en lugar de una configuración, vea [Cómo: especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md).</span><span class="sxs-lookup"><span data-stu-id="9f41f-104">For a description of how to configure this service using code instead of a configuration, see [How to: Specify a Service Binding in Code](how-to-specify-a-service-binding-in-code.md).</span></span>  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a><span data-ttu-id="d2b84-102">Cómo: Especificar un enlace de servicio en la configuración</span><span class="sxs-lookup"><span data-stu-id="d2b84-102">How to: Specify a Service Binding in Configuration</span></span>
+<span data-ttu-id="d2b84-103">En este ejemplo, se define un contrato `ICalculator` para un servicio de calculadora básico; el servicio se implementa en la clase `CalculatorService` y, después, su punto de conexión se configura en el archivo Web.config, donde se especifica que el servicio usa <xref:System.ServiceModel.BasicHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="d2b84-103">In this example, an `ICalculator` contract is defined for a basic calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is configured in the Web.config file, where it is specified that the service uses the <xref:System.ServiceModel.BasicHttpBinding>.</span></span> <span data-ttu-id="d2b84-104">Para obtener una descripción de cómo configurar este servicio mediante código en lugar de una configuración, vea [Cómo: especificar un enlace](how-to-specify-a-service-binding-in-code.md)de servicio en código .</span><span class="sxs-lookup"><span data-stu-id="d2b84-104">For a description of how to configure this service using code instead of a configuration, see [How to: Specify a Service Binding in Code](how-to-specify-a-service-binding-in-code.md).</span></span>  
   
- <span data-ttu-id="9f41f-105">Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código.</span><span class="sxs-lookup"><span data-stu-id="9f41f-105">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="9f41f-106">Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio.</span><span class="sxs-lookup"><span data-stu-id="9f41f-106">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="9f41f-107">Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="9f41f-107">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
+ <span data-ttu-id="d2b84-105">Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código.</span><span class="sxs-lookup"><span data-stu-id="d2b84-105">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="d2b84-106">Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio.</span><span class="sxs-lookup"><span data-stu-id="d2b84-106">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="d2b84-107">Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d2b84-107">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
- <span data-ttu-id="9f41f-108">Todos los pasos de configuración siguientes se pueden llevar a cabo mediante la [herramienta editor de configuración (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md).</span><span class="sxs-lookup"><span data-stu-id="9f41f-108">All of the following configuration steps can be undertaken using the [Configuration Editor Tool (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md).</span></span>  
+ <span data-ttu-id="d2b84-108">Todos los siguientes pasos de configuración se pueden realizar mediante la herramienta Editor de configuración [(SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md).</span><span class="sxs-lookup"><span data-stu-id="d2b84-108">All of the following configuration steps can be undertaken using the [Configuration Editor Tool (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md).</span></span>  
   
- <span data-ttu-id="9f41f-109">Para la copia de origen de este ejemplo, consulte [BasicBinding](./samples/basicbinding.md).</span><span class="sxs-lookup"><span data-stu-id="9f41f-109">For the source copy of this example, see [BasicBinding](./samples/basicbinding.md).</span></span>  
+ <span data-ttu-id="d2b84-109">Para obtener la copia de origen de este ejemplo, vea [BasicBinding](./samples/basicbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d2b84-109">For the source copy of this example, see [BasicBinding](./samples/basicbinding.md).</span></span>  
   
-## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a><span data-ttu-id="9f41f-110">Para especificar BasicHttpBinding para utilizarlo para configurar el servicio</span><span class="sxs-lookup"><span data-stu-id="9f41f-110">To specify the BasicHttpBinding to use to configure the service</span></span>  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a><span data-ttu-id="d2b84-110">Para especificar BasicHttpBinding para utilizarlo para configurar el servicio</span><span class="sxs-lookup"><span data-stu-id="d2b84-110">To specify the BasicHttpBinding to use to configure the service</span></span>  
   
-1. <span data-ttu-id="9f41f-111">Defina un contrato de servicios para el tipo de servicio.</span><span class="sxs-lookup"><span data-stu-id="9f41f-111">Define a service contract for the type of service.</span></span>  
+1. <span data-ttu-id="d2b84-111">Defina un contrato de servicios para el tipo de servicio.</span><span class="sxs-lookup"><span data-stu-id="d2b84-111">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2. <span data-ttu-id="9f41f-112">Implemente el contrato de servicios en una clase de servicio.</span><span class="sxs-lookup"><span data-stu-id="9f41f-112">Implement the service contract in a service class.</span></span>  
+2. <span data-ttu-id="d2b84-112">Implemente el contrato de servicios en una clase de servicio.</span><span class="sxs-lookup"><span data-stu-id="d2b84-112">Implement the service contract in a service class.</span></span>  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    > <span data-ttu-id="9f41f-113">La información de dirección o enlace no se especifica dentro de la implementación del servicio.</span><span class="sxs-lookup"><span data-stu-id="9f41f-113">Address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="9f41f-114">Por lo tanto, el código no tiene que escribirse para recuperar esa información del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="9f41f-114">Also, code does not have to be written to fetch that information from the configuration file.</span></span>  
+    > <span data-ttu-id="d2b84-113">La información de dirección o enlace no se especifica dentro de la implementación del servicio.</span><span class="sxs-lookup"><span data-stu-id="d2b84-113">Address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="d2b84-114">Por lo tanto, el código no tiene que escribirse para recuperar esa información del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="d2b84-114">Also, code does not have to be written to fetch that information from the configuration file.</span></span>  
   
-3. <span data-ttu-id="9f41f-115">Cree un archivo Web.config para configurar un punto de conexión para `CalculatorService` que utiliza <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="9f41f-115">Create a Web.config file to configure an endpoint for the `CalculatorService` that uses the <xref:System.ServiceModel.WSHttpBinding>.</span></span>  
+3. <span data-ttu-id="d2b84-115">Cree un archivo Web.config para configurar un punto de conexión para `CalculatorService` que utiliza <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="d2b84-115">Create a Web.config file to configure an endpoint for the `CalculatorService` that uses the <xref:System.ServiceModel.WSHttpBinding>.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -44,7 +44,7 @@ ms.locfileid: "73040707"
       <system.serviceModel>  
         <services>  
           <service name=" CalculatorService" >  
-            
+
             <!-- Leave the address blank to be populated by default -->
             <!-- from the hosting environment,in this case IIS, so -->
             <!-- the address will just be that of the IIS Virtual -->
@@ -55,8 +55,8 @@ ms.locfileid: "73040707"
             <!-- want to modify the properties of the binding. -->
             <!-- The bindingConfiguration name Binding1 is defined -->
             <!-- below in the bindings element. -->
-            <endpoint   
-                address=""   
+            <endpoint
+                address=""
                 binding="wsHttpBinding"  
                 bindingConfiguration="Binding1"  
                 contract="ICalculator" />  
@@ -74,15 +74,15 @@ ms.locfileid: "73040707"
     </configuration>  
     ```  
   
-4. <span data-ttu-id="9f41f-116">Cree un archivo Service.svc que contenga la línea siguiente y colóquelo en su directorio virtual de Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="9f41f-116">Create a Service.svc file that contains the following line and place it in your Internet Information Services (IIS) virtual directory.</span></span>  
+4. <span data-ttu-id="d2b84-116">Cree un archivo Service.svc que contenga la línea siguiente y colóquelo en su directorio virtual de Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="d2b84-116">Create a Service.svc file that contains the following line and place it in your Internet Information Services (IIS) virtual directory.</span></span>  
   
     ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
+    <%@ServiceHost language=c# Service="CalculatorService" %>
     ```  
   
-## <a name="to-modify-the-default-values-of-the-binding-properties"></a><span data-ttu-id="9f41f-117">Para modificar los valores predeterminados de las propiedades de enlace</span><span class="sxs-lookup"><span data-stu-id="9f41f-117">To modify the default values of the binding properties</span></span>  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a><span data-ttu-id="d2b84-117">Para modificar los valores predeterminados de las propiedades de enlace</span><span class="sxs-lookup"><span data-stu-id="d2b84-117">To modify the default values of the binding properties</span></span>  
   
-1. <span data-ttu-id="9f41f-118">Para modificar uno de los valores de propiedad predeterminados del <xref:System.ServiceModel.WSHttpBinding>, cree un nombre de configuración de enlace nuevo-`<binding name="Binding1">`-en el elemento de [> \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) y establezca los nuevos valores para los atributos del enlace en este elemento de enlace.</span><span class="sxs-lookup"><span data-stu-id="9f41f-118">To modify one of the default property values of the <xref:System.ServiceModel.WSHttpBinding>, create a new binding configuration name - `<binding name="Binding1">` - within the [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) element and set the new values for the attributes of the binding in this binding element.</span></span> <span data-ttu-id="9f41f-119">Por ejemplo, para cambiar los valores predeterminados de abrir y cerrar el tiempo de espera de 1 minuto a 2 minutos, agregue el siguiente al archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="9f41f-119">For example, to change the default open and close timeout values of 1 minute to 2 minutes, add the following to the configuration file.</span></span>  
+1. <span data-ttu-id="d2b84-118">Para modificar uno de los <xref:System.ServiceModel.WSHttpBinding>valores de propiedad predeterminados `<binding name="Binding1">` de la , crear un nuevo nombre de configuración de enlace - - dentro del [ \<elemento de>wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) y establecer los nuevos valores para los atributos del enlace en este elemento de enlace.</span><span class="sxs-lookup"><span data-stu-id="d2b84-118">To modify one of the default property values of the <xref:System.ServiceModel.WSHttpBinding>, create a new binding configuration name - `<binding name="Binding1">` - within the [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) element and set the new values for the attributes of the binding in this binding element.</span></span> <span data-ttu-id="d2b84-119">Por ejemplo, para cambiar los valores predeterminados de abrir y cerrar el tiempo de espera de 1 minuto a 2 minutos, agregue el siguiente al archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="d2b84-119">For example, to change the default open and close timeout values of 1 minute to 2 minutes, add the following to the configuration file.</span></span>  
   
     ```xml  
     <wsHttpBinding>  
@@ -93,7 +93,7 @@ ms.locfileid: "73040707"
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9f41f-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="9f41f-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2b84-120">Consulte también</span><span class="sxs-lookup"><span data-stu-id="d2b84-120">See also</span></span>
 
-- [<span data-ttu-id="9f41f-121">Utilización de enlaces para configurar servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="9f41f-121">Using Bindings to Configure Services and Clients</span></span>](using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="9f41f-122">Especificación de una dirección de punto de conexión</span><span class="sxs-lookup"><span data-stu-id="9f41f-122">Specifying an Endpoint Address</span></span>](specifying-an-endpoint-address.md)
+- [<span data-ttu-id="d2b84-121">Utilización de enlaces para configurar servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="d2b84-121">Using Bindings to Configure Services and Clients</span></span>](using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="d2b84-122">Especificación de una dirección de punto de conexión</span><span class="sxs-lookup"><span data-stu-id="d2b84-122">Specifying an Endpoint Address</span></span>](specifying-an-endpoint-address.md)
