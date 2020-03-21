@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783844"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149562"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema y colecciones de esquema
-Las clases de **conexión** de cada una de las .NET Framework proveedores administrados implementan un método **GetSchema** que se utiliza para recuperar información de esquema sobre la base de datos que está conectada actualmente y la información de esquema devuelta desde elEl método GetSchema tiene el formato de <xref:System.Data.DataTable>. El método **GetSchema** es un método sobrecargado que proporciona parámetros opcionales para especificar la colección de esquemas que se va a devolver y restringir la cantidad de información devuelta.  
+Las clases **connection** de cada uno de los proveedores administrados de .NET Framework implementan un método **GetSchema** que se usa para recuperar <xref:System.Data.DataTable>información de esquema sobre la base de datos que está conectada actualmente y la información de esquema devuelta desde el método **GetSchema** viene en forma de archivo . El **GetSchema** método es un método sobrecargado que proporciona parámetros opcionales para especificar la colección de esquemas que se va a devolver y restringir la cantidad de información devuelta.  
   
 ## <a name="specifying-the-schema-collections"></a>Especificación de las colecciones de esquemas  
  El primer parámetro opcional del método **GetSchema** es el nombre de la colección que se especifica como una cadena. Existen dos tipos de colecciones de esquemas: comunes, que son comunes a todos los proveedores, y específicas, que son específicas de cada proveedor.  
   
- Puede consultar un proveedor administrado de .NET Framework para determinar la lista de colecciones de esquemas admitidas llamando al método **GetSchema** sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
+ Puede consultar un proveedor administrado de .NET Framework para determinar la lista de colecciones de esquemas compatibles llamando al método **GetSchema** sin argumentos o con el nombre de colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
   
 ### <a name="retrieving-schema-collections-example"></a>Ejemplo de recuperación de colecciones de esquemas  
- En los siguientes ejemplos se muestra cómo utilizar <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> el método del proveedor de datos .NET Framework para la <xref:System.Data.SqlClient.SqlConnection> clase SQL Server para recuperar información de esquema de todas las tablas contenidas en la base de datos de ejemplo **AdventureWorks** :  
+ En los ejemplos siguientes <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> se muestra cómo utilizar el método <xref:System.Data.SqlClient.SqlConnection> del proveedor de datos de .NET Framework para la clase de SQL Server para recuperar información de esquema sobre todas las tablas contenidas en la base de datos de ejemplo **AdventureWorks:**  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -42,7 +42,7 @@ Module Module1
    End Sub  
   
    Private Function GetConnectionString() As String  
-      ' To avoid storing the connection string in your code,    
+      ' To avoid storing the connection string in your code,
       ' you can retrieve it from a configuration file.  
       Return "Data Source=(local);Database=AdventureWorks;" _  
          & "Integrated Security=true;"  
@@ -104,7 +104,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Recuperación de información del esquema de la base de datos](retrieving-database-schema-information.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

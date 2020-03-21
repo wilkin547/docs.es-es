@@ -2,19 +2,19 @@
 title: Información general sobre Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: e0f154ab2d9db1a1fdbaba8c72bc7e43ad71ee0b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 880b81f2b6d4c4b893d28c919490f88dfb2a42e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738494"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150381"
 ---
 # <a name="entity-sql-overview"></a>Información general sobre Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] es un lenguaje similar a SQL que permite consultar modelos conceptuales en el Entity Framework. Los modelos conceptuales representan los datos como entidades y relaciones, y [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite consultar esas entidades y relaciones en un formato conocido para los usuarios que han usado SQL.  
-      
- El Entity Framework funciona con proveedores de datos específicos del almacenamiento para traducir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] genéricos en consultas específicas del almacenamiento. El proveedor EntityClient proporciona una forma de ejecutar un comando de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en un modelo de entidades y devolver tipos enriquecidos de datos incluidos resultados escalares, conjuntos de resultados y gráficos de objetos. Cuando crea objetos <xref:System.Data.EntityClient.EntityCommand>, puede especificar un nombre de procedimiento guardado o el texto de una consulta asignando una cadena de consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] a su propiedad <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>. <xref:System.Data.EntityClient.EntityDataReader> muestra los resultados de ejecutar <xref:System.Data.EntityClient.EntityCommand> en un EDM. Para ejecutar el comando que devuelve el <xref:System.Data.EntityClient.EntityDataReader>, llame a <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]es un lenguaje similar a SQL que le permite consultar modelos conceptuales en Entity Framework. Los modelos conceptuales representan datos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] como entidades y relaciones y le permiten consultar esas entidades y relaciones en un formato que es familiar para aquellos que han utilizado SQL.  
+
+ Entity Framework funciona con proveedores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] datos específicos del almacenamiento para traducir genéricos en consultas específicas del almacenamiento. El proveedor EntityClient proporciona una forma de ejecutar un comando de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en un modelo de entidades y devolver tipos enriquecidos de datos incluidos resultados escalares, conjuntos de resultados y gráficos de objetos. Cuando crea objetos <xref:System.Data.EntityClient.EntityCommand>, puede especificar un nombre de procedimiento guardado o el texto de una consulta asignando una cadena de consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] a su propiedad <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>. <xref:System.Data.EntityClient.EntityDataReader> muestra los resultados de ejecutar <xref:System.Data.EntityClient.EntityCommand> en un EDM. Para ejecutar el comando que devuelve el <xref:System.Data.EntityClient.EntityDataReader>, llame a <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.  
   
- Además del proveedor de EntityClient, el Entity Framework permite utilizar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para ejecutar consultas en un modelo conceptual y devolver los datos como objetos CLR fuertemente tipados que son instancias de tipos de entidad. Para obtener más información, vea [trabajar con objetos](../working-with-objects.md).  
+ Además del proveedor EntityClient, Entity Framework [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite ejecutar consultas en un modelo conceptual y devolver datos como objetos CLR fuertemente tipados que son instancias de tipos de entidad. Para obtener más información, consulte [Trabajar con objetos](../working-with-objects.md).  
   
  En esta sección se proporciona información conceptual de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
@@ -51,17 +51,17 @@ ms.locfileid: "73738494"
   
  [Funciones](functions-entity-sql.md)  
   
- [Precedencia de operadores](operator-precedence-entity-sql.md)  
+ [Precedencia del operador](operator-precedence-entity-sql.md)  
   
  [Paginación](paging-entity-sql.md)  
   
  [Semántica de comparación](comparison-semantics-entity-sql.md)  
   
- [Creación de consultas anidadas de Entity SQL](composing-nested-entity-sql-queries.md)  
+ [Crear consultas anidadas de Entity SQL](composing-nested-entity-sql-queries.md)  
   
  [Tipos estructurados que aceptan valores NULL](nullable-structured-types-entity-sql.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [Lenguaje Entity SQL](entity-sql-language.md)

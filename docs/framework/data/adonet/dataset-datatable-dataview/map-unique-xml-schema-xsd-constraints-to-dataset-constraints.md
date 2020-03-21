@@ -2,35 +2,35 @@
 title: Asignar restricciones UNIQUE de un esquema XML (XSD) a restricciones de conjuntos de datos
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 6b847aba31aa75f7be3bd6a11b6bcb8231c06bc4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8bcf705ce4415929e685be79f813846bbb40bb36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040363"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150849"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones UNIQUE de un esquema XML (XSD) a restricciones de conjuntos de datos
-En un esquema del lenguaje de definición de esquemas XML (XSD), el elemento **Unique** especifica la restricción de unicidad en un elemento o atributo. En el proceso de traducción de un esquema XML a un esquema relacional, la restricción única especificada para un elemento o un atributo del esquema XML se asigna a una restricción única de la <xref:System.Data.DataTable> en el <xref:System.Data.DataSet> correspondiente que se genera.  
+En un esquema de lenguaje de definición de esquemas XML (XSD), el elemento **unique** especifica la restricción de unicidad en un elemento o atributo. En el proceso de traducción de un esquema XML a un esquema relacional, la restricción única especificada para un elemento o un atributo del esquema XML se asigna a una restricción única de la <xref:System.Data.DataTable> en el <xref:System.Data.DataSet> correspondiente que se genera.  
   
- En la tabla siguiente se describen los atributos **msdata** que puede especificar en el elemento **Unique** .  
+ En la tabla siguiente se describen los atributos **msdata** que puede especificar en el elemento **único.**  
   
 |Nombre del atributo|Descripción|  
 |--------------------|-----------------|  
-|**msdata: ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción. De lo contrario, el atributo **Name** proporciona el valor del nombre de la restricción.|  
-|**msdata: PrimaryKey**|Si `PrimaryKey="true"` está presente en el elemento **Unique** , se crea una restricción UNIQUE con la propiedad **IsPrimaryKey** establecida en **true**.|  
+|**msdata:ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción. De lo contrario, el atributo **name** proporciona el valor del nombre de la restricción.|  
+|**msdata:PrimaryKey**|Si `PrimaryKey="true"` está presente en el elemento **único,** se crea una restricción única con la propiedad **IsPrimaryKey** establecida en **true**.|  
   
- En el ejemplo siguiente se muestra un esquema XML que utiliza el elemento **Unique** para especificar una restricción de unicidad.  
+ En el ejemplo siguiente se muestra un esquema XML que utiliza el elemento **único** para especificar una restricción de unicidad.  
   
 ```xml  
-<xs:schema id="SampleDataSet"   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="SampleDataSet"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="Customers">  
     <xs:complexType>  
       <xs:sequence>  
-        <xs:element name="CustomerID" type="xs:integer"   
+        <xs:element name="CustomerID" type="xs:integer"
            minOccurs="0"/>  
-        <xs:element name="CompanyName" type="xs:string"   
+        <xs:element name="CompanyName" type="xs:string"
            minOccurs="0"/>  
        <xs:element name="Phone" type="xs:string" />  
      </xs:sequence>  
@@ -48,13 +48,13 @@ En un esquema del lenguaje de definición de esquemas XML (XSD), el elemento **U
 </xs:schema>  
 ```  
   
- El elemento **Unique** del esquema especifica que, para todos los elementos de los **clientes** de una instancia de documento, el valor del elemento secundario **CustomerID** debe ser único. Al compilar el **conjunto**de elementos, el proceso de asignación Lee este esquema y genera la tabla siguiente:  
+ El elemento **único** del esquema especifica que para todos los elementos **Customers** de una instancia de documento, el valor del elemento secundario **CustomerID** debe ser único. Al compilar el **conjunto de datos**, el proceso de asignación lee este esquema y genera la tabla siguiente:  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- El proceso de asignación también crea una restricción UNIQUE en la columna **CustomerID** , como se muestra en el siguiente **conjunto**de elementos. Para simplificar, sólo se muestran las propiedades relevantes.  
+ El proceso de asignación también crea una restricción única en la columna **CustomerID,** como se muestra en el siguiente **DataSet**. Para simplificar, sólo se muestran las propiedades relevantes.  
   
 ```text  
       DataSetName: MyDataSet  
@@ -68,23 +68,23 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- En el **conjunto de DataSet** que se genera, la propiedad **IsPrimaryKey** está establecida en **false** para la restricción UNIQUE. La propiedad **Unique** de la columna indica que los valores de la columna **CustomerID** deben ser únicos (pero pueden ser una referencia nula, tal y como se especifica en la propiedad **AllowDBNull** de la columna).  
+ En el **DataSet** que se genera, el **IsPrimaryKey** propiedad está establecida en **False** para la restricción única. La propiedad **unique** de la columna indica que los valores de columna **CustomerID** deben ser únicos (pero pueden ser una referencia nula, tal como se especifica en la propiedad **AllowDBNull** de la columna).  
   
- Si modifica el esquema y establece el valor del atributo **msdata: PrimaryKey** opcional en **true**, se creará la restricción UNIQUE en la tabla. La propiedad de columna **AllowDBNull** está establecida en **false**y la propiedad **IsPrimaryKey** de la restricción se establece en **true**, lo que convierte la columna **CustomerID** en una columna de clave principal.  
+ Si modifica el esquema y establece el valor opcional del atributo **msdata:PrimaryKey** en **True**, se crea la restricción única en la tabla. La propiedad de columna **AllowDBNull** se establece en **False**y la propiedad **IsPrimaryKey** de la restricción establecida en **True**, por lo que la columna **CustomerID** es una columna de clave principal.  
   
- Puede especificar una restricción única en una combinación de elementos o atributos del esquema XML. En el ejemplo siguiente se muestra cómo especificar que una combinación de valores **CustomerID** y **CompanyName** debe ser única para todos los **clientes** de cualquier instancia, agregando otro elemento **xs: Field** en el esquema.  
+ Puede especificar una restricción única en una combinación de elementos o atributos del esquema XML. En el ejemplo siguiente se muestra cómo especificar que una combinación de **CustomerID** y **CompanyName** valores deben ser únicos para todos los **clientes** en cualquier instancia, agregando otro **xs:field** elemento en el esquema.  
   
 ```xml  
-      <xs:unique     
-         msdata:ConstraintName="SomeName"    
-         name="UniqueCustIDConstr" >   
-  <xs:selector xpath=".//Customers" />   
-  <xs:field xpath="CustomerID" />   
-  <xs:field xpath="CompanyName" />   
+      <xs:unique
+         msdata:ConstraintName="SomeName"
+         name="UniqueCustIDConstr" >
+  <xs:selector xpath=".//Customers" />
+  <xs:field xpath="CustomerID" />
+  <xs:field xpath="CompanyName" />
 </xs:unique>  
 ```  
   
- Esta es la restricción que se crea en el **conjunto**de resultados.  
+ Esta es la restricción que se crea en el **conjunto de datos**resultante.  
   
 ```text  
 ConstraintName: SomeName  
@@ -93,8 +93,8 @@ ConstraintName: SomeName
   IsPrimaryKey: False  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

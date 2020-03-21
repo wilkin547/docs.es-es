@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 7cc8ff5391fca7c3315dda433785a182f476bca7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c2a6cb0661a0e39fc3a0dd599fcbb3c046f382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783879"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149617"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generar comandos con objetos CommandBuilder
 Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo de ejecución, por ejemplo a través de una herramienta de consulta que acepta un comando de texto del usuario, existe la posibilidad de que no se pueda especificar adecuadamente en tiempo de diseño el comando `InsertCommand`, `UpdateCommand` o `DeleteCommand` correspondiente. Si el objeto <xref:System.Data.DataTable> se asigna a una única tabla de base de datos o se genera a partir de ella, puede utilizar el objeto <xref:System.Data.Common.DbCommandBuilder> para generar automáticamente las propiedades `DeleteCommand`, `InsertCommand` y `UpdateCommand` de <xref:System.Data.Common.DbDataAdapter>.  
@@ -23,9 +23,9 @@ Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo d
   
  Cuando se asocia con un objeto `DataAdapter`, <xref:System.Data.Common.DbCommandBuilder> genera automáticamente las propiedades `InsertCommand`, `UpdateCommand` y `DeleteCommand` del objeto `DataAdapter` si son referencias nulas. Si ya existe algún objeto `Command` para una propiedad, se utilizará el objeto `Command` existente.  
   
- Las vistas de bases de datos creadas al unir una o varias tablas no se consideran una tabla única de base de datos. En este caso no puede utilizar <xref:System.Data.Common.DbCommandBuilder> para generar comandos automáticamente y deberá especificarlos de manera explícita. Para obtener información acerca de cómo establecer explícitamente los comandos `DataSet` para resolver las actualizaciones en el origen de datos, vea [Actualizar orígenes de datos con DataAdapters](updating-data-sources-with-dataadapters.md).  
+ Las vistas de bases de datos creadas al unir una o varias tablas no se consideran una tabla única de base de datos. En este caso no puede utilizar <xref:System.Data.Common.DbCommandBuilder> para generar comandos automáticamente y deberá especificarlos de manera explícita. Para obtener información sobre cómo establecer `DataSet` explícitamente comandos para resolver actualizaciones de una copia posterior en el origen de datos, vea Actualizar orígenes de [datos con DataAdapters](updating-data-sources-with-dataadapters.md).  
   
- Es posible que desee asignar parámetros de salida a la fila actualizada de un `DataSet`. Una tarea habitual consiste en recuperar, a partir del origen de datos, el valor de un campo de identidad de generación automática o una marca de tiempo. <xref:System.Data.Common.DbCommandBuilder> no asigna de forma predeterminada los parámetros de salida a las columnas de una fila actualizada. En este caso, debe especificar el comando de forma explícita. Para obtener un ejemplo de asignación de un campo de identidad generado automáticamente a una columna de una fila insertada, vea [recuperar valores de identidad o Autonuméricos](retrieving-identity-or-autonumber-values.md).  
+ Es posible que desee asignar parámetros de salida a la fila actualizada de un `DataSet`. Una tarea habitual consiste en recuperar, a partir del origen de datos, el valor de un campo de identidad de generación automática o una marca de tiempo. <xref:System.Data.Common.DbCommandBuilder> no asigna de forma predeterminada los parámetros de salida a las columnas de una fila actualizada. En este caso, debe especificar el comando de forma explícita. Para obtener un ejemplo de asignación de un campo de identidad generado automáticamente a una columna de una fila insertada, vea Recuperar valores de [identidad o numeración automática](retrieving-identity-or-autonumber-values.md).  
   
 ## <a name="rules-for-automatically-generated-commands"></a>Reglas para comandos generados automáticamente  
  En la tabla siguiente se muestran las reglas de la generación automática de comandos.  
@@ -37,7 +37,7 @@ Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo d
 |`DeleteCommand`|Elimina filas en el origen de datos para todas las filas de la tabla con una propiedad `RowState` con el valor <xref:System.Data.DataRowState.Deleted>. Elimina todas las filas en las que los valores de columna coinciden con los valores de la columna de clave principal de la fila, siempre que las restantes columnas del origen de datos coincidan con los valores originales de la fila. Para obtener más información, vea la sección "Modelo de simultaneidad optimista para actualizaciones y eliminaciones" de este mismo tema.|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Modelo de simultaneidad optimista para actualizaciones y eliminaciones  
- La lógica para generar comandos automáticamente para las instrucciones UPDATE y DELETE se basa en la *simultaneidad optimista*, es decir, los registros no se bloquean para su edición y pueden ser modificados por otros usuarios o procesos en cualquier momento. Dado que existe la posibilidad de que un registro haya sido modificado después de que haya sido devuelto por la instrucción SELECT y antes de que se emita la instrucción UPDATE o DELETE, la instrucción UPDATE o DELETE generada automáticamente incluye una cláusula WHERE que especifica que la fila solo se actualiza cuando contiene todos los valores originales y no ha sido eliminada del origen de datos. Esto evita que se sobrescriban los datos nuevos. Si una actualización generada automáticamente intenta actualizar una fila que ha sido eliminada o que no contiene los valores originales del <xref:System.Data.DataSet>, el comando no tienen ningún efecto en los registros y se inicia una excepción <xref:System.Data.DBConcurrencyException>.  
+ La lógica para generar comandos automáticamente para las instrucciones UPDATE y DELETE se basa en la *simultaneidad optimista,* es decir, los registros no están bloqueados para su edición y pueden ser modificados por otros usuarios o procesos en cualquier momento. Dado que existe la posibilidad de que un registro haya sido modificado después de que haya sido devuelto por la instrucción SELECT y antes de que se emita la instrucción UPDATE o DELETE, la instrucción UPDATE o DELETE generada automáticamente incluye una cláusula WHERE que especifica que la fila solo se actualiza cuando contiene todos los valores originales y no ha sido eliminada del origen de datos. Esto evita que se sobrescriban los datos nuevos. Si una actualización generada automáticamente intenta actualizar una fila que ha sido eliminada o que no contiene los valores originales del <xref:System.Data.DataSet>, el comando no tienen ningún efecto en los registros y se inicia una excepción <xref:System.Data.DBConcurrencyException>.  
   
  Si desea que la instrucción UPDATE o DELETE se ejecute sin tener en cuenta los valores originales, debe establecer de forma explícita la propiedad `UpdateCommand` del `DataAdapter` sin utilizar la generación automática de comandos.  
   
@@ -48,13 +48,13 @@ Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo d
  La lógica de generación automática de comandos crea instrucciones INSERT, UPDATE o DELETE para tablas independientes sin tener en cuenta las relaciones que éstas puedan tener con otras tablas en el origen de datos. Por eso, se puede producir un error al llamar a `Update` para realizar cambios en una columna que participa de una restricción de clave externa en la base de datos. Para evitar esa excepción, no utilice <xref:System.Data.Common.DbCommandBuilder> al actualizar las columnas que participan en una restricción de clave externa. En este caso debe especificar de forma explícita las instrucciones que se van a utilizar para llevar a cabo la operación.  
   
 ### <a name="table-and-column-names"></a>Nombres de tabla y columna  
- La lógica de generación automática de comandos puede ocasionar un error cuando los nombres de las tablas o de las columnas incluyen algún carácter especial, como espacios, puntos, comillas y otros caracteres no alfanuméricos, incluso si están delimitados por corchetes. En función del proveedor, el establecimiento de los parámetros QuotePrefix y QuoteSuffix puede permitir que la lógica de generación procese espacios, pero los caracteres especiales no pueden convertirse en caracteres de escape. Se admiten nombres de tabla completos con el formato *Catalog. Schema. Table* .  
+ La lógica de generación automática de comandos puede ocasionar un error cuando los nombres de las tablas o de las columnas incluyen algún carácter especial, como espacios, puntos, comillas y otros caracteres no alfanuméricos, incluso si están delimitados por corchetes. En función del proveedor, el establecimiento de los parámetros QuotePrefix y QuoteSuffix puede permitir que la lógica de generación procese espacios, pero los caracteres especiales no pueden convertirse en caracteres de escape. Se admiten nombres de tabla completos en forma de *catalog.schema.table.*  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Utilizar CommandBuilder para generar automáticamente una instrucción SQL  
  Para generar instrucciones SQL automáticamente para un `DataAdapter`, defina en primer lugar la propiedad `SelectCommand` del `DataAdapter` y, a continuación, cree un objeto `CommandBuilder` y especifique como argumento el `DataAdapter` para el que `CommandBuilder` generará automáticamente las instrucciones SQL.  
   
 ```vb  
-' Assumes that connection is a valid SqlConnection object   
+' Assumes that connection is a valid SqlConnection object
 ' inside of a Using block.  
 Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
   "SELECT * FROM dbo.Customers", connection)  
@@ -90,7 +90,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- En el siguiente ejemplo se vuelve a crear la tabla `Customers` en el conjunto de datos `custDS`. Se llama al método **RefreshSchema** para actualizar los comandos generados automáticamente con esta nueva información de columna.  
+ En el siguiente ejemplo se vuelve a crear la tabla `Customers` en el conjunto de datos `custDS`. El **RefreshSchema** se llama al método para actualizar los comandos generados automáticamente con esta nueva información de columna.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -104,7 +104,7 @@ adapter.Fill(custDS, "Customers")
   
 ```csharp  
 // Assumes an open SqlConnection and SqlDataAdapter inside of a using block.  
-adapter.SelectCommand.CommandText =   
+adapter.SelectCommand.CommandText =
   "SELECT CustomerID, ContactName FROM dbo.Customers";  
 builder.RefreshSchema();  
   
@@ -112,9 +112,9 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Comandos y parámetros](commands-and-parameters.md)
 - [Ejecución de un comando](executing-a-command.md)
 - [DbConnection, DbCommand y DbException](dbconnection-dbcommand-and-dbexception.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

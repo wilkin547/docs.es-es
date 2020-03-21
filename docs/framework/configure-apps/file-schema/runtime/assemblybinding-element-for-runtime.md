@@ -8,24 +8,24 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118130"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154327"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<elemento de > assemblyBinding para \<Runtime >
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding> \<Element para el> en tiempo de ejecución
 Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding >**  
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyBinding>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-      <assemblyBinding    
+      <assemblyBinding
    xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
 </assemblyBinding>  
 ```  
@@ -38,14 +38,14 @@ Contiene información sobre la redirección de versiones de ensamblado y las ubi
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**xmlns**|Atributo necesario.<br /><br /> Especifica el espacio de nombres XML necesario para el enlace de ensamblados. Utilice la cadena "urn: schemas-microsoft-v1" como valor.|  
-|**appliesTo**|Especifica la versión en tiempo de ejecución a la que se aplica la redirección del ensamblado de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework. El atributo **appliesTo** se incorporó en .NET Framework versión 1,1; se omite en la versión 1,0 de .NET Framework. Esto significa que se aplican todos los elementos **\<assemblyBinding>** cuando se usa la versión 1.0 de .NET Framework, aunque se especifique un atributo **appliesTo**.|  
+|**aplicaA**|Especifica la versión en tiempo de ejecución a la que se aplica la redirección del ensamblado de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework. El atributo **appliesTo** se introdujo en la versión 1.1 de .NET Framework; la versión 1.0 de .NET Framework lo omite. Esto significa ** \<** que todos los elementos assemblyBinding>se aplican cuando se usa la versión 1.0 de .NET Framework, incluso si se especifica un atributo **appliesTo.**|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Encapsula la directiva de enlace y la ubicación de un ensamblado. Use una\<la etiqueta de **> dependentAssembly** para cada ensamblado.|  
-|[\<probing>](probing-element.md)|Especifica los subdirectorios en los que busca Common Language Runtime cuando se cargan los ensamblados.|  
+|[\<dependienteEnsamblaje>](dependentassembly-element.md)|Encapsula la directiva de enlace y la ubicación de un ensamblado. Utilice ** \<** una etiqueta dependentAssembly>para cada ensamblado.|  
+|[\<>de sondeo](probing-element.md)|Especifica los subdirectorios en los que busca Common Language Runtime cuando se cargan los ensamblados.|  
 |[\<publisherPolicy>](publisherpolicy-element.md)|Especifica si el tiempo de ejecución aplica la directiva de editor.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cuando se utiliza un nombre parcial.|  
   
@@ -82,7 +82,7 @@ Contiene información sobre la redirección de versiones de ensamblado y las ubi
 ```xml  
 <runtime>  
    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-      <dependentAssembly>   
+      <dependentAssembly>
          <assemblyIdentity name="mscorcfg" publicKeyToken="b03f5f7f11d50a3a" culture=""/>  
          <bindingRedirect oldVersion="0.0.0.0-65535.65535.65535.65535" newVersion="1.0.3300.0"/>  
       </dependentAssembly>  
@@ -90,8 +90,8 @@ Contiene información sobre la redirección de versiones de ensamblado y las ubi
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
-- [Esquema de los archivos de configuración](../index.md)
+- [Esquema del archivo de configuración](../index.md)
 - [Redirigir versiones de ensamblado](../../redirect-assembly-versions.md)
