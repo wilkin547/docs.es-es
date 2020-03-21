@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 27f867bbf079c2e202d93425ddb951fc0df7784a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 37723011d69e8ea2ead3f7a30a30898dede054cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318379"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176687"
 ---
 # <a name="designing-service-contracts"></a>Diseño de contratos de servicios
 En este tema se describe qué son los contratos de servicios, cómo se definen, qué operaciones están disponibles (y las implicaciones para los intercambios de mensajes subyacentes), qué tipos de datos se usan y otras cuestiones que le ayudan a diseñar operaciones que satisfagan adecuadamente los requisitos de su escenario.  
   
 ## <a name="creating-a-service-contract"></a>Crear un contrato de servicios  
- Los servicios exponen varias operaciones. En aplicaciones Windows Communication Foundation (WCF), defina las operaciones creando un método y marcándolos con el atributo <xref:System.ServiceModel.OperationContractAttribute>. A continuación, para crear un contrato de servicios, agrupe sus operaciones, declarándolas dentro de una interfaz marcada con el atributo <xref:System.ServiceModel.ServiceContractAttribute>, o bien definiéndolas en una clase marcada con el mismo atributo. (Para obtener un ejemplo básico, consulte [Cómo: definir un contrato de servicio](how-to-define-a-wcf-service-contract.md)).  
+ Los servicios exponen varias operaciones. En las aplicaciones de Windows Communication Foundation (WCF), defina las <xref:System.ServiceModel.OperationContractAttribute> operaciones creando un método y marcándolo con el atributo. A continuación, para crear un contrato de servicios, agrupe sus operaciones, declarándolas dentro de una interfaz marcada con el atributo <xref:System.ServiceModel.ServiceContractAttribute>, o bien definiéndolas en una clase marcada con el mismo atributo. (Para obtener un ejemplo básico, vea [Cómo: definir un contrato](how-to-define-a-wcf-service-contract.md)de servicio .)  
   
- Los métodos que no tienen un atributo <xref:System.ServiceModel.OperationContractAttribute> no son operaciones de servicio y no se exponen mediante servicios WCF.  
+ Los métodos que <xref:System.ServiceModel.OperationContractAttribute> no tienen un atributo no son operaciones de servicio y no se exponen por los servicios WCF.  
   
  Este tema describe los puntos de decisión siguientes al diseñar un contrato de servicios:  
   
@@ -35,7 +35,7 @@ En este tema se describe qué son los contratos de servicios, cómo se definen, 
 - Las restricciones para las entradas y salidas de la operación.  
   
 ## <a name="classes-or-interfaces"></a>Clases o interfaces  
- Tanto las clases como las interfaces representan una agrupación de funcionalidad y, por lo tanto, ambos se pueden utilizar para definir un contrato de servicio de WCF. Sin embargo, se recomienda que utilice las interfaces porque modelan directamente los contratos de servicios. Sin una implementación, las interfaces no hacen más que definir una agrupación de métodos con ciertas firmas. Implementar una interfaz de contrato de servicio y haber implementado un servicio WCF.  
+ Las clases y las interfaces representan una agrupación de funcionalidad y, por lo tanto, ambas se pueden usar para definir un contrato de servicio WCF. Sin embargo, se recomienda que utilice las interfaces porque modelan directamente los contratos de servicios. Sin una implementación, las interfaces no hacen más que definir una agrupación de métodos con ciertas firmas. Implementar una interfaz de contrato de servicio y ha implementado un servicio WCF.  
   
  Todas las ventajas de las interfaces administradas se aplican a las interfaces de contrato de servicio:  
   
@@ -50,11 +50,11 @@ En este tema se describe qué son los contratos de servicios, cómo se definen, 
 > [!NOTE]
 > Al heredar de otras interfaces del contrato de servicio, no puede invalidar las propiedades de operación, como el nombre o espacio de nombres. Si intenta hacerlo, crea una nueva operación en el contrato de servicios actual.  
   
- Para obtener un ejemplo del uso de una interfaz para crear un contrato de servicios, consulte [Cómo: crear un servicio con una interfaz de contrato](./feature-details/how-to-create-a-service-with-a-contract-interface.md).  
+ Para obtener un ejemplo del uso de una interfaz para crear un contrato de servicio, vea [Cómo: crear un servicio con una interfaz](./feature-details/how-to-create-a-service-with-a-contract-interface.md)de contrato .  
   
- Sin embargo, puede utilizar una clase para definir un contrato de servicios e implementar dicho contrato al mismo tiempo. La ventaja de crear sus servicios aplicando directamente <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> a la clase y los métodos en la clase, respectivamente, es la velocidad y la simplicidad. Las desventajas son que las clases administradas no admiten la herencia múltiple, y como resultado solo pueden implementar uno contrato de servicios a la vez. Además, cualquier modificación de las firmas de la clase o del método modifica el contrato público para ese servicio, lo que puede impedir que los clientes no modificados utilicen su servicio. Para obtener más información, consulte [implementación de contratos de servicio](implementing-service-contracts.md).  
+ Sin embargo, puede utilizar una clase para definir un contrato de servicios e implementar dicho contrato al mismo tiempo. La ventaja de crear sus servicios aplicando directamente <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> a la clase y los métodos en la clase, respectivamente, es la velocidad y la simplicidad. Las desventajas son que las clases administradas no admiten la herencia múltiple, y como resultado solo pueden implementar uno contrato de servicios a la vez. Además, cualquier modificación de las firmas de la clase o del método modifica el contrato público para ese servicio, lo que puede impedir que los clientes no modificados utilicen su servicio. Para obtener más información, consulte Implementación de [contratos](implementing-service-contracts.md)de servicio .  
   
- Para obtener un ejemplo en el que se usa una clase para crear un contrato de servicios e implementarlo al mismo tiempo, vea [Cómo: crear un servicio con una clase de contrato](./feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
+ Para obtener un ejemplo que usa una clase para crear un contrato de servicio y lo implementa al mismo tiempo, vea [Cómo: crear un servicio con una clase](./feature-details/how-to-create-a-wcf-contract-with-a-class.md)de contrato .  
   
  En este punto, debería entender la diferencia entre definir su contrato de servicios utilizando una interfaz y utilizando una clase. El paso siguiente consiste en decidir qué datos se pueden intercambiar entre un servicio y sus clientes.  
   
@@ -69,14 +69,14 @@ En este tema se describe qué son los contratos de servicios, cómo se definen, 
 > El valor de los nombres de parámetro en la firma de la operación forma parte del contrato y distingue entre mayúsculas y minúsculas. Si desea utilizar localmente el mismo nombre de parámetro pero modificar el nombre en los metadatos publicados, vea <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Contratos de datos  
- Las aplicaciones orientadas a servicios como las aplicaciones de Windows Communication Foundation (WCF) están diseñadas para interoperar con el mayor número posible de aplicaciones cliente en plataformas de Microsoft y que no son de Microsoft. Para obtener la interoperabilidad más amplia posible, se recomienda que marque sus tipos con los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> para crear un contrato de datos, que es la parte del contrato de servicios que describe los datos que intercambian sus operaciones de servicio.  
+ Las aplicaciones orientadas a servicios como las aplicaciones de Windows Communication Foundation (WCF) están diseñadas para interoperar con el mayor número posible de aplicaciones cliente en plataformas Microsoft y no de Microsoft. Para obtener la interoperabilidad más amplia posible, se recomienda que marque sus tipos con los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> para crear un contrato de datos, que es la parte del contrato de servicios que describe los datos que intercambian sus operaciones de servicio.  
   
- Los contratos de datos son contratos de estilo de participación: ningún tipo o miembro de datos se serializa a menos que aplique explícitamente el atributo de contrato de datos. Los contratos de datos no están relacionados con el ámbito de acceso del código administrado: los miembros de datos privados se pueden serializar y enviar a otra parte para obtener acceso a ellos públicamente. (Para obtener un ejemplo básico de un contrato de datos, consulte [Cómo: crear un contrato de datos básico para una clase o estructura](./feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)). WCF controla la definición de los mensajes SOAP subyacentes que habilitan la funcionalidad de la operación así como la serialización de los tipos de datos dentro y fuera del cuerpo de los mensajes. Siempre y cuando los tipos de datos sean serializables, no necesita pensar en la infraestructura de intercambio de mensajes subyacentes al diseñar las operaciones.  
+ Los contratos de datos son contratos de estilo de participación: ningún tipo o miembro de datos se serializa a menos que aplique explícitamente el atributo de contrato de datos. Los contratos de datos no están relacionados con el ámbito de acceso del código administrado: los miembros de datos privados se pueden serializar y enviar a otra parte para obtener acceso a ellos públicamente. (Para obtener un ejemplo básico de un contrato de datos, vea Cómo: crear un contrato de [datos básicos para una clase o estructura](./feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) WCF controla la definición de los mensajes SOAP subyacentes que habilitan la funcionalidad de la operación, así como la serialización de los tipos de datos dentro y fuera del cuerpo de los mensajes. Siempre y cuando los tipos de datos sean serializables, no necesita pensar en la infraestructura de intercambio de mensajes subyacentes al diseñar las operaciones.  
   
- Aunque la aplicación WCF típica usa los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> para crear contratos de datos para las operaciones, puede utilizar otros mecanismos de serialización. Los mecanismos estándares <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> y <xref:System.Xml.Serialization.IXmlSerializable> trabajan para administrar la serialización de sus tipos de datos en los mensajes SOAP subyacentes que los llevan de una aplicación a otra. Puede emplear más estrategias de serialización si sus tipos de datos necesitan una compatibilidad especial. Para obtener más información sobre las opciones para la serialización de tipos de datos en aplicaciones WCF, vea [especificar transferencia de datos en contratos de servicio](./feature-details/specifying-data-transfer-in-service-contracts.md).  
+ Aunque la aplicación WCF <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> típica usa los atributos y para crear contratos de datos para las operaciones, puede usar otros mecanismos de serialización. Los mecanismos estándares <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> y <xref:System.Xml.Serialization.IXmlSerializable> trabajan para administrar la serialización de sus tipos de datos en los mensajes SOAP subyacentes que los llevan de una aplicación a otra. Puede emplear más estrategias de serialización si sus tipos de datos necesitan una compatibilidad especial. Para obtener más información acerca de las opciones para la serialización de tipos de datos en aplicaciones WCF, vea especificar la transferencia de datos [en contratos](./feature-details/specifying-data-transfer-in-service-contracts.md)de servicio .  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>Asignar los parámetros y los valores devueltos a los intercambios de mensajes  
- Las operaciones de servicio están soportadas por un intercambio subyacente de mensajes SOAP que transfiere los datos de la aplicación, además de los datos requeridos por la aplicación para soportar cierta seguridad estándar, transacción y características relacionadas con la sesión. Como este es el caso, la firma de una operación de servicio dicta un determinado *patrón de intercambio de mensajes* (MEP) subyacente que puede admitir la transferencia de datos y las características que requiere una operación. Puede especificar tres patrones en el modelo de programación de WCF: patrones de mensajes de solicitud/respuesta, unidireccionales y dúplex.  
+ Las operaciones de servicio están soportadas por un intercambio subyacente de mensajes SOAP que transfiere los datos de la aplicación, además de los datos requeridos por la aplicación para soportar cierta seguridad estándar, transacción y características relacionadas con la sesión. Dado que este es el caso, la firma de una operación de servicio dicta un determinado *patrón* de intercambio de mensajes subyacente (MEP) que puede admitir la transferencia de datos y las características que requiere una operación. Puede especificar tres patrones en el modelo de programación WCF: solicitud/respuesta, unidireccional y patrones de mensaje dúplex.  
   
 ##### <a name="requestreply"></a>Solicitud/Respuesta  
  Un patrón de solicitud/respuesta es uno en el que un remitente de la solicitud (una aplicación cliente) recibe una respuesta con la que está relacionada la solicitud. Este es el MEP predeterminado porque admite una operación en la que uno o más parámetros se pasan a la operación y se devuelve un valor de retorno al autor de llamada. Por ejemplo, en el ejemplo de código de C# siguiente, se muestra una operación de servicio básica que toma una cadena y devuelve una cadena.  
@@ -95,7 +95,7 @@ Function Hello (ByVal greeting As String) As String
   
  Esta firma de operación dicta la forma del intercambio de mensajes subyacente. Si no existía ninguna correlación, WCF no puede determinar para qué operación está previsto el valor devuelto.  
   
- Tenga en cuenta que, a menos que especifique un patrón de mensaje subyacente diferente, incluso las operaciones de servicio que devuelven `void` (`Nothing` en Visual Basic) son intercambios de mensajes de solicitud/respuesta. El resultado para su operación es que a menos que un cliente invoque de forma asincrónica la operación, el cliente detiene el procesamiento hasta que se reciba el mensaje de retorno, aunque ese mensaje esté normalmente vacío. En el ejemplo de código de C# siguiente, se muestra una operación que no regresa hasta que el cliente ha recibido un mensaje vacío como respuesta.  
+ Tenga en cuenta que, a menos que especifique `void` un`Nothing` patrón de mensaje subyacente diferente, incluso las operaciones de servicio que devuelven (en Visual Basic) son intercambios de mensajes de solicitud/respuesta. El resultado para su operación es que a menos que un cliente invoque de forma asincrónica la operación, el cliente detiene el procesamiento hasta que se reciba el mensaje de retorno, aunque ese mensaje esté normalmente vacío. En el ejemplo de código de C# siguiente, se muestra una operación que no regresa hasta que el cliente ha recibido un mensaje vacío como respuesta.  
   
 ```csharp  
 [OperationContractAttribute]  
@@ -109,10 +109,10 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- El ejemplo anterior puede desacelerar rendimiento del cliente y la receptividad si la operación tarda mucho tiempo en realizarse, pero hay ventajas para las operaciones de solicitud/respuesta incluso cuando devuelven `void`. La más obvia es que los errores SOAP pueden devolverse en el mensaje de respuesta, lo que indica que se ha producido alguna condición de error relacionada con el servicio, bien en la comunicación bien en el procesamiento. Los errores SOAP que se especifican en un contrato de servicios se pasan a la aplicación cliente como un objeto <xref:System.ServiceModel.FaultException%601>, donde el parámetro de tipo es el tipo especificado en el contrato de servicios. Esto facilita la notificación de las condiciones de error en los servicios WCF. Para obtener más información sobre las excepciones, los errores de SOAP y el control de errores, vea [especificar y controlar errores en contratos y servicios](specifying-and-handling-faults-in-contracts-and-services.md). Para ver un ejemplo de un servicio de solicitud/respuesta y un cliente, consulte [Cómo: crear un contrato de solicitud-respuesta](./feature-details/how-to-create-a-request-reply-contract.md). Para obtener más información sobre los problemas con el patrón de solicitud-respuesta, vea [servicios de solicitud-respuesta](./feature-details/request-reply-services.md).  
+ El ejemplo anterior puede desacelerar rendimiento del cliente y la receptividad si la operación tarda mucho tiempo en realizarse, pero hay ventajas para las operaciones de solicitud/respuesta incluso cuando devuelven `void`. La más obvia es que los errores SOAP pueden devolverse en el mensaje de respuesta, lo que indica que se ha producido alguna condición de error relacionada con el servicio, bien en la comunicación bien en el procesamiento. Los errores SOAP que se especifican en un contrato de servicios se pasan a la aplicación cliente como un objeto <xref:System.ServiceModel.FaultException%601>, donde el parámetro de tipo es el tipo especificado en el contrato de servicios. Esto facilita la notificación a los clientes sobre las condiciones de error en los servicios WCF. Para obtener más información acerca de las excepciones, los errores SOAP y el control de errores, vea [Especificar y controlar errores en contratos y servicios](specifying-and-handling-faults-in-contracts-and-services.md). Para ver un ejemplo de un servicio de solicitud/respuesta y un cliente, consulte Cómo: Crear un contrato de [solicitud-respuesta](./feature-details/how-to-create-a-request-reply-contract.md). Para obtener más información acerca de los problemas con el patrón de solicitud-respuesta, vea Servicios de [solicitud-respuesta](./feature-details/request-reply-services.md).  
   
 ##### <a name="one-way"></a>Unidireccional  
- Si el cliente de una aplicación de servicio WCF no debe esperar a que se complete la operación y no procesa los errores de SOAP, la operación puede especificar un patrón de mensaje unidireccional. Una operación unidireccional es aquella en la que un cliente invoca una operación y continúa el procesamiento después de que WCF escriba el mensaje en la red. Normalmente, esto significa que, salvo que los datos que se están enviando en el mensaje saliente sean extremadamente grandes, el cliente sigue ejecutándose de manera prácticamente inmediata (a menos que se produzca un error al enviar los datos). Este tipo de patrón de intercambio de mensajes soporta el comportamiento como evento de un cliente a una aplicación de servicio.  
+ Si el cliente de una aplicación de servicio WCF no debe esperar a que se complete la operación y no procesa errores SOAP, la operación puede especificar un patrón de mensaje unidireccional. Una operación unidireccional es una en la que un cliente invoca una operación y continúa el procesamiento después de que WCF escribe el mensaje en la red. Normalmente, esto significa que, salvo que los datos que se están enviando en el mensaje saliente sean extremadamente grandes, el cliente sigue ejecutándose de manera prácticamente inmediata (a menos que se produzca un error al enviar los datos). Este tipo de patrón de intercambio de mensajes soporta el comportamiento como evento de un cliente a una aplicación de servicio.  
   
  Un intercambio de mensajes en el que se envía un mensaje y no se recibe ninguno no puede soportar una operación de servicio que especifique un valor devuelto distinto de `void`; en este caso se inicia una excepción <xref:System.InvalidOperationException>.  
   
@@ -132,7 +132,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Este método es idéntico al ejemplo de solicitud/respuesta anterior, pero estableciendo la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> en `true` significa que, aunque el método es idéntico, la operación de servicio no envía un mensaje de retorno y los clientes devuelven inmediatamente una vez el mensaje saliente se ha entregado al nivel del canal. Para obtener un ejemplo, vea [Cómo: crear un contrato unidireccional](./feature-details/how-to-create-a-one-way-contract.md). Para obtener más información sobre el patrón unidireccional, vea [servicios unidireccionales](./feature-details/one-way-services.md).  
+ Este método es idéntico al ejemplo de solicitud/respuesta anterior, pero estableciendo la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> en `true` significa que, aunque el método es idéntico, la operación de servicio no envía un mensaje de retorno y los clientes devuelven inmediatamente una vez el mensaje saliente se ha entregado al nivel del canal. Para obtener un ejemplo, vea [Cómo: crear un contrato unidireccional](./feature-details/how-to-create-a-one-way-contract.md). Para obtener más información sobre el patrón unidireccional, vea [Servicios unidireccionales](./feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Dúplex  
  Un patrón dúplex se caracteriza por la capacidad tanto del servicio y como del cliente para enviarse mensajes entre sí independientemente de si se está utilizando una mensajería unidireccional o de solicitud/respuesta. Esta forma de comunicación bidireccional es útil para los servicios que deben comunicarse directamente con el cliente, o para proporcionar una experiencia asincrónica a cada lado de un intercambio de mensajes, incluido el comportamiento similar a un evento.  
@@ -143,13 +143,13 @@ Sub Hello (ByVal greeting As String)
   
  Para implementar un patrón dúplex, debe crear una segunda interfaz que contenga las declaraciones de método a las que se llaman en el cliente.  
   
- Para obtener un ejemplo de creación de un servicio y un cliente que tiene acceso a ese servicio, consulte [Cómo: crear un contrato dúplex](./feature-details/how-to-create-a-duplex-contract.md) y [Cómo: obtener acceso a los servicios con un contrato dúplex](./feature-details/how-to-access-services-with-a-duplex-contract.md). Para obtener un ejemplo funcional, vea [dúplex](./samples/duplex.md). Para obtener más información acerca de los problemas de uso de contratos dúplex, vea [servicios dúplex](./feature-details/duplex-services.md).  
+ Para obtener un ejemplo de creación de un servicio y un cliente que tiene acceso a ese servicio, vea [Cómo: crear un contrato dúplex](./feature-details/how-to-create-a-duplex-contract.md) y [Cómo: acceder a servicios con un contrato dúplex](./feature-details/how-to-access-services-with-a-duplex-contract.md). Para ver un ejemplo de trabajo, consulte [Dúplex](./samples/duplex.md). Para obtener más información acerca de los problemas que usan contratos dúplex, vea [Servicios dúplex](./feature-details/duplex-services.md).  
   
 > [!CAUTION]
 > Cuando un servicio recibe un mensaje dúplex, examina el elemento `ReplyTo` en ese mensaje entrante para determinar dónde enviar la respuesta. Si no se protege el canal que se utiliza para recibir el mensaje, un cliente que no es de confianza podría enviar un mensaje malintencionado con un equipo de destino `ReplyTo`, provocando una denegación de servicio (DoS) de ese equipo de destino.  
   
 ##### <a name="out-and-ref-parameters"></a>Parámetros out y ref  
- En la mayoría de los casos, puede usar los parámetros `in` (`ByVal` en Visual Basic) y `out` y `ref` (`ByRef` en Visual Basic). Dado que tanto el parámetro `out` como `ref` indican que los datos son devueltos por una operación, una firma de operación como la siguiente especifica que se requiere una operación de solicitud/respuesta aunque la firma de la operación devuelva `void`.  
+ En la mayoría de `in` los`ByVal` casos, puede `out` `ref` usar`ByRef` parámetros (en Visual Basic) y parámetros (en Visual Basic). Dado que tanto el parámetro `out` como `ref` indican que los datos son devueltos por una operación, una firma de operación como la siguiente especifica que se requiere una operación de solicitud/respuesta aunque la firma de la operación devuelva `void`.  
   
 ```csharp  
 [ServiceContractAttribute]  
@@ -177,10 +177,10 @@ End Interface
 ### <a name="specify-message-protection-level-on-the-contract"></a>Especificar el nivel de protección del mensaje en el contrato  
  Al diseñar su contrato, también debe decidir el nivel de protección del mensaje de los servicios que implementa su contrato. Esto solo es necesario si la seguridad del mensaje se aplica al enlace en el extremo del contrato. Si el enlace tiene la seguridad desactivada (es decir, si el enlace proporcionado por el sistema establece <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> en el valor <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>) no tiene que decidir sobre el nivel de protección del mensaje para el contrato. En la mayoría de los casos, los enlaces proporcionados por el sistema a los que se aplica la seguridad del nivel de mensaje, ofrecen un nivel de protección suficiente que hace innecesario el nivel de protección para cada operación o mensaje.  
   
- El nivel de protección es un valor que especifica si los mensajes (o partes del mensaje) que soportan un servicio están firmados, firmados y cifrados, o si se envían sin firmar o cifrar. El nivel de protección se puede establecer en varios ámbitos: en el nivel del servicio, para una operación determinada, para un mensaje dentro de esa operación, o una parte del mensaje. Los valores establecidos en un ámbito se convierten en el valor predeterminado para los ámbitos menores a menos que se invalide explícitamente. Si una configuración de enlace no puede proporcionar el nivel de protección mínimo necesario para el contrato, se produce una excepción. Y cuando ningún valor de nivel de protección se establece explícitamente en el contrato, la configuración de enlace controla el nivel de protección para todos los mensajes si el enlace tiene seguridad de mensajes. Éste es el comportamiento predeterminado.  
+ El nivel de protección es un valor que especifica si los mensajes (o partes del mensaje) que soportan un servicio están firmados, firmados y cifrados, o si se envían sin firmar o cifrar. El nivel de protección se puede establecer en varios ámbitos: en el nivel del servicio, para una operación determinada, para un mensaje dentro de esa operación, o una parte del mensaje. Los valores establecidos en un ámbito se convierten en el valor predeterminado para los ámbitos menores a menos que se invalide explícitamente. Si una configuración de enlace no puede proporcionar el nivel de protección mínimo necesario para el contrato, se produce una excepción. Y cuando ningún valor de nivel de protección se establece explícitamente en el contrato, la configuración de enlace controla el nivel de protección para todos los mensajes si el enlace tiene seguridad de mensajes. Este es el comportamiento predeterminado.  
   
 > [!IMPORTANT]
-> Decidir si establecer explícitamente varios ámbitos de un contrato en un nivel de protección inferior al nivel de protección completo de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> generalmente es una decisión que canjea cierto grado de seguridad por un aumento del rendimiento. En estos casos, las decisiones girarán en torno a las operaciones y al valor de los datos que intercambian. Para obtener más información, vea [proteger los servicios](securing-services.md).  
+> Decidir si establecer explícitamente varios ámbitos de un contrato en un nivel de protección inferior al nivel de protección completo de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> generalmente es una decisión que canjea cierto grado de seguridad por un aumento del rendimiento. En estos casos, las decisiones girarán en torno a las operaciones y al valor de los datos que intercambian. Para obtener más información, consulte [Protección](securing-services.md)de servicios .  
   
  Por ejemplo, el ejemplo de código siguiente no establece la propiedad <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> o <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> en el contrato.  
   
@@ -192,7 +192,7 @@ public interface ISampleService
   public string GetString();  
   
   [OperationContractAttribute]  
-  public int GetInt();    
+  public int GetInt();
 }  
 ```  
   
@@ -223,28 +223,28 @@ public interface IExplicitProtectionLevelSampleService
   public string GetString();  
   
   [OperationContractAttribute(ProtectionLevel=ProtectionLevel.None)]  
-  public int GetInt();    
+  public int GetInt();
   [OperationContractAttribute(ProtectionLevel=ProtectionLevel.EncryptAndSign)]  
-  public int GetGuid();    
+  public int GetGuid();
 }  
 ```  
   
  A continuación, se muestra el código equivalente en Visual Basic.  
   
 ```vb  
-<ServiceContract()> _   
-Public Interface IExplicitProtectionLevelSampleService   
-    <OperationContract()> _   
-    Public Function GetString() As String   
-    End Function   
+<ServiceContract()> _
+Public Interface IExplicitProtectionLevelSampleService
+    <OperationContract()> _
+    Public Function GetString() As String
+    End Function
   
-    <OperationContract(ProtectionLevel := ProtectionLevel.None)> _   
-    Public Function GetInt() As Integer   
-    End Function   
+    <OperationContract(ProtectionLevel := ProtectionLevel.None)> _
+    Public Function GetInt() As Integer
+    End Function
   
-    <OperationContractAttribute(ProtectionLevel := ProtectionLevel.EncryptAndSign)> _   
-    Public Function GetGuid() As Integer   
-    End Function   
+    <OperationContractAttribute(ProtectionLevel := ProtectionLevel.EncryptAndSign)> _
+    Public Function GetGuid() As Integer
+    End Function
   
 End Interface  
 ```  
@@ -257,26 +257,26 @@ End Interface
   
 - La operación `GetGuid`<xref:System.Guid?displayProperty=nameWithType> se devuelve en un mensaje que se cifra y se firma.  
   
- Para obtener más información acerca de los niveles de protección y cómo usarlos, vea [Descripción del nivel de protección](understanding-protection-level.md). Para obtener más información acerca de la seguridad, consulte protección de los [servicios](securing-services.md).  
+ Para obtener más información sobre los niveles de protección y cómo usarlos, consulte Descripción del nivel de [protección](understanding-protection-level.md). Para obtener más información acerca de la seguridad, consulte [Protección](securing-services.md)de servicios .  
   
 ##### <a name="other-operation-signature-requirements"></a>Otros requisitos de firma de operación  
- Algunas características de aplicación requieren un tipo determinado de firma de la operación. Por ejemplo, el enlace <xref:System.ServiceModel.NetMsmqBinding> soporta los servicios duraderos y clientes, en los que una aplicación se puede reiniciar en el medio de la comunicación y se puede retomar donde se dejó sin olvidarse ningún mensaje. (Para obtener más información, vea [colas en WCF](./feature-details/queues-in-wcf.md)). Sin embargo, las operaciones duraderas deben tomar solo un parámetro `in` y no tienen ningún valor devuelto.  
+ Algunas características de aplicación requieren un tipo determinado de firma de la operación. Por ejemplo, el enlace <xref:System.ServiceModel.NetMsmqBinding> soporta los servicios duraderos y clientes, en los que una aplicación se puede reiniciar en el medio de la comunicación y se puede retomar donde se dejó sin olvidarse ningún mensaje. (Para obtener más información, vea [colas en WCF](./feature-details/queues-in-wcf.md).) Sin embargo, las `in` operaciones duraderas deben tomar solo un parámetro y no tener ningún valor devuelto.  
   
- Otro ejemplo es el uso de los tipos <xref:System.IO.Stream> en operaciones. Puesto que el parámetro <xref:System.IO.Stream> incluye el cuerpo completo del mensaje, si una entrada o una salida (es decir, parámetro `ref`, parámetro `out` o valor devuelto) es del tipo <xref:System.IO.Stream>, debe ser la única entrada o salida especificada en su operación. Además, el parámetro o el tipo devuelto debe ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> o <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Para obtener más información sobre las secuencias, consulte [datos y streaming de gran tamaño](./feature-details/large-data-and-streaming.md).  
+ Otro ejemplo es el uso de los tipos <xref:System.IO.Stream> en operaciones. Puesto que el parámetro <xref:System.IO.Stream> incluye el cuerpo completo del mensaje, si una entrada o una salida (es decir, parámetro `ref`, parámetro `out` o valor devuelto) es del tipo <xref:System.IO.Stream>, debe ser la única entrada o salida especificada en su operación. Además, el parámetro o el tipo devuelto debe ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> o <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Para obtener más información acerca de las secuencias, vea [Datos grandes y streaming](./feature-details/large-data-and-streaming.md).  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>Nombres, espacios de nombres y ofuscación  
  Los nombres y espacios de nombres de los tipos de .NET en la definición de contratos y operaciones son significativos cuando los contratos se convierten en WSDL y cuando los mensajes de contrato se crean y envían. Por lo tanto, es muy recomendable que los nombres y espacios de nombres de los contratos de servicio se establezcan explícitamente mediante las propiedades `Name` y `Namespace` de todos los atributos de contrato auxiliares, como <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute> y otros atributos de contrato.  
   
  Una de las consecuencias es que, si no se establecen explícitamente los nombres y espacios de nombres, el uso de la ofuscación de IL en el ensamblado modifica los nombres y espacios de nombres del tipo de contrato y, por lo tanto, los intercambios de conexión y WSDL modificados generan errores. Si no establece los nombres y espacios de nombres de contrato explícitamente pero tiene pensado utilizar la ofuscación, use los atributos <xref:System.Reflection.ObfuscationAttribute> y <xref:System.Reflection.ObfuscateAssemblyAttribute> para evitar la modificación de los nombres y espacios de nombres del tipo de contrato.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Creación de un contrato de solicitud-respuesta](./feature-details/how-to-create-a-request-reply-contract.md)
-- [Creación de un contrato unidireccional](./feature-details/how-to-create-a-one-way-contract.md)
+- [Cómo crear un contrato unidireccional](./feature-details/how-to-create-a-one-way-contract.md)
 - [Creación de un contrato dúplex](./feature-details/how-to-create-a-duplex-contract.md)
-- [Definición de transferencias de datos en contratos de servicio](./feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Specifying Data Transfer in Service Contracts](./feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Especificación y gestión de errores en contratos y servicios](specifying-and-handling-faults-in-contracts-and-services.md)
 - [Uso de sesiones](using-sessions.md)
 - [Operaciones sincrónicas y asincrónicas](synchronous-and-asynchronous-operations.md)
-- [Servicios de confianza](reliable-services.md)
+- [Servicios confiables](reliable-services.md)
 - [Servicios y transacciones](services-and-transactions.md)

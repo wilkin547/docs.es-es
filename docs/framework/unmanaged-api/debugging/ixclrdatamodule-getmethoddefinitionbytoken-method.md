@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataModule::GetMethodDefinitionByToken
+title: IXCLRDataModule::GetMethodDefinitionByToken Método
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176674"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Método IXCLRDataModule::GetMethodDefinitionByToken
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken Método
 
-Obtiene la definición del método correspondiente a un token de metadatos especificado.
+Obtiene la definición del método correspondiente a un token de metadatos determinado.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>Parámetros
 
 `token`\
-[in] El token del método.
+[en] El token de método.
 
 `methodDefinition`\
-[out] La definición del método.
+[fuera] La definición del método.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El método proporcionado forma parte de la `IXCLRDataModule` interfaz y corresponde a la ranura de la tabla de métodos virtuales 25.
+El método proporcionado forma `IXCLRDataModule` parte de la interfaz y corresponde a la ranura 25 de la tabla de métodos virtuales.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguno  
+**Biblioteca:** Ninguno  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
-## <a name="see-also"></a>Vea también
+
+## <a name="see-also"></a>Consulte también
 
 - [Depuración](index.md)
 - [Interfaz IXCLRDataModule](ixclrdatamodule-interface.md)

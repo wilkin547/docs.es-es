@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-ms.openlocfilehash: 77de550cd3fb614e03f8028707c3cbf914734910
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9885149a71147db6eef13958b8ef825caa1d6ec6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141090"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176388"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx (Método)
 Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados.  
@@ -29,50 +29,50 @@ Establece el tamaño de un segmento de recolección de elementos no utilizados y
   
 ```cpp  
 HRESULT SetGCStartupLimitsEx (  
-    [in] SIZE_T SegmentSize,   
+    [in] SIZE_T SegmentSize,
     [in] SIZE_T MaxGen0Size  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `SegmentSize`  
- de Tamaño especificado de un segmento de recolección de elementos no utilizados.  
+ [en] El tamaño especificado de un segmento de recolección de elementos no utilizados.  
   
- El tamaño mínimo del segmento es 4 MB. Los segmentos se pueden aumentar en incrementos de 1 MB o más.  
+ El tamaño mínimo del segmento es de 4 MB. Los segmentos se pueden aumentar en incrementos de 1 MB o más.  
   
  `MaxGen0Size`  
- de Tamaño máximo especificado para la generación 0.  
+ [en] El tamaño máximo especificado para la generación 0.  
   
- El tamaño mínimo de la generación 0 es 64 KB.  
+ El tamaño mínimo de generación 0 es de 64 KB.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx` devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
-|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetGCStartupLimitsEx`regresó con éxito.|  
+|HOST_E_CLRNOTAVAILABLE|Common Language Runtime (CLR) no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se adelantó la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no es el propietario de la cerradura.|  
+|HOST_E_ABANDONED|Un evento se canceló mientras un hilo bloqueado o fibra lo esperaba.|  
+|E_FAIL|Se ha producido un fallo catastrófico desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- Los valores que `SetGCStartupLimitsEx` establece solo se pueden especificar antes de que se inicie el host. Las llamadas posteriores a `SetGCStartupLimitsEx` se omiten.  
+## <a name="remarks"></a>Observaciones  
+ Los valores `SetGCStartupLimitsEx` que establecen solo se pueden especificar antes de que se inicie el host. Las llamadas posteriores a `SetGCStartupLimitsEx` se omiten.  
   
- Para establecer cualquiera de los parámetros sin afectar al otro, especifique 0 (cero) para el parámetro que no quiere cambiar.  
+ Para establecer cualquiera de los parámetros sin afectar al otro, especifique 0 (cero) para el parámetro que no desea cambiar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE. h  
+ **Encabezado:** MScorEE.h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
+- [Gestión automática de la memoria](../../../standard/automatic-memory-management.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)
-- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRControl (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager2 (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

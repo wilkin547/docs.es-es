@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432069"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177875"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType (Método)
 Crea una estructura `ExportedType` que contiene los metadatos para el tipo exportado especificado y devuelve el token de metadatos asociado.  
@@ -30,7 +30,7 @@ Crea una estructura `ExportedType` que contiene los metadatos para el tipo expor
 ```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
-    [in]  mdToken             tkImplementation,   
+    [in]  mdToken             tkImplementation,
     [in]  mdTypeDef           tkTypeDef,  
     [in]  DWORD               dwExportedTypeFlags,  
     [out] mdExportedType      *pmdct  
@@ -39,40 +39,40 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- de Nombre del tipo que se va a exportar. En la versión 1,1 del Common Language Runtime, el nombre del tipo exportado debe coincidir exactamente con el nombre especificado en el `TypeDef` para el tipo.  
+ [en] El nombre del tipo que se va a exportar. Para la versión 1.1 de Common Language Runtime, el nombre del `TypeDef` tipo exportado debe coincidir exactamente con el nombre especificado en el para el tipo.  
   
  `tkImplementation`  
- de Token que especifica dónde se implementa el tipo exportado. Los valores válidos y sus significados asociados son:  
+ [en] Un token que especifica dónde se implementa el tipo exportado. Los valores válidos y sus significados asociados son:  
   
-- `mdFile` el tipo se implementa en un archivo diferente dentro de este ensamblado.  
+- `mdFile`El tipo se implementa en un archivo diferente dentro de este ensamblado.  
   
-- `mdAssemblyRef` el tipo se implementa en un ensamblado diferente.  
+- `mdAssemblyRef`El tipo se implementa en un ensamblado diferente.  
   
-- `mdExportedTYpe` el tipo está anidado dentro de otro tipo.  
+- `mdExportedTYpe`El tipo está anidado dentro de algún otro tipo.  
   
-- `mdFileNil` el tipo está en el mismo archivo que el manifiesto y no es un tipo anidado.  
+- `mdFileNil`El tipo está en el mismo archivo que el manifiesto y no es un tipo anidado.  
   
  `tkTypeDef`  
- de Token a los metadatos que especifica el tipo que se va a exportar. Este valor se especifica en la tabla `TypeDef` del archivo que implementa el tipo y solo es relevante si ese archivo está en este ensamblado.  
+ [en] Un token para los metadatos que especifica el tipo que se va a exportar. Este valor se `TypeDef` introduce en la tabla del archivo que implementa el tipo y sólo es relevante si ese archivo está en este ensamblado.  
   
  `dwExportedTypeFlags`  
- de Combinación bit a bit de los valores de enumeración de [cortypeattr (](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) que definen los valores de propiedad para el tipo exportado.  
+ [en] Combinación bit a bit de valores de enumeración [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) que definen la configuración de propiedad para el tipo exportado.  
   
  `pmdct`  
- enuncia Puntero al símbolo (token) de metadatos devuelto que indica el tipo exportado.  
+ [fuera] Puntero al token de metadatos devuelto que indica el tipo exportado.  
   
-## <a name="remarks"></a>Comentarios  
- Se debe definir una estructura de metadatos de `ExportedType` para cada tipo expuesto por este ensamblado y que se implementa en un módulo distinto del que contiene el manifiesto.  
+## <a name="remarks"></a>Observaciones  
+ Se `ExportedType` debe definir una estructura de metadatos para cada tipo expuesto por este ensamblado y que se implementa en un módulo distinto del que contiene el manifiesto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

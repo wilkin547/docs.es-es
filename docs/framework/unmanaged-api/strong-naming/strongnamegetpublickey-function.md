@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-ms.openlocfilehash: 966a2a628f30f1999688da7b6ba435c1d6cb830c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fcdd4a3f07b4499fd2388b5d165c409da9150466
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176934"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey (Función)
-Obtiene la clave pública de un par de claves pública y privada. El par de claves se puede proporcionar como un nombre de contenedor de claves dentro de un proveedor de servicios criptográficos (CSP) o como una colección de bytes sin procesar.  
+Obtiene la clave pública de un par de claves pública y privada. El par de claves se puede proporcionar como un nombre de contenedor de claves dentro de un proveedor de servicios criptográficos (CSP) o como una colección sin procesar de bytes.  
   
- Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameGetPublicKey (](../hosting/iclrstrongname-strongnamegetpublickey-method.md) en su lugar.  
+ Esta función ha quedado en desuso. Utilice el [método ICLRStrongName::StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-BOOLEAN StrongNameGetPublicKey (   
+BOOLEAN StrongNameGetPublicKey (
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
     [in]  ULONG     cbKeyBlob,  
@@ -41,44 +41,44 @@ BOOLEAN StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>Parámetros  
  `szKeyContainer`  
- de Nombre del contenedor de claves que contiene el par de claves pública y privada. Si `pbKeyBlob` es null, `szKeyContainer` debe especificar un contenedor válido en el CSP. En este caso, `StrongNameGetPublicKey` extrae la clave pública del par de claves almacenado en el contenedor.  
+ [en] El nombre del contenedor de claves que contiene el par de claves pública y privada. Si `pbKeyBlob` es `szKeyContainer` null, debe especificar un contenedor válido dentro del CSP. En este `StrongNameGetPublicKey` caso, extrae la clave pública del par de claves almacenado en el contenedor.  
   
- Si `pbKeyBlob` no es null, se supone que el par de claves está incluido en el objeto binario grande (BLOB) de clave.  
+ Si `pbKeyBlob` no es null, se supone que el par de claves está contenido en el objeto binario grande (BLOB) clave.  
   
- Las claves deben ser claves de firma de Rivest-Shamir-Adleman (RSA) de 1024 bits. En este momento no se admite ningún otro tipo de clave.  
+ Las claves deben ser claves de firma Rivest-Shamir-Adleman (RSA) de 1024 bits. No se admiten otros tipos de claves en este momento.  
   
  `pbKeyBlob`  
- de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `szKeyContainer` contiene el par de claves.  
+ [en] Un puntero al par de claves pública y privada. Este par tiene el formato creado `CryptExportKey` por la función Win32. Si `pbKeyBlob` es null, se supone `szKeyContainer` que el contenedor de claves especificado por contiene el par de claves.  
   
  `cbKeyBlob`  
- de Tamaño, en bytes, de `pbKeyBlob`.  
+ [en] El tamaño, en `pbKeyBlob`bytes, de .  
   
  `ppbPublicKeyBlob`  
- enuncia El BLOB de clave pública devuelto. El Common Language Runtime asigna el parámetro `ppbPublicKeyBlob` y se devuelve al autor de la llamada. El autor de la llamada debe liberar la memoria mediante la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
+ [fuera] La clave pública devuelta BLOB. Common `ppbPublicKeyBlob` Language Runtime asigna el parámetro y lo devuelve al autor de la llamada. El llamador debe liberar la memoria mediante el uso de la [StrongNameFreeBuffer](strongnamefreebuffer-function.md) función.  
   
  `pcbPublicKeyBlob`  
- enuncia Tamaño del BLOB de clave pública devuelto.  
+ [fuera] El tamaño de la clave pública devuelta BLOB.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` cuando se complete correctamente; de lo contrario, `false`.  
+ `true`una finalización exitosa; de `false`lo contrario, .  
   
-## <a name="remarks"></a>Comentarios  
- La clave pública está contenida en una estructura [PublicKeyBlob](publickeyblob-structure.md) .  
+## <a name="remarks"></a>Observaciones  
+ La clave pública se encuentra en un [PublicKeyBlob](publickeyblob-structure.md) estructura.  
   
- Si la función `StrongNameGetPublicKey` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si `StrongNameGetPublicKey` la función no se completa correctamente, llame a la [StrongNameErrorInfo](strongnameerrorinfo-function.md) función para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** StrongName. h  
+ **Encabezado:** StrongName.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StrongNameGetPublicKey (método)](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [StrongNameTokenFromPublicKey (método)](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [Método StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [Método StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
-- [PublicKeyBlob (estructura)](publickeyblob-structure.md)
+- [PublicKeyBlob (Estructura)](publickeyblob-structure.md)

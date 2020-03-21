@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7db27670b72a5018a03d4614b69486f67bcef155
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435932"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175686"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream (Método)
-Guarda todos los metadatos del ámbito actual en el `IStream`especificado.  
+Guarda todos los metadatos del ámbito `IStream`actual en el archivo .  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-HRESULT SaveToStream (   
+HRESULT SaveToStream (
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  
 );  
@@ -36,7 +36,7 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Parámetros  
  `pIStream`  
- de Secuencia grabable en la que se va a guardar.  
+ [en] La secuencia grabable para guardar.  
   
  `dwSaveFlags`  
  [in] Reservado. Debe ser cero.  
@@ -44,13 +44,13 @@ HRESULT SaveToStream (
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

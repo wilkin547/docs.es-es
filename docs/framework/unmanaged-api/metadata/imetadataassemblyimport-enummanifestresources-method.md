@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 22141cf46a965c0624c076bd1d86d2624e5a09f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176024"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources (Método)
 Obtiene un puntero a un enumerador para los recursos a los que se hace referencia en el manifiesto del ensamblado actual.  
@@ -29,42 +29,42 @@ Obtiene un puntero a un enumerador para los recursos a los que se hace referenci
   
 ```cpp  
 HRESULT EnumManifestResources (  
-    [in, out] HCORENUM         *phEnum,   
-    [out] mdManifestResource   rManifestResources[],   
-    [in]  ULONG                cMax,   
+    [in, out] HCORENUM         *phEnum,
+    [out] mdManifestResource   rManifestResources[],
+    [in]  ULONG                cMax,
     [out] ULONG                *pcTokens  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Puntero al enumerador. Debe ser un valor NULL cuando se llama al método `EnumManifestResources` por primera vez.  
+ [adentro, fuera] Un puntero al enumerador. Debe ser un valor `EnumManifestResources` nulo cuando se llama al método por primera vez.  
   
  `rManifestResources`  
- enuncia Matriz usada para almacenar los tokens de metadatos de `mdManifestResource`.  
+ [fuera] Matriz utilizada para `mdManifestResource` almacenar los tokens de metadatos.  
   
  `cMax`  
- de Número máximo de tokens de `mdManifestResource` que se pueden colocar en `rManifestResources`.  
+ [en] El número `mdManifestResource` máximo de tokens `rManifestResources`que se pueden colocar en .  
   
  `pcTokens`  
- enuncia Número de tokens de `mdManifestResource` realmente colocados en `rManifestResources`.  
+ [fuera] El número `mdManifestResource` de tokens `rManifestResources`colocados en .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` devolvió correctamente.|  
-|`S_FALSE`|No hay tokens que enumerar. En este caso, `pcTokens` se establece en cero.|  
+|`S_OK`|`EnumManifestResources`regresó con éxito.|  
+|`S_FALSE`|No hay tokens para enumerar. En este `pcTokens` caso, se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

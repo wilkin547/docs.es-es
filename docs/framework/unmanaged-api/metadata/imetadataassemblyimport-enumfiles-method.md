@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443552"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177812"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles (Método)
 Enumera los archivos a los que se hace referencia en el manifiesto del ensamblado actual.  
@@ -29,42 +29,42 @@ Enumera los archivos a los que se hace referencia en el manifiesto del ensamblad
   
 ```cpp  
 HRESULT EnumFiles (  
-    [in, out] HCORENUM    *phEnum,   
-    [out] mdFile          rFiles[],   
-    [in]  ULONG           cMax,   
+    [in, out] HCORENUM    *phEnum,
+    [out] mdFile          rFiles[],
+    [in]  ULONG           cMax,
     [out] ULONG           *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Puntero al enumerador. Debe ser un valor null para la primera llamada de este método.  
+ [adentro, fuera] Un puntero al enumerador. Debe ser un valor nulo para la primera llamada de este método.  
   
  `rFiles`  
- enuncia Matriz usada para almacenar los tokens de metadatos de `mdFile`.  
+ [fuera] Matriz utilizada para `mdFile` almacenar los tokens de metadatos.  
   
  `cMax`  
- de Número máximo de tokens de `mdFile` que se pueden colocar en `rFiles`.  
+ [en] El número `mdFile` máximo de tokens `rFiles`que se pueden colocar en .  
   
  `pcTokens`  
- enuncia Número de tokens de `mdFile` realmente colocados en `rFiles`.  
+ [fuera] El número `mdFile` de tokens `rFiles`colocados en .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` devolvió correctamente.|  
-|`S_FALSE`|No hay tokens que enumerar. En este caso, `pcTokens` se establece en cero.|  
+|`S_OK`|`EnumFiles`regresó con éxito.|  
+|`S_FALSE`|No hay tokens para enumerar. En este `pcTokens` caso, se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

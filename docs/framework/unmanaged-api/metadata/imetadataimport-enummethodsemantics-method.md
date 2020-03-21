@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: ff6932b6040a19e0ccda2f8d2140fa131cdd9224
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f20652a7f86576e64646a1f63c3e2c48b55cf811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450079"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175465"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics (Método)
 Enumera las propiedades y los eventos de cambio de propiedad con los que está relacionado el método especificado.  
@@ -30,7 +30,7 @@ Enumera las propiedades y los eventos de cambio de propiedad con los que está r
 ```cpp  
 HRESULT EnumMethodSemantics (  
    [in, out] HCORENUM    *phEnum,  
-   [in]  mdMethodDef     mb,   
+   [in]  mdMethodDef     mb,
    [out] mdToken         rEventProp[],  
    [in]  ULONG           cMax,  
    [out] ULONG           *pcEventProp  
@@ -39,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
+ [adentro, fuera] Un puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `mb`  
- de Un token MethodDef que limita el ámbito de la enumeración.  
+ [en] Un token MethodDef que limita el ámbito de la enumeración.  
   
  `rEventProp`  
- enuncia Matriz que se usa para almacenar los eventos o propiedades.  
+ [fuera] Matriz utilizada para almacenar los eventos o propiedades.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rEventProp`.  
   
  `pcEventProp`  
- enuncia Número de eventos o propiedades devueltos en `rEventProp`.  
+ [fuera] El número de eventos `rEventProp`o propiedades devueltos en .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` devolvió correctamente.|  
-|`S_FALSE`|No hay eventos ni propiedades para enumerar. En ese caso, `pcEventProp` es cero.|  
+|`S_OK`|`EnumMethodSemantics`regresó con éxito.|  
+|`S_FALSE`|No hay eventos ni propiedades que enumerar. En ese `pcEventProp` caso, es cero.|  
   
-## <a name="remarks"></a>Comentarios  
- Muchos tipos de Common Language Runtime definen eventos de`Changed` de *propiedad* y `On`de los métodos de`Changed` de *propiedad* relacionados con sus propiedades. Por ejemplo, el tipo <xref:System.Windows.Forms.Control?displayProperty=nameWithType> define una propiedad <xref:System.Windows.Forms.Control.Font%2A>, un evento <xref:System.Windows.Forms.Control.FontChanged> y un método <xref:System.Windows.Forms.Control.OnFontChanged%2A>. El método de descriptor de acceso set de la propiedad <xref:System.Windows.Forms.Control.Font%2A> llama a <xref:System.Windows.Forms.Control.OnFontChanged%2A> método, que a su vez provoca el evento <xref:System.Windows.Forms.Control.FontChanged>. Llamaría a `EnumMethodSemantics` mediante MethodDef para <xref:System.Windows.Forms.Control.OnFontChanged%2A> para obtener referencias a la propiedad <xref:System.Windows.Forms.Control.Font%2A> y al evento <xref:System.Windows.Forms.Control.FontChanged>.  
+## <a name="remarks"></a>Observaciones  
+ Muchos tipos de *Property* `Changed` Common Language `On`Runtime definen eventos Property y métodos *Property* `Changed` relacionados con sus propiedades. Por ejemplo, <xref:System.Windows.Forms.Control?displayProperty=nameWithType> el <xref:System.Windows.Forms.Control.Font%2A> tipo define <xref:System.Windows.Forms.Control.FontChanged> una propiedad, un evento y un <xref:System.Windows.Forms.Control.OnFontChanged%2A> método. El método de <xref:System.Windows.Forms.Control.Font%2A> descriptor <xref:System.Windows.Forms.Control.OnFontChanged%2A> de acceso set de <xref:System.Windows.Forms.Control.FontChanged> la propiedad llama al método, que a su vez provoca el evento. Se llamaría `EnumMethodSemantics` a través <xref:System.Windows.Forms.Control.OnFontChanged%2A> de la MethodDef para obtener referencias a la <xref:System.Windows.Forms.Control.Font%2A> propiedad y el <xref:System.Windows.Forms.Control.FontChanged> evento.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

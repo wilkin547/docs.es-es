@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443870"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176206"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets (Enumeración)
 Especifica los elementos de aplicación en los que se permite aplicar un atributo.  
@@ -44,53 +44,53 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
-|`catAssembly`|El atributo se puede aplicar a un ensamblado.|  
-|`catModule`|El atributo se puede aplicar a un módulo ejecutable portable (. dll o. exe).|  
-|`catClass`|El atributo se puede aplicar a una clase.|  
-|`catStruct`|El atributo se puede aplicar a una estructura; es decir, un tipo de valor.|  
-|`catEnum`|El atributo se puede aplicar a una enumeración.|  
-|`catConstructor`|El atributo se puede aplicar a un constructor.|  
-|`catMethod`|El atributo se puede aplicar a un método.|  
-|`catProperty`|El atributo se puede aplicar a una propiedad.|  
-|`catField`|El atributo se puede aplicar a un campo.|  
-|`catEvent`|El atributo se puede aplicar a un evento.|  
-|`catInterface`|El atributo se puede aplicar a una interfaz.|  
-|`catParameter`|El atributo se puede aplicar a un parámetro.|  
-|`catDelegate`|El atributo se puede aplicar a un delegado.|  
-|`catGenericParameter`|El atributo se puede aplicar a un parámetro genérico.|  
-|`catAll`|El atributo se puede aplicar a cualquier elemento de la aplicación.|  
-|`catClassMembers`|El atributo se puede aplicar a un miembro de una clase.|  
+|`catAssembly`|El atributo puede aplicarse a un ensamblado.|  
+|`catModule`|Atributo se puede aplicar a un módulo ejecutable portátil (.dll o .exe).|  
+|`catClass`|El atributo puede aplicarse a una clase.|  
+|`catStruct`|El atributo puede aplicarse a una estructura, es decir, a un tipo de valor.|  
+|`catEnum`|El atributo puede aplicarse a una enumeración.|  
+|`catConstructor`|El atributo puede aplicarse a un constructor.|  
+|`catMethod`|El atributo puede aplicarse a un método.|  
+|`catProperty`|El atributo puede aplicarse a una propiedad.|  
+|`catField`|El atributo puede aplicarse a un campo.|  
+|`catEvent`|El atributo puede aplicarse a un evento.|  
+|`catInterface`|El atributo puede aplicarse a una interfaz.|  
+|`catParameter`|El atributo puede aplicarse a un parámetro.|  
+|`catDelegate`|El atributo puede aplicarse a un delegado.|  
+|`catGenericParameter`|El atributo puede aplicarse a un parámetro genérico.|  
+|`catAll`|El atributo puede aplicarse a cualquier elemento de la aplicación.|  
+|`catClassMembers`|Atributo se puede aplicar a un miembro de una clase.|  
   
-## <a name="remarks"></a>Comentarios  
- Los valores de enumeración de `CorAttributeTargets` se pueden combinar con una operación OR bit a bit para obtener la combinación preferida.  
+## <a name="remarks"></a>Observaciones  
+ Los `CorAttributeTargets` valores de enumeración se pueden combinar con una operación OR bit a bit para obtener la combinación preferida.  
   
- El `CorAttributeTargets` en paralelo a la enumeración de <xref:System.AttributeTargets?displayProperty=nameWithType> administrados.  
+ Los `CorAttributeTargets` paralelos <xref:System.AttributeTargets?displayProperty=nameWithType> de la enumeración administrada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr. h  
+ **Encabezado:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

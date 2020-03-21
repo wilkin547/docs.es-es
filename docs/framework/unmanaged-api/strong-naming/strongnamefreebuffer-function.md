@@ -18,40 +18,40 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-ms.openlocfilehash: 11821acbeeb04ae09464eb0e032b9bf387914168
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50e3cc6e677de45be9256a2a818ebd6ed7d8b843
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095050"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176921"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer (Función)
 Libera la memoria asignada mediante una llamada anterior a una función de nombre seguro como [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md) o [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md).  
   
- Esta función está en desuso. Use en su lugar el método [ICLRStrongName:: StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Esta función ha quedado en desuso. Utilice el [método ICLRStrongName::StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-VOID StrongNameFreeBuffer (   
+VOID StrongNameFreeBuffer (
    [in] BYTE   *pbMemory  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pbMemory`  
- de Puntero a la memoria que se va a liberar.  
+ [en] Un puntero a la memoria para liberar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** StrongName. h  
+ **Encabezado:** StrongName.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StrongNameFreeBuffer (método)](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
+- [Método StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
 - [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

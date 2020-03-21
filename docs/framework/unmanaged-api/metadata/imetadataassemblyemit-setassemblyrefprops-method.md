@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440554"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176050"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps (Método)
 Modifica la estructura de metadatos `AssemblyRef` especificada.  
@@ -32,8 +32,8 @@ HRESULT SetAssemblyRefProps (
     [in] mdAssemblyRef              ar,  
     [in] const void                 *pbPublicKeyOrToken,  
     [in] ULONG                      cbPublicKeyOrToken,  
-    [in] LPCWSTR                    szName,   
-    [in] const ASSEMBLYMETADATA     *pMetaData,   
+    [in] LPCWSTR                    szName,
+    [in] const ASSEMBLYMETADATA     *pMetaData,
     [in] const void                 *pbHashValue,  
     [in] ULONG                      cbHashValue,  
     [in] DWORD                      dwAssemblyRefFlags  
@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parámetros  
  `ar`  
- de Símbolo (token) de metadatos que especifica el `AssemblyRef` estructura de metadatos que se va a modificar.  
+ [en] El token de metadatos `AssemblyRef` que especifica la estructura de metadatos que se va a modificar.  
   
  `pbPublicKeyOrToken`  
- de La clave pública del publicador del ensamblado al que se hace referencia.  
+ [en] La clave pública del publicador del ensamblado al que se hace referencia.  
   
  `cbPublicKeyOrToken`  
- de Tamaño en bytes de `pbPublicKeyOrToken`.  
+ [en] El tamaño en `pbPublicKeyOrToken`bytes de .  
   
  `szName`  
- de Nombre del texto legible del ensamblado.  
+ [en] El nombre de texto legible del ensamblado.  
   
  `pMetaData`  
- de Un puntero a una instancia de ASSEMBLYMETADATA (que contiene la versión, la plataforma y la información de configuración regional para el ensamblado.  
+ [en] Puntero a una instancia de ASSEMBLYMETADATA que contiene la información de versión, plataforma y configuración regional del ensamblado.  
   
  `pbHashValue`  
- de Puntero a los datos hash asociados al ensamblado.  
+ [en] Puntero a los datos hash asociados al ensamblado.  
   
  `cbHashValue`  
- de Tamaño en bytes de `pbHashValue`.  
+ [en] El tamaño en `pbHashValue`bytes de .  
   
  `dwAssemblyRefFlags`  
- de Combinación bit a bit de valores de [AssemblyRefFlags (](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) que especifican los atributos del ensamblado al que se hace referencia.  
+ [en] Combinación bit a bit de [assemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) valores que especifican atributos del ensamblado al que se hace referencia.  
   
-## <a name="remarks"></a>Comentarios  
- Para crear una estructura de metadatos de `AssemblyRef`, use el método [IMetaDataAssemblyEmit::D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) .  
+## <a name="remarks"></a>Observaciones  
+ Para crear `AssemblyRef` una estructura de metadatos, utilice el [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

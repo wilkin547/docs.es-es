@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437575"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177267"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps (Método)
-Obtiene información de metadatos para el evento representado por el token de evento especificado, incluido el tipo declarativo, los métodos Add y Remove para los delegados, y cualquier marcador y otros datos asociados.  
+Obtiene información de metadatos para el evento representado por el token de evento especificado, incluido el tipo declarador, los métodos add y remove para los delegados y cualquier marca y otros datos asociados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parámetros  
  `ev`  
- de Token de metadatos de evento que representa el evento para el que se van a obtener los metadatos.  
+ [en] El token de metadatos del evento que representa el evento para el que se obtendrán los metadatos.  
   
  `pClass`  
- enuncia Un puntero al token de TypeDef que representa la clase que declara el evento.  
+ [fuera] Puntero al token TypeDef que representa la clase que declara el evento.  
   
  `szEvent`  
- enuncia Nombre del evento al que hace referencia `ev`.  
+ [fuera] El nombre del evento `ev`al que hace referencia .  
   
  `pchEvent`  
- de La longitud solicitada en caracteres anchos de `szEvent`.  
+ [en] La longitud solicitada en `szEvent`caracteres anchos de .  
   
  `pdwEventFlags`  
- enuncia La longitud devuelta en caracteres anchos de `szEvent`.  
+ [fuera] La longitud devuelta `szEvent`en caracteres anchos de .  
   
  `ptkEventType`  
- enuncia Un puntero a un símbolo (token) de metadatos de TypeRef o TypeDef que representa el tipo de <xref:System.Delegate> del evento.  
+ [fuera] Puntero a un token de metadatos TypeRef <xref:System.Delegate> o TypeDef que representa el tipo del evento.  
   
  `pmdAddOn`  
- enuncia Un puntero al token de metadatos que representa el método que agrega controladores para el evento.  
+ [fuera] Puntero al token de metadatos que representa el método que agrega controladores para el evento.  
   
  `pmdRemoveOn`  
- enuncia Un puntero al token de metadatos que representa el método que quita los controladores para el evento.  
+ [fuera] Puntero al token de metadatos que representa el método que quita controladores para el evento.  
   
  `pmdFire`  
- enuncia Un puntero al token de metadatos que representa el método que genera el evento.  
+ [fuera] Puntero al token de metadatos que representa el método que provoca el evento.  
   
  `rmdOtherMethod`  
- enuncia Matriz de punteros de token a otros métodos asociados al evento.  
+ [fuera] Matriz de punteros de token a otros métodos asociados al evento.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rmdOtherMethod`.  
   
  `pcOtherMethod`  
- enuncia Número de tokens devueltos en `rmdOtherMethod`.  
+ [fuera] El número de `rmdOtherMethod`tokens devueltos en .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

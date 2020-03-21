@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440430"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177383"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked (Método)
 Obtiene un valor que indica si el token de metadatos especificado se ha marcado como procesado.  
@@ -29,27 +29,27 @@ Obtiene un valor que indica si el token de metadatos especificado se ha marcado 
   
 ```cpp  
 HRESULT IsTokenMarked (  
-    [in]  mdToken  tk,   
+    [in]  mdToken  tk,
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- de Token que se va a examinar para una marca de procesamiento.  
+ [en] El token que se examinará para una marca de procesamiento.  
   
  `pIsMarked`  
- enuncia Un valor que es `true` si se ha procesado `tk`; de lo contrario `false`.  
+ [fuera] Un valor `true` que `tk` es si se ha procesado; de `false`lo contrario .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataFilter (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [IMetaDataFilter (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
