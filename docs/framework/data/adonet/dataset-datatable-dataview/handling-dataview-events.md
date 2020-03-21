@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: c36c68b0375e7d03aac36de7d02b2c9579ea9316
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784591"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151109"
 ---
-# <a name="handling-dataview-events"></a><span data-ttu-id="5ceae-102">Controlar eventos de DataView</span><span class="sxs-lookup"><span data-stu-id="5ceae-102">Handling DataView Events</span></span>
-<span data-ttu-id="5ceae-103">Puede utilizar el evento <xref:System.Data.DataView.ListChanged> de la <xref:System.Data.DataView> para determinar si se ha actualizado una vista.</span><span class="sxs-lookup"><span data-stu-id="5ceae-103">You can use the <xref:System.Data.DataView.ListChanged> event of the <xref:System.Data.DataView> to determine if a view has been updated.</span></span> <span data-ttu-id="5ceae-104">Entre las actualizaciones que generan el evento se incluyen la agregación de una fila a la tabla subyacente, así como su eliminación o modificación; la agregación de una columna al esquema de la tabla subyacente o su eliminación y la modificación de una relación primaria o secundaria.</span><span class="sxs-lookup"><span data-stu-id="5ceae-104">Updates that raise the event include adding, deleting, or modifying a row in the underlying table; adding or deleting a column to the schema of the underlying table; and a change in a parent or child relationship.</span></span> <span data-ttu-id="5ceae-105">El evento **ListChanged** también le notifica si la lista de filas que está viendo ha cambiado significativamente debido a la aplicación de un nuevo criterio de ordenación o un filtro.</span><span class="sxs-lookup"><span data-stu-id="5ceae-105">The **ListChanged** event also notifies you if the list of rows you are viewing has changed significantly due to the application of a new sort order or a filter.</span></span>  
+# <a name="handling-dataview-events"></a><span data-ttu-id="4f2c3-102">Controlar eventos de DataView</span><span class="sxs-lookup"><span data-stu-id="4f2c3-102">Handling DataView Events</span></span>
+<span data-ttu-id="4f2c3-103">Puede utilizar el evento <xref:System.Data.DataView.ListChanged> de la <xref:System.Data.DataView> para determinar si se ha actualizado una vista.</span><span class="sxs-lookup"><span data-stu-id="4f2c3-103">You can use the <xref:System.Data.DataView.ListChanged> event of the <xref:System.Data.DataView> to determine if a view has been updated.</span></span> <span data-ttu-id="4f2c3-104">Entre las actualizaciones que generan el evento se incluyen la agregación de una fila a la tabla subyacente, así como su eliminación o modificación; la agregación de una columna al esquema de la tabla subyacente o su eliminación y la modificación de una relación primaria o secundaria.</span><span class="sxs-lookup"><span data-stu-id="4f2c3-104">Updates that raise the event include adding, deleting, or modifying a row in the underlying table; adding or deleting a column to the schema of the underlying table; and a change in a parent or child relationship.</span></span> <span data-ttu-id="4f2c3-105">El evento **ListChanged** también le notifica si la lista de filas que está viendo ha cambiado significativamente debido a la aplicación de un nuevo criterio de ordenación o un filtro.</span><span class="sxs-lookup"><span data-stu-id="4f2c3-105">The **ListChanged** event also notifies you if the list of rows you are viewing has changed significantly due to the application of a new sort order or a filter.</span></span>  
   
- <span data-ttu-id="5ceae-106">El evento **ListChanged** implementa el <xref:System.ComponentModel> delegado **ListChangedEventHandler** del espacio de nombres y toma como entrada un <xref:System.ComponentModel.ListChangedEventArgs> objeto.</span><span class="sxs-lookup"><span data-stu-id="5ceae-106">The **ListChanged** event implements the **ListChangedEventHandler** delegate of the <xref:System.ComponentModel> namespace and takes as input a <xref:System.ComponentModel.ListChangedEventArgs> object.</span></span> <span data-ttu-id="5ceae-107">Puede determinar el tipo de cambio que se ha producido mediante <xref:System.ComponentModel.ListChangedType> el valor de enumeración en la propiedad **ListChangedType** del objeto **ListChangedEventArgs** .</span><span class="sxs-lookup"><span data-stu-id="5ceae-107">You can determine what type of change has occurred using the <xref:System.ComponentModel.ListChangedType> enumeration value in the **ListChangedType** property of the **ListChangedEventArgs** object.</span></span> <span data-ttu-id="5ceae-108">En el caso de los cambios que implican agregar, eliminar o mover filas, se puede tener acceso al nuevo índice de la fila agregada o movida y al índice anterior de la fila eliminada mediante la propiedad **NewIndex** del objeto **ListChangedEventArgs** .</span><span class="sxs-lookup"><span data-stu-id="5ceae-108">For changes that involve adding, deleting, or moving rows, the new index of the added or moved row and the previous index of the deleted row can be accessed using the **NewIndex** property of the **ListChangedEventArgs** object.</span></span> <span data-ttu-id="5ceae-109">En el caso de una fila movida, se puede tener acceso al índice anterior de la fila movida mediante la propiedad **OldIndex** del objeto **ListChangedEventArgs** .</span><span class="sxs-lookup"><span data-stu-id="5ceae-109">In the case of a moved row, the previous index of the moved row can be accessed using the **OldIndex** property of the **ListChangedEventArgs** object.</span></span>  
+ <span data-ttu-id="4f2c3-106">El evento **ListChanged** implementa el delegado **ListChangedEventHandler** del <xref:System.ComponentModel> <xref:System.ComponentModel.ListChangedEventArgs> espacio de nombres y toma como entrada un objeto.</span><span class="sxs-lookup"><span data-stu-id="4f2c3-106">The **ListChanged** event implements the **ListChangedEventHandler** delegate of the <xref:System.ComponentModel> namespace and takes as input a <xref:System.ComponentModel.ListChangedEventArgs> object.</span></span> <span data-ttu-id="4f2c3-107">Puede determinar qué tipo de cambio <xref:System.ComponentModel.ListChangedType> se ha producido mediante el valor de enumeración en el **ListChangedType** propiedad de la **ListChangedEventArgs** objeto.</span><span class="sxs-lookup"><span data-stu-id="4f2c3-107">You can determine what type of change has occurred using the <xref:System.ComponentModel.ListChangedType> enumeration value in the **ListChangedType** property of the **ListChangedEventArgs** object.</span></span> <span data-ttu-id="4f2c3-108">Para los cambios que implican agregar, eliminar o mover filas, se puede tener acceso al nuevo índice de la fila agregada o movida y al índice anterior de la fila eliminada mediante la propiedad **NewIndex** del objeto **ListChangedEventArgs.**</span><span class="sxs-lookup"><span data-stu-id="4f2c3-108">For changes that involve adding, deleting, or moving rows, the new index of the added or moved row and the previous index of the deleted row can be accessed using the **NewIndex** property of the **ListChangedEventArgs** object.</span></span> <span data-ttu-id="4f2c3-109">En el caso de una fila movida, se puede tener acceso al índice anterior de la fila movida mediante la propiedad **OldIndex** del objeto **ListChangedEventArgs.**</span><span class="sxs-lookup"><span data-stu-id="4f2c3-109">In the case of a moved row, the previous index of the moved row can be accessed using the **OldIndex** property of the **ListChangedEventArgs** object.</span></span>  
   
- <span data-ttu-id="5ceae-110">El **objeto** **DataViewManager** también expone un evento **ListChanged** para recibir una notificación si se ha agregado o quitado una tabla, o si se ha realizado un cambio en la colección **Relations** del conjunto de objetos subyacente.</span><span class="sxs-lookup"><span data-stu-id="5ceae-110">The **DataViewManager** also exposes a **ListChanged** event to notify you if a table has been added or removed, or if a change has been made to the **Relations** collection of the underlying **DataSet**.</span></span>  
+ <span data-ttu-id="4f2c3-110">El **DataViewManager** también expone un **ListChanged** eventos para notificarle si se ha agregado o quitado una tabla, o si se ha realizado un cambio en el **Relations** colección del **DataSet**subyacente .</span><span class="sxs-lookup"><span data-stu-id="4f2c3-110">The **DataViewManager** also exposes a **ListChanged** event to notify you if a table has been added or removed, or if a change has been made to the **Relations** collection of the underlying **DataSet**.</span></span>  
   
- <span data-ttu-id="5ceae-111">En el ejemplo de código siguiente se muestra cómo agregar un controlador de eventos **ListChanged** .</span><span class="sxs-lookup"><span data-stu-id="5ceae-111">The following code example shows how to add a **ListChanged** event handler.</span></span>  
+ <span data-ttu-id="4f2c3-111">En el ejemplo de código siguiente se muestra cómo agregar un **ListChanged** controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="4f2c3-111">The following code example shows how to add a **ListChanged** event handler.</span></span>  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -38,10 +38,10 @@ End Sub
 ```  
   
 ```csharp  
-custView.ListChanged  += new   
+custView.ListChanged  += new
   System.ComponentModel.ListChangedEventHandler(OnListChanged);  
   
-protected static void OnListChanged(object sender,   
+protected static void OnListChanged(object sender,
   System.ComponentModel.ListChangedEventArgs args)  
 {  
   Console.WriteLine("ListChanged:");  
@@ -51,9 +51,9 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5ceae-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="5ceae-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f2c3-112">Consulte también</span><span class="sxs-lookup"><span data-stu-id="4f2c3-112">See also</span></span>
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
-- [<span data-ttu-id="5ceae-113">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="5ceae-113">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="5ceae-114">Información general sobre ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5ceae-114">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="4f2c3-113">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="4f2c3-113">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="4f2c3-114">Información general de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4f2c3-114">ADO.NET Overview</span></span>](../ado-net-overview.md)

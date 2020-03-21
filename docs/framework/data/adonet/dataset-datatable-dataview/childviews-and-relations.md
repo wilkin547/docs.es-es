@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786586"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151486"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="2996a-102">Objetos ChildView y Relation</span><span class="sxs-lookup"><span data-stu-id="2996a-102">ChildViews and Relations</span></span>
-<span data-ttu-id="2996a-103">Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria.</span><span class="sxs-lookup"><span data-stu-id="2996a-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="2996a-104">Por ejemplo, el código siguiente muestra las **categorías** y sus **productos** relacionados en orden alfabético ordenados por **CategoryName** y **NombreProducto**.</span><span class="sxs-lookup"><span data-stu-id="2996a-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="140a3-102">Objetos ChildView y Relation</span><span class="sxs-lookup"><span data-stu-id="140a3-102">ChildViews and Relations</span></span>
+<span data-ttu-id="140a3-103">Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria.</span><span class="sxs-lookup"><span data-stu-id="140a3-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="140a3-104">Por ejemplo, el código siguiente muestra **Categorías** y sus **productos** relacionados en orden alfabético ordenado por **CategoryName** y **ProductName**.</span><span class="sxs-lookup"><span data-stu-id="140a3-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -50,12 +50,12 @@ DataTable catTable = catDS.Tables["Categories"];
 DataTable prodTable = catDS.Tables["Products"];  
   
 // Create a relation between the Categories and Products tables.  
-DataRelation relation = catDS.Relations.Add("CatProdRel",   
+DataRelation relation = catDS.Relations.Add("CatProdRel",
   catTable.Columns["CategoryID"],  
                                                             prodTable.Columns["CategoryID"]);  
   
 // Create DataViews for the Categories and Products tables.  
-DataView catView = new DataView(catTable, "", "CategoryName",   
+DataView catView = new DataView(catTable, "", "CategoryName",
   DataViewRowState.CurrentRows);  
 DataView prodView;  
   
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2996a-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="2996a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="140a3-105">Consulte también</span><span class="sxs-lookup"><span data-stu-id="140a3-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="2996a-106">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="2996a-106">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="2996a-107">Información general sobre ADO.NET</span><span class="sxs-lookup"><span data-stu-id="2996a-107">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="140a3-106">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="140a3-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="140a3-107">Información general de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="140a3-107">ADO.NET Overview</span></span>](../ado-net-overview.md)

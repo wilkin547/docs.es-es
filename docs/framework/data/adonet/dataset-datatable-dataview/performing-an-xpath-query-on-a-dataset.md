@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784377"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150836"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="66912-102">Realizar una consulta XPath en un objeto DataSet</span><span class="sxs-lookup"><span data-stu-id="66912-102">Performing an XPath Query on a DataSet</span></span>
-<span data-ttu-id="66912-103">La relación entre un sincronizado <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> permite hacer uso de servicios XML, como la consulta XPath (lenguaje de rutas XML), que tienen acceso al **XmlDataDocument** y pueden realizar ciertas funciones de forma más cómoda que acceso directo al **conjunto de DataSet** .</span><span class="sxs-lookup"><span data-stu-id="66912-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="66912-104">Por ejemplo, en lugar de usar el método **Select** de <xref:System.Data.DataTable> para navegar por las relaciones con otras tablas de un **conjunto**de información, puede realizar una consulta XPath en un **XmlDataDocument** que esté sincronizado con el **DataSet**para obtener un lista de elementos XML en forma de <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="66912-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="66912-105">Los nodos de la **XmlNodeList**, convertidos <xref:System.Xml.XmlElement> como nodos, se pueden pasar al método **GetRowFromElement** de **XmlDataDocument**para devolver las referencias coincidentes <xref:System.Data.DataRow> a las filas de la tabla en la sincronizada **. Conjunto de DataSet**.</span><span class="sxs-lookup"><span data-stu-id="66912-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
+# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="13ad8-102">Realizar una consulta XPath en un objeto DataSet</span><span class="sxs-lookup"><span data-stu-id="13ad8-102">Performing an XPath Query on a DataSet</span></span>
+<span data-ttu-id="13ad8-103">La relación entre <xref:System.Data.DataSet> un <xref:System.Xml.XmlDataDocument> sincronizado y permite hacer uso de servicios XML, como la consulta de lenguaje de ruta de acceso XML (XPath), que tienen acceso a **XmlDataDocument** y pueden realizar cierta funcionalidad más convenientemente que tener acceso al **conjunto** de datos directamente.</span><span class="sxs-lookup"><span data-stu-id="13ad8-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="13ad8-104">Por ejemplo, en **Select** lugar de <xref:System.Data.DataTable> utilizar el método Select de a para navegar por las relaciones a otras tablas de un **DataSet**, puede realizar una <xref:System.Xml.XmlNodeList>consulta XPath en un **XmlDataDocument** que se sincroniza con el **DataSet**, para obtener una lista de elementos XML en forma de archivo .</span><span class="sxs-lookup"><span data-stu-id="13ad8-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="13ad8-105">Los nodos de **XmlNodeList** <xref:System.Xml.XmlElement> , que se convierten como nodos, se pueden pasar al <xref:System.Data.DataRow> método **GetRowFromElement** de **XmlDataDocument**, para devolver referencias coincidentes a las filas de la tabla en el conjunto de **datos**sincronizado .</span><span class="sxs-lookup"><span data-stu-id="13ad8-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
   
- <span data-ttu-id="66912-106">Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath.</span><span class="sxs-lookup"><span data-stu-id="66912-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="66912-107">El **conjunto de DataSet** se rellena con tres tablas: **Customers**, **Orders**y **OrderDetails**.</span><span class="sxs-lookup"><span data-stu-id="66912-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="66912-108">En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre las tablas **Customers** y **Orders** , y entre las tablas **Orders** y **OrderDetails** .</span><span class="sxs-lookup"><span data-stu-id="66912-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="66912-109">Después, se realiza una consulta XPath para devolver una **XmlNodeList** de nodos **Customers** en la que un nodo de **OrderDetails** secundario tiene un nodo **ProductID** con el valor de 43.</span><span class="sxs-lookup"><span data-stu-id="66912-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="66912-110">En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** de 43.</span><span class="sxs-lookup"><span data-stu-id="66912-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
+ <span data-ttu-id="13ad8-106">Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath.</span><span class="sxs-lookup"><span data-stu-id="13ad8-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="13ad8-107">El **conjunto de** datos se rellena con tres tablas: **Customers**, **Orders**y **OrderDetails**.</span><span class="sxs-lookup"><span data-stu-id="13ad8-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="13ad8-108">En el ejemplo, primero se crea una relación primario-secundario entre las **tablas Customers** y **Orders** y entre las tablas **Orders** y **OrderDetails.**</span><span class="sxs-lookup"><span data-stu-id="13ad8-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="13ad8-109">A continuación, se realiza una consulta XPath para devolver un **XmlNodeList** de **customers** nodos donde un nieto **OrderDetails** nodo tiene un **ProductID** nodo con el valor de 43.</span><span class="sxs-lookup"><span data-stu-id="13ad8-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="13ad8-110">En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** de 43.</span><span class="sxs-lookup"><span data-stu-id="13ad8-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  
@@ -101,7 +101,7 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="66912-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="66912-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13ad8-111">Consulte también</span><span class="sxs-lookup"><span data-stu-id="13ad8-111">See also</span></span>
 
-- [<span data-ttu-id="66912-112">Sincronización de DataSet y XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="66912-112">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="66912-113">Información general sobre ADO.NET</span><span class="sxs-lookup"><span data-stu-id="66912-113">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="13ad8-112">Sincronización de DataSet y XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="13ad8-112">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
+- [<span data-ttu-id="13ad8-113">Información general de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="13ad8-113">ADO.NET Overview</span></span>](../ado-net-overview.md)

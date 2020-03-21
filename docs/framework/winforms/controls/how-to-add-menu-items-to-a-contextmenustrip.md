@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar elementos de menú a un objeto ContextMenuStrip
+title: 'Cómo: Agregar elementos de menú a ContextMenuStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: 85729082d34cc976fabdbc50629b528c5f28cf54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e3480c5a56170ce94d5b5bde0208542c82e7702
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624081"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182312"
 ---
-# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="7e28d-102">Procedimiento para agregar elementos de menú a un objeto ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="7e28d-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
-<span data-ttu-id="7e28d-103">Puede agregar simplemente un elemento de menú o varios elementos a la vez a un <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="7e28d-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="24c7e-102">Cómo: Agregar elementos de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="24c7e-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
+<span data-ttu-id="24c7e-103">Puede agregar solo un elemento de menú o <xref:System.Windows.Forms.ContextMenuStrip>varios elementos a la vez a un archivo .</span><span class="sxs-lookup"><span data-stu-id="24c7e-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="7e28d-104">Para agregar un solo elemento de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="7e28d-104">To add a single menu item to a ContextMenuStrip</span></span>  
+### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="24c7e-104">Para agregar un único elemento de menú a un ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="24c7e-104">To add a single menu item to a ContextMenuStrip</span></span>  
   
-- <span data-ttu-id="7e28d-105">Use la <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método para agregar un elemento de menú a un <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="7e28d-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+- <span data-ttu-id="24c7e-105">Utilice <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> el método para agregar <xref:System.Windows.Forms.ContextMenuStrip>un elemento de menú a un archivo .</span><span class="sxs-lookup"><span data-stu-id="24c7e-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -31,9 +31,9 @@ ms.locfileid: "64624081"
     this.contextMenuStrip1.Items.Add(toolStripMenuItem1);  
     ```  
   
-### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="7e28d-106">Para agregar varios elementos de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="7e28d-106">To add several menu items to a ContextMenuStrip</span></span>  
+### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="24c7e-106">Para agregar varios elementos de menú a un ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="24c7e-106">To add several menu items to a ContextMenuStrip</span></span>  
   
-- <span data-ttu-id="7e28d-107">Use la <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método para agregar varios elementos de menú a un <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="7e28d-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+- <span data-ttu-id="24c7e-107">Utilice <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> el método para agregar <xref:System.Windows.Forms.ContextMenuStrip>varios elementos de menú a un archivo .</span><span class="sxs-lookup"><span data-stu-id="24c7e-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
     ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  
@@ -42,11 +42,11 @@ ms.locfileid: "64624081"
     ```  
   
     ```csharp  
-    this.contextMenuStrip1.Items.AddRange(new   
+    this.contextMenuStrip1.Items.AddRange(new
        System.Windows.Forms.ToolStripItem[] {  
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7e28d-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="7e28d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24c7e-108">Consulte también</span><span class="sxs-lookup"><span data-stu-id="24c7e-108">See also</span></span>
 
-- [<span data-ttu-id="7e28d-109">ContextMenuStrip (Control)</span><span class="sxs-lookup"><span data-stu-id="7e28d-109">ContextMenuStrip Control</span></span>](contextmenustrip-control.md)
+- [<span data-ttu-id="24c7e-109">ContextMenuStrip (Control)</span><span class="sxs-lookup"><span data-stu-id="24c7e-109">ContextMenuStrip Control</span></span>](contextmenustrip-control.md)
