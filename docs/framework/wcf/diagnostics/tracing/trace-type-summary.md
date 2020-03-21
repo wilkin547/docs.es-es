@@ -2,31 +2,31 @@
 title: Resumen del tipo de seguimiento
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856012"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674838"
 ---
 # <a name="trace-type-summary"></a>Resumen del tipo de seguimiento
-[Niveles de origen](https://go.microsoft.com/fwlink/?LinkID=94943) define varios niveles de seguimiento: Crítico, error, ADVERTENCIA, información y detallado, además de proporcionar una descripción de la `ActivityTracing` marca, que alterna la salida del límite de seguimiento y los eventos de transferencia de actividad.  
+[Niveles](xref:System.Diagnostics.SourceLevels) de origen define varios niveles de seguimiento: Crítico, Error, Advertencia, Información `ActivityTracing` y Detallado, así como proporciona una descripción de la marca, que alterna la salida de los eventos de transferencia de actividad y límite de seguimiento.  
   
- También puede revisar [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) para ver los tipos de seguimientos que se pueden emitir <xref:System.Diagnostics>desde.  
+ También puede <xref:System.Diagnostics.TraceEventType> revisar los tipos de seguimientos <xref:System.Diagnostics>que se pueden emitir desde .  
   
  La tabla siguiente enumera los más importantes.  
   
-|Tipo de traza|DESCRIPCIÓN|  
+|Tipo de traza|Descripción|  
 |----------------|-----------------|  
 |Crítico|Error irrecuperable o bloqueo de la aplicación.|  
 |Error|Error recuperable.|  
 |Advertencia|Mensaje informativo.|  
-|Información|Problema no crítico.|  
-|Detallado|Traza de depuración.|  
-|Iniciar|Inicio de una unidad lógica de procesamiento.|  
+|Information|Problema no crítico.|  
+|Verbose|Traza de depuración.|  
+|Start|Inicio de una unidad lógica de procesamiento.|  
 |Suspender|Suspensión de una unidad lógica de procesamiento.|  
-|Reanudar|Reanudación de una unidad lógica de procesamiento.|  
-|Detener|Detención de una unidad lógica de procesamiento.|  
+|Reanudación|Reanudación de una unidad lógica de procesamiento.|  
+|Stop|Detención de una unidad lógica de procesamiento.|  
 |Transferir|Cambio de la identidad de correlación.|  
   
  Una actividad se define como una combinación de los tipos de trazas anteriores.  

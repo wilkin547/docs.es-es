@@ -1,17 +1,17 @@
 ---
-title: Imperativo
+title: Imperativa
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 897b4a37c25ff8f7cf5739cc9fca8cb3f3e9a4d6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2484b6a6a8e5a62676eb9e9830a91f91ac923eff
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144687"
 ---
-# <a name="imperative"></a>Imperativo
+# <a name="imperative"></a>Imperativa
 
-Este ejemplo muestra cómo definir un <xref:System.ServiceModel.WSHttpBinding> para un servicio que usa el código, en lugar de definir el enlace `wsHttpBinding` en la configuración. Este ejemplo se basa en el [Introducción](getting-started-sample.md) que implementa un servicio de calculadora.
+Este ejemplo muestra cómo definir un <xref:System.ServiceModel.WSHttpBinding> para un servicio que usa el código, en lugar de definir el enlace `wsHttpBinding` en la configuración. Este ejemplo se basa en la [Introducción](getting-started-sample.md) que implementa un servicio de calculadora.
 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
@@ -35,7 +35,7 @@ public static void Main()
     // Create a ServiceHost for the CalculatorService type and provide the base address.
     using(ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
     {
-        serviceHost.AddServiceEndpoint(typeof(ICalculator), 
+        serviceHost.AddServiceEndpoint(typeof(ICalculator),
                                        binding, baseAddress);
         // Open the ServiceHostBase to create listeners and start listening for messages.
         serviceHost.Open();
@@ -80,17 +80,17 @@ Press <ENTER> to terminate client.
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .
 
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).
+3. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](running-the-samples.md)de Windows Communication Foundation .
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Imperative`

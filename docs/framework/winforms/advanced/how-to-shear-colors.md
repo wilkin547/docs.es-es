@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para sesgar colores
+title: 'Cómo: Recortar colores'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 825e5a90ebb0d9df3b894ce7bd353e917b676939
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593201"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142399"
 ---
-# <a name="how-to-shear-colors"></a>Procedimiento para sesgar colores
-Distorsión aumenta o disminuye un componente de color en una cantidad proporcional a otro componente de color. Por ejemplo, considere la posibilidad de la transformación donde el componente rojo se incrementa por la mitad del valor del componente azul. En este tipo de transformación, el color (0.2, 0.5, 1) se convertiría en (0,7, 0,5, 1). El nuevo componente rojo es 0,2 + (1/2)(1) = 0,7.  
+# <a name="how-to-shear-colors"></a>Cómo: Recortar colores
+El cizallamiento aumenta o disminuye un componente de color en una cantidad proporcional a otro componente de color. Por ejemplo, considere la transformación en la que el componente rojo se incrementa en la mitad del valor del componente azul. En tal transformación, el color (0,2, 0,5, 1) se convertiría en (0,7, 0,5, 1). El nuevo componente rojo es 0,2 + (1/2)(1) a 0,7.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea un <xref:System.Drawing.Image> objeto desde el archivo ColorBars4.bmp. A continuación, el código aplica la transformación de recorte que se describe en el párrafo anterior a cada píxel de la imagen.  
+ En el ejemplo <xref:System.Drawing.Image> siguiente se construye un objeto a partir del archivo ColorBars4.bmp. A continuación, el código aplica la transformación de cizallamiento descrita en el párrafo anterior a cada píxel de la imagen.  
   
- La siguiente ilustración muestra la imagen original a la izquierda y la imagen recortada de la derecha: 
+ La siguiente ilustración muestra la imagen original a la izquierda y la imagen cizallada a la derecha:
   
- ![Dos cuadrados con barras de colores por en paralelo que ilustra la imagen original y la imagen recortada.](./media/how-to-shear-colors/original-image-sheared-image.png)  
+ ![Dos cuadrados con rayas de colores lado a lado ilustrando la imagen original y la imagen cizallada.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
- En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de la transformación de recorte.  
+ En la tabla siguiente se enumeran los vectores de color de las cuatro barras antes y después de la transformación de cizallamiento.  
   
-|Original|Recorta|  
+|Original|Esquilada|  
 |--------------|-------------|  
 |(0, 0, 1, 1)|(0.5, 0, 1, 1)|  
 |(0.5, 1, 0.5, 1)|(0.75, 1, 0.5, 1)|  
@@ -38,9 +38,9 @@ Distorsión aumenta o disminuye un componente de color en una cantidad proporcio
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace `ColorBars.bmp` con un nombre de la imagen y la ruta de acceso válida en su sistema.  
+ El ejemplo anterior está diseñado para su uso <xref:System.Windows.Forms.PaintEventArgs> `e`con formularios Windows Forms, y requiere , que es un parámetro del <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace `ColorBars.bmp` por un nombre de imagen y una ruta de acceso válidas en el sistema.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>

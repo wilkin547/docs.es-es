@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 8cebbf717f66b072bc84b2068193ff2fe76ea87b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976670"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187279"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado TemplateBinding
 Vincula el valor de una propiedad de una plantilla de control para que sea el valor de otra propiedad del control con plantilla.  
@@ -35,14 +35,14 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
 |||  
 |-|-|  
 |`propertyName`|Propiedad <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> que se va establecer en la sintaxis del establecedor.|  
-|`sourceProperty`|Otra propiedad de dependencia existente en el tipo con plantilla, especificada por el valor de <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Nombre de propiedad "relacionada" que se define por un tipo diferente del tipo de destino que se va a convertir en un tipo con plantilla. En realidad, se trata de un objeto <xref:System.Windows.PropertyPath>. Consulte [sintaxis XAML de PropertyPath](propertypath-xaml-syntax.md).|  
+|`sourceProperty`|Otra propiedad de dependencia existente en el tipo con plantilla, especificada por el valor de <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Nombre de propiedad "relacionada" que se define por un tipo diferente del tipo de destino que se va a convertir en un tipo con plantilla. En realidad, se trata de un objeto <xref:System.Windows.PropertyPath>. Consulte [Sintaxis XAML PropertyPath](propertypath-xaml-syntax.md).|  
   
-## <a name="remarks"></a>Comentarios  
- Un `TemplateBinding` es una forma optimizada de un [enlace](binding-markup-extension.md) para escenarios de plantilla, similar a un `Binding` construido con `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. `TemplateBinding` siempre es un enlace unidireccional, aunque las propiedades implicadas establezcan por defecto un enlace bidireccional. Ambas propiedades implicadas deben ser propiedades de dependencia. Para lograr el enlace bidireccional a un elemento primario con plantilla, use en su lugar la siguiente instrucción de enlace `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
+## <a name="remarks"></a>Observaciones  
+ A `TemplateBinding` es una forma optimizada de un [enlace](binding-markup-extension.md) para `Binding` escenarios `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`de plantilla, análogo a un construido con . `TemplateBinding` siempre es un enlace unidireccional, aunque las propiedades implicadas establezcan por defecto un enlace bidireccional. Ambas propiedades implicadas deben ser propiedades de dependencia. Para lograr el enlace bidireccional a un elemento primario con `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`plantilla, utilice la siguiente instrucción de enlace en su lugar.
   
- [RelativeSource](relativesource-markupextension.md) es otra extensión de marcado que a veces se usa junto con o en lugar de `TemplateBinding` para realizar un enlace de propiedad relativo dentro de una plantilla.  
+ [RelativeSource](relativesource-markupextension.md) es otra extensión de marcado que a `TemplateBinding` veces se usa junto con o en lugar de para realizar el enlace de propiedad relativa dentro de una plantilla.  
   
- La descripción de las plantillas de control como concepto no se trata aquí. para obtener más información, vea [estilos y plantillas de control](../controls/control-styles-and-templates.md).  
+ La descripción de plantillas de control como un concepto no se trata aquí; Para obtener más información, consulte [Estilos de control y plantillas](../controls/control-styles-and-templates.md).  
   
  La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado. El token de cadena que se proporciona después de la cadena de identificador `TemplateBinding` se asigna como valor de <xref:System.Windows.TemplateBindingExtension.Property%2A> de la clase de extensión <xref:System.Windows.TemplateBindingExtension> subyacente.  
   
@@ -56,16 +56,16 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
   
  El uso detallado suele ser útil para las extensiones que tienen más de una propiedad que se puede configurar, o en aquellos casos en que algunas propiedades son opcionales. Dado que `TemplateBinding` tiene una sola propiedad configurable, que es obligatoria, este uso detallado no es habitual.  
   
- En la implementación del procesador de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML, el control de esta extensión de marcado se define mediante la clase <xref:System.Windows.TemplateBindingExtension>.  
+ En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la implementación del procesador XAML, la <xref:System.Windows.TemplateBindingExtension> clase define el control de esta extensión de marcado.  
   
- `TemplateBinding` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado de XAML usan los caracteres `{` y `}` en su sintaxis de atributo, que es la Convención por la que un procesador XAML reconoce que una extensión de marcado debe procesar el atributo. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
+ `TemplateBinding` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones `{` de `}` marcado en XAML usan los caracteres y en su sintaxis de atributo, que es la convención por la que un procesador XAML reconoce que una extensión de marcado debe procesar el atributo. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
-- [RelativeSource (extensión de marcado)](relativesource-markupextension.md)
-- [Binding (extensión de marcado)](binding-markup-extension.md)
+- [Extensión de marcado RelativeSource](relativesource-markupextension.md)
+- [Enlazar extensión de marcado](binding-markup-extension.md)

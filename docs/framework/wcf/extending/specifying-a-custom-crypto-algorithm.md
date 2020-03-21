@@ -2,12 +2,12 @@
 title: Especificar un algoritmo criptográfico personalizado
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 673d177a665e265d77f0221e0a00f4b814c8795c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628688"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186488"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificar un algoritmo criptográfico personalizado
 WCF permite especificar un algoritmo criptográfico personalizado para usarlo cuando se cifren datos o se calculen firmas digitales. Para ello, se siguen estos pasos:  
@@ -105,12 +105,12 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La sección bajo el <`cryptoClasses`elemento > crea la asignación entre SHA256CryptoServiceProvider y el alias "SHA256CSP". El elemento <`nameEntry`> crea la asignación entre el alias "SHA256CSP" y la dirección URL especificada `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`.  
+ La sección bajo `cryptoClasses` el <> elemento crea la asignación entre el SHA256CryptoServiceProvider y el alias "SHA256CSP". El `nameEntry` elemento <> crea la asignación entre el alias "SHA256CSP" y la dirección URL `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`especificada.  
   
  Use el método <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> para registrar el algoritmo personalizado en código. Este método crea ambas asignaciones. En el ejemplo siguiente se muestra cómo llamar a este método:  
   
 ```csharp
-// Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
+// Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
 ```  
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- Para obtener un ejemplo de código completo, vea el ejemplo de [agilidad criptográfica en la seguridad de WCF](../samples/cryptographic-agility-in-wcf-security.md) .  
+ Para obtener un ejemplo de código completo, vea el [ejemplo de agilidad criptográfica en seguridad WCF.](../samples/cryptographic-agility-in-wcf-security.md)  
   
 ## <a name="see-also"></a>Consulte también
 
-- [Protección de servicios y clientes](../feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../feature-details/securing-services-and-clients.md)
 - [Seguridad de servicios](../securing-services.md)
 - [Información general sobre seguridad](../feature-details/security-overview.md)
 - [Conceptos de seguridad](../feature-details/security-concepts.md)

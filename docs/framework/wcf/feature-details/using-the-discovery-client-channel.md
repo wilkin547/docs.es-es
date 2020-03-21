@@ -2,12 +2,12 @@
 title: Usar el canal del cliente de detección
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 05ca54d62179d024e619bc5c9c70a4e08b9dd62f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2d9dd68d233541f4d8cb3185adc1023cd5a19de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975941"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184262"
 ---
 # <a name="using-the-discovery-client-channel"></a>Usar el canal del cliente de detección
 Al escribir una aplicación cliente de WCF, debe conocer la dirección del extremo del servicio al que está llamando. En muchas situaciones, la dirección del extremo de un servicio no se conoce de antemano o la dirección del servicio cambia con el tiempo. El canal del cliente de detección le permite escribir una aplicación cliente de WCF y describir el servicio al que desea llamar para que el canal de cliente envíe una solicitud de análisis de forma automática. Cuando un servicio responde, el canal del cliente de detección recupera la dirección del extremo para el servicio de la respuesta de análisis y la usa para llamar al servicio.  
@@ -22,9 +22,9 @@ Al escribir una aplicación cliente de WCF, debe conocer la dirección del extre
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, que se utiliza para describir el servicio al que desea llamar.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> que especifica el extremo de detección al que se van a enviar los mensajes de detección.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>que especifica el punto de conexión de detección al que enviar mensajes de detección.  
   
- La propiedad <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> le permite especificar el contrato de servicio que está buscando, cualquier URI del ámbito necesario, así como la cantidad máxima de tiempo para intentar abrir el canal. El tipo de contrato se especifica mediante una llamada al constructor <xref:System.ServiceModel.Discovery.FindCriteria>. Los URI del ámbito se pueden agregar a la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> le permite especificar el número máximo de resultados a los que el cliente intenta conectarse. Cuando se recibe una respuesta del análisis, el cliente intenta abrir el canal mediante la dirección del punto de conexión de la respuesta del análisis. Si se produce una excepción, el cliente pasa a la siguiente respuesta del análisis, esperando a recibir más respuestas si es necesario. Continúa así hasta que el canal se abre correctamente o hasta que se alcanza el número máximo de resultados. Para obtener más información acerca de esta configuración, consulte <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ La propiedad <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> le permite especificar el contrato de servicio que está buscando, cualquier URI del ámbito necesario, así como la cantidad máxima de tiempo para intentar abrir el canal. El tipo de contrato se <xref:System.ServiceModel.Discovery.FindCriteria>especifica llamando al constructor . Los URI del ámbito se pueden agregar a la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> le permite especificar el número máximo de resultados a los que el cliente intenta conectarse. Cuando se recibe una respuesta del análisis, el cliente intenta abrir el canal mediante la dirección del punto de conexión de la respuesta del análisis. Si se produce una excepción, el cliente pasa a la siguiente respuesta del análisis, esperando a recibir más respuestas si es necesario. Continúa así hasta que el canal se abre correctamente o hasta que se alcanza el número máximo de resultados. Para obtener más información acerca de estas configuraciones, vea <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
  La propiedad <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> le permite especificar el punto de conexión de detección que desea usar. Normalmente, se trata de una clase <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, pero puede ser cualquier punto de conexión válido.  
   
@@ -41,7 +41,7 @@ bindingElement.FindCriteria = new FindCriteria(typeof(ICalculator)) { MaxResults
 // Use the UdpDiscoveryEndpoint  
 bindingElement.DiscoveryEndpoint = new UdpDiscoveryEndpoint();  
   
-// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the   
+// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the
 // top of the stack  
 CustomBinding binding = new CustomBinding(new BasicHttpBinding());  
 binding.Elements.Insert(0,bindingElement);  
@@ -60,4 +60,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>Seguridad y el canal del cliente de detección  
- Al usar el canal del cliente de detección, se especifican dos puntos de conexión. Uno se utiliza para los mensajes de detección, normalmente <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, y el otro es el punto de conexión de la aplicación. Al implementar un servicio seguro, debe tener cuidado de proteger ambos puntos de conexión. Para obtener más información acerca de la seguridad, consulte [protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+ Al usar el canal del cliente de detección, se especifican dos puntos de conexión. Uno se utiliza para los mensajes de detección, normalmente <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, y el otro es el punto de conexión de la aplicación. Al implementar un servicio seguro, debe tener cuidado de proteger ambos puntos de conexión. Para obtener más información acerca de la seguridad, vea [Proteger servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).

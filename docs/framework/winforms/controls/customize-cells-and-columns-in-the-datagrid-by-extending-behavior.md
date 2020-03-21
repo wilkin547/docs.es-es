@@ -1,5 +1,5 @@
 ---
-title: Personalizar celdas y columnas en el control DataGridView extendiendo su comportamiento y apariencia
+title: Personalizar celdas y columnas en DataGridView Control ampliando su comportamiento y apariencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: be01e085d4fa74c0c49f0a0494183482875c6a09
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e111f0bce812fc0851fabd1fde0fc2a6d44dd25f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744059"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182394"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Cómo: Personalizar celdas y columnas en el control DataGridView de formularios Windows Forms ampliando su comportamiento y apariencia
 El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de personalizar su apariencia y comportamiento mediante propiedades, eventos y clases complementarias. Ocasionalmente podría tener requisitos para sus celdas que van más allá de lo que pueden proporcionar estas características. Puede crear su propia clase <xref:System.Windows.Forms.DataGridViewCell> personalizado para proporcionar una funcionalidad ampliada.  
@@ -28,7 +28,7 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
 > [!NOTE]
 > Este ejemplo no funcionará correctamente si agrega filas vacías. Se crean filas vacías, por ejemplo, cuando se agregan filas al control estableciendo la propiedad <xref:System.Windows.Forms.DataGridView.RowCount%2A>. Esto se debe a que las filas agregadas en este caso se comparten automáticamente, lo que significa que no se crean instancias de los objetos `DataGridViewRolloverCell` hasta que haga clic en cada celda individual, y esto hace que las filas asociadas dejan de estar compartidas.  
   
- Como este tipo de personalización de celda requiere filas no compartidas, no es adecuado para su uso con grandes conjuntos de datos. Para obtener más información sobre el uso compartido de filas, vea [prácticas recomendadas para escalar el control DataGridView Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Como este tipo de personalización de celda requiere filas no compartidas, no es adecuado para su uso con grandes conjuntos de datos. Para obtener más información sobre el uso compartido de filas, vea [Prácticas recomendadas para escalar el control DataGridView de formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 > [!NOTE]
 > Al derivar de <xref:System.Windows.Forms.DataGridViewCell> o <xref:System.Windows.Forms.DataGridViewColumn> y agregar nuevas propiedades a la clase derivada, asegúrese de invalidar el método `Clone` para copiar las nuevas propiedades durante las operaciones de clonación. También debe llamar al método `Clone` de la clase base para copiar las propiedades de la clase base a la nueva celda o columna.  
@@ -67,13 +67,13 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Windows.Forms y System.Drawing.  
- 
+
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)
 - [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)
-- [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tipos de columnas en el control DataGridView de formularios Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
 - [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)

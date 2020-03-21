@@ -1,20 +1,20 @@
 ---
-title: Procedimiento para recuperar metadatos mediante un enlace que no sea MEX
+title: 'Cómo: Recuperar metadatos mediante un enlace que no sea MEX'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a006795c87a2ae845d03db90dce296692c4339fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856032"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186446"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedimiento para recuperar metadatos mediante un enlace que no sea MEX
-En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX. El código de este ejemplo se basa en el ejemplo de [extremo de metadatos seguro personalizado](../samples/custom-secure-metadata-endpoint.md) .  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Cómo: Recuperar metadatos mediante un enlace que no sea MEX
+En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX. El código de este ejemplo se basa en el ejemplo Deicuando el punto de conexión de [metadatos seguros personalizado.](../samples/custom-secure-metadata-endpoint.md)  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadatos mediante un enlace que no sea MEX  
   
-1. Determine el enlace utilizado por el extremo MEX. En el caso de los servicios Windows Communication Foundation (WCF), puede determinar el enlace MEX accediendo al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
+1. Determine el enlace utilizado por el extremo MEX. Para los servicios de Windows Communication Foundation (WCF), puede determinar el enlace MEX accediendo al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
   
     ```xml  
     <services>  
@@ -79,7 +79,7 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
             </clientCredentials>  
           </behavior>  
         </endpointBehaviors>  
-      </behaviors>    
+      </behaviors>
     </system.serviceModel>  
     ```  
   
@@ -121,8 +121,8 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información acerca de la importación [de metadatos, consulte Cómo: Importe los metadatos en los](../feature-details/how-to-import-metadata-into-service-endpoints.md)puntos de conexión de servicio.  
+5. En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información acerca de la importación de metadatos, vea [Cómo: Importar metadatos en puntos](../feature-details/how-to-import-metadata-into-service-endpoints.md)de conexión de servicio .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Metadatos](../feature-details/metadata.md)

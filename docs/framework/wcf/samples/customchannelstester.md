@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c23bd3eddd49972b7083347fed88d4e70707ae58
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928645"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183811"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 El `CustomChannelsTester` es una herramienta que se utiliza para probar las implementaciones del canal personalizadas contra un conjunto de contratos de servicios predefinidos. Puede seleccionar el conjunto de contratos de servicios y pasarlo a la herramienta utilizando un archivo XML. La herramienta genera a continuación el servicio y el cliente que ejerce sus implementaciones del canal personalizadas durante el intercambio de mensajes.  
   
 ### <a name="to-build-the-tool"></a>Para compilar la herramienta  
   
-1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Para compilar la solución, siga las instrucciones de Creación de [ejemplos](../../../../docs/framework/wcf/samples/building-the-samples.md)de Windows Communication Foundation .  
   
-2. Al compilar la solución, se generan tres archivos: CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. El archivo SampleRun. cmd tiene una línea de comandos de ejemplo que muestra cómo utilizar esta herramienta para probar [el transporte: Ejemplo](../../../../docs/framework/wcf/samples/transport-udp.md) de UDP.  
+2. Al compilar la solución, se generan tres archivos: CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. El archivo SampleRun.cmd tiene una línea de comandos de ejemplo que muestra cómo utilizar esta herramienta para probar el [ejemplo Transport: UDP.](../../../../docs/framework/wcf/samples/transport-udp.md)  
   
 ### <a name="to-run-the-tool"></a>Para ejecutar la herramienta  
   
@@ -28,7 +28,7 @@ El `CustomChannelsTester` es una herramienta que se utiliza para probar las impl
   
      Se requiere utilizar la opción `/binding`.  
   
-     `/dll`es necesario si "Binding" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
+     `/dll`es necesario si "enlace" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
   
      `/testspec` es opcional.  
   
@@ -39,15 +39,15 @@ El `CustomChannelsTester` es una herramienta que se utiliza para probar las impl
      A continuación, se muestra el ejemplo XML para la descripción de las características técnicas de pruebas (testspec.xml):  
   
     ```xml  
-    <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
+    <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
     <!-- Test a contract which has oneway / twoway operations. If you set ExpandAll = true, both types of contracts are tested -->    <IsOneWay ExpandAll="true">true</IsOneWay>  
     <!-- Test a contract with Asynchronous / Synchronous Operations-->  
-        <IsAsync>false</IsAsync>   
-    <!-- Test a sessionful / sessionless contract-->      
+        <IsAsync>false</IsAsync>
+    <!-- Test a sessionful / sessionless contract-->
         <IsSession ExpandAll="true">true</IsSession>  
-    <!-- If the Service Contract includes a CallBack Contract-->      
+    <!-- If the Service Contract includes a CallBack Contract-->
         <IsCallBack ExpandAll="true">true</IsCallBack>  
     </ServiceContract>  
     <TestDetails>  
@@ -56,7 +56,7 @@ El `CustomChannelsTester` es una herramienta que se utiliza para probar las impl
     <!-- Port Number - Optional-->  
         <Port>8000</Port>  
     <!--URI for the callBack address for the client. The client will receive the messages from the server on this address in case of a CallBack Contract-->  
-        <ClientCallBackAddress/>      
+        <ClientCallBackAddress/>
     <!-- Duration (in sec) after the server has started, it times out - optional(default = 300sec) -->  
         <ServerTimeout>300</ServerTimeout>  
     <!-- Duration (in sec) before the Client initializes -optional(default = 60sec) -->  
