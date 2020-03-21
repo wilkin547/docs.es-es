@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 5b21b2bdf3447e3a61c8fff0a311b4144ecaecb2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791923"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174529"
 ---
-# <a name="polling-in-console-applications"></a><span data-ttu-id="17cb7-102">Sondear aplicaciones de consola</span><span class="sxs-lookup"><span data-stu-id="17cb7-102">Polling in Console Applications</span></span>
-<span data-ttu-id="17cb7-103">Las operaciones asincrónicas de ADO.NET permiten iniciar en un subproceso operaciones de base de datos que requieren mucho tiempo mientras en otro subproceso se realizan otras tareas.</span><span class="sxs-lookup"><span data-stu-id="17cb7-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="17cb7-104">En la mayoría de los casos, al final llegará a un punto en el que la aplicación no debe continuar hasta que se complete la operación de base de datos.</span><span class="sxs-lookup"><span data-stu-id="17cb7-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="17cb7-105">En tales casos, resulta útil sondear la operación asincrónica para determinar si se ha completado.</span><span class="sxs-lookup"><span data-stu-id="17cb7-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="ab46b-102">Sondear aplicaciones de consola</span><span class="sxs-lookup"><span data-stu-id="ab46b-102">Polling in Console Applications</span></span>
+<span data-ttu-id="ab46b-103">Las operaciones asincrónicas en ADO.NET permiten iniciar operaciones de base de datos que consumen mucho tiempo en un subproceso mientras se realizan otras tareas en otro subproceso.</span><span class="sxs-lookup"><span data-stu-id="ab46b-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="ab46b-104">Sin embargo, en la mayoría de los escenarios llegará a un punto en el que la aplicación no debería continuar hasta que se complete la operación de base de datos.</span><span class="sxs-lookup"><span data-stu-id="ab46b-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="ab46b-105">En estos casos, resulta útil sondear la operación asincrónica para determinar si la operación se ha completado o no.</span><span class="sxs-lookup"><span data-stu-id="ab46b-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- <span data-ttu-id="17cb7-106">Para averiguar si la operación se ha completado, puede utilizar la propiedad <xref:System.IAsyncResult.IsCompleted%2A>.</span><span class="sxs-lookup"><span data-stu-id="17cb7-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
+ <span data-ttu-id="ab46b-106">Puede usar la propiedad <xref:System.IAsyncResult.IsCompleted%2A> para averiguar si se ha completado o no la operación.</span><span class="sxs-lookup"><span data-stu-id="ab46b-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="17cb7-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="17cb7-107">Example</span></span>  
- <span data-ttu-id="17cb7-108">La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks** y realiza su trabajo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="17cb7-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="17cb7-109">Para emular un proceso cuya ejecución tiene una larga duración, en este ejemplo se inserta una instrucción WAITFOR en el texto de comando.</span><span class="sxs-lookup"><span data-stu-id="17cb7-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="17cb7-110">Normalmente, no intentaría hacer que sus comandos se ejecutaran de forma más lenta, pero en este caso facilita la demostración del comportamiento asincrónico.</span><span class="sxs-lookup"><span data-stu-id="17cb7-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab46b-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ab46b-107">Example</span></span>  
+ <span data-ttu-id="ab46b-108">La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks** y lo hace de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="ab46b-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="ab46b-109">Para emular un proceso de ejecución prolongada, en este ejemplo se inserta una instrucción WAITFOR en el texto del comando.</span><span class="sxs-lookup"><span data-stu-id="ab46b-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="ab46b-110">Normalmente, no intentaría que los comandos se ejecutaran más lentamente, pero en este caso facilita la demostración del comportamiento asincrónico.</span><span class="sxs-lookup"><span data-stu-id="ab46b-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
 ```vb  
 Imports System  
@@ -27,7 +27,7 @@ Imports System.Data.SqlClient
 Module Module1  
   
     Sub Main()  
-        ' The WAITFOR statement simply adds enough time to prove the   
+        ' The WAITFOR statement simply adds enough time to prove the
         ' asynchronous nature of the command.  
         Dim commandText As String = _  
          "UPDATE Production.Product " & _  
@@ -47,10 +47,10 @@ Module Module1
     Private Sub RunCommandAsynchronously( _  
      ByVal commandText As String, ByVal connectionString As String)  
   
-        ' Given command text and connection string, asynchronously   
-        ' execute the specified command against the connection. For   
-        ' this example, the code displays an indicator as it's working,   
-        ' verifying the asynchronous behavior.   
+        ' Given command text and connection string, asynchronously
+        ' execute the specified command against the connection. For
+        ' this example, the code displays an indicator as it's working,
+        ' verifying the asynchronous behavior.
         Using connection As New SqlConnection(connectionString)  
             Try  
                 Dim count As Integer = 0  
@@ -61,7 +61,7 @@ Module Module1
                 While Not result.IsCompleted  
                     Console.WriteLine("Waiting ({0})", count)  
                     ' Wait for 1/10 second, so the counter  
-                    ' doesn't consume all available resources   
+                    ' doesn't consume all available resources
                     ' on the main thread.  
                     Threading.Thread.Sleep(100)  
                     count += 1  
@@ -83,17 +83,17 @@ Module Module1
     End Sub  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks; " & _  
           "Asynchronous Processing=true"  
     End Function  
-End Module   
+End Module
 ```  
   
 ```csharp  
@@ -106,7 +106,7 @@ class Class1
     [STAThread]  
     static void Main()  
     {  
-        // The WAITFOR statement simply adds enough time to   
+        // The WAITFOR statement simply adds enough time to
         // prove the asynchronous nature of the command.  
   
         string commandText =  
@@ -129,27 +129,27 @@ class Class1
       string commandText, string connectionString)  
     {  
         // Given command text and connection string, asynchronously  
-        // execute the specified command against the connection.   
-        // For this example, the code displays an indicator as it's   
-        // working, verifying the asynchronous behavior.   
+        // execute the specified command against the connection.
+        // For this example, the code displays an indicator as it's
+        // working, verifying the asynchronous behavior.
         using (SqlConnection connection =  
           new SqlConnection(connectionString))  
         {  
             try  
             {  
                 int count = 0;  
-                SqlCommand command =   
+                SqlCommand command =
                     new SqlCommand(commandText, connection);  
                 connection.Open();  
   
-                IAsyncResult result =   
+                IAsyncResult result =
                     command.BeginExecuteNonQuery();  
                 while (!result.IsCompleted)  
                 {  
                     Console.WriteLine(  
                                     "Waiting ({0})", count++);  
                     // Wait for 1/10 second, so the counter  
-                    // doesn't consume all available   
+                    // doesn't consume all available
                     // resources on the main thread.  
                     System.Threading.Thread.Sleep(100);  
                 }  
@@ -159,7 +159,7 @@ class Class1
             }  
             catch (SqlException ex)  
             {  
-                Console.WriteLine("Error ({0}): {1}",   
+                Console.WriteLine("Error ({0}): {1}",
                     ex.Number, ex.Message);  
             }  
             catch (InvalidOperationException ex)  
@@ -177,20 +177,20 @@ class Class1
   
     private static string GetConnectionString()  
     {  
-        // To avoid storing the connection string in your code,              
-        // you can retrieve it from a configuration file.   
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
   
         // If you have not included "Asynchronous Processing=true"  
         // in the connection string, the command will not be able  
         // to execute asynchronously.  
         return "Data Source=(local);Integrated Security=SSPI;" +  
-        "Initial Catalog=AdventureWorks; " +   
+        "Initial Catalog=AdventureWorks; " +
         "Asynchronous Processing=true";  
     }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="17cb7-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="17cb7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab46b-111">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ab46b-111">See also</span></span>
 
-- [<span data-ttu-id="17cb7-112">Operaciones asincrónicas</span><span class="sxs-lookup"><span data-stu-id="17cb7-112">Asynchronous Operations</span></span>](asynchronous-operations.md)
-- [<span data-ttu-id="17cb7-113">Información general sobre ADO.NET</span><span class="sxs-lookup"><span data-stu-id="17cb7-113">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="ab46b-112">Operaciones asincrónicas</span><span class="sxs-lookup"><span data-stu-id="ab46b-112">Asynchronous Operations</span></span>](asynchronous-operations.md)
+- [<span data-ttu-id="ab46b-113">Información general de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="ab46b-113">ADO.NET Overview</span></span>](../ado-net-overview.md)
